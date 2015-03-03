@@ -1,0 +1,22 @@
+language: java
+env:
+  global:
+    - secure: cKHQ3fOT4xzkgZlcABWQNZtlCZNUYMBg5jmgFmprxxnjGO8n9odj9uVINtL2pJiyd2LsLyerN7Bt3JHxHWqviEOqP0JjT29R5zZV8t/8L0vQ7zJHJw9hvfer71H+cH/Ah4umRpMutoMJlzMjY4DtVz6XwYEeRCKm6ver70B567c=
+before_script:
+  - curl -L http://sourceforge.net/projects/saxon/files/Saxon-HE/9.5/SaxonHE9-5-1-4J.zip/download > SaxonHE9.zip
+  - unzip SaxonHE9.zip
+  - git config --global user.email "johannes.hund@gmail.com"
+  - git config --global user.name "h0ru5"
+  - git config --global credential.helper "store --file=.git/credentials"
+
+
+script:
+  - java -jar saxon9he.jar -s:ucr-doc/wot-ucr.xml -o:wot-ucr-tmp.html -a
+
+  - git clone --branch gh-pages https://github.com/h0ru5/wot.git page
+  - cp wot-ucr-tmp.html page/wot-ucr.html
+  - cd page
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - git add wot-ucr.html
+  - git commit -m"automated commit from Travis CI"
+  - git push https://github.com/h0ru5/wot.git gh-pages
