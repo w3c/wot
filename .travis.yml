@@ -1,11 +1,12 @@
 language: java
 before_script:
-  - git checkout gh-pages
   - curl -L http://sourceforge.net/projects/saxon/files/Saxon-HE/9.5/SaxonHE9-5-1-4J.zip/download > SaxonHE9.zip
   - unzip SaxonHE9.zip
 
 script:
-  - java -jar saxon9he.jar -s:ucr-doc/WOT-UCR.xml -o:WOT-UCR.html -a
-  - git add ucr-doc/WOT-UCR.html
+  - java -jar saxon9he.jar -s:ucr-doc/WOT-UCR.xml -o:wot-ucr-tmp.html -a
+  - git checkout gh-pages
+  - cp wot-ucr-tmp.html WOT-UCR.html
+  - git add WOT-UCR.html
   - git commit -m"automated commit"
   - git push origin gh-pages
