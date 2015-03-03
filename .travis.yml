@@ -4,7 +4,7 @@ before_script:
   - unzip SaxonHE9.zip
 
 script:
-  - java -jar saxon9he.jar -s:ucr-doc/WOT-UCR.xml -o:wot-ucr-tmp.html -a
+  - java -jar saxon9he.jar -s:wot/ucr-doc/WOT-UCR.xml -o:wot/wot-ucr-tmp.html -a
   - git checkout gh-pages
   - cp wot-ucr-tmp.html WOT-UCR.html
   - git add WOT-UCR.html
