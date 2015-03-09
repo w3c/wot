@@ -1,5 +1,7 @@
 language: java
-secure: cKHQ3fOT4xzkgZlcABWQNZtlCZNUYMBg5jmgFmprxxnjGO8n9odj9uVINtL2pJiyd2LsLyerN7Bt3JHxHWqviEOqP0JjT29R5zZV8t/8L0vQ7zJHJw9hvfer71H+cH/Ah4umRpMutoMJlzMjY4DtVz6XwYEeRCKm6ver70B567c=
+env:
+  global:
+    - secure: cKHQ3fOT4xzkgZlcABWQNZtlCZNUYMBg5jmgFmprxxnjGO8n9odj9uVINtL2pJiyd2LsLyerN7Bt3JHxHWqviEOqP0JjT29R5zZV8t/8L0vQ7zJHJw9hvfer71H+cH/Ah4umRpMutoMJlzMjY4DtVz6XwYEeRCKm6ver70B567c=
 before_script:
   - curl -L http://sourceforge.net/projects/saxon/files/Saxon-HE/9.5/SaxonHE9-5-1-4J.zip/download > SaxonHE9.zip
   - unzip SaxonHE9.zip
