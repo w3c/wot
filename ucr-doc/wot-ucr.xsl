@@ -7,7 +7,7 @@
             <head>
                 <title>Use Cases and Requirements for the Web of Things</title>
                 <meta charset="utf-8"/>
-                    <script src="http://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
+                    <script src="//www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
                     <script class="remove">
                         var respecConfig = {
                         specStatus: "unofficial",
@@ -25,10 +25,10 @@
                             key: "GitHub",
                             data: [{
                                 value: "Master branch on GitHub",
-                                href: "https://github.com/dret/W3C/tree/master/WoTIG"
+                                href: "https://github.com/h0ru5/wot/tree/master"
                                 },{
                                 value: "Project Pages branch on GitHub",
-                                href: "https://github.com/dret/W3C/tree/gh-pages/WoTIG" }]}
+                                href: "https://github.com/h0ru5/wot/tree/gh-pages/" }]}
                         ],
                         };
                     </script>
@@ -42,7 +42,7 @@
                     <xsl:apply-templates select="/ucr/usecase"/>
                 </section>
                 <section id="requirements">
-                    <h2>Requirements</h2>
+                    <h2>Interaction patterns</h2>
                     <xsl:apply-templates select="/ucr/req"/>
                 </section>
                 <section id="technologies">
