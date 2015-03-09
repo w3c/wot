@@ -8,7 +8,7 @@ before_script:
   - git config --global user.email "johannes.hund@gmail.com"
   - git config --global user.name "h0ru5"
   - git config --global credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+
 
 script:
   - java -jar saxon9he.jar -s:ucr-doc/wot-ucr.xml -o:wot-ucr-tmp.html -a
@@ -16,6 +16,7 @@ script:
   - git clone --branch gh-pages https://github.com/h0ru5/wot.git page
   - cp wot-ucr-tmp.html page/wot-ucr.html
   - cd page
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - git add wot-ucr.html
   - git commit -m"automated commit from Travis CI"
   - git push https://github.com/h0ru5/wot.git gh-pages
