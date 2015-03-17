@@ -96,14 +96,16 @@
                </li>
                <li id="bakery-data-exchange-format">
                   <b>
-                     <a href="#data-exchange-format">Data Exchange Format</a>: 
+                     <a href="#data-exchange-format">Content-Negotiation</a>: 
                   </b>The bakery's order management has to interact with the order management system of
                   the delivery company.
                </li>
                <li id="bakery-object-memory">
                   <b>
                      <a href="#object-memory">Object Memory</a>: 
-                  </b>...
+                  </b>For perishable ingredients like milk or cheese, the due date can be estimated much
+                  more precisely if an object memory is kept for them. Also it can be a way to prove
+                  the origin and freshness of ingridients
                </li>
                <li id="bakery-layered-comm">
                   <b>
@@ -141,7 +143,7 @@
                </li>
                <li id="adaptive-building-lifecycle-mgmt">
                   <b>
-                     <a href="#lifecycle-mgmt">Lifecycle Management</a>: 
+                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
                   </b>The appearance and disappearance of users requires means to orchestrate the lifecycle
                   of users/stakeholders.
                </li>
@@ -154,7 +156,8 @@
                <li id="adaptive-building-privacy">
                   <b>
                      <a href="#privacy">Privacy</a>: 
-                  </b>...
+                  </b>Since the system would rely on informations which person  is in what room at what
+                  time, it can allow a very fine-grained movement profile, which is sensitve information
                </li>
             </ul>
          </section>
@@ -175,7 +178,7 @@
                </li>
                <li id="shift-of-function-lifecycle-mgmt">
                   <b>
-                     <a href="#lifecycle-mgmt">Lifecycle Management</a>: 
+                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
                   </b>The appearance and disappearance of devices as well as the software management on
                   the devices itself requires means to orchestrate the lifecycle of individual devices
                   resp. components.
@@ -214,7 +217,7 @@
                </li>
                <li id="vpp-lifecycle-mgmt">
                   <b>
-                     <a href="#lifecycle-mgmt">Lifecycle Management</a>: 
+                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
                   </b>Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance
                   of DERs as well as the software management on the devices itself requires means to
                   orchestrate the lifecycle of individual devices resp. components.
@@ -234,7 +237,7 @@
                </li>
                <li id="vpp-data-exchange-format">
                   <b>
-                     <a href="#data-exchange-format">Data Exchange Format</a>: 
+                     <a href="#data-exchange-format">Content-Negotiation</a>: 
                   </b>The different stakeholders have to interact and therefore need a common data format.
                </li>
                <li id="vpp-resource-description">
@@ -247,17 +250,20 @@
                <li id="vpp-push">
                   <b>
                      <a href="#push">Push Services</a>: 
-                  </b>...
+                  </b>As there is a fan-out with many devices that probably have a rate-limited connection
+                  connecting to one single command central, a bidirectional communication mechanism
+                  is needed rather tzhan polling for the reverse direction
                </li>
                <li id="vpp-privacy">
                   <b>
                      <a href="#privacy">Privacy</a>: 
-                  </b>...
+                  </b>As fine-grained metering informtion provides sensitve data about a household, the
+                  system should show a high digree of privacy
                </li>
                <li id="vpp-trust">
                   <b>
                      <a href="#trust">Trust</a>: 
-                  </b>...
+                  </b>
                </li>
                <li id="vpp-object-memory">
                   <b>
@@ -323,13 +329,13 @@
             <ul>
                <li id="emobility-lifecycle-mgmt">
                   <b>
-                     <a href="#lifecycle-mgmt">Lifecycle Management</a>: 
+                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
                   </b>Managing EVs and Fleets such as buses, cars etc. requires the ability to handle dynamic
                   systems.
                </li>
                <li id="emobility-data-exchange-format">
                   <b>
-                     <a href="#data-exchange-format">Data Exchange Format</a>: 
+                     <a href="#data-exchange-format">Content-Negotiation</a>: 
                   </b>A standardized data format is needed when different transport/electricity providers
                   and different devices are involved.
                </li>
@@ -405,7 +411,7 @@
                </li>
                <li id="lifecycle-management-data-exchange-format">
                   <b>
-                     <a href="#data-exchange-format">Data Exchange Format</a>: 
+                     <a href="#data-exchange-format">Content-Negotiation</a>: 
                   </b>Different stakeholders have to interact between themselves. Also, each of them needs
                   to interact with different resources. To support exchange of data between different
                   parties a common data exchange format is needed.
@@ -426,7 +432,7 @@
                </li>
                <li id="lifecycle-management-lifecycle-mgmt">
                   <b>
-                     <a href="#lifecycle-mgmt">Lifecycle Management</a>: 
+                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
                   </b>Different stakeholders interact with different resources throughout different lifecycle
                   phases, e.g., same resources may be used transparently in the development phase as
                   well as in the operation phase.
@@ -447,7 +453,7 @@
             </ul>
          </section>
       </section>
-      <section id="requirements">
+      <section id="building-blocks">
          <h2>Building blocks</h2>
          <section id="resource-description">
             <h2>Resource Description</h2>
@@ -587,7 +593,10 @@
                         <em>
                            <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
                         </em>
-                        <a href="#vpp-push" title="Go to Atomic Use Case">...</a>
+                        <a href="#vpp-push" title="Go to Atomic Use Case">As there is a fan-out with many devices that probably have a rate-limited connection
+                           connecting to one single command central, a bidirectional communication mechanism
+                           is needed rather tzhan polling for the reverse direction
+                        </a>
                      </li>
                      <li>
                         <em>
@@ -624,7 +633,7 @@
             </dl>
          </section>
          <section id="data-exchange-format">
-            <h2>Data Exchange Format</h2>
+            <h2>Content-Negotiation</h2>
             <p>For many interactions, it is necessary that peers agree on a shared data exchange
                format. There are various ways in which such a format can be defined, and in which
                agreement can be reached, but the general goal for all of these cases is that peers
@@ -698,7 +707,7 @@
             </dl>
          </section>
          <section id="lifecycle-mgmt">
-            <h2>Lifecycle Management</h2>
+            <h2>Device Lifecycle Management</h2>
             <p>For some systems, its of crucial importance to be able to manage a dynamic, amorphous
                collective (ensemble) of components/devices that dynamically appear and disappear,
                resp. are on- and offline.
@@ -924,6 +933,74 @@
                </dd>
             </dl>
          </section>
+         <section id="object-memory">
+            <h2>Object Memory</h2>
+            <p>keeping a history / digital twin of a physical object that serves as a proxy or avatar</p>
+            <dl>
+               <dt>
+                  <b>Motivated by 3 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#bakery" title="Go to complete Use Case">Order Management System: </a>
+                        </em>
+                        <a href="#bakery-object-memory" title="Go to Atomic Use Case">For perishable ingredients like milk or cheese, the due date can be estimated much
+                           more precisely if an object memory is kept for them. Also it can be a way to prove
+                           the origin and freshness of ingridients
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-object-memory" title="Go to Atomic Use Case">...</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-object-memory" title="Go to Atomic Use Case">...</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="database">
+            <h2>Database</h2>
+            <p>...</p>
+            <dl>
+               <dt>
+                  <b>Motivated by 1 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#automation-factories" title="Go to complete Use Case">Service Platform for Automation Factories: </a>
+                        </em>
+                        <a href="#automation-factories-database" title="Go to Atomic Use Case">The platform needs a database to store the collected data.</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+      </section>
+      <section id="non-functionals">
+         <h2>Non-Functional Requirements</h2>
          <section id="synchronous">
             <h2>Synchronicity, soft real-time</h2>
             <p>Whenever a user interacts with a WoT system or also in many M2M cases a crucial acceptance
@@ -960,13 +1037,17 @@
                         <em>
                            <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
                         </em>
-                        <a href="#adaptive-building-privacy" title="Go to Atomic Use Case">...</a>
+                        <a href="#adaptive-building-privacy" title="Go to Atomic Use Case">Since the system would rely on informations which person  is in what room at what
+                           time, it can allow a very fine-grained movement profile, which is sensitve information
+                        </a>
                      </li>
                      <li>
                         <em>
                            <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
                         </em>
-                        <a href="#vpp-privacy" title="Go to Atomic Use Case">...</a>
+                        <a href="#vpp-privacy" title="Go to Atomic Use Case">As fine-grained metering informtion provides sensitve data about a household, the
+                           system should show a high digree of privacy
+                        </a>
                      </li>
                   </ul>
                </dd>
@@ -1023,7 +1104,7 @@
                         <em>
                            <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
                         </em>
-                        <a href="#vpp-trust" title="Go to Atomic Use Case">...</a>
+                        <a href="#vpp-trust" title="Go to Atomic Use Case"></a>
                      </li>
                      <li>
                         <em>
@@ -1032,68 +1113,6 @@
                         <a href="#emobility-trust" title="Go to Atomic Use Case">Since a financial transaction is directly involved, it is important that both sides
                            can enter a trust relationship.
                         </a>
-                     </li>
-                  </ul>
-               </dd>
-               <dt>
-                  <b>Covered by 0 Technologies: </b>
-               </dt>
-               <dd>
-                  <ul></ul>
-               </dd>
-            </dl>
-         </section>
-         <section id="object-memory">
-            <h2>Object Memory</h2>
-            <p>keeping a history / digital twin of a physical object that serves as a proxy or avatar</p>
-            <dl>
-               <dt>
-                  <b>Motivated by 3 Use Cases: </b>
-               </dt>
-               <dd>
-                  <ul>
-                     <li>
-                        <em>
-                           <a href="#bakery" title="Go to complete Use Case">Order Management System: </a>
-                        </em>
-                        <a href="#bakery-object-memory" title="Go to Atomic Use Case">...</a>
-                     </li>
-                     <li>
-                        <em>
-                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
-                        </em>
-                        <a href="#vpp-object-memory" title="Go to Atomic Use Case">...</a>
-                     </li>
-                     <li>
-                        <em>
-                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
-                        </em>
-                        <a href="#emobility-object-memory" title="Go to Atomic Use Case">...</a>
-                     </li>
-                  </ul>
-               </dd>
-               <dt>
-                  <b>Covered by 0 Technologies: </b>
-               </dt>
-               <dd>
-                  <ul></ul>
-               </dd>
-            </dl>
-         </section>
-         <section id="database">
-            <h2>Database</h2>
-            <p>...</p>
-            <dl>
-               <dt>
-                  <b>Motivated by 1 Use Cases: </b>
-               </dt>
-               <dd>
-                  <ul>
-                     <li>
-                        <em>
-                           <a href="#automation-factories" title="Go to complete Use Case">Service Platform for Automation Factories: </a>
-                        </em>
-                        <a href="#automation-factories-database" title="Go to Atomic Use Case">The platform needs a database to store the collected data.</a>
                      </li>
                   </ul>
                </dd>
@@ -1291,7 +1310,7 @@
                </li>
                <li id="xmpp-data-exchange-format">
                   <b>
-                     <a href="#data-exchange-format">Data Exchange Format</a>: 
+                     <a href="#data-exchange-format">Content-Negotiation</a>: 
                   </b>The protocol and payloads are described as XML Schemas, enabling other serializations
                   (such as xmpp-ftw in JSON)
                </li>
@@ -1312,7 +1331,7 @@
             <ul>
                <li id="exi-data-exchange-format">
                   <b>
-                     <a href="#data-exchange-format">Data Exchange Format</a>: 
+                     <a href="#data-exchange-format">Content-Negotiation</a>: 
                   </b>
                </li>
             </ul>
