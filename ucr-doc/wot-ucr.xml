@@ -19,11 +19,12 @@
  <!ATTLIST li
            reqref IDREF #REQUIRED >
  <!ELEMENT req (title, p*) >
- <!ATTLIST req 
+ <!ATTLIST req
            id ID #REQUIRED
+           type CDATA "functional"
            >
  <!ELEMENT tech (title, p*, ul?) >
- <!ATTLIST tech 
+ <!ATTLIST tech
            id ID #REQUIRED
            href CDATA #IMPLIED
            >
@@ -45,7 +46,7 @@
         <ul>
             <li reqref="resource-description">At some point in the system, the measurement value has to be enriched with some meta-information (e.g., timestamp, unit, id, ...).</li>
             <li reqref="data-exchange-format">The bakery's order management has to interact with the order management system of the delivery company.</li>
-            <li reqref="object-memory">...</li>
+            <li reqref="object-memory">For perishable ingredients like milk or cheese, the due date can be estimated much more precisely if an object memory is kept for them. Also it can be a way to prove the origin and freshness of ingridients</li>
             <li reqref="layered-comm">Given a commonality of interfacing protocols to heterogeneous ordering systems, layered communication enables a better reusability across several ordering systems. While the interaction primitives, transport protocol and representation might likely be the same for many systems, a difference in data structure demands a clear layering of the communication.</li>
         </ul>
     </usecase>
@@ -58,7 +59,7 @@
             <li reqref="multi-stakeholder-operation">Multiple people in the same room require automatic mediation of desired comfort levels.</li>
             <li reqref="lifecycle-mgmt">The appearance and disappearance of users requires means to orchestrate the lifecycle of users/stakeholders.</li>
             <li reqref="resource-description">The environment around a user must be conceivable by the system in a way that does not require manual engineering.</li>
-            <li reqref="privacy">...</li>
+            <li reqref="privacy">Since the system would rely on informations which person  is in what room at what time, it can allow a very fine-grained movement profile, which is sensitve information</li>
         </ul>
     </usecase>
     <usecase id="shift-of-function" author="h0ru5">
@@ -84,9 +85,9 @@
             <li reqref="ensemble-discovery">In order to dynamically find matching DERs needed for the operational goal of a VPP, a registry with different options of DER discovery is needed.</li>
             <li reqref="data-exchange-format">The different stakeholders have to interact and therefore need a common data format.</li>
             <li reqref="resource-description">The DER has to describe itself to enable discovery of single DERs and ensembles, also the operational data needs to be understood by the different stakeholders without engineering effort.</li>
-            <li reqref="push">...</li>
-            <li reqref="privacy">...</li>
-            <li reqref="trust">...</li>
+            <li reqref="push">As there is a fan-out with many devices that probably have a rate-limited connection connecting to one single command central, a bidirectional communication mechanism is needed rather tzhan polling for the reverse direction</li>
+            <li reqref="privacy">As fine-grained metering informtion provides sensitve data about a household, the system should show a high digree of privacy</li>
+            <li reqref="trust"></li>
             <li reqref="object-memory">...</li>
             <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serilization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
         </ul>
@@ -141,11 +142,11 @@
         <p>The default interaction in most Web-based scenarios are pull interactions, where applications request information form servers. This pattern supports scalability very well, because servers do not need to keep track of clients. However, in some scenarios it may be advantageous for this interaction pattern to be reversed, with servers (i.e., the managing entities of resources) initiating an interaction for certain resource-based events. These push interactions require servers to keep track of clients (often referred to as "subscribers"), but on the other hand minimizes interactions when resource events are infrequent but should be noticed by clients as soon as possible.</p>
     </req>
     <req id="data-exchange-format">
-        <title>Data Exchange Format</title>
+        <title>Content-Negotiation</title>
         <p>For many interactions, it is necessary that peers agree on a shared data exchange format. There are various ways in which such a format can be defined, and in which agreement can be reached, but the general goal for all of these cases is that peers can reach agreement on which data exchange to use, and what it means to use this format. Depending on the type of data to be exchanged, different data exchange formats have different advantages and disadvantages, but generally speaking, the most important factor is that there is agreement on the representation of the data to be exchanged, and how to parse that into a model that is usable and useful for the application's goals.</p>
     </req>
     <req id="lifecycle-mgmt">
-        <title>Lifecycle Management</title>
+        <title>Device Lifecycle Management</title>
         <p>For some systems, its of crucial importance to be able to manage a dynamic, amorphous collective (ensemble) of components/devices that dynamically appear and disappear, resp. are on- and offline.</p>
         <p>This implies also a form of adding new components that does not involve high engineering effort.</p>
     </req>
@@ -165,20 +166,20 @@
         <title>Resource Choreography</title>
         <p>A language that enables resources to be choreographed, parametrized, wired and invoked. The language also features a communication protocol which enables collaboration during these tasks (e.g., checks constraints when resources are combined).</p>
     </req>
-    <req id="synchronous">
+    <req id="synchronous" type="non-functional">
         <title>Synchronicity, soft real-time</title>
         <p>Whenever a user interacts with a WoT system or also in many M2M cases a crucial acceptance factor is the time between the input and the reaction</p>
     </req>
-    <req id="privacy">
+    <req id="privacy" type="non-functional">
         <title>Privacy</title>
         <!-- http://www.w3.org/2005/Incubator/socialweb/XGR-socialweb-20101206/#Privacy might be interesting. -->
         <p>A data surce resp. the owner of this data needs to be able to decide who is allowed to see what data and methods are needed to define and enforce this in a secure yet pragmatic way</p>
     </req>
-    <req id="integrity">
+    <req id="integrity" type="non-functional">
         <title>Integrity</title>
         <p>In some Wot appications,  the integrity and dependability of data needs to be provable. Ensuring that the data was not altered and is genuine is a common requirement of all systems operating in public networks</p>
     </req>
-    <req id="trust">
+    <req id="trust" type="non-functional">
         <title>Trust</title>
         <p>The mutual trust into the respective peer's identity  is of high importance especially in systems and applications interacting with physical entites</p>
     </req>
@@ -191,11 +192,11 @@
         <title>Database</title>
         <p>...</p>
     </req>
-    <req id="interaction-mechanism">
+    <req id="interaction-mechanism" type="non-functional">
         <title>Interaction Mechanism</title>
         <p>...</p>
     </req>
-    <req id="layered-comm">
+    <req id="layered-comm" type="non-functional">
         <title>Layered L7 Communication</title>
         <p>when services interact with a plethora of clients, a distinction of diffenrent layers of information exchange is a well-known way to ensure interoperability. <!-- requirement "data exchange format"? --></p>
     	<p>this means a layering of the OSI application layer 7:</p>

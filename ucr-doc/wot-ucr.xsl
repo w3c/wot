@@ -41,9 +41,13 @@
                     <h2>Use Cases</h2>
                     <xsl:apply-templates select="/ucr/usecase"/>
                 </section>
-                <section id="requirements">
+                <section id="building-blocks">
                     <h2>Building blocks</h2>
-                    <xsl:apply-templates select="/ucr/req"/>
+                    <xsl:apply-templates select="/ucr/req[@type='functional']"/>
+                </section>
+                <section id="non-functionals">
+                    <h2>Non-Functional Requirements</h2>
+                    <xsl:apply-templates select="/ucr/req[@type='non-functional']"/>
                 </section>
                 <section id="technologies">
                     <h2>Technologies</h2>
