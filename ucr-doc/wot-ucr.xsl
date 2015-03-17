@@ -25,10 +25,10 @@
                             key: "GitHub",
                             data: [{
                                 value: "Master branch on GitHub",
-                                href: "https://github.com/h0ru5/wot/tree/master"
+                                href: "https://github.com/w3c/wot/tree/master"
                                 },{
                                 value: "Project Pages branch on GitHub",
-                                href: "https://github.com/h0ru5/wot/tree/gh-pages/" }]}
+                                href: "https://github.com/w3c/wot/tree/gh-pages" }]}
                         ],
                         };
                     </script>
@@ -42,7 +42,7 @@
                     <xsl:apply-templates select="/ucr/usecase"/>
                 </section>
                 <section id="requirements">
-                    <h2>Interaction patterns</h2>
+                    <h2>Building blocks</h2>
                     <xsl:apply-templates select="/ucr/req"/>
                 </section>
                 <section id="technologies">
