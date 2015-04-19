@@ -54,28 +54,41 @@
                in the same way as the more basic services, so that developers can access all these
                services in a uniform way.
             </p>
-            <ul>
-               <li id="building-automation-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>Applications may want to get an understanding of what kind of sensors and other capabilities
-                  are exposed as part of the building automation system. In such a case, it is necessary
-                  that available resources can be described or are describing themselves, preferably
-                  using a framework that makes those descriptions uniform even if the underlying sensors
-                  or services are using different implementation technologies.
-               </li>
-               <li id="building-automation-push">
-                  <b>
-                     <a href="#push">Push Services</a>: 
-                  </b>Applications may want to be notified of certain events in the building automation
-                  system, without having to listen to a continuous event stream from it. In such a case,
-                  it is advantageous for the building automation system to support some kind of push
-                  mechanism, so that application can subscribe to these events, and will be notified
-                  when they happen. This increases the workload of the building automation system (it
-                  has to keep track of subscribers), but may make development of certain classes of
-                  applications much easier.
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="building-automation-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>Applications may want to get an understanding of what kind of sensors and other capabilities
+                        are exposed as part of the building automation system. In such a case, it is necessary
+                        that available resources can be described or are describing themselves, preferably
+                        using a framework that makes those descriptions uniform even if the underlying sensors
+                        or services are using different implementation technologies.
+                     </li>
+                     <li id="building-automation-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>Applications may want to be notified of certain events in the building automation
+                        system, without having to listen to a continuous event stream from it. In such a case,
+                        it is advantageous for the building automation system to support some kind of push
+                        mechanism, so that application can subscribe to these events, and will be notified
+                        when they happen. This increases the workload of the building automation system (it
+                        has to keep track of subscribers), but may make development of certain classes of
+                        applications much easier.
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
          </section>
          <section id="bakery">
             <h2 title="Authored by: stefan">Order Management System</h2>
@@ -87,36 +100,50 @@
             <p>As soon as the production material falls below a certain threshold, the system sends
                an order to a delivery company.
             </p>
-            <ul>
-               <li id="bakery-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>At some point in the system, the measurement value has to be enriched with some meta-information
-                  (e.g., timestamp, unit, id, ...).
-               </li>
-               <li id="bakery-data-exchange-format">
-                  <b>
-                     <a href="#data-exchange-format">Content-Negotiation</a>: 
-                  </b>The bakery's order management has to interact with the order management system of
-                  the delivery company.
-               </li>
-               <li id="bakery-object-memory">
-                  <b>
-                     <a href="#object-memory">Object Memory</a>: 
-                  </b>For perishable ingredients like milk or cheese, the due date can be estimated much
-                  more precisely if an object memory is kept for them. Also it can be a way to prove
-                  the origin and freshness of ingridients
-               </li>
-               <li id="bakery-layered-comm">
-                  <b>
-                     <a href="#layered-comm">Layered L7 Communication</a>: 
-                  </b>Given a commonality of interfacing protocols to heterogeneous ordering systems, layered
-                  communication enables a better reusability across several ordering systems. While
-                  the interaction primitives, transport protocol and representation might likely be
-                  the same for many systems, a difference in data structure demands a clear layering
-                  of the communication.
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="bakery-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>At some point in the system, the measurement value has to be enriched with some meta-information
+                        (e.g., timestamp, unit, id, ...).
+                     </li>
+                     <li id="bakery-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>The bakery's order management has to interact with the order management system of
+                        the delivery company.
+                     </li>
+                     <li id="bakery-object-memory">
+                        <b>
+                           <a href="#object-memory">Object Memory</a>: 
+                        </b>For perishable ingredients like milk or cheese, the due date can be estimated much
+                        more precisely if an object memory is kept for them. Also it can be a way to prove
+                        the origin and freshness of ingridients
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="bakery-layered-comm">
+                        <b>
+                           <a href="#layered-comm">Layered L7 Communication</a>: 
+                        </b>Given a commonality of interfacing protocols to heterogeneous ordering systems, layered
+                        communication enables a better reusability across several ordering systems. While
+                        the interaction primitives, transport protocol and representation might likely be
+                        the same for many systems, a difference in data structure demands a clear layering
+                        of the communication.
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
          <section id="adaptive-building">
             <h2 title="Authored by: h0ru5">Adaptive Building</h2>
@@ -129,37 +156,51 @@
                This is also the case in other cross-influenced situations and if overall goals are
                set to be achieved, such as energy saving.
             </p>
-            <ul>
-               <li id="adaptive-building-ensemble-discovery">
-                  <b>
-                     <a href="#ensemble-discovery">Ensemble Discovery</a>: 
-                  </b>Dynamical selection of the surrounding/affecting resources to create the desired comfort
-                  level.
-               </li>
-               <li id="adaptive-building-multi-stakeholder-operation">
-                  <b>
-                     <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
-                  </b>Multiple people in the same room require automatic mediation of desired comfort levels.
-               </li>
-               <li id="adaptive-building-lifecycle-mgmt">
-                  <b>
-                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
-                  </b>The appearance and disappearance of users requires means to orchestrate the lifecycle
-                  of users/stakeholders.
-               </li>
-               <li id="adaptive-building-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>The environment around a user must be conceivable by the system in a way that does
-                  not require manual engineering.
-               </li>
-               <li id="adaptive-building-privacy">
-                  <b>
-                     <a href="#privacy">Privacy</a>: 
-                  </b>Since the system would rely on informations which person  is in what room at what
-                  time, it can allow a very fine-grained movement profile, which is sensitve information
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="adaptive-building-ensemble-discovery">
+                        <b>
+                           <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                        </b>Dynamical selection of the surrounding/affecting resources to create the desired comfort
+                        level.
+                     </li>
+                     <li id="adaptive-building-multi-stakeholder-operation">
+                        <b>
+                           <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                        </b>Multiple people in the same room require automatic mediation of desired comfort levels.
+                     </li>
+                     <li id="adaptive-building-lifecycle-mgmt">
+                        <b>
+                           <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                        </b>The appearance and disappearance of users requires means to orchestrate the lifecycle
+                        of users/stakeholders.
+                     </li>
+                     <li id="adaptive-building-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>The environment around a user must be conceivable by the system in a way that does
+                        not require manual engineering.
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="adaptive-building-privacy">
+                        <b>
+                           <a href="#privacy">Privacy</a>: 
+                        </b>Since the system would rely on informations which person  is in what room at what
+                        time, it can allow a very fine-grained movement profile, which is sensitve information
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
          <section id="shift-of-function">
             <h2 title="Authored by: h0ru5">Shift of Function in Automation Systems</h2>
@@ -169,35 +210,49 @@
             <p>In order to introduce such a new function, the function can first be run supervised
                inside the central system and then shifted downwards, e.g. installed on a field device.
             </p>
-            <ul>
-               <li id="shift-of-function-embedded-runtime">
-                  <b>
-                     <a href="#embedded-runtime">Embedded Runtime</a>: 
-                  </b>A seamless shift of functions requires an embedded runtime which allows the simple
-                  implementation, monitoring and debugging of applications.
-               </li>
-               <li id="shift-of-function-lifecycle-mgmt">
-                  <b>
-                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
-                  </b>The appearance and disappearance of devices as well as the software management on
-                  the devices itself requires means to orchestrate the lifecycle of individual devices
-                  resp. components.
-               </li>
-               <li id="shift-of-function-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>At some point in the system, the measurement value has to be enriched with some meta-information
-                  (e.g., timestamp, unit, id, ...).
-               </li>
-               <li id="shift-of-function-layered-comm">
-                  <b>
-                     <a href="#layered-comm">Layered L7 Communication</a>: 
-                  </b>In heterogeneous systems, the seamless shift of functionality requires a clear and
-                  consistent layering of application protocols since the functionality is focused on
-                  the data structure and should be agnostic of the underlying application layer protocol
-                  layers.
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="shift-of-function-embedded-runtime">
+                        <b>
+                           <a href="#embedded-runtime">Embedded Runtime</a>: 
+                        </b>A seamless shift of functions requires an embedded runtime which allows the simple
+                        implementation, monitoring and debugging of applications.
+                     </li>
+                     <li id="shift-of-function-lifecycle-mgmt">
+                        <b>
+                           <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                        </b>The appearance and disappearance of devices as well as the software management on
+                        the devices itself requires means to orchestrate the lifecycle of individual devices
+                        resp. components.
+                     </li>
+                     <li id="shift-of-function-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>At some point in the system, the measurement value has to be enriched with some meta-information
+                        (e.g., timestamp, unit, id, ...).
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="shift-of-function-layered-comm">
+                        <b>
+                           <a href="#layered-comm">Layered L7 Communication</a>: 
+                        </b>In heterogeneous systems, the seamless shift of functionality requires a clear and
+                        consistent layering of application protocols since the functionality is focused on
+                        the data structure and should be agnostic of the underlying application layer protocol
+                        layers.
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
          <section id="vpp">
             <h2 title="Authored by: h0ru5">Virtual Power Plants</h2>
@@ -209,76 +264,90 @@
                between many different parties e.g. such as the DER owner, the VPP operator, the grid
                operator and others.
             </p>
-            <ul>
-               <li id="vpp-multi-stakeholder-operation">
-                  <b>
-                     <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
-                  </b>Multiple involved parties have to find a common mode of operation
-               </li>
-               <li id="vpp-lifecycle-mgmt">
-                  <b>
-                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
-                  </b>Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance
-                  of DERs as well as the software management on the devices itself requires means to
-                  orchestrate the lifecycle of individual devices resp. components.
-               </li>
-               <li id="vpp-embedded-runtime">
-                  <b>
-                     <a href="#embedded-runtime">Embedded Runtime</a>: 
-                  </b>Especially for DERs in remote locations, maintaining a close couple control loop can
-                  be expensive if feasible at all. Therefore, it is desirable to be able to offload
-                  control logic to the DER itself.
-               </li>
-               <li id="vpp-ensemble-discovery">
-                  <b>
-                     <a href="#ensemble-discovery">Ensemble Discovery</a>: 
-                  </b>In order to dynamically find matching DERs needed for the operational goal of a VPP,
-                  a registry with different options of DER discovery is needed.
-               </li>
-               <li id="vpp-data-exchange-format">
-                  <b>
-                     <a href="#data-exchange-format">Content-Negotiation</a>: 
-                  </b>The different stakeholders have to interact and therefore need a common data format.
-               </li>
-               <li id="vpp-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>The DER has to describe itself to enable discovery of single DERs and ensembles, also
-                  the operational data needs to be understood by the different stakeholders without
-                  engineering effort.
-               </li>
-               <li id="vpp-push">
-                  <b>
-                     <a href="#push">Push Services</a>: 
-                  </b>As there is a fan-out with many devices that probably have a rate-limited connection
-                  connecting to one single command central, a bidirectional communication mechanism
-                  is needed rather tzhan polling for the reverse direction
-               </li>
-               <li id="vpp-privacy">
-                  <b>
-                     <a href="#privacy">Privacy</a>: 
-                  </b>As fine-grained metering informtion provides sensitve data about a household, the
-                  system should show a high digree of privacy
-               </li>
-               <li id="vpp-trust">
-                  <b>
-                     <a href="#trust">Trust</a>: 
-                  </b>
-               </li>
-               <li id="vpp-object-memory">
-                  <b>
-                     <a href="#object-memory">Object Memory</a>: 
-                  </b>...
-               </li>
-               <li id="vpp-layered-comm">
-                  <b>
-                     <a href="#layered-comm">Layered L7 Communication</a>: 
-                  </b>Since multiple different links are used for monitoring and control, integration requires
-                  a clear and consistent seperation of information from the used serilization and application
-                  protocols to enable the exchange of homogenous information over heterogenous application
-                  layer protocols
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="vpp-multi-stakeholder-operation">
+                        <b>
+                           <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                        </b>Multiple involved parties have to find a common mode of operation
+                     </li>
+                     <li id="vpp-lifecycle-mgmt">
+                        <b>
+                           <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                        </b>Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance
+                        of DERs as well as the software management on the devices itself requires means to
+                        orchestrate the lifecycle of individual devices resp. components.
+                     </li>
+                     <li id="vpp-embedded-runtime">
+                        <b>
+                           <a href="#embedded-runtime">Embedded Runtime</a>: 
+                        </b>Especially for DERs in remote locations, maintaining a close couple control loop can
+                        be expensive if feasible at all. Therefore, it is desirable to be able to offload
+                        control logic to the DER itself.
+                     </li>
+                     <li id="vpp-ensemble-discovery">
+                        <b>
+                           <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                        </b>In order to dynamically find matching DERs needed for the operational goal of a VPP,
+                        a registry with different options of DER discovery is needed.
+                     </li>
+                     <li id="vpp-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>The different stakeholders have to interact and therefore need a common data format.
+                     </li>
+                     <li id="vpp-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>The DER has to describe itself to enable discovery of single DERs and ensembles, also
+                        the operational data needs to be understood by the different stakeholders without
+                        engineering effort.
+                     </li>
+                     <li id="vpp-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>As there is a fan-out with many devices that probably have a rate-limited connection
+                        connecting to one single command central, a bidirectional communication mechanism
+                        is needed rather tzhan polling for the reverse direction
+                     </li>
+                     <li id="vpp-object-memory">
+                        <b>
+                           <a href="#object-memory">Object Memory</a>: 
+                        </b>...
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="vpp-privacy">
+                        <b>
+                           <a href="#privacy">Privacy</a>: 
+                        </b>As fine-grained metering informtion provides sensitve data about a household, the
+                        system should show a high digree of privacy
+                     </li>
+                     <li id="vpp-trust">
+                        <b>
+                           <a href="#trust">Trust</a>: 
+                        </b>
+                     </li>
+                     <li id="vpp-layered-comm">
+                        <b>
+                           <a href="#layered-comm">Layered L7 Communication</a>: 
+                        </b>Since multiple different links are used for monitoring and control, integration requires
+                        a clear and consistent seperation of information from the used serilization and application
+                        protocols to enable the exchange of homogenous information over heterogenous application
+                        layer protocols
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
          <section id="automation-factories">
             <h2 title="Authored by: stefan">Service Platform for Automation Factories</h2>
@@ -297,24 +366,38 @@
                in an optical head-mounted display).
                
             </p>
-            <ul>
-               <li id="automation-factories-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>At some point in the system, the data has to be enriched with some meta-information
-                  (e.g. timestamp, unit, id).
-               </li>
-               <li id="automation-factories-interaction-mechanism">
-                  <b>
-                     <a href="#interaction-mechanism">Interaction Mechanism</a>: 
-                  </b>The platform has to provide interaction mechanisms to provide data to the applications.
-               </li>
-               <li id="automation-factories-database">
-                  <b>
-                     <a href="#database">Database</a>: 
-                  </b>The platform needs a database to store the collected data.
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="automation-factories-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>At some point in the system, the data has to be enriched with some meta-information
+                        (e.g. timestamp, unit, id).
+                     </li>
+                     <li id="automation-factories-database">
+                        <b>
+                           <a href="#database">Database</a>: 
+                        </b>The platform needs a database to store the collected data.
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="automation-factories-interaction-mechanism">
+                        <b>
+                           <a href="#interaction-mechanism">Interaction Mechanism</a>: 
+                        </b>The platform has to provide interaction mechanisms to provide data to the applications.
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
          <section id="emobility">
             <h2 title="Authored by: h0ru5">E-Mobility</h2>
@@ -326,53 +409,67 @@
                process, such as voltages, currents, time it takes to charge etc., but also information
                like how the electricity will be payed for, how much was already transferred etc.
             </p>
-            <ul>
-               <li id="emobility-lifecycle-mgmt">
-                  <b>
-                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
-                  </b>Managing EVs and Fleets such as buses, cars etc. requires the ability to handle dynamic
-                  systems.
-               </li>
-               <li id="emobility-data-exchange-format">
-                  <b>
-                     <a href="#data-exchange-format">Content-Negotiation</a>: 
-                  </b>A standardized data format is needed when different transport/electricity providers
-                  and different devices are involved.
-               </li>
-               <li id="emobility-push">
-                  <b>
-                     <a href="#push">Push Services</a>: 
-                  </b>Both components may want to be notified of certain events in the charging system,
-                  without having to listen to a continuous event stream from it. This allows a more
-                  lightweight implementation.
-               </li>
-               <li id="emobility-trust">
-                  <b>
-                     <a href="#trust">Trust</a>: 
-                  </b>Since a financial transaction is directly involved, it is important that both sides
-                  can enter a trust relationship.
-               </li>
-               <li id="emobility-integrity">
-                  <b>
-                     <a href="#integrity">Integrity</a>: 
-                  </b>To avoid man-in-the middle attacks and fraud by alteration, the integrity of all exchanges
-                  messages must be confirmable
-               </li>
-               <li id="emobility-object-memory">
-                  <b>
-                     <a href="#object-memory">Object Memory</a>: 
-                  </b>...
-               </li>
-               <li id="emobility-layered-comm">
-                  <b>
-                     <a href="#layered-comm">Layered L7 Communication</a>: 
-                  </b>Since the same data contents are transferred over several communication links (such
-                  as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle
-                  to fleet operation, etc.), it is neccessary that the communication of the information/contets
-                  can be transferred independent of the different transports or serialization formats
-                  used
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="emobility-lifecycle-mgmt">
+                        <b>
+                           <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                        </b>Managing EVs and Fleets such as buses, cars etc. requires the ability to handle dynamic
+                        systems.
+                     </li>
+                     <li id="emobility-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>A standardized data format is needed when different transport/electricity providers
+                        and different devices are involved.
+                     </li>
+                     <li id="emobility-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>Both components may want to be notified of certain events in the charging system,
+                        without having to listen to a continuous event stream from it. This allows a more
+                        lightweight implementation.
+                     </li>
+                     <li id="emobility-object-memory">
+                        <b>
+                           <a href="#object-memory">Object Memory</a>: 
+                        </b>...
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="emobility-trust">
+                        <b>
+                           <a href="#trust">Trust</a>: 
+                        </b>Since a financial transaction is directly involved, it is important that both sides
+                        can enter a trust relationship.
+                     </li>
+                     <li id="emobility-integrity">
+                        <b>
+                           <a href="#integrity">Integrity</a>: 
+                        </b>To avoid man-in-the middle attacks and fraud by alteration, the integrity of all exchanges
+                        messages must be confirmable
+                     </li>
+                     <li id="emobility-layered-comm">
+                        <b>
+                           <a href="#layered-comm">Layered L7 Communication</a>: 
+                        </b>Since the same data contents are transferred over several communication links (such
+                        as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle
+                        to fleet operation, etc.), it is neccessary that the communication of the information/contets
+                        can be transferred independent of the different transports or serialization formats
+                        used
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
          <section id="lifecycle-management">
             <h2 title="Authored by: darko">Lifecycle Management for Industrial Automation Systems</h2>
@@ -397,60 +494,74 @@
             <p>From these activities, as found in a typical lifecycle management of an IAS, one can
                derive following requirements:
             </p>
-            <ul>
-               <li id="lifecycle-management-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>When a new application, service or a function needs to be developed, parametrized,
-                  maintained or optimized, it is required to get understanding about physical resources
-                  involved in such a task. In this case, resources (sensors, actuators, controllers
-                  etc.) can be described or self-described in a uniform way, i.e., they expose their
-                  properties, functionalities and roles in a uniform way although they may be implemented
-                  with different technologies. It would be desired that Resource Description relies
-                  on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).
-               </li>
-               <li id="lifecycle-management-data-exchange-format">
-                  <b>
-                     <a href="#data-exchange-format">Content-Negotiation</a>: 
-                  </b>Different stakeholders have to interact between themselves. Also, each of them needs
-                  to interact with different resources. To support exchange of data between different
-                  parties a common data exchange format is needed.
-               </li>
-               <li id="lifecycle-management-resource-choreography">
-                  <b>
-                     <a href="#resource-choreography">Resource Choreography</a>: 
-                  </b>A language that enables resources to be choreographed, parametrized, wired and invoked.
-                  The language also features a communication protocol which enables collaboration during
-                  these tasks (e.g., checks constraints when resources are combined).
-               </li>
-               <li id="lifecycle-management-ensemble-discovery">
-                  <b>
-                     <a href="#ensemble-discovery">Ensemble Discovery</a>: 
-                  </b>Resources need be discoverable based on their Resource Description (e.g., properties,
-                  functionalities and roles). The discovery also needs to be enabled in a dynamic environment
-                  where physical resources appear and disappear during lifecycle phases.
-               </li>
-               <li id="lifecycle-management-lifecycle-mgmt">
-                  <b>
-                     <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
-                  </b>Different stakeholders interact with different resources throughout different lifecycle
-                  phases, e.g., same resources may be used transparently in the development phase as
-                  well as in the operation phase.
-               </li>
-               <li id="lifecycle-management-multi-stakeholder-operation">
-                  <b>
-                     <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
-                  </b>Lifecycle management of Industrial Automation Systems involves multi-stakeholders
-                  (e.g., domain engineers, software engineers, system engineers, system installers etc.).
-               </li>
-               <li id="lifecycle-management-layered-comm">
-                  <b>
-                     <a href="#layered-comm">Layered L7 Communication</a>: 
-                  </b>In heterogeneous systems, where several vendors use different flavors of the same
-                  data exchange in terms of data representation or  transport protocols, integration
-                  requires a clear and consistent layering of application protocols.
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="lifecycle-management-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>When a new application, service or a function needs to be developed, parametrized,
+                        maintained or optimized, it is required to get understanding about physical resources
+                        involved in such a task. In this case, resources (sensors, actuators, controllers
+                        etc.) can be described or self-described in a uniform way, i.e., they expose their
+                        properties, functionalities and roles in a uniform way although they may be implemented
+                        with different technologies. It would be desired that Resource Description relies
+                        on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).
+                     </li>
+                     <li id="lifecycle-management-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>Different stakeholders have to interact between themselves. Also, each of them needs
+                        to interact with different resources. To support exchange of data between different
+                        parties a common data exchange format is needed.
+                     </li>
+                     <li id="lifecycle-management-resource-choreography">
+                        <b>
+                           <a href="#resource-choreography">Resource Choreography</a>: 
+                        </b>A language that enables resources to be choreographed, parametrized, wired and invoked.
+                        The language also features a communication protocol which enables collaboration during
+                        these tasks (e.g., checks constraints when resources are combined).
+                     </li>
+                     <li id="lifecycle-management-ensemble-discovery">
+                        <b>
+                           <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                        </b>Resources need be discoverable based on their Resource Description (e.g., properties,
+                        functionalities and roles). The discovery also needs to be enabled in a dynamic environment
+                        where physical resources appear and disappear during lifecycle phases.
+                     </li>
+                     <li id="lifecycle-management-lifecycle-mgmt">
+                        <b>
+                           <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                        </b>Different stakeholders interact with different resources throughout different lifecycle
+                        phases, e.g., same resources may be used transparently in the development phase as
+                        well as in the operation phase.
+                     </li>
+                     <li id="lifecycle-management-multi-stakeholder-operation">
+                        <b>
+                           <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                        </b>Lifecycle management of Industrial Automation Systems involves multi-stakeholders
+                        (e.g., domain engineers, software engineers, system engineers, system installers etc.).
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="lifecycle-management-layered-comm">
+                        <b>
+                           <a href="#layered-comm">Layered L7 Communication</a>: 
+                        </b>In heterogeneous systems, where several vendors use different flavors of the same
+                        data exchange in terms of data representation or  transport protocols, integration
+                        requires a clear and consistent layering of application protocols.
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
       </section>
       <section id="building-blocks">
@@ -1259,30 +1370,56 @@
                two resources, represented by the graph nodes. This graph view is the easiest possible
                mental model for RDF and is often used in easy-to-understand visual explanations.
             </p>
-            <ul>
-               <li id="rdf-resource-description">
-                  <b>
-                     <a href="#resource-description">Resource Description</a>: 
-                  </b>RDF's origins (as highlighted by its name) are in the field of providing metadata
-                  (i.e., descriptions) of Web resources. This is facilitated by using URIs as identifiers,
-                  and by using attribute/value pairs that make statements about those URI-identified
-                  resources. RDF descriptions can be of arbitrary complexity by joining triples to form
-                  a graph, and they can use and combine various vocabularies so that the graph contains
-                  information according to the concepts defined in those vocabularies.
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="rdf-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>RDF's origins (as highlighted by its name) are in the field of providing metadata
+                        (i.e., descriptions) of Web resources. This is facilitated by using URIs as identifiers,
+                        and by using attribute/value pairs that make statements about those URI-identified
+                        resources. RDF descriptions can be of arbitrary complexity by joining triples to form
+                        a graph, and they can use and combine various vocabularies so that the graph contains
+                        information according to the concepts defined in those vocabularies.
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
          </section>
          <section id="pubsubhubbub">
             <h2>PubSubHubbub (PuSH) 
                <a href="https://code.google.com/p/pubsubhubbub/" title="External Link">(Link)</a>
             </h2>
-            <ul>
-               <li id="pubsubhubbub-push">
-                  <b>
-                     <a href="#push">Push Services</a>: 
-                  </b>...
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="pubsubhubbub-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>...
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
          </section>
          <section id="xmpp">
             <h2>Extensible Messaging and Presence Protocol (XMPP) 
@@ -1295,26 +1432,40 @@
                authentication, error handling, and communication primitives for messaging, network
                availability ("presence"), and request-response interactions.
             </p>
-            <ul>
-               <li id="xmpp-push">
-                  <b>
-                     <a href="#push">Push Services</a>: 
-                  </b>being based on a bidirectional link, XMPP offers a standardized publish/subscribe
-                  scheme
-               </li>
-               <li id="xmpp-layered-comm">
-                  <b>
-                     <a href="#layered-comm">Layered L7 Communication</a>: 
-                  </b>The protocol consists of a link layer that can be TCP/TLS, BOSH or WebSocket, and
-                  an XML-based protocol on top of it
-               </li>
-               <li id="xmpp-data-exchange-format">
-                  <b>
-                     <a href="#data-exchange-format">Content-Negotiation</a>: 
-                  </b>The protocol and payloads are described as XML Schemas, enabling other serializations
-                  (such as xmpp-ftw in JSON)
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="xmpp-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>being based on a bidirectional link, XMPP offers a standardized publish/subscribe
+                        scheme
+                     </li>
+                     <li id="xmpp-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>The protocol and payloads are described as XML Schemas, enabling other serializations
+                        (such as xmpp-ftw in JSON)
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="xmpp-layered-comm">
+                        <b>
+                           <a href="#layered-comm">Layered L7 Communication</a>: 
+                        </b>The protocol consists of a link layer that can be TCP/TLS, BOSH or WebSocket, and
+                        an XML-based protocol on top of it
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
          </section>
          <section id="exi">
             <h2>Efficient XML Interchange (EXI) 
@@ -1328,13 +1479,26 @@
                amenable to fast and compact implementation, and a small set of datatype representations,
                it reliably produces efficient encodings of XML event streams.
             </p>
-            <ul>
-               <li id="exi-data-exchange-format">
-                  <b>
-                     <a href="#data-exchange-format">Content-Negotiation</a>: 
-                  </b>
-               </li>
-            </ul>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="exi-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
          </section>
       </section>
    </body>
