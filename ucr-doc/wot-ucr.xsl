@@ -142,9 +142,20 @@
         </a>
     </xsl:template>
     <xsl:template match="ul">
-        <ul>
-            <xsl:apply-templates select="li"/>
-        </ul>
+      <dl>
+        <dt><b>Related Building Blocks</b></dt>
+        <dd>
+          <ul>
+              <xsl:apply-templates select="li[id(@reqref)[@type='functional']]"/>
+          </ul>
+        </dd>
+        <dt><b>Related Non-Functionals</b></dt>
+        <dd>
+          <ul>
+              <xsl:apply-templates select="li[id(@reqref)[@type='non-functional']]"/>
+          </ul>
+        </dd>
+      </dl>
     </xsl:template>
     <xsl:template match="li">
         <li id="{concat(../../@id, '-', @reqref)}">
