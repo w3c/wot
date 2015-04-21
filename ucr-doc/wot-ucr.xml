@@ -117,6 +117,63 @@
             <li reqref="layered-comm">Since the same data contents are transferred over several communication links (such as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle to fleet operation, etc.), it is neccessary that the communication of the information/contets can be transferred independent of the different transports or serialization formats used</li>
         </ul>
     </usecase>
+    <usecase id="device-management" author="cabo">
+      <title>Device, Network, and Application Management</title>
+      <p>
+        A device, its network environment, and the applications
+        installed on the device, need to be managed.  The relevant
+        resources are typically represented in a hierarchical fashion
+        (as modelled in the YANG schema language) and exchanged as
+        collections or as subsets of a larger collection.
+        Some of the resources can be so large that they seriously
+        stress the runtime environment of the device (e.g., for
+        firmware updates).
+        Some of the subresources may appear and disappear dynamically
+        (e.g., network prefixes).  Retrieval and update of the
+        resources may refer to non-contiguous subsets of a hierarchy
+        (PATCH, non-contiguous GET).  Traditional URI-paths may be too
+        expensive for repeated transfer in requests.
+      </p>
+      <ul>
+        <li reqref="resource-description">
+          The management information may need to be reflected in the
+          self-description of the resource.
+        </li>
+        <li reqref="push">
+          Updates may need to be pushed, as well as special event-type
+          information (YANG notifications).
+        </li>
+        <li reqref="data-exchange-format">
+          The exchange format needs to be both compact and easy to
+          handle in various sub-collections.
+        </li>
+        <li reqref="ensemble-discovery">
+          Management applications may need to find all devices that
+          have a certain set of properties.
+        </li>
+        <li reqref="multi-stakeholder-operation">
+          Management of devices, the network, and applications may all
+          be performed by different entities and the applicationes
+          these set up.
+        </li>
+        <li reqref="privacy" type="non-functional">
+          Management information is sometimes relevant to privacy
+          considerations.
+          As importantly, management information needs to be
+          confidentiality protected.
+        </li>
+        <li reqref="integrity" type="non-functional">
+          (This requirement, as phrased, should be called non-repudiation.)
+          Management information usually needs integrity protection,
+          in particular for software updates.
+        </li>
+        <li reqref="trust" type="non-functional">
+          To enable a management application to manage specific
+          device, a security association needs to be set up as part of
+          the provisioning process.
+        </li>
+      </ul>
+    </usecase>
     <usecase id="lifecycle-management" author="darko">
         <title>Lifecycle Management for Industrial Automation Systems</title>
         <p>An industrial automation systems (IAS) needs to be managed throughout different phases of its lifecycle, e.g., development, engineering, operation, maintenance, optimization, and other phases. The lifecycle management is a challenging task due to various reasons. For instance, it is a task that involves various stakeholders (e.g., domain engineers, software engineers, system engineers, system installers etc.) and hence it is an error-prone task, it is often handled in a safety critical environment, it needs to be maintained over a longer timeframe (during which some of the stakeholders or parts of the system may not be available) and so forth.</p>
