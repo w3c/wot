@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="wot-ucr.xsl"?>
+<!DOCTYPE ucr [
+ <!ELEMENT ucr (usecase*, req*, tech*) >
+ <!ELEMENT usecase (title, p*, ul?) >
+ <!ATTLIST usecase
+           id ID #REQUIRED
+           author ( dret | stefan | joerg | h0ru5 | darko | mamund | inadarei | hlgr360 ) #REQUIRED
+           >
+ <!ELEMENT title (#PCDATA) >
+ <!ELEMENT p ( #PCDATA | a )* >
+ <!ELEMENT a (#PCDATA) >
+ <!ATTLIST a
+           href CDATA #REQUIRED
+           title CDATA #REQUIRED
+           >
+ <!ELEMENT ul (li*) >
+ <!ELEMENT li (#PCDATA) >
+ <!ATTLIST li
+           reqref IDREF #REQUIRED >
+ <!ELEMENT req (title, p*) >
+ <!ATTLIST req
+           id ID #REQUIRED
+           type CDATA "functional"
+           >
+ <!ELEMENT tech (title, p*, ul?) >
+ <!ATTLIST tech
+           id ID #REQUIRED
+           href CDATA #IMPLIED
+           >
+]>
+<ucr>
+    <usecase id="building-automation" author="dret">
+        <title>Building Automation</title>
+        <p>Buildings often have a large variety of components such as Heating, Venting, and Air Conditioning (HVAC), lighting systems, and possibly more specialized systems such as support for reserving rooms electronically. Very often, these systems are not provided by a single supplier, but there still should be a single way how interactions with the overall building automation infrastructure are possible.</p>
+        <p>Possibly, building automation scenarios can have layered services, such for example when it comes to temperature sensing. While the basic functionality of the building automation system might only include to get information about the current temperature in a variety of places, there also might be a "temperature history" service. This service might allow more advanced features such as accessing the complete history of temperature measurements, and possible even more advanced functionalities such as queries int this dataset. Again, such an advanced service should be accessible in the same way as the more basic services, so that developers can access all these services in a uniform way.</p>
+        <ul>
+            <li reqref="resource-description">Applications may want to get an understanding of what kind of sensors and other capabilities are exposed as part of the building automation system. In such a case, it is necessary that available resources can be described or are describing themselves, preferably using a framework that makes those descriptions uniform even if the underlying sensors or services are using different implementation technologies.</li>
+            <li reqref="push">Applications may want to be notified of certain events in the building automation system, without having to listen to a continuous event stream from it. In such a case, it is advantageous for the building automation system to support some kind of push mechanism, so that application can subscribe to these events, and will be notified when they happen. This increases the workload of the building automation system (it has to keep track of subscribers), but may make development of certain classes of applications much easier.</li>
+        </ul>
+    </usecase>
+    <usecase id="bakery" author="stefan">
+        <title>Order Management System</title>
+        <p>In companies like a large industry bakery you have storage facilities like silos to store production materials. In order to keep track of the amount of production material in the silos, level radar devices are used. The measurement data is collected by an order management system.</p>
+        <p>As soon as the production material falls below a certain threshold, the system sends an order to a delivery company.</p>
+        <ul>
+            <li reqref="resource-description">At some point in the system, the measurement value has to be enriched with some meta-information (e.g., timestamp, unit, id, ...).</li>
+            <li reqref="data-exchange-format">The bakery's order management has to interact with the order management system of the delivery company.</li>
+            <li reqref="object-memory">For perishable ingredients like milk or cheese, the due date can be estimated much more precisely if an object memory is kept for them. Also it can be a way to prove the origin and freshness of ingridients</li>
+            <li reqref="layered-comm">Given a commonality of interfacing protocols to heterogeneous ordering systems, layered communication enables a better reusability across several ordering systems. While the interaction primitives, transport protocol and representation might likely be the same for many systems, a difference in data structure demands a clear layering of the communication.</li>
+        </ul>
+    </usecase>
+    <usecase id="adaptive-building" author="h0ru5">
+        <title>Adaptive Building</title>
+        <p>Each employee in an office building specifies a preference profile (temperature, light setup, table height, ...). Due to his company badge or his smartphone the building can automatically influence the building automation system around him based on his current location and preference profile.</p>
+        <p>In case of several people in the same room (e.g. a meeting), a meditation is needed. This is also the case in other cross-influenced situations and if overall goals are set to be achieved, such as energy saving.</p>
+        <ul>
+            <li reqref="ensemble-discovery">Dynamical selection of the surrounding/affecting resources to create the desired comfort level.</li>
+            <li reqref="multi-stakeholder-operation">Multiple people in the same room require automatic mediation of desired comfort levels.</li>
+            <li reqref="lifecycle-mgmt">The appearance and disappearance of users requires means to orchestrate the lifecycle of users/stakeholders.</li>
+            <li reqref="resource-description">The environment around a user must be conceivable by the system in a way that does not require manual engineering.</li>
+            <li reqref="privacy">Since the system would rely on informations which person  is in what room at what time, it can allow a very fine-grained movement profile, which is sensitve information</li>
+        </ul>
+    </usecase>
+    <usecase id="shift-of-function" author="h0ru5">
+        <title>Shift of Function in Automation Systems</title>
+        <p>In a factory, the automation function does not run on a large central system, but decision-making is shifted "downwards" towards the machine itself.</p>
+        <p>In order to introduce such a new function, the function can first be run supervised inside the central system and then shifted downwards, e.g. installed on a field device.</p>
+        <ul>
+            <li reqref="embedded-runtime">A seamless shift of functions requires an embedded runtime which allows the simple implementation, monitoring and debugging of applications.</li>
+            <li reqref="lifecycle-mgmt">The appearance and disappearance of devices as well as the software management on the devices itself requires means to orchestrate the lifecycle of individual devices resp. components.</li>
+            <li reqref="resource-description">At some point in the system, the measurement value has to be enriched with some meta-information (e.g., timestamp, unit, id, ...).</li>
+            <li reqref="layered-comm">In heterogeneous systems, the seamless shift of functionality requires a clear and consistent layering of application protocols since the functionality is focused on the data structure and should be agnostic of the underlying application layer protocol layers.</li>
+            <!-- embedded is a must -->
+        </ul>
+    </usecase>
+    <usecase id="vpp" author="h0ru5">
+        <title>Virtual Power Plants</title>
+        <p>A Virtual Power Plant (VPP) is an aggregation of Distributed Energy Resources (DERs), that can act as an entity on energy markets or as an ancillary service to grid operation.</p>
+        <p>The individual DERs often have a primary use on their own, with electric generation/consumption being a side-effect resp. secondary use. This results in negotiations/collaborations between many different parties e.g. such as the DER owner, the VPP operator, the grid operator and others.</p>
+        <ul>
+            <li reqref="multi-stakeholder-operation">Multiple involved parties have to find a common mode of operation</li>
+            <li reqref="lifecycle-mgmt">Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance of DERs as well as the software management on the devices itself requires means to orchestrate the lifecycle of individual devices resp. components.</li>
+            <li reqref="embedded-runtime">Especially for DERs in remote locations, maintaining a close couple control loop can be expensive if feasible at all. Therefore, it is desirable to be able to offload control logic to the DER itself.</li>
+            <li reqref="ensemble-discovery">In order to dynamically find matching DERs needed for the operational goal of a VPP, a registry with different options of DER discovery is needed.</li>
+            <li reqref="data-exchange-format">The different stakeholders have to interact and therefore need a common data format.</li>
+            <li reqref="resource-description">The DER has to describe itself to enable discovery of single DERs and ensembles, also the operational data needs to be understood by the different stakeholders without engineering effort.</li>
+            <li reqref="push">As there is a fan-out with many devices that probably have a rate-limited connection connecting to one single command central, a bidirectional communication mechanism is needed rather tzhan polling for the reverse direction</li>
+            <li reqref="privacy">As fine-grained metering informtion provides sensitve data about a household, the system should show a high digree of privacy</li>
+            <li reqref="trust"></li>
+            <li reqref="object-memory">...</li>
+            <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serilization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
+        </ul>
+    </usecase>
+    <usecase id="automation-factories" author="stefan">
+        <title>Service Platform for Automation Factories</title>
+        <p>Manufacturing plants and process automation plants not only have to be monitored on-site but also from remote locations. That is for example to compare KPI (key performance indicators) of different manufacturing sites and optimization of the production processes and outputs based on the collected data, for diagnosis, remote service support or predictive maintenance.</p>
+        <p>For such a system you need a platform that collects the data from field level devices, from control level and also from applications on MES level. Applications can connect to the platform to retrieve the data for further processing (e.g., optimization algorithms). The open platform enables the connection between data points provided from devices/applications of different companies to applications from different parties (e.g., a software that provides trouble shooting information combined with online status information of devices in an optical head-mounted display).
+        </p>
+        <ul>
+            <li reqref="resource-description">At some point in the system, the data has to be enriched with some meta-information (e.g. timestamp, unit, id).</li>
+            <li reqref="interaction-mechanism">The platform has to provide interaction mechanisms to provide data to the applications.</li>
+            <li reqref="database">The platform needs a database to store the collected data.</li>
+        </ul>
+    </usecase>
+    <usecase id="emobility" author="h0ru5">
+        <title>E-Mobility</title>
+        <p>Te process of charging an e-car diverts greatly from a simple pumping of gas. It involves several players apart from the obvious car, chargespot and car owner, such as electricity providers and clearing houses</p>
+        <p>An e-car and the chargespot negotiate different parameters affecting the charging process, such as voltages, currents, time it takes to charge etc., but also information like how the electricity will be payed for, how much was already transferred etc.</p>
+        <ul>
+            <li reqref="lifecycle-mgmt">Managing EVs and Fleets such as buses, cars etc. requires the ability to handle dynamic systems.</li>
+            <li reqref="data-exchange-format">A standardized data format is needed when different transport/electricity providers and different devices are involved.</li>
+            <li reqref="push">Both components may want to be notified of certain events in the charging system, without having to listen to a continuous event stream from it. This allows a more lightweight implementation.</li>
+            <li reqref="trust">Since a financial transaction is directly involved, it is important that both sides can enter a trust relationship.</li>
+            <li reqref="integrity">To avoid man-in-the middle attacks and fraud by alteration, the integrity of all exchanges messages must be confirmable</li>
+            <li reqref="object-memory">...</li>
+            <li reqref="layered-comm">Since the same data contents are transferred over several communication links (such as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle to fleet operation, etc.), it is neccessary that the communication of the information/contets can be transferred independent of the different transports or serialization formats used</li>
+        </ul>
+    </usecase>
+    <usecase id="lifecycle-management" author="darko">
+        <title>Lifecycle Management for Industrial Automation Systems</title>
+        <p>An industrial automation systems (IAS) needs to be managed throughout different phases of its lifecycle, e.g., development, engineering, operation, maintenance, optimization, and other phases. The lifecycle management is a challenging task due to various reasons. For instance, it is a task that involves various stakeholders (e.g., domain engineers, software engineers, system engineers, system installers etc.) and hence it is an error-prone task, it is often handled in a safety critical environment, it needs to be maintained over a longer timeframe (during which some of the stakeholders or parts of the system may not be available) and so forth.</p>
+        <p>Let us consider a use case scenario which, throughout the lifecycle management of an IAS, considers following tasks: Development of a new automation function, service or an app based on available resources and domain knowledge; Support for resource discovery, optimal selection and choreography of resources; Parametrization of resources, functions, services and apps; Support for adaptive services running in a dynamic environment (i.e., physical resources appear and disappear); Monitoring and diagnosis of resources, functions, services and apps; Optimization of automation workflows involving different resources and different lifecycle phases.</p>
+        <p>From these activities, as found in a typical lifecycle management of an IAS, one can derive following requirements:</p>
+        <ul>
+            <li reqref="resource-description">When a new application, service or a function needs to be developed, parametrized, maintained or optimized, it is required to get understanding about physical resources involved in such a task. In this case, resources (sensors, actuators, controllers etc.) can be described or self-described in a uniform way, i.e., they expose their properties, functionalities and roles in a uniform way although they may be implemented with different technologies. It would be desired that Resource Description relies on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).</li>
+            <li reqref="data-exchange-format">Different stakeholders have to interact between themselves. Also, each of them needs to interact with different resources. To support exchange of data between different parties a common data exchange format is needed.</li>
+            <li reqref="resource-choreography">A language that enables resources to be choreographed, parametrized, wired and invoked. The language also features a communication protocol which enables collaboration during these tasks (e.g., checks constraints when resources are combined).</li>
+            <li reqref="ensemble-discovery">Resources need be discoverable based on their Resource Description (e.g., properties, functionalities and roles). The discovery also needs to be enabled in a dynamic environment where physical resources appear and disappear during lifecycle phases.</li>
+            <li reqref="lifecycle-mgmt">Different stakeholders interact with different resources throughout different lifecycle phases, e.g., same resources may be used transparently in the development phase as well as in the operation phase.</li>
+            <li reqref="multi-stakeholder-operation">Lifecycle management of Industrial Automation Systems involves multi-stakeholders (e.g., domain engineers, software engineers, system engineers, system installers etc.).</li>
+            <li reqref="layered-comm">In heterogeneous systems, where several vendors use different flavors of the same data exchange in terms of data representation or  transport protocols, integration requires a clear and consistent layering of application protocols.</li>
+        </ul>
+    </usecase>
+    <req id="resource-description">
+        <title>Resource Description</title>
+        <p>In loosely coupled systems, applications may encounter resources they have no prior knowledge about. Resource Description is a facility that allows resources to be described or describe themselves, so that applications can use those descriptions to learn about certain properties and/or capabilities of a resource. Resource descriptions on the highest abstraction level needs to provide two main facilities: identification of resources through some referencing mechanism, and description of resources through some data model.</p>
+    </req>
+    <req id="push">
+        <title>Push Services</title>
+        <!-- http://www.w3.org/2005/Incubator/socialweb/XGR-socialweb-20101206/#Activity might be interesting. -->
+        <p>The default interaction in most Web-based scenarios are pull interactions, where applications request information form servers. This pattern supports scalability very well, because servers do not need to keep track of clients. However, in some scenarios it may be advantageous for this interaction pattern to be reversed, with servers (i.e., the managing entities of resources) initiating an interaction for certain resource-based events. These push interactions require servers to keep track of clients (often referred to as "subscribers"), but on the other hand minimizes interactions when resource events are infrequent but should be noticed by clients as soon as possible.</p>
+    </req>
+    <req id="data-exchange-format">
+        <title>Content-Negotiation</title>
+        <p>For many interactions, it is necessary that peers agree on a shared data exchange format. There are various ways in which such a format can be defined, and in which agreement can be reached, but the general goal for all of these cases is that peers can reach agreement on which data exchange to use, and what it means to use this format. Depending on the type of data to be exchanged, different data exchange formats have different advantages and disadvantages, but generally speaking, the most important factor is that there is agreement on the representation of the data to be exchanged, and how to parse that into a model that is usable and useful for the application's goals.</p>
+    </req>
+    <req id="lifecycle-mgmt">
+        <title>Device Lifecycle Management</title>
+        <p>For some systems, its of crucial importance to be able to manage a dynamic, amorphous collective (ensemble) of components/devices that dynamically appear and disappear, resp. are on- and offline.</p>
+        <p>This implies also a form of adding new components that does not involve high engineering effort.</p>
+    </req>
+    <req id="ensemble-discovery">
+        <title>Ensemble Discovery</title>
+        <p>The ability to discover single devices resp. components with certain capabilities or attributes or an ensemble of these is a pivotal point for applications that target an group that bis dynamically gathered.</p>
+    </req>
+    <req id="multi-stakeholder-operation">
+        <title>Multi-Stakeholder Operation</title>
+        <p>In the WoT, there are cases of operation resp. automation that involve more than one single system owner, but rather are based on a collaboration between different stakeholder that influence or are influenced by the system/application.</p>
+    </req>
+    <req id="embedded-runtime">
+        <title>Embedded Runtime</title>
+        <p>A sandboxed runtime with a standardized API/service based abstraction layer to enable the execution of applications on things. Architecturally comparable to nowadays browsers, app runtimes and containers like J2EE, but specifically targeted at constrained devices.</p>
+    </req>
+    <req id="resource-choreography">
+        <title>Resource Choreography</title>
+        <p>A language that enables resources to be choreographed, parametrized, wired and invoked. The language also features a communication protocol which enables collaboration during these tasks (e.g., checks constraints when resources are combined).</p>
+    </req>
+    <req id="synchronous" type="non-functional">
+        <title>Synchronicity, soft real-time</title>
+        <p>Whenever a user interacts with a WoT system or also in many M2M cases a crucial acceptance factor is the time between the input and the reaction</p>
+    </req>
+    <req id="privacy" type="non-functional">
+        <title>Privacy</title>
+        <!-- http://www.w3.org/2005/Incubator/socialweb/XGR-socialweb-20101206/#Privacy might be interesting. -->
+        <p>A data surce resp. the owner of this data needs to be able to decide who is allowed to see what data and methods are needed to define and enforce this in a secure yet pragmatic way</p>
+    </req>
+    <req id="integrity" type="non-functional">
+        <title>Integrity</title>
+        <p>In some Wot appications,  the integrity and dependability of data needs to be provable. Ensuring that the data was not altered and is genuine is a common requirement of all systems operating in public networks</p>
+    </req>
+    <req id="trust" type="non-functional">
+        <title>Trust</title>
+        <p>The mutual trust into the respective peer's identity  is of high importance especially in systems and applications interacting with physical entites</p>
+    </req>
+    <req id="object-memory">
+        <title>Object Memory</title>
+        <p>keeping a history / digital twin of a physical object that serves as a proxy or avatar</p>
+        <!-- wondering how this relates to the "database" requirement. any clear overlap/similarities/differences? -->
+    </req>
+    <req id="database">
+        <title>Database</title>
+        <p>...</p>
+    </req>
+    <req id="interaction-mechanism" type="non-functional">
+        <title>Interaction Mechanism</title>
+        <p>...</p>
+    </req>
+    <req id="layered-comm" type="non-functional">
+        <title>Layered L7 Communication</title>
+        <p>when services interact with a plethora of clients, a distinction of diffenrent layers of information exchange is a well-known way to ensure interoperability. <!-- requirement "data exchange format"? --></p>
+    	<p>this means a layering of the OSI application layer 7:</p>
+    	<p>a transport (HTTP, CoAP, XMPP, MQTT...) will enable basic exchange and negiotin of formatted data</p>
+    	<p>independent of a tranport, several interaction primitives (Request-response,Pub-sub, Message...) are possible</p>
+    	<p> the transferred data is to be seperated into the representation (JSON, XML, EXI...) that is used to serialize a data structure (Schema, DTD ...) <!--  this last two points I would see matching partly with data exchange format, however, the whole block is more about an elevation of Content-negotiation --></p>
+    	<p> This enables the communication of a resource to be implementation-independent</p>
+    </req>
+    <tech id="rdf" href="http://www.w3.org/RDF/">
+        <title>Resource Description Framework (RDF)</title>
+        <p>RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed. RDF extends the linking structure of the Web to use URIs to name the relationship between things as well as the two ends of the link (this is usually referred to as a “triple”). Using this simple model, it allows structured and semi-structured data to be mixed, exposed, and shared across different applications. This linking structure forms a directed, labeled graph, where the edges represent the named link between two resources, represented by the graph nodes. This graph view is the easiest possible mental model for RDF and is often used in easy-to-understand visual explanations.</p>
+        <ul>
+            <li reqref="resource-description">RDF's origins (as highlighted by its name) are in the field of providing metadata (i.e., descriptions) of Web resources. This is facilitated by using URIs as identifiers, and by using attribute/value pairs that make statements about those URI-identified resources. RDF descriptions can be of arbitrary complexity by joining triples to form a graph, and they can use and combine various vocabularies so that the graph contains information according to the concepts defined in those vocabularies.</li>
+        </ul>
+    </tech>
+    <tech id="pubsubhubbub" href="https://code.google.com/p/pubsubhubbub/">
+        <title>PubSubHubbub (PuSH)</title>
+        <ul>
+            <li reqref="push">...</li>
+        </ul>
+    </tech>
+    <tech id="xmpp" href="http://xmpp.org/">
+        <title>Extensible Messaging and Presence Protocol (XMPP)</title>
+        <p>The Extensible Messaging and Presence Protocol (XMPP) is an application profile of the Extensible Markup Language (XML) that enables the near-real-time exchange of structured yet extensible data between any two or more network entities. This document defines XMPP's core protocol methods: setup and teardown of XML streams, channel encryption, authentication, error handling, and communication primitives for messaging, network availability ("presence"), and request-response interactions.</p>
+        <ul>
+            <li reqref="push">being based on a bidirectional link, XMPP offers a standardized publish/subscribe scheme</li>
+            <li reqref="layered-comm">The protocol consists of a link layer that can be TCP/TLS, BOSH or WebSocket, and an XML-based protocol on top of it</li>
+            <li reqref="data-exchange-format">The protocol and payloads are described as XML Schemas, enabling other serializations (such as xmpp-ftw in JSON)</li>
+        </ul>
+    </tech>
+    <tech id="exi" href="http://www.w3.org/TR/exi/">
+        <title>Efficient XML Interchange (EXI)</title>
+        <p>EXI is a very compact representation for the Extensible Markup Language (XML) Information Set that is intended to simultaneously optimize performance and the utilization of computational resources. The EXI format uses a hybrid approach drawn from the information and formal language theories, plus practical techniques verified by measurements, for entropy encoding XML information. Using a relatively simple algorithm, which is amenable to fast and compact implementation, and a small set of datatype representations, it reliably produces efficient encodings of XML event streams.</p>
+        <ul>
+            <li reqref="data-exchange-format"/>
+        </ul>
+    </tech>
+</ucr>
