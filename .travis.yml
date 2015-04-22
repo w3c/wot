@@ -18,5 +18,5 @@ script:
   - cd page
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - git add wot-ucr.html
-  - git commit -m"automated commit from Travis CI"
-  - git push https://github.com/h0ru5/wot.git gh-pages
+  - [ "${TRAVIS_PULL_REQUEST}" = "false" ] && git commit -m"automated commit from Travis CI"
+  - [ "${TRAVIS_PULL_REQUEST}" = "false" ] && git push https://github.com/h0ru5/wot.git gh-pages
