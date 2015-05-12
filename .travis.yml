@@ -14,10 +14,10 @@ script:
   - java -jar saxon9he.jar -s:ucr-doc/wot-ucr.xml -o:wot-ucr-tmp.html -a
 
 after_success:
-  - git clone --branch gh-pages https://github.com/h0ru5/wot.git page
+  - git clone --branch gh-pages https://github.com/w3c/wot.git page
   - cp wot-ucr-tmp.html page/wot-ucr.html
   - cd page
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - git add wot-ucr.html
   - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then git diff-index --quiet --cached HEAD || git commit -m"automated commit from Travis CI"; fi 
-  - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then git push https://github.com/h0ru5/wot.git gh-pages; fi 
+  - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then git push https://github.com/w3c/wot.git gh-pages; fi 
