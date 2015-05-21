@@ -471,6 +471,110 @@
                </dd>
             </dl>
          </section>
+         <section id="device-management">
+            <h2 title="Authored by: cabo">Device, Network, and Application Management</h2>
+            <p>
+               A device, its network environment, and the applications
+               installed on the device, need to be managed.  The relevant
+               resources are typically represented in a hierarchical fashion
+               (as modelled in the YANG schema language) and exchanged as
+               collections or as subsets of a larger collection.
+               Some of the resources can be so large that they seriously
+               stress the runtime environment of the device (e.g., for
+               firmware updates).
+               Some of the subresources may appear and disappear dynamically
+               (e.g., network prefixes).  Retrieval and update of the
+               resources may refer to non-contiguous subsets of a hierarchy
+               (PATCH, non-contiguous GET).  Traditional URI-paths may be too
+               expensive for repeated transfer in requests.
+               
+            </p>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="device-management-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>
+                        The management information may need to be reflected in the
+                        self-description of the resource.
+                        
+                     </li>
+                     <li id="device-management-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>
+                        Updates may need to be pushed, as well as special event-type
+                        information (YANG notifications).
+                        
+                     </li>
+                     <li id="device-management-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>
+                        The exchange format needs to be both compact and easy to
+                        handle in various sub-collections.
+                        
+                     </li>
+                     <li id="device-management-ensemble-discovery">
+                        <b>
+                           <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                        </b>
+                        Management applications may need to find all devices that
+                        have a certain set of properties.
+                        
+                     </li>
+                     <li id="device-management-multi-stakeholder-operation">
+                        <b>
+                           <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                        </b>
+                        Management of devices, the network, and applications may all
+                        be performed by different entities and the applicationes
+                        these set up.
+                        
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="device-management-privacy">
+                        <b>
+                           <a href="#privacy">Privacy</a>: 
+                        </b>
+                        Management information is sometimes relevant to privacy
+                        considerations.
+                        As importantly, management information needs to be
+                        confidentiality protected.
+                        
+                     </li>
+                     <li id="device-management-integrity">
+                        <b>
+                           <a href="#integrity">Integrity</a>: 
+                        </b>
+                        (This requirement, as phrased, should be called non-repudiation.)
+                        Management information usually needs integrity protection,
+                        in particular for software updates.
+                        
+                     </li>
+                     <li id="device-management-trust">
+                        <b>
+                           <a href="#trust">Trust</a>: 
+                        </b>
+                        To enable a management application to manage specific
+                        device, a security association needs to be set up as part of
+                        the provisioning process.
+                        
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
+         </section>
          <section id="lifecycle-management">
             <h2 title="Authored by: darko">Lifecycle Management for Industrial Automation Systems</h2>
             <p>An industrial automation systems (IAS) needs to be managed throughout different phases
@@ -578,7 +682,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 7 Use Cases: </b>
+                  <b>Motivated by 8 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -636,6 +740,16 @@
                      </li>
                      <li>
                         <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-resource-description" title="Go to Atomic Use Case">
+                           The management information may need to be reflected in the
+                           self-description of the resource.
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
                            <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
                         </em>
                         <a href="#lifecycle-management-resource-description" title="Go to Atomic Use Case">When a new application, service or a function needs to be developed, parametrized,
@@ -683,7 +797,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 3 Use Cases: </b>
+                  <b>Motivated by 4 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -716,6 +830,16 @@
                         <a href="#emobility-push" title="Go to Atomic Use Case">Both components may want to be notified of certain events in the charging system,
                            without having to listen to a continuous event stream from it. This allows a more
                            lightweight implementation.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-push" title="Go to Atomic Use Case">
+                           Updates may need to be pushed, as well as special event-type
+                           information (YANG notifications).
+                           
                         </a>
                      </li>
                   </ul>
@@ -757,7 +881,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 4 Use Cases: </b>
+                  <b>Motivated by 5 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -781,6 +905,16 @@
                         </em>
                         <a href="#emobility-data-exchange-format" title="Go to Atomic Use Case">A standardized data format is needed when different transport/electricity providers
                            and different devices are involved.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-data-exchange-format" title="Go to Atomic Use Case">
+                           The exchange format needs to be both compact and easy to
+                           handle in various sub-collections.
+                           
                         </a>
                      </li>
                      <li>
@@ -893,7 +1027,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 3 Use Cases: </b>
+                  <b>Motivated by 4 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -911,6 +1045,16 @@
                         </em>
                         <a href="#vpp-ensemble-discovery" title="Go to Atomic Use Case">In order to dynamically find matching DERs needed for the operational goal of a VPP,
                            a registry with different options of DER discovery is needed.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-ensemble-discovery" title="Go to Atomic Use Case">
+                           Management applications may need to find all devices that
+                           have a certain set of properties.
+                           
                         </a>
                      </li>
                      <li>
@@ -940,7 +1084,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 3 Use Cases: </b>
+                  <b>Motivated by 4 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -955,6 +1099,17 @@
                            <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
                         </em>
                         <a href="#vpp-multi-stakeholder-operation" title="Go to Atomic Use Case">Multiple involved parties have to find a common mode of operation</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-multi-stakeholder-operation" title="Go to Atomic Use Case">
+                           Management of devices, the network, and applications may all
+                           be performed by different entities and the applicationes
+                           these set up.
+                           
+                        </a>
                      </li>
                      <li>
                         <em>
@@ -1140,7 +1295,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 2 Use Cases: </b>
+                  <b>Motivated by 3 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1158,6 +1313,18 @@
                         </em>
                         <a href="#vpp-privacy" title="Go to Atomic Use Case">As fine-grained metering informtion provides sensitve data about a household, the
                            system should show a high digree of privacy
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-privacy" title="Go to Atomic Use Case">
+                           Management information is sometimes relevant to privacy
+                           considerations.
+                           As importantly, management information needs to be
+                           confidentiality protected.
+                           
                         </a>
                      </li>
                   </ul>
@@ -1178,7 +1345,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 1 Use Cases: </b>
+                  <b>Motivated by 2 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1188,6 +1355,17 @@
                         </em>
                         <a href="#emobility-integrity" title="Go to Atomic Use Case">To avoid man-in-the middle attacks and fraud by alteration, the integrity of all exchanges
                            messages must be confirmable
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-integrity" title="Go to Atomic Use Case">
+                           (This requirement, as phrased, should be called non-repudiation.)
+                           Management information usually needs integrity protection,
+                           in particular for software updates.
+                           
                         </a>
                      </li>
                   </ul>
@@ -1207,7 +1385,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 2 Use Cases: </b>
+                  <b>Motivated by 3 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1223,6 +1401,17 @@
                         </em>
                         <a href="#emobility-trust" title="Go to Atomic Use Case">Since a financial transaction is directly involved, it is important that both sides
                            can enter a trust relationship.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-trust" title="Go to Atomic Use Case">
+                           To enable a management application to manage specific
+                           device, a security association needs to be set up as part of
+                           the provisioning process.
+                           
                         </a>
                      </li>
                   </ul>
