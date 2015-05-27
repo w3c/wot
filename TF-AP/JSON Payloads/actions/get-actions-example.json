@@ -1,0 +1,43 @@
+{
+	"lcd":{
+		"name":"lcd",  
+		"description":"Change the text of the LCD screen.", 
+		"type":"actuator", 
+		"lastUpdate":"<TIMESTAMP>",  
+		"customFields":{
+				"status":"inactive"
+		}	
+	}, 
+	"camera":{
+		"name":"camera",  
+		"description":"Control the orientation of the camera.",
+		"type":"actuator", 
+		"lastUpdate":"<TIMESTAMP>",  
+		"customFields":{
+				"status":"active"
+		}	
+	},
+	"leds":{
+		"name":"leds",  
+		"description":"Controls the LEDs on the device.",
+		"type":"actuator", 
+		"lastUpdate":"<TIMESTAMP>",  
+		"customFields":{
+				"status":"inactive"
+		}	
+	},
+	"reboot":{
+		"name":"reboot",  
+		"description":"Reboots the device.",
+		"type":"action", 
+		"lastUpdate":"<TIMESTAMP>",  
+		"customFields":{
+				"status":"inactive"
+		}	
+	},
+	"myActionType":{
+		"name":"myActionType",  
+		"description":"This tweets the LCD.",
+		"type":"action", 
+	}
+}

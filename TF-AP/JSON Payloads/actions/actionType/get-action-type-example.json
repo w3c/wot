@@ -1,0 +1,36 @@
+{ 
+	"name":"reboot",  
+	"description":"Reboots the device", 
+	"lastUpdate":23123123,  
+	"customFields":{},	
+	"parameters": {
+		"delay":{
+			"type":"integer",
+			"optional":"false",
+			"minValue":"0",
+			"maxValue":"100",
+			"maxLength":"20",
+			"unit":"milliseconds"
+		},
+		"mode":{
+			"name":"<STRING>",
+			"description":"<STRING>",
+			"type":"<STRING>",
+			"unit":"<STRING>",
+			"optional":"<BOOLEAN>",
+			"minValue":"<NUMERIC>",
+			"maxValue":"<NUMERIC>",
+			"maxLength":"<INTEGER>"
+		},
+		"requester":{
+			"name":"<STRING>",
+			"description":"<STRING>",
+			"type":"<STRING>",
+			"unit":"<STRING>",
+			"optional":"<BOOLEAN>",
+			"minValue":"<NUMERIC>",
+			"maxValue":"<NUMERIC>",
+			"maxLength":"<INTEGER>"
+		}
+	}
+}

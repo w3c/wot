@@ -1,0 +1,24 @@
+{
+	"deviceError":{
+		"name":"deviceError",  
+		"description":"Basic event", 
+		"type":"log", 
+		"lastUpdate":"<TIMESTAMP>",  
+		"customFields":{
+				"status":"inactive"
+		}	
+	}, 
+	"batteryLow":{
+		"name":"batteryLow",  
+		"description":"When battery drops below 2.8v.",
+		"type":"sensor", 
+		"lastUpdate":"<TIMESTAMP>",  
+		"customFields":{
+				"status":"active"
+		}	
+	},
+	"myCustomEventType":{
+		"name":"myCustomEventType",  
+		"description":"User can create custom events (using a rule).",
+	}
+}

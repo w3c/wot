@@ -1,0 +1,26 @@
+{
+	"2349":{
+		"subscriberId":"ServiceObject-123213213",
+		"subscriptionId":"ServiceObject-123213213#location",
+		"type":"http.callback",
+		"delay":60,
+		"expire":10000,
+		"forceUpdates":false,
+		"resource":"/properties/temperature",
+		"customFields":{
+			"callbackUrl":"http://www.compose-project.eu/so/ServiceObject-123213213/callback"	
+		}
+	},
+	"2550":{
+		"subscriberId":"ServiceObject-123213213",
+		"subscriptionId":"ServiceObject-123213213#location02",
+		"type":"http.websocket",
+		"delay":0,
+		"expire":10000,
+		"forceUpdates":true,
+		"resource":"/properties/location",			
+		"customFields":{
+			"websocketUrl":"wss://www.compose-project.eu/WebObject-2423529879879875/streams/location"
+		}
+	}
+}
