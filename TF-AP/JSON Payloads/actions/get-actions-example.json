@@ -1,43 +1,25 @@
 {
-	"lcd":{
-		"name":"lcd",  
-		"description":"Change the text of the LCD screen.", 
-		"type":"actuator", 
-		"lastUpdate":"<TIMESTAMP>",  
+	"upgradeFirmware":{
+		"name":"Upgrade Device Firmware",  
+		"description":"Loads a new firmware from the cloud and installs it.",
+		"type":"action", 
 		"customFields":{
-				"status":"inactive"
-		}	
-	}, 
-	"camera":{
-		"name":"camera",  
-		"description":"Control the orientation of the camera.",
-		"type":"actuator", 
-		"lastUpdate":"<TIMESTAMP>",  
-		"customFields":{
-				"status":"active"
-		}	
-	},
-	"leds":{
-		"name":"leds",  
-		"description":"Controls the LEDs on the device.",
-		"type":"actuator", 
-		"lastUpdate":"<TIMESTAMP>",  
-		"customFields":{
-				"status":"inactive"
+			"permission":"admin",
+			"priority":"high"
 		}	
 	},
 	"reboot":{
-		"name":"reboot",  
+		"name":"Reboot",  
 		"description":"Reboots the device.",
 		"type":"action", 
-		"lastUpdate":"<TIMESTAMP>",  
 		"customFields":{
-				"status":"inactive"
+			"status":"inactive",
+			"permission":"admin"
 		}	
 	},
 	"myActionType":{
 		"name":"myActionType",  
-		"description":"This tweets the LCD.",
-		"type":"action", 
+		"description":"Whatever you want.",
+		"type":"action"
 	}
 }

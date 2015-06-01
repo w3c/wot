@@ -1,37 +1,19 @@
 {
-	"id":"string",
-  	"name": "string",
-  	"description":"string",
-  	"tags":["string","string"],
+	"id":"<URI>",
+	"createdAd":"<Timestamp>", 
+	"updatedAd":"<Timestamp>", 
+  	"name": "<String>",
+  	"description":"<String>",
+	"product":"<URI>",
+  	"tags":["<String>",...],
   	"customFields":{
-  		"a":"string",
-  		"b":"string"
+  		"<String>":"<String>",...
   	},
  	"links":{ 
-    	"sensors": {
-        	"link": "sensors/",
-        	"title": "List of sensors"
-      	},
-		"actuators": {
-			"link": "actuators/",
-			"title": "List of sensors"
-		},
-		"meta": {
-			"link": "http://webofthings.cc/meta/device/",
-			"title": "Metadata"
-		},
-		"help": {
-			"link": "http://webofthings.cc/docs/pi/",
-			"title": "Documentation"
-		},
-		"ui": {
-			"link": "ui/",
-			"title": "User Interface"
-		},
-		"_myCustomLinkRelType":{
-			"link":"http://myserver.com/custom",
-			"title":"A resource of this Web Thing on my server.",
-			"type":"http://http://myserver.com/custom.rdf"
-		}
+    	"relType": {
+        	"link": "<URI>",
+        	"title": "<String>",
+        	"type": "<String>"
+      	},...
  	}
 }

@@ -1,12 +1,11 @@
 {
 	"<actionType>":{
-		"name":"<STRING>",  // Can only be alphanum, "_", or "-", used as the link
-		"description":"<STRING>", // human readable description, shown in an app
-		"type":"<STRING>", // what type of action is this. Needed?
-		"lastUpdate":"<TIMESTAMP>", // when an action of this type has been last executed 
+		"name":"<String>",   
+		"description":"<String>", 
+		"type":"<String>", 
+		"updatedAt":"<Timestamp>",  
 		"customFields":{
-				"<STRING>":"<STRING>",
-				"<STRING>":"<STRING>"
+			"<String>":"<String>"
 		}	
 	}//,...
 }

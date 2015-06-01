@@ -1,22 +1,28 @@
 {
 	"id":"WebObject-2423529879879875",
+	"createdAd":"<Timestamp>", 
+	"updatedAd":"<Timestamp>", 
 	"name":"Shopping Cart",
 	"description":"Shopping Cart that updates its location as it moves",
+	"product":"http://api.evrythng.com/products/8838830wfoifj3jfo4i", 
 	"tags":["cart","device","test"],
 	"customFields":{"size":"20","color":"blue"},
-	"productId":"api.evrythng.com/products/8838830wfoifj3jfo4i", 
 	"links":{
+		"configurations":{
+	 	  "link": "configurations/",
+	 	  "title": "Configurations of this Web Thing."			
+		},
 	 	"properties": {
 	 	  "link": "properties/",
-	 	  "title": "List of Properties"
+	 	  "title": "Properties of this Web Thing."
 	 	},
 	 	"events": {
 	 	  "link": "events/",
-	 	  "title": "List of Events"
+	 	  "title": "Events of this Web Thing."
 	 	},
 	 	"actions": {
 	 	  "link": "actions/",
-	 	  "title": "List of Actions"
+	 	  "title": "Actions of this Web Thing."
 	 	},
 	 	"meta": {
 	 	  "link": "http://w3c.org/schemas/webthing/",
