@@ -46,7 +46,7 @@
             <!-- embedded is a must -->
         </ul>
     </usecase>
-    <usecase id="vpp" author="h0ru5" domain="smart_grid">
+    <usecase id="vpp" author="h0ru5" domain="smart_grids">
         <title>Virtual Power Plants</title>
         <p>A Virtual Power Plant (VPP) is an aggregation of Distributed Energy Resources (DERs), that can act as an entity on energy markets or as an ancillary service to grid operation.</p>
         <p>The individual DERs often have a primary use on their own, with electric generation/consumption being a side-effect resp. secondary use. This results in negotiations/collaborations between many different parties e.g. such as the DER owner, the VPP operator, the grid operator and others.</p>
@@ -128,18 +128,18 @@
           be performed by different entities and the applicationes
           these set up.
         </li>
-        <li reqref="privacy" type="non-functional">
+        <li reqref="privacy">
           Management information is sometimes relevant to privacy
           considerations.
           As importantly, management information needs to be
           confidentiality protected.
         </li>
-        <li reqref="integrity" type="non-functional">
+        <li reqref="integrity">
           (This requirement, as phrased, should be called non-repudiation.)
           Management information usually needs integrity protection,
           in particular for software updates.
         </li>
-        <li reqref="trust" type="non-functional">
+        <li reqref="trust">
           To enable a management application to manage specific
           device, a security association needs to be set up as part of
           the provisioning process.

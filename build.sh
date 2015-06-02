@@ -4,5 +4,5 @@ if [ ! -f saxon9he.jar ]; then
     unzip SaxonHE9.zip
 fi
 echo "got saxon, building..."
-java -jar saxon9he.jar -s:ucr-doc/wot-ucr.xml -o:wot-ucr-tmp.html -a
+java -jar saxon9he.jar -s:ucr-doc/wot-ucr.xml -o:wot-ucr-tmp.html -a -dtd
 echo "done. if you see no errors, check wot-ucr-tmp.html"
