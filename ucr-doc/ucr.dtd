@@ -1,0 +1,27 @@
+ <!ELEMENT ucr (usecase*, req*, tech*) >
+ <!ELEMENT usecase (title, p*, ul?) >
+ <!ATTLIST usecase
+           id ID #REQUIRED
+           author ( dret | stefan | joerg | h0ru5 | darko | mamund | inadarei | hlgr360 ) #REQUIRED
+           >
+ <!ELEMENT title (#PCDATA) >
+ <!ELEMENT p ( #PCDATA | a )* >
+ <!ELEMENT a (#PCDATA) >
+ <!ATTLIST a
+           href CDATA #REQUIRED
+           title CDATA #REQUIRED
+           >
+ <!ELEMENT ul (li*) >
+ <!ELEMENT li (#PCDATA) >
+ <!ATTLIST li
+           reqref IDREF #REQUIRED >
+ <!ELEMENT req (title, p*) >
+ <!ATTLIST req
+           id ID #REQUIRED
+           type CDATA "functional"
+           >
+ <!ELEMENT tech (title, p*, ul?) >
+ <!ATTLIST tech
+           id ID #REQUIRED
+           href CDATA #IMPLIED
+           >
