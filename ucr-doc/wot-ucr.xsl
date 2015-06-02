@@ -61,7 +61,7 @@
     </xsl:template>
     <xsl:template match="usecase">
       <section id="domain-{@domain}">
-          <h3>Domain: <xsl:value-of select="@domain" /></h3>
+          <h3>Domain: <xsl:value-of select="translate(@domain,'_',' ')" /></h3>
           <xsl:for-each select="key('domain', @domain)">
             <section id="{@id}">
                 <xsl:apply-templates select="title, p, ul">
