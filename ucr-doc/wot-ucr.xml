@@ -1,36 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="wot-ucr.xsl"?>
-<!DOCTYPE ucr [
- <!ELEMENT ucr (usecase*, req*, tech*) >
- <!ELEMENT usecase (title, p*, ul?) >
- <!ATTLIST usecase
-           id ID #REQUIRED
-           author ( dret | stefan | joerg | h0ru5 | darko | mamund | inadarei | hlgr360 ) #REQUIRED
-           >
- <!ELEMENT title (#PCDATA) >
- <!ELEMENT p ( #PCDATA | a )* >
- <!ELEMENT a (#PCDATA) >
- <!ATTLIST a
-           href CDATA #REQUIRED
-           title CDATA #REQUIRED
-           >
- <!ELEMENT ul (li*) >
- <!ELEMENT li (#PCDATA) >
- <!ATTLIST li
-           reqref IDREF #REQUIRED >
- <!ELEMENT req (title, p*) >
- <!ATTLIST req
-           id ID #REQUIRED
-           type CDATA "functional"
-           >
- <!ELEMENT tech (title, p*, ul?) >
- <!ATTLIST tech
-           id ID #REQUIRED
-           href CDATA #IMPLIED
-           >
-]>
+<!DOCTYPE ucr SYSTEM "ucr.dtd">
 <ucr>
-    <usecase id="building-automation" author="dret">
+    <usecase id="building-automation" author="dret" domain="home_automation">
         <title>Building Automation</title>
         <p>Buildings often have a large variety of components such as Heating, Venting, and Air Conditioning (HVAC), lighting systems, and possibly more specialized systems such as support for reserving rooms electronically. Very often, these systems are not provided by a single supplier, but there still should be a single way how interactions with the overall building automation infrastructure are possible.</p>
         <p>Possibly, building automation scenarios can have layered services, such for example when it comes to temperature sensing. While the basic functionality of the building automation system might only include to get information about the current temperature in a variety of places, there also might be a "temperature history" service. This service might allow more advanced features such as accessing the complete history of temperature measurements, and possible even more advanced functionalities such as queries int this dataset. Again, such an advanced service should be accessible in the same way as the more basic services, so that developers can access all these services in a uniform way.</p>
@@ -39,7 +11,7 @@
             <li reqref="push">Applications may want to be notified of certain events in the building automation system, without having to listen to a continuous event stream from it. In such a case, it is advantageous for the building automation system to support some kind of push mechanism, so that application can subscribe to these events, and will be notified when they happen. This increases the workload of the building automation system (it has to keep track of subscribers), but may make development of certain classes of applications much easier.</li>
         </ul>
     </usecase>
-    <usecase id="bakery" author="stefan">
+    <usecase id="bakery" author="stefan" domain="logistics">
         <title>Order Management System</title>
         <p>In companies like a large industry bakery you have storage facilities like silos to store production materials. In order to keep track of the amount of production material in the silos, level radar devices are used. The measurement data is collected by an order management system.</p>
         <p>As soon as the production material falls below a certain threshold, the system sends an order to a delivery company.</p>
@@ -50,7 +22,7 @@
             <li reqref="layered-comm">Given a commonality of interfacing protocols to heterogeneous ordering systems, layered communication enables a better reusability across several ordering systems. While the interaction primitives, transport protocol and representation might likely be the same for many systems, a difference in data structure demands a clear layering of the communication.</li>
         </ul>
     </usecase>
-    <usecase id="adaptive-building" author="h0ru5">
+    <usecase id="adaptive-building" author="h0ru5" domain="home_automation">
         <title>Adaptive Building</title>
         <p>Each employee in an office building specifies a preference profile (temperature, light setup, table height, ...). Due to his company badge or his smartphone the building can automatically influence the building automation system around him based on his current location and preference profile.</p>
         <p>In case of several people in the same room (e.g. a meeting), a meditation is needed. This is also the case in other cross-influenced situations and if overall goals are set to be achieved, such as energy saving.</p>
@@ -62,7 +34,7 @@
             <li reqref="privacy">Since the system would rely on informations which person  is in what room at what time, it can allow a very fine-grained movement profile, which is sensitve information</li>
         </ul>
     </usecase>
-    <usecase id="shift-of-function" author="h0ru5">
+    <usecase id="shift-of-function" author="h0ru5" domain="manufacturing">
         <title>Shift of Function in Automation Systems</title>
         <p>In a factory, the automation function does not run on a large central system, but decision-making is shifted "downwards" towards the machine itself.</p>
         <p>In order to introduce such a new function, the function can first be run supervised inside the central system and then shifted downwards, e.g. installed on a field device.</p>
@@ -74,7 +46,7 @@
             <!-- embedded is a must -->
         </ul>
     </usecase>
-    <usecase id="vpp" author="h0ru5">
+    <usecase id="vpp" author="h0ru5" domain="smart_grids">
         <title>Virtual Power Plants</title>
         <p>A Virtual Power Plant (VPP) is an aggregation of Distributed Energy Resources (DERs), that can act as an entity on energy markets or as an ancillary service to grid operation.</p>
         <p>The individual DERs often have a primary use on their own, with electric generation/consumption being a side-effect resp. secondary use. This results in negotiations/collaborations between many different parties e.g. such as the DER owner, the VPP operator, the grid operator and others.</p>
@@ -92,7 +64,7 @@
             <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serilization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
         </ul>
     </usecase>
-    <usecase id="automation-factories" author="stefan">
+    <usecase id="automation-factories" author="stefan" domain="manufacturing">
         <title>Service Platform for Automation Factories</title>
         <p>Manufacturing plants and process automation plants not only have to be monitored on-site but also from remote locations. That is for example to compare KPI (key performance indicators) of different manufacturing sites and optimization of the production processes and outputs based on the collected data, for diagnosis, remote service support or predictive maintenance.</p>
         <p>For such a system you need a platform that collects the data from field level devices, from control level and also from applications on MES level. Applications can connect to the platform to retrieve the data for further processing (e.g., optimization algorithms). The open platform enables the connection between data points provided from devices/applications of different companies to applications from different parties (e.g., a software that provides trouble shooting information combined with online status information of devices in an optical head-mounted display).
@@ -103,7 +75,7 @@
             <li reqref="database">The platform needs a database to store the collected data.</li>
         </ul>
     </usecase>
-    <usecase id="emobility" author="h0ru5">
+    <usecase id="emobility" author="h0ru5" domain="transportation">
         <title>E-Mobility</title>
         <p>Te process of charging an e-car diverts greatly from a simple pumping of gas. It involves several players apart from the obvious car, chargespot and car owner, such as electricity providers and clearing houses</p>
         <p>An e-car and the chargespot negotiate different parameters affecting the charging process, such as voltages, currents, time it takes to charge etc., but also information like how the electricity will be payed for, how much was already transferred etc.</p>
@@ -117,7 +89,7 @@
             <li reqref="layered-comm">Since the same data contents are transferred over several communication links (such as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle to fleet operation, etc.), it is neccessary that the communication of the information/contets can be transferred independent of the different transports or serialization formats used</li>
         </ul>
     </usecase>
-    <usecase id="device-management" author="cabo">
+    <usecase id="device-management" author="cabo" domain="other">
       <title>Device, Network, and Application Management</title>
       <p>
         A device, its network environment, and the applications
@@ -156,25 +128,25 @@
           be performed by different entities and the applicationes
           these set up.
         </li>
-        <li reqref="privacy" type="non-functional">
+        <li reqref="privacy">
           Management information is sometimes relevant to privacy
           considerations.
           As importantly, management information needs to be
           confidentiality protected.
         </li>
-        <li reqref="integrity" type="non-functional">
+        <li reqref="integrity">
           (This requirement, as phrased, should be called non-repudiation.)
           Management information usually needs integrity protection,
           in particular for software updates.
         </li>
-        <li reqref="trust" type="non-functional">
+        <li reqref="trust">
           To enable a management application to manage specific
           device, a security association needs to be set up as part of
           the provisioning process.
         </li>
       </ul>
     </usecase>
-    <usecase id="lifecycle-management" author="darko">
+    <usecase id="lifecycle-management" author="darko" domain="manufacturing">
         <title>Lifecycle Management for Industrial Automation Systems</title>
         <p>An industrial automation systems (IAS) needs to be managed throughout different phases of its lifecycle, e.g., development, engineering, operation, maintenance, optimization, and other phases. The lifecycle management is a challenging task due to various reasons. For instance, it is a task that involves various stakeholders (e.g., domain engineers, software engineers, system engineers, system installers etc.) and hence it is an error-prone task, it is often handled in a safety critical environment, it needs to be maintained over a longer timeframe (during which some of the stakeholders or parts of the system may not be available) and so forth.</p>
         <p>Let us consider a use case scenario which, throughout the lifecycle management of an IAS, considers following tasks: Development of a new automation function, service or an app based on available resources and domain knowledge; Support for resource discovery, optimal selection and choreography of resources; Parametrization of resources, functions, services and apps; Support for adaptive services running in a dynamic environment (i.e., physical resources appear and disappear); Monitoring and diagnosis of resources, functions, services and apps; Optimization of automation workflows involving different resources and different lifecycle phases.</p>

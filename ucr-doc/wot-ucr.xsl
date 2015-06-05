@@ -2,6 +2,7 @@
 <!-- Copied from https://github.com/dret/W3C/blob/master/WoTIG/WoT-UCR.xsl -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xsd" version="2.0">
     <xsl:output method="xhtml" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
+    <xsl:key name="domain" match="usecase" use="@domain" />
     <xsl:template match="/">
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html>&#xa;</xsl:text>
         <html>
@@ -40,7 +41,8 @@
                 </section>
                 <section id="use-cases">
                     <h2>Use Cases</h2>
-                    <xsl:apply-templates select="/ucr/usecase"/>
+
+                    <xsl:apply-templates select="/ucr/usecase[generate-id(.)=generate-id(key('domain',@domain)[1])]"/>
                 </section>
                 <section id="building-blocks">
                     <h2>Building blocks</h2>
@@ -58,11 +60,16 @@
         </html>
     </xsl:template>
     <xsl:template match="usecase">
-        <section id="{@id}">
-            <xsl:apply-templates select="title, p, ul">
-                <xsl:with-param name="position" select="position()"/>
-            </xsl:apply-templates>
-        </section>
+      <section id="domain-{@domain}">
+          <h3>Domain: <xsl:value-of select="translate(@domain,'_',' ')" /></h3>
+          <xsl:for-each select="key('domain', @domain)">
+            <section id="{@id}">
+                <xsl:apply-templates select="title, p, ul">
+                    <xsl:with-param name="position" select="position()"/>
+                </xsl:apply-templates>
+            </section>
+          </xsl:for-each>
+      </section>
     </xsl:template>
     <xsl:template match="req">
         <xsl:variable name="reqid" select="@id"/>
