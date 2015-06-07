@@ -1,19 +1,26 @@
-{
-	"id":"<URI>",
-	"createdAd":"<Timestamp>", 
-	"updatedAd":"<Timestamp>", 
-  	"name": "<String>",
-  	"description":"<String>",
-	"product":"<URI>",
-  	"tags":["<String>",...],
-  	"customFields":{
-  		"<String>":"<String>",...
-  	},
- 	"links":{ 
-    	"relType": {
-        	"link": "<URI>",
-        	"title": "<String>",
-        	"type": "<String>"
-      	},...
- 	}
+{  
+   "id":"<String>",
+   "createdAd":"<Timestamp>",
+   "updatedAd":"<Timestamp>",
+   "name":"<String>",
+   "description":"<String>",
+   "product":"<URI>",
+   "tags":[  
+      "<String>",
+      "..."
+   ],
+   "customFields":{  
+      "<String>":"<String>",
+      "...":"..."
+   },
+   "links":{  
+      "<RelType>":{  
+         "link":"<URI>",
+         "title":"<String>",
+         "type":"<String>"
+      },
+      {  
+         "...":"..."
+      }
+   }
 }
