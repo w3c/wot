@@ -3,15 +3,15 @@
 // Links: <temperature/>; 
 {
 	"temperature":{  
-	    "timestamp": 1346860078782,
+	    "timestamp": "2012-08-24T17:29:11.683Z",
 		"value":22  
 	},
 	"status":{
-	    "timestamp": 1346860078782,
+	    "timestamp": "2012-08-24T17:29:11.683Z",
 		"value":"OK"  
 	},
 	"acceleration":{
-	    "timestamp": 1346860078782,
+	    "timestamp": "2012-08-24T17:29:11.683Z",
 		"value":{
 			"x":-22,
 			"y":2.1,
@@ -19,7 +19,7 @@
 		}  
 	},
 	"engineAngle":{
-	    "timestamp": 1346860078782,
+	    "timestamp": "2012-08-24T17:29:11.683Z",
 		"value":{
 			"theta":"2",
 			"rho":"-0.1"
@@ -35,13 +35,12 @@
 	"name":"<STRING>",
 	"description":"<STRING>",
 	"timestamp":"<TIMESTAMP>",
-    "frequency": "<NUMERIC>",
-	"channels":{
+	"unit":"<SI_STRING>",
+	"type":"<STRING>",
+	"value":{
 		"<channelName>":{
 			"name":"<STRING>",
 			"description":"<STRING>",
-			"unit":"<SI_STRING>",
-			"type":"<STRING>",
 			"value":"<STRING|NUM|BOOL>"
 		},...
 	},
@@ -55,28 +54,23 @@
 {
 	"name": "acceleration",
 	"description": "A 3D acceleration sensor.",
-    "timestamp": 1346860078782,
-    "frequency": 5000,
-	"channels":{
+    "timestamp": "2012-08-24T17:29:11.683Z",
+	"unit":"m/s2",
+	"type":"numeric",
+	"value":{
 		"x":{
 			"name":"Y-axis",
 			"description":"The X dimension of the sensor",
-			"unit":"m/s2",
-			"type":"numeric",
 			"value":-22
 			},
 		"y":{
 			"name":"Y-axis",
 			"description":"The y dimension of the sensor",
-			"unit":"m/s2",
-			"type":"numeric",
 			"value":2.1
 			},
 		"z":{
 			"name":"Z-axis",
 			"description":"The z dimension of the sensor",
-			"unit":"m/s2",
-			"type":"numeric",
 			"value":3
 			}
 	},
@@ -85,26 +79,28 @@
 }
 
 
-# GET {wt}/properties/status/value/last
-{
-	"value":"OK",
-	"timestamp":1346860078782	
-}
 
-# POST {wt}/properties/status/value/
-{
-	"value":"OK"
-}
 
+# POST {wt}/properties/temperature/values
+[
+	{
+	    "timestamp": "2012-08-24T17:29:11.683Z",
+		"value":"OK"
+	},
+	{
+	    "timestamp": "2012-07-24T17:29:11.683Z",
+		"value":"COLD"
+	}
+]
 
 # GET {wt}/properties/acceleration/value
 {
+    "timestamp": "2012-08-24T17:29:11.683Z",
 	"value":{
 		"x":-22,
 		"y":2.1,
 		"z":3
-	},
-	"timestamp":1346860078782	
+	}
 }
 
 
@@ -123,6 +119,13 @@
 {
 	"temperature":24,
 	"acceleration":{"x":"-22","y":"2.1","z":"3"},
+	"timestamp": "2012-08-24T17:29:11.683Z"	
 }
 
 
+
+# PUT {wt}/properties/temperature
+[{
+	"value":24,
+    "timestamp": "2012-08-24T17:29:11.683Z"	
+}]
