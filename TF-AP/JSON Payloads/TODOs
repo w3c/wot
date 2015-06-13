@@ -1,0 +1,41 @@
+Master model:
+
+   "createdAt":"<Timestamp>",
+   "updatedAt":"<Timestamp>",
+   "tags" : [],
+   "customFields" : {}
+
+
+   TODO:
+
+ -  Must in headers, should in JSON
+   to be defined generically
+
+ -  Add Links to all resources: 
+
+   "links":{  
+      "<RelType>":{  
+         "link":"<URI>",
+         "title":"<String>",
+         "type":"<String>"
+      }
+
+- 	Parameters
+
+	"parameters": {
+		"<parameterName>":{
+			"name":"<String>",
+			"description":"<String>",
+			"type":"<String>",
+			"unit":"<String>",
+			"optional":"<Boolean>",
+			"minValue":"<Numeric>",
+			"maxValue":"<Numeric>",
+			"maxLength":"<Integer>"
+		}
+
+- All clients should expect more fields in the JSON payloads than specified here. They should ignore the fields they do not know about.
+
+- Subscriptions can be attached to any resource
+
+- Pagination see EVRYTHNG
