@@ -12,8 +12,8 @@
 		},
 		"mode":{
 			"description":"What type of reboot mode",
-			"type":"enum",
-			"values":{
+			"type":"string", // refers to the type of what is in the enum
+			"enum":{
 				"FORCE":"Quits all processes and shuts down the system",
 				"SOFT":"Waits all processes to finish before rebooting the device"
 			}

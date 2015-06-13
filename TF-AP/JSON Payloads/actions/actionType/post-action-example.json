@@ -1,5 +1,30 @@
 // POST {wt}/actions/reboot
+// 201 Accepted
+// Location: {wt}/actions/reboot/233
+
 {
-	"delay":"50",
+	"delay":50,
 	"mode":"debug"
 }
+
+// PUT {wt}/actions/reboot
+// To update an action type
+
+{
+	updated action type model
+}
+
+
+// GET {wt}/actions/reboot/233
+{
+	"delay":50,
+	"mode":"debug",
+	"status" : buffered|executing|succeeded|failed
+}
+
+// GET {wt}/actions/reboot/all
+// get all instances of actions
+
+// GET {wt}/actions/reboot
+// get the model of reboot
+

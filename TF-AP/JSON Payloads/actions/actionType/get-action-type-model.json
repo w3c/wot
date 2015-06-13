@@ -1,13 +1,8 @@
 {
 	"name":"<String>",   
 	"description":"<String>", 
-	"type":"<String>", 
-	"updatedAt":"<Timestamp>",  
-	"customFields":{
-		"<String>":"<String>"
-	},
-	"parameters": {
-		"<parameterName>":{
+	"values": {
+		"<valueNames>":{
 			"name":"<String>",
 			"description":"<String>",
 			"type":"<String>",
@@ -15,7 +10,7 @@
 			"optional":"<Boolean>",
 			"minValue":"<Numeric>",
 			"maxValue":"<Numeric>",
-			"maxLength":"<Integer>"
+			"enum":
 		},
 		...
 	}

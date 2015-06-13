@@ -2,8 +2,17 @@
 	"<eventType>":{
 		"name":"<STRING>",  // Can only be alphanum, "_", or "-", used as the link
 		"description":"<STRING>", // human readable description, shown in an app
-		"type":"<STRING>", // what type of action is this. Needed?
-		"lastUpdate":"<TIMESTAMP>", // when an action of this type has been last executed 
+		"values": {
+		"<valueNames>":{
+			"name":"<String>",
+			"description":"<String>",
+			"type":"<String>",
+			"unit":"<String>",
+			"optional":"<Boolean>",
+			"minValue":"<Numeric>",
+			"maxValue":"<Numeric>",
+			"enum":
+		},
 		"customFields":{
 				"<STRING>":"<STRING>",
 				"<STRING>":"<STRING>"
