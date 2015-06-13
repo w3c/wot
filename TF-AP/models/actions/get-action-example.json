@@ -1,8 +1,8 @@
 { 
-	"name":"reboot",  
+	"id":"reboot",
+	"name":"Reboot",  
 	"description":"Reboots the device", 
-	"lastUpdate":23123123,  
-	"parameters": {
+	"values": {
 		"delay":{
 			"type":"integer",
 			"optional":"false",
@@ -12,7 +12,11 @@
 		},
 		"mode":{
 			"description":"What type of reboot mode",
+<<<<<<< Updated upstream:TF-AP/JSON Payloads/actions/actionType/get-action-type-example.json
 			"type":"string", // refers to the type of what is in the enum
+=======
+			"type":"string",
+>>>>>>> Stashed changes:TF-AP/models/actions/get-action-example.json
 			"enum":{
 				"FORCE":"Quits all processes and shuts down the system",
 				"SOFT":"Waits all processes to finish before rebooting the device"

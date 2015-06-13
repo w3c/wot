@@ -1,0 +1,29 @@
+// GET {wt}/properties/acceleration
+// 200 OK
+// Link: <values/> rel="propertyValues";
+ 
+{
+    "id":"acceleration",
+    "name": "Acceleration",
+    "description": "A 3D acceleration sensor.",
+    "timestamp": "2012-08-24T17:29:11.683Z",
+    "values":{
+        "x":{
+            "name":"Y-axis",
+            "description":"The X dimension of the sensor",
+            "unit":"m/s2",
+            "value":22
+        },
+        "y":{
+            "name":"Y-axis",
+            "description":"The y dimension of the sensor",
+            "unit":"m/s2",
+            "value":22.56
+        },
+        "z":{
+            "name":"Z-axis",
+            "description":"The z dimension of the sensor",
+            "value":1.4
+        }
+    }
+}

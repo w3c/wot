@@ -8,8 +8,7 @@ Master model:
 
    TODO:
 
- -  Must in headers, should in JSON
-   to be defined generically
+ -  Must in headers, should in JSON to be defined generically
 
  -  Add Links to all resources: 
 
@@ -20,7 +19,7 @@ Master model:
          "type":"<String>"
       }
 
-- 	Parameters
+- 	Values
 
 	"parameters": {
 		"<parameterName>":{
@@ -36,6 +35,5 @@ Master model:
 
 - All clients should expect more fields in the JSON payloads than specified here. They should ignore the fields they do not know about.
 
-- Subscriptions can be attached to any resource
 
 - Pagination see EVRYTHNG

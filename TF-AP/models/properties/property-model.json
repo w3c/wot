@@ -1,0 +1,20 @@
+// GET {wt}/properties/{propertyName}
+// 200 OK
+// Link: <values/> rel="propertyValues";
+ 
+{
+	"name":"<STRING>",
+	"description":"<STRING>",
+	"timestamp":"<TIMESTAMP>",
+	"unit":"<SI_STRING>",
+	"type":"<STRING>",
+	"value":{
+		"<channelName>":{
+			"name":"<STRING>",
+			"description":"<STRING>",
+			"value":"<STRING|NUM|BOOL>"
+		},...
+	},
+	"tags":"<ARRAY>",
+	"customFields":"<OBJECT>"	
+}

@@ -1,0 +1,33 @@
+// GET {wt}/properties/
+// 200 OK
+// Link: <temperature/>; rel="property"; <status/>; rel="property"; <acceleration/>; rel="property"; 
+
+[
+	{
+		"name":"temperature",
+	    "timestamp": "2012-08-24T17:29:11.683Z",
+		"value":22  
+	},
+	{
+		"name":"status",
+	    "timestamp": "2012-08-24T17:29:11.683Z",
+		"value":"OK"  
+	},
+	{
+		"name":"acceleration",
+	    "timestamp": "2012-08-24T17:29:11.683Z",
+		"value":{
+			"x":-22,
+			"y":2.1,
+			"z":3
+		}  
+	},
+	{
+		"name":"engineAngle",
+	    "timestamp": "2012-08-24T17:29:11.683Z",
+		"value":{
+			"theta":"2",
+			"rho":"-0.1"
+		}  
+	}
+]
