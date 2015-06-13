@@ -1,6 +1,6 @@
 // GET {wt}/properties/
 // 200 OK
-// Links: <temperature/>; 
+// Link: <temperature/>; rel="property"; <status/>; rel="property"; <acceleration/>; rel="property"; 
 
 [
 	{
@@ -34,7 +34,7 @@
 
 // GET {wt}/properties/{propertyName}
 // 200 OK
-// Links: <values/>; 
+// Link: <values/> rel="propertyValues";
  
 {
 	"name":"<STRING>",
@@ -55,24 +55,24 @@
 
 // GET {wt}/properties/{propertyName}
 // 200 OK
-// Links: <values/>; 
+// Link: <values/>; 
 
 # GET {wt}/properties/acceleration
 {
 	"name": "acceleration",
 	"description": "A 3D acceleration sensor.",
     "timestamp": "2012-08-24T17:29:11.683Z",
-	"unit":"m/s2",
-	"type":"numeric",
 	"values":{
 		"x":{
 			"name":"Y-axis",
 			"description":"The X dimension of the sensor",
+			"unit":"m/s2",
 			"value":22
 		},
 		"y":{
 			"name":"Y-axis",
 			"description":"The y dimension of the sensor",
+			"unit":"m/s2",
 			"value":22.56
 		},
 		"z":{
@@ -105,8 +105,9 @@
 	}
 }
 
+// POST {wt}/properties/
+// 201 OK
 
-# POST {wt}/properties/
 [
 	{
 		"name":"temperature",
@@ -121,7 +122,10 @@
 
 ]
 
-# POST {wt}/properties/temperature/values
+// POST {wt}/properties/temperature/values
+// 201 CREATED
+// Location: {wt}/properties/temperature/propertyValues
+
 [
 	{
 		"value":24,
