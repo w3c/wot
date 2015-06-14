@@ -1,30 +1,23 @@
-{ 
-	"id":"reboot",
-	"name":"Reboot",  
-	"description":"Reboots the device", 
-	"values": {
-		"delay":{
-			"type":"integer",
-			"optional":"false",
-			"minValue":"0",
-			"maxValue":"120000",
-			"unit":"milliseconds"
+// GET {wt}/actions/upgradeFirmware/
+// 200 OK
+// Link: <http://webofthings.org/actions/upgradefirmware>; rel="meta"
+// Link: <model/>; rel="model"
+
+[
+	{
+		"id":223,
+		"value":{
+			"delay":30,
+			"mode":"SOFT"
 		},
-		"mode":{
-			"description":"What type of reboot mode",
-<<<<<<< Updated upstream:TF-AP/JSON Payloads/actions/actionType/get-action-type-example.json
-			"type":"string", // refers to the type of what is in the enum
-=======
-			"type":"string",
->>>>>>> Stashed changes:TF-AP/models/actions/get-action-example.json
-			"enum":{
-				"FORCE":"Quits all processes and shuts down the system",
-				"SOFT":"Waits all processes to finish before rebooting the device"
-			}
+	    "timestamp":"2015-06-14T18:33:25.938Z"
+	},
+	{
+		"id":222,
+		"value":{
+			"delay":60,
+			"mode":"FORCE"
 		},
-		"requester":{
-			"description":"Your user ID (optional) ",
-			"type":"string"
-		}
+		"timestamp":"2015-06-14T14:22:23.233Z"
 	}
-}
+]

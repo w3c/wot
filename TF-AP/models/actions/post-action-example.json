@@ -1,35 +1,51 @@
-// POST {wt}/actions/reboot
-<<<<<<< Updated upstream:TF-AP/JSON Payloads/actions/actionType/post-action-example.json
-// 201 Accepted
-// Location: {wt}/actions/reboot/233
-=======
+// POST {wt}/actions/{actionType}
+{
+	"value":{
+		"a":"<Value>",
+		"b":"<Value>",
+	},
+	"timestamp":"<Timestamp>",
+	"customFields":"<customFields>"
+}
+
 // 201 Created
-// Location: {wt}/actions/reboot/
->>>>>>> Stashed changes:TF-AP/models/actions/post-action-example.json
+// Location: {wt}/actions/{actionType}/{actionId}
 
+
+
+// POST {wt}/actions/reboot
 {
-	"delay":50,
-	"mode":"debug"
+	"value":{
+		"delay":50,
+		"mode":"debug"
+	}
 }
 
-// PUT {wt}/actions/reboot
-// To update an action type
-
+// 201 Created
+// Location: {wt}/actions/reboot/233
 {
-	updated action type model
+	"id":233,
+	"type":"reboot",
+	"status" : "executing",
+    "timestamp":"2015-06-14T14:30:00.000Z",
+	"value":{
+		"delay":50,
+		"mode":"debug"
+	}
 }
+
 
 
 // GET {wt}/actions/reboot/233
+
+// 200 OK
+// Link: <http://webofthings.org/actions/reboot>; rel="meta"
 {
-	"delay":50,
-	"mode":"debug",
-	"status" : buffered|executing|succeeded|failed
+	"id":233,
+	"status" : "buffered|executing|succeeded|failed",
+    "timestamp":"2015-06-14T14:30:00.000Z",
+	"value":{
+		"delay":50,
+		"mode":"debug"
+	}
 }
-
-// GET {wt}/actions/reboot/all
-// get all instances of actions
-
-// GET {wt}/actions/reboot
-// get the model of reboot
-

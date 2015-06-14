@@ -1,26 +1,19 @@
-//Same API as for actions
+// GET {wt}/events/
 
-{
-	"deviceError":{
-		"name":"deviceError",  
-		"description":"Basic event", 
-		"type":"log", 
-		"lastUpdate":"<TIMESTAMP>",  
-		"customFields":{
-				"status":"inactive"
-		}	
+// Link: <subscriptions/>; rel="subscriptions"
+// Link: <http://webofthings.org/events/>; rel="meta"
+
+[
+	{
+		"id":"deviceError",
+		"name":"Device Error",
 	}, 
-	"batteryLow":{
-		"name":"batteryLow",  
-		"description":"When battery drops below 2.8v.",
-		"type":"sensor", 
-		"lastUpdate":"<TIMESTAMP>",  
-		"customFields":{
-				"status":"active"
-		}	
+	{
+		"id":"batteryLow",
+		"name":"Low Battery",  
 	},
-	"myCustomEventType":{
-		"name":"myCustomEventType",  
-		"description":"User can create custom events (using a rule).",
+	{
+		"id":"myCustomEventType",
+		"name":"My Event",  
 	}
-}
+]

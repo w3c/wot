@@ -105,7 +105,7 @@ Alternatively, for example when you cannot configure the headers of the server. 
 
 | Field name  | Type  | Attributes | Description|
 | :------------ |:----------| :-----:|:-----|
-| `<relType>` | String  | Required | The relation type of this link. |
+| `relType` | String  | Required | The relation type of this link. _Examples: "meta", "http://webofthings.io/properties", "actions"_ |
 | `link` | String  | Required | The link to this resource. |
 | `title` | String  | Required | A human-readable name for this relation |
 | `schema` | String  | - | If a custom relation type is used, you can add a link that defines the nature of it. |
@@ -170,8 +170,7 @@ The model of each value is as follows
 			"unit":"<String>",
 			"required":"<Boolean>",
 			"minValue":"<Numeric>",
-			"maxValue":"<Numeric>",
-			"maxLength":"<Integer>"
+			"maxValue":"<Numeric>"
 		},...
 	}
 	...
@@ -182,10 +181,11 @@ The model of each value is as follows
 
 | Field name  | Type  | Attributes | Description|
 | :------------ |:----------| :-----:|:-----|
-| `valueName` | String  | required | The name of this value (e.g. `durationTime`). |
+| `valueName` | String  | Required | The name of this value (e.g. `durationTime`). |
 | `name` | String  | Required | A human-readable caption for this value. |
 | `description` | String  | read-only | A human-readable description of this value is. |
 | `type` | String  | - | The type of this value. The supported types are `integer`, `float`, `boolean`, `string` | 
+| `unit` | String  | - | The SI unit of this value, use the full name from [here](http://physics.nist.gov/cuu/Units/units.html). _Example: "meter per second squared"_ | 
 | `required` | Boolean  | - | Specifies whether this value is required or optional (useful in description of an action model).| 
 | `minValue` | Integer or Float  | - | The minimal value of this value.| 
 | `maxValue` | Integer or Float  | - | The maximal value of this value.| 
@@ -195,3 +195,22 @@ The model of each value is as follows
 ### Values Object - Example
 
 [See an example JSON](https://github.com/w3c/wot/blob/master/TF-AP/models/web-thing-model.json)
+
+## HTTP Verbs Support for Web Things
+
+| REST URL | POST | GET | PUT | DELETE | OPTIONS |
+| :--------|:----:|:---:|:---:|:------:|:-------:|
+| `{wt}` | - | X | - | - | X |
+| `{wt}/properties` | X | X | - | - | X |
+| `{wt}/properties/{id}` | X | X | - | - | X |
+| `{wt}/properties/{id}/model` | - | X | X | - | X |
+| `{wt}/actions` | - | X | - | - | X |
+| `{wt}/actions/{id}` | X | X | - | - | X |
+| `{wt}/actions/{id}/{actionId}` | - | X | - | X | X |
+| `{wt}/actions/{id}/model` | - | X | X | - | X |
+| `{wt}/event` | - | X | - | - | X |
+| `{wt}/event/{id}` | X | X | - | - | X |
+| `{wt}/event/{id}/model` | - | X | X | - | X |
+| `{wt}/things` | - | X | - | - | X |
+| `{wt}/things/{id}` | X | X | X | X | X |
+| `{wt}/*/subscriptions` | - | X | X | X | X |

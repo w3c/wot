@@ -1,0 +1,35 @@
+// POST {wt}/event/{eventType}
+{
+	"value":{
+		"a":"<Value>",
+		"b":"<Value>",
+	},
+	"timestamp":"<Timestamp>",
+	"customFields":"<customFields>",
+	"tags":"[<String>,...]"
+}
+
+
+// POST {wt}/event/batteryLow
+{
+    "timestamp":"2015-06-14T18:33:25.938Z",
+	"value":{
+		"state":"CRITICAL"
+	},
+	"tags":["alert"]
+}
+
+
+// 201 CREATED
+// Location: {wt}/event/batteryLow/56
+
+{
+	"id":56,
+	"type":"batteryLow",
+	"name":"Low Battery",
+    "timestamp":"2015-06-14T18:33:25.938Z",
+	"value":{
+		"state":"CRITICAL"
+	},
+	"tags":["alert"]
+}

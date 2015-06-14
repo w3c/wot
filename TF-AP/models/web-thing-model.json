@@ -2,8 +2,10 @@
    "id":"<String>",
    "name":"<String>",
    "description":"<String>",
+   "tags":"[<String>,...]",
+   "customFields":"<customFields>",
    "links":{  
-      "<RelType>":{  
+      "<relType>":{  
          "link":"<URI>",
          "title":"<String>",
          "type":"<String>"

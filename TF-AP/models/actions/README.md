@@ -4,10 +4,9 @@
 
 This resource specifies all actions (commands) that clients can send to a Web Thing.    
 
-It is a list of **Action Types**, each one with a specific meaning an payload. 
+It is a list of **Action Types**, each one with a specific meaning and payload.   
 
-
-### Action Type - JSON Model 
+## Action Type - JSON Model 
 
 [View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/actions/action-type-model.json)
 
@@ -15,74 +14,67 @@ It is a list of **Action Types**, each one with a specific meaning an payload.
 
 | Field name  | Type  | Attributes | Description|
 | :------------ |:----------| :-----:|:-----|
-| `actionType` | String | required | The unique machine name of this action type. Ideally, it should be alphanum, "_", or "-". _Examples: "rebootDevice,setLampStatus"_|
-| `name` | String  | required | The human name of this action type. |
-| `description` | String  | - | A short human-readable description of this Action Type. | 
-| `tags` | [String,...]  | - | An array of tags. _Example: ["test","phone"]_| 
-| `customFields` | Object  | - | A JSON object with key-value pairs to store any custom information about this Action Type. _Example: {"permissions": "public","priority": "low"}_| 
+| `id` | String | Required | The unique machine name of this action type. Ideally, it should be alphanum, "_", or "-". _Examples: "rebootDevice","setLampStatus"_|
+| `name` | String  | - | The human-readable name of this action type. |
+| `description` | String  | - | A short human-readable description of what this action type does. _Example:"Reboots the device."_| 
+|`values`| [Values](https://github.com/w3c/wot/blob/master/TF-AP/models/README.md)| - | The parameters that this action type accepts when created.|
 
 #### Notes:
 * Action type here don't define the details of _how to_ send an action of this type - only the ones supported by the Web Thing.   
 
-## List all actions - `GET {wt}/actions`
+## `GET {wt}/actions`
 This returns the list of all action types supported by this device as an array of action types. 
 
 [View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/actions/get-actions-example.json)
 
-You can then use the `id` of each action to address that specific action type.  
+You can then use the `id` of each action (`{typeId}` below) to address that specific action type (to find their model and create actions of that type).  
 
-## Get action type - `GET {wt}/actions/{id}`
-This returns the list of all action types supported by this device as an array of action types. 
+## `GET {wt}/actions/{typeId}`
+
+This returns an array with all actions of type `{typeId}` contained on the Web Thing. 
+
+[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/actions/get-action-example.json)
+
+
+## `GET {wt}/actions/{typeId}/model`
+
+This returns the Model of the action type `{typeId}`. 
+
+[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/actions/get-action-model-example.json)
 
 ```
-GET {wt}/actions/{id}
+GET {wt}/actions/{typeId}
 
 200 OK
-ActionType
+Action Type Document
 
 ```
-You can then use the `id` of each action to address that specific action type.  
+If allowed by the device, you can update this action type model using PUT by sending the new <actionType> document.  
 
-## Create action - `POST {wt}/actions/{id}`
-This creates a new instance of that action, which is created immediately (if the parameters are valid), but might not be executed on the spot.  
+## `POST {wt}/actions/{typeId}`
+This creates a new instance of that action, which is created immediately (if the parameters are valid), but might not be executed on the spot. This is how you send a command to a device.  
 
-To create a new action of a given type, you simply send 
-
-```
-GET {wt}/actions/{id}
-
-200 OK
-ActionType
+To create a new action of a given type, you simply send to the resource of that type a `POST` request and the payload MUST be an object with the values that are required by the model. 
+ 
+[View the JSON Examples](https://github.com/w3c/wot/blob/master/TF-AP/models/actions/post-action-example.json)
 
 ```
-You can then use the `id` of each action to address that specific action type.  
-
-
-## Example - Actions
-```javascript
+--> REQUEST
+POST {wt}/actions/reboot
 {
-	"upgradeFirmware":{
-		"name":"Upgrade Device Firmware",  
-		"description":"Loads a new firmware from the cloud and installs it.",
-		"type":"action", 
-		"customFields":{
-			"permission":"admin",
-			"priority":"high"
-		}	
-	},
-	"reboot":{
-		"name":"Reboot",  
-		"description":"Reboots the device.",
-		"type":"action", 
-		"customFields":{
-			"status":"inactive",
-			"permission":"admin"
-		}	
-	},
-	"myActionType":{
-		"name":"myActionType",  
-		"description":"Whatever you want.",
-		"type":"action"
-	}
+	"delay":50,
+	"mode":"debug"
+}
+
+<-- RESPONSE
+201 CREATED
+Location: {wt}/actions/reboot/233
+{
+	"id":233,
+	"delay":50,
+	"mode":"debug",
+	"status" : "executing",
+    "timestamp":"2015-06-14T14:30:00.000Z"
 }
 ```
+You can then use the `id` of each action to address that specific action (the full link is returned in the `Location:` header), and see its status using a `GET` on that URL.   
