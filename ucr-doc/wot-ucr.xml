@@ -59,8 +59,8 @@
             <li reqref="resource-description">The DER has to describe itself to enable discovery of single DERs and ensembles, also the operational data needs to be understood by the different stakeholders without engineering effort.</li>
             <li reqref="push">As there is a fan-out with many devices that probably have a rate-limited connection connecting to one single command central, a bidirectional communication mechanism is needed rather tzhan polling for the reverse direction</li>
             <li reqref="privacy">As fine-grained metering informtion provides sensitve data about a household, the system should show a high digree of privacy</li>
-            <li reqref="trust"></li>
-            <li reqref="object-memory">...</li>
+            <li reqref="trust">Since the data exchange between the virtual power plant and the distibuted energy resource leads to a physical action that invokves high currents and monetary flows, the integrity of both parties and the exchanges data is crucial</li>
+            <li reqref="object-memory">As multiple and interchangable stakeholdes are involved in the application, a backlog of the object is beneficial for scrollkeeping</li>
             <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serilization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
         </ul>
     </usecase>
