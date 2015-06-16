@@ -5,7 +5,7 @@ The baseline idea is mapping domain use cases to technologies by breaking them d
 These primitives are referred to as *atomic use case* or *building block*.
 Together, the building blocks form a blueprint called the WoT Framework.
 
-See the presentation "WoT_CommonView_KickOff.pdf" for the motivation behind this approach.
+See the presentations "WoT_CommonView_KickOff.pdf" and "UC_dissamination.pdf" for the motivation and introduction behind this approach.
 
 ## Structure and Building
 The data is collected in the xml file and rendered into a re:spec-page using xslt.
@@ -14,13 +14,13 @@ The repo is connected to a continuous delivery chain using Travis CI
 That means that every commit will trigger a rebuild of the document.
 If the build was successful, the updated document is pushed to the ``gh-pages`` branch, which is accessible via:
 
-http://h0ru5.github.io/wot/wot-ucr.html
+http://w3c.github.io/wot/wot-ucr.html
 
 ## Contributing
 
-Contributions are welcome via pull-requests. For this you need a github account.
+Contributions are welcome via pull-requests. For this you need a free github account. You can sign up [here](https://github.com/join).
 
-The github documentation on:
+See also the github documentation on:
 * [Fork a repo](https://help.github.com/articles/fork-a-repo/)
 * [Using pull requests](https://help.github.com/articles/using-pull-requests/)
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
@@ -35,7 +35,7 @@ To contribute, please follow the following steps:
 
 ###There is a shortcut:
 
-if you click the file [wot-ucr.xml](https://github.com/h0ru5/wot/blob/master/ucr-doc/wot-ucr.xml)
+if you click the file [wot-ucr.xml](https://github.com/w3c/wot/blob/master/ucr-doc/wot-ucr.xml)
 you have a pencil-icon in the upper right, enabling a direct edit. That will automagically create a fork, a feature-branch and a pull-request.
 
 ## License
