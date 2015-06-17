@@ -42,6 +42,6 @@ you have a pencil-icon in the upper right, enabling a direct edit. That will aut
 As per W3C policies, all contributions are licensed under a [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/).
 
 ## Credits / Contact
-You can contact Johannes Hund (@h0ru5, johannes.hund@siemens.com) for questions.
+You can contact Johannes Hund (@h0ru5, johannes.hund -at - siemens.com) for questions.
 
 Kudos to Erik Wilde (@dret) for initial XML, XSLT and examples.
