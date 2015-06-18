@@ -62,12 +62,12 @@ You can use all the [registered entity types](https://tools.ietf.org/html/rfc598
 
 Web Things also define the following relation types: 
 
-* **[Properties](web-things-model/properties)**. The properties of this Web Thing. 
-* **[Events](web-things-models/events)**. The events this Web Thing can generate. 
-* **[Actions](web-things-models/actions)**. The actions that you can send to this Web Thing. 
-* **[System](web-things-models/system)**. The system configurations and parameters of this Web Thing. 
-* **[Things](web-things-models/things)**. The other Things proxied by this Web Thing (if applicable). 
-* **[Subscriptions](web-things-models/subscriptions)**. The endpoint to manage to subscribe to this resource.
+* **[Properties](/properties)**. The properties of this Web Thing. 
+* **[Events](/events)**. The events this Web Thing can generate. 
+* **[Actions](/actions)**. The actions that you can send to this Web Thing. 
+* **[System](/system)**. The system configurations and parameters of this Web Thing. 
+* **[Things](/things)**. The other Things proxied by this Web Thing (if applicable). 
+* **[Subscriptions](/subscriptions)**. The endpoint to manage to subscribe to this resource.
 * **Product**. A link to a a product definition for this Web Thing. 
 
 Each resource of Web Things SHOULD use the link header mechanism to expose the links to its sub-resources using the `Link:` header type.
@@ -185,11 +185,11 @@ The model of each value is as follows
 
 ### Values Object - Example
 
-[See an example JSON](web-things-model/web-thing-model.json)
+[See an example JSON](web-thing-model.json)
 
 ## HTTP Resources & Verbs Support for Web Things
 
-Ideally all end-points should be supported by all Web Things, the target column refers to the [integration patterns document](../web-things-integration-patterns) and is here as an indication which type of Web Thing would typically implement these end points. 
+Ideally all end-points should be supported by all Web Things, the target column refers to the [Integration Patterns document](../web-things-integration-patterns) and is here as an indication which type of Web Thing would typically implement these end points. 
 
 | REST URL | POST | GET | PUT | DELETE | OPTIONS | Target |
 | :--------|:----:|:---:|:---:|:------:|:-------:|:------:|

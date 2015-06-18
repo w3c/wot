@@ -1,10 +1,13 @@
 # Web of Things Standard Recommendation
 
-[Main document](../)
+This document is part of the [Web of Things Standard Recommendation](../).
+
+This part looks into the different ways of integrating physical objects to the Web to make them Web Things. Once a pattern has been choosen the server of a Web Thing should follow the [Web Things Requirements](../web-things-requirements/) and the resources and payloads it uses should be following the [Web Things Model](../web-things-model/).
+
 
 ## Web Things Integration Patterns
 
-Some physical entities might not expose a Web API themselves for various reasons (e.g., a ZigBee sensor node, or an Alarm clock accessible over HomeKit only), in which case they aren’t WTs as such but they can use another Web Thing as a proxy or gateway to provide an Web API for them.
+Some physical entities might not expose a Web API themselves for various reasons (e.g., a ZigBee sensor node, or an Alarm clock accessible over Bluetooth only), in which case they aren’t WTs as such but they can use another Web Thing as a proxy or gateway to provide an Web API for them.
 
 ### Direct Connectivity
 
