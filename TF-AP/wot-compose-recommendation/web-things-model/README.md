@@ -62,12 +62,12 @@ You can use all the [registered entity types](https://tools.ietf.org/html/rfc598
 
 Web Things also define the following relation types: 
 
-* **[Properties](/properties)**. The properties of this Web Thing. 
-* **[Events](/events)**. The events this Web Thing can generate. 
-* **[Actions](/actions)**. The actions that you can send to this Web Thing. 
-* **[System](/system)**. The system configurations and parameters of this Web Thing. 
-* **[Things](/things)**. The other Things proxied by this Web Thing (if applicable). 
-* **[Subscriptions](/subscriptions)**. The endpoint to manage to subscribe to this resource.
+* **[Properties](properties/)**. The properties of this Web Thing. 
+* **[Events](events/)**. The events this Web Thing can generate. 
+* **[Actions](actions/)**. The actions that you can send to this Web Thing. 
+* **[System](system/)**. The system configurations and parameters of this Web Thing. 
+* **[Things](things/)**. The other Things proxied by this Web Thing (if applicable). 
+* **[Subscriptions](subscriptions/)**. The endpoint to manage to subscribe to this resource.
 * **Product**. A link to a a product definition for this Web Thing. 
 
 Each resource of Web Things SHOULD use the link header mechanism to expose the links to its sub-resources using the `Link:` header type.
