@@ -1,7 +1,8 @@
 # Web of Things Standard Recommendation
 
-[Main document](../)
+This document is part of the [Web of Things Standard Recommendation](../).
 
+This part proposes a definition of Web Things, their resources and payloads. Using the proposed model enables interoperability between Web Things. It assumes an [Integration Pattern](../web-things-integration-patterns/) and that the Web Thing follows the [Web Things Requirements](../web-things-requirements/) document.
 
 ## Web Things Model
 Every resource in the Web of Things (Things, Actions, Properties, etc.) MUST have an id that is used to address it (which MUST be unique in its context). Web Things MAY also define the following fields in their JSON representation, therefore you MUST NOT use them in your implementation for anything else than defined here. 
@@ -62,16 +63,14 @@ You can use all the [registered entity types](https://tools.ietf.org/html/rfc598
 Web Things also define the following relation types: 
 
 * **[Properties](web-things-model/properties)**. The properties of this Web Thing. 
-* **[Events](https://github.com/w3c/wot/blob/master/TF-AP/models/events)**. The events this Web Thing can generate. 
-* **[Actions](https://github.com/w3c/wot/blob/master/TF-AP/models/actions)**. The actions that you can send to this Web Thing. 
-* **[System](https://github.com/w3c/wot/blob/master/TF-AP/models/system)**. The system configurations and parameters of this Web Thing. 
-* **[Things](https://github.com/w3c/wot/blob/master/TF-AP/models/things)**. The other Things proxied by this Web Thing (if proxies other Web Things). 
-* **[Subscriptions](https://github.com/w3c/wot/blob/master/TF-AP/models/subscriptions)**. The endpoint to manage to subscribe to this resource.
+* **[Events](web-things-models/events)**. The events this Web Thing can generate. 
+* **[Actions](web-things-models/actions)**. The actions that you can send to this Web Thing. 
+* **[System](web-things-models/system)**. The system configurations and parameters of this Web Thing. 
+* **[Things](web-things-models/things)**. The other Things proxied by this Web Thing (if applicable). 
+* **[Subscriptions](web-things-models/subscriptions)**. The endpoint to manage to subscribe to this resource.
 * **Product**. A link to a a product definition for this Web Thing. 
 
-
 Each resource of Web Things SHOULD use the link header mechanism to expose the links to its sub-resources using the `Link:` header type.
-
 
 
 Alternatively, for example when you cannot configure the headers of the server. You MAY expose the links in the JSON object as follows:
@@ -186,23 +185,25 @@ The model of each value is as follows
 
 ### Values Object - Example
 
-[See an example JSON](https://github.com/w3c/wot/blob/master/TF-AP/models/web-thing-model.json)
+[See an example JSON](web-things-model/web-thing-model.json)
 
-## HTTP Verbs Support for Web Things
+## HTTP Resources & Verbs Support for Web Things
 
-| REST URL | POST | GET | PUT | DELETE | OPTIONS |
-| :--------|:----:|:---:|:---:|:------:|:-------:|
-| `{wt}` | - | X | - | - | X |
-| `{wt}/properties` | X | X | - | - | X |
-| `{wt}/properties/{id}` | X | X | - | - | X |
-| `{wt}/properties/{id}/model` | - | X | X | - | X |
-| `{wt}/actions` | - | X | - | - | X |
-| `{wt}/actions/{id}` | X | X | - | - | X |
-| `{wt}/actions/{id}/{actionId}` | - | X | - | X | X |
-| `{wt}/actions/{id}/model` | - | X | X | - | X |
-| `{wt}/events` | - | X | - | - | X |
-| `{wt}/events/{id}` | X | X | - | - | X |
-| `{wt}/events/{id}/model` | - | X | X | - | X |
-| `{wt}/things` | - | X | - | - | X |
-| `{wt}/things/{id}` | X | X | X | X | X |
-| `{wt}/*/subscriptions` | - | X | X | X | X |
+Ideally all end-points should be supported by all Web Things, the target column refers to the [integration patterns document](../web-things-integration-patterns) and is here as an indication which type of Web Thing would typically implement these end points. 
+
+| REST URL | POST | GET | PUT | DELETE | OPTIONS | Target |
+| :--------|:----:|:---:|:---:|:------:|:-------:|:------:|
+| `{wt}` | - | X | - | - | X | Things, Gateways, Clouds
+| `{wt}/properties` | X | X | - | - | X | Things, Gateways, Clouds
+| `{wt}/properties/{id}` | X | X | - | - | X | Things, Gateways, Clouds
+| `{wt}/properties/{id}/model` | - | X | X | - | X | Things, Gateways, Clouds
+| `{wt}/actions` | - | X | - | - | X | Gateways, Clouds
+| `{wt}/actions/{id}` | X | X | - | - | X | Gateways, Clouds
+| `{wt}/actions/{id}/{actionId}` | - | X | - | X | X | Gateways, Clouds
+| `{wt}/actions/{id}/model` | - | X | X | - | X | Gateways, Clouds
+| `{wt}/events` | - | X | - | - | X | Gateways, Clouds
+| `{wt}/events/{id}` | X | X | - | - | X | Gateways, Clouds
+| `{wt}/events/{id}/model` | - | X | X | - | X | Gateways, Clouds
+| `{wt}/things` | - | X | - | - | X | Gateways, Clouds
+| `{wt}/things/{id}` | X | X | X | X | X | Gateways, Clouds
+| `{wt}/*/subscriptions` | - | X | X | X | X | Things, Gateways, Clouds

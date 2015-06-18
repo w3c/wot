@@ -1,6 +1,6 @@
 # Web of Things Standard Recommendation
 
-[Main document]()
+[Main document](../)
 
 ## Web Things Integration Patterns
 
