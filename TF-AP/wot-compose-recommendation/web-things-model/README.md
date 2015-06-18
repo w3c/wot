@@ -1,18 +1,10 @@
-# Web of Things Label
+# Web of Things Standard Recommendation
 
-**Authors**
+[Main document](../)
 
-* Vlad Trifa, [EVRYTHNG](http://evrythng.com)
-* Dominique Guinard, [EVRYTHNG](http://evrythng.com)
-* David Carrera, [Barcelona Supercomputing Center](http://bsc.es)
-* François Daoust, [W3C](http://w3c.org)
 
-**Overview**
-
-This documents contains a set of data models (JSON) of all the components of a Web Thing. You can find a document that describes these concepts in more detail [here](https://github.com/w3c/wot/blob/master/TF-AP/WoT-Label-current.pdf). 
-
-## Master Model
-Every resource in the Web of Things (things, actions, properties, etc.) MUST have an id that is used to address it (which MUST be unique in its context). Web Things MAY also define the following fields in their JSON representation, therefore you MUST NOT use them in your implementation for anything else than defined here. 
+## Web Things Model
+Every resource in the Web of Things (Things, Actions, Properties, etc.) MUST have an id that is used to address it (which MUST be unique in its context). Web Things MAY also define the following fields in their JSON representation, therefore you MUST NOT use them in your implementation for anything else than defined here. 
 
 ## Basic JSON Fields
 Every JSON resource of the Web of Things MAY have the following fields in their payload: 
@@ -69,7 +61,7 @@ You can use all the [registered entity types](https://tools.ietf.org/html/rfc598
 
 Web Things also define the following relation types: 
 
-* **[Properties](https://github.com/w3c/wot/blob/master/TF-AP/models/properties)**. The properties of this Web Thing. 
+* **[Properties](web-things-model/properties)**. The properties of this Web Thing. 
 * **[Events](https://github.com/w3c/wot/blob/master/TF-AP/models/events)**. The events this Web Thing can generate. 
 * **[Actions](https://github.com/w3c/wot/blob/master/TF-AP/models/actions)**. The actions that you can send to this Web Thing. 
 * **[System](https://github.com/w3c/wot/blob/master/TF-AP/models/system)**. The system configurations and parameters of this Web Thing. 
@@ -208,9 +200,9 @@ The model of each value is as follows
 | `{wt}/actions/{id}` | X | X | - | - | X |
 | `{wt}/actions/{id}/{actionId}` | - | X | - | X | X |
 | `{wt}/actions/{id}/model` | - | X | X | - | X |
-| `{wt}/event` | - | X | - | - | X |
-| `{wt}/event/{id}` | X | X | - | - | X |
-| `{wt}/event/{id}/model` | - | X | X | - | X |
+| `{wt}/events` | - | X | - | - | X |
+| `{wt}/events/{id}` | X | X | - | - | X |
+| `{wt}/events/{id}/model` | - | X | X | - | X |
 | `{wt}/things` | - | X | - | - | X |
 | `{wt}/things/{id}` | X | X | X | X | X |
 | `{wt}/*/subscriptions` | - | X | X | X | X |
