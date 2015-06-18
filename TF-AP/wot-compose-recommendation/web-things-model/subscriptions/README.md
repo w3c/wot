@@ -10,7 +10,7 @@ The Web Thing developer needs to decide which end-points support it, but the `{w
 
 ## Ssubscriptions Object - JSON Model 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/subscriptions/things-model.json)
+[View the JSON model](things-model.json)
 
 ### Event Type - FIELDS
 
@@ -25,7 +25,7 @@ The Web Thing developer needs to decide which end-points support it, but the `{w
 ## `GET {wt}/*/subscriptions`
 This returns all the subscriptions on this resource.
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/subscriptions/get-subscriptions-example.json)
+[View the JSON model](get-subscriptions-example.json)
 
 
 ## `POST {wt}/*/subscriptions`

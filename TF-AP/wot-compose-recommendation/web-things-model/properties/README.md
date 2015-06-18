@@ -10,7 +10,7 @@ A property is used to keep track of a set of variables about a device (its locat
 
 ## Property Type - JSON Model 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/properties/property-type-model.json)
+[View the JSON model](property-type-model.json)
 
 ### Property Type - FIELDS
 
@@ -19,14 +19,14 @@ A property is used to keep track of a set of variables about a device (its locat
 | `id` | String | Required | The unique machine name of this property. Ideally, it should be alphanum, "_", or "-". _Examples: "rebootDevice","setLampStatus"_|
 | `name` | String  | - | The human-readable name of this property. |
 | `description` | String  | - | A short human-readable description of what this property type does. _Example:"Reboots the device."_| 
-|`values`| [Values](https://github.com/w3c/wot/blob/master/TF-AP/models/README.md)| - | The multiple channels this property contains.|
+|`values`| [Values](../web-things-model#-values)| - | The multiple channels this property contains.|
 
 #### Notes:
 
 ## `GET {wt}/properties`
 This returns an array of all properties available on this Web Thing. 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/properties/get-properties-example.json)
+[View the JSON model](get-properties-example.json)
 
 You can then use the `id` of each property (`{typeId}` below) to address that specific property type (to find their model and create properties of that type).  
 
@@ -34,14 +34,14 @@ You can then use the `id` of each property (`{typeId}` below) to address that sp
 
 This returns an array with all properties of type `{typeId}` contained on the Web Thing. 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/properties/get-property-example.json)
+[View the JSON model](get-property-example.json)
 
 
 ## `GET {wt}/properties/{typeId}/model`
 
 This returns the Model of the property type `{typeId}`. 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/properties/get-property-model-example.json)
+[View the JSON model](get-property-model-example.json)
 
 ```
 GET {wt}/properties/{typeId}
@@ -55,7 +55,7 @@ If allowed by the device, you can update this property type model using PUT by s
 ## `POST {wt}/properties/{typeId}`
 To update a property of a device, you must post an *array* of property value objects (can be only 1). This allows you to send several updates at the same time, and is useful only if the Web Thing can store more than a single (e.g. a cloud-based Web Thing). Clients can provide an optional timestamp with each value object, but if none is provided, the Web Thing should automatically append it 
  
-[View the JSON Examples](https://github.com/w3c/wot/blob/master/TF-AP/models/properties/post-property-example.json)
+[View the JSON Examples](post-property-example.json)
 
 ```
 --> REQUEST

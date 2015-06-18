@@ -8,7 +8,7 @@ This is mainly useful on cloud or gateways, which proxy third party devices.
 
 ## Web Thing Type - JSON Model 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/things/things-model.json)
+[View the JSON model](things-model.json)
 
 ### Event Type - FIELDS
 
@@ -23,6 +23,6 @@ This is mainly useful on cloud or gateways, which proxy third party devices.
 ## `GET {wt}/things`
 This returns array with all the things proxied by this Web Thing. 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/things/get-things-example.json)
+[View the JSON model](get-things-example.json)
 
 The root URL for each of those Web Things MUST be `{wt}/things/{id}`, unless the field `rootUrl` is defined. 

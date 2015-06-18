@@ -6,7 +6,7 @@ This resource specifies all configurations or system properties that a Web Thing
 
 ## System Object - JSON Model 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/system/things-model.json)
+[View the JSON model](things-model.json)
 
 ### Event Type - FIELDS
 
@@ -21,7 +21,7 @@ This resource specifies all configurations or system properties that a Web Thing
 ## `GET {wt}/system`
 This returns an object with the system object of this Web Thing. 
 
-[View the JSON model](https://github.com/w3c/wot/blob/master/TF-AP/models/system/get-system-example.json)
+[View the JSON model](get-system-example.json)
 
 The root URL for each of those Web Things MUST be `{wt}/things/{id}`, unless the field `rootUrl` is defined. 
 
