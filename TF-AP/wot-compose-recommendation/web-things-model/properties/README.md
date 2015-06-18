@@ -19,7 +19,7 @@ A property is used to keep track of a set of variables about a device (its locat
 | `id` | String | Required | The unique machine name of this property. Ideally, it should be alphanum, "_", or "-". _Examples: "rebootDevice","setLampStatus"_|
 | `name` | String  | - | The human-readable name of this property. |
 | `description` | String  | - | A short human-readable description of what this property type does. _Example:"Reboots the device."_| 
-|`values`| [Values](../web-things-model#-values)| - | The multiple channels this property contains.|
+|`values`| [Values](../)| - | The multiple channels this property contains.|
 
 #### Notes:
 

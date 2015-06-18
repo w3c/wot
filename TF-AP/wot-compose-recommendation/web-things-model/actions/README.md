@@ -17,7 +17,7 @@ It is a list of **Action Types**, each one with a specific meaning and payload.
 | `id` | String | Required | The unique machine name of this action type. Ideally, it should be alphanum, "_", or "-". _Examples: "rebootDevice","setLampStatus"_|
 | `name` | String  | - | The human-readable name of this action type. |
 | `description` | String  | - | A short human-readable description of what this action type does. _Example:"Reboots the device."_| 
-|`values`| [Values](../web-things-model#-values)| - | The parameters that this action type accepts when created.|
+|`values`| [Values](../)| - | The parameters that this action type accepts when created.|
 
 #### Notes:
 * Action type here don't define the details of _how to_ send an action of this type - only the ones supported by the Web Thing.   

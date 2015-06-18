@@ -17,7 +17,7 @@ It is a list of **event Types**, each one with a specific meaning and payload.
 | `id` | String | Required | The unique machine name of this event type. Ideally, it should be alphanum, "_", or "-". _Examples: "batteryLow","systemFailure"_|
 | `name` | String  | - | The human-readable name of this event type. |
 | `description` | String  | - | A short human-readable description of when this event is generated. _Example:"Created when the Web Thing battery is low."_| 
-|`values`| [[Values](../web-things-model#-values)| - | The values that this event type contains when created.|
+|`values`| [[Values](../)| - | The values that this event type contains when created.|
 
 #### Notes:
 
