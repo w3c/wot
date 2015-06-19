@@ -1,26 +1,24 @@
 # The `subscriptions` Resource
 
-<--TODO-->
-
 **Default URL**:`{wt}/*/subscriptions`
 
-This resource MAY be appended to any other resource from Web Things, and allows to manage pub/sub type of subscriptions for that resource.  
+This resource MAY be appended to **any other resource from Web Things**, and allows to manage pub/sub type of subscriptions for that resource.  
 
-The Web Thing developer needs to decide which end-points support it, but the `{wt}/events/*` and `{wt}/properties/*` at least SHOULD have it.
+The Web Thing developer needs to decide which end-points support it, but the `{wt}/events/*` and `{wt}/properties/*` SHOULD support it.
 
-## Ssubscriptions Object - JSON Model 
+The subscriptions model supports delivery via Web Hooks and WebSockets.
 
-[View the JSON model](things-model.json)
+## Subscriptions Object - JSON Model 
 
-### Event Type - FIELDS
+[View the JSON model](.json)
+
+### Subscription Type - FIELDS
 
 | Field name  | Type  | Attributes | Description|
 | :------------ |:----------| :-----:|:-----|
-| `id` | String | Required | The unique machine name of this thing. Ideally, it should be alphanum, "_", or "-". _Examples: "batteryLow","systemFailure"_|
-| `name` | String  | - | The human-readable name of this Web Thing. |
-| `rootUrl` | String  | - | The root URL to this Web Thing, only if different from `{wt}/thing/{id}` _Example:"http://192.168.0.4:8080"_| 
+| `subscriberId` | String | Required | A unique identifier for the subscription |
+| `type` | String  | - | `httpCallback` or `websockets` |
 
-#### Notes:
 
 ## `GET {wt}/*/subscriptions`
 This returns all the subscriptions on this resource.
@@ -29,6 +27,6 @@ This returns all the subscriptions on this resource.
 
 
 ## `POST {wt}/*/subscriptions`
-This allows you to create a subscription on this end-point. We will describe how to do it using Web Hooks and WebSockets. 
+This allows you to create a subscription on this end-point.
 
-
+[View the JSON model](post-subscriptions-example.json)
