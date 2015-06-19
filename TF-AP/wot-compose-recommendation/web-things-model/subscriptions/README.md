@@ -10,7 +10,7 @@ The subscriptions model supports delivery via Web Hooks and WebSockets.
 
 ## Subscriptions Object - JSON Model 
 
-[View the JSON model](.json)
+[View the JSON model](subscriptions-model.json)
 
 ### Subscription Type - FIELDS
 
@@ -23,10 +23,10 @@ The subscriptions model supports delivery via Web Hooks and WebSockets.
 ## `GET {wt}/*/subscriptions`
 This returns all the subscriptions on this resource.
 
-[View the JSON model](get-subscriptions-example.json)
+[View JSON examples](get-subscriptions-example.json)
 
 
 ## `POST {wt}/*/subscriptions`
 This allows you to create a subscription on this end-point.
 
-[View the JSON model](post-subscriptions-example.json)
+[View JSON examples](post-subscriptions-example.json)
