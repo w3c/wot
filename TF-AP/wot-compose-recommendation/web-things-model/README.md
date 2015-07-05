@@ -7,9 +7,49 @@ This part proposes a definition of Web Things, their resources and payloads. Usi
 ## Web Things Model
 Every resource in the Web of Things (Things, Actions, Properties, etc.) MUST have an id that is used to address it (which MUST be unique in its context). Web Things MAY also define the following fields in their JSON representation, therefore you MUST NOT use them in your implementation for anything else than defined here. 
 
-## Basic JSON Fields
-Every JSON resource of the Web of Things MAY have the following fields in their payload: 
+```
+{  
+   "id":"<String>",
+   "name":"<String>",
+   "description":"<String>",
+   "tags":"[<String>,...]",
+   "customFields":"<customFields>",
+   "links":{  
+      "<relType>":{  
+         "link":"<URI>",
+         "title":"<String>",
+         "type":"<String>"
+      },...
+   }
+}
 
+```
+
+### Web Thing - Example
+
+```
+{
+	...
+	"id":"myCar",
+	"name":"My super great car",
+	"description":"This is such a great car. Seriously!",
+	"createdAd":"2012-08-24T17:29:11.683Z", 
+	"updatedAd":"2012-08-24T17:29:11.683Z", 
+	"tags":["cart","device","test"],
+	"customFields":{
+		"size":"20",
+		"color":"blue"
+	},
+	"links":{
+		... (see below)...
+	}
+	...
+
+```
+
+
+
+### Links Object - Model
 ```
 {
 	...
