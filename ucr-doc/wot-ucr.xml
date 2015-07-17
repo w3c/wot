@@ -4,10 +4,10 @@
 <ucr>
     <usecase id="building-automation" author="dret" domain="home_automation">
         <title>Building Automation</title>
-        <p>Buildings often have a large variety of components such as Heating, Venting, and Air Conditioning (HVAC), lighting systems, and possibly more specialized systems such as support for reserving rooms electronically. Very often, these systems are not provided by a single supplier, but there still should be a single way how interactions with the overall building automation infrastructure are possible.</p>
-        <p>Possibly, building automation scenarios can have layered services, such for example when it comes to temperature sensing. While the basic functionality of the building automation system might only include to get information about the current temperature in a variety of places, there also might be a "temperature history" service. This service might allow more advanced features such as accessing the complete history of temperature measurements, and possible even more advanced functionalities such as queries int this dataset. Again, such an advanced service should be accessible in the same way as the more basic services, so that developers can access all these services in a uniform way.</p>
+        <p>Buildings often have a large variety of components such as Heating, Venting, and Air Conditioning (HVAC), lighting systems, and possibly more specialized systems such as support for reserving rooms electronically. Very often, these systems are not provided by a single supplier. Instead, landscapes of heterogeneous systems develop over time. Interoperability becomes a paramount challenge, as there should be a single way how interactions with the overall building automation infrastructure are possible. Furthermore, sensors, controllers, and actors of one system serving one specific use case can be useful for other use cases and can also enable new cross-domain applications and services to amplify comfort, security, and operational efficiency in smart buildings.</p>
+        <p>Possibly, building automation scenarios can have layered services, such for example when it comes to temperature sensing. While the basic functionality of the building automation system might only include to get information about the current temperature in a variety of places, there also might be a "temperature history" service. This service might allow more advanced features such as accessing the complete history of temperature measurements, and possible even more advanced functionalities such as queries in this dataset. By combining available data (e.g., weather forcast and occupancy of meeting rooms), room temperatures and future cooling/heating demand can be predicted to increase (e.g., an office building's) energy efficiency. Again, such an advanced service should be accessible in the same way as the more basic services, so that developers can access all these services in a uniform way.</p>
         <ul>
-            <li reqref="resource-description">Applications may want to get an understanding of what kind of sensors and other capabilities are exposed as part of the building automation system. In such a case, it is necessary that available resources can be described or are describing themselves, preferably using a framework that makes those descriptions uniform even if the underlying sensors or services are using different implementation technologies.</li>
+            <li reqref="resource-description">Applications may want to get an understanding of what kind of sensors and other capabilities are exposed as part of the building automation system. In such a case, it is necessary that available resources can be described or are describing themselves, preferably using a framework that makes those descriptions uniform even if the underlying sensors or services are using different implementation and communication technologies.</li>
             <li reqref="push">Applications may want to be notified of certain events in the building automation system, without having to listen to a continuous event stream from it. In such a case, it is advantageous for the building automation system to support some kind of push mechanism, so that application can subscribe to these events, and will be notified when they happen. This increases the workload of the building automation system (it has to keep track of subscribers), but may make development of certain classes of applications much easier.</li>
         </ul>
     </usecase>
@@ -25,6 +25,7 @@
     <usecase id="adaptive-building" author="h0ru5" domain="home_automation">
         <title>Adaptive Building</title>
         <p>Each employee in an office building specifies a preference profile (temperature, light setup, table height, ...). Due to his company badge or his smartphone the building can automatically influence the building automation system around him based on his current location and preference profile.</p>
+        <p>Besides an increase of comfort in general, personal profiles can also be used to assist people with special needs. For instance, in case of emergency, the acustic alarm sirens are insufficient for death people. Other mechanisms like flashing lights or mobile device notifications that are available in the person's proximity need to be used.</p>
         <p>In case of several people in the same room (e.g. a meeting), a meditation is needed. This is also the case in other cross-influenced situations and if overall goals are set to be achieved, such as energy saving.</p>
         <ul>
             <li reqref="ensemble-discovery">Dynamical selection of the surrounding/affecting resources to create the desired comfort level.</li>
@@ -32,12 +33,13 @@
             <li reqref="lifecycle-mgmt">The appearance and disappearance of users requires means to orchestrate the lifecycle of users/stakeholders.</li>
             <li reqref="resource-description">The environment around a user must be conceivable by the system in a way that does not require manual engineering.</li>
             <li reqref="privacy">Since the system would rely on informations which person  is in what room at what time, it can allow a very fine-grained movement profile, which is sensitve information</li>
+            <li reqref="security">The infrastructure has to secure personal profile information in order to prohibit unauthorized access or manipulation.</li>
         </ul>
     </usecase>
     <usecase id="shift-of-function" author="h0ru5" domain="manufacturing">
         <title>Shift of Function in Automation Systems</title>
-        <p>In a factory, the automation function does not run on a large central system, but decision-making is shifted "downwards" towards the machine itself.</p>
-        <p>In order to introduce such a new function, the function can first be run supervised inside the central system and then shifted downwards, e.g. installed on a field device.</p>
+        <p>In a factory, the automation function does not run on a large central system, but decision-making is increasingly decentralized, i.e., shifted "downwards" towards the machine or control panels on the shop flor. With the advent of the digitization, the demand for a flexible production in small batch sizes or the production of multi-variant mass products arises in many manufactoring industries. The production process can be adaptive if product memories specify the machining; appropriate paths along the production line can be discovered dynamically.</p>
+        <p>In order to introduce such a new automation function, the function can first be run supervised inside the central system and then shifted downwards, e.g. installed on a field device.</p>
         <ul>
             <li reqref="embedded-runtime">A seamless shift of functions requires an embedded runtime which allows the simple implementation, monitoring and debugging of applications.</li>
             <li reqref="lifecycle-mgmt">The appearance and disappearance of devices as well as the software management on the devices itself requires means to orchestrate the lifecycle of individual devices resp. components.</li>
@@ -45,7 +47,7 @@
             <li reqref="layered-comm">In heterogeneous systems, the seamless shift of functionality requires a clear and consistent layering of application protocols since the functionality is focused on the data structure and should be agnostic of the underlying application layer protocol layers.</li>
             <!-- embedded is a must -->
         </ul>
-    </usecase>
+    </usecase><
     <usecase id="vpp" author="h0ru5" domain="smart_grids">
         <title>Virtual Power Plants</title>
         <p>A Virtual Power Plant (VPP) is an aggregation of Distributed Energy Resources (DERs), that can act as an entity on energy markets or as an ancillary service to grid operation.</p>
@@ -61,7 +63,7 @@
             <li reqref="privacy">As fine-grained metering informtion provides sensitve data about a household, the system should show a high digree of privacy</li>
             <li reqref="trust">Since the data exchange between the virtual power plant and the distibuted energy resource leads to a physical action that invokves high currents and monetary flows, the integrity of both parties and the exchanges data is crucial</li>
             <li reqref="object-memory">As multiple and interchangable stakeholdes are involved in the application, a backlog of the object is beneficial for scrollkeeping</li>
-            <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serilization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
+            <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serialization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
         </ul>
     </usecase>
     <usecase id="automation-factories" author="stefan" domain="manufacturing">
@@ -73,6 +75,19 @@
             <li reqref="resource-description">At some point in the system, the data has to be enriched with some meta-information (e.g. timestamp, unit, id).</li>
             <li reqref="interaction-mechanism">The platform has to provide interaction mechanisms to provide data to the applications.</li>
             <li reqref="database">The platform needs a database to store the collected data.</li>
+        </ul>
+    </usecase>
+    <usecase id="smart-maintenance" author="mju" domain="manufacturing">
+        <title>Optimal Maintenance in Connected Industries</title>
+        <p>Continuous condition monitoring of machines and production systems allow for understanding the current operational performance of a production system. Furthermore, by observing the deterioration of machines or analyzing the causes of defects, typical event patterns and causally determined correlations in more complex systems can be learned and used to predict future maintenance demand. Precise predictions require a large amount of high quality monitoring data in order to achieve the promised aims of reducing the percentage of unplanned maintenance and downtime. Many defects can be diagnosed, and sometimes fixed, remotely if the maintenance service provider accesses historical and live machine data. Furthermore, previous maintenance and repair reports provide useful knowledge to find a solution quickly.</p>
+        <p>An efficient maintenance strategy dispatches technicians according to the current maintenance demand, downtime probabilities, available resources, preferences of the machine operator, in conjunction with economic trade-offs. In particular, the dispatching for an optimal maintenance strategy needs to integrate the predicted maintenance demand with various other information sources like skills and experiences of available service technicians, information of installed machines and systems, availability of potentially useful tools and spare parts, time limits of forthcoming production orders, etc.</p>
+        <ul>
+            <li reqref="resource-description">The collected data has to be enriched with meta-information. This allows for a flexible integration and interpretation of the data that is used to optimize the dispatching of service technicians. Not only machines, sensors and their data points, but also the data from and about installed systems in the factory, personal, control panels and systems, as well as interfaces to (MES, ERP) applications should be self-descriptive with a flexible schema open for future extensions.</li>
+            <li reqref="interaction-mechanism">The platform has to provide interaction mechanisms to provide data to the applications.</li>
+            <li reqref="layered-comm">In heterogeneous manufacturing systems integrating machines and sensors of different vendors, a layering of application protocols is required to abstract from specific data schema, interfaces and interaction patterns.</li>
+            <li reqref="data-exchange-format">The different stakeholders have to interact and therefore need a common data format.</li>
+            <li reqref="trust">A trust model is especially important in complex service networks and ecosystems. Production, machine, and operational data are extremely valuable, but must be shared among business partners.</li>
+            <li reqref="database">The platform needs a scalable database to manage and process static as well as dynamic data.</li>
         </ul>
     </usecase>
     <usecase id="emobility" author="h0ru5" domain="transportation">
