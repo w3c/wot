@@ -2,8 +2,8 @@
  <!ELEMENT usecase (title, p*, ul?) >
  <!ATTLIST usecase
            id ID #REQUIRED
-           author ( dret | stefan | joerg | h0ru5 | darko | mamund | inadarei | hlgr360 | cabo) #REQUIRED
-           domain (home_automation | home_entertainment | home_secrity | sports_and_lifestyle | healthcare_and_medical | assisted_living | smart_grids | utility | transportation | emergency | retail | logistics | manufacturing | other) "other"
+           author ( dret | stefan | joerg | h0ru5 | darko | mamund | inadarei | hlgr360 | cabo | edoardopignotti ) #REQUIRED
+           domain (home_automation | home_entertainment | home_secrity | sports_and_lifestyle | healthcare_and_medical | assisted_living | smart_grids | smart_cities | utility | transportation | emergency | retail | logistics | manufacturing | other) "other"
            >
  <!ELEMENT title (#PCDATA) >
  <!ELEMENT p ( #PCDATA | a )* >
