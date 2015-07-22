@@ -116,7 +116,7 @@ The resource ``/actions`` contains metadata of the availiable actions.
 The resource ``/actions/{id}`` exposes state and metadata of a single action for GET and can be invoked via POST (supplying parameters as payload)
 
 ### CoAP
-TBD
+(should basically be the same as HTTP, but with added observe)
 
 ### XMPP
 TBD
