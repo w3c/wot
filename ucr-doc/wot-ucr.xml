@@ -161,6 +161,34 @@
             <li reqref="layered-comm">In heterogeneous systems, where several vendors use different flavors of the same data exchange in terms of data representation or  transport protocols, integration requires a clear and consistent layering of application protocols.</li>
         </ul>
     </usecase>
+    <usecase id="washing-machine" author="daveraggett" domain="home_automation">
+        <title>Smart control of washing machine</title>
+        <p>What is the user motivation for the use case: Joan has a heavy load of washing to do. She decides to run it over night to take advantage of the lower power prices. She loads the clothes into the washing machine and selects the economy operation mode. She has previously set her preferences with her home automation agent that is accessible on the Web from her phone, tablet, TV or laptop.</p>
+        <p>How does this translate to a technical Description: The physical user controls on the washing machine are deliberately simple, and designed to work in conjunction with the web based home automation agent. This agent has access to Joan’s electricity supplier and as is able to track the price charged by her supplier on her electricity plan as it changes according to demand across the city. The agent runs in the cloud, but is able to communicate through the firewall with devices in Joan’s home via her home hub. This was set up automatically when she first plugged the machine in. The washing machine has a very limited embedded controller. It suffices to run the desired washing and drying cycle, and has sensors that monitor its operation and enable components that are wearing out to be detected before they fail. Joan has agreed to share this data with the manufacturer as part of the warranty agreement. In return, she gets proactive scheduling of service visits at her convenience.</p>
+        <p>What application domains are related (e.g. referring to the taxonomy):
+            (1) main: smart home / home automation / deferred operation,
+            (2) related: smart cities / smart grid / signaling with smart power devices</p>
+        <p>What interaction pattern with or btw things can be observed: 
+            (1) Thing registers: thing registers with service in the cloud,
+            (2) Configure data subscription: specific data field (e.g. for maintenance) is forwarded (e.g. to manufacturer), 
+            (3) Thing integration in web based agent
+        </p>
+        <p>Which aspects are not considered:
+            (1) Life cycle of devices, services and applications, 
+            (2) Discovery of devices,
+            (3) Installation process,
+            (4) Dealing with faults,
+            (5) Replacing devices,
+            (6) Taking devices out of operation
+        </p>
+        <ul>
+            <li reqref="privacy">Home automation agent is accessible on the Web.</li>
+            <li reqref="trust">User has agreed to share data with the manufacturer as part of the warranty agreement.</li>
+            <li reqref="push">Notify user when washing is done.</li>
+        </ul>
+    </usecase>
+    
+    
     <req id="resource-description">
         <title>Resource Description</title>
         <p>In loosely coupled systems, applications may encounter resources they have no prior knowledge about. Resource Description is a facility that allows resources to be described or describe themselves, so that applications can use those descriptions to learn about certain properties and/or capabilities of a resource. Resource descriptions on the highest abstraction level needs to provide two main facilities: identification of resources through some referencing mechanism, and description of resources through some data model.</p>
