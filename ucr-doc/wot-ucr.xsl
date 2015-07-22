@@ -64,7 +64,7 @@
           <h3>Domain: <xsl:value-of select="translate(@domain,'_',' ')" /></h3>
           <xsl:for-each select="key('domain', @domain)">
             <section id="{@id}">
-                <xsl:apply-templates select="title, p, ul">
+                <xsl:apply-templates select="title, p, details, ul">
                     <xsl:with-param name="position" select="position()"/>
                 </xsl:apply-templates>
             </section>
@@ -134,6 +134,20 @@
                 <a href="{../@href}" title="External Link">(Link)</a>
             </xsl:if>
         </h2>
+    </xsl:template>
+    <xsl:template match="details">
+        <div>
+            <xsl:if test="exists(./title)">
+                <h4>
+                    <xsl:value-of select="./title"/>        
+                </h4>
+            </xsl:if>
+            <xsl:for-each select="p">
+                <p>
+                <xsl:value-of select="."/> 
+                </p>
+            </xsl:for-each>
+        </div>
     </xsl:template>
     <xsl:template match="p">
         <p>
