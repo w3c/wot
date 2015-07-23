@@ -43,8 +43,12 @@
                <p>Buildings often have a large variety of components such as Heating, Venting, and Air
                   Conditioning (HVAC), lighting systems, and possibly more specialized systems such
                   as support for reserving rooms electronically. Very often, these systems are not provided
-                  by a single supplier, but there still should be a single way how interactions with
-                  the overall building automation infrastructure are possible.
+                  by a single supplier. Instead, landscapes of heterogeneous systems develop over time.
+                  Interoperability becomes a paramount challenge, as there should be a single way how
+                  interactions with the overall building automation infrastructure are possible. Furthermore,
+                  sensors, controllers, and actors of one system serving one specific use case can be
+                  useful for other use cases and can also enable new cross-domain applications and services
+                  to amplify comfort, security, and operational efficiency in smart buildings.
                </p>
                <p>Possibly, building automation scenarios can have layered services, such for example
                   when it comes to temperature sensing. While the basic functionality of the building
@@ -52,9 +56,11 @@
                   in a variety of places, there also might be a "temperature history" service. This
                   service might allow more advanced features such as accessing the complete history
                   of temperature measurements, and possible even more advanced functionalities such
-                  as queries int this dataset. Again, such an advanced service should be accessible
-                  in the same way as the more basic services, so that developers can access all these
-                  services in a uniform way.
+                  as queries in this dataset. By combining available data (e.g., weather forcast and
+                  occupancy of meeting rooms), room temperatures and future cooling/heating demand can
+                  be predicted to increase (e.g., an office building's) energy efficiency. Again, such
+                  an advanced service should be accessible in the same way as the more basic services,
+                  so that developers can access all these services in a uniform way.
                </p>
                <dl>
                   <dt>
@@ -69,7 +75,7 @@
                            are exposed as part of the building automation system. In such a case, it is necessary
                            that available resources can be described or are describing themselves, preferably
                            using a framework that makes those descriptions uniform even if the underlying sensors
-                           or services are using different implementation technologies.
+                           or services are using different implementation and communication technologies.
                         </li>
                         <li id="building-automation-push">
                            <b>
@@ -98,6 +104,11 @@
                   setup, table height, ...). Due to his company badge or his smartphone the building
                   can automatically influence the building automation system around him based on his
                   current location and preference profile.
+               </p>
+               <p>Besides an increase of comfort in general, personal profiles can also be used to assist
+                  people with special needs. For instance, in case of emergency, the acustic alarm sirens
+                  are insufficient for death people. Other mechanisms like flashing lights or mobile
+                  device notifications that are available in the person's proximity need to be used.
                </p>
                <p>In case of several people in the same room (e.g. a meeting), a meditation is needed.
                   This is also the case in other cross-influenced situations and if overall goals are
@@ -144,6 +155,12 @@
                               <a href="#privacy">Privacy</a>: 
                            </b>Since the system would rely on informations which person  is in what room at what
                            time, it can allow a very fine-grained movement profile, which is sensitve information
+                        </li>
+                        <li id="adaptive-building-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>The infrastructure has to secure personal profile information in order to prohibit
+                           unauthorized access or manipulation.
                         </li>
                      </ul>
                   </dd>
@@ -449,10 +466,16 @@
             <section id="shift-of-function">
                <h2 title="Authored by: h0ru5">Shift of Function in Automation Systems</h2>
                <p>In a factory, the automation function does not run on a large central system, but
-                  decision-making is shifted "downwards" towards the machine itself.
+                  decision-making is increasingly decentralized, i.e., shifted "downwards" towards the
+                  machine or control panels on the shop flor. With the advent of the digitization, the
+                  demand for a flexible production in small batch sizes or the production of multi-variant
+                  mass products arises in many manufactoring industries. The production process can
+                  be adaptive if product memories specify the machining; appropriate paths along the
+                  production line can be discovered dynamically.
                </p>
-               <p>In order to introduce such a new function, the function can first be run supervised
-                  inside the central system and then shifted downwards, e.g. installed on a field device.
+               <p>In order to introduce such a new automation function, the function can first be run
+                  supervised inside the central system and then shifted downwards, e.g. installed on
+                  a field device.
                </p>
                <dl>
                   <dt>
@@ -543,6 +566,84 @@
                            <b>
                               <a href="#interaction-mechanism">Interaction Mechanism</a>: 
                            </b>The platform has to provide interaction mechanisms to provide data to the applications.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="smart-maintenance">
+               <h2 title="Authored by: mju">Optimal Maintenance in Connected Industries</h2>
+               <p>Continuous condition monitoring of machines and production systems allow for understanding
+                  the current operational performance of a production system. Furthermore, by observing
+                  the deterioration of machines or analyzing the causes of defects, typical event patterns
+                  and causally determined correlations in more complex systems can be learned and used
+                  to predict future maintenance demand. Precise predictions require a large amount of
+                  high quality monitoring data in order to achieve the promised aims of reducing the
+                  percentage of unplanned maintenance and downtime. Many defects can be diagnosed, and
+                  sometimes fixed, remotely if the maintenance service provider accesses historical
+                  and live machine data. Furthermore, previous maintenance and repair reports provide
+                  useful knowledge to find a solution quickly.
+               </p>
+               <p>An efficient maintenance strategy dispatches technicians according to the current
+                  maintenance demand, downtime probabilities, available resources, preferences of the
+                  machine operator, in conjunction with economic trade-offs. In particular, the dispatching
+                  for an optimal maintenance strategy needs to integrate the predicted maintenance demand
+                  with various other information sources like skills and experiences of available service
+                  technicians, information of installed machines and systems, availability of potentially
+                  useful tools and spare parts, time limits of forthcoming production orders, etc.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="smart-maintenance-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>The collected data has to be enriched with meta-information. This allows for a flexible
+                           integration and interpretation of the data that is used to optimize the dispatching
+                           of service technicians. Not only machines, sensors and their data points, but also
+                           the data from and about installed systems in the factory, personal, control panels
+                           and systems, as well as interfaces to (MES, ERP) applications should be self-descriptive
+                           with a flexible schema open for future extensions.
+                        </li>
+                        <li id="smart-maintenance-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>The different stakeholders have to interact and therefore need a common data format.
+                        </li>
+                        <li id="smart-maintenance-database">
+                           <b>
+                              <a href="#database">Database</a>: 
+                           </b>The platform needs a scalable database to manage and process static as well as dynamic
+                           data.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="smart-maintenance-interaction-mechanism">
+                           <b>
+                              <a href="#interaction-mechanism">Interaction Mechanism</a>: 
+                           </b>The platform has to provide interaction mechanisms to provide data to the applications.
+                        </li>
+                        <li id="smart-maintenance-layered-comm">
+                           <b>
+                              <a href="#layered-comm">Layered L7 Communication</a>: 
+                           </b>In heterogeneous manufacturing systems integrating machines and sensors of different
+                           vendors, a layering of application protocols is required to abstract from specific
+                           data schema, interfaces and interaction patterns.
+                        </li>
+                        <li id="smart-maintenance-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>A trust model is especially important in complex service networks and ecosystems.
+                           Production, machine, and operational data are extremely valuable, but must be shared
+                           among business partners.
                         </li>
                      </ul>
                   </dd>
@@ -733,7 +834,7 @@
                            <b>
                               <a href="#layered-comm">Layered L7 Communication</a>: 
                            </b>Since multiple different links are used for monitoring and control, integration requires
-                           a clear and consistent seperation of information from the used serilization and application
+                           a clear and consistent seperation of information from the used serialization and application
                            protocols to enable the exchange of homogenous information over heterogenous application
                            layer protocols
                         </li>
@@ -1160,7 +1261,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 9 Use Cases: </b>
+                  <b>Motivated by 10 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1172,7 +1273,7 @@
                            are exposed as part of the building automation system. In such a case, it is necessary
                            that available resources can be described or are describing themselves, preferably
                            using a framework that makes those descriptions uniform even if the underlying sensors
-                           or services are using different implementation technologies.
+                           or services are using different implementation and communication technologies.
                         </a>
                      </li>
                      <li>
@@ -1214,6 +1315,18 @@
                         </em>
                         <a href="#automation-factories-resource-description" title="Go to Atomic Use Case">At some point in the system, the data has to be enriched with some meta-information
                            (e.g. timestamp, unit, id).
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-resource-description" title="Go to Atomic Use Case">The collected data has to be enriched with meta-information. This allows for a flexible
+                           integration and interpretation of the data that is used to optimize the dispatching
+                           of service technicians. Not only machines, sensors and their data points, but also
+                           the data from and about installed systems in the factory, personal, control panels
+                           and systems, as well as interfaces to (MES, ERP) applications should be self-descriptive
+                           with a flexible schema open for future extensions.
                         </a>
                      </li>
                      <li>
@@ -1385,7 +1498,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 7 Use Cases: </b>
+                  <b>Motivated by 8 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1402,6 +1515,12 @@
                            <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
                         </em>
                         <a href="#vpp-data-exchange-format" title="Go to Atomic Use Case">The different stakeholders have to interact and therefore need a common data format.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-data-exchange-format" title="Go to Atomic Use Case">The different stakeholders have to interact and therefore need a common data format.</a>
                      </li>
                      <li>
                         <em>
@@ -1770,7 +1889,7 @@
             <p>...</p>
             <dl>
                <dt>
-                  <b>Motivated by 1 Use Cases: </b>
+                  <b>Motivated by 2 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1779,6 +1898,14 @@
                            <a href="#automation-factories" title="Go to complete Use Case">Service Platform for Automation Factories: </a>
                         </em>
                         <a href="#automation-factories-database" title="Go to Atomic Use Case">The platform needs a database to store the collected data.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-database" title="Go to Atomic Use Case">The platform needs a scalable database to manage and process static as well as dynamic
+                           data.
+                        </a>
                      </li>
                   </ul>
                </dd>
@@ -1955,10 +2082,18 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 4 Use Cases: </b>
+                  <b>Motivated by 6 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
+                     <li>
+                        <em>
+                           <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
+                        </em>
+                        <a href="#adaptive-building-trust" title="Go to Atomic Use Case">The infrastructure has to secure personal profile information in order to prohibit
+                           unauthorized access or manipulation.
+                        </a>
+                     </li>
                      <li>
                         <em>
                            <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
@@ -1966,6 +2101,15 @@
                         <a href="#vpp-trust" title="Go to Atomic Use Case">Since the data exchange between the virtual power plant and the distibuted energy
                            resource leads to a physical action that invokves high currents and monetary flows,
                            the integrity of both parties and the exchanges data is crucial
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-trust" title="Go to Atomic Use Case">A trust model is especially important in complex service networks and ecosystems.
+                           Production, machine, and operational data are extremely valuable, but must be shared
+                           among business partners.
                         </a>
                      </li>
                      <li>
@@ -2008,7 +2152,7 @@
             <p>...</p>
             <dl>
                <dt>
-                  <b>Motivated by 1 Use Cases: </b>
+                  <b>Motivated by 2 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -2017,6 +2161,12 @@
                            <a href="#automation-factories" title="Go to complete Use Case">Service Platform for Automation Factories: </a>
                         </em>
                         <a href="#automation-factories-interaction-mechanism" title="Go to Atomic Use Case">The platform has to provide interaction mechanisms to provide data to the applications.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-interaction-mechanism" title="Go to Atomic Use Case">The platform has to provide interaction mechanisms to provide data to the applications.</a>
                      </li>
                   </ul>
                </dd>
@@ -2046,7 +2196,7 @@
             <p> This enables the communication of a resource to be implementation-independent</p>
             <dl>
                <dt>
-                  <b>Motivated by 5 Use Cases: </b>
+                  <b>Motivated by 6 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -2076,9 +2226,18 @@
                            <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
                         </em>
                         <a href="#vpp-layered-comm" title="Go to Atomic Use Case">Since multiple different links are used for monitoring and control, integration requires
-                           a clear and consistent seperation of information from the used serilization and application
+                           a clear and consistent seperation of information from the used serialization and application
                            protocols to enable the exchange of homogenous information over heterogenous application
                            layer protocols
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-layered-comm" title="Go to Atomic Use Case">In heterogeneous manufacturing systems integrating machines and sensors of different
+                           vendors, a layering of application protocols is required to abstract from specific
+                           data schema, interfaces and interaction patterns.
                         </a>
                      </li>
                      <li>
