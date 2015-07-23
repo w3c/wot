@@ -194,6 +194,226 @@
             <li reqref="layered-comm">In heterogeneous systems, where several vendors use different flavors of the same data exchange in terms of data representation or  transport protocols, integration requires a clear and consistent layering of application protocols.</li>
         </ul>
     </usecase>
+    <usecase id="washing-machine" author="Dave Raggett" domain="home_automation">
+        <title>Smart control of washing machine</title>
+        <p>Joan has a heavy load of washing to do. She decides to run it over night to take advantage of the lower power prices. She loads the clothes into the washing machine and selects the economy operation mode. She has previously set her preferences with her home automation agent that is accessible on the Web from her phone, tablet, TV or laptop.</p>
+        <p>see http://www.w3.org/WoT/IG/wiki/Use_cases_across_application_domains#Smart_control_of_washing_machine</p>
+        <details>
+            <title>How does this translate to a technical Description</title>
+            <p>The physical user controls on the washing machine are deliberately simple, and designed to work in conjunction with the web based home automation agent. This agent has access to Joan’s electricity supplier and as is able to track the price charged by her supplier on her electricity plan as it changes according to demand across the city. The agent runs in the cloud, but is able to communicate through the firewall with devices in Joan’s home via her home hub. This was set up automatically when she first plugged the machine in. The washing machine has a very limited embedded controller. It suffices to run the desired washing and drying cycle, and has sensors that monitor its operation and enable components that are wearing out to be detected before they fail. Joan has agreed to share this data with the manufacturer as part of the warranty agreement. In return, she gets proactive scheduling of service visits at her convenience. </p>
+        </details>
+        <details>
+            <title>What application domains are related (e.g. referring to the taxonomy)</title>
+            <p>main: smart home / home automation / deferred operation </p>
+            <p> related: smart cities / smart grid / signaling with smart power devices </p>
+        </details>
+        <details>
+            <title>What interaction pattern with or btw things can be observed</title>
+            <p>Thing registers: thing registers with service in the cloud </p>
+            <p>Configure data subscription: specific data field (e.g. for maintenance) is forwarded (e.g. to manufacturer) </p>
+            <p>Thing integration in web based agent</p>
+        </details>
+        <details>
+            <title>Which aspects are not considered</title>
+            <p>Life cycle of devices, services and applications </p>
+            <p>Discovery of devices</p>
+            <p>Installation process </p>
+            <p>Dealing with faults </p>
+            <p>Replacing devices </p>
+            <p>Replacing devices </p>
+        </details>
+        <ul>
+            <li reqref="privacy">Home automation agent is accessible on the Web.</li>
+            <li reqref="trust">User has agreed to share data with the manufacturer as part of the warranty agreement.</li>
+            <li reqref="push">Notify user when washing is done.</li>
+        </ul>
+    </usecase>
+    <usecase id="flood-monitoring" author="Edoardo Pignotti" domain="smart_cities">
+        <title>Community-based Flood Monitoring</title>
+        <p>Flood warning systems are often based on blanket reports from local authorities and environment agencies, which are based on, limited resources and a small number of expensive, professional sensors.</p>
+        <p>If John wants to determine if his property will be affected by water, it needs access to flooding information at a street level and understand how connected water streams might effect the water level near his property. Such process requires higher resolution data on the streams, groundwater and complex basins riddling cities and villages.</p>
+        <p>John is part of a community-based initiative where members provide access to water level data by radio connected low cost sensors in their properties. It is very important for John to understand the quality of the information it has access too in order to make better decisions about what flood defences to use.</p>
+        <p>Privacy is also am important factor as sensors could be deployed in areas of low-density population and John does not want that other people can infer what kind of flood damages his property might have ensued.</p>
+        <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Apr/0031.html</p>
+        <details>
+            <title>How does this translate to a technical description?</title>
+            <p>Device installation: Members of the community need to install water-level monitoring sensors on their property;</p>
+            <p>Data transmission: Data from the sensors need to be reliably transmitted to cloud services;</p>
+            <p>Data transformation: Data streams need to be manipulated and transformed in real time;</p>
+            <p>Decision Making: Resulting data streams should be used for decision making (e.g. through visualisation tools or other applications);</p>
+            <p>Network Monitoring: Data quality indicators should be used for monitoring the sensor network.</p>
+        </details>
+        <details>
+            <title>What application domains are related (e.g. referring to the taxonomy)?</title>
+            <p>main: smart cities / other utilities / monitoring water levels for flood warnings</p>
+        </details>
+        <details>
+            <title>What interaction pattern with or btw things can be observed?</title>
+            <p>Resource Description: In the system, the data has to be enriched with some meta-information (e.g. timestamp, location, data quality indicators, provenance, etc.).</p>
+            <p>Thing registration: sensors and gateways are registered with services in the cloud.</p>
+            <p>Data subscription: agents subscribe to data streams generated by devices in the sensor network or other external data sources.</p>
+            <p>Data transformation: agents transform incoming data streams and generate outgoing data streams.</p>
+            <p>Quality Assessment: Information quality indicators associated with things are used by the technical team to monitor the operation of the sensor network</p>
+            <p>Automated Decision Making: Automated decisions can be made based on the current status of things e.g. activate flood defences.</p>
+        </details>
+        <details>
+            <title>Which aspects are not considered?</title>
+            <p>Lifecycle of devices, services and applications</p>
+            <p>Discovery of devices and related data sources</p>
+        </details>
+        <ul>
+            <li reqref="privacy">Privacy is also am important factor as sensors could be deployed in areas of low-density population and John does not want that other people can infer what kind of flood damages his property might have ensued.</li>
+            <li reqref="synchronous">Data streams need to be manipulated and transformed in real time</li>
+            <li reqref="data-exchange-format">Data from the sensors need to be reliably transmitted to cloud services</li>
+            <li reqref="resource-description">In the system, the data has to be enriched with some meta-information (e.g. timestamp, location, data quality indicators, provenance, etc.)</li>
+            <li reqref="push">Warn user if property will be affected by water</li>
+        </ul>
+    </usecase>   
+    
+    <usecase id="health-monitoring" author="claesnilsson" domain="healthcare_and_medical">
+        <title>Remote health monitoring system</title>
+        <p>John is retired and lives alone in his own apartment. He has bad legs and there is a constant risk that he falls. If that happens he is not able to rise from the floor without help. In addition, John suffers from heart arrhythmias and diabetes.</p>
+        <p>Due to John's condition he needs remote monitoring by his healthcare provider. He therefore wears a wristband capable of continuously monitoring his heart rate and detect irregular heart rhythms as well as detecting a fall situation. A future version of the wristband will also be capable of non-invasive monitoring of his blood glucose level. The wristband communicates wirelessly with John's healthcare provider. This remote monitoring system could be seen as a complement to a normal home alarm system for elderly people with which old persons manually could call an emergency service. The differences are that the wristband system detects severe conditions automatically, which is needed if the old person is confused or gets unconscious, and also has the possibility to measure medical parameters such as heart rate and heart rhythm.</p>
+        <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Mar/0057.html</p>
+        <details>
+            <title>How does this translate to a technical Description</title>
+            <p>When the system is in operation everything works automatic without any user interface. The remote monitoring application runs in a cloud server and can communicate with the wristband. A local router, situated for example in a Smartphone, may be needed to translate between a local communication method such as Bluetooth Low Energy and the mobile network or wifi, but at application level end-to-end security and communication through firewalls are achieved. The communication must be reliable and the power consumption in the wristband low to achieve long battery life.</p>
+            <p>User interaction is only required at system installation. The user, or another trusted person, e.g. a relative, health care personnel or personal assistant, has to use a web browser to log in to the remote monitoring application and the user has to approve that the application has access to his/her wristband using an existing authorize system, e.g. OAuth.</p>
+            <p>To provide service discovery for applications the wristband, during the system installation, is registered in a discovery service that contains a service description for the wristband. This service description states for example manufacturer, owner and the APIs to access the resources of the wristband.</p>
+        </details>
+        <details>
+            <title>What application domains are related (e.g. referring to the taxonomy)</title>
+            <p>main: Smart lifecare / Healthcare and medical / Remote patient monitoring and care</p>
+        </details>
+        <details>
+            <title>What interaction pattern with or btw things can be observed</title>
+            <p>Registration and authorization:  Registration of IoT device to make it discoverable and accessible by applications. Registration and authorization of applications to access resources on IoT devices.</p>
+            <p>User interface: User interface only for registration and authorization. Operation is "user interface less".</p>
+            <p>Security: End-to-end security cloud service - IoT device</p>
+        </details>
+        <details>
+            <title>Accessibiliy considerations</title>
+            <p>Low vision, blindness, deafness and hearing loss does not provide any limitation for users during operation of the system as the system is UI-less. However, the system installation process requires operation of a normal web browser, which may require assistance for people with physical or mental limitations.</p>
+        </details>
+        <details>
+            <title>Which aspects are not considered</title>
+            <p>Life cycle of devices, services and applications</p>
+            <p>Dealing with faults</p>
+            <p>Replacing devices</p>
+            <p>Taking devices out of operation</p>
+        </details>
+        <ul>
+            <li reqref="data-exchange-format">communication must be reliable</li>
+            <li reqref="push">alarm system: wristband system detects severe conditions </li>
+            <li reqref="privacy">The user, or another trusted person, e.g. a relative, health care personnel or personal assistant, has to use a web browser to log in to the remote monitoring application and the user has to approve that the application has access to his/her wristband using an existing authorize system, e.g. OAuth.</li>
+        </ul>
+    </usecase>
+    <usecase id="integrated-home-automation" author="Takuki Kamiya" domain="home_automation">
+        <title>Integrated Home Automation, Demand Response and security</title>
+        <p>Many households nowadays use one or more of Home Automation service,
+            Demand-Response (DR) service or Securities and more. For DR subscription
+            and operation, a home gateway device communicates with an aggregator to
+            shed energy use on when asked. Home automation, typically also with
+            a home gateway, enables cloud-based monitoring and control of home
+            devices based-on pre-defined rules that perform actions based on 
+            conditions or triggers such as weather forecast or push on doorbells.
+            Security services also install sensors and provide cloud-based control
+            of security features such as arming/disarming and monitoring.</p>
+        <p>There is an increasing need to integrate those discrete services from
+            different vendors harmoniously to increase the total benefit by 
+            orchestrating them.</p>
+        <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Mar/0048.html</p>
+        <details>
+            <title>How does this translate to a technical Description</title>
+            <p>Clear separation of roles between home gateway through which to manage devices 
+                and sensors at home, and management platform that enables mashed-up, coordinated
+                cloud-based services. Each device and sensor connects to home gateway through
+                various technologies (e.g. Wi-Fi, Bluetooth, ZigBee, etc.).</p>
+        </details>
+        <ul>
+            <li reqref="privacy">cloud-based monitoring and control of home devices based-on pre-defined rules</li>
+        </ul>
+    </usecase>
+    <usecase id="intelligent-hotel-room " author="Debbie Dahl" domain="home_automation">
+        <title>Intelligent Hotel Room </title>
+        <p>Katherine is a frequent business traveler. She stays in a variety of
+            different hotels in many cities and different countries. In each hotel room
+            she is able to control the lighting, heating/air conditioning, locks, alarm
+            clock, water temperature, and entertainment in her room. If someone knocks
+            on the door she can see who's there from the TV or from her phone (a
+            security camera is outside her door). Control is available from her mobile
+            device, or she may be able to interact with the hotel room's services
+            through an ambient device located in the room. It is important for user
+            satisfaction for Katherine to get immediate access to these services when
+            she checks in (without installing hotel-specific software), but it's also
+            important that she not have access after she checks out. She doesn't have
+            time to learn a new user interface for every hotel, or even every hotel
+            chain, that she stays in, because she stays in so many different places. </p>
+        <p>The user should also be able to control the room remotely through her mobile
+            device; for example, she would like to be able to warm up the room when she
+            is within a half hour or so of arriving back from dinner. This would support
+            energy savings because the room could be colder when no one is there.
+            Similarly, geofencing could also be used to turn on the lights when she's
+            approaching the room. </p>
+        <p>The user would also like to have her preferences made known when she checks
+            in. For example, the room should automatically know her preferred room
+            temperature, preferred units (metric vs. English), and her preferred
+            language. However, her preferences may have to be overridden by the hotel
+            (for example, if she prefers a temperature that is too high or too low, or
+            if her preferred language is not available). In that case, she needs to be
+            informed that her preferences can't be met and she should be offered
+            alternatives. </p>
+        <p>Privacy is also important in this use case. For example, the user doesn't
+            want it to be generally known whether or not she's in the room. Security is
+            important for preventing unauthorized access to the room or its services. </p>
+        <p>The user sometimes also shares a hotel room with a colleague, in which case
+            both occupants need to have access to the same capabilities. </p>
+        <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Apr/0027.html</p>
+        <details>
+            <title>How does this translate to a technical Description</title>
+            <p>This use case describes a dynamic configuration where different users are
+                coming and going into the same space. It terms of control it is very similar
+                to a smart home, but the difference is that the occupant of the room changes
+                on a very frequent basis.</p>
+            <p>Discovery is very important so that users' devices can be used to find the
+                hotel room's services and their capabilities. It also points out the
+                importance of:</p>
+            <p>Interoperabiltiy across vendors</p>
+            <p>Uniform user interface across hotels</p>
+            <p>Communication of user preferences between users' device and hotel.</p>
+        </details>
+        <details>
+            <title>What application domains are related (e.g. referring to the taxonomy)</title>
+            <p>Smart buildings</p>
+        </details>
+        <details>
+            <title>What interaction pattern with or btw things can be observed </title>
+            <p>The hotel communicates with the room to allow/block access to control of a
+                room as required when a guest checks in/checks out.</p>
+            <p>The security camera communicates with the phone and/or the TV so that the
+                camera image can be displayed.</p>
+            <p>The user's mobile device communicates with the heating/AC to set preferred
+                temperatures.</p>
+            <p>The user's mobile device communicates with the TV to set preferred languages
+                and channels.</p>
+            <p>The user communicates to the alarm clock, TV, heating/AC and water to set
+                alarm times, TV channels, and water temperature when she wants to change
+                them.</p>
+        </details>
+        <details>
+            <title>Which Aspects are not considered </title>
+            <p>How access to the hotel services are authorized (e.g. passcode, biometrics,
+                smart room key).</p>
+            <p>How access is turned on/turned off for new and departing guests.</p>
+        </details>
+        <ul>
+            <li reqref="privacy">the user doesn't want it to be generally known whether or not she's in the room</li>
+            <li reqref="multi-stakeholder-operation">The user sometimes also shares a hotel room with a colleague, in which case
+                both occupants need to have access to the same capabilities.</li>
+        </ul>
+    </usecase>
+    
+    
     <req id="resource-description">
         <title>Resource Description</title>
         <p>In loosely coupled systems, applications may encounter resources they have no prior knowledge about. Resource Description is a facility that allows resources to be described or describe themselves, so that applications can use those descriptions to learn about certain properties and/or capabilities of a resource. Resource descriptions on the highest abstraction level needs to provide two main facilities: identification of resources through some referencing mechanism, and description of resources through some data model.</p>
