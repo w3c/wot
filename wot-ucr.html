@@ -149,6 +149,242 @@
                   </dd>
                </dl>
             </section>
+            <section id="washing-machine">
+               <h2 title="Authored by: Dave Raggett">Smart control of washing machine</h2>
+               <p>Joan has a heavy load of washing to do. She decides to run it over night to take advantage
+                  of the lower power prices. She loads the clothes into the washing machine and selects
+                  the economy operation mode. She has previously set her preferences with her home automation
+                  agent that is accessible on the Web from her phone, tablet, TV or laptop.
+               </p>
+               <p>see http://www.w3.org/WoT/IG/wiki/Use_cases_across_application_domains#Smart_control_of_washing_machine</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>The physical user controls on the washing machine are deliberately simple, and designed
+                     to work in conjunction with the web based home automation agent. This agent has access
+                     to Joan’s electricity supplier and as is able to track the price charged by her supplier
+                     on her electricity plan as it changes according to demand across the city. The agent
+                     runs in the cloud, but is able to communicate through the firewall with devices in
+                     Joan’s home via her home hub. This was set up automatically when she first plugged
+                     the machine in. The washing machine has a very limited embedded controller. It suffices
+                     to run the desired washing and drying cycle, and has sensors that monitor its operation
+                     and enable components that are wearing out to be detected before they fail. Joan has
+                     agreed to share this data with the manufacturer as part of the warranty agreement.
+                     In return, she gets proactive scheduling of service visits at her convenience. 
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>main: smart home / home automation / deferred operation </p>
+                  <p> related: smart cities / smart grid / signaling with smart power devices </p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or btw things can be observed</h4>
+                  <p>Thing registers: thing registers with service in the cloud </p>
+                  <p>Configure data subscription: specific data field (e.g. for maintenance) is forwarded
+                     (e.g. to manufacturer) 
+                  </p>
+                  <p>Thing integration in web based agent</p>
+               </div>
+               <div>
+                  <h4>Which aspects are not considered</h4>
+                  <p>Life cycle of devices, services and applications </p>
+                  <p>Discovery of devices</p>
+                  <p>Installation process </p>
+                  <p>Dealing with faults </p>
+                  <p>Replacing devices </p>
+                  <p>Replacing devices </p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="washing-machine-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>Notify user when washing is done.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="washing-machine-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>Home automation agent is accessible on the Web.
+                        </li>
+                        <li id="washing-machine-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>User has agreed to share data with the manufacturer as part of the warranty agreement.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="integrated-home-automation">
+               <h2 title="Authored by: Takuki Kamiya">Integrated Home Automation, Demand Response and security</h2>
+               <p>Many households nowadays use one or more of Home Automation service,
+                  Demand-Response (DR) service or Securities and more. For DR subscription
+                  and operation, a home gateway device communicates with an aggregator to
+                  shed energy use on when asked. Home automation, typically also with
+                  a home gateway, enables cloud-based monitoring and control of home
+                  devices based-on pre-defined rules that perform actions based on
+                  conditions or triggers such as weather forecast or push on doorbells.
+                  Security services also install sensors and provide cloud-based control
+                  of security features such as arming/disarming and monitoring.
+               </p>
+               <p>There is an increasing need to integrate those discrete services from
+                  different vendors harmoniously to increase the total benefit by
+                  orchestrating them.
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Mar/0048.html</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>Clear separation of roles between home gateway through which to manage devices
+                     and sensors at home, and management platform that enables mashed-up, coordinated
+                     cloud-based services. Each device and sensor connects to home gateway through
+                     various technologies (e.g. Wi-Fi, Bluetooth, ZigBee, etc.).
+                  </p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul></ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="integrated-home-automation-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>cloud-based monitoring and control of home devices based-on pre-defined rules
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="intelligent-hotel-room">
+               <h2 title="Authored by: Debbie Dahl">Intelligent Hotel Room </h2>
+               <p>Katherine is a frequent business traveler. She stays in a variety of
+                  different hotels in many cities and different countries. In each hotel room
+                  she is able to control the lighting, heating/air conditioning, locks, alarm
+                  clock, water temperature, and entertainment in her room. If someone knocks
+                  on the door she can see who's there from the TV or from her phone (a
+                  security camera is outside her door). Control is available from her mobile
+                  device, or she may be able to interact with the hotel room's services
+                  through an ambient device located in the room. It is important for user
+                  satisfaction for Katherine to get immediate access to these services when
+                  she checks in (without installing hotel-specific software), but it's also
+                  important that she not have access after she checks out. She doesn't have
+                  time to learn a new user interface for every hotel, or even every hotel
+                  chain, that she stays in, because she stays in so many different places. 
+               </p>
+               <p>The user should also be able to control the room remotely through her mobile
+                  device; for example, she would like to be able to warm up the room when she
+                  is within a half hour or so of arriving back from dinner. This would support
+                  energy savings because the room could be colder when no one is there.
+                  Similarly, geofencing could also be used to turn on the lights when she's
+                  approaching the room. 
+               </p>
+               <p>The user would also like to have her preferences made known when she checks
+                  in. For example, the room should automatically know her preferred room
+                  temperature, preferred units (metric vs. English), and her preferred
+                  language. However, her preferences may have to be overridden by the hotel
+                  (for example, if she prefers a temperature that is too high or too low, or
+                  if her preferred language is not available). In that case, she needs to be
+                  informed that her preferences can't be met and she should be offered
+                  alternatives. 
+               </p>
+               <p>Privacy is also important in this use case. For example, the user doesn't
+                  want it to be generally known whether or not she's in the room. Security is
+                  important for preventing unauthorized access to the room or its services. 
+               </p>
+               <p>The user sometimes also shares a hotel room with a colleague, in which case
+                  both occupants need to have access to the same capabilities. 
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Apr/0027.html</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>This use case describes a dynamic configuration where different users are
+                     coming and going into the same space. It terms of control it is very similar
+                     to a smart home, but the difference is that the occupant of the room changes
+                     on a very frequent basis.
+                  </p>
+                  <p>Discovery is very important so that users' devices can be used to find the
+                     hotel room's services and their capabilities. It also points out the
+                     importance of:
+                  </p>
+                  <p>Interoperabiltiy across vendors</p>
+                  <p>Uniform user interface across hotels</p>
+                  <p>Communication of user preferences between users' device and hotel.</p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>Smart buildings</p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or btw things can be observed </h4>
+                  <p>The hotel communicates with the room to allow/block access to control of a
+                     room as required when a guest checks in/checks out.
+                  </p>
+                  <p>The security camera communicates with the phone and/or the TV so that the
+                     camera image can be displayed.
+                  </p>
+                  <p>The user's mobile device communicates with the heating/AC to set preferred
+                     temperatures.
+                  </p>
+                  <p>The user's mobile device communicates with the TV to set preferred languages
+                     and channels.
+                  </p>
+                  <p>The user communicates to the alarm clock, TV, heating/AC and water to set
+                     alarm times, TV channels, and water temperature when she wants to change
+                     them.
+                  </p>
+               </div>
+               <div>
+                  <h4>Which Aspects are not considered </h4>
+                  <p>How access to the hotel services are authorized (e.g. passcode, biometrics,
+                     smart room key).
+                  </p>
+                  <p>How access is turned on/turned off for new and departing guests.</p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="intelligent-hotel-room-multi-stakeholder-operation">
+                           <b>
+                              <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                           </b>The user sometimes also shares a hotel room with a colleague, in which case
+                           both occupants need to have access to the same capabilities.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="intelligent-hotel-room-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>the user doesn't want it to be generally known whether or not she's in the room
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
          </section>
          <section id="domain-logistics">
             <h3>Domain: logistics</h3>
@@ -688,6 +924,227 @@
                </dl>
             </section>
          </section>
+         <section id="domain-smart_cities">
+            <h3>Domain: smart cities</h3>
+            <section id="flood-monitoring">
+               <h2 title="Authored by: Edoardo Pignotti">Community-based Flood Monitoring</h2>
+               <p>Flood warning systems are often based on blanket reports from local authorities and
+                  environment agencies, which are based on, limited resources and a small number of
+                  expensive, professional sensors.
+               </p>
+               <p>If John wants to determine if his property will be affected by water, it needs access
+                  to flooding information at a street level and understand how connected water streams
+                  might effect the water level near his property. Such process requires higher resolution
+                  data on the streams, groundwater and complex basins riddling cities and villages.
+               </p>
+               <p>John is part of a community-based initiative where members provide access to water
+                  level data by radio connected low cost sensors in their properties. It is very important
+                  for John to understand the quality of the information it has access too in order to
+                  make better decisions about what flood defences to use.
+               </p>
+               <p>Privacy is also am important factor as sensors could be deployed in areas of low-density
+                  population and John does not want that other people can infer what kind of flood damages
+                  his property might have ensued.
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Apr/0031.html</p>
+               <div>
+                  <h4>How does this translate to a technical description?</h4>
+                  <p>Device installation: Members of the community need to install water-level monitoring
+                     sensors on their property;
+                  </p>
+                  <p>Data transmission: Data from the sensors need to be reliably transmitted to cloud
+                     services;
+                  </p>
+                  <p>Data transformation: Data streams need to be manipulated and transformed in real time;</p>
+                  <p>Decision Making: Resulting data streams should be used for decision making (e.g. through
+                     visualisation tools or other applications);
+                  </p>
+                  <p>Network Monitoring: Data quality indicators should be used for monitoring the sensor
+                     network.
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)?</h4>
+                  <p>main: smart cities / other utilities / monitoring water levels for flood warnings</p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or btw things can be observed?</h4>
+                  <p>Resource Description: In the system, the data has to be enriched with some meta-information
+                     (e.g. timestamp, location, data quality indicators, provenance, etc.).
+                  </p>
+                  <p>Thing registration: sensors and gateways are registered with services in the cloud.</p>
+                  <p>Data subscription: agents subscribe to data streams generated by devices in the sensor
+                     network or other external data sources.
+                  </p>
+                  <p>Data transformation: agents transform incoming data streams and generate outgoing
+                     data streams.
+                  </p>
+                  <p>Quality Assessment: Information quality indicators associated with things are used
+                     by the technical team to monitor the operation of the sensor network
+                  </p>
+                  <p>Automated Decision Making: Automated decisions can be made based on the current status
+                     of things e.g. activate flood defences.
+                  </p>
+               </div>
+               <div>
+                  <h4>Which aspects are not considered?</h4>
+                  <p>Lifecycle of devices, services and applications</p>
+                  <p>Discovery of devices and related data sources</p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="flood-monitoring-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>Data from the sensors need to be reliably transmitted to cloud services
+                        </li>
+                        <li id="flood-monitoring-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>In the system, the data has to be enriched with some meta-information (e.g. timestamp,
+                           location, data quality indicators, provenance, etc.)
+                        </li>
+                        <li id="flood-monitoring-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>Warn user if property will be affected by water
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="flood-monitoring-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>Privacy is also am important factor as sensors could be deployed in areas of low-density
+                           population and John does not want that other people can infer what kind of flood damages
+                           his property might have ensued.
+                        </li>
+                        <li id="flood-monitoring-synchronous">
+                           <b>
+                              <a href="#synchronous">Synchronicity, soft real-time</a>: 
+                           </b>Data streams need to be manipulated and transformed in real time
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-healthcare_and_medical">
+            <h3>Domain: healthcare and medical</h3>
+            <section id="health-monitoring">
+               <h2 title="Authored by: claesnilsson">Remote health monitoring system</h2>
+               <p>John is retired and lives alone in his own apartment. He has bad legs and there is
+                  a constant risk that he falls. If that happens he is not able to rise from the floor
+                  without help. In addition, John suffers from heart arrhythmias and diabetes.
+               </p>
+               <p>Due to John's condition he needs remote monitoring by his healthcare provider. He
+                  therefore wears a wristband capable of continuously monitoring his heart rate and
+                  detect irregular heart rhythms as well as detecting a fall situation. A future version
+                  of the wristband will also be capable of non-invasive monitoring of his blood glucose
+                  level. The wristband communicates wirelessly with John's healthcare provider. This
+                  remote monitoring system could be seen as a complement to a normal home alarm system
+                  for elderly people with which old persons manually could call an emergency service.
+                  The differences are that the wristband system detects severe conditions automatically,
+                  which is needed if the old person is confused or gets unconscious, and also has the
+                  possibility to measure medical parameters such as heart rate and heart rhythm.
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Mar/0057.html</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>When the system is in operation everything works automatic without any user interface.
+                     The remote monitoring application runs in a cloud server and can communicate with
+                     the wristband. A local router, situated for example in a Smartphone, may be needed
+                     to translate between a local communication method such as Bluetooth Low Energy and
+                     the mobile network or wifi, but at application level end-to-end security and communication
+                     through firewalls are achieved. The communication must be reliable and the power consumption
+                     in the wristband low to achieve long battery life.
+                  </p>
+                  <p>User interaction is only required at system installation. The user, or another trusted
+                     person, e.g. a relative, health care personnel or personal assistant, has to use a
+                     web browser to log in to the remote monitoring application and the user has to approve
+                     that the application has access to his/her wristband using an existing authorize system,
+                     e.g. OAuth.
+                  </p>
+                  <p>To provide service discovery for applications the wristband, during the system installation,
+                     is registered in a discovery service that contains a service description for the wristband.
+                     This service description states for example manufacturer, owner and the APIs to access
+                     the resources of the wristband.
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>main: Smart lifecare / Healthcare and medical / Remote patient monitoring and care</p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or btw things can be observed</h4>
+                  <p>Registration and authorization:  Registration of IoT device to make it discoverable
+                     and accessible by applications. Registration and authorization of applications to
+                     access resources on IoT devices.
+                  </p>
+                  <p>User interface: User interface only for registration and authorization. Operation
+                     is "user interface less".
+                  </p>
+                  <p>Security: End-to-end security cloud service - IoT device</p>
+               </div>
+               <div>
+                  <h4>Accessibiliy considerations</h4>
+                  <p>Low vision, blindness, deafness and hearing loss does not provide any limitation for
+                     users during operation of the system as the system is UI-less. However, the system
+                     installation process requires operation of a normal web browser, which may require
+                     assistance for people with physical or mental limitations.
+                  </p>
+               </div>
+               <div>
+                  <h4>Which aspects are not considered</h4>
+                  <p>Life cycle of devices, services and applications</p>
+                  <p>Dealing with faults</p>
+                  <p>Replacing devices</p>
+                  <p>Taking devices out of operation</p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="health-monitoring-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>communication must be reliable
+                        </li>
+                        <li id="health-monitoring-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>alarm system: wristband system detects severe conditions 
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="health-monitoring-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>The user, or another trusted person, e.g. a relative, health care personnel or personal
+                           assistant, has to use a web browser to log in to the remote monitoring application
+                           and the user has to approve that the application has access to his/her wristband using
+                           an existing authorize system, e.g. OAuth.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
       </section>
       <section id="building-blocks">
          <h2>Building blocks</h2>
@@ -703,7 +1160,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 8 Use Cases: </b>
+                  <b>Motivated by 9 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -782,6 +1239,14 @@
                            on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).
                         </a>
                      </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-resource-description" title="Go to Atomic Use Case">In the system, the data has to be enriched with some meta-information (e.g. timestamp,
+                           location, data quality indicators, provenance, etc.)
+                        </a>
+                     </li>
                   </ul>
                </dd>
                <dt>
@@ -818,7 +1283,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 4 Use Cases: </b>
+                  <b>Motivated by 7 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -863,6 +1328,24 @@
                            
                         </a>
                      </li>
+                     <li>
+                        <em>
+                           <a href="#washing-machine" title="Go to complete Use Case">Smart control of washing machine: </a>
+                        </em>
+                        <a href="#washing-machine-push" title="Go to Atomic Use Case">Notify user when washing is done.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-push" title="Go to Atomic Use Case">Warn user if property will be affected by water</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#health-monitoring" title="Go to complete Use Case">Remote health monitoring system: </a>
+                        </em>
+                        <a href="#health-monitoring-push" title="Go to Atomic Use Case">alarm system: wristband system detects severe conditions </a>
+                     </li>
                   </ul>
                </dd>
                <dt>
@@ -902,7 +1385,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 5 Use Cases: </b>
+                  <b>Motivated by 7 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -946,6 +1429,18 @@
                            to interact with different resources. To support exchange of data between different
                            parties a common data exchange format is needed.
                         </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-data-exchange-format" title="Go to Atomic Use Case">Data from the sensors need to be reliably transmitted to cloud services</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#health-monitoring" title="Go to complete Use Case">Remote health monitoring system: </a>
+                        </em>
+                        <a href="#health-monitoring-data-exchange-format" title="Go to Atomic Use Case">communication must be reliable</a>
                      </li>
                   </ul>
                </dd>
@@ -1105,7 +1600,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 4 Use Cases: </b>
+                  <b>Motivated by 5 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1138,6 +1633,14 @@
                         </em>
                         <a href="#lifecycle-management-multi-stakeholder-operation" title="Go to Atomic Use Case">Lifecycle management of Industrial Automation Systems involves multi-stakeholders
                            (e.g., domain engineers, software engineers, system engineers, system installers etc.).
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#intelligent-hotel-room" title="Go to complete Use Case">Intelligent Hotel Room : </a>
+                        </em>
+                        <a href="#intelligent-hotel-room-multi-stakeholder-operation" title="Go to Atomic Use Case">The user sometimes also shares a hotel room with a colleague, in which case
+                           both occupants need to have access to the same capabilities.
                         </a>
                      </li>
                   </ul>
@@ -1297,10 +1800,17 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 0 Use Cases: </b>
+                  <b>Motivated by 1 Use Cases: </b>
                </dt>
                <dd>
-                  <ul></ul>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-synchronous" title="Go to Atomic Use Case">Data streams need to be manipulated and transformed in real time</a>
+                     </li>
+                  </ul>
                </dd>
                <dt>
                   <b>Covered by 0 Technologies: </b>
@@ -1318,7 +1828,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 3 Use Cases: </b>
+                  <b>Motivated by 8 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1349,6 +1859,43 @@
                            confidentiality protected.
                            
                         </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#washing-machine" title="Go to complete Use Case">Smart control of washing machine: </a>
+                        </em>
+                        <a href="#washing-machine-privacy" title="Go to Atomic Use Case">Home automation agent is accessible on the Web.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-privacy" title="Go to Atomic Use Case">Privacy is also am important factor as sensors could be deployed in areas of low-density
+                           population and John does not want that other people can infer what kind of flood damages
+                           his property might have ensued.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#health-monitoring" title="Go to complete Use Case">Remote health monitoring system: </a>
+                        </em>
+                        <a href="#health-monitoring-privacy" title="Go to Atomic Use Case">The user, or another trusted person, e.g. a relative, health care personnel or personal
+                           assistant, has to use a web browser to log in to the remote monitoring application
+                           and the user has to approve that the application has access to his/her wristband using
+                           an existing authorize system, e.g. OAuth.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#integrated-home-automation" title="Go to complete Use Case">Integrated Home Automation, Demand Response and security: </a>
+                        </em>
+                        <a href="#integrated-home-automation-privacy" title="Go to Atomic Use Case">cloud-based monitoring and control of home devices based-on pre-defined rules</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#intelligent-hotel-room" title="Go to complete Use Case">Intelligent Hotel Room : </a>
+                        </em>
+                        <a href="#intelligent-hotel-room-privacy" title="Go to Atomic Use Case">the user doesn't want it to be generally known whether or not she's in the room</a>
                      </li>
                   </ul>
                </dd>
@@ -1408,7 +1955,7 @@
             </p>
             <dl>
                <dt>
-                  <b>Motivated by 3 Use Cases: </b>
+                  <b>Motivated by 4 Use Cases: </b>
                </dt>
                <dd>
                   <ul>
@@ -1439,6 +1986,12 @@
                            the provisioning process.
                            
                         </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#washing-machine" title="Go to complete Use Case">Smart control of washing machine: </a>
+                        </em>
+                        <a href="#washing-machine-trust" title="Go to Atomic Use Case">User has agreed to share data with the manufacturer as part of the warranty agreement.</a>
                      </li>
                   </ul>
                </dd>
