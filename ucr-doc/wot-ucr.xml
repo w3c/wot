@@ -33,7 +33,7 @@
             <li reqref="lifecycle-mgmt">The appearance and disappearance of users requires means to orchestrate the lifecycle of users/stakeholders.</li>
             <li reqref="resource-description">The environment around a user must be conceivable by the system in a way that does not require manual engineering.</li>
             <li reqref="privacy">Since the system would rely on informations which person  is in what room at what time, it can allow a very fine-grained movement profile, which is sensitve information</li>
-            <li reqref="security">The infrastructure has to secure personal profile information in order to prohibit unauthorized access or manipulation.</li>
+            <li reqref="trust">The infrastructure has to secure personal profile information in order to prohibit unauthorized access or manipulation.</li>
         </ul>
     </usecase>
     <usecase id="shift-of-function" author="h0ru5" domain="manufacturing">
