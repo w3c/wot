@@ -1245,6 +1245,38 @@
                   </dd>
                </dl>
             </section>
+            <section id="ecg">
+               <h2 title="Authored by: draggett">Remote Electrocardiogram (ECG)</h2>
+               <p>Ebele is a nurse in a large medical district covering many villages.  Today she is
+                  visiting Imani who has been complaining of weakness and chest pains.  Ebele uses her
+                  mobile phone to consult the doctor who is a clinic in a town eighty miles away. The
+                  doctor asks her to perform an ECG on Imani. She attaches the electrodes to Imani's
+                  chest and plugs them into the remote ECG monitor. This streams the data in real time
+                  over the mobile network to the clinic where the doctor is based. The doctor examines
+                  the ECG and spots signs of arrythmia, and directs Ebele to put Imani on a course of
+                  Tambocor.
+               </p>
+               <div>
+                  <h4>How does this translate to a technical Description?</h4>
+                  <p>The remote ECG monitor has a multichannel signal processing board that combines the
+                     readings from the electrodes to generate a clean analog output.  This is fed to the
+                     ADC in a microcontroller, which streams the digitised samples over the mobile network
+                     to a server in the clinic. The data is then forwarded to the doctor's terminal for
+                     analysis.
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>main: Smart lifecare / Healthcare and medical / Remote patient monitoring and care</p>
+               </div>
+               <div>
+                  <h4>What is technically significant about this use case?</h4>
+                  <p>This use case involves a means to model streams as a complex data type for the description
+                     language for "things". In this particular use case, the stream consists of 24 bit
+                     values at a sampling rate of 300 per second.
+                  </p>
+               </div>
+            </section>
          </section>
       </section>
       <section id="building-blocks">
