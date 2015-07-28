@@ -290,6 +290,24 @@
             <li reqref="privacy">The user, or another trusted person, e.g. a relative, health care personnel or personal assistant, has to use a web browser to log in to the remote monitoring application and the user has to approve that the application has access to his/her wristband using an existing authorize system, e.g. OAuth.</li>
         </ul>
     </usecase>
+    
+    <usecase id="ecg" author="draggett" domain="healthcare_and_medical">
+        <title>Remote Electrocardiogram (ECG)</title>
+            <p>Ebele is a nurse in a large medical district covering many villages.  Today she is visiting Imani who has been complaining of weakness and chest pains.  Ebele uses her mobile phone to consult the doctor who is a clinic in a town eighty miles away. The doctor asks her to perform an ECG on Imani. She attaches the electrodes to Imani's chest and plugs them into the remote ECG monitor. This streams the data in real time over the mobile network to the clinic where the doctor is based. The doctor examines the ECG and spots signs of arrythmia, and directs Ebele to put Imani on a course of Tambocor.</p>
+        <details>
+            <title>How does this translate to a technical Description?</title>
+            <p>The remote ECG monitor has a multichannel signal processing board that combines the readings from the electrodes to generate a clean analog output.  This is fed to the ADC in a microcontroller, which streams the digitised samples over the mobile network to a server in the clinic. The data is then forwarded to the doctor's terminal for analysis.</p>
+        </details>
+        <details>
+            <title>What application domains are related (e.g. referring to the taxonomy)</title>
+            <p>main: Smart lifecare / Healthcare and medical / Remote patient monitoring and care</p>
+        </details>
+        <details>
+            <title>What is technically significant about this use case?</title>
+            <p>This use case involves a means to model streams as a complex data type for the description language for "things". In this particular use case, the stream consists of 24 bit values at a sampling rate of 300 per second.</p>
+        </details>
+    </usecase>
+
     <usecase id="integrated-home-automation" author="Takuki Kamiya" domain="home_automation">
         <title>Integrated Home Automation, Demand Response and security</title>
         <p>Many households nowadays use one or more of Home Automation service,
