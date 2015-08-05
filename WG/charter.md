@@ -18,11 +18,13 @@ The starting point is the idea of virtual representations (objects) of "things" 
 
 Proxies can also be established as part of the scripting execution environment for Web pages, subject to the protocols supported by Web browsers and the single origin security policy.
 
-| End date	| 31 December 2017 |
-| Confidentiality | Proceedings are public |
-| Initial Chairs | Co-Chairs TBD |
-| Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura |
-| Usual Meeting Schedule |Teleconferences: Weekly, Face-to-face: 2-3 per year |
+Property | Value
+---------|------
+End date	| 31 December 2017
+Confidentiality | Proceedings are public
+Initial Chairs | Co-Chairs TBD
+Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura
+Usual Meeting Schedule | Teleconferences: Weekly, Face-to-face: 2-3 per year
 
 ## Goals
 
