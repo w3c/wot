@@ -42,7 +42,7 @@ This Working Group will focus on a Linked Data vocabulary for describing things 
 
 * Work related to security, assurance, privacy and resilience of IoT systems. These are being declared as out of scope since it is not yet completely clear what W3C should do, e.g. in respect to authentication and access control.
 
-When a consensus emerges as to what is needed, new work items could be added to future revisions of this charter.
+When a consensus emerges as to what is needed, the scope could be adjusted and new work items could be added to future revisions of this charter, subject to W3C Advisory Committee Review.
 
 ## Deliverables
 
@@ -62,7 +62,7 @@ This Working Group will register a Content Type for a [JSON-LD](http://www.w3.or
 
 ### Bindings to common protocols
 
-This will define how common protocols can be used to convey messages for event notifications, property and metadata updates, action invokations and responses. The set of protocols should include HTTP, WebSockets, CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP.
+This will define how common protocols can be used to convey messages for event notifications, property and metadata updates, action invokations and responses. The set of protocols should include HTTP, WebSockets, and CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP.
 
 ## Milestones
 
