@@ -1,4 +1,7 @@
-# [DRAFT] Charter for the Web of Things Framework Working Group
+# [DRAFT] Charter for the W3C Web of Things Framework Working Group
+
+**Comments on this charter can be made via [issues on this repository](https://github.com/w3c/wot/blob/master/WG/charter.md), [pull requests](https://github.com/pulls) or email to the public-wot-ig@w3.org list. Please use the subject line prefix [WG Charter]**
+
 The Internet of Things (IoT) suffers from fragmentation and data silos. The mission of the Web of Things Framework Working Group is to address this fragmentation by connecting IoT platforms via the Web using an abstraction layer above existing platforms and transport protocols. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
 
 ## Extending the Web from a Web of Pages to a Web of Things
