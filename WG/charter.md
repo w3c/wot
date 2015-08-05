@@ -62,7 +62,7 @@ This Working Group will register a Content Type for a [JSON-LD](http://www.w3.or
 
 ### Bindings to common protocols
 
-This will define how common protocols can be used to convey messages for event notifications, property and metadata updates, action invokations and responses. The set of protocols should include HTTP, WebSockets, and CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP.
+This will define how common protocols can be used to convey messages for registering and unregistering proxies, event notifications, property and metadata updates, action invocations and responses. The set of protocols should include HTTP, WebSockets, and CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP.
 
 ## Milestones
 
