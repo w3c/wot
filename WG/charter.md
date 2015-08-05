@@ -64,6 +64,17 @@ This Working Group will register a Content Type for a [JSON-LD](http://www.w3.or
 
 This will define how common protocols can be used to convey messages for event notifications, property and metadata updates, action invokations and responses. The set of protocols should include HTTP, WebSockets, CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP.
 
+## Milestones
+
+Specification | FPWD | CR | PR | REC
+--------------|------|----|----|----
+Data Modelling Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
+Server Protocols Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
+JSON-LD Content Type | April 2016 | December 2016 | September 2017 | November 2017
+Protocol Bindings | April 2016 | December 2016 | September 2017 | November 2017
+
+*Note: the group will document signifcant departures from this initial schedule on the group home page*
+
 ## Dependencies and Liaisons
 
 ### Other W3C Groups
