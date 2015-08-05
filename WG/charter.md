@@ -18,9 +18,16 @@ The starting point is the idea of virtual representations (objects) of "things" 
 
 Proxies can also be established as part of the scripting execution environment for Web pages, subject to the protocols supported by Web browsers and the single origin security policy.
 
+| End date	| 31 December 2017 |
+| Confidentiality | Proceedings are public |
+| Initial Chairs | Co-Chairs TBD |
+| Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura |
+| Usual Meeting Schedule |Teleconferences: Weekly
+Face-to-face: | 2-3 per year |
+
 ## Goals
 
-This Working Group will define standards to enable service that bridge IoT platforms, and help to end the current fragmentation and data silos, for a global market of services.
+This Working Group will define standards to enable services that bridge IoT platforms, and help to end the current fragmentation and data silos, for a global market of services.
 
 ## Scope
 
@@ -32,9 +39,9 @@ This Working Group will focus on a Linked Data vocabulary for describing things 
 
 * Application Programming Interfaces
 
-* Work related to security, assurance, privacy and resilience of IoT systems. These are being declared as out of scope since it is not yet completely clear what W3C should do, e.g. in respect to authentication and access control
+* Work related to security, assurance, privacy and resilience of IoT systems. These are being declared as out of scope since it is not yet completely clear what W3C should do, e.g. in respect to authentication and access control.
 
-When a consensu emerges as to what is needed, new work items could be added to future revisions to this charter.
+When a consensus emerges as to what is needed, new work items could be added to future revisions of this charter.
 
 ## Deliverables
 
@@ -46,11 +53,11 @@ This will specify a data modelling vocabulary for describing things in terms of 
 
 ### Linked Data vocabulary for describing which protocols servers support
 
-This will specify a Linked Data vocabulary for as a basis for identifying a common set of protocols, data formats and encodings for communication between servers.
+This will specify a Linked Data vocabulary for identifying a common set of protocols, data formats and encodings for communication between servers.
 
 ### Content Type for a serialisation of data models in JSON-LD
 
-This Working Group will register a Content Type for a JSON-LD serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary.
+This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary.
 
 ### Bindings to common protocols
 
