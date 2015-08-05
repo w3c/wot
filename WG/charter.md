@@ -12,7 +12,7 @@ The approach is based upon the fundamentals of Web architecture
 * A variety of protocols for accessing things, since no one protocol will be appropriate in all contexts
 * Linked Data for describing things as the basis for interoperability
 
-The starting point is the idea of virtual representations (objects) of "things" standing for physical or abstract entities. Thing descriptions enable the generation of scriptable objects as proxies for things on another server. Web developers are shielded from the details of the transport protocols, allowing system designers to choose the protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
+The starting point is the idea of object as virtual representations of "things" standing for physical or abstract entities. Thing descriptions enable the generation of scriptable objects as proxies for things on another server. Web developers are shielded from the details of the transport protocols, allowing system designers to choose the protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
 
 ![web of things servers and scripts](https://github.com/w3c/web-of-things-framework/blob/master/images/wot-arch.png)
 
