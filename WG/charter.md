@@ -21,7 +21,7 @@ This Working Group will define standards to enable service that bridge IoT platf
 
 ## Scope
 
-This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define a content type for serialization of data models in JSON-LD along with a default context for the core vocabulary, and bindings for common protocols in collaboration with other groups.
+This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define a content type for serialization of data models in [JSON-LD](http://www.w3.org/TR/json-ld/) along with a default context for the core vocabulary, and bindings for common protocols in collaboration with other groups.
 
 ### Out of Scope
 
@@ -71,6 +71,8 @@ This will define how common protocols can be used to convey messages for event n
   for collaboration on use cases and requirements, as well as research and incubation of ideas for consideration by this group.
 * [Web Security Interest Group](http://www.w3.org/community/webpayments/)
   for security reviews.
+* [EXI Working Group](http://www.w3.org/XML/EXI/)
+  for collaboration on efficient encoding schemes for thing descriptions and protocol bindings.
 
 This group will also collaborate with future W3C Working Groups developing authentication protocols.
 
