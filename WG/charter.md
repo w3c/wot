@@ -1,6 +1,8 @@
 # [DRAFT] Charter for the Web of Things Framework Working Group
 The Internet of Things (IoT) suffers from fragmentation and data silos. The mission of the Web of Things Framework Working Group is to address this fragmentation by connecting IoT platforms via the Web using an abstraction layer above existing platforms and transport protocols. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
 
+## Extending the Web from a Web of Pages to a Web of Things
+
 The approach is based upon the fundamentals of Web architecture
 
 * URIs for identifying things
@@ -11,34 +13,76 @@ The starting point is the idea of virtual representations (objects) of "things" 
 
 ![web of things servers and scripts](https://github.com/w3c/web-of-things-framework/blob/master/images/wot-arch.png)
 
-This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define a content type for serialization of data models in JSON-LD along with a default context for the core vocabulary, and bindings for common protocols in collaboration with other groups.
+Proxies can also be established as part of the scripting execution environment for Web pages, subject to the protocols supported by Web browsers and the single origin security policy.
 
 ## Goals
 
+This Working Group will define standards to enable service that bridge IoT platforms, and help to end the current fragmentation and data silos, for a global market of services.
+
 ## Scope
 
+This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define a content type for serialization of data models in JSON-LD along with a default context for the core vocabulary, and bindings for common protocols in collaboration with other groups.
+
+### Out of Scope
+
+* Vocabularies for specific application domains, 
+
+* Work related to security, assurance, privacy and resilience of IoT systems. These are being declared as out of scope since it is not yet completely clear what W3C should do, e.g. in respect to authentication and access control
+
+When a consensu emerges as to what is needed, new work items could be added to future revisions to this charter.
+
 ## Deliverables
+
+This Working Group will develop specifications and progress them to W3C Recommendations for the following work items:
+
+### Linked Data vocabulary for describing data models
+
+This will specify a data modelling vocabulary for describing things in terms of events, properties and actions, and links to domain models. This will include provision for late bound data types, re-use of data type definitions, and labelled opaque data types for data to be handed on to entities that understand it. This vocabulary will be designed to supplement the RDF core datatypes.
+
+### Linked Data vocabulary for describing which protocols servers support
+
+This will specify a Linked Data vocabulary for as a basis for identifying a common set of protocols, data formats and encodings for communication between servers.
+
+### Content Type for a serialisation of data models in JSON-LD
+
+This Working Group will register a Content Type for a JSON-LD serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary.
+
+### Bindings to common protocols
+
+This will define how common protocols can be used to convey messages for event notifications, property and metadata updates, action invokations and responses. The set of protocols should include HTTP, WebSockets, CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP.
 
 ## Dependencies and Liaisons
 
 ### Other W3C Groups
 
-Internationalization Core Working Group
-: Internationalization and localization review.
-Privacy Interest Group
-: For privacy reviews.
-Protocols and Formats Working Group (and successor)
-: To help ensure the protocols provide support for accessibility to people with disabilities.
-Web Application Security
-: For security reviews.
-Web Applications Working Group (and successor)
-: For review of JavaScript APIs.
-Web Security Interest Group
-: For security reviews.
+* [Internationalization Core Working Group](http://www.w3.org/International/core/)
+  for internationalization and localization review.
+* [Privacy Interest Group](http://www.w3.org/Privacy/)
+  for privacy reviews.
+* [Protocols and Formats Working Group](http://www.w3.org/WAI/PF/) (and successor)
+  to help ensure the protocols provide support for accessibility to people with disabilities.
+* [Web Application Security](http://www.w3.org/2011/webappsec/)
+  for security reviews.
+* [Web Applications Working Group](http://www.w3.org/2008/webapps/) (and successor)
+  for review of JavaScript APIs.
+* [Web of Things Interest Group](http://www.w3.org/WoT/IG/)
+  for collaboration on use cases and requirements, as well as research and incubation of ideas for consideration by this group.
+* [Web Security Interest Group](http://www.w3.org/community/webpayments/)
+  for security reviews.
 
 This group will also collaborate with future W3C Working Groups developing authentication protocols.
 
 ### Groups Outside W3C
+
+* [IETF](http://www.ietf.org)
+  for collaboration on use cases and requirements, as well as on protocol bindings, security and privacy.
+* [Industrial Internet Consortium (IIC)](http://www.industrialinternetconsortium.org)
+  for collaboration on use cases and requirements.
+* [ETSI](http://www.etsi.org) and [OneM2M](http://www.onem2m.org)
+  for collaboration on use cases and requirements, and enabling the use of the Linked Data vocabularies by M2M.
+* [OASIS](https://www.oasis-open.org)
+  for collaboration on use cases and requirements, and binding to the MQTT, MQTT-SN and AMQP protcols
+* *others to be added*
 
 ## Participation
 
