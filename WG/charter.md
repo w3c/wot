@@ -25,7 +25,9 @@ This Working Group will focus on a Linked Data vocabulary for describing things 
 
 ### Out of Scope
 
-* Vocabularies for specific application domains, 
+* Vocabularies for specific application domains
+
+* Application Programming Interfaces
 
 * Work related to security, assurance, privacy and resilience of IoT systems. These are being declared as out of scope since it is not yet completely clear what W3C should do, e.g. in respect to authentication and access control
 
