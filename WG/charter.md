@@ -22,8 +22,7 @@ Proxies can also be established as part of the scripting execution environment f
 | Confidentiality | Proceedings are public |
 | Initial Chairs | Co-Chairs TBD |
 | Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura |
-| Usual Meeting Schedule |Teleconferences: Weekly
-Face-to-face: | 2-3 per year |
+| Usual Meeting Schedule |Teleconferences: Weekly, Face-to-face: 2-3 per year |
 
 ## Goals
 
