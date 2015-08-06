@@ -16,6 +16,8 @@ The starting point is the idea of objects as virtual representations of "things"
 
 ![web of things servers and scripts](https://github.com/w3c/web-of-things-framework/blob/master/images/wot-arch.png)
 
+A script on server A above can register a proxy for a thing on server B. An alternative is for a script on server B to register a proxy on server A. This is useful when server A is on the public Internet and server B is behind a firewall.
+
 Proxies can also be established as part of the scripting execution environment for Web pages, subject to the protocols supported by Web browsers and the single origin security policy.
 
 Property | Value
