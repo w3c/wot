@@ -4,6 +4,15 @@
 
 The Internet of Things (IoT) suffers from fragmentation and data silos. The mission of the Web of Things Framework Working Group is to address this fragmentation by connecting IoT platforms via the Web using an abstraction layer above existing platforms and transport protocols. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
 
+Property | Value
+---------|------
+End date	| 31 December 2017
+Confidentiality | Proceedings are public
+Initial Chairs | Co-Chairs TBD
+Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura
+Usual Meeting Schedule | Teleconferences: Weekly, Face-to-face: 2-3 per year
+
+
 ## Extending the Web from a Web of Pages to a Web of Things
 
 The approach is based upon the fundamentals of Web architecture
@@ -19,14 +28,6 @@ The starting point is the idea of objects as virtual representations of "things"
 A script on server A above can register a proxy for a thing on server B. An alternative is for a script on server B to register a proxy on server A. This is useful when server A is on the public Internet and server B is behind a firewall.
 
 Proxies can also be established as part of the scripting execution environment for Web pages, subject to the protocols supported by Web browsers and the single origin security policy.
-
-Property | Value
----------|------
-End date	| 31 December 2017
-Confidentiality | Proceedings are public
-Initial Chairs | Co-Chairs TBD
-Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura
-Usual Meeting Schedule | Teleconferences: Weekly, Face-to-face: 2-3 per year
 
 ## Goals
 
