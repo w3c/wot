@@ -85,6 +85,8 @@ Protocol Bindings | April 2016 | December 2016 | September 2017 | November 2017
   for privacy reviews.
 * [Protocols and Formats Working Group](http://www.w3.org/WAI/PF/) (and successor)
   to help ensure the protocols provide support for accessibility to people with disabilities.
+* [Spatial Data on the Web Working Group](http://www.w3.org/2015/spatial/wiki/Main_Page)
+  for geospatial metadata and the Semantic Sensor Network ontology.
 * [Web Application Security](http://www.w3.org/2011/webappsec/)
   for security reviews.
 * [Web Applications Working Group](http://www.w3.org/2008/webapps/) (and successor)
