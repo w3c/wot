@@ -49,7 +49,7 @@ When a consensus emerges as to what is needed, the scope could be adjusted and n
 
 ## Deliverables
 
-This Working Group will develop specifications and progress them to W3C Recommendations for the following work items:
+This Working Group will develop specifications and progress them to W3C Recommendations for the following work items, each of which will be expected to have a section on security and privacy considerations.
 
 ### Linked Data vocabulary for describing data models
 
@@ -65,7 +65,7 @@ This Working Group will register a Content Type for a [JSON-LD](http://www.w3.or
 
 ### Bindings to common protocols
 
-This work item will define how common protocols can be used to convey messages for registering and unregistering proxies, event notifications, property and metadata updates, action invocations and responses. The set of protocols should include HTTP, WebSockets, and CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP. The work item will include guidance on security and privacy considerations, and may be split into separate specifications for each protocol.
+This work item will define how common protocols can be used to convey messages for registering and unregistering proxies, event notifications, property and metadata updates, action invocations and responses. The set of protocols should include HTTP, WebSockets, and CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP. The work item may be split into separate specifications for each protocol.
 
 ## Milestones
 
@@ -112,7 +112,9 @@ This group will also collaborate with future W3C Working Groups developing authe
 * [ETSI](http://www.etsi.org) and [OneM2M](http://www.onem2m.org)
   for collaboration on use cases and requirements, and enabling the use of the Linked Data vocabularies by M2M.
 * [OASIS](https://www.oasis-open.org)
-  for collaboration on use cases and requirements, and binding to the MQTT, MQTT-SN and AMQP protcols
+  for collaboration on use cases and requirements, and binding to the MQTT, MQTT-SN and AMQP protcols.
+* [OGC SensorThings SWG](http://www.opengeospatial.org/projects/groups/sweiotswg)
+  for review of this group's draft specifications in respect to their applicability to the OGC's Sensor Web Interface for IoT.
 * *others to be added*
 
 ## Participation
