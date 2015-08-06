@@ -40,7 +40,7 @@ This Working Group will focus on a Linked Data vocabulary for describing things 
 
 * Application Programming Interfaces
 
-* Normative specifications for security, assurance, privacy and resilience of IoT systems. These are being declared as out of scope for this charter since it is not yet completely clear what W3C should do, e.g. in respect to authentication and access control.
+* Normative specifications for security, assurance, privacy and resilience of IoT systems. These are recognized as important topics, but are being declared as out of scope for this charter since it is not yet completely clear what W3C should do in respect to these topics.
 
 When a consensus emerges as to what is needed, the scope could be adjusted and new work items added to future revisions of this charter, subject to W3C Advisory Committee Review.
 
