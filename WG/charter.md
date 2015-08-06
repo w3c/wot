@@ -53,7 +53,7 @@ This Working Group will develop specifications and progress them to W3C Recommen
 
 ### Linked Data vocabulary for describing data models
 
-This will specify a data modelling vocabulary for describing things in terms of events, properties and actions, and links to domain models and protocol specific API descriptions. This work item will include provision for late bound data types, re-use of data type definitions, and labelled opaque data types for data to be handed on to entities that understand it. This vocabulary will be designed to supplement the RDF core datatypes.
+This will specify a data modelling vocabulary for describing things in terms of events, properties and actions, and links to domain models and protocol specific API descriptions. This work item will include provision for late bound data types, re-use of data type definitions, and labelled opaque data types for data to be handed on to entities that understand it. This vocabulary will be designed to supplement the RDF core datatypes, including enumerations and numeric ranges.
 
 ### Linked Data vocabulary for describing which protocols servers support
 
