@@ -58,7 +58,7 @@ This will specify a Linked Data vocabulary for identifying a common set of proto
 
 ### Content Type for a serialisation of data models in JSON-LD
 
-This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary.
+This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary, and allowing for efficient implementation on resource constrained IoT devices.
 
 ### Bindings to common protocols
 
