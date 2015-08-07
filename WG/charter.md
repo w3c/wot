@@ -30,7 +30,7 @@ URIs can be used to access machine interpretable descriptions of things. These d
 The diagram shows a thing on server A that acts as a proxy for a thing on server B which is coupled to a sensor and actuator. The proxy on server A could be set up by a script on that server, or by a script on server B.
 The latter is useful when server A is on the public Internet and server B is behind a firewall, and you want to provide public access to the thing from server A.
 
-Web page scripts can create local proxies for things on servers, subject to the protocols supported by Web browsers and the single origin security policy.
+Web page scripts can create local proxies for things on servers, subject to the protocols supported by Web browsers and the single origin security policy. There are many possible applications across a wide range of domains, e.g. homes, offices, lifecare, cities, electrical grids, retail and manufacturing.
 
 ## Goals
 
