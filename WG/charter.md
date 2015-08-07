@@ -97,8 +97,6 @@ Protocol Bindings | April 2016 | December 2016 | September 2017 | November 2017
   for geospatial metadata and the Semantic Sensor Network ontology.
 * [Web Application Security](http://www.w3.org/2011/webappsec/)
   for security reviews.
-* [Web Applications Working Group](http://www.w3.org/2008/webapps/) (and successor)
-  for review of JavaScript APIs.
 * [Web of Things Interest Group](http://www.w3.org/WoT/IG/)
   for collaboration on use cases and requirements, as well as research and incubation of ideas for consideration by this group.
 * [Web Security Interest Group](http://www.w3.org/community/webpayments/)
