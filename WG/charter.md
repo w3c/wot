@@ -2,7 +2,7 @@
 
 **Comments on this charter can be made via pull requests or email to the public-wot-ig@w3.org list. Please use the subject line prefix [WG Charter]**
 
-> The Internet of Things is essentially about services based upon the means to describe and connect things including physical sensors and actuators, people and abstract things.
+> The Internet of Things is about services that are based upon the means to describe and connect things including physical sensors and actuators, people and abstract things.
 
 The Internet of Things (IoT) suffers from fragmentation and data silos. The mission of the Web of Things Framework Working Group is to address this fragmentation by connecting IoT platforms via the Web using an abstraction layer above existing platforms and transport protocols. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
 
