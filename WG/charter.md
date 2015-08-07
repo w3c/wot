@@ -115,7 +115,7 @@ This group will also collaborate with future W3C Working Groups developing authe
 * [ETSI](http://www.etsi.org) and [OneM2M](http://www.onem2m.org)
   for collaboration on use cases and requirements, and enabling the use of the Linked Data vocabularies by M2M.
 * [OASIS](https://www.oasis-open.org)
-  for collaboration on use cases and requirements, and binding to the MQTT, MQTT-SN and AMQP protcols.
+  for collaboration on use cases and requirements, and binding to the MQTT, MQTT-SN and AMQP protocols.
 * [OGC SensorThings SWG](http://www.opengeospatial.org/projects/groups/sweiotswg)
   for review of this group's draft specifications in respect to their applicability to the OGC's Sensor Web Interface for IoT.
 * *others to be added*
