@@ -27,7 +27,8 @@ URIs can be used to access machine interpretable descriptions of things. These d
 
 ![web of things servers and scripts](https://github.com/w3c/web-of-things-framework/blob/master/images/wot-arch.png)
 
-A script on server A above can register a proxy for a thing on server B. An alternative is for a script on server B to register a proxy on server A. This is useful when server A is on the public Internet and server B is behind a firewall.
+The diagram shows a thing on server A that acts as a proxy for a thing on server B which is coupled to a sensor and actuator. The proxy on server A could be set up by a script on that server, or by a script on server B.
+The latter is useful when server A is on the public Internet and server B is behind a firewall.
 
 Proxies can also be established as part of the scripting execution environment for Web pages, subject to the protocols supported by Web browsers and the single origin security policy.
 
