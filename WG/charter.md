@@ -15,13 +15,13 @@ Usual Meeting Schedule | Teleconferences: Weekly, Face-to-face: 2-3 per year
 
 ## Extending the Web from a Web of Pages to a Web of Things
 
-The approach is based upon the fundamentals of Web architecture
+This section introduces the architecture for the Web of Things as the basis for the charter's work items. The starting point is the idea of scriptable objects as "things" standing for physical or abstract entities. The approach is based upon the fundamentals of Web architecture:
 
 * URIs for identifying things
 * A variety of protocols for accessing things, since no one protocol will be appropriate in all contexts
-* Linked Data for describing things as the basis for interoperability
+* Linked Data for describing things as a basis for interoperability and discovery, playing an analogous role to HTML for web pages
 
-The starting point is the idea of objects as virtual representations of "things" standing for physical or abstract entities. Thing descriptions enable the generation of scriptable objects as proxies for things on another server. Web developers are shielded from the details of the transport protocols, allowing system designers to choose the protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
+URIs can be used to access machine interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects whose events, properties and actions correspond to those of the thing the object stands for. An object on one server can act as a proxy for an object on another server. Web developers are shielded from the implementation details of how objects are coupled, allowing system designers to choose the transport protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
 
 ![web of things servers and scripts](https://github.com/w3c/web-of-things-framework/blob/master/images/wot-arch.png)
 
