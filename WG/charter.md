@@ -111,7 +111,7 @@ This group will also collaborate with future W3C Working Groups developing authe
 * [IETF](http://www.ietf.org)
   for collaboration on use cases and requirements, as well as on protocol bindings, security and privacy.
 * [Industrial Internet Consortium (IIC)](http://www.industrialinternetconsortium.org)
-  for collaboration on use cases and requirements.
+  for collaboration on use cases and requirements, and review of this group's draft specifications.
 * [ETSI](http://www.etsi.org) and [OneM2M](http://www.onem2m.org)
   for collaboration on use cases and requirements, and enabling the use of the Linked Data vocabularies by M2M.
 * [OASIS](https://www.oasis-open.org)
