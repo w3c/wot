@@ -1,9 +1,14 @@
+
 # About this Tutorial
 This tutorial explains and how to use the Thing Description (TD) and its minimal vocabulary set. As example, an LED lamp will be modeled with the TD using the JSON-LD format. 
 
 
 ## Basics about Thing Description
 The TD is mainly based on the entities Metadata, Data, and the 3 interaction models Property, Action, and Event. 
+
+
+![TDL Model](TDL.jpg)
+
 
 ### Metadata 
 Metadata is used to provide some generic information which may not that relevant at runtime. There are 3 mandatory vocabularies defined within the Metadata:
@@ -28,7 +33,6 @@ There are 3 mandatory vocabularies defined within the Property:
 * Name: Name of the property
 * OutputData: Which data is associated with this property
 * Writeable: Is this property writeable. 
-
 
 ### Action
 The interaction variant Action invokes actions on a Thing which may or may not result in state change (e.g., move robot, brew cup of coffee, etc).
