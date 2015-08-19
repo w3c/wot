@@ -28,3 +28,13 @@ There are 3 mandatory vocabularies defined within the Property:
 * Name: Name of the property
 * OutputData: Which data is associated with this property
 * Writeable: Is this property writeable. 
+
+
+### Action
+The interaction variant Action invokes actions on a Thing which may or may not result in state change (e.g., move robot, brew cup of coffee, etc).
+
+There are 3 mandatory vocabularies defined within the Action:
+
+* Name: Name of the action
+* InputData: Which input data is associated with this action
+* OutputData: Which output data is associated with this action
