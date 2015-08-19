@@ -50,3 +50,6 @@ There are 2 mandatory vocabularies defined within the Event:
 * Name: Name of the action
 * OutputData: Which data is associated with this event
 
+## Sample: LED Lamp
+tbd
+
