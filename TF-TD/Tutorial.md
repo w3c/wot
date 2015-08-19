@@ -38,3 +38,11 @@ There are 3 mandatory vocabularies defined within the Action:
 * Name: Name of the action
 * InputData: Which input data is associated with this action
 * OutputData: Which output data is associated with this action
+
+### Event
+The interaction variant Event enables an intention to be notified from the Thing on a certain condition. 
+There are 2 mandatory vocabularies defined within the Event:
+
+* Name: Name of the action
+* OutputData: Which data is associated with this event
+
