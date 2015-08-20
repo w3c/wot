@@ -64,7 +64,23 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name = “MyLED”
 * Protocol = CoAP and HTTP
 * Encoding = JSON
+
 #### Property
+1) 
+* Name =  "colorTemperature”
+* OutputData = unsignedShort
+
+2)
+* Name =  "rgbValueR”
+* OutputData = unsignedByte
+
+3)
+* Name =  "rgbValueG”
+* OutputData = unsignedByte
+
+4)
+* Name =  "rgbValueB”
+* OutputData = unsignedByte
 
 tbd
 
