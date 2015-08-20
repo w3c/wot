@@ -60,12 +60,12 @@ A LED Lamp “MyLED” has following characteristics:
 
 Bringing this in the Thing Description context, we would categorize this information in the following way
 
-#### Metadata
+##### Metadata
 * Name = “MyLED”
 * Protocol = CoAP and HTTP
 * Encoding = JSON
 
-#### Property
+##### Property
 1) 
 * Name =  "colorTemperature”
 * OutputData = unsignedShort
@@ -81,6 +81,10 @@ Bringing this in the Thing Description context, we would categorize this informa
 4)
 * Name =  "rgbValueB”
 * OutputData = unsignedByte
+
+##### Event
+* Name =  "colorTemperatureChanged”
+* OutputData = unsignedShort
 
 tbd
 
