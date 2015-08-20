@@ -50,6 +50,21 @@ There are 2 mandatory vocabularies defined within the Event:
 * Name: Name of the action
 * OutputData: Which data is associated with this event
 
-## Sample: LED Lamp
+## Sample Thing: LED Lamp 
+A LED Lamp “MyLED” has following characteristics:
+* supports CoAP and HTTP as application protocol
+* supports only JSON as exchange data format
+* provides the current color temperature (colorTemperature) in unsignedShort
+* provides the current rgb values (r, g, b) each of them in unsignedByte
+* notifies when color temperate is changed (colorTemperatureChanged)
+
+Bringing this in the Thing Description context, we would categorize this information in the following way
+
+#### Metadata
+* Name = “MyLED”
+* Protocol = CoAP and HTTP
+* Encoding = JSON
+#### Property
+
 tbd
 
