@@ -54,6 +54,7 @@ There are 2 mandatory vocabularies defined within the Event:
 A LED Lamp “MyLED” has following characteristics:
 * supports CoAP and HTTP as application protocol
 * supports only JSON as exchange data format
+* can be switched on / off (ledOnOff) using a boolean value (true=ON, false=off)
 * provides the current color temperature (colorTemperature) in unsignedShort
 * provides the current rgb values (r, g, b) each of them in unsignedByte
 * notifies when color temperate is changed (colorTemperatureChanged)
@@ -68,19 +69,27 @@ Bringing this in the Thing Description context, we would categorize this informa
 ##### Property
 1) 
 * Name =  "colorTemperature”
-* OutputData = unsignedShort
+* Writeable= true
+* Input-/OutputData = unsignedShort
 
 2)
 * Name =  "rgbValueR”
-* OutputData = unsignedByte
+* Writeable= true
+* Input-/OutputData = unsignedByte
 
 3)
 * Name =  "rgbValueG”
-* OutputData = unsignedByte
+* Writeable= true
+* Input-/OutputData = unsignedByte
 
 4)
 * Name =  "rgbValueB”
-* OutputData = unsignedByte
+* Writeable= true
+* Input-/OutputData = unsignedByte
+
+##### Action
+* Name =  "ledOnOff”
+* InputData = boolean
 
 ##### Event
 * Name =  "colorTemperatureChanged”
