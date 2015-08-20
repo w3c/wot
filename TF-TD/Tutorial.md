@@ -95,5 +95,6 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name =  "colorTemperatureChanged”
 * OutputData = unsignedShort
 
+This can be transformed into JSON-LD representation.
 tbd
 
