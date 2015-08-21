@@ -22,7 +22,9 @@ Note: Besides of this 3 defined vocabularies additional characteristics can be d
 ### Data 
 This field is used to define application specific data types that are used of the interaction models (property, action, event). 
 
-Per default, a subset of XML Schema simple data types are supported which includes string, int, float, byte, short, boolean, unsignedByte, unsignedShort, and unsignedInt.
+Per default, a subset of XML Schema simple data types are supported which includes string, int, float, byte, short, boolean, unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).
+
+An input or output data field can be assigned empty which is equivalent to 'void' or 'null'.
 
 ### Property
 
