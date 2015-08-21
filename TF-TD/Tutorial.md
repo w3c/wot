@@ -102,6 +102,59 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name =  "colorTemperatureChanged"
 * OutputData = unsignedShort
 
-This can be transformed into JSON-LD representation.
+This can be transformed into JSON-LD representation (the JSON-LD file can be downloaded here).
 
+```
+{
+  "@context": {
+    "td": "http://www.w3c.org/wot/td#",
+	"xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "td:hasMetadata": {
+    "td:name": "MyLED",
+    "td:protocol": [
+      "td:CoAP",
+      "td:HTTP"
+    ],
+    "td:encoding": [
+      "td:JSON"
+    ]
+  },
+  "td:hasInteraction": [
+    {
+      "@type": "td:Property",
+      "td:hasOutput": "xsd:unsignedShort",
+      "td:name": "colorTemperature",
+      "td:writable": true
+    }, 
+    {
+      "@type": "td:Property",
+      "td:name": "rgbValueRed",
+      "td:hasOutput": "xsd:unsignedByte",
+      "td:writable": false
+    }, {
+      "@type": "td:Property",
+      "td:name": "rgbValueGreen",
+      "td:hasOutput": "xsd:unsignedByte",
+      "td:writable": false
+    }, {
+      "@type": "td:Property",
+      "td:name": "rgbValueBlue",
+      "td:hasOutput": "xsd:unsignedByte",
+      "td:writable": false
+    }, {
+      "@type": "td:Action",
+      "td:name": "ledOnOff",
+      "td:hasInput": "xsd:boolean",
+      "td:hasOutput": ""
+    }, {
+      "@type": "td:Event",
+      "td:hasOutput": "MyLEDDataColorTemperatureChanged",
+      "td:name": "colorTemperatureChanged"
+    }
+  ]
+}
+
+
+```
 
