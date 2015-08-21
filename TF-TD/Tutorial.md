@@ -24,7 +24,7 @@ This field is used to define application specific data types that are used of th
 
 Per default, a subset of XML Schema simple data types are supported which includes string, int, float, byte, short, boolean, unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).
 
-An input or output data field can be assigned empty which is equivalent to 'void' or 'null'.
+An input or output data field can be assigned as empty which is equivalent to 'void' or 'null'.
 
 ### Property
 
