@@ -54,7 +54,7 @@ There are 2 mandatory vocabularies defined within the Event:
 * Name: Name of the action
 * OutputData: Which data is associated with this event
 
-Note: Event can also be seen as a Property with abilitiy for subscribtion. 
+Note: Event can also be seen as a Property with abilitiy for subscription. 
 
 ## Sample Thing: LED Lamp 
 A LED Lamp “MyLED” has following characteristics:
