@@ -149,7 +149,7 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
       "td:hasOutput": ""
     }, {
       "@type": "td:Event",
-      "td:hasOutput": "MyLEDDataColorTemperatureChanged",
+      "td:hasOutput": "xsd:unsignedShort",
       "td:name": "colorTemperatureChanged"
     }
   ]
