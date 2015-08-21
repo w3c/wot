@@ -123,8 +123,8 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
   "td:hasInteraction": [
     {
       "@type": "td:Property",
-      "td:hasOutput": "xsd:unsignedShort",
       "td:name": "colorTemperature",
+      "td:hasOutput": "xsd:unsignedShort",
       "td:writable": true
     }, 
     {
@@ -154,7 +154,6 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
     }
   ]
 }
-
 
 ```
 
