@@ -31,8 +31,10 @@ The interaction variant Property is used to serve properties of a Thing which ca
 There are 3 mandatory vocabularies defined within the Property:
 
 * Name: Name of the property
-* OutputData: Which data is associated with this property
-* Writeable: Is this property writeable. 
+* OutputData: Which data type is associated with this property
+* Writeable: Is this property writeable (true/false).
+
+Note: If the property is writeable=true, then the property accept inputData which have the same data type as defined by the outputData.  
 
 ### Action
 The interaction variant Action invokes actions on a Thing which may or may not result in state change (e.g., move robot, brew cup of coffee, etc).
@@ -50,51 +52,54 @@ There are 2 mandatory vocabularies defined within the Event:
 * Name: Name of the action
 * OutputData: Which data is associated with this event
 
+Note: Event can also be seen as a Property with abilitiy for subscribtion. 
+
 ## Sample Thing: LED Lamp 
 A LED Lamp “MyLED” has following characteristics:
 * supports CoAP and HTTP as application protocol
 * supports only JSON as exchange data format
 * can be switched on / off (ledOnOff) using a boolean value (true=On, false=Off)
-* provides and change the color temperature (colorTemperature) in unsignedShort
-* provides and change current rgb values (r, g, b) each of them in unsignedByte
+* provides the color temperature (colorTemperature) in unsignedShort; color temperature can be changed by a client 
+* provides current rgb values (red, green, blue) each of them in unsignedByte
 * notifies when color temperate is changed (colorTemperatureChanged)
 
 Bringing this in the Thing Description context, we would categorize this information in the following way
 
 ##### Metadata
-* Name = “MyLED”
+* Name = "MyLED"
 * Protocol = CoAP and HTTP
 * Encoding = JSON
 
 ##### Property
 1) 
-* Name =  "colorTemperature”
+* Name =  "colorTemperature"
+* OutputData = unsignedShort
 * Writeable= true
-* Input-/OutputData = unsignedShort
 
 2)
-* Name =  "rgbValueR”
-* Writeable= true
-* Input-/OutputData = unsignedByte
+* Name =  "rgbValueRed"
+* OutputData = unsignedByte
+* Writeable= false
 
 3)
-* Name =  "rgbValueG”
-* Writeable= true
-* Input-/OutputData = unsignedByte
+* Name =  "rgbValueGreen"
+* OutputData = unsignedByte
+* Writeable= false
 
 4)
-* Name =  "rgbValueB”
-* Writeable= true
-* Input-/OutputData = unsignedByte
+* Name =  "rgbValueBlue"
+* OutputData = unsignedByte
+* Writeable= false
 
 ##### Action
-* Name =  "ledOnOff”
+* Name =  "ledOnOff"
 * InputData = boolean
+* OutputData = void/null
 
 ##### Event
-* Name =  "colorTemperatureChanged”
+* Name =  "colorTemperatureChanged"
 * OutputData = unsignedShort
 
 This can be transformed into JSON-LD representation.
-tbd
+
 
