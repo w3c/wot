@@ -1,6 +1,6 @@
 
 # About this Tutorial
-This tutorial explains and how to use the Thing Description (TD) and its minimal vocabulary set. As example, an LED lamp will be modeled with the TD using the JSON-LD format. 
+This tutorial explains how to use the Thing Description (TD) and its minimal vocabulary set. As example, an LED lamp will be modeled with the TD using the JSON-LD format. 
 
 
 ## Basics about Thing Description
@@ -11,20 +11,20 @@ The TD is mainly based on the entities Metadata, Data, and the 3 interaction mod
 
 
 ### Metadata 
-Metadata is used to provide some generic information which may not that relevant at runtime. There are 3 mandatory vocabularies defined within the Metadata:
+Metadata is used to provide some generic information which may be not that relevant at runtime. There are 3 mandatory vocabularies defined within the Metadata:
 
 * Name: Name of the Thing
-* Protocol: Which kind of protocols is supported (e.g., HTTP, CoAP, XMPP, etc,)
+* Protocol: Which kind of protocol is supported (e.g., HTTP, CoAP, XMPP, etc,)
 * Encoding: Which kind of serialization format is supported (e.g., JSON, XML, etc.)
 
-Note: Besides of this 3 defined vocabularies additional characteristics can be defined such as product id, firmware version, location, etc..
+Note: Besides of these 3 defined vocabularies additional characteristics can be defined such as product id, firmware version, location, etc..
 
 ### Data 
-This field is used to define application specific data types that are used of the interaction models (property, action, event). 
+This field is used to define application-specific data types that are used by the interaction models (property, action, event). 
 
-Per default, a subset of XML Schema simple data types are supported which includes string, int, float, byte, short, boolean, unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).
+Per default, a subset of XML Schema simple data types is supported which includes string, int, float, byte, short, boolean, unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).
 
-An input or output data field can be assigned as empty which is equivalent to 'void' or 'null'.
+An input or output data fields can be assigned as empty which is equivalent to 'void' or 'null'.
 
 ### Property
 
@@ -36,10 +36,10 @@ There are 3 mandatory vocabularies defined within the Property:
 * OutputData: Which data type is associated with this property
 * Writeable: Is this property writeable (true/false).
 
-Note: If the property is writeable=true, then the property accept inputData which have the same data type as defined by the outputData.  
+Note: If the property is writeable=true, then the property accepts inputData which has the same data type as defined by the outputData.  
 
 ### Action
-The interaction variant Action invokes actions on a Thing which may or may not result in state change (e.g., move robot, brew cup of coffee, etc).
+The interaction variant Action invokes actions on a Thing which may or may not result in state change (e.g., move a robot, brew a cup of coffee, etc).
 
 There are 3 mandatory vocabularies defined within the Action:
 
@@ -48,7 +48,7 @@ There are 3 mandatory vocabularies defined within the Action:
 * OutputData: Which output data is associated with this action
 
 ### Event
-The interaction variant Event enables an intention to be notified from the Thing on a certain condition. 
+The interaction variant Event enables an intention to be notified by the Thing on a certain condition. 
 There are 2 mandatory vocabularies defined within the Event:
 
 * Name: Name of the action
