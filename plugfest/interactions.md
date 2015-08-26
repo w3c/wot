@@ -121,33 +121,6 @@ Links:
 |change| self | write | hypermedia link to modify the execution | no |
 |cancel | self | delete | hypermedia link to cancel an execution |  no |
 
-### Modifying running executions of an Action
-
-#### Request
-
-The request body contains the parameters resp. inputs
-|Name|Type|Mandatory|Content|
-|---|---|---|---|
-| value|(given in thing description - can be null)|no |inputs resp. parameters|
-
-
-#### Response
-
- The response contains contains the following fields:
-
-|Name|Type|Mandatory|Content|
-|---|---|---|---|
-| value|(given in thing description - can be null)|no |inputs resp. parameters|
-|status|enumeration|no |current status of the execution|
-|time|timestamp|no |time of invocation|
-
-Links:
-
-|Relation|Href | Action |Meaning | mandatory |
-|---|---|---|---|---|
-|change| self | write | hypermedia link to modify the execution | no |
-|cancel | self | delete | hypermedia link to cancel an execution |  no |
-
 ### Canceling running executions of an Action
 To cancel a running execution of an action, a **delete** action is called on the sub-resource representing the execution.
 #### Request
@@ -171,6 +144,7 @@ To modify a running execution of an action, a **write** action is called on the 
 #### Request
 
 The request body contains the parameters resp. inputs
+
 |Name|Type|Mandatory|Content|
 |---|---|---|---|
 | value|(given in thing description - can be null)|no |inputs resp. parameters|
