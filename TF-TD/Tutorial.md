@@ -176,7 +176,7 @@ GET http://www.example.com:5683/ledlamp/colorTemperature
 
 ```
 {
-	"colorTemperature" : 4000
+	"value" : 4000
 }
 ```
 
@@ -190,7 +190,7 @@ Payload
 
 ```
 {
-	"colorTemperature" : 4500
+	"value" : 4500
 }
 ```
 
