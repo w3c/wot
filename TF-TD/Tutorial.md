@@ -169,6 +169,7 @@ Since this TD points the support of HTTP and CoAP as application transport proto
 ##### Property colorTemperature
 ###### Read Request 
 GET coap://www.example.com:5683/ledlamp/colorTemperature
+
 GET http://www.example.com:5683/ledlamp/colorTemperature
 
 ###### Response 
