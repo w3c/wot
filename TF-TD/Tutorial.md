@@ -112,11 +112,17 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
   },
   "td:hasMetadata": {
     "td:name": "MyLED",
-    "td:protocol": [
-      "td:CoAP",
-      "td:HTTP"
-    ],
-    "td:encoding": [
+    "td:protocols" : {
+      "td:coap" : {
+        "td:uri" : "coap://www.example.com:5683/ledlamp",
+        "td:priority" : 1
+		},
+      "td:http" : {
+        "td:uri" : "http://www.example.com:80/ledlamp",
+        "td:priority" : 2
+		}
+	},
+    "td:encodings": [
       "td:JSON"
     ]
   },
@@ -156,4 +162,22 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
 }
 
 ```
+
+
+Since this TD points the support of HTTP and CoAP as application transport protocol and JSON as data serialization format a simple protocol binding convention can be met:
+
+##### Property colorTemperature
+###### Read Request 
+GET coap://www.example.com:5683/ledlamp/colorTemperature
+GET http://www.example.com:5683/ledlamp/colorTemperature
+
+###### Response 
+
+```
+{
+	"colorTemperature" : 4000
+}
+```
+
+
 
