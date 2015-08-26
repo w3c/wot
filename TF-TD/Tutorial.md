@@ -172,13 +172,31 @@ GET coap://www.example.com:5683/ledlamp/colorTemperature
 
 GET http://www.example.com:5683/ledlamp/colorTemperature
 
-###### Response 
+###### Payload Response 
 
 ```
 {
-	"colorTemperature" : 4000
+	"value" : 4000
 }
 ```
 
 
+###### Write Request 
+PUT coap://www.example.com:5683/ledlamp/colorTemperature
 
+PUT http://www.example.com:5683/ledlamp/colorTemperature
+
+Payload
+
+```
+{
+	"value" : 4500
+}
+```
+
+###### Payload Response 
+empty
+
+##### Property rgbValueRed
+
+TBD
