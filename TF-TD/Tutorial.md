@@ -57,7 +57,7 @@ There are 2 mandatory vocabularies defined within the Event:
 Note: Event can also be seen as a Property with abilitiy for subscription.
 
 ## Sample Thing: LED Lamp
-A LED Lamp �MyLED� has following characteristics:
+A LED Lamp 'MyLED' has following characteristics:
 * supports CoAP and HTTP as application protocol
 * supports only JSON as exchange data format
 * can be switched on / off (ledOnOff) using a boolean value (true=On, false=Off)
