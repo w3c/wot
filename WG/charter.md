@@ -66,6 +66,10 @@ This will specify a Linked Data vocabulary for identifying a common set of proto
 
 This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary, and allowing for efficient implementation on resource constrained IoT devices.
 
+### Content Type for a serialisation of server metadata in JSON-LD
+
+This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of metadata with a default context defining short names for the terms in the server metadata vocabulary. This metadata will enable servers to identify which protocols, data formats and encodings to use for communicating with other servers.
+
 ### Bindings to common protocols
 
 This work item will define how common protocols can be used to convey messages for registering and unregistering proxies, event notifications, property and metadata updates, action invocations and responses. The set of protocols should include HTTP, WebSockets, and CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP. The work item may be split into separate specifications for each protocol.
