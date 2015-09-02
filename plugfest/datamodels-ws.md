@@ -39,4 +39,8 @@ This action returns no data.
 
 This example has no events.
 
+I have kept things simple for now and would expect this to evolve incrementally as we tackle more complex use cases. In particular the name of a property could be expanded into a path syntax, see e.g. http://goessner.net/articles/JsonPath/
 
+When a property requires more than the name of a core data type, the idea is to use a JSON object (associative array) whose properties provide further information, e.g. {“type”:”float”, “min”:0.0, “max”:1.0}.
+
+Further work is needed on actions. If an action takes a single value, this could be expressed directly. Otherwise a JSON object is needed for the named arguments to pass to the action.  We could reserve the name "returns" to model the data asynchromously returned from an action, but we might want to use a name like "@returns" to avoid the possibility of name clashes with the names of arguments passed to the action.
