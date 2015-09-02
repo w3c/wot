@@ -33,9 +33,9 @@ Here is an example for discussion purposes:
 }
 ```
 
-This has a name "MyLED" for the specific light.  It has two properties that scripts can write to: on which is a boolean and color_temp which is the colour temperature in Kelvin. Scripts can read but not write the corresponding red, green and blue values as unsigned 8 bit numbers.
+This has a name "MyLED" for the specific light.  It has two properties that scripts can write to: "on" is a boolean and "color_temp" is the color temperature in Kelvin. Scripts can read but not write the corresponding red, green and blue values as unsigned 8 bit numbers.
 
-There is one action "dim" which changes the brightness over a given number of seconds.  The brightness is given as a 32 bit IEEE floating point number in the range 0.0 to 1.0.  The delay is specified in seconds as a 32 bit IEEE floating point number.
+There is one action "dim" which changes the brightness over a given number of seconds. This action takes two named parameters. The "brightness" is passed as a 32 bit IEEE floating point number in the range 0.0 to 1.0.  The "time" for the change to complete is specified in seconds as a 32 bit IEEE floating point number.
 
 This action returns no data.
 
