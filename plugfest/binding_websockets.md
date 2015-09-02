@@ -51,6 +51,8 @@ The same message is sent to the thing server when the proxy updates a property.
 
 Note: the thing should echo this back when the change has taken effect. For IoT devices that spend most of the time asleep, there will be a lag until the device's next receiving window opens. By echoing the property update back to the proxy after the update has actually been sent to the IoT device, user interfaces can indicate that an update is in progress during the lag.
 
+I have kept things simple for now and would expect this to evolve incrementally as we tackle more complex use cases. In particular the name of a property could be expanded into a path syntax, see e.g. http://goessner.net/articles/JsonPath/
+
 Note: the thing._running is a metaproperty that signals that the thing is running, i.e. it is true between calls to the thing's start and stop methods.
 
 If an event is fired on the thing, the thing server sends a notification to all proxies:
