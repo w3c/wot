@@ -2,6 +2,8 @@
 
 This is a description of how Thing data models can be defined in JSON-LD and has been implemented by a [NodeJS based server](https://github.com/w3c/web-of-things-framework). Note that further work is needed to specify the data model for results returned by actions, and for metadata on whether a property value is static, or if not, how long its value can be relied on. 
 
+The syntax assumes a JSON-LD context that maps short names to RDF URLs, e.g. to the RDF core datatypes that RDF imports from XML Schema. The default JSON-LD context is assumed e.g. on the basis of the Media Type used for the model.  Thing descriptions should use @context to import domain specific models. This will be ignored on resource constrained devices, but on more powerful platforms, the domain semantics can be used as a basis for selecting matching servers, e.g. during service composition.
+
 Here is an example for discussion purposes:
 
 ```
