@@ -25,8 +25,6 @@ Here is an example for discussion purposes:
             "actions" : {
                         "dim" {
                                     "brightness" : "float",
-                                    "min_value" : 0.0,
-                                    "max_value" : 1.0,
                                     "time" : float
                         }
             }
