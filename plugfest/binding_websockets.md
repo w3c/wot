@@ -4,7 +4,7 @@ A single web socket connection should be made between any pair of servers or ser
 
 To register a proxy for a thing, the proxy server sends:
 
-```javascript
+```
 {
   register: thing's uri
 }
@@ -14,7 +14,7 @@ Where the URI is URL for the thing's description in JSON-LD
 
 The server hosting the proxied thing replies with:
 
-```javascript
+```
 {
   uri: thing's uri,
   state: thing's properties as an associative array
@@ -23,7 +23,7 @@ The server hosting the proxied thing replies with:
 
 The proxy server can later unregister with:
 
-```javascript
+```
 {
   unregister: thing's uri
 }
@@ -31,7 +31,7 @@ The proxy server can later unregister with:
 
 If the server hosting the proxied thing unregisters the thing, all proxy servers (or web pages) are notified with:
 
-```javascript
+```
 {
   unregister: thing's uri
 }
@@ -39,7 +39,7 @@ If the server hosting the proxied thing unregisters the thing, all proxy servers
 
 When a property for the thing is updated, the thing server sends to all proxies:
 
-```javascript
+```
 {
   uri: thing's uri
   patch: property name
@@ -55,7 +55,7 @@ Note: the thing._running is a metaproperty that signals that the thing is runnin
 
 If an event is fired on the thing, the thing server sends a notification to all proxies:
 
-```javascript
+```
 {
   uri: thing's uri
   event: event name
@@ -67,7 +67,7 @@ The data property is optional and if missing will assumed to be 'null'. If the e
 
 If the proxy invokes an action on the thing it sends the following:
 
-```javascript
+```
 {
   uri: thing's uri
   call: call id
@@ -80,7 +80,7 @@ The data property is optional and if missing will assumed to be 'null'. If the a
 
 The Thing server later sends the action's result (if any) with:
 
-```javascript
+```
 {
   uri: thing's uri
   call: call id
