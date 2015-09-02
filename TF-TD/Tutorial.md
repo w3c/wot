@@ -1,16 +1,16 @@
 
 # About this Tutorial
-This tutorial explains how to use the Thing Description (TD) and its minimal vocabulary set. As example, an LED lamp will be modeled with the TD using the JSON-LD format. 
+This tutorial explains how to use the Thing Description (TD) and its minimal vocabulary set. As example, an LED lamp will be modeled with the TD using the JSON-LD format.
 
 
 ## Basics about Thing Description
-The TD is mainly based on the entities Metadata, Data, and the 3 interaction models Property, Action, and Event. 
+The TD is mainly based on the entities Metadata, Data, and the 3 interaction models Property, Action, and Event.
 
 
 ![TDL Model](TDL.jpg)
 
 
-### Metadata 
+### Metadata
 Metadata is used to provide some generic information which may be not that relevant at runtime. There are 3 mandatory vocabularies defined within the Metadata:
 
 * Name: Name of the Thing
@@ -19,8 +19,8 @@ Metadata is used to provide some generic information which may be not that relev
 
 Note: Besides of these 3 defined vocabularies additional characteristics can be defined such as product id, firmware version, location, etc..
 
-### Data 
-This field is used to define application-specific data types that are used by the interaction models (property, action, event). 
+### Data
+This field is used to define application-specific data types that are used by the interaction models (property, action, event).
 
 Per default, a subset of XML Schema simple data types is supported which includes string, int, float, byte, short, boolean, unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).
 
@@ -48,20 +48,20 @@ There are 3 mandatory vocabularies defined within the Action:
 * OutputData: Which output data is associated with this action
 
 ### Event
-The interaction variant Event enables an intention to be notified by the Thing on a certain condition. 
+The interaction variant Event enables an intention to be notified by the Thing on a certain condition.
 There are 2 mandatory vocabularies defined within the Event:
 
 * Name: Name of the action
 * OutputData: Which data is associated with this event
 
-Note: Event can also be seen as a Property with abilitiy for subscription. 
+Note: Event can also be seen as a Property with abilitiy for subscription.
 
-## Sample Thing: LED Lamp 
-A LED Lamp “MyLED” has following characteristics:
+## Sample Thing: LED Lamp
+A LED Lamp 'MyLED' has following characteristics:
 * supports CoAP and HTTP as application protocol
 * supports only JSON as exchange data format
 * can be switched on / off (ledOnOff) using a boolean value (true=On, false=Off)
-* provides the color temperature (colorTemperature) in unsignedShort; color temperature can be changed by a client 
+* provides the color temperature (colorTemperature) in unsignedShort; color temperature can be changed by a client
 * provides current rgb values (red, green, blue) each of them in unsignedByte
 * notifies when color temperate is changed (colorTemperatureChanged)
 
@@ -73,7 +73,7 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Encoding = JSON
 
 ##### Property
-1) 
+1)
 * Name =  "colorTemperature"
 * OutputData = unsignedShort
 * Writeable= true
@@ -132,7 +132,7 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
       "td:name": "colorTemperature",
       "td:hasOutput": "xsd:unsignedShort",
       "td:writable": true
-    }, 
+    },
     {
       "@type": "td:Property",
       "td:name": "rgbValueRed",
@@ -164,15 +164,15 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
 ```
 
 
-Since this TD points the support of HTTP and CoAP as application transport protocol and JSON as data serialization format a simple protocol binding convention can be met:
+Since this TD points the support of HTTP and CoAP as application transport protocol and JSON as data serialization format a simple protocol binding convention can be met (also see XXX):
 
 ##### Property colorTemperature
-###### Read Request 
+###### Read Request
 GET coap://www.example.com:5683/ledlamp/colorTemperature
 
 GET http://www.example.com:5683/ledlamp/colorTemperature
 
-###### Payload Response 
+###### Payload Response
 
 ```
 {
@@ -181,7 +181,7 @@ GET http://www.example.com:5683/ledlamp/colorTemperature
 ```
 
 
-###### Write Request 
+###### Write Request
 PUT coap://www.example.com:5683/ledlamp/colorTemperature
 
 PUT http://www.example.com:5683/ledlamp/colorTemperature
@@ -194,7 +194,7 @@ Payload
 }
 ```
 
-###### Payload Response 
+###### Payload Response
 empty
 
 ##### Property rgbValueRed

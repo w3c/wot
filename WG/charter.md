@@ -58,13 +58,17 @@ This Working Group will develop specifications and progress them to W3C Recommen
 
 This will specify a data modelling vocabulary for describing things in terms of events, properties and actions, and links to domain models and protocol specific API descriptions. This work item will include provision for late bound data types, re-use of data type definitions, and labelled opaque data types for data to be handed on to entities that understand it. This vocabulary will be designed to supplement the RDF core datatypes, including enumerations and numeric ranges.
 
-### Linked Data vocabulary for describing which protocols servers support
+### Linked Data vocabulary for server metadata
 
-This will specify a Linked Data vocabulary for identifying a common set of protocols, data formats and encodings for communication between servers.
+This will specify a Linked Data vocabulary for identifying a common set of protocols, data formats and encodings for communication between servers. This is needed to decouple application scripting APIs from the details of which protocols are used between any pair of servers.
 
 ### Content Type for a serialisation of data models in JSON-LD
 
 This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary, and allowing for efficient implementation on resource constrained IoT devices.
+
+### Content Type for a serialisation of server metadata in JSON-LD
+
+This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of metadata with a default context defining short names for the terms in the server metadata vocabulary. This metadata will enable servers to identify which protocols, data formats and encodings to use for communicating with other servers.
 
 ### Bindings to common protocols
 
