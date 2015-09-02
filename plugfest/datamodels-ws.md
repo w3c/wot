@@ -8,19 +8,19 @@ Here is an example for discussion purposes:
 
 ```
 {
-            “name” : “MyLED”,
-            “properties”: {
+            "name" : "MyLED",
+            "properties": {
                         on: {
-                                   “type” : “boolean”,
-                                   “writeable”: true
+                                   "type" : "boolean",
+                                   "writeable": true
                         },
-                        “color_temp”: {
-                                   “type” : “uint16”,
-                                   “writeable” : true
+                        "color_temp": {
+                                   "type" : "uint16",
+                                   "writeable" : true
                         },
-                        “red”: “uint8”,
-                        “green”: “uint8”,
-                        “blue”: “uint8”
+                        "red": "uint8",
+                        "green": "uint8",
+                        "blue": "uint8"
             },
             "actions" : {
                         "dim" {
