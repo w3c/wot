@@ -17,7 +17,7 @@ In contrast to conformance tests, only the interface in form of a thing descript
 For the start, we will face the follwing scenario  and constraints:
 
 ### Protocols
-To start out simple, we will restrict the used (WoT) protocols for the first Plugfest to CoAP and HTTP.
+To start out simple, we will restrict the used (WoT) protocols for the first Plugfest to CoAP, HTTP and WebSocket-based protocols.
 
 ### Things
 The things are for example: (detailed thing description to follow):
