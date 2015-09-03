@@ -6,9 +6,9 @@ A sample protocol binding for CoAP will be discussed at the end of this tutorial
 
 # Table of Contents
 1. [ Basics about Thing Description](#Basics-about-Thing-Description)
-2. [Sample Thing: LED Lamp](#Sample-Thing:-LED-Lamp)
-  1. [Thing Description LED Lamp](#Sample-Thing:-LED-Lamp)
-  2. [CoAP Protocol Binding](#CoAP-Protocol-Binding)
+2. [Sample Thing: LED Lamp](#sample-thing-led-lampp)
+  1. [Thing Description LED Lamp](#sample-thing-led-lamp)
+  2. [CoAP Protocol Binding](#coap-protocol-binding)
 
 
 ## Basics about Thing Description
