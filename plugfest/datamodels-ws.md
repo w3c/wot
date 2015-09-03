@@ -46,3 +46,8 @@ There is one action "dim" which changes the brightness over a given number of se
 This example has no events.
 
 I have kept things simple for now and would expect this to evolve incrementally as we tackle more complex use cases. When a property requires more than the name of a core data type, the idea would be to use a JSON object (associative array) whose properties provide further information, e.g. {“type”:”float”, “min”:0.0, “max”:1.0}.
+
+## editing
+
+* [JSON Lint](http://jsonlint.com) which can be used to validate JSON
+* [JSON-LD Playground](http://json-ld.org/playground/) which can be used to validate JSON-LD
