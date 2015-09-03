@@ -2,6 +2,14 @@
 # About this Tutorial
 This tutorial explains how to use the Thing Description (TD) and its minimal vocabulary set. As example, an LED lamp will be modeled with the TD using the JSON-LD format.
 
+A sample protocol binding for CoAP will be discussed at the end of this tutorial.
+
+# Table of Contents
+1. [ Basics about Thing Description](#Basics-about-Thing-Description)
+2. [Sample Thing: LED Lamp](#Sample-Thing:-LED-Lamp)
+  1. [Thing Description LED Lamp](#Sample-Thing:-LED-Lamp)
+  2. [CoAP Protocol Binding](#CoAP-Protocol-Binding)
+
 
 ## Basics about Thing Description
 The TD is mainly based on the entities Metadata, Data, and the 3 interaction models Property, Action, and Event.
@@ -62,6 +70,7 @@ A LED Lamp 'MyLED' has following characteristics:
 * supports CoAP and HTTP as application protocol
 * supports only JSON as exchange data format
 * can be switched on / off (ledOnOff) using a boolean value (true=On, false=Off)
+* fade in (fadeIn) and fade out (fadeOut) with a fade in/out time in seconds (=unsignedByte)
 * provides the color temperature (colorTemperature) in unsignedShort; color temperature can be changed by a client
 * provides current rgb values (red, green, blue) each of them in unsignedByte
 * notifies when color temperate is changed (colorTemperatureChanged)
@@ -94,9 +103,20 @@ Bringing this in the Thing Description context, we would categorize this informa
 * OutputData = unsignedByte
 * Writeable= false
 
-##### Action
+5)
 * Name =  "ledOnOff"
 * InputData = boolean
+* OutputData = void/null
+
+##### Action
+1)
+* Name =  "fadeIn"
+* InputData = unsignedByte
+* OutputData = void/null
+
+2)
+* Name =  "fadeOut"
+* InputData = unsignedByte
 * OutputData = void/null
 
 ##### Event
@@ -105,7 +125,7 @@ Bringing this in the Thing Description context, we would categorize this informa
 
 This can be transformed into JSON-LD representation (the JSON-LD file can be downloaded here).
 
-Note: Currently, a context JSON-LD file is developed for the WoT TD. If this file is ready and accessable via a known URI, @context can simple refer to it and there is no need the "td:" prefixes.
+[Note: Currently, a context JSON-LD file is developed for the WoT TD. If this file is ready and accessible via a known URI, @context can simple refer to it. The "td:" prefixes will be obsolete then.]
 
 ```
 {
@@ -152,11 +172,22 @@ Note: Currently, a context JSON-LD file is developed for the WoT TD. If this fil
       "td:hasOutput": "xsd:unsignedByte",
       "td:writable": false
     }, {
-      "@type": "td:Action",
+      "@type": "td:Property",
       "td:name": "ledOnOff",
       "td:hasInput": "xsd:boolean",
       "td:hasOutput": ""
     }, {
+      "@type": "td:Action",
+      "td:name": "fadeIn",
+      "td:hasInput": "xsd:unsignedByte",
+      "td:hasOutput": ""
+    },  {
+      "@type": "td:Action",
+      "td:name": "fadeOut",
+      "td:hasInput": "xsd:unsignedByte",
+      "td:hasOutput": ""
+    },
+    {
       "@type": "td:Event",
       "td:hasOutput": "xsd:unsignedShort",
       "td:name": "colorTemperatureChanged"
@@ -166,8 +197,11 @@ Note: Currently, a context JSON-LD file is developed for the WoT TD. If this fil
 
 ```
 
+## CoAP Protocol Binding
 
-Since this TD points CoAP as application transport protocol and JSON as data serialization format a simple protocol binding convention can be met (also see   [CoAP binding for WoT interaction patterns](https://github.com/w3c/wot/blob/master/plugfest/binding_coap.md)):
+[Note: This subsection is in work in progress and reflects the current status of the WoT discussion.]
+
+The LED TD points CoAP as application transport protocol and JSON as data serialization format. A simple protocol binding convention can be met as describt in [CoAP binding for WoT interaction patterns](https://github.com/w3c/wot/blob/master/plugfest/binding_coap.md):
 
 ##### Property colorTemperature
 ###### Read Request (with HATEOAS)
@@ -224,18 +258,15 @@ empty
 }
 ```
 
-##### Action dimLight
+##### Action fadeIn
 
-POST coap://www.example.com:5683/ledlamp/dimLight
+POST coap://www.example.com:5683/ledlamp/fadeIn
 
 Payload
 
 ```
 {
-    value : {
-      "targetValue" : 40,
-      "inSeconds" : 5
-     }
+    value : 5
 }
 ```
 
@@ -247,7 +278,7 @@ Payload
     "createdTime" : "201509021310",
     "links" : [
       {
-        "href" : "/dimLight/1",
+        "href" : "/fadeIn/1",
         "rel" : "execution"
       }
 
