@@ -15,11 +15,11 @@ Here is a data model for the light for discussion purposes:
             "name" : "MyLED",
             "@context" : "http://example.com/domain-semantics",
             "properties": {
-                        on: {
+                        "on" : {
                                    "type" : "boolean",
                                    "writeable": true
                         },
-                        "color_temp": {
+                        "color_temp" : {
                                    "type" : "uint16",
                                    "writeable" : true
                         },
