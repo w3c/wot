@@ -49,7 +49,7 @@ This example has no events.
 
 * I have kept things simple for now and would expect this to evolve incrementally as we tackle more complex use cases.
 * When a property requires more than the name of a data type, you use a JSON object whose properties provide further information, e.g. {“type”:”float”, “min”:0.0, “max”:1.0}.
-* When a property value is given as the name of a data type rather than as a JSON object, there is an implicit "type" relationship between the property and its type. This is syntactic sugar and has the same interpretation as a JSON object with a field named "type".
+* When a property value is given as the name of a data type rather than as a JSON object, there is an implicit "type" relationship between the property and its type. This is syntactic sugar for a JSON object with a single field named "type" whose value is the name of the type.
 * For nested properties, you define the property value as a JSON object, one of whose fields is "properties". Its value is a JSON object whose fields are the nested property names.
 * Further work is needed to specify metadata on whether a property value is static, or if not, how long its value can be relied on. 
 * The server metadata is held separately and describes which protocols, data formats and encodings etc. that the server supports. This is needed to determine which protocols etc. to use to connect to a given server.
