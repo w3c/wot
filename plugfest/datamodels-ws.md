@@ -31,7 +31,7 @@ Here is a data model for the light for discussion purposes:
                         "dim" {
                                     "input" : {
                                                 "brightness" : "float",
-                                                "time" : float
+                                                "time" : "float"
                                     },
                                     "output" : null
                         }
