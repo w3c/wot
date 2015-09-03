@@ -35,6 +35,7 @@ There are 3 mandatory vocabularies defined within the Property:
 * Name: Name of the property
 * OutputData: Which data type is associated with this property
 * Writeable: Is this property writeable (true/false).
+* Stability: [optional] Max time of stability of the property value in ms (0ms=stable/static property value)  
 
 Note: If the property is writeable=true, then the property accepts inputData which has the same data type as defined by the outputData.  
 
@@ -104,6 +105,8 @@ Bringing this in the Thing Description context, we would categorize this informa
 
 This can be transformed into JSON-LD representation (the JSON-LD file can be downloaded here).
 
+Note: Currently, a context JSON-LD file is developed for the WoT TD. If this file is ready and accessable via a known URI, @context can simple refer to it and there is no need the "td:" prefixes.
+
 ```
 {
   "@context": {
@@ -164,15 +167,31 @@ This can be transformed into JSON-LD representation (the JSON-LD file can be dow
 ```
 
 
-Since this TD points the support of HTTP and CoAP as application transport protocol and JSON as data serialization format a simple protocol binding convention can be met (also see XXX):
+Since this TD points CoAP as application transport protocol and JSON as data serialization format a simple protocol binding convention can be met (also see   [CoAP binding for WoT interaction patterns](https://github.com/w3c/wot/blob/master/plugfest/binding_coap.md)):
 
 ##### Property colorTemperature
-###### Read Request
+###### Read Request (with HATEOAS)
 GET coap://www.example.com:5683/ledlamp/colorTemperature
 
-GET http://www.example.com:5683/ledlamp/colorTemperature
 
-###### Payload Response
+
+
+###### Payload Response (with HATEOAS)
+
+```
+{
+    "value" : 4000
+    "links" : {
+      "method" : "PUT",
+      "href" : "/colorTemperature"
+  }
+}
+```
+###### Read Request (without HATEOAS)
+GET coap://www.example.com:5683/ledlamp/colorTemperature/value
+
+
+###### Payload Response (without HATEOAS)
 
 ```
 {
@@ -182,9 +201,7 @@ GET http://www.example.com:5683/ledlamp/colorTemperature
 
 
 ###### Write Request
-PUT coap://www.example.com:5683/ledlamp/colorTemperature
-
-PUT http://www.example.com:5683/ledlamp/colorTemperature
+PUT coap://www.example.com:5683/ledlamp/colorTemperature/value
 
 Payload
 
@@ -197,6 +214,44 @@ Payload
 ###### Payload Response
 empty
 
-##### Property rgbValueRed
+###### Payload Response (with HATEOAS)
+```
+{
+  "links" : {
+    "method" : "GET",
+    "href" : "/colorTemperature"
+  }
+}
+```
 
-TBD
+##### Action dimLight
+
+POST coap://www.example.com:5683/ledlamp/dimLight
+
+Payload
+
+```
+{
+    value : {
+      "targetValue" : 40,
+      "inSeconds" : 5
+     }
+}
+```
+
+###### Payload Response
+```
+{
+  "actionStatus" : {
+    "status" : "running",
+    "createdTime" : "201509021310",
+    "links" : [
+      {
+        "href" : "/dimLight/1",
+        "rel" : "execution"
+      }
+
+    ]
+  }
+}
+```
