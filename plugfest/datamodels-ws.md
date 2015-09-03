@@ -19,16 +19,16 @@ Here is a data model for the light for discussion purposes:
                                    "type" : "boolean",
                                    "writeable": true
                         },
-                        "color_temp" : {
+                        "color_temp": {
                                    "type" : "uint16",
                                    "writeable" : true
                         },
-                        "red": "uint8",
-                        "green": "uint8",
-                        "blue": "uint8"
+                        "red" : "uint8",
+                        "green" : "uint8",
+                        "blue" : "uint8"
             },
             "actions" : {
-                        "dim" {
+                        "dim" : {
                                     "input" : {
                                                 "brightness" : "float",
                                                 "time" : "float"
