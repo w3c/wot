@@ -1,6 +1,6 @@
 # Thing Data Models in JSON-LD
 
-This is a description of how Thing data models can be defined in JSON-LD and has been implemented by a [NodeJS based server](https://github.com/w3c/web-of-things-framework). Note that further work is needed to specify the data model for results returned by actions, and for metadata on whether a property value is static, or if not, how long its value can be relied on. 
+This is a description of how Thing data models can be defined in JSON-LD and has been implemented by a [NodeJS based server](https://github.com/w3c/web-of-things-framework). 
 
 The syntax assumes a JSON-LD context that maps short names to RDF URLs, e.g. to the RDF core datatypes that RDF imports from XML Schema. The default JSON-LD context is assumed, e.g. on the basis of the Media Type used for the model.  Thing descriptions should use @context to reference domain semantics. This will be ignored on resource constrained devices, but on more powerful platforms, the domain semantics can be used as a basis for selecting matching services, e.g. during service composition.
 
@@ -45,7 +45,12 @@ There is one action "dim" which changes the brightness over a given number of se
 
 This example has no events.
 
-I have kept things simple for now and would expect this to evolve incrementally as we tackle more complex use cases. When a property requires more than the name of a core data type, the idea would be to use a JSON object (associative array) whose properties provide further information, e.g. {“type”:”float”, “min”:0.0, “max”:1.0}.
+## Notes
+
+* I have kept things simple for now and would expect this to evolve incrementally as we tackle more complex use cases. When a property requires more than the name of a core data type, the idea would be to use a JSON object (associative array) whose properties provide further information, e.g. {“type”:”float”, “min”:0.0, “max”:1.0}.
+
+* Further work is needed to specify metadata on whether a property value is static, or if not, how long its value can be relied on. 
+* The server metadata is held separately and describes which protocols, data formats and encodings etc. that the server supports. This is needed to determine which protocols etc. to use to connect to a given server.
 
 ## Editing
 
