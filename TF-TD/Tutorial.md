@@ -4,14 +4,14 @@ This tutorial explains how to use the Thing Description (TD) and its minimal voc
 
 A sample protocol binding for CoAP will be discussed at the end of this tutorial.
 
-# Table of Contents
-1. [ Basics about Thing Description](#Basics-about-Thing-Description)
-2. [Sample Thing: LED Lamp](#sample-thing-led-lampp)
+## Table of Contents
+1. [ Basics about Thing Description](#basics-about-thing-description)
+2. [Sample Thing: LED Lamp](#sample-thing-led-lamp)
   1. [Thing Description LED Lamp](#sample-thing-led-lamp)
   2. [CoAP Protocol Binding](#coap-protocol-binding)
 
 
-## Basics about Thing Description
+# Basics about Thing Description
 The TD is mainly based on the entities Metadata, Data, and the 3 interaction models Property, Action, and Event.
 
 
@@ -65,7 +65,7 @@ There are 2 mandatory vocabularies defined within the Event:
 
 Note: Event can also be seen as a Property with abilitiy for subscription.
 
-## Sample Thing: LED Lamp
+# Sample Thing: LED Lamp
 A LED Lamp 'MyLED' has following characteristics:
 * supports CoAP and HTTP as application protocol
 * supports only JSON as exchange data format
