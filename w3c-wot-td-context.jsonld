@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "td": "https://github.com/w3c/wot/td/onto#",
+    "Metadata": "td:Metadata",
+    "metadata": "td:hasMetadata",
+    "name": "td:name",
+    "protocols": "td:protocol",
+    "HTTP": "td:HTTP",
+    "XMPP": "td:XMPP",
+    "CoAP": "td:CoAP",
+    "WebSocket": "td:WebSocket",
+    "encodings": "td:encoding",
+    "JSON": "td:JSON",
+    "JSON-LD": "td:JSON-LD",
+    "XML": "td:XML",
+    "EXI": "td:EXI",
+	"interactions": "td:hasInteraction",
+	"Property": "td:Property",
+	"outputData": "td:hasOutput",
+	"stability": "td:stability",
+	"writeable": "td:writeable",
+	"Event": "td:Event",
+	"inputData": "td:hasInput",
+	"Action": "td:Action"
+  }
+}
