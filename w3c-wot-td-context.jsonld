@@ -1,5 +1,6 @@
 {
   "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "td": "http://www.w3c.org/wot/td#",
     "Metadata": "td:Metadata",
     "metadata": {
@@ -17,8 +18,14 @@
     "XMPP": "td:XMPP",
     "CoAP": "td:CoAP",
     "WebSocket": "td:WebSocket",
-    "uri": "td:associatedUri",
-    "priority": "td:priority",
+    "uri": {
+      "@id": "td:associatedUri",
+      "@type": "xsd:anyURI"
+    },
+    "priority": {
+      "@id": "td:priority",
+      "@type": "xsd:integer"
+    },
     "encodings": {
       "@id": "td:encoding",
       "@type": "@id",
@@ -38,8 +45,14 @@
       "@id": "td:hasOutput",
       "@type": "@id"
     },
-    "stability": "td:stability",
-    "writeable": "td:writeable",
+    "stability": {
+      "@id": "td:stability",
+      "@type": "xsd:integer"
+    },
+    "writeable": {
+      "@id": "td:writeable",
+      "@type": "xsd:boolean"
+    },
     "Event": "td:Event",
     "inputData":  {
       "@id": "td:hasInput",
