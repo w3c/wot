@@ -7,9 +7,13 @@ Even though this binding is providing conventions for resource paths that are ac
 The actual encoding is dependent on content-negotiation, the supported ones are described in the Thing description.
 
 ## Things
-Things are a resource with the following defined verbs:
-GET - returns either TD (application/json-ld)
-  or direct the agent to a thing description using Location-Path Option.
+Things are represented with a resource:
+
+GET:
+
+returns either TD (application/json-ld)
+or direct the agent to a thing description using Location-Path Option.
+
 For HATEOAS-style browsing, it SHOULD also include a list of links to the actions and properties.
 
 ## Properties
