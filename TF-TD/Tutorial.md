@@ -123,74 +123,72 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name =  "colorTemperatureChanged"
 * OutputData = unsignedShort
 
-This can be transformed into JSON-LD representation (the JSON-LD file can be downloaded here).
-
-[Note: Currently, a context JSON-LD file is developed for the WoT TD. If this file is ready and accessible via a known URI, @context can simple refer to it. The "td:" prefixes will be obsolete then.]
+This would have the following JSON-LD representation:
 
 ```
 {
   "@context": {
-    "td": "http://www.w3c.org/wot/td#",
-	"xsd": "http://www.w3.org/2001/XMLSchema#"
+    "@vocab": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+	  "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "td:hasMetadata": {
-    "td:name": "MyLED",
-    "td:protocols" : {
-      "td:coap" : {
-        "td:uri" : "coap://www.example.com:5683/ledlamp",
-        "td:priority" : 1
-		},
-      "td:http" : {
-        "td:uri" : "http://www.example.com:80/ledlamp",
-        "td:priority" : 2
-		}
-	},
-    "td:encodings": [
-      "td:JSON"
+  "metadata": {
+    "name": "MyLED",
+    "protocols" : [
+      "CoAP" : {
+        "uri" : "coap://www.example.com:5683/ledlamp",
+        "priority" : 1
+		  },
+      "HTTP" : {
+        "uri" : "http://www.example.com:80/ledlamp",
+        "priority" : 2
+      }
+	  ],
+    "encodings": [
+      "JSON"
     ]
   },
-  "td:hasInteraction": [
+  "interactions": [
     {
-      "@type": "td:Property",
-      "td:name": "colorTemperature",
-      "td:hasOutput": "xsd:unsignedShort",
-      "td:writable": true
+      "@type": "Property",
+      "name": "colorTemperature",
+      "outputData": "xsd:unsignedShort",
+      "writable": true
     },
     {
-      "@type": "td:Property",
-      "td:name": "rgbValueRed",
-      "td:hasOutput": "xsd:unsignedByte",
-      "td:writable": false
+      "@type": "Property",
+      "name": "rgbValueRed",
+      "outputData": "xsd:unsignedByte",
+      "writable": false
     }, {
-      "@type": "td:Property",
-      "td:name": "rgbValueGreen",
-      "td:hasOutput": "xsd:unsignedByte",
-      "td:writable": false
+      "@type": "Property",
+      "name": "rgbValueGreen",
+      "outputData": "xsd:unsignedByte",
+      "writable": false
     }, {
-      "@type": "td:Property",
-      "td:name": "rgbValueBlue",
-      "td:hasOutput": "xsd:unsignedByte",
-      "td:writable": false
+      "@type": "Property",
+      "name": "rgbValueBlue",
+      "outputData": "xsd:unsignedByte",
+      "writable": false
     }, {
-      "@type": "td:Property",
-      "td:name": "ledOnOff",
-      "td:hasInput": "xsd:boolean",
-      "td:hasOutput": ""
+      "@type": "Property",
+      "name": "ledOnOff",
+      "inputData": "xsd:boolean",
+      "outputData": ""
     }, {
-      "@type": "td:Action",
-      "td:name": "fadeIn",
-      "td:hasInput": "xsd:unsignedByte",
-      "td:hasOutput": ""
+      "@type": "Action",
+      "name": "fadeIn",
+      "inputData": "xsd:unsignedByte",
+      "outputData": ""
     },  {
-      "@type": "td:Action",
-      "td:name": "fadeOut",
-      "td:hasInput": "xsd:unsignedByte",
-      "td:hasOutput": ""
+      "@type": "Action",
+      "name": "fadeOut",
+      "inputData": "xsd:unsignedByte",
+      "outputData": ""
     },
     {
-      "@type": "td:Event",
-      "td:hasOutput": "xsd:unsignedShort",
-      "td:name": "colorTemperatureChanged"
+      "@type": "Event",
+      "outputData": "xsd:unsignedShort",
+      "name": "colorTemperatureChanged"
     }
   ]
 }
