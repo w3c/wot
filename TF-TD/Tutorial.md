@@ -123,9 +123,10 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name =  "colorTemperatureChanged"
 * OutputData = unsignedShort
 
-This would have the following JSON-LD representation:
+This would have the following JSON-LD representation (see also `wot/TF-TD/TD Samples/led.json`):
 
 ```
+
 {
   "@context": {
     "@vocab": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -153,8 +154,7 @@ This would have the following JSON-LD representation:
       "name": "colorTemperature",
       "outputData": "xsd:unsignedShort",
       "writable": true
-    },
-    {
+    }, {
       "@type": "Property",
       "name": "rgbValueRed",
       "outputData": "xsd:unsignedByte",
@@ -184,8 +184,7 @@ This would have the following JSON-LD representation:
       "name": "fadeOut",
       "inputData": "xsd:unsignedByte",
       "outputData": ""
-    },
-    {
+    }, {
       "@type": "Event",
       "outputData": "xsd:unsignedShort",
       "name": "colorTemperatureChanged"
@@ -194,6 +193,9 @@ This would have the following JSON-LD representation:
 }
 
 ```
+
+It includes a default JSON-LD context file, which is hosted [here](https://w3c.github.io/wot/w3c-wot-td-context.jsonld).
+The ontology referenced by the context can be found as an .owl file at `wot/TF-TD/Ontology/w3c-wot-td.owl`.
 
 ## CoAP Protocol Binding
 
