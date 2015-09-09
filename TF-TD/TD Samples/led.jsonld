@@ -1,11 +1,8 @@
 {
-  "@context": {
-    "@vocab": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-	  "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
+  "@context": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
   "metadata": {
     "name": "MyLED",
-    "protocols" : [
+    "protocols" : {
       "CoAP" : {
         "uri" : "coap://www.example.com:5683/ledlamp",
         "priority" : 1
@@ -14,7 +11,7 @@
         "uri" : "http://www.example.com:80/ledlamp",
         "priority" : 2
       }
-	  ],
+	  },
     "encodings": [
       "JSON"
     ]

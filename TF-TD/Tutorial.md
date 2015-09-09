@@ -123,79 +123,10 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name =  "colorTemperatureChanged"
 * OutputData = unsignedShort
 
-This would have the following JSON-LD representation (see also `wot/TF-TD/TD Samples/led.json`):
-
-```
-
-{
-  "@context": {
-    "@vocab": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-	  "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "metadata": {
-    "name": "MyLED",
-    "protocols" : [
-      "CoAP" : {
-        "uri" : "coap://www.example.com:5683/ledlamp",
-        "priority" : 1
-		  },
-      "HTTP" : {
-        "uri" : "http://www.example.com:80/ledlamp",
-        "priority" : 2
-      }
-	  ],
-    "encodings": [
-      "JSON"
-    ]
-  },
-  "interactions": [
-    {
-      "@type": "Property",
-      "name": "colorTemperature",
-      "outputData": "xsd:unsignedShort",
-      "writable": true
-    }, {
-      "@type": "Property",
-      "name": "rgbValueRed",
-      "outputData": "xsd:unsignedByte",
-      "writable": false
-    }, {
-      "@type": "Property",
-      "name": "rgbValueGreen",
-      "outputData": "xsd:unsignedByte",
-      "writable": false
-    }, {
-      "@type": "Property",
-      "name": "rgbValueBlue",
-      "outputData": "xsd:unsignedByte",
-      "writable": false
-    }, {
-      "@type": "Property",
-      "name": "ledOnOff",
-      "inputData": "xsd:boolean",
-      "outputData": ""
-    }, {
-      "@type": "Action",
-      "name": "fadeIn",
-      "inputData": "xsd:unsignedByte",
-      "outputData": ""
-    },  {
-      "@type": "Action",
-      "name": "fadeOut",
-      "inputData": "xsd:unsignedByte",
-      "outputData": ""
-    }, {
-      "@type": "Event",
-      "outputData": "xsd:unsignedShort",
-      "name": "colorTemperatureChanged"
-    }
-  ]
-}
-
-```
+The resulting JSON-LD document is located at [`wot/TF-TD/TD Samples/led.json`](/TD Samples/led.json).
 
 It includes a default JSON-LD context file, which is hosted [here](https://w3c.github.io/wot/w3c-wot-td-context.jsonld).
-The ontology referenced by the context can be found as an .owl file at `wot/TF-TD/Ontology/w3c-wot-td.owl`.
+The ontology referenced by the context can be found as an .owl file at [`wot/TF-TD/Ontology/w3c-wot-td.owl`](/Ontology/w3c-wot-td.owl).
 
 ## CoAP Protocol Binding
 
