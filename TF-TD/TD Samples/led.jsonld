@@ -1,5 +1,5 @@
 {
-  "@context": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
   "metadata": {
     "name": "MyLED",
     "protocols" : {
@@ -38,7 +38,7 @@
       "outputData": "xsd:unsignedByte",
       "writable": false
     }, {
-      "@type": "Property",
+      "@type": "Action",
       "name": "ledOnOff",
       "inputData": "xsd:boolean",
       "outputData": ""
