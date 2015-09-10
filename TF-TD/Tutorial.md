@@ -103,18 +103,19 @@ Bringing this in the Thing Description context, we would categorize this informa
 * OutputData = unsignedByte
 * Writeable= false
 
-5)
+##### Action
+
+1)
 * Name =  "ledOnOff"
 * InputData = boolean
 * OutputData = void/null
 
-##### Action
-1)
+2)
 * Name =  "fadeIn"
 * InputData = unsignedByte
 * OutputData = void/null
 
-2)
+3)
 * Name =  "fadeOut"
 * InputData = unsignedByte
 * OutputData = void/null
