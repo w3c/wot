@@ -123,79 +123,10 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name =  "colorTemperatureChanged"
 * OutputData = unsignedShort
 
-This can be transformed into JSON-LD representation (the JSON-LD file can be downloaded here).
+The resulting JSON-LD document is located at [`wot/TF-TD/TD Samples/led.json`](/TD Samples/led.json).
 
-[Note: Currently, a context JSON-LD file is developed for the WoT TD. If this file is ready and accessible via a known URI, @context can simple refer to it. The "td:" prefixes will be obsolete then.]
-
-```
-{
-  "@context": {
-    "td": "http://www.w3c.org/wot/td#",
-	"xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "td:hasMetadata": {
-    "td:name": "MyLED",
-    "td:protocols" : {
-      "td:coap" : {
-        "td:uri" : "coap://www.example.com:5683/ledlamp",
-        "td:priority" : 1
-		},
-      "td:http" : {
-        "td:uri" : "http://www.example.com:80/ledlamp",
-        "td:priority" : 2
-		}
-	},
-    "td:encodings": [
-      "td:JSON"
-    ]
-  },
-  "td:hasInteraction": [
-    {
-      "@type": "td:Property",
-      "td:name": "colorTemperature",
-      "td:hasOutput": "xsd:unsignedShort",
-      "td:writable": true
-    },
-    {
-      "@type": "td:Property",
-      "td:name": "rgbValueRed",
-      "td:hasOutput": "xsd:unsignedByte",
-      "td:writable": false
-    }, {
-      "@type": "td:Property",
-      "td:name": "rgbValueGreen",
-      "td:hasOutput": "xsd:unsignedByte",
-      "td:writable": false
-    }, {
-      "@type": "td:Property",
-      "td:name": "rgbValueBlue",
-      "td:hasOutput": "xsd:unsignedByte",
-      "td:writable": false
-    }, {
-      "@type": "td:Property",
-      "td:name": "ledOnOff",
-      "td:hasInput": "xsd:boolean",
-      "td:hasOutput": ""
-    }, {
-      "@type": "td:Action",
-      "td:name": "fadeIn",
-      "td:hasInput": "xsd:unsignedByte",
-      "td:hasOutput": ""
-    },  {
-      "@type": "td:Action",
-      "td:name": "fadeOut",
-      "td:hasInput": "xsd:unsignedByte",
-      "td:hasOutput": ""
-    },
-    {
-      "@type": "td:Event",
-      "td:hasOutput": "xsd:unsignedShort",
-      "td:name": "colorTemperatureChanged"
-    }
-  ]
-}
-
-```
+It includes a default JSON-LD context file, which is hosted [here](https://w3c.github.io/wot/w3c-wot-td-context.jsonld).
+The ontology referenced by the context can be found as an .owl file at [`wot/TF-TD/Ontology/w3c-wot-td.owl`](/Ontology/w3c-wot-td.owl).
 
 ## CoAP Protocol Binding
 
