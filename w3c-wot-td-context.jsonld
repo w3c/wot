@@ -11,8 +11,7 @@
     "name": "td:name",
     "protocols": {
       "@id": "td:protocol",
-      "@type": "@id",
-      "@container": "@set"
+      "@type": "@id"
     },
     "HTTP": "td:HTTP",
     "XMPP": "td:XMPP",
