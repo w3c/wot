@@ -12,7 +12,7 @@
     "protocols": {
       "@id": "td:protocol",
       "@type": "@id",
-      "@container": "@set"
+      "@container": "@index"
     },
     "HTTP": "td:HTTP",
     "XMPP": "td:XMPP",
