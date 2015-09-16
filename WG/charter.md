@@ -10,7 +10,7 @@ Property | Value
 ---------|------
 Start date |  (The start date is the date of the "Call for Participation", when the charter is approved.)
 End date	| 31 December 2017
-Charter extension | The charter extension history is documented in "<a href="#about">About this charter</a>
+Charter extension | The charter extension history is documented in "<a href="#about">About this charter</a>"
 Confidentiality | Proceedings are public
 Initial Chairs | Co-Chairs TBD
 Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura
