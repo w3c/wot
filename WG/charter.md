@@ -27,7 +27,7 @@ This section introduces the architecture for the Web of Things as the basis for 
 
 URIs can be used to access machine interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects whose events, properties and actions correspond to those of the thing the object stands for. An object on one server can act as a proxy for an object on another server. Web developers are shielded from the implementation details of how objects are coupled, allowing system designers to choose the transport protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
 
-![web of things servers and scripts](https://github.com/w3c/web-of-things-framework/blob/master/images/wot-arch.png)
+![web of things servers and scripts](http://www.w3.org/2015/09/wot-arch.png)
 
 The diagram shows a thing on server A that acts as a proxy for a thing on server B which is coupled to a sensor and actuator. The proxy on server A could be set up by a script on that server, or by a script on server B.
 The latter is useful when server A is on the public Internet and server B is behind a firewall, and you want to provide public access to the thing from server A.
