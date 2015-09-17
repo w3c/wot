@@ -36,7 +36,7 @@ Web page scripts can create local proxies for things on servers, subject to the 
 
 ## Goals
 
-This Working Group will define Web technology standards to enable services that bridge IoT platforms on devices ranging from microcontrollers to cloud-based server farms, and help to end the current fragmentation and data silos, for a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realise the full potential for the IoT.
+This Working Group will define Web technology standards to enable services that span IoT platforms on devices ranging from microcontrollers to cloud-based server farms, and help to end the current fragmentation and data silos, for a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realise the full potential for the IoT.
 
 ## Scope
 
