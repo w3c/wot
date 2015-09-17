@@ -9,7 +9,7 @@ The Internet of Things (IoT) suffers from fragmentation and data silos. The miss
 Property | Value
 ---------|------
 Start date |  (The start date is the date of the "Call for Participation", when the charter is approved.)
-End date	| 31 December 2017
+End date	| 31 December 2018
 Charter extension | The charter extension history is documented in "<a href="#about">About this charter</a>"
 Confidentiality | Proceedings are [public](http://www.w3.org/2015/Process-20150901/#confidentiality-levels)
 Initial Chairs | Co-Chairs TBD
@@ -82,12 +82,12 @@ This work item will define how common protocols can be used to convey messages f
 
 Specification | FPWD | CR | PR | REC
 --------------|------|----|----|----
-Data Modelling Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
-Server Protocols Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
-Data Models Content Type | April 2016 | December 2016 | September 2017 | November 2017
-Server Metadata Content Type | April 2016 | December 2016 | September 2017 | November 2017
-Scripting APIs | April 2016 | December 2016 | September 2017 | November 2017
-Protocol Bindings | April 2016 | December 2016 | September 2017 | November 2017
+Data Modelling Vocabulary | July 2016 | December 2017 | September 2018 | November 2018
+Server Protocols Vocabulary | July 2016 | December 2017 | September 2018 | November 2018
+Data Models Content Type | July 2016 | December 2017 | September 2018 | November 2018
+Server Metadata Content Type | July 2016 | December 2017 | September 2018 | November 2018
+Scripting APIs | December 2016 | December 2017 | September 2018 | November 2018
+Protocol Bindings | December 2016 | December 2017 | September 2018 | November 2018
 
 *Note: the group will document signifcant departures from this initial schedule on the group home page*
 
