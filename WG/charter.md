@@ -40,13 +40,11 @@ This Working Group will define standards to enable services that bridge IoT plat
 
 ## Scope
 
-This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define a content type for serialization of data models in [JSON-LD](http://www.w3.org/TR/json-ld/) along with a default context for the core vocabulary, and bindings for common protocols in collaboration with other groups.
+This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define content types for serialization of data models and server metadata, along with scripting APIs and bindings for common protocols in collaboration with other groups.
 
 ### Out of Scope
 
 * Vocabularies for specific application domains
-
-* Application Programming Interfaces
 
 * Normative specifications for security, assurance, privacy and resilience of IoT systems. These are recognized as important topics, but are being declared as out of scope for this charter since it is not yet completely clear what W3C should do in respect to these topics.
 
@@ -64,13 +62,17 @@ This will specify a data modelling vocabulary for describing things in terms of 
 
 This will specify a Linked Data vocabulary for identifying a common set of protocols, data formats and encodings for communication between servers. This is needed to decouple application scripting APIs from the details of which protocols are used between any pair of servers.
 
-### Content Type for a serialisation of data models in JSON-LD
+### Content Type for a serialisation of data models
 
-This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary, and allowing for efficient implementation on resource constrained IoT devices.
+This Working Group will register a Content Type for a serialisation of data models that is easy to author and easy to process on resource constrained devices. 
 
-### Content Type for a serialisation of server metadata in JSON-LD
+### Content Type for a serialisation of server metadata
 
-This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of metadata with a default context defining short names for the terms in the server metadata vocabulary. This metadata will enable servers to identify which protocols, data formats and encodings to use for communicating with other servers.
+This Working Group will register a Content Type for a serialisation of server metadata that is easy to author and easy to process on resource constrained devices. This metadata will enable other servers to identify which protocols, data formats and encodings to use when communicating with a given server.
+
+### Application Domain Independent Scripting APIs for Things
+
+This work item will define programming language dependent APIs for application scripts to interact with things and their metadata. This includes the means to register and unregister things and their proxies, as well as event listeners for events associated with things. For static programming languages, this will include the means to access and update properties, and to invoke actions and handle their results.
 
 ### Bindings to common protocols
 
@@ -82,7 +84,9 @@ Specification | FPWD | CR | PR | REC
 --------------|------|----|----|----
 Data Modelling Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
 Server Protocols Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
-JSON-LD Content Type | April 2016 | December 2016 | September 2017 | November 2017
+Data Models Content Type | April 2016 | December 2016 | September 2017 | November 2017
+Server Metadata Content Type | April 2016 | December 2016 | September 2017 | November 2017
+Scripting APIs | April 2016 | December 2016 | September 2017 | November 2017
 Protocol Bindings | April 2016 | December 2016 | September 2017 | November 2017
 
 *Note: the group will document signifcant departures from this initial schedule on the group home page*
