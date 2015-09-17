@@ -74,7 +74,7 @@ This Working Group will register a Content Type for a serialisation of server me
 
 ### Application Domain Independent Scripting APIs for Things
 
-This work item will define programming language dependent APIs for application scripts to interact with things and their metadata. This includes the means to register and unregister things and their proxies, as well as event listeners for events associated with things. For static programming languages, this will include the means to access and update properties, and to invoke actions and handle their results.
+This work item will define programming language dependent APIs for application scripts to interact with things and their metadata. This includes the means to register and unregister things and their proxies, as well as event listeners for events associated with things. For static programming languages, this will include the means to access and update properties, and to invoke actions and handle their results. For dynamic programming languages, this can be transparently handled via getters, setters, and method invocation.
 
 ### Bindings to common protocols
 
