@@ -11,7 +11,7 @@ Property | Value
 Start date |  (The start date is the date of the "Call for Participation", when the charter is approved.)
 End date	| 31 December 2017
 Charter extension | The charter extension history is documented in "<a href="#about">About this charter</a>"
-Confidentiality | Proceedings are public
+Confidentiality | Proceedings are [public](http://www.w3.org/2015/Process-20150901/#confidentiality-levels)
 Initial Chairs | Co-Chairs TBD
 Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura
 Usual Meeting Schedule | Teleconferences: Weekly, Face-to-face: 2-3 per year
@@ -149,6 +149,6 @@ For more information about disclosure obligations for this group, please see the
 
 ## About this Charter
 
-This charter for the Web Payments Working Group has been created http://www.w3.org/Consortium/Processaccording to [section 6.2](http://www.w3.org/Consortium/Process/groups#GAGeneral) of the [Process Document](). In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+This charter for the Web Payments Working Group has been created according to [section 5.2](http://www.w3.org/Consortium/Process/groups#GAGeneral) of the [Process Document](). In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
 
 Development of this charter was supported in part by the European Union's 7th Research Framework Programme (FP7/ 2013-2015) under grant agreement nº317862 - Compose.
