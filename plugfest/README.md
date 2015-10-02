@@ -40,8 +40,11 @@ The use cases could for example comprise:
 
 ## Participating
 
-Youb are more than welcome to participate in the plugfest.
-Either by bringing along an implemention of a thing, of an application or providing a thing description.
+Youb are more than welcome to participate in the plugfest!
+
+Either by bringing along an implemention of a thing, of an application and providing a thing description or using one of the provided descriptions.
+
+Please provide a thing desription for the Thing(s) that you are providing resp. expecting and upload it via pull-request to our github space.
 
 ## Time plan
 We plan to show first interoperable demos at TPAC 2015.
