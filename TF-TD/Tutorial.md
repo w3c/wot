@@ -124,7 +124,7 @@ Bringing this in the Thing Description context, we would categorize this informa
 * Name =  "colorTemperatureChanged"
 * OutputData = unsignedShort
 
-The resulting JSON-LD document is located at [`wot/TF-TD/TD Samples/led.json`](/TF-TD/TD Samples/led.json).
+The resulting JSON-LD document is located at [`wot/TF-TD/TD Samples/led.jsonld`](/TF-TD/TD Samples/led.jsonld).
 
 It includes a default JSON-LD context file, which is hosted [here](https://w3c.github.io/wot/w3c-wot-td-context.jsonld).
 The ontology referenced by the context can be found as an .owl file at [`wot/TF-TD/Ontology/w3c-wot-td.owl`](/TF-TD/Ontology/w3c-wot-td.owl).
