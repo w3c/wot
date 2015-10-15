@@ -1,10 +1,17 @@
-# CoAP binding for WoT interaction patterns
+# HTTP/1.1 binding for WoT interaction patterns
 
-This document details out specifications how to map the WoT model onto CoAP.
+This document details out specifications how to map the WoT model onto HTTP.
 
 ## General
 Even though this binding is providing conventions for resource paths that are accessible from prior knowledge, we expect resources to be linked in a HATEOAS-fashion.
+
 The actual encoding is dependent on content-negotiation, the supported ones are described in the Thing description.
+
+To map the interaction primitive for subscriptions we backport the CoAP OBSERVE Option to HTTP/1.1 in that we assume that each observable resource is upgradeable.
+
+That means, you can send a regular GET request to poll the resource or open a WebSocket by adding the headers "Connection: Upgrade" and "Upgrade: websocket" in the request (and Sec-WebSocket-* as needed). The WebSocket will send a response body upon each state update.
+
+See also [RFC6455](https://tools.ietf.org/html/rfc6455) for more information on opening a WebSocket. A simple design study is provided [here](https://github.com/h0ru5/http-observe)
 
 ## Things
 Things are represented with a resource:
@@ -36,7 +43,7 @@ PUT:
     * rel = state
     * href = self (the property)
 
-GET with OBSERVE Option:
+Subscription:
 
 usual behavior (returns a response to the agent every time the property changes).
 
@@ -64,7 +71,7 @@ GET: Queries the status of an action
       * method = POST
       * accepts = type as described in the thing description (or empty if defined as such in the TD).
 
-GET+Observe Option:
+Subscription:
 
 regular behavior, returns the same response as if a GET was issued on every change.
 
@@ -94,3 +101,7 @@ PUT: Alters the parameters of an execution
 
   * Returns: details of the invocation using the media type described in interactions.md
   * Accepts: the type as described in the thing description
+
+Subscription:
+
+regular behavior, returns the same response as if a GET was issued on every change.

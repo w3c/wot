@@ -8,8 +8,10 @@ The Internet of Things (IoT) suffers from fragmentation and data silos. The miss
 
 Property | Value
 ---------|------
-End date	| 31 December 2017
-Confidentiality | Proceedings are public
+Start date |  (The start date is the date of the "Call for Participation", when the charter is approved.)
+End date	| 31 December 2018
+Charter extension | The charter extension history is documented in "<a href="#about">About this charter</a>"
+Confidentiality | Proceedings are [public](http://www.w3.org/2015/Process-20150901/#confidentiality-levels)
 Initial Chairs | Co-Chairs TBD
 Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura
 Usual Meeting Schedule | Teleconferences: Weekly, Face-to-face: 2-3 per year
@@ -25,7 +27,7 @@ This section introduces the architecture for the Web of Things as the basis for 
 
 URIs can be used to access machine interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects whose events, properties and actions correspond to those of the thing the object stands for. An object on one server can act as a proxy for an object on another server. Web developers are shielded from the implementation details of how objects are coupled, allowing system designers to choose the transport protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
 
-![web of things servers and scripts](https://github.com/w3c/web-of-things-framework/blob/master/images/wot-arch.png)
+![web of things servers and scripts](http://www.w3.org/2015/09/wot-arch.png)
 
 The diagram shows a thing on server A that acts as a proxy for a thing on server B which is coupled to a sensor and actuator. The proxy on server A could be set up by a script on that server, or by a script on server B.
 The latter is useful when server A is on the public Internet and server B is behind a firewall, and you want to provide public access to the thing from server A.
@@ -34,21 +36,21 @@ Web page scripts can create local proxies for things on servers, subject to the 
 
 ## Goals
 
-This Working Group will define standards to enable services that bridge IoT platforms, and help to end the current fragmentation and data silos, for a global market of services.
+This Working Group will define Web technology standards to enable services that span IoT platforms on devices ranging from microcontrollers to cloud-based server farms, and help to end the current fragmentation and data silos, for a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realise the full potential for the IoT.
 
 ## Scope
 
-This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define a content type for serialization of data models in [JSON-LD](http://www.w3.org/TR/json-ld/) along with a default context for the core vocabulary, and bindings for common protocols in collaboration with other groups.
+This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define content types for serialization of data models and server metadata, along with scripting APIs and bindings for common protocols in collaboration with other groups.
 
 ### Out of Scope
 
 * Vocabularies for specific application domains
 
-* Application Programming Interfaces
+* Application domain specific scripting interfaces
 
 * Normative specifications for security, assurance, privacy and resilience of IoT systems. These are recognized as important topics, but are being declared as out of scope for this charter since it is not yet completely clear what W3C should do in respect to these topics.
 
-When a consensus emerges as to what is needed, the scope could be adjusted and new work items added to future revisions of this charter, subject to W3C Advisory Committee Review.
+When a consensus emerges as to what is needed and is appropriate for this group, the scope could be adjusted and new work items added to future revisions of this charter, subject to W3C Advisory Committee Review.
 
 ## Deliverables
 
@@ -62,13 +64,17 @@ This will specify a data modelling vocabulary for describing things in terms of 
 
 This will specify a Linked Data vocabulary for identifying a common set of protocols, data formats and encodings for communication between servers. This is needed to decouple application scripting APIs from the details of which protocols are used between any pair of servers.
 
-### Content Type for a serialisation of data models in JSON-LD
+### Content Type for a serialisation of data models
 
-This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of data models with a default context defining short names for the terms in the data modelling vocabulary, and allowing for efficient implementation on resource constrained IoT devices.
+This Working Group will register a Content Type for a serialisation of data models that is easy to author and easy to process on resource constrained devices. 
 
-### Content Type for a serialisation of server metadata in JSON-LD
+### Content Type for a serialisation of server metadata
 
-This Working Group will register a Content Type for a [JSON-LD](http://www.w3.org/TR/json-ld/) serialisation of metadata with a default context defining short names for the terms in the server metadata vocabulary. This metadata will enable servers to identify which protocols, data formats and encodings to use for communicating with other servers.
+This Working Group will register a Content Type for a serialisation of server metadata that is easy to author and easy to process on resource constrained devices. This metadata will enable other servers to identify which protocols, data formats and encodings to use when communicating with a given server.
+
+### Application Domain Independent Scripting APIs for Things
+
+This work item will define programming language dependent APIs for application scripts to interact with things and their metadata. This includes the means to register and unregister things and their proxies, as well as event listeners for events associated with things. For static programming languages, this will include the means to access and update properties, and to invoke actions and handle their results. For dynamic programming languages, this can be transparently handled via getters, setters, and method invocation.
 
 ### Bindings to common protocols
 
@@ -78,10 +84,12 @@ This work item will define how common protocols can be used to convey messages f
 
 Specification | FPWD | CR | PR | REC
 --------------|------|----|----|----
-Data Modelling Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
-Server Protocols Vocabulary | April 2016 | December 2016 | September 2017 | November 2017
-JSON-LD Content Type | April 2016 | December 2016 | September 2017 | November 2017
-Protocol Bindings | April 2016 | December 2016 | September 2017 | November 2017
+Data Modelling Vocabulary | July 2016 | December 2017 | September 2018 | November 2018
+Server Protocols Vocabulary | July 2016 | December 2017 | September 2018 | November 2018
+Data Models Content Type | July 2016 | December 2017 | September 2018 | November 2018
+Server Metadata Content Type | July 2016 | December 2017 | September 2018 | November 2018
+Scripting APIs | December 2016 | December 2017 | September 2018 | November 2018
+Protocol Bindings | December 2016 | December 2017 | September 2018 | November 2018
 
 *Note: the group will document signifcant departures from this initial schedule on the group home page*
 
@@ -147,6 +155,6 @@ For more information about disclosure obligations for this group, please see the
 
 ## About this Charter
 
-This charter for the Web Payments Working Group has been created http://www.w3.org/Consortium/Processaccording to [section 6.2](http://www.w3.org/Consortium/Process/groups#GAGeneral) of the [Process Document](). In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+This charter for the Web Payments Working Group has been created according to [section 5.2](http://www.w3.org/Consortium/Process/groups#GAGeneral) of the [Process Document](). In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
 
 Development of this charter was supported in part by the European Union's 7th Research Framework Programme (FP7/ 2013-2015) under grant agreement nº317862 - Compose.
