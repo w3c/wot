@@ -4,11 +4,11 @@
     "name": "MyLED",
     "protocols" : {
       "CoAP" : {
-        "uri" : "coap://localhost:5683/things/MyLED",
+        "uri" : "coap://192.168.1.123:5683/things/MyLED",
         "priority" : 1
 		  },
       "HTTP" : {
-        "uri" : "http://localhost:8080/things/MyLED",
+        "uri" : "http://192.168.1.123:8080/things/MyLED",
         "priority" : 2
       }
 	  },
