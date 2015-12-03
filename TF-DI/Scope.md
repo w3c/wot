@@ -24,9 +24,12 @@ This document is part of Task Force on Discovery. The discussions on discovery w
 ## Brainstorming on
 * What are you using to discover?
 * What are you discovering - 
-*** It could be in terms of a physical thing or its description or an URI of thing
-*** Alternatively, it could also be mentioned in terms of resource, service and property
-*** Could also be local network discovery
+
+** It could be in terms of a physical thing or its description or an URI of thing
+
+** Alternatively, it could also be mentioned in terms of resource, service and property
+
+** Could also be local network discovery
 * Clarify and define how Thing Description (TD) can be used in discovery
 
 # Open questions/items
