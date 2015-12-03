@@ -1,20 +1,28 @@
 # W3C WoT TF-DI Scope
 
-Wiki - http://www.w3.org/WoT/IG/wiki/Discovery_TF
-This document is part of Task Force on Discovery. The discussions on discovery will address the following aspects.
+Author - Soumya Kanti Datta, EURECOM, Email: dattas@eurecom.fr
 
-## Definition of discovery in general
+## Resource Discovery
+Resource discovery is one of the most fundamental building block of a Web of Things (WoT) platform. Industry estimates show that 30-50 Billions things will be connected to the Internet by 2020. To provide value-added services to the end users through WoT platforms, these things must interact with their environment, the cloud and among themselves too. Such interactions allow exchanging and processing of things metadata and reacting automatically to the environment. However, the heterogeneity of thing, their capabilities & properties, communication technologies add to the complexity of effective realization of the WoT platforms. Therefore, to realize the vision of WoT, there must be mechanisms available for automatic discovery of resources, their properties and capabilities as well as the means to access them. Furthermore, such discovery mechanisms also depend on other services like configuration management, registration and un-registration, sleep/idle mode of things. The WoT Task Force on Discovery recognizes the importance of discovery and addresses the following aspects.
+
 * Understanding its purpose
 * Applicability into various use cases
 
 ## Current landscape
-* It is intended to survey the existing literature and mechanisms for discovery.
-* Understand different discovery architectures i.e. centralized or P2P over distributed architecture
-* Means of interaction used for discovery
+
+An extensive survey of the existing technological survey has been carried out by TF-DI. The main goals of this study were -
+
+* Understand and compile the current mechanisms for discovery.
+* Review different discovery architectures i.e. centralized, P2P, distributed architecture.
+* Examine the available discovery technologies.
+
+The main outcome of the survey is a categorization of the discovery mechanisms and studying their interaction patterns. This is further illustrated at section [Put the section hyperlink here].
 
 ## Scopes and dimensions of discovery
-* Scopes could be further classified into local and remote
-* Dimensions could be in terms of context, location, humans(from access control perspective) etc.
+
+Resource discovery has different scopes based on the contexts of the intended scenarios. When considering from the point of view of physical location and/or network, the discovey scopes can include both local and remote aspects. For example, searching for things around "ME" corresponds to a local scope while a remote scope can be searching for things providing offline maps in a foreign location through a WoT platform. At the same time, discovery scopes could also be in terms of one-time (thing discovery in a smart home) or long standing (pub-sub sytle).
+
+Similarly, discovery mechanisms also have several dimensions, e.g. context, location, humans (from the access control perspective) etc.
 
 ## Need to consider
 * Registration and unregistration of WoT devices as a part of discovery
@@ -55,3 +63,5 @@ We're looking to simplify discovery by decoupling scripts from the details of th
 
 
 '''We need your help to collect relevant use cases!'''
+
+## 
