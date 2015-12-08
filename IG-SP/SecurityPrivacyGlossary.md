@@ -19,6 +19,7 @@ The process of establishing confidence in user identities.
 The process of verifying a claim that a system entity or system resource has a certain attribute value. An authentication process consists of two basic steps:
 *	Identification step: Presenting the claimed attribute value (e.g., a user identifier) to the authentication subsystem.
 *	Verification step: Presenting or generating authentication information (e.g., a value signed with a private key) that acts as evidence to prove the binding between the attribute and that for which it is claimed
+
 # (Entity) Authentication (SAML)
 To confirm a system entity’s asserted principal identity with a specified, or understood, level of confidence
 # Authorization
