@@ -26,6 +26,7 @@ To confirm a system entity’s asserted principal identity with a specified, or 
 This term is used in the following connotations:
 * Administrative connotation (RFC 4949): An approval that is granted to a system entity to access a system resource.
 * Operative connotation (SAML): The process of determining whether a subject is allowed to have the specified types of access to a particular resource.
+
 # Authorization decision (SAML)
 The result of an act of authorization. The result may be negative, that is, it may indicate that the subject is not allowed any access to the resource.
 # Authorization policy
