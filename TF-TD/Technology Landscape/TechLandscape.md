@@ -105,7 +105,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
 
 ### [Efficient XML Interchange (EXI)](http://www.w3.org/TR/exi/)
   - **Background of the technology:** 
-  - **Consortium:** 
+  - **Consortium:** W3C 
   - **Tool/Development Support:** 
   - **Data Types-aware encoding:**
   - **Binary Format:**
