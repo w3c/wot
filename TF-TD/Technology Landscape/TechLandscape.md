@@ -144,13 +144,13 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Context-aware encoding:** no
 
 ### [CBOR](http://cbor.io/)
-  - **Background of the technology:**
-  - **Consortium:**  
-  - **Tool/Development Support:**  
-  - **Data Types-aware encoding:**
-  - **Binary Format:**  
-  - **Compression:**
-  - **Small memory footprint:**
+  - **Background of the technology:** The "Concise Binary Object Representation (CBOR)" is based on the JSON data model
+  - **Consortium:**   IETF
+  - **Tool/Development Support:** yes
+  - **Data Types-aware encoding:** yes
+  - **Binary Format:**   yes
+  - **Compression:** high
+  - **Small memory footprint:** yes
   - **Context-aware encoding:**
 
 ### [CoRE Link Format](https://tools.ietf.org/html/rfc6690)
