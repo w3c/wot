@@ -200,10 +200,10 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Primitive data types:** boolean, (unsigned-)Byte, (unsigned-)Short, (unsigned-)Int, (unsigned-)Long, float, double, hexBinary, base64Binary, date, time, ...
   - **Composite data types:** Any simple-typed data can be composed to a structered complex typed data
 
-### [SenML](https://tools.ietf.org/html/draft-jennings-core-senml-02)
-  - **Background of the technology:** SenML is a media type for representing simple sensor measurements and device parameters.
-  - **Primitive data types:**
-  - **Composite data types:**
+### [SenML](https://tools.ietf.org/html/draft-jennings-core-senml)
+  - **Background of the technology:** SenML is a media type for representing simple sensor measurements and device parameters. SenML has JSON, CBOR, XML, and EXI representations which all share the common SenML data model.  
+  - **Primitive data types:** string, boolean, floating point, time (and plans for adding binary)
+  - **Composite data types:** all measurements can include, in addition to value, "name", "time", and "measurement unit"
 
 # Functional Description
 Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
