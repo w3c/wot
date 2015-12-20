@@ -5,14 +5,12 @@
     "Metadata": "td:Metadata",
     "metadata": {
       "@id": "td:hasMetadata",
-      "@type": "@id",
-      "@container": "@set"
+      "@type": "@id"
     },
     "name": "td:name",
     "protocols": {
       "@id": "td:protocol",
-      "@type": "@id",
-      "@container": "@index"
+      "@type": "@id"
     },
     "HTTP": "td:HTTP",
     "XMPP": "td:XMPP",
@@ -49,7 +47,7 @@
       "@id": "td:stability",
       "@type": "xsd:integer"
     },
-    "writeable": {
+    "writable": {
       "@id": "td:writeable",
       "@type": "xsd:boolean"
     },
