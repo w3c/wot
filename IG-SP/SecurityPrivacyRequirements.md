@@ -13,7 +13,8 @@ The following does (a-priori) sketch how that might look like. Note that the "re
 
 Task Force | Use Case | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
 ----------- | ------- | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
-TODO | TODO | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
+Thing Description |  |  |  |  |  |  |  |  |  |  |  |  | 
+                  | [TF-TD] UC-i  | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
 
 Individual entries shall provide:
 * A short indication whether a requirement applies (e.g. fully, partially, not) - best done in a coloring scheme
