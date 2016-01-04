@@ -60,44 +60,10 @@ The former require more attention during the architecture and design process tha
 This section digests state-of-the-art of security and privacy means for WoT.
 ## Overall
 This section captures the matching between security&privacy requirements as well as means. This section is meant to provide a compass for WoT projects. For more details see below as well as child pages.
-{| class#"wikitable"
-|-
-! !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Informational_Self-Determination Informational Self-Determination] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Anonymization.2C_Pseudonymization Anonymization, Pseudonymization] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Authorization_Management Authorization Management] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Authorization_Enforcement Authorization Enforcement] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Initial_Authentication Initial Authentication] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Single-Sign-On Single-Sign-On] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Confidentiality Confidentiality] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Data_Origin_Authentication.2C_Integrity Data Origin Authentication, Integrity] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Credentialing Credentialing] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Provisioning Provisioning] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Rate_Limitations Rate Limitations] !! [https://www.w3.org/WoT/IG/wiki/Security%26Privacy_Requirements_Catalogue#Intrusion_Detection_and_Prevention Intrusion Detection and Prevention]
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#UMA '''UMA'''] || '''Core objective''' (through user-managed authorizations) || - || Addressed (users as primary policy management authorities) || Addressed  (push model, HTTP) || - || - || - ||  - || - || - || - || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#OATH '''OATH'''] || - || - || - || - || '''Core objective''' (time, event or challenge-based OTP schemes) || - || - || - || Addressed (symmetric key containers and provisioning of symmetric keys) || - || Side concern (throttling for event-based schemes) || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#OpenID_Connect '''OpenID Connect'''] || Side concern (users decide if their identity information is supplied to relying parties) || Implementation-specific || - || - || '''Core objective''' (requests reports about [initial] authentication events)  || '''Core objective''' (SSO across organizations/domains and in the same domain) || - || - || See OAuth || See OAuth || - || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#JWT '''JWT'''] || - || - || - || - || '''Core objective''' (reports about [initial] authentication events) || Side concern (allows to transfer and sustain information about authentication events) || - || - || - || - || - || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#FIDO '''FIDO'''] || - || '''Core objective''' (uses long-lived public key associations instead user names/identifiers) || - || - || '''Core objective''' (framework for initial user authentication in the Web) || - || - ||  - || Side concern (defines the creation/supply of public/private keys to FIDO clients) || - || - || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#TWAI '''TWAI'''] || - || - || - || - || '''Core objective''' (supports server and client authentication on application level) || - || - || - || - || - || - || - 
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#OAuth '''OAuth'''] || - || - || '''Core objective''' (users or legal entities as policy management authorities) || '''Core objective''' (push model, HTTP) || - || - || - || - || Side concern (registration/management of OAuth clients) ||  Side concern (registration/management of OAuth clients) || - || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#OAuth-for-CoAP '''OAuth-for-CoAP'''] || - || - || '''Core objective''' (legal entities as policy management authorities) || '''Core objective''' (push model, CoAP) || - (DTLS-based client authentication) || - (no user actor) || - || - || - || - || - || - 
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#UMA-for-CoAP '''UMA-for-CoAP'''] || As for native UMA || - || As for native UMA  || As for native UMA  || - || - || - ||  - || - || - || - || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#DCAF '''DCAF'''] || - || - || '''Core objective''' (legal entities as policy management authorities) || '''Core objective''' (push model, CoAP) || - || - || - || - || - || - || - 
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#CoRE_Authz '''CoRE Authz'''] || - || - || '''Core objective''' (legal entities as policy management authorities) || '''Core objective''' (push or pull model, CoAP) || - || - || - || - || - || - || - || - 
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#DTLS '''DTLS'''] || - || - || - || - || '''Core objective''' (transport-level client/server authentication) || - (does not define the transfer of authentication state across network servers || '''Core objective''' (transport-level message encryption) || '''Core objective''' (transport-level signature) || - || - || - || - 
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#DICE '''DICE'''] || - || - || - || - || As for DTLS || - || As for DTLS || As for DTLS || - || - || - || - 
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#JOSE '''JOSE'''] || - || -|| - || - || - || - || '''Core objective''' (application-level encryption, JSON) ||  '''Core objective''' (application-level signature, JSON) || - || - || - || -  
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#COSE '''COSE'''] || - || -|| - || - || - || - || '''Core objective''' (application-level encryption, CBOR) || '''Core objective''' (application-level signature, CBOR) || - || - || - || - 
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#OSCOAP '''OSCOAP'''] || - || - || - || - || - || - || '''Core objective''' (application-level encryption, CBOR or JSON) || '''Core objective''' (application-level signature, CBOR or JSON) || - || - || - || -
-|-
-| [https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means#SCIM '''SCIM'''] || - || - || - || - || - || -  || - ||  - || - || '''Core objective''' (manage metadata about system actors-not limited to users) || - || -  
-|}
+
+Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
+-------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
+TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
 
 ## Clusters
 This section considers specific clusters of security and privacy requirements to the state-of-the-art assessment further drill-down. See child pages for further details.
