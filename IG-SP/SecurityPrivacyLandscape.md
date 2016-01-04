@@ -71,14 +71,14 @@ TWAI | - | - | - | - |  **Core objective** (supports server and client authentic
 OAuth | - | - | **Core objective** (users or legal entities as policy management authorities)  | **Core objective** (push model, HTTP)  | - | - | - | - |  Side concern (registration/management of OAuth clients)  | Side concern (registration/management of OAuth clients)  | - | -
 OAuth-for-CoAP | - | - | Core objective (legal entities as policy management authorities) | Core objective (push model, CoAP) |  - (DTLS-based client authentication) | - (no user actor) | - | - |  - |  - | - | -
 UMA-for-CoAP | As for native UMA  | - | As for native UMA  | As for native UMA  | - | - | - | - | - | - | - | -
-DCAF | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-CoRE Authz | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-DTLS | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-DICE | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-JOSE | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-COSE | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-OSCOAP | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-SCIM | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+DCAF | - | - | **Core objective** (legal entities as policy management authorities)  | **Core objective** (push model, CoAP) | - | - | - | - | - | - | - | -
+CoRE Authz | - | - | **Core objective** (legal entities as policy management authorities) | **Core objective** (push or pull model, CoAP)  | - | - | - | - | - | - | - | -
+DTLS | - | - | - | - | **Core objective** (transport-level client/server authentication) | - (does not define the transfer of authentication state across network servers) | **Core objective** (transport-level message encryption) | **Core objective** (transport-level signature) | - | - | - | -
+DICE | - | - | - | - | As for DTLS  | - | As for DTLS | As for DTLS | - | - | - | -
+JOSE | - | - | - | - | - | - | **Core objective** (application-level encryption, JSON)  | **Core objective** (application-level signature, JSON)  | - | - | - | -
+COSE | - | - | - | - | - | - | **Core objective** (application-level encryption, CBOR)  | **Core objective** (application-level signature, CBOR)  | - | - | - | -
+OSCOAP | - | - | - | - | - | - | **Core objective** (application-level encryption, CBOR or JSON)  | **Core objective** (application-level signature, CBOR or JSON)  | - | - | - | -
+SCIM | - | - | - | - | - | - | - | - | - | **Core objective** (manage metadata about system actors-not limited to users)  | - | -
 
 ## Clusters
 This section considers specific clusters of security and privacy requirements to the state-of-the-art assessment further drill-down. See child pages for further details.
