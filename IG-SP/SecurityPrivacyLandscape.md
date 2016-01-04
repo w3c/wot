@@ -62,15 +62,15 @@ This section captures the matching between security&privacy requirements as well
 
    -   | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
 ------ | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
-UMA | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-OATH | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-OpennID Connect | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-JWT | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-FIDO | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-TWAI | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-OAuth | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-OAuth-for-CoAP | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
-UMA-for-CoAP | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+UMA | **Core objective** (through user-managed authorizations)  | - | Addressed (users as primary policy management authorities) | Addressed (push model, HTTP)  | - | - | - | - |  - |  - | - | -
+OATH | - | - | - | - |  **Core objective** (time, event or challenge-based OTP schemes)  | - | - | - |  Addressed (symmetric key containers and provisioning of symmetric keys) | - | Side concern (throttling for event-based schemes) | -
+OpenID Connect | Side concern (users decide if their identity information is supplied to relying parties | Implementation-specific  | - | - |  **Core objective** (requests reports about [initial] authentication events) | **Core objective** (SSO across organizations/domains and in the same domain)  | - | - |  See OAuth  |  See OAuth  | - | -
+JWT | - | - | - | - | **Core objective** (reports about [initial] authentication events)  | Side concern (allows to transfer and sustain information about authentication events) | - | - | - | - | - | -
+FIDO | - | **Core objective** (uses long-lived public key associations instead user names/identifiers)  | - | - | **Core objective** (framework for initial user authentication in the Web)  | - | - | - |  Side concern (defines the creation/supply of public/private keys to FIDO clients) | - | - | -
+TWAI | - | - | - | - |  **Core objective** (supports server and client authentication on application level)  | - | - | - |  - |  - | - | -
+OAuth | - | - | **Core objective** (users or legal entities as policy management authorities)  | **Core objective** (push model, HTTP)  | - | - | - | - |  Side concern (registration/management of OAuth clients)  | Side concern (registration/management of OAuth clients)  | - | -
+OAuth-for-CoAP | - | - | Core objective (legal entities as policy management authorities) | Core objective (push model, CoAP) |  - (DTLS-based client authentication) | - (no user actor) | - | - |  - |  - | - | -
+UMA-for-CoAP | As for native UMA  | - | As for native UMA  | As for native UMA  | - | - | - | - | - | - | - | -
 DCAF | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
 CoRE Authz | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
 DTLS | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
