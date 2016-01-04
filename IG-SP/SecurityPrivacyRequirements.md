@@ -15,6 +15,14 @@ Task Force | Use Case | Informational Self-Determination | Anonymization, Pseudo
 ----------- | ------- | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
 Thing Description |  |  |  |  |  |  |  |  |  |  |  |  | 
                   | [TF-TD] UC-i  | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
+Scripting API and Protocol mapping |  |  |  |  |  |  |  |  |  |  |  |  | 
+                  | Home automation  | Yes TODO: discuss how personal the information is that is dealt with (behavior vs body)  | Yes TODO as before | Yes starts with owner can do all, else can do nothing, may have to add friends&family | Yes depends on netwok characteritic (nearfield vs widearea)  | Yes | Yes for human users, TODO for M2M | Yes TODO: consider deployment options (Cloud-based intemediaries) | Yes TODO: consider deployment options (Cloud-based intemediaries) | Yes | Yes but depends on whether multi-user components are in the game (portal in the Cloud) | Probably yes but for portal-style components in the Cloud rather than home-based components | Not now
+Thing Discovery |  |  |  |  |  |  |  |  |  |  |  |  | 
+                  | Finding things around me | Needed at least for consumer goods...  | TBD | Owner needs be able to excercise access control | Thing needs to be able to enforce access control according the owner's strategy  | Yes but not necessarily done by the thing | TBD | Yes | Yes | Yes | Open | TODO | TODO
+                  | Finding things on my network  | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
+                  | Searching in directories  | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
+                  | Searching across peers  | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
+                  | Accessing thing metadata  | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
 
 Individual entries shall provide:
 * A short indication whether a requirement applies (e.g. fully, partially, not) - best done in a coloring scheme
