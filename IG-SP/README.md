@@ -3,6 +3,8 @@ Github repository of the task force on security and privacy
 
 Following artifacts are provided in this folder:
 
+0. [README](https://github.com/w3c/wot/edit/master/IG-SP/README.md): this file
+
 1. [Challenges](https://github.com/w3c/wot/edit/master/IG-SP/SecurityPrivacyChallenges.md): explain the drivers behind adaptation and innovation needs with respect to security and privacy in WoT
 
 2. [Requirements](https://github.com/w3c/wot/edit/master/IG-SP/SecurityPrivacyRequirements.md): identify the security and privacy requirements for the use cases that are considered by the W3C IG WoT 
