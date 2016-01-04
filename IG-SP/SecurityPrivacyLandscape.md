@@ -1,4 +1,4 @@
-''Note: current contents present an initial draft state. They serve the discussion in the WoT IG''
+*Note: current contents present an initial draft state. They serve the discussion in the WoT IG*
 
 #Summary
 The WoT provides distributed IT-systems. The study of distributed system protection started soon after their invention i.e in the 60/70ies. So there is lots of prior art in security&privacy.
@@ -42,7 +42,6 @@ This state-of-the-art survey does focus on existing or emerging standards for Wo
 
 # Origin/Heritage of Security and Privacy Technologies
 Numerous security and privacy-enabling mechanisms and solutions do already exists. Prominent examples are Kerberos, SSL/TLS and OAuth. 
-
 They were created to serve the needs encountered in office/enterprise IT(e.g. Kerberos), the classical Web (e.g. SSL/TLS) as well as new Web application styles (service-oriented applications, apps/REST APIs, e.g. OAuth). These mechanims often are very mature i.e respresent broadly accepted standards that are in large-scale production use. 
 
 Such prior-art mechanisms may help to address the security&privacy of (parts of) WoT scenarios but there is no guarantee that a (mature) security or privacy mean with a non-WoT origin/heritage does present a good match for WoT. For security/privacy mechanisms with non-WoT origin, '''fitness checks''' are  needed.   
@@ -63,7 +62,23 @@ This section captures the matching between security&privacy requirements as well
 
    -   | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
 ------ | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
-TODO | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+UMA | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+OATH | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+OpennID Connect | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+JWT | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+FIDO | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+TWAI | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+OAuth | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+OAuth-for-CoAP | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+UMA-for-CoAP | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+DCAF | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+CoRE Authz | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+DTLS | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+DICE | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+JOSE | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+COSE | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+OSCOAP | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
+SCIM | TODO | TODO | TODO | TODO |  TODO | TODO | TODO | TODO |  TODO |  TODO | TODO | TODO
 
 ## Clusters
 This section considers specific clusters of security and privacy requirements to the state-of-the-art assessment further drill-down. See child pages for further details.
