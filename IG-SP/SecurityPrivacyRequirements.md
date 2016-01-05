@@ -8,7 +8,7 @@ The identification of security and privacy requirement is use case-specific. Con
 * Important in WoT scenarios with legal entity-owned things/devices processing data attributed to human users such as health care equipment
 * Not relevant in WoT scenarios with legal entity-owned things/devices not processing data attributed to human users such as industrial control systems
 
-So security and privacy identification is a task that has to be addressed in liasion with the WoT IG TFs. The security and privacy requirements catalogue below provides the input needed so that the output of the identification effort ("selection") refers to the same manifest and allows things to be compared across use cases and TFs
+So security and privacy identification is a task that has to be addressed in liaision with the WoT IG TFs. The security and privacy requirements catalogue below provides the input needed so that the output of the identification effort ("selection") refers to the same manifest and allows things to be compared across use cases and TFs
 
 Task Force | Use Case | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
 ----------- | ------- | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
@@ -33,7 +33,7 @@ Individual entries shall provide:
 
 This artifact lists and defines the security and privacy requirements that are considered in the WoT IG. 
 
-Also see the [security&privacy glossary](SecurityPrivacyGlossary.md) for the actual terms: this catalogue lists an defines the considered security and privacy requirements by selecting and referring/repeating original terms plus explaining their WoT relations (where needed). Well-known mechanisms that are used to implement such requirements are mentioned for illustration purposes only. These mentionings aim at readability and do not imply any statement of their fitness for WoT (see the [security&privacy landscape](SecurityPrivacyLandscape.md) for such statements).
+Also see the [security&privacy glossary](SecurityPrivacyGlossary.md) for the actual terms: this catalogue lists an defines the considered security and privacy requirements by selecting and referring/repeating original terms plus explaining their WoT relations (where needed). Well-known mechanisms that are used to implement such requirements are mentioned for illustration purposes only. This aims at readability and do not imply any statement of their fitness for WoT (see the [security&privacy landscape](SecurityPrivacyLandscape.md) for such statements).
 
 ## Privacy
 The notion of privacy is human user-centric: it considers the right of human users to determine the degree to which she or he interacts with her or his environment. This applies to some IoT/WoT scenarios (e.g. health care) but not all (e.g. industrial control systems).
