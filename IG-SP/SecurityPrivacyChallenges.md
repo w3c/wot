@@ -43,8 +43,8 @@ Integration of physical things does happen:
 * *Web-of-Things*: also concerned with physical goods e.g. cars, lighting devices, smoke sensors, thermostats, wind turbines where reproduction, relocation of item instances comes at cost
 
 ####Sustaining: more tedious
-* *Traditional Web and office IT*: system updating/patching straight-forward
-* *Web-of-Things*: system updating/patching not straight-forward (e.g. firmware on constrained network devices)
+* *Traditional Web and office IT*: system updating/patching straight-forward. Keeping all components of a system up-to-date is feasible
+* *Web-of-Things*: system updating/patching not straight-forward (e.g. firmware on constrained network devices).Keeping all components of a system up-to-date during their lifetime may be hard (note that physical things can have a long lifetime, for instance 10-20 years in case of critical infrastructure components, software components in general and cryptographic algorithms in particular could become outdated during their lifetime) 
 
 # Exercising control
 Generalizations are needed:
