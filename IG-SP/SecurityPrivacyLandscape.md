@@ -29,9 +29,9 @@ The inclusion of physical goods also leads to security and privacy requirements 
 * Software update/patching
 * Things discovery authorization
 * Managing the authorization to authorize
-See [security and privacy challenges](SecurityPrivacyChallenges.md) for more information on the aspects that make a WoT security and privacy a different game than Web-of-Services or Web-of-Things security and privacy
+See [here](SecurityPrivacyChallenges.md) for more information on the aspects that make a WoT security and privacy a different game than Web-of-Services or Web-of-Things security and privacy
 
-# Standards
+# Standardization
 The W3C IG WoT is considering same as well as cross-domain interactions:
 * For interactions in the same-domain standards for security provide reuse
 * For interactions that cross domains (i.e. there is no single vendor/provider that designs/produces/supplies all components that interact in a WoT scenario) standards for security (authentication and authorization, secure communications provide interoperability AND reuse. Common security standards are mandatory i.e. things cannot be done without
