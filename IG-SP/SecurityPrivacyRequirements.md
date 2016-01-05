@@ -1,16 +1,14 @@
 *Note: current contents present an initial draft state. They serve the discussion in the WoT IG*
 
-This page serves the identification of security and privacy requirements in the use cases that are considered by the WoT IG. This identification is based on the security and privacy requirements catalogue below
+This page identifies the security and privacy requirements of the use cases that are considered by the WoT IG. This identification is based on the security and privacy requirements catalogue below.
 
 # Requirements Identification
-The identification of security and privacy requirement will be use case-specific. Consider privacy requirements as an example:
+The identification of security and privacy requirement is use case-specific. Consider privacy requirements as an example:
 * Important in WoT scenarios comprising wearables, connected cars or other individually-owned things/devices
-* Important  in WoT scenarios with legal entity-owned things/devices processing data attributed to human users such as health care equipment
+* Important in WoT scenarios with legal entity-owned things/devices processing data attributed to human users such as health care equipment
 * Not relevant in WoT scenarios with legal entity-owned things/devices not processing data attributed to human users such as industrial control systems
 
 So security and privacy identification is a task that has to be addressed in interaction the WoT IG TFs resp. in liasion with them. The security and privacy requirements catalogue below provides the input needed so that the output of the identification effort ("selection") refers to the same manifest and allows things to be compared across use cases and TFs
-
-The following does (a-priori) sketch how that might look like. Note that the "requirement identification" section is planned to be moved to an own page later on
 
 Task Force | Use Case | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
 ----------- | ------- | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
@@ -29,13 +27,13 @@ Individual entries shall provide:
 * A short indication whether a requirement applies (e.g. fully, partially, not) - best done in a coloring scheme
 * Some (short) textual qualification reflecting the requirement aspects described in the catalogue. Take secure communication (confidentiality) as an example: the qualification should reflect if two-party or multi-party communications are to be protected and provide any other information that is relevant (such as preferences on the kind of cryptographic scheme - symmetric vs. asymmetric)
 
-''Caveat: the UCs are not TF-specific. However from a communication and interaction perspective it seems best to cover the UCs by approaching the TFs. For that reason the table above reflects TFs in its structure''
+*Caveat: the UCs are not TF-specific. However from a communication and interaction perspective it seems best to cover the UCs by approaching the TFs. For that reason the table above reflects TFs in its structure*
 
 #Requirements Catalogue
 
 This artifact lists and defines the security and privacy requirements that are considered in the WoT IG. 
 
-Also see the [[Security&Privacy Glossary|security&privacy glossary]] for the actual terms: this catalogue identifies important requirements by selection and referring/repeating original terms plus explaining their WoT relations (where needed). Mechanisms that are commonly used to implement specific requirements are provided for illustration purposes only. These mentionings aim at readability and do not imply any statement of fitness for WoT (see the [[Design-Time Security&Privacy Means|landscape of security&privacy means]] for such statements).
+Also see the [security&privacy glossary](SecurityPrivacyGlossary.md)  for the actual terms: this catalogue identifies important requirements by selection and referring/repeating original terms plus explaining their WoT relations (where needed). Mechanisms that are commonly used to implement specific requirements are provided for illustration purposes only. These mentionings aim at readability and do not imply any statement of fitness for WoT (see the [security&privacy landscape](SecurityPrivacyLandscape.md) for such statements).
 
 ## Privacy
 The notion of privacy is human user-centric: it considers the right of human users to determine the degree to which she or he interacts with her or his environment. This applies to some IoT/WoT scenarios (e.g. health care) but not all (e.g. industrial control systems).
@@ -57,7 +55,7 @@ The authority of authorization management usually is the owner of a thing or dev
 A change of ownership implies the need to erase existing authorization strategies.
 
 ### Authorization Enforcement
-The enforcement of authorization does **apply given authorization strategies** in order to **grant or deny instructions or operations** given to or requested at a thing or device. This requires to authenticate the actor who is sending the instruction (callers <X> should not be able to easily pretend to be 'John Doe' who is allowed to do the operation desired by <X>, see [[Security&Privacy_Requirements_Catalogue#Authentication]]). 
+The enforcement of authorization does **apply given authorization strategies** in order to **grant or deny instructions or operations** given to or requested at a thing or device. This requires to authenticate the actor who is sending the instruction (callers <X> should not be able to easily pretend to be 'John Doe' who is allowed to do the operation desired by <X>, see [security&privacy requirements, section Catalogue, subsection Authentication](SecurityPrivacyRequirements.md) ). 
 
 The actual enforcement usually needs to be done upon the component that serves the requested resource or close to it. The decision making can be offloaded to another component. A special case of such decision making is the prompting of the (individual) owner where there is no a priori policy or strategy available. 
 
@@ -91,7 +89,7 @@ Moreover single-party interactions (e.g. secure storage for own use later on) ha
 ### Data Origin Authentication, Integrity
 **Integrity allows to verify that messages resp. information was not manipulated in transit or storage**. **Data origin authentication allows to corroborate the source of messages and information.** 
 
-Note: data origin authentication mechanisms usually imply entity authentication (see [[Security&Privacy_Requirements_Catalogue#Authentication]]) but entity authentication does usually not imply data origin authentication for example:
+Note: data origin authentication mechanisms usually imply entity authentication (see [security&privacy requirements, section Catalogue, subsection Authentication](SecurityPrivacyRequirements.md) ) but entity authentication does usually not imply data origin authentication for example:
 * TLS (in its usual implementation) provides entity authentication for Web server as well as data origin authentication for HTTP response messages 
 * HTTP basic authentication provides entity authentication for Web browsers (representing human users as their user agents) but does not provide data origin authentication for HTTP request messages
 
@@ -102,13 +100,13 @@ Moreover single-party interactions (e.g. secure storage for own use later on) ha
 TODO: mention replay protection, non-repudiation?
 
 ## Provisioning, Credentialing
-Provisioning and credentialing are concerned with the supply and management of things/device metadata as well as credentials. This information is needed for a thing or device in order to engage in security protocol i.e. a distributed algorithm that provides security objectives (see [[Security&Privacy_Requirements_Catalogue#Authentication]] and [[Security&Privacy_Requirements_Catalogue#Secure Communications and Storage]]) 
+Provisioning and credentialing are concerned with the supply and management of things/device metadata as well as credentials. This information is needed for a thing or device in order to engage in security protocol i.e. a distributed algorithm that provides security objectives (see [security&privacy requirements, section Catalogue, subsection Authentication](SecurityPrivacyRequirements.md)  and [security&privacy requirements, section Catalogue, subsection Secure Communications and Storage](SecurityPrivacyRequirements.md) ) 
 
 ### Credentialing
 Credentialing refers to the **supply and management of credentials** (secrets, [symmetric or asymmetric cryptographic] keys) **by/for the thing or device**. Such credentials are needed to participate in security protocols. Corresponding objects may be created upon the thing or device or external to it. In the former case credential representations that allow peers to invert corresponding operations (e.g. decrypting or validating) need to be exported. In the latter case they need to be imported. Details depend on the actual security protocol and the (cryptographic) primitives employed by it.  
 
 ### Provisioning
-Provisioning refers to the **supply and management of thing or device metadata** (identifiers, attributes, affiliations). Such metadata is needed in order to authorize instructions sent by things or devices (see [[Security&Privacy_Requirements_Catalogue#Authorization]]). Such metadata is validated during authentication of things or devices (see [[Security&Privacy_Requirements_Catalogue#Authentication]])
+Provisioning refers to the **supply and management of thing or device metadata** (identifiers, attributes, affiliations). Such metadata is needed in order to authorize instructions sent by things or devices (see [security&privacy requirements, section Catalogue, subsection Authorization](SecurityPrivacyRequirements.md) ). Such metadata is validated during authentication of things or devices (see [security&privacy requirements, section Catalogue, subsection Authentication](SecurityPrivacyRequirements.md) )
 
 ## Others 
 
