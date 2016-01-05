@@ -10,8 +10,7 @@ The identification of security and privacy requirement is use case-specific. Con
 
 So security and privacy identification is a task that has to be addressed in liasion with the WoT IG TFs. The security and privacy requirements catalogue below provides the input needed so that the output of the identification effort ("selection") refers to the same manifest and allows things to be compared across use cases and TFs
 
-     -      |    -    | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
-Task Force | Use Case |                                  |                                 |                          |                           |                         |                |                 |                                       |                 |               |                  | 
+Task Force | Use Case | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
 ----------- | ------- | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
 Thing Description |  |  |  |  |  |  |  |  |  |  |  |  | 
                   | [TF-TD] UC-i  | TODO  | TODO | TODO | TODO  | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO
