@@ -18,14 +18,12 @@ The process of establishing confidence in user identities.
 The process of verifying a claim that a system entity or system resource has a certain attribute value. An authentication process consists of two basic steps:
 *	Identification step: Presenting the claimed attribute value (e.g., a user identifier) to the authentication subsystem.
 *	Verification step: Presenting or generating authentication information (e.g., a value signed with a private key) that acts as evidence to prove the binding between the attribute and that for which it is claimed
-
 #### (Entity) Authentication (SAML)
 To confirm a system entity’s asserted principal identity with a specified, or understood, level of confidence
 #### Authorization
 This term is used in the following connotations:
 * Administrative connotation (RFC 4949): An approval that is granted to a system entity to access a system resource.
 * Operative connotation (SAML): The process of determining whether a subject is allowed to have the specified types of access to a particular resource.
-
 #### Authorization decision (SAML)
 The result of an act of authorization. The result may be negative, that is, it may indicate that the subject is not allowed any access to the resource.
 #### Authorization policy
@@ -38,11 +36,11 @@ Tangible items such as buildings, machinery, and equipment produced and used in 
 Data that has been transformed by encryption so that its semantic information content (i.e., its meaning) is no longer intelligible or directly available.
 #### Claim (WS-Trust)
 A claim is a statement made about a client, service or other resource (e.g. name, identity, key, group, privilege, capability, etc.).
-#### Claim (A Guide to Claims-Based Identity and Access Control (2nd Edition))
+#### Claim (A Guide to Claims-Based Identity and Access Control)
 A statement about a subject; for example, a name, identity, key, group, permission, or capability made by one subject about itself or another subject. Claims are given one or more values and then packaged in security tokens that are distributed by the issuer 
 #### Claimant (NIST SP 800-63)
 A party whose identity is to be verified using an authentication protocol
-Claims-based identity model (A Guide to Claims-Based Identity and Access Control)
+#### Claims-based identity model (A Guide to Claims-Based Identity and Access Control)
 A way to write applications so that the establishment of user identity is external to the application itself. The environment provides all required user information in a secure manner
 #### Consumer good (Encyclopedia Britannica)
 Any tangible commodity produced and subsequently purchased to satisfy the current wants and perceived needs of the buyer. Consumer goods are divided into three categories: durable goods, nondurable goods, and services.
@@ -57,7 +55,7 @@ The property that data has not been changed, destroyed, or lost in an unauthoriz
 #### Data (origin) authentication (ISO 7498-2)
 The corroboration that the source of data received is as claimed.
 #### Datagram Transport Layer Security (DTLS)
-An IETF standard protocol providing transport-bound security (data authentication and confidentiality, entity authentication) for data exchanges over unreliable transports (UDP). An adaptation of TLS.
+An IETF standard protocol providing transport-bound security (data authentication and confidentiality, entity authentication) for data exchanges over unreliable transports (UDP). An adaptation of the TLS protocol.
 #### Encryption (RFC 4949) 
 Cryptographic transformation of data (called "plaintext") into a form (called "ciphertext") that conceals the data's original meaning to prevent it from being known or used. If the transformation is reversible, the corresponding reversal process is called "decryption", which is a transformation that restores encrypted data to its original state.
 #### Functionally trusted third party (Handbook of Applied Cryptography)
@@ -105,7 +103,7 @@ An authentication subsystem that enables a user to access multiple, connected sy
 #### Transport-bound security
 Security features (e.g. encryption for data confidentiality) that are provided as part of transport. Transport-bound security mechanisms (e.g. SSL/TLS or DTLS, IPSec) protect data in transit between the endpoints implementing the security protocol – in a transient fashion and independent from the content of the transferred data
 #### Transport Layer Security (TLS)
-An IETF standard protocol providing transport-bound security (data authentication and confidentiality, entity authentication) for data exchanges over reliable transports (TCP). The successor of SSL.
+An IETF standard protocol providing transport-bound security (data authentication and confidentiality, entity authentication) for data exchanges over reliable transports (TCP). The successor of the SSL protocol.
 #### Unconditionally trusted third party (Handbook of Applied Cryptography)
 A TTP is said to be unconditionally trusted if it is trusted on all matters.
 #### Verifier (NIST SP 800-63)
