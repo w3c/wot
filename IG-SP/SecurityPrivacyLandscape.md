@@ -118,7 +118,8 @@ Things may appear as requestors (callers) as well as resource servers (callees) 
 * Pull: resource servers that offload authorization decision making to supporting components. These are online components that reside in the same domain
 * Push: resource servers that offload authorization decision making as well as authentication to supporting components. These are online components that reside in the same domain
 * Agent: resource servers that offload authorization decision making and enforcement as well as authentication to supporting components. These are inline components that reside upstream from resource servers in the same domain
-The standardization needs do vary with the chosen approach:
+
+The requirements on standardization do vary with the chosen approach:
 * Pull: authorization is a local matter of the resource owner domain. No standardization of authorization needed for cross-domain purposes
 * Push: authorization is a joined concern between requesting party and resource owner domains. Standardization is needed with respect to the acquisition and supply of objects expressing authorization decisions 
 * Agent: authorization is a local matter of the resource owner domain. A pull or push model may be employed between callers and agents. See above 
@@ -156,10 +157,10 @@ Since given constraints do vary in WoT technology adaptations are needed. This i
 As of today there are no commonly accepted protocol standards for authenticating and authorizing things resp. devices. Current projects do either not address these challenges or create silo’ed solutions. The IETF ACE working group happens to be the leading initiative in order to overcome this limitation:
 * ACE has a sound problem statement and high-level approach
 * But ACE does not yet provide a solution - for the time being a plethora of not-yet-integrated approaches for expressing access tokens as well as acquiring them in request/response protocols (see [here](https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means) ) are being discussed. The current stage of elaboration might be regarded "brainstorming". Moreover, questions around system dynamics and bootstrapping are not yet fully illuminated. This includes aspects such as:
-* Creation/management of token issuance policies (in a possibly automated fashion)
-* Performing/protecting component registration
-* Managing the authorization to authorize
-* Things discovery authorization
+  * Creation/management of token issuance policies (in a possibly automated fashion)
+  * Performing/protecting component registration
+  * Managing the authorization to authorize
+  * Things discovery authorization
 
 From the perspective of the W3C IG WoT the protocol standards for authenticating and authorizing things resp. devices should address/enable: 
 * A variety of security token types for different application domains(CoAP...)/use cases(consumer/industry)/security models(enc/sign, bearer/PoP)/encodings (JSON, CBOR...)/topologies (3/4/n-party)/delivery models (by-value, by-ref). The corresponding ecosystem needs to be extensible (*create-your-own security token type in case the already defined ones do not solve your issue*)
