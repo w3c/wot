@@ -8,7 +8,7 @@ The identification of security and privacy requirement is use case-specific. Con
 * Important in WoT scenarios with legal entity-owned things/devices processing data attributed to human users such as health care equipment
 * Not relevant in WoT scenarios with legal entity-owned things/devices not processing data attributed to human users such as industrial control systems
 
-So security and privacy identification is a task that has to be addressed in interaction the WoT IG TFs resp. in liasion with them. The security and privacy requirements catalogue below provides the input needed so that the output of the identification effort ("selection") refers to the same manifest and allows things to be compared across use cases and TFs
+So security and privacy identification is a task that has to be addressed in liasion with the WoT IG TFs. The security and privacy requirements catalogue below provides the input needed so that the output of the identification effort ("selection") refers to the same manifest and allows things to be compared across use cases and TFs
 
 Task Force | Use Case | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
 ----------- | ------- | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
@@ -33,7 +33,7 @@ Individual entries shall provide:
 
 This artifact lists and defines the security and privacy requirements that are considered in the WoT IG. 
 
-Also see the [security&privacy glossary](SecurityPrivacyGlossary.md)  for the actual terms: this catalogue identifies important requirements by selection and referring/repeating original terms plus explaining their WoT relations (where needed). Mechanisms that are commonly used to implement specific requirements are provided for illustration purposes only. These mentionings aim at readability and do not imply any statement of fitness for WoT (see the [security&privacy landscape](SecurityPrivacyLandscape.md) for such statements).
+Also see the [security&privacy glossary](SecurityPrivacyGlossary.md) for the actual terms: this catalogue lists an defines the considered security and privacy requirements by selecting and referring/repeating original terms plus explaining their WoT relations (where needed). Well-known mechanisms that are used to implement such requirements are mentioned for illustration purposes only. These mentionings aim at readability and do not imply any statement of their fitness for WoT (see the [security&privacy landscape](SecurityPrivacyLandscape.md) for such statements).
 
 ## Privacy
 The notion of privacy is human user-centric: it considers the right of human users to determine the degree to which she or he interacts with her or his environment. This applies to some IoT/WoT scenarios (e.g. health care) but not all (e.g. industrial control systems).
@@ -42,7 +42,9 @@ The notion of privacy is human user-centric: it considers the right of human use
 Informational self-determination is concerned with the **sharing of personal information** with others. It aims at facilitating the user (to whom that information belongs) to act as **point-of-control** for this sharing. 
 
 ### Anonymization, Pseudonymization
-Anonymization and pseudonymization **process personally-identifiable information**. Pseudonymization obfuscates personally-identifiable information esp. identifiers in a way that facilitates trace-back (but makes it hard for any outsider). Anonymization obfuscates personally-identifiable information esp. identifiers in a way that does not facilitate trace-back
+Anonymization and pseudonymization **process personally-identifiable information**. 
+* Pseudonymization obfuscates personally-identifiable information esp. identifiers in a way that facilitates tracing-back (but makes it hard for any outsider). 
+* Anonymization obfuscates personally-identifiable information esp. identifiers in a way that does not facilitate tracing-back
 
 ## Authorization
 The requirements in this section refer to the determination whether instructions or operations given to or requested at a thing or device are to be granted (hence performed) or rejected. Note that access control mechanisms natively serves authorization but may also be regarded/considered a privacy-supporting mechanism esp. for the case of user-managed access mechanisms.
@@ -62,7 +64,7 @@ The actual enforcement usually needs to be done upon the component that serves t
 ## Authentication
 The requirements in this section refer to the corroboration of identity of system actors. This concerns the originators of requests or messages. Such actors present claimants and their peers present verifiers (of claimed identity). A thing or device may act as claimant and/or verifier. 
 
-Note that "identity" refers to a set of information items that may but do not have to include identifiers which uniquely refer to a distinct actor; identity information may be comprised of non-unique properties (e.g. age, member-of). 
+Note that "identity" refers to the set of information items that may but do not have to include identifiers which uniquely refer to a distinct actor; identity information may be comprised of non-unique properties (e.g. age, member-of). 
 
 ### Initial Authentication
 During initial authentication an actor claims an identity and needs to **prove this claim according a specific scheme resp. algorithm**. Initial authentication may be initiated by the claimant or verifier. Devices/things may present a claimant and/or verifier.
