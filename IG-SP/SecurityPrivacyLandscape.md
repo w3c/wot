@@ -132,15 +132,16 @@ Adaptations of the established/known approaches are needed to meet WoT constrain
 * Some initiatives tightly couple security token and request/response specification: Core Authz, DCAF
 * Some initiatives do not honor the supporting component for the client side (the so-called Authorization Manager [short: AM]) introduced by IETF ACE: OAuth-for-CoAP, UMA-for-CoAP
 
-To further elaborate on the OAuth approach::
+To further elaborate on the OAuth approach:
 * Some OAuth grant types (these are predefined sequences of interaction) assume *requesting party*=*resource owner* (OAuth authorization code and implicit grant types). This situation may be the case for some WoT use cases but not in general
 * All OAuth exchanges assume the client component on side of the requesting party to be aware of all OAuth authorization server (these are the components to which the resource servers externalize security-enabling tasks) for the resource servers they want to interact with (resource servers in the same domain can share an OAuth authorization server). This includes the need to support a protocol stack that is shared with these OAuth authorization servers, to hold registratons with them and to interact with them. This proposition does not match contrained clients well.
 * OAuth defines the notion of a *token* (aka *access token* or *security token*) on an abstract level and defines aquisition as well as management protocols on a concrete level but does not define concrete token contents
+
 Hence OAuth (adapted to WoT) does not provide the full solution for WoT on the one hand. On the other hand OAuth is extensible and allows (resp. requires) to define:
 * New grant types
 * New parameters in predefined grant types
 * Own token contents
-In addition new endpoints providing new functionality may be added. So OAuth can provide a baseline for inheriting tocken acquisition and management frameworks for WoT
+In addition new endpoints providing new functionality may be added. So OAuth can well provide a baseline for inheriting tocken acquisition and management frameworks for WoT. This also seems to be the preferred approach in the IETF ACE working group.
 
 ###Secure Communications and Storage
 Things may appear as signer or verifier (for the signing use case) as well as encrypter and or decrypter (for the encryption use cases). These task may be performed according various strategies (transport-bound vs. information-bound protection)
