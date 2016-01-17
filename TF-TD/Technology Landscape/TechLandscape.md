@@ -31,6 +31,7 @@ Things needs to be described in order to provide basic information about themsel
 | [IoT Consortium](http://www.iofthings.org/)  | --  | -- | -- | -- | -- |
 | [sensei-IoT](http://www.sensei-iot.org/)  | --  | -- | -- | -- | -- |
 | [SAREF](http://ontology.tno.nl/saref)  | --  | -- | -- | -- | -- |
+| [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
 
 # Thing Description Model and Vocabulary
 
