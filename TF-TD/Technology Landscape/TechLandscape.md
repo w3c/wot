@@ -18,7 +18,7 @@ Things needs to be described in order to provide basic information about themsel
 | [The Open Geospatial Consortium (OGC)](http://www.opengeospatial.org/)  | SensorThings Data Model SensorML  | -- | -- | -- | -- | 
 | [RWE AG](http://www.lemonbeat.net/)  | Lemonbeat Device Language  | -- | -- | -- | -- | 
 | [Google](https://developers.google.com/brillo/?hl=en)  | Google Weave  | -- | -- | -- | -- | 
-| [Amazon](https://aws.amazon.com/iot/)  | AWS IoT Metadata  | -- | -- | -- | -- | 
+| [Amazon AWS IoT](https://aws.amazon.com/iot/)  | [Device Registry and Thing Shadows for AWS IoT](###Device-Registry-and-Thing-Shadows-for-AWS-IoT)  | -- | JSON | -- | -- | 
 | [Eclipse IoT](http://iot.eclipse.org/)  | --  | -- | -- | -- | -- | 
 | [The Open Interconnect Consortium (OIC)](http://openinterconnect.org/)  | --  | -- | -- | -- | -- | 
 | [Allseen Alliance (AllJoyn)](https://allseenalliance.org/)  | --  | -- | -- | -- | -- | 
@@ -26,11 +26,11 @@ Things needs to be described in order to provide basic information about themsel
 | [The Industrial Internet Consortium (IIC)](http://www.iiconsortium.org/)  | --  | -- | -- | -- | -- | 
 | [The Alliance for Internet of Things Innovation (AIOTI)](http://www.aioti.eu/)  | --  | -- | -- | -- | -- | 
 | [Thread Group](http://threadgroup.org/)  | --  | -- | -- | -- | -- | 
-| [Hyper/Cat](http://www.hypercat.io/)  | --  | -- | -- | -- | -- | 
+| [Hyper/Cat](http://www.hypercat.io/)  | [HyperCat catalogue](###HyperCat-catalogue)  | RDF-like triple statements | JSON | -- | -- | 
 | [The Open Group](http://www.opengroup.org/)  | --  | -- | -- | -- | -- | 
 | [IoT Consortium](http://www.iofthings.org/)  | --  | -- | -- | -- | -- | 
 | [sensei-IoT](http://www.sensei-iot.org/)  | --  | -- | -- | -- | -- | 
-| [SAREF](http://ontology.tno.nl/saref)  | --  | -- | -- | -- | -- | 
+| [SAREF](http://ontology.tno.nl/saref)  | [The Smart Appliances REFerence (SAREF) ontology]()  | RDF | RDF serialization formats | XSD | -- | 
 
 # Thing Description Model and Vocabulary
 
@@ -69,10 +69,10 @@ Things needs to be described in order to provide basic information about themsel
 ### Semantic Sensor Network (SSN) Ontology
   - **Background of the technology:** SSN was developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG) to describe sensors and observations, and related concepts. SSN is now being extended and standardised by W3C Spatial Data on The Web Working Group(SDWWG) 
   - **Consortium:** SSN-XG, SDWWG
-  - **Tool/Development Support:** SPARQL engine & RDF Parser
+  - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
   - **Resource identification:** URIs/URN 
   - **Query capabilities:** SPARQL queries + spatial extensions 
-  - **Data Types:** sensor, sensor observations, probably actuators in the newer version
+  - **Data Types:** XSD 
 
 ### SensorML
   - **Background of the technology:** The primary focus of the Sensor Model Language (SensorML) is to provide a robust and semantically-tied means of defining processes and processing components associated with the measurement and post-measurement transformation of observations. This includes sensors and actuators as well as computational processes applied pre- and post measurement. 
@@ -90,6 +90,31 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:**
   - **Data Types:**
   
+### Device Registry and Thing Shadows for AWS IoT
+  - **Background of the technology:** The Thing Registry enables registration of so called units (both for real devices and virtual applications). Units are properties that describe a device or virtual application. A user may define custom attributes associated with each unit. AWS IoT has a notion of a Thing Shadow. A thing shadow (sometimes referred to as a device shadow) is a JSON document that is used to store and retrieve current state information for a thing (device, app, and so on). The Thing Shadows service maintains a thing shadow for each thing you connect to AWS IoT.
+  - **Consortium:** Amazon
+  - **Tool/Development Support:** 
+  - **Resource identification:** A device in the Device Registry can be uniquely identified.
+  - **Query capabilities:** 
+  - **Data Types:**
+  
+### HyperCat catalogue
+  - **Background of the technology:** HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs (uniform resource identifiers). Using HTTPS, REST and JSON, each HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it. 
+  - **Consortium:** HyperCat
+  - **Tool/Development Support:** 
+  - **Resource identification:** URIs
+  - **Query capabilities:** Catalogues are accumulated into a knowledge graph that can be queried. 
+  - **Data Types:**
+
+### The Smart Appliances REFerence (SAREF) ontology
+  - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions. 
+  - **Consortium:** SAREF consortium
+  - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
+  - **Resource identification:** URIs 
+  - **Query capabilities:** SPARQL queries
+  - **Data Types:** XSD
+
+
 # Metadata Model
 
 ### The Resource Description Framework (RDF)
