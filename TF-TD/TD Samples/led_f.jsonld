@@ -4,13 +4,13 @@
     "name": "MyLED",
     "protocols" : {
       "HTTP" : {
-        "uri" : "http://www.example.com:80/ledlamp",
+        "uri" : "http://100.64.20.184:8445/wot/ledlamp",
         "priority" : 1
-      }
-      "WS" : {
-        "uri" : "ws://www.example.com:80/ledlamp",
-        "priority" : 2
       },
+      "WS" : {
+        "uri" : "ws://100.64.20.184:8445/wot/ledlamp",
+        "priority" : 2
+      }
 	  },
     "encodings": [
       "JSON"
@@ -40,7 +40,7 @@
     }, {
       "@type": "Property",
       "name": "ledOnOff",
-      " outputData": "xsd:boolean",
+      "outputData": "xsd:boolean",
       "writable": true
     }
   ]

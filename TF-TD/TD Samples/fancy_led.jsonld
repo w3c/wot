@@ -1,0 +1,71 @@
+{
+  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+  "metadata": {
+    "name": "MyLED",
+    "protocols" : {
+      "CoAP" : {
+        "uri" : "coap://192.168.1.123:5683/things/MyLED",
+        "priority" : 1
+		  },
+      "HTTP" : {
+        "uri" : "http://192.168.1.123:8080/things/MyLED",
+        "priority" : 2
+      }
+	  },
+    "encodings": [
+      "JSON"
+    ]
+  },
+  "interactions": [
+     {
+      "@type": "Property",
+      "name": "brightness",
+      "outputData": "xsd:unsignedByte",
+      "writable": true
+     }, {
+      "@type": "Property",
+      "name": "colorTemperature",
+      "outputData": "xsd:unsignedShort",
+      "writable": true
+    }, {
+      "@type": "Property",
+      "name": "rgbValueRed",
+      "outputData": "xsd:unsignedByte",
+      "writable": true
+    }, {
+      "@type": "Property",
+      "name": "rgbValueGreen",
+      "outputData": "xsd:unsignedByte",
+      "writable": true
+    }, {
+      "@type": "Property",
+      "name": "rgbValueBlue",
+      "outputData": "xsd:unsignedByte",
+      "writable": true
+    }, {
+      "@type": "Action",
+      "name": "ledOnOff",
+      "inputData": "xsd:boolean",
+      "outputData": ""
+    }, {
+      "@type": "Action",
+      "name": "fadeIn",
+      "inputData": "xsd:unsignedByte",
+      "outputData": ""
+    },  {
+      "@type": "Action",
+      "name": "fadeOut",
+      "inputData": "xsd:unsignedByte",
+      "outputData": ""
+    },  {
+      "@type": "Action",
+      "name": "trafficLight",
+      "inputData": "xsd:boolean",
+      "outputData": ""
+    }, {
+      "@type": "Event",
+      "outputData": "xsd:unsignedShort",
+      "name": "colorTemperatureChanged"
+    }
+  ]
+}
