@@ -33,14 +33,6 @@ Things needs to be described in order to provide basic information about themsel
 | [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
 # Thing Description Model and Vocabulary
 
-### IPSO Smart Object
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool/Development Support:**
-  - **Resource identification:**
-  - **Query capabilities:**
-  - **Data Types:**
-
 ### The OMA DM Management Objects 
   - **Background of the technology:**
   - **Consortium:**
@@ -48,6 +40,23 @@ Things needs to be described in order to provide basic information about themsel
   - **Resource identification:**
   - **Query capabilities:**
   - **Data Types:**
+
+
+### OMA Lightweight M2M (LWM2M) Objects
+  - **Background of the technology:** Update OMA DM for M2M and unify DM and application stack using CoAP. LWM2M specifies interfaces (bootstrap, registration, device management & service enablement, information reporting) and operations (read, write, execute, notify) on top of CoAP. Functionality is structured in so-called Objects. LWM2M comes with device management objects (e.g., Access Control, Device, Firmware Update). OMA provides an open registry for application-specific Object definitions (http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry)
+  - **Consortium:** Open Mobile Alliance
+  - **Tool/Development Support:** online Object editor, emulator for virtual devices and protocol/message inspection (https://github.com/OpenMobileAlliance/)
+  - **Resource identification:** URIs with numeric identifiers (e.g., /3/0/2 is the Device Object (3), Instance 0, serial number (2))
+  - **Query capabilities:** CoRE resource directory filtering or custom API, CoRE Link Format
+  - **Data Types:** text/plain, application/vnd.oma.lwm2m+opaque, application/vnd.oma.lwm2m+tlv, application/vnd.oma.lwm2m+json
+
+### IPSO Smart Object
+  - **Background of the technology:** Provides application-specific Object models following OMA LWM2M and publishes to OMA Object registry. Also aims for HTTP support in addition to CoAP
+  - **Consortium:** IPSO Alliance
+  - **Tool/Development Support:** http://challenge.ipso-alliance.org/so-starter-pack, http://challenge.ipso-alliance.org/so-expansion-pack
+  - **Resource identification:** See OMA LWM2M
+  - **Query capabilities:** See OMA LWM2M
+  - **Data Types:** See OMA LWM2M
 
 ### IOTDB.org
   - **Background of the technology:**
@@ -58,9 +67,9 @@ Things needs to be described in order to provide basic information about themsel
   - **Data Types:**
 
 ### Vorto
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool/Development Support:**
+  - **Background of the technology:** Metamodel to generate framework-specific data models and code. Open source project in the Eclipse Foundation started by Bosch.
+  - **Consortium:** Open source project (Eclipse IoT working group)
+  - **Tool/Development Support:** https://www.eclipse.org/vorto/
   - **Resource identification:**
   - **Query capabilities:**
   - **Data Types:**
