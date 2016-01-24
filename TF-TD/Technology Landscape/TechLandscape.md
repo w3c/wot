@@ -12,12 +12,13 @@ Things needs to be described in order to provide basic information about themsel
 # Iot Consortia Related to TD
 
 | Iot consortium Related to TD | Thing Description Model and Vocabulary | Metadata Model | Serialization of Thing Descriptions | Data Types | Functional Description |
+| --------------------------- | -------------------------------------- | -------------- | ----------------------------------- | ---------- | ---------------------- | 
 | [IPSO Alliance](http://www.ipso-alliance.org)  | IPSO Smart Object  | -- | -- | -- | -- | 
 | [Open Mobile Alliance (OMA)](http://openmobilealliance.org/)  | The OMA DM Management Objects  | -- | plain text, opaque binary data, TLV, JSON  | -- | -- | 
 | [The Open Geospatial Consortium (OGC)](http://www.opengeospatial.org/)  | SensorThings Data Model SensorML  | -- | -- | -- | -- | 
 | [RWE AG](http://www.lemonbeat.net/)  | Lemonbeat Device Language  | -- | -- | -- | -- | 
 | [Google](https://developers.google.com/brillo/?hl=en)  | Google Weave  | -- | -- | -- | -- | 
-| [Amazon AWS IoT](https://aws.amazon.com/iot/)  | [Device Registry and Thing Shadows for AWS IoT](###Device-Registry-and-Thing-Shadows-for-AWS-IoT)  | -- | JSON | -- | -- | 
+| [Amazon AWS IoT](https://aws.amazon.com/iot/)  | [Device Registry and Thing Shadows for AWS IoT](###Device-Registry-and-Thing-Shadows-for-AWS-IoT)  | -- | JSON | -- | -- |     
 | [Eclipse IoT](http://iot.eclipse.org/)  | --  | -- | -- | -- | -- | 
 | [The Open Interconnect Consortium (OIC)](http://openinterconnect.org/)  | --  | -- | -- | -- | -- | 
 | [Allseen Alliance (AllJoyn)](https://allseenalliance.org/)  | --  | -- | -- | -- | -- | 
@@ -31,7 +32,7 @@ Things needs to be described in order to provide basic information about themsel
 | [sensei-IoT](http://www.sensei-iot.org/)  | --  | -- | -- | -- | -- | 
 | [SAREF](http://ontology.tno.nl/saref)  | [The Smart Appliances REFerence (SAREF) ontology]()  | RDF | RDF serialization formats | XSD | -- | 
 | [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
-# Thing Description Model and Vocabulary
+
 
 ### The OMA DM Management Objects 
   - **Background of the technology:**
