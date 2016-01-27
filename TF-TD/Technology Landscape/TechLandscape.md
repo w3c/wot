@@ -49,6 +49,16 @@ Things needs to be described in order to provide basic information about themsel
   - **Resource identification:**
   - **Query capabilities:**
   - **Data Types:**
+  
+
+
+### ECHONET device objects (Naka)
+  - **Background of the technology:**
+  - **Consortium:**
+  - **Tool/Development Support:**
+  - **Resource identification:**
+  - **Query capabilities:**
+  - **Data Types:**
 
 ### OMA Lightweight M2M (LWM2M) Objects
   - **Background of the technology:** Update OMA DM for M2M and unify DM and application stack using CoAP. LWM2M specifies interfaces (bootstrap, registration, device management & service enablement, information reporting) and operations (read, write, execute, notify) on top of CoAP. Functionality is structured in so-called Objects. LWM2M comes with device management objects (e.g., Access Control, Device, Firmware Update). OMA provides an open registry for application-specific Object definitions (http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry)
