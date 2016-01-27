@@ -9,9 +9,9 @@ Things needs to be described in order to provide basic information about themsel
 4. [Serialization of Thing Descriptions](#serialization-of-thing-descriptions)
 5. [Data Types](#data-types)
 
-# Iot Consortia Related to TD
+# IoT Origin Related  to TD
 
-| Iot consortium Related to TD | Thing Description Model and Vocabulary | Metadata Model | Serialization of Thing Descriptions | Data Types | Functional Description |
+| IoT Origin Related to TD | Thing Description Model and Vocabulary | Metadata Model | Serialization of Thing Descriptions | Data Types | Functional Description |
 | --------------------------- | -------------------------------------- | -------------- | ----------------------------------- | ---------- | ---------------------- | 
 | [IPSO Alliance](http://www.ipso-alliance.org)  | IPSO Smart Object  | -- | -- | -- | -- | 
 | [Open Mobile Alliance (OMA)](http://openmobilealliance.org/)  | The OMA DM Management Objects  | -- | plain text, opaque binary data, TLV, JSON  | -- | -- | 
