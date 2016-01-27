@@ -42,6 +42,13 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:**
   - **Data Types:**
 
+### Lemonbeat Device Language (Frank)
+  - **Background of the technology:**
+  - **Consortium:**
+  - **Tool/Development Support:**
+  - **Resource identification:**
+  - **Query capabilities:**
+  - **Data Types:**
 
 ### OMA Lightweight M2M (LWM2M) Objects
   - **Background of the technology:** Update OMA DM for M2M and unify DM and application stack using CoAP. LWM2M specifies interfaces (bootstrap, registration, device management & service enablement, information reporting) and operations (read, write, execute, notify) on top of CoAP. Functionality is structured in so-called Objects. LWM2M comes with device management objects (e.g., Access Control, Device, Firmware Update). OMA provides an open registry for application-specific Object definitions (http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry)
@@ -124,10 +131,17 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:** SPARQL queries
   - **Data Types:** XSD
 
+### oneM2M (Martin)
+  - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions. 
+  - **Consortium:** SAREF consortium
+  - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
+  - **Resource identification:** URIs 
+  - **Query capabilities:** SPARQL queries
+  - **Data Types:** XSD
 
 # Metadata Model
 
-### The Resource Description Framework (RDF) ()
+### The Resource Description Framework (RDF) (Victor)
   - **Background of the technology:** Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Among them, concepts like Events, Location, Primary data types can be used for Things Description model
   - **Consortium:** Google, Ms Bing, Yahoo,etc
   - **Tool/Development Support:** RDFa, Microdata and JSON-LD encodings
@@ -135,10 +149,16 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:**
   - **Data Types:**
 
+
+
+### Are there more meta data models? (Sebastian)
+
+
+
 # Serialization Formats
 Serialization formats suitable for representing Thing Descriptions are surveyed here.
 
-### [Efficient XML Interchange (EXI)](http://www.w3.org/TR/exi/)
+### [Efficient XML Interchange (EXI)](http://www.w3.org/TR/exi/) (Taki)
   - **Background of the technology:** Binary serialization format of the XML Infoset
   - **Consortium:** W3C
   - **Tool/Development Support:** yes
@@ -148,7 +168,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** yes
   - **Context-aware encoding:** yes
 
-### EXI for JSON
+### EXI for JSON (Taki)
   - **Background of the technology:** Binary serialization format for JSON data model based on EXI approach
   - **Consortium:** W3C
   - **Tool/Development Support:** yes
@@ -158,7 +178,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** yes
   - **Context-aware encoding:**
 
-### [JSON](http://www.json.org/)
+### [JSON](http://www.json.org/) (Taki)
   - **Background of the technology:** An attribute value-pair format to transmit data objects.
   - **Consortium:**  	RFC 7159 and ECMA-404
   - **Tool/Development Support:** yes
@@ -168,7 +188,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** not feasible for constrained devices
   - **Context-aware encoding:** no
 
-### [JSON-LD](http://json-ld.org/)
+### [JSON-LD](http://json-ld.org/) (Victor)
   - **Background of the technology:** Serialization format for RDF based on JSON data model
   - **Consortium:** W3C
   - **Tool/Development Support:** yes
@@ -178,7 +198,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** not feasible for constrained devices
   - **Context-aware encoding:** no
 
-### [CBOR](http://cbor.io/)
+### [CBOR](http://cbor.io/) (Carsten)
   - **Background of the technology:** The "Concise Binary Object Representation (CBOR)" is based on the JSON data model
   - **Consortium:**   IETF
   - **Tool/Development Support:** yes
@@ -188,7 +208,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** yes
   - **Context-aware encoding:**
 
-### [CoRE Link Format](https://tools.ietf.org/html/rfc6690)
+### [CoRE Link Format](https://tools.ietf.org/html/rfc6690) (Matthias)
   - **Background of the technology:**
   - **Consortium:** IETF
   - **Tool/Development Support:**
@@ -197,8 +217,9 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Compression:**
   - **Small memory footprint:**
   - **Context-aware encoding:**
-### RDF/EXI
-  - **Background of the technology:** Serialize RDF in EXI format
+  
+### RDF/EXI (Daniel)
+  - **Background of the technology:** Serialize RDF in EXI format 
   - **Consortium:** W3C (EXI/XML)
   - **Tool/Development Support:** yes
   - **Data Types-aware encoding:** yes
@@ -207,17 +228,8 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** yes, feasible for constrained devices
   - **Context-aware encoding:** yes, is able to take fix context knowledge into account
 
-### Type-Length-Value (TLV)
-  - **Background of the technology:**
-  - **Consortium:** none
-  - **Tool/Development Support:**
-  - **Data Types-aware encoding:**
-  - **Binary Format:**
-  - **Compression:**
-  - **Small memory footprint:**
-  - **Context-aware encoding:**
 
-### Protocol Buffers
+### Google Protocol Buffers (Daniel)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool/Development Support:**
@@ -229,62 +241,58 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
 
 # Data Types
 
-### [XML Schema (XSD)](http://www.w3.org/TR/xmlschema11-1/)
+### [XML Schema (XSD)](http://www.w3.org/TR/xmlschema11-1/) (Daniel)
   - **Background of the technology:** XML Schema: Datatypes is part 2 of the specification of the XML Schema language. It defines facilities for defining datatypes to be used in XML Schemas as well as other XML specifications. It provides a rich set of of primitive data types and enables to define new or restrict data types.
   - **Primitive data types:** boolean, (unsigned-)Byte, (unsigned-)Short, (unsigned-)Int, (unsigned-)Long, float, double, hexBinary, base64Binary, date, time, ...
   - **Composite data types:** Any simple-typed data can be composed to a structered complex typed data
 
-### [SenML](https://tools.ietf.org/html/draft-jennings-core-senml)
+### [SenML](https://tools.ietf.org/html/draft-jennings-core-senml) (Ari)
   - **Background of the technology:** SenML is a media type for representing simple sensor measurements and device parameters. SenML has JSON, CBOR, XML, and EXI representations which all share the common SenML data model.  
   - **Primitive data types:** string, boolean, floating point, time (and plans for adding binary)
   - **Composite data types:** all measurements can include, in addition to value, "name", "time", and "measurement unit"
 
-# Functional Description
+# Functional Description 
 Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
 
-### [HATEOAS](https://spring.io/understanding/HATEOAS)
+### [HATEOAS](https://spring.io/understanding/HATEOAS) (Matthias)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [Hydra](http://www.hydra-cg.com/)
+### [Hydra](http://www.hydra-cg.com/) (Victor)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [RAML](http://raml.org/)
+### [RAML](http://raml.org/) (Victor)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [Swagger](http://swagger.io/)
+### [Swagger](http://swagger.io/) (Victor)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [API Blueprint](https://apiblueprint.org/)
+### [API Blueprint](https://apiblueprint.org/) (Victor)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [Functional Semantics for WoT Devices](http://htmlpreview.github.io/?https://github.com/smnmyr/iot-semantics-w3c/blob/master/iot-semantics-membersubmission.html)
+
+### [RESTdesc](http://htmlpreview.github.io/?https://github.com/smnmyr/iot-semantics-w3c/blob/master/iot-semantics-membersubmission.html) (Matthias)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [RESTdesc]()
+### [JSON HyperSchema](http://json-schema.org/latest/json-schema-hypermedia.html) (Victor)
   - **Background of the technology:**
-  - **Consortium:**
-  - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**
-
-### [JSON HyperSchema](http://json-schema.org/latest/json-schema-hypermedia.html)  - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**  
