@@ -34,7 +34,7 @@ Things needs to be described in order to provide basic information about themsel
 | [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
 
 
-### The OMA DM Management Objects 
+### The OMA DM Management Objects (Matthias)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool/Development Support:**
@@ -59,7 +59,7 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:** See OMA LWM2M
   - **Data Types:** See OMA LWM2M
 
-### IOTDB.org
+### IOTDB.org (David Janes)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool/Development Support:**
@@ -67,7 +67,7 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:**
   - **Data Types:**
 
-### Vorto
+### Vorto (Matthias)
   - **Background of the technology:** Metamodel to generate framework-specific data models and code. Open source project in the Eclipse Foundation started by Bosch.
   - **Consortium:** Open source project (Eclipse IoT working group)
   - **Tool/Development Support:** https://www.eclipse.org/vorto/
@@ -75,7 +75,7 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:**
   - **Data Types:**
 
-### Semantic Sensor Network (SSN) Ontology
+### Semantic Sensor Network (SSN) Ontology (Danh)
   - **Background of the technology:** SSN was developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG) to describe sensors and observations, and related concepts. SSN is now being extended and standardised by W3C Spatial Data on The Web Working Group(SDWWG) 
   - **Consortium:** SSN-XG, SDWWG
   - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
@@ -84,7 +84,7 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:** SPARQL queries + spatial extensions
   - **Data Types:** XSD 
 
-### SensorML
+### SensorML (check from OGC, Simon and Arne)
   - **Background of the technology:** The primary focus of the Sensor Model Language (SensorML) is to provide a robust and semantically-tied means of defining processes and processing components associated with the measurement and post-measurement transformation of observations. This includes sensors and actuators as well as computational processes applied pre- and post measurement.
   - **Consortium:** OGC
   - **Tool/Development Support:**
@@ -92,14 +92,15 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:**
   - **Data Types:**
 
-### Schema.org
+### Schema.org (Michael Koster)
   - **Background of the technology:** Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Among them, concepts like Events, Location, Primary data types can be used for Things Description model
   - **Consortium:** Google, Ms Bing, Yahoo,etc
   - **Tool/Development Support:** RDFa, Microdata and JSON-LD encodings
   - **Resource identification:**
   - **Query capabilities:**
   - **Data Types:**
-### Device Registry and Thing Shadows for AWS IoT
+
+### Device Registry and Thing Shadows for AWS IoT (Michael Koster?)
   - **Background of the technology:** The Thing Registry enables registration of so called units (both for real devices and virtual applications). Units are properties that describe a device or virtual application. A user may define custom attributes associated with each unit. AWS IoT has a notion of a Thing Shadow. A thing shadow (sometimes referred to as a device shadow) is a JSON document that is used to store and retrieve current state information for a thing (device, app, and so on). The Thing Shadows service maintains a thing shadow for each thing you connect to AWS IoT.
   - **Consortium:** Amazon
   - **Tool/Development Support:** 
@@ -107,7 +108,7 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:** 
   - **Data Types:**
   
-### HyperCat catalogue
+### HyperCat catalogue (John from BT)
   - **Background of the technology:** HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs (uniform resource identifiers). Using HTTPS, REST and JSON, each HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it. 
   - **Consortium:** HyperCat
   - **Tool/Development Support:** 
@@ -115,7 +116,7 @@ Things needs to be described in order to provide basic information about themsel
   - **Query capabilities:** Catalogues are accumulated into a knowledge graph that can be queried. 
   - **Data Types:**
 
-### The Smart Appliances REFerence (SAREF) ontology
+### The Smart Appliances REFerence (SAREF) ontology (Jasper Roes)
   - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions. 
   - **Consortium:** SAREF consortium
   - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
@@ -126,7 +127,7 @@ Things needs to be described in order to provide basic information about themsel
 
 # Metadata Model
 
-### The Resource Description Framework (RDF)
+### The Resource Description Framework (RDF) ()
   - **Background of the technology:** Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Among them, concepts like Events, Location, Primary data types can be used for Things Description model
   - **Consortium:** Google, Ms Bing, Yahoo,etc
   - **Tool/Development Support:** RDFa, Microdata and JSON-LD encodings
