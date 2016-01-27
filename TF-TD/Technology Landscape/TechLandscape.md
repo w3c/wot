@@ -30,7 +30,7 @@ Things needs to be described in order to provide basic information about themsel
 | [The Open Group](http://www.opengroup.org/)  | --  | -- | -- | -- | -- | 
 | [IoT Consortium](http://www.iofthings.org/)  | --  | -- | -- | -- | -- | 
 | [sensei-IoT](http://www.sensei-iot.org/)  | --  | -- | -- | -- | -- | 
-| [SAREF](http://ontology.tno.nl/saref)  | [The Smart Appliances REFerence (SAREF) ontology]()  | RDF | RDF serialization formats | XSD | -- | 
+| [SAREF](http://ontology.tno.nl/saref) and (http://uri.etsi.org/m2m/saref)  | [The Smart Appliances REFerence (SAREF) ontology]()  | RDF | RDF serialization formats | -- | -- | 
 | [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
 
 
@@ -134,12 +134,12 @@ Things needs to be described in order to provide basic information about themsel
   - **Data Types:**
 
 ### The Smart Appliances REFerence (SAREF) ontology (Jasper Roes)
-  - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions. 
-  - **Consortium:** SAREF consortium
+  - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.
+  - **Consortium:** Created for the EC by TNO with input from many different stakeholders, now standardized and maintained by ETSI (TS 103 264 - V1.1.1). 
   - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
   - **Resource identification:** URIs 
   - **Query capabilities:** SPARQL queries
-  - **Data Types:** XSD
+  - **Data Types:** No explicit choice. SAREF is currently only an ontology to translate information from and between communication standards.
 
 ### oneM2M (Martin)
   - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions. 
