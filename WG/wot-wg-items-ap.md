@@ -3,16 +3,20 @@
 
 Scope:
 * API definitions for Client and Server-side scripts (servient model)
+** including discovery client APIs
+** including high-level security handling on client and servient side
 * Define callback signatures and how to attach callbacks
 * security model and policies
 * allow for structuring an interlinking of resources
 * language-independent definitions with examples e.g. in JS
 * concept of applications spanning multiple things resp. resources
-* TD interactions as manifest
+* TD as manifest for applications
+
 
 Out-of scope:
 * solutions for particular runtimes/frameworks
 * middlewares and protocol drivers
+* security frameworks and protocols
 
 Deliverables:
 * exemplary mapping and examples in Javascript
