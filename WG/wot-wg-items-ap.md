@@ -3,15 +3,19 @@
 
 Scope:
 * API definitions for Client and Server-side scripts (servient model)
-  * including discovery client APIs
+  * including high-level discovery client APIs for both local&remote cases 
   * including high-level security handling on client and servient side
-* Define callback signatures and how to attach callbacks
+  * lifecycle methods
+  * registering and creating things (local and remote)
+    * based on TD
+    * imperatively
+  * Define requirements & contracts between runtime and application (e.g. callback signatures and how to attach callbacks)
 * security model and policies
 * allow for structuring an interlinking of resources
 * language-independent definitions with examples e.g. in JS
 * concept of applications spanning multiple things resp. resources
-* TD as manifest for applications
-
+* requirements/contracts for error handling
+* considerations for cross-cutting work (e.g. I18N, accessibility, privacy)
 
 Out-of scope:
 * solutions for particular runtimes/frameworks
@@ -19,8 +23,11 @@ Out-of scope:
 * security frameworks and protocols
 
 Deliverables:
-* exemplary mapping and examples in Javascript
-* API Standard Recommendation document with API definitions e.g. in WebIDL
+* WoT API Standard Recommendation document
+ * with API definitions e.g. in WebIDL
+ * and exemplary mapping with examples in Javascript
+
+Testing approach
 
 ## Bindings To Common Protocols
 
