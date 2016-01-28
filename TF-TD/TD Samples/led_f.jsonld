@@ -6,16 +6,16 @@
       "HTTP" : {
         "uri" : "http://100.64.20.184:8445/wot/ledlamp",
         "priority" : 1
-      }
+      },
       "WS" : {
         "uri" : "ws://100.64.20.184:8445/wot/ledlamp",
         "priority" : 2
-      },
+      }
 	  },
     "encodings": [
       "JSON"
     ]
-  }
+  },
   "interactions": [
     {
       "@type": "Property",
