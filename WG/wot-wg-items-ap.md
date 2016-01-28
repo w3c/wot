@@ -3,8 +3,8 @@
 
 Scope:
 * API definitions for Client and Server-side scripts (servient model)
-** including discovery client APIs
-** including high-level security handling on client and servient side
+  * including discovery client APIs
+  * including high-level security handling on client and servient side
 * Define callback signatures and how to attach callbacks
 * security model and policies
 * allow for structuring an interlinking of resources
