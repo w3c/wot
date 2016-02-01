@@ -12,25 +12,25 @@ Things needs to be described in order to provide basic information about themsel
 # IoT Origin Related  to TD
 
 | IoT Origin Related to TD | Thing Description Model and Vocabulary | Metadata Model | Serialization of Thing Descriptions | Data Types | Functional Description |
-| --------------------------- | -------------------------------------- | -------------- | ----------------------------------- | ---------- | ---------------------- | 
-| [IPSO Alliance](http://www.ipso-alliance.org)  | IPSO Smart Object  | -- | -- | -- | -- | 
-| [Open Mobile Alliance (OMA)](http://openmobilealliance.org/)  | The OMA DM Management Objects  | -- | plain text, opaque binary data, TLV, JSON  | -- | -- | 
-| [The Open Geospatial Consortium (OGC)](http://www.opengeospatial.org/)  | SensorThings Data Model SensorML  | -- | -- | -- | -- | 
-| [RWE AG](http://www.lemonbeat.net/)  | Lemonbeat Device Language  | -- | -- | -- | -- | 
-| [Google](https://developers.google.com/brillo/?hl=en)  | Google Weave  | -- | -- | -- | -- | 
+| --------------------------- | -------------------------------------- | -------------- | ----------------------------------- | ---------- | ---------------------- |
+| [IPSO Alliance](http://www.ipso-alliance.org)  | IPSO Smart Object  | -- | -- | -- | -- |
+| [Open Mobile Alliance (OMA)](http://openmobilealliance.org/)  | The OMA DM Management Objects  | -- | plain text, opaque binary data, TLV, JSON  | -- | -- |
+| [The Open Geospatial Consortium (OGC)](http://www.opengeospatial.org/)  | SensorThings Data Model SensorML  | -- | -- | -- | -- |
+| [RWE AG](http://www.lemonbeat.net/)  | Lemonbeat Device Language  | -- | -- | -- | -- |
+| [Google](https://developers.google.com/brillo/?hl=en)  | Google Weave  | -- | -- | -- | -- |
 | [Amazon AWS IoT](https://aws.amazon.com/iot/)  | [Device Registry and Thing Shadows for AWS IoT](###Device-Registry-and-Thing-Shadows-for-AWS-IoT)  | -- | JSON | -- | -- |     
-| [Eclipse IoT](http://iot.eclipse.org/)  | --  | -- | -- | -- | -- | 
-| [The Open Interconnect Consortium (OIC)](http://openinterconnect.org/)  | --  | -- | -- | -- | -- | 
-| [Allseen Alliance (AllJoyn)](https://allseenalliance.org/)  | --  | -- | -- | -- | -- | 
-| [oneM2M](http://www.onem2m.org/)  | --  | -- | -- | -- | -- | 
-| [The Industrial Internet Consortium (IIC)](http://www.iiconsortium.org/)  | --  | -- | -- | -- | -- | 
-| [The Alliance for Internet of Things Innovation (AIOTI)](http://www.aioti.eu/)  | --  | -- | -- | -- | -- | 
-| [Thread Group](http://threadgroup.org/)  | --  | -- | -- | -- | -- | 
-| [Hyper/Cat](http://www.hypercat.io/)  | [HyperCat catalogue](###HyperCat-catalogue)  | RDF-like triple statements | JSON | -- | -- | 
-| [The Open Group](http://www.opengroup.org/)  | --  | -- | -- | -- | -- | 
-| [IoT Consortium](http://www.iofthings.org/)  | --  | -- | -- | -- | -- | 
-| [sensei-IoT](http://www.sensei-iot.org/)  | --  | -- | -- | -- | -- | 
-| [SAREF](http://ontology.tno.nl/saref) and (http://uri.etsi.org/m2m/saref)  | [The Smart Appliances REFerence (SAREF) ontology]()  | RDF | RDF serialization formats | -- | -- | 
+| [Eclipse IoT](http://iot.eclipse.org/)  | --  | -- | -- | -- | -- |
+| [The Open Interconnect Consortium (OIC)](http://openinterconnect.org/)  | --  | -- | -- | -- | -- |
+| [Allseen Alliance (AllJoyn)](https://allseenalliance.org/)  | --  | -- | -- | -- | -- |
+| [oneM2M](http://www.onem2m.org/)  | --  | -- | -- | -- | -- |
+| [The Industrial Internet Consortium (IIC)](http://www.iiconsortium.org/)  | --  | -- | -- | -- | -- |
+| [The Alliance for Internet of Things Innovation (AIOTI)](http://www.aioti.eu/)  | --  | -- | -- | -- | -- |
+| [Thread Group](http://threadgroup.org/)  | --  | -- | -- | -- | -- |
+| [Hyper/Cat](http://www.hypercat.io/)  | [HyperCat catalogue](###HyperCat-catalogue)  | RDF-like triple statements | JSON | -- | -- |
+| [The Open Group](http://www.opengroup.org/)  | --  | -- | -- | -- | -- |
+| [IoT Consortium](http://www.iofthings.org/)  | --  | -- | -- | -- | -- |
+| [sensei-IoT](http://www.sensei-iot.org/)  | --  | -- | -- | -- | -- |
+| [SAREF](http://ontology.tno.nl/saref) and (http://uri.etsi.org/m2m/saref)  | [The Smart Appliances REFerence (SAREF) ontology]()  | RDF | RDF serialization formats | -- | -- |
 | [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
 
 
@@ -49,7 +49,7 @@ Things needs to be described in order to provide basic information about themsel
   - **Resource identification:**
   - **Query capabilities:**
   - **Data Types:**
-  
+
 
 
 ### ECHONET device objects (Naka)
@@ -93,13 +93,13 @@ Things needs to be described in order to provide basic information about themsel
   - **Data Types:**
 
 ### Semantic Sensor Network (SSN) Ontology (Danh)
-  - **Background of the technology:** SSN was developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG) to describe sensors and observations, and related concepts. SSN is now being extended and standardised by W3C Spatial Data on The Web Working Group(SDWWG) 
+  - **Background of the technology:** SSN was developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG) to describe sensors and observations, and related concepts. SSN is now being extended and standardised by W3C Spatial Data on The Web Working Group(SDWWG)
   - **Consortium:** SSN-XG, SDWWG
   - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
 
   - **Resource identification:** URIs/URN
   - **Query capabilities:** SPARQL queries + spatial extensions
-  - **Data Types:** XSD 
+  - **Data Types:** XSD
 
 ### SensorML (check from OGC, Simon and Arne)
   - **Background of the technology:** The primary focus of the Sensor Model Language (SensorML) is to provide a robust and semantically-tied means of defining processes and processing components associated with the measurement and post-measurement transformation of observations. This includes sensors and actuators as well as computational processes applied pre- and post measurement.
@@ -120,49 +120,95 @@ Things needs to be described in order to provide basic information about themsel
 ### Device Registry and Thing Shadows for AWS IoT (Michael Koster?)
   - **Background of the technology:** The Thing Registry enables registration of so called units (both for real devices and virtual applications). Units are properties that describe a device or virtual application. A user may define custom attributes associated with each unit. AWS IoT has a notion of a Thing Shadow. A thing shadow (sometimes referred to as a device shadow) is a JSON document that is used to store and retrieve current state information for a thing (device, app, and so on). The Thing Shadows service maintains a thing shadow for each thing you connect to AWS IoT.
   - **Consortium:** Amazon
-  - **Tool/Development Support:** 
+  - **Tool/Development Support:**
   - **Resource identification:** A device in the Device Registry can be uniquely identified.
-  - **Query capabilities:** 
+  - **Query capabilities:**
   - **Data Types:**
-  
+
 ### HyperCat catalogue (John from BT)
-  - **Background of the technology:** HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs (uniform resource identifiers). Using HTTPS, REST and JSON, each HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it. 
+  - **Background of the technology:** HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs (uniform resource identifiers). Using HTTPS, REST and JSON, each HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.
   - **Consortium:** HyperCat
-  - **Tool/Development Support:** 
+  - **Tool/Development Support:**
   - **Resource identification:** URIs
-  - **Query capabilities:** Catalogues are accumulated into a knowledge graph that can be queried. 
+  - **Query capabilities:** Catalogues are accumulated into a knowledge graph that can be queried.
   - **Data Types:**
 
 ### The Smart Appliances REFerence (SAREF) ontology (Jasper Roes)
   - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.
-  - **Consortium:** Created for the EC by TNO with input from many different stakeholders, now standardized and maintained by ETSI (TS 103 264 - V1.1.1). 
+  - **Consortium:** Created for the EC by TNO with input from many different stakeholders, now standardized and maintained by ETSI (TS 103 264 - V1.1.1).
   - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
-  - **Resource identification:** URIs 
+  - **Resource identification:** URIs
   - **Query capabilities:** SPARQL queries
   - **Data Types:** No explicit choice. SAREF is currently only an ontology to translate information from and between communication standards.
 
 ### oneM2M (Martin)
-  - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions. 
+  - **Background of the technology:** The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.
   - **Consortium:** SAREF consortium
   - **Tool/Development Support:** ontology tools: SPARQL engine & RDF Parser etc.
-  - **Resource identification:** URIs 
+  - **Resource identification:** URIs
   - **Query capabilities:** SPARQL queries
   - **Data Types:** XSD
 
 # Metadata Model
 
-### The Resource Description Framework (RDF) (Victor)
-  - **Background of the technology:** Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Among them, concepts like Events, Location, Primary data types can be used for Things Description model
-  - **Consortium:** Google, Ms Bing, Yahoo,etc
-  - **Tool/Development Support:** RDFa, Microdata and JSON-LD encodings
+### RDF Schema ([RDFS](https://www.w3.org/TR/rdf-schema/)) (Victor)
+  - **Background of the technology:** RDFS defines simple semantics for RDF
+  data, e.g. the concept of class and subsumption relations between classes or
+  properties. It is intended to provide a baseline for other meta vocabularies,
+  such as [SKOS](https://www.w3.org/TR/2009/REC-skos-reference-20090818/)
+  (thesauri, taxonomies) or [Dublin Core](http://dublincore.org/)
+  (document metadata).
+
+  [Schema.org](http://schema.org/), based on RDFS, is a popular vocabulary for
+  general information on the Web: persons, events, places, products... Its
+  development has been driven by today's major search engines to help them
+  structure search results using annotations on Web pages (e.g. in the RDFa or
+  microdata formats).
+
+  An overview of Web vocabularies can be found on the
+  [Linked Open Vocabulary](http://lov.okfn.org/) platform.
+  - **Consortium:** W3C, schema.org community (including Google, Microsoft, Yahoo, Yandex)
+  - **Tool/Development Support:** e.g. schema.org's [extension mechanism](http://schema.org/docs/extension.html),
+  [TopBraid](http://www.topquadrant.com/products/).
+  - **Resource identification:** IRI (Internationalized Resource Identifier)
+  - **Data Types:** Built-in XSD datatypes for literals. RDFS classes for resources.
+
+### Web Ontology Language ([OWL](https://www.w3.org/TR/owl-ref/)) (Victor)
+  - **Background of the technology:** Defined in extension to [RDFS](RDF Schema)
+  to allow more complex modeling and non-trivial automated reasoning. OWL
+  mostly relies on Description Logic (DL). It can have different levels of
+  complexity (called [profiles](https://www.w3.org/TR/owl-ref/#Sublanguages)).
+  A second version of OWL
+  ([OWL 2](https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/)) was published
+  and new profiles were added, mostly to trade "some expressive power for the
+  efficiency of reasoning".
+
+  OWL proved successful (especially in specific domains like biology) and many
+  Web vocabularies use it (see the LOV platoform for an overview). However, only
+  few of them take full advantage of its expressiveness.
+  - **Consortium:** W3C
+  - **Tool/Development Support:** [TopBraid](http://www.topquadrant.com/products/)
+  (TopQuadrant), [Protégé](http://protege.stanford.edu/) (Stanford University).
+  - **Resource identification:** same as RDFS.
+  - **Data Types:** same as RDFS.
+
+### DTD/XML Schema (Sebastian)
+  - **Background of the technology:**
+  - **Consortium:**
+  - **Tool/Development Support:**
   - **Resource identification:**
-  - **Query capabilities:**
   - **Data Types:**
 
-
-
-### Are there more meta data models? (Sebastian)
-
+### [JSON Schema](http://json-schema.org/) (Victor)
+  - **Background of the technology:** JSON Schema is an open-source initiative
+  aiming at formalizing the structure of JSON data used in current systems.
+  It enables automatic validation of data, among others.
+  - **Consortium:**  Used de facto in many Web projects (e.g. Swagger). It has been
+  [submitted](http://tools.ietf.org/html/draft-zyp-json-schema-04) to IETF.
+  - **Tool/Development Support:** See its [Github page](https://github.com/json-schema/json-schema).
+  - **Resource identification:** see [JSON Hyper Schema](http://json-schema.org/latest/json-schema-hypermedia.html)
+  for hyper-media control.
+  - **Data Types:** Uses JSON base types.
 
 
 # Serialization Formats
@@ -227,9 +273,9 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Compression:**
   - **Small memory footprint:**
   - **Context-aware encoding:**
-  
+
 ### RDF/EXI (Daniel)
-  - **Background of the technology:** Serialize RDF in EXI format 
+  - **Background of the technology:** Serialize RDF in EXI format
   - **Consortium:** W3C (EXI/XML)
   - **Tool/Development Support:** yes
   - **Data Types-aware encoding:** yes
@@ -261,7 +307,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Primitive data types:** string, boolean, floating point, time (and plans for adding binary)
   - **Composite data types:** all measurements can include, in addition to value, "name", "time", and "measurement unit"
 
-# Functional Description 
+# Functional Description
 Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
 
 ### [HATEOAS](https://spring.io/understanding/HATEOAS) (Matthias)
