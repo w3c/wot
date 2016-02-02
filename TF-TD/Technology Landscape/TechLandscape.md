@@ -323,30 +323,39 @@ Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [Hydra](http://www.hydra-cg.com/) (Victor)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**
-
 ### [RAML](http://raml.org/) (Victor)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**
+  - **Background of the technology:** The RESTful API Definition Language (RAML)
+  is a format to specify an API in the form of a resource tree. For each
+  resource, one can specify supported methods (GET, POST, etc), parameters if
+  any and the structure of its content. It follows the principles of
+  design first and model-driven engineering to allow for more automation in
+  the development of Web applications.
+  - **Consortium:** onw community, including Cisco, VMWare, Spotify.
+  - **Tool Support:** see [RAML projects](http://raml.org/projects/projects)
+  (50+ projects). Enables code generation (for both client and server sides),
+  API validation, automatic documentation and integrated development.  
+  - **Underlying Language/Model/Serialization Formats:** YAML
 
-### [Swagger](http://swagger.io/) (Victor)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**
+### [Open API Initiative (OAI)](https://openapis.org/) (Victor)
+  - **Background of the technology:** RESTful API specification framework.
+  Formerly known as [Swagger](http://swagger.io/). Its specification has almost
+  the same features as RAML, JSON-based.
+  - **Consortium:** own community supported by the Linux Foundation. Members
+  include Google, IBM, Microsoft, Paypal and others.
+  - **Tool Support:** see [Swagger tools](http://swagger.io/tools/). Enables
+  code generation (for both client and server sides), API validation and
+  automatic documentation.
+  - **Underlying Language/Model/Serialization Formats:** JSON-based. Resource
+  types are defined using JSON Schema (not mandatory).
 
-### [API Blueprint](https://apiblueprint.org/) (Victor)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**
-
+### [Hydra](http://www.hydra-cg.com/) (Victor)
+  - **Background of the technology:** RDFS vocabulary for RESTful API
+  specification. It includes most of the features of the frameworks mentioned
+  above (some details are still being discussed).
+  - **Consortium:** W3C Community Group
+  - **Tool Support:** see Hydra's [website](http://www.hydra-cg.com/). Limited
+  support.
+  - **Underlying Language/Model/Serialization Formats:** JSON-LD, RDF
 
 ### [RESTdesc](http://htmlpreview.github.io/?https://github.com/smnmyr/iot-semantics-w3c/blob/master/iot-semantics-membersubmission.html) (Matthias)
   - **Background of the technology:**
