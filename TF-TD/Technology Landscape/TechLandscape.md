@@ -354,7 +354,7 @@ Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
   - **Tool Support:**
   - **Underlying Language/Model/Serialization Formats:**
 
-### [JSON HyperSchema](http://json-schema.org/latest/json-schema-hypermedia.html) (Victor)
+### [JSON HyperSchema](http://json-schema.org/latest/json-schema-hypermedia.html) (Michael)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool Support:**
