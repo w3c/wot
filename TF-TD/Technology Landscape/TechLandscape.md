@@ -203,8 +203,10 @@ Things needs to be described in order to provide basic information about themsel
   - **Background of the technology:** JSON Schema is an open-source initiative
   aiming at formalizing the structure of JSON data used in current systems.
   It enables automatic validation of data, among others.
-  - **Consortium:**  Used de facto in many Web projects (e.g. Swagger). It has been
-  [submitted](http://tools.ietf.org/html/draft-zyp-json-schema-04) to IETF.
+  - **Consortium:**  Used de facto in some Web standards (e.g.
+  [Open API Initiative](https://openapis.org/specification),
+  [Open Interconnect Consortium](http://openinterconnect.org/developer-resources/specs/))
+  and submitted [to IETF](http://tools.ietf.org/html/draft-zyp-json-schema-04).
   - **Tool/Development Support:** See its [Github page](https://github.com/json-schema/json-schema).
   - **Resource identification:** see [JSON Hyper Schema](http://json-schema.org/latest/json-schema-hypermedia.html)
   for hyper-media control.
@@ -245,14 +247,19 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Context-aware encoding:** no
 
 ### [JSON-LD](http://json-ld.org/) (Victor)
-  - **Background of the technology:** Serialization format for RDF based on JSON data model
+  - **Background of the technology:** JSON-based serialization format for Linked
+  Data. Transformation from JSON-LD to RDF has been standardized. The
+  opposite transformation is not fully supported.
   - **Consortium:** W3C
-  - **Tool/Development Support:** yes
-  - **Data Types-aware encoding:** supports rich type assignment based on XSD data types, however, each value is presented in plain-text in a JSON-LD document
+  - **Tool/Development Support:** [implementations](http://json-ld.org/test-suite/reports/)
+  available, tested and open-source. JSON-LD [playground](http://json-ld.org/playground/).
+  - **Data Types-aware encoding:** Type coercion for basic data types
+  (from JSON types to XSD data types)
   - **Binary Format:** no
-  - **Compression:** no (plain-text representation)
-  - **Small memory footprint:** not feasible for constrained devices
-  - **Context-aware encoding:** no
+  - **Compression:** to some extent: plain-text representation but compaction
+  algorithm specified to reduce the size of JSON keys and values.
+  - **Small memory footprint:** not designed for constrained devices.
+  - **Context-aware encoding:** Any JSON-LD document shall include a context.
 
 ### [CBOR](http://cbor.io/) (Carsten)
   - **Background of the technology:** The "Concise Binary Object Representation (CBOR)" is based on the JSON data model
