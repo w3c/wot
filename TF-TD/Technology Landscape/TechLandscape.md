@@ -11,6 +11,7 @@ Things needs to be described in order to provide basic information about themsel
 
 # IoT Origin Related  to TD
 
+<!--
 | IoT Origin Related to TD | Thing Description Model and Vocabulary | Metadata Model | Serialization of Thing Descriptions | Data Types | Functional Description |
 | --------------------------- | -------------------------------------- | -------------- | ----------------------------------- | ---------- | ---------------------- |
 | [IPSO Alliance](http://www.ipso-alliance.org)  | IPSO Smart Object  | -- | -- | -- | -- |
@@ -32,7 +33,7 @@ Things needs to be described in order to provide basic information about themsel
 | [sensei-IoT](http://www.sensei-iot.org/)  | --  | -- | -- | -- | -- |
 | [SAREF](http://ontology.tno.nl/saref) and (http://uri.etsi.org/m2m/saref)  | [The Smart Appliances REFerence (SAREF) ontology]()  | RDF | RDF serialization formats | -- | -- |
 | [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
-
+-->
 
 ### The OMA DM Management Objects (Matthias)
   - **Background of the technology:**
