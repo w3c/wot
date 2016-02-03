@@ -1,6 +1,6 @@
 # W3C WoT TF-TD Technology Landscape
 
-Things needs to be described in order to provide basic information about themselves. For example, a thing description may provide information about what a thing is; what properties, event and actions the thing provides; how to access them; what type of data the thing produces/consumes and so forth. A thing description my be provided in accordance to a data model, a vocabulary and a serialization format. W3C WoT TF-TD Technology Landscape surveys existing technologies that may serve for this purpose. For more information, see [Thing Description Task Force](https://www.w3.org/WoT/IG/wiki/Thing_Description) of W3C WoT IG.
+Things needs to be described in order to provide basic information about themselves. For example, a thing description may provide information about what a thing is; what properties, event andE actions the thing provides; how to access them; what type of data the thing produces/consumes and so forth. A thing description my be provided in accordance to a data model, a vocabulary and a serialization format. W3C WoT TF-TD Technology Landscape surveys existing technologies that may serve for this purpose. For more information, see [Thing Description Task Force](https://www.w3.org/WoT/IG/wiki/Thing_Description) of W3C WoT IG.
 
 ## Contents
 1. [Iot Consortia Related to TD](#iot-consortia-related-to-td)
@@ -226,7 +226,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** yes
   - **Context-aware encoding:** yes
 
-### EXI for JSON (Taki)
+### [EXI for JSON](https://www.w3.org/TR/exi-for-json/) (Taki)
   - **Background of the technology:** Binary serialization format for JSON data model based on EXI approach
   - **Consortium:** W3C
   - **Tool/Development Support:** yes
