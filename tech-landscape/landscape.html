@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'/>
     <title>WoT technology landscape</title>
-    <script src='//www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
+    <script src='http://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
     <script class='remove'>
       var respecConfig = {
               specStatus:   "unofficial"
@@ -42,15 +42,15 @@
     </section>
     <section id='sotd'>
       <p>
-        This is a template to capture the inputs from the wiki into a deliverable format. 
-        
+        This is a template to capture the inputs from the wiki into a deliverable format.
+
         <p class="note" title="Contributing">
         Please contribute using <a hrwf="https://github.com/w3c/wot/blob/master/tech-landscape/landscape.html">github</a> or the <a href="https://github.com/w3c/wot/edit/master/tech-landscape/landscape.html">direct edit</a>.
       	</p>
-      	
+
       </p>
     </section>
-    <section>    	
+    <section>
 	<h2>Terminology</h2>
       <p>
        This document uses the following terms defined elsewhere:
@@ -66,10 +66,10 @@
 		A global infrastructure for the information society, enabling advanced services by interconnecting (physical and virtual) things based on existing and evolving interoperable information and communication technologies.  [ITU-T Y.2060]
 	 </dd>
 	 <dt><dfn title="iri" id="dfn-iri">IRI</dfn></dt><dd>
-	 Acronym for Internationalized Resource Identifier. An IRI is a sequence of characters from the Universal Character Set (Unicode/ISO 10646) [[rfc3987]]	
+	 Acronym for Internationalized Resource Identifier. An IRI is a sequence of characters from the Universal Character Set (Unicode/ISO 10646) [[rfc3987]]
 	 </dd>
 	 <dt><dfn title="json" id="json">JSON</dfn></dt><dd>
-	 Acronym for JavaScript Object Notation [[!RFC4627]] [[ECMA-404]]	
+	 Acronym for JavaScript Object Notation [[!RFC4627]] [[ECMA-404]]
 	 </dd>
 	 <dt><dfn title="resource" id="dfn-resource">Resource</dfn></dt><dd>
 	 Anything that might be identified by a URI or IRI [[!webarch]]
@@ -78,7 +78,7 @@
 	With regard to the Internet of things, this is an object of the physical world (physical things) or the information world (virtual things), which is capable of being identified and integrated into communication networks.  [ITU-T Y.2060]
 	 </dd>
 	 <dt><dfn title="Thing Description" id="thing-description">Thing Description</dfn></dt><dd>
-	 Description about a thing - interfaces, data and aspects of a Thing 
+	 Description about a thing - interfaces, data and aspects of a Thing
 	 </dd>
 	 <dt><dfn title="URI" id="dfn-URI">URI</dfn></dt><dd>
 	Acronym for Uniform Resource Identifier. A simple and extensible means for identifying a resource. [[!rfc3986]]
@@ -87,20 +87,20 @@
 	 One type of Web agent; a piece of software acting on behalf of a person. Browsers are examples of user agents, as are web robots that automatically traverse the web collecting information. [[di-gloss]] [[webarch]]
 	</dd>
 	<dt><dfn titile="web agent" id="dfn-WA">Web agent</dfn></dt><dd>
-	A person or a piece of software acting on the information space on behalf of a person, entity, or process. [[!webarch]]	
+	A person or a piece of software acting on the information space on behalf of a person, entity, or process. [[!webarch]]
 	</dd>
 	 <dt><dfn title="web of tings" id="dfn-wot">Web of Things (WoT)</dfn></dt><dd>
 	A way to realize the IoT where (physical and virtual) things are connected and controlled through the World Wide Web.  [ITU-T Y.2063]
 	</dd>
 	<dt><dfn title="WoT Client" id="dfn-wot-client">WoT Client</dfn></dt><dd>
-	a logical entity that accesses an WoT Resource on an WoT Server	
+	a logical entity that accesses an WoT Resource on an WoT Server
 	</dd>
 	 <dt><dfn title="WWW" id="dfn-WWW">World Wide Web</dfn></dt><dd>
 	An information space in which the items of interest, referred to as resources, are identified by global identifiers called Uniform Resource Identifiers (URI). [[!webarch]]
 	</dd>
 	</dL>
 	</section>
-	
+
     <section>
       <h2>Tech landscape for Thing description</h2>
       <section>
@@ -138,17 +138,138 @@
       <h2>Tech landscape for APIs and protocol mappings</h2>
       <section>
         <h2> Protocols</h2>
+        <ul>
+          <li>HTTP <b>(IRTF to provide input)</b></li>
+          <li>HTTP/2 <b>(IRTF to provide input)</b></li>
+          <li>Websocket <b>(Dave Raggett)</b></li>
+          <li>WebRTC <b>(Claes)</b></li>
+          <li>CoAP <b>(Matthias Kovatsch to outreach)</b></li>
+          <li>MQTT <b>(Dave Raggett, Michael Koster)</b></li>
+          <ul>
+            <li>addressing scheme is topics</li>
+            <li>MQTT is TCP, MQTT SN is UDP</li>
+            <li>Pub/sub based, Broker mandatory</li>
+          </ul>
+          <li>XMPP <b>(Johannes Hund will outreach to XSF)</b></li>
+          <li>STOMP <b>(relevant? outreach?)</b> </li>
+          <li>AMQP <b>(Dave Raggett to reach out)</b></li>
+          <li>Bluetooth GATT <a href="https://lists.w3.org/Archives/Public/public-wot-ig/2015Jul/att-0077/GATT.pdf">presentation</a>
+            <ul>
+              <li>remote Key/Value store with CRUD operation</li>
+              <li>client/server-mimic</li>
+              <li>could be used to model REST with some work</li>
+              <li>legacy protocol from WoT perspective</li>
+            </ul>
+          </li>
+          <li>MMI architecture <b>(Kaz to outreach)</b></li>
+          <li>Thread <b>(Claes)</b></li>
+          <li>Discovery protocols <b>(move to DI? -> Soumya)</b>
+            <ul>
+              <li>BLE based protocols: iBeacon, URIBeacon</li>
+              <li>UPnP: Universal Plug and Play Protocol (especially UPnP 2.0 with more focus on IoT)</li>
+              <li>SSDP: Simple Service Discovery Protocol. SSDP is the discovery layer of UPnP but also used as standalone discovery protocol e.g. in DIAL. </li>
+              <li>mDNS/DNS-SD: multicast DNS based network discovery protocol. Supported on Android and iOS</li>
+            </ul>
+          </li>
+        </ul>
       </section>
       <section>
-        <h2> Resource Models</h2>
+        <h2> Resource Models &amp; Protocol mappings from Consortia</h2>
+        <dd>
+          <ul>
+            <li> CoRE Link format (Soumya presented on July 8)
+              <ul>
+                  <li> link description format</li>
+                  <li> offers resource type and interface type</li>
+                  <li> resource type denotes the media type resp. data structure</li>
+                  <li> interactions of a resource are modeled in the interface type      </li>
+              </ul>
+            </li>
+            <li> OMA LWM2M (Soumya presented on July 8)
+              <ul>
+                <li> CoAP based device management</li>
+                <li> defines resource types for CoRE link</li>
+              </ul>
+            </li>
+            <li> ISO/IEC/IEEE P21451-1-4
+              <ul>
+                <li> approach is driving XMPP as IoT solution
+                </li>
+                <li> emphasis on connecting of different (legacy) protocols to/over XMPP transport
+                </li>
+                <li> strong security focus (domain federation and identity)
+                </li>
+                <li> protocol-agnostic model
+                </li>
+              </ul>
+            </li>
+            <li> IETF CoRE (Carsten?, Mattias?)</li>
+            </li>
+            <li> OMA (Mohammed Dadas / Orange (Johannes to outreach), bryant sullivan / AT &amp; T?)
+            </li>
+            <li>OIC (Kaz to outreach : Daniel Park, Michael Koster)</li>
+            <li>IPSO Alliance (Michael Koster)</li>
+            <li>oneM2M (Soumya to outreach: Martin Bauer,Omar.)</li>
+            <li>Hyper/Cat (TF-DI? -> Soumya)</li>
+            <li>Open Group (Dave to outreach)</li>
+            <li>OGC SWE (discuss with TD if AP are there protocol/ASPI aspects)</li>
+            <li>ECHONET Consortium (Naka, Kazuo Kajimoto)</li>
+            <li>Allseen Alliance
+              <dl>
+                <dt>Model for "Things"</dt>
+                <dd>Yes. See <a href="https://allseenalliance.org/framework/documentation/learn/core">https://allseenalliance.org/framework/documentation/learn/core</a>. Application exposes its services through a "BusObject" defining a set of interfaces, where each interface defines a set of Methods, Properties, and Signals (Events). Interface descriptions are XML-documents: <a href="https://allseenalliance.org/framework/documentation/learn/core/about-announcement/interface">https://allseenalliance.org/framework/documentation/learn/core/about-announcement/interface</a></dd>
+                <dt>Protocol mapping</dt>
+                <dd>AllSeen is an application layer concept that is tranport layer agnostic. Today mapping to TCP/IP and UDP/IP over WiFi, WiFi-Direct, Ethernet and PLC. Mapping to non-IP transports, e.g. Bluetooth LE, ZigBee or Z–Wave can be added. See <a href="https://allseenalliance.org/framework/documentation/learn/core/system-description/alljoyn-transport">https://allseenalliance.org/framework/documentation/learn/core/system-description/alljoyn-transport</a></dd>
+                <dt>Resource structure / web API</dt>
+                <dd>AllSeen is not web focused. Applications are written in C, C++, Obj-C, Java etc but it is probably possible to give access for web apps to an AllJoyn network through an AllSeen Gateway Agent.</dd>
+                <dt>Client-side scripting API to acces remote things</dt>
+                <dd>APIs are exposed in different native languages. See <a href"https://allseenalliance.org/framework/documentation/develop/api-reference">API refereence</a></dd>
+                <dt>Server-side API to create/expose things</dt>
+                <dd>APIs are exposed in different native languages. See <a href"https://allseenalliance.org/framework/documentation/develop/api-reference">API refereence</a></dd>
+                <dt>Additional, platform specific findings of interest for this landscape</dt>
+                <dd>For basics see <a href="https://allseenalliance.org/framework/documentation/learn/architecture">architecture</a>,
+<a href="https://allseenalliance.org/framework/documentation/learn/core/system-description">system-description</a>, <a href="https://allseenalliance.org/framework/documentation/learn">learn</a>
+              </dd>
+              </dl>
+            </li>
+
+        </ul>
       </section>
       <section>
-        <h2> API patterns</h2>
+        <h2> Potential scripting API patterns</h2>
         <section>
           <h2> Server-Side</h2>
+          <p>There are numerous exisiting web api frameworks that can or could serve as current practise,
+            e.g. refer to <a href="http://www.todobackend.com/">todobackend.com</a></p>
         </section>
         <section>
-          <h2> Client-Side</h2>
+          <h2> Client-Side scripting APIs</h2>
+          <ul>
+            <li> W3C fetch API </li>
+            <li> Presentation API <a href="http://w3c.github.io/presentation-api/">W3C Presentation API</a> <b>(Louay?)</b></li>
+            <li> Geolocation API <b>(Kaz to outreach chair)</b></li>
+            <li> NFC &amp; Bluetooth API <b>(Kaz to outreach)</b></li>
+          </ul>
+        </section>
+        <section>
+          <h2> scripting APIs to physical things</h2>
+          <ul>
+            <li> DAP Generic Sensor API <b>(Johannes to outreach to tobie langel for basic design principles)</b></li>
+            <li> Vehicle API <b>(Kaz to outreach chair)</b></li>
+            <li> Physical API such as <a href="https://rawgit.com/browserobo/WebGPIO/master/index.html">Web GPIO API</a>, <a href="https://rawgit.com/browserobo/WebI2C/master/index.html">Web I2C API</a> <b>(Kaz to outreach to Mozilla Japan)</b></li>
+            <li> johnnyfive <b>(Johannes to outreach github-&gt; maintainer )</b></li>
+          </ul>
+        </section>
+        <section>
+          <h2> embedded runtimes</h2>
+          <ul>
+            <li> node.js <b>(Tibor)</b></li>
+            <li> micropython</li>
+            <li> Arduino <b>(Dave Raggett)</b></li>
+            <li> <a href="http://mozopenhard.mozillafactory.org/">Chirimen</a> / <a href="https://wiki.mozilla.org/B2G">B2G</a> <b>(Kaz to outreach to Mozilla Japan)</b></li>
+            <li> ARM mbed</li>
+            <li> NodeMCU <b>(Johannes to outreach)</b></li>
+          </ul>
         </section>
       </section>
     </section>
