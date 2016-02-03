@@ -193,11 +193,11 @@ Things needs to be described in order to provide basic information about themsel
   - **Data Types:** same as RDFS.
 
 ### DTD/XML Schema (Sebastian)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool/Development Support:**
-  - **Resource identification:**
-  - **Data Types:**
+  - **Background of the technology:** Data modeling tool to structure data content and data value types (such as simple and complex type)
+  - **Consortium:** W3C
+  - **Tool/Development Support:** rich support of tools and libs such as validators to check instances for correctness and editors to model data
+  - **Resource identification:** Is done via namespace declerations
+  - **Data Types:** rich set of data type support (boolean, byte, unsignedByte, etc.). See full list here [https://www.w3.org/TR/xmlschema-2/#built-in-datatypes]
 
 ### [JSON Schema](http://json-schema.org/) (Victor)
   - **Background of the technology:** JSON Schema is an open-source initiative
