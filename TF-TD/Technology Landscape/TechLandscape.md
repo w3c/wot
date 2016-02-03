@@ -35,7 +35,7 @@ Things needs to be described in order to provide basic information about themsel
 | [ECHONET Consortium](http://echonet.jp/english/)  | ECHONET device objects  | -- | -- | -- | -- |
 -->
 
-### The OMA DM Management Objects (Matthias and Mohammed
+### The OMA DM Management Objects (Matthias and Mohammed)
   - **Background of the technology:**
   - **Consortium:**
   - **Tool/Development Support:**
