@@ -1,3 +1,7 @@
+# Charter items for the Web of Things Working Group
+
+to comment, please add an issue or send a pull request.
+Direct link for a pull request: https://github.com/w3c/wot/edit/master/WG/wot-wg-items.md
 
 ## Web of Things scripting API
 
