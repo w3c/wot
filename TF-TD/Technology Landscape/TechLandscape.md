@@ -293,15 +293,15 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Context-aware encoding:** yes, is able to take fix context knowledge into account
 
 
-### Google Protocol Buffers (Daniel)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool/Development Support:**
-  - **Data Types-aware encoding:**
-  - **Binary Format:**
-  - **Compression:**
-  - **Small memory footprint:**
-  - **Context-aware encoding:**
+### [Google Protocol Buffers](https://developers.google.com/protocol-buffers/) (Daniel)
+  - **Background of the technology:** Method of serializing structured data by involving an interface description language that describes the structure
+  - **Consortium:** Google
+  - **Tool/Development Support:** yes
+  - **Data Types-aware encoding:** yes
+  - **Binary Format:** yes
+  - **Compression:** high
+  - **Small memory footprint:** yes
+  - **Context-aware encoding:** yes
 
 # Data Types
 
