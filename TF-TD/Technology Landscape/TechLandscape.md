@@ -288,9 +288,9 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes
   - **Data Types-aware encoding:** yes
   - **Binary Format:** yes
-  - **Compression:** very high (types-aware encoder + removes redundancy)
+  - **Compression:** very high (type-aware coder + removes redundancy)
   - **Small memory footprint:** yes, feasible for constrained devices
-  - **Context-aware encoding:** yes, is able to take fix context knowledge into account
+  - **Context-aware encoding:** yes, is able to take into account context knowledge 
 
 
 ### [Google Protocol Buffers](https://developers.google.com/protocol-buffers/) (Daniel)
