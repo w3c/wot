@@ -292,7 +292,8 @@
       </section>
       <section>
       	<h2>Inclusion of Physical Goods</h2>
-        <p>The inclusion of physical goods is the key differentiator between the Web-of-Things on the on hand and the Web-of-Services resp. the traditional Web (Web-of-Pages) on the other hand. There are Web-of-Services and Web-of-Pages security and privacy requirements which translate to Web-of-Things in a straight-forward manner such as user authentication->device/thing authentication. For these requirements security and privacy-enabling mechanisms were established in other domains such as office/enterprise IT or Cloud computing. Corresponding standards and best practices do exist and may apply or may be translated to WoT. Note that constraints (number of instances, computing power, memory, IO and networking capabilities etc.) do change when considering the WoT image of a traditional requirement such as the authentication of a caller. 
+        <p>The inclusion of physical goods is the key differentiator between the Web-of-Things on the on hand and the Web-of-Services resp. the traditional Web (<i></i>Web-of-Pages</i>) on the other hand.<br/><br/>
+        There are Web-of-Services and Web-of-Pages security and privacy requirements which translate to Web-of-Things in a straight-forward manner such as <i>user authentication->device/thing authentication</i>. For these requirements security and privacy-enabling mechanisms were established in other domains such as office/enterprise IT or Cloud computing. Corresponding standards and best practices do exist and may apply or may be translated to WoT. Note that constraints (number of instances, computing power, memory, IO and networking capabilities etc.) do change when considering the WoT image of a traditional requirement such as the authentication of a caller.<br/><br/>
         The inclusion of physical goods also leads to security and privacy requirements or constraints with no real/good analogies in the digital World. These requirements resp. constraints are not yet covered by security and privacy technologies developed for existing domains. This includes security and privacy requirements as well as constraints such as:
         <ul><li>Things discovery authorization</li>
         <li>Managing the authorization to authorize</li>
@@ -303,13 +304,13 @@
         <p>The W3C IG WoT is considering same as well as cross-domain interactions among resp. with things:
         <ul><li>For interactions in the same-domain standards for security facilitate reuse - they are nice-to-have</li>
         <li>For interactions that cross domains (i.e. there is no single vendor/provider that designs/produces/supplies all components that interact in a WoT scenario) standards for security (authentication and authorization, secure communications provide interoperability AND reuse - they are must-haves</li></ul>
-        Thus, standards for security and privacy are mandatory from the perspective of the WoT IG (this refers to conventions for implementing security and privacy that are broadly resp. industry or application domain-wide accepted).
+        Thus, standards for security and privacy are mandatory for WoT (this refers to conventions for implementing security and privacy that are broadly resp. industry or application domain-wide accepted).<br/><br/>
         The state-of-the-art survey provided in this landscape document does consider existing and emerging standards for WoT security and privacy.</p>
       </section>
       <section>
       	<h2>Technology Origin/Heritage</h2>
-        <p>Numerous security and privacy-enabling tools do already exist. Prominent examples are Kerberos, SSL/TLS and OAuth. They were created to serve the needs encountered in office/enterprise IT (e.g. Kerberos), the classical Web (e.g. SSL/TLS) as well as new Web application styles esp. service-oriented applications, apps/REST APIs (e.g. OAuth). The corresponding mechanisms often are very mature i.e. they represent broadly accepted standards that are in large-scale production use.
-        This prior-art can help to address security and privacy for (parts of) WoT scenarios. But there is no guarantee that a (mature) security or privacy means with non-WoT origin/heritage does present a good match for WoT. For security/privacy mechanisms with non-WoT origin, fitness checks are needed.
+        <p>Numerous security and privacy-enabling tools do already exist. Prominent examples are Kerberos, SSL/TLS and OAuth. They were created to serve the needs encountered in office/enterprise IT (e.g. Kerberos), the classical Web (e.g. SSL/TLS) as well as new Web application styles esp. service-oriented applications, apps/REST APIs (e.g. OAuth). The corresponding mechanisms often are very mature i.e. they represent broadly accepted standards that are in large-scale production use.<br/><br/>
+        This prior-art can help to address security and privacy for (parts of) WoT scenarios. But there is no guarantee that a (mature) security or privacy means with non-WoT origin/heritage does present a good match for WoT. For security/privacy mechanisms with non-WoT origin, fitness checks are needed.<br/><br/>
         Security and privacy mechanism with WoT or IoT origin are work-in-progress nowadays. They do not yet present the same maturity level (not yet broadly accepted standards, not yet in large-scale protection use). Hence (and for the time being) maturity checks are needed for security/privacy mechanisms with WoT origin.</a></p>
       </section>
       <section>
@@ -320,7 +321,7 @@
       </section>
       <section>
       	<h2>Distribution of Complexity</h2>
-        <p>Mechanisms invented <2010 for distributed IT-System security e.g. Kerberos, SSL/TLS, SAML happen to distribute logical and computational complexity quite evenly over client and server components.
+        <p>Mechanisms invented <2010 for distributed IT-System security e.g. Kerberos, SSL/TLS, SAML happen to distribute logical and computational complexity quite evenly over client and server components.<br/><br/>
         This was a major issue for the app/API economy where 3rd pary developes create components (e.g. mobile apps) that interact with services provided by other parties. To overcome this obstacle the new generation security and security-enabling technologies invented >2010 (e.g. OAuth, SCIM) distributes complexity unevenly:
         <ul><li>The server or responder-side (e.g. OAuth authorization server) usually is as complex as in classical approaches (e.g. SAML IdP)</li>
         <li>The client or requestor-side (e.g. OAuth client) complexity is orders of magnitude smaller than in classical approaches (e.g. SAML RP) This simplifies the security resp. security-enabling stack that has to be provided on client-side. This new approach provides a better fit for WoT than technologies with an even distribution of complexity.</li></ul></p>
