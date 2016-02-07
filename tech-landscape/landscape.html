@@ -332,7 +332,15 @@
       </section>
       <section>
       	<h2>Summary</h2>
-        <p>TODO: incorporate <a href="https://github.com/w3c/wot/blob/master/IG-SP/SecurityPrivacyLandscape.md">Security&Privacy Landscape working draft in Github</a></p>
+        <p>As of today there are no commonly accepted protocol standards for authenticating and authorizing things resp. devices. Current projects do either not address these challenges or create silo’ed solutions. The IETF ACE working group happens to be the leading initiative in order to overcome this limitation:
+        <ul><li>ACE has a sound problem statement and high-level approach</li>
+        <li>But ACE does not yet provide a solution - for the time being a plethora of not-yet-integrated approaches for expressing access tokens as well as acquiring them in request/response protocols (see here ) are being discussed. The current stage of elaboration might be regarded "brainstorming". Moreover, questions around system dynamics and bootstrapping are not yet fully illuminated. This includes aspects such as creation/management of token issuance policies (in a possibly automated fashion), protecting component (self-)registration, managing the authorization to authorize, things discovery authorization
+        </li></ul>
+        From the perspective of the W3C IG WoT the protocol standards for authenticating and authorizing things resp. devices should address/enable:
+        <ul><li>A variety of security token types for different application domains(CoAP...)/use cases(consumer/industry)/security models(enc/sign, bearer/PoP)/encodings (JSON, CBOR...)/topologies (3/4/n-party)/delivery models (by-value, by-ref). The corresponding ecosystem needs to be extensible (create-your-own security token type in case the already defined ones do not solve your issue)</li>
+        <li>A (single) request/response framework for acquiring and handling such tokens with different protocol bindings (HTTP/CoAP...). Request/response messages and security token (type) specifications should be decoupled i.e. the same request/response framework should allow the handling of various security token types. The corresponding framework needs to be extensible (create-your-own exchange in case the already defined ones do not solve your issue)</li></ul>
+        For secure communications on transport-level, DTLS as well as TLS present commonly accepted standards. Their profiling/optimization for constrained devices and networks is a task that is currently ongoing. Note that securing communications on transport-level comes with limitations in the end-to-end security span which is achievable. For secure communications on application-level and secure storage, standards do exist for representing encrypted and signed data in JSON (a form-factor not suitable for very constrained components). Corresponding work is ongoing for CBOR (a form-factor suitable for very constrained components).<br/><br/>
+        Moreover there are no commonly accepted standards for registering things resp. devices and supplying identity (meta-)data and credentials about things resp. devices as of now.</p>
       </section>
     </section>  
   </body>
