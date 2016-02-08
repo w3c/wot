@@ -36,12 +36,12 @@ Things needs to be described in order to provide basic information about themsel
 -->
 
 ### The OMA DM Management Objects (Matthias and Mohammed)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool/Development Support:**
-  - **Resource identification:**
-  - **Query capabilities:**
-  - **Data Types:**
+  - **Background of the technology:** Device management specification for mobile phone terminals targeting mobile network operators. WAP Binary XML serialization over HTTP(S), binary SMS for wakeup and bootstraping.
+  - **Consortium:** Open Mobile Alliance
+  - **Tool/Development Support:** ?
+  - **Resource identification:** DM Objects
+  - **Query capabilities:** 
+  - **Data Types:** 
 
 ### Lemonbeat Device Language (Frank)
   - **Background of the technology:**
@@ -86,12 +86,12 @@ Things needs to be described in order to provide basic information about themsel
   - **Data Types:**
 
 ### Vorto (Matthias)
-  - **Background of the technology:** Metamodel to generate framework-specific data models and code. Open source project in the Eclipse Foundation started by Bosch.
+  - **Background of the technology:** (Meta) information model to generate framework-specific data models and code. Open source project in the Eclipse Foundation started by Bosch.
   - **Consortium:** Open source project (Eclipse IoT working group)
-  - **Tool/Development Support:** https://www.eclipse.org/vorto/
-  - **Resource identification:**
-  - **Query capabilities:**
-  - **Data Types:**
+  - **Tool/Development Support:** information model DSL, model repository, code genereators
+  - **Resource identification:** any (depends on target framework)
+  - **Query capabilities:** (depends on target framework)
+  - **Data Types:** (depends on target framework)
 
 ### Semantic Sensor Network (SSN) Ontology (Danh)
   - **Background of the technology:** SSN was developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG) to describe sensors and observations, and related concepts. SSN is now being extended and standardised by W3C Spatial Data on The Web Working Group(SDWWG)
@@ -272,15 +272,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Small memory footprint:** yes
   - **Context-aware encoding:**
 
-### [CoRE Link Format](https://tools.ietf.org/html/rfc6690) (Matthias)
-  - **Background of the technology:**
-  - **Consortium:** IETF
-  - **Tool/Development Support:**
-  - **Data Types-aware encoding:**
-  - **Binary Format:**
-  - **Compression:**
-  - **Small memory footprint:**
-  - **Context-aware encoding:**
+<!-- Matthias: CoRE Link Format is not a (generic) serialization format, but a specific format for Web links. There are also JSON and CBOR serializations of the Link Format. -->
 
 ### RDF/EXI (Daniel)
   - **Background of the technology:** Serialize RDF in EXI format
@@ -318,11 +310,11 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
 # Functional Description
 Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
 
-### [HATEOAS](https://spring.io/understanding/HATEOAS) (Matthias)
-  - **Background of the technology:**
-  - **Consortium:**
+### [HATEOAS](http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) (Matthias)
+  - **Background of the technology:** HATEOAS (Hypermedia as the Engine of Application State) is part of the REST architectural style (uniform interface constraint). REST clients may not rely on typed resources or predefined (out-of-band) request definitions, but must receive the list of possible requests from the server. Hypermedia formats are providing these functional descriptions in-band through links and forms, which tell the client how to construct requests. Semantic information about the state transition when following a link or submitting a form is attached through the link relation type and respectively form relation type attribute. The types are managed in an IANA [registry](http://www.iana.org/assignments/link-relations/link-relations.xhtml). However, proper types for WoT applications are still missing.
+  - **Consortium:** IETF/IANA
   - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**
+  - **Underlying Language/Model/Serialization Formats:** any hypermedia format (e.g., HTML, HAL, Hydra, Siren)
 
 ### [RAML](http://raml.org/) (Victor)
   - **Background of the technology:** The RESTful API Definition Language (RAML)
@@ -359,10 +351,10 @@ Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
   - **Underlying Language/Model/Serialization Formats:** JSON-LD, RDF
 
 ### [RESTdesc](http://htmlpreview.github.io/?https://github.com/smnmyr/iot-semantics-w3c/blob/master/iot-semantics-membersubmission.html) (Matthias)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**
+  - **Background of the technology:** RESTdesc is based on the Notation3 (N3) syntax. It attaches REST request definitions to the conclusion of first-order logic inference rules. Given a goal definition (also in N3), a semantic reasoner can calculate a proof that also carries an execution plan (an ordered list of requests) to achieve the goal. RESTdesc is a community effort by  Universiteit Gent and Universitat Politecnica de Catalunya.
+  - **Consortium:** n/a
+  - **Tool Support:** EYE semantic reasoner, ClickScript goal editor, few other open source projects
+  - **Underlying Language/Model/Serialization Formats:** Notation3/RDF
 
 ### [JSON HyperSchema](http://json-schema.org/latest/json-schema-hypermedia.html) (Michael)
   - **Background of the technology:**
