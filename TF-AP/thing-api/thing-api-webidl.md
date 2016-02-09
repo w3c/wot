@@ -1,6 +1,6 @@
 # W3C Thing API
 
-The Thing API is an experimental API for Discovery, Provisioning and Control of Things in a [Web of Things](http://www.w3.org/WoT/). It considers ideas and concepts been discussed in the different WoT TFs (Discovery, Thing Description, ...). 
+The Thing API is an experimental API for Discovery, Provisioning and Control of Things in a [Web of Things](http://www.w3.org/WoT/). It considers ideas and concepts been discussed in the different WoT TFs (Discovery, Thing Description, ...).
 
 # Interfaces
 
@@ -13,7 +13,7 @@ interface ThingRequest {
 };
 ```
 
-A `ThingRequest` is the entry point in the Thing API to find things. It has a single method `start()` that starts the discovery or lookup according to the `ThingFilter` that is passed as input of the `ThingRequest` constructor. 
+A `ThingRequest` is the entry point in the Thing API to find things. It has a single method `start()` that starts the discovery or lookup according to the `ThingFilter` that is passed as input of the `ThingRequest` constructor.
 
 PS: If the Thing API is exposed to web pages as a JavaScript API, the User Agent may open a dialog that let users select Things the page is allowed to access after the `ThingRequest.start()` is called. For trusted applications e.g. running in Node.js environment, the list of things found is passed to the application without asking the user.
 
@@ -24,7 +24,7 @@ dictionary ThingFilter {
     attribute DOMString? type;
     attribute ThingProximity? proximity;
     attribute DOMString? id;
-    attribute DOMString? server; 
+    attribute DOMString? server;
 };
 ```
 
@@ -35,26 +35,52 @@ A `ThingFilter` is a dictionary that is passed as input to the `ThingRequest` co
 * `server`: It is the end point of the WoT directory where to look to Things. If `server` is set, the value of `proximity` must be `remote`.
 
 ## Interface `ThingProximity`
-                                                                                                                 
+
 ```webidl
-enum ThingProximity { 
-    "local", 
-    "nearby", 
-    "remote" 
+enum ThingProximity {
+    "local",
+    "nearby",
+    "remote"
 };
 ```
 
 The `ThingProximity` is a enumaration about possible values for the `ThingFilter.proximity` attribute. The three values are currently supported:
- 
+
 * `local`: It represents discovery in local networks (e.g. SSDP, mDNS/DNS-SD, ...)
 * `nearby`: It represents all discovery technologies where the physical location is considered (BLE, Audio Watermarking, ...)
 * `remote`: It represents lookup in WoT directories. The end point of the directory musst be supported.  
 
-## Interface `Thing`
+## Interface `ExposedThing`
 
 ```webidl
 [Constructor(ThingDescription td)]
-interface Thing: EventTarget {
+[Constructor(DOMString name)]
+interface ExposedThing {
+    readonly attribute ThingDescription description;
+    readonly attribute DOMString name;
+
+    ExposedThing addAction(DOMString actionName, DOMString parameterType, DOMString resultType);
+    ExposedThing addProperty(DOMString propertyName, DOMString propertyType);
+
+    void onCall(DOMString actionName, ActionEventListener listener);
+    void onChange(DOMString actionName, ChangeEventListener listener);
+
+    void addListener(DOMString eventName, ThingEventListener listener);
+    void removeListener(DOMString eventName, ThingEventListener listener);
+    void removeAllListeners(DOMString eventName);
+}
+callback ThingEventListener = void (ThingEvent event);
+callback ChangeEventListener = void (any newValue, any OldValue, ThingEvent event);
+callback ActionEventListener = any (any param)
+```
+The interface `ExposedThing` is used for providing a thing.
+It has methods to attach handlers that flesh out the application logic and can modify the provided interactions.
+
+## Interface `ConsumedThing`
+
+```webidl
+[Constructor(ThingDescription td)]
+interface ConsumedThing {
     readonly attribute DOMString id;
     readonly attribute DOMString type;
     readonly attribute DOMString name;
@@ -70,20 +96,20 @@ interface Thing: EventTarget {
 callback ThingEventListener = void (ThingEvent event);
 ```
 
-`Thing` is the main interface to interact with a thing. It consists of the following attributes and functions:
+`ConsumedThing` is the main interface to interact with a thing as client. It consists of the following attributes and functions:
 * `id`: is a unique identifier of a Thing.
 * `type`: is the type of a thing. It is important to filter things by type (see `ThingFilter.type`).
 * `name`: the human readable name of the thing.
 * `reachable`: defines if the Thing is reachable or not. e.g. `reachable` is `false` when the control device (that runs an application using the Thing API) leaves the range of a BLE sensor and `true` if the device is in range.
 * `onreachabilitychange`: event handle to monitor reachability of the thing. It will be triggered each time the value of the `reachable` attribute changes.
-* `callAction()`: call an action defined in the thing description. 
+* `callAction()`: call an action defined in the thing description.
 * `setProperty()`: set a new value for a property defined in the thing description.
 * `getProperty()`: get the value of a property defined in the thing description.
 * `addListener()`: add a new listener to an event defined in the thing description.
-* `removeListener()`: remove an already added event listener. 
+* `removeListener()`: remove an already added event listener.
 * `removeAllListeners()`: remove all listener registered for an event defined in the thing description.
 
-A `Thing` instance can be returned as a result of discovery (see `ThingRequest.start()`) or directly by using the Thing constructor that accepts a `ThingDescription` as input.
+A `ConsumedThing` instance can be returned as a result of discovery (see `ThingRequest.start()`) or directly by using the Thing constructor that accepts a `ThingDescription` as input. 
 
 ## Interface `ThingEvent`
 
@@ -102,13 +128,13 @@ The `ThingEvent` is passed as input to the event listener added to a Thing. It c
 
 ## Interface `ThingDescription`
 
-```webidl                              
-dictionary ThingDescription {                 
+```webidl
+dictionary ThingDescription {
     // Thing Description according to the JSON-LD TD spec.
-}                                      
+}
 ```
 
-`ThingDescription` is a place holder for the JSON-LD spec of the Thing Description. 
+`ThingDescription` is a place holder for the JSON-LD spec of the Thing Description.
 
 # Examples
 
@@ -129,7 +155,7 @@ request.start().then(function(things){
         console.log("type: ", thing.type);
         console.log("manufacturer: ", thing.manufacturer);
         console.log("reachable: ", thing.reachable);
-        // store thing id locally e.g. in localStorage 
+        // store thing id locally e.g. in localStorage
         localStorage && localStorage.setItem("thing.id",thing.id);
         // monitor reachability of the thing
         thing.onreachabilitychange = function(){
@@ -156,7 +182,7 @@ request.start().then(function(things){
         // add and remove thing event listener
         var myListener;
         thing.addListener("myEvent",myListener=function(evt){
-            console.log("receive event ",name,"from thing",evt.source.name,"with value",evt.value);           
+            console.log("receive event ",name,"from thing",evt.source.name,"with value",evt.value);
         });
         thing.removeListener("myEvent",myListener);
         thing.removeAllListeners("myEvent");
