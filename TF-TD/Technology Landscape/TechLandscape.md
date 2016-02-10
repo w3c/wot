@@ -54,12 +54,12 @@ Things needs to be described in order to provide basic information about themsel
 
 
 ### ECHONET device objects (Naka)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool/Development Support:**
-  - **Resource identification:**
-  - **Query capabilities:**
-  - **Data Types:**
+  - **Background of the technology:** ECHONET device object is a logical model of the information held by more than 100 types of equipment devices or home electrical appliances such as sensors, air conditioners and LED Lights, or of control items that can be remotely controlled.
+  - **Consortium:** ECHONET Consortium
+  - **Tool/Development Support:** The Consortium does NOT provide the official tool/development support, however, some member companies and a university provide SDK / test tool / maintenance tool
+  - **Resource identification:** “Identification number” property whose data type is unsigned character is included in common part of ECHONET device object definition.
+  - **Query capabilities:** Thing descovery and registration method is described as a guideline in ECHONET Lite specifications. The guideline includes implementation of UPnP search mechanism.
+  - **Data Types:** Data types are dependent on property type specified in ECHONET device objects, e.g. binary unsigened character.
 
 ### OMA Lightweight M2M (LWM2M) Objects
   - **Background of the technology:** Update OMA DM for M2M and unify DM and application stack using CoAP. LWM2M specifies interfaces (bootstrap, registration, device management & service enablement, information reporting) and operations (read, write, execute, notify) on top of CoAP. Functionality is structured in so-called Objects. LWM2M comes with device management objects (e.g., Access Control, Device, Firmware Update). OMA provides an open registry for application-specific Object definitions (http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry)
