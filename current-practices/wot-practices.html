@@ -1,1 +1,390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>WoT Current Practices</title>
+		<script src='http://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
+		<script class="remove">
+		  var respecConfig = {
+				  specStatus:   "unofficial"
+			  ,   editors:      [{name:"Daniel Peintner"}, {name:"Matthias Kovatsch"}]
+			  ,   authors:      [{name:"Volunteers needed"}]
+			  ,   processVersion: 2015
+			  ,   shortName:    "wot-tech"
+			  , wg:           "Interest Group on the Web of Things"
+			  , wgURI:        "http://www.w3.org/WoT/IG/"
+			  , wgPublicList: "public-wot-ig"
+			  , otherLinks: [
+				{
+				 key: "GitHub",
+				 data: [
+				   {
+					 value: "Master branch on GitHub",
+					 href: "https://github.com/w3c/wot/blob/master/current-practices/wot-practices.html"
+				   }, {
+					value: "File a bug",
+					href: "https://github.com/w3c/wot/issues"
+				   }, {
+					value: "Contribute",
+					href: "https://github.com/w3c/wot/edit/master/current-practices/wot-practices.html"
+				   }
+				  ]
+				}
+			   ]
+			};
+		</script>
+	</head>
+	
+	<body>
+		<section id="abstract">
+			<p>
+				The Web of Things (WoT) interest group is collecting concepts and technologies to enable discovery and interoperability of Internet of Things services on a world wide basis.
+				The discussions of the working group already shaped rough, preliminary WoT building blocks, which were also prototyped and tested in so-called plugfests.
+				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
+				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
+				While this document is not a technical specification, it aims at helping implementers to get a quick overview of the WoT architecture.
+				Furthermore, it includes reports from past plugfests and follow-up discussions, which explain the rational behind the current practices.
+			</p>
+		</section>
+		<section id="sotd">
+			<p>
+				<p class="note" title="Contributing">
+					Please contribute using <a href="https://github.com/w3c/wot/blob/master/current-practices/wot-practices.html">Git</a> or the <a href="https://github.com/w3c/wot/edit/master/current-practices/wot-practices.html">GitHub edit feature</a>.
+				</p>
+			</p>
+		</section>
 
+		<section>
+			<h1>Introduction</h1>
+			
+			<p>
+				The Web of Things (WoT) interest group (IG) provides a forum for technical discussions to identify use cases and requirements for services based upon the role of Web technologies for a combination of the Internet of Things (IoT) with the Web of data.
+				The IG has been divided into four task forces that looked into building blocks for such a Web of Things: thing description (TD), scripting API & protocol bindings (AP), discovery (DI), and security & privacy (SP).
+				Beside the planned deliverable of a technology landscape document which provides an overview of existing technology, also promising concepts and working drafts were discussed. It turned out challenging for implementers
+				to follow the current state of the WoT building blocks respectively in these discussions.
+				This is, however, very important for the mission of the <a href='#plugfests'>plugfests</a>, where the current practices should be tested and evaluated.
+				Moreover, it is hard for newcomers to quickly get a picture of the IG activities.
+				Thus, this document shall provide a snapshot that represents the current practices of the WoT IG.
+				It preserves the results of the plugfests as well as the disscussions between participants.
+				This document is not a technical specification, but more a working document for implementors of the prototypical WoT building blocks.
+			</p>
+
+			<section class="ednote">
+				What about the following topics?
+				<ul>
+					<li>Do's and Don'ts: Provide some guidelines/warnings?</li>
+					<li>Typical Issues many people run into (e.g., /value in CoAP/HTTP, see Plugfest)</li>
+					<li>Section for user/developer feedback</li>
+					<li>In scope vs. out-of-scope</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Vision</h2>
+				<p>
+					...
+				</p>
+			</section>
+
+			<section>
+				<h2>How to get started</h2>
+				<p>
+					...
+				</p>
+			</section>
+		</section>
+
+		<section>
+			<h2>Terminology</h2>
+			<p>This document uses the following terms defined elsewhere.</p>
+			<!--<section>
+        <h2>Definitions Example</h2>  
+        <p>Note capitalization style, which should be consistent. Other W3C documents use this capitalized style.</p>
+      </section>-->
+
+			<dl>
+				<dt>
+					<dfn id="CoAP">CoAP</dfn>
+				</dt>
+				<dd>Acronym for Constrained Application Protocol [[!RFC7252]]</dd>
+			</dl>
+
+
+		</section>
+
+		<section>
+			<h1>Principles &amp; Basic Concepts</h1>
+			<p>
+				Describe the basic concepts and principles. Introduce the tasks etc.
+			</p>
+			<section>
+				<h2>Thing Description</h2>
+				<p>
+					The Thing Description (TD) provides a minimal vocabulary for describing a thing based on
+							<code>Metadata</code> and <code>Interactions</code>. Interactions are further divided into three
+					categories namely  <code>Property</code>, <code>Action</code>, and <code>Event</code>.
+				</p>
+				<p>
+					Find below an LED example:
+				</p>
+				<pre class='example'>
+{
+  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+  "metadata": {
+    "name": "MyLED",
+    "protocols" : {
+      "CoAP" : {
+        "uri" : "coap://www.example.com:5683/ledlamp",
+        "priority" : 1
+		  },
+      "HTTP" : {
+        "uri" : "http://www.example.com:80/ledlamp",
+        "priority" : 2
+      }
+	  },
+    "encodings": [
+      "JSON"
+    ]
+  },
+  "interactions": [
+    {
+      "@type": "Property",
+      "name": "colorTemperature",
+      "outputData": "xsd:unsignedShort",
+      "writable": true
+    }, {
+      "@type": "Property",
+      "name": "rgbValueRed",
+      "outputData": "xsd:unsignedByte",
+      "writable": false
+    }, {
+      "@type": "Property",
+      "name": "rgbValueGreen",
+      "outputData": "xsd:unsignedByte",
+      "writable": false
+    }, {
+      "@type": "Property",
+      "name": "rgbValueBlue",
+      "outputData": "xsd:unsignedByte",
+      "writable": false
+    }, {
+      "@type": "Action",
+      "name": "ledOnOff",
+      "inputData": "xsd:boolean",
+      "outputData": ""
+    }, {
+      "@type": "Action",
+      "name": "fadeIn",
+      "inputData": "xsd:unsignedByte",
+      "outputData": ""
+    },  {
+      "@type": "Action",
+      "name": "fadeOut",
+      "inputData": "xsd:unsignedByte",
+      "outputData": ""
+    }, {
+      "@type": "Event",
+      "outputData": "xsd:unsignedShort",
+      "name": "colorTemperatureChanged"
+    }
+  ]
+}
+				</pre>
+				<p>
+					@TODO Describe the LED example and point to the important parts...
+				</p>
+				
+				<section>
+					<h3>Metadata</h3>
+					
+					@TODO What is metadata. Also talk about life cycle stages, security options, etc.
+				</section>
+				
+				<section>
+					<h3>Capabilities</h3>
+					
+					@TODO Present Properties, Actions, and Events.
+				</section>
+				
+				<section>
+					<h3>Discovery</h3>
+					
+					@TODO How to get the TD: Repository, local discovery, ...
+				</section>
+				
+				<section>
+					<h3>Security Considerations</h3>
+					
+					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
+				</section>
+				
+			</section>
+
+			<section>  
+				<h2>Protocol mappings</h2>
+				<p>What is this task all about...</p>
+				
+				<section>
+					<h3>Resource Model and URIs</h3>
+					
+					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
+				</section>
+				
+				<section>
+					<h3>Available Bindings</h3>
+
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">HTTP mapping</span>
+						</p>
+						<p class="practicedesc">
+							@TODO HTTP mapping.          
+						</p>
+					</div>
+	
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">CoAP mapping</span>
+						</p>
+						<p class="practicedesc">
+							@TODO CoAP mapping.          
+						</p>
+					</div>
+	
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">MQTT mapping</span>
+						</p>
+						<p class="practicedesc">
+							@TODO MQTT mapping: write down Michael Koster's shim layer appraoch.
+						</p>
+					</div>
+				</section>
+				
+				<section>
+					<h3>Security Considerations</h3>
+					
+					@TODO How to use protocols correctls (e.g., (D)TLS info)
+				</section>
+			</section>
+
+			<section>  
+				<h2>Scripting API</h2>
+				<p class="issue">
+					Portable application logic, language-independent
+				</p>
+				
+				<section>
+					<h3>Servients</h3>
+					
+					@TODO How to use protocols correctls (e.g., (D)TLS info)
+				</section>
+				
+				<section>
+					<h3>Discovery API</h3>
+					
+					@TODO Get content
+				</section>
+				
+				<section>
+					<h3>Client API</h3>
+					
+					@TODO Get content
+				</section>
+				
+				<section>
+					<h3>Server API</h3>
+					
+					@TODO Get content
+				</section>
+				
+				<section>
+					<h3>Physical API</h3>
+					
+					@TODO Get content
+				</section>
+				
+				<section>
+					<h3>Security Considerations</h3>
+					
+					@TODO Figure out
+				</section>
+			</section>
+
+		</section>
+
+		<section>
+			<h1 id="plugfests">Plugfests</h1>
+			<p>This section includes the goals and ideas of each WoT Plugfest in chronological order. The "lessons learned" is given which led to further improve the WoT work.</p>
+			<p class="ednote">
+				@TODO Add more detailed information along with pictures of each plugfest
+			</p>
+			<section>
+				<h2>Sapporo (2015-10)</h2>
+				<p>Include content from <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_29-30_October_2015,_Sapporo,_Japan#Plugfest">wiki</a> .</p>
+				<h3>Goals</h3>
+				<ul>
+					<li>Interoperable applications by means of a thing description only.</li>
+					<li>...</li>
+				</ul>
+				<h3>Outcome</h3>
+				<ul>
+					<li>Thing description registry and discovery is needed</li>
+					<li>...</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Nice (2016-01)</h2>
+				<p>Include content from <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#PlugFest">wiki</a> .</p>
+				<h3>Goals</h3>
+				<ul>
+					<li>Security</li>
+					<li>Thing registration &amp; discovery</li>
+					<li>...</li>
+				</ul>
+				<h3>Outcome</h3>
+				<ul>
+					<li>How to properly handly thing description URI/IP change</li>
+					<li>How to deal with the situation a thing changes</li>
+					<li>How to specify ranges and valid values within a TD more accurately</li>
+					<li>How to share interactions of a TD across several things</li>
+					<li>...</li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<h2>Conclusions</h2>
+			<p>
+        What decisions came out of discussions at phone or F2F meetings. Keep arguments here why solutions were discarded or why the practice is as it is.
+			</p>
+		</section>
+		
+		<section>
+			<h2>Outlook</h2>
+			<p>
+				...
+			</p>
+		</section>
+
+		<section class='appendix'>
+			<h2>Acknowledgements</h2>
+			<p>
+				We would like to thank all Plugfest participants who helped to improve the practices given in this document.
+			</p>
+		</section>
+
+		<section class='appendix'>
+			<h2>Change History</h2>
+			<p>
+				List changes over publications and their rational...
+			</p>
+		</section>
+
+	</body>
+	<script language="javascript" id="dstimer">
+//<![CDATA[
+if(dschk() == 1) { if(typeof (dsSetTimers) != "undefined") { dsSetTimers(1454572750,1454589711,43200,86400,180,1454589796 - parseInt(""+(new Date()).getTime()/1000),1);}}
+//]]>
+	</script>
+</html>
