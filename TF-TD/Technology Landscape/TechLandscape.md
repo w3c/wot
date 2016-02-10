@@ -44,12 +44,12 @@ Things needs to be described in order to provide basic information about themsel
   - **Data Types:** 
 
 ### Lemonbeat Device Language (Frank)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool/Development Support:**
-  - **Resource identification:**
-  - **Query capabilities:**
-  - **Data Types:**
+  - **Background of the technology:** RWE is first mover of SmartHome solutions and market leader in Germany. Lemonbeat is a follow-up-technology based on SmartHome but address a wide spread of different industries. CoAP-Implementation is in the design phase. XML/XSD, EXI, CoAP, DTLS, UDP, IPv6
+  - **Consortium:** RWE
+  - **Tool/Development Support:** Management Software
+  - **Resource identification:** A new device sends it device description and the inclusion into the network is fully automatically, without manual activities. Content of device description: IPv6-adress, SGTIN, name of device, manufacturer, communication protocol, radio and wake-up information, etc.
+  - **Query capabilities:** The Value Description of each device can be queried and configured.
+  - **Data Types:** XML/XSD, EXI compression
 
 
 
