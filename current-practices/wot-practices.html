@@ -34,7 +34,7 @@
 			};
 		</script>
 	</head>
-	
+
 	<body>
 		<section id="abstract">
 			<p>
@@ -42,7 +42,7 @@
 				The discussions of the interest group already shaped rough, preliminary WoT building blocks: thing description (TD), scripting API & protocol bindings (AP), discovery (DI), and security & privacy (SP). The current practices related to WoT building blocks were also prototyped and tested in so-called plugfests.
 				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
 				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
-				While this document is not a technical specification, it aims at helping implementers to get a quick overview of the WoT architecture.
+				While this document is not a technical specification, it aims at helping implementers to get a quick overview of the WoT building blocks.
 				Furthermore, it includes reports from past plugfests and follow-up discussions, which explain the rational behind the current practices.
 			</p>
 		</section>
@@ -56,7 +56,7 @@
 
 		<section>
 			<h1>Introduction</h1>
-			
+
 			<p>
 				The Web of Things (WoT) interest group (IG) provides a forum for technical discussions to identify use cases and requirements for services based upon the role of Web technologies for a combination of the Internet of Things (IoT) with the Web of data.
 				The IG has been divided into four task forces that looked into building blocks for such a Web of Things: thing description (TD), scripting API & protocol bindings (AP), discovery (DI), and security & privacy (SP).
@@ -78,7 +78,7 @@
 					<li>In scope vs. out-of-scope</li>
 				</ul>
 			</section>
-			
+
 			<section>
 				<h2>Vision</h2>
 				<p>
@@ -98,7 +98,7 @@
 			<h2>Terminology</h2>
 			<p>This document uses the following terms defined elsewhere.</p>
 			<!--<section>
-        <h2>Definitions Example</h2>  
+        <h2>Definitions Example</h2>
         <p>Note capitalization style, which should be consistent. Other W3C documents use this capitalized style.</p>
       </section>-->
 
@@ -193,43 +193,43 @@
 				<p>
 					@TODO Describe the LED example and point to the important parts...
 				</p>
-				
+
 				<section>
 					<h3>Metadata</h3>
-					
+
 					@TODO What is metadata. Also talk about life cycle stages, security options, etc.
 				</section>
-				
+
 				<section>
 					<h3>Capabilities</h3>
-					
+
 					@TODO Present Properties, Actions, and Events.
 				</section>
-				
+
 				<section>
 					<h3>Discovery</h3>
-					
+
 					@TODO How to get the TD: Repository, local discovery, ...
 				</section>
-				
+
 				<section>
 					<h3>Security Considerations</h3>
-					
+
 					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
 				</section>
-				
+
 			</section>
 
-			<section>  
+			<section>
 				<h2>Web API</h2>
 				<p>The API used for the communication between things, that is, the networking protocols and interfaces.</p>
-				
+
 				<section>
 					<h3>Resource Model and URIs</h3>
-					
+
 					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
 				</section>
-				
+
 				<section>
 					<h3>Protocol Mappings</h3>
 
@@ -238,19 +238,19 @@
 							<span id="some-practice" class="practicelab">HTTP mapping</span>
 						</p>
 						<p class="practicedesc">
-							@TODO HTTP mapping.          
+							@TODO HTTP mapping.
 						</p>
 					</div>
-	
+
 					<div class="practice">
 						<p>
 							<span id="some-practice" class="practicelab">CoAP mapping</span>
 						</p>
 						<p class="practicedesc">
-							@TODO CoAP mapping.          
+							@TODO CoAP mapping.
 						</p>
 					</div>
-	
+
 					<div class="practice">
 						<p>
 							<span id="some-practice" class="practicelab">MQTT mapping</span>
@@ -260,53 +260,53 @@
 						</p>
 					</div>
 				</section>
-				
+
 				<section>
 					<h3>Security Considerations</h3>
-					
+
 					@TODO How to use protocols correctls (e.g., (D)TLS info)
 				</section>
 			</section>
 
-			<section>  
+			<section>
 				<h2>Scripting API</h2>
 				<p class="issue">
 					Portable application logic, language-independent
 				</p>
-				
+
 				<section>
 					<h3>Servients</h3>
-					
+
 					@TODO How to use protocols correctls (e.g., (D)TLS info)
 				</section>
-				
+
 				<section>
 					<h3>Discovery API</h3>
-					
+
 					@TODO Get content
 				</section>
-				
+
 				<section>
 					<h3>Client API</h3>
-					
+
 					@TODO Get content
 				</section>
-				
+
 				<section>
 					<h3>Server API</h3>
-					
+
 					@TODO Get content
 				</section>
-				
+
 				<section>
 					<h3>Physical API</h3>
-					
+
 					@TODO Get content
 				</section>
-				
+
 				<section>
 					<h3>Security Considerations</h3>
-					
+
 					@TODO Figure out
 				</section>
 			</section>
@@ -359,7 +359,7 @@
         What decisions came out of discussions at phone or F2F meetings. Keep arguments here why solutions were discarded or why the practice is as it is.
 			</p>
 		</section>
-		
+
 		<section>
 			<h2>Outlook</h2>
 			<p>
