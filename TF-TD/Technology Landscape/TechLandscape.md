@@ -230,8 +230,8 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
 ### [EXI for JSON](https://www.w3.org/TR/exi-for-json/) (Taki)
   - **Background of the technology:** Binary serialization format for JSON data model based on EXI approach
   - **Consortium:** W3C
-  - **Tool/Development Support:** yes
-  - **Data Types-aware encoding:** yes
+  - **Tool/Development Support:** yes (e.g., [JavaScript playground](http://exificient.github.io/javascript/demo/processJSON.html?SharedStrings=true) with context knowledge, Java [library](https://github.com/EXIficient/exificient-for-json) and [GUI](https://github.com/EXIficient/exificient-gui), [C implementation](https://github.com/EXIficient/exificient-for-json.c))
+  - **Data Types-aware encoding:** yes (string, float, boolean, array, null, integer, decimal, binary, date, dateTime, time)
   - **Binary Format:** yes
   - **Compression:** very high
   - **Small memory footprint:** yes
