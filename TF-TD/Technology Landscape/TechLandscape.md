@@ -220,7 +220,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
 ### [Efficient XML Interchange (EXI)](http://www.w3.org/TR/exi/) (Taki)
   - **Background of the technology:** Binary serialization format of the XML Infoset
   - **Consortium:** W3C
-  - **Tool/Development Support:** yes
+  - **Tool/Development Support:** yes (see https://www.w3.org/XML/EXI/#implementations)
   - **Data Types-aware encoding:** yes, based on XSD
   - **Binary Format:** yes
   - **Compression:** very high
