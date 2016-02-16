@@ -183,16 +183,19 @@
 					<ul> 
 					 	<li>Name: Name of the property</li> 
 					 	<li>OutputData: Which data type is associated with this property</li> 
-					 	<li>Writeable: Is this property writeable (true/false)</li> 
-					 	<li>href: Array of URLs of property's resource (can be also relativ to provided protocol information in
-					 	metadate field) or URL server that has the awarness of property's resource  </li>
+					 	<li>Writable: Is this property writable (true/false)</li> 
+					 	<li>Href: Array of URLs of property's resource (can be also relativ to provided protocol information in
+					 	metadate field) or URL of a redirection server to the property's resource </li>
 						<li>Stability: [optional] Max time of stability of the property value in ms 
 					 	(0ms=stable/static property value)</li>
-					 	<li>Secure: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
+					 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
 					 </ul>
 					
 					<p>The href field can contain one or more URL entries in relation of the number of supported protocols of 
 					the Thing. </p>
+					
+						<p>Note: If the property is writeable=true, then the property accepts inputData which has the same 
+						data type as defined by the outputData.</p>
 
 				</section>
 
