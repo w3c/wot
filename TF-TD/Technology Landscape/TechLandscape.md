@@ -56,7 +56,7 @@ Things needs to be described in order to provide basic information about themsel
 ### ECHONET device objects (Naka)
   - **Background of the technology:** ECHONET device object is a logical model of the information held by more than 100 types of equipment devices or home electrical appliances such as sensors, air conditioners and LED Lights, or of control items that can be remotely controlled.
   - **Consortium:** ECHONET Consortium
-  - **Tool/Development Support:** The Consortium does NOT provide the official tool/development support, however, some member companies and a university provide SDK / test tool / maintenance tool
+  - **Tool/Development Support:** The Consortium does NOT provide the official tool/development support, however, some member companies and a university provide SDK / test tool / maintenance tool, e.g. https://smarthouse-center.org/sdk/
   - **Resource identification:** “Identification number” property whose data type is unsigned character is included in common part of ECHONET device object definition.
   - **Query capabilities:** Thing descovery and registration method is described as a guideline in ECHONET Lite specifications. The guideline includes implementation of UPnP search mechanism.
   - **Data Types:** Data types are dependent on property type specified in ECHONET device objects, e.g. binary unsigened character.
