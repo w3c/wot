@@ -179,13 +179,15 @@
 					<p>The interaction variant Property is used to serve properties of a Thing which can be 
 					static and/or dynamic (e.g., temperature value, fill level of water, etc.).</p>
 					
-					<p>There are 3 mandatory and one optional vocabularies defined within the Property:</p>
+					<p>There are 4 mandatory and one optional vocabularies defined within the Property:</p>
 					<ul> 
 					 	<li>Name: Name of the property</li> 
 					 	<li>OutputData: Which data type is associated with this property</li> 
 					 	<li>Writeable: Is this property writeable (true/false)</li> 
-					 	<li>Stability: [optional] Max time of stability of the property value in ms 
-					 	(0ms=stable/static property value)</li> 
+					 	<li>href: URL of the property resource (can be also relativ to provided protocol information in
+					 	metadate field</li>
+						<li>Stability: [optional] Max time of stability of the property value in ms 
+					 	(0ms=stable/static property value)</li>
 					 </ul>
 					
 					<p>An input or output data field can be also assigned as empty which is equivalent to 'void' or 'null'.</p>
