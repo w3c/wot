@@ -149,97 +149,102 @@
 
 	 			<section>
 					<h3>TD Components</h3>
-				<section>
-					<h3>Metadata</h3>
-					Metadata is used to provide some generic information of a Thing. There are 3 mandatory and one optional vocabulary defined within the Metadata:
-					 <ul> 
-					 	<li>Name: Name of the Thing</li> 
-					 	<li>Protocol: Which kind of protocol is supported (e.g., HTTP, CoAP, XMPP, etc,)</li> 
-					 	<li>Encoding: Which kind of serialization format is supported (e.g., JSON, XML, etc.)</li>
-					 	<li>Security: [optional]  Access metadata (self-contained) of the Thing for securely transmitting information of all Thing's resources </li>
-					 </ul>
-				      	<p>Besides of these pre-defined vocabularies additional characteristics can be added such as product id, firmware 
-				      	version, location, etc.. This involves also the case of vocabularies from other context 
-				      	</p>
-				      	
-				      	
-				</section>
-
-				<section>
-					<h3>Data</h3>
-
-					<p>This field is used to define application-specific simple and complex data types that are used by the interaction 
-					models (property, action, event).</p>
-					
-					<p>Per default, a subset of XML Schema simple data types is supported which includes string, int, float, byte, short, boolean, 
-					unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).</p>
-					
-					<p>An input or output data field can be also assigned as empty which is equivalent to 'void' or 'null'.</p>
-
-				</section>
-
-				<section>
-					<h3>Property</h3>
-
-					<p>The interaction variant Property is used to serve properties of a Thing which can be 
-					static and/or dynamic (e.g., temperature value, fill level of water, etc.).</p>
-					
-					<p>There are 4 mandatory and 2 optional vocabularies defined within the Property:</p>
-					<ul> 
-					 	<li>Name: Name of the property</li> 
-					 	<li>OutputData: Which data type is associated with this property</li> 
-					 	<li>Writable: Is this property writable (true/false)</li> 
-					 	<li>Href: Array of URLs of property's resource (can be also relativ to provided protocol information in
-					 	metadate field) or URL of a redirection server to the property's resource </li>
-						<li>Stability: [optional] Max time of stability of the property value in ms 
-					 	(0ms=stable/static property value)</li>
-					 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
-					 </ul>
-					
-					<p>The href field can contain one or more URL entries in relation of the number of supported protocols of 
-					the Thing. </p>
-					
-						<p>Note: If the property is writeable=true, then the property accepts inputData which has the same 
-						data type as defined by the outputData.</p>
-
-				</section>
-
-				<section>
-					<h3>Action</h3>
-
-					<p>The interaction variant Action invokes actions on a Thing which starts a process 
-					(e.g., LED fade in, move a robot, brew a cup of coffee, etc) and may creates a new (sub-)resource</p>
-					
-					<p>There are 1 mandatory and 4 optional vocabularies defined within the Action:</p>
-					<ul> 
-					 	<li>Name: Name of the action</li>
-					 	<li>InputData: [optional] Which input data is associated with this action</li>
-					 	<li>OutputData: [optional] Which data type is associated with this action</li> 
-					 	<li>Href: Array of URLs of action's resource (can be also relativ to provided protocol information in
-					 	metadate field) or URL of a redirection server to the action's resource </li>
-					 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
-					 </ul>
-					
- 
-
-				</section>
+					<section>
+						<h3>Metadata</h3>
+						Metadata is used to provide some generic information of a Thing. There are 3 mandatory and one optional vocabulary defined within the Metadata:
+						 <ul> 
+						 	<li>Name: Name of the Thing</li> 
+						 	<li>Protocol: Which kind of protocol is supported (e.g., HTTP, CoAP, XMPP, etc,)</li> 
+						 	<li>Encoding: Which kind of serialization format is supported (e.g., JSON, XML, etc.)</li>
+						 	<li>Security: [optional]  Access metadata (self-contained) of the Thing for securely transmitting information of all Thing's resources </li>
+						 </ul>
+					      	<p>Besides of these pre-defined vocabularies additional characteristics can be added such as product id, firmware 
+					      	version, location, etc.. This involves also the case of vocabularies from other context 
+					      	</p>
+					      	
+					      	
+					</section>
+	
+					<section>
+						<h3>Data</h3>
+	
+						<p>This field is used to define application-specific simple and complex data types that are used by the interaction 
+						models (property, action, event).</p>
+						
+						<p>Per default, a subset of XML Schema simple data types is supported which includes string, int, float, byte, short, boolean, 
+						unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).</p>
+						
+						<p>An input or output data field can be also assigned as empty which is equivalent to 'void' or 'null'.</p>
+	
+					</section>
+	
+					<section>
+						<h3>Property</h3>
+	
+						<p>The interaction variant Property is used to serve properties of a Thing which can be 
+						static and/or dynamic (e.g., temperature value, fill level of water, etc.).</p>
+						
+						<p>There are 4 mandatory and 2 optional vocabularies defined within the Property:</p>
+						<ul> 
+						 	<li>Name: Name of the property</li> 
+						 	<li>OutputData: Which data type is associated with this property</li> 
+						 	<li>Writable: Is this property writable (true/false)</li> 
+						 	<li>Href: Array of URLs of property's resource (can be also relativ to provided protocol information in
+						 	metadate field) or URL of a redirection server to the property's resource </li>
+							<li>Stability: [optional] Max time of stability of the property value in ms 
+						 	(0ms=stable/static property value)</li>
+						 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
+						 </ul>
+						
+						<p>The href field can contain one or more URL entries in relation of the number of supported protocols of 
+						the Thing. </p>
+						
+							<p>Note: If the property is writeable=true, then the property accepts inputData which has the same 
+							data type as defined by the outputData.</p>
+	
+					</section>
+	
+					<section>
+						<h3>Action</h3>
+	
+						<p>The interaction variant Action invokes actions on a Thing which starts a process 
+						(e.g., LED fade in, move a robot, brew a cup of coffee, etc) and may creates a new (sub-)resource</p>
+						
+						<p>There are 1 mandatory and 4 optional vocabularies defined within the Action:</p>
+						<ul> 
+						 	<li>Name: Name of the action</li>
+						 	<li>InputData: [optional] Which input data is associated with this action</li>
+						 	<li>OutputData: [optional] Which data type is associated with this action</li> 
+						 	<li>Href: Array of URLs of action's resource (can be also relativ to provided protocol information in
+						 	metadate field) or URL of a redirection server to the action's resource </li>
+						 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
+						 </ul>
+						
+	 
+	
+					</section>
 				
 				
-				<section>
-					<h3>Event</h3>
-
-					<p>The interaction variant Action invokes actions on a Thing which starts a process 
-					(e.g., LED fade in, move a robot, brew a cup of coffee, etc) and may creates a new (sub-)resource</p>
-					
-					<p>There are 2 mandatory and 2 optional vocabularies defined within the Event:</p>
-					<ul> 
-					 	<li>Name: Name of the event</li>
-					 	<li>OutputData: [optional] Which data type is associated with this event</li> 
-					 	<li>Href: Array of URLs of event's resource (can be also relativ to provided protocol information in
-					 	metadate field) or URL of a redirection server to the event's resource </li>
-					 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
-					 </ul>
+					<section>
+						<h3>Event</h3>
+	
+						<p>The interaction variant Action invokes actions on a Thing which starts a process 
+						(e.g., LED fade in, move a robot, brew a cup of coffee, etc) and may creates a new (sub-)resource</p>
+						
+						<p>There are 2 mandatory and 2 optional vocabularies defined within the Event:</p>
+						<ul> 
+						 	<li>Name: Name of the event</li>
+						 	<li>OutputData: [optional] Which data type is associated with this event</li> 
+						 	<li>Href: Array of URLs of event's resource (can be also relativ to provided protocol information in
+						 	metadate field) or URL of a redirection server to the event's resource </li>
+						 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
+						 </ul>
+					</section>
 				</section>
+				<h3>TD Samples</h3>
+				To get a good understanding of how a TD can look like in a concrete instance a TD is provided in the case of a 
+				sensor (Temperature) and actuator (LED).
+				<section>
 				</section>
 				<section>
 					<h3>Discovery</h3>
