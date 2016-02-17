@@ -158,8 +158,8 @@
 					 	<li>Encoding: Which kind of serialization format is supported (e.g., JSON, XML, etc.)</li>
 					 	<li>Security: [optional]  Access metadata (self-contained) of the Thing for securely transmitting information of all Thing's resources </li>
 					 </ul>
-				      	<p>Besides of these 3 fix defined vocabularies additional characteristics can be defined such as product id, firmware 
-				      	version, location, etc..
+				      	<p>Besides of these pre-defined vocabularies additional characteristics can be added such as product id, firmware 
+				      	version, location, etc.. This involves also the case of vocabularies from other context 
 				      	</p>
 				      	
 				      	
@@ -204,7 +204,25 @@
 
 				</section>
 
+				<section>
+					<h3>Action</h3>
 
+					<p>The interaction variant Action invokes actions on a Thing which starts a process 
+					(e.g., LED fade in, move a robot, brew a cup of coffee, etc) and may creates a new (sub-)resource</p>
+					
+					<p>There are 1 mandatory and 4 optional vocabularies defined within the Property:</p>
+					<ul> 
+					 	<li>Name: Name of the action</li>
+					 	<li>InputData: [optional] Which input data is associated with this action</li>
+					 	<li>OutputData: [optional] Which data type is associated with this action</li> 
+					 	<li>Href: Array of URLs of action's resource (can be also relativ to provided protocol information in
+					 	metadate field) or URL of a redirection server to the action's resource </li>
+					 	<li>Security: [optional]  Access metadata (self-contained) for securely transmitting information of the property </li>
+					 </ul>
+					
+ 
+
+				</section>
 				<section>
 					<h3>Discovery</h3>
 
