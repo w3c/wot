@@ -357,7 +357,7 @@ Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.
   - **Underlying Language/Model/Serialization Formats:** Notation3/RDF
 
 ### [JSON HyperSchema](http://json-schema.org/latest/json-schema-hypermedia.html) (Michael)
-  - **Background of the technology:**
-  - **Consortium:**
-  - **Tool Support:**
-  - **Underlying Language/Model/Serialization Formats:**  
+  - **Background of the technology:** JSON Hyper-Schema is an extension to JSON Schema which adds a Link Description Object to enable JSON Schema to express hyperlink constructions. A links property is defined to indicate the Link Description, and a number of common link terms like "href" and "rel" are defined, and methods to enable URI template syntax to be used to schematically construct hyperlinks. JSON Pointer is supported to construct references to document fragments or elements.
+  - **Consortium:** IETF Draft 
+  - **Tool Support:** A number of tools support JSON Schema and JSON Hyper Schema [JSON Schema Tools](http://json-schema.org/implementations.html) Also note that RAML uses JSON Schema and could easily be extended to support JSON Hyper Schema
+  - **Underlying Language/Model/Serialization Formats:**  JSON, JSON Schema, JSON Pointer
