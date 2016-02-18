@@ -233,9 +233,9 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes (e.g., [JavaScript playground](http://exificient.github.io/javascript/demo/processJSON.html?SharedStrings=true) with context knowledge, Java [library](https://github.com/EXIficient/exificient-for-json) and [GUI](https://github.com/EXIficient/exificient-gui), [C implementation](https://github.com/EXIficient/exificient-for-json.c))
   - **Data Types-aware encoding:** yes (string, float, boolean, array, null, integer, decimal, binary, date, dateTime, time)
   - **Binary Format:** yes
-  - **Compression:** Very high. EXI for JSON compaction works more effective than comparative formats such as CBOR and BSON. EXI for JSON compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.
-  - **Small memory footprint:** yes
-  - **Context-aware encoding:**
+  - **Compression:** Very high. EXI for JSON compaction works more effective than comparative formats such as CBOR and BSON. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.
+  - **Small memory footprint:** EXI for JSON uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. EXI grammars used in EXI for JSON derives from a simple schema, resulting in small set of EXI grammars.
+  - **Context-aware encoding:** No
 
 ### [JSON](http://www.json.org/) (Taki)
   - **Background of the technology:** An attribute value-pair format to transmit data objects.
