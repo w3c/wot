@@ -1,3 +1,8 @@
+***This document is not anymore maintained. Discussion has moved to the [current practices](http://w3c.github.io/wot/current-practices/wot-practices.html#scripting-api) document.***
+
+
+---
+
 # W3C Thing API
 
 The Thing API is an experimental API for Discovery, Provisioning and Control of Things in a [Web of Things](http://www.w3.org/WoT/). It considers ideas and concepts been discussed in the different WoT TFs (Discovery, Thing Description, ...).
