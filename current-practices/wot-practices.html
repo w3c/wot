@@ -268,7 +268,23 @@
 					<h4>Protecting TD Objects</h4>
 					<p>TODO</p>
 					<h4>Describing Prerequistes for Accessing Things</h4>
-					<p>TODO</p>
+					<p>When private resources (things) get exposed at public-facing endpoints (Internet) then components exposing things (servients) usually demand security: exchanges have to be encrypted/signed, credentials have to be presented etc. There are 2 strategies for demanding security mechanisms:
+						<ul>
+							<li>A priori</li>: Callers know beforehand and make a request according the expectations of the callee. An example for this strategy are clients that use SSL/TLS because this is triggered by the URL access scheme 'https' (HTTTP-over-TLS, RFC 2818).
+							<li>A posteriori</li>: Callers do not know beforehand, make a request and are being told in the response. An example for this strategy are clients and servers that negotiate the use of SSL/TLS as part of HTTP exchanges and dynamically upgrade to TLS (TLS-in-HTTP, RFC 2817).
+						</ul>
+						The a posteriori-strategy places requirements on the application protocol itself esp. its error responses, not TD. The a priori-strategy places requirements on TD: TD needs to be able to express security mechanisms that callers need to fulfill. This expression shall be optional to allow usage of TD objects in deployments with a preference for the a posteriori strategy.
+						<h5>Secure Communications</h5>
+						<p>The URL access scheme allows to express the need for secure communications (SSL/TLS or DTLS). This is part of the resource endpoint URL and there is no need for TD to specify additional means. Note that http vs. https resp. coap vs. coaps is a binary/boolean style item of information while the suite of parameters that determine an SSL/TLS or DTLS session is much larger. Hence the URL access scheme does not provide a rich or full announcement of required settings. Since it is best current practice to an a posteriori apporach (inband with the security protocol) there is no need for TD to go beyond. TODO: elaborate on whether/how to express application-layer secure communications</p>
+						<h5>Authorization and Authentication</h5>
+						This section assumes that servients externalize complex processing tasks (around caller authentication and call authorization) to security-support components according the architectural model in IETF ACE. There is an alternative strategy (business services that internalize these tasks) but even in the non-constrained IT world the externalization is the default approach (Kerberos, OAuth, OIDC, SAML et al are incarnations of the "let something else do the work"-idea). Given the constrained nature of WoT components the internalization strategy is anticipated to be uncommon and hence is not covered. Following items are needed to inform callees about security credentials/tokens that they have to present for specific resources:
+						<ul>
+							<li>Type/category of security token</li>: Callers need to know which type(s) or categories of security tokens they need to apply for. An individual security token type or category is assumed to expressed by a URN (in the namespace of the security token issuer). 
+							<li>Protection model for security token</li>: Callers need to know the protection model of the security tokens they need to apply for: bearer token are submitted in a opaque fashion, for PoP tokens an authenticator has to be created by the caller.
+							<li>Issuing authority of the security token</li>: Callers need to know the authority where they need to apply for security tokens. This includes information about their endpoints and supported protocols
+						</ul>
+						TODO: create/align text, consider relation to resources 
+					</p>
 				</section>
 
 			</section>
