@@ -316,6 +316,8 @@
 
 			<section>
 				<h2>Scripting API</h2>
+				<p>
+					The Scripting API is an API for Discovery, Provisioning and Control of Things in a <a href="http://www.w3.org/WoT/">Web of Things</a>.</p>
 				<p class="issue">
 					Portable application logic, language-independent
 				</p>
@@ -329,19 +331,204 @@
 				<section>
 					<h3>Discovery API</h3>
 
-					@TODO Get content
+<section>
+<h3 id="interface-thingrequest">Interface <code>ThingRequest</code></h3>
+
+<p>A <code>ThingRequest</code> is the entry point in the Scripting API to find things. It has a single method <code>start()</code> that starts the discovery or lookup according to the <code>ThingFilter</code> that is passed as input of the <code>ThingRequest</code> constructor.</p>
+<p>PS: If the Scripting API is exposed to web pages as a JavaScript API, the User Agent may open a dialog that let users select Things the page is allowed to access after the <code>ThingRequest.start()</code> is called. For trusted applications e.g. running in Node.js environment, the list of things found is passed to the application without asking the user.</p>
+
+
+<!-- Properly move it to WebIDL syntax -->
+<!--
+<dl title='[Constructor] interface ThingFilter ' class='idl'>
+  <dt>const unsigned short LEVROGYROUS = 0</dt>
+  <dd>
+    Turning left.
+  </dd>
+  <dt>const unsigned short DEXTROGYROUS = 1</dt>
+  <dd>
+    Turning right.
+  </dd>
+  <dt>readonly attribute DOMString chirality</dt>
+  <dd>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit (...)
+  </dd>
+  <dt>attribute unsigned long age</dt>
+  <dd>
+     Ut enim ad minim veniam, quis nostrud exercitation (...)
+  </dd>
+  <dt>Dahut turnAround (float angle, boolean fall)</dt>
+  <dd>
+    Duis aute irure dolor in reprehenderit in voluptate (...)
+  </dd>
+  <dt>unsigned long trip ()</dt>
+  <dd>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa (...)
+  </dd>
+  <dt>void yell ([AllowAny] unsigned long volume,
+                    [TreatNullAs=EmptyString] DOMString sentence)</dt>
+  <dd>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit (...)
+  </dd>
+</dl> -->
+
+
+<pre class="idl">
+[Constructor(ThingFilter filter)]
+interface ThingRequest {
+    Promise&lt;sequence&lt;Thing&gt;&gt; start();
+};
+</pre>
+</section>
+
+<section>
+<h3 id="interface-thingfilter">Interface <code>ThingFilter</code></h3>
+
+<p>A <code>ThingFilter</code> is a dictionary that is passed as input to the <code>ThingRequest</code> constructor. It may be extended in the future with additional filter properties. The current supported filter properties are:</p>
+<ul>
+<li><code>type</code>: It is a url that identify the type of the thing e.g. <code>http://example.com/things#temperature</code></li>
+<li><code>proximity</code>: It defines how to find the requested things. See ThingProximity Interface for more details about the possible values.</li>
+<li><code>id</code>: Each thing consists of a unique <code>id</code> (see attribute <code>Thing.id</code>). Using the <code>id</code> in the filter allows to find a Thing by its <code>id</code>. If <code>id</code> is set, all other filter parameters will be ignored.</li>
+<li><code>server</code>: It is the end point of the WoT directory where to look to Things. If <code>server</code> is set, the value of <code>proximity</code> must be <code>remote</code>.</li>
+</ul>
+
+<pre class="idl">dictionary ThingFilter {
+    attribute DOMString? type;
+    attribute ThingProximity? proximity;
+    attribute DOMString? id;
+    attribute DOMString? server;
+};
+</pre>
+</section>
+
+<section>
+<h3 id="interface-thingproximity">Interface <code>ThingProximity</code></h3>
+
+<p>The <code>ThingProximity</code> is a enumaration about possible values for the <code>ThingFilter.proximity</code> attribute. The three values are currently supported:</p>
+<ul>
+<li><code>local</code>: It represents discovery in local networks (e.g. SSDP, mDNS/DNS-SD, ...)</li>
+<li><code>nearby</code>: It represents all discovery technologies where the physical location is considered (BLE, Audio Watermarking, ...)</li>
+<li><code>remote</code>: It represents lookup in WoT directories. The end point of the directory musst be supported.  </li>
+</ul>
+
+<pre class="idl">enum ThingProximity {
+    &quot;local&quot;,
+    &quot;nearby&quot;,
+    &quot;remote&quot;
+};
+</pre>
+</section>
+
+
 				</section>
 
 				<section>
 					<h3>Client API</h3>
 
-					@TODO Get content
+<section>
+<h2 id="interface-consumedthing">Interface <code>ConsumedThing</code></h2>
+<p><code>ConsumedThing</code> is the main interface to interact with a thing as client.</p>
+
+<p>It consists of the following attributes and functions:</p>
+<ul>
+<li><code>id</code>: is a unique identifier of a Thing.</li>
+<li><code>type</code>: is the type of a thing. It is important to filter things by type (see <code>ThingFilter.type</code>).</li>
+<li><code>name</code>: the human readable name of the thing.</li>
+<li><code>reachable</code>: defines if the Thing is reachable or not. e.g. <code>reachable</code> is <code>false</code> when the control device (that runs an application using the Thing API) leaves the range of a BLE sensor and <code>true</code> if the device is in range.</li>
+<li><code>onreachabilitychange</code>: event handle to monitor reachability of the thing. It will be triggered each time the value of the <code>reachable</code> attribute changes.</li>
+<li><code>callAction()</code>: call an action defined in the thing description.</li>
+<li><code>setProperty()</code>: set a new value for a property defined in the thing description.</li>
+<li><code>getProperty()</code>: get the value of a property defined in the thing description.</li>
+<li><code>addListener()</code>: add a new listener to an event defined in the thing description.</li>
+<li><code>removeListener()</code>: remove an already added event listener.</li>
+<li><code>removeAllListeners()</code>: remove all listener registered for an event defined in the thing description.</li>
+</ul>
+
+<pre class="idl">[Constructor(ThingDescription td)]
+interface ConsumedThing {
+    readonly attribute DOMString id;
+    readonly attribute DOMString type;
+    readonly attribute DOMString name;
+    readonly attribute boolean reachable;
+    attribute EventHandler onreachabilitychange;
+    Promise&lt;any&gt; callAction(DOMString actionName, any parameter);
+    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
+    Promise&lt;any&gt; getProperty(DOMString propertyName);
+    void addListener(DOMString eventName, ThingEventListener listener);
+    void removeListener(DOMString eventName, ThingEventListener listener);
+    void removeAllListeners(DOMString eventName);
+}
+callback ThingEventListener = void (ThingEvent event);
+</pre>
+
+<p>A <code>ConsumedThing</code> instance can be returned as a result of discovery (see <code>ThingRequest.start()</code>) or directly by using the Thing constructor that accepts a <code>ThingDescription</code> as input. </p>
+</section>
+
+
+<section>
+<h2 id="interface-thingevent">Interface <code>ThingEvent</code></h2>
+
+
+<p>The <code>ThingEvent</code> is passed as input to the event listener added to a Thing. It consists of the following attributes:</p>
+<ul>
+<li><code>name</code>: the name of the event. It allows to distinct between different event types in the event handler.</li>
+<li><code>value</code>: the new value reported by the event.</li>
+<li><code>source</code>: the thing that fired the event.</li>
+</ul>
+
+<pre class="idl">interface ThingEvent {
+    readonly attribute DOMString name;
+    readonly attribute any value;
+    readonly attribute Thing source;
+}
+</pre>
+</section>
+
+
+<section>
+<h2 id="interface-thingdescription">Interface <code>ThingDescription</code></h2>
+<p><code>ThingDescription</code> is a place holder for the JSON-LD spec of the Thing Description.</p>
+<pre class="idl">dictionary ThingDescription {
+    // Thing Description according to the JSON-LD TD spec.
+}
+</pre>
+
+</section>
+
+
+
 				</section>
 
 				<section>
 					<h3>Server API</h3>
 
-					@TODO Get content
+<section>
+<h3 id="interface-exposedthing-">Interface <code>ExposedThing</code></h3>
+<p>The interface <code>ExposedThing</code> is used for providing a thing.<br>It has methods to attach handlers that flesh out the application logic and can modify the provided interactions.</p>
+
+<pre class="idl">[Constructor(ThingDescription td)]
+[Constructor(DOMString name)]
+interface ExposedThing {
+    readonly attribute ThingDescription description;
+    readonly attribute DOMString name;
+
+    ExposedThing addAction(DOMString actionName, DOMString parameterType, DOMString resultType);
+    ExposedThing addProperty(DOMString propertyName, DOMString propertyType);
+
+    void onCall(DOMString actionName, ActionEventListener listener);
+    void onChange(DOMString actionName, ChangeEventListener listener);
+
+    void addListener(DOMString eventName, ThingEventListener listener);
+    void removeListener(DOMString eventName, ThingEventListener listener);
+    void removeAllListeners(DOMString eventName);
+}
+callback ThingEventListener = void (ThingEvent event);
+callback ChangeEventListener = void (any newValue, any OldValue, ThingEvent event);
+callback ActionEventListener = any (any param)
+</pre>
+</section>
+
+					
 				</section>
 
 				<section>
@@ -354,6 +541,91 @@
 					<h3>Security Considerations</h3>
 
 					@TODO Figure out
+				</section>
+				
+				
+				<section>
+					<h3>Scripting API Examples</h3>
+
+<section>
+<h2 id="example-discover-things-nearby">Example <code>Discover Things nearby</code></h2>
+<pre class="highlight">var filter = {
+    type: &quot;http://example.org#foo&quot;,
+    proximity: &quot;nearby&quot;
+};
+var request = new ThingRequest(filter);
+request.start().then(function(things){
+    var thing = things[0];
+    if(thing){
+        // get thing basic information
+        console.log(&quot;id: &quot;, thing.id);
+        console.log(&quot;name: &quot;, thing.name);
+        console.log(&quot;type: &quot;, thing.type);
+        console.log(&quot;manufacturer: &quot;, thing.manufacturer);
+        console.log(&quot;reachable: &quot;, thing.reachable);
+        // store thing id locally e.g. in localStorage
+        localStorage &amp;&amp; localStorage.setItem(&quot;thing.id&quot;,thing.id);
+        // monitor reachability of the thing
+        thing.onreachabilitychange = function(){
+            console.log(&quot;reachability changed to &quot;, this.reachable);
+            // If the thing is not reachable, then the operations callAction(), getProperty()
+			// and setProperty() will fail and the promise will be rejected with a corresponding
+			// error. The operations addListener(), removeListener() and removeAllListeners()
+			// will not fail, but events will be fired when the thing is reachable again.
+        };
+        // Call an action
+        var input = ...;
+        thing.callAction(&quot;myAction&quot;,input).then(function(output){
+            console.log(&quot;Result of myAction()&quot;,output);
+        }).catch(function(err){
+            console.error(&quot;Error on call action&quot;,err);
+        });
+        // get and set property
+        thing.getProperty(&quot;myProp&quot;).then(function(value){
+            console.log(&quot;Value of myProp &quot;,value);
+            var newValue = ...;
+            return thing.setProperty(&quot;myProp&quot;, newValue);
+        }).then(function(newValue){
+            console.log(&quot;Value of myProp is now&quot;,newValue);
+        }).catch(function(err){
+            console.error(&quot;Error on get or set property myProp&quot;,err);
+        });
+        // add and remove thing event listener
+        var myListener;
+        thing.addListener(&quot;myEvent&quot;,myListener=function(evt){
+            console.log(&quot;receive event &quot;,name,&quot;from thing&quot;,evt.source.name,&quot;with value&quot;,evt.value);
+        });
+        thing.removeListener(&quot;myEvent&quot;,myListener);
+        thing.removeAllListeners(&quot;myEvent&quot;);
+    };
+}).catch(function(err){
+    //TODO: handle error
+});
+</pre>
+</section>
+
+
+<section>
+<h2 id="example-find-thing-by-id">Example <code>Find Thing by id</code></h2>
+<pre class="highlight">var thingId = localStorage &amp;&amp; localStorage.getItem(&quot;thing.id&quot;);
+if(thingId){
+    var filter = {
+        id: thingId
+    };
+    var request = new ThingRequest(filter);
+    request.start().then(function(things){
+        var thing = things[0];
+        if(thing){
+            // access thing as in previous example
+        }
+    }).catch(function(err){
+        //handle error
+    });
+}
+</pre>
+</section>
+
+					
 				</section>
 			</section>
 
