@@ -223,7 +223,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes (see https://www.w3.org/XML/EXI/#implementations)
   - **Data Types-aware encoding:** yes, based on XSD
   - **Binary Format:** yes
-  - **Compression:** very high
+  - **Compression:** Very High. Much more effective than GZip in cases of larger files for which GZip is known to work well. More effective than ASN.1 in cases of smaller files for which ASN.1 is known to work well.
   - **Small memory footprint:** yes
   - **Context-aware encoding:** yes
 
