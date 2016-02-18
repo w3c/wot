@@ -223,7 +223,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes (see https://www.w3.org/XML/EXI/#implementations)
   - **Data Types-aware encoding:** yes, based on XSD
   - **Binary Format:** yes
-  - **Compression:** Very High. EXI compaction works more effective than ASN.1 PER in cases of smaller files for which ASN.1 is known to work pretty well. It also works much more effective than GZip in cases of larger files for which GZip is known to work very well.
+  - **Compression:** Very High. EXI compaction works more effective than ASN.1 PER in cases of smaller files for which ASN.1 is known to work pretty well. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.
   - **Small memory footprint:** EXI uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. When a schema is available, EXI derives grammar from the schema. Simple schemas result in small set of EXI grammars.
   - **Context-aware encoding:** yes
 
@@ -233,7 +233,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes (e.g., [JavaScript playground](http://exificient.github.io/javascript/demo/processJSON.html?SharedStrings=true) with context knowledge, Java [library](https://github.com/EXIficient/exificient-for-json) and [GUI](https://github.com/EXIficient/exificient-gui), [C implementation](https://github.com/EXIficient/exificient-for-json.c))
   - **Data Types-aware encoding:** yes (string, float, boolean, array, null, integer, decimal, binary, date, dateTime, time)
   - **Binary Format:** yes
-  - **Compression:** very high
+  - **Compression:** Very high. EXI for JSON compaction works more effective than comparative formats such as CBOR and BSON. EXI for JSON compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.
   - **Small memory footprint:** yes
   - **Context-aware encoding:**
 
