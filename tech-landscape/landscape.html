@@ -136,11 +136,27 @@
       <section>
         <h2> Protocols</h2>
         <ul>
-          <li>HTTP <b>(IRTF to provide input)</b></li>
+          <li>HTTP (<a href="https://tools.ietf.org/html/rfc7230">RFC&nbsp;7230</a>)
+            <ul>
+              <li>REST implementation (client/server, stateless, uniform interfaces, caching, layered/intermediaries)</li>
+              <li>URIs with <pre>http</pre> scheme</li>
+              <li><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">Internet Media Types</a> describe representations</li>
+              <li>Extensible throgh <a href="http://www.iana.org/assignments/message-headers/message-headers.xhtml">header fields</a></li>
+            </ul>
+          </li>
           <li>HTTP/2 <b>(IRTF to provide input)</b></li>
           <li>Websocket <b>(Dave Raggett)</b></li>
           <li>WebRTC <b>(Claes)</b></li>
-          <li>CoAP <b>(Matthias Kovatsch to outreach)</b></li>
+          <li>CoAP (<a href="https://tools.ietf.org/html/rfc7252">RFC&nbsp;7252</a>)
+            <ul>
+              <li>REST implementation (client/server, stateless, uniform interfaces, caching, layered/intermediaries)</li>
+              <li>URIs with <pre>coap</pre> scheme</li>
+              <li>Supports server push (<a href="https://tools.ietf.org/html/rfc7641">Observing Resources</a>)</li>
+              <li>Supports group communication (IP multicast)</li>
+              <li><a href="http://www.iana.org/assignments/core-parameters/core-parameters.xhtml#content-formats">Content format IDs</a> (Internet Media Types combined with encoding) describe representations</li>
+              <li>Extensible throgh <a href="http://www.iana.org/assignments/core-parameters/core-parameters.xhtml#option-numbers">options</a></li>
+            </ul>
+          </li>
           <li>MQTT <b>(Dave Raggett, Michael Koster)</b></li>
           <ul>
             <li>addressing scheme is topics</li>
@@ -182,15 +198,6 @@
         <h2> Resource Models &amp; Protocol mappings from Consortia</h2>
         <dd>
           <ul>
-            <li> CoRE Link format (Soumya presented on July 8)
-              <ul>
-                  <li> link description format</li>
-                  <li> offers resource type and interface type</li>
-                  <li> resource type denotes the media type resp. data structure</li>
-                  <li> interactions of a resource are modeled in the interface type      </li>
-              </ul>
-            </li>
-           
             <li> ISO/IEC/IEEE P21451-1-4
               <ul>
                 <li> approach is driving XMPP as IoT solution
@@ -203,7 +210,21 @@
                 </li>
               </ul>
             </li>
-            <li> IETF CoRE (Carsten?, Mattias?)</li>
+            <li>IETF Constrained RESTful Environments (CoRE)</li>
+              <ul>
+              	<li>Adjunct specifications and recommendations around CoAP</li>
+              	<li>Provide an ecosystem for mainly RESTful IoT applications (but also <a href="https://tools.ietf.org/html/draft-koster-core-coap-pubsub">pub-sub</a> for instance)</li>
+              	<li>Usually also applicable to HTTP (except for CoAP-specific features, e.g., involving observe)</li>
+              	<li>Building blocks:
+              	  <ul>
+                    <li>CoRE Link Format (<a href="https://tools.ietf.org/html/rfc6690">RFC&nbsp;6690</a>): Format for collection of <a href="https://tools.ietf.org/html/rfc5988">Web links</a> with additional attributes, e.g., resource type (<pre>rt</pre>) as semantic tag and interface (<pre>if</pre>) for interaction type labels</li>
+                    <li>CoRE Resource Directory (<a href="https://tools.ietf.org/html/draft-ietf-core-resource-directory">I-D</a>): Registry for devices (and services) that supports updates, de-registration, and various look-ups as well as availability management (registration lifetime, heart beats)</li>
+                    <li>CoAP over TCP/TLS (<a href="https://tools.ietf.org/html/draft-ietf-core-coap-tcp-tls">I-D</a>): CoAP transport binding for legacy networks (IPv4, NATs, middleboxes) and point-to-point use cases</li>
+                    <li>CoRE Interfaces (<a href="https://tools.ietf.org/html/draft-ietf-core-interfaces">I-D</a>): Collection of reusable interface definitions and patterns</li>
+                    <li>CoAP PubSub (<a href="https://tools.ietf.org/html/draft-koster-core-coap-pubsub">individual I-D</a>): Publish-Subscribe mechanism modelled with CoAP methods</li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li> OMA <b>(Mohammed Dadas / Orange, bryant sullivan / AT &amp; T?)</b>
 	            <li>LWM2M</li>
