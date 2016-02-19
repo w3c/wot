@@ -243,7 +243,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes (see http://json.org/)
   - **Data Types-aware encoding:** supports limited type assignment (number, string, boolean, array, null), however, each value is presented in plain-text in JSON document
   - **Binary Format:** No
-  - **Compression:** No compression (plain-text representation)
+  - **Compression:** Some limited compaction is often possible by removing redundant whitespaces.
   - **Small memory footprint:** Not feasible for highly constrained devices
   - **Context-aware encoding:** No
 
