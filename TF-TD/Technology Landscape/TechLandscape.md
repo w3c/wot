@@ -243,9 +243,9 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes (see http://json.org/)
   - **Data Types-aware encoding:** supports limited type assignment (number, string, boolean, array, null), however, each value is presented in plain-text in JSON document
   - **Binary Format:** No
-  - **Compression:** no compression (plain-text representation)
-  - **Small memory footprint:** not feasible for constrained devices
-  - **Context-aware encoding:** no
+  - **Compression:** No compression (plain-text representation)
+  - **Small memory footprint:** Not feasible for highly constrained devices
+  - **Context-aware encoding:** No
 
 ### [JSON-LD](http://json-ld.org/) (Victor)
   - **Background of the technology:** JSON-based serialization format for Linked
