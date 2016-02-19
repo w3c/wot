@@ -228,7 +228,7 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Context-aware encoding:** yes
 
 ### [EXI for JSON](https://www.w3.org/TR/exi-for-json/) (Taki)
-  - **Background of the technology:** Binary serialization format for JSON data model based on EXI approach
+  - **Background of the technology:** Binary serialization format for JSON data model based on EXI
   - **Consortium:** W3C
   - **Tool/Development Support:** yes (e.g., [JavaScript playground](http://exificient.github.io/javascript/demo/processJSON.html?SharedStrings=true) with context knowledge, Java [library](https://github.com/EXIficient/exificient-for-json) and [GUI](https://github.com/EXIficient/exificient-gui), [C implementation](https://github.com/EXIficient/exificient-for-json.c))
   - **Data Types-aware encoding:** yes (string, float, boolean, array, null, integer, decimal, binary, date, dateTime, time)
@@ -238,11 +238,11 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Context-aware encoding:** No
 
 ### [JSON](http://www.json.org/) (Taki)
-  - **Background of the technology:** An attribute value-pair format to transmit data objects.
+  - **Background of the technology:** Lightweight language independent data format originally based on JavaScript programming language
   - **Consortium:**  	RFC 7159 and ECMA-404
-  - **Tool/Development Support:** yes
+  - **Tool/Development Support:** yes (see http://json.org/)
   - **Data Types-aware encoding:** supports limited type assignment (number, string, boolean, array, null), however, each value is presented in plain-text in JSON document
-  - **Binary Format:** no
+  - **Binary Format:** No
   - **Compression:** no compression (plain-text representation)
   - **Small memory footprint:** not feasible for constrained devices
   - **Context-aware encoding:** no
