@@ -355,13 +355,16 @@
 						The servient component triggers the exchanges between the caller and its online TTP but is not involved during their execution. The requesting party domain may introduce further online TTP components to support e.g. constrained callers or clients. 
 						No one-size-fits-all security token should be expected in WoT. Specific WoT domains such as building automation, sports/health care, industrial control systems have their own specific needs to express caller properties. Specific protocol stacks also have their own specific constraints that affect security token contents.<br/><br/>
 						In addition to the security tokens (that are at least domain and protocol stack-specific) protocols are needed to acquire and supply security tokens<br/><br/>
-						The security token supply between caller and servient is the simple part here:
+						The security token supply between callers and servients is the straight-forward part of this trick:
 						<ul>
 							<li>Application requests</li>The application protocols requests must support the transfer of security tokens (bearer) and/or authenticators (PoP) in a standardized way. For HTTP such standards exist, for CoAP they do emerge. One critical issue are large security tokens/authenticators that can not be supplied inline with normal application requests. The usual trick to mitigate this concern is to introduce a dedicated endpoint to which the security token resp. authentictor can be sent as a normal application protocol data unit in an upfront exchange.
-							<li>Application responses</li>The application protocol (error) responses must allow to inform clients about expected security token issuing authority, expected security token type/category and protection. Current and emerging standards do not yet provide an adequate coverage for this concern.<br/><br/>
+							<li>Application responses</li>The application protocol (error) responses must allow to inform clients about expected security token issuing authority, expected security token type/category and protection. Current and emerging standards do not yet provide an adequate coverage for this concern.
 						</ul>
-						
-						
+						The security token acquisition is more complex part of this trick. Obviously the online TTP that represents the servient needs to respect the capabilities of the actual caller or its proxy. In addition to that a continental divide exists between following scenarios:
+						<ul>
+							<li>Consumer goods, owner by individual end users</li>TODO
+							<li>Capital goods, owner by legal entities</li>TODO
+						</ul>
 						<h4>Secure Communications</h4>
 						Communication security can be implemented in a transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the the same working tasks and workload<br/><br/>
 						Transport-level security has a long heritage it IT and presents a well-understood means in Web security that is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
