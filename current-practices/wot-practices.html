@@ -347,8 +347,8 @@
 						<h4>Authorization and Authentication</h4>
 						TODO
 						<h4>Secure Communications</h4>
-						Communication security can be implemented in a transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE)<br/>
-						Transport-level security has a long heritage it IT and presents a well-understood means in Web security that is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/>
+						Communication security can be implemented in a transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the the same working tasks and workload<br/><br/>
+						Transport-level security has a long heritage it IT and presents a well-understood means in Web security that is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
 						Some WoT deployments may have requirements that do not match TLS and DTLS constraints, for instance group-oriented communication security. It might also be the case that (severely) constrained WoT components can bear the overhead that is implied by TLS and DTLS protocols. This is where persistent, application-level security can help to achieve communication security. In contrast to transport-level security, application-level security allows to apply cryptographic transformations in a specific/granular manner (affecting some but not all exchanged data objects) and thereby reducing the processing burden.<br/>
 						In case security tokens are to be used in cases where transport-level security can not be used, application-level security offers means to provide PoP for security tokens as well as authenticity for message exchanges.
 					</p>
