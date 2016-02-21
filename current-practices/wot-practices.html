@@ -256,37 +256,42 @@
 
 					@TODO How to extend the TD with contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
 				</section>
-				
 				<section>
 					<h3>Security Considerations</h3>
 					<p>Following security concerns apply to TD:
 						<ul>
-							<li>Protecting TD objects</li>: TD objects in plain form can easily be manipulated or faked. This could result in security or safety breaches. Signature mechanisms can be used to establish the authenticity of TD objects.
-							<li>Describing prerequistes for accessing things</li>: Components that expose things (aka servients) may demand caller to present credentials in order to access them. Specific properties in TD objects allow to express such requirements. 
+							<li>Protecting TD objects</li>TD objects in plain form can easily be manipulated or faked by attackers. This could result in security or safety breaches. Signature mechanisms are needed to establish the authenticity of TD objects. This corroberates the source of the TD information and assures the integrity of its contents.
+							<li>Describing prerequistes for accessing things</li>Components that expose things (aka servients) may demand callers to present credentials and/or use secure communications in order to access them. Specific TD object contents are need to express such requirements. 
 						</ul>
+					These 2 security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related prerquisites for accessing actual things (see a posteriori-strategy below). TD objects may express such information without being signed.
 					</p>
 					<h4>Protecting TD Objects</h4>
-					<p>TODO</p>
+					<p>Signing TD objects is optional. If TD objects are signed then cryptographic checksums (aka signatures) are added that establish the authenticity of TD objects. Such checksums are created by the producers/issuers of TD objects and validated by consumers of TD objects (which should reject signed TD objects whose signatures are invalid). They use keying associations between the TD object producer and its consumers. The checksum resp. keying association can be asymmetric (producer signs with a private key, consumer validates with the corresponding public key) or symmetric (producer and consumer use a shared secret key). 
+					For TD objects expressed in JSON, IETF JOSE (JSON Object Signature and Encryption, see https://datatracker.ietf.org/wg/jose/documents/) provides the standards for computation and validation of signatures and their representation for network transfer (RFC 7515).
+					Note that the actual signing mechanism is cheap - with respect to specification (re-use existing standards e.g. IETF JOSE), development (re-use existing libraries) and operation (choose algorithms and key lenghts in a way that matches computational abilities). The cryptographic algorithm that provides the checksum only reduces the amount of data that has to be protected-from potentially large (TD object) to small (key). Sound key management practices are needed behind the scene. They determine the price-tag of solution.</p>
 					<h4>Describing Prerequistes for Accessing Things</h4>
-					<p>When private resources (things) get exposed at public-facing endpoints (Internet) then components exposing things (servients) usually demand security: exchanges have to be encrypted/signed, credentials have to be presented etc. There are 2 strategies for demanding security mechanisms:
+					<p>When private resources (e.g. things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing the things (servients) must demand security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are 2 basic strategies for demanding such security mechanisms:
 						<ul>
-							<li>A priori</li>: Callers know beforehand and make a request according the expectations of the callee. An example for this strategy are clients that use SSL/TLS because this is triggered by the URL access scheme 'https' (HTTTP-over-TLS, RFC 2818).
-							<li>A posteriori</li>: Callers do not know beforehand, make a request and are being told in the response. An example for this strategy are clients and servers that negotiate the use of SSL/TLS as part of HTTP exchanges and dynamically upgrade to TLS (TLS-in-HTTP, RFC 2817).
+							<li>A priori</li>Callers know beforehand and make requests according the expectations of the callee. A prominent example for this strategy is the 'https' access scheme in URLs. It triggers clients to employ SSL/TLS in order to send HTTP requests (HTTP-over-TLS, RFC 2818).
+							<li>A posteriori</li>Callers do not know beforehand, make a request and are being told by the callee in the response. An example for this strategy is the negotiation of the use of SSL/TLS as part of HTTP exchanges (TLS-in-HTTP, RFC 2817).
 						</ul>
-						The a posteriori-strategy places requirements on the application protocol itself esp. its error responses, not TD. The a priori-strategy places requirements on TD: TD needs to be able to express security mechanisms that callers need to fulfill. This expression shall be optional to allow usage of TD objects in deployments with a preference for the a posteriori strategy.
-						<h5>Secure Communications</h5>
-						<p>The URL access scheme allows to express the need for secure communications (SSL/TLS or DTLS). This is part of the resource endpoint URL and there is no need for TD to specify additional means. Note that http vs. https resp. coap vs. coaps is a binary/boolean style item of information while the suite of parameters that determine an SSL/TLS or DTLS session is much larger. Hence the URL access scheme does not provide a rich or full announcement of required settings. Since it is best current practice to an a posteriori apporach (inband with the security protocol) there is no need for TD to go beyond. TODO: elaborate on whether/how to express application-layer secure communications</p>
+						The a posteriori-strategy places requirements on the application protocol esp. the contents of its error responses, not TD. In case of WoT, the a priori-strategy places requirements on TD: TD needs to be able to express security mechanisms that callers have to fulfill. This expression shall be optional because WoT deployments might prefer the a posteriori-strategy and do (intentionally) not want to reveal this information in TD objects.
 						<h5>Authorization and Authentication</h5>
-						This section assumes that servients externalize complex processing tasks (around caller authentication and call authorization) to security-support components according the architectural model in IETF ACE. There is an alternative strategy (business services that internalize these tasks) but even in the non-constrained IT world the externalization is the default approach (Kerberos, OAuth, OIDC, SAML et al are incarnations of the "let something else do the work"-idea). Given the constrained nature of WoT components the internalization strategy is anticipated to be uncommon and hence is not covered. Following items are needed to inform callees about security credentials/tokens that they have to present for specific resources:
+						This section assumes that servients externalize complex processing tasks around call authorization and caller authentication to security-support components (representing online TTPs). There is an alternative strategy: business services that internalize such tasks. But even in the non-constrained World of office/enterprise/Cloud-IT it is the default approch to externalize such tasks: Kerberos, SAML, WS-*, OAuth, OID, OIDC et al. all are incarnations of the "<i>let somebody/-thing else do the work</i>"-idea. Given the constrained nature of WoT the internalization strategy is anticipated to be uncommon in WoT and hence is not covered here. Following items are needed to inform callees about security credentials/tokens that they have to present for specific resources:
 						<ul>
-							<li>Type/category of security token</li>: Callers need to know which type(s) or categories of security tokens they need to apply for. An individual security token type or category is assumed to expressed by a URN (in the namespace of the security token issuer). 
-							<li>Protection model for security token</li>: Callers need to know the protection model of the security tokens they need to apply for: bearer token are submitted in a opaque fashion, for PoP tokens an authenticator has to be created by the caller.
-							<li>Issuing authority of the security token</li>: Callers need to know the authority where they need to apply for security tokens. This includes information about their endpoints and supported protocols
+							<li>Issuing authority of the security token</li>Callers need to know about the online TTP component where they need to apply for security tokens. This includes information about their configuration encompassing endpoints and supported protocols.
+							<li>Type/category of security token</li>Callers need to know which type(s) or categories of security tokens they need to apply for. An individual security token type or category is assumed to expressed by a URN (in the namespace of the security token issuer). 
+							<li>Protection model for security token</li>Callers need to know the protection model of the security tokens they need to apply for. Note that bearer token are submitted in a opaque fashion, for PoP tokens an authenticator has to be created by the caller.
 						</ul>
-						TODO: create/align text, consider relation to resources 
+						<h5>Secure Communications</h5>
+						<h6>Transient Protection, Transport-Level Security</h6>
+						<p>The URL access scheme allows to express the need for secure communications (SSL/TLS or DTLS). This is part of the resource endpoint URL and there is no need for TD to specify any additional means. 
+						Note that 'http' vs. 'https' resp. 'coap' vs. 'coaps' carries only boolean information. The suite of parameters that determine SSL/TLS or DTLS sessions is much larger (encompassing authentication modes and related information, encryption/signature strategies). Hence the URL access scheme does not provide a full or even rich announcement of the required settings. Since it is the best current practice in IT to rely on a simple a priori trigger (in URL access scheme) and do the rest of the work accordng the a posteriori-apporach (inband with the security protocol) there is no need for TD resp. WoT to go beyond.</p>
+						<h6>Persited Protection, Application-Level Security</h6>
+						Application-level security providing persisted protection is usually handled by specifications/conventions in the application domain. This uses specific media types such as application/json for JSON-plain and application/jose for protected JSON objects (JWS/JWE). Note that application/cbor does exist but there is not yet a IANA registration for "application/cose" (as of 2016-02-21, see http://www.iana.org/assignments/media-types). 
+						<b></b>TODO (@TF TD): the datatype part in XML Schema (https://www.w3.org/TR/xmlschema11-2/) seems to be short with respect to being able to speak about cryptographically transformed data (see RFC 7193 for e.g. application/cms). It seems hard to impossible to allow callees to express security requirements wrt to persitent application-level security based on that. I suggest to either disclaim this case or allow richer data types</b>
 					</p>
 				</section>
-
 			</section>
 
 			<section>
