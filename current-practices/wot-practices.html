@@ -339,9 +339,19 @@
 
 				<section>
 					<h3>Security Considerations</h3>
-					<p>Following security concerns apply to </p>
-
-					@TODO How to use protocols correctls (e.g., (D)TLS info)
+					<p>The purpose of WoT is to expose private resources (things themselves, information they produce or information about them) at public-facing endpoints (e.g. Internet). This implies that the components which are exposing things (servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are needed here:
+						<ul>
+							<li>Authorization and authentication</li>When receiving an instruction, servients must authorize such calls/requests i.e. determine whether or not to accept them for processing. This implies the need to authenticate properties of the caller that are used when performing authorization.
+							<li>Secure communications</li>When exchanging sensitive resources/information over a shared network, servients must demand encrypting/signing corresponding message exchanges.
+						</ul>
+						<h4>Authorization and Authentication</h4>
+						TODO
+						<h4>Secure Communications</h4>
+						Communication security can be implemented in a transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE)<br/>
+						Transport-level security has a long heritage it IT and presents a well-understood means in Web security that is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/>
+						Some WoT deployments may have requirements that do not match TLS and DTLS constraints, for instance group-oriented communication security. It might also be the case that (severely) constrained WoT components can bear the overhead that is implied by TLS and DTLS protocols. This is where persistent, application-level security can help to achieve communication security. In contrast to transport-level security, application-level security allows to apply cryptographic transformations in a specific/granular manner (affecting some but not all exchanged data objects) and thereby reducing the processing burden.<br/>
+						In case security tokens are to be used in cases where transport-level security can not be used, application-level security offers means to provide PoP for security tokens as well as authenticity for message exchanges.
+					</p>
 				</section>
 			</section>
 
