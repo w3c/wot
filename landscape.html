@@ -379,8 +379,7 @@
       </section>
       <section>
       	<h2>Mechanisms' State-of-the-Art</h2>
-        <p>TODO: incorporate <a href="https://github.com/w3c/wot/blob/master/IG-SP/SecurityPrivacyLandscape.md">Security&Privacy Landscape working draft in Github</a></p>
-        
+        <p>The table below surveys security and privacy mechanisms for WoT and identifies their evolution stage (as of 2016-02-22):</p>
 <table><thead>
 <tr>
 <th>-</th>
@@ -394,8 +393,7 @@
 <th>Data Origin Authentication, Integrity</th>
 <th>Credentialing</th>
 <th>Provisioning</th>
-<th>Rate Limitations</th>
-<th>Intrusion Detection and Prevention</th>
+<th>Status</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -410,8 +408,7 @@
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF draft (individual submission to IETF oauth WG)</td>
 </tr>
 <tr>
 <td>OATH</td>
@@ -425,8 +422,7 @@
 <td>-</td>
 <td>Addressed (symmetric key containers and provisioning of symmetric keys)</td>
 <td>-</td>
-<td>Side concern (throttling for event-based schemes)</td>
-<td>-</td>
+<td>IETF standards</td>
 </tr>
 <tr>
 <td>OpenID Connect</td>
@@ -440,8 +436,7 @@
 <td>-</td>
 <td>See OAuth</td>
 <td>See OAuth</td>
-<td>-</td>
-<td>-</td>
+<td>OpenID Forum standards</td>
 </tr>
 <tr>
 <td>JWT</td>
@@ -455,8 +450,21 @@
 <td>-</td>
 <td>-</td>
 <td>-</td>
+<td>IETF standard</td>
+</tr>
+<tr>
+<td>CWT</td>
 <td>-</td>
 <td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (reports about [initial] authentication events)</td>
+<td>Side concern (allows to transfer and sustain information about authentication events)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>IETF draft (individual submission to IETF ace WG)</td>
 </tr>
 <tr>
 <td>FIDO</td>
@@ -470,23 +478,7 @@
 <td>-</td>
 <td>Side concern (defines the creation/supply of public/private keys to FIDO clients)</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>TWAI</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td><strong>Core objective</strong> (supports server and client authentication on application level)</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>Submitted to W3C</td>
 </tr>
 <tr>
 <td>OAuth</td>
@@ -500,8 +492,7 @@
 <td>-</td>
 <td>Side concern (registration/management of OAuth clients)</td>
 <td>Side concern (registration/management of OAuth clients)</td>
-<td>-</td>
-<td>-</td>
+<td>IETF standards</td>
 </tr>
 <tr>
 <td>OAuth-for-CoAP</td>
@@ -515,23 +506,7 @@
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>UMA-for-CoAP</td>
-<td>As for native UMA</td>
-<td>-</td>
-<td>As for native UMA</td>
-<td>As for native UMA</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF working group draft (IETF ace WG)</td>
 </tr>
 <tr>
 <td>DCAF</td>
@@ -545,23 +520,7 @@
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>CoRE Authz</td>
-<td>-</td>
-<td>-</td>
-<td><strong>Core objective</strong> (legal entities as policy management authorities)</td>
-<td><strong>Core objective</strong> (push or pull model, CoAP)</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF draft (individual submission to IETF ace WG)</td>
 </tr>
 <tr>
 <td>DTLS</td>
@@ -575,8 +534,7 @@
 <td><strong>Core objective</strong> (transport-level signature)</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF standard</td>
 </tr>
 <tr>
 <td>DICE</td>
@@ -590,8 +548,7 @@
 <td>As for DTLS</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF working group draft (IETF dice WG)</td>
 </tr>
 <tr>
 <td>JOSE</td>
@@ -605,8 +562,7 @@
 <td><strong>Core objective</strong> (application-level signature, JSON)</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF standards</td>
 </tr>
 <tr>
 <td>COSE</td>
@@ -620,8 +576,7 @@
 <td><strong>Core objective</strong> (application-level signature, CBOR)</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF working group draft (IETF dice WG)</td>
 </tr>
 <tr>
 <td>OSCOAP</td>
@@ -635,8 +590,7 @@
 <td><strong>Core objective</strong> (application-level signature, CBOR or JSON)</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
+<td>IETF working group draft (IETF ace WG)</td>
 </tr>
 <tr>
 <td>SCIM</td>
@@ -650,8 +604,7 @@
 <td>-</td>
 <td>-</td>
 <td><strong>Core objective</strong> (manage metadata about system actors-not limited to users)</td>
-<td>-</td>
-<td>-</td>
+<td>IETF standards</td>
 </tr>
 </tbody></table>
      
