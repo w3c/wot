@@ -380,6 +380,281 @@
       <section>
       	<h2>Mechanisms' State-of-the-Art</h2>
         <p>TODO: incorporate <a href="https://github.com/w3c/wot/blob/master/IG-SP/SecurityPrivacyLandscape.md">Security&Privacy Landscape working draft in Github</a></p>
+        
+<table><thead>
+<tr>
+<th>-</th>
+<th>Informational Self-Determination</th>
+<th>Anonymization, Pseudonymization</th>
+<th>Authorization Management</th>
+<th>Authorization Enforcement</th>
+<th>Initial Authentication</th>
+<th>Single-Sign-On</th>
+<th>Confidentiality</th>
+<th>Data Origin Authentication, Integrity</th>
+<th>Credentialing</th>
+<th>Provisioning</th>
+<th>Rate Limitations</th>
+<th>Intrusion Detection and Prevention</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>UMA</td>
+<td><strong>Core objective</strong> (through user-managed authorizations)</td>
+<td>-</td>
+<td>Addressed (users as primary policy management authorities)</td>
+<td>Addressed (push model, HTTP)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OATH</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (time, event or challenge-based OTP schemes)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Addressed (symmetric key containers and provisioning of symmetric keys)</td>
+<td>-</td>
+<td>Side concern (throttling for event-based schemes)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OpenID Connect</td>
+<td>Side concern (users decide if their identity information is supplied to relying parties</td>
+<td>Implementation-specific</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (requests reports about [initial] authentication events)</td>
+<td><strong>Core objective</strong> (SSO across organizations/domains and in the same domain)</td>
+<td>-</td>
+<td>-</td>
+<td>See OAuth</td>
+<td>See OAuth</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>JWT</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (reports about [initial] authentication events)</td>
+<td>Side concern (allows to transfer and sustain information about authentication events)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>FIDO</td>
+<td>-</td>
+<td><strong>Core objective</strong> (uses long-lived public key associations instead user names/identifiers)</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (framework for initial user authentication in the Web)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Side concern (defines the creation/supply of public/private keys to FIDO clients)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>TWAI</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (supports server and client authentication on application level)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OAuth</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (users or legal entities as policy management authorities)</td>
+<td><strong>Core objective</strong> (push model, HTTP)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Side concern (registration/management of OAuth clients)</td>
+<td>Side concern (registration/management of OAuth clients)</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OAuth-for-CoAP</td>
+<td>-</td>
+<td>-</td>
+<td>Core objective (legal entities as policy management authorities)</td>
+<td>Core objective (push model, CoAP)</td>
+<td>- (DTLS-based client authentication)</td>
+<td>- (no user actor)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>UMA-for-CoAP</td>
+<td>As for native UMA</td>
+<td>-</td>
+<td>As for native UMA</td>
+<td>As for native UMA</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DCAF</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (legal entities as policy management authorities)</td>
+<td><strong>Core objective</strong> (push model, CoAP)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CoRE Authz</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (legal entities as policy management authorities)</td>
+<td><strong>Core objective</strong> (push or pull model, CoAP)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DTLS</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (transport-level client/server authentication)</td>
+<td>- (does not define the transfer of authentication state across network servers)</td>
+<td><strong>Core objective</strong> (transport-level message encryption)</td>
+<td><strong>Core objective</strong> (transport-level signature)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DICE</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>As for DTLS</td>
+<td>-</td>
+<td>As for DTLS</td>
+<td>As for DTLS</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>JOSE</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (application-level encryption, JSON)</td>
+<td><strong>Core objective</strong> (application-level signature, JSON)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>COSE</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (application-level encryption, CBOR)</td>
+<td><strong>Core objective</strong> (application-level signature, CBOR)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OSCOAP</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (application-level encryption, CBOR or JSON)</td>
+<td><strong>Core objective</strong> (application-level signature, CBOR or JSON)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SCIM</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (manage metadata about system actors-not limited to users)</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+     
       </section>
       <section>
       	<h2>Summary</h2>
