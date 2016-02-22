@@ -146,7 +146,15 @@
           </li>
           <li>HTTP/2 <b>(IRTF to provide input)</b></li>
           <li>Websocket <b>(Dave Raggett)</b></li>
-          <li>WebRTC <b>(Claes)</b></li>
+          <li>WebRTC (<a href="https://www.w3.org/TR/webrtc/">W3C WebRTC 1.0</a>)
+            <ul>
+              <li>Enables direct, i.e. without passing a server, peer to peer connectivity</li>
+              <li>However, servers are needed to set up the peer-to-peer connection and to cope with NATs and firewalls</li>
+              <li>Supports media streaming and data communication</li>
+              <li>WebRTC is exposed to web apps through the W3C WebRTC APIs in web browsers (Chrome, Firefox, Opera) and to native apps in Android and IoS. This enables direct media streaming and data communication between web apps and mobile apps located in distant devices</li>
+              <li>No plugins are needed to support WebRTC</li>
+            </ul>
+          </li>          
           <li>CoAP (<a href="https://tools.ietf.org/html/rfc7252">RFC&nbsp;7252</a>)
             <ul>
               <li>REST implementation (client/server, stateless, uniform interfaces, caching, layered/intermediaries)</li>
