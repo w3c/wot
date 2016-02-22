@@ -68,25 +68,25 @@ This section digests state-of-the-art of security and privacy means for WoT.
 ## Overall
 This section captures the matching between the considered security and privacy requirements (see [here](SecurityPrivacyRequirements.md)) as well as the assessed means (see [here]( https://www.w3.org/WoT/IG/wiki/Design-Time_Security%26Privacy_Means)). This section is meant to provide a compass for WoT projects. For more details see below.
 
-   -   | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Rate Limitations | Intrusion Detection and Prevention
------- | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- | -----------------------------
-UMA | **Core objective** (through user-managed authorizations)  | - | Addressed (users as primary policy management authorities) | Addressed (push model, HTTP)  | - | - | - | - |  - |  - | - | -
-OATH | - | - | - | - |  **Core objective** (time, event or challenge-based OTP schemes)  | - | - | - |  Addressed (symmetric key containers and provisioning of symmetric keys) | - | Side concern (throttling for event-based schemes) | -
-OpenID Connect | Side concern (users decide if their identity information is supplied to relying parties | Implementation-specific  | - | - |  **Core objective** (requests reports about [initial] authentication events) | **Core objective** (SSO across organizations/domains and in the same domain)  | - | - |  See OAuth  |  See OAuth  | - | -
-JWT | - | - | - | - | **Core objective** (reports about [initial] authentication events)  | Side concern (allows to transfer and sustain information about authentication events) | - | - | - | - | - | -
-FIDO | - | **Core objective** (uses long-lived public key associations instead user names/identifiers)  | - | - | **Core objective** (framework for initial user authentication in the Web)  | - | - | - |  Side concern (defines the creation/supply of public/private keys to FIDO clients) | - | - | -
-TWAI | - | - | - | - |  **Core objective** (supports server and client authentication on application level)  | - | - | - |  - |  - | - | -
-OAuth | - | - | **Core objective** (users or legal entities as policy management authorities)  | **Core objective** (push model, HTTP)  | - | - | - | - |  Side concern (registration/management of OAuth clients)  | Side concern (registration/management of OAuth clients)  | - | -
-OAuth-for-CoAP | - | - | Core objective (legal entities as policy management authorities) | Core objective (push model, CoAP) |  - (DTLS-based client authentication) | - (no user actor) | - | - |  - |  - | - | -
-UMA-for-CoAP | As for native UMA  | - | As for native UMA  | As for native UMA  | - | - | - | - | - | - | - | -
-DCAF | - | - | **Core objective** (legal entities as policy management authorities)  | **Core objective** (push model, CoAP) | - | - | - | - | - | - | - | -
-CoRE Authz | - | - | **Core objective** (legal entities as policy management authorities) | **Core objective** (push or pull model, CoAP)  | - | - | - | - | - | - | - | -
-DTLS | - | - | - | - | **Core objective** (transport-level client/server authentication) | - (does not define the transfer of authentication state across network servers) | **Core objective** (transport-level message encryption) | **Core objective** (transport-level signature) | - | - | - | -
-DICE | - | - | - | - | As for DTLS  | - | As for DTLS | As for DTLS | - | - | - | -
-JOSE | - | - | - | - | - | - | **Core objective** (application-level encryption, JSON)  | **Core objective** (application-level signature, JSON)  | - | - | - | -
-COSE | - | - | - | - | - | - | **Core objective** (application-level encryption, CBOR)  | **Core objective** (application-level signature, CBOR)  | - | - | - | -
-OSCOAP | - | - | - | - | - | - | **Core objective** (application-level encryption, CBOR or JSON)  | **Core objective** (application-level signature, CBOR or JSON)  | - | - | - | -
-SCIM | - | - | - | - | - | - | - | - | - | **Core objective** (manage metadata about system actors-not limited to users)  | - | -
+   -   | Informational Self-Determination | Anonymization, Pseudonymization | Authorization Management | Authorization Enforcement |  Initial Authentication | Single-Sign-On | Confidentiality | Data Origin Authentication, Integrity |  Credentialing |  Provisioning | Remark
+------ | -------------------------------- | ------------------------------- | ------------------------ | ------------------------- |  -------------- | -------------- | --------------- | ------------------------------------- |  ------------- |  ------------ | ----------- 
+UMA | **Core objective** (through user-managed authorizations)  | - | Addressed (users as primary policy management authorities) | Addressed (push model, HTTP)  | - | - | - | - |  - |  - | - 
+OATH | - | - | - | - |  **Core objective** (time, event or challenge-based OTP schemes)  | - | - | - |  Addressed (symmetric key containers and provisioning of symmetric keys) | - | -
+OpenID Connect | Side concern (users decide if their identity information is supplied to relying parties | Implementation-specific  | - | - |  **Core objective** (requests reports about [initial] authentication events) | **Core objective** (SSO across organizations/domains and in the same domain)  | - | - |  See OAuth  |  See OAuth  | - 
+JWT | - | - | - | - | **Core objective** (reports about [initial] authentication events)  | Side concern (allows to transfer and sustain information about authentication events) | - | - | - | - | - 
+FIDO | - | **Core objective** (uses long-lived public key associations instead user names/identifiers)  | - | - | **Core objective** (framework for initial user authentication in the Web)  | - | - | - |  Side concern (defines the creation/supply of public/private keys to FIDO clients) | - | - 
+TWAI | - | - | - | - |  **Core objective** (supports server and client authentication on application level)  | - | - | - |  - |  - | -
+OAuth | - | - | **Core objective** (users or legal entities as policy management authorities)  | **Core objective** (push model, HTTP)  | - | - | - | - |  Side concern (registration/management of OAuth clients)  | Side concern (registration/management of OAuth clients)  | - 
+OAuth-for-CoAP | - | - | Core objective (legal entities as policy management authorities) | Core objective (push model, CoAP) |  - (DTLS-based client authentication) | - (no user actor) | - | - |  - |  - | - 
+UMA-for-CoAP | As for native UMA  | - | As for native UMA  | As for native UMA  | - | - | - | - | - | - | - 
+DCAF | - | - | **Core objective** (legal entities as policy management authorities)  | **Core objective** (push model, CoAP) | - | - | - | - | - | - | - 
+CoRE Authz | - | - | **Core objective** (legal entities as policy management authorities) | **Core objective** (push or pull model, CoAP)  | - | - | - | - | - | - | - 
+DTLS | - | - | - | - | **Core objective** (transport-level client/server authentication) | - (does not define the transfer of authentication state across network servers) | **Core objective** (transport-level message encryption) | **Core objective** (transport-level signature) | - | - | - 
+DICE | - | - | - | - | As for DTLS  | - | As for DTLS | As for DTLS | - | - | - 
+JOSE | - | - | - | - | - | - | **Core objective** (application-level encryption, JSON)  | **Core objective** (application-level signature, JSON)  | - | - | - 
+COSE | - | - | - | - | - | - | **Core objective** (application-level encryption, CBOR)  | **Core objective** (application-level signature, CBOR)  | - | - | - 
+OSCOAP | - | - | - | - | - | - | **Core objective** (application-level encryption, CBOR or JSON)  | **Core objective** (application-level signature, CBOR or JSON)  | - | - | - 
+SCIM | - | - | - | - | - | - | - | - | - | **Core objective** (manage metadata about system actors-not limited to users)  | - 
 
 ## Clusters
 This section presents the WoT security and privacy landscape according the considered requirements (see [here](SecurityPrivacyRequirements.md) ).
