@@ -300,7 +300,11 @@
           <h2> Client-Side scripting APIs</h2>
           <ul>
             <li> W3C fetch API </li>
-            <li> Presentation API <a href="http://w3c.github.io/presentation-api/">W3C Presentation API</a> <b>(Louay?)</b></li>
+            <li> <a href="http://w3c.github.io/presentation-api/">W3C Presentation API</a>: The <a href="https://www.w3.org/2014/secondscreen/">W3C Second Screen Working Group</a> works on a specification of an API that enables web content to access external presentation displays and use them for presenting web content. The specification aims to make presentation displays such as projectors or connected TVs, available to the Web and takes into account displays that are attached using wired (HDMI, DVI, or similar) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, or similar), but the Presentation API abstracts from these underlying protocols. It allows Browser vendors to implement the API on top of different protocols. The specification describes the conformance criteria for two classes of user agents:</b>
+            Controlling user agent: Web browsers that conform to the specifications of a controlling user agent must be able to monitor the availability of presentation displays, start new presentations, join or reconnect to running presentations and to exchange messages and binary data with presentations.</b>
+            Receiving user agent: Web browsers that conform to the specifications of a receiving user agent must be able to render presentations by providing the necessary inferfaces to accept launch or join requests from controlling user agents and to exchange messages and binary data with controlling pages.</b>
+            The concept of the Presentation API is relevant to the work of the this group since the WoT Thing API is intended to offer an API that abstracts from the underlying IoT protocols. The Presentation API can be seen as a concrete case of the generic Thing API if we consider presentation displays as kind of things that provide Thing Description with the necessary set of actions, properties and events to start and control presentations.  
+            </li>
             <li> Geolocation API <b>(Kaz to outreach chair)</b></li>
             <li> NFC &amp; Bluetooth API <b>(Kaz to outreach)</b></li>
           </ul>
@@ -332,14 +336,14 @@
       <h2>Tech landscape for Security&Privacy</h2>
       <p>While things may be of low value (say <50$) they can control (parts of) high value assets such as smart locks controlling access to homes or offices/factories. WoT aims at exposing the functonality of such things at public-facing endpoints in the Internet/Web. This establishes <b>security</b> as a top concern for WoT.<br/><br/>
       Things can reveal/expose data related to user habits such as lightning/heating practices or the human body such as heartbeat rates. This establishes <b>privacy</b> as another top concern for WoT. In the first place this refers to things owned/used by individuals esp. consumer goods. Privacy can also concern things owned/used by legal entities e.g. capital/investment goods such as health care equipment. But not all things owned/used by legal entities are subject to privacy concerns. There also are WoT scenarios which do not process individual user data such as industrial control systems.<br/><br/>
-      This chapter sketches the security&privacy landscape for WoT.</p>
+      This chapter provides the security&privacy landscape for WoT.</p>
       <section>
       	<h2>Takeaway</h2>
         <p>The WoT provides distributed IT-systems. The study of protecting distributed IT-systems started soon after their invention i.e. in the 60/70ies. So there is lots of prior art for security&privacy - collectively providing the current toolbox. But WoT needs security&privacy tools that are not yet present in the current toolbox. New security&privacy tools for WoT will come in 2 forms:
         <ul><li>New tools that change form-factors of existing tools (smaller, lighter...) i.e. tools doing known tricks in new forms</li>
         <li>New tools doing new tricks</li></ul>
         These new security&privacy tools need to come as (broadly resp. industry/domain-wide accepted) standards. These standards do not yet exist, they do emerge right now. 
-        This chapter further elaborates on this hypothesis.</p>
+        This chapter elaborates on this hypothesis.</p>
       </section>
       <section>
       	<h2>Inclusion of Physical Goods</h2>
@@ -372,8 +376,8 @@
       </section>
       <section>
       	<h2>Distribution of Complexity</h2>
-        <p>Authorization and authentication mechanisms for distributed IT-System security invented <2010 e.g. Kerberos and SAML happen to distribute logical and computational complexity quite evenly over client and server components.<br/><br/>
-        This was a major issue for the app/API economy where 3rd party developers create components (e.g. mobile apps) that interact with services provided by other parties. To overcome this obstacle the new generation security resp. security-enabling technologies invented >2010 (e.g. OAuth, SCIM) distributes complexity unevenly:
+        <p>Mechanisms invented <2010 for distributed IT-System security e.g. Kerberos, SSL/TLS, SAML happen to distribute logical and computational complexity quite evenly over client and server components.<br/><br/>
+        This was a major issue for the app/API economy where 3rd pary developes create components (e.g. mobile apps) that interact with services provided by other parties. To overcome this obstacle the new generation security resp. security-enabling technologies invented >2010 (e.g. OAuth, SCIM) distributes complexity unevenly:
         <ul><li>The server or responder-side (e.g. OAuth authorization server) usually is as complex as in classical approaches (e.g. SAML IdP)</li>
         <li>The client or requestor-side (e.g. OAuth client) complexity is orders of magnitude smaller than in classical approaches (e.g. SAML RP) This simplifies the security resp. security-enabling stack that has to be provided on client-side. This new approach provides a better fit for WoT than technologies with an even distribution of complexity.</li></ul></p>
       </section>
@@ -660,10 +664,10 @@
       	<h2>Summary</h2>
         <p>As of today there are no commonly accepted protocol standards for authenticating and authorizing things resp. devices. Current projects do either not address these challenges or create silo’ed solutions. The IETF ACE working group happens to be the leading initiative in order to overcome this limitation:
         <ul><li>ACE has a sound problem statement and high-level approach</li>
-        <li>But ACE does not yet provide a solution - for the time being a plethora of not-yet-integrated approaches for expressing access tokens as well as acquiring them in request/response protocols are being discussed as of now. The current stage of elaboration might be regarded "brainstorming". Moreover, questions around system dynamics and bootstrapping are not yet fully illuminated. This includes aspects such as creation/management of token issuance policies (in a possibly automated fashion), protecting component (self-)registration, managing the authorization to authorize, things discovery authorization
+        <li>But ACE does not yet provide a solution - for the time being a plethora of not-yet-integrated approaches for expressing access tokens as well as acquiring them in request/response protocols (see here ) are being discussed. The current stage of elaboration might be regarded "brainstorming". Moreover, questions around system dynamics and bootstrapping are not yet fully illuminated. This includes aspects such as creation/management of token issuance policies (in a possibly automated fashion), protecting component (self-)registration, managing the authorization to authorize, things discovery authorization
         </li></ul>
         From the perspective of the W3C IG WoT the protocol standards for authenticating and authorizing things resp. devices should address/enable:
-        <ul><li>A variety of security token types for different application domains(CoAP...)/use cases(consumer/industry)/security models(encryption/signing, bearer/PoP security models)/encodings (JSON, CBOR...)/topologies (3/4/n-party)/delivery models (by-value, by-ref). The corresponding ecosystem needs to be extensible (create-your-own security token type in case the already defined ones do not solve your issue)</li>
+        <ul><li>A variety of security token types for different application domains(CoAP...)/use cases(consumer/industry)/security models(enc/sign, bearer/PoP)/encodings (JSON, CBOR...)/topologies (3/4/n-party)/delivery models (by-value, by-ref). The corresponding ecosystem needs to be extensible (create-your-own security token type in case the already defined ones do not solve your issue)</li>
         <li>A (single) request/response framework for acquiring and handling such tokens with different protocol bindings (HTTP/CoAP...). Request/response messages and security token (type) specifications should be decoupled i.e. the same request/response framework should allow the handling of various security token types. The corresponding framework needs to be extensible (create-your-own exchange in case the already defined ones do not solve your issue)</li></ul>
         For secure communications on transport-level, DTLS as well as TLS present commonly accepted standards. Their profiling/optimization for constrained devices and networks is a task that is currently ongoing. Note that securing communications on transport-level comes with limitations in the end-to-end security span which is achievable. For secure communications on application-level and secure storage, standards do exist for representing encrypted and signed data in JSON (a form-factor not suitable for very constrained components). Corresponding work is ongoing for CBOR (a form-factor suitable for very constrained components).<br/><br/>
         Moreover there are no commonly accepted standards for registering things resp. devices and supplying identity (meta-)data and credentials about things resp. devices as of now.</p>
