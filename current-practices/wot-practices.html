@@ -365,8 +365,8 @@
 						</ul>
 						The security token acquisition is more complex part of this trick. The servient components trigger exchanges between callers and their online TTP but are not involved during their execution. The requesting party may also introduce further online TTP components to support e.g. constrained callers or clients. Obviously the online TTPs need to respect the capabilities of the actual caller or its proxy. In addition to that a continental divide exists between following scenarios:
 						<ul>
-							<li>Consumer goods, owned by individual end users</li>TODO
-							<li>Capital goods, owned by legal entities</li>TODO
+							<li>Consumer goods, owned by individual end users</li>Authorization is often conducted according a lazy policing model: access requests happen first, then the resource owner (an individual) is asked for an authorization (whether she can be assumed to be online does matter). This results in an authorization policy that is build-up dynamically 
+							<li>Capital goods, owned by legal entities</li>Authorization is mostly conducted according a preemtive policing model: a (static) authorization policy is provided, then access request happen and authorization decisions are rendered without assuming any interaction with the resource ownwer or a representative
 						</ul>
 						Both cases distribute work unevenly over servients and their callers; both sides have fundamentally differnt working tasks and workloads in authorization and authentication:
 						<ul>
