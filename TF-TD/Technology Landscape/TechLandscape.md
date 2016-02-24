@@ -223,29 +223,29 @@ Serialization formats suitable for representing Thing Descriptions are surveyed 
   - **Tool/Development Support:** yes (see https://www.w3.org/XML/EXI/#implementations)
   - **Data Types-aware encoding:** yes, based on XSD
   - **Binary Format:** yes
-  - **Compression:** very high
-  - **Small memory footprint:** yes
+  - **Compression:** Very High. EXI compaction works more effective than ASN.1 PER in cases of smaller files for which ASN.1 is known to work pretty well. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.
+  - **Small memory footprint:** EXI uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. When a schema is available, EXI derives grammar from the schema. Simple schemas result in small set of EXI grammars.
   - **Context-aware encoding:** yes
 
 ### [EXI for JSON](https://www.w3.org/TR/exi-for-json/) (Taki)
-  - **Background of the technology:** Binary serialization format for JSON data model based on EXI approach
+  - **Background of the technology:** Binary serialization format for JSON data model based on EXI
   - **Consortium:** W3C
   - **Tool/Development Support:** yes (e.g., [JavaScript playground](http://exificient.github.io/javascript/demo/processJSON.html?SharedStrings=true) with context knowledge, Java [library](https://github.com/EXIficient/exificient-for-json) and [GUI](https://github.com/EXIficient/exificient-gui), [C implementation](https://github.com/EXIficient/exificient-for-json.c))
   - **Data Types-aware encoding:** yes (string, float, boolean, array, null, integer, decimal, binary, date, dateTime, time)
   - **Binary Format:** yes
-  - **Compression:** very high
-  - **Small memory footprint:** yes
-  - **Context-aware encoding:**
+  - **Compression:** Very high. EXI for JSON compaction works more effective than comparative formats such as CBOR and BSON. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.
+  - **Small memory footprint:** EXI for JSON uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. EXI grammars used in EXI for JSON derives from a simple schema, resulting in small set of EXI grammars.
+  - **Context-aware encoding:** No
 
 ### [JSON](http://www.json.org/) (Taki)
-  - **Background of the technology:** An attribute value-pair format to transmit data objects.
+  - **Background of the technology:** Lightweight language independent data format originally based on JavaScript programming language
   - **Consortium:**  	RFC 7159 and ECMA-404
-  - **Tool/Development Support:** yes
+  - **Tool/Development Support:** yes (see http://json.org/)
   - **Data Types-aware encoding:** supports limited type assignment (number, string, boolean, array, null), however, each value is presented in plain-text in JSON document
-  - **Binary Format:** no
-  - **Compression:** no compression (plain-text representation)
-  - **Small memory footprint:** not feasible for constrained devices
-  - **Context-aware encoding:** no
+  - **Binary Format:** No
+  - **Compression:** Some limited compaction is often possible by removing redundant whitespaces. For repetitive data, a technique based on refactoring also may help making JSON data a little more compact. (e.g. [jsonpack](https://www.npmjs.com/package/jsonpack)).
+  - **Small memory footprint:** Not feasible for highly constrained devices
+  - **Context-aware encoding:** No
 
 ### [JSON-LD](http://json-ld.org/) (Victor)
   - **Background of the technology:** JSON-based serialization format for Linked
