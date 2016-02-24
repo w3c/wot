@@ -104,7 +104,7 @@
         <h2> Data model &amp; Vocabulary &amp; TD Model</h2>
       </section>
       <section>
-        <h2> Respresentation</h2>
+        <h2> Representation</h2>
       </section>
       <section>
         <h2> Datatype description</h2>
@@ -218,18 +218,27 @@
                 </li>
               </ul>
             </li>
-            <li>IETF Constrained RESTful Environments (CoRE)</li>
+            <li>IETF Constrained RESTful Environments (CoRE)
               <ul>
               	<li>Adjunct specifications and recommendations around CoAP</li>
               	<li>Provide an ecosystem for mainly RESTful IoT applications (but also <a href="https://tools.ietf.org/html/draft-koster-core-coap-pubsub">pub-sub</a> for instance)</li>
               	<li>Usually also applicable to HTTP (except for CoAP-specific features, e.g., involving observe)</li>
               	<li>Building blocks:
               	  <ul>
-                    <li>CoRE Link Format (<a href="https://tools.ietf.org/html/rfc6690">RFC&nbsp;6690</a>): Format for collection of <a href="https://tools.ietf.org/html/rfc5988">Web links</a> with additional attributes, e.g., resource type (<pre>rt</pre>) as semantic tag and interface (<pre>if</pre>) for interaction type labels</li>
+                    <li>CoRE Link Format (<a href="https://tools.ietf.org/html/rfc6690">RFC 6690</a>): Format for collection of <a href="https://tools.ietf.org/html/rfc5988">Web links</a> with additional attributes, e.g., resource type (<pre>rt</pre>) as semantic tag and interface (<pre>if</pre>) for interaction type labels</li>
                     <li>CoRE Resource Directory (<a href="https://tools.ietf.org/html/draft-ietf-core-resource-directory">I-D</a>): Registry for devices (and services) that supports updates, de-registration, and various look-ups as well as availability management (registration lifetime, heart beats)</li>
                     <li>CoAP over TCP/TLS (<a href="https://tools.ietf.org/html/draft-ietf-core-coap-tcp-tls">I-D</a>): CoAP transport binding for legacy networks (IPv4, NATs, middleboxes) and point-to-point use cases</li>
                     <li>CoRE Interfaces (<a href="https://tools.ietf.org/html/draft-ietf-core-interfaces">I-D</a>): Collection of reusable interface definitions and patterns</li>
                     <li>CoAP PubSub (<a href="https://tools.ietf.org/html/draft-koster-core-coap-pubsub">individual I-D</a>): Publish-Subscribe mechanism modelled with CoAP methods</li>
+                    <li>CoMI (<a
+                    href="https://tools.ietf.org/html/draft-vanderstok-core-comi">individual
+                    I-D</a>): CoAP Management Interface, enables the
+                    use and manipulation of datastores described by
+                    YANG modules over CoAP (HTTP version is called
+                    RESTCONF).  YANG (<a
+                    href="https://tools.ietf.org/html/rfc6020">RFC 6020</a>)
+                    is IETF's data
+                    modeling language used for all recent device/network management work.</li>
                   </ul>
                 </li>
               </ul>
