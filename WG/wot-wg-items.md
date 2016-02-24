@@ -3,6 +3,8 @@
 to comment, please add an issue or send a pull request.
 Direct link for a pull request: https://github.com/w3c/wot/edit/master/WG/wot-wg-items.md
 
+IMPORTANT: please check if you have IPR in the scope of the recommendation track items
+
 ## Web of Things scripting API
 
 Scope:
@@ -14,7 +16,7 @@ Scope:
     * based on TD
     * imperatively
   * Define requirements & contracts between runtime and application (e.g. callback signatures and how to attach callbacks)
-* security model and policies
+* security model and policies for scripting runtimes
 * allow for structuring an interlinking of resources
 * language-independent definitions with examples e.g. in JS
 * concept of applications spanning multiple things resp. resources
@@ -27,7 +29,7 @@ Out-of scope:
 * security frameworks and protocols
 
 Deliverables:
-* WoT API Standard Recommendation document
+* WoT API Recommendation track document
  * with API definitions e.g. in WebIDL
  * and exemplary mapping with examples in Javascript
 
@@ -47,7 +49,7 @@ Out of Scope:
 * serializations/encodings
 
 Deliverables:
-* Spec & guidelines for model and integration points
+* WG note: Spec & guidelines for model and integration points
 
 ## Thing Description
 Scope:
@@ -74,5 +76,5 @@ Out-of scope:
 * enforcement of described security mechanism
 
 Deliverables:
-* Specification document of the TD
+* Recommendation track specification document of the TD
 * TD ontology/context file and a fix URI that can be used to refer to
