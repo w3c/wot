@@ -9,7 +9,7 @@
 				  specStatus:   "unofficial"
 			  ,   editors:      [{name:"Daniel Peintner"}, {name:"Matthias Kovatsch"}]
 			  ,   authors:      [{name:"Sebastian Käbisch"}, {name:"Volunteers needed"}]
-			  ,   processVersion: 2015
+			  ,   processVersion: 2016
 			  ,   shortName:    "wot-tech"
 			  , wg:           "Interest Group on the Web of Things"
 			  , wgURI:        "http://www.w3.org/WoT/IG/"
@@ -97,63 +97,90 @@
 		<section>
 			<h2>Terminology</h2>
 			<p>This document uses the following terms defined elsewhere.</p>
-			<!--<section>
-        <h2>Definitions Example</h2>
-        <p>Note capitalization style, which should be consistent. Other W3C documents use this capitalized style.</p>
-      </section>-->
 
 			<dl>
-				<dt>
-					<dfn id="CoAP">CoAP</dfn>
-				</dt>
+				<dt><dfn>CoAP</dfn></dt>
 				<dd>Acronym for Constrained Application Protocol [[!RFC7252]]</dd>
+				
+				<dt><dfn>JSON-LD</dfn></dt>
+				<dd>A JSON document that is augmented with support for Linked Data by providing an <code>@context</code> property with a defining URI</dd>
+				
+				<dt><dfn>Repository</dfn></dt>
+				<dd>A registry for <a>TDs</a> that provides a Web interface to register TDs and look them up, for intance using SPARQL queries</dd>
+				
+				<dt><dfn>Scripting API</dfn></dt>
+				<dd>Programming interface that allows scripts to discover things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API.</dd>
+				
+				<dt><dfn data-lt="servient|servients">Servient</dfn></dt>
+				<dd>System component or application endpoint that provides a WoT API and may be in client role, server role, or both</dd>
+				
+				<dt><dfn>SPARQL</dfn></dt>
+				<dd>A query language for semantic data</dd>
+				
+				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
+				<dd>A JSON-LD document that contains semantic and functional descriptions of a thing</dd>
+				
+				<dt><dfn>WoT API</dfn></dt>
+				<dd>Resource-oriented Web interface that allows access to servients over the network using different protocols mappings</dd>
 			</dl>
-
 
 		</section>
 
 		<section>
-			<h1>Principles &amp; Basic Concepts</h1>
+			<h1>Concepts &amp; Building Blocks</h1>
+			
 			<p>
-				Describe the basic concepts and principles. Introduce the tasks etc.
+				Things in the WoT architecture are represented by so-called <a>servients</a>, which are usually hosted directly on the physical thing.
+				Yet servients can also represent virtual things, for instance a collection of things (e.g., all lights in a room) or a WoT gateway for legacy devices (e.g., a Bluetooth device connected to a smartphone).
+				In this latter case, servients are hosted anywhere, a smartphone, local gateway, or the cloud.
+				Servients communicate with each other through the so-called <a>WoT API</a>, a Web API that follows the recommendations of the WoT IG.
+				Servients can be in client role (i.e., they only consume other things), server role (i.e., they only provide capabilities), or both (i.e., they use other things, but also provide capabilities).
 			</p>
+			
+			<p>
+				Each thing (or technically each <a>servient</a>) is described by a WoT <a>Thing Description</a> (TD).
+				The TD must be acquired to use and interact with the thing, since it describes the semantics of a thing as well as its <a>WoT API</a>.
+				Usually, things directly provide their own TD, but the TD can also be hosted externally if there is not enough space on the device or when a WoT-compatible legacy device is retrofitted with a TD.
+				To ease discovery, TDs can be registered with a well-known TD <a>repository</a>, where things of interest can be queried, for instance using <a>SPARQL</a>.
+			</p>
+			
+			<p>
+				The application logic of a thing can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained things.
+				Following the patterns in the Web, however, application logic should also be provided by scripts.
+				This is supported through a scripting runtime environment&mdash;similar to the Web browser&mdash;that may be provided by a servient.
+				Portability of such scripts is ensured through a common <a>Scripting API</a> that allows access to discovery, the client and server functionality of the servient, and the hardware physically attached to the servient.
+			</p>
+			
+			<p>
+				In the following, the technical building blocks for the Web of Things are discussed on more detail.
+			</p>
+			
 			<section>
 				<h2>Thing Description</h2>
+				
 				<p>
-					In the context of WoT, networks have to face the challenge of getting ever more complex. 
-					The complexity arises as the number of interchanging heterogeneous Things and different 
-					hardware resource classes always increase. When it comes to the development and the use 
-					of such networks in the WoT domain, semantic technologies are seen as one way to tackle 
-					this complexity. For example, properties and capabilities of resource constrained embedded 
-					devices may be semantically described in order to enable an effective discovery  over different 
-					classes of devices, semantic data integration may be deployed to integrate data produced by 
-					these devices, or Things may be empowered to reason about semantic data in the context of WoT 
-					applications. 
-					
-					<p>
-					The defined Thing Description (TD) of the WoT IG provides a minimal vocabulary set for describing a Thing. More precisely, 
-					it is a semantically description of Thing’s capabilities in terms of API’s <code>Property</code>, 
-					<code>Action</code>, and <code>Event</code>. 
-					In addition, it provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.) and 
-					security considerations of resources (if it needed).
-					</p>
-					<!--The Thing Description (TD) provides a minimal vocabulary for describing a thing based on
-							<code>Metadata</code> and <code>Interactions</code>. Interactions are further divided into three
-					categories namely  <code>Property</code>, <code>Action</code>, and <code>Event</code>. -->
+					The WoT Thing Description (TD) is a <a>JSON-LD</a> document that provides a semantic description of a thing as well as a functional description of its <a>WoT API</a>.
+					For this, the WoT IG defined a minimal vocabulary set to express the capabilities of a thing in terms of <code>Properties</code>, <code>Actions</code>, and <code>Events</code>.
+					In addition, the TD provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.), representation formats, and security policies for resources.
+				</p>
+				
+				<figure id="fig-td">
+          <img src="td.svg">
+          <figcaption>Elements of a Thing Description (TD)</figcaption>
+        </figure>
+				
 				<p>
-					Figure xxx gives an overview which kind of relevant components are defined in the TD. The subsequent 
-					subsection will give a more detail explaination of the components, its content, and its relation to each other.
+					<a href="#fig-td"></a> gives an overview which kind of relevant elements are defined in the TD.
+					The subsequent subsection will give a more detail explaination of the elements, their content, and their relation to each other.
 				</p>
-				</p>
-		 
 
 	 			<section>
-					<h3>TD Components</h3>
+					<h3>TD Elements</h3>
 					<section>
 						<h3>Metadata</h3>
-						Metadata is used to provide some generic information of a Thing. There are 3 mandatory and one optional vocabulary defined within the Metadata:
+						Metadata is used to provide some generic information of a thing. There are three mandatory and one optional vocabularies defined within the Metadata:
 						 <ul> 
-						 	<li>Name: Name of the Thing</li> 
+						 	<li>Name: Name of the thing</li> 
 						 	<li>Protocol: Which kind of protocol is supported (e.g., HTTP, CoAP, XMPP, etc,)</li> 
 						 	<li>Encoding: Which kind of serialization format is supported (e.g., JSON, XML, etc.)</li>
 						 	<li>Security: [optional]  Access metadata (self-contained) of the Thing for securely transmitting information of all Thing's resources </li>
@@ -184,7 +211,7 @@
 						<p>The interaction variant Property is used to serve properties of a Thing which can be 
 						static and/or dynamic (e.g., temperature value, fill level of water, etc.).</p>
 						
-						<p>There are 4 mandatory and 2 optional vocabularies defined within the Property:</p>
+						<p>There are four mandatory and two optional vocabularies defined within the Property:</p>
 						<ul> 
 						 	<li>Name: Name of the property</li> 
 						 	<li>OutputData: Which data type is associated with this property</li> 
@@ -297,7 +324,7 @@
 			</section>
 
 			<section>
-				<h2>Web API</h2>
+				<h2>WoT API</h2>
 				<p>The API used for the communication between things, that is, the networking protocols and interfaces.</p>
 
 				<section>
