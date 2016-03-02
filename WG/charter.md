@@ -25,7 +25,7 @@ This section introduces the architecture for the Web of Things as the basis for 
 * A variety of protocols for accessing things, since no one protocol will be appropriate in all contexts
 * Linked Data for describing things as a basis for interoperability and discovery, playing an analogous role to HTML for web pages
 
-URIs can be used to access machine interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects whose events, properties and actions correspond to those of the thing the object stands for. An object on one server can act as a proxy for an object on another server. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
+URIs can be used to access machine interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects whose events, properties and actions correspond to those of the thing the object stands for. An object on one server can act as a proxy for an object on another server. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols and communication patterns best suited to the context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
 
 ![web of things servers and scripts](http://www.w3.org/2015/09/wot-arch.png)
 
@@ -33,7 +33,7 @@ The diagram shows a thing on server A that acts as a proxy for a thing on server
 
 ## Goals
 
-This Working Group will define Web technology standards to enable services that span IoT platforms on devices ranging from microcontrollers to cloud-based server farms, with a view to countering fragmentation and data silos, and enabling a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realise the full potential for the IoT.
+This Working Group will define Web technology standards to enable services that span IoT platforms on devices ranging from microcontrollers to cloud-based server farms, with a view to countering fragmentation, and enabling a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realise the full potential for the IoT. In short, we seek to extend the Web from a Web of pages to a Web of things.
 
 There are many possible applications across a wide range of domains, e.g. homes, offices, healthcare, cities, electrical grids, retail and manufacturing. The key to realizing the Web of Things is the metadata that provides the basis for semantic interoperability. This Working Group will focus on the metadata vocabularies that are useful across a broad range of application domains. In addition, we plan work on scripting APIs exposed to application developers, and bindings to common protocols in collaboration with the standards development organizations responsible for those protocols.
 
