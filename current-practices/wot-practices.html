@@ -734,10 +734,38 @@ if(thingId){
 				</ul>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
-					<li>How to properly handle thing description URI/IP change?</li>
-					<li>How to deal with the situation a thing changes its capabilities?</li>
-					<li>How to specify ranges and valid values within a TD more accurately?</li>
-					<li>How to share interactions of a TD across several things?</li>
+					<li>Thing Description
+						<ul>
+							<li>Protocols: how to set up IP addresses?</li>
+							<li>How to setup data types with restrictions, e.g. with ranges?</li>
+							<li>Security : Which resources has access restrictions?</li>
+							<li>How to deal with the situation a thing changes its capabilities?</li>
+							<li>How to share interactions of a TD across several things?</li>
+							<li>De-coupling: semantics / relation types from links</li>
+							<li>REST-based topics:
+								<ul>
+									<li>Resource hierarchy missing (no parentOf and/or childOf)</li>
+									<li>Relative links vs. absolute links in interaction models </li>
+								</ul>
+							</li>
+							<li>How to include more semantics / other context</li>
+						</ul>
+					</li>
+					<li>Scripting API
+						<ul>
+							<li>"Server"-side API is missing and needs to be added</li>
+						</ul>
+					</li>
+					<li>Security Findings (details can be found <a href="https://www.w3.org/WoT/IG/wiki/images/1/18/Security%26Privacy_-_Plugfest_Findings_and_Implementers_Feedback.pdf">here</a>)
+						<ul>
+							<li>The security token form-factor CWT was unavailable due to lack of signature/encryption support in current CBOR libraries</li>
+							<li>The security token form-factor JWT is versatile but lacks a standard way of  distinguishing different types</li>
+							<li>CoAP lacks adaptation of the HTTP authorization framework (RFCs 2617/7235)</li>
+							<li>CoAP stacks lack programmatic/declarative ways of telling the runtime to enforce the presence of valid security tokens (for certain resources)</li>
+							<li>WoT lacks consideration on whether that should be expressed in thing descriptions (opt. item for domains that prefer a-priori strategies)</li>
+							<li>OAuth resp. ACE miss some coverage for cross-domain cases</li>
+						</ul>
+					</li>
 				</ul>
 			</section>
 			<section>
