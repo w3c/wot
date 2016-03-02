@@ -54,6 +54,7 @@ The Working Group will seek to specify a suite of APIs exposed to applications c
 * Thing lifecycles, e.g. registering and creating things, and enabling applications to be aware of lifecycle transitions
 * Cross cutting concerns, e.g. internationalisation, accessibility and privacy
 * Error handling
+
 Where practical, APIs will be defined in ways that are independent of the choice of programming languages.
 
 ### Bindings to Common Protocols
