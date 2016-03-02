@@ -43,8 +43,8 @@ There are many possible applications across a wide range of domains, e.g. homes,
 
 * A Linked Data vocabulary for describing things in terms of the data models they expose to applications. This will include datatypes, integrity constraints, and provision for early and late binding. This cross domain vocabulary will be designed for use in combination with vocabularies for domain specific semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage inter dependencies, and is analogous the role of metadata for package management in the Linux operating system.
 * A Linked Data vocabulary for security metadata as a basis for platforms to determine how to securely interoperate. This will build upon emerging best practices for securing IoT platforms. _This is extremely vague and needs much greater precision_
-* A Linked Data vocabulary for communications metadata. This will enable platforms to determine how to interoperate given a choice of protocol, data formats and encodings, as well as different communication patterns, e.g. push, pull, pub-sub and peer to peer. Communications metadata may be needed to discribe the multiplexing of data from different sensors, different approaches to buffering data, and the interoperability requirements for communicating with battery or ambient powered devices that spend a lot of their time asleep to conserve power.
-* Serialization formats for metadata suitable for processing on resource constrained platforms and designed to appeal to application developers. This includes the definition of standard terms and their bindings to URIs in the Resource Description Framework, so that it isn't necessary for resource constrained platforms to dereference these terms when constructing the software objects corresponding to the data models for things.
+* A Linked Data vocabulary for communications metadata. This will enable platforms to determine how to interoperate given a choice of protocols, data formats and encodings, as well as different communication patterns, e.g. push, pull, pub-sub and peer to peer. Communications metadata may be needed to describe the multiplexing of data from different sensors, different approaches to buffering data, and the interoperability requirements for communicating with battery or ambient powered devices that spend a lot of their time asleep to conserve power.
+* Serialization formats and encondings for metadata suitable for processing on resource constrained platforms and designed to appeal to application developers. This includes the definition of standard terms and their bindings to URIs in the Resource Description Framework, so that it isn't necessary for resource constrained platforms to dereference these terms when constructing the software objects corresponding to the data models for things. Where practical this will be based upon existing formats and encodings.
 
 ### Scripting APIs
 
@@ -63,7 +63,7 @@ The enable interoperability, the Working Group will seek to define standard bind
 ### Out of Scope
 
 * Application & domain specific metadata vocabularies
-* Definitiion of protocol bindings without the collaboration of the standards development organisations responsible for those protocols
+* Definition of protocol bindings without the collaboration of the standards development organisations responsible for those protocols
 * APIs and security frameworks specific to particular platforms external to the W3C
 * URI mappings for non-resourceful protocols
 
