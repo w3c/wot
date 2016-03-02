@@ -4,7 +4,7 @@
 
 > The Internet of Things is about services based upon the means to describe and connect things including physical sensors and actuators, people and abstract things.
 
-The Internet of Things (IoT) suffers from fragmentation and data silos. The mission of the Web of Things Framework Working Group is to address this fragmentation by connecting IoT platforms via the Web using an abstraction layer above existing platforms and transport protocols. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
+The Internet of Things (IoT) suffers from fragmentation and data silos. The mission of the Web of Things Framework Working Group is to address this fragmentation by introducing an abstraction layer above existing IoT platforms and transport protocols. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
 
 Property | Value
 ---------|------
@@ -13,85 +13,59 @@ End date	| 31 December 2018
 Charter extension | The charter extension history is documented in "<a href="#about">About this charter</a>"
 Confidentiality | Proceedings are [public](http://www.w3.org/2015/Process-20150901/#confidentiality-levels)
 Initial Chairs | Co-Chairs TBD
-Initial Team Contacts | (FTE %: 50%) Dave Raggett, Kazuyuki Ashimura
+Initial Team Contacts | (FTE %: 25%) Dave Raggett, Kazuyuki Ashimura
 Usual Meeting Schedule | Teleconferences: Weekly, Face-to-face: 2-3 per year
 
 
 ## Extending the Web from a Web of Pages to a Web of Things
 
-This section introduces the architecture for the Web of Things as the basis for the charter's work items. The starting point is the idea of scriptable objects as "things" standing for physical or abstract entities. The approach is based upon the fundamentals of Web architecture:
+This section introduces the architecture for the Web of Things as the basis for the charter's work items. The starting point is the idea of scriptable objects as "things" standing for physical or abstract entities whether these are connected or not. The approach is based upon the fundamentals of Web architecture:
 
 * URIs for identifying things
 * A variety of protocols for accessing things, since no one protocol will be appropriate in all contexts
 * Linked Data for describing things as a basis for interoperability and discovery, playing an analogous role to HTML for web pages
 
-URIs can be used to access machine interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects whose events, properties and actions correspond to those of the thing the object stands for. An object on one server can act as a proxy for an object on another server. Web developers are shielded from the implementation details of how objects are coupled, allowing system designers to choose the transport protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
+URIs can be used to access machine interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects whose events, properties and actions correspond to those of the thing the object stands for. An object on one server can act as a proxy for an object on another server. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols best suited to the given context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms.
 
 ![web of things servers and scripts](http://www.w3.org/2015/09/wot-arch.png)
 
-The diagram shows a thing on server A that acts as a proxy for a thing on server B which is coupled to a sensor and actuator. The proxy on server A could be set up by a script on that server, or by a script on server B.
-The latter is useful when server A is on the public Internet and server B is behind a firewall, and you want to provide public access to the thing from server A.
-
-Web page scripts can create local proxies for things on servers, subject to the protocols supported by Web browsers and the single origin security policy. There are many possible applications across a wide range of domains, e.g. homes, offices, lifecare, cities, electrical grids, retail and manufacturing.
+The diagram shows a thing on server A that acts as a proxy for a thing on server B which is coupled to a sensor and actuator. The proxy on server A could be set up by a script on that server, or by a script on server B. The latter is useful when server A is on the public Internet and server B is behind a firewall, and you want to provide public access to the thing from server A. Web page scripts can create local proxies for things on servers, subject to the protocols supported by Web browsers and the single origin security policy.
 
 ## Goals
 
 This Working Group will define Web technology standards to enable services that span IoT platforms on devices ranging from microcontrollers to cloud-based server farms, and help to end the current fragmentation and data silos, for a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realise the full potential for the IoT.
 
+There are many possible applications across a wide range of domains, e.g. homes, offices, healthcare, cities, electrical grids, retail and manufacturing. The key to realizing the Web of Things is the metadata that provides the basis for semantic interoperability. This Working Group will focus on the metadata vocabularies that are useful across a broad range of application domains. In addition, we plan work on scripting APIs exposed to application developers, and bindings to common protocols in collaboration with the standards development organizations responsible for those protocols.
+
 ## Scope
 
-This Working Group will focus on a Linked Data vocabulary for describing things in terms of their events, properties and actions, and for describing which protocols a given server supports. In addition, the Working Group will define content types for serialization of data models and server metadata, along with scripting APIs and bindings for common protocols in collaboration with other groups.
+### Thing Descriptions
+
+* A Linked Data vocabulary for describing things in terms of the data models they expose to applications. This will include datatypes, integrity constraints, and provision for early and late binding. This cross domain vocabulary will be designed for use in combination with vocabularies for domain specific semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage inter dependencies, and is analogous the role of metadata for package management in the Linux operating system.
+* A Linked Data vocabulary for security metadata as a basis for platforms to determine how to securely interoperate. This will build upon emerging best practices for securing IoT platforms. ''This is extremely vague and needs much greater precision''
+* A Linked Data vocabulary for communications metadata. This will enable platforms to determine how to interoperate given a choice of protocol, data formats and encodings, as well as different communication patterns, e.g. push, pull, pub-sub and peer to peer. Communications metadata may be needed to discribe the multiplexing of data from different sensors, different approaches to buffering data, and the interoperability requirements for communicating with battery or ambient powered devices that spend a lot of their time asleep to conserve power.
+* Serialization formats for metadata suitable for processing on resource constrained platforms and designed to appeal to application developers. This includes the definition of standard terms and their bindings to URIs in the Resource Description Framework, so that it isn't necessary for resource constrained platforms to dereference these terms when constructing the software objects corresponding to the data models for things.
+
+### Scripting APIs
+
+The Working Group will seek to specify a suite of APIs exposed to applications covering the following:
+* Discovery for local and remote cases
+* Cross platform security frameworks including provisioning, updates, authentication, and secure communication
+* Thing lifecycles, e.g. registering and creating things, and enabling applications to be aware of lifecycle transitions
+* Cross cutting concerns, e.g. internationalisation, accessibility and privacy
+* Error handling
+Where practical, APIs will be defined in ways that are independent of the choice of programming languages.
+
+### Bindings to Common Protocols
+
+The enable interoperability, the Working Group will seek to define standard bindings to common protocols. This includes the mapping between thing data models and protocol resource models, the relationship between communication patterns and interaction models, and guidelines to standards development organisations for mapping the web of things to their protocols.
 
 ### Out of Scope
 
-* Vocabularies for specific application domains
-
-* Application domain specific scripting interfaces
-
-* Normative specifications for security, assurance, privacy and resilience of IoT systems. These are recognized as important topics, but are being declared as out of scope for this charter since it is not yet completely clear what W3C should do in respect to these topics.
-
-When a consensus emerges as to what is needed and is appropriate for this group, the scope could be adjusted and new work items added to future revisions of this charter, subject to W3C Advisory Committee Review.
-
-## Deliverables
-
-This Working Group will develop specifications and progress them to W3C Recommendations for the following work items, each of which will be expected to have a section on security and privacy considerations.
-
-### Linked Data vocabulary for describing data models
-
-This will specify a data modelling vocabulary for describing things in terms of events, properties and actions, and links to domain models and protocol specific API descriptions. This work item will include provision for late bound data types, re-use of data type definitions, and labelled opaque data types for data to be handed on to entities that understand it. This vocabulary will be designed to supplement the RDF core datatypes, including enumerations and numeric ranges.
-
-### Linked Data vocabulary for server metadata
-
-This will specify a Linked Data vocabulary for identifying a common set of protocols, data formats and encodings for communication between servers. This is needed to decouple application scripting APIs from the details of which protocols are used between any pair of servers.
-
-### Content Type for a serialisation of data models
-
-This Working Group will register a Content Type for a serialisation of data models that is easy to author and easy to process on resource constrained devices. 
-
-### Content Type for a serialisation of server metadata
-
-This Working Group will register a Content Type for a serialisation of server metadata that is easy to author and easy to process on resource constrained devices. This metadata will enable other servers to identify which protocols, data formats and encodings to use when communicating with a given server.
-
-### Application Domain Independent Scripting APIs for Things
-
-This work item will define programming language dependent APIs for application scripts to interact with things and their metadata. This includes the means to register and unregister things and their proxies, as well as event listeners for events associated with things. For static programming languages, this will include the means to access and update properties, and to invoke actions and handle their results. For dynamic programming languages, this can be transparently handled via getters, setters, and method invocation.
-
-### Bindings to common protocols
-
-This work item will define how common protocols can be used to convey messages for registering and unregistering proxies, event notifications, property and metadata updates, action invocations and responses. The set of protocols should include HTTP, WebSockets, and CoAP as a minimum, and may include MQTT, MQTT-SN, XMPP and AMQP. The work item may be split into separate specifications for each protocol.
-
-## Milestones
-
-Specification | FPWD | CR | PR | REC
---------------|------|----|----|----
-Data Modelling Vocabulary | July 2016 | December 2017 | September 2018 | November 2018
-Server Protocols Vocabulary | July 2016 | December 2017 | September 2018 | November 2018
-Data Models Content Type | July 2016 | December 2017 | September 2018 | November 2018
-Server Metadata Content Type | July 2016 | December 2017 | September 2018 | November 2018
-Scripting APIs | December 2016 | December 2017 | September 2018 | November 2018
-Protocol Bindings | December 2016 | December 2017 | September 2018 | November 2018
-
-*Note: the group will document signifcant departures from this initial schedule on the group home page*
+* Application & domain specific metadata vocabularies
+* Definitiion of protocol bindings without the collaboration of the standards development organisations responsible for those protocols
+* APIs and security frameworks specific to particular platforms external to the W3C
+* URI mappings for non-resourceful protocols
 
 ## Dependencies and Liaisons
 
@@ -114,7 +88,7 @@ Protocol Bindings | December 2016 | December 2017 | September 2018 | November 20
 * [Web Security Interest Group](http://www.w3.org/community/webpayments/)
   for security reviews.
 * [EXI Working Group](http://www.w3.org/XML/EXI/)
-  for collaboration on efficient encoding schemes for thing descriptions and protocol bindings.
+  for collaboration on efficient encoding schemes for thing descriptions.
 
 This group will also collaborate with future W3C Working Groups developing authentication protocols.
 
