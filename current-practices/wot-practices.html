@@ -435,6 +435,24 @@
 				</section>
 				
 				<section>
+					<h3>Abstract Thing Descriptions</h3>
+					
+					<p class="note" title="Matthias Kovatsch">
+						This is a proposal to implement the concept of late binding.
+					</p>
+					
+					<p>
+						An abstract TD contains all the semantic information of a normal TD except for the protocol and addressing information (i.e., base URIs and hrefs) as well as certain elements of the metadata that would refer to a specific instance of such a thing (e.g., name and serial number).
+						They can be compared to abstract classes or interfaces from object-oriented programming: abstract TDs define placeholders that cannot be instantiated, that is, do not belong to a concrete thing.
+						This is useful for semantic reasoning processes that require information about thing capabilities (e.g., to proof that a certain functionality can be implemented through service composition).
+						Abstract TDs also fulfill the requirement of late bindings in the application logic.
+						A script could instantiate a proxy object that exposes all capabilities of the abstract TD.
+						Only when it is accessed, a matching TD has to be discovered, so that the properties, actions, and events can be bound to the resources of an actual thing using its URIs.
+					</p>
+					
+				</section>
+				
+				<section>
 					<h3>Security Considerations</h3>
 					<p>Following security concerns apply to TD:
 						<ul>
