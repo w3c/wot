@@ -5,32 +5,32 @@
 		<title>WoT Current Practices</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async class="remove"></script>
 		<script class="remove">
-		  var respecConfig = {
+			var respecConfig = {
 				  specStatus:   "unofficial"
-			  ,   editors:      [{name:"Daniel Peintner"}, {name:"Matthias Kovatsch"}]
-			  ,   authors:      [{name:"Sebastian Käbisch"}, {name:"Volunteers needed"}]
-			  ,   processVersion: 2016
-			  ,   shortName:    "wot-tech"
-			  , wg:           "Interest Group on the Web of Things"
-			  , wgURI:        "http://www.w3.org/WoT/IG/"
-			  , wgPublicList: "public-wot-ig"
-			  , otherLinks: [
-				{
-				 key: "GitHub",
-				 data: [
-				   {
-					 value: "Master branch on GitHub",
-					 href: "https://github.com/w3c/wot/blob/master/current-practices/wot-practices.html"
-				   }, {
-					value: "File a bug",
-					href: "https://github.com/w3c/wot/issues"
-				   }, {
-					value: "Contribute",
-					href: "https://github.com/w3c/wot/edit/master/current-practices/wot-practices.html"
-				   }
-				  ]
-				}
-			   ]
+				, editors:      [{name:"Daniel Peintner"}, {name:"Matthias Kovatsch"}]
+				, authors:      [{name:"Sebastian Käbisch"}, {name:"Volunteers needed"}]
+				, processVersion: 2015
+				, shortName:    "wot-tech"
+				, wg:           "Interest Group on the Web of Things"
+				, wgURI:        "http://www.w3.org/WoT/IG/"
+				, wgPublicList: "public-wot-ig"
+				, otherLinks: [
+					{
+						key: "GitHub",
+						data: [
+							{
+								value: "Master branch on GitHub",
+								href: "https://github.com/w3c/wot/blob/master/current-practices/wot-practices.html"
+							}, {
+								value: "File a bug",
+								href: "https://github.com/w3c/wot/issues"
+							}, {
+								value: "Contribute",
+								href: "https://github.com/w3c/wot/edit/master/current-practices/wot-practices.html"
+							}
+						]
+					}
+				]
 			};
 		</script>
 	</head>
@@ -210,7 +210,7 @@
 									Encoding usually refers to the lower formats, that is, how data is represented in bits and bytes, which happens in the protocols.
 									Should we maybe go for "serialization", since also all examples are serialization formats?
 								</p>
-								<p class="ednote" title="Matthias Kovatsch">
+								<p class="note" title="Matthias Kovatsch">
 									In the future, we might need a list of specific representation formats, since an <code>xsd:unsignedByte</code> in a JSON document with just a <code>value</code> property is extremely implicit (and hence not self-descriptive, neither semantically safe; and actually pretty pointless overhead).
 									Here, also a new concept of Content Classes could apply, which could replace a single, unstructured Content identifier with multiple tags that describe the content (e.g., JSON, JSON-LD, TD).
 								</p>
@@ -239,7 +239,7 @@
 							This also has logical conflict with properties, which technically provide the data of a thing.
 							Furthermore, this should maybe become part of the represenation format carrying the data to become self-descriptive and semantically safe.
 						</p>
-						<p class="ednote" title="Matthias Kovatsch">
+						<p class="note" title="Matthias Kovatsch">
 							Personally, I am not even sure if we need this.
 							The encoding of the value within a representation format (JSON number, EXI element, etc.) should be enough, when the property itself is fully described.
 							We do not care if the system internally represents it as an unsighend byte, signed integer, or whatever.
@@ -273,7 +273,7 @@
 							<li><b>Name:</b> Name of the property that also defines the semantics</li>
 							<li><b>Href:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
 							<li><i>OutputData: Which data type is associated with this property</i>
-								<p class="ednote" title="Matthias Kovatsch">
+								<p class="note" title="Matthias Kovatsch">
 									This needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
 								</p>
@@ -327,7 +327,7 @@
 							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
 							<li><i>InputData: [optional] Which input data is associated with this action</i></li>
 							<li><i>OutputData: [optional] Which data type is associated with this action</i>
-								<p class="ednote" title="Matthias Kovatsch">
+								<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
 								</p>
@@ -369,7 +369,7 @@
 							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
 							<li><i>InputData: [optional] Which input data is associated with this event</i></li>
 							<li><i>OutputData: [optional] Which data type is associated with this event</i>
-								<p class="ednote" title="Matthias Kovatsch">
+								<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
 								</p>
