@@ -157,9 +157,16 @@
 				<h2>Thing Description</h2>
 				
 				<p>
-					The WoT Thing Description (TD) is a <a>JSON-LD</a> document that provides a semantic description of a thing as well as a functional description of its <a>WoT API</a>.
+					The WoT Thing Description (TD) relays on the Resource Description Framework (RDF) as an underlying data model.
+					As a current serialization format of RDF JSON-LD has been proposed which provides the semantic description of 
+					a Thing as well as a functional description of its <a>WoT API</a>.
 					For this, the WoT IG defined a minimal vocabulary set to express the capabilities of a thing in terms of <code>Properties</code>, <code>Actions</code>, and <code>Events</code>.
 					In addition, the TD provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.), representation formats, and security policies for resources.
+				</p>
+				
+				<p>
+					<a href="#fig-td"></a> gives an overview which kind of relevant content are defined in the TD.
+					
 				</p>
 				
 				<figure id="fig-td">
@@ -168,7 +175,7 @@
         </figure>
 				
 				<p>
-					<a href="#fig-td"></a> gives an overview which kind of relevant elements are defined in the TD.
+	
 					The subsequent subsection will give a more detail explaination of the elements, their content, and their relation to each other.
 				</p>
 				
@@ -178,7 +185,9 @@
 
 	 			<section>
 					<h3>TD Elements</h3>
-					
+					<section>
+						<h4>TD Context (@context) and Type (@type)</h4>
+					</section>
 					<section>
 						<h4>Metadata</h4>
 						
@@ -401,130 +410,13 @@
 					<section>
 						<h4>Temperature Sensor</h4>
 						
-						<p>
-							The following TD describes a temperature sensor called "OutsideTemperature", which is accessable only via CoAP, but provides two different serialization formats.
-							The thing offers two properties and three events for interaction.
-						</p>
-						
-						<pre class="example highlight">
-							{
-							  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-							  "metadata": {
-							    "name": "OutsideTemperature",
-							    "protocols" : [
-							    	"coap://[fefe::206:98ff:fe00:202]/"
-							    ],
-							    "encodings": [
-							      "JSON",
-							      "CBOR"
-							    ]
-							  },
-							  "interactions": [
-							    {
-							      "@type": "Property",
-							      "name": "temperature",
-							      "href": "sensor",
-							      "outputData": "xsd:float",
-							      "writable": false
-							    }, {
-							      "@type": "Property",
-							      "name": "temperatureThreshold",
-							      "href": "threshold",
-							      "outputData": "xsd:float",
-							      "writable": true
-							    }, {
-							      "@type": "Event",
-							      "name": "temperatureChanged",
-							      "href": "e/changed",
-							      "outputData": "xsd:float",
-							    }, {
-							      "@type": "Event",
-							      "name": "highTemperature",
-							      "href": "e/high",
-							      "outputData": "xsd:float"
-							    },{
-							      "@type": "Event",
-							      "name": "lowTemperature",
-							      "href": "e/low",
-							      "outputData": "xsd:float"
-							    }
-							  ]
-							}
-						</pre>
+					
 					</section>
 					
 					<section>
 						<h4>LED Actuator</h4>
 						
-						<p>
-							The following TD describes a color LED lamp called "MyLED", which is accessable via HTTP and CoAP.
-							The thing offers four properties, three actions, and one event for interaction.
-							The interaction resource structure differs between the two protocols.
-							Thus, the <code>href</code> field is an array that matches in length and order the <code>protocols</code> array in the metadata (i.e., the first entry belongs to HTTP and the second to CoAP).
-							Also note that for CoAP, the resource <code>coap://myled.example.com:5683/t</code> is used for both a property for setting the color temperature and an event to subscribe to notifications about changes of the color temperature.
-						</p>
 						
-						<pre class="example highlight">
-							{
-							  "metadata": {
-							    "name": "MyLED",
-							    "protocols": [
-							      "http://myled.example.com:80/ledlamp/",
-							      "coap://myled.example.com:5683/"
-							    ],
-							    "encodings": [
-							      "JSON"
-							    ]
-							  },
-							  "interactions": [
-							    {
-							      "@type": "Property",
-							      "name": "colorTemperature",
-							      "href": ["set/temp", "t"],
-							      "outputData": "xsd:unsignedShort",
-							      "writable": true
-							    }, {
-							      "@type": "Property",
-							      "name": "rgbValueRed",
-							      "href": ["rgb/red", "r"],
-							      "outputData": "xsd:unsignedByte",
-							      "writable": false
-							    }, {
-							      "@type": "Property",
-							      "name": "rgbValueGreen",
-							      "href": ["rgb/green", "g"],
-							      "outputData": "xsd:unsignedByte",
-							      "writable": false
-							    }, {
-							      "@type": "Property",
-							      "name": "rgbValueBlue",
-							      "href": ["rgb/blue", "b"],
-							      "outputData": "xsd:unsignedByte",
-							      "writable": false
-							    }, {
-							      "@type": "Action",
-							      "name": "ledOnOff",
-							      "href": ["set/onoff", "s"],
-							      "inputData": "xsd:boolean"
-							    }, {
-							      "@type": "Action",
-							      "name": "fadeIn",
-							      "href": ["fading/in", "i"],
-							      "inputData": "xsd:unsignedByte"
-							    },  {
-							      "@type": "Action",
-							      "name": "fadeOut",
-							      "href": ["fading/out", "o"],
-							      "inputData": "xsd:unsignedByte"
-							    }, {
-							      "@type": "Event",
-							      "name": "colorTemperatureChanged",
-							      "href": ["events/temp", "t"],
-							      "outputData": "xsd:unsignedShort"
-							    }
-							  ]
-							}
-						</pre>
 					</section>
 					
 				</section>
