@@ -424,8 +424,45 @@
 				
 				<section>
 					<h3>Discovery</h3>
+					
+					<p class="ednote">
+						This section describes in general how a thing (i.e., its TD) can be discovered.
+						In particular, the current practices at the Plugfests should become clear.
+						Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
+					</p>
 
-					@TODO How to get the TD: Repository, local discovery, ...
+					<p>
+						Discovering a thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
+						The URI of the link may point to the thing itself, as things often host their TD directly, or to any other location on the Web.
+						There are several approaches to aquire such links.
+						Some work independent from the protocol binding, others rely on features of a specific protocol.
+					</p>
+					
+					<section>
+						<h4>Manual Discovery</h4>
+						
+						<p>
+							The link to the TD is provided by the developer at programming time, the operator through device management, or the user through a UI.
+						</p>
+					</section>
+					
+					<section>
+						<h4>Repository</h4>
+						
+						<p>
+							The thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
+						</p>
+					</section>
+					
+					<section>
+						<h4>Local Discovery</h4>
+						
+						<p>
+							The thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
+							The response to a discovery request can include the TD directly or just a link.
+							For announcements, it is more common to only provide a link, since broadcasting TDs can be expensive.
+						</p>
+					</section>
 				</section>
 
 				<section id="td-context-extension">
@@ -484,7 +521,7 @@
 					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
 				</section>
 
-				<section>
+				<section id="sec-protocol-mappings">
 					<h3>Protocol Mappings</h3>
 
 					<div class="practice">
