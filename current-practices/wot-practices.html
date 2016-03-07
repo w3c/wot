@@ -573,7 +573,7 @@
 							<li>Internalization</li>The servient component performs authorization decision making and enforcement
 							<li>Externalization according push</li>The servient component performs authorization decision enforcement. Authorization decision making is done by the TTP that performs the initial authentication of callers (resource access control information travels in-band with the security token asserting the authenticated identity of the caller)
 							<li>Externalization according pull</li>The servient component performs authorization decision enforcement. Authorization decision making is done by a backend component (called by the servient).
-						<ul/>
+						</ul>
 						The externalization of initial caller authentication and the externalization of the authorization decision making according push to TTPs matches the architectural proposition of the IETF ACE working group (see "An architecture for authorization in constrained environments" at https://www.ietf.org/id/draft-ietf-ace-actors).<br/><br/>
 						The anticipated default strategy in WoT results in online TTP components as well as special-purpose objects: security tokens by which online TTPs report the results of their work back to servients. These are cryptographically protected objects that report properties of the caller (identifiers, attributes, assignments, affiliations, permissions etc) which are asserted by the online TTP. Such objects may contain resource access control information. Such objects are short-lived (normally: minutes/hours) and may be re-used during their lifetime. These objects must be signed to prevent counterfeiting and may be encrypted to preserve confidentiality.
 						<ul>
