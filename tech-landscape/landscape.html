@@ -363,10 +363,10 @@
         This chapter elaborates on this hypothesis.</p>
       </section>
       <section>
-      	<h2>Inclusion of Physical Goods</h2>
-        <p>The inclusion of physical goods is the key differentiator between the Web-of-Things on the on hand and the Web-of-Services resp. the traditional Web (<i>Web-of-Pages</i>) on the other hand.<br/><br/>
-        There are Web-of-Services and Web-of-Pages security&privacy requirements which translate to Web-of-Things in a straight-forward manner such as <i>user authentication->device/thing authentication</i>. For such requirements security&privacy mechanisms were established by other domains such as office/enterprise IT or Cloud computing. Corresponding standards and best practices do exist and may apply or may be translated to WoT. Note that constraints (number of instances, computing power, memory, IO and networking capabilities etc.) do change when considering the WoT image of a traditional requirement such as the authentication of a caller.<br/><br/>
-        The inclusion of physical goods also leads to security&privacy requirements or constraints with no real/good analogies in the digital World. These requirements resp. constraints are not yet covered by security&privacy technologies developed for existing domains. This includes security&privacy requirements as well as constraints such as:
+      	<h2>Inclusion of Physical Goods and Processes</h2>
+        <p>The inclusion of physical goods and processes is the key differentiator between the Web-of-Things on the on hand and the Web-of-Services resp. the traditional Web (<i>Web-of-Pages</i>) on the other hand.<br/><br/>
+        There are Web-of-Services and Web-of-Pages security&privacy requirements which translate to Web-of-Things in a straight-forward manner such as <i>user authentication->thing authentication</i>. For such requirements security&privacy mechanisms were established by other domains such as office/enterprise IT or Cloud computing. Corresponding standards and best practices do exist and may apply or may be translated to WoT. Note that constraints (number of instances, computing power, memory, IO and networking capabilities etc.) do change when considering the WoT image of a traditional requirement such as the authentication of a caller.<br/><br/>
+        The inclusion of physical goods and processes also leads to security&privacy requirements or constraints with no real/good analogies in the digital World. These requirements resp. constraints are not yet covered by security&privacy technologies developed for existing domains. This includes security&privacy requirements as well as constraints such as:
         <ul><li>Things discovery authorization</li>
         <li>Managing the authorization to authorize</li>
         <li>Software esp. firmware update/patching</li></ul></p>
@@ -376,7 +376,7 @@
         <p>The W3C IG WoT is considering same as well as cross-domain interactions among resp. with things:
         <ul><li>For interactions in the same-domain standards for security facilitate reuse - they are nice-to-have</li>
         <li>For interactions that cross domains (i.e. there is no single vendor/provider that designs/produces/supplies all components that interact in a WoT scenario) standards for security (authentication and authorization, secure communications provide interoperability AND reuse - they are must-haves</li></ul>
-        Thus, standards for security&privacy are mandatory for WoT (this refers to conventions for implementing security&privacy that are broadly resp. industry or application domain-wide accepted).<br/><br/>
+        Thus, standards for security&privacy are mandatory for WoT. This refers to conventions for implementing security&privacy that are broadly resp. industry or application domain-wide accepted.<br/><br/>
         The state-of-the-art survey provided in this landscape document does consider existing and emerging standards for WoT security&privacy.</p>
       </section>
       <section>
@@ -388,19 +388,20 @@
       <section>
       	<h2>Architectural Impact</h2>
         <p>Different security&privacy tools do have different impact on the architecture and implementation of WoT systems:
-        <ul><li>Some affect the core from solution design and realization perspective e.g. authentication and authorization such as the representation and handling of authenticated callers throughout a codebase.</li>
-        <li>Other security technologies are more peripheral i.e. can be added or replaced easily such as transport-oriented security mechanisms. The former mechanisms require more attention during the architecture and design process than the latter.</li></ul></p>
+        <ul><li>Some affect the core from solution design and realization perspective e.g. the authorization of actions and the authentication of actors. For instance this includes cross-cutting concerns such as the representation and handling of authenticated callers throughout a codebase.</li>
+        <li>Other security mechanisms are more peripheral i.e. can be added or replaced easily. This especially holds for transport-oriented security mechanisms such as SSL/TLS and DTLS.</li></ul>
+        The former mechanisms require more attention during the architecture and design process than the latter.</p>
       </section>
       <section>
       	<h2>Distribution of Complexity</h2>
         <p>Mechanisms invented <2010 for distributed IT-System security e.g. Kerberos, SSL/TLS, SAML happen to distribute logical and computational complexity quite evenly over client and server components.<br/><br/>
-        This was a major issue for the app/API economy where 3rd pary developes create components (e.g. mobile apps) that interact with services provided by other parties. To overcome this obstacle the new generation security resp. security-enabling technologies invented >2010 (e.g. OAuth, SCIM) distributes complexity unevenly:
+        This was a major issue for the Web app/API economy where 3rd pary developers create components (e.g. mobile apps) that interact with services provided by other parties. To overcome this obstacle the new generation security resp. security-enabling technologies invented >2010 (e.g. OAuth) distribute complexity unevenly:
         <ul><li>The server or responder-side (e.g. OAuth authorization server) usually is as complex as in classical approaches (e.g. SAML IdP)</li>
-        <li>The client or requestor-side (e.g. OAuth client) complexity is orders of magnitude smaller than in classical approaches (e.g. SAML RP) This simplifies the security resp. security-enabling stack that has to be provided on client-side. This new approach provides a better fit for WoT than technologies with an even distribution of complexity.</li></ul></p>
+        <li>The client or requestor-side (e.g. OAuth client) complexity is orders of magnitude smaller than in classical approaches (e.g. SAML RP) This simplifies the security resp. security-enabling stack that has to be provided on client-side.</li></ul>The new approach tends to be a better fit for WoT than technologies with an even distribution of complexity.</p>
       </section>
       <section>
       	<h2>Mechanisms' State-of-the-Art</h2>
-        <p>The table below surveys potential building blocks for WoT security and privacy and identifies their current evolution stage (as of 2016-02-22):</p>
+        <p>The table below surveys potential building blocks for WoT security and privacy and identifies their current evolution stage (as of 2016-02-29):</p>
 <table><thead>
 <tr>
 <th>-</th>
@@ -631,14 +632,15 @@
      
       </section>
       <section>
-      	<h2>Summary</h2>
-        <p>As of today there are no commonly accepted protocol standards for authenticating and authorizing things resp. devices. Current projects do either not address these challenges or create silo’ed solutions. The IETF ACE working group happens to be the leading initiative in order to overcome this limitation:
+      	<h2>Wrap-Up</h2>
+        <p>As of today there are no broadly accepted protocol standards for authenticating and authorizing things. Current projects do either not address these challenges or create silos.<br/>
+        The IETF ACE working group happens to be the leading initiative in order to overcome this limitation:
         <ul><li>ACE has a sound problem statement and high-level approach</li>
-        <li>But ACE does not yet provide a solution - for the time being a plethora of not-yet-integrated approaches for expressing access tokens as well as acquiring them in request/response protocols (see here ) are being discussed. The current stage of elaboration might be regarded "brainstorming". Moreover, questions around system dynamics and bootstrapping are not yet fully illuminated. This includes aspects such as creation/management of token issuance policies (in a possibly automated fashion), protecting component (self-)registration, managing the authorization to authorize, things discovery authorization
+        <li>But ACE does not yet provide a solution - for the time being a plethora of not-yet-integrated approaches for expressing access tokens as well as acquiring them in request/response protocols are being discussed. The current stage of elaboration should be regarded "brainstorming". Moreover, questions around system dynamics (on and offboarding of components) and bootstrapping are not yet fully illuminated. This includes aspects such as creation/management of token issuance policies (in a possibly automated fashion), protecting component (self-)registration, managing the authorization to authorize, things discovery authorization
         </li></ul>
-        From the perspective of the W3C IG WoT the protocol standards for authenticating and authorizing things resp. devices should address/enable:
-        <ul><li>A variety of security token types for different application domains(CoAP...)/use cases(consumer/industry)/security models(enc/sign, bearer/PoP)/encodings (JSON, CBOR...)/topologies (3/4/n-party)/delivery models (by-value, by-ref). The corresponding ecosystem needs to be extensible (create-your-own security token type in case the already defined ones do not solve your issue)</li>
-        <li>A (single) request/response framework for acquiring and handling such tokens with different protocol bindings (HTTP/CoAP...). Request/response messages and security token (type) specifications should be decoupled i.e. the same request/response framework should allow the handling of various security token types. The corresponding framework needs to be extensible (create-your-own exchange in case the already defined ones do not solve your issue)</li></ul>
+        From the perspective of the W3C IG WoT the (to-be-established) protocol standards for the authorization of actions and the authentication of actors in WoT should address/enable:
+        <ul><li>A variety of security token types for different application domains/use cases (consumer/industry), security models (enc/sign, bearer/PoP), encodings (JSON, CBOR...), topologies (3/4/n-party), delivery models (by-value, by-ref). The corresponding ecosystem needs to be extensible and allow to create-your-own security token type in case the already defined ones do not solve your issue.</li>
+        <li>A (single) request/response framework for acquiring and handling such tokens with different protocol bindings (HTTP/CoAP...). Request/response messages and security token (type) specifications should be decoupled i.e. the same request/response framework should allow the handling of various security token types. The corresponding framework needs to be extensible and allows to create-your-own exchange in case the already defined ones do not solve your issue.</li></ul>
         For secure communications on transport-level, DTLS as well as TLS present commonly accepted standards. Their profiling/optimization for constrained devices and networks is a task that is currently ongoing. Note that securing communications on transport-level comes with limitations in the end-to-end security span which is achievable. For secure communications on application-level and secure storage, standards do exist for representing encrypted and signed data in JSON (a form-factor not suitable for very constrained components). Corresponding work is ongoing for CBOR (a form-factor suitable for very constrained components).<br/><br/>
         Moreover there are no commonly accepted standards for registering things resp. devices and supplying identity (meta-)data and credentials about things resp. devices as of now.</p>
       </section>
