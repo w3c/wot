@@ -412,16 +412,133 @@
 						To get a good understanding of how a TD can look like in a concrete instance a TD is provided in the case of a sensor (Temperature) and actuator (LED).
 					</p>
 					
-					<section>
+					<section class=remove">
 						<h4>Temperature Sensor</h4>
 						
-					
+						<p>
+							The following TD describes a temperature sensor called "OutsideTemperature", which is accessable only via CoAP, but provides two different serialization formats.
+							The thing offers two properties and three events for interaction.
+						</p>
+						
+						<pre class="example highlight">
+							{
+							  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+							  "metadata": {
+							    "name": "OutsideTemperature",
+							    "protocols" : [
+							      "coap://[fefe::206:98ff:fe00:202]/"
+							    ],
+							    "encodings": [
+							      "JSON",
+							      "CBOR"
+							    ]
+							  },
+							  "interactions": [
+							    {
+							      "@type": "Property",
+							      "name": "temperature",
+							      "href": "sensor",
+							      "outputData": "xsd:float",
+							      "writable": false
+							    }, {
+							      "@type": "Property",
+							      "name": "temperatureThreshold",
+							      "href": "threshold",
+							      "outputData": "xsd:float",
+							      "writable": true
+							    }, {
+							      "@type": "Event",
+							      "name": "temperatureChanged",
+							      "href": "e/changed",
+							      "outputData": "xsd:float",
+							    }, {
+							      "@type": "Event",
+							      "name": "highTemperature",
+							      "href": "e/high",
+							      "outputData": "xsd:float"
+							    },{
+							      "@type": "Event",
+							      "name": "lowTemperature",
+							      "href": "e/low",
+							      "outputData": "xsd:float"
+							    }
+							  ]
+							}
+						</pre>
 					</section>
 					
-					<section>
+					<section class=remove">
 						<h4>LED Actuator</h4>
 						
+						<p>
+							The following TD describes a color LED lamp called "MyLED", which is accessable via HTTP and CoAP.
+							The thing offers four properties, three actions, and one event for interaction.
+							The interaction resource structure differs between the two protocols.
+							Thus, the <code>href</code> field is an array that matches in length and order the <code>protocols</code> array in the metadata (i.e., the first entry belongs to HTTP and the second to CoAP).
+							Also note that for CoAP, the resource <code>coap://myled.example.com:5683/t</code> is used for both a property for setting the color temperature and an event to subscribe to notifications about changes of the color temperature.
+						</p>
 						
+						<pre class="example highlight">
+							{
+							  "metadata": {
+							    "name": "MyLED",
+							    "protocols": [
+							      "http://myled.example.com:80/ledlamp/",
+							      "coap://myled.example.com:5683/"
+							    ],
+							    "encodings": [
+							      "JSON"
+							    ]
+							  },
+							  "interactions": [
+							    {
+							      "@type": "Property",
+							      "name": "colorTemperature",
+							      "href": ["set/temp", "t"],
+							      "outputData": "xsd:unsignedShort",
+							      "writable": true
+							    }, {
+							      "@type": "Property",
+							      "name": "rgbValueRed",
+							      "href": ["rgb/red", "r"],
+							      "outputData": "xsd:unsignedByte",
+							      "writable": false
+							    }, {
+							      "@type": "Property",
+							      "name": "rgbValueGreen",
+							      "href": ["rgb/green", "g"],
+							      "outputData": "xsd:unsignedByte",
+							      "writable": false
+							    }, {
+							      "@type": "Property",
+							      "name": "rgbValueBlue",
+							      "href": ["rgb/blue", "b"],
+							      "outputData": "xsd:unsignedByte",
+							      "writable": false
+							    }, {
+							      "@type": "Action",
+							      "name": "ledOnOff",
+							      "href": ["set/onoff", "s"],
+							      "inputData": "xsd:boolean"
+							    }, {
+							      "@type": "Action",
+							      "name": "fadeIn",
+							      "href": ["fading/in", "i"],
+							      "inputData": "xsd:unsignedByte"
+							    },  {
+							      "@type": "Action",
+							      "name": "fadeOut",
+							      "href": ["fading/out", "o"],
+							      "inputData": "xsd:unsignedByte"
+							    }, {
+							      "@type": "Event",
+							      "name": "colorTemperatureChanged",
+							      "href": ["events/temp", "t"],
+							      "outputData": "xsd:unsignedShort"
+							    }
+							  ]
+							}
+						</pre>
 					</section>
 					
 				</section>
