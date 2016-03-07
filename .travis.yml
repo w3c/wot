@@ -16,7 +16,7 @@ after_success:
   - git clone --branch gh-pages https://github.com/w3c/wot.git page
   - cp wot-ucr-tmp.html page/wot-ucr.html
   - cp tech-landscape/landscape.html page/landscape.html
-  - cp -R current-practices/ page/current-practices/
+  - cp -R current-practices/ page/
   - cd page
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - git add wot-ucr.html
