@@ -171,31 +171,51 @@
 				</p>
 
 				<figure id="fig-td">
-          <img src="td_concept.jpg">
+          <img src="td_concept.jpg" width="50%">
           <figcaption>Concept of a Thing Description (TD)</figcaption>
         </figure>
 
 				<p>
 
-					The subsequent subsection will give a more detail explaination of the TD elements, their content, and their relation to each other.
+					The subsequent subsection will give a basic concept of the TD as a JSON-LD sample and more detail explaination of the TD elements, their (manditory/optional) contents, and their relation to each other.
 				</p>
 
 				<p class="ednote">
 					The term was changed from TD "components" to TD "elements", as component has a specific meaning in the Web/REST (i.e., user agent, intermediary, origin server).
 				</p>
-
+				<section>
+					<h3>TD Sample</h3>
+					<div class="example"><div class="example-title"><span>Example 1</span>: TD sample descriping LED</div><pre class="example">{
+						<span class="highlight">"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",</span>
+						...
+					}</pre></div>
+				</section>
 	 			<section>
 					<h3>TD Elements</h3>
 					<section>
-						<h4>TD Context (@context) </h4>
+						<h4>TD Context (@context) and Thing Type (@type) </h4>
 
-						<div class="example"><div class="example-title"><span>Example 1</span>: Context for the TD </div><pre class="example">{
+						<div class="example"><div class="example-title"><span>Example 2</span>: Context for the TD</div><pre class="example">{
 							<span class="highlight">"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",</span>
 						  ...
-							}</pre>
-						</div>
+						}</pre></div>
 
-						To identify a document as a TD and to map TD terms to distinct IRIs the context "http://w3c.github.io/wot/w3c-wot-td-context.jsonld" is used.
+						To identify a document as a TD and to map TD terms to distinct IRIs the context "http://w3c.github.io/wot/w3c-wot-td-context.jsonld" has to be used.
+					</section>
+					<section>
+						<h4>Security</h4>
+
+						<div class="example"><div class="example-title"><span>Example 2</span>: Context for the TD</div><pre class="example">{
+							...
+							<span class="highlight">"security": {"typ":"JWT", "alg":"HS256"},</span>
+							...
+						}</pre></div>
+
+						The <b>(optional)</b> security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources.
+
+						<p>Here, JSON Web Token (JWT) type is assigned and the corresponding hashing algorithm "HS256".</p>
+
+
 					</section>
 					<section>
 						<h4>Metadata</h4>
