@@ -337,19 +337,22 @@
 						
 						<p>
 							The hypertext reference (<code>href</code>) field works similar to properties.
+							Reading this resource may return a list of currently running or queued tasks for this action.
+							This list as well as access to the linked (sub-)resources depends on the policy by the application (e.g., it might be allowed to inspect individual tasks, but not to modify or cancel them).
 						</p>
 						
 						<p class="ednote">
 							Actions work similar to forms in hypermedia.
 							For alignment with the HATEOAS approach, the InputData field should be replaced with "Accept" information for representation formats, so that the action is not tied to an implicit serialization of the data.
+							Furthermore, the method of the common CRUD model should me mentioned explicitly, so that for instance, HTTP and CoAP clients know that they need to use a POST to invoke the action.
 							The output data would work similar and just provide a hint for the client what to expect.
 						</p>
 						
 						<p>
 							Usually, calling an action results in a response that indicates a new (sub-)resource where the ongoing action can be monitored and also controlled:
-							Updating this resource may allow to modify the process (e.g., when it is still queued and not started yet, but also during runtime if the process supports that).
-							Deleting this resource may allow the cancellation of the action.
-							Once the action completes, the sub-resource may be removed by the server; or it is marked as completed, but kept for traceability.
+							Updating this (sub-)resource may allow to modify the process (e.g., when it is still queued and not started yet, but also during runtime if the process supports that).
+							Deleting this (sub-)resource may allow the cancellation of the action task.
+							Once the task completes, the (sub-)resource may be removed by the server; or it is marked as completed, but kept for traceability.
 							It is also possible that calling an action produces a so-called action result that is not manifested in any temporary resource nor other changes to the server (e.g., a conversion process or dry run).
 						</p>
 					</section>
@@ -358,16 +361,16 @@
 						<h4>Event</h4>
 	
 						<p>
-							The interaction type <code>Event</code> enables a mechanism to be notified by the thing on a certain condition.
+							The interaction type <code>Event</code> enables a mechanism to be notified by the thing on a certain condition or with a specific interval.
+							Along with the subscription information, clients may provide configuration information that specifies the condition, interval, or other information such as the unit of measure.
 							While some protocols such as CoAP can provide such a mechanism natively, others do not.
-							Furthermore, events might need a specific configuration that requires data sent and stored on the thing in a standard way.
 							There are are two mandatory and two optional vocabularies defined within the <code>Event</code> type:
 						</p>
 						
 						<ul> 
 							<li><b>Name:</b> Name of the event</li>
 							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><i>InputData: [optional] Which input data is associated with this event</i></li>
+							<li><i>InputData: [optional] Which configuration is associated with the subscription</i></li>
 							<li><i>OutputData: [optional] Which data type is associated with this event</i>
 								<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
@@ -385,11 +388,12 @@
 						</p>
 						
 						<p>
-							The interaction with events works similar to actions with the difference that no side effects are intended on the thing.
-							A client issues a request to the URI of an action, which may include a payload that represents the configuration data for the event mechanism.
-							The created (sub-)resource serves as a handle for the event.
-							It can be monitored to receive notifications: an HTTP client would need to poll this resource, while a CoAP client would simply observe it.
+							The interaction with events works similar to actions with the difference that no side effects are intended on the thing (apart from storing the subscription and configuration).
+							A client issues a request to the URI of an event, which may include a payload that represents the configuration data for the event mechanism (e.g., notify when temperature is above 100&nbsp;&deg;C).
+							The created (sub-)resource serves as a handle for the subscription and the associated configuration.
+							It can be monitored to receive notifications: an HTTP client would need to poll this (sub-)resource, while a CoAP client would simply observe the (sub-)resource.
 							In fact, multiple clients could use the event created by another client when they are interested in the same event configutation.
+							To see which configurations are available, the client could read the event resource, which should return a list of linked (sub-)resources.
 							The event configuration can also be updated and ultimatively deleted to clean up internal notification hooks.
 						</p>
 						
@@ -408,16 +412,133 @@
 						To get a good understanding of how a TD can look like in a concrete instance a TD is provided in the case of a sensor (Temperature) and actuator (LED).
 					</p>
 					
-					<section>
+					<section class=remove">
 						<h4>Temperature Sensor</h4>
 						
-					
+						<p>
+							The following TD describes a temperature sensor called "OutsideTemperature", which is accessable only via CoAP, but provides two different serialization formats.
+							The thing offers two properties and three events for interaction.
+						</p>
+						
+						<pre class="example highlight">
+							{
+							  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+							  "metadata": {
+							    "name": "OutsideTemperature",
+							    "protocols" : [
+							      "coap://[fefe::206:98ff:fe00:202]/"
+							    ],
+							    "encodings": [
+							      "JSON",
+							      "CBOR"
+							    ]
+							  },
+							  "interactions": [
+							    {
+							      "@type": "Property",
+							      "name": "temperature",
+							      "href": "sensor",
+							      "outputData": "xsd:float",
+							      "writable": false
+							    }, {
+							      "@type": "Property",
+							      "name": "temperatureThreshold",
+							      "href": "threshold",
+							      "outputData": "xsd:float",
+							      "writable": true
+							    }, {
+							      "@type": "Event",
+							      "name": "temperatureChanged",
+							      "href": "e/changed",
+							      "outputData": "xsd:float",
+							    }, {
+							      "@type": "Event",
+							      "name": "highTemperature",
+							      "href": "e/high",
+							      "outputData": "xsd:float"
+							    },{
+							      "@type": "Event",
+							      "name": "lowTemperature",
+							      "href": "e/low",
+							      "outputData": "xsd:float"
+							    }
+							  ]
+							}
+						</pre>
 					</section>
 					
-					<section>
+					<section class=remove">
 						<h4>LED Actuator</h4>
 						
+						<p>
+							The following TD describes a color LED lamp called "MyLED", which is accessable via HTTP and CoAP.
+							The thing offers four properties, three actions, and one event for interaction.
+							The interaction resource structure differs between the two protocols.
+							Thus, the <code>href</code> field is an array that matches in length and order the <code>protocols</code> array in the metadata (i.e., the first entry belongs to HTTP and the second to CoAP).
+							Also note that for CoAP, the resource <code>coap://myled.example.com:5683/t</code> is used for both a property for setting the color temperature and an event to subscribe to notifications about changes of the color temperature.
+						</p>
 						
+						<pre class="example highlight">
+							{
+							  "metadata": {
+							    "name": "MyLED",
+							    "protocols": [
+							      "http://myled.example.com:80/ledlamp/",
+							      "coap://myled.example.com:5683/"
+							    ],
+							    "encodings": [
+							      "JSON"
+							    ]
+							  },
+							  "interactions": [
+							    {
+							      "@type": "Property",
+							      "name": "colorTemperature",
+							      "href": ["set/temp", "t"],
+							      "outputData": "xsd:unsignedShort",
+							      "writable": true
+							    }, {
+							      "@type": "Property",
+							      "name": "rgbValueRed",
+							      "href": ["rgb/red", "r"],
+							      "outputData": "xsd:unsignedByte",
+							      "writable": false
+							    }, {
+							      "@type": "Property",
+							      "name": "rgbValueGreen",
+							      "href": ["rgb/green", "g"],
+							      "outputData": "xsd:unsignedByte",
+							      "writable": false
+							    }, {
+							      "@type": "Property",
+							      "name": "rgbValueBlue",
+							      "href": ["rgb/blue", "b"],
+							      "outputData": "xsd:unsignedByte",
+							      "writable": false
+							    }, {
+							      "@type": "Action",
+							      "name": "ledOnOff",
+							      "href": ["set/onoff", "s"],
+							      "inputData": "xsd:boolean"
+							    }, {
+							      "@type": "Action",
+							      "name": "fadeIn",
+							      "href": ["fading/in", "i"],
+							      "inputData": "xsd:unsignedByte"
+							    },  {
+							      "@type": "Action",
+							      "name": "fadeOut",
+							      "href": ["fading/out", "o"],
+							      "inputData": "xsd:unsignedByte"
+							    }, {
+							      "@type": "Event",
+							      "name": "colorTemperatureChanged",
+							      "href": ["events/temp", "t"],
+							      "outputData": "xsd:unsignedShort"
+							    }
+							  ]
+							}
+						</pre>
 					</section>
 					
 				</section>
