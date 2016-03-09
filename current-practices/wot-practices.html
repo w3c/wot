@@ -193,14 +193,18 @@
 				</p>
 				<section>
 					<h3>TD Sample</h3>
-					<div class="example"><div class="example-title"><span>Example 1</span>: TD sample descriping LED</div><pre class="example">{
-						"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						"@type": "Thing",
-						"uri": ["coap://www.myled.com:5683/",
-					  "http://www.myled.com:8080/myled/"],
-					 	"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
-						...
-					}</pre></div>
+					<div class="example">
+		       <div class="example-title"><span>Example XZY</span></div>
+		       <pre>
+						 {
+		  			 	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+		  				"@type": "Thing",
+							"name": "MyLED",
+		  				"uri": ["coap://www.myled.com:5683/",
+		  				"http://www.myled.com:8080/myled/"],
+		  				"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
+		  				...
+		 				}</pre></div>
 				</section>
 	 			<section>
 					<h3>TD Elements</h3>
