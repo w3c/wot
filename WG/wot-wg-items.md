@@ -5,23 +5,24 @@ Direct link for a pull request: https://github.com/w3c/wot/edit/master/WG/wot-wg
 
 IMPORTANT: please check if you have IPR in the scope of the recommendation track items
 
-## Web of Things scripting API
+## Web of Things scripting API (API)
 
 Scope:
-* API definitions for Client and Server-side scripts (servient model)
-  * including high-level discovery client APIs for both local&remote cases
-  * including high-level security handling on client and servient side
-  * lifecycle methods
-  * registering and creating things (local and remote)
-    * based on TD
-    * imperatively
-  * Define requirements & contracts between runtime and application (e.g. callback signatures and how to attach callbacks)
-* security model and policies for scripting runtimes
-* allow for structuring an interlinking of resources
-* language-independent definitions with examples e.g. in JS
-* concept of applications spanning multiple things resp. resources
-* requirements/contracts for error handling
-* considerations for cross-cutting work (e.g. I18N, accessibility, privacy)
+
+1. API definitions for Client and Server-side scripts (servient model)
+  1. including high-level discovery client APIs for both local&remote cases
+  1. including high-level security handling on client and servient side
+  1. lifecycle methods
+  1. registering and creating things (local and remote)
+    1. based on TD
+    1. imperatively
+  1. Define requirements & contracts between runtime and application (e.g. callback signatures and how to attach callbacks)
+1. security model and policies for scripting runtimes
+1. allow for structuring an interlinking of resources
+1. language-independent definitions with examples e.g. in JS
+1. concept of applications spanning multiple things resp. resources
+1. requirements/contracts for error handling
+1. considerations for cross-cutting work (e.g. I18N, accessibility, privacy)
 
 Out-of scope:
 * solutions for particular runtimes/frameworks
@@ -35,13 +36,14 @@ Deliverables:
 
 Testing approach
 
-## Bindings To Common Protocols
+## Bindings To Common Protocols (BP)
 
 Scope:
-* Resource Model and URI concepts
-* Interaction Models
-* description of integration point for protocols
-* guidelines for SDOs how to map WoT to their protocol
+
+1. Resource Model and URI concepts
+1. Interaction Models
+1. description of integration point for protocols
+1. guidelines for SDOs how to map WoT to their protocol
 
 Out of Scope:
 * Protocol definitions (to be done by SDOs)
@@ -51,19 +53,19 @@ Out of Scope:
 Deliverables:
 * WG note: Spec & guidelines for model and integration points
 
-## Thing Description
+## Thing Description (TD)
 Scope:
 
-* A standard RDF vocabulary of terms for describing
-	* data models (e.g., for use in generating scriptable objects for IoT services)
-	* server metadata
-	* security metadata
-* Guidelines how to involve existing vocabulary  
-* Evaluate different serialization formats for RDF (shall be also feasible for constraints Things in terms of memory, processing, and bandwidth) and make a recommendation for (a) suitable serialization format(s)
-* Setup guidelines how to discover and filter Thing Descriptions
-* Extendibility of the metadata (such as relation to other things, location information, etc.)?
-* Consider lifecycle / lifecycle management in the TD (e.g., allow changes of metadata over lifetime (e.g., add location information, instanceTime, etc.))
-* Include base vocabulary for atomic use cases (domain independent) such as switching on / off ?
+1. A standard RDF vocabulary of terms for describing
+	1. data models (e.g., for use in generating scriptable objects for IoT services)
+	1. server metadata
+	1. security metadata
+1. Guidelines how to involve existing vocabulary  
+1. Evaluate different serialization formats for RDF (shall be also feasible for constraints Things in terms of memory, processing, and bandwidth) and make a recommendation for (a) suitable serialization format(s)
+1. Setup guidelines how to discover and filter Thing Descriptions
+1. Extendibility of the metadata (such as relation to other things, location information, etc.)?
+1. Consider lifecycle / lifecycle management in the TD (e.g., allow changes of metadata over lifetime (e.g., add location information, instanceTime, etc.))
+1. Include base vocabulary for atomic use cases (domain independent) such as switching on / off ?
 
 
 
