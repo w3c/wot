@@ -83,7 +83,7 @@
 
 			<section>
 				<h2>How to get started</h2>
-				
+
 				<p>
 					This document gives an overview for implementers over the W3C WoT building blocks and how they are connected.
 					<ul>
@@ -96,7 +96,7 @@
 
 		<section>
 			<h2>Terminology</h2>
-			
+
 			<p>
 				This document uses the following terms defined elsewhere.
 			</p>
@@ -194,17 +194,16 @@
 				<section>
 					<h3>TD Sample</h3>
 					<div class="example">
-		       <div class="example-title"><span>Example XZY</span></div>
+		       <div class="example-title"><span>Example 1</span></div>
 		       <pre>
-						 {
-		  			 	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-		  				"@type": "Thing",
-							"name": "MyLED",
-		  				"uri": ["coap://www.myled.com:5683/",
-		  				"http://www.myled.com:8080/myled/"],
-		  				"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
-		  				...
-		 				}</pre></div>
+{
+	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+	"name": "MyLED",
+	"uri": ["coap://www.myled.com:5683/",
+		  		"http://www.myled.com:8080/myled/"],
+	"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
+	...
+}</pre></div>
 				</section>
 	 			<section>
 					<h3>TD Elements</h3>
@@ -519,11 +518,11 @@
 
 				<section>
 					<h3>Abstract Thing Descriptions</h3>
-					
+
 					<p class="note" title="Matthias Kovatsch">
 						This is a proposal to implement the concept of late binding.
 					</p>
-					
+
 					<p>
 						An abstract TD contains all the semantic information of a normal TD except for the protocol and addressing information (i.e., base URIs and hrefs) as well as certain elements of the metadata that would refer to a specific instance of such a thing (e.g., name and serial number).
 						They can be compared to abstract classes or interfaces from object-oriented programming: abstract TDs define placeholders that cannot be instantiated, that is, do not belong to a concrete thing.
@@ -532,9 +531,9 @@
 						A script could instantiate a proxy object that exposes all capabilities of the abstract TD.
 						Only when it is accessed, a matching TD has to be discovered, so that the properties, actions, and events can be bound to the resources of an actual thing using its URIs.
 					</p>
-					
+
 				</section>
-				
+
 				<section>
 					<h3>Security Considerations</h3>
 					<p>Following security concerns apply to TD:
@@ -990,51 +989,51 @@ if(thingId){
 
 		<section>
 			<h1 id="plugfests">Plugfests</h1>
-			
+
 			<p>
 				This section includes the goals and ideas of each WoT Plugfest in chronological order.
 				Before reflecting the "lessons learned" of each Plugfest, which drove the development of the presented practices, the document provides a <a href="#sec-plugfest-howto">howto</a> for participating in the Plugfests.</p>
 			<p class="ednote">
 				@TODO Add more detailed information along with pictures of each plugfest
 			</p>
-			
+
 			<section id="sec-plugfest-howto">
 				<h2>Participation Howto</h2>
-				
+
 				<p class="note" title="Status">
 					The current status of the howto is <a href="#plugfest-montreal">Montreal (2016-04)</a>
 				</p>
-				
+
 				<p>
 					This howto is kept up to date with the requirements for the latest/upcoming edition of the Plugfest.
 					To participate in an upcoming Plugfest, prepare an implemention by deciding on the following questions.
 					The answers to these questions will also be needed when registering for a Plugfest by filling out a table in the corresponding Plugfest page in the <a href="https://www.w3.org/WoT/IG/wiki/Main_Page#Face_to_Face_Meetings">WoT IG Wiki</a>.
 					Note that might be additional options in the future when more features are defined or more protocol bindings become popular in the Plugfest.
 				</p>
-				
+
 				<section>
 					<h3>What to Implement?</h3>
-					
+
 					<ol>
 						<li>WoT client (e.g., a Web browser app or dashboard)</li>
 						<li>WoT server (e.g., a thing that only provides functionality, but does not use other things)</li>
 						<li>WoT <a>servient</a> (e.g., a virtual thing that composes multiple other things and provides a higher-level TD)</li>
 					</ol>
 				</section>
-				
+
 				<section>
 					<h3>Which Protocols to Support?</h3>
-					
+
 					<ol>
 						<li>HTTP (the most common protocol for clients and more powerful things)</li>
 						<li>CoAP (the predominant protocol for resource-constrained things)</li>
 						<li>Additional protocol such as MQTT (usually need a shim layer or new URI definition)</li>
 					</ol>
 				</section>
-				
+
 				<section>
 					<h3>What Security Modes to Support?</h3>
-					
+
 					<ol>
 						<li>NoSec (there is no security involved)</li>
 						<li>
@@ -1047,21 +1046,21 @@ if(thingId){
 						<li>Message authentication and encryption (i.e., using (D)TLS)</li>
 					</ol>
 				</section>
-				
+
 				<section>
 					<h3>How to Implement the Application Logic?</h3>
-					
+
 					<ol>
 						<li>Natively (i.e., directly in the firmware or using proprietary code and libraries)</li>
 						<li>Scripting (i.e., providing the <a>Scripting API</a>)</li>
 					</ol>
 				</section>
-				
+
 			</section>
-			
+
 			<section>
 				<h2>Sapporo (2015-10)</h2>
-				
+
 				<p>This first WoT plugfest elaborated, based on a JSON-LD thing description, server and client role of "thing".
 				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI encodings.</p>
 				<p>More information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_29-30_October_2015,_Sapporo,_Japan#Plugfest">wiki</a> page.</p>
@@ -1074,10 +1073,10 @@ if(thingId){
 					<li>Thing description registry and discovery is needed</li>
 				</ul>
 			</section>
-			
+
 			<section>
 				<h2>Nice (2016-01)</h2>
-				
+
 				<h3>Goals</h3>
 				<p>Based on the previous <a href="#sapporo-2015-10">plugfest in Sapporo</a> four advances will be proposed
 				   (more information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#PlugFest">wiki</a> page).</p>
@@ -1123,10 +1122,10 @@ if(thingId){
 					</li>
 				</ul>
 			</section>
-			
+
 			<section id="plugfest-montreal">
 				<h2>Montreal (2016-04)</h2>
-				
+
 				<p>Find Plugfest organization and contributor details on
 				the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_April,_11th_-_13th,_Montreal,_Canada#PlugFest">WoT Montreal Plugfest wiki page</a>.</p>
 				<p>With this plugfest we would like to move on from testing the practices in this document to actually
