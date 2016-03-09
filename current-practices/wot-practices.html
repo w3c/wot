@@ -198,12 +198,37 @@
 		       <pre>
 {
 	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+	"@type": "Thing",
 	"name": "MyLED",
 	"uri": ["coap://www.myled.com:5683/",
-		  		"http://www.myled.com:8080/myled/"],
+					"http://www.myled.com:8080/myled/"],
 	"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
-	...
-}</pre></div>
+	"encodings": [ "JSON"],
+	"interactions": [{
+		"@type": "Property",
+		"name": "Status",
+		"outputData": "xsd:boolean",
+		"writable": false,
+		"href": ["status", "myled/status" ]
+	}, {
+		"@type": "Action",
+ 		"name": "fadeIn",
+		"inputData": "xsd:unsignedByte",
+		"href": ["in", "myled/in" ]
+	},  {
+		"@type": "Action",
+		"name": "fadeOut",
+		"inputData": "xsd:unsignedByte",
+		"href": ["out", "myled/out" ]
+	},  {
+		"@type": "Event",
+		"name": "criticalCondition",
+		"outputData": "xsd:string",
+		"href": ["ev", "myled/out" ]
+	}
+]
+}
+</pre></div>
 				</section>
 	 			<section>
 					<h3>TD Elements</h3>
