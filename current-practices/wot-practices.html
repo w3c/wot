@@ -718,48 +718,16 @@
 <p>A <code>ThingRequest</code> is the entry point in the Scripting API to find things. It has a single method <code>start()</code> that starts the discovery or lookup according to the <code>ThingFilter</code> that is passed as input of the <code>ThingRequest</code> constructor.</p>
 <p>PS: If the Scripting API is exposed to web pages as a JavaScript API, the User Agent may open a dialog that let users select Things the page is allowed to access after the <code>ThingRequest.start()</code> is called. For trusted applications e.g. running in Node.js environment, the list of things found is passed to the application without asking the user.</p>
 
-
-<!-- Properly move it to WebIDL syntax -->
-<!--
-<dl title='[Constructor] interface ThingFilter ' class='idl'>
-  <dt>const unsigned short LEVROGYROUS = 0</dt>
-  <dd>
-    Turning left.
-  </dd>
-  <dt>const unsigned short DEXTROGYROUS = 1</dt>
-  <dd>
-    Turning right.
-  </dd>
-  <dt>readonly attribute DOMString chirality</dt>
-  <dd>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit (...)
-  </dd>
-  <dt>attribute unsigned long age</dt>
-  <dd>
-     Ut enim ad minim veniam, quis nostrud exercitation (...)
-  </dd>
-  <dt>Dahut turnAround (float angle, boolean fall)</dt>
-  <dd>
-    Duis aute irure dolor in reprehenderit in voluptate (...)
-  </dd>
-  <dt>unsigned long trip ()</dt>
-  <dd>
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa (...)
-  </dd>
-  <dt>void yell ([AllowAny] unsigned long volume,
-                    [TreatNullAs=EmptyString] DOMString sentence)</dt>
-  <dd>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit (...)
-  </dd>
-</dl> -->
-
+<!-- Proper WebIDL syntax -->
+<!-- Examples: https://www.w3.org/respec/examples/webidl-contiguous.html -->
 
 <pre class="idl">
 [Constructor(ThingFilter filter)]
 interface ThingRequest {
-    Promise&lt;sequence&lt;Thing&gt;&gt; start();
+	Promise&lt;sequence&lt;Thing&gt;&gt; start();
 };
 </pre>
+
 </section>
 
 <section>
@@ -773,13 +741,15 @@ interface ThingRequest {
 <li><code>server</code>: It is the end point of the WoT directory where to look to Things. If <code>server</code> is set, the value of <code>proximity</code> must be <code>remote</code>.</li>
 </ul>
 
-<pre class="idl">dictionary ThingFilter {
-    attribute DOMString? type;
-    attribute ThingProximity? proximity;
-    attribute DOMString? id;
-    attribute DOMString? server;
+<pre class="idl">
+dictionary ThingFilter {
+    DOMString? type;
+    ThingProximity? proximity;
+    DOMString? id;
+    DOMString? server;
 };
 </pre>
+
 </section>
 
 <section>
@@ -792,12 +762,14 @@ interface ThingRequest {
 <li><code>remote</code>: It represents lookup in WoT directories. The end point of the directory musst be supported.  </li>
 </ul>
 
-<pre class="idl">enum ThingProximity {
+<pre class="idl">
+enum ThingProximity {
     &quot;local&quot;,
     &quot;nearby&quot;,
     &quot;remote&quot;
 };
 </pre>
+
 </section>
 
 
@@ -825,7 +797,9 @@ interface ThingRequest {
 <li><code>removeAllListeners()</code>: remove all listener registered for an event defined in the thing description.</li>
 </ul>
 
-<pre class="idl">[Constructor(ThingDescription td)]
+
+<pre class="idl">
+[Constructor(ThingDescription td)]
 interface ConsumedThing {
     readonly attribute DOMString id;
     readonly attribute DOMString type;
@@ -838,7 +812,7 @@ interface ConsumedThing {
     void addListener(DOMString eventName, ThingEventListener listener);
     void removeListener(DOMString eventName, ThingEventListener listener);
     void removeAllListeners(DOMString eventName);
-}
+};
 callback ThingEventListener = void (ThingEvent event);
 </pre>
 
@@ -857,21 +831,25 @@ callback ThingEventListener = void (ThingEvent event);
 <li><code>source</code>: the thing that fired the event.</li>
 </ul>
 
-<pre class="idl">interface ThingEvent {
+<pre class="idl">
+interface ThingEvent {
     readonly attribute DOMString name;
     readonly attribute any value;
     readonly attribute Thing source;
-}
+};
 </pre>
+
 </section>
 
 
 <section>
 <h2 id="interface-thingdescription">Interface <code>ThingDescription</code></h2>
 <p><code>ThingDescription</code> is a place holder for the JSON-LD spec of the Thing Description.</p>
-<pre class="idl">dictionary ThingDescription {
+
+<pre class="idl">
+dictionary ThingDescription {
     // Thing Description according to the JSON-LD TD spec.
-}
+};
 </pre>
 
 </section>
@@ -884,11 +862,11 @@ callback ThingEventListener = void (ThingEvent event);
 					<h3>Server API</h3>
 
 <section>
-<h3 id="interface-exposedthing-">Interface <code>ExposedThing</code></h3>
+<h3 id="interface-exposedthing">Interface <code>ExposedThing</code></h3>
 <p>The interface <code>ExposedThing</code> is used for providing a thing.<br>It has methods to attach handlers that flesh out the application logic and can modify the provided interactions.</p>
 
-<pre class="idl">[Constructor(ThingDescription td)]
-[Constructor(DOMString name)]
+<pre class="idl">
+[Constructor(ThingDescription td), Constructor(DOMString name)]
 interface ExposedThing {
     readonly attribute ThingDescription description;
     readonly attribute DOMString name;
@@ -902,11 +880,12 @@ interface ExposedThing {
     void addListener(DOMString eventName, ThingEventListener listener);
     void removeListener(DOMString eventName, ThingEventListener listener);
     void removeAllListeners(DOMString eventName);
-}
+};
 callback ThingEventListener = void (ThingEvent event);
 callback ChangeEventListener = void (any newValue, any OldValue, ThingEvent event);
-callback ActionEventListener = any (any param)
+callback ActionEventListener = any (any param);
 </pre>
+
 </section>
 
 
