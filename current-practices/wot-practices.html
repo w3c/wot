@@ -185,38 +185,41 @@
 				</p>
 				<section>
 					<h3>TD Sample</h3>
-					<pre class="example highlight">
-						 "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						 "@type": "Thing",
-  				 	 "uri": ["coap://www.myled.com:5683/",
-          	 "http://www.myled.com:8080/myled/"],
-  					 "security": {"typ":"JWT", "alg":"HS256"},
- 							...
-						</pre>
+					<div class="example"><div class="example-title"><span>Example 1</span>: TD sample descriping LED</div><pre class="example">{
+						"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+						"@type": "Thing",
+						"uri": ["coap://www.myled.com:5683/",
+					  "http://www.myled.com:8080/myled/"],
+					 	"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
+						...
+					}</pre></div>
 				</section>
 	 			<section>
 					<h3>TD Elements</h3>
 					<section>
 						<h4>TD Context (@context) and Thing Type (@type) </h4>
 
- 					<pre class="example highlight">
-						 "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-							...
-						</pre>
+						<div class="example"><div class="example-title"><span>Example 2</span>: Context for the TD</div><pre class="example">{
+							"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+						  ...
+						}</pre></div>
 
 						To identify a document as a TD and to map TD terms to distinct IRIs the context "http://w3c.github.io/wot/w3c-wot-td-context.jsonld" has to be used.
 					</section>
 					<section>
 						<h4>Security</h4>
-						<pre class="example highlight">
-							...
-							"security": {"typ":"JWT", "alg":"HS256"},
-							...
-						</pre>
 
-						The <b>(optional)</b> security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources.
+						<div class="example"><div class="example-title"><span>Example 2</span>: Context for the TD</div><pre class="example">{
+							...
+							"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
+							...
+						}</pre></div>
 
-						<p>Here, JSON Web Token (JWT) type is assigned and the corresponding hashing algorithm "HS256".</p>
+						The <b>(optional)</b> security field can be used to provide access metadata (self-contained) information of the Thing
+						for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
+
+
+						<p>Here as a example, JSON Web Token (JWT) type is assigned and the corresponding hashing algorithm "HS256".</p>
 
 
 					</section>
