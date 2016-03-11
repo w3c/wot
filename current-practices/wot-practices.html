@@ -209,9 +209,9 @@
 	  "properties": [
 	    {
 	      "@type": "sensor:Temperature",
-	      "name" : "temperatur",
+				"name" : "temperatur",
 				"unit" : "Celsius",
-	      "outputData": "xsd:float",
+				"outputData": "xsd:float",
 	      "writable": false,
 	      "href": "temp"
 	    }
@@ -275,10 +275,10 @@ requirements (based on JWT), and  different interaction models (properties, acti
 						<div class="example">
 			       <div class="example-title"><span>Example 3</span></div>
 	<pre>
-		{
-			"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-			"@type": "Thing",
-			...
+{
+	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+	"@type": "Thing",
+	...
 	</pre>
 	</div>
 
@@ -311,17 +311,19 @@ terms to the TD context the type "Thing" has to be used.
 						<h4>Thing's Metadata</h4>
 
 						<div class="example">
-			       <div class="example-title"><span>Example 1</span></div>
+			       <div class="example-title"><span>Example 4</span></div>
 	<pre>
-		{
-			...
-			"name": "MyLED",
-			"uri": ["coap://www.myled.com:5683/",
-					    "http://www.myled.com:8080/myled/"],
-			"encodings": [ "JSON", "EXI4JSON"],
-		  "security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
-		  ...
-		}
+{
+	...
+	"name": "MyLED",
+	"uri": ["coap://www.myled.com:5683/", "http://www.myled.com:8080/myled/"],
+	"encodings": [ "JSON", "EXI4JSON"],
+	"security": {"cat":"token:jwt",
+							 "alg":"HS256",
+							 "as":"https://authority-issuing.org"
+						  },
+	...
+}
 	</pre>
 	</div>
 
@@ -366,12 +368,13 @@ terms to the TD context the type "Thing" has to be used.
 						</ul>
 
 						<p>
-							Besides of these pre-defined vocabularies additional characteristics can be added such as product ID, firmware version, location, etc.
-							This involves also the case of vocabularies from other contexts (see <a href="#td-context-extension"></a>.
+							<b>Note:</b> Besides of these pre-defined vocabularies in the TD context, additional characteristics can be
+							added such as product ID, firmware version, location, etc.	that are defined vocabularies from other
+							contexts (see <a href="#td-context-extension"></a>.
 						</p>
 					</section>
 
-					<section>
+				<!--	<section>
 						<h4>Data</h4>
 
 						<p class="ednote">
@@ -379,7 +382,7 @@ terms to the TD context the type "Thing" has to be used.
 							This also has logical conflict with properties, which technically provide the data of a thing.
 							Furthermore, this should maybe become part of the represenation format carrying the data to become self-descriptive and semantically safe.
 						</p>
-						<p class="note" title="Matthias Kovatsch">
+				 	<p class="note" title="Matthias Kovatsch">
 							Personally, I am not even sure if we need this.
 							The encoding of the value within a representation format (JSON number, EXI element, etc.) should be enough, when the property itself is fully described.
 							We do not care if the system internally represents it as an unsighend byte, signed integer, or whatever.
@@ -394,20 +397,38 @@ terms to the TD context the type "Thing" has to be used.
 
 						<p>An input or output data field can be also assigned as empty which is equivalent to 'void' or 'null'.</p>
 					</section>
-
+-->
 					<section>
 						<h4>Property</h4>
-
-						<p class="ednote">
-							Properties, Actions, and Events at this level do not correspond to the actual TD elements in JSON-LD.
-							It would be more intuitive to stick to the JSON-LD structure, that is, having an "Interactions" section here.
-						</p>
-
 						<p>
 							The interaction type <code>Property</code> is used to serve data of a thing.
 							This data can be static (e.g., supported mode, provided output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
-							There are four mandatory and two optional vocabularies defined within the <code>Property</code> type:
 						</p>
+
+						<div class="example">
+			       <div class="example-title"><span>Example 5</span></div>
+	<pre>
+		...
+		"properties": [
+		    {
+		      "@type": "sensor:Temperature",
+					"name" : "temperatur",
+					"unit" : "Celsius",
+					"outputData": "xsd:float",
+		      "writable": false,
+		      "href": "temp"
+		    }
+			...
+	</pre>
+	</div>
+				<!--		<p class="ednote">
+							Properties, Actions, and Events at this level do not correspond to the actual TD elements in JSON-LD.
+							It would be more intuitive to stick to the JSON-LD structure, that is, having an "Interactions" section here.
+						</p>
+					-->
+
+						<p>	There are four mandatory and two optional vocabularies defined within the <code>Property</code> type: </p>
+
 
 						<ul>
 							<li><b>Name:</b> Name of the property that also defines the semantics</li>
