@@ -185,31 +185,55 @@
 
 				<p>
 
-					The subsequent subsection will give a basic concept of the TD as a JSON-LD sample and more detail explaination of the TD elements, their (manditory/optional) contents, and their relation to each other.
+					The subsequent subsection will give a basic concept of the TD as  JSON-LD samples and more detail explaination of the
+					TD elements as well as how can it be used in a TD sample.
 				</p>
 
-				<p class="ednote">
-					The term was changed from TD "components" to TD "elements", as component has a specific meaning in the Web/REST (i.e., user agent, intermediary, origin server).
-				</p>
 				<section>
-					<h3>TD Sample</h3>
-
-					Example 1 shows a simple TD that reflects a very basic way to describe
-					a temperature resource of a Thing that uses	JSON as a exchange data format
-					and HTTP as application transportation protocol.
+					<h3>TD Samples</h3>
+					In the follwoing we introduce two TD samples to show the TD's oppertunities. Example 1 shows a simple TD
+					that reflects a very basic way to describe a temperature Thing ("MyTemperatureThing") that serve a temperature property that uses JSON as an exchange data format
+					and CoAP as application transportation protocol to request and transport the temperature value.
 
 
 					<div class="example">
 		       <div class="example-title"><span>Example 1</span></div>
 <pre>
-
+	{
+	  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+	              {"sensor" : "http://example.org/sensors#"}],
+	  "@type": "Thing",
+	  "name": "MyTemperatureThing",
+	  "uri" : "coap://www.mytemp.com:5683/",
+	  "encodings": "JSON",
+	  "properties": [
+	    {
+	      "@type": "sensor:Temperature",
+	      "name" : "temperatur",
+				"unit" : "Celsius"
+	      "outputData": "xsd:float",
+	      "writable": false,
+	      "href": "temp"
+	    }
+	  ]
+	}
 </pre>
 </div>
+Based on this information in the TD we are able to understand what kind of
+resources is provided (temperature), how to access them (GET coap://www.mytemp.com:5683/temp),
+what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
+and what is the underlying data type (float).
+
+
+Example 2 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
+different kind of protocols (http and coap), encodings (JSON and EXI4JSON), security
+requirements (based on JWT), and  different interaction models (properties, actions, events).
+
 
 					<div class="example">
 		       <div class="example-title"><span>Example 2</span></div>
 		       <pre>
-{
+<!--{
 	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 	"@type": "Thing",
 	"name": "MyLED",
@@ -239,7 +263,7 @@
 		"outputData": "xsd:string",
 		"href": ["ev", "myled/out" ]
 	}]
-}
+}-->
 </pre></div>
 				</section>
 	 			<section>
@@ -698,8 +722,8 @@
 							<li>Caller tasks</li>React on application protocol error responses (demanding the supply of security tokens), acquire security token from online TTPs, perform initial authentication by means of a security protocol (possibly different from the application protocol, evtl. mediated by an online TTP on side of the requesting party), and supply security tokens (bearer) and/or authenticators (PoP) as part of the application protocol
 						</ul>
 						For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT APIs
-						
-						The security-part of the W3C WoT Plugfest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the Plugfest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this Plugfest 
+
+						The security-part of the W3C WoT Plugfest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the Plugfest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this Plugfest
 						<h4>Secure Communications</h4>
 						Communication security can be implemented in form of transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the same working tasks and workload<br/><br/>
 						Transport-level security has a long heritage in IT and presents a well-understood means in Web security which is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
