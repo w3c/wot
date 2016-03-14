@@ -200,10 +200,8 @@
 		       <div class="example-title"><span>Example 1</span></div>
 <pre>
 	{
-	  "@context": [
-	    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-	    { "sensor": "http://example.org/sensors#"}
-	  ],
+	  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+	    					{ "sensor": "http://example.org/sensors#"}],
 	  "@type": "Thing",
 	  "name": "MyTemperatureThing",
 	  "uri": "coap://www.mytemp.com:5683/",
@@ -352,12 +350,16 @@ terms to the TD context the type "Thing" has to be used.
 {
 	...
 	"name": "MyLED",
-	"uri": ["coap://www.myled.com:5683/", "http://www.myled.com:8080/myled/"],
-	"encodings": [ "JSON", "EXI4JSON"],
-	"security": {"cat":"token:jwt",
-							 "alg":"HS256",
-							 "as":"https://authority-issuing.org"
-						  },
+  "uri": [
+    "coap://www.myled.com:5683/",
+    "http://www.myled.com:8080/myled/"
+  ],
+  "encodings": [ "JSON","EXI4JSON"],
+  "security": {
+    "cat": "token:jwt",
+    "alg": "HS256",
+    "as": "https://authority-issuing.org"
+  },
 	...
 }
 	</pre>
@@ -446,14 +448,15 @@ terms to the TD context the type "Thing" has to be used.
 	<pre>
 		...
 		"properties": [
-		    {
-		      "@type": "sensor:Temperature",
-					"name" : "temperatur",
-					"sensor:unit" : "sensor:Celsius",
-					"baseType": "xsd:float",
-		      "writable": false,
-		      "href": "temp"
-		    }
+	    {
+	      "@type": "sensor:Temperature",
+	      "name": "temperature",
+	      "sensor:unit": "sensor:Celsius",
+	      "baseType": "xsd:float",
+	      "writable": false,
+	      "href": "temp"
+	    }
+	  ]
 			...
 	</pre>
 	</div>
@@ -467,10 +470,11 @@ terms to the TD context the type "Thing" has to be used.
 
 
 						<ul>
+							<li><b>@type:</b> [optional] Allows to assign a context to the property.</li>
 							<li><b>Name:</b> Name of the property that also defines the semantics</li>
 							<li><b>Href:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><i>BaseType: Which data type is associated with this property. There are different kind of ways to assign data types. You can rely on simple data types that are in context of
-							XML Schema (xsd prefix), JSON Schema, or link to a external data type defination.
+							<li><i>BaseType: Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
+							RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type defination.
 							<p>
 							Type restrications are enabled by the <b>optional</b> terms <b>min</b>, <b>max</b>, and <b>enum</b>.
 							<p>
@@ -483,7 +487,11 @@ terms to the TD context the type "Thing" has to be used.
 							</li>
 							<li><b>Writable:</b> Is this property writable (true/false)</li>
 							<li><b>Stability: [optional]</b> Expected maximum time of stability of the property value in ms (0=stable/static property value)</li>
-							<li><b>Security: [optional]</b> Access metadata for securely transmitting information of the property</li>
+							<li><b>Security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the property
+
+									<p>Compared to the security field that can be found in  <a href="#thing-s-metadata">Thing's metadata</a>, this field here can be used to apply
+										specific security requirements that is only valid for that resources. </p>
+							</li>
 						</ul>
 
 						<p>
@@ -524,17 +532,39 @@ terms to the TD context the type "Thing" has to be used.
 							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the thing.
 							There are one mandatory and four optional vocabularies defined within the <code>Action</code> type:
 						</p>
-
+						<div class="example">
+			       <div class="example-title"><span>Example 6</span></div>
+	<pre>
+		...
+		"actions": [
+			{
+				"@type": "actuator:fadeIn",
+				"name": "fadeIn",
+				"inputData": {
+					"min": 1000,
+					"max": 10000,
+					"baseType": "xsd:short",
+					"actuator:unit": "actuator:ms"
+				},
+				"href": ["in", "myled/in"  ]
+			}
+		],
+			...
+	</pre>
+	</div>
 						<ul>
+							<li><b>@type:</b> [optional] Allows to assign a context to the action.</li>
 							<li><b>Name:</b> Name of the action</li>
-							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><i>InputData: [optional] Which input data is associated with this action</i></li>
-							<li><i>OutputData: [optional] Which data type is associated with this action</i>
-								<p class="note" title="Matthias Kovatsch">
+							<li><i><b>InputData:</b> [optional] Which input data is associated with this action. In there, specific data type characteristics can be defined such as <b>basedType</b>,
+								and the <b>optional</b> restrictions <b>min</b>, <b>max</b>, and <b>enum</b>  (also see description in <a href="#property">Property</a>) as well as <b>optional</b>
+								addition context metadata (e.g., unit ms)</i></li>
+							<li><i><b>OutputData:</b> [optional] Which data type is associated with this action (same condition as InputData above)</i>
+					<!--			<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
-								</p>
+								</p>-->
 							</li>
+							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
 							<li><b>Security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the property</li>
 						</ul>
 
@@ -566,16 +596,33 @@ terms to the TD context the type "Thing" has to be used.
 							Furthermore, events might need a specific configuration that requires data sent and stored on the thing in a standard way.
 							There are are two mandatory and two optional vocabularies defined within the <code>Event</code> type:
 						</p>
-
+						<div class="example">
+			       <div class="example-title"><span>Example 6</span></div>
+	<pre>
+		...
+		"events": [
+			{
+				"name": "criticalCondition",
+				"enums": [ "temperatureToHigh", "lowVoltage" ],
+				"baseType": "xsd:string",
+				"href": [ "ev", "myled/event" ]
+			}
+		]
+			...
+	</pre>
+	</div>
 						<ul>
+							<li><b>@type:</b> [optional] Allows to assign a context to the event.</li>
 							<li><b>Name:</b> Name of the event</li>
 							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><i>InputData: [optional] Which input data is associated with this event</i></li>
-							<li><i>OutputData: [optional] Which data type is associated with this event</i>
-								<p class="note" title="Matthias Kovatsch">
+				<!--			<li><i>InputData: [optional] Which input data is associated with this event</i></li>-->
+							<li><i>OutputData: [optional] Which data type is associated with this event. In there, specific data type characteristics can be defined such as <b>basedType</b>,
+								and the <b>optional</b> restrictions <b>min</b>, <b>max</b>, and <b>enum</b>  (also see description in <a href="#property">Property</a>) as well as <b>optional</b>
+								addition context metadata (e.g., unit ms)</i>
+						<!--		<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
-								</p>
+								</p>-->
 							</li>
 							<li><b>Security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the property </li>
 						</ul>
