@@ -200,18 +200,20 @@
 		       <div class="example-title"><span>Example 1</span></div>
 <pre>
 	{
-	  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-	              {"sensor" : "http://example.org/sensors#"}],
+	  "@context": [
+	    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+	    { "sensor": "http://example.org/sensors#"}
+	  ],
 	  "@type": "Thing",
 	  "name": "MyTemperatureThing",
-	  "uri" : "coap://www.mytemp.com:5683/",
+	  "uri": "coap://www.mytemp.com:5683/",
 	  "encodings": "JSON",
 	  "properties": [
 	    {
 	      "@type": "sensor:Temperature",
-				"name" : "temperatur",
-				"unit" : "Celsius",
-				"outputData": "xsd:float",
+	      "name": "temperature",
+	      "sensor:unit": "sensor:Celsius",
+	      "baseType": "xsd:float",
 	      "writable": false,
 	      "href": "temp"
 	    }
@@ -229,43 +231,74 @@ and what is the underlying data type (float).
 <p>
 Example 2 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
 different kind of protocols (http and coap), encodings (JSON and EXI4JSON), security
-requirements (based on JWT), and  different interaction models (properties, actions, events).
+requirements (based on JWT), and  different interaction models (properties, actions, events) with
+some type restrictions.
 </p>
 
 					<div class="example">
 		       <div class="example-title"><span>Example 2</span></div>
 		       <pre>
-<!--{
-	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-	"@type": "Thing",
-	"name": "MyLED",
-	"uri": ["coap://www.myled.com:5683/",
-					"http://www.myled.com:8080/myled/"],
-	"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
-	"encodings": [ "JSON"],
-	"interactions": [{
-		"@type": "Property",
-		"name": "Status",
-		"outputData": "xsd:boolean",
-		"writable": false,
-		"href": ["status", "myled/status" ]
-	}, {
-		"@type": "Action",
- 		"name": "fadeIn",
-		"inputData": "xsd:unsignedByte",
-		"href": ["in", "myled/in" ]
-	},  {
-		"@type": "Action",
-		"name": "fadeOut",
-		"inputData": "xsd:unsignedByte",
-		"href": ["out", "myled/out" ]
-	},  {
-		"@type": "Event",
-		"name": "criticalCondition",
-		"outputData": "xsd:string",
-		"href": ["ev", "myled/out" ]
-	}]
-}-->
+						 {
+						   "@context": [
+						     "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+						     {"actuator": "http://example.org/actuator#"}
+						   ],
+						   "@type": "Thing",
+						   "name": "MyLED",
+						   "uri": [
+						     "coap://www.myled.com:5683/",
+						     "http://www.myled.com:8080/myled/"
+						   ],
+						   "encodings": [ "JSON", "EXI4JSON"],
+						   "security": {
+						     "cat": "token:jwt",
+						     "alg": "HS256",
+						     "as": "https://authority-issuing.org"
+						   },
+						   "properties": [
+						     {
+						       "@type": "actuator:onOffStatus",
+						       "name": "status",
+						       "enums": [ "on", "off"],
+						       "baseType": "xsd:string",
+						       "writable": false,
+						       "href": [ "status", "myled/status"]
+						     }
+						   ],
+						   "actions": [
+						     {
+						       "@type": "actuator:fadeIn",
+						       "name": "fadeIn",
+						       "inputData": {
+						         "min": 1000,
+						         "max": 10000,
+						         "baseType": "xsd:short",
+						         "actuator:unit": "actuator:ms"
+						       },
+						       "href": [ "in", "myled/in" ]
+						     },
+						     {
+						       "@type": "actuator:fadeOut",
+						       "name": "fadeOut",
+						       "inputData": {
+						         "min": 1000,
+						         "max": 10000,
+						         "baseType": "xsd:short",
+						         "actuator:unit": "actuator:ms"
+						       },
+						       "href": ["out","myled/out"]
+						     }
+						   ],
+						   "events": [
+						     {
+						       "name": "criticalCondition",
+						       "enums": [ "temperatureToHigh", "lowVoltage"],
+						       "baseType": "xsd:string",
+						       "href": [ "ev", "myled/event" ]
+						     }
+						   ]
+						 }
+
 </pre></div>
 				</section>
 	 			<section>
@@ -413,8 +446,8 @@ terms to the TD context the type "Thing" has to be used.
 		    {
 		      "@type": "sensor:Temperature",
 					"name" : "temperatur",
-					"unit" : "Celsius",
-					"outputData": "xsd:float",
+					"sensor:unit" : "sensor:Celsius",
+					"baseType": "xsd:float",
 		      "writable": false,
 		      "href": "temp"
 		    }
@@ -433,7 +466,7 @@ terms to the TD context the type "Thing" has to be used.
 						<ul>
 							<li><b>Name:</b> Name of the property that also defines the semantics</li>
 							<li><b>Href:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><i>OutputData: Which data type is associated with this property</i>
+							<li><i>BaseType: Which data type is associated with this property</i>
 								<p class="note" title="Matthias Kovatsch">
 									This needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
