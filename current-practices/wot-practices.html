@@ -239,67 +239,70 @@ some type restrictions.
 		       <div class="example-title"><span>Example 2</span></div>
 		       <pre>
 						 {
-						   "@context": [
-						     "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						     {"actuator": "http://example.org/actuator#"}
-						   ],
-						   "@type": "Thing",
-						   "name": "MyLED",
-						   "uri": [
-						     "coap://www.myled.com:5683/",
-						     "http://www.myled.com:8080/myled/"
-						   ],
-						   "encodings": [ "JSON", "EXI4JSON"],
-						   "security": {
-						     "cat": "token:jwt",
-						     "alg": "HS256",
-						     "as": "https://authority-issuing.org"
-						   },
-						   "properties": [
-						     {
-						       "@type": "actuator:onOffStatus",
-						       "name": "status",
-						       "enums": [ "on", "off"],
-						       "baseType": "xsd:string",
-						       "writable": false,
-						       "href": [ "status", "myled/status"]
-						     }
-						   ],
-						   "actions": [
-						     {
-						       "@type": "actuator:fadeIn",
-						       "name": "fadeIn",
-						       "inputData": {
-						         "min": 1000,
-						         "max": 10000,
-						         "baseType": "xsd:short",
-						         "actuator:unit": "actuator:ms"
-						       },
-						       "href": [ "in", "myled/in" ]
-						     },
-						     {
-						       "@type": "actuator:fadeOut",
-						       "name": "fadeOut",
-						       "inputData": {
-						         "min": 1000,
-						         "max": 10000,
-						         "baseType": "xsd:short",
-						         "actuator:unit": "actuator:ms"
-						       },
-						       "href": ["out","myled/out"]
-						     }
-						   ],
-						   "events": [
-						     {
-						       "name": "criticalCondition",
-						       "enums": [ "temperatureToHigh", "lowVoltage"],
-						       "baseType": "xsd:string",
-						       "href": [ "ev", "myled/event" ]
-						     }
-						   ]
-						 }
+  "@context": [
+    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    {"actuator": "http://example.org/actuator#"}
+  ],
+  "@type": "Thing",
+  "name": "MyLED",
+  "uri": [
+    "coap://www.myled.com:5683/",
+    "http://www.myled.com:8080/myled/"
+  ],
+  "encodings": [ "JSON","EXI4JSON"],
+  "security": {
+    "cat": "token:jwt",
+    "alg": "HS256",
+    "as": "https://authority-issuing.org"
+  },
+  "properties": [
+    {
+      "@type": "actuator:onOffStatus",
+      "name": "status",
+      "enums": [ "on", "off" ],
+      "baseType": "xsd:string",
+      "writable": false,
+      "href": [ "status", "myled/status" ]
+    }
+  ],
+  "actions": [
+    {
+      "@type": "actuator:fadeIn",
+      "name": "fadeIn",
+      "inputData": {
+        "min": 1000,
+        "max": 10000,
+        "baseType": "xsd:short",
+        "actuator:unit": "actuator:ms"
+      },
+      "href": ["in", "myled/in"  ]
+    },
+    {
+      "@type": "actuator:fadeOut",
+      "name": "fadeOut",
+      "inputData": {
+        "min": 1000,
+        "max": 10000,
+        "baseType": "xsd:short",
+        "actuator:unit": "actuator:ms"
+      },
+      "href": ["out", "myled/out" ]
+    }
+  ],
+  "events": [
+    {
+      "name": "criticalCondition",
+      "enums": [ "temperatureToHigh", "lowVoltage" ],
+      "baseType": "xsd:string",
+      "href": [ "ev", "myled/event" ]
+    }
+  ]
+}
 
 </pre></div>
+
+More details about the TD elements are given in the next section.
+
 				</section>
 	 			<section>
 					<h3>Details of the TD Elements</h3>
@@ -466,11 +469,17 @@ terms to the TD context the type "Thing" has to be used.
 						<ul>
 							<li><b>Name:</b> Name of the property that also defines the semantics</li>
 							<li><b>Href:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><i>BaseType: Which data type is associated with this property</i>
-								<p class="note" title="Matthias Kovatsch">
+							<li><i>BaseType: Which data type is associated with this property. There are different kind of ways to assign data types. You can rely on simple data types that are in context of
+							XML Schema (xsd prefix), JSON Schema, or link to a external data type defination.
+							<p>
+							Type restrications are enabled by the <b>optional</b> terms <b>min</b>, <b>max</b>, and <b>enum</b>.
+							<p>
+
+						 </i>
+							<!--	<p class="note" title="Matthias Kovatsch">
 									This needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
-								</p>
+								</p>-->
 							</li>
 							<li><b>Writable:</b> Is this property writable (true/false)</li>
 							<li><b>Stability: [optional]</b> Expected maximum time of stability of the property value in ms (0=stable/static property value)</li>
