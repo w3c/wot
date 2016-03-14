@@ -102,15 +102,404 @@
       <h2>Tech landscape for Thing description</h2>
       <section>
         <h2> Data model &amp; Vocabulary &amp; TD Model</h2>
+        <ul>
+        <li><p>The OMA DM Management Objects (Matthias and Mohammed)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Device management specification for mobile phone terminals targeting mobile network operators. WAP Binary XML serialization over HTTP(S), binary SMS for wakeup and bootstraping.</li>
+        <li><strong>Consortium:</strong> Open Mobile Alliance</li>
+        <li><strong>Tool/Development Support:</strong> ?</li>
+        <li><strong>Resource identification:</strong> DM Objects</li>
+        <li><strong>Query capabilities:</strong> </li>
+        <li><strong>Data Types:</strong> </li>
+        </ul>
+        </li>
+        <li><p>Lemonbeat Device Language (Frank)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RWE is first mover of SmartHome solutions and market leader in Germany. Lemonbeat is a follow-up-technology based on SmartHome but address a wide spread of different industries. CoAP-Implementation is in the design phase. XML/XSD, EXI, CoAP, DTLS, UDP, IPv6</li>
+        <li><strong>Consortium:</strong> RWE</li>
+        <li><strong>Tool/Development Support:</strong> Management Software</li>
+        <li><strong>Resource identification:</strong> A new device sends it device description and the inclusion into the network is fully automatically, without manual activities. Content of device description: IPv6-adress, SGTIN, name of device, manufacturer, communication protocol, radio and wake-up information, etc.</li>
+        <li><strong>Query capabilities:</strong> The Value Description of each device can be queried and configured.</li>
+        <li><strong>Data Types:</strong> XML/XSD, EXI compression</li>
+        </ul>
+        </li>
+        </ul>
+        <ul>
+        <li><p>ECHONET device objects (Naka)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> ECHONET device object is a logical model of the information held by more than 100 types of equipment devices or home electrical appliances such as sensors, air conditioners and LED Lights, or of control items that can be remotely controlled.</li>
+        <li><strong>Consortium:</strong> ECHONET Consortium</li>
+        <li><strong>Tool/Development Support:</strong> The Consortium does NOT provide the official tool/development support, however, some member companies and a university provide SDK / test tool / maintenance tool, e.g. <a href="https://smarthouse-center.org/sdk/">https://smarthouse-center.org/sdk/</a></li>
+        <li><strong>Resource identification:</strong> “Identification number” property whose data type is unsigned character is included in common part of ECHONET device object definition.</li>
+        <li><strong>Query capabilities:</strong> Thing descovery and registration method is described as a guideline in ECHONET Lite specifications. The guideline includes implementation of UPnP search mechanism.</li>
+        <li><strong>Data Types:</strong> Data types are dependent on property type specified in ECHONET device objects, e.g. binary unsigened character.</li>
+        </ul>
+        </li>
+        <li><p>OMA Lightweight M2M (LWM2M) Objects</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Update OMA DM for M2M and unify DM and application stack using CoAP. LWM2M specifies interfaces (bootstrap, registration, device management &amp; service enablement, information reporting) and operations (read, write, execute, notify) on top of CoAP. Functionality is structured in so-called Objects. LWM2M comes with device management objects (e.g., Access Control, Device, Firmware Update). OMA provides an open registry for application-specific Object definitions (<a href="http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry">http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry</a>)</li>
+        <li><strong>Consortium:</strong> Open Mobile Alliance</li>
+        <li><strong>Tool/Development Support:</strong> online Object editor, emulator for virtual devices and protocol/message inspection (<a href="https://github.com/OpenMobileAlliance/">https://github.com/OpenMobileAlliance/</a>)</li>
+        <li><strong>Resource identification:</strong> URIs with numeric identifiers (e.g., /3/0/2 is the Device Object (3), Instance 0, serial number (2))</li>
+        <li><strong>Query capabilities:</strong> CoRE resource directory filtering or custom API, CoRE Link Format</li>
+        <li><strong>Data Types:</strong> text/plain, application/vnd.oma.lwm2m+opaque, application/vnd.oma.lwm2m+tlv, application/vnd.oma.lwm2m+json</li>
+        </ul>
+        </li>
+        <li><p>IPSO Smart Object</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Provides application-specific Object models following OMA LWM2M and publishes to OMA Object registry. Also aims for HTTP support in addition to CoAP</li>
+        <li><strong>Consortium:</strong> IPSO Alliance</li>
+        <li><strong>Tool/Development Support:</strong> <a href="http://challenge.ipso-alliance.org/so-starter-pack">http://challenge.ipso-alliance.org/so-starter-pack</a>, <a href="http://challenge.ipso-alliance.org/so-expansion-pack">http://challenge.ipso-alliance.org/so-expansion-pack</a></li>
+        <li><strong>Resource identification:</strong> See OMA LWM2M</li>
+        <li><strong>Query capabilities:</strong> See OMA LWM2M</li>
+        <li><strong>Data Types:</strong> See OMA LWM2M</li>
+        </ul>
+        </li>
+        <li><p>IOTDB.org (David Janes)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong></li>
+        <li><strong>Consortium:</strong></li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong></li>
+        <li><strong>Query capabilities:</strong></li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>Vorto (Matthias)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> (Meta) information model to generate framework-specific data models and code. Open source project in the Eclipse Foundation started by Bosch.</li>
+        <li><strong>Consortium:</strong> Open source project (Eclipse IoT working group)</li>
+        <li><strong>Tool/Development Support:</strong> information model DSL, model repository, code genereators</li>
+        <li><strong>Resource identification:</strong> any (depends on target framework)</li>
+        <li><strong>Query capabilities:</strong> (depends on target framework)</li>
+        <li><strong>Data Types:</strong> (depends on target framework)</li>
+        </ul>
+        </li>
+        <li><p>Semantic Sensor Network (SSN) Ontology (Danh)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> SSN was developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG) to describe sensors and observations, and related concepts. SSN is now being extended and standardised by W3C Spatial Data on The Web Working Group(SDWWG)</li>
+        <li><strong>Consortium:</strong> SSN-XG, SDWWG</li>
+        <li><p><strong>Tool/Development Support:</strong> ontology tools: SPARQL engine &amp; RDF Parser etc.</p>
+        </li>
+        <li><p><strong>Resource identification:</strong> URIs/URN</p>
+        </li>
+        <li><strong>Query capabilities:</strong> SPARQL queries + spatial extensions</li>
+        <li><strong>Data Types:</strong> XSD</li>
+        </ul>
+        </li>
+        <li><p>SensorML (check from OGC, Simon and Arne)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The primary focus of the Sensor Model Language (SensorML) is to provide a robust and semantically-tied means of defining processes and processing components associated with the measurement and post-measurement transformation of observations. This includes sensors and actuators as well as computational processes applied pre- and post measurement.</li>
+        <li><strong>Consortium:</strong> OGC</li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong></li>
+        <li><strong>Query capabilities:</strong></li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>Device Registry and Thing Shadows for AWS IoT (Michael Koster?)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The Thing Registry enables registration of so called units (both for real devices and virtual applications). Units are properties that describe a device or virtual application. A user may define custom attributes associated with each unit. AWS IoT has a notion of a Thing Shadow. A thing shadow (sometimes referred to as a device shadow) is a JSON document that is used to store and retrieve current state information for a thing (device, app, and so on). The Thing Shadows service maintains a thing shadow for each thing you connect to AWS IoT.</li>
+        <li><strong>Consortium:</strong> Amazon</li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong> A device in the Device Registry can be uniquely identified.</li>
+        <li><strong>Query capabilities:</strong></li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>HyperCat catalogue (John from BT)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs (uniform resource identifiers). Using HTTPS, REST and JSON, each HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.</li>
+        <li><strong>Consortium:</strong> HyperCat</li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong> URIs</li>
+        <li><strong>Query capabilities:</strong> Catalogues are accumulated into a knowledge graph that can be queried.</li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>The Smart Appliances REFerence (SAREF) ontology (Jasper Roes)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.</li>
+        <li><strong>Consortium:</strong> Created for the EC by TNO with input from many different stakeholders, now standardized and maintained by ETSI (TS 103 264 - V1.1.1).</li>
+        <li><strong>Tool/Development Support:</strong> ontology tools: SPARQL engine &amp; RDF Parser etc.</li>
+        <li><strong>Resource identification:</strong> URIs</li>
+        <li><strong>Query capabilities:</strong> SPARQL queries</li>
+        <li><strong>Data Types:</strong> No explicit choice. SAREF is currently only an ontology to translate information from and between communication standards.</li>
+        </ul>
+        </li>
+        <li><p>oneM2M (Martin)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.</li>
+        <li><strong>Consortium:</strong> SAREF consortium</li>
+        <li><strong>Tool/Development Support:</strong> ontology tools: SPARQL engine &amp; RDF Parser etc.</li>
+        <li><strong>Resource identification:</strong> URIs</li>
+        <li><strong>Query capabilities:</strong> SPARQL queries</li>
+        <li><strong>Data Types:</strong> XSD</li>
+        </ul>
+        </li>
+        </ul>
       </section>
       <section>
-        <h2> Representation</h2>
+        <h2>Metadata &amp; Metamodel</h2>
+        <ul>
+        <li><p>RDF Schema (<a href="https://www.w3.org/TR/rdf-schema/">RDFS</a>) (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RDFS defines simple semantics for RDF
+        data. It includes e.g. the concepts of class and subsumption relation between classes or
+        properties. It is intended to provide a baseline for other meta-vocabularies,
+        such as <a href="https://www.w3.org/TR/2009/REC-skos-reference-20090818/">SKOS</a>
+        (thesauri, taxonomies) or <a href="http://dublincore.org/">Dublin Core</a>
+        (document metadata).</li>
+        </ul>
+        <p><a href="http://schema.org/">Schema.org</a>, based on RDFS, is a popular vocabulary for
+        general information on the Web: persons, events, places, products... Its
+        development has been driven by today&#39;s major search engines to help them
+        structure search results using annotations on Web pages (e.g. in the RDFa or
+        microdata formats).</p>
+        <p>An overview of Web vocabularies can be found on the
+        <a href="http://lov.okfn.org/">Linked Open Vocabulary</a> platform.</p>
+        <ul>
+        <li><strong>Consortium:</strong> W3C, schema.org community (including Google, Microsoft, Yahoo, Yandex)</li>
+        <li><strong>Tool/Development Support:</strong> e.g. schema.org&#39;s <a href="http://schema.org/docs/extension.html">extension mechanism</a>,
+        <a href="http://www.topquadrant.com/products/">TopBraid</a>.</li>
+        <li><strong>Resource identification:</strong> IRI (Internationalized Resource Identifier)</li>
+        <li><strong>Data Types:</strong> Built-in XSD datatypes for literals. RDFS classes for resources.</li>
+        </ul>
+        </li>
+        <li><p>Web Ontology Language (<a href="https://www.w3.org/TR/owl-ref/">OWL</a>) (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Defined in extension to <a href="RDF Schema">RDFS</a>
+        to allow more complex modeling and non-trivial automated reasoning. OWL
+        mostly relies on Description Logic (DL). It can have different levels of
+        complexity (called <a href="https://www.w3.org/TR/owl-ref/#Sublanguages">profiles</a>).
+        A second version of OWL
+        (<a href="https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/">OWL 2</a>) was published
+        and new profiles were added, mostly to trade &quot;some expressive power for the
+        efficiency of reasoning&quot;.</li>
+        </ul>
+        <p>OWL proved successful (especially in specific domains like biology) and many
+        Web vocabularies use it (see the LOV platoform for an overview). However, only
+        few of them take full advantage of its expressiveness.</p>
+        <ul>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> <a href="http://www.topquadrant.com/products/">TopBraid</a>
+        (TopQuadrant), <a href="http://protege.stanford.edu/">Protégé</a> (Stanford University).</li>
+        <li><strong>Resource identification:</strong> same as RDFS.</li>
+        <li><strong>Data Types:</strong> same as RDFS.</li>
+        </ul>
+        </li>
+        <li><p>DTD/XML Schema (Sebastian)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Data modeling tool to structure data content and data value types (such as simple and complex type)</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> rich support of tools and libs such as validators to check instances for correctness and editors to model data</li>
+        <li><strong>Resource identification:</strong> Is done via namespace declerations</li>
+        <li><strong>Data Types:</strong> rich set of data type support (boolean, byte, unsignedByte, etc.). See full list here [<a href="https://www.w3.org/TR/xmlschema-2/#built-in-datatypes">https://www.w3.org/TR/xmlschema-2/#built-in-datatypes</a>]</li>
+        </ul>
+        </li>
+        <li><p><a href="http://json-schema.org/">JSON Schema</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> JSON Schema is an open-source initiative
+        aiming at formalizing the structure of JSON data used in current systems.
+        It enables automatic validation of data, among others.</li>
+        <li><strong>Consortium:</strong>  Used de facto in some Web standards (e.g.
+        <a href="https://openapis.org/specification">Open API Initiative</a>,
+        <a href="http://openinterconnect.org/developer-resources/specs/">Open Interconnect Consortium</a>)
+        and submitted <a href="http://tools.ietf.org/html/draft-zyp-json-schema-04">to IETF</a>.</li>
+        <li><strong>Tool/Development Support:</strong> See its <a href="https://github.com/json-schema/json-schema">Github page</a>.</li>
+        <li><strong>Resource identification:</strong> see <a href="http://json-schema.org/latest/json-schema-hypermedia.html">JSON Hyper Schema</a>
+        for hyper-media control.</li>
+        <li><strong>Data Types:</strong> Uses JSON base types.</li>
+        </ul>
+        </li>
+        </ul>
       </section>
       <section>
-        <h2> Datatype description</h2>
+        <h2>Serialization</h2>
+        <p>Serialization formats suitable for representing Thing Descriptions are surveyed here.</p>
+        <ul>
+        <li><p><a href="http://www.w3.org/TR/exi/">Efficient XML Interchange (EXI)</a> (Taki)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Binary serialization format of the XML Infoset</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> yes (see <a href="https://www.w3.org/XML/EXI/#implementations">https://www.w3.org/XML/EXI/#implementations</a>)</li>
+        <li><strong>Data Types-aware encoding:</strong> yes, based on XSD</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> Very High. EXI compaction works more effective than ASN.1 PER in cases of smaller files for which ASN.1 is known to work pretty well. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.</li>
+        <li><strong>Small memory footprint:</strong> EXI uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. When a schema is available, EXI derives grammar from the schema. Simple schemas result in small set of EXI grammars.</li>
+        <li><strong>Context-aware encoding:</strong> yes</li>
+        </ul>
+        </li>
+        <li><p><a href="https://www.w3.org/TR/exi-for-json/">EXI for JSON</a> (Taki)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Binary serialization format for JSON data model based on EXI</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> yes (e.g., <a href="http://exificient.github.io/javascript/demo/processJSON.html?SharedStrings=true">JavaScript playground</a> with context knowledge, Java <a href="https://github.com/EXIficient/exificient-for-json">library</a> and <a href="https://github.com/EXIficient/exificient-gui">GUI</a>, <a href="https://github.com/EXIficient/exificient-for-json.c">C implementation</a>)</li>
+        <li><strong>Data Types-aware encoding:</strong> yes (string, float, boolean, array, null, integer, decimal, binary, date, dateTime, time)</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> Very high. EXI for JSON compaction works more effective than comparative formats such as CBOR and BSON. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.</li>
+        <li><strong>Small memory footprint:</strong> EXI for JSON uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. EXI grammars used in EXI for JSON derives from a simple schema, resulting in small set of EXI grammars.</li>
+        <li><strong>Context-aware encoding:</strong> No</li>
+        </ul>
+        </li>
+        <li><p><a href="http://www.json.org/">JSON</a> (Taki)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Lightweight language independent data format originally based on JavaScript programming language</li>
+        <li><strong>Consortium:</strong>      RFC 7159 and ECMA-404</li>
+        <li><strong>Tool/Development Support:</strong> yes (see <a href="http://json.org/">http://json.org/</a>)</li>
+        <li><strong>Data Types-aware encoding:</strong> supports limited type assignment (number, string, boolean, array, null), however, each value is presented in plain-text in JSON document</li>
+        <li><strong>Binary Format:</strong> No</li>
+        <li><strong>Compression:</strong> Some limited compaction is often possible by removing redundant whitespaces. For repetitive data, a technique based on refactoring also may help making JSON data a little more compact. (e.g. <a href="https://www.npmjs.com/package/jsonpack">jsonpack</a>).</li>
+        <li><strong>Small memory footprint:</strong> Not feasible for highly constrained devices</li>
+        <li><strong>Context-aware encoding:</strong> No</li>
+        </ul>
+        </li>
+        <li><p><a href="http://json-ld.org/">JSON-LD</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> JSON-based serialization format for Linked
+        Data. Transformation from JSON-LD to RDF has been standardized. The
+        opposite transformation is not fully supported.</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> <a href="http://json-ld.org/test-suite/reports/">implementations</a>
+        available, tested and open-source. JSON-LD <a href="http://json-ld.org/playground/">playground</a>.</li>
+        <li><strong>Data Types-aware encoding:</strong> Type coercion for basic data types
+        (from JSON types to XSD data types)</li>
+        <li><strong>Binary Format:</strong> no</li>
+        <li><strong>Compression:</strong> to some extent: plain-text representation but compaction
+        algorithm specified to reduce the size of JSON keys and values.</li>
+        <li><strong>Small memory footprint:</strong> not designed for constrained devices.</li>
+        <li><strong>Context-aware encoding:</strong> Any JSON-LD document shall include a context.</li>
+        </ul>
+        </li>
+        <li><p><a href="http://cbor.io/">CBOR</a> (Carsten)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The &quot;Concise Binary Object Representation (CBOR)&quot; is based on the JSON data model</li>
+        <li><strong>Consortium:</strong>   IETF</li>
+        <li><strong>Tool/Development Support:</strong> yes</li>
+        <li><strong>Data Types-aware encoding:</strong> yes</li>
+        <li><strong>Binary Format:</strong>   yes</li>
+        <li><strong>Compression:</strong> high</li>
+        <li><strong>Small memory footprint:</strong> yes</li>
+        <li><strong>Context-aware encoding:</strong></li>
+        </ul>
+        </li>
+        </ul>
+        <!-- Matthias: CoRE Link Format is not a (generic) serialization format, but a specific format for Web links. There are also JSON and CBOR serializations of the Link Format. -->
+        <ul>
+        <li>RDF/EXI (Daniel)<ul>
+        <li><strong>Background of the technology:</strong> Serialize RDF in EXI format</li>
+        <li><strong>Consortium:</strong> W3C (EXI/XML)</li>
+        <li><strong>Tool/Development Support:</strong> yes</li>
+        <li><strong>Data Types-aware encoding:</strong> yes</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> very high (type-aware coder + removes redundancy)</li>
+        <li><strong>Small memory footprint:</strong> yes, feasible for constrained devices</li>
+        <li><strong>Context-aware encoding:</strong> yes, is able to take into account context knowledge </li>
+        </ul>
+        </li>
+        </ul>
+        <ul>
+        <li><a href="https://developers.google.com/protocol-buffers/">Google Protocol Buffers</a> (Daniel)<ul>
+        <li><strong>Background of the technology:</strong> Method of serializing structured data by involving an interface description language that describes the structure</li>
+        <li><strong>Consortium:</strong> Google</li>
+        <li><strong>Tool/Development Support:</strong> yes</li>
+        <li><strong>Data Types-aware encoding:</strong> yes</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> high</li>
+        <li><strong>Small memory footprint:</strong> yes</li>
+        <li><strong>Context-aware encoding:</strong> yes</li>
+        </ul>
+        </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Datatype description</h2>
+        <ul>
+        <li><p><a href="https://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/datatypes.html">XML Schema (XSD) Datatypes</a> (Daniel)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> XML Schema: Datatypes is part 2 of the specification of the XML Schema language. It defines facilities for defining datatypes to be used in XML Schemas as well as other XML specifications. It provides a rich set of of primitive data types and enables to define new or restrict data types.</li>
+        <li><strong>Primitive data types:</strong> boolean, (unsigned-)Byte, (unsigned-)Short, (unsigned-)Int, (unsigned-)Long, float, double, hexBinary, base64Binary, date, time, ...</li>
+        <li><strong>Composite data types:</strong> Any simple-typed data can be composed to a structered complex typed data</li>
+        </ul>
+        </li>
+        <li><p><a href="https://tools.ietf.org/html/draft-jennings-core-senml">SenML</a> (Ari)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> SenML is a media type for representing simple sensor measurements and device parameters. SenML has JSON, CBOR, XML, and EXI representations which all share the common SenML data model.  </li>
+        <li><strong>Primitive data types:</strong> string, boolean, floating point, time (and plans for adding binary)</li>
+        <li><strong>Composite data types:</strong> all measurements can include, in addition to value, &quot;name&quot;, &quot;time&quot;, and &quot;measurement unit&quot;</li>
+        </ul>
+        </li>
+        </ul>
       </section>
       <section>
         <h2> Functional Description</h2>
+        <p>Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.</p>
+        <ul>
+        <li><p><a href="http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven">HATEOAS</a> (Matthias)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> HATEOAS (Hypermedia as the Engine of Application State) is part of the REST architectural style (uniform interface constraint). REST clients may not rely on typed resources or predefined (out-of-band) request definitions, but must receive the list of possible requests from the server. Hypermedia formats are providing these functional descriptions in-band through links and forms, which tell the client how to construct requests. Semantic information about the state transition when following a link or submitting a form is attached through the link relation type and respectively form relation type attribute. The types are managed in an IANA <a href="http://www.iana.org/assignments/link-relations/link-relations.xhtml">registry</a>. However, proper types for WoT applications are still missing.</li>
+        <li><strong>Consortium:</strong> IETF/IANA</li>
+        <li><strong>Tool Support:</strong></li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> any hypermedia format (e.g., HTML, HAL, Hydra, Siren)</li>
+        </ul>
+        </li>
+        <li><p><a href="http://raml.org/">RAML</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The RESTful API Definition Language (RAML)
+        is a format to specify an API in the form of a resource tree. For each
+        resource, one can specify supported methods (GET, POST, etc), parameters if
+        any and the structure of its content. It follows the principles of
+        design first and model-driven engineering to allow for more automation in
+        the development of Web applications.</li>
+        <li><strong>Consortium:</strong> onw community, including Cisco, VMWare, Spotify.</li>
+        <li><strong>Tool Support:</strong> see <a href="http://raml.org/projects/projects">RAML projects</a>
+        (50+ projects). Enables code generation (for both client and server sides),
+        API validation, automatic documentation and integrated development.  </li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> YAML</li>
+        </ul>
+        </li>
+        <li><p><a href="https://openapis.org/">Open API Initiative (OAI)</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RESTful API specification framework.
+        Formerly known as <a href="http://swagger.io/">Swagger</a>. Its specification has almost
+        the same features as RAML, JSON-based.</li>
+        <li><strong>Consortium:</strong> own community supported by the Linux Foundation. Members
+        include Google, IBM, Microsoft, Paypal and others.</li>
+        <li><strong>Tool Support:</strong> see <a href="http://swagger.io/tools/">Swagger tools</a>. Enables
+        code generation (for both client and server sides), API validation and
+        automatic documentation.</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> JSON-based. Resource
+        types are defined using JSON Schema (not mandatory).</li>
+        </ul>
+        </li>
+        <li><p><a href="http://www.hydra-cg.com/">Hydra</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RDFS vocabulary for RESTful API
+        specification. It includes most of the features of the frameworks mentioned
+        above (some details are still being discussed).</li>
+        <li><strong>Consortium:</strong> W3C Community Group</li>
+        <li><strong>Tool Support:</strong> see Hydra&#39;s <a href="http://www.hydra-cg.com/">website</a>. Limited
+        support.</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> JSON-LD, RDF</li>
+        </ul>
+        </li>
+        <li><p><a href="http://htmlpreview.github.io/?https://github.com/smnmyr/iot-semantics-w3c/blob/master/iot-semantics-membersubmission.html">RESTdesc</a> (Matthias)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RESTdesc is based on the Notation3 (N3) syntax. It attaches REST request definitions to the conclusion of first-order logic inference rules. Given a goal definition (also in N3), a semantic reasoner can calculate a proof that also carries an execution plan (an ordered list of requests) to achieve the goal. RESTdesc is a community effort by  Universiteit Gent and Universitat Politecnica de Catalunya.</li>
+        <li><strong>Consortium:</strong> n/a</li>
+        <li><strong>Tool Support:</strong> EYE semantic reasoner, ClickScript goal editor, few other open source projects</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> Notation3/RDF</li>
+        </ul>
+        </li>
+        <li><p><a href="http://json-schema.org/latest/json-schema-hypermedia.html">JSON HyperSchema</a> (Michael)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> JSON Hyper-Schema is an extension to JSON Schema which adds a Link Description Object to enable JSON Schema to express hyperlink constructions. A links property is defined to indicate the Link Description, and a number of common link terms like &quot;href&quot; and &quot;rel&quot; are defined, and methods to enable URI template syntax to be used to schematically construct hyperlinks. JSON Pointer is supported to construct references to document fragments or elements.</li>
+        <li><strong>Consortium:</strong> IETF Draft </li>
+        <li><strong>Tool Support:</strong> A number of tools support JSON Schema and JSON Hyper Schema <a href="http://json-schema.org/implementations.html">JSON Schema Tools</a> Also note that RAML uses JSON Schema and could easily be extended to support JSON Hyper Schema</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong>  JSON, JSON Schema, JSON Pointer</li>
+        </ul>
+        </li>
+        </ul>
       </section>
     </section>
     <section>
@@ -154,7 +543,7 @@
               <li>WebRTC is exposed to web apps through the W3C WebRTC APIs in web browsers (Chrome, Firefox, Opera) and to native apps in Android and IoS. This enables direct media streaming and data communication between web apps and mobile apps located in distant devices</li>
               <li>No plugins are needed to support WebRTC</li>
             </ul>
-          </li>          
+          </li>
           <li>CoAP (<a href="https://tools.ietf.org/html/rfc7252">RFC&nbsp;7252</a>)
             <ul>
               <li>REST implementation (client/server, stateless, uniform interfaces, caching, layered/intermediaries)</li>
@@ -284,7 +673,7 @@
                 <dd></dd>
               </dl>
             </li>
-            
+
             </li>
             <li>Allseen Alliance
               <dl>
@@ -320,7 +709,7 @@
             <li> <a href="http://w3c.github.io/presentation-api/">W3C Presentation API</a>: The <a href="https://www.w3.org/2014/secondscreen/">W3C Second Screen Working Group</a> works on a specification of an API that enables web content to access external presentation displays and use them for presenting web content. The specification aims to make presentation displays such as projectors or connected TVs, available to the Web and takes into account displays that are attached using wired (HDMI, DVI, or similar) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, or similar), but the Presentation API abstracts from these underlying protocols. It allows Browser vendors to implement the API on top of different protocols. The specification describes the conformance criteria for two classes of user agents:</b>
             Controlling user agent: Web browsers that conform to the specifications of a controlling user agent must be able to monitor the availability of presentation displays, start new presentations, join or reconnect to running presentations and to exchange messages and binary data with presentations.</b>
             Receiving user agent: Web browsers that conform to the specifications of a receiving user agent must be able to render presentations by providing the necessary inferfaces to accept launch or join requests from controlling user agents and to exchange messages and binary data with controlling pages.</b>
-            The concept of the Presentation API is relevant to the work of the this group since the WoT Thing API is intended to offer an API that abstracts from the underlying IoT protocols. The Presentation API can be seen as a concrete case of the generic Thing API if we consider presentation displays as kind of things that provide Thing Description with the necessary set of actions, properties and events to start and control presentations.  
+            The concept of the Presentation API is relevant to the work of the this group since the WoT Thing API is intended to offer an API that abstracts from the underlying IoT protocols. The Presentation API can be seen as a concrete case of the generic Thing API if we consider presentation displays as kind of things that provide Thing Description with the necessary set of actions, properties and events to start and control presentations.
             </li>
             <li> Geolocation API <b>(Kaz to outreach chair)</b></li>
             <li> NFC &amp; Bluetooth API <b>(Kaz to outreach)</b></li>
@@ -359,7 +748,7 @@
         <p>The WoT provides distributed IT-systems. The study of protecting distributed IT-systems started soon after their invention i.e. in the 60/70ies. So there is lots of prior art for security&privacy - collectively providing the current toolbox. But WoT needs security&privacy tools that are not yet present in the current toolbox. New security&privacy tools for WoT will come in 2 forms:
         <ul><li>New tools that change form-factors of existing tools (smaller, lighter...) i.e. tools doing known tricks in new forms</li>
         <li>New tools doing new tricks</li></ul>
-        These new security&privacy tools need to come as (broadly resp. industry/domain-wide accepted) standards. These standards do not yet exist, they do emerge right now. 
+        These new security&privacy tools need to come as (broadly resp. industry/domain-wide accepted) standards. These standards do not yet exist, they do emerge right now.
         This chapter elaborates on this hypothesis.</p>
       </section>
       <section>
@@ -629,7 +1018,7 @@
 <td>IETF standards</td>
 </tr>
 </tbody></table>
-     
+
       </section>
       <section>
       	<h2>Wrap-Up</h2>
@@ -644,6 +1033,6 @@
         For secure communications on transport-level, DTLS as well as TLS present commonly accepted standards. Their profiling/optimization for constrained devices and networks is a task that is currently ongoing. Note that securing communications on transport-level comes with limitations in the end-to-end security span which is achievable. For secure communications on application-level and secure storage, standards do exist for representing encrypted and signed data in JSON (a form-factor not suitable for very constrained components). Corresponding work is ongoing for CBOR (a form-factor suitable for very constrained components).<br/><br/>
         Moreover there are no commonly accepted standards for registering things resp. devices and supplying identity (meta-)data and credentials about things resp. devices as of now.</p>
       </section>
-    </section>  
+    </section>
   </body>
 </html>
