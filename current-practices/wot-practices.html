@@ -8,7 +8,7 @@
 			var respecConfig = {
 				  specStatus:   "unofficial"
 				, editors:      [{name:"Daniel Peintner"}, {name:"Matthias Kovatsch"}]
-				, authors:      [{name:"Sebastian Käbisch"}, {name:"Volunteers needed"}]
+				, authors:      [{name:"Sebastian Käbisch"}, {name:"Victor Charpenay"}, {name:"Volunteers needed"}]
 				, processVersion: 2015
 				, shortName:    "wot-tech"
 				, wg:           "Interest Group on the Web of Things"
@@ -166,10 +166,10 @@
 				<h2>Thing Description</h2>
 
 				<p>
-					The WoT Thing Description (TD) relays on the Resource Description Framework (RDF) as an underlying data model.
+					The WoT Thing Description (TD) relies on the Resource Description Framework (RDF) as an underlying data model.
 					As a current serialization format of RDF JSON-LD has been proposed which provides the semantic description of
 					a Thing as well as a functional description of its <a>WoT API</a>.
-					For this, the WoT IG defined a minimal vocabulary set to express the capabilities of a thing in terms of <code>Properties</code>, <code>Actions</code>, and <code>Events</code>.
+					For this, the WoT IG defined a minimal vocabulary to express the capabilities of a thing in terms of <code>Properties</code>, <code>Actions</code>, and <code>Events</code>.
 					In addition, the TD provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.), representation formats, and security policies for resources.
 				</p>
 
@@ -199,24 +199,24 @@
 					<div class="example">
 		       <div class="example-title"><span>Example 1</span></div>
 <pre>
-	{
-	  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-	    					{ "sensor": "http://example.org/sensors#"}],
-	  "@type": "Thing",
-	  "name": "MyTemperatureThing",
-	  "uri": "coap://www.mytemp.com:5683/",
-	  "encodings": "JSON",
-	  "properties": [
-	    {
-	      "@type": "sensor:Temperature",
-	      "name": "temperature",
-	      "sensor:unit": "sensor:Celsius",
-	      "valueType": "xsd:float",
-	      "writable": false,
-	      "href": "temp"
-	    }
-	  ]
-	}
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               {"sensor": "http://example.org/sensors#"}],
+  "@type": "Thing",
+  "name": "MyTemperatureThing",
+  "uri": "coap://www.mytemp.com:5683/",
+  "encodings": ["JSON"],
+  "properties": [
+    {
+      "@type": "sensor:Temperature",
+      "name": "temperature",
+      "sensor:unit": "sensor:Celsius",
+      "valueType": "xsd:float",
+      "writable": false,
+      "href": "temp"
+    }
+  ]
+}
 </pre>
 </div>
 <p>
@@ -228,7 +228,7 @@ and what is the underlying data type (float).
 
 <p>
 Example 2 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
-different kind of protocols (http and coap), encodings (JSON and EXI4JSON), security
+different kind of protocols (HTTP and CoAP), encodings (JSON and EXI4JSON), security
 requirements (based on JWT), and  different interaction models (properties, actions, events) with
 some type restrictions.
 </p>
@@ -236,13 +236,11 @@ some type restrictions.
 					<div class="example">
 		       <div class="example-title"><span>Example 2</span></div>
 		       <pre>
-						 {
-  "@context": [
-    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-    {"actuator": "http://example.org/actuator#"}
-  ],
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               {"actuator": "http://example.org/actuator#"}],
   "@type": "Thing",
-  "name": "MyLED",
+  "name": "MyLEDThing",
   "uri": [
     "coap://www.myled.com:5683/",
     "http://www.myled.com:8080/myled/"
@@ -296,7 +294,6 @@ some type restrictions.
     }
   ]
 }
-
 </pre></div>
 
 More details about the TD elements are given in the next section.
@@ -305,21 +302,51 @@ More details about the TD elements are given in the next section.
 	 			<section>
 					<h3>Details of the TD Elements</h3>
 					<section>
-						<h4>TD Context (@context) and Thing Type (@type) </h4>
-						<div class="example">
-			       <div class="example-title"><span>Example 3</span></div>
-	<pre>
+						<h4>TD Context</h4>
+							<p>
+								JSON-LD is a serialization format for Linked Data, that is, its content should
+								use one or more vocabularies that are uniquely defined and available on the Web.
+								Any JSON-LD document has to be defined within a specific context that points
+								to the relevant vocabularies. For instance, the term <code>Thing</code> refers
+								to a concept defined in the RDFS vocabulary for Thing Description at
+								<code>http://www.w3c.org/wot/td#</code>. The context object should look like
+								this:
+								<div class="example">
+									<div class="example-title"><span>Example 3</span></div>
+									<pre>
 {
-	"@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-	"@type": "Thing",
-	...
-	</pre>
-	</div>
-
-To identify a document as a TD and to map TD terms to distinct IRIs the context
-"http://w3c.github.io/wot/w3c-wot-td-context.jsonld" has to be used. To associate the
-terms to the TD context the type "Thing" has to be used.
-
+  "@context": {
+    "Thing": "http://www.w3c.org/wot/td#Thing",
+    ...
+  }
+}
+									</pre>
+								</div>
+							</p>
+							<p>
+								For convenience, a standard context including all TD vocabulary terms has
+								been defined and made available at <code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>.
+								This way, one only needs to add this URI to the Thing's context to import all
+								TD terms. It is recommended to include this standard context in a Thing
+								Description, but not mandatory.
+							</p>
+							<p>
+								As the TD vocabulary we have developed is intended to be minimal, it is
+								strongly recommended to extend it for each Thing by reusing other vocabularies
+								or ontologies and/or defining application-specific terms (see <a href="#td-context-extension"></a>).
+								In the following example, in addition to our standard context, the Thing's
+								context points to a shared vocabulary for sensors:
+								<div class="example">
+									<div class="example-title"><span>Example 3 (bis)</span></div>
+									<pre>
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               {"sensor": "http://example.org/sensors#"}],
+  ...
+}
+									</pre>
+								</div>
+							</p>
 					</section>
 <!--					<section>
 						<h4>Security</h4>
@@ -347,24 +374,24 @@ terms to the TD context the type "Thing" has to be used.
 						<div class="example">
 			       <div class="example-title"><span>Example 4</span></div>
 	<pre>
-		{
-			...
-		  "name": "MyLED",
-		  "uri": [
-		    "coap://www.myled.com:5683/",
-		    "http://www.myled.com:8080/myled/"
-		  ],
-		  "encodings": [
-		    "JSON",
-		    "EXI4JSON"
-		  ],
-		  "security": {
-		    "cat": "token:jwt",
-		    "alg": "HS256",
-		    "as": "https://authority-issuing.org"
-		  }
-			...
-		}
+{
+	...
+  "name": "MyLED",
+  "uri": [
+    "coap://www.myled.com:5683/",
+    "http://www.myled.com:8080/myled/"
+  ],
+  "encodings": [
+    "JSON",
+    "EXI4JSON"
+  ],
+  "security": {
+    "cat": "token:jwt",
+    "alg": "HS256",
+    "as": "https://authority-issuing.org"
+  }
+	...
+}
 	</pre>
 	</div>
 
@@ -375,15 +402,12 @@ terms to the TD context the type "Thing" has to be used.
 
 						<ul>
 							<li><b>Name:</b> Name of the Thing (string-based)</li>
-							<li><b>Protocols:</b> Provides information about the supported protocols  (e.g., HTTP, CoAP, XMPP, etc,)
-								in combination with Thing's address location. One or more can be listed (listed as an array).
-								<p class="ednote">
-									To become independent from protocol mappings, and hence protocol-specifc details in the TD, this must become a list of base URIs
-								</p>
-
+							<li><b>URI:</b> Defines base URI for the Thing. More than one URI can be listed (as an array),
+								if various protocols are supported (e.g. HTTP and CoAP) or in specific configurations
+								(e.g. a Thing could rely on a redirection server if its URI is likely to change over time).
 							</li>
 							<li><b>Encodings:</b> Which encodings/serialization formats are supported (e.g., JSON, XML, etc.). One or more can be listed (listed as an array).
-							<	<p class="ednote">
+							<p class="ednote">
 									Is encoding the right word here?
 									Encoding usually refers to the lower formats, that is, how data is represented in bits and bytes, which happens in the protocols.
 									Should we maybe go for "serialization", since also all examples are serialization formats?
@@ -396,7 +420,7 @@ terms to the TD context the type "Thing" has to be used.
 							<li><b>Security:</b> [optional]  The  security field can be used to provide access metadata (self-contained) information of the Thing
 							for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
 
-							<p>Above, the security field is used to  announce that JSON Web Token (JWT) has to be used to interact with Thing's resources. Therby, type is assigned by the cat field, the corresponding hashing algorithm "HS256" by the alg field,
+							<p>Above, the security field is used to  announce that JSON Web Token (JWT) has to be used to interact with Thing's resources. Thereby, type is assigned by the cat field, the corresponding hashing algorithm "HS256" by the alg field,
 							and  the issuing authority of the security token by the as field.</p>
 
 							<!--	<p class="ednote">
@@ -409,9 +433,9 @@ terms to the TD context the type "Thing" has to be used.
 						</ul>
 
 						<p>
-							<b>Note:</b> Besides of these pre-defined vocabularies in the TD context, additional characteristics can be
-							added such as product ID, firmware version, location, etc.	that are defined vocabularies from other
-							contexts (see <a href="#td-context-extension"></a>.
+							<b>Note:</b> Besides these pre-defined terms in the TD context, additional characteristics can be
+							added such as product ID, firmware version, location, etc. These terms should then appear in the Thing's
+							context (as detailed in <a href="#td-context"></a>).
 						</p>
 					</section>
 
@@ -449,20 +473,20 @@ terms to the TD context the type "Thing" has to be used.
 						<div class="example">
 			       <div class="example-title"><span>Example 5</span></div>
 	<pre>
-		{
-			...
-		  "properties": [
-		    {
-		      "@type": "sensor:Temperature",
-		      "name": "temperature",
-		      "sensor:unit": "sensor:Celsius",
-		      "valueType": "xsd:float",
-		      "writable": false,
-		      "href": "temp"
-		    }
-		  ]
-			...
-		}
+{
+	...
+  "properties": [
+    {
+      "@type": "sensor:Temperature",
+      "name": "temperature",
+      "sensor:unit": "sensor:Celsius",
+      "valueType": "xsd:float",
+      "writable": false,
+      "href": "temp"
+    }
+  ]
+	...
+}
 	</pre>
 	</div>
 				<!--		<p class="ednote">
@@ -471,7 +495,7 @@ terms to the TD context the type "Thing" has to be used.
 						</p>
 					-->
 
-						<p>	There are four mandatory and two optional vocabularies defined within the <code>Property</code> type: </p>
+						<p>	There are four mandatory and two optional terms defined for the <code>Property</code> type: </p>
 
 
 						<ul>
@@ -535,31 +559,31 @@ terms to the TD context the type "Thing" has to be used.
 							The interaction type <code>Action</code> targets changes or processes on a Thing that take a certain time (i.e., actions cannot be applied instantaneously like property writes).
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
 							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the thing.
-							There are one mandatory and four optional vocabularies defined within the <code>Action</code> type:
+							There are one mandatory and four optional terms defined within the <code>Action</code> type:
 						</p>
 						<div class="example">
 			       <div class="example-title"><span>Example 7</span></div>
 	<pre>
-		{
-			...
-		  "actions": [
-		    {
-		      "@type": "actuator:fadeIn",
-		      "name": "fadeIn",
-		      "inputData": {
-		        "min": 1000,
-		        "max": 10000,
-		        "valueType": "xsd:short",
-		        "actuator:unit": "actuator:ms"
-		      },
-		      "href": [
-		        "in",
-		        "myled/in"
-		      ]
-		    }
-		  ]
-			...
-		}
+{
+	...
+  "actions": [
+    {
+      "@type": "actuator:fadeIn",
+      "name": "fadeIn",
+      "inputData": {
+        "min": 1000,
+        "max": 10000,
+        "valueType": "xsd:short",
+        "actuator:unit": "actuator:ms"
+      },
+      "href": [
+        "in",
+        "myled/in"
+      ]
+    }
+  ]
+	...
+}
 	</pre>
 	</div>
 						<ul>
@@ -604,29 +628,29 @@ terms to the TD context the type "Thing" has to be used.
 							The interaction type <code>Event</code> enables a mechanism to be notified by the thing on a certain condition.
 							While some protocols such as CoAP can provide such a mechanism natively, others do not.
 							Furthermore, events might need a specific configuration that requires data sent and stored on the thing in a standard way.
-							There are are two mandatory and two optional vocabularies defined within the <code>Event</code> type:
+							There are are two mandatory and two optional terms defined within the <code>Event</code> type:
 						</p>
 						<div class="example">
 			       <div class="example-title"><span>Example 8</span></div>
 	<pre>
-		{
-			...
-		  "events": [
-		    {
-		      "name": "criticalCondition",
-		      "enums": [
-		        "temperatureToHigh",
-		        "lowVoltage"
-		      ],
-		      "valueType": "xsd:string",
-		      "href": [
-		        "ev",
-		        "myled/event"
-		      ]
-		    }
-		  ]
-			...
-		}
+{
+	...
+  "events": [
+    {
+      "name": "criticalCondition",
+      "enums": [
+        "temperatureToHigh",
+        "lowVoltage"
+      ],
+      "valueType": "xsd:string",
+      "href": [
+        "ev",
+        "myled/event"
+      ]
+    }
+  ]
+	...
+}
 	</pre>
 	</div>
 						<ul>
