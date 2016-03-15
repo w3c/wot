@@ -211,7 +211,7 @@
 	      "@type": "sensor:Temperature",
 	      "name": "temperature",
 	      "sensor:unit": "sensor:Celsius",
-	      "baseType": "xsd:float",
+	      "valueType": "xsd:float",
 	      "writable": false,
 	      "href": "temp"
 	    }
@@ -258,7 +258,7 @@ some type restrictions.
       "@type": "actuator:onOffStatus",
       "name": "status",
       "enums": [ "on", "off" ],
-      "baseType": "xsd:string",
+      "valueType": "xsd:string",
       "writable": false,
       "href": [ "status", "myled/status" ]
     }
@@ -270,7 +270,7 @@ some type restrictions.
       "inputData": {
         "min": 1000,
         "max": 10000,
-        "baseType": "xsd:short",
+        "valueType": "xsd:short",
         "actuator:unit": "actuator:ms"
       },
       "href": ["in", "myled/in"  ]
@@ -281,7 +281,7 @@ some type restrictions.
       "inputData": {
         "min": 1000,
         "max": 10000,
-        "baseType": "xsd:short",
+        "valueType": "xsd:short",
         "actuator:unit": "actuator:ms"
       },
       "href": ["out", "myled/out" ]
@@ -291,7 +291,7 @@ some type restrictions.
     {
       "name": "criticalCondition",
       "enums": [ "temperatureToHigh", "lowVoltage" ],
-      "baseType": "xsd:string",
+      "valueType": "xsd:string",
       "href": [ "ev", "myled/event" ]
     }
   ]
@@ -456,7 +456,7 @@ terms to the TD context the type "Thing" has to be used.
 		      "@type": "sensor:Temperature",
 		      "name": "temperature",
 		      "sensor:unit": "sensor:Celsius",
-		      "baseType": "xsd:float",
+		      "valueType": "xsd:float",
 		      "writable": false,
 		      "href": "temp"
 		    }
@@ -478,8 +478,8 @@ terms to the TD context the type "Thing" has to be used.
 							<li><b>@type:</b> [optional] Allows to assign a context to the property.</li>
 							<li><b>Name:</b> Name of the property that also defines the semantics</li>
 							<li><b>Href:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>BaseType:</b> Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
-							RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type defination.
+							<li><b>ValueType:</b> Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
+							RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type definition.
 							<p>
 							Type restrications are enabled by the <b>optional</b> terms <b>min</b>, <b>max</b>, and <b>enum</b>.
 							<p>
@@ -549,7 +549,7 @@ terms to the TD context the type "Thing" has to be used.
 		      "inputData": {
 		        "min": 1000,
 		        "max": 10000,
-		        "baseType": "xsd:short",
+		        "valueType": "xsd:short",
 		        "actuator:unit": "actuator:ms"
 		      },
 		      "href": [
@@ -618,7 +618,7 @@ terms to the TD context the type "Thing" has to be used.
 		        "temperatureToHigh",
 		        "lowVoltage"
 		      ],
-		      "baseType": "xsd:string",
+		      "valueType": "xsd:string",
 		      "href": [
 		        "ev",
 		        "myled/event"
