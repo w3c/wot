@@ -191,13 +191,45 @@
 
 				<section>
 					<h3>Quick Start: TD Samples</h3>
-					In the follwoing we introduce two TD samples to show the TD's oppertunities. Example 1 shows a simple TD
+					In the follwoing we introduce three TD samples to show the TD's oppertunities. Example 1 shows a simple TD
 					that reflects a very basic way to describe a temperature Thing ("MyTemperatureThing") that serve a temperature property
 					that uses JSON as an exchange data format and CoAP as application transportation protocol to request and transport the temperature value.
 
 
 					<div class="example">
 		       <div class="example-title"><span>Example 1</span></div>
+<pre>
+{
+  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+  "@type": "Thing",
+  "name": "MyTemperatureThing",
+  "uri": "coap://www.mytemp.com:5683/",
+  "encodings": ["JSON"],
+  "properties": [
+    {
+      "@type": "sensor:Temperature",
+      "name": "temperature",
+      "valueType": "xsd:float",
+      "writable": false,
+      "href": "temp"
+    }
+  ]
+}
+</pre>
+</div>
+<p>
+Based on this information in the TD we are able to understand what kind of
+resources is provided (temperature), how to access them (GET coap://www.mytemp.com:5683/temp),
+and what is the underlying data type (float).
+</p>
+
+<p>
+New text: what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
+and what is the underlying data type (float).
+</p>
+
+					<div class="example">
+		       <div class="example-title"><span>Example 2</span></div>
 <pre>
 {
   "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -219,22 +251,25 @@
 }
 </pre>
 </div>
+
+
+
+
 <p>
-Based on this information in the TD we are able to understand what kind of
-resources is provided (temperature), how to access them (GET coap://www.mytemp.com:5683/temp),
+Update: resources is provided (temperature), how to access them (GET coap://www.mytemp.com:5683/temp),
 what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
 and what is the underlying data type (float).
 </p>
 
 <p>
-Example 2 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
+Example 3 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
 different kind of protocols (HTTP and CoAP), encodings (JSON and EXI4JSON), security
 requirements (based on JWT), and  different interaction models (properties, actions, events) with
 some type restrictions.
 </p>
 
 					<div class="example">
-		       <div class="example-title"><span>Example 2</span></div>
+		       <div class="example-title"><span>Example 3</span></div>
 		       <pre>
 {
   "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -312,7 +347,7 @@ More details about the TD elements are given in the next section.
 								<code>http://www.w3c.org/wot/td#</code>. The context object should look like
 								this:
 								<div class="example">
-									<div class="example-title"><span>Example 3</span></div>
+									<div class="example-title"><span>Example 4</span></div>
 									<pre>
 {
   "@context": {
@@ -337,7 +372,7 @@ More details about the TD elements are given in the next section.
 								In the following example, in addition to our standard context, the Thing's
 								context points to a shared vocabulary for sensors:
 								<div class="example">
-									<div class="example-title"><span>Example 3 (bis)</span></div>
+									<div class="example-title"><span>Example 5</span></div>
 									<pre>
 {
   "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -372,7 +407,7 @@ More details about the TD elements are given in the next section.
 						<h4>Thing's Metadata</h4>
 
 						<div class="example">
-			       <div class="example-title"><span>Example 4</span></div>
+			       <div class="example-title"><span>Example 6</span></div>
 	<pre>
 {
 	...
@@ -471,7 +506,7 @@ More details about the TD elements are given in the next section.
 						</p>
 
 						<div class="example">
-			       <div class="example-title"><span>Example 5</span></div>
+			       <div class="example-title"><span>Example 7</span></div>
 	<pre>
 {
 	...
@@ -562,7 +597,7 @@ More details about the TD elements are given in the next section.
 							There are one mandatory and four optional terms defined within the <code>Action</code> type:
 						</p>
 						<div class="example">
-			       <div class="example-title"><span>Example 7</span></div>
+			       <div class="example-title"><span>Example 8</span></div>
 	<pre>
 {
 	...
@@ -631,7 +666,7 @@ More details about the TD elements are given in the next section.
 							There are are two mandatory and two optional terms defined within the <code>Event</code> type:
 						</p>
 						<div class="example">
-			       <div class="example-title"><span>Example 8</span></div>
+			       <div class="example-title"><span>Example 9</span></div>
 	<pre>
 {
 	...
