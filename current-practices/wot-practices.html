@@ -207,7 +207,6 @@
   "encodings": ["JSON"],
   "properties": [
     {
-      "@type": "sensor:Temperature",
       "name": "temperature",
       "valueType": "xsd:float",
       "writable": false,
@@ -218,12 +217,18 @@
 </pre>
 </div>
 <p>
-Based on this information in the TD we are able to understand what kind of
-resources is provided (temperature), how to access them (GET coap://www.mytemp.com:5683/temp),
-and what is the underlying data type (float).
+Based on this information in the TD we know the basic infomration about a Thing. There exists one 
+resource (temperature), we know how to access it (GET coap://www.mytemp.com:5683/temp)
+and what is a data type (float) of the data provided by the resource.
 </p>
 
 <p>
+In practise a Thing is described with additional information that provides further details about what kind 
+of a Thing it is and what additional properties and capabilities it has. This infomration provides a semantic context 
+of a Thing. JSON-LD provides a means to extend a TD with an external (semantic) contex and reuse exisitng contexts, 
+thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms, 
+instead of dealing with meaningless strings. 
+
 New text: what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
 and what is the underlying data type (float).
 </p>
