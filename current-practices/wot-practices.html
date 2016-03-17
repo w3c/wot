@@ -327,11 +327,11 @@ some type restrictions.
 </pre></div>
 
 <p>
-Based on this infromation you are able to know that JWT is required for the interaction of Thing's resources (tokens are issued by https://authority-issuing.org and tokens
+Based on this TD you are able to know that JWT is required for the interaction of Thing's resources (tokens are issued by https://authority-issuing.org and tokens
 are signed by HS256), status can be requested (using CoAP GET coap://www.myled.com:5683/status  or HTTP GET http://www.myled.com:8080/myled/status) or manipulted since
 the status property is writeable (using CoAP PUT coap://www.myled.com:5683/in or using HTTP PUT http://www.myled.com:8080/myled/myled/in with a string status payload). Actions can be
 iniitied using the resources fadeIn and fadeOut (e.g.,  using CoAP POST coap://www.myled.com:5683/in or HTTP coap://www.myled.com:5683/myled/out with a short-based payload (for ms)).
-The "MyLEDThing" also serves an event (criticalCondition) that enables clients to do subcribsions on that kind of resources (e.g., using CoAP GET OBSERVE  coap://www.myled.com:5683/ev).
+The "MyLEDThing" also serves an event (criticalCondition) that enables clients to be informed when an event occurs (e.g., using CoAP GET OBSERVE  coap://www.myled.com:5683/ev).
 </p>
 
 <p>
