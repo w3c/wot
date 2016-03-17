@@ -200,34 +200,34 @@
 		       <div class="example-title"><span>Example 1</span></div>
 <pre>
 {
-  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
   "@type": "Thing",
   "name": "MyTemperatureThing",
-  "uri": "coap://www.mytemp.com:5683/",
+  "uris": "coap://www.mytemp.com:5683/",
   "encodings": ["JSON"],
   "properties": [
     {
       "name": "temperature",
       "valueType": "xsd:float",
       "writable": false,
-      "href": "temp"
+      "hrefs": ["temp"]
     }
   ]
 }
 </pre>
 </div>
 <p>
-Based on this information in the TD we know the basic information about a Thing. There exists one 
+Based on this information in the TD we know the basic information about a Thing. There exists one
 resource (temperature), we know how to access it (GET coap://www.mytemp.com:5683/temp)
 and what is a data type (float) of the data provided by the resource.
 </p>
 
 <p>
-In practice a Thing is described with additional information that provides further details about what kind 
-of a Thing it is and what additional properties and capabilities it has. This information provides a semantic context 
-of a Thing. JSON-LD provides a means to extend a TD with an external (semantic) context and reuse existing contexts, 
-thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms, 
-instead of dealing with meaningless strings. 
+In practice a Thing is described with additional information that provides further details about what kind
+of a Thing it is and what additional properties and capabilities it has. This information provides a semantic context
+of a Thing. JSON-LD provides a means to extend a TD with an external (semantic) context and reuse existing contexts,
+thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms,
+instead of dealing with meaningless strings.
 
 New text: what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
 and what is the underlying data type (float).
@@ -241,7 +241,7 @@ and what is the underlying data type (float).
                {"sensor": "http://example.org/sensors#"}],
   "@type": "Thing",
   "name": "MyTemperatureThing",
-  "uri": "coap://www.mytemp.com:5683/",
+  "uris": ["coap://www.mytemp.com:5683/"],
   "encodings": ["JSON"],
   "properties": [
     {
@@ -250,7 +250,7 @@ and what is the underlying data type (float).
       "sensor:unit": "sensor:Celsius",
       "valueType": "xsd:float",
       "writable": false,
-      "href": "temp"
+      "hrefs": ["temp"]
     }
   ]
 }
@@ -260,11 +260,7 @@ and what is the underlying data type (float).
 
 
 
-<p>
-Update: resources is provided (temperature), how to access them (GET coap://www.mytemp.com:5683/temp),
-what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
-and what is the underlying data type (float).
-</p>
+
 
 <p>
 Example 3 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
@@ -281,7 +277,7 @@ some type restrictions.
                {"actuator": "http://example.org/actuator#"}],
   "@type": "Thing",
   "name": "MyLEDThing",
-  "uri": [
+  "uris": [
     "coap://www.myled.com:5683/",
     "http://www.myled.com:8080/myled/"
   ],
@@ -295,10 +291,9 @@ some type restrictions.
     {
       "@type": "actuator:onOffStatus",
       "name": "status",
-      "enums": [ "on", "off" ],
       "valueType": "xsd:string",
-      "writable": false,
-      "href": [ "status", "myled/status" ]
+      "writable": true,
+      "hrefs": [ "status", "myled/status" ]
     }
   ],
   "actions": [
@@ -306,38 +301,42 @@ some type restrictions.
       "@type": "actuator:fadeIn",
       "name": "fadeIn",
       "inputData": {
-        "min": 1000,
-        "max": 10000,
         "valueType": "xsd:short",
         "actuator:unit": "actuator:ms"
       },
-      "href": ["in", "myled/in"  ]
+      "hrefs": ["in", "myled/in"  ]
     },
     {
       "@type": "actuator:fadeOut",
       "name": "fadeOut",
       "inputData": {
-        "min": 1000,
-        "max": 10000,
         "valueType": "xsd:short",
         "actuator:unit": "actuator:ms"
       },
-      "href": ["out", "myled/out" ]
+      "hrefs": ["out", "myled/out" ]
     }
   ],
   "events": [
     {
       "name": "criticalCondition",
-      "enums": [ "temperatureToHigh", "lowVoltage" ],
       "valueType": "xsd:string",
-      "href": [ "ev", "myled/event" ]
+      "hrefs": [ "ev", "myled/event" ]
     }
   ]
 }
 </pre></div>
 
-More details about the TD elements are given in the next section.
+<p>
+Based on this infromation you are able to know that JWT is required for the interaction of Thing's resources (tokens are issued by https://authority-issuing.org and tokens
+are signed by HS256), status can be requested (using CoAP GET coap://www.myled.com:5683/status  or HTTP GET http://www.myled.com:8080/myled/status) or manipulted since
+the status property is writeable (using CoAP PUT coap://www.myled.com:5683/in or using HTTP PUT http://www.myled.com:8080/myled/myled/in with a string status payload). Actions can be
+iniitied using the resources fadeIn and fadeOut (e.g.,  using CoAP POST coap://www.myled.com:5683/in or HTTP coap://www.myled.com:5683/myled/out with a short-based payload (for ms)).
+The "MyLEDThing" also serves an event (criticalCondition) that enables clients to do subcribsions on that kind of resources (e.g., using CoAP GET OBSERVE  coap://www.myled.com:5683/ev).
+</p>
 
+<p>
+More details about the TD elements are given in the next section.
+</p>
 				</section>
 	 			<section>
 					<h3>Details of the TD Elements</h3>
@@ -442,7 +441,7 @@ More details about the TD elements are given in the next section.
 
 						<ul>
 							<li><b>Name:</b> Name of the Thing (string-based)</li>
-							<li><b>URI:</b> Defines base URI for the Thing. More than one URI can be listed (as an array),
+							<li><b>Uris:</b> Defines base URI for the Thing. More than one URI can be listed (as an array),
 								if various protocols are supported (e.g. HTTP and CoAP) or in specific configurations
 								(e.g. a Thing could rely on a redirection server if its URI is likely to change over time).
 							</li>
@@ -522,7 +521,7 @@ More details about the TD elements are given in the next section.
       "sensor:unit": "sensor:Celsius",
       "valueType": "xsd:float",
       "writable": false,
-      "href": "temp"
+      "hrefs": "temp"
     }
   ]
 	...
@@ -541,13 +540,13 @@ More details about the TD elements are given in the next section.
 						<ul>
 							<li><b>@type:</b> [optional] Allows to assign a context to the property.</li>
 							<li><b>Name:</b> Name of the property that also defines the semantics</li>
-							<li><b>Href:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
+							<li><b>Hrefs:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
 							<li><b>ValueType:</b> Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
 							RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type definition.
-							<p>
+					<!--		<p>
 							Type restrications are enabled by the <b>optional</b> terms <b>min</b>, <b>max</b>, and <b>enum</b>.
 							<p>
-
+-->
 
 							<!--	<p class="note" title="Matthias Kovatsch">
 									This needs to become Content Type/Format/Class information about the representation format(s).
@@ -611,12 +610,10 @@ More details about the TD elements are given in the next section.
       "@type": "actuator:fadeIn",
       "name": "fadeIn",
       "inputData": {
-        "min": 1000,
-        "max": 10000,
         "valueType": "xsd:short",
         "actuator:unit": "actuator:ms"
       },
-      "href": [
+      "hrefs": [
         "in",
         "myled/in"
       ]
@@ -630,8 +627,7 @@ More details about the TD elements are given in the next section.
 							<li><b>@type:</b> [optional] Allows to assign a context to the action.</li>
 							<li><b>Name:</b> Name of the action</li>
 							<li> <b>InputData:</b> [optional] Which input data is associated with this action. In there, specific data type characteristics can be defined such as <b>basedType</b>,
-								and the <b>optional</b> restrictions <b>min</b>, <b>max</b>, and <b>enum</b>  (also see description in <a href="#property">Property</a>) as well as <b>optional</b>
-								addition context metadata (e.g., unit ms) </li>
+								and  <b>optional</b> addition context metadata (e.g., unit ms) </li>
 							<li><i><b>OutputData:</b> [optional] Which data type is associated with this action (same condition as InputData above)</i>
 					<!--			<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
@@ -678,12 +674,8 @@ More details about the TD elements are given in the next section.
   "events": [
     {
       "name": "criticalCondition",
-      "enums": [
-        "temperatureToHigh",
-        "lowVoltage"
-      ],
       "valueType": "xsd:string",
-      "href": [
+      "hrefs": [
         "ev",
         "myled/event"
       ]
@@ -696,7 +688,7 @@ More details about the TD elements are given in the next section.
 						<ul>
 							<li><b>@type:</b> [optional] Allows to assign a context to the event.</li>
 							<li><b>Name:</b> Name of the event</li>
-							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
+							<li><b>Hrefs:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
 				<!--			<li><i>InputData: [optional] Which input data is associated with this event</i></li>-->
 							<li><b>OutputData:</b> [optional] Which data type is associated with this event. This field works similar to actions.
 						<!--		<p class="note" title="Matthias Kovatsch">
