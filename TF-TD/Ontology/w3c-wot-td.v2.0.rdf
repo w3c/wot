@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3c.org/wot/td#"
+     xml:base="http://www.w3c.org/wot/td"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.w3c.org/wot/td">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">2.1</owl:versionInfo>
+        <created rdf:datatype="&xsd;string">2015-08-14</created>
+        <title rdf:datatype="&xsd;string">Thing Description Model</title>
+        <rdfs:comment rdf:datatype="&xsd;string">This ontology describes Things as specified by the Thing Description Model.</rdfs:comment>
+        <creator rdf:datatype="&xsd;string">W3C Web of Things Interest Group</creator>
+        <identifier rdf:datatype="&xsd;anyURI">http://www.w3c.org/wot/td</identifier>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3c.org/wot/td#created -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3c.org/wot/td#created"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#creator -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3c.org/wot/td#creator"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3c.org/wot/td#identifier"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#modified -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3c.org/wot/td#modified"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#title -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3c.org/wot/td#title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3c.org/wot/td#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#dependsOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3c.org/wot/td#isAssociatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#hasAction">
+        <rdfs:range rdf:resource="http://www.w3c.org/wot/td#Action"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3c.org/wot/td#hasInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasDataType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#hasDataType">
+        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#DataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#hasEvent">
+        <rdfs:range rdf:resource="http://www.w3c.org/wot/td#Event"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3c.org/wot/td#hasInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#hasInput">
+        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#Interaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasInteraction -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#hasInteraction">
+        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#hasOutput">
+        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#Interaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#hasProperty">
+        <rdfs:range rdf:resource="http://www.w3c.org/wot/td#Property"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3c.org/wot/td#hasInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#isAssociatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#isAssociatedTo">
+        <rdfs:range rdf:resource="http://www.w3c.org/wot/td#Thing"/>
+        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#isChildOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#isChildOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3c.org/wot/td#isAssociatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#isParentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#isParentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3c.org/wot/td#isAssociatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#supportsEncoding -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#supportsEncoding">
+        <rdfs:comment>This is a serialization format (e.g., JSON-LD, EXI etc.) supported by this Thing.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#supportsSecurity -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#supportsSecurity">
+        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3c.org/wot/td#associatedUri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3c.org/wot/td#associatedUri">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#hasType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3c.org/wot/td#hasType"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3c.org/wot/td#name">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#priority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3c.org/wot/td#priority">
+        <rdfs:comment>In case of more than one protocol binding, defines an order to suggest which protocol(s) should be used in priority.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#stability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3c.org/wot/td#stability">
+        <rdfs:comment>Characterizes how often the property likely changes. Expressed in ms.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#writeable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3c.org/wot/td#writeable">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3c.org/wot/td#Action -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#Action">
+        <rdfs:subClassOf rdf:resource="http://www.w3c.org/wot/td#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#Actuator -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.w3c.org/wot/td#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#DataType -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#DataType"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#Event -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#Event">
+        <rdfs:subClassOf rdf:resource="http://www.w3c.org/wot/td#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#Interaction -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#Interaction"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#Property -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#Property">
+        <rdfs:subClassOf rdf:resource="http://www.w3c.org/wot/td#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#Sensor -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3c.org/wot/td#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#Thing -->
+
+    <owl:Class rdf:about="http://www.w3c.org/wot/td#Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3c.org/wot/td#CoAP -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td#CoAP"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#EXI -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td#EXI"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#HTTP -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td#HTTP"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#JSON -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td#JSON"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#JSON-LD -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td#JSON-LD"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#WebSocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td#WebSocket"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td#XMPP -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td#XMPP"/>
+    
+
+
+    <!-- http://www.w3c.org/wot/td/tutorial#XML -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3c.org/wot/td/tutorial#XML"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
