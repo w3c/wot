@@ -499,10 +499,10 @@ More details about the TD elements are given in the next section.
 
 
 						<ul>
-							<li><b>@type:</b> [optional] Allows to assign a context to the property.</li>
-							<li><b>Name:</b> Name of the property that also defines the semantics</li>
-							<li><b>Href:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>ValueType:</b> Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
+							<li><b>@type:</b> [optional] RDF type of the resource. Could be used e.g. for semantic disambiguation.</li>
+							<li><b>name:</b> Name of the property that also defines the semantics</li>
+							<li><b>hrefs:</b> A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
+							<li><b>valueType:</b> Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
 							RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type definition.
 							<p>
 							Type restrications are enabled by the <b>optional</b> terms <b>min</b>, <b>max</b>, and <b>enum</b>.
@@ -514,9 +514,9 @@ More details about the TD elements are given in the next section.
 									Otherwise we go down the WS-*/SOAP path.
 								</p>-->
 							</li>
-							<li><b>Writable:</b> Is this property writable (true/false)</li>
-							<li><b>Stability: [optional]</b> Expected maximum time of stability of the property value in ms (0=stable/static property value)</li>
-							<li><b>Security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the property
+							<li><b>writable:</b> Is this property writable (true/false)</li>
+							<li><b>stability: [optional]</b> Expected maximum time of stability of the property value in ms (0=stable/static property value)</li>
+							<li><b>security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the property
 
 									<p>Compared to the security field that can be found in  <a href="#thing-s-metadata">Thing's metadata</a>, this field here can be used to apply
 										specific security requirements that is only valid for that resources. </p>
@@ -587,19 +587,19 @@ More details about the TD elements are given in the next section.
 	</pre>
 	</div>
 						<ul>
-							<li><b>@type:</b> [optional] Allows to assign a context to the action.</li>
-							<li><b>Name:</b> Name of the action</li>
-							<li> <b>InputData:</b> [optional] Which input data is associated with this action. In there, specific data type characteristics can be defined such as <b>basedType</b>,
+							<li><b>@type:</b> [optional] RDF type of the resource. Could be used e.g. for semantic disambiguation.</li>
+							<li><b>name:</b> Name of the action</li>
+							<li> <b>inputData:</b> [optional] Which input data is associated with this action. In there, specific data type characteristics can be defined such as <b>valueType</b>,
 								and the <b>optional</b> restrictions <b>min</b>, <b>max</b>, and <b>enum</b>  (also see description in <a href="#property">Property</a>) as well as <b>optional</b>
 								addition context metadata (e.g., unit ms) </li>
-							<li><i><b>OutputData:</b> [optional] Which data type is associated with this action (same condition as InputData above)</i>
+							<li><i><b>outputData:</b> [optional] Which data type is associated with this action (same condition as InputData above)</i>
 					<!--			<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
 								</p>-->
 							</li>
-							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>Security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the action.</li>
+							<li><b>hrefs:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
+							<li><b>security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the action.</li>
 						</ul>
 
 						<p>
@@ -654,17 +654,17 @@ More details about the TD elements are given in the next section.
 	</pre>
 	</div>
 						<ul>
-							<li><b>@type:</b> [optional] Allows to assign a context to the event.</li>
-							<li><b>Name:</b> Name of the event</li>
-							<li><b>Href:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
+							<li><b>@type:</b> [optional] RDF type of the resource. Could be used e.g. for semantic disambiguation.</li>
+							<li><b>name:</b> Name of the event</li>
+							<li><b>hrefs:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
 				<!--			<li><i>InputData: [optional] Which input data is associated with this event</i></li>-->
-							<li><b>OutputData:</b> [optional] Which data type is associated with this event. This field works similar to actions.
+							<li><b>valueType:</b> [optional] Which data type is associated with this event. This field works similar to actions.
 						<!--		<p class="note" title="Matthias Kovatsch">
 									This again needs to become Content Type/Format/Class information about the representation format(s).
 									Otherwise we go down the WS-*/SOAP path.
 								</p>-->
 							</li>
-							<li><b>Security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the event. </li>
+							<li><b>security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the event. </li>
 						</ul>
 
 						<p class="ednote">
