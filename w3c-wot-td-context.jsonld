@@ -3,29 +3,23 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "td": "http://www.w3c.org/wot/td#",
     "Metadata": "td:Metadata",
-    "metadata": {
-      "@id": "td:hasMetadata",
-      "@type": "@id"
-    },
     "name": "td:name",
-    "protocols": {
-      "@id": "td:protocol",
-      "@type": "@id"
-    },
-    "HTTP": "td:HTTP",
-    "XMPP": "td:XMPP",
-    "CoAP": "td:CoAP",
-    "WebSocket": "td:WebSocket",
-    "uri": {
+    "uris": {
       "@id": "td:associatedUri",
-      "@type": "xsd:anyURI"
+      "@type": "xsd:anyURI",
+      "@container": "@set"
+    },
+    "hrefs": {
+      "@id": "td:associatedUri",
+      "@type": "xsd:anyURI",
+      "@container": "@set"
     },
     "priority": {
       "@id": "td:priority",
       "@type": "xsd:integer"
     },
     "encodings": {
-      "@id": "td:encoding",
+      "@id": "td:supportsEncoding",
       "@type": "@id",
       "@container": "@set"
     },
@@ -33,16 +27,18 @@
     "JSON-LD": "td:JSON-LD",
     "XML": "td:XML",
     "EXI": "td:EXI",
+    "security": "td:supportsSecurity",
 	  "interactions": {
       "@id": "td:hasInteraction",
       "@type": "@id",
       "@container": "@set"
     },
-	  "Property": "td:Property",
-    "outputData": {
-      "@id": "td:hasOutput",
-      "@type": "@id"
+    "properties": {
+      "@id": "td:hasProperty",
+      "@container": "@set"
     },
+	  "Property": "td:Property",
+    "valueType": "td:valueType",
     "stability": {
       "@id": "td:stability",
       "@type": "xsd:integer"
@@ -51,10 +47,22 @@
       "@id": "td:writeable",
       "@type": "xsd:boolean"
     },
+    "events": {
+      "@id": "td:hasEvent",
+      "@container": "@set"
+    },
     "Event": "td:Event",
     "inputData":  {
       "@id": "td:hasInput",
       "@type": "@id"
+    },
+    "outputData": {
+      "@id": "td:hasOutput",
+      "@type": "@id"
+    },
+    "actions": {
+      "@id": "td:hasAction",
+      "@container": "@set"
     },
     "Action": "td:Action"
   }

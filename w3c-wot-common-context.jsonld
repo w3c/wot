@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "qu": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#",
+    "dogont": "http://elite.polito.it/ontologies/dogont.owl#",
+    "lgdo": "http://linkedgeodata.org/ontology/",
+    "schema": "http://schema.org/",
+
+    "Temperature": "qu:temperature",
+    "Brightness": "qu:quantityOfLight",
+    "Distance": "qu:distance",
+    "Speed": "qu:speed",
+    "PowerConsumption": "qu:energy",
+
+    "celsius": "qu:degreeCelsius",
+    "kelvin": "qu:kelvin",
+    "m": "qu:meter",
+    "mm": "qu:millimeter",
+    "mile": "qu:mile",
+    "inch": "qu:inch",
+    "kmh": "qu:kilometerPerHour",
+    "mph": "qu:milePerHour",
+    "kwh": "qu:kilowattHour",
+    "joule": "qu:joule",
+
+    "Lamp": "dogont:Lamp",
+    "Lighting": "dogont:Lighting",
+    "TrafficLight": "lgdo:StreetLamp",
+    "Switch": "dogont:OnOffSwitch",
+    "Fan": "dogont:Fan",
+    "Door": "dogont:Door",
+    "Car": "schema:Car",
+
+    "min": "schema:minValue",
+    "max": "schema:maxvalue",
+    "enum": "schema:valueReference"
+  }
+}
