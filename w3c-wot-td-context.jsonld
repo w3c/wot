@@ -44,7 +44,7 @@
       "@type": "xsd:integer"
     },
     "writable": {
-      "@id": "td:writeable",
+      "@id": "td:writable",
       "@type": "xsd:boolean"
     },
     "events": {
@@ -53,17 +53,18 @@
     },
     "Event": "td:Event",
     "inputData":  {
-      "@id": "td:hasInput",
-      "@type": "@id"
+      "@id": "td:hasInput"
     },
     "outputData": {
-      "@id": "td:hasOutput",
-      "@type": "@id"
+      "@id": "td:hasOutput"
     },
     "actions": {
       "@id": "td:hasAction",
       "@container": "@set"
     },
-    "Action": "td:Action"
+    "Action": "td:Action",
+    "associated": "td:isAssociatedTo",
+    "child": "td:isChildOf",
+    "parent": "td:isParentOf"
   }
 }
