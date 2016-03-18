@@ -5,12 +5,25 @@
     "lgdo": "http://linkedgeodata.org/ontology/",
     "schema": "http://schema.org/",
 
+    "reference": {
+      "@id": "schema:valueReference",
+      "@type": "@id"
+    },
     "Temperature": "qu:temperature",
     "Brightness": "qu:quantityOfLight",
     "Distance": "qu:distance",
     "Speed": "qu:speed",
     "PowerConsumption": "qu:energy",
+    "OnOff": "dogont:OnOffState",
+    "RGBColor": "dogont:ColorStateRGB",
+    "RGBColorRed": "dogont:RedStateValue",
+    "RGBColorGreen": "dogont:GreenStateValue",
+    "RGBColorBlue": "dogont:BlueStateValue",
 
+    "unit": {
+      "@id": "qu:unit",
+      "@type": "@id"
+    },
     "celsius": "qu:degreeCelsius",
     "kelvin": "qu:kelvin",
     "m": "qu:meter",
@@ -22,6 +35,14 @@
     "kwh": "qu:kilowattHour",
     "joule": "qu:joule",
 
+    "On": "dogont:OnCommand",
+    "Off": "dogont:OffCommand",
+    "Toggle": "dogont:ToggleCommand",
+    "Start": "dogont:StartCommand",
+    "Stop": "dogont:StopCommand",
+    "IncreaseColor": "dogont:IncreaseColorCommand",
+    "DecreaseColor": "dogont:DecreaseColorCommand",
+
     "Lamp": "dogont:Lamp",
     "Lighting": "dogont:Lighting",
     "TrafficLight": "lgdo:StreetLamp",
@@ -31,7 +52,6 @@
     "Car": "schema:Car",
 
     "min": "schema:minValue",
-    "max": "schema:maxvalue",
-    "enum": "schema:valueReference"
+    "max": "schema:maxvalue"
   }
 }
