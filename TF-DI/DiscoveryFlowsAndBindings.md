@@ -120,8 +120,59 @@ This section discusses bindings to state of the art discovery technologies. Each
 
 ### SSDP Binding
 
-TBD
+Ideas:
 
+ - Define new SSDP device type for Things e.g. `urn:w3c-org:device:Thing:1`
+ - Thing Provider advertises the following SSDP message when things appear in the network: 
+ 
+    ```
+    NOTIFY * HTTP/1.1
+    HOST: 239.255.255.250:1900
+    CACHE-CONTROL: max-age = seconds until advertisement expires
+    LOCATION: URL to UPnP Device Description to stay compatible.  
+    NT: urn:w3c-org:device:Thing:1
+    NTS: ssdp:alive
+    SERVER: OS/version UPnP/1.0 product/version
+    USN: advertisement UUID
+    TD.WOT.W3C.ORG: URL to Thing Description
+    ```
+    
+ - Thing Provider advertises the following SSDP message before things disappear from the network: 
+
+    ```
+    NOTIFY * HTTP/1.1
+    HOST: 239.255.255.250:1900
+    NT: urn:w3c-org:device:Thing:1
+    NTS: ssdp:byebye
+    USN: uuid:advertisement UUID 
+    ```
+    
+ - Thing Consumer searches for things in the network:
+    
+    ```
+    M-SEARCH * HTTP/1.1
+    HOST: 239.255.255.250:1900
+    MAN: "ssdp:discover"
+    MX: seconds to delay response
+    ST: urn:w3c-org:device:Thing:1
+    QUERY.WOT.W3C.ORG: the search query to find specific things
+    ```
+    
+ - Thing Provider responds to search request with following message.
+ 
+    ```
+    HTTP/1.1 200 OK
+    CACHE-CONTROL: max-age = seconds until advertisement expires
+    DATE: when response was generated
+    EXT:
+    LOCATION: URL of the web page to advertise
+    SERVER: OS/version UPnP/1.0 product/version
+    ST: urn:w3c-org:device:Thing:1
+    USN: advertisement UUID
+    TD.WOT.W3C.ORG: URL to Thing Description
+    QUERY-USED.WOT.W3C.ORG: 0 or 1 depending if the Thing Provider provides filtering or not
+    ``` 
+ 
 ### mDNS Binding
 
 TBD
