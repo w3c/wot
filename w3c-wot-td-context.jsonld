@@ -1,50 +1,74 @@
 {
   "@context": {
-    "Metadata": "http://www.w3c.org/wot/td#Metadata",
-    "metadata": {
-      "@id": "http://www.w3c.org/wot/td#hasMetadata",
-      "@type": "@id"
-    },
-    "name": "http://www.w3c.org/wot/td#name",
-    "protocols": {
-      "@id": "http://www.w3c.org/wot/td#protocol",
-      "@type": "@id"
-    },
-    "HTTP": "http://www.w3c.org/wot/td#HTTP",
-    "XMPP": "http://www.w3c.org/wot/td#XMPP",
-    "CoAP": "http://www.w3c.org/wot/td#CoAP",
-    "WebSocket": "http://www.w3c.org/wot/td#WebSocket",
-    "uri": {
-      "@id": "http://www.w3c.org/wot/td#associatedUri",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "priority": "http://www.w3c.org/wot/td#priority",
-    "encodings": {
-      "@id": "http://www.w3c.org/wot/td#encoding",
-      "@type": "@vocab",
-      "@container": "@set"
-    },
-    "JSON": "http://www.w3c.org/wot/td#JSON",
-    "JSON-LD": "http://www.w3c.org/wot/td#JSON-LD",
-    "XML": "http://www.w3c.org/wot/td#XML",
-    "EXI": "http://www.w3c.org/wot/td#EXI",
-	  "interactions": {
-      "@id": "http://www.w3c.org/wot/td#hasInteraction",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "td": "http://www.w3c.org/wot/td#",
+    "Metadata": "td:Metadata",
+    "name": "td:name",
+    "uris": {
+      "@id": "td:associatedUri",
       "@type": "@id",
       "@container": "@set"
     },
-	  "Property": "http://www.w3c.org/wot/td#Property",
-    "outputData": {
-      "@id": "http://www.w3c.org/wot/td#hasOutput",
+    "hrefs": {
+      "@id": "td:associatedUri",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "priority": {
+      "@id": "td:priority",
+      "@type": "xsd:integer"
+    },
+    "encodings": {
+      "@id": "td:supportsEncoding",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "JSON": "td:JSON",
+    "JSON-LD": "td:JSON-LD",
+    "XML": "td:XML",
+    "EXI": "td:EXI",
+    "security": "td:supportsSecurity",
+	  "interactions": {
+      "@id": "td:hasInteraction",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "properties": {
+      "@id": "td:hasProperty",
+      "@container": "@set"
+    },
+	  "Property": "td:Property",
+    "valueType": "td:valueType",
+    "stability": {
+      "@id": "td:stability",
+      "@type": "xsd:integer"
+    },
+    "writable": {
+      "@id": "td:writable",
+      "@type": "xsd:boolean"
+    },
+    "events": {
+      "@id": "td:hasEvent",
+      "@container": "@set"
+    },
+    "Event": "td:Event",
+    "property": {
+      "@id": "td:forProperty",
       "@type": "@id"
     },
-    "stability": "http://www.w3c.org/wot/td#stability",
-    "writable": "http://www.w3c.org/wot/td#writeable",
-    "Event": "http://www.w3c.org/wot/td#Event",
     "inputData":  {
-      "@id": "http://www.w3c.org/wot/td#hasInput",
-      "@type": "@id"
+      "@id": "td:hasInput"
     },
-    "Action": "http://www.w3c.org/wot/td#Action"
+    "outputData": {
+      "@id": "td:hasOutput"
+    },
+    "actions": {
+      "@id": "td:hasAction",
+      "@container": "@set"
+    },
+    "Action": "td:Action",
+    "associations": "td:isAssociatedTo",
+    "child": "td:isChildOf",
+    "parent": "td:isParentOf"
   }
 }
