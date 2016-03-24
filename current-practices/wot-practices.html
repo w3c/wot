@@ -708,11 +708,13 @@ More details about the TD elements are given in the next section.
 					<h3>TD Samples</h3>
 
 					<p>
-						In the following, we give two examples of full TD. The first example, a
+						In the following, we give three examples of full TD. The first example, a
 						temperature sensor, shows how to define relations between Thing's
 						Properties. As a second example, we modeled
 						an actuator (LED lamp) where Actions have all been characterized semantically,
 						so that machines could unambiguously interpret them in an automated manner.
+						At last, association between Things is shown by defining a master switch
+						controlling other LED lamps.
 					</p>
 
 					<section>
@@ -866,6 +868,60 @@ More details about the TD elements are given in the next section.
 							Action. The Action's input also has a pre-defined type: <code>OnOff</code>
 							that should be understood not only as a boolean but as an on/off state
 							(as defined in DogOnt).
+						</p>
+					</section>
+
+					<section>
+						<h4>LED Master Switch</h4>
+						<div class="example">
+							<div class="example-title"><span>Example 12</span></div>
+							<pre>
+{
+  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": "Lamp",
+  "name": "myMasterLED",
+  "uris" : ["coap://www.example.com:5683/master",
+            "http://www.example.com:80/master"],
+  "encodings": ["JSON"],
+  "actions": [
+    {
+      "@type": "Toggle",
+      "name": "myMasterOnOff",
+      "inputData": {
+        "@type": "OnOff",
+        "valueType": "xsd:boolean"
+      },
+      "hrefs": ["toggle"]
+    }
+  ],
+  "associations": [
+    { "hrefs": ["coap://www.example.com:5683/0"] },
+    { "hrefs": ["coap://www.example.com:5683/1"] },
+    { "hrefs": ["coap://www.example.com:5683/2"] },
+    { "hrefs": ["coap://www.example.com:5683/3"] },
+    { "hrefs": ["coap://www.example.com:5683/4"] },
+    { "hrefs": ["coap://www.example.com:5683/5"] },
+    { "hrefs": ["coap://www.example.com:5683/6"] },
+    { "hrefs": ["coap://www.example.com:5683/7"] },
+  ]
+}
+						  </pre>
+						</div>
+
+						<p>
+							In this last example, we illustrate the use of <code>associations</code>.
+							The Thing we modeled here acts as a master switch for eight lamps similar
+							to that of <a href="#led-actuator"></a>. It means switching on and off
+							<code>myMasterOnOff</code> will propagate to all associated Things
+							by toggling their Action that is also of type <code>Toggle</code>.
+						</p>
+
+						<p>
+							No precise semantics for <code>associations</code> have been defined yet
+							and there might exist many other kinds of dependency between Things than
+							simply parent/child relation. This issue will be addressed soon. Until then,
+							Thing associations could be useful for discovery.
 						</p>
 					</section>
 

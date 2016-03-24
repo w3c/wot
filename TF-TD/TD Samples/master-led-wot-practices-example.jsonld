@@ -1,0 +1,30 @@
+{
+  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": "Lamp",
+  "name": "myMasterLED",
+  "uris" : ["coap://www.example.com:5683/master",
+            "http://www.example.com:80/master"],
+  "encodings": ["JSON"],
+  "actions": [
+    {
+      "@type": "Toggle",
+      "name": "myMasterOnOff",
+      "inputData": {
+        "@type": "OnOff",
+        "valueType": "xsd:boolean"
+      },
+      "hrefs": ["toggle"]
+    }
+  ],
+  "associations": [
+    { "hrefs": ["coap://www.example.com:5683/0"] },
+    { "hrefs": ["coap://www.example.com:5683/1"] },
+    { "hrefs": ["coap://www.example.com:5683/2"] },
+    { "hrefs": ["coap://www.example.com:5683/3"] },
+    { "hrefs": ["coap://www.example.com:5683/4"] },
+    { "hrefs": ["coap://www.example.com:5683/5"] },
+    { "hrefs": ["coap://www.example.com:5683/6"] },
+    { "hrefs": ["coap://www.example.com:5683/7"] },
+  ]
+}
