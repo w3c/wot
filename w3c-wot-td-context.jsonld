@@ -6,12 +6,12 @@
     "name": "td:name",
     "uris": {
       "@id": "td:associatedUri",
-      "@type": "xsd:anyURI",
+      "@type": "@id",
       "@container": "@set"
     },
     "hrefs": {
       "@id": "td:associatedUri",
-      "@type": "xsd:anyURI",
+      "@type": "@id",
       "@container": "@set"
     },
     "priority": {
@@ -52,7 +52,10 @@
       "@container": "@set"
     },
     "Event": "td:Event",
-    "property": "td:forProperty",
+    "property": {
+      "@id": "td:forProperty",
+      "@type": "@id"
+    },
     "inputData":  {
       "@id": "td:hasInput"
     },
