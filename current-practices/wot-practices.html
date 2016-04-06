@@ -87,8 +87,8 @@
 				<p>
 					This document gives an overview for implementers over the W3C WoT building blocks and how they are connected.
 					<ul>
-						<li>To get familiar with the basics of WoT, continue with <a href="sec-concepts"></a>.</li>
-						<li>To participate in the WoT Plugfests, first get familar with <a href="sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a></li>
+						<li>To get familiar with the basics of WoT, continue with <a href="#sec-concepts"></a>.</li>
+						<li>To participate in the WoT Plugfests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a>.</li>
 					</ul>
 				</p>
 			</section>
@@ -112,19 +112,22 @@
 				<dd>A registry for <a>TDs</a> that provides a Web interface to register TDs and look them up, for intance using SPARQL queries</dd>
 
 				<dt><dfn>Scripting API</dfn></dt>
-				<dd>Programming interface that allows scripts to discover things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API.</dd>
+				<dd>Programming interface that allows scripts to discover things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#sec-scripting-api"></a>)</dd>
 
 				<dt><dfn data-lt="servient|servients">Servient</dfn></dt>
-				<dd>System component or application endpoint that provides a WoT API and may be in client role, server role, or both</dd>
+				<dd>System component or application endpoint that may be in client role, server role, or both and makes things interactive by providing a WoT API</dd>
 
 				<dt><dfn>SPARQL</dfn></dt>
 				<dd>A query language for semantic data</dd>
 
+				<dt><dfn>Thing</dfn></dt>
+				<dd>An entity in the Web of Things that can either be a physical artifact such as a device or a virtual representation such as a location or group of device</dd>
+
 				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
-				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a thing</dd>
+				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a thing (see <a href="#sec-td"></a>)</dd>
 
 				<dt><dfn>WoT API</dfn></dt>
-				<dd>Resource-oriented Web interface that allows access to servients over the network using different protocols mappings</dd>
+				<dd>Resource-oriented Web interface that allows access to servients over the network using different protocols mappings (see <a href="#sec-wot-api"></a>)</dd>
 			</dl>
 
 		</section>
@@ -162,7 +165,7 @@
 				In the following, the technical building blocks for the Web of Things are discussed on more detail.
 			</p>
 
-			<section>
+			<section id="sec-td">
 				<h2>Thing Description</h2>
 
 				<p>
@@ -1066,9 +1069,15 @@ More details about the TD elements are given in the next section.
 				</section>
 			</section>
 
-			<section>
+			<section id="sec-wot-api">
 				<h2>WoT API</h2>
-				<p>The API used for the communication between things, that is, the networking protocols and interfaces.</p>
+				
+				<p>
+					A WoT API is a Web API that is describable by a WoT <a>Thing Description</a> (TD).
+					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
+					Furthermore, it must suppoort the encodings and security mechanisms defined in the TD.
+					The WoT API is used for the communication between <a>servients</a>, that is, the networking protocols and interfaces (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
+				</p>
 
 				<section>
 					<h3>Resource Model and URIs</h3>
@@ -1163,7 +1172,7 @@ More details about the TD elements are given in the next section.
 				</section>
 			</section>
 
-			<section>
+			<section id="sec-scripting-api">
 				<h2>Scripting API</h2>
 				<p>
 					The Scripting API is an API for Discovery, Provisioning and Control of Things in a <a href="http://www.w3.org/WoT/">Web of Things</a>.</p>
@@ -1485,11 +1494,31 @@ if(thingId){
 
 				<section>
 					<h3>What to Implement?</h3>
-
+					
 					<ol>
-						<li>WoT client (e.g., a Web browser app or dashboard)</li>
-						<li>WoT server (e.g., a thing that only provides functionality, but does not use other things)</li>
-						<li>WoT <a>servient</a> (e.g., a virtual thing that composes multiple other things and provides a higher-level TD)</li>
+						<li>
+							WoT Client (e.g., a Web dashboard or controller)
+							<blockquote>
+								A WoT client implementation requires a <a href="#sec-td">TD</a> parser, a user interface or control logic to drive the interaction with one or more things.
+								For the TD parser, a JSON-LD library and RDF support are recommended, to reason about the TD of consumed things.
+								Optionally, it can implement lookup support for the <a href="#sec-repo">Repository</a>.
+							</blockquote>
+						</li>
+						<li>
+							WoT Server (e.g., a thing that only provides functionality, but does not use other things)
+							<blockquote>
+								A WoT server requires resource handlers that implement Properties, Actions, or Events.
+								The <a href="#sec-td">TD</a> can be static or dynamically generated based on the implementd resources.
+								For this, a simple JSON library is enough, as the vocabulary is fully known at design time.
+								Optionally, it can implement support for repository registration.
+							</blockquote>
+						</li>
+						<li>
+							WoT Servient (e.g., a virtual thing that composes multiple other things and provides a higher-level TD)
+							<blockquote>
+								A WoT <a>servient</a> needs to implement both client and server requirements.
+							</blockquote>
+						</li>
 					</ol>
 				</section>
 
@@ -1497,9 +1526,27 @@ if(thingId){
 					<h3>Which Protocols to Support?</h3>
 
 					<ol>
-						<li>HTTP (the most common protocol for clients and more powerful things)</li>
-						<li>CoAP (the predominant protocol for resource-constrained things)</li>
-						<li>Additional protocol such as MQTT (usually need a shim layer or new URI definition)</li>
+						<li>
+							HTTP
+							<blockquote>
+								The classic Web protocol is currently most common for clients (e.g., with a Web UI) and more powerful things.
+								There is a plethory of HTTP frameworks available for most languages and platforms.
+							</blockquote>
+						</li>
+						<li>
+							CoAP
+							<blockquote>
+								This protocol is predominant for resource-constrained things.
+								Several different CoAP implementations and frameworks can be found <a href="http://coap.technology/impls.html">here</a>.
+							</blockquote>
+						</li>
+						<li>
+							Additional Protocols
+							<blockquote>
+								To evaluate more protocol bindings, implementors are welcome to bring things with alternative protocol stacks to the Plugfests.
+								Some protocols might require a shim layer to allow for the resource model of WoT.
+							</blockquote>
+						</li>
 					</ol>
 				</section>
 
@@ -1523,8 +1570,21 @@ if(thingId){
 					<h3>How to Implement the Application Logic?</h3>
 
 					<ol>
-						<li>Natively (i.e., directly in the firmware or using proprietary code and libraries)</li>
-						<li>Scripting (i.e., providing the <a>Scripting API</a>)</li>
+						<li>
+							Native Code</li>
+							<blockquote>
+								The application logic is implemented directly in the firmware or a supported language of the protocol framework.
+								This is the default for resource-constrained things that serve a specific purpose.
+							</blockquote>
+						</li>
+						<li>
+							Scripting
+							<blockquote>
+								Having the application logic in scripted apps means that the servient must implement a runtime environment that provides the <a>Scripting API</a>.
+								Node.js may provide a good initial prototype for a WoT runtime environment on more powerful things or cloud servients.
+								In the embedded world, Lua is a popular scripting language that could be used for portable apps.
+							</blockquote>
+						</li>
 					</ol>
 				</section>
 
