@@ -10,7 +10,7 @@ protocols or rely on different data models.
 As explained in a
 [document introducing Thing Descriptions](http://w3c.github.io/wot/current-practices/wot-practices.html),
 we rely on JSON-LD to describe WoT Things. As a consequence, any RDF term could
-be theoretically included to a Thing Description (as annotation). To ease
+be theoretically included to a Thing Description. To ease
 experiments with Thing Descriptions, we provide, in the form of a JSON-LD
 context file, a set of terms that are relevant in the context of WoT. This file
 is accessible at https://w3c.github.io/wot/w3c-wot-common-context.jsonld. We
@@ -32,8 +32,8 @@ Semantic Web tools (for ontology matching, automatic reasoning, etc).
 
 All the terms originate from existing RDF vocabularies, freely accessible on
 the Web. They are part of the Linked Open Data (LOD) cloud. We have used four
-vocabularies until now: the ontology for quantity kinds and units (QU), DogOnt,
-LinkedGeoData and schema.org. It looks as follows in the context file:
+vocabularies until now: Quantities & Units, DogOnt, LinkedGeoData and
+schema.org. It looks as follows in the context file:
 
 ```
 {
