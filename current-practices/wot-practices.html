@@ -736,6 +736,48 @@ More details about the TD elements are given in the next section.
 
 					</section>
 
+					<section>
+						<h4>Note on URI Resolution</h4>
+						<p>
+							A Thing could be associated to more than one URI (in case it e.g. supports
+							several protocols). The same way, links to Properties, Actions or Events
+							could be defined as an array instead of a single string. URIs can also
+							be relative. The IETF recommendation for URI resolution [[!RFC3986]] does note
+							fully cover that case. This section is an attempt to specify how to
+							resolve URIs in a Thing Description document.
+						</p>
+						<p>
+							<ul>
+								<li>
+									A Thing Description can define one or more <code>uris</code>. If only one URI
+									is defined, the JSON value can be a plain string. If more than one URI
+									is defined, the JSON value must be a string array.
+								</li>
+								<li>
+									Each string from the JSON value should be interpreted as a base URI
+									and must be absolute.
+								</li>
+								<li>
+									A Property, an Action or an Event can define one or more <code>hrefs</code>.
+									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code>
+									must be a string. If it is a string array, the JSON value of <code>hrefs</code>
+									can be either a string or a string array.
+								</li>
+								<li>
+									If the JSON value of <code>hrefs</code> is a string, it can be either a relative
+									or an absolute URI. In the former case, it should be possible to resolve it using
+									the algorithm of [[!RFC3986]] using <i>any</i> of the base URIs available.
+								</li>
+								<li>
+									If the JSON value of <code>hrefs</code> is a string array, it must contain
+									as many elements as that of <code>uris</code> and each element must be a
+									relative URI. The resolution algorithm of [[!RFC3986]] should then be applied
+									<i>index-wise</i>.
+								</li>
+							</ul>
+						</p>
+					</section>
+
 				</section>
 
 				<section>
@@ -1071,7 +1113,7 @@ More details about the TD elements are given in the next section.
 
 			<section id="sec-wot-api">
 				<h2>WoT API</h2>
-				
+
 				<p>
 					A WoT API is a Web API that is describable by a WoT <a>Thing Description</a> (TD).
 					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
@@ -1494,7 +1536,7 @@ if(thingId){
 
 				<section>
 					<h3>What to Implement?</h3>
-					
+
 					<ol>
 						<li>
 							WoT Client (e.g., a Web dashboard or controller)
