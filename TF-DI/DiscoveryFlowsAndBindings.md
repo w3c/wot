@@ -8,7 +8,7 @@ This section discusses potential discovery options independent from the underlyi
 
  - **Thing Consumer**: is an application component that discovers thing descriptions (TDs) that fulfil a discovery request (query).
  - **Thing Provider**: is an application component that is responsible for providing access to one or multiple things. A Thing Provider may offer the thing descriptions or use a central Thing Registry. 
- - **Thing Registry**: is an application component for registering thing descriptions. It offers a lookup interface to find thing descriptions for a specific query. It also offers an interface to retrieve a single thing description. In some cases, this could be combined with the role of a gateway that manages multiple IoT devices.
+ - **Thing Registry**: is an application component for registering thing descriptions. It offers a lookup interface to find thing descriptions for a specific query. It also offers an interface to retrieve a single thing description. In some cases, the registry could be combined with the role of a gateway that manages multiple IoT devices.
  - **TD Generator**: is an application component that generates Thing Descriptions on the fly based on templates for specific devices or technologies. It offers an interface that accepts requests containing metadata of a thing and returns a Thing Description with the corresponding binding information.
 
 ### Discovery Flow 1
