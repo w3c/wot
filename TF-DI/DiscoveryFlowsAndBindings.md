@@ -175,7 +175,8 @@ Ideas:
  
 ### mDNS Binding
 
-TBD
+- A typical scenario is a smart home with a gateway device that manages multiple IoT devices and bridges them to cloud based services. The IoT devices use multicast DNS to discover the gateway when they start up. Multicast DNS (mDNS) is DNS over multicast UDP packets and uses the same message format as regular DNS. DNS messages consist of a header field followed by a sequence of question records and a sequence of answer records. Each record starts with a NAME field followed by the record's type and class. This in turn is followed by type specific fields. DNS and mDNS are defined in a suite of IETF RFCs.
+- The starting point is for a device to use IGMP to join the mDNS multicast group. The device can then send a message with a question for "PTR" records with the desired service type, e.g. "_http._tcp._local". The gateway replies with a DNS message containing several records, including a "SRV" record with the IP port number, and "A" records for an IPv4 address or "AAAA" records for an IPv6 address. A gateway could advertise multiple services. In principle, the gateway could use "TXT" records to provide a set of name/value pairs describing the service. When the device has finished with the discovery process it uses IGMP to leave the multicast group.
 
 ### BLE-GATT Binding
 
