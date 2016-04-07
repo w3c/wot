@@ -1,6 +1,6 @@
 # WoT Discovery
 
-This document describes initial ideas for usage of discovery protocols in WoT. The main goal of discovery in WoT is to find thing descriptions of things that fulfil a specific request (query). 
+This document describes initial ideas for usage of discovery protocols in WoT. The main goal of discovery in WoT is to find thing descriptions of things that fulfil a specific request (query). Another use is for an IoT device to discover a gateway with which to register itself.
 
 ## Discovery Flows
 
