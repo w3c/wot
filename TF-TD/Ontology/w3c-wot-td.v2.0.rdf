@@ -200,7 +200,14 @@
     <!-- http://www.w3c.org/wot/td#valueType -->
 
     <owl:ObjectProperty rdf:about="http://www.w3c.org/wot/td#valueType">
-        <rdfs:domain rdf:resource="http://www.w3c.org/wot/td#Property"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3c.org/wot/td#Event"/>
+                    <rdf:Description rdf:about="http://www.w3c.org/wot/td#Property"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
