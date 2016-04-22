@@ -1,8 +1,8 @@
 The model for Thing Descriptions is still an on-going work. Here are the
 following tasks being currently carried out:
-- [Complex data types](expressing-complex-data-types-in-a-thing-description)
-- [Mapping with other models](mapping-thing-description-to-other-data-models)
-- [Semantic extensions](annotating-thing-description-with-external-vocabularies)
+- [Complex data types](#expressing-complex-data-types-in-a-thing-description)
+- [Mapping with other models](#mapping-thing-description-to-other-data-models)
+- [Semantic extensions](#annotating-thing-description-with-external-vocabularies)
 
 # Expressing complex data types in a Thing Description
 
