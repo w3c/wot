@@ -1,4 +1,145 @@
-# Thing Description Semantic Annotation & Common Vocabulary
+The model for Thing Descriptions is still an on-going work. Here are the
+following tasks being currently carried out:
+- [Complex data types](#datatypes)
+- [Mapping with other models]()
+- [Semantic extensions]()
+
+<a name="datatypes"></a>
+# Expressing complex data types in a Thing Description
+
+## Note on RDF data types
+
+It is allowed (but not recommended) to associate a literal to any type
+definition that has a URI (even without precise semantics). Still, a dedicated
+mechanism to define complex types is needed: there is no way to specifiy the
+nature of the data type on a literal.
+
+Refering to arbitrary XSD schema is allowed, as long as schema components
+define an ID. The other proposed solution was with XSCD, which never reached
+the recommendation status, though.
+
+OWL allows restriction on RDF-compatible XSD types. Structured values, such as
+JSON objects should be expressed as classes. A simpler type declaration would
+be beneficial.
+
+References:
+- https://www.w3.org/TR/rdf11-concepts/#section-Datatypes (RDF data types)
+- https://www.w3.org/TR/owl2-syntax/#Datatype_Definitions (OWL data types)
+- https://www.w3.org/TR/swbp-xsch-datatypes/#sec-userDefined (user-defined XSD data types)
+
+## JSON Schema
+
+Thing descriptiton allows one to define a type for input and output values
+(e.g., valueType). We need to allow for
+- simple types and
+- composed types (a.k.a. complex types)
+
+The original idea was to base simple types on XML schema datatypes (e.g.,
+  xsd:integer) and composed types based on schema.org.
+
+That said using XSD datatypes seems to implicitly match to a given
+representation (e.g., xsd:byte) while still not providing an easy way to limit
+ranges or enumerate values without requring the full power of XML schema.
+
+On the contrary, schema.org allow for refering to existing types but introduces
+a second concept (compared to simple types) by linking to types defined
+elsewhere. Coming up with user-defined types does not seem to be very easy also.
+
+Hence, trying to use JSON schema in both cases, simple types and composed
+types, seems a reasonable approach.
+
+## Schema.org
+
+## Comparison
+
+<table>
+  <tr>
+    <th>JSON Schema</td>
+    <th>Schema.org</td>
+    <!-- <th>Example</td> -->
+  </tr>
+
+  <tr>
+    <td>
+      <pre>
+{
+  "type": "integer",
+  "maximum": 13
+}
+      </pre>
+    </td>
+    <td>
+      <pre>
+{
+  "@type": "Integer",
+  "maxValue": 13
+}
+      </pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre>
+{
+   "type": "string",
+   "enum": [ "file", "memory"]
+}
+      </pre>
+    </td>
+    <td>
+      <i>Not applicable</i>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre>
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": ["id"]
+}
+      </pre>
+    </td>
+    <td>
+      <pre>
+{
+  "@type": "StructuredValue",
+  "value": [
+    {
+      "@type": "PropertyValue",
+      "name": "id",
+      "value": { "@type": "Integer" }
+    },
+    {
+      "@name": "PropertyValue",
+      "name": "name",
+      "value": { "@type": "Text" }
+    }
+  ]
+}
+      </pre>
+    </td>
+  </tr>
+</table>
+
+# Mapping Thing Description to other data models
+
+## Bluetooth Low Energy (BLE)
+
+## Zigbee
+
+## OCF oneIoTA
+
+# Annotating a Thing Description with external vocabulary
 
 ## Common WoT Vocabulary
 
@@ -17,8 +158,6 @@ is accessible at https://w3c.github.io/wot/w3c-wot-common-context.jsonld. We
 present the terms it contains in the following. A few examples showing how
 to use them are also presented in our
 [introductory document](http://w3c.github.io/wot/current-practices/wot-practices.html#td-samples).
-
-### Note
 
 This approach of defining a "common" vocabulary for Thing Description is only
 meant for internal experimentation within the Web of Things group to help
