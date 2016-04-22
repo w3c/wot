@@ -1,10 +1,9 @@
 The model for Thing Descriptions is still an on-going work. Here are the
 following tasks being currently carried out:
-- [Complex data types](#datatypes)
-- [Mapping with other models]()
-- [Semantic extensions]()
+- [Complex data types](expressing-complex-data-types-in-a-thing-description)
+- [Mapping with other models](mapping-thing-description-to-other-data-models)
+- [Semantic extensions](annotating-thing-description-with-external-vocabularies)
 
-<a name="datatypes"></a>
 # Expressing complex data types in a Thing Description
 
 ## Note on RDF data types
@@ -139,7 +138,7 @@ types, seems a reasonable approach.
 
 ## OCF oneIoTA
 
-# Annotating a Thing Description with external vocabulary
+# Annotating Thing Description with external vocabularies
 
 ## Common WoT Vocabulary
 
