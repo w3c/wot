@@ -38,12 +38,13 @@
 	<body>
 		<section id="abstract">
 			<p>
-				The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things services on a worldwide basis.
-				The discussions of the interest group already shaped rough, preliminary WoT building blocks: thing description (TD), scripting API & protocol bindings (AP), discovery (DI), and security & privacy (SP). The current practices related to WoT building blocks were also prototyped and tested in so-called plugfests.
+				The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things (IoT) services on a worldwide basis.
+				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, protocol bindings, discovery mechanisms, and cross-cutting security & privacy considerations.
+				The current practices related to WoT building blocks were also prototyped and tested in so-called PlugFests.
 				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
 				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
 				While this document is not a technical specification, it aims at helping implementers to get a quick overview of the WoT building blocks.
-				Furthermore, it includes reports from past plugfests and follow-up discussions, which explain the rational behind the current practices.
+				Furthermore, it includes reports from past PlugFests and follow-up discussions, which explain the rational behind the current practices.
 			</p>
 		</section>
 
@@ -66,10 +67,10 @@
 				The IG has been divided into four task forces that looked into building blocks for such a Web of Things: thing description (TD), scripting API & protocol bindings (AP), discovery (DI), and security & privacy (SP).
 				Apart from the planned deliverable of a technology landscape document which provides an overview of existing technology, also promising concepts and working drafts were discussed. It turned out challenging for implementers
 				to follow the current state of the WoT building blocks respectively in these discussions.
-				This is, however, very important for the mission of the <a href='#plugfests'>plugfests</a>, where the current practices should be tested and evaluated.
+				This is, however, very important for the mission of the <a href='#plugfests'>PlugFests</a>, where the current practices should be tested and evaluated.
 				Moreover, it is hard for newcomers to quickly get a picture of the IG activities.
 				Thus, this document shall provide a snapshot that represents the current practices of the WoT IG.
-				It preserves the results of the plugfests as well as the discussions between participants.
+				It preserves the results of the PlugFests as well as the discussions between participants.
 				This document is not a technical specification, but more a working document for implementors of the prototypical WoT building blocks.
 			</p>
 
@@ -87,7 +88,7 @@
 					This document gives an overview for implementers over the W3C WoT building blocks and how they are connected.
 					<ul>
 						<li>To get familiar with the basics of WoT, continue with <a href="#sec-concepts"></a>.</li>
-						<li>To participate in the WoT Plugfests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a>.</li>
+						<li>To participate in the WoT PlugFests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a>.</li>
 					</ul>
 				</p>
 			</section>
@@ -189,7 +190,7 @@
 					
 					<p>
 						WoT architecture does not limit to the mappings to what is isted here.
-						This is currently practiced at Plugfests.
+						This is currently practiced at PlugFests.
 					</p>
 
 					<div class="practice">
@@ -270,7 +271,7 @@
 						</ul>
 						For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT APIs
 
-						The security-part of the W3C WoT Plugfest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the Plugfest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this Plugfest
+						The security-part of the W3C WoT PlugFest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the PlugFest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this PlugFest
 						<h4>Secure Communications</h4>
 						Communication security can be implemented in form of transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the same working tasks and workload<br/><br/>
 						Transport-level security has a long heritage in IT and presents a well-understood means in Web security which is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
@@ -775,7 +776,7 @@
 						</ul>
 
 						<p class="ednote">
-							So far, the concept of events has not been evaluated yet during the plugfests.
+							So far, the concept of events has not been evaluated yet during the PlugFests.
 							Thus, there has been little discussion and no common practice has emerged.
 							The following text is a strawman proposal to trigger discussion.
 							The Input-/OutputData needs a similar alignment with HATEOAS as actions.
@@ -1062,7 +1063,7 @@
 
 					<p class="ednote">
 						This section describes in general how a thing (i.e., its TD) can be discovered.
-						In particular, the current practices at the Plugfests should become clear.
+						In particular, the current practices at the PlugFests should become clear.
 						Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
 					</p>
 
@@ -1480,11 +1481,11 @@
 		</section>
 
 		<section>
-			<h1 id="plugfests">Plugfests</h1>
+			<h1 id="plugfests">PlugFests</h1>
 
 			<p>
-				This section includes the goals and ideas of each WoT Plugfest in chronological order.
-				Before reflecting the "lessons learned" of each Plugfest, which drove the development of the presented practices, the document provides a <a href="#sec-plugfest-howto">howto</a> for participating in the Plugfests.</p>
+				This section includes the goals and ideas of each WoT PlugFest in chronological order.
+				Before reflecting the "lessons learned" of each PlugFest, which drove the development of the presented practices, the document provides a <a href="#sec-plugfest-howto">howto</a> for participating in the PlugFests.</p>
 			<p class="ednote">
 				@TODO Add more detailed information along with pictures of each plugfest
 			</p>
@@ -1497,10 +1498,10 @@
 				</p>
 
 				<p>
-					This howto is kept up to date with the requirements for the latest/upcoming edition of the Plugfest.
-					To participate in an upcoming Plugfest, prepare an implemention by deciding on the following questions.
-					The answers to these questions will also be needed when registering for a Plugfest by filling out a table in the corresponding Plugfest page in the <a href="https://www.w3.org/WoT/IG/wiki/Main_Page#Face_to_Face_Meetings">WoT IG Wiki</a>.
-					Note that might be additional options in the future when more features are defined or more protocol bindings become popular in the Plugfest.
+					This howto is kept up to date with the requirements for the latest/upcoming edition of the PlugFest.
+					To participate in an upcoming PlugFest, prepare an implemention by deciding on the following questions.
+					The answers to these questions will also be needed when registering for a PlugFest by filling out a table in the corresponding PlugFest page in the <a href="https://www.w3.org/WoT/IG/wiki/Main_Page#Face_to_Face_Meetings">WoT IG Wiki</a>.
+					Note that might be additional options in the future when more features are defined or more protocol bindings become popular in the PlugFest.
 				</p>
 
 				<section>
@@ -1554,7 +1555,7 @@
 						<li>
 							Additional Protocols
 							<blockquote>
-								To evaluate more protocol bindings, implementors are welcome to bring things with alternative protocol stacks to the Plugfests.
+								To evaluate more protocol bindings, implementors are welcome to bring things with alternative protocol stacks to the PlugFests.
 								Some protocols might require a shim layer to allow for the resource model of WoT.
 							</blockquote>
 						</li>
@@ -1604,7 +1605,7 @@
 			<section id="plugfest-sapporo">
 				<h2>Sapporo (2015-10)</h2>
 
-				<p>This first WoT plugfest elaborated, based on a JSON-LD thing description, server and client role of "thing".
+				<p>This first WoT PlugFest elaborated, based on a JSON-LD thing description, server and client role of "thing".
 				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI encodings.</p>
 				<p>More information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_29-30_October_2015,_Sapporo,_Japan#Plugfest">wiki</a> page.</p>
 				<h3>Goals</h3>
@@ -1621,7 +1622,7 @@
 				<h2>Nice (2016-01)</h2>
 
 				<h3>Goals</h3>
-				<p>Based on the previous <a href="#sapporo-2015-10">plugfest in Sapporo</a> four advances will be proposed
+				<p>Based on the previous <a href="#sapporo-2015-10">PlugFest in Sapporo</a> four advances will be proposed
 				   (more information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#PlugFest">wiki</a> page).</p>
 				<ul>
 					<li>Security: using new security mechanisms that emerged for protecting new styles of Web applications (Web/REST APIs, browser-based/mobile apps) in the things space</li>
@@ -1669,23 +1670,23 @@
 			<section id="plugfest-montreal">
 				<h2>Montreal (2016-04)</h2>
 
-				<p>Find Plugfest organization and contributor details on
-				the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_April,_11th_-_13th,_Montreal,_Canada#PlugFest">WoT Montreal Plugfest wiki page</a>.</p>
-				<p>With this plugfest we would like to move on from testing the practices in this document to actually
+				<p>Find PlugFest organization and contributor details on
+				the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_April,_11th_-_13th,_Montreal,_Canada#PlugFest">WoT Montreal PlugFest wiki page</a>.</p>
+				<p>With this PlugFest we would like to move on from testing the practices in this document to actually
 				   accomplishing real-world scenarios.</p>
 				<h3>Goals</h3>
-				<p>Compared to previous plugfests we do not plan to introduce new technologies nor additional parts.
+				<p>Compared to previous PlugFests we do not plan to introduce new technologies nor additional parts.
 				   Instead we focus on a broader support of the same features by different implementations.</p>
 				<p>Moreover, we especially encourage real-world scenarios in the following two areas:<p/>
 				<ul>
 					<li>Thing-to-thing communication and interactions</li>
 					<li><a href="#scripting-api">Scripting API</a></li>
 				</ul>
-				<p>Former plugfest participants are well aware of the available thing acting and sensing capabilities.
+				<p>Former PlugFest participants are well aware of the available thing acting and sensing capabilities.
 				   That said, we would like to stimulate new scenarios based on what we have seen so far
 				   (e.g., discover thing properties and combine them with other thing actions and/or events). Feel free
 				   to come up with rather sophisticated real-world use-cases.
-				   Please also make use of the discovery to improve plugfest preperation and enable onsite combination of things.</p>
+				   Please also make use of the discovery to improve PlugFest preperation and enable onsite combination of things.</p>
 				<p>It is time to stress what we elaborated so far to actually proof it!</p>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
@@ -1711,7 +1712,7 @@
 		<section class='appendix'>
 			<h2>Acknowledgements</h2>
 			<p>
-				We would like to thank all Plugfest participants who helped to improve the practices given in this document.
+				We would like to thank all PlugFest participants who helped to improve the practices given in this document.
 			</p>
 		</section>
 
