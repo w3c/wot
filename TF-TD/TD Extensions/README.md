@@ -110,21 +110,17 @@ types, seems a reasonable approach.
     </td>
     <td>
       <pre>
-{
-  "@type": "StructuredValue",
-  "value": [
-    {
-      "@type": "PropertyValue",
-      "name": "id",
-      "value": { "@type": "Integer" }
-    },
-    {
-      "@name": "PropertyValue",
-      "name": "name",
-      "value": { "@type": "Text" }
-    }
-  ]
-}
+[
+  {
+    "@type": "PropertyValueSpecification",
+    "valueName": "id",
+    "valueRequired": true,
+  },
+  {
+    "@type": "PropertyValueSpecification",
+    "valueName": "name"
+  }
+]
       </pre>
     </td>
   </tr>
