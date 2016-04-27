@@ -55,9 +55,22 @@ types, seems a reasonable approach.
   <tr>
     <th>JSON Schema</td>
     <th>Schema.org</td>
-    <!-- <th>Example</td> -->
+    <th>Notes</td>
   </tr>
-
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+    <dl>
+      <dt>Community</dt>
+      <dd>JSON Schema: ?loosely coupled?</dd>
+      <dd>Schema.org: Strong community</dd>
+      <dt>Shared vocabulary between different parties</dt>
+      <dd>JSON Schema: ?No?</dd>
+      <dd>Schema.org: Yes  (e.g., Bing, Google, Yahoo)</dd>
+    </dl>
+    </td>
+  </tr>
   <tr>
     <td>
       <pre>
@@ -75,6 +88,7 @@ types, seems a reasonable approach.
 }
       </pre>
     </td>
+    <th></td>
   </tr>
 
   <tr>
@@ -88,6 +102,13 @@ types, seems a reasonable approach.
     </td>
     <td>
       <i>Not applicable</i>
+    </td>
+    <td>
+    <dl>
+      <dt>Enumerated value support</dt>
+      <dd>JSON Schema: Yes </dd>
+      <dd>Schema.org: No. Possible to use composed type?</dd>
+    </dl>
     </td>
   </tr>
 
@@ -122,6 +143,17 @@ types, seems a reasonable approach.
   }
 ]
       </pre>
+    </td>
+    <td>
+    <dl>
+      <dt>Tools Support for Validation</dt>
+      <dd>JSON Schema: Yes e.g,  http://jsonschemalint.com/</dd>
+      <dd>Schema.org: ??? https://developers.google.com/structured-data/testing-tool/ ???</dd>
+      <dt>User-defined types</dt>
+      <dd>JSON Schema: yes</dd>
+      <dd>Schema.org: ??? request to schema.org community???</dd>
+    </dl>
+    
     </td>
   </tr>
 </table>
