@@ -18,11 +18,13 @@ after_success:
   - cp tech-landscape/landscape.html page/landscape.html
   - cp -R current-practices/ page/
   - cp -R architecture/ page/
+  - cp -R charters/ page/
   - cd page
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - git add wot-ucr.html
   - git add landscape.html
   - git add current-practices/
   - git add architecture/
+  - git add charters/
   - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then git diff-index --quiet --cached HEAD || git commit -m"automated commit from Travis CI"; fi
   - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then git push https://github.com/w3c/wot.git gh-pages; fi

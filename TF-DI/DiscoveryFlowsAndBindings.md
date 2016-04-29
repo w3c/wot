@@ -1,14 +1,14 @@
 # WoT Discovery
 
-This document describes initial ideas for usage of discovery protocols in WoT. The main goal of discovery in WoT is to find thing descriptions of things that fulfil a specific request (query). 
+This document describes initial ideas for usage of discovery protocols in WoT. The main goal of discovery in WoT is to find thing descriptions of things that fulfil a specific request (query). Another use is for an IoT device to discover a gateway or registry with which to register itself.
 
 ## Discovery Flows
 
 This section discusses potential discovery options independent from the underlying discovery or lookup technology. Below is an explanation for each of the components used in the diagrams:
 
  - **Thing Consumer**: is an application component that discovers thing descriptions (TDs) that fulfil a discovery request (query).
- - **Thing Provider**: is an application component that is responsible for providing access to one or multiple things. A Thing Provider may offer the thing descriptions or use central Thing Registry. 
- - **Thing Registry**: is an application component for registering thing descriptions. It offers a lookup interface to find thing descriptions for a specific query. It also offers an interface to retrieve a single thing description. 
+ - **Thing Provider**: is an application component that is responsible for providing access to one or multiple things. A Thing Provider may offer the thing descriptions or use a central Thing Registry. 
+ - **Thing Registry**: is an application component for registering thing descriptions. It offers a lookup interface to find thing descriptions for a specific query. It also offers an interface to retrieve a single thing description. In some cases, the registry could be combined with the role of a gateway that manages multiple IoT devices.
  - **TD Generator**: is an application component that generates Thing Descriptions on the fly based on templates for specific devices or technologies. It offers an interface that accepts requests containing metadata of a thing and returns a Thing Description with the corresponding binding information.
 
 ### Discovery Flow 1
@@ -175,7 +175,8 @@ Ideas:
  
 ### mDNS Binding
 
-TBD
+- A typical scenario is a smart home with a gateway device that manages multiple IoT devices and bridges them to cloud based services. The IoT devices use multicast DNS to discover the gateway when they start up. Multicast DNS (mDNS) is DNS over multicast UDP packets and uses the same message format as regular DNS. DNS messages consist of a header field followed by a sequence of question records and a sequence of answer records. Each record starts with a NAME field followed by the record's type and class. This in turn is followed by type specific fields. DNS and mDNS are defined in a suite of IETF RFCs.
+- The starting point is for a device to use IGMP to join the mDNS multicast group. The device can then send a message with a question for "PTR" records with the desired service type, e.g. "_http._tcp._local". The gateway replies with a DNS message containing several records, including a "SRV" record with the IP port number, and "A" records for an IPv4 address or "AAAA" records for an IPv6 address. A gateway could advertise multiple services. In principle, the gateway could use "TXT" records to provide a set of name/value pairs describing the service. When the device has finished with the discovery process it uses IGMP to leave the multicast group.
 
 ### BLE-GATT Binding
 
