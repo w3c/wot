@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Web of Things Interest Group Charter</title>
+
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/Guide/pubrules-style.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css" />
+    <style type="text/css">
+      ul#navbar {
+        font-size: small;
+      }
+      dt.spec {
+        font-weight: bold;
+      }
+      dt.spec new {
+        background: yellow;
+      }
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+      .todo {
+        color: red;
+      }
+      footer {
+        font-size: small;
+      }
+      span.caption {
+        display: block;
+        text-align: center;
+        font-style: italic;
+      }
+      div.summary {
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 0.5em;
+        background: rgb(240,240,255);
+        border: solid 1px black;
+      }
+      #deliverables dt {
+        font-weight: bold;
+        margin-top: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          <li><a href="#patentpolicy">Patent Policy</a></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72" /></a>
+        <a class="domainlogo" title="domain:ubi" href="http://w3.org/UbiWeb/"><img src="https://www.w3.org/Icons/ubi212" alt="Ubiquitous Web Domain"></a>
+      </p>
+    </header>
+
+
+    <main>
+      <h1 id="title">Web of Things Interest Group Charter</h1>
+
+      <p class="issue"><i>
+      	Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public email list</a>, and you are encouraged to file <a href="https://github.com/w3c/wot/issues">issues</a> on GitHub and open <a href="https://github.com/w3c/wot/pulls">pull-requests</a> with concrete proposals.
+      	The GitHub location of this document is <a href="https://github.com/w3c/wot/tree/master/charters/wot-ig-2016.html">https://github.com/w3c/wot/tree/master/charters/wot-ig-2016.html</a>.
+      </i></p>
+
+      <p class="mission">
+      	The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group</a> is to counter the fragmentation of the Internet of Things (IoT) by introducing a Web-based abstraction layer spanning existing IoT platforms and complementing available standards.
+      	We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
+      	As a W3C Interest Group, we're seeking to build a shared understanding of the Web of Things, and to identify opportunities for initiating standards track work within W3C Working Groups.
+      </p>
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Web of Things Interest Group.</a></p>
+      </div>
+
+      <section id="details">
+        <table class="summary-table">
+          <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+            </td>
+          </tr>
+          <tr id="Duration">
+            <th>
+              End date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy]</i>
+            </td>
+          </tr>
+<!--
+          <tr class="todo">
+            <th>Charter extension</th>
+            <td>See <a href="#history">Change History</a>.
+              <span class="issue">(<b>Note:</b> Only include this row if this is a charter extension.)</span>
+            </td>
+          </tr>
+-->
+          <tr>
+            <th>
+              Chairs
+            </th>
+            <td>
+              <i class="todo">[chair name]</i>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Team Contacts
+            </th>
+            <td>
+              <a href="mailto:dsr@w3.org">Dave Raggett,</a> (0.2 <abbr title="Full-Time Equivalent">FTE</abbr>), <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>), <a href="mailto:yingying@w3.org">Yingying Chen</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)</i>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+              <strong>Teleconferences:</strong> Weekly with additional topic specific calls as appropriate.<br />
+              <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, with no more than 4 face to face meetings in total per year.
+            </td>
+          </tr>
+        </table>
+      </section>
+
+
+
+      <section id="scope" class="scope">
+        <h2>Scope</h2>
+
+				<div class="summary">
+					<p style="text-align:center;font-style:italic">Scope Summary</p>
+					<p class="todo">Statement paragraph</p>
+					<ul>
+						<li class="todo">Concrete items</li>
+				  </ul>
+				</div>
+			
+			</section>
+
+
+
+			<section id="deliverables">
+				<h2>Deliverables</h2>
+        
+        <p>More detailed milestones and updated publication schedules are available on the <a class="todo" href="https://www.w3.org/WoT/IG/wiki/PubStatus">group publication status page</a>.</p>
+
+        <p class="todo">Description</p>
+
+				<dl>
+					<dt><a href="http://w3c.github.io/wot/wot-ucr.html">Use Cases and Requirements</a></dt>
+					<dd>This document will collect use cases from a range of application domains, and identify requirements that are shared across domains, and those that are specific to each domain.</dd>
+					
+					<dt><a href="http://w3c.github.io/wot/landscape.html">Technology Landscape</a></dt>
+					<dd>This document will look at existing practices and standards, and identify opportunities for new work.</dd>
+					
+					<dt><a href="http://w3c.github.io/wot/architecture/wot-architecture.html">Architecture</a></dt>
+					<dd>This document will provide a high level overview of the architectural components of the Web of Things.</dd>
+					
+					<dt><a href="http://w3c.github.io/wot/current-practices/wot-practices.html">Current Practices</a></dt>
+					<dd>This document will document building blocks that have been evaluated through prototypes and so-called PlugFests (interoperability testing).</dd>
+					
+					<dt class="todo">Deliverable Title</dt>
+					<dd>Deliverable description.</dd>
+				</dl>	  
+
+				<p>Additional deliverables may be added by the Interest Group as appropriate to explore specific topics in greater depth.</p>
+			</section>
+
+
+
+      <section id="coordination">
+        <h2>
+        	Coordination
+        </h2>
+        
+        <p>For all specifications, this Interest Group will seek <a href="https://www.w3.org/Guide/Charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a href="https://www.w3.org/2015/Process-20150901/#RecsWD" title="First Public Working Draft">FPWD</a> and <a href="https://www.w3.org/2015/Process-20150901/#RecsCR" title="Candidate Recommendation">CR</a>, and should be issued when major changes occur in a specification.</p>
+        <p class="issue"><b>Issue:</b> The paragraph above replaces line-item liaisons and dependencies with individual horizontal groups. There's been a suggestion to name and individually link the specific horizontal groups inline, instead of pointing to a page that lists them.</p>
+        <p class="issue"><b>Issue:</b> The requirement for an invitation to review before FPWD and CR may seem a bit overly restrictive, but it only requires an invitation, not a review, a commitment to review, or even a response from the horizontal group. This compromise offers early notification without introducing a bottleneck.</p>
+
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/2015/Process-20150901/#WGCharter">W3C Process Document</a>:</p>
+
+        <div>
+          <h3 id="w3c-coordination">W3C Groups</h3>
+          <dl>
+            <dt><a href=""><i class="todo">[other name]</i></a></dt>
+            <dd><i class="todo">[specific nature of liason]</i></dd>
+          </dl>
+
+          <p class="issue"><b>Note:</b> Do not list horizontal groups here, only specific WGs relevant to your work.</p>
+
+          <h3 id="external-coordination">External Organizations</h3>
+          <dl>
+            <dt><a href=""><i class="todo">[other name]</i></a></dt>
+            <dd><i class="todo">[specific nature of liason]</i></dd>
+          </dl>
+        </div>
+      </section>
+
+
+
+      <section class="participation">
+        <h2 id="participation">
+          Participation
+        </h2>
+        <p>
+          To be successful, this Interest Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a day per week towards the Interest Group. There is no minimum requirement for other Participants.
+        </p>
+        <p>
+          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>.
+        </p>
+        <p>
+          The group also welcomes non-Members to contribute technical submissions for consideration, with the agreement from each participant to Royalty-Free licensing of those submissions under the W3C Patent Policy.
+        </p>
+      </section>
+
+
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public">
+          Technical discussions for this Interest Group are conducted in <a href="https://www.w3.org/2015/Process-20150901/#confidentiality-levels">public</a>. Meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository, and may permit direct public contribution requests.
+        </p>
+        <p>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="http://www.w3.org/WoT/WG/">Web of Things Interest Group home page.</a>
+        </p>
+        <p>
+          Most Web of Things Interest Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+        </p>
+        <p>
+          This group primarily conducts its technical work on the public mailing list <a id="public-name" href="mailto:public-wot-ig@w3.org">public-wot-ig@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-wot-ig/">archive</a>). The public is invited to post messages to this list.
+        </p>
+        <p>
+          The group may use a Member-confidential mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
+        </p>
+      </section>
+
+
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p>
+          This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/2015/Process-20150901/policies#Consensus"> W3C Process Document (section 3.3</a>). Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+        <p>
+           However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote, and record a decision along with any objections.
+        </p>
+        <p>
+          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
+
+          A call for consensus (CfC) will be issued for all resolutions (for example, via email and/or web-based survey), with a response period from one week to 10 working days, depending on the chair's evaluation of the group consensus on the issue.
+
+          If no objections are raised on the mailing list by the end of the response period, the resolution will be considered to have consensus as a resolution of the Interest Group.
+        </p>
+        <p>
+          All decisions made by the group should be considered resolved unless and until new information becomes available, or unless reopened at the discretion of the Chairs or the Director.
+        </p>
+        <p>
+          This charter is written in accordance with the <a href="https://www.w3.org/Consortium/Process/policies#Votes">W3C Process Document (Section 3.4, Votes)</a>, and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+
+
+      <section id="patentpolicy">
+        <h2>
+          Patent Policy
+        </h2>
+        <p>
+          This Interest Group operates under the <a href="http://w3.org/Consortium/Patent-Policy-20040205/">W3C Patent Policy</a> (5 February 2004 Version). To promote the widest adoption of Web standards, W3C seeks to issue Recommendations that can be implemented, according to this policy, on a Royalty-Free basis.
+
+          For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.
+        </p>
+      </section>
+
+
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>This Interest Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
+      </section>
+
+
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p>
+          This charter has been created according to <a href="https://www.w3.org/Consortium/Process/groups#GAGeneral">section 5.2</a> of the <a href="https://www.w3.org/Consortium/Process">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+        </p>
+
+<!--
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+          <p class="issue"><b>Note:</b> Only include this section if this is a charter extension. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/Charter#extension">Charter Guidebook (section 4)</a>.</p>
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/2015/Process-20150901/#CharterReview">W3C Process Document (section 5.2.3)</a>:</p>
+          <table class="history">
+            <tbody>
+              <tr>
+                <th>
+                  Charter Period
+                </th>
+                <th>
+                  Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+                <th>
+                  Changes
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Initial Charter</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Charter Extension</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Rehartered</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <p class="todo">[description of change to charter, with link to new deliverable item in charter] <b>Note:</b> use the class <code>new</code> for all new deliverables, for ease of recognition.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+-->
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <address>
+        <a href="mailto:dsr@w3.org">Dave Raggett</a>, <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a>, <a href="mailto:yingying@w3.org">Yingying Chen</a>
+      </address>
+      <p class="copyright">
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016
+        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+        (
+        <a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+        <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+        <a href="http://www.keio.ac.jp/">Keio</a>,
+        <a href="http://ev.buaa.edu.cn/">Beihang</a>
+        ), All Rights Reserved.
+
+        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+      </p>
+      <p>
+        <!-- $Date: 2015/04/30 16:53:49 $ -->
+      </p>
+    </footer>
+
+  </body>
+</html>
