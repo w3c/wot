@@ -5,16 +5,17 @@ Thing description allows one to define a type for input and output values
 - simple types and
 - composed types (a.k.a. complex types)
 
-The original idea was to base simple types on XML schema datatypes just like RDF does (e.g.,
-  xsd:integer) and composed types based on schema.org.
+The original idea was to base simple types on XML schema datatypes just like RDF
+does (e.g., xsd:integer) and composed types based on schema.org.
 
 That said using XSD datatypes seems to implicitly match to a given
 representation (e.g., xsd:byte) while still not providing an easy way to limit
-ranges or enumerate values without requring the full power of XML schema.
+ranges or enumerate values without requiring the full power of XML schema.
 
 Goal
 - express how JSON payload MUST look like
 - do not prohibit mappings to other formats than JSON (e.g., XML)
+- enable semantic annotation of type definition
 
 ## Note on RDF data types
 
@@ -36,13 +37,15 @@ References:
 - https://www.w3.org/TR/owl2-syntax/#Datatype_Definitions (OWL data types)
 - https://www.w3.org/TR/swbp-xsch-datatypes/#sec-userDefined (user-defined XSD data types)
 
-## Schema.org
+## Other schemas
+
+### Schema.org
 
 Schema.org allow for refering to existing types but introduces
 another concept by linking to types defined
 elsewhere. Coming up with user-defined types does not seem to be very easy also.
 
-## JSON Schema
+### JSON Schema
 
 Using JSON schema in both cases, simple types and composed
 types, seems a reasonable/possible approach.
@@ -52,25 +55,25 @@ types, seems a reasonable/possible approach.
 
 <table>
   <tr>
+    <th>Feature</th>
     <th>JSON Schema</td>
     <th>Schema.org</td>
     <th>Notes</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td>
-    <dl>
-      <dt>Community</dt>
-      <dd>JSON Schema: ?loosely coupled?</dd>
-      <dd>Schema.org: Strong community</dd>
-      <dt>Shared vocabulary between different parties</dt>
-      <dd>JSON Schema: ?No?</dd>
-      <dd>Schema.org: Yes  (e.g., Bing, Google, Yahoo)</dd>
-    </dl>
-    </td>
+    <td>Community</td>
+    <td>?loosely coupled?</td>
+    <td>Strong community</td>
+    <td>Schema.org vocabulary is shared between different parties (e.g., Bing, Google, Yahoo)</td>
   </tr>
   <tr>
+    <td>Tool support for validation</td>
+    <td>Yes e.g.  http://jsonschemalint.com/</td>
+    <td>Partially, e.g. https://developers.google.com/structured-data/testing-tool/</td>
+    <td>Google's tool only check against existing classes and data types.</td>
+  </tr>
+  <tr>
+    <td>Value constraints</td>
     <td>
       <pre>
 {
@@ -91,6 +94,7 @@ types, seems a reasonable/possible approach.
   </tr>
 
   <tr>
+    <td>Enumerated value support</td>
     <td>
       <pre>
 {
@@ -102,16 +106,11 @@ types, seems a reasonable/possible approach.
     <td>
       <i>Not applicable</i>
     </td>
-    <td>
-    <dl>
-      <dt>Enumerated value support</dt>
-      <dd>JSON Schema: Yes </dd>
-      <dd>Schema.org: No. Possible to use composed type?</dd>
-    </dl>
-    </td>
+    <td></td>
   </tr>
 
   <tr>
+    <td>User-defined types</td>
     <td>
       <pre>
 {
@@ -143,16 +142,17 @@ types, seems a reasonable/possible approach.
 ]
       </pre>
     </td>
-    <td>
-    <dl>
-      <dt>Tools Support for Validation</dt>
-      <dd>JSON Schema: Yes e.g,  http://jsonschemalint.com/</dd>
-      <dd>Schema.org: ??? https://developers.google.com/structured-data/testing-tool/ ???</dd>
-      <dt>User-defined types</dt>
-      <dd>JSON Schema: yes</dd>
-      <dd>Schema.org: ??? request to schema.org community???</dd>
-    </dl>
-
-    </td>
+    <td>A request to the schema.org community is needed to extend its model</td>
   </tr>
 </table>
+
+## Next steps
+
+JSON Schema appears a good candidate and it is recommended for complex data
+type specification. However, it still needs to be mapped to RDF, so that type
+definitions can be semantically annotated.
+
+Moreover, further languages have been proposed
+([CDDL](https://tools.ietf.org/html/draft-greevenbosch-appsawg-cbor-cddl-08),
+[YANG](https://tools.ietf.org/html/draft-ietf-netmod-rfc6020bis-12))
+that still need to be reviewed.
