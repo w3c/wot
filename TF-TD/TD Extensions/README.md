@@ -4,7 +4,23 @@ following tasks being currently carried out:
 - [Mapping with other models](#mapping-thing-description-to-other-data-models)
 - [Semantic extensions](#annotating-thing-description-with-external-vocabularies)
 
-# Expressing complex data types in a Thing Description
+# Expressing data types in a Thing Description
+
+Thing description allows one to define a type for input and output values
+(e.g., valueType). We need to allow for
+- simple types and
+- composed types (a.k.a. complex types)
+
+The original idea was to base simple types on XML schema datatypes just like RDF does (e.g.,
+  xsd:integer) and composed types based on schema.org.
+  
+That said using XSD datatypes seems to implicitly match to a given
+representation (e.g., xsd:byte) while still not providing an easy way to limit
+ranges or enumerate values without requring the full power of XML schema.
+
+Goal
+- express how JSON payload MUST look like
+- do not prohibit mappings to other formats than JSON (e.g., XML)
 
 ## Note on RDF data types
 
@@ -26,28 +42,17 @@ References:
 - https://www.w3.org/TR/owl2-syntax/#Datatype_Definitions (OWL data types)
 - https://www.w3.org/TR/swbp-xsch-datatypes/#sec-userDefined (user-defined XSD data types)
 
-## JSON Schema
+## Schema.org
 
-Thing descriptiton allows one to define a type for input and output values
-(e.g., valueType). We need to allow for
-- simple types and
-- composed types (a.k.a. complex types)
-
-The original idea was to base simple types on XML schema datatypes (e.g.,
-  xsd:integer) and composed types based on schema.org.
-
-That said using XSD datatypes seems to implicitly match to a given
-representation (e.g., xsd:byte) while still not providing an easy way to limit
-ranges or enumerate values without requring the full power of XML schema.
-
-On the contrary, schema.org allow for refering to existing types but introduces
-a second concept (compared to simple types) by linking to types defined
+Schema.org allow for refering to existing types but introduces
+another concept by linking to types defined
 elsewhere. Coming up with user-defined types does not seem to be very easy also.
 
-Hence, trying to use JSON schema in both cases, simple types and composed
-types, seems a reasonable approach.
+## JSON Schema
 
-## Schema.org
+Using JSON schema in both cases, simple types and composed
+types, seems a reasonable/possible approach.
+
 
 ## Comparison
 
@@ -55,9 +60,22 @@ types, seems a reasonable approach.
   <tr>
     <th>JSON Schema</td>
     <th>Schema.org</td>
-    <!-- <th>Example</td> -->
+    <th>Notes</td>
   </tr>
-
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+    <dl>
+      <dt>Community</dt>
+      <dd>JSON Schema: ?loosely coupled?</dd>
+      <dd>Schema.org: Strong community</dd>
+      <dt>Shared vocabulary between different parties</dt>
+      <dd>JSON Schema: ?No?</dd>
+      <dd>Schema.org: Yes  (e.g., Bing, Google, Yahoo)</dd>
+    </dl>
+    </td>
+  </tr>
   <tr>
     <td>
       <pre>
@@ -75,6 +93,7 @@ types, seems a reasonable approach.
 }
       </pre>
     </td>
+    <th></td>
   </tr>
 
   <tr>
@@ -88,6 +107,13 @@ types, seems a reasonable approach.
     </td>
     <td>
       <i>Not applicable</i>
+    </td>
+    <td>
+    <dl>
+      <dt>Enumerated value support</dt>
+      <dd>JSON Schema: Yes </dd>
+      <dd>Schema.org: No. Possible to use composed type?</dd>
+    </dl>
     </td>
   </tr>
 
@@ -122,6 +148,17 @@ types, seems a reasonable approach.
   }
 ]
       </pre>
+    </td>
+    <td>
+    <dl>
+      <dt>Tools Support for Validation</dt>
+      <dd>JSON Schema: Yes e.g,  http://jsonschemalint.com/</dd>
+      <dd>Schema.org: ??? https://developers.google.com/structured-data/testing-tool/ ???</dd>
+      <dt>User-defined types</dt>
+      <dd>JSON Schema: yes</dd>
+      <dd>Schema.org: ??? request to schema.org community???</dd>
+    </dl>
+    
     </td>
   </tr>
 </table>
