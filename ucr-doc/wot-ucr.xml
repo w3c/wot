@@ -334,6 +334,37 @@
             <li reqref="privacy">cloud-based monitoring and control of home devices based-on pre-defined rules</li>
         </ul>
     </usecase>
+    <usecase id="Smart_home" author="Kazuaki Nimura" domain="home_automation">
+        <title>Smart home</title>
+        <p>Katherine prefer to living in comfortable condition. 
+           She has an air conditioner at home and  has been using her 
+           smartphone to controlling it since a controller application on the 
+           smartphone can more precisely control based on her preference 
+           instead of using a remote controller that comes with.
+	   Recently she bought a home hub. Then now she can use another 
+           attentive feature that can turn-on the air conditioner from outside 
+           using the smartphone and the application a little bit before 
+           arriving at home to preparing more comfortable room temperature 
+           for her.
+        </p>
+        <p>Requirements:</p>
+        <p>- An application on a smartphone can search devices possible to 
+            control both on local network and remote network.</p>
+        <p>- An application on a smartphone can understand the property of 
+            searched devices.</p>
+        <p>- An application on a smartphone can send commands without caring 
+            the network connection underneath.</p>
+            <p>Related Building Blocks:</p>
+        <p>- Abstracted discovery mechanism that applications can queries 
+            devices possible to use both locally and remotely.</p>
+        <p>- Abstracted device representation that applications can understand 
+            capabilities of devices to articulate a command to send. </p>
+        <p>- Abstraction APIs that applications can access devices with 
+            network agnostic.</p>
+        <details>
+            <title>How does this translate to a technical Description</title>
+        </details>
+    </usecase>
     <usecase id="intelligent-hotel-room " author="Debbie Dahl" domain="home_automation">
         <title>Intelligent Hotel Room </title>
         <p>Katherine is a frequent business traveler. She stays in a variety of
