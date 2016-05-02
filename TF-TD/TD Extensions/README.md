@@ -1,4 +1,4 @@
-# Thing Description Semantic Annotation & Common Vocabulary
+# Annotating Thing Description with external vocabularies
 
 ## Common WoT Vocabulary
 
@@ -17,8 +17,6 @@ is accessible at https://w3c.github.io/wot/w3c-wot-common-context.jsonld. We
 present the terms it contains in the following. A few examples showing how
 to use them are also presented in our
 [introductory document](http://w3c.github.io/wot/current-practices/wot-practices.html#td-samples).
-
-### Note
 
 This approach of defining a "common" vocabulary for Thing Description is only
 meant for internal experimentation within the Web of Things group to help
