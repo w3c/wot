@@ -156,3 +156,58 @@ Moreover, further languages have been proposed
 ([CDDL](https://tools.ietf.org/html/draft-greevenbosch-appsawg-cbor-cddl-08),
 [YANG](https://tools.ietf.org/html/draft-ietf-netmod-rfc6020bis-12))
 that still need to be reviewed.
+
+
+## Mappings to Encodings
+
+### Mapping to JSON/CBOR/EXIforJSON
+
+By means of JSON schema mapping to JSON instances seems straightforward. 
+
+One question that remains is whether JSON payload needs to be wrapped in one way or the other. 
+
+
+| Not wrapped   | Wrapped (e.g., [TD-Tutorial](https://github.com/w3c/wot/blob/master/TF-TD/Tutorial.md))   |
+| ------------- | ------------- |
+| `123`         | `{ "value": 123 }`  |
+
+
+### Mapping to XML/EXI
+
+
+Mapping to XML could be done by transforming JSON schema to XML schema first. The XML schema defines then the structure of the XML document. Also, the XML schema can be used for efficient XML representations such as EXI.
+
+
+```javascript
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": ["id"]
+}
+```
+
+transforms to 
+
+```xml
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="value">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="id" type="xs:integer" minOccurs="1" />
+                <xs:element name="name" type="xs:string" />
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+```
+
+Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
+
+Note2: A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
