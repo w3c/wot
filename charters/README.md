@@ -12,6 +12,14 @@ As decided in the [WebConf on 27 Apr 2016](https://www.w3.org/2016/04/27-wot-min
 * The current status of the charter document is accessable for everyone over the w3c.github.io page.
 * Feedback on the [mailing list](https://lists.w3.org/Archives/Public/public-wot-ig/) is still possible and welcome. A directly appointed helper or otherwise the W3C staff is responsible to create corresponding comments or pull-requests on GitHub.
 
+## Howto
+
+* [Fork](https://github.com/w3c/wot/edit/master/charters/README.md#fork-destination-box) the `w3c/wot` repository into your own account
+* Create a branch in your fork for one particular topic (e.g., a single IG scope item)
+* Make your edits and commit
+* Push the new branch to your own repository fork
+* GitHub will automatically offer to open a pull-request to `w3c/wot` (from your new branch to master)
+
 ## Help
 
 * https://help.github.com/articles/using-pull-requests/ provides a tutorial on GitHub pull-requests.
