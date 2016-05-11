@@ -58,7 +58,7 @@ types, seems a reasonable/possible approach.
     <th>Feature</th>
     <th>JSON Schema</th>
     <th>Schema.org</th>
-    <th>Proposal from issue #122</th>
+    <th>Proposal from <a href="https://github.com/w3c/wot/issues/122">issue #122</a></th>
     <th>Notes</td>
   </tr>
   <tr>
@@ -106,7 +106,7 @@ types, seems a reasonable/possible approach.
 }
       </pre>
     </td>
-    <td>The third stucture does not differentiate between _quantities_ and the _values_ these quantities are associated with</td>
+    <td>The third stucture does not differentiate between <i>quantities</i> and the <i>values</i> these quantities are associated with</td>
   </tr>
 
   <tr>
