@@ -12,31 +12,9 @@ As decided in the [WebConf on 27 Apr 2016](https://www.w3.org/2016/04/27-wot-min
 * The current status of the charter document is accessable for everyone over the w3c.github.io page.
 * Feedback on the [mailing list](https://lists.w3.org/Archives/Public/public-wot-ig/) is still possible and welcome. A directly appointed helper or otherwise the W3C staff is responsible to create corresponding comments or pull-requests on GitHub.
 
-## Howto
+## How to participate
 
-### Web-site based
-
-* [Fork](https://github.com/w3c/wot#fork-destination-box) the `w3c/wot` repository into your own account (botton in the top right corner)
-* Navigate to http://github.com/{your-account}/wot/blob/master/charters/wot-ig-2016.html or http://github.com/{your-account}/wot/blob/master/charters/wot-wg-2016.html
-* Click the edit icon in the upper right (pen next to Raw/Blame/History)
-* Make your edits (e.g., directly in the online editor or by copying the text to your favorite editor and back)
-* Give a meaningful commit message (i.e., do not leave "Update ...")
-* Choose *Create a new branch for this commit and start a pull request* and give a proper name (e.g., `charters-ig-scope-plugfest`)
-* Click *Propose file change*
-* Skip the form, since you do not want to create a PR to your fork. Instead, go to https://github.com/w3c/wot, where GitHub will have found your new branch and will offer to open a pull-request (base fork: `w3c/wot`, base: `master` ... head fork: `{your-account}/wot`, compare: `{your-branch}`).
-
-### Command-line based
-
-* [Fork](https://github.com/w3c/wot#fork-destination-box) the `w3c/wot` repository into your own account
-* Create a branch in your fork for one particular topic (e.g., a single IG scope item) with a proper name (e.g., `charter-ig-scope-plugfest`)
-* Make your edits and commit
-* Push the new branch to your own repository fork
-* GitHub will automatically offer to open a pull-request to `w3c/wot` (from your new branch to master)
-
-## Help
-
-* https://help.github.com/articles/using-pull-requests/ provides a tutorial on GitHub pull-requests.
-* If you have not worked with GitHub in this way before, we will give direct assistance.
+Check [How to Get Involved](https://github.com/w3c/wot#how-to-get-involved) if you are unsure how to open a pull-request.
 
 ## Status
 
