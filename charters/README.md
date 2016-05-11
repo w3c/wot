@@ -16,14 +16,14 @@ As decided in the [WebConf on 27 Apr 2016](https://www.w3.org/2016/04/27-wot-min
 
 ### Web-site based
 
-* [Fork](https://github.com/w3c/wot#fork-destination-box) the `w3c/wot` repository into your own account
-* Navigate to http://github.com/{your-account}/wot/blob/master/charters/wot-ig-2016.html or http://github.com/{your-account}/wot/blob/master/charters/wot-ig-2016.html
+* [Fork](https://github.com/w3c/wot#fork-destination-box) the `w3c/wot` repository into your own account (botton in the top right corner)
+* Navigate to http://github.com/{your-account}/wot/blob/master/charters/wot-ig-2016.html or http://github.com/{your-account}/wot/blob/master/charters/wot-wg-2016.html
 * Click the edit icon in the upper right (pen next to Raw/Blame/History)
 * Make your edits (e.g., directly in the online editor or by copying the text to your favorite editor and back)
 * Give a meaningful commit message (i.e., do not leave "Update ...")
-* Choose *Create a new branch for this commit and start a pull request* and give a proper name (e.g., `charter-ig-scope-plugfest`)
+* Choose *Create a new branch for this commit and start a pull request* and give a proper name (e.g., `charters-ig-scope-plugfest`)
 * Click *Propose file change*
-* Skip the form, since you do not want to create a PR to your fork. Go to https://github.com/w3c/wot instead, where GitHub will have found your new branch and offer to open a pull-request.
+* Skip the form, since you do not want to create a PR to your fork. Instead, go to https://github.com/w3c/wot, where GitHub will have found your new branch and will offer to open a pull-request (base fork: `w3c/wot`, base: `master` ... head fork: `{your-account}/wot`, compare: `{your-branch}`).
 
 ### Command-line based
 
