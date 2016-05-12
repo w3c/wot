@@ -43,12 +43,16 @@
       div.summary {
         margin-left: 20%;
         margin-right: 20%;
+        margin-top: 1em;
         padding: 0.5em;
         background: rgb(240,240,255);
         border: solid 1px black;
       }
       #deliverables dt {
         font-weight: bold;
+        margin-top: 0.5em;
+      }
+      ul.spread li {
         margin-top: 0.5em;
       }
     </style>
@@ -84,6 +88,8 @@
       </i></p>
 
       <p class="mission">The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group</a> is to counter the fragmentation of the Internet of Things (IoT) by introducing a Web-based abstraction layer spanning existing IoT platforms and complementing available standards. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect. As a W3C Interest Group, we're seeking to build a shared understanding of the Web of Things, and to identify opportunities for initiating standards track work within W3C Working Groups.</p>
+
+	<p>This is a updated charter, and supersedes the <a href="http://www.w3.org/2014/12/wot-ig-charter.html">former charter</a>.</p>
 
       <div class="noprint">
         <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Web of Things Interest Group.</a></p>
@@ -147,15 +153,53 @@
 
 <section id="scope" class="scope">
 
+	<h2>Introduction</h2>
+		
+	<p>The Internet of Things (IoT) suffers from a lack of interoperability across platforms. As a result developers are faced with data silos, high costs and limited market potential. This can be likened to the situation before the Internet when there were competing non-interoperable networking technologies. The Internet makes it easy to develop networked applications independently of those technologies. W3C is seeking to do the same for the Internet of Things.</p>
+	
+    <p>To achieve this goal, we need platform independent APIs for application developers, and a means for different platforms to discover how to inter-operate with one another. The approach we are taking is based upon rich metadata that describes the data and interaction models exposed to applications, and the communications and security requirements for platforms to communicate effectively. A further aspect is the need to enable platforms to share the same meaning when they exchange data. We are therefore seeking to enable expression of the semantics of things and the domain constraints associated with them, building upon W3C's extensive work on RDF and Linked Data.</p>
+    
+    <p>The Web of Things is founded on the core architecture of the Web. Things stand for physical or abstract entities. Each thing is identified with a URI. This URI can be dereferenced to access the thing's description, which can include its relationship to other things. Due to the variations in requirements across application domains, there are many protocols. Things can be interacted with on many kinds of platforms and devices including resource constrained IoT devices, gateways and cloud-based server farms. In addition, Web browsers may be used for the human-machine interface for services based around the Web of Things.</p>
+	
     <h2>Scope</h2>
 
 	<div class="summary">
 	<p style="text-align:center;font-style:italic">Scope Summary</p>
-	<p class="todo">Statement paragraph</p>
+	<p>The Web of Things Interest Group seeks to:</p>
 	<ul>
-		<li class="todo">Concrete items</li>
+		<li>Support the proposed Web of Things Working Group</li>
+		<li>Explore areas and identify work that is ready for transfer to the W3C Recommendation Track</li>
+		<li>Organize and run plugfests to evaluate the current working assumptions of Web of Things technology building blocks</li>
+		<li>Reach out and collaborate with interested parties, vendors and communities in support of the  Interest Group's mission</li>
 		</ul>
-	</div>	
+	</div>
+	
+	<p>The Web of Things Interest Group is a forum for discussion of ideas relating to the Web of Things and is intended to complement the role of the proposed Web of Things Working Group. This is illustrated in the following diagram.</p>
+	
+	<p>
+	<img style="float:right" src="WoT%20IG%20relationship.png" alt="relationship between WoT IG and WG" />
+	
+	The Interest Group will:</p>
+	
+	<ul class="spread">
+	    <li>Drive outreach and collaboration with interested parties, vendors and communities, including IoT industry alliances, and standards development organizations.</li>
+	    
+	    <li>Encourage work on open source projects and community evaluation of the Web of Things.</li>
+	    
+	    <li>Organize plugfests, and encourage the participation of IoT platform developers, as a basis for exploring ideas for enabling interoperability across platforms.</li>
+	    
+	    <li>Explore use cases and requirements for a broad range of application domains for the Web of Things.</li>
+	
+	    <li>Support the Web of Things Working Group, e.g. through providing use cases and requirements as well as implementation experience.</li>
+	
+	    <li>Respond to requests from the Working Group for further study on such topics as deemed appropriate.</li>
+	
+	    <li>Propose new work items for transfer to the W3C Recommendation Track.</li>
+	
+	    <li>Coordinate with other W3C groups as appropriate to the Interest Group's mission.</li>
+	</ul>
+	
+	<p style="clear:both">&nbsp;</p>
 
 </section>
 
@@ -164,10 +208,10 @@
 <section id="deliverables">
 
 	<h2>Deliverables</h2>
+	
+	<p>This is an initial list of deliverables and may be added to by the Interest Group as appropriate to its mission. More detailed milestones and updated publication schedules are available on the <a class="todo" href="https://www.w3.org/WoT/IG/wiki/PubStatus">group publication status page</a>.</p>
 
-    <p>More detailed milestones and updated publication schedules are available on the <a class="todo" href="https://www.w3.org/WoT/IG/wiki/PubStatus">group publication status page</a>.</p>
-
-    <p class="todo">Description</p>
+    <p>Description</p>
 
     <dl>
 		<dt><a href="http://w3c.github.io/wot/wot-ucr.html">Use Cases and Requirements</a></dt>
