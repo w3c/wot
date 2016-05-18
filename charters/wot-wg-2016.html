@@ -191,10 +191,12 @@
   </ul>
 </div>
 
-<h3>Thing Descriptions</h3>
+<h3>Thing Description</h3>
+
+<p>The Working Group will develop solutions to describe things through metadata and declarations of their capabilities (e.g., possible interactions). This work includes the definition of different vocabularies and serialization formats of such a Thing Description.</p>
 
 <ul>
-<li><p>A Linked Data vocabulary for describing things in terms of the data and interaction  models they expose to applications. This will cover thing lifecycles, datatypes, including streams, integrity constraints, and provision for early and late binding. This cross domain vocabulary will be designed for use in combination with vocabularies for domain specific semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage interdependencies, and is analogous to the role of metadata for package management in the Linux operating system.</p></li>
+<li><p>A Linked Data vocabulary for describing things in terms of the data and interactionmodels they expose to applications. This will cover thing lifecycles, datatypes, including streams, integrity constraints, and provision for early and late binding. This cross domain vocabulary will be designed for use in combination with vocabularies for domain specific semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage interdependencies, and is analogous to the role of metadata for package management in the Linux operating system.</p></li>
 
 <li><p>A Linked Data vocabulary for security metadata as a basis for platforms to determine how to securely interoperate. This will build upon emerging standards and best practices for securing exchanges, and includes metadata relating to authorization, authentication and secure communication. The use of such metadata will be optional (to support deployments which prefer to inform the requester via error responses rather than upfront). It will support, but not mandate, the utilization of online trusted third party services (such as OAuth/ACE authorization servers). It will support a variety of security token form factors (e.g. JSON, CBOR), domain-specific security token contents (e.g. building automation), various security models (bearer, proof-of-possession). It will support a variety of protocols for their acquisition (e.g. OAuth, OAuth-for-CoAP) and supply (e.g. CoAP). Support for secure communications will initially focus on transport-level security e.g. TLS and DTLS.</p></li>
 <!--
@@ -215,7 +217,7 @@
 
 <li><p>Discovery for local and remote cases, abstracting away from the details of the discovery mechanisms. This will cover a range of approaches: things on the same server, things near me, things on the same network, things listed in a repository, and discovery based upon formal or crowd-sourced semantics and social relationships.</p></li>
 
-<p>Cross platform security frameworks including authorization, authentication and secure communication, as well as the means for their establishment through provisioning of metadata and keying associations. This will enable the use of security frameworks, such as IETF OAuth and ACE, according to the specific tasks for the client (e.g. security credentials acquisition and supply), and for the server (e.g. security token enforcement and validation), as well as common tasks (e.g. registration). A goal is to decouple applications from the implementations of the security frameworks. This introduces online trusted-third party components to which constrained WoT components delegate specific processing tasks (such as authorization and authentication). It requires trusted assertions that report about such processing events as well as protocols to trigger such processing.</p>
+<li><p>Cross platform security frameworks including authorization, authentication and secure communication, as well as the means for their establishment through provisioning of metadata and keying associations. This will enable the use of security frameworks, such as IETF OAuth and ACE, according to the specific tasks for the client (e.g. security credentials acquisition and supply), and for the server (e.g. security token enforcement and validation), as well as common tasks (e.g. registration). A goal is to decouple applications from the implementations of the security frameworks. This introduces online trusted-third party components to which constrained WoT components delegate specific processing tasks (such as authorization and authentication). It requires trusted assertions that report about such processing events as well as protocols to trigger such processing.</p></li>
 
 <p>Support for secure communications will initially focus on transport-level security e.g. TLS and DTLS. This task will utilize 3rd party defined security frameworks and protocols including their extension points. The profiling of their usage is in scope of this task. The specification of own (new from scratch) exchanges is out-of-scope</p>
 </li>
@@ -232,7 +234,7 @@
 
 <h3>Bindings to Common Platforms and Protocols</h3>
 
-<p>To enable interoperability, the Working Group will seek to define standard bindings to common platforms and protocols in close collaboration with the industry alliances and standards development organizations responsible for these. This includes definition of mappings from the ”interactions" (actions, properties, events etc.) at the application layer, via abstract messages at the thing layer, to:</p>
+<p>To enable interoperability, the Working Group will seek to define standard bindings to common platforms and protocols which the server exposes to clients or other servers, in close collaboration with the industry alliances and standards development organizations responsible for these. This includes definition of mappings from the ”interactions" (actions, properties, events etc.) at the application layer, via abstract messages at the thing layer, to:</p>
 
 <ul>
   <li><p>Transfer layer communication patterns, push, pull, pub-sub, bi-directional messaging, etc.</p></li>

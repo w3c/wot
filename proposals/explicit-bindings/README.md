@@ -68,6 +68,16 @@ BLE uses the GATT protocol: The interactions are modelled as Services, which con
 * Delete: Not supported
 * Notifiy: NOTIFY characteristic subscribers (property `notify` must be set)
 
+#### Issues
+
+BLE has two (staged) mechanisms to identify and address attributes. The UUID is used to identify an interaction within the logical service/characteristic structure and links to the (textual) service description. Through discovery, clients learn which *handle* is used on a particular devices to address a specific attribute.
+
+When having the UUID in the TD, and hence as part of the URI, the URI cannot be used directly. First, a discovery needs to be made to learn about the handle. A nice property of URIs is that one can share them and they identify and address an instance of a resource without further information. This is lost when using the UUID and servients need to know implicitly that discovery is necessary.
+
+When using the handle instead, we will have difficulties to describe the the content of an attribute. BLE has a rather strange concept of defining how to interpret the bits inside an attribute. Thus, one would need the UUID anyway to at least have a link to the textual description of how to interpret message payloads.
+
+I think we need to look at what BLE libraries usually provide as API. I saw that many provide access at an UUID level and hide the many BLE message exchanges that are necessary behind the scene.
+
 #### TD Sample
 
 ```
