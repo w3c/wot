@@ -56,20 +56,23 @@ types, seems a reasonable/possible approach.
 <table>
   <tr>
     <th>Feature</th>
-    <th>JSON Schema</td>
-    <th>Schema.org</td>
+    <th>JSON Schema</th>
+    <th>Schema.org</th>
+    <th>Proposal from <a href="https://github.com/w3c/wot/issues/122">issue #122</a></th>
     <th>Notes</td>
   </tr>
   <tr>
     <td>Community</td>
     <td>?loosely coupled?</td>
     <td>Strong community</td>
+    <td>None</td>
     <td>Schema.org vocabulary is shared between different parties (e.g., Bing, Google, Yahoo)</td>
   </tr>
   <tr>
     <td>Tool support for validation</td>
     <td>Yes e.g.  http://jsonschemalint.com/</td>
     <td>Partially, e.g. https://developers.google.com/structured-data/testing-tool/</td>
+    <td>None</td>
     <td>Google's tool only check against existing classes and data types.</td>
   </tr>
   <tr>
@@ -77,20 +80,33 @@ types, seems a reasonable/possible approach.
     <td>
       <pre>
 {
-  "type": "integer",
-  "maximum": 13
+  "valueType": {
+    "type": "integer",
+    "maximum": 13
+  }
 }
       </pre>
     </td>
     <td>
       <pre>
 {
-  "@type": "Integer",
-  "maxValue": 13
+  "valueType": {
+    "@type": "Integer",
+    "maxValue": 13
+  }
 }
       </pre>
     </td>
-    <th></td>
+    <td>
+      <pre>
+{
+  "type": "integer",
+  "max": 13
+  "units": "celsius"
+}
+      </pre>
+    </td>
+    <td>The third stucture does not differentiate between <i>quantities</i> and the <i>values</i> these quantities are associated with</td>
   </tr>
 
   <tr>
@@ -98,15 +114,24 @@ types, seems a reasonable/possible approach.
     <td>
       <pre>
 {
-   "type": "string",
-   "enum": [ "file", "memory"]
+  "valueType": {
+     "type": "string",
+     "enum": [ "file", "memory"]
+  }
 }
       </pre>
     </td>
     <td>
       <i>Not applicable</i>
     </td>
-    <td></td>
+    <td>
+      <pre>
+{
+  "enum": ["file", "memory"]
+}
+      </pre>
+    </td>
+    <td>Enumerations values might not be of type "string", e.g. dates (see [example of US holidays](https://www.w3.org/TR/xmlschema-2/#rf-enumeration))</td>
   </tr>
 
   <tr>
@@ -114,16 +139,18 @@ types, seems a reasonable/possible approach.
     <td>
       <pre>
 {
-    "type": "object",
-    "properties": {
-        "id": {
-            "type": "integer"
-        },
-        "name": {
-            "type": "string"
-        }
-    },
-    "required": ["id"]
+  "valueType": {
+      "type": "object",
+      "properties": {
+          "id": {
+              "type": "integer"
+          },
+          "name": {
+              "type": "string"
+          }
+      },
+      "required": ["id"]
+  }
 }
       </pre>
     </td>
@@ -142,7 +169,64 @@ types, seems a reasonable/possible approach.
 ]
       </pre>
     </td>
+    <td>
+      <pre>
+{
+  "type": {
+    "id": "integer",
+    "name": "integer"
+  }
+}
+      </pre>
+    </td>
     <td>A request to the schema.org community is needed to extend its model</td>
+  </tr>
+  <tr>
+    <td>Reference to other types</td>
+    <td>
+      <pre>
+"properties": [
+  {
+    "valueType": {
+      "type": "Number",
+      ...
+    }
+  }, {
+    "valueType": {
+      "$ref": "#/properties/0/valueType"
+    }
+  }
+]
+      </pre>
+    </td>
+    <td>
+      <pre>
+"properties": [
+  {
+    "valueType": {
+      "@id": "valType1",
+      "@type": "Number",
+      ...
+    }
+  }, {
+    "valueType": "valType1"
+  }
+]
+      </pre>
+    </td>
+    <td>
+      <pre>
+"property1": {
+  "type": "number",
+  ...
+},
+"property2": "@property1"
+      </pre>
+    </td>
+    <td>
+      In the third structure, property2 must be identical to property1? Is
+      property2 needed then?
+    </td>
   </tr>
 </table>
 
