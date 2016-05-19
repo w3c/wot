@@ -101,6 +101,26 @@ This shows that the lifecycle part of the TD is more complex. Things need to be 
 }
 ```
 
+#### TD Sample by Matthias
+
+```
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+  "@type": "Thing",
+  "name": "MyTemperatureThing",
+  "uris": ["gatt://{BLE MAC address}/"],
+  "encodings": ["?"],
+  "properties": [
+    {
+      "name": "temperature",
+      "valueType": "gatt:float64",
+      "writable": false,
+      "hrefs": ["{handle}"]
+    }
+  ]
+}
+```
+
 ### BACnet
 
 #### Operation Mapping
