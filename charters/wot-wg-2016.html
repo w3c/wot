@@ -165,7 +165,31 @@
 
 <p> The following diagram shows how the abstraction layer for "things" fits into the communications stack.</p>
 
-<p><img style="margin-left:5%;width:80%" alt="figure showing layers in the web of things communication stack" src="wot-comms-stack.png" /></p>
+<p>
+<table class="" style="width:60%">
+  <tr>
+    <th>Application</th>
+    <td>Scripts that define the properties, actions, and events of a thing, consuming and exposing APIs for control of sensors and actuators</td>
+  </tr>
+  <tr>
+    <th>Things</th>
+    <td>Software objects that expose the state of things; Data, Data Models, Metadata, Semantic annotation, Thing Description</td>
+  </tr>
+  <tr>
+    <th>Transfer</th>
+    <td>Addressing of elements, state exchange, binding of abstract mesages to protocols; HTTP, CoAP, MQTT, BLE GATT</td>
+  </tr>
+  <tr>
+    <th>Transport</th>
+    <td>Addressing of application endpoints and transmission of messages; UDP, TCP</td>
+  </tr>
+  <tr>
+    <th>Network</th>
+    <td>Adressing of network nodes and routing of packages across interconnected networks; IP, 6LoWPAN, Thread</td>
+  </tr>
+</table>
+<span class="caption">The Web of Things defines the application layer above different transfer protocols, thereby complementing existing standards.</span>
+</p>
 
 <p>This Working Group will define Web technology standards to enable services that span different IoT platforms and standards, with a view to countering fragmentation, and enabling a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realise the full potential for the IoT. In short, we seek to extend the Web from a Web of pages to a Web of things.</p>
 
