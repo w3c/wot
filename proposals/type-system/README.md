@@ -1,6 +1,6 @@
 # Expressing data types in a Thing Description
 
-Thing description allows one to define a type for input and output values
+Thing descriptiown allows one to define a type for input and output values
 (e.g., valueType). We need to allow for
 - simple types and
 - composed types (a.k.a. complex types)
@@ -255,6 +255,7 @@ One question that remains is whether JSON payload needs to be wrapped in one way
 | ------------- | ------------- |
 | `123`         | `{ "value": 123 }`  |
 
+Note: some JSON parsers and also serializers have problems with value-only literals. Also, depending on the JSON specification (RFC vs. ECMA) the text "hello" is valid JSON or not -> hence the value-wrapping seems to be "safer".
 
 ### Mapping to XML/EXI
 
