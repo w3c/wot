@@ -251,7 +251,7 @@ By means of JSON schema mapping to JSON instances seems straightforward.
 One question that remains is whether JSON payload needs to be wrapped in one way or the other. 
 
 
-| Not wrapped   | Wrapped (e.g., [TD-Tutorial](https://github.com/w3c/wot/blob/master/TF-TD/Tutorial.md))   |
+| Not wrapped   | Wrapped   |
 | ------------- | ------------- |
 | `123`         | `{ "value": 123 }`  |
 
