@@ -261,6 +261,7 @@ One question that remains is whether JSON payload needs to be wrapped in one way
 
 Mapping to XML could be done by transforming JSON schema to XML schema first. The XML schema defines then the structure of the XML document. Also, the XML schema can be used for efficient XML representations such as EXI.
 
+The following is an example JSON schema defining a JSON object.
 
 ```javascript
 {
@@ -290,6 +291,36 @@ transforms to
         </xs:complexType>
     </xs:element>
 </xs:schema>
+```
+
+Here is another example JSON schema defining a JSON array.
+
+```javascript
+{
+    "type": "array",
+    "items": {
+        "type" : "number"
+    },
+    "minOccurs" : 2,
+    "minOccurs" : 3
+}
+```
+
+transforms to 
+
+```xml
+<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:sequence>
+        <xs:element name="value" type="xs:double" minOccurs="2" minOccurs="3" />
+    </xs:sequence>
+    <xs:attribute name="isArray">
+        <xs:simpleType>
+            <xs:restriction base="xs:boolean">
+              <xs:enumeration value="true"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:complexType>
 ```
 
 Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
