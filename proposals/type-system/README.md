@@ -325,4 +325,8 @@ transforms to
 </xs:complexType>
 ```
 
-Note2: A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
+XML does not provide intrinsic support for arrays. For this reason, XML 
+elements that is meant to represent an array communicate that by carrying
+an attribute *jsonType* of value "array".
+
+Note3: A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
