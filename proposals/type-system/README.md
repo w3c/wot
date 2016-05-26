@@ -355,6 +355,6 @@ Otherwise (i.e. the array has a name), transforms to the following XML schema, w
 </xs:element>
 ```
 
-Note2: The above XML structure is borrowed from EXI4JSON. The structure is designed to work both for schema-less JSON and schema-informed JSON documents. 
+Note2: The above XML structure is borrowed from [EXI4JSON](http://www.w3.org/XML/EXI/docs/json/exi-for-json.html "EXI4JSON"). The structure is designed to work both for schema-less JSON and schema-informed JSON documents. 
 
 Note3: A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
