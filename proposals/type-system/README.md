@@ -281,14 +281,14 @@ The following is an example JSON schema defining a JSON object.
 transforms to the following XML schema when the object is anonymous.
 
 ```xml
-    <xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-        <xs:complexType>
-            <xs:all>
-                <xs:element name="id" type="xs:integer" minOccurs="1" />
-                <xs:element name="name" type="xs:string" />
-            </xs:all>
-        </xs:complexType>
-    </xs:element>
+<xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType>
+        <xs:all>
+            <xs:element name="id" type="xs:integer" minOccurs="1" />
+            <xs:element name="name" type="xs:string" />
+        </xs:all>
+    </xs:complexType>
+</xs:element>
 ```
 
 Otherwise (i.e. the object has a name), transforms to the following XML schema, where __name is the name of the object.
