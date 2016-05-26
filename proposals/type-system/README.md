@@ -308,21 +308,34 @@ Here is another example JSON schema defining a JSON array.
 }
 ```
 
-transforms to 
+transforms to the following XML schema when the array is anonymous.
 
 ```xml
-<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:sequence>
-        <xs:element name="value" type="xs:double" minOccurs="2" minOccurs="3" />
-    </xs:sequence>
-    <xs:attribute name="jsonType">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="array"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
-</xs:complexType>
+<xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="value" type="xs:double" minOccurs="2" minOccurs="3" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+```
+
+Otherwise (i.e. the array has a name), transforms to the following XML schema, where *name* is the name of the array.
+
+```xml
+<xs:element name="*name*" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="array">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="value" type="xs:double" minOccurs="2" minOccurs="3" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
 ```
 
 XML does not provide intrinsic support for arrays. For this reason, XML 
