@@ -291,6 +291,8 @@ transforms to the following XML schema when the object is anonymous.
 </xs:element>
 ```
 
+Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
+
 Otherwise (i.e. the object has a name), transforms to the following XML schema, where __name is the name of the object.
 
 ```xml
@@ -309,8 +311,6 @@ Otherwise (i.e. the object has a name), transforms to the following XML schema, 
     </xs:complexType>
 </xs:element>
 ```
-
-Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
 
 Here is another example JSON schema defining a JSON array.
 
@@ -355,8 +355,6 @@ Otherwise (i.e. the array has a name), transforms to the following XML schema, w
 </xs:element>
 ```
 
-XML does not provide intrinsic support for arrays. For this reason, XML 
-elements that is meant to represent an array communicate that by carrying
-an attribute *jsonType* of value "array".
+Note2: The above XML structure is borrowed from EXI4JSON. The structure is designed to work both for schema-less JSON and schema-informed JSON documents. 
 
 Note3: A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
