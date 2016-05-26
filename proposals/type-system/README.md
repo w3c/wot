@@ -244,6 +244,8 @@ that still need to be reviewed.
 
 ## Mappings to Encodings
 
+![Type System](https://raw.githubusercontent.com/takuki/wot/beec63c253e396ac20794980264839ba2f8f6ca3/proposals/type-system/WoT%20Datatypes.png) 
+
 ### Mapping to JSON/CBOR/EXIforJSON
 
 By means of JSON schema mapping to JSON instances seems straightforward. 
