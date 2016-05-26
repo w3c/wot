@@ -320,10 +320,10 @@ transforms to the following XML schema when the array is anonymous.
 </xs:element>
 ```
 
-Otherwise (i.e. the array has a name), transforms to the following XML schema, where *name* is the name of the array.
+Otherwise (i.e. the array has a name), transforms to the following XML schema, where *__name* is the name of the array.
 
 ```xml
-<xs:element name="*name*" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="__name" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:complexType>
         <xs:sequence>
             <xs:element name="array">
