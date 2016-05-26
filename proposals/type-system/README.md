@@ -293,6 +293,8 @@ transforms to
 </xs:schema>
 ```
 
+Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
+
 Here is another example JSON schema defining a JSON array.
 
 ```javascript
@@ -322,7 +324,5 @@ transforms to
     </xs:attribute>
 </xs:complexType>
 ```
-
-Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
 
 Note2: A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
