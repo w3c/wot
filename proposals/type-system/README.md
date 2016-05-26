@@ -278,11 +278,10 @@ The following is an example JSON schema defining a JSON object.
 }
 ```
 
-transforms to 
+transforms to the following XML schema when the object is anonymous.
 
 ```xml
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="value">
+    <xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
         <xs:complexType>
             <xs:all>
                 <xs:element name="id" type="xs:integer" minOccurs="1" />
@@ -290,7 +289,25 @@ transforms to
             </xs:all>
         </xs:complexType>
     </xs:element>
-</xs:schema>
+```
+
+Otherwise (i.e. the object has a name), transforms to the following XML schema, where __name is the name of the object.
+
+```xml
+<xs:element name="__name" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="object">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="id" type="xs:integer" minOccurs="1" />
+                        <xs:element name="name" type="xs:string" />
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
 ```
 
 Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
