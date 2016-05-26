@@ -313,10 +313,10 @@ transforms to
     <xs:sequence>
         <xs:element name="value" type="xs:double" minOccurs="2" minOccurs="3" />
     </xs:sequence>
-    <xs:attribute name="isArray">
+    <xs:attribute name="jsonType">
         <xs:simpleType>
-            <xs:restriction base="xs:boolean">
-              <xs:enumeration value="true"/>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="array"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:attribute>
