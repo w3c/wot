@@ -280,14 +280,27 @@ The following is an example JSON schema defining a JSON object.
 }
 ```
 
-transforms to the following XML schema when the object is anonymous.
+When the object is anonymous (i.e. it is the document root, or participates in an array definition), 
+the above object definition transforms to the following XML schema element definition.
 
 ```xml
 <xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:complexType>
         <xs:all>
-            <xs:element name="id" type="xs:integer" minOccurs="1" />
-            <xs:element name="name" type="xs:string" />
+            <xs:element name="id">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="integer" type="xs:integer" />
+                  </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="name" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="string" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:all>
     </xs:complexType>
 </xs:element>
@@ -295,7 +308,7 @@ transforms to the following XML schema when the object is anonymous.
 
 Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
 
-Otherwise (i.e. the object has a name), transforms to the following XML schema, where __name is the name of the object.
+Otherwise (i.e. the object is a member of another object definition, thus has a name), transforms to the following XML schema, where __name is the name of the object.
 
 ```xml
 <xs:element name="__name" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -304,8 +317,20 @@ Otherwise (i.e. the object has a name), transforms to the following XML schema, 
             <xs:element name="object">
                 <xs:complexType>
                     <xs:all>
-                        <xs:element name="id" type="xs:integer" minOccurs="1" />
-                        <xs:element name="name" type="xs:string" />
+                        <xs:element name="id">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="integer" type="xs:integer" />
+                              </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="name" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="string" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
                     </xs:all>
                 </xs:complexType>
             </xs:element>
@@ -327,19 +352,20 @@ Here is another example JSON schema defining a JSON array.
 }
 ```
 
-transforms to the following XML schema when the array is anonymous.
+When the array is anonymous (i.e. it is the document root, or participates in an array definition), 
+the above array definition transforms to the following XML schema element definition.
 
 ```xml
 <xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="value" type="xs:double" minOccurs="2" minOccurs="3" />
+            <xs:element name="double" type="xs:double" minOccurs="2" minOccurs="3" />
         </xs:sequence>
     </xs:complexType>
 </xs:element>
 ```
 
-Otherwise (i.e. the array has a name), transforms to the following XML schema, where *__name* is the name of the array.
+Otherwise (i.e. the array is a member of an object definition, thus has a name), transforms to the following XML schema, where __name is the name of the array.
 
 ```xml
 <xs:element name="__name" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -348,7 +374,7 @@ Otherwise (i.e. the array has a name), transforms to the following XML schema, w
             <xs:element name="array">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="value" type="xs:double" minOccurs="2" minOccurs="3" />
+                        <xs:element name="double" type="xs:double" minOccurs="2" minOccurs="3" />
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
