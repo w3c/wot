@@ -2,49 +2,39 @@
   "@context": {
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "td": "http://www.w3c.org/wot/td#",
-    "Metadata": "td:Metadata",
     "name": "td:name",
     "uris": {
-      "@id": "td:associatedUri",
+      "@id": "td:hasThingDescription",
       "@type": "@id",
       "@container": "@set"
     },
     "hrefs": {
-      "@id": "td:associatedUri",
-      "@type": "@id",
-      "@container": "@set"
-    },
-    "priority": {
-      "@id": "td:priority",
-      "@type": "xsd:integer"
-    },
-    "encodings": {
-      "@id": "td:supportsEncoding",
-      "@type": "@id",
-      "@container": "@set"
-    },
-    "JSON": "td:JSON",
-    "JSON-LD": "td:JSON-LD",
-    "XML": "td:XML",
-    "EXI": "td:EXI",
-    "security": "td:supportsSecurity",
-	  "interactions": {
       "@id": "td:hasInteraction",
       "@type": "@id",
       "@container": "@set"
     },
+	"Interaction": "td:Interaction",
+    "priority": {
+      "@id": "td:hasPriority",
+      "@type": "xsd:integer"
+    },
+    "encodings": {
+      "@id": "td:supportsEncoding",
+      "@container": "@set"
+    },
+    "security": "td:supportsSecurity",
     "properties": {
       "@id": "td:hasProperty",
       "@container": "@set"
     },
-	  "Property": "td:Property",
-    "valueType": "td:valueType",
+	"Property": "td:Property",
+    "valueType": "td:hasValueType",
     "stability": {
-      "@id": "td:stability",
+      "@id": "td:hasStability",
       "@type": "xsd:integer"
     },
     "writable": {
-      "@id": "td:writable",
+      "@id": "td:isWritable",
       "@type": "xsd:boolean"
     },
     "events": {
