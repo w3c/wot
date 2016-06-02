@@ -1285,6 +1285,16 @@
         </ul>
       </section>
       <section>
+      	<h2>Rapidly changing sensor readings</h2>
+      	<p><em></em>REST or representational state transfer assumes that requests/responses transfer the state of the resource, but what does that mean when the state is constantly changing?</em></p>
+      	<p>This has been addressed by creating extensions to the REST design style, both in CoAP Observe and HTTP EventSource, that allow for multiple serial state changes to be returned asynchronously in response to a request. The client/application simply responds to these using a handler and applies the resource state changes to the application state.</p>
+      	<p>For example, if the application is a thermostat, the asynchronous temperature state updates invoke a handler that evaluates the thermostat mode and other controls and decides, on each response from the sensor, whether to turn the heating system on or off, heat or cool mode.</p>
+      	<p>Additionally, the pattern described by Claes below is supported in the notion of a subscription, or binding, where you may CREATE (POST) a control to a location that starts "web callbacks" which are POST or PUT operations sent to the destination address configured by the CREATE operation.</p>
+      	<p>These patterns are becoming more well known and are described in the <a href="https://github.com/connectIOT/iotivity-servient/blob/master/docs/abstract-transfer.pdf"></a>abstract transfer layer proposal</a>.</p>
+      	<p>In the <a href="https://datatracker.ietf.org/doc/draft-ietf-core-interfaces/"></a>CoRE Interfaces draft</a>, there is a description of Observe Attributes, which are additional controls on the Observation. For example, the pmin attribute specifies the minimum interval between responses. By using pmin in conjunction with a content format that allows batch sample reporting (e.g. <a href="https://datatracker.ietf.org/doc/draft-jennings-core-senml/"></a>SenML</a>) rapidly changing samples may be buffered at the source and sent as a batch in each periodic notification. Additional conditional observe attributes are defined and being defined to provide additional controls and filtering. These are appropriate for including in the payload when creating a subscription or binding.</p>
+      	<p>Additionally, in a REST based hypermedia system, resources may be assigned media types and content formats that are designed for media streams. This works like a websocket upgrade, where a separate socket connection is made from the media stream data source to the handler in the application.</p>
+      </section>
+      <section>
         <h2> Resource Models &amp; Protocol mappings from Consortia</h2>
         <dd>
           <ul>
