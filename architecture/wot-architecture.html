@@ -112,6 +112,83 @@
       </section>
     </section>
     <section>
+      <h1>General Description of WoT Servient</h1>
+      <p>In Web of Things (WoT), functional virtual device is named “WoT
+        Servient” which provides the access to, control and get the status and
+        values from IoT physical devices.<br />
+        General WoT Servient functional architecture is presented in Fig.15</p>
+      <div  style="text-align: center;"><img  title="Functional Architecture of WoT Servient"
+
+           alt="Functional Architecture of WoT Servient"  src="functional_architecture2.png"
+
+           style="width: 640px;" /><br />
+        <p>Fig.15 Functional Architecture of WoT Servient</p>
+        <p  style="text-align: left;">The role and functionality of each module
+          is as follows;</p>
+      </div>
+      <section>
+        <h2>Server Connector</h2>
+        <p>server Connector accepts requests from networked clients through internet
+          and sends responses to clients.</p>
+        Examples of protocols between WoT servient and clients include HTTP,
+        CoAP, MQTT and so on.<br />
+        REST style API can be defined in front of the Server Connector module. This
+        API is named “WoT Interface”. WoT Interface is the subject of the standardization
+        activity. <br />
+      </section>
+      <section>
+        <h2>Client Connector</h2>
+        <p>WoT Servient can access other web servers and/or WoT servients
+          through internet.<br />
+          In these cases a Client Connector module communicates with other servers via
+          protocols such as HTTP.<br />
+          When Client Connector modules calls other WoT servients not legacy web
+          servers, the API is provided through WoT Interface.<br />
+        </p>
+      </section>
+      <section>
+        <h2>Legacy Communication</h2>
+        <p> As described before, currently, there are many IoT services and
+          standards proposed by many organizations.<br />
+          In order to communicate such legacy devices, WoT servient includes
+          legacy communication module for such protocols as Echonet Lite, QNX,
+          ONVIF, DLNA and so on.<br />
+         Legacy Communication inludes proprietly protocol binding mechanism and resource management defined by each protocol managing organizations.<br />
+        </p>
+      </section>
+      <section>
+        <h2>Protocol Binding</h2>
+        <p>Protocol Binding block converts interactions with devices using information in Things Description in accordance with lower layer protocols such as HTTP, CoAP, MQTT and so on.</p>
+      </section>
+      <section>
+        <h2>Resource Model</h2>
+        <p>Resource Model Provides a common abstraction across the different protocols.<br />
+        Just like the Web, it allows to identify and address interaction points with URIs.</p>
+      </section>
+      <section>
+        <h2>Things Description</h2>
+        <p>Things Description declares providing API name, parameter type and so on.<br />
+        External client refers this description to call WoT Interface.
+        </p>
+      </section>
+      <section>
+        <h2>App Script</h2>
+        <p>AppScripts implements application logic in a modular and portable way.<br />
+        It can access local hardware, locally connected legacy devices, and remote things through the WoT Interface.<br />
+        For this, the runtime environment must provide the Scripting API (Client, Server, Discovery and Proprietly(if any)).
+        </p>
+      </section>
+      <section>
+        <h2>Runtime Environment</h2>
+        <p>Runtime Environment provides the Scriptiong API<br />
+        Sever API is the API for creating server functions which accepts request through WoT Interface from other clients.<br />
+        Client API is the API for creating client functions which utilizes resource model, protocol binding and so on.
+        Client API sometimes includes Physical API to manpulate I2C etc.<br />
+        Discovery API is utility API to discover other Servers and/or WoT Servients.
+        </p>
+      </section>
+    </section>
+    <section>
         <h1>Scenarios</h1>
         <p  style="text-align: left;">Scenarios utilizing WoT Servient, WoT Server and WoT Client are showed in this section. Each of the scenarios also has explanation of how the discovery and APIs work.</p>
       <section>
@@ -421,83 +498,6 @@ In this case, a temperature sensor is connected to WoT Servient 1 and control ag
           home hub;<br />
           e)    Emergency Apps running in a local environment when the fire
           alarm and similar event occur.</p>
-      </section>
-    </section>
-    <section>
-      <h1>General Description of WoT Servient</h1>
-      <p>In Web of Things (WoT), functional virtual device is named “WoT
-        Servient” which provides the access to, control and get the status and
-        values from IoT physical devices.<br />
-        General WoT Servient functional architecture is presented in Fig.15</p>
-      <div  style="text-align: center;"><img  title="Functional Architecture of WoT Servient"
-
-           alt="Functional Architecture of WoT Servient"  src="functional_architecture2.png"
-
-           style="width: 640px;" /><br />
-        <p>Fig.15 Functional Architecture of WoT Servient</p>
-        <p  style="text-align: left;">The role and functionality of each module
-          is as follows;</p>
-      </div>
-      <section>
-        <h2>Server Connector</h2>
-        <p>server Connector accepts requests from networked clients through internet
-          and sends responses to clients.</p>
-        Examples of protocols between WoT servient and clients include HTTP,
-        CoAP, MQTT and so on.<br />
-        REST style API can be defined in front of the Server Connector module. This
-        API is named “WoT Interface”. WoT Interface is the subject of the standardization
-        activity. <br />
-      </section>
-      <section>
-        <h2>Client Connector</h2>
-        <p>WoT Servient can access other web servers and/or WoT servients
-          through internet.<br />
-          In these cases a Client Connector module communicates with other servers via
-          protocols such as HTTP.<br />
-          When Client Connector modules calls other WoT servients not legacy web
-          servers, the API is provided through WoT Interface.<br />
-        </p>
-      </section>
-      <section>
-        <h2>Legacy Communication</h2>
-        <p> As described before, currently, there are many IoT services and
-          standards proposed by many organizations.<br />
-          In order to communicate such legacy devices, WoT servient includes
-          legacy communication module for such protocols as Echonet Lite, QNX,
-          ONVIF, DLNA and so on.<br />
-         Legacy Communication inludes proprietly protocol binding mechanism and resource management defined by each protocol managing organizations.<br />
-        </p>
-      </section>
-      <section>
-        <h2>Protocol Binding</h2>
-        <p>Protocol Binding block converts interactions with devices using information in Things Description in accordance with lower layer protocols such as HTTP, CoAP, MQTT and so on.</p>
-      </section>
-      <section>
-        <h2>Resource Model</h2>
-        <p>Resource Model Provides a common abstraction across the different protocols.<br />
-        Just like the Web, it allows to identify and address interaction points with URIs.</p>
-      </section>
-      <section>
-        <h2>Things Description</h2>
-        <p>Things Description declares providing API name, parameter type and so on.<br />
-        External client refers this description to call WoT Interface.
-        </p>
-      </section>
-      <section>
-        <h2>App Script</h2>
-        <p>AppScripts implements application logic in a modular and portable way.<br />
-        It can access local hardware, locally connected legacy devices, and remote things through the WoT Interface.<br />
-        For this, the runtime environment must provide the Scripting API (Client, Server, Discovery and Proprietly(if any)).
-        </p>
-      </section>
-      <section>
-        <h2>Runtime Environment</h2>
-        <p>Runtime Environment provides the Scriptiong API<br />
-        Sever API is the API for creating server functions which accepts request through WoT Interface from other clients.<br />
-        Client API is the API for creating client functions which utilizes resource model, protocol binding and so on.
-        Client API sometimes includes Physical API to manpulate I2C etc.<br />
-        Discovery API is utility API to discover other Servers and/or WoT Servients.
-        </p>
       </section>
     </section>
     <section>
