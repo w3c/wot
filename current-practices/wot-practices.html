@@ -797,6 +797,65 @@
 					</section>
 
 					<section>
+						<h4>Value Type</h4>
+
+						<p>All of the three interaction types <code>Property</code>, <code>Action</code> and <code>Event</code> can specify the type of the value acceptable as an input or expected as an output of the interaction. JSON schema provides a standard way to describe the structure and datatypes of data, and we use JSON schema as the notation for value types of the interaction types.
+						</p>
+
+						<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
+						</p>
+
+						<pre class="example">
+							{
+								...
+							  "properties": [
+							    {
+										...
+							      "name": "temperature",
+							      "valueType": { "type": "number" },
+										...
+							    }
+							  ]
+								...
+							  "events": [
+							    {
+										...
+							      "name": "criticalCondition",
+							      "valueType": { "type": "string" },
+										...
+							    }
+							  ]
+								...
+							}
+						</pre>
+
+						<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
+						</p>
+
+						<pre class="example">
+							{
+								...
+							  "actions": [
+							    {
+										...
+							      "name": "fadeIn",
+							      "inputData": {
+							        "valueType": { "type": "number" },
+							        "actuator:unit": "actuator:ms"
+							      },
+							      "outputData": {
+							        "valueType": { "type": "boolean" },
+							      },
+										...
+							    }
+							  ]
+								...
+							}
+						</pre>
+
+					</section>
+
+					<section>
 						<h4>Note on URI Resolution</h4>
 
 						<p>
