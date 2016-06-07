@@ -8,7 +8,7 @@
 			var respecConfig = {
 				  specStatus:   "unofficial"
 				, editors:      [{name:"Daniel Peintner"}, {name:"Matthias Kovatsch"}]
-				, authors:      [{name:"Sebastian Käbisch"}, {name:"Victor Charpenay"}, {name:"Volunteers needed"}]
+				, authors:      [{name:"Sebastian Käbisch"}, {name:"Victor Charpenay"}, {name:"Takuki Kamiya (Fujitsu)"}, {name:"Volunteers needed"}]
 				, processVersion: 2015
 				, shortName:    "wot-tech"
 				, wg:           "Interest Group on the Web of Things"
@@ -852,6 +852,172 @@
 								...
 							}
 						</pre>
+
+					<section>
+						<h5>Simple Data</h5>
+						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
+						</p>
+
+						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code>.
+						</p>
+
+						<pre class="example">
+							"valueType": { "type": "number" },
+						</pre>
+
+						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
+						</p>
+
+						<pre class="example">
+							{ "value": 123 }
+						</pre>
+
+						<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
+						</p>
+
+						<pre class="example">
+							&lt;value>
+								&lt;number>123&lt;/number>
+							&lt;/value>
+						</pre>
+
+						<p class="ednote">
+							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
+						</p>
+					</section>
+
+					<section>
+						<h5>Structured Data</h5>
+
+						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>. 
+						</p>
+
+						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
+						JSON provides two distinct constructs to define a structure that can have multiple literal values. They are JSON object and JSON array.
+						</p>
+
+					<section>
+						<h5>JSON Object</h5>
+
+						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of 
+						two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) 
+						where <code>id</code> is required to be present.
+						</p>
+
+						<pre class="example">
+							"valueType": {
+							    "type": "object",
+							    "properties": {
+							        "id": {
+							            "type": "integer"
+							        },
+							        "name": {
+							            "type": "string"
+							        }
+							    },
+							    "required": ["id"]
+							}
+						</pre>
+
+						<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
+						</p>
+
+						<pre class="example">
+							{ 
+								"value": {
+									"id": 12345,
+									"name": "Web of Things"
+								} 
+							}
+						</pre>
+
+						<p>The above data will look the following when the data is exchanged in XML.
+						</p>
+
+						<pre class="example">
+							&lt;value>
+								&lt;object>
+									&lt;id>
+										&lt;number>12345&lt;/number>
+									&lt;/id>
+									&lt;name>
+										&lt;string>Web of Things&lt;/string>
+									&lt;/name>
+								&lt;/object>
+							&lt;/value>
+						</pre>
+
+					</section>
+
+					<section>
+						<h5>JSON Array</h5>
+
+						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of 
+						multiple number literals where the occurrence must be either twice or three times.
+						</p>
+
+						<pre class="example">
+							{
+							    "type": "array",
+							    "items": {
+							        "type" : "number"
+							    },
+							    "minOccurs" : 2,
+							    "minOccurs" : 3
+							}
+						</pre>
+
+						<p>When the numbers being exchanged are 123 and 456, data serialization in JSON format will look like the following.
+						</p>
+
+						<pre class="example">
+							{ 
+								"value": [
+									123,
+									456
+								]
+							}
+						</pre>
+
+						<p>The above data will look the following when the data is exchanged in XML.
+						</p>
+
+						<pre class="example">
+							&lt;value>
+								&lt;array>
+									&lt;double>123&lt;/double>
+									&lt;double>456&lt;/double>
+								&lt;/array>
+							&lt;/value>
+						</pre>
+
+
+					</section><!-- End of "JSON Array" -->
+
+					</section><!-- End of "Structured Data" -->
+
+					<section>
+						<h5>Mapping to XML Schema</h5>
+
+						<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema 
+						look like when serialized to XML in parallel to corresponding JSON serializations.
+						</p>
+
+						<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
+Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
+						</p>
+
+					<section>
+						<h5>JSON Object to XML Schema</h5>
+
+					</section>
+
+					<section>
+						<h5>JSON Array to XML Schema</h5>
+
+					</section>
+
+					</section><!-- End of "Mapping to XML Schema" -->
 
 					</section>
 
