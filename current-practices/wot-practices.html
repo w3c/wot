@@ -342,7 +342,8 @@
 						of a Thing it is and what additional properties and capabilities it has. This information provides a semantic context
 						of a Thing. JSON-LD provides a means to extend a TD with an external (semantic) context and reuse existing contexts,
 						thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms,
-						instead of dealing with meaningless strings.
+						instead of dealing with meaningless strings.  Example 2 shows the integration of the "sensor" namespaces and the semantic enrichment of the 
+						temperature property with a concrete @type and unit assignment.
 					</p>
 					
 					<p class="remove">
@@ -350,19 +351,22 @@
 						and what is the underlying data type (float).
 					</p>
 
-					<pre class="example">
+										<pre class="example">
+
 						{
 						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						               {"sensor": "http://example.org/sensors#"}],
+						               {
+									<div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor": "http://example.org/sensors#"</div>
+								}],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
 						  "uris": ["coap://www.mytemp.com:5683/"],
 						  "encodings": ["JSON"],
 						  "properties": [
 						    {
-						      "@type": "sensor:Temperature",
+						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"@type": "sensor:Temperature",</div>
 						      "name": "temperature",
-						      "sensor:unit": "sensor:Celsius",
+						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
 						      "valueType": "xsd:float",
 						      "writable": false,
 						      "hrefs": ["temp"]
