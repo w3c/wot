@@ -51,6 +51,14 @@
         background: rgb(240,240,255);
         border: solid 1px black;
       }
+      #relationships {
+      	display: block;
+      	float: right;
+        margin-left: 0.6em;
+        width:40%;
+        min-width:250px;
+        max-width:936px;
+      }
     </style>
   </head>
   <body>
@@ -78,7 +86,7 @@
 
       <p class="issue"><i>Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public email list</a>, and you are encouraged to file issues on github, but please use the label "WG Charter". The GitHub URL for this document is <a href="https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html">https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html</a>.</i></p>
 
-      <p class="mission">The <strong>mission</strong> of the <a href=“http://www.w3.org/WoT/WG/”>Web of Things Working Group</a> is to counter the fragmentation of the Internet of Things by introducing a Web-based abstraction layer complementing existing IoT platforms and standards. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.</p>
+      <p class="mission">The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/WG/">Web of Things Working Group</a> is to counter the fragmentation of the Internet of Things by introducing a Web-based abstraction layer complementing existing IoT platforms and standards. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.</p>
 
       <div class="noprint">
         <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Web of Things Working Group.</a></p>
@@ -190,15 +198,18 @@
           <span class="caption">The Web of Things defines the application layer above different transfer protocols, thereby complementing existing standards.</span>
         </p>
 
-        <p>This Working Group will define Web technology standards to enable services that span different IoT platforms and standards, with a view to countering fragmentation and enabling a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realize the full potential for the IoT. In short, we seek to extend the Web from a Web of pages to a Web of things.</p>
+        <a href="wot-ig-2016-relationship.png"><img id="relationships" src="wot-ig-2016-relationship.png" alt="Relationship between WoT WG and WoT IG" /></a>
+
+        <p>The Web of Things Working Group will define Web technology standards to enable services that span different IoT platforms and standards, with a view to countering fragmentation and enabling a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realize the full potential for the IoT. In short, we seek to extend the Web from a Web of pages to a Web of things.</p>
 
         <p>There are many possible applications across a wide range of domains, e.g., homes, offices, healthcare, cities, electrical grids, retail and manufacturing. The key to realizing the Web of Things is the metadata that provides the basis for semantic interoperability. This Working Group will focus on the metadata vocabularies that are useful across a broad range of application domains. In addition, we plan work on scripting APIs exposed to application developers, and bindings to common platforms and protocols in collaboration with the standards development organizations responsible for these.</p>
 
-        <p>Security is a major concern for the IoT. The Web of Things Working Group will seek to enable end-to-end security across IoT platforms. This will require security metadata as a basis for one platform to identify how to securely interoperate with another. The Working Group will also address application focusing APIs for cross platform security frameworks.</p>
+        <p>Security and privacy is a major concern for the IoT. The Web of Things Working Group will seek to enable end-to-end security across IoT platforms. This will require security metadata as a basis for one platform to identify how to securely interoperate with another. The Working Group will also address application focusing APIs for cross-platform security frameworks.</p>
 
+        <p>This working group (WG) will be supported by the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> (IG). While the WG is tasked to write standards-track specifications and test suites, the IG will organize and run PlugFests to evaluate the current working assumptions, reach out and collaborate with interested organizations, vendors, and communities, and explore new areas to identify work that is ready for transfer to the W3C Recommendation Track (i.e., any W3C working group).</p>
       </section>
 
-      <section id="scope" class="scope">
+      <section id="scope" class="scope" style="clear:both;">
         <h2>Scope</h2>
         
         <div class="summary">
