@@ -14,13 +14,17 @@ A resource represents an interaction point and is identified and addressed by a 
 Currently, the operations on these resources are defined implicitly through the classification as Property, Action, or Event.
 There is no explicit information how these interactions are preformed and no specification how these interactions are bound to specific protocols.
 
-### Approach
+## Approach: Abstract Operations
 
 The resource model shall also provide functional descriptions.
 We want to define a common abstraction for the interaction model that can explicity descibe the interactions.
 
 A popular solution is using CRUD operations, sometimes extended to CRUDN to also reflect Notifications (e.g., OCF).
 Protocol binding specifications then need to map the abstract CRUD(N) operations to concrete protocol actions (e.g., POST, GET, PUT, DELETE of RESTful protocols).
+
+## Approach: Protocol-specific Binding Information
+
+Similar to multiple URI schemes, each interaction could provide protocol-specific information to construct a message. For instance, for HTTP and CoAP the methods GET, POST, PUT, and DELETE are given directly, while for BLE Read, Write, etc. are given. This could be done in an array, similar to the URIs and hrefs. Alternatively, one could imagine retrieving a protocol-binding specific TD: a servient that wants to talk to a thing over BLE would request a BLE-flavored TD; this would decrease size and increase readability. A superset TD could still fall back to the array notation.
 
 ## Protocols
 
