@@ -853,311 +853,311 @@
 							}
 						</pre>
 
-					<section>
-						<h5>Simple Data</h5>
-						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
-						</p>
+						<section>
+							<h5>Simple Data</h5>
+							<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
+							</p>
+	
+							<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code>.
+							</p>
+	
+							<pre class="example">
+								"valueType": { "type": "number" },
+							</pre>
+	
+							<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
+							</p>
+	
+							<pre class="example">
+								{ "value": 123 }
+							</pre>
+	
+							<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
+							</p>
+	
+							<pre class="example">
+								&lt;number>123&lt;/number>
+							</pre>
+	
+							<p class="ednote">
+								At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
+							</p>
+	
+						</section>
 
-						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code>.
-						</p>
+						<section>
+							<h5>Structured Data</h5>
+	
+							<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>. 
+							</p>
+	
+							<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
+							JSON provides two distinct constructs to define a structure that can have multiple literal values. 
+							One is JSON object, and the other is JSON array.
+							</p>
+	
+							<section>
+								<h6 id="json-object">JSON Object</h6>
+		
+								<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of 
+								two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) 
+								where <code>id</code> is required to be present.
+								</p>
+		
+								<pre class="example">
+									"valueType": {
+									    "type": "object",
+									    "properties": {
+									        "id": {
+									            "type": "integer"
+									        },
+									        "name": {
+									            "type": "string"
+									        }
+									    },
+									    "required": ["id"]
+									}
+								</pre>
+		
+								<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
+								</p>
+		
+								<pre class="example">
+									{ 
+										"value": {
+											"id": 12345,
+											"name": "Web of Things"
+										} 
+									}
+								</pre>
+		
+								<p>The above data will look the following when the data is exchanged in XML.
+								</p>
+		
+								<pre class="example">
+									&lt;object>
+										&lt;id>
+											&lt;number>12345&lt;/number>
+										&lt;/id>
+										&lt;name>
+											&lt;string>Web of Things&lt;/string>
+										&lt;/name>
+									&lt;/object>
+								</pre>
+		
+							</section>
+	
+							<section>
+								<h6 id="json-array">JSON Array</h6>
+		
+								<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of 
+								multiple number literals where the occurrence must be either twice or three times.
+								</p>
+		
+								<pre class="example">
+									"valueType": {
+									    "type": "array",
+									    "items": {
+									        "type" : "number"
+									    },
+									    "minOccurs" : 2,
+									    "minOccurs" : 3
+									}
+								</pre>
+		
+								<p>When the numbers being exchanged are 123 and 456, data serialization in JSON format will look like the following.
+								</p>
+		
+								<pre class="example">
+									{ 
+										"value": [
+											123,
+											456
+										]
+									}
+								</pre>
+		
+								<p>The above data will look the following when the data is exchanged in XML.
+								</p>
+		
+								<pre class="example">
+									&lt;array>
+										&lt;double>123&lt;/double>
+										&lt;double>456&lt;/double>
+									&lt;/array>
+								</pre>
+		
+		
+							</section><!-- End of "JSON Array" -->
+	
+						</section><!-- End of "Structured Data" -->
 
-						<pre class="example">
-							"valueType": { "type": "number" },
-						</pre>
+						<section>
+							<h5>Mapping to XML Schema</h5>
+	
+							<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema 
+							look like when serialized to XML in parallel to corresponding JSON serializations.
+							</p>
+	
+							<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
+	Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
+							</p>
+	
+							<p>The XML structure is based on <a href="https://www.w3.org/XML/EXI/docs/json/exi-for-json.html">EXI4JSON</a>. 
+							The structure works uniformly well for both schema-less and schema-informed use cases. 
+							</p>
+	
+							<p class="ednote">A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
+							</p>
+	
+							<section>
+								<h5>JSON Object Definition to XML Schema</h5>
+		
+								<p>Shown below is the JSON schema <code>object</code> definition used as the <code>valueType</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
+								</p>
+		
+								<pre class="example">
+									{
+									    "type": "object",
+									    "properties": {
+									        "id": {
+									            "type": "integer"
+									        },
+									        "name": {
+									            "type": "string"
+									        }
+									    },
+									    "required": ["id"]
+									}
+								</pre>
+		
+								<p>When the <code>object</code> is anonymous (i.e. it is the root, or participates in an <code>array</code> definition), 
+								the above <code>object</code> definition transforms to the following XML Schema element definition.
+								</p>
+		
+								<pre class="example">
+									&lt;xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+									    &lt;xs:complexType>
+									        &lt;xs:all>
+									            &lt;xs:element name="id">
+									                &lt;xs:complexType>
+									                  &lt;xs:sequence>
+									                    &lt;xs:element name="integer" type="xs:integer" />
+									                  &lt;/xs:sequence>
+									                &lt;/xs:complexType>
+									            &lt;/xs:element>
+									            &lt;xs:element name="name" minOccurs="0">
+									                &lt;xs:complexType>
+									                  &lt;xs:sequence>
+									                    &lt;xs:element name="string" type="xs:string" />
+									                  &lt;/xs:sequence>
+									                &lt;/xs:complexType>
+									            &lt;/xs:element>
+									        &lt;/xs:all>
+									    &lt;/xs:complexType>
+									&lt;/xs:element>
+								</pre>
+		
+								<p class="ednote">JSON schema <code>object</code> does NOT define any order. 
+								Therefore, in order to capture the constraints of JSON schema <code>object</code>, 
+								we need to use xsd:all constructs instead of xsd:sequence.
+								</p>
+		
+								<p>Otherwise (i.e. the <code>object</code> is a member of another <code>object</code> definition, thus has a name), 
+								the <code>object</code> definition transforms to the following XML schema element definition.
+								Note <code><i>__name</i></code> should be replaced by the actual name of the <code>object</code>.
+								</p>
+		
+								<pre class="example">
+									&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+									    &lt;xs:complexType>
+									        &lt;xs:sequence>
+									            &lt;xs:element name="object">
+									                &lt;xs:complexType>
+									                    &lt;xs:all>
+									                        &lt;xs:element name="id">
+									                            &lt;xs:complexType>
+									                              &lt;xs:sequence>
+									                                &lt;xs:element name="integer" type="xs:integer" />
+									                              &lt;/xs:sequence>
+									                            &lt;/xs:complexType>
+									                        &lt;/xs:element>
+									                        &lt;xs:element name="name" minOccurs="0">
+									                            &lt;xs:complexType>
+									                              &lt;xs:sequence>
+									                                &lt;xs:element name="string" type="xs:string" />
+									                              &lt;/xs:sequence>
+									                            &lt;/xs:complexType>
+									                        &lt;/xs:element>
+									                    &lt;/xs:all>
+									                &lt;/xs:complexType>
+									            &lt;/xs:element>
+									        &lt;/xs:sequence>
+									    &lt;/xs:complexType>
+									&lt;/xs:element>
+								</pre>
+		
+							</section><!-- End of "JSON Object Definition to XML Schema" -->
+	
+							<section>
+								<h5>JSON Array Definition to XML Schema</h5>
+		
+								<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
+								The <code>array</code> consists of multiple number literals where the occurrence the literal must be either twice or three times.
+								</p>
+		
+								<pre class="example">
+									{
+									    "type": "array",
+									    "items": {
+									        "type" : "number"
+									    },
+									    "minOccurs" : 2,
+									    "minOccurs" : 3
+									}
+								</pre>
+		
+								<p>When the <code>array</code> is anonymous (i.e. it is the root, or participates in another <code>array</code> definition), 
+								the above <code>array</code> definition transforms to the following XML Schema element definition.
+								</p>
+		
+								<pre class="example">
+									&lt;xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+									    &lt;xs:complexType>
+									        &lt;xs:sequence>
+									            &lt;xs:element name="double" type="xs:double" minOccurs="2" minOccurs="3" />
+									        &lt;/xs:sequence>
+									    &lt;/xs:complexType>
+									&lt;/xs:element>
+								</pre>
+		
+								<p>Otherwise (i.e. the <code>array</code> is a member of an <code>object</code> definition, thus has a name), 
+								the <code>array</code> definition transforms to the following XML schema element definition.
+								Note <code><i>__name</i></code> should be replaced by the actual name of the <code>array</code>.
+								</p>
+		
+		
+								<pre class="example">
+									&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+									    &lt;xs:complexType>
+									        &lt;xs:sequence>
+									            &lt;xs:element name="array">
+									                &lt;xs:complexType>
+									                    &lt;xs:sequence>
+									                        &lt;xs:element name="double" type="xs:double" minOccurs="2" maxOccurs="3" />
+									                    &lt;/xs:sequence>
+									                &lt;/xs:complexType>
+									            &lt;/xs:element>
+									        &lt;/xs:sequence>
+									    &lt;/xs:complexType>
+									&lt;/xs:element>
+								</pre>
+		
+							</section><!-- End of "JSON Array Definition to XML Schema" -->
+	
+						</section><!-- End of "Mapping to XML Schema" -->
 
-						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
-						</p>
-
-						<pre class="example">
-							{ "value": 123 }
-						</pre>
-
-						<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
-						</p>
-
-						<pre class="example">
-							&lt;number>123&lt;/number>
-						</pre>
-
-						<p class="ednote">
-							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
-						</p>
-
-					</section>
-
-					<section>
-						<h5>Structured Data</h5>
-
-						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>. 
-						</p>
-
-						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
-						JSON provides two distinct constructs to define a structure that can have multiple literal values. 
-						One is JSON object, and the other is JSON array.
-						</p>
-
-					<section>
-						<h5 id="json-object">JSON Object</h5>
-
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of 
-						two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) 
-						where <code>id</code> is required to be present.
-						</p>
-
-						<pre class="example">
-							"valueType": {
-							    "type": "object",
-							    "properties": {
-							        "id": {
-							            "type": "integer"
-							        },
-							        "name": {
-							            "type": "string"
-							        }
-							    },
-							    "required": ["id"]
-							}
-						</pre>
-
-						<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
-						</p>
-
-						<pre class="example">
-							{ 
-								"value": {
-									"id": 12345,
-									"name": "Web of Things"
-								} 
-							}
-						</pre>
-
-						<p>The above data will look the following when the data is exchanged in XML.
-						</p>
-
-						<pre class="example">
-							&lt;object>
-								&lt;id>
-									&lt;number>12345&lt;/number>
-								&lt;/id>
-								&lt;name>
-									&lt;string>Web of Things&lt;/string>
-								&lt;/name>
-							&lt;/object>
-						</pre>
-
-					</section>
-
-					<section>
-						<h5 id="json-array">JSON Array</h5>
-
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of 
-						multiple number literals where the occurrence must be either twice or three times.
-						</p>
-
-						<pre class="example">
-							"valueType": {
-							    "type": "array",
-							    "items": {
-							        "type" : "number"
-							    },
-							    "minOccurs" : 2,
-							    "minOccurs" : 3
-							}
-						</pre>
-
-						<p>When the numbers being exchanged are 123 and 456, data serialization in JSON format will look like the following.
-						</p>
-
-						<pre class="example">
-							{ 
-								"value": [
-									123,
-									456
-								]
-							}
-						</pre>
-
-						<p>The above data will look the following when the data is exchanged in XML.
-						</p>
-
-						<pre class="example">
-							&lt;array>
-								&lt;double>123&lt;/double>
-								&lt;double>456&lt;/double>
-							&lt;/array>
-						</pre>
-
-
-					</section><!-- End of "JSON Array" -->
-
-					</section><!-- End of "Structured Data" -->
-
-					<section>
-						<h5>Mapping to XML Schema</h5>
-
-						<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema 
-						look like when serialized to XML in parallel to corresponding JSON serializations.
-						</p>
-
-						<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
-Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
-						</p>
-
-						<p>The XML structure is based on <a href="https://www.w3.org/XML/EXI/docs/json/exi-for-json.html">EXI4JSON</a>. 
-						The structure works uniformly well for both schema-less and schema-informed use cases. 
-						</p>
-
-						<p class="ednote">A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
-						</p>
-
-					<section>
-						<h5>JSON Object Definition to XML Schema</h5>
-
-						<p>Shown below is the JSON schema <code>object</code> definition used as the <code>valueType</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
-						</p>
-
-						<pre class="example">
-							{
-							    "type": "object",
-							    "properties": {
-							        "id": {
-							            "type": "integer"
-							        },
-							        "name": {
-							            "type": "string"
-							        }
-							    },
-							    "required": ["id"]
-							}
-						</pre>
-
-						<p>When the <code>object</code> is anonymous (i.e. it is the root, or participates in an <code>array</code> definition), 
-						the above <code>object</code> definition transforms to the following XML Schema element definition.
-						</p>
-
-						<pre class="example">
-							&lt;xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-							    &lt;xs:complexType>
-							        &lt;xs:all>
-							            &lt;xs:element name="id">
-							                &lt;xs:complexType>
-							                  &lt;xs:sequence>
-							                    &lt;xs:element name="integer" type="xs:integer" />
-							                  &lt;/xs:sequence>
-							                &lt;/xs:complexType>
-							            &lt;/xs:element>
-							            &lt;xs:element name="name" minOccurs="0">
-							                &lt;xs:complexType>
-							                  &lt;xs:sequence>
-							                    &lt;xs:element name="string" type="xs:string" />
-							                  &lt;/xs:sequence>
-							                &lt;/xs:complexType>
-							            &lt;/xs:element>
-							        &lt;/xs:all>
-							    &lt;/xs:complexType>
-							&lt;/xs:element>
-						</pre>
-
-						<p class="ednote">JSON schema <code>object</code> does NOT define any order. 
-						Therefore, in order to capture the constraints of JSON schema <code>object</code>, 
-						we need to use xsd:all constructs instead of xsd:sequence.
-						</p>
-
-						<p>Otherwise (i.e. the <code>object</code> is a member of another <code>object</code> definition, thus has a name), 
-						the <code>object</code> definition transforms to the following XML schema element definition.
-						Note <code><i>__name</i></code> should be replaced by the actual name of the <code>object</code>.
-						</p>
-
-						<pre class="example">
-							&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-							    &lt;xs:complexType>
-							        &lt;xs:sequence>
-							            &lt;xs:element name="object">
-							                &lt;xs:complexType>
-							                    &lt;xs:all>
-							                        &lt;xs:element name="id">
-							                            &lt;xs:complexType>
-							                              &lt;xs:sequence>
-							                                &lt;xs:element name="integer" type="xs:integer" />
-							                              &lt;/xs:sequence>
-							                            &lt;/xs:complexType>
-							                        &lt;/xs:element>
-							                        &lt;xs:element name="name" minOccurs="0">
-							                            &lt;xs:complexType>
-							                              &lt;xs:sequence>
-							                                &lt;xs:element name="string" type="xs:string" />
-							                              &lt;/xs:sequence>
-							                            &lt;/xs:complexType>
-							                        &lt;/xs:element>
-							                    &lt;/xs:all>
-							                &lt;/xs:complexType>
-							            &lt;/xs:element>
-							        &lt;/xs:sequence>
-							    &lt;/xs:complexType>
-							&lt;/xs:element>
-						</pre>
-
-					</section>
-
-					<section>
-						<h5>JSON Array Definition to XML Schema</h5>
-
-						<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
-						The <code>array</code> consists of multiple number literals where the occurrence the literal must be either twice or three times.
-						</p>
-
-						<pre class="example">
-							{
-							    "type": "array",
-							    "items": {
-							        "type" : "number"
-							    },
-							    "minOccurs" : 2,
-							    "minOccurs" : 3
-							}
-						</pre>
-
-						<p>When the <code>array</code> is anonymous (i.e. it is the root, or participates in another <code>array</code> definition), 
-						the above <code>array</code> definition transforms to the following XML Schema element definition.
-						</p>
-
-						<pre class="example">
-							&lt;xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-							    &lt;xs:complexType>
-							        &lt;xs:sequence>
-							            &lt;xs:element name="double" type="xs:double" minOccurs="2" minOccurs="3" />
-							        &lt;/xs:sequence>
-							    &lt;/xs:complexType>
-							&lt;/xs:element>
-						</pre>
-
-						<p>Otherwise (i.e. the <code>array</code> is a member of an <code>object</code> definition, thus has a name), 
-						the <code>array</code> definition transforms to the following XML schema element definition.
-						Note <code><i>__name</i></code> should be replaced by the actual name of the <code>array</code>.
-						</p>
-
-
-						<pre class="example">
-							&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-							    &lt;xs:complexType>
-							        &lt;xs:sequence>
-							            &lt;xs:element name="array">
-							                &lt;xs:complexType>
-							                    &lt;xs:sequence>
-							                        &lt;xs:element name="double" type="xs:double" minOccurs="2" maxOccurs="3" />
-							                    &lt;/xs:sequence>
-							                &lt;/xs:complexType>
-							            &lt;/xs:element>
-							        &lt;/xs:sequence>
-							    &lt;/xs:complexType>
-							&lt;/xs:element>
-						</pre>
-
-					</section>
-
-					</section><!-- End of "Mapping to XML Schema" -->
-
-					</section>
+					</section><!-- End of "Value Type" -->
 
 					<section>
 						<h4>Note on URI Resolution</h4>
