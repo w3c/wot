@@ -87,14 +87,14 @@
       <h1 id="title">Web of Things Interest Group Charter</h1>
 
       <p class="issue"><i>
-      	Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public email list</a>, and you are encouraged to file <a href="https://github.com/w3c/wot/issues">issues</a> on GitHub and open <a href="https://github.com/w3c/wot/pulls">pull-requests</a> with concrete proposals.
+      	Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public e-mail list</a>, and you are encouraged to file <a href="https://github.com/w3c/wot/issues">issues</a> on GitHub and open <a href="https://github.com/w3c/wot/pulls">pull-requests</a> with concrete proposals.
       	The GitHub location of this document is <a href="https://github.com/w3c/wot/tree/master/charters/wot-ig-2016.html">https://github.com/w3c/wot/tree/master/charters/wot-ig-2016.html</a>.
       </i></p>
 
-      <p class="mission">The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group</a> is to counter the fragmentation of the Internet of Things by introducing a Web-based abstraction layer spanning existing Internet of Things platforms and complementing available standards. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect. As a W3C Interest Group, we're seeking to build a shared understanding of the Web of Things, and to identify opportunities for initiating standards track work within W3C Working Groups. Industry alliances and standards development organizations are seeking to collaborate with W3C in two critical areas: semantic interoperability and end to end security across different platforms.</p>
+      <p class="mission">The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group</a> is to counter the fragmentation of the Internet of Things by introducing a Web-based abstraction layer spanning existing Internet of Things platforms and complementing available standards. We seek to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect. As a W3C Interest Group, we are seeking to build a shared understanding of the Web of Things, and to identify opportunities for initiating standards track work within W3C working groups. Industry alliances and standards development organizations are seeking to collaborate with W3C in two critical areas: semantic interoperability and end-to-end security across different platforms.</p>
 
       <div class="noprint">
-        <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Web of Things Interest Group.</a></p>
+        <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/75874/join">Join the Web of Things Interest Group</a>.</p>
       </div>
 
 <section id="details">
@@ -104,7 +104,7 @@
               Start date
             </th>
             <td>
-              <i class="todo">11 July 2016 monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+              <i class="todo">11 July 2016 (date of the "Call for Participation", when the charter is approved)</i>
             </td>
           </tr>
           <tr id="Duration">
@@ -144,8 +144,8 @@
               Meeting Schedule
             </th>
             <td>
-              <strong>Teleconferences:</strong> Weekly with additional topic specific calls as appropriate.<br />
-              <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, with no more than 4 face to face meetings in total per year.
+              <strong>Teleconferences:</strong> Weekly with additional topic-specific calls as appropriate.<br />
+              <strong>Face-to-face:</strong> We will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, with no more than 4 face-to-face meetings in total per year.
             </td>
           </tr>
     </table>
@@ -156,47 +156,48 @@
 <section id="intro" class="scope">
     <h2>Introduction</h2>
 		
-    <p>The Internet of Things (IoT) suffers from a lack of interoperability across platforms. As a result developers are faced with data silos, high costs and limited market potential. This can be likened to the situation before the Internet when there were competing non-interoperable networking technologies. The Internet makes it easy to develop networked applications independently of those technologies. W3C is seeking to do the same for the Internet of Things with the Web of Things.</p>
+    <p>The Internet of Things (IoT) suffers from a lack of interoperability across platforms. As a result developers are faced with data silos, high costs, and limited market potential. This can be likened to the situation before the Internet, when there were competing non-interoperable networking technologies. The Internet makes it easy to develop networked applications independently of those technologies. The W3C is seeking to do the same for the Internet of Things with the Web of Things.</p>
 	
-    <p>To achieve this goal for cross platform interoperability, we need platform independent APIs for application developers, and a means for different platforms to discover how to inter-operate with one another. The approach we are taking is based upon rich metadata that describes the data and interaction models exposed to applications, and the communications and security requirements for platforms to communicate effectively. A further aspect is the need to enable platforms to share the same meaning when they exchange data. We are therefore seeking to enable expression of the semantics of things and the domain constraints associated with them, building upon W3C's extensive work on RDF and Linked Data. This is the second charter for the Web of Things Interest Group, and continues the work on identifying requirements for the technology building blocks for the application layer that forms the Web of Things.</p>
+    <p>To achieve this goal for cross-platform interoperability, we need platform-independent APIs for application developers and a means for different platforms to discover how to inter-operate with one another. The approach we are taking is based upon rich metadata that describes the data and interaction models exposed to applications, and the communications and security requirements for platforms to communicate effectively. A further aspect is the need to enable platforms to share the same meaning when they exchange data. We are therefore seeking to enable expression of the semantics of things and the domain constraints associated with them, building upon W3C's extensive work on RDF and Linked Data. This is the second charter for the Web of Things Interest Group and continues the work on identifying requirements for the technology building blocks for the application layer that forms the Web of Things.</p>
     
-    <p>The Web of Things is founded on the <a href="http://www.w3.org/TR/2004/REC-webarch-20041215/">Architecture of the World Wide Web</a>. Things stand for physical or abstract entities such as abstractions encompassing multiple devices. Each thing is identified with a URI. This URI can be followed to access the thing's description, which can include its relationship to other things, analogous to links in HTML. The Web of Things also allows for on-device data processing and direct thing-to-thing interaction. For this, things can provide a standardized vendor neutral runtime environment for portable apps, similar to Web apps running in every browser. Due to the variations in requirements across application domains, there are many protocols. Things can be interacted with on many kinds of platforms and devices ranging from resource constrained IoT devices, and gateways to cloud-based server farms. In addition, Web browsers may be used for the human-machine interface for services based around the Web of Things.</p>
+    <p>The Web of Things is founded on the <a href="http://www.w3.org/TR/2004/REC-webarch-20041215/">Architecture of the World Wide Web</a>. Things stand for physical or abstract entities such as sensor nodes and services encompassing multiple devices, respectively. Each thing is identified with a URI. This URI can be followed to access the thing's description, which can include its relationship to other things, analogous to links in HTML. The Web of Things also allows for on-device data processing and direct thing-to-thing interaction. For this, things can provide a standardized vendor neutral runtime environment for portable apps, similar to Web apps running in every browser. Due to the variations in requirements across application domains, there are many protocols. Things can be interacted with on many kinds of platforms and devices ranging from resource-constrained IoT devices and less constrained gateways to cloud-based server farms. In addition, Web browsers may be used for the human-machine interface for services based around the Web of Things.</p>
     
-    <p>The short term priority for the Interest Group is to launch a Working Group to initiate standardization for work items that the Interest Group believes are ready for progression along the W3C Recommendation track. In the mid-term, the priority is to demonstrate how the Web of Things can be used across a wide range of IoT platforms in collaboration with the corresponding consortia and organizations. This will include work on metadata for describing particular platforms, as well as work on semantic models and constraints, and enabling end to end security across different platforms. In the long term, the priority will be on enabling open markets of services on the scale of the Web.</p>
+    <p>The short term priority for the Interest Group is to launch a Working Group to initiate standardization of work items that the Interest Group believes are ready for progression along the W3C Recommendation track. In the mid-term, the priority is to demonstrate how the Web of Things can be used across a wide range of IoT platforms in collaboration with the corresponding consortia and organizations. This will include work on metadata for describing particular platforms, as well as work on semantic models and constraints, and enabling end-to-end security across different platforms. In the long term, the priority will be on enabling open markets of services on the scale of the Web.</p>
 </section>
 
 <section id="scope" class="scope">
     <h2>Scope</h2>
 
     <p>
-    <a href="wot-ig-2016-relationship.png"><img id="relationships" src="wot-ig-2016-relationship.png" alt="relationship between WoT IG and WG" /></a>
-    The Web of Things Interest Group (WoT IG) is a forum for discussion of ideas relating to the Web of Things, and is intended to complement the role of the proposed Web of Things Working Group. In particular, the Interest Group will propose new Work Items for the Working Group based upon new use case considerations, and discussions with IoT developer communities, industry alliances and standards development organizations. Vice versa, the Interest Group will consider new topics that are submitted to it by the Working Group.</p>
+      <a href="wot-ig-2016-relationship.png"><img id="relationships" src="wot-ig-2016-relationship.png" alt="relationship between WoT IG and WG" /></a>
+      The Web of Things Interest Group (WoT IG) is a forum for discussion of ideas relating to the Web of Things and is intended to complement the role of the proposed Web of Things Working Group. In particular, the Interest Group will propose new Work Items for the Working Group based upon new use case considerations and discussions with IoT developer communities, industry alliances, and standards development organizations. Vice versa, the Interest Group will consider new topics that are submitted to it by the Working Group.
+    </p>
     
-    <p>The Interest Group will identify requirements for standardization in two ways: first, by exploring use cases and requirements for a broad range of application domains, and second, through examining the requirements for integrating a broad range of IoT platforms into the Web of Things. Two areas that have already been identified as critical are semantic interoperability and end to end security across different platforms. The Interest Group will work on these in coordination with external groups to address their needs.</p>
+    <p>The Interest Group will identify requirements for standardization in two ways: first, by exploring use cases and requirements for a broad range of application domains, and second, through examining the requirements for integrating a broad range of IoT platforms into the Web of Things. Two areas that have already been identified as critical are semantic interoperability and end-to-end security across different platforms. The Interest Group will work on these in coordination with external groups to address their needs.</p>
     
-    <p>This is expected to include an exploration of the role of semantic technologies for representing and applying domain constraints, and an exploration of the role of trust assumptions for enabling end to end security across platforms using standards defined by different organizations. This work would combine implementation experience with in-depth analysis. The Interest Group is seeking to broaden the range of participants to provide the necessary skills and resources to conduct this work.</p>
+    <p>In the mid term, this is expected to include an exploration of the role of semantic technologies for representing and applying domain constraints, and an exploration of the role of trust assumptions for enabling end-to-end security across platforms using standards defined by different organizations. This work would combine implementation experience with in-depth analysis. The Interest Group is seeking to broaden the range of participants to provide the necessary skills and resources to conduct this work.</p>
 
-    <p>An important activity is the operation of PlugFests to test interoperability and to validate the current working assumptions of the technology building blocks discussed in the Web of Things Interest Group. These events enable developers to get together to test their implementations and facilitates networking between partners and experts. The Interest Group will seek to encourage work on open source projects and community evaluation of the Web of Things. In more detail, PlugFests allow participants to:</p>
+    <p>An important activity is the operation of PlugFests to test interoperability and to validate the current working assumptions of the technological building blocks discussed in the Web of Things Interest Group as well as proposed Working Group. These events enable developers to get together to test their implementations and facilitates networking between partners and experts. The Interest Group will seek to encourage work on open source projects and community evaluation of the Web of Things. In more detail, PlugFests allow participants to:</p>
     
     <ul>
-    <li>assist with preparing implementation reports for WoT WG Candidate Recommendations</li>
-    <li>test-drive upcoming or proposed technologies for the W3C Recommendation Track</li>
-    <li>take part in interoperability experiments across implementations for ideas at different levels of maturity</li>
-    <li>reach out to other communities and new members (open day, demo track)</li>
+      <li>assist with preparing implementation reports for WoT WG Candidate Recommendations</li>
+      <li>test-drive upcoming or proposed technologies for the W3C Recommendation Track</li>
+      <li>take part in interoperability experiments across implementations for ideas at different levels of maturity</li>
+      <li>reach out to other communities and new members through an OpenDay for non-Members, which usually includes a demo track</li>
     </ul>
     
-    <p>The Interest Group will use the practical experience gained from these experiments as a basis for identifying new work items. Further ideas for topic areas are expected from discussions and expert presentations of IoT projects, including, for example, decentralised IoT systems and the role of blockchains. Another example is the exploration of ideas for a vendor neutral Web platform for apps that are installed on home gateways. The Interest Group will incubate work items for the Web of Things until they are ready for transfer to the W3C Recommendation Track, either in existing Working Groups, such as the Web of Things Working Group or in new Working Groups.</p>
+    <p>In the long term, the Interest Group will use the practical experience gained from these experiments as a basis for identifying new work items. Further ideas for topic areas are expected from discussions and expert presentations of IoT projects, including for example, decentralised IoT systems and the role of blockchains. Another example is the exploration of ideas for a vendor neutral Web platform for apps that are installed on home gateways. The Interest Group will incubate work items for the Web of Things until they are ready for transfer to the W3C Recommendation Track, either in existing Working Groups, such as the Web of Things Working Group, or in new working groups.</p>
 
     <div class="summary">
         <p style="text-align:center;font-style:italic">Scope Summary</p>
         <ul>
             <li>Support the proposed Web of Things Working Group</li>
             <li>Organize and run PlugFests to evaluate the current working assumptions in regards to Web of Things technologies</li>
-            <li>Reach out and collaborate with interested organizations, vendors and communities in support of the  Interest Group's mission</li>
+            <li>Reach out and collaborate with interested organizations, vendors, and communities in support of the Interest Group's mission</li>
             <li>Explore areas and identify work that is ready for transfer to the W3C Recommendation Track</li>
         </ul>
     </div>
-	
+
 </section>
 
 <section id="deliverables">
@@ -207,12 +208,12 @@
 
 	<h3>Short-term Deliverables</h3>
 	
-	<p>The first set of deliverables listed here were started during the first charter period. They mainly represent supportive input for the proposed Web of Things Working Group.
+	<p>The first set of deliverables listed here were started during the first charter period. They mainly represent supportive input for the proposed Web of Things Working Group.</p>
 
 	<dl>
 		<dt><a href="http://w3c.github.io/wot/wot-ucr.html">Use Cases and Requirements</a></dt>
 		<dd>
-			<p>This document will collect use cases from a range of application domains, and identify requirements that are shared across domains, and those that are specific to each domain.</p>
+			<p>This document will collect use cases from a range of application domains, and identify requirements that are shared across domains and those that are specific to each domain.</p>
 			<p><b>Editor:</b> Johannes Hund</p>
 			<p class="milestone"><b>Expected completion:</b> Q2 2016</p>
 		</dd>
@@ -226,14 +227,14 @@
 
 		<dt><a href="http://w3c.github.io/wot/architecture/wot-architecture.html">Architecture</a></dt>
 		<dd>
-			<p>This document will provide a high level overview of the architectural components of the Web of Things.</p>
+			<p>This document will provide a high-level overview of the architectural components of the Web of Things.</p>
 			<p><b>Editor:</b> Kazuo Kajimoto</p>
 			<p class="milestone"><b>Expected completion:</b> Q2 2016</p>
 		</dd>
 
 		<dt><a href="http://w3c.github.io/wot/current-practices/wot-practices.html">Current Practices</a></dt>
 		<dd>
-			<p>This document will describe building blocks that have been evaluated through prototypes and so-called PlugFests (interoperability testing).
+			<p>This document will describe building blocks that have been evaluated through prototypes and the PlugFests.
 			<p><b>Editors:</b> Daniel Peitner, Matthias Kovatsch</p>
 			<p class="milestone"><b>Expected completion:</b> Continous releases for each PlugFest</p>
 		</dd>
@@ -351,21 +352,15 @@
 </section>
 
 <section id="patentpolicy">
-<!--
-    <h2>Patent Policy</h2>
+    <h2 id="patentpolicy">Patent Disclosures</h2>
 
-    <p>This Interest Group operates under the <a href="http://w3.org/Consortium/Patent-Policy-20040205/">W3C Patent Policy</a> (5 February 2004 Version). To promote the widest adoption of Web standards, W3C seeks to issue Recommendations that can be implemented, according to this policy, on a Royalty-Free basis. For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.</p>
--->
-<h2 id="patentpolicy">Patent Disclosures</h2>
+    <p>The Web of Things Interest Group provides an opportunity to share perspectives on the topic addressed by this charter. W3C reminds Interest Group participants of their obligation to comply with patent disclosure obligations as set out in <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">Section 6</a> of the W3C Patent Policy. While the Interest Group does not produce Recommendation-track documents, when Interest Group participants review Recommendation-track specifications from Working Groups, the patent disclosure obligations do apply.</p>
 
-<p>The Web of Things Interest Group provides an opportunity to share perspectives on the topic addressed by this charter. W3C reminds Interest Group participants of their obligation to comply with patent disclosure obligations as set out in <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">Section 6</a> of the W3C Patent Policy. While the Interest Group does not produce Recommendation-track documents, when Interest Group participants review Recommendation-track specifications from Working Groups, the patent disclosure obligations do apply.</p>
-
-<p>For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.</p>
+    <p>For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.</p>
 
 </section>
 
 <section id="licensing">
-
     <h2>Licensing</h2>
     
     <p>This Interest Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
@@ -373,7 +368,6 @@
 </section>
 
 <section id="about">
-
     <h2>About this Charter</h2>
     
     <p>This charter has been created according to <a href="https://www.w3.org/Consortium/Process/groups#GAGeneral">section 5.2</a> of the <a href="https://www.w3.org/Consortium/Process">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.</p>
