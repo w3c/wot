@@ -177,9 +177,9 @@
 
 				<section>
 					<h3>Resource Model and URIs</h3>
-					
+
 					<p>
-						
+
 					</p>
 
 					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
@@ -187,7 +187,7 @@
 
 				<section id="sec-protocol-mappings">
 					<h3>Protocol Mappings</h3>
-					
+
 					<p>
 						WoT architecture does not limit to the mappings to what is isted here.
 						This is currently practiced at PlugFests.
@@ -223,10 +223,10 @@
 
 				<section>
 					<h3>Security Considerations</h3>
-					
+
 					@TODO Callee required term? SIP related? Client/Server would be better for IoT people
-					
-					
+
+
 					<p>The purpose of WoT is to expose private resources (things themselves, information they produce or information about them) at public-facing endpoints (e.g. Internet). This implies that components which expose things (servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
 						<ul>
 							<li>Authorization and authentication</li>When receiving instructions, servients must authorize such calls/requests i.e. determine whether to accept them for processing. This implies the need to authenticate the properties of callers that are used when performing authorization.
@@ -344,7 +344,7 @@
 						thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms,
 						instead of dealing with meaningless strings.
 					</p>
-					
+
 					<p class="remove">
 						New text: what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
 						and what is the underlying data type (float).
@@ -457,7 +457,7 @@
 							Any JSON-LD document has to be defined within a specific context that points to the relevant vocabularies.
 							For instance, the term <code>Thing</code> refers to a concept defined in the RDFS vocabulary for Thing Description at <code>http://www.w3c.org/wot/td#</code>.
 							The context object should look like this:
-							
+
 							<pre class="example">
 								{
 								  "@context": {
@@ -605,7 +605,7 @@
 -->
 					<section>
 						<h4>Property</h4>
-						
+
 						<p>
 							The interaction type <code>Property</code> is used to serve data of a thing.
 							This data can be static (e.g., supported mode, provided output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
@@ -686,7 +686,7 @@
 							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the thing.
 							There are one mandatory and four optional terms defined within the <code>Action</code> type:
 						</p>
-						
+
 						<pre class="example">
 							{
 								...
@@ -881,7 +881,7 @@
 							&lt;/value>
 						</pre>
 
-						<p class="ednote">
+						<p class="note" title="Wrapping single values in a JSON object">
 							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
 						</p>
 					</section>
@@ -889,7 +889,7 @@
 					<section>
 						<h5>Structured Data</h5>
 
-						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>. 
+						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>.
 						</p>
 
 						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
@@ -899,8 +899,8 @@
 					<section>
 						<h5>JSON Object</h5>
 
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of 
-						two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) 
+						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of
+						two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>)
 						where <code>id</code> is required to be present.
 						</p>
 
@@ -923,11 +923,11 @@
 						</p>
 
 						<pre class="example">
-							{ 
+							{
 								"value": {
 									"id": 12345,
 									"name": "Web of Things"
-								} 
+								}
 							}
 						</pre>
 
@@ -947,12 +947,26 @@
 							&lt;/value>
 						</pre>
 
+						<div class="note" title="RDF serialization of value types">
+							<p>
+								Using the TD model and JSON Schema in a single document may lead
+								to a name conflict:
+								<code>properties</code> is used both to declare Thing's
+								properties and expected keys in a JSON object.
+						 		Depending on the use case, if a serialization of the Thing
+								Description in RDF is required, the <code>valueType</code>
+								definition should be processed with an additional JSON-LD
+								context that overrides the mapping for <code>properties</code>
+								(see [[!JSON-LD]], Advanced Context Usage).
+							</p>
+						</div>
+
 					</section>
 
 					<section>
 						<h5>JSON Array</h5>
 
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of 
+						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
 						multiple number literals where the occurrence must be either twice or three times.
 						</p>
 
@@ -971,7 +985,7 @@
 						</p>
 
 						<pre class="example">
-							{ 
+							{
 								"value": [
 									123,
 									456
@@ -999,7 +1013,7 @@
 					<section>
 						<h5>Mapping to XML Schema</h5>
 
-						<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema 
+						<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema
 						look like when serialized to XML in parallel to corresponding JSON serializations.
 						</p>
 
@@ -1082,7 +1096,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 					<section>
 						<h4>Temperature Sensor</h4>
-						
+
 						<pre class="example">
 							{
 							  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -1361,10 +1375,10 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						</ul>
 						These two security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related expectation for accessing things. On the other hand TD objects may express such expectations without being signed.
 					</p>
-					
+
 					<section>
 						<h4>Protecting TD Objects</h4>
-						
+
 						<p>
 							TD objects may be protected by means of signature. Signing TD objects is optional.<br/><br/>
 							If TD objects are signed then cryptographic checksums (aka signatures) are added to establish the authenticity of TD objects. Such checksums are created by the producers/issuers of TD objects and validated by consumers of TD objects (which should reject signed TD objects whose signatures are invalid). They use keying associations between the producer of the protected TD objects and its consumer(s). The checksum resp. keying association can be asymmetric (producer signs with a private key, consumers validate with the corresponding public key) or symmetric (producer and consumer use a shared secret key).<br/>
@@ -1373,10 +1387,10 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							On top of a commonly signature object specification such as XML Signature or CMS lots of profiling may be needed in order to make a signature mechanism meaningful for a specific domain. This is illustrated by the IETF ltans effort: IETF ltans addressed the long-term archival of digital data objects and produced a number of RFCs (RFC 4810/4998/5276/5698/6238) on top of XML Signature resp. CMS that were needed to do the trick. Another example is XAdES (https://www.w3.org/TR/XAdES/). Note: this does not try to suggest that the signing of TD objects will have the same added complexity as IETF ltans or W3C XAdES, only that specific conventions/profiles for the use of JWS or XML Signature in the TD domain will be needed.
 						</p>
 					</section>
-					
+
 					<section>
 						<h4>Describing Prerequistes for Accessing Things</h4>
-						
+
 						<p>
 							When private resources (things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing the things (servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic strategies for demanding such security mechanisms:
 							<ul>
@@ -1410,7 +1424,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 				<p>
 					The Scripting API is an API for Discovery, Provisioning and Control of Things in a <a href="http://www.w3.org/WoT/">Web of Things</a>.
 				</p>
-				
+
 				<p class="issue">
 					Portable application logic, language-independent
 				</p>
@@ -1431,16 +1445,16 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							A <code>ThingRequest</code> is the entry point in the Scripting API to find things.
 							It has a single method <code>start()</code> that starts the discovery or lookup according to the <code>ThingFilter</code> that is passed as input of the <code>ThingRequest</code> constructor.
 						</p>
-						
+
 						<p>
 							PS: If the Scripting API is exposed to web pages as a JavaScript API, the User Agent may open a dialog that let users select Things the page is allowed to access after the <code>ThingRequest.start()</code> is called.
 							@TODO not Node.js example.
 							For trusted applications e.g. running in Node.js environment, the list of things found is passed to the application without asking the user.
 						</p>
-					
+
 						<!-- Proper WebIDL syntax -->
 						<!-- Examples: https://www.w3.org/respec/examples/webidl-contiguous.html -->
-					
+
 						<pre class="idl">
 							[Constructor(ThingFilter filter)]
 							interface ThingRequest {
@@ -1448,22 +1462,22 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							};
 						</pre>
 					</section>
-					
+
 					<section>
 						<h3 id="interface-thingfilter">Interface <code>ThingFilter</code></h3>
-					
+
 						<p>
 							A <code>ThingFilter</code> is a dictionary that is passed as input to the <code>ThingRequest</code> constructor.
 							It may be extended in the future with additional filter properties. The current supported filter properties are:
 						</p>
-						
+
 						<ul>
 							<li><code>type</code>: It is a url that identify the type of the thing e.g. <code>http://example.com/things#temperature</code></li>
 							<li><code>proximity</code>: It defines how to find the requested things. See ThingProximity Interface for more details about the possible values.</li>
 							<li><code>id</code>: Each thing consists of a unique <code>id</code> (see attribute <code>Thing.id</code>). Using the <code>id</code> in the filter allows to find a Thing by its <code>id</code>. If <code>id</code> is set, all other filter parameters will be ignored.</li>
 							<li><code>server</code>: It is the end point of the WoT directory where to look to Things. If <code>server</code> is set, the value of <code>proximity</code> must be <code>remote</code>.</li>
 						</ul>
-						
+
 						<pre class="idl">
 							dictionary ThingFilter {
 							    DOMString? type;
@@ -1473,21 +1487,21 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							};
 						</pre>
 					</section>
-					
+
 					<section>
 						<h3 id="interface-thingproximity">Interface <code>ThingProximity</code></h3>
-					
+
 						<p>
 							The <code>ThingProximity</code> is a enumaration about possible values for the <code>ThingFilter.proximity</code> attribute.
 							The three values are currently supported:
 						</p>
-						
+
 						<ul>
 							<li><code>local</code>: It represents discovery in local networks (e.g. SSDP, mDNS/DNS-SD, ...)</li>
 							<li><code>nearby</code>: It represents all discovery technologies where the physical location is considered (BLE, Audio Watermarking, ...)</li>
 							<li><code>remote</code>: It represents lookup in WoT directories. The end point of the directory musst be supported.  </li>
 						</ul>
-						
+
 						<pre class="idl">
 							enum ThingProximity {
 							    &quot;local&quot;,
@@ -1497,18 +1511,18 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						</pre>
 					</section>
 				</section>
-					
+
 				<section>
 					<h3>Client API</h3>
-					
+
 					<section>
 						<h4 id="interface-consumedthing">Interface <code>ConsumedThing</code></h4>
-						
+
 						<p>
 							<code>ConsumedThing</code> is the main interface to interact with a thing as client.</p>
 							It consists of the following attributes and functions:
 						</p>
-						
+
 						<ul>
 							<li><code>id</code>: is a unique identifier of a Thing.</li>
 							<li><code>type</code>: is the type of a thing. It is important to filter things by type (see <code>ThingFilter.type</code>).</li>
@@ -1522,8 +1536,8 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							<li><code>removeListener()</code>: remove an already added event listener.</li>
 							<li><code>removeAllListeners()</code>: remove all listener registered for an event defined in the thing description.</li>
 						</ul>
-					
-					
+
+
 						<pre class="idl">
 							[Constructor(ThingDescription td)]
 							interface ConsumedThing {
@@ -1557,7 +1571,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							<li><code>value</code>: the new value reported by the event.</li>
 							<li><code>source</code>: the thing that fired the event.</li>
 						</ul>
-					
+
 						<pre class="idl">
 							interface ThingEvent {
 							    readonly attribute DOMString name;
@@ -1569,9 +1583,9 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 					<section>
 						<h4 id="interface-thingdescription">Interface <code>ThingDescription</code></h4>
-						
+
 						<p><code>ThingDescription</code> is a place holder for the JSON-LD spec of the Thing Description.</p>
-					
+
 						<pre class="idl">
 							dictionary ThingDescription {
 							    // Thing Description according to the JSON-LD TD spec.
@@ -1582,27 +1596,27 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 				<section>
 					<h3>Server API</h3>
-					
+
 					<section>
 						<h4 id="interface-exposedthing">Interface <code>ExposedThing</code></h4>
-						
+
 						<p>
 							The interface <code>ExposedThing</code> is used for providing a thing.
 							It has methods to attach handlers that flesh out the application logic and can modify the provided interactions.
 						</p>
-					
+
 						<pre class="idl">
 							[Constructor(ThingDescription td), Constructor(DOMString name)]
 							interface ExposedThing {
 							    readonly attribute ThingDescription description;
 							    readonly attribute DOMString name;
-							
+
 							    ExposedThing addAction(DOMString actionName, DOMString parameterType, DOMString resultType);
 							    ExposedThing addProperty(DOMString propertyName, DOMString propertyType);
-							
+
 							    void onCall(DOMString actionName, ActionEventListener listener);
 							    void onChange(DOMString actionName, ChangeEventListener listener);
-							
+
 							    void addListener(DOMString eventName, ThingEventListener listener);
 							    void removeListener(DOMString eventName, ThingEventListener listener);
 							    void removeAllListeners(DOMString eventName);
@@ -1628,7 +1642,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 				<section>
 					<h3>Scripting API Examples</h3>
-					
+
 					<pre class="example highlight" title="Discover Things nearby">
 						var filter = {
 						    type: &quot;http://example.org#foo&quot;,
