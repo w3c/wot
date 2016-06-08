@@ -4,7 +4,7 @@ Typically, (REST) resources are used with query parameters such as /resource?par
 #Use Case
 * function parameters
 * OCF if views 
-* filtering / selecting of, e.g., JSON or XMl-based data (or Yang data)
+* filtering / selecting of, e.g., JSON or XML-based data (or Yang data)
 * ...
 
 #First Ideas
