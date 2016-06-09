@@ -32,3 +32,7 @@ Similar to multiple URI schemes, each interaction could provide protocol-specifi
 * [CoAP](https://github.com/w3c/wot/blob/master/proposals/explicit-bindings/binding-coap.md)
 * [BLE](https://github.com/w3c/wot/blob/master/proposals/explicit-bindings/binding-ble.md)
 * [BACnet](https://github.com/w3c/wot/blob/master/proposals/explicit-bindings/binding-bacnet.md)
+
+## Abstract Transfer Layer (by Michael Koster)
+
+* [Proposal](w3c.github.io/wot/proposals/explicit-bindings/abstract-transfer-layer.html)
