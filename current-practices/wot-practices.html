@@ -440,7 +440,7 @@
 					<p>
 						Based on this TD you are able to know that JWT is required for the interaction of Thing's resources (tokens are issued by https://authority-issuing.org and tokens
 						are signed by HS256), status can be requested (using CoAP GET coap://www.myled.com:5683/status  or HTTP GET http://www.myled.com:8080/myled/status) or modified since
-						the status property is writeable (using CoAP PUT coap://www.myled.com:5683/in or using HTTP PUT http://www.myled.com:8080/myled/myled/in with a string status payload). Actions can be
+						the status property is writable (using CoAP PUT coap://www.myled.com:5683/in or using HTTP PUT http://www.myled.com:8080/myled/myled/in with a string status payload). Actions can be
 						initiated using the resources fadeIn and fadeOut (e.g.,  using CoAP POST coap://www.myled.com:5683/in or HTTP coap://www.myled.com:5683/myled/out with a short-based payload (for ms)).
 						The "MyLEDThing" also serves an event (criticalCondition) that enables clients to be informed when an event occurs (e.g., using CoAP GET OBSERVE  coap://www.myled.com:5683/ev).
 					</p>
@@ -611,21 +611,24 @@
 						<h4>Property</h4>
 
 						<p>
-							The interaction type <code>Property</code> is used to serve data of a thing.
-							This data can be static (e.g., supported mode, provided output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
+							The array field <code>properties</code> is used to reflect one ore more interaction property data of a servient. 
+							Such data can be static (e.g., supported mode, provided output voltage, etc.) or 
+							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
+
 
 						<pre class="example">
 							{
 								...
 							  "properties": [
 							    {
-							      "@type": "sensor:Temperature",
-							      "name": "temperature",
-							      "sensor:unit": "sensor:Celsius",
-							      "valueType": "number",
+							      <div style="font-style:italic;">"@type": "A_Type_From_Ontology"</div>,
+							      "name": "AnyName",
+							      "valueType": "JSON Type (number, string,..) or JSON Schema or XSD or ...",
 							      "writable": false,
-							      "hrefs": "temp"
+							      "hrefs": ["relative_or_absolute_URI"],
+							      <div style="font-style:italic;">"stability": 0,
+							      "security": {...}</div>
 							    }
 							  ]
 								...
@@ -633,7 +636,7 @@
 						</pre>
 
 						<p>
-							There are four mandatory and two optional terms defined for the <code>Property</code> type:
+							There are four mandatory and three optional terms (marked as italic in the JSON sample) defined for the <code>Property</code> type:
 						</p>
 
 						<ul>
@@ -672,7 +675,7 @@
 						</p>
 
 						<p>
-							If the property is writeable (<code>writeable=true</code>), then the property accepts the same format(s) as input as described for its output.
+							If the property is writable (<code>writable=true</code>), then the property accepts the same format(s) as input as described for its output.
 						</p>
 
 						<p>
