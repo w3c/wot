@@ -530,30 +530,24 @@
 					<section>
 						<h4>Thing's Metadata</h4>
 
+				<p>A TD will provide some generic metadata vocabularies that can be used, e.g., to assign a name 
+				or what kind of protocols does a servient support. 
+				
+				is used to provide generic information about a thing.</p>
 						<pre class="example">
 							{
 								...
-							  "name": "MyLED",
-							  "uri": [
-							    "coap://www.myled.com:5683/",
-							    "http://www.myled.com:8080/myled/"
-							  ],
-							  "encodings": [
-							    "JSON",
-							    "EXI4JSON"
-							  ],
-							  "security": {
-							    "cat": "token:jwt",
-							    "alg": "HS256",
-							    "as": "https://authority-issuing.org"
-							  }
+							  "name": "anyName",
+							  "uri": ["endpoint_uri_with_underlying_protocol_e.g._coap://www.myled.com:5683/"],
+							  "encodings": ["supported_encoding_formats_e.g._JSON],
+							  <div style="font-style:italic;">"security": {...}</div>
 								...
 							}
 						</pre>
 
 						<p>
-							Metadata is used to provide generic information about a thing.
-							There are three mandatory and one optional vocabulary terms defined within metadata:
+							
+							There are three mandatory and one optional vocabulary (shown as italic text in JSON snippet) terms defined within metadata:
 						</p>
 
 						<ul>
