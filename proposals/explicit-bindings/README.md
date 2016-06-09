@@ -35,4 +35,4 @@ Similar to multiple URI schemes, each interaction could provide protocol-specifi
 
 ## Abstract Transfer Layer (by Michael Koster)
 
-* [Proposal](w3c.github.io/wot/proposals/explicit-bindings/abstract-transfer-layer.html)
+* [Proposal](https://w3c.github.io/wot/proposals/explicit-bindings/abstract-transfer-layer.html)
