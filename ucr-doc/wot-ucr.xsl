@@ -17,20 +17,23 @@
                         editors: [
                         {   name:       "Johannes Hund",
                             company:    "Siemens",
-                            companyURL: "http://www.siemens.com/" },
-                        {   name:       "Erik Wilde",
-                            url:        "http://dret.net/netdret/",
-                            company:    "Siemens",
                             companyURL: "http://www.siemens.com/" }
                         ],
-                        otherLinks: [{
+                        otherLinks: [
+                        {
                             key: "GitHub",
                             data: [{
-                                value: "Master branch on GitHub",
-                                href: "https://github.com/w3c/wot/tree/master"
+                                    value: "Master branch on GitHub",
+                                    href: "https://github.com/w3c/wot/tree/master"
                                 },{
-                                value: "Project Pages branch on GitHub",
-                                href: "https://github.com/w3c/wot/tree/gh-pages" }]}
+                                    value: "Project Pages branch on GitHub",
+                                    href: "https://github.com/w3c/wot/tree/gh-pages"
+                                },{
+                                    value: "Contribute",
+                                    href: "https://github.com/w3c/wot/edit/master/ucr-doc/wot-ucr.xml"
+                                }
+                                ]
+                            }
                         ],
                         };
                     </script>
