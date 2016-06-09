@@ -63,21 +63,26 @@
 			<h1>Introduction</h1>
 
 			<p>
-				The Web of Things (WoT) interest group (IG) provides a forum for technical discussions to identify use cases and requirements for services based upon the role of Web technologies for a combination of the Internet of Things (IoT) with the Web of data.
-				The IG has been divided into four task forces that looked into building blocks for such a Web of Things: thing description (TD), scripting API & protocol bindings (AP), discovery (DI), and security & privacy (SP).
-				Apart from the planned deliverable of a technology landscape document which provides an overview of existing technology, also promising concepts and working drafts were discussed. It turned out challenging for implementers
-				to follow the current state of the WoT building blocks respectively in these discussions.
-				This is, however, very important for the mission of the <a href='#plugfests'>PlugFests</a>, where the current practices should be tested and evaluated.
-				Moreover, it is hard for newcomers to quickly get a picture of the IG activities.
+				The Web of Things (WoT) Interest Group (IG) provides a forum for technical discussions on the role of Web technologies for a combination of the Internet of Things (IoT) with the Web of data.
+				Apart from the <a href="http://w3c.github.io/wot/wot-ucr.html">Use Cases and Requirements</a> and <a href="http://w3c.github.io/wot/landscape.html">Technology Landscape</a> deliverables, the IG is also working on promising concepts and prototypical building blocks.
+				It turned out challenging for implementers to follow the current practices resulting from the IG discussions.
+				This is, however, very important for the mission of the <a href='#plugfests'>PlugFests</a>, where the current practices should be tested and evaluated through prototypes.
+				Moreover, it is hard for newcomers to quickly get a picture of the IG activities and intermediary results.
 				Thus, this document shall provide a snapshot that represents the current practices of the WoT IG.
-				It preserves the results of the PlugFests as well as the discussions between participants.
-				This document is not a technical specification, but more a working document for implementors of the prototypical WoT building blocks.
+				It preserves the latest consensus of the discussions among the Members as well as the results of the the PlugFests.
+				Note that this document is not a technical specification, but more a working document for implementors of the prototypical WoT building blocks.
 			</p>
 
 			<section>
 				<h2>Vision</h2>
 				<p>
-					...
+					The central idea of WoT is that things can describe their capabilities and metadata in a machine-understandable format: the WoT <a>Thing Description</a> (TD), which is rooted in <a>RDF</a>.
+					The TD can be served by a thing itself or hosted elsewhere on the Web.
+					This way, a TD can also be retrofitted on existing devices, and thereby complement existing IoT platforms and standards with rich metadata to enable interoperability across platforms.
+					WoT also supports flexible Protocol Bindings that enable the mapping of a semantically described thing interaction to different protocols, since each domain has different requirements.
+					Finally, WoT envisions to provide a common runtime environment for IoT-related apps.
+					Sensors and actuators can be improved by installing better data processing algorithms or by adding completely new features through software.
+					With a common runtime environment, aggregation apps can be instantiated in the cloud and then relocated to local hubs, or even directly onto a powerful thing, to meet certain quality of service requirements.
 				</p>
 			</section>
 
@@ -115,13 +120,13 @@
 				<dd>Programming interface that allows scripts to discover things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#sec-scripting-api"></a>)</dd>
 
 				<dt><dfn data-lt="servient|servients">Servient</dfn></dt>
-				<dd>System component or application endpoint that may be in client role, server role, or both and makes things interactive by providing a WoT API</dd>
+				<dd>The addressable application endpoint of a thing that makes it interactive by providing a WoT API and means to execute application logic</dd>
 
 				<dt><dfn>SPARQL</dfn></dt>
 				<dd>A query language for semantic data</dd>
 
 				<dt><dfn>Thing</dfn></dt>
-				<dd>An entity in the Web of Things that can either be a physical artifact such as a device or a virtual representation such as a location or group of device</dd>
+				<dd>The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</dd>
 
 				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
 				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a thing (see <a href="#sec-td"></a>)</dd>
@@ -530,24 +535,30 @@
 					<section>
 						<h4>Thing's Metadata</h4>
 
-				<p>A TD will provide some generic metadata vocabularies that can be used, e.g., to assign a name 
-				or what kind of protocols does a servient support. 
-				
-				is used to provide generic information about a thing.</p>
 						<pre class="example">
 							{
 								...
-							  "name": "anyName",
-							  "uri": ["endpoint_uri_with_underlying_protocol_e.g._coap://www.myled.com:5683/"],
-							  "encodings": ["supported_encoding_formats_e.g._JSON],
-							  <div style="font-style:italic;">"security": {...}</div>
+							  "name": "MyLED",
+							  "uri": [
+							    "coap://www.myled.com:5683/",
+							    "http://www.myled.com:8080/myled/"
+							  ],
+							  "encodings": [
+							    "JSON",
+							    "EXI4JSON"
+							  ],
+							  "security": {
+							    "cat": "token:jwt",
+							    "alg": "HS256",
+							    "as": "https://authority-issuing.org"
+							  }
 								...
 							}
 						</pre>
 
 						<p>
-							
-							There are three mandatory and one optional vocabulary (shown as italic text in JSON snippet) terms defined within metadata:
+							Metadata is used to provide generic information about a thing.
+							There are three mandatory and one optional vocabulary terms defined within metadata:
 						</p>
 
 						<ul>
