@@ -611,7 +611,7 @@
 						<h4>Property</h4>
 
 						<p>
-							The array field <code>properties</code> is used to reflect one or more interactions of type Property. 
+							The array field <div style="font-style:italic;">properties</div></div> is used to reflect one or more interactions of type <code>Property</code>. 
 							Property provides data that can be static (e.g., supported mode, rated output voltage, etc.) or 
 							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
@@ -622,12 +622,12 @@
 								...
 							  "properties": [
 							    {
-							      <div style="font-style:italic;">"@type": "A_Type_From_Ontology"</div>,
+							      <div style="font-style:italic;">"@type": "A_Type_From_an_Ontology",</div>
 							      "name": "AnyName",
 							      "valueType": "JSON Type (number, string,..) or JSON Schema or XSD or ...",
 							      "writable": false,
-							      "hrefs": ["relative_or_absolute_URI"],
-							      <div style="font-style:italic;">"stability": 0,
+							      "hrefs": ["relative_or_absolute_URI"],<div style="font-style:italic;">
+							      "stability": 0,
 							      "security": {...}</div>
 							    }
 							  ]
@@ -688,33 +688,35 @@
 						<h4>Action</h4>
 
 						<p>
-							The interaction type <code>Action</code> targets changes or processes on a Thing that take a certain time (i.e., actions cannot be applied instantaneously like property writes).
+							The interaction type <code>Action</code> targets changes or processes on a Thing that take a certain time 
+							(i.e., actions cannot be applied instantaneously like property writes).
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
 							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the thing.
-							There are one mandatory and four optional terms defined within the <code>Action</code> type:
+							
 						</p>
+						<p>Within the TD, the  servient's actions are announced by the JSON array <div style="font-style:italic;">actions</div>.</p>
 
 						<pre class="example">
 							{
 								...
 							  "actions": [
 							    {
-							      "@type": "actuator:fadeIn",
-							      "name": "fadeIn",
+							      <div style="font-style:italic;">"@type": "A_Type_From_an_Ontology",</div>
+							      "name": "AnyName",
 							      "inputData": {
-							        "valueType": "integer",
-							        "actuator:unit": "actuator:ms"
+							        "valueType": "JSON Type (number, string,..) or JSON Schema or XSD or ..."
 							      },
-							      "hrefs": [
-							        "in",
-							        "myled/in"
-							      ]
+							      "inputData": {
+							        "valueType": "JSON Type (number, string,..) or JSON Schema or XSD or ..."
+							      },
+							       "hrefs": ["relative_or_absolute_URI"],<div style="font-style:italic;">
+							      "security": {...}</div>
 							    }
 							  ]
 								...
 							}
 						</pre>
-
+						<p>There are one mandatory and four optional terms defined within the <code>Action</code> type:</p>
 						<ul>
 							<li><b>@type: [optional]</b> RDF type of the resource, which can be used for semantic disambiguation</li>
 							<li><b>name:</b> Name of the action</li>
