@@ -323,7 +323,7 @@
 						  "properties": [
 						    {
 						      "name": "temperature",
-						      "valueType": "xsd:float",
+						      "valueType": "number",
 						      "writable": false,
 						      "hrefs": ["temp"]
 						    }
@@ -367,7 +367,7 @@
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"@type": "sensor:Temperature",</div>
 						      "name": "temperature",
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
-						      "valueType": "xsd:float",
+						      "valueType": "number",
 						      "writable": false,
 						      "hrefs": ["temp"]
 						    }
@@ -402,7 +402,7 @@
 						    {
 						      "@type": "actuator:onOffStatus",
 						      "name": "status",
-						      "valueType": "xsd:string",
+						      "valueType": "string",
 						      "writable": true,
 						      "hrefs": [ "status", "myled/status" ]
 						    }
@@ -412,7 +412,7 @@
 						      "@type": "actuator:fadeIn",
 						      "name": "fadeIn",
 						      "inputData": {
-						        "valueType": "xsd:short",
+						        "valueType": "integer",
 						        "actuator:unit": "actuator:ms"
 						      },
 						      "hrefs": ["in", "myled/in"  ]
@@ -421,7 +421,7 @@
 						      "@type": "actuator:fadeOut",
 						      "name": "fadeOut",
 						      "inputData": {
-						        "valueType": "xsd:short",
+						        "valueType": "integer",
 						        "actuator:unit": "actuator:ms"
 						      },
 						      "hrefs": ["out", "myled/out" ]
@@ -430,7 +430,7 @@
 						  "events": [
 						    {
 						      "name": "criticalCondition",
-						      "valueType": "xsd:string",
+						      "valueType": "string",
 						      "hrefs": [ "ev", "myled/event" ]
 						    }
 						  ]
@@ -623,7 +623,7 @@
 							      "@type": "sensor:Temperature",
 							      "name": "temperature",
 							      "sensor:unit": "sensor:Celsius",
-							      "valueType": "xsd:float",
+							      "valueType": "number",
 							      "writable": false,
 							      "hrefs": "temp"
 							    }
@@ -699,7 +699,7 @@
 							      "@type": "actuator:fadeIn",
 							      "name": "fadeIn",
 							      "inputData": {
-							        "valueType": "xsd:short",
+							        "valueType": "integer",
 							        "actuator:unit": "actuator:ms"
 							      },
 							      "hrefs": [
@@ -760,7 +760,7 @@
 							  "events": [
 							    {
 							      "name": "criticalCondition",
-							      "valueType": "xsd:string",
+							      "valueType": "string",
 							      "hrefs": [
 							        "ev",
 							        "myled/event"
@@ -1116,7 +1116,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "unit": "celsius",
 							      "reference": "threshold",
 							      "name": "myTemp",
-							      "valueType": "xsd:float",
+							      "valueType": "number",
 							      "writable": false,
 							      "hrefs": ["val"]
 							    }, {
@@ -1124,19 +1124,19 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "@type": "Temperature",
 							      "unit": "celsius",
 							      "name": "myThreshold",
-							      "valueType": "xsd:float",
+							      "valueType": "number",
 							      "writable": true,
 							      "hrefs": ["threshold"]
 							    }
 							  ],
 							  "events": [
 							    {
-							      "valueType": "xsd:float",
+							      "valueType": "number",
 							      "name": "myChange",
 							      "property": "temp",
 							      "hrefs": ["val/changed"]
 							    }, {
-							      "valueType": "xsd:float",
+							      "valueType": "number",
 							      "name": "myWarning",
 							      "hrefs": ["val/high"]
 							    }
@@ -1181,7 +1181,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "@id": "color",
 							      "@type": "RGBColor",
 							      "name": "myColor",
-							      "valueType": "xsd:unsignedInt",
+							      "valueType": "integer",
 							      "writable": true,
 							      "hrefs": ["val"]
 							    }
@@ -1192,7 +1192,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "xsd:boolean"
+							        "valueType": "boolean"
 							      },
 							      "hrefs": ["toggle"]
 							    }, {
@@ -1200,7 +1200,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myFadeIn",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "xsd:unsignedInt"
+							        "valueType": "integer"
 							      },
 							      "property": "color",
 							      "hrefs": ["fadein"]
@@ -1209,7 +1209,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myFadeOut",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "xsd:unsignedInt"
+							        "valueType": "integer"
 							      },
 							      "property": "color",
 							      "hrefs": ["fadeout"]
@@ -1217,7 +1217,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							  ],
 							  "events": [
 							    {
-							      "valueType": "xsd:unsignedShort",
+							      "valueType": "integer",
 							      "name": "myChange",
 							      "property": "color",
 							      "hrefs": ["changed"]
@@ -1265,7 +1265,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myMasterOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "xsd:boolean"
+							        "valueType": "boolean"
 							      },
 							      "hrefs": ["toggle"]
 							    }
