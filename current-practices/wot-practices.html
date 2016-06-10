@@ -190,38 +190,117 @@
 					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
 				</section>
 
-				<section id="sec-protocol-mappings">
-					<h3>Protocol Mappings</h3>
+				<section id="sec-protocol-bindings">
+					<h3>Protocol Bindings</h3>
 
 					<p>
-						WoT architecture does not limit to the mappings to what is isted here.
-						This is currently practiced at PlugFests.
+						We currently have an implicit mapping from WoT interaction patterns to specific protocol operations such as REST or BLE methods.
+						The WoT architecture is not limited to the Protocol Bindings isted here. These simply represent the commonly used protocols at the PlugFests.
+					</p>
+					
+					<p>
+						The default interaction with Properties is <i>read</i>. When they are marked <code>writable</code>, they can also be written.
+						Actions must support invocation, which results in the creation of a handle resource (e.g., a sub-resource of the Action resource).
+						Yet Actions may also support a read to list running or queued taks as links.
+						The linked handle resources may exhibit further interactions such as writing an update of the task parameters or cancellation.
+						Events offer a subscribe interaction, which results in the creation of a handle resource similar to tasks.
+					</p>
+					
+					<p>
+						Depending on the interaction, a payload may be optional or required.
+						For details see <a href="#sec-td-details"></a>.
 					</p>
 
 					<div class="practice">
 						<p>
-							<span id="some-practice" class="practicelab">HTTP mapping</span>
+							<span id="some-practice" class="practicelab">HTTP Binding</span>
 						</p>
 						<p class="practicedesc">
-							@TODO HTTP mapping.
+							<ul>
+								<li>
+									<b>Property</b>
+									<ul>
+										<li><b>Read:</b> GET</li>
+										<li><b>Write:</b> PUT</li>
+									</ul>
+								</li>
+								<li>
+									<b>Action</b>
+									<ul>
+										<li><b>Invoke:</b> POST</li>
+										<li><b>Update task:</b> PUT (on handle resource)</li>
+										<li><b>Cancel task:</b> DELETE (on handle resource)</li>
+									</ul>
+								</li>
+								<li>
+									<b>Event</b>
+									<ul>
+										<li><b>Subscribe:</b> POST + (Long-)Polling/Chunking/Streaming of returned handle resource</li>
+										<li><b>Update subscription:</b> PUT (on handle resource)</li>
+										<li><b>Cancel subscription:</b> DELETE (on handle resource)</li>
+									</ul>
+								</li>
+							</ul>
 						</p>
 					</div>
 
 					<div class="practice">
 						<p>
-							<span id="some-practice" class="practicelab">CoAP mapping</span>
+							<span id="some-practice" class="practicelab">CoAP Binding</span>
 						</p>
 						<p class="practicedesc">
-							@TODO CoAP mapping.
+							<ul>
+								<li>
+									<b>Property</b>
+									<ul>
+										<li><b>Read:</b> GET</li>
+										<li><b>Write:</b> PUT</li>
+									</ul>
+								</li>
+								<li>
+									<b>Action</b>
+									<ul>
+										<li><b>Invoke:</b> POST</li>
+										<li><b>Update task:</b> PUT (on handle resource)</li>
+										<li><b>Cancel task:</b> DELETE (on handle resource)</li>
+									</ul>
+								</li>
+								<li>
+									<b>Event</b>
+									<ul>
+										<li><b>Subscribe:</b> POST + Observe of returned handle resource</li>
+										<li><b>Update subscription:</b> PUT (on handle resource)</li>
+										<li><b>Cancel subscription:</b> DELETE (on handle resource)</li>
+									</ul>
+								</li>
+							</ul>
 						</p>
 					</div>
 
 					<div class="practice">
 						<p>
-							<span id="some-practice" class="practicelab">MQTT mapping</span>
+							<span id="some-practice" class="practicelab">MQTT Binding</span>
 						</p>
 						<p class="practicedesc">
-							@TODO MQTT mapping: write down Michael Koster's shim layer appraoch.
+							@TODO Help needed by MQTT implementers
+						</p>
+					</div>
+
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">BLE Binding</span>
+						</p>
+						<p class="practicedesc">
+							@TODO Help needed by BLE implementers
+						</p>
+					</div>
+
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">WebSockets Binding</span>
+						</p>
+						<p class="practicedesc">
+							@TODO Help needed by WebSockets implementers
 						</p>
 					</div>
 				</section>
@@ -455,7 +534,7 @@
 					</p>
 				</section>
 
-	 			<section>
+	 			<section id="sec-td-details">
 					<h3>Details of the TD Elements</h3>
 
 					<section>
