@@ -323,7 +323,7 @@
 						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
-						  "uris": "coap://www.mytemp.com:5683/",
+						  "uris": ["coap://www.mytemp.com:5683/"],
 						  "encodings": ["JSON"],
 						  "properties": [
 						    {
@@ -534,7 +534,8 @@
 
 					<section>
 						<h4>Thing Metadata</h4>
-
+						<p>A TD will provide some generic metadata vocabularies that can be used, e.g., 
+						to assign a name or what kind of protocols does a servient support.</p>
 						<pre class="example">
 							{
 								...
@@ -547,18 +548,18 @@
 							    "JSON",
 							    "EXI4JSON"
 							  ],
-							  "security": {
+							  <i>"security": {
 							    "cat": "token:jwt",
 							    "alg": "HS256",
 							    "as": "https://authority-issuing.org"
-							  }
+							  }</i>
 								...
 							}
 						</pre>
 
 						<p>
-							Metadata is used to provide generic information about a Thing.
-							There are three mandatory and one optional vocabulary terms defined within metadata:
+							There are three mandatory and one optional (shown as italic text in JSON snippet) vocabulary terms defined 
+							within metadata:
 						</p>
 
 						<ul>
@@ -626,13 +627,13 @@
 								...
 							  "properties": [
 							    {
-							      <div style="font-style:italic;">"@type": "A_Type_From_an_Ontology",</div>
-							      "name": "AnyName",
-							      "valueType": "JSON Type (number, string,..) or JSON Schema or XSD or ...",
+							      <i>"@type": "sensor:Temperature",</i>
+							      "name": "temperature",
+							      "valueType": "xsd:float",
 							      "writable": false,
-							      "hrefs": ["relative_or_absolute_URI"],<div style="font-style:italic;">
-							      "stability": 0,
-							      "security": {...}</div>
+							      "hrefs": "temp",
+							      <i>"stability": 10,</i>
+							      
 							    }
 							  ]
 								...
@@ -640,7 +641,7 @@
 						</pre>
 
 						<p>
-							There are four mandatory and three optional terms (marked as italic in the JSON sample) defined for the <code>Property</code> type:
+							There are four mandatory and three optional terms (shown as italic text in JSON snippet) defined for the <code>Property</code> type:
 						</p>
 
 						<ul>
@@ -652,7 +653,7 @@
 								RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type definition.
 							</li>
 							<li><b>writable:</b> Is this property writable (true/false)</li>
-							<li><b>stability: [optional]</b> Expected maximum time of stability of the property value in ms (0=stable/static property value)</li>
+							<li><b>stability: [optional]</b> Expected maximum time of stability of the property value in ms (>0ms value; 0=unregular change;-1=no change, static value)</li>
 							<li><b>security: [optional]</b>
 								Access metadata (self-contained) for securely transmitting information of the property.
 								Compared to the security field that can be found in the <a href="#thing-metadata">Thing metadata</a>, this field here can be used to apply specific security requirements that is only valid for that resources.
@@ -705,16 +706,16 @@
 								...
 							  "actions": [
 							    {
-							      <div style="font-style:italic;">"@type": "A_Type_From_an_Ontology",</div>
-							      "name": "AnyName",
-							      "inputData": {
-							        "valueType": "JSON Type (number, string,..) or JSON Schema or XSD or ..."
+							      <i>"@type": "actuator:fadeIn",</i>
+							      "name": "fadeIn",
+							      <i>"inputData":</i> {
+							        "valueType": "xsd:short",
+							        "actuator:unit": "actuator:ms"
 							      },
-							      "inputData": {
-							        "valueType": "JSON Type (number, string,..) or JSON Schema or XSD or ..."
-							      },
-							       "hrefs": ["relative_or_absolute_URI"],<div style="font-style:italic;">
-							      "security": {...}</div>
+							      "hrefs": [
+							        "in",
+							        "myled/in"
+							      ]
 							    }
 							  ]
 								...
