@@ -6,7 +6,7 @@
 * Retrieve: GET / FETCH
 * Update: PUT / POST / PATCH
 * Delete: DELETE
-* Subscribe: Observe
+* Notify (actially Subscribe): Observe
 
 #### TD Sample
 
@@ -14,7 +14,7 @@ I assume defaults defined in the CoAP Binding:
 
 * Retrieve: allowed on any resource and by default a GET
 * Update: allowed on resources marked `writable`; default PUT when `true`
-* Create: allowed on resources marked `creatable`; default POST when `true`
+* Create: allowed on resources in "actions" array or marked `creatable`; default POST when `true`
 * Delete: allowed on resources marked `deletable`; default DELETE when `true`
 
 In case the resource interaction differs from the default, the explicit protocol operations are given in a string array, whose index corresponds to the base URI indexes (links to the protocol by scheme).
