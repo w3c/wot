@@ -35,7 +35,7 @@ In case the resource interaction differs from the default, the explicit protocol
       "@id": "colorList",
       "@type": "RGBColor",
       "name": "myColorList",
-      "valueType": { "type": "array", "items": { "type" : "integer", "minimum": 0, "maximum": 255 }, "minItems" : 3, "maxItems" : 3 },
+      "valueType": {"type":"array","items":{"type":"integer","minimum":0,"maximum":255},"minItems":3,"maxItems":3},
       <b>"writable": true,</b>
       "hrefs": ["list"]
     }
@@ -71,7 +71,7 @@ In case the resource interaction differs from the default, the explicit protocol
       "@id": "colorOCF",
       "@type": "RGBColor",
       "name": "myColorOCF",
-      "valueType": { "type": "array", "items": { "type" : "integer", "minimum": 0, "maximum": 255 }, "minItems" : 3, "maxItems" : 3 },
+      "valueType": {"type":"array","items":{"type":"integer","minimum":0,"maximum":255},"minItems":3,"maxItems":3},
       <b>"writable": ["POST"],</b> /* OCF uses POST to write */
       "hrefs": ["ocf"]
     }
