@@ -120,7 +120,7 @@
 				<dd>Programming interface that allows scripts to discover Things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#sec-scripting-api"></a>)</dd>
 
 				<dt><dfn data-lt="servient|servients">Servient</dfn></dt>
-				<dd>The addressable application endpoint of a Thing that makes it interactive by providing a WoT API and means to execute application logic</dd>
+				<dd>The addressable application endpoint of a Thing that makes it interactive by providing a <a>WoT Interface</a> and means to execute application logic</dd>
 
 				<dt><dfn>SPARQL</dfn></dt>
 				<dd>A query language for semantic data</dd>
@@ -131,8 +131,8 @@
 				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
 				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#sec-td"></a>)</dd>
 
-				<dt><dfn>WoT API</dfn></dt>
-				<dd>Resource-oriented Web interface that allows access to servients over the network using different protocols mappings (see <a href="#sec-wot-interface"></a>)</dd>
+				<dt><dfn>WoT Interface</dfn></dt>
+				<dd>Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different protocols bindings (see <a href="#sec-wot-interface"></a>)</dd>
 			</dl>
 
 		</section>
@@ -148,13 +148,13 @@
 				Things in the WoT architecture are represented by so-called <a>servients</a>, which are usually hosted directly on the physical thing.
 				Yet servients can also represent virtual Things, for instance a collection of Things (e.g., all lights in a room) or a WoT gateway for legacy devices (e.g., a Bluetooth device connected to a smartphone).
 				In this latter case, servients are hosted anywhere, a smartphone, local gateway, or the cloud.
-				Servients communicate with each other through the so-called <a>WoT API</a>, a Web API that follows the recommendations of the WoT IG.
+				Servients communicate with each other through the so-called <a>WoT Interface</a>, a Web API that follows the recommendations of the WoT IG.
 				Servients can be in client role (i.e., they only consume other Things), server role (i.e., they only provide capabilities), or both (i.e., they use other Things, but also provide capabilities).
 			</p>
 
 			<p>
 				Each Thing is described by a WoT <a>Thing Description</a> (TD).
-				The TD must be acquired to use and interact with the Thing, since it describes the semantics of a Thing as well as its <a>WoT API</a>.
+				The TD must be acquired to use and interact with the Thing, since it describes the semantics of a Thing as well as its <a>WoT Interface</a>.
 				Usually, Things directly provide their own TD, but the TD can also be hosted externally if there is not enough space on the device or when a WoT-compatible legacy device is retrofitted with a TD.
 				To ease discovery, TDs can be registered with a well-known TD <a>repository</a>, where Things of interest can be queried, for instance using <a>SPARQL</a>.
 			</p>
@@ -174,10 +174,10 @@
 				<h2>WoT Interface</h2>
 
 				<p>
-					A WoT API is a Web API that is describable by a WoT <a>Thing Description</a> (TD).
+					A WoT Interface is a Web interface (often called "Web API") that is describable by a WoT <a>Thing Description</a> (TD).
 					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
 					Furthermore, it must suppoort the encodings and security mechanisms defined in the TD.
-					The WoT API is used for the communication between <a>servients</a>, that is, the networking protocols and interfaces (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
+					The WoT Interface is used for the communication between <a>servients</a>, that is, the networking protocols and interfaces (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
 				</p>
 
 				<section>
@@ -274,7 +274,7 @@
 							<li>Servient tasks</li>Understand protection needs (public, private) of served resources, challenge for security tokens (bearer) and/or authenicators (PoP), validate security tokens (bearer) and/or authenicators (PoP) and match their content against application request contents
 							<li>Caller tasks</li>React on application protocol error responses (demanding the supply of security tokens), acquire security token from online TTPs, perform initial authentication by means of a security protocol (possibly different from the application protocol, evtl. mediated by an online TTP on side of the requesting party), and supply security tokens (bearer) and/or authenticators (PoP) as part of the application protocol
 						</ul>
-						For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT APIs
+						For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT Interfaces.
 
 						The security-part of the W3C WoT PlugFest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the PlugFest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this PlugFest
 						<h4>Secure Communications</h4>
@@ -292,7 +292,7 @@
 				<p>
 					The WoT Thing Description (TD) relies on the Resource Description Framework (RDF) as an underlying data model.
 					As a current serialization format of RDF JSON-LD has been proposed which provides the semantic description of
-					a Thing as well as a functional description of its <a>WoT API</a>.
+					a Thing as well as a functional description of its <a>WoT Interface</a>.
 					For this, the WoT IG defined a minimal vocabulary to express the capabilities of a Thing in terms of <i>Properties</i>, <i>Actions</i>, and <i>Events</i>.
 					In addition, the TD provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.), representation formats, and security policies for resources.
 				</p>
