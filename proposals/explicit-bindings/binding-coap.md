@@ -15,11 +15,11 @@ I assume defaults defined in the CoAP Binding:
 * Retrieve: allowed on any resource and by default a GET
 * Update: allowed on resources marked `writable`; default PUT when `true`
 * Create: allowed on resources marked `creatable`; default POST when `true`
-* Delete: allowed on recouseces marked `deletable`; default DELETE when `true`
+* Delete: allowed on resources marked `deletable`; default DELETE when `true`
 
 In case the resource differs from the default, the explicit protocol operations are given in a string array, whose index corresponds to the base URI indexes (links to the protocol by scheme).
 
-```
+<pre>
 ...
 "properties": [
     {
@@ -57,6 +57,7 @@ In case the resource differs from the default, the explicit protocol operations 
       <b>"creatable": ["PATCH"],</b>
       "hrefs": ["fadein"]
     }
-```
+...
+</pre>
 
 This nicely minimizes the WoT resource model to CRUDS(ubscribe) while enabling a mapping to protocols that have more than 5 operations (e.g., BACnet with more than 30). I could also imagine to replace the historic letters in CRUD with something that fits better to our resource model. For instance: Read, Subscribe, Write, Invoke, Delete or "WISRD" \wizzard\
