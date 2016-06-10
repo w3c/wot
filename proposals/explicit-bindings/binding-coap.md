@@ -4,7 +4,7 @@
 
 * Create: POST / PUT
 * Retrieve: GET / FETCH
-* Update: PUT / PATCH
+* Update: PUT / POST / PATCH
 * Delete: DELETE
 * Subscribe: Observe
 
@@ -17,7 +17,9 @@ I assume defaults defined in the CoAP Binding:
 * Create: allowed on resources marked `creatable`; default POST when `true`
 * Delete: allowed on resources marked `deletable`; default DELETE when `true`
 
-In case the resource differs from the default, the explicit protocol operations are given in a string array, whose index corresponds to the base URI indexes (links to the protocol by scheme).
+In case the resource interaction differs from the default, the explicit protocol operations are given in a string array, whose index corresponds to the base URI indexes (links to the protocol by scheme).
+
+##### WoT Device Matching the Defaults
 
 <pre>
 ...
@@ -30,18 +32,65 @@ In case the resource differs from the default, the explicit protocol operations 
       <b>"writable": true,</b>
       "hrefs": ["val"]
     }, {
+      "@id": "colorList",
+      "@type": "RGBColor",
+      "name": "myColorList",
+      "valueType": {
+        "type": "array",
+        "items": {
+          "type" : "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "minItems" : 3,
+        "maxItems" : 3
+      },
+      <b>"writable": true,</b>
+      "hrefs": ["list"]
+    }
+  ],
+  "actions": [
+    {
+      "@type": "IncreaseColor",
+      "name": "myFadeIn",
+      "inputData": {
+        "@type": "RGBColor",
+        "valueType": "integer"
+      },
+      "property": "color",
+      <b>"creatable": true,</b> /* implied by actions */
+      "hrefs": ["fadein"]
+    }
+...
+</pre>
+
+##### Exotic WoT Device or Retro-fitted Legacy Device
+
+<pre>
+...
+"properties": [
+    {
+      "@id": "color",
+      "@type": "RGBColor",
+      "name": "myColor",
+      "valueType": "integer",
+      <b>"writable": true,</b> /* default operation */
+      "hrefs": ["val"]
+    }, {
       "@id": "colorOCF",
       "@type": "RGBColor",
       "name": "myColorOCF",
       "valueType": {
         "type": "array",
         "items": {
-          "type" : "integer"
+          "type" : "integer",
+          "minimum": 0,
+          "maximum": 255
         },
-        "minOccurs" : 3,
-        "maxOccurs" : 3
+        "minItems" : 3,
+        "maxItems" : 3
       },
-      <b>"writable": ["POST"],</b>
+      <b>"writable": ["POST"],</b> /* OCF uses POST to write */
       "hrefs": ["ocf"]
     }
   ],
@@ -54,7 +103,7 @@ In case the resource differs from the default, the explicit protocol operations 
         "valueType": "integer"
       },
       "property": "color",
-      <b>"creatable": ["PATCH"],</b>
+      <b>"creatable": ["PATCH"],</b> /* constructed exotic action */
       "hrefs": ["fadein"]
     }
 ...
