@@ -76,13 +76,13 @@
 			<section>
 				<h2>Vision</h2>
 				<p>
-					The central idea of WoT is that things can describe their capabilities and metadata in a machine-understandable format: the WoT <a>Thing Description</a> (TD), which is rooted in <a>RDF</a>.
-					The TD can be served by a thing itself or hosted elsewhere on the Web.
+					The central idea of WoT is that Things can describe their capabilities and metadata in a machine-understandable format: the WoT <a>Thing Description</a> (TD), which is rooted in <a>RDF</a>.
+					The TD can be served by a Thing itself or hosted elsewhere on the Web.
 					This way, a TD can also be retrofitted on existing devices, and thereby complement existing IoT platforms and standards with rich metadata to enable interoperability across platforms.
-					WoT also supports flexible Protocol Bindings that enable the mapping of a semantically described thing interaction to different protocols, since each domain has different requirements.
+					WoT also supports flexible Protocol Bindings that enable the mapping of a semantically described Thing interaction to different protocols, since each domain has different requirements.
 					Finally, WoT envisions to provide a common runtime environment for IoT-related apps.
 					Sensors and actuators can be improved by installing better data processing algorithms or by adding completely new features through software.
-					With a common runtime environment, aggregation apps can be instantiated in the cloud and then relocated to local hubs, or even directly onto a powerful thing, to meet certain quality of service requirements.
+					With a common runtime environment, aggregation apps can be instantiated in the cloud and then relocated to local hubs, or even directly onto a powerful Thing, to meet certain quality of service requirements.
 				</p>
 			</section>
 
@@ -117,10 +117,10 @@
 				<dd>A registry for <a>TDs</a> that provides a Web interface to register TDs and look them up, for intance using SPARQL queries</dd>
 
 				<dt><dfn>Scripting API</dfn></dt>
-				<dd>Programming interface that allows scripts to discover things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#sec-scripting-api"></a>)</dd>
+				<dd>Programming interface that allows scripts to discover Things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#sec-scripting-api"></a>)</dd>
 
 				<dt><dfn data-lt="servient|servients">Servient</dfn></dt>
-				<dd>The addressable application endpoint of a thing that makes it interactive by providing a WoT API and means to execute application logic</dd>
+				<dd>The addressable application endpoint of a Thing that makes it interactive by providing a WoT API and means to execute application logic</dd>
 
 				<dt><dfn>SPARQL</dfn></dt>
 				<dd>A query language for semantic data</dd>
@@ -129,7 +129,7 @@
 				<dd>The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</dd>
 
 				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
-				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a thing (see <a href="#sec-td"></a>)</dd>
+				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#sec-td"></a>)</dd>
 
 				<dt><dfn>WoT API</dfn></dt>
 				<dd>Resource-oriented Web interface that allows access to servients over the network using different protocols mappings (see <a href="#sec-wot-interface"></a>)</dd>
@@ -146,21 +146,21 @@
 
 			<p>
 				Things in the WoT architecture are represented by so-called <a>servients</a>, which are usually hosted directly on the physical thing.
-				Yet servients can also represent virtual things, for instance a collection of things (e.g., all lights in a room) or a WoT gateway for legacy devices (e.g., a Bluetooth device connected to a smartphone).
+				Yet servients can also represent virtual Things, for instance a collection of Things (e.g., all lights in a room) or a WoT gateway for legacy devices (e.g., a Bluetooth device connected to a smartphone).
 				In this latter case, servients are hosted anywhere, a smartphone, local gateway, or the cloud.
 				Servients communicate with each other through the so-called <a>WoT API</a>, a Web API that follows the recommendations of the WoT IG.
-				Servients can be in client role (i.e., they only consume other things), server role (i.e., they only provide capabilities), or both (i.e., they use other things, but also provide capabilities).
+				Servients can be in client role (i.e., they only consume other Things), server role (i.e., they only provide capabilities), or both (i.e., they use other Things, but also provide capabilities).
 			</p>
 
 			<p>
-				Each thing (or technically each <a>servient</a>) is described by a WoT <a>Thing Description</a> (TD).
-				The TD must be acquired to use and interact with the thing, since it describes the semantics of a thing as well as its <a>WoT API</a>.
-				Usually, things directly provide their own TD, but the TD can also be hosted externally if there is not enough space on the device or when a WoT-compatible legacy device is retrofitted with a TD.
-				To ease discovery, TDs can be registered with a well-known TD <a>repository</a>, where things of interest can be queried, for instance using <a>SPARQL</a>.
+				Each Thing is described by a WoT <a>Thing Description</a> (TD).
+				The TD must be acquired to use and interact with the Thing, since it describes the semantics of a Thing as well as its <a>WoT API</a>.
+				Usually, Things directly provide their own TD, but the TD can also be hosted externally if there is not enough space on the device or when a WoT-compatible legacy device is retrofitted with a TD.
+				To ease discovery, TDs can be registered with a well-known TD <a>repository</a>, where Things of interest can be queried, for instance using <a>SPARQL</a>.
 			</p>
 
 			<p>
-				The application logic of a thing can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained things.
+				The application logic of a Thing (or technically a <a>servient</a>) can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained Things.
 				Following the patterns in the Web, however, application logic should also be provided by scripts.
 				This is supported through a scripting runtime environment&mdash;similar to the Web browser&mdash;that may be provided by a servient.
 				Portability of such scripts is ensured through a common <a>Scripting API</a> that allows access to discovery, the client and server functionality of the servient, and the hardware physically attached to the servient.
@@ -232,7 +232,7 @@
 					@TODO Callee required term? SIP related? Client/Server would be better for IoT people
 
 
-					<p>The purpose of WoT is to expose private resources (things themselves, information they produce or information about them) at public-facing endpoints (e.g. Internet). This implies that components which expose things (servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
+					<p>The purpose of WoT is to expose private resources (Things themselves, information they produce, or information about them) at public-facing endpoints (e.g. Internet). This implies that components that expose Things (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
 						<ul>
 							<li>Authorization and authentication</li>When receiving instructions, servients must authorize such calls/requests i.e. determine whether to accept them for processing. This implies the need to authenticate the properties of callers that are used when performing authorization.
 							<li>Secure communications</li>When exchanging sensitive resources/information over a shared network, servients must demand encrypting/signing corresponding message exchanges.
@@ -293,7 +293,7 @@
 					The WoT Thing Description (TD) relies on the Resource Description Framework (RDF) as an underlying data model.
 					As a current serialization format of RDF JSON-LD has been proposed which provides the semantic description of
 					a Thing as well as a functional description of its <a>WoT API</a>.
-					For this, the WoT IG defined a minimal vocabulary to express the capabilities of a thing in terms of <code>Properties</code>, <code>Actions</code>, and <code>Events</code>.
+					For this, the WoT IG defined a minimal vocabulary to express the capabilities of a Thing in terms of <i>Properties</i>, <i>Actions</i>, and <i>Events</i>.
 					In addition, the TD provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.), representation formats, and security policies for resources.
 				</p>
 
@@ -343,8 +343,8 @@
 					</p>
 
 					<p>
-						In practice a Thing is described with additional information that provides further details about what kind
-						of a Thing it is and what additional properties and capabilities it has. This information provides a semantic context
+						In practice, a Thing is described with additional information that provides further details about what kind
+						of Thing it is and what additional properties and capabilities it has. This information provides a semantic context
 						of a Thing. JSON-LD provides a means to extend a TD with an external (semantic) context and reuse existing contexts,
 						thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms,
 						instead of dealing with meaningless strings.  Example 2 shows the integration of the "sensor" namespaces and the semantic enrichment of the 
@@ -443,7 +443,7 @@
 					</pre>
 
 					<p>
-						Based on this TD you are able to know that JWT is required for the interaction of Thing's resources (tokens are issued by https://authority-issuing.org and tokens
+						Based on this TD you are able to know that JWT is required to interact with the resources of the Thing (tokens are issued by https://authority-issuing.org and tokens
 						are signed by HS256), status can be requested (using CoAP GET coap://www.myled.com:5683/status  or HTTP GET http://www.myled.com:8080/myled/status) or modified since
 						the status property is writable (using CoAP PUT coap://www.myled.com:5683/in or using HTTP PUT http://www.myled.com:8080/myled/myled/in with a string status payload). Actions can be
 						initiated using the resources fadeIn and fadeOut (e.g.,  using CoAP POST coap://www.myled.com:5683/in or HTTP coap://www.myled.com:5683/myled/out with a short-based payload (for ms)).
@@ -464,7 +464,7 @@
 						<p>
 							JSON-LD is a serialization format for Linked Data, that is, its content should use one or more vocabularies that are uniquely defined and available on the Web.
 							Any JSON-LD document has to be defined within a specific context that points to the relevant vocabularies.
-							For instance, the term <code>Thing</code> refers to a concept defined in the RDFS vocabulary for Thing Description at <code>http://www.w3c.org/wot/td#</code>.
+							For instance, the term <code>Thing</code> below refers to a concept defined in the RDFS vocabulary for Thing Description at <code>http://www.w3c.org/wot/td#</code>.
 							The context object should look like this:
 
 							<pre class="example">
@@ -479,13 +479,13 @@
 
 						<p>
 							For convenience, a standard context including all TD vocabulary terms has been defined and made available at <code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>.
-							This way, one only needs to add this URI to the Thing's context to import all TD terms.
-							It is recommended to include this standard context in a Thing Description, but not mandatory.
+							This way, one only needs to add this URI to the context of the Thing to import all TD terms.
+							It is recommended to include this standard context in a Thing Description, but not mandatory if the vocabulary is included in another context file.
 						</p>
 
 						<p>
 							As the TD vocabulary we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by reusing other vocabularies or ontologies and/or defining application-specific terms (see <a href="#td-context-extension"></a>).
-							In the following example, in addition to our standard context, the Thing's context points to a shared vocabulary for sensors:
+							In the following example, in addition to our standard context, the context of the Thing points to a shared vocabulary for sensors:
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -533,7 +533,7 @@
 -->
 
 					<section>
-						<h4>Thing's Metadata</h4>
+						<h4>Thing Metadata</h4>
 
 						<pre class="example">
 							{
@@ -557,7 +557,7 @@
 						</pre>
 
 						<p>
-							Metadata is used to provide generic information about a thing.
+							Metadata is used to provide generic information about a Thing.
 							There are three mandatory and one optional vocabulary terms defined within metadata:
 						</p>
 
@@ -566,7 +566,7 @@
 							<li><b>uris:</b>
 								Defines base URI for the Thing. More than one URI can be listed (as an array),
 								if various protocols are supported (e.g. HTTP and CoAP) or in specific configurations
-								(e.g. a Thing could rely on a redirection server if its URI is likely to change over time).
+								(e.g., a Thing could rely on a redirection server if its URI is likely to change over time).
 							</li>
 							<li><b>encodings:</b>
 								Which serialization formats are supported (e.g., JSON, XML, etc.). One or more can be listed (listed as an array).
@@ -574,15 +574,14 @@
 							<li><b>security: [optional]</b>
 								The security field can be used to provide access metadata (self-contained) information of the Thing
 								for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
-								Above, the security field is used to announce that JSON Web Token (JWT) has to be used to interact with Thing's resources.
+								Above, the security field is used to announce that JSON Web Token (JWT) has to be used to interact with the resources of the Thing.
 								Thereby, type is assigned by the cat field, the corresponding hashing algorithm "HS256" by the alg field, and  the issuing authority of the security token by the as field.
 							</li>
 						</ul>
 
 						<p>
 							<b>Note:</b> Besides these pre-defined terms in the TD context, additional characteristics can be
-							added such as product ID, firmware version, location, etc. These terms should then appear in the Thing's
-							context (as detailed in <a href="#td-context"></a>).
+							added such as product ID, firmware version, location, etc. These terms should then appear in the context of the Thing (as detailed in <a href="#td-context"></a>).
 						</p>
 					</section>
 
@@ -592,7 +591,7 @@
 
 						<p class="ednote">
 							If encodings/serializations are part of the metadata, why aren't the data types?
-							This also has logical conflict with properties, which technically provide the data of a thing.
+							This also has logical conflict with properties, which technically provide the data of a Thing.
 							Furthermore, this should maybe become part of the represenation format carrying the data to become self-descriptive and semantically safe.
 						</p>
 
@@ -600,7 +599,7 @@
 							Personally, I am not even sure if we need this.
 							The encoding of the value within a representation format (JSON number, EXI element, etc.) should be enough, when the property itself is fully described.
 							We do not care if the system internally represents it as an unsighend byte, signed integer, or whatever.
-							It appears to be obsolete WS-* baggage that is not required for scripting; native application logic must infer the required types from the semantic description, usually before or at compile time (e.g., a native application consuming a thing with a <code>Temperature</code> property must know how to represent it internally).
+							It appears to be obsolete WS-* baggage that is not required for scripting; native application logic must infer the required types from the semantic description, usually before or at compile time (e.g., a native application consuming a Thing with a <code>Temperature</code> property must know how to represent it internally).
 						</p>
 
 						<p>This field is used to define application-specific simple and complex data types that are used by the interaction
@@ -656,7 +655,7 @@
 							<li><b>stability: [optional]</b> Expected maximum time of stability of the property value in ms (0=stable/static property value)</li>
 							<li><b>security: [optional]</b>
 								Access metadata (self-contained) for securely transmitting information of the property.
-								Compared to the security field that can be found in the <a href="#thing-s-metadata">Thing's metadata</a>, this field here can be used to apply specific security requirements that is only valid for that resources.
+								Compared to the security field that can be found in the <a href="#thing-metadata">Thing metadata</a>, this field here can be used to apply specific security requirements that is only valid for that resources.
 							</li>
 						</ul>
 
@@ -666,10 +665,10 @@
 								<li>a single relative reference from the base URIs defined in the <code>protocols</code> metadata field (in case the relative path is the same for all protocols) or</li>
 								<li>an array of relative references or absolute URIs that must match the length and order of the <code>protocols</code> array of the metadata (in case the URIs of the property differ).</li>
 							</ul>
-							Absolute URIs can point to an external resource that is not hosted by the thing directly.
-							This can be useful to link data into the context of the thing, for which there is not enough space in the thing itself.
-							Absolute URIs could also point to a proxy or gateway that allow access to legacy systems that might belong to a thing that does not have the capability to translate by itself (but provides other, WoT-compatible resources).
-							This mechanism is also interesting for virtual things that combine the services of multiple other things (e.g., a room lighting servient that has properties for each individual light, while these linked properties are hosted directly on the lights).
+							Absolute URIs can point to an external resource that is not hosted by the Thing directly.
+							This can be useful to link data into the context of the Thing, for which there is not enough space in the device itself.
+							Absolute URIs could also point to a proxy or gateway that allow access to legacy systems that might belong to a Thing that does not have the capability to translate by itself (but provides other, WoT-compatible resources).
+							This mechanism is also interesting for virtual Things that combine the services of multiple other Things (e.g., a room lighting servient that has properties for each individual light, while these linked properties are hosted directly on the lights).
 						</p>
 
 						<p class="ednote">
@@ -696,7 +695,7 @@
 							The interaction type Action targets changes or processes on a Thing that take a certain time 
 							(i.e., actions cannot be applied instantaneously like property writes).
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
-							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the thing.
+							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the Thing.
 							
 						</p>
 						<p>Within the TD, the  servient's actions are announced by the JSON array <code>actions</code>.</p>
@@ -758,9 +757,9 @@
 						<h4>Event</h4>
 
 						<p>
-							The interaction type <code>Event</code> enables a mechanism to be notified by the thing on a certain condition.
+							The interaction type <code>Event</code> enables a mechanism to be notified by the Thing on a certain condition.
 							While some protocols such as CoAP can provide such a mechanism natively, others do not.
-							Furthermore, events might need a specific configuration that requires data sent and stored on the thing in a standard way.
+							Furthermore, events might need a specific configuration that requires data sent and stored on the Thing in a standard way.
 							There are are two mandatory and two optional terms defined within the <code>Event</code> type:
 						</p>
 
@@ -797,7 +796,7 @@
 						</p>
 
 						<p>
-							The interaction with events works similar to actions with the difference that no side effects are intended on the thing.
+							The interaction with events works similar to actions with the difference that no side effects are intended on the Thing.
 							A client issues a request to the URI of an action, which may include a payload that represents the configuration data for the event mechanism.
 							The created (sub-)resource serves as a handle for the event.
 							It can be monitored to receive notifications: an HTTP client would need to poll this resource, while a CoAP client would simply observe it.
@@ -965,8 +964,7 @@
 							<p>
 								Using the TD model and JSON Schema in a single document may lead
 								to a name conflict:
-								<code>properties</code> is used both to declare Thing's
-								properties and expected keys in a JSON object.
+								<code>properties</code> is used both to declare Properties of the Thing and expected keys in a JSON object.
 						 		Depending on the use case, if a serialization of the Thing
 								Description in RDF is required, the <code>valueType</code>
 								definition should be processed with an additional JSON-LD
@@ -1053,8 +1051,8 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<h4>Note on URI Resolution</h4>
 
 						<p>
-							A Thing could be associated to more than one URI (in case it e.g. supports
-							several protocols). The same way, links to Properties, Actions or Events
+							A servient can be associated to more than one URI (e.g., in case it supports
+							several protocols). The same way, links to Properties, Actions, or Events
 							could be defined as an array instead of a single string. URIs can also
 							be relative. The IETF recommendation for URI resolution [[!RFC3986]] does note
 							fully cover that case. This section is an attempt to specify how to
@@ -1100,7 +1098,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 					<p>
 						In the following, we give three examples of full TD. The first example, a
-						temperature sensor, shows how to define relations between Thing's
+						temperature sensor, shows how to define relations between Thing
 						Properties. As a second example, we modeled
 						an actuator (LED lamp) where Actions have all been characterized semantically,
 						so that machines could unambiguously interpret them in an automated manner.
@@ -1165,7 +1163,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						</p>
 
 						<p>
-							Moreover, one of the Thing's Events is linked to the measured value
+							Moreover, one of the Events of the Thing is linked to the measured value
 							(with the predicate <code>property</code>). It means
 							in that context that an event should be triggered each time <code>myTemp</code>
 							changes. The other Event does not define further semantics, it could be used either
@@ -1315,14 +1313,14 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 					<h3>Discovery</h3>
 
 					<p class="ednote">
-						This section describes in general how a thing (i.e., its TD) can be discovered.
+						This section describes in general how a Thing (i.e., its TD) can be discovered.
 						In particular, the current practices at the PlugFests should become clear.
 						Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
 					</p>
 
 					<p>
-						Discovering a thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
-						The URI of the link may point to the thing itself, as things often host their TD directly, or to any other location on the Web.
+						Discovering a Thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
+					The URI of the link may point to the Thing (technically the <a>servient</a>) itself, as Things often host their TD directly, or to any other location on the Web.
 						There are several approaches to aquire such links.
 						Some work independent from the protocol binding, others rely on features of a specific protocol.
 					</p>
@@ -1339,7 +1337,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<h4>Repository</h4>
 
 						<p>
-							The thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
+							The Thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
 						</p>
 					</section>
 
@@ -1347,7 +1345,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<h4>Local Discovery</h4>
 
 						<p>
-							The thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
+							The Thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
 							The response to a discovery request can include the TD directly or just a link.
 							For announcements, it is more common to only provide a link, since broadcasting TDs can be expensive.
 						</p>
@@ -1368,12 +1366,12 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 					</p>
 
 					<p>
-						An abstract TD contains all the semantic information of a normal TD except for the protocol and addressing information (i.e., base URIs and hrefs) as well as certain elements of the metadata that would refer to a specific instance of such a thing (e.g., name and serial number).
-						They can be compared to abstract classes or interfaces from object-oriented programming: abstract TDs define placeholders that cannot be instantiated, that is, do not belong to a concrete thing.
-						This is useful for semantic reasoning processes that require information about thing capabilities (e.g., to proof that a certain functionality can be implemented through service composition).
+						An abstract TD contains all the semantic information of a normal TD except for the protocol and addressing information (i.e., base URIs and hrefs) as well as certain elements of the metadata that would refer to a specific instance of such a Thing (e.g., name and serial number).
+						They can be compared to abstract classes or interfaces from object-oriented programming: abstract TDs define placeholders that cannot be instantiated, that is, do not belong to a concrete Thing.
+						This is useful for semantic reasoning processes that require information about Thing capabilities (e.g., to proof that a certain functionality can be implemented through service composition).
 						Abstract TDs also fulfill the requirement of late bindings in the application logic.
 						A script could instantiate a proxy object that exposes all capabilities of the abstract TD.
-						Only when it is accessed, a matching TD has to be discovered, so that the properties, actions, and events can be bound to the resources of an actual thing using its URIs.
+						Only when it is accessed, a matching TD has to be discovered, so that the Properties, Actions, and Events can be bound to the resources of a servient using its URIs.
 					</p>
 
 				</section>
@@ -1385,9 +1383,10 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						Following security concerns apply to TD:
 						<ul>
 							<li>Protecting TD objects</li>TD objects in plain form can easily be manipulated or faked by attackers. This could result in security or safety breaches. To establish the authenticity of TD objects signature mechanisms are needed. They allow to corroborate the source of the TD information and to assure the integrity of its contents.
-							<li>Describing prerequistes for accessing things</li>Components that expose things (aka servients) may expect callers to present credentials and/or to use secure communications in order to access them. Specific TD object contents are needed to express such requirements.
+							<li>Describing prerequistes for accessing Things</li>
+							<li>Components that expose Things (aka servients) may expect callers to present credentials and/or to use secure communications in order to access them. Specific TD object contents are needed to express such requirements.</li>
 						</ul>
-						These two security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related expectation for accessing things. On the other hand TD objects may express such expectations without being signed.
+						These two security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related expectation for accessing Things. On the other hand TD objects may express such expectations without being signed.
 					</p>
 
 					<section>
@@ -1406,7 +1405,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<h4>Describing Prerequistes for Accessing Things</h4>
 
 						<p>
-							When private resources (things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing the things (servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic strategies for demanding such security mechanisms:
+							When private resources (Things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing theThings (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic strategies for demanding such security mechanisms:
 							<ul>
 								<li>A priori</li>Callers know beforehand and make requests according the expectations of the callee. A prominent example for this strategy is the 'https' access scheme in URLs. It triggers clients to employ SSL/TLS in order to send HTTP requests (HTTP-over-TLS, RFC 2818).
 								<li>A posteriori</li>Callers do not know beforehand, make a request and are being told by the callee in the response or during the exchanges. An example for this strategy is the negotiation of the use of SSL/TLS as part of HTTP exchanges (TLS-in-HTTP, RFC 2817).
@@ -1456,14 +1455,14 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<h3 id="interface-thingrequest">Interface <code>ThingRequest</code></h3>
 
 						<p>
-							A <code>ThingRequest</code> is the entry point in the Scripting API to find things.
+							A <code>ThingRequest</code> is the entry point in the Scripting API to find Things.
 							It has a single method <code>start()</code> that starts the discovery or lookup according to the <code>ThingFilter</code> that is passed as input of the <code>ThingRequest</code> constructor.
 						</p>
 
 						<p>
 							PS: If the Scripting API is exposed to web pages as a JavaScript API, the User Agent may open a dialog that let users select Things the page is allowed to access after the <code>ThingRequest.start()</code> is called.
 							@TODO not Node.js example.
-							For trusted applications e.g. running in Node.js environment, the list of things found is passed to the application without asking the user.
+							For trusted applications e.g. running in Node.js environment, the list of Things found is passed to the application without asking the user.
 						</p>
 
 						<!-- Proper WebIDL syntax -->
@@ -1486,9 +1485,9 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						</p>
 
 						<ul>
-							<li><code>type</code>: It is a url that identify the type of the thing e.g. <code>http://example.com/things#temperature</code></li>
-							<li><code>proximity</code>: It defines how to find the requested things. See ThingProximity Interface for more details about the possible values.</li>
-							<li><code>id</code>: Each thing consists of a unique <code>id</code> (see attribute <code>Thing.id</code>). Using the <code>id</code> in the filter allows to find a Thing by its <code>id</code>. If <code>id</code> is set, all other filter parameters will be ignored.</li>
+							<li><code>type</code>: It is a url that identify the type of the Thing (e.g., <code>http://example.com/things#temperature</code>)</li>
+							<li><code>proximity</code>: It defines how to find the requested Things. See ThingProximity Interface for more details about the possible values.</li>
+							<li><code>id</code>: Each Thing consists of a unique <code>id</code> (see attribute <code>Thing.id</code>). Using the <code>id</code> in the filter allows to find a Thing by its <code>id</code>. If <code>id</code> is set, all other filter parameters will be ignored.</li>
 							<li><code>server</code>: It is the end point of the WoT directory where to look to Things. If <code>server</code> is set, the value of <code>proximity</code> must be <code>remote</code>.</li>
 						</ul>
 
@@ -1533,22 +1532,22 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<h4 id="interface-consumedthing">Interface <code>ConsumedThing</code></h4>
 
 						<p>
-							<code>ConsumedThing</code> is the main interface to interact with a thing as client.</p>
+							<code>ConsumedThing</code> is the main interface to interact with a Thing as client.</p>
 							It consists of the following attributes and functions:
 						</p>
 
 						<ul>
 							<li><code>id</code>: is a unique identifier of a Thing.</li>
-							<li><code>type</code>: is the type of a thing. It is important to filter things by type (see <code>ThingFilter.type</code>).</li>
-							<li><code>name</code>: the human readable name of the thing.</li>
+							<li><code>type</code>: is the type of a Thing. It is important to filter Things by type (see <code>ThingFilter.type</code>).</li>
+							<li><code>name</code>: the human readable name of the Thing.</li>
 							<li><code>reachable</code>: defines if the Thing is reachable or not. e.g. <code>reachable</code> is <code>false</code> when the control device (that runs an application using the Thing API) leaves the range of a BLE sensor and <code>true</code> if the device is in range.</li>
-							<li><code>onreachabilitychange</code>: event handle to monitor reachability of the thing. It will be triggered each time the value of the <code>reachable</code> attribute changes.</li>
-							<li><code>callAction()</code>: call an action defined in the thing description.</li>
-							<li><code>setProperty()</code>: set a new value for a property defined in the thing description.</li>
-							<li><code>getProperty()</code>: get the value of a property defined in the thing description.</li>
-							<li><code>addListener()</code>: add a new listener to an event defined in the thing description.</li>
+							<li><code>onreachabilitychange</code>: event handle to monitor reachability of the Thing. It will be triggered each time the value of the <code>reachable</code> attribute changes.</li>
+							<li><code>callAction()</code>: call an action defined in the Thing description.</li>
+							<li><code>setProperty()</code>: set a new value for a property defined in the TD.</li>
+							<li><code>getProperty()</code>: get the value of a property defined in the TD.</li>
+							<li><code>addListener()</code>: add a new listener to an event defined in the TD.</li>
 							<li><code>removeListener()</code>: remove an already added event listener.</li>
-							<li><code>removeAllListeners()</code>: remove all listener registered for an event defined in the thing description.</li>
+							<li><code>removeAllListeners()</code>: remove all listener registered for an event defined in the TD.</li>
 						</ul>
 
 
@@ -1583,7 +1582,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<ul>
 							<li><code>name</code>: the name of the event. It allows to distinct between different event types in the event handler.</li>
 							<li><code>value</code>: the new value reported by the event.</li>
-							<li><code>source</code>: the thing that fired the event.</li>
+							<li><code>source</code>: the Thing that fired the event.</li>
 						</ul>
 
 						<pre class="idl">
@@ -1598,7 +1597,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 					<section>
 						<h4 id="interface-thingdescription">Interface <code>ThingDescription</code></h4>
 
-						<p><code>ThingDescription</code> is a place holder for the JSON-LD spec of the Thing Description.</p>
+						<p><code>ThingDescription</code> is a place holder for the JSON-LD spec of the TD.</p>
 
 						<pre class="idl">
 							dictionary ThingDescription {
@@ -1615,7 +1614,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<h4 id="interface-exposedthing">Interface <code>ExposedThing</code></h4>
 
 						<p>
-							The interface <code>ExposedThing</code> is used for providing a thing.
+							The interface <code>ExposedThing</code> is used for providing a Thing.
 							It has methods to attach handlers that flesh out the application logic and can modify the provided interactions.
 						</p>
 
@@ -1657,7 +1656,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 				<section>
 					<h3>Scripting API Examples</h3>
 
-					<pre class="example highlight" title="Discover Things nearby">
+					<pre class="example highlight" title="Discover Things Nearby">
 						var filter = {
 						    type: &quot;http://example.org#foo&quot;,
 						    proximity: &quot;nearby&quot;
@@ -1722,7 +1721,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						    request.start().then(function(things){
 						        var thing = things[0];
 						        if(thing){
-						            // access thing as in previous example
+						            // access Thing as in previous example
 						        }
 						    }).catch(function(err){
 						        //handle error
@@ -1764,13 +1763,13 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<li>
 							WoT Client (e.g., a Web dashboard or controller)
 							<blockquote>
-								A WoT client implementation requires a <a href="#sec-td">TD</a> parser, a user interface or control logic to drive the interaction with one or more things.
-								For the TD parser, a JSON-LD library and RDF support are recommended, to reason about the TD of consumed things.
+								A WoT client implementation requires a <a href="#sec-td">TD</a> parser, a user interface or control logic to drive the interaction with one or more Things.
+								For the TD parser, a JSON-LD library and RDF support are recommended, to reason about the TD of consumed Things.
 								Optionally, it can implement lookup support for the <a href="#sec-repo">Repository</a>.
 							</blockquote>
 						</li>
 						<li>
-							WoT Server (e.g., a thing that only provides functionality, but does not use other things)
+							WoT Server (e.g., a Thing that only provides functionality, but does not use other Things)
 							<blockquote>
 								A WoT server requires resource handlers that implement Properties, Actions, or Events.
 								The <a href="#sec-td">TD</a> can be static or dynamically generated based on the implementd resources.
@@ -1779,7 +1778,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							</blockquote>
 						</li>
 						<li>
-							WoT Servient (e.g., a virtual thing that composes multiple other things and provides a higher-level TD)
+							WoT Servient (e.g., a virtual Thing that composes multiple other Things and provides a higher-level TD)
 							<blockquote>
 								A WoT <a>servient</a> needs to implement both client and server requirements.
 							</blockquote>
@@ -1794,21 +1793,21 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<li>
 							HTTP
 							<blockquote>
-								The classic Web protocol is currently most common for clients (e.g., with a Web UI) and more powerful things.
+								The classic Web protocol is currently most common for clients (e.g., with a Web UI) and more powerful Things.
 								There is a plethory of HTTP frameworks available for most languages and platforms.
 							</blockquote>
 						</li>
 						<li>
 							CoAP
 							<blockquote>
-								This protocol is predominant for resource-constrained things.
+								This protocol is predominant for resource-constrained Things.
 								Several different CoAP implementations and frameworks can be found <a href="http://coap.technology/impls.html">here</a>.
 							</blockquote>
 						</li>
 						<li>
 							Additional Protocols
 							<blockquote>
-								To evaluate more protocol bindings, implementors are welcome to bring things with alternative protocol stacks to the PlugFests.
+								To evaluate more protocol bindings, implementors are welcome to bring Things with alternative protocol stacks to the PlugFests.
 								Some protocols might require a shim layer to allow for the resource model of WoT.
 							</blockquote>
 						</li>
@@ -1839,14 +1838,14 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							Native Code</li>
 							<blockquote>
 								The application logic is implemented directly in the firmware or a supported language of the protocol framework.
-								This is the default for resource-constrained things that serve a specific purpose.
+								This is the default for resource-constrained Things that serve a specific purpose.
 							</blockquote>
 						</li>
 						<li>
 							Scripting
 							<blockquote>
 								Having the application logic in scripted apps means that the servient must implement a runtime environment that provides the <a>Scripting API</a>.
-								Node.js may provide a good initial prototype for a WoT runtime environment on more powerful things or cloud servients.
+								Node.js may provide a good initial prototype for a WoT runtime environment on more powerful Things or cloud servients.
 								In the embedded world, Lua is a popular scripting language that could be used for portable apps.
 							</blockquote>
 						</li>
@@ -1858,12 +1857,12 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 			<section id="plugfest-sapporo">
 				<h2>Sapporo (2015-10)</h2>
 
-				<p>This first WoT PlugFest elaborated, based on a JSON-LD thing description, server and client role of "thing".
+				<p>This first WoT PlugFest elaborated, based on a JSON-LD Thing Description, server and client role of a Thing.
 				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI encodings.</p>
 				<p>More information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_29-30_October_2015,_Sapporo,_Japan#Plugfest">wiki</a> page.</p>
 				<h3>Goals</h3>
 				<ul>
-					<li>Interoperable applications by means of a thing description only</li>
+					<li>Interoperable applications by means of a Thing Description only</li>
 				</ul>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
@@ -1878,10 +1877,10 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 				<p>Based on the previous <a href="#sapporo-2015-10">PlugFest in Sapporo</a> four advances will be proposed
 				   (more information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#PlugFest">wiki</a> page).</p>
 				<ul>
-					<li>Security: using new security mechanisms that emerged for protecting new styles of Web applications (Web/REST APIs, browser-based/mobile apps) in the things space</li>
-					<li>APIs: generic APIs to program behavior for a thing or interact with a thing</li>
-					<li>Thing registries: practical registration and discovery of a thing</li>
-					<li>HATEOAS: application of REST-based hypermedia controls in the thing world</li>
+					<li>Security: using new security mechanisms that emerged for protecting new styles of Web applications (Web/REST APIs, browser-based/mobile apps) in the Things space</li>
+					<li>APIs: generic APIs to program behavior for a Thing or interact with a Thing</li>
+					<li>Thing registries: practical registration and discovery of a Thing</li>
+					<li>HATEOAS: application of REST-based hypermedia controls in the Thing world</li>
 				</ul>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
@@ -1890,8 +1889,8 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							<li>Protocols: how to set up IP addresses?</li>
 							<li>How to setup data types with restrictions, e.g. with ranges?</li>
 							<li>Security: Which resources has access restrictions?</li>
-							<li>How to deal with the situation a thing changes its capabilities?</li>
-							<li>How to share interactions of a TD across several things?</li>
+							<li>How to deal with the situation a Thing changes its capabilities?</li>
+							<li>How to share interactions of a TD across several Things?</li>
 							<li>De-coupling: semantics / relation types from links</li>
 							<li>REST-based topics:
 								<ul>
@@ -1913,7 +1912,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							<li>The security token form-factor JWT is versatile but lacks a standard way of  distinguishing different types</li>
 							<li>CoAP lacks adaptation of the HTTP authorization framework (RFCs 2617/7235)</li>
 							<li>CoAP stacks lack programmatic/declarative ways of telling the runtime to enforce the presence of valid security tokens (for certain resources)</li>
-							<li>WoT lacks consideration on whether that should be expressed in thing descriptions (opt. item for domains that prefer a-priori strategies)</li>
+							<li>WoT lacks consideration on whether that should be expressed in Thing Descriptions (opt. item for domains that prefer a-priori strategies)</li>
 							<li>OAuth resp. ACE miss some coverage for cross-domain cases</li>
 						</ul>
 					</li>
@@ -1935,11 +1934,11 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 					<li>Thing-to-thing communication and interactions</li>
 					<li><a href="#scripting-api">Scripting API</a></li>
 				</ul>
-				<p>Former PlugFest participants are well aware of the available thing acting and sensing capabilities.
+				<p>Former PlugFest participants are well aware of the available actuation and sensing capabilities of Things.
 				   That said, we would like to stimulate new scenarios based on what we have seen so far
-				   (e.g., discover thing properties and combine them with other thing actions and/or events). Feel free
+				   (e.g., discover Properties and combine them with Actions and/or Events of other Things). Feel free
 				   to come up with rather sophisticated real-world use-cases.
-				   Please also make use of the discovery to improve PlugFest preperation and enable onsite combination of things.</p>
+				   Please also make use of the discovery to improve PlugFest preperation and enable onsite combination of Things.</p>
 				<p>It is time to stress what we elaborated so far to actually proof it!</p>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
