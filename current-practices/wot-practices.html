@@ -311,7 +311,7 @@
 					@TODO Callee required term? SIP related? Client/Server would be better for IoT people
 
 
-					<p>The purpose of WoT is to expose private resources (Things themselves, information they produce, or information about them) at public-facing endpoints (e.g. Internet). This implies that components that expose Things (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
+					<p>The purpose of WoT is to expose private resources (Things themselves, information they produce, or information about them) at public-facing endpoints (e.g., Internet). This implies that components that expose Things (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
 						<ul>
 							<li>Authorization and authentication</li>When receiving instructions, servients must authorize such calls/requests i.e. determine whether to accept them for processing. This implies the need to authenticate the properties of callers that are used when performing authorization.
 							<li>Secure communications</li>When exchanging sensitive resources/information over a shared network, servients must demand encrypting/signing corresponding message exchanges.
@@ -1978,26 +1978,36 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 					<ol>
 						<li>
-							WoT Client (e.g., a Web dashboard or controller)
+							WoT Client (e.g., a Web dashboard)
 							<blockquote>
-								A WoT client implementation requires a <a href="#sec-td">TD</a> parser, a user interface or control logic to drive the interaction with one or more Things.
-								For the TD parser, a JSON-LD library and RDF support are recommended, to reason about the TD of consumed Things.
+								A WoT client implementation requires a <a href="#sec-td">TD</a> parser and a user interface or control logic to drive the interaction with one or more other Things.
 								Optionally, it can implement lookup support for the <a href="#sec-repo">Repository</a>.
+								For the TD parser, a JSON-LD library is recommended, but it is also possible to implement a simpler parser that exploits knowledge about which parts of the TD are actually relevant for the Thing.
+								Simple WoT clients can have a limited notion of the semantics and only support interactions that match their own capabilities.
+								A simple switch, for instance, does not need to understand the RGB color model.
+								Powerful WoT clients, however, may have full RDF support and require access to Linked Data to reason about the metadata and interactions provided by the TD.
 							</blockquote>
 						</li>
 						<li>
 							WoT Server (e.g., a Thing that only provides functionality, but does not use other Things)
 							<blockquote>
 								A WoT server requires resource handlers that implement Properties, Actions, or Events.
-								The <a href="#sec-td">TD</a> can be static or dynamically generated based on the implementd resources.
+								The <a href="#sec-td">TD</a> can vary between static or dynamically generated based on the implementd interactions.
 								For this, a simple JSON library is enough, as the vocabulary is fully known at design time.
-								Optionally, it can implement support for repository registration.
+								A WoT server should also implement support for TD Repository registration.
 							</blockquote>
 						</li>
 						<li>
 							WoT Servient (e.g., a virtual Thing that composes multiple other Things and provides a higher-level TD)
 							<blockquote>
-								A WoT <a>servient</a> needs to implement both client and server requirements.
+								A WoT <a>servient</a> is capable of thing-to-thing interaction.
+								It needs to implement both server and client requirements.
+								The server part is usually used to configure the Thing, so it knows which interaction to select on the other Thing(s).
+								A powerful Thing might only need rough information such as all Things at location X and then uses semantic match between itself and the capabilities of the discovered Things.
+								A smart switch, for instance, has the notion of being on or off, and hence binds to the first `onOffStatus` interaction it finds on discovered lamps.
+								Resource-constrained Things usually need the exact wiring configuration by a user or comissioning tool.
+								A smartphone app, for instance, can be used to write the TD of a specific lamp together with the `@id` value of the desired interaction to the configuration Properties of a energy-harvesting switch.
+								The client part then starts the interaction with the other Thing(s) by constructing messages based on the given TD and implemented Protocol Bindings.
 							</blockquote>
 						</li>
 					</ol>
