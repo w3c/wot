@@ -79,7 +79,7 @@
 					The central idea of WoT is that Things can describe their capabilities and metadata in a machine-understandable format: the WoT <a>Thing Description</a> (TD), which is rooted in <a>RDF</a>.
 					The TD can be served by a Thing itself or hosted elsewhere on the Web.
 					This way, a TD can also be retrofitted on existing devices, and thereby complement existing IoT platforms and standards with rich metadata to enable interoperability across platforms.
-					WoT also supports flexible Protocol Bindings that enable the mapping of a semantically described Thing interaction to different protocols, since each domain has different requirements.
+					WoT also supports flexible Protocol Bindings that enable the mapping of a semantically described Thing interaction to different protocols, since each domain has different requirements here.
 					Finally, WoT envisions to provide a common runtime environment for IoT-related apps.
 					Sensors and actuators can be improved by installing better data processing algorithms or by adding completely new features through software.
 					With a common runtime environment, aggregation apps can be instantiated in the cloud and then relocated to local hubs, or even directly onto a powerful Thing, to meet certain quality of service requirements.
@@ -89,13 +89,12 @@
 			<section>
 				<h2>How to get started</h2>
 
-				<p>
-					This document gives an overview for implementers over the W3C WoT building blocks and how they are connected.
-					<ul>
-						<li>To get familiar with the basics of WoT, continue with <a href="#sec-concepts"></a>.</li>
-						<li>To participate in the WoT PlugFests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a>.</li>
-					</ul>
-				</p>
+				<ul>
+					<li>This document gives an overview for implementers of the W3C WoT building blocks.</li>
+					<li>To get a quick introduction to the basics of WoT, continue with <a href="#sec-concepts"></a>.</li>
+					<li>To participate in the WoT PlugFests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a>.</li>
+					<li>An introduction to the deployment scenarios and high-level architecture can be found in the <a href="http://w3c.github.io/wot/architecture/wot-architecture.html">WoT Architecture</a> document.</li>
+				</ul>
 			</section>
 		</section>
 
@@ -108,10 +107,16 @@
 
 			<dl>
 				<dt><dfn>CoAP</dfn></dt>
-				<dd>Acronym for Constrained Application Protocol [[!RFC7252]]</dd>
+				<dd>Constrained Application Protocol [[!RFC7252]]</dd>
 
 				<dt><dfn>JSON-LD</dfn></dt>
-				<dd>A JSON document that is augmented with support for Linked Data by providing an <code>@context</code> property with a defining URI</dd>
+				<dd>A JSON document that is augmented with support for Linked Data by providing an <code>@context</code> property with a defining URI [[!JSON-LD]]</dd>
+
+				<dt><dfn>JWT</dfn></dt>
+				<dd>JSON Web Token [[!RFC7519]]</dd>
+
+				<dt><dfn>RDF</dfn></dt>
+				<dd>The Resource Description Framework (RDF) of the Semantic Web [[!rdf11-concepts]]</dd>
 
 				<dt><dfn>Repository</dfn></dt>
 				<dd>A registry for <a>TDs</a> that provides a Web interface to register TDs and look them up, for intance using SPARQL queries</dd>
@@ -369,40 +374,40 @@
 				<h2>Thing Description</h2>
 
 				<p>
-					The WoT Thing Description (TD) relies on the Resource Description Framework (RDF) as an underlying data model.
-					As a current serialization format of RDF JSON-LD has been proposed which provides the semantic description of
-					a Thing as well as a functional description of its <a>WoT Interface</a>.
-					For this, the WoT IG defined a minimal vocabulary to express the capabilities of a Thing in terms of <i>Properties</i>, <i>Actions</i>, and <i>Events</i>.
-					In addition, the TD provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.), representation formats, and security policies for resources.
-				</p>
-
-				<p>
-					<a href="#fig-td"></a> gives an overview which kind of relevant content can be defined in and can be extract from a TD.
+					The WoT Thing Description (TD) provides the semantic metadata of a Thing as well as a functional description of its <a>WoT Interface</a>.
+					For this, it relies on the Resource Description Framework (RDF) [[!rdf11-concepts]] as an underlying data model.
+					For now, [[!JSON-LD]] is used as the default TD serialization format.
+					The WoT IG defined a minimal vocabulary to express the capabilities of a Thing in terms of different interaction patterns: <i>Properties</i>, <i>Actions</i>, and <i>Events</i>.
+					In addition, the TD provides metadata for the different communication bindings (e.g., HTTP, CoAP, etc.), encodings (e.g., JSON, EXI, etc.), and security policies (authentication, authorization, etc.).
+					<a href="#fig-td"></a> gives an overview of the relevant content defined in a TD.
 				</p>
 
 				<figure id="fig-td">
-          <img src="td_concept.jpg" width="50%">
-          <figcaption>Concept of the Thing Description (TD)</figcaption>
+          <img src="td-concepts.png" width="60%">
+          <figcaption>Concepts of the Thing Description (TD)</figcaption>
         </figure>
 
 				<p>
-					The subsequent subsection will give a basic concept of the TD as  JSON-LD samples and more detail explaination of the
-					TD elements as well as how can it be used in a TD sample.
+					The subsequent subsection will give a brief introduction to the TD as JSON-LD samples.
+					This is followed by more detailed explainations of the TD elements, a number of more complex TD examples, and finally the considerations for use in production.
 				</p>
 
 				<section>
 					<h3>Quick Start: TD Samples</h3>
 
 					<p>
-						In the following we introduce three TD samples to show the TD's opportunities. Example 1 shows a simple TD that reflects a very basic way to describe a temperature Thing ("MyTemperatureThing") that serves a temperature property that uses JSON as an exchange data format and CoAP as application transportation protocol to request and transport the temperature value.
+						In the following, we introduce three minimal TD samples to show the prospects of the W3C Thing Descriptions.
+						Example 1 shows a simple TD that describes a temperature Thing.
+						It supports a single protocol, CoAP, and uses JSON for its encoding (or data exchange format).
+						Reading out the temperature value from a Property is the only interaction provided by the Thing.
 					</p>
 
-					<pre class="example" title="Quick Start">
+					<pre class="example" title="Data Only">
 						{
 						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
-						  "uris": ["coap://www.mytemp.com:5683/"],
+						  "uris": ["coap://mytemp.example.com:5683/"],
 						  "encodings": ["JSON"],
 						  "properties": [
 						    {
@@ -416,32 +421,24 @@
 					</pre>
 
 					<p>
-						Based on this information in the TD we know the basic information about a Thing. There exists one
-						resource (temperature), we know how to access it (GET coap://www.mytemp.com:5683/temp)
-						and what is a data type (float) of the data provided by the resource.
+						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure (encoding).
+						However, this is missing critical semantic information such as this resource actually represents and what unit this number has.
 					</p>
-
+					
 					<p>
-						In practice, a Thing is described with additional information that provides further details about what kind
-						of Thing it is and what additional properties and capabilities it has. This information provides a semantic context
-						of a Thing. JSON-LD provides a means to extend a TD with an external (semantic) context and reuse existing contexts,
-						thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms,
-						instead of dealing with meaningless strings.  Example 2 shows the integration of the "sensor" namespaces and the semantic enrichment of the 
-						temperature property with a concrete @type and unit assignment.
+						In practice, a Thing provides further details about what kind of Thing it is and what the interactions mean.
+						This additional information is the semantic context of the Thing.
+						JSON-LD provides a means to extend a TD with an external (semantic) context, which allows to reuse existing models, thereby enhancing semantic interoperability.
+						Through a context, the meaningless strings turn into semantically defined terms that are part of a linkable vocabulary.
+						Example 2 shows the integration of the <code>sensor</code> namespace and the resulting semantic enrichment of the temperature Property with a concrete <code>@type</code> and unit assignment.
 					</p>
 
-					<p class="remove">
-						New text: what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
-						and what is the underlying data type (float).
-					</p>
-
-										<pre class="example">
-
+					<pre class="example" title="Semantic Annotations">
 						{
-						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						               {
-									<div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor": "http://example.org/sensors#"</div>
-								}],
+							"@context": [
+								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								<span style="font-weight: bold; background-color: lightgrey;">{ "sensor": "http://example.org/sensors#" }</span>
+							],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
 						  "uris": ["coap://www.mytemp.com:5683/"],
@@ -460,77 +457,75 @@
 					</pre>
 
 					<p>
-						Example 3 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
-						different kind of protocols (HTTP and CoAP), encodings (JSON and EXI4JSON), security
-						requirements (based on JWT), and  different interaction models (properties, actions, events) with
-						some type restrictions.
+						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP) and encodings (JSON and EXI).
+						The Thing also specifies security policies (it requires a <a>JWT</a>) and provides different interaction patterns (one Property, two Actions, one Event).
 					</p>
 
-					<pre class="example">
+					<pre class="example" title="More Capabilities">
 						{
-						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						               {"actuator": "http://example.org/actuator#"}],
-						  "@type": "Thing",
-						  "name": "MyLEDThing",
-						  "uris": [
-						    "coap://www.myled.com:5683/",
-						    "http://www.myled.com:8080/myled/"
-						  ],
-						  "encodings": [ "JSON","EXI4JSON"],
-						  "security": {
-						    "cat": "token:jwt",
-						    "alg": "HS256",
-						    "as": "https://authority-issuing.org"
-						  },
-						  "properties": [
-						    {
-						      "@type": "actuator:onOffStatus",
-						      "name": "status",
-						      "valueType": "string",
-						      "writable": true,
-						      "hrefs": [ "status", "myled/status" ]
-						    }
-						  ],
-						  "actions": [
-						    {
-						      "@type": "actuator:fadeIn",
-						      "name": "fadeIn",
-						      "inputData": {
-						        "valueType": "integer",
-						        "actuator:unit": "actuator:ms"
-						      },
-						      "hrefs": ["in", "myled/in"  ]
-						    },
-						    {
-						      "@type": "actuator:fadeOut",
-						      "name": "fadeOut",
-						      "inputData": {
-						        "valueType": "integer",
-						        "actuator:unit": "actuator:ms"
-						      },
-						      "hrefs": ["out", "myled/out" ]
-						    }
-						  ],
-						  "events": [
-						    {
-						      "name": "criticalCondition",
-						      "valueType": "string",
-						      "hrefs": [ "ev", "myled/event" ]
-						    }
-						  ]
+							"@context": [
+								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								{ "actuator": "http://example.org/actuator#" }
+							],
+							"@type": "Thing",
+							"name": "MyLEDThing",
+							"uris": [
+								"coap://myled.example.com:5683/",
+								"http://mything.example.com:8080/myled/"
+							],
+							"encodings": [ "JSON","EXI"],
+							"security": {
+								"cat": "token:jwt",
+								"alg": "HS256",
+								"as": "https://authority-issuing.example.org"
+							},
+							"properties": [
+								{
+									"@type": "actuator:onOffStatus",
+									"name": "status",
+									"valueType": "boolean",
+									"writable": true,
+									"hrefs": [ "pwr", "status" ]
+								}
+							],
+							"actions": [
+								{
+									"@type": "actuator:fadeIn",
+									"name": "fadeIn",
+									"inputData": {
+										"valueType": "integer",
+										"actuator:unit": "actuator:ms"
+									},
+									"hrefs": ["in", "led/in"  ]
+								},
+								{
+									"@type": "actuator:fadeOut",
+									"name": "fadeOut",
+									"inputData": {
+										"valueType": "integer",
+										"actuator:unit": "actuator:ms"
+									},
+									"hrefs": ["out", "led/out" ]
+								}
+							],
+							"events": [
+								{
+									"@type": "actuator:alert",
+									"name": "criticalCondition",
+									"valueType": "string",
+									"hrefs": [ "ev", "alert" ]
+								}
+							]
 						}
 					</pre>
 
 					<p>
-						Based on this TD you are able to know that JWT is required to interact with the resources of the Thing (tokens are issued by https://authority-issuing.org and tokens
-						are signed by HS256), status can be requested (using CoAP GET coap://www.myled.com:5683/status  or HTTP GET http://www.myled.com:8080/myled/status) or modified since
-						the status property is writable (using CoAP PUT coap://www.myled.com:5683/in or using HTTP PUT http://www.myled.com:8080/myled/myled/in with a string status payload). Actions can be
-						initiated using the resources fadeIn and fadeOut (e.g.,  using CoAP POST coap://www.myled.com:5683/in or HTTP coap://www.myled.com:5683/myled/out with a short-based payload (for ms)).
-						The "MyLEDThing" also serves an event (criticalCondition) that enables clients to be informed when an event occurs (e.g., using CoAP GET OBSERVE  coap://www.myled.com:5683/ev).
-					</p>
-
-					<p>
-						More details about the TD elements are given in the next section.
+						Based on this TD, one is able to know that a JSON Web Token (JWT) is required to interact with the resources of the Thing.
+						They are issued by <code>https://authority-issuing.example.org</code> and signed using HMAC SHA-256 (HS256).
+						The status of the Thing can be requested using a CoAP GET on <code>coap://myled.example.com:5683/pwr</code> or an HTTP GET on <code>http://mything.example.com:8080/myled/status</code>.
+						It can also modified using a PUT on the respective URIs, since Property is writable.
+						The Actions can be invoked through a POST to the resources fadeIn (<code>/in</code> for CoAP and <code>/myled/led/in</code> for HTTP) and fadeOut (<code>/out</code> for CoAP and <code>/myled/led/out</code> for HTTP) with an integer value in milliseconds serialized as JSON or EXI.
+						MyLEDThing also serves a textual Event called criticalCondition, which enables clients to be informed about problems (e.g., by sensing a CoAP GET with the Observe option to <code>coap://myled.example.com:5683/ev</code>).
 					</p>
 				</section>
 
@@ -2004,9 +1999,9 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 								It needs to implement both server and client requirements.
 								The server part is usually used to configure the Thing, so it knows which interaction to select on the other Thing(s).
 								A powerful Thing might only need rough information such as all Things at location X and then uses semantic match between itself and the capabilities of the discovered Things.
-								A smart switch, for instance, has the notion of being on or off, and hence binds to the first `onOffStatus` interaction it finds on discovered lamps.
+								A smart switch, for instance, has the notion of being on or off, and hence binds to the first <code>onOffStatus</code> interaction it finds on discovered lamps.
 								Resource-constrained Things usually need the exact wiring configuration by a user or comissioning tool.
-								A smartphone app, for instance, can be used to write the TD of a specific lamp together with the `@id` value of the desired interaction to the configuration Properties of a energy-harvesting switch.
+								A smartphone app, for instance, can be used to write the TD of a specific lamp together with the <code>@id</code> value of the desired interaction to the configuration Properties of a energy-harvesting switch.
 								The client part then starts the interaction with the other Thing(s) by constructing messages based on the given TD and implemented Protocol Bindings.
 							</blockquote>
 						</li>
