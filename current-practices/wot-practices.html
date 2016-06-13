@@ -134,7 +134,7 @@
 				<dd>The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</dd>
 
 				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
-				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#sec-td"></a>)</dd>
+				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#sec-td"></a> for details)</dd>
 
 				<dt><dfn>WoT Interface</dfn></dt>
 				<dd>Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different protocols bindings (see <a href="#sec-wot-interface"></a>)</dd>
@@ -536,7 +536,7 @@
 						<h4>TD Context</h4>
 
 						<p>
-							JSON-LD is a serialization format for Linked Data, that is, its content should use one or more vocabularies that are uniquely defined and available on the Web.
+							<a>JSON-LD</a> is a serialization format for Linked Data, that is, its content should use one or more vocabularies that are uniquely defined and available on the Web.
 							Any JSON-LD document has to be defined within a specific context that points to the relevant vocabularies.
 							For instance, the term <code>Thing</code> below refers to a concept defined in the RDFS vocabulary for Thing Description at <code>http://www.w3c.org/wot/td#</code>.
 							The context object should look like this:
@@ -1958,7 +1958,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 				<h2>Participation Howto</h2>
 
 				<p class="note" title="Status">
-					The current status of the howto is <a href="#plugfest-montreal">Montreal (2016-04)</a>
+					The current status of the howto is <a href="#plugfest-beijing">Beijing (2016-07)</a>
 				</p>
 
 				<p>
@@ -1975,9 +1975,9 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<li>
 							WoT Client (e.g., a Web dashboard)
 							<blockquote>
-								A WoT client implementation requires a <a href="#sec-td">TD</a> parser and a user interface or control logic to drive the interaction with one or more other Things.
+								A WoT client implementation requires a <a>TD</a> parser and a user interface or control logic to drive the interaction with one or more other <a>Things</a>.
 								Optionally, it can implement lookup support for the <a href="#sec-repo">Repository</a>.
-								For the TD parser, a JSON-LD library is recommended, but it is also possible to implement a simpler parser that exploits knowledge about which parts of the TD are actually relevant for the Thing.
+								For the TD parser, a <a>JSON-LD</a> library is recommended, but it is also possible to implement a simpler parser that exploits knowledge about which parts of the TD are actually relevant for the Thing.
 								Simple WoT clients can have a limited notion of the semantics and only support interactions that match their own capabilities.
 								A simple switch, for instance, does not need to understand the RGB color model.
 								Powerful WoT clients, however, may have full RDF support and require access to Linked Data to reason about the metadata and interactions provided by the TD.
@@ -1987,7 +1987,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							WoT Server (e.g., a Thing that only provides functionality, but does not use other Things)
 							<blockquote>
 								A WoT server requires resource handlers that implement Properties, Actions, or Events.
-								The <a href="#sec-td">TD</a> can vary between static or dynamically generated based on the implementd interactions.
+								The <a>TD</a> can vary between static or dynamically generated based on the implementd interactions.
 								For this, a simple JSON library is enough, as the vocabulary is fully known at design time.
 								A WoT server should also implement support for TD Repository registration.
 							</blockquote>
