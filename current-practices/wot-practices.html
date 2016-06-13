@@ -1999,9 +1999,9 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 								It needs to implement both server and client requirements.
 								The server part is usually used to configure the Thing, so it knows which interaction to select on the other Thing(s).
 								A powerful Thing might only need rough information such as all Things at location X and then uses semantic match between itself and the capabilities of the discovered Things.
-								A smart switch, for instance, has the notion of being on or off, and hence binds to the first `onOffStatus` interaction it finds on discovered lamps.
+								A smart switch, for instance, has the notion of being on or off, and hence binds to the first <code>onOffStatus</code> interaction it finds on discovered lamps.
 								Resource-constrained Things usually need the exact wiring configuration by a user or comissioning tool.
-								A smartphone app, for instance, can be used to write the TD of a specific lamp together with the `@id` value of the desired interaction to the configuration Properties of a energy-harvesting switch.
+								A smartphone app, for instance, can be used to write the TD of a specific lamp together with the <code>@id</code> value of the desired interaction to the configuration Properties of a energy-harvesting switch.
 								The client part then starts the interaction with the other Thing(s) by constructing messages based on the given TD and implemented Protocol Bindings.
 							</blockquote>
 						</li>
