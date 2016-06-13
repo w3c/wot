@@ -213,7 +213,7 @@
 					
 					<p>
 						Depending on the interaction, a payload may be optional or required.
-						For details see <a href="#sec-td-details"></a>.
+						For details see <a href="#sec-interactions"></a>.
 					</p>
 
 					<div class="practice">
@@ -275,7 +275,10 @@
 									<ul>
 										<li><b>Subscribe:</b> POST + Observe of returned handle resource</li>
 										<li><b>Update subscription:</b> PUT (on handle resource)</li>
-										<li><b>Cancel subscription:</b> DELETE (on handle resource)</li>
+										<li>
+											<b>Cancel subscription:</b> DELETE (on handle resource)<br/>
+											Note that CoAP Observe has cancellation support. This would represent pausing the subscription, where the configuration is preserved for the Event and can be resumed through a new GET + Observe.
+										</li>
 									</ul>
 								</li>
 							</ul>
@@ -310,64 +313,6 @@
 					</div>
 				</section>
 
-				<section>
-					<h3>Security Considerations</h3>
-
-					@TODO Callee required term? SIP related? Client/Server would be better for IoT people
-
-
-					<p>The purpose of WoT is to expose private resources (Things themselves, information they produce, or information about them) at public-facing endpoints (e.g., Internet). This implies that components that expose Things (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
-						<ul>
-							<li>Authorization and authentication</li>When receiving instructions, servients must authorize such calls/requests i.e. determine whether to accept them for processing. This implies the need to authenticate the properties of callers that are used when performing authorization.
-							<li>Secure communications</li>When exchanging sensitive resources/information over a shared network, servients must demand encrypting/signing corresponding message exchanges.
-						</ul>
-						These fundamental security services depend on underpinnings esp. the provisioning of metadata (identifiers, attributes, assignments/affiliations) about system actors and the establishment of keying relations resp. shared secrets among actors that are supposed to interact in protected fashion. This section does not further elaborate on the provisioning of metadata and establishment of keys/secrets needed to implement authoriztion and authentication resp. secure communications.
-						<h4>Authorization and Authentication</h4>
-						The authorization of requested actions (instructions/requests) depends on the authentication of those properties of a caller that are relevant for authorization and that are being submitted or claimed by the caller. This can e.g. be identifiers, attributes (e.g. location), assignments (e.g. roles), affiliations (e.g. group memberships) or permissions (e.g. resource access rights). There are two basic strategies for the initial authentication of callers:
-						<ul>
-							<li>Internalization</li>The servient challenges the caller for initial authentication credentials, validates them, determines the properties of the authenticated caller, uses them to render an authorization decision and enforces this decision.
-							<li>Externalization to online TTPs</li>The servient delegates the challenging for initial authentication credentials, their validation, the determination of caller properties and evtl. the rendering of an authorization decision to an online TTP. In course of that  the servient then receives a report of the TTP (corresponding objects are called 'security token' or 'access token') and proceeds with it
-						</ul>
-						The internalization approach has a number of issues including: lack of SSO (a concern when the caller is a user agent, no real issue otherwise), tight coupling of initial authentication credentials and application protocol (a painpoint when multiple schemes/dynamics are to be covered), forcing servients into the implementation of complex, non-core functionality. For these reasons the internalization strategy is uncommon - even in unconstrained office/enterprise/Cloud IT. Since WoT is concerned with components that are (severly) constrained, it is anticipated that WoT solutions will externalize complex processing tasks in caller authentication to online TTP components by default.<br/>
-						The externalization of initial caller authentication to TTPs allows to allocate the authorization decision making as follows:
-						<ul>
-							<li>Internalization</li>The servient component performs authorization decision making and enforcement
-							<li>Externalization according push</li>The servient component performs authorization decision enforcement. Authorization decision making is done by the TTP that performs the initial authentication of callers (resource access control information travels in-band with the security token asserting the authenticated identity of the caller)
-							<li>Externalization according pull</li>The servient component performs authorization decision enforcement. Authorization decision making is done by a backend component (called by the servient).
-						</ul>
-						The externalization of initial caller authentication and the externalization of the authorization decision making according push to TTPs matches the architectural proposition of the IETF ACE working group (see "An architecture for authorization in constrained environments" at https://www.ietf.org/id/draft-ietf-ace-actors).<br/><br/>
-						The anticipated default strategy in WoT results in online TTP components as well as special-purpose objects: security tokens by which online TTPs report the results of their work back to servients. These are cryptographically protected objects that report properties of the caller (identifiers, attributes, assignments, affiliations, permissions etc) which are asserted by the online TTP. Such objects may contain resource access control information. Such objects are short-lived (normally: minutes/hours) and may be re-used during their lifetime. These objects must be signed to prevent counterfeiting and may be encrypted to preserve confidentiality.
-						<ul>
-							<li>Bearer security model</li>In case of bearer tokens submitters of security tokens do not have to provide any proof-of-possession. A real-life analogy is a cinema or concert ticket - the recipient only wants to make sure it is no counterfeit. This implies a risk that illegitimate callers may present valid security tokens. In the digital World SAML Web SSO is a prominent example of an online TTP scheme that is implementing a bearer model.
-							<li>PoP security model</li>In case of PoP (aka HoK) tokens submitters are required to supply fresh authenticator objects in addition/conjunction with security tokens. A real-life analogy is a passport - the recipient wants to make sure it is no counterfeit and is presented by the right person. In the digital World Kerberos is the most prominent example of an online TTP scheme that is implementing a PoP model.
-						</ul>
-						Note that OAuth started with PoP (OAuth 1.x), moved to bearer (OAuth 2.0 according RFC 6749/6750) to foster adaptation and currently adds PoP (current OAuth 2.0 drafts) to include high-value assets.<br/><br/>
-						In WoT no one-size-fits-all security token should be expected. Specific WoT domains such as building automation, sports/health care, industrial control systems have their own specific needs when it comes to the expression of caller properties. Moreover specific protocol stacks also have their own specific constraints that affect security token contents.<br/><br/>
-						In addition to  security tokens (that are domain and protocol stack-specific) protocols are needed to acquire and supply security tokens. The security token supply between callers and servients is the straight-forward part of this task:
-						<ul>
-							<li>Application requests</li>The application protocol requests must allow the transfer of security tokens (bearer) and/or authenticators (PoP) in a standardized way. For HTTP such standards exist (RFC 6750 for bearer tokens) resp. emerge (PoP tokens); for CoAP they do emerge. A critical issue are large security tokens/authenticators that can not be supplied inline with arbitrary application requests. The common trick to address this concern is to introduce a dedicated endpoint to which security tokens and/or authenticators can be sent in application PDUs (dedicated to the supply of security tokens and/or authenticators) during in an upfront exchange.
-							<li>Application responses</li>The application protocol (error) responses must allow to inform clients about expected security token issuing authority, expected security token type/category and protection. Current and emerging standards do not yet provide an adequate coverage for this concern.
-						</ul>
-						The security token acquisition is the more complex part of this trick. The servient components trigger exchanges between callers and their online TTP but are not involved during their execution. The requesting party may also introduce further online TTP components to support e.g. constrained callers or clients. Obviously the online TTPs need to respect the capabilities of the actual caller or its proxy. In addition to that a continental divide exists between following scenarios:
-						<ul>
-							<li>Consumer goods, owned by individual end users</li>Authorization is often conducted according a lazy policing model: access requests happen first, then the resource owner (an individual) is asked for an authorization (whether she can be assumed to be online does matter). This results in an authorization policy that is build-up dynamically
-							<li>Capital goods, owned by legal entities</li>Authorization is mostly conducted according a preemtive policing model: a (static) authorization policy is provided, then access request happen and authorization decisions are rendered without assuming any interaction with the resource ownwer or a representative
-						</ul>
-						Both cases distribute work unevenly over servients and their callers; both sides have fundamentally different working tasks and workloads in authorization and authentication:
-						<ul>
-							<li>Servient tasks</li>Understand protection needs (public, private) of served resources, challenge for security tokens (bearer) and/or authenicators (PoP), validate security tokens (bearer) and/or authenicators (PoP) and match their content against application request contents
-							<li>Caller tasks</li>React on application protocol error responses (demanding the supply of security tokens), acquire security token from online TTPs, perform initial authentication by means of a security protocol (possibly different from the application protocol, evtl. mediated by an online TTP on side of the requesting party), and supply security tokens (bearer) and/or authenticators (PoP) as part of the application protocol
-						</ul>
-						For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT Interfaces.
-
-						The security-part of the W3C WoT PlugFest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the PlugFest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this PlugFest
-						<h4>Secure Communications</h4>
-						Communication security can be implemented in form of transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the same working tasks and workload<br/><br/>
-						Transport-level security has a long heritage in IT and presents a well-understood means in Web security which is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
-						Some WoT deployments have requirements that do not match TLS and DTLS properties, for instance multicast resp. group-oriented communications. It is also possible that (severely) constrained WoT components can not bear the overhead that is implied by the TLS and DTLS protocols. Then persistent, application-level security can help to achieve communication security.<br/>
-						In contrast to transport-level security, application-level security allows to apply cryptographic transformations in a specific/granular manner (affecting some but not all exchanged data objects) and thereby reducing the security processing burden. In case security tokens are to be used in cases where transport-level security can not be used, application-level security offers means to provide PoP for security tokens as well as authenticity for message exchanges.
-					</p>
-				</section>
 			</section>
 
 			<section id="sec-td">
@@ -529,8 +474,8 @@
 					</p>
 				</section>
 
-	 			<section id="sec-td-details">
-					<h3>Details of the TD Elements</h3>
+	 			<section>
+					<h3>Semantic Metadata</h3>
 
 					<section>
 						<h4>TD Context</h4>
@@ -659,33 +604,55 @@
 							added such as product ID, firmware version, location, etc. These terms should then appear in the context of the Thing (as detailed in <a href="#td-context"></a>).
 						</p>
 					</section>
-
-<!--
+					
 					<section>
-						<h4>Data</h4>
+						<h4>Note on URI Resolution</h4>
 
-						<p class="ednote">
-							If encodings/serializations are part of the metadata, why aren't the data types?
-							This also has logical conflict with properties, which technically provide the data of a Thing.
-							Furthermore, this should maybe become part of the represenation format carrying the data to become self-descriptive and semantically safe.
+						<p>
+							A servient can be associated to more than one URI (e.g., in case it supports
+							several protocols). The same way, links to Properties, Actions, or Events
+							could be defined as an array instead of a single string. URIs can also
+							be relative. The IETF recommendation for URI resolution [[!RFC3986]] does note
+							fully cover that case. This section is an attempt to specify how to
+							resolve URIs in a Thing Description document.
 						</p>
 
-				 		<p class="note" title="Matthias Kovatsch">
-							Personally, I am not even sure if we need this.
-							The encoding of the value within a representation format (JSON number, EXI element, etc.) should be enough, when the property itself is fully described.
-							We do not care if the system internally represents it as an unsighend byte, signed integer, or whatever.
-							It appears to be obsolete WS-* baggage that is not required for scripting; native application logic must infer the required types from the semantic description, usually before or at compile time (e.g., a native application consuming a Thing with a <code>Temperature</code> property must know how to represent it internally).
+						<p>
+							<ul>
+								<li>
+									A Thing Description can define one or more <code>uris</code>. If only one URI
+									is defined, the JSON value can be a plain string. If more than one URI
+									is defined, the JSON value must be a string array.
+								</li>
+								<li>
+									Each string from the JSON value should be interpreted as a base URI
+									and must be absolute.
+								</li>
+								<li>
+									A Property, an Action or an Event can define one or more <code>hrefs</code>.
+									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code>
+									must be a string. If it is a string array, the JSON value of <code>hrefs</code>
+									can be either a string or a string array.
+								</li>
+								<li>
+									If the JSON value of <code>hrefs</code> is a string, it can be either a relative
+									or an absolute URI. In the former case, it should be possible to resolve it using
+									the algorithm of [[!RFC3986]] using <i>any</i> of the base URIs available.
+								</li>
+								<li>
+									If the JSON value of <code>hrefs</code> is a string array, it must contain
+									as many elements as that of <code>uris</code> and each element must be a
+									relative URI. The resolution algorithm of [[!RFC3986]] should then be applied
+									<i>index-wise</i>.
+								</li>
+							</ul>
 						</p>
-
-						<p>This field is used to define application-specific simple and complex data types that are used by the interaction
-						models (property, action, event).</p>
-
-						<p>Per default, a subset of XML Schema simple data types is supported which includes string, int, float, byte, short, boolean,
-						unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).</p>
-
-						<p>An input or output data field can be also assigned as empty which is equivalent to 'void' or 'null'.</p>
 					</section>
--->
+				</section>
+
+				<section>
+					<h3>Interaction Patterns</h3>
+					
 					<section>
 						<h4>Property</h4>
 
@@ -694,7 +661,6 @@
 							Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or 
 							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
-
 
 						<pre class="example">
 							{
@@ -883,116 +849,242 @@
 							Should we rather talk about servients here or is the explicit role as client beneficial?
 						</p>
 					</section>
+				</section>
+
+				<section>
+					<h3>Type System</h3>
+
+					<p>All of the three interaction types <code>Property</code>, <code>Action</code>, and <code>Event</code> can specify the type of the value acceptable as an input or expected as an output of the interaction. JSON schema provides a standard way to describe the structure and datatypes of data, and we use JSON schema as the notation for value types of the interaction types.
+					</p>
+
+					<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
+					</p>
+
+					<pre class="example">
+						{
+							...
+						  "properties": [
+						    {
+									...
+						      "name": "temperature",
+						      "valueType": { "type": "number" },
+									...
+						    }
+						  ]
+							...
+						  "events": [
+						    {
+									...
+						      "name": "criticalCondition",
+						      "valueType": { "type": "string" },
+									...
+						    }
+						  ]
+							...
+						}
+					</pre>
+
+					<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
+					</p>
+
+					<pre class="example">
+						{
+							...
+						  "actions": [
+						    {
+									...
+						      "name": "fadeIn",
+						      "inputData": {
+						        "valueType": { "type": "number" },
+						        "actuator:unit": "actuator:ms"
+						      },
+						      "outputData": {
+						        "valueType": { "type": "boolean" },
+						      },
+									...
+						    }
+						  ]
+							...
+						}
+					</pre>
 
 					<section>
-						<h4>Value Type</h4>
-
-						<p>All of the three interaction types <code>Property</code>, <code>Action</code> and <code>Event</code> can specify the type of the value acceptable as an input or expected as an output of the interaction. JSON schema provides a standard way to describe the structure and datatypes of data, and we use JSON schema as the notation for value types of the interaction types.
-						</p>
-
-						<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
-						</p>
-
-						<pre class="example">
-							{
-								...
-							  "properties": [
-							    {
-										...
-							      "name": "temperature",
-							      "valueType": { "type": "number" },
-										...
-							    }
-							  ]
-								...
-							  "events": [
-							    {
-										...
-							      "name": "criticalCondition",
-							      "valueType": { "type": "string" },
-										...
-							    }
-							  ]
-								...
-							}
-						</pre>
-
-						<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
-						</p>
-
-						<pre class="example">
-							{
-								...
-							  "actions": [
-							    {
-										...
-							      "name": "fadeIn",
-							      "inputData": {
-							        "valueType": { "type": "number" },
-							        "actuator:unit": "actuator:ms"
-							      },
-							      "outputData": {
-							        "valueType": { "type": "boolean" },
-							      },
-										...
-							    }
-							  ]
-								...
-							}
-						</pre>
-
-					<section>
-						<h5>Simple Data</h5>
+						<h4>Simple Data</h4>
 						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
 						</p>
-
+	
 						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code>.
 						</p>
-
+	
 						<pre class="example">
 							"valueType": { "type": "number" },
 						</pre>
-
+	
 						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
 						</p>
-
+	
 						<pre class="example">
 							{ "value": 123 }
 						</pre>
-
+	
 						<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
 						</p>
-
+	
 						<pre class="example">
 								&lt;number>123&lt;/number>
 						</pre>
-
+	
 						<p class="note" title="Wrapping single values in a JSON object">
 							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
 						</p>
 					</section>
-
+	
 					<section>
-						<h5>Structured Data</h5>
-
+						<h4>Structured Data</h4>
+	
 						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>.
 						</p>
-
+	
 						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
 						JSON provides two distinct constructs to define a structure that can have multiple literal values. 
 						One is JSON object, and the other is JSON array.
 						</p>
+	
+						<section>
+							<h5 id="json-object">JSON Object</h5>
+		
+							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of
+							two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>)
+							where <code>id</code> is required to be present.
+							</p>
+		
+							<pre class="example">
+								"valueType": {
+								    "type": "object",
+								    "properties": {
+								        "id": {
+								            "type": "integer"
+								        },
+								        "name": {
+								            "type": "string"
+								        }
+								    },
+								    "required": ["id"]
+								}
+							</pre>
+		
+							<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
+							</p>
+		
+							<pre class="example">
+								{
+									"value": {
+										"id": 12345,
+										"name": "Web of Things"
+									}
+								}
+							</pre>
+		
+							<p>The above data will look the following when the data is exchanged in XML.
+							</p>
+		
+							<pre class="example">
+									&lt;object>
+										&lt;id>
+											&lt;number>12345&lt;/number>
+										&lt;/id>
+										&lt;name>
+											&lt;string>Web of Things&lt;/string>
+										&lt;/name>
+									&lt;/object>
+							</pre>
+		
+							<div class="note" title="RDF serialization of value types">
+								<p>
+									Using the TD model and JSON Schema in a single document may lead
+									to a name conflict:
+									<code>properties</code> is used both to declare Properties of the Thing and expected keys in a JSON object.
+							 		Depending on the use case, if a serialization of the Thing
+									Description in RDF is required, the <code>valueType</code>
+									definition should be processed with an additional JSON-LD
+									context that overrides the mapping for <code>properties</code>
+									(see [[!JSON-LD]], Advanced Context Usage).
+								</p>
+							</div>
+		
+						</section>
+	
+						<section>
+							<h5 id="json-array">JSON Array</h5>
+		
+							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
+							multiple number literals where the occurrence must be either twice or three times.
+							</p>
+		
+							<pre class="example">
+								"valueType": {
+								    "type": "array",
+								    "items": {
+								        "type" : "number"
+								    },
+								    "minOccurs" : 2,
+								    "minOccurs" : 3
+								}
+							</pre>
+		
+							<p>When the numbers being exchanged are 123 and 456, data serialization in JSON format will look like the following.
+							</p>
+		
+							<pre class="example">
+								{
+									"value": [
+										123,
+										456
+									]
+								}
+							</pre>
+		
+							<p>The above data will look the following when the data is exchanged in XML.
+							</p>
+		
+							<pre class="example">
+									&lt;array>
+										&lt;double>123&lt;/double>
+										&lt;double>456&lt;/double>
+									&lt;/array>
+							</pre>
+		
+		
+						</section><!-- End of "JSON Array" -->
+	
+					</section><!-- End of "Structured Data" -->
+	
+					<section>
+					<h4>Mapping to XML Schema</h4>
+
+					<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema
+					look like when serialized to XML in parallel to corresponding JSON serializations.
+					</p>
+
+					<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
+Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
+					</p>
+
+					<p>The XML structure is based on <a href="https://www.w3.org/XML/EXI/docs/json/exi-for-json.html">EXI4JSON</a>. 
+					The structure works uniformly well for both schema-less and schema-informed use cases. 
+					</p>
+
+					<p class="ednote">A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
+					</p>
 
 					<section>
-						<h6 id="json-object">JSON Object</h6>
+						<h5>JSON Object Definition to XML Schema</h5>
 
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of
-						two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>)
-						where <code>id</code> is required to be present.
+						<p>Shown below is the JSON schema <code>object</code> definition used as the <code>valueType</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
 						</p>
 
 						<pre class="example">
-							"valueType": {
+							{
 							    "type": "object",
 							    "properties": {
 							        "id": {
@@ -1006,310 +1098,139 @@
 							}
 						</pre>
 
-						<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
+						<p>When the <code>object</code> is anonymous (i.e. it is the root, or participates in an <code>array</code> definition), 
+						the above <code>object</code> definition transforms to the following XML Schema element definition.
 						</p>
 
 						<pre class="example">
-							{
-								"value": {
-									"id": 12345,
-									"name": "Web of Things"
-								}
-							}
-						</pre>
-
-						<p>The above data will look the following when the data is exchanged in XML.
-						</p>
-
-						<pre class="example">
-								&lt;object>
-									&lt;id>
-										&lt;number>12345&lt;/number>
-									&lt;/id>
-									&lt;name>
-										&lt;string>Web of Things&lt;/string>
-									&lt;/name>
-								&lt;/object>
-						</pre>
-
-						<div class="note" title="RDF serialization of value types">
-							<p>
-								Using the TD model and JSON Schema in a single document may lead
-								to a name conflict:
-								<code>properties</code> is used both to declare Properties of the Thing and expected keys in a JSON object.
-						 		Depending on the use case, if a serialization of the Thing
-								Description in RDF is required, the <code>valueType</code>
-								definition should be processed with an additional JSON-LD
-								context that overrides the mapping for <code>properties</code>
-								(see [[!JSON-LD]], Advanced Context Usage).
+							&lt;xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+							    &lt;xs:complexType>
+							        &lt;xs:all>
+							            &lt;xs:element name="id">
+							                &lt;xs:complexType>
+							                  &lt;xs:sequence>
+							                    &lt;xs:element name="integer" type="xs:integer" />
+							                  &lt;/xs:sequence>
+							                &lt;/xs:complexType>
+							            &lt;/xs:element>
+							            &lt;xs:element name="name" minOccurs="0">
+							                &lt;xs:complexType>
+							                  &lt;xs:sequence>
+							                    &lt;xs:element name="string" type="xs:string" />
+							                  &lt;/xs:sequence>
+							                &lt;/xs:complexType>
+							            &lt;/xs:element>
+							        &lt;/xs:all>
+							    &lt;/xs:complexType>
+							&lt;/xs:element>
+							</pre>
+	
+							<p class="ednote">JSON schema <code>object</code> does NOT define any order. 
+							Therefore, in order to capture the constraints of JSON schema <code>object</code>, 
+							we need to use xsd:all constructs instead of xsd:sequence.
 							</p>
-						</div>
-
-					</section>
-
-					<section>
-						<h6 id="json-array">JSON Array</h6>
-
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
-						multiple number literals where the occurrence must be either twice or three times.
-						</p>
-
-						<pre class="example">
-							"valueType": {
-							    "type": "array",
-							    "items": {
-							        "type" : "number"
-							    },
-							    "minOccurs" : 2,
-							    "minOccurs" : 3
-							}
-						</pre>
-
-						<p>When the numbers being exchanged are 123 and 456, data serialization in JSON format will look like the following.
-						</p>
-
-						<pre class="example">
-							{
-								"value": [
-									123,
-									456
-								]
-							}
-						</pre>
-
-						<p>The above data will look the following when the data is exchanged in XML.
-						</p>
-
-						<pre class="example">
-								&lt;array>
-									&lt;double>123&lt;/double>
-									&lt;double>456&lt;/double>
-								&lt;/array>
-						</pre>
-
-
-					</section><!-- End of "JSON Array" -->
-
-					</section><!-- End of "Structured Data" -->
-
-					<section>
-						<h5>Mapping to XML Schema</h5>
-
-						<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema
-						look like when serialized to XML in parallel to corresponding JSON serializations.
-						</p>
-
-						<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
-Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
-						</p>
-
-						<p>The XML structure is based on <a href="https://www.w3.org/XML/EXI/docs/json/exi-for-json.html">EXI4JSON</a>. 
-						The structure works uniformly well for both schema-less and schema-informed use cases. 
-						</p>
-
-						<p class="ednote">A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
-						</p>
+	
+							<p>Otherwise (i.e. the <code>object</code> is a member of another <code>object</code> definition, thus has a name), 
+							the <code>object</code> definition transforms to the following XML schema element definition.
+							Note <code><i>__name</i></code> should be replaced by the actual name of the <code>object</code>.
+							</p>
+	
+							<pre class="example">
+								&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+								    &lt;xs:complexType>
+								        &lt;xs:sequence>
+								            &lt;xs:element name="object">
+								                &lt;xs:complexType>
+								                    &lt;xs:all>
+								                        &lt;xs:element name="id">
+								                            &lt;xs:complexType>
+								                              &lt;xs:sequence>
+								                                &lt;xs:element name="integer" type="xs:integer" />
+								                              &lt;/xs:sequence>
+								                            &lt;/xs:complexType>
+								                        &lt;/xs:element>
+								                        &lt;xs:element name="name" minOccurs="0">
+								                            &lt;xs:complexType>
+								                              &lt;xs:sequence>
+								                                &lt;xs:element name="string" type="xs:string" />
+								                              &lt;/xs:sequence>
+								                            &lt;/xs:complexType>
+								                        &lt;/xs:element>
+								                    &lt;/xs:all>
+								                &lt;/xs:complexType>
+								            &lt;/xs:element>
+								        &lt;/xs:sequence>
+								    &lt;/xs:complexType>
+								&lt;/xs:element>
+							</pre>
+	
+						</section><!-- End of "JSON Object Definition to XML Schema" -->
 
 						<section>
-							<h5>JSON Object Definition to XML Schema</h5>
+							<h5>JSON Array Definition to XML Schema</h5>
 	
-							<p>Shown below is the JSON schema <code>object</code> definition used as the <code>valueType</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
+							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
+							The <code>array</code> consists of multiple number literals where the occurrence the literal must be either twice or three times.
 							</p>
 	
 							<pre class="example">
 								{
-								    "type": "object",
-								    "properties": {
-								        "id": {
-								            "type": "integer"
-								        },
-								        "name": {
-								            "type": "string"
-								        }
+								    "type": "array",
+								    "items": {
+								        "type" : "number"
 								    },
-								    "required": ["id"]
+								    "minOccurs" : 2,
+								    "minOccurs" : 3
 								}
 							</pre>
 	
-							<p>When the <code>object</code> is anonymous (i.e. it is the root, or participates in an <code>array</code> definition), 
-							the above <code>object</code> definition transforms to the following XML Schema element definition.
+							<p>When the <code>array</code> is anonymous (i.e. it is the root, or participates in another <code>array</code> definition), 
+							the above <code>array</code> definition transforms to the following XML Schema element definition.
 							</p>
 	
 							<pre class="example">
-								&lt;xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+								&lt;xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 								    &lt;xs:complexType>
-								        &lt;xs:all>
-								            &lt;xs:element name="id">
-								                &lt;xs:complexType>
-								                  &lt;xs:sequence>
-								                    &lt;xs:element name="integer" type="xs:integer" />
-								                  &lt;/xs:sequence>
-								                &lt;/xs:complexType>
-								            &lt;/xs:element>
-								            &lt;xs:element name="name" minOccurs="0">
-								                &lt;xs:complexType>
-								                  &lt;xs:sequence>
-								                    &lt;xs:element name="string" type="xs:string" />
-								                  &lt;/xs:sequence>
-								                &lt;/xs:complexType>
-								            &lt;/xs:element>
-								        &lt;/xs:all>
+								        &lt;xs:sequence>
+								            &lt;xs:element name="double" type="xs:double" minOccurs="2" minOccurs="3" />
+								        &lt;/xs:sequence>
 								    &lt;/xs:complexType>
 								&lt;/xs:element>
-								</pre>
-		
-								<p class="ednote">JSON schema <code>object</code> does NOT define any order. 
-								Therefore, in order to capture the constraints of JSON schema <code>object</code>, 
-								we need to use xsd:all constructs instead of xsd:sequence.
-								</p>
-		
-								<p>Otherwise (i.e. the <code>object</code> is a member of another <code>object</code> definition, thus has a name), 
-								the <code>object</code> definition transforms to the following XML schema element definition.
-								Note <code><i>__name</i></code> should be replaced by the actual name of the <code>object</code>.
-								</p>
-		
-								<pre class="example">
-									&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-									    &lt;xs:complexType>
-									        &lt;xs:sequence>
-									            &lt;xs:element name="object">
-									                &lt;xs:complexType>
-									                    &lt;xs:all>
-									                        &lt;xs:element name="id">
-									                            &lt;xs:complexType>
-									                              &lt;xs:sequence>
-									                                &lt;xs:element name="integer" type="xs:integer" />
-									                              &lt;/xs:sequence>
-									                            &lt;/xs:complexType>
-									                        &lt;/xs:element>
-									                        &lt;xs:element name="name" minOccurs="0">
-									                            &lt;xs:complexType>
-									                              &lt;xs:sequence>
-									                                &lt;xs:element name="string" type="xs:string" />
-									                              &lt;/xs:sequence>
-									                            &lt;/xs:complexType>
-									                        &lt;/xs:element>
-									                    &lt;/xs:all>
-									                &lt;/xs:complexType>
-									            &lt;/xs:element>
-									        &lt;/xs:sequence>
-									    &lt;/xs:complexType>
-									&lt;/xs:element>
-								</pre>
-		
-							</section><!-- End of "JSON Object Definition to XML Schema" -->
+							</pre>
 	
-							<section>
-								<h5>JSON Array Definition to XML Schema</h5>
-		
-								<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
-								The <code>array</code> consists of multiple number literals where the occurrence the literal must be either twice or three times.
-								</p>
-		
-								<pre class="example">
-									{
-									    "type": "array",
-									    "items": {
-									        "type" : "number"
-									    },
-									    "minOccurs" : 2,
-									    "minOccurs" : 3
-									}
-								</pre>
-		
-								<p>When the <code>array</code> is anonymous (i.e. it is the root, or participates in another <code>array</code> definition), 
-								the above <code>array</code> definition transforms to the following XML Schema element definition.
-								</p>
-		
-								<pre class="example">
-									&lt;xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-									    &lt;xs:complexType>
-									        &lt;xs:sequence>
-									            &lt;xs:element name="double" type="xs:double" minOccurs="2" minOccurs="3" />
-									        &lt;/xs:sequence>
-									    &lt;/xs:complexType>
-									&lt;/xs:element>
-								</pre>
-		
-								<p>Otherwise (i.e. the <code>array</code> is a member of an <code>object</code> definition, thus has a name), 
-								the <code>array</code> definition transforms to the following XML schema element definition.
-								Note <code><i>__name</i></code> should be replaced by the actual name of the <code>array</code>.
-								</p>
-		
-		
-								<pre class="example">
-									&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-									    &lt;xs:complexType>
-									        &lt;xs:sequence>
-									            &lt;xs:element name="array">
-									                &lt;xs:complexType>
-									                    &lt;xs:sequence>
-									                        &lt;xs:element name="double" type="xs:double" minOccurs="2" maxOccurs="3" />
-									                    &lt;/xs:sequence>
-									                &lt;/xs:complexType>
-									            &lt;/xs:element>
-									        &lt;/xs:sequence>
-									    &lt;/xs:complexType>
-									&lt;/xs:element>
-								</pre>
-		
-							</section><!-- End of "JSON Array Definition to XML Schema" -->
+							<p>Otherwise (i.e. the <code>array</code> is a member of an <code>object</code> definition, thus has a name), 
+							the <code>array</code> definition transforms to the following XML schema element definition.
+							Note <code><i>__name</i></code> should be replaced by the actual name of the <code>array</code>.
+							</p>
 	
-						</section><!-- End of "Mapping to XML Schema" -->
+	
+							<pre class="example">
+								&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+								    &lt;xs:complexType>
+								        &lt;xs:sequence>
+								            &lt;xs:element name="array">
+								                &lt;xs:complexType>
+								                    &lt;xs:sequence>
+								                        &lt;xs:element name="double" type="xs:double" minOccurs="2" maxOccurs="3" />
+								                    &lt;/xs:sequence>
+								                &lt;/xs:complexType>
+								            &lt;/xs:element>
+								        &lt;/xs:sequence>
+								    &lt;/xs:complexType>
+								&lt;/xs:element>
+							</pre>
+	
+						</section><!-- End of "JSON Array Definition to XML Schema" -->
 
-					</section><!-- End of "Value Type" -->
+					</section><!-- End of "Mapping to XML Schema" -->
 
-					<section>
-						<h4>Note on URI Resolution</h4>
-
-						<p>
-							A servient can be associated to more than one URI (e.g., in case it supports
-							several protocols). The same way, links to Properties, Actions, or Events
-							could be defined as an array instead of a single string. URIs can also
-							be relative. The IETF recommendation for URI resolution [[!RFC3986]] does note
-							fully cover that case. This section is an attempt to specify how to
-							resolve URIs in a Thing Description document.
-						</p>
-
-						<p>
-							<ul>
-								<li>
-									A Thing Description can define one or more <code>uris</code>. If only one URI
-									is defined, the JSON value can be a plain string. If more than one URI
-									is defined, the JSON value must be a string array.
-								</li>
-								<li>
-									Each string from the JSON value should be interpreted as a base URI
-									and must be absolute.
-								</li>
-								<li>
-									A Property, an Action or an Event can define one or more <code>hrefs</code>.
-									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code>
-									must be a string. If it is a string array, the JSON value of <code>hrefs</code>
-									can be either a string or a string array.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string, it can be either a relative
-									or an absolute URI. In the former case, it should be possible to resolve it using
-									the algorithm of [[!RFC3986]] using <i>any</i> of the base URIs available.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string array, it must contain
-									as many elements as that of <code>uris</code> and each element must be a
-									relative URI. The resolution algorithm of [[!RFC3986]] should then be applied
-									<i>index-wise</i>.
-								</li>
-							</ul>
-						</p>
-					</section>
-
-				</section>
+				</section><!-- End of "Type System" -->
 
 				<section>
-					<h3>TD Samples</h3>
+					<h3>TD Examples</h3>
 
 					<p>
-						In the following, we give three examples of full TD. The first example, a
+						In the following, we give three examples of a full TD. The first one, a
 						temperature sensor, shows how to define relations between Thing
 						Properties. As a second example, we modeled
 						an actuator (LED lamp) where Actions have all been characterized semantically,
@@ -1518,127 +1439,64 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							Thing associations could be useful for discovery.
 						</p>
 					</section>
-
 				</section>
 
 				<section>
-					<h3>Discovery</h3>
+					<h3>Usage</h3>
 
-					<p class="ednote">
-						This section describes in general how a Thing (i.e., its TD) can be discovered.
-						In particular, the current practices at the PlugFests should become clear.
-						Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
-					</p>
+					<section id="td-context-extension">
+						<h4>Extending Thing Description with Other Semantic Models</h4>
 
-					<p>
-						Discovering a Thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
-					The URI of the link may point to the Thing (technically the <a>servient</a>) itself, as Things often host their TD directly, or to any other location on the Web.
-						There are several approaches to aquire such links.
-						Some work independent from the protocol binding, others rely on features of a specific protocol.
-					</p>
-
-					<section>
-						<h4>Manual Discovery</h4>
-
-						<p>
-							The link to the TD is provided by the developer at programming time, the operator through device management, or the user through a UI.
-						</p>
+						@TODO How to extend the TD with contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
 					</section>
+					
+					<section id="td-discovery">
+						<h4>Discovery</h4>
 
-					<section>
-						<h4>Repository</h4>
-
-						<p>
-							The Thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
+						<p class="ednote">
+							This section describes in general how a Thing (i.e., its TD) can be discovered.
+							In particular, the current practices at the PlugFests should become clear.
+							Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
 						</p>
+	
+						<p>
+							Discovering a Thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
+						The URI of the link may point to the Thing (technically the <a>servient</a>) itself, as Things often host their TD directly, or to any other location on the Web.
+							There are several approaches to aquire such links.
+							Some work independent from the protocol binding, others rely on features of a specific protocol.
+						</p>
+	
+						<section>
+							<h5>Manual Discovery</h5>
+	
+							<p>
+								The link to the TD is provided by the developer at programming time, the operator through device management, or the user through a UI.
+							</p>
+						</section>
+	
+						<section>
+							<h5>Repository</h5>
+	
+							<p>
+								The Thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
+							</p>
+						</section>
+	
+						<section>
+							<h5>Local Discovery</h5>
+	
+							<p>
+								The Thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
+								The response to a discovery request can include the TD directly or just a link.
+								For announcements, it is more common to only provide a link, since broadcasting TDs can be expensive.
+							</p>
+						</section>
 					</section>
-
+					
 					<section>
-						<h4>Local Discovery</h4>
-
-						<p>
-							The Thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
-							The response to a discovery request can include the TD directly or just a link.
-							For announcements, it is more common to only provide a link, since broadcasting TDs can be expensive.
-						</p>
-					</section>
-				</section>
-
-				<section id="td-context-extension">
-					<h3>Extending Thing Description with Other Semantic Models</h3>
-
-					@TODO How to extend the TD with contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
-				</section>
-
-				<section>
-					<h3>Abstract Thing Descriptions</h3>
-
-					<p class="note" title="Matthias Kovatsch">
-						This is a proposal to implement the concept of late binding.
-					</p>
-
-					<p>
-						An abstract TD contains all the semantic information of a normal TD except for the protocol and addressing information (i.e., base URIs and hrefs) as well as certain elements of the metadata that would refer to a specific instance of such a Thing (e.g., name and serial number).
-						They can be compared to abstract classes or interfaces from object-oriented programming: abstract TDs define placeholders that cannot be instantiated, that is, do not belong to a concrete Thing.
-						This is useful for semantic reasoning processes that require information about Thing capabilities (e.g., to proof that a certain functionality can be implemented through service composition).
-						Abstract TDs also fulfill the requirement of late bindings in the application logic.
-						A script could instantiate a proxy object that exposes all capabilities of the abstract TD.
-						Only when it is accessed, a matching TD has to be discovered, so that the Properties, Actions, and Events can be bound to the resources of a servient using its URIs.
-					</p>
-
-				</section>
-
-				<section>
-					<h3>Security Considerations</h3>
-
-					<p>
-						Following security concerns apply to TD:
-						<ul>
-							<li>Protecting TD objects</li>TD objects in plain form can easily be manipulated or faked by attackers. This could result in security or safety breaches. To establish the authenticity of TD objects signature mechanisms are needed. They allow to corroborate the source of the TD information and to assure the integrity of its contents.
-							<li>Describing prerequistes for accessing Things</li>
-							<li>Components that expose Things (aka servients) may expect callers to present credentials and/or to use secure communications in order to access them. Specific TD object contents are needed to express such requirements.</li>
-						</ul>
-						These two security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related expectation for accessing Things. On the other hand TD objects may express such expectations without being signed.
-					</p>
-
-					<section>
-						<h4>Protecting TD Objects</h4>
-
-						<p>
-							TD objects may be protected by means of signature. Signing TD objects is optional.<br/><br/>
-							If TD objects are signed then cryptographic checksums (aka signatures) are added to establish the authenticity of TD objects. Such checksums are created by the producers/issuers of TD objects and validated by consumers of TD objects (which should reject signed TD objects whose signatures are invalid). They use keying associations between the producer of the protected TD objects and its consumer(s). The checksum resp. keying association can be asymmetric (producer signs with a private key, consumers validate with the corresponding public key) or symmetric (producer and consumer use a shared secret key).<br/>
-							For TD objects expressed in JSON, IETF JOSE (JSON Object Signature and Encryption, see https://datatracker.ietf.org/wg/jose/documents/) provides the standards for computation and validation of signatures and their representation as network transfer objects (RFC 7515).<br/><br/>
-							Signing is straight-forward on the level of cryptographic primitives i.e. algorithms to generate and validate checksums. But the cryptographic algorithm that computes the checksum only reduces the amount of data that has to be protected - from potentially large (TD) to small (key) objects. Sound key management practices are needed behind the scene. Key management largely contributes to the overall price-tag of the security solution. It is also not straight-forward on the level of cryptographic objects i.e. the expression and organization of signed data and signature metadata (information about the embedding/location and transformation/normalization of signed data, information about the signature algorithm as well as the keying association etc). The solution design needs to reflect given or anticipated WoT system dynamics with respect to granularity/pooling of TD object signing. This presents a not yet addressed problem.<br/><br/>
-							On top of a commonly signature object specification such as XML Signature or CMS lots of profiling may be needed in order to make a signature mechanism meaningful for a specific domain. This is illustrated by the IETF ltans effort: IETF ltans addressed the long-term archival of digital data objects and produced a number of RFCs (RFC 4810/4998/5276/5698/6238) on top of XML Signature resp. CMS that were needed to do the trick. Another example is XAdES (https://www.w3.org/TR/XAdES/). Note: this does not try to suggest that the signing of TD objects will have the same added complexity as IETF ltans or W3C XAdES, only that specific conventions/profiles for the use of JWS or XML Signature in the TD domain will be needed.
-						</p>
-					</section>
-
-					<section>
-						<h4>Describing Prerequistes for Accessing Things</h4>
-
-						<p>
-							When private resources (Things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing theThings (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic strategies for demanding such security mechanisms:
-							<ul>
-								<li>A priori</li>Callers know beforehand and make requests according the expectations of the callee. A prominent example for this strategy is the 'https' access scheme in URLs. It triggers clients to employ SSL/TLS in order to send HTTP requests (HTTP-over-TLS, RFC 2818).
-								<li>A posteriori</li>Callers do not know beforehand, make a request and are being told by the callee in the response or during the exchanges. An example for this strategy is the negotiation of the use of SSL/TLS as part of HTTP exchanges (TLS-in-HTTP, RFC 2817).
-							</ul>
-							The a posteriori-strategy places requirements on the application protocol esp. the contents of its error responses, not TD. In case of WoT, the a priori-strategy places requirements on TD: TD needs to be able to express security mechanisms that callers have to fulfill. This expression shall be optional because certain WoT deployments might prefer the a posteriori-strategy and do (intentionally) not want to reveal this information in TD objects.
-							<h5>Authorization and Authentication</h5>
-							This section assumes that servients externalize complex processing tasks around call authorization and caller authentication to security components (representing online TTPs). See below for a rationale.<br/>
-							Following items are needed to inform callees about security credentials/tokens that they have to present for specific resources:
-							<ul>
-								<li>Issuing authority of the security token</li>Callers need to know about the online TTP component where they need to apply for security tokens. This includes information about their configuration encompassing endpoints and supported protocols.
-								<li>Type/category of security token</li>Callers need to know which type(s) or categories of security tokens they need to apply for. An individual security token type or category is assumed to expressed by a URN (in the namespace of the security token issuer).
-								<li>Protection model for security token</li>Callers need to know the protection model of the security tokens they need to apply for. Note that bearer token are submitted in a opaque fashion, for PoP tokens an authenticator has to be created by the caller.
-							</ul>
-							<h5>Secure Communications</h5>
-							<h6>Transient Protection, Transport-Level Security</h6>
-							<p>The URL access scheme allows to express the need for secure communications (SSL/TLS or DTLS). This is part of the resource endpoint URL and there is no need for TD to specify any additional means.
-							Note that 'http' vs. 'https' resp. 'coap' vs. 'coaps' carries only boolean information. The suite of parameters that determine SSL/TLS or DTLS sessions is much larger (encompassing authentication modes and related information, encryption/signature strategies). Hence the URL access scheme does not provide a full or even rich announcement of the required settings. Since it is the best current practice in IT to rely on a simple a priori trigger (in URL access scheme) and do the rest of the work accordng the a posteriori-apporach (inband with the security protocol) there is no need for TD resp. WoT to go beyond.</p>
-							<h6>Persited Protection, Application-Level Security</h6>
-							Application-level security providing persisted protection is usually handled by specifications/conventions in the application domain. This uses specific media types such as application/json for JSON-plain and application/jose for protected JSON objects (JWS/JWE). Note that application/cbor does exist but there is not yet a IANA registration for "application/cose" (as of 2016-02-21, see http://www.iana.org/assignments/media-types).<br/><br/>
-							<b>TODO (@TF TD): the datatype part in XML Schema (https://www.w3.org/TR/xmlschema11-2/) seems to be short with respect to being able to speak about cryptographically transformed data (see RFC 7193 for e.g. application/cms). It seems hard to impossible to allow callees to express security requirements wrt to persitent application-level security based on that. I suggest to either disclaim this case or allow richer data types</b>
-						</p>
+						<h4>Security</h4>
+						
+						@TODO Add howto about security metadata and how to use it
 					</section>
 				</section>
 			</section>
@@ -1860,12 +1718,6 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 				</section>
 
 				<section>
-					<h3>Security Considerations</h3>
-
-					@TODO Figure out
-				</section>
-
-				<section>
 					<h3>Scripting API Examples</h3>
 
 					<pre class="example highlight" title="Discover Things Nearby">
@@ -1941,6 +1793,127 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						}
 					</pre>
 				</section>
+			</section>
+		</section>
+
+		<section>
+			<h1>Security Considerations</h1>
+
+			<p>
+				This section outlines the conception behind the WoT security model.
+				The following security concerns apply:
+				<ul>
+					<li>Enforcing security at the network interface of the Thing</li>
+					<li>
+						Protecting TD objects
+						
+						<p>
+							TD objects in plain form can easily be manipulated or faked by attackers.
+							This could result in security or safety breaches.
+							To establish the authenticity of TD objects signature mechanisms are needed.
+							They allow to corroborate the source of the TD information and to assure the integrity of its contents.
+						</p>
+					</li>
+					<li>Describing prerequistes for accessing Things</li>
+					<li>Components that expose Things (aka servients) may expect callers to present credentials and/or to use secure communications in order to access them. Specific TD object contents are needed to express such requirements.</li>
+				</ul>
+				These two security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related expectation for accessing Things. On the other hand TD objects may express such expectations without being signed.
+			</p>
+
+			<section>
+				<h2>Security Enforcement at the WoT Interface</h2>
+
+				<p>The purpose of WoT is to expose private resources (Things themselves, information they produce, or information about them) at public-facing endpoints (e.g., Internet). This implies that components that expose Things (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
+					<ul>
+						<li>Authorization and authentication</li>When receiving instructions, servients must authorize such calls/requests i.e. determine whether to accept them for processing. This implies the need to authenticate the properties of callers that are used when performing authorization.
+						<li>Secure communications</li>When exchanging sensitive resources/information over a shared network, servients must demand encrypting/signing corresponding message exchanges.
+					</ul>
+					These fundamental security services depend on underpinnings esp. the provisioning of metadata (identifiers, attributes, assignments/affiliations) about system actors and the establishment of keying relations resp. shared secrets among actors that are supposed to interact in protected fashion. This section does not further elaborate on the provisioning of metadata and establishment of keys/secrets needed to implement authoriztion and authentication resp. secure communications.
+					<h4>Authorization and Authentication</h4>
+					The authorization of requested actions (instructions/requests) depends on the authentication of those properties of a caller that are relevant for authorization and that are being submitted or claimed by the caller. This can e.g. be identifiers, attributes (e.g. location), assignments (e.g. roles), affiliations (e.g. group memberships) or permissions (e.g. resource access rights). There are two basic strategies for the initial authentication of callers:
+					<ul>
+						<li>Internalization</li>The servient challenges the caller for initial authentication credentials, validates them, determines the properties of the authenticated caller, uses them to render an authorization decision and enforces this decision.
+						<li>Externalization to online TTPs</li>The servient delegates the challenging for initial authentication credentials, their validation, the determination of caller properties and evtl. the rendering of an authorization decision to an online TTP. In course of that  the servient then receives a report of the TTP (corresponding objects are called 'security token' or 'access token') and proceeds with it
+					</ul>
+					The internalization approach has a number of issues including: lack of SSO (a concern when the caller is a user agent, no real issue otherwise), tight coupling of initial authentication credentials and application protocol (a painpoint when multiple schemes/dynamics are to be covered), forcing servients into the implementation of complex, non-core functionality. For these reasons the internalization strategy is uncommon - even in unconstrained office/enterprise/Cloud IT. Since WoT is concerned with components that are (severly) constrained, it is anticipated that WoT solutions will externalize complex processing tasks in caller authentication to online TTP components by default.<br/>
+					The externalization of initial caller authentication to TTPs allows to allocate the authorization decision making as follows:
+					<ul>
+						<li>Internalization</li>The servient component performs authorization decision making and enforcement
+						<li>Externalization according push</li>The servient component performs authorization decision enforcement. Authorization decision making is done by the TTP that performs the initial authentication of callers (resource access control information travels in-band with the security token asserting the authenticated identity of the caller)
+						<li>Externalization according pull</li>The servient component performs authorization decision enforcement. Authorization decision making is done by a backend component (called by the servient).
+					</ul>
+					The externalization of initial caller authentication and the externalization of the authorization decision making according push to TTPs matches the architectural proposition of the IETF ACE working group (see "An architecture for authorization in constrained environments" at https://www.ietf.org/id/draft-ietf-ace-actors).<br/><br/>
+					The anticipated default strategy in WoT results in online TTP components as well as special-purpose objects: security tokens by which online TTPs report the results of their work back to servients. These are cryptographically protected objects that report properties of the caller (identifiers, attributes, assignments, affiliations, permissions etc) which are asserted by the online TTP. Such objects may contain resource access control information. Such objects are short-lived (normally: minutes/hours) and may be re-used during their lifetime. These objects must be signed to prevent counterfeiting and may be encrypted to preserve confidentiality.
+					<ul>
+						<li>Bearer security model</li>In case of bearer tokens submitters of security tokens do not have to provide any proof-of-possession. A real-life analogy is a cinema or concert ticket - the recipient only wants to make sure it is no counterfeit. This implies a risk that illegitimate callers may present valid security tokens. In the digital World SAML Web SSO is a prominent example of an online TTP scheme that is implementing a bearer model.
+						<li>PoP security model</li>In case of PoP (aka HoK) tokens submitters are required to supply fresh authenticator objects in addition/conjunction with security tokens. A real-life analogy is a passport - the recipient wants to make sure it is no counterfeit and is presented by the right person. In the digital World Kerberos is the most prominent example of an online TTP scheme that is implementing a PoP model.
+					</ul>
+					Note that OAuth started with PoP (OAuth 1.x), moved to bearer (OAuth 2.0 according RFC 6749/6750) to foster adaptation and currently adds PoP (current OAuth 2.0 drafts) to include high-value assets.<br/><br/>
+					In WoT no one-size-fits-all security token should be expected. Specific WoT domains such as building automation, sports/health care, industrial control systems have their own specific needs when it comes to the expression of caller properties. Moreover specific protocol stacks also have their own specific constraints that affect security token contents.<br/><br/>
+					In addition to  security tokens (that are domain and protocol stack-specific) protocols are needed to acquire and supply security tokens. The security token supply between callers and servients is the straight-forward part of this task:
+					<ul>
+						<li>Application requests</li>The application protocol requests must allow the transfer of security tokens (bearer) and/or authenticators (PoP) in a standardized way. For HTTP such standards exist (RFC 6750 for bearer tokens) resp. emerge (PoP tokens); for CoAP they do emerge. A critical issue are large security tokens/authenticators that can not be supplied inline with arbitrary application requests. The common trick to address this concern is to introduce a dedicated endpoint to which security tokens and/or authenticators can be sent in application PDUs (dedicated to the supply of security tokens and/or authenticators) during in an upfront exchange.
+						<li>Application responses</li>The application protocol (error) responses must allow to inform clients about expected security token issuing authority, expected security token type/category and protection. Current and emerging standards do not yet provide an adequate coverage for this concern.
+					</ul>
+					The security token acquisition is the more complex part of this trick. The servient components trigger exchanges between callers and their online TTP but are not involved during their execution. The requesting party may also introduce further online TTP components to support e.g. constrained callers or clients. Obviously the online TTPs need to respect the capabilities of the actual caller or its proxy. In addition to that a continental divide exists between following scenarios:
+					<ul>
+						<li>Consumer goods, owned by individual end users</li>Authorization is often conducted according a lazy policing model: access requests happen first, then the resource owner (an individual) is asked for an authorization (whether she can be assumed to be online does matter). This results in an authorization policy that is build-up dynamically
+						<li>Capital goods, owned by legal entities</li>Authorization is mostly conducted according a preemtive policing model: a (static) authorization policy is provided, then access request happen and authorization decisions are rendered without assuming any interaction with the resource ownwer or a representative
+					</ul>
+					Both cases distribute work unevenly over servients and their callers; both sides have fundamentally different working tasks and workloads in authorization and authentication:
+					<ul>
+						<li>Servient tasks</li>Understand protection needs (public, private) of served resources, challenge for security tokens (bearer) and/or authenicators (PoP), validate security tokens (bearer) and/or authenicators (PoP) and match their content against application request contents
+						<li>Caller tasks</li>React on application protocol error responses (demanding the supply of security tokens), acquire security token from online TTPs, perform initial authentication by means of a security protocol (possibly different from the application protocol, evtl. mediated by an online TTP on side of the requesting party), and supply security tokens (bearer) and/or authenticators (PoP) as part of the application protocol
+					</ul>
+					For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT Interfaces.
+
+					The security-part of the W3C WoT PlugFest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the PlugFest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this PlugFest
+					<h4>Secure Communications</h4>
+					Communication security can be implemented in form of transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the same working tasks and workload<br/><br/>
+					Transport-level security has a long heritage in IT and presents a well-understood means in Web security which is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
+					Some WoT deployments have requirements that do not match TLS and DTLS properties, for instance multicast resp. group-oriented communications. It is also possible that (severely) constrained WoT components can not bear the overhead that is implied by the TLS and DTLS protocols. Then persistent, application-level security can help to achieve communication security.<br/>
+					In contrast to transport-level security, application-level security allows to apply cryptographic transformations in a specific/granular manner (affecting some but not all exchanged data objects) and thereby reducing the security processing burden. In case security tokens are to be used in cases where transport-level security can not be used, application-level security offers means to provide PoP for security tokens as well as authenticity for message exchanges.
+				</p>
+			</section>
+
+			<section>
+				<h2>Describing Prerequistes for Accessing Things</h2>
+
+				<p>
+					When private resources (Things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing theThings (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic strategies for demanding such security mechanisms:
+					<ul>
+						<li>A priori</li>Callers know beforehand and make requests according the expectations of the callee. A prominent example for this strategy is the 'https' access scheme in URLs. It triggers clients to employ SSL/TLS in order to send HTTP requests (HTTP-over-TLS, RFC 2818).
+						<li>A posteriori</li>Callers do not know beforehand, make a request and are being told by the callee in the response or during the exchanges. An example for this strategy is the negotiation of the use of SSL/TLS as part of HTTP exchanges (TLS-in-HTTP, RFC 2817).
+					</ul>
+					The a posteriori-strategy places requirements on the application protocol esp. the contents of its error responses, not TD. In case of WoT, the a priori-strategy places requirements on TD: TD needs to be able to express security mechanisms that callers have to fulfill. This expression shall be optional because certain WoT deployments might prefer the a posteriori-strategy and do (intentionally) not want to reveal this information in TD objects.
+					<h5>Authorization and Authentication</h5>
+					This section assumes that servients externalize complex processing tasks around call authorization and caller authentication to security components (representing online TTPs). See below for a rationale.<br/>
+					Following items are needed to inform callees about security credentials/tokens that they have to present for specific resources:
+					<ul>
+						<li>Issuing authority of the security token</li>Callers need to know about the online TTP component where they need to apply for security tokens. This includes information about their configuration encompassing endpoints and supported protocols.
+						<li>Type/category of security token</li>Callers need to know which type(s) or categories of security tokens they need to apply for. An individual security token type or category is assumed to expressed by a URN (in the namespace of the security token issuer).
+						<li>Protection model for security token</li>Callers need to know the protection model of the security tokens they need to apply for. Note that bearer token are submitted in a opaque fashion, for PoP tokens an authenticator has to be created by the caller.
+					</ul>
+					<h5>Secure Communications</h5>
+					<h6>Transient Protection, Transport-Level Security</h6>
+					<p>The URL access scheme allows to express the need for secure communications (SSL/TLS or DTLS). This is part of the resource endpoint URL and there is no need for TD to specify any additional means.
+					Note that 'http' vs. 'https' resp. 'coap' vs. 'coaps' carries only boolean information. The suite of parameters that determine SSL/TLS or DTLS sessions is much larger (encompassing authentication modes and related information, encryption/signature strategies). Hence the URL access scheme does not provide a full or even rich announcement of the required settings. Since it is the best current practice in IT to rely on a simple a priori trigger (in URL access scheme) and do the rest of the work accordng the a posteriori-apporach (inband with the security protocol) there is no need for TD resp. WoT to go beyond.</p>
+					<h6>Persited Protection, Application-Level Security</h6>
+					Application-level security providing persisted protection is usually handled by specifications/conventions in the application domain. This uses specific media types such as application/json for JSON-plain and application/jose for protected JSON objects (JWS/JWE). Note that application/cbor does exist but there is not yet a IANA registration for "application/cose" (as of 2016-02-21, see http://www.iana.org/assignments/media-types).<br/><br/>
+					<b>TODO (@TF TD): the datatype part in XML Schema (https://www.w3.org/TR/xmlschema11-2/) seems to be short with respect to being able to speak about cryptographically transformed data (see RFC 7193 for e.g. application/cms). It seems hard to impossible to allow callees to express security requirements wrt to persitent application-level security based on that. I suggest to either disclaim this case or allow richer data types</b>
+				</p>
+			</section>
+
+			<section>
+				<h2>Protecting TD Objects</h2>
+
+				<p>
+					TD objects may be protected by means of signature. Signing TD objects is optional.<br/><br/>
+					If TD objects are signed then cryptographic checksums (aka signatures) are added to establish the authenticity of TD objects. Such checksums are created by the producers/issuers of TD objects and validated by consumers of TD objects (which should reject signed TD objects whose signatures are invalid). They use keying associations between the producer of the protected TD objects and its consumer(s). The checksum resp. keying association can be asymmetric (producer signs with a private key, consumers validate with the corresponding public key) or symmetric (producer and consumer use a shared secret key).<br/>
+					For TD objects expressed in JSON, IETF JOSE (JSON Object Signature and Encryption, see https://datatracker.ietf.org/wg/jose/documents/) provides the standards for computation and validation of signatures and their representation as network transfer objects (RFC 7515).<br/><br/>
+					Signing is straight-forward on the level of cryptographic primitives i.e. algorithms to generate and validate checksums. But the cryptographic algorithm that computes the checksum only reduces the amount of data that has to be protected - from potentially large (TD) to small (key) objects. Sound key management practices are needed behind the scene. Key management largely contributes to the overall price-tag of the security solution. It is also not straight-forward on the level of cryptographic objects i.e. the expression and organization of signed data and signature metadata (information about the embedding/location and transformation/normalization of signed data, information about the signature algorithm as well as the keying association etc). The solution design needs to reflect given or anticipated WoT system dynamics with respect to granularity/pooling of TD object signing. This presents a not yet addressed problem.<br/><br/>
+					On top of a commonly signature object specification such as XML Signature or CMS lots of profiling may be needed in order to make a signature mechanism meaningful for a specific domain. This is illustrated by the IETF ltans effort: IETF ltans addressed the long-term archival of digital data objects and produced a number of RFCs (RFC 4810/4998/5276/5698/6238) on top of XML Signature resp. CMS that were needed to do the trick. Another example is XAdES (https://www.w3.org/TR/XAdES/). Note: this does not try to suggest that the signing of TD objects will have the same added complexity as IETF ltans or W3C XAdES, only that specific conventions/profiles for the use of JWS or XML Signature in the TD domain will be needed.
+				</p>
 			</section>
 		</section>
 
