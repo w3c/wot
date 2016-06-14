@@ -854,7 +854,7 @@
 				<section>
 					<h3>Type System</h3>
 
-					<p>All of the three interaction types <code>Property</code>, <code>Action</code>, and <code>Event</code> can specify the type of the value acceptable as an input or expected as an output of the interaction. JSON schema provides a standard way to describe the structure and datatypes of data, and we use JSON schema as the notation for value types of the interaction types.
+					<p>All of the three interaction types <code>Property</code>, <code>Action</code>, and <code>Event</code> can specify the type of the value acceptable as an input or expected as an output of the interaction. JSON schema [[!draft-zyp-json-schema-04]] [[!draft-fge-json-schema-validation-00]] provides a standard way to describe the structure and datatypes of data, and we use JSON schema as the notation for value types of the interaction types.
 					</p>
 
 					<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
@@ -913,11 +913,15 @@
 						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
 						</p>
 	
-						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code>.
+						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code> within the value range of [ 0 ... 255 ].
 						</p>
 	
 						<pre class="example">
-							"valueType": { "type": "number" },
+							"valueType": { 
+								"type": "number",
+								"minimum": 0,
+								"maximum": 255,
+							}
 						</pre>
 	
 						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
@@ -1018,7 +1022,7 @@
 							<h5 id="json-array">JSON Array</h5>
 		
 							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
-							multiple number literals where the occurrence must be either twice or three times.
+							exactly three number literals with each value within the range of [ 0 ... 255 ].
 							</p>
 		
 							<pre class="example">
@@ -1026,20 +1030,23 @@
 								    "type": "array",
 								    "items": {
 								        "type" : "number"
+								        "minimum": 0,
+								        "maximum": 255,
 								    },
-								    "minOccurs" : 2,
-								    "minOccurs" : 3
+								    "minItems" : 3,
+								    "maxItems" : 3
 								}
 							</pre>
 		
-							<p>When the numbers being exchanged are 123 and 456, data serialization in JSON format will look like the following.
+							<p>When the numbers being exchanged are 208, 32 and 144, data serialization in JSON format will look like the following.
 							</p>
 		
 							<pre class="example">
 								{
 									"value": [
-										123,
-										456
+										208,
+										32,
+										144
 									]
 								}
 							</pre>
@@ -1049,8 +1056,9 @@
 		
 							<pre class="example">
 									&lt;array>
-										&lt;double>123&lt;/double>
-										&lt;double>456&lt;/double>
+										&lt;double>208&lt;/double>
+										&lt;double>32&lt;/double>
+										&lt;double>144&lt;/double>
 									&lt;/array>
 							</pre>
 		
@@ -1170,17 +1178,18 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							<h5>JSON Array Definition to XML Schema</h5>
 	
 							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
-							The <code>array</code> consists of multiple number literals where the occurrence the literal must be either twice or three times.
-							</p>
+							The <code>array</code> consists of exactly three number literals with each value within the value range of [ 0 ... 255 ].</p>
 	
 							<pre class="example">
 								{
 								    "type": "array",
 								    "items": {
 								        "type" : "number"
+								        "minimum": 0,
+								        "maximum": 255,
 								    },
-								    "minOccurs" : 2,
-								    "minOccurs" : 3
+								    "minItems" : 3,
+								    "maxItems" : 3
 								}
 							</pre>
 	
@@ -1192,7 +1201,14 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 								&lt;xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 								    &lt;xs:complexType>
 								        &lt;xs:sequence>
-								            &lt;xs:element name="double" type="xs:double" minOccurs="2" minOccurs="3" />
+								            &lt;xs:element name="double" minOccurs="3" maxOccurs="3">
+								                &lt;xs:simpleType name="minInclusive">
+								                    &lt;xs:restriction base="xs:double">
+								                        &lt;xs:minInclusive value="0"/>
+								                        &lt;xs:maxInclusive value="255"/>
+								                    &lt;/xs:restriction>
+								                &lt;/xs:simpleType>
+								            &lt;/xs:element>
 								        &lt;/xs:sequence>
 								    &lt;/xs:complexType>
 								&lt;/xs:element>
@@ -1211,7 +1227,14 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 								            &lt;xs:element name="array">
 								                &lt;xs:complexType>
 								                    &lt;xs:sequence>
-								                        &lt;xs:element name="double" type="xs:double" minOccurs="2" maxOccurs="3" />
+								                        &lt;xs:element name="double" minOccurs="3" maxOccurs="3" >
+								                            &lt;xs:simpleType name="minInclusive">
+								                                &lt;xs:restriction base="xs:double">
+								                                    &lt;xs:minInclusive value="0"/>
+								                                    &lt;xs:maxInclusive value="255"/>
+								                                &lt;/xs:restriction>
+								                            &lt;/xs:simpleType>
+								                        &lt;/xs:element>
 								                    &lt;/xs:sequence>
 								                &lt;/xs:complexType>
 								            &lt;/xs:element>
