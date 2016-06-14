@@ -39,7 +39,7 @@
 		<section id="abstract">
 			<p>
 				The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things (IoT) services on a worldwide basis.
-				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, protocol bindings, discovery mechanisms, and cross-cutting security & privacy considerations.
+				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, Protocol Bindings, discovery mechanisms, and cross-cutting security & privacy considerations.
 				The current practices related to WoT building blocks were also prototyped and tested in so-called PlugFests.
 				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
 				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
@@ -79,7 +79,7 @@
 					The central idea of WoT is that Things can describe their capabilities and metadata in a machine-understandable format: the WoT <a>Thing Description</a> (TD), which is rooted in <a>RDF</a>.
 					The TD can be served by a Thing itself or hosted elsewhere on the Web.
 					This way, a TD can also be retrofitted on existing devices, and thereby complement existing IoT platforms and standards with rich metadata to enable interoperability across platforms.
-					WoT also supports flexible Protocol Bindings that enable the mapping of a semantically described Thing interaction to different protocols, since each domain has different requirements here.
+					WoT also supports flexible <a>Protocol Bindings</a> that enable the mapping of a semantically described Thing interaction to different protocols, since each domain has different requirements here.
 					Finally, WoT envisions to provide a common runtime environment for IoT-related apps.
 					Sensors and actuators can be improved by installing better data processing algorithms or by adding completely new features through software.
 					With a common runtime environment, aggregation apps can be instantiated in the cloud and then relocated to local hubs, or even directly onto a powerful Thing, to meet certain quality of service requirements.
@@ -115,6 +115,9 @@
 				<dt><dfn>JWT</dfn></dt>
 				<dd>JSON Web Token [[!RFC7519]]</dd>
 
+				<dt><dfn data-lt="Protocol Bindings">Protocol Binding</dfn></dt>
+				<dd>A mapping from operations on the WoT resource model to specific operations of a protocol (see <a href="#protocol-bindings"></a>)</dd>
+
 				<dt><dfn>RDF</dfn></dt>
 				<dd>The Resource Description Framework (RDF) of the Semantic Web [[!rdf11-concepts]]</dd>
 
@@ -137,7 +140,7 @@
 				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#sec-td"></a> for details)</dd>
 
 				<dt><dfn>WoT Interface</dfn></dt>
-				<dd>Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different protocols bindings (see <a href="#sec-wot-interface"></a>)</dd>
+				<dd>Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different <a>Protocol Bindings</a> (see <a href="#sec-wot-interface"></a>)</dd>
 			</dl>
 
 		</section>
@@ -195,12 +198,12 @@
 					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
 				</section>
 
-				<section id="sec-protocol-bindings">
+				<section>
 					<h3>Protocol Bindings</h3>
 
 					<p>
 						We currently have an implicit mapping from WoT interaction patterns to specific protocol operations such as REST or BLE methods.
-						The WoT architecture is not limited to the Protocol Bindings isted here. These simply represent the commonly used protocols at the recent PlugFests.
+						The WoT architecture is not limited to the Protocol Bindings listed here. These simply represent the commonly used protocols at the recent PlugFests.
 					</p>
 					
 					<p>
@@ -1043,10 +1046,10 @@
 					</p>
 
 					<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
-Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
+					Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
 					</p>
 
-					<p>The XML structure is based on <a href="https://www.w3.org/XML/EXI/docs/json/exi-for-json.html">EXI4JSON</a> [[!EXI4JSON]].
+					<p>The XML structure is based on EXI4JSON [[!exi-for-json]].
 					The structure works uniformly well for both schema-less and schema-informed use cases. 
 					</p>
 
@@ -1452,9 +1455,9 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 	
 						<p>
 							Discovering a Thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
-						The URI of the link may point to the Thing (technically the <a>servient</a>) itself, as Things often host their TD directly, or to any other location on the Web.
+							The URI of the link may point to the Thing (technically the <a>servient</a>) itself, as Things often host their TD directly, or to any other location on the Web.
 							There are several approaches to aquire such links.
-							Some work independent from the protocol binding, others rely on features of a specific protocol.
+							Some work independent from the <a>Protocol Binding</a>, others rely on features of a specific protocol.
 						</p>
 	
 						<section>
@@ -1929,7 +1932,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 					This howto is kept up to date with the requirements for the latest/upcoming edition of the PlugFest.
 					To participate in an upcoming PlugFest, prepare an implemention by deciding on the following questions.
 					The answers to these questions will also be needed when registering for a PlugFest by filling out a table in the corresponding PlugFest page in the <a href="https://www.w3.org/WoT/IG/wiki/Main_Page#Face_to_Face_Meetings">WoT IG Wiki</a>.
-					Note that might be additional options in the future when more features are defined or more protocol bindings become popular in the PlugFest.
+					Note that there might be additional options in the future when more features are defined or more <a>Protocol Bindings</a> become popular in the PlugFest.
 				</p>
 
 				<section>
@@ -1966,7 +1969,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 								A smart switch, for instance, has the notion of being on or off, and hence binds to the first <code>onOffStatus</code> interaction it finds on discovered lamps.
 								Resource-constrained Things usually need the exact wiring configuration by a user or comissioning tool.
 								A smartphone app, for instance, can be used to write the TD of a specific lamp together with the <code>@id</code> value of the desired interaction to the configuration Properties of a energy-harvesting switch.
-								The client part then starts the interaction with the other Thing(s) by constructing messages based on the given TD and implemented Protocol Bindings.
+								The client part then starts the interaction with the other Thing(s) by constructing messages based on the given TD and implemented <a>Protocol Bindings</a>.
 							</blockquote>
 						</li>
 					</ol>
@@ -1993,7 +1996,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<li>
 							Additional Protocols
 							<blockquote>
-								To evaluate more protocol bindings, implementors are welcome to bring Things with alternative protocol stacks to the PlugFests.
+								To evaluate more <a>Protocol Bindings</a>, implementors are welcome to bring Things with alternative protocol stacks to the PlugFests.
 								Some protocols might require a shim layer to allow for the resource model of WoT.
 							</blockquote>
 						</li>
