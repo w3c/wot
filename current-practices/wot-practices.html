@@ -200,7 +200,7 @@
 
 					<p>
 						We currently have an implicit mapping from WoT interaction patterns to specific protocol operations such as REST or BLE methods.
-						The WoT architecture is not limited to the Protocol Bindings isted here. These simply represent the commonly used protocols at the PlugFests.
+						The WoT architecture is not limited to the Protocol Bindings isted here. These simply represent the commonly used protocols at the recent PlugFests.
 					</p>
 					
 					<p>
@@ -213,7 +213,7 @@
 					
 					<p>
 						Depending on the interaction, a payload may be optional or required.
-						For details see <a href="#sec-interactions"></a>.
+						For details see <a href="#interaction-patterns"></a>.
 					</p>
 
 					<div class="practice">
@@ -357,7 +357,7 @@
 						  "properties": [
 						    {
 						      "name": "temperature",
-						      "valueType": "number",
+						      "valueType": { "type": "number" },
 						      "writable": false,
 						      "hrefs": ["temp"]
 						    }
@@ -393,7 +393,7 @@
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"@type": "sensor:Temperature",</div>
 						      "name": "temperature",
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
-						      "valueType": "number",
+						      "valueType": { "type": "number" },
 						      "writable": false,
 						      "hrefs": ["temp"]
 						    }
@@ -403,7 +403,7 @@
 
 					<p>
 						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP) and encodings (JSON and EXI).
-						The Thing also specifies security policies (it requires a <a>JWT</a>) and provides different interaction patterns (one Property, two Actions, one Event).
+						The Thing also specifies security policies (it requires a <a>JWT</a>) and provides four different interactions (one Property, two Actions, one Event).
 					</p>
 
 					<pre class="example" title="More Capabilities">
@@ -428,7 +428,7 @@
 								{
 									"@type": "actuator:onOffStatus",
 									"name": "status",
-									"valueType": "boolean",
+									"valueType": { "type": "boolean" },
 									"writable": true,
 									"hrefs": [ "pwr", "status" ]
 								}
@@ -438,7 +438,7 @@
 									"@type": "actuator:fadeIn",
 									"name": "fadeIn",
 									"inputData": {
-										"valueType": "integer",
+										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
 									"hrefs": ["in", "led/in"  ]
@@ -447,7 +447,7 @@
 									"@type": "actuator:fadeOut",
 									"name": "fadeOut",
 									"inputData": {
-										"valueType": "integer",
+										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
 									"hrefs": ["out", "led/out" ]
@@ -457,7 +457,7 @@
 								{
 									"@type": "actuator:alert",
 									"name": "criticalCondition",
-									"valueType": "string",
+									"valueType": { "type": "string" },
 									"hrefs": [ "ev", "alert" ]
 								}
 							]
@@ -565,7 +565,7 @@
 							  ],
 							  "encodings": [
 							    "JSON",
-							    "EXI4JSON"
+							    "EXI"
 							  ],
 							  <i>"security": {
 							    "cat": "token:jwt",
@@ -609,41 +609,35 @@
 						<h4>Note on URI Resolution</h4>
 
 						<p>
-							A servient can be associated to more than one URI (e.g., in case it supports
-							several protocols). The same way, links to Properties, Actions, or Events
-							could be defined as an array instead of a single string. URIs can also
-							be relative. The IETF recommendation for URI resolution [[!RFC3986]] does note
-							fully cover that case. This section is an attempt to specify how to
-							resolve URIs in a Thing Description document.
+							A servient can be associated to more than one URI (e.g., in case it supports several protocols).
+							The same way, links in Properties, Actions, or Events can be defined as an array instead of a single string.
+							The IETF recommendation for URI resolution [[!RFC3986]] does note fully cover that case.
+							This section is an attempt to specify how to resolve URIs in a Thing Description document.
 						</p>
 
 						<p>
 							<ul>
 								<li>
-									A Thing Description can define one or more <code>uris</code>. If only one URI
-									is defined, the JSON value can be a plain string. If more than one URI
-									is defined, the JSON value must be a string array.
+									A Thing Description can define one or more base URI in the <code>uris</code> field.
+									If only one URI is defined, the JSON value is a string.
+									If more than one URI is defined, the JSON value is a string array.
 								</li>
 								<li>
-									Each string from the JSON value should be interpreted as a base URI
-									and must be absolute.
+									Each string from the <code>uris</code> JSON value must be an absolute URI that is interpreted as a protocol-specific base URI identified through the URI scheme.
 								</li>
 								<li>
-									A Property, an Action or an Event can define one or more <code>hrefs</code>.
-									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code>
-									must be a string. If it is a string array, the JSON value of <code>hrefs</code>
-									can be either a string or a string array.
+									Properties, Actions, and Events can define one or more <code>hrefs</code> values.
+									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code> must also be a string.
+									If <code>uris</code> is a string array, the JSON value of <code>hrefs</code> can be either a string or a string array.
 								</li>
 								<li>
-									If the JSON value of <code>hrefs</code> is a string, it can be either a relative
-									or an absolute URI. In the former case, it should be possible to resolve it using
-									the algorithm of [[!RFC3986]] using <i>any</i> of the base URIs available.
+									If the JSON value of <code>hrefs</code> is a string, the algorithm of [[!RFC3986]] can be applied to <i>any</i> of the base URIs available.
+									Note that <code>hrefs</code> can also contain an absolute URI pointing to an external resource or a different protocol for this specific interaction.
 								</li>
 								<li>
-									If the JSON value of <code>hrefs</code> is a string array, it must contain
-									as many elements as that of <code>uris</code> and each element must be a
-									relative URI. The resolution algorithm of [[!RFC3986]] should then be applied
-									<i>index-wise</i>.
+									If the JSON value of <code>hrefs</code> is a string array, it must contain as many elements as that of <code>uris</code>.
+									The resolution algorithm of [[!RFC3986]] must then be applied <i>index-wise</i>.
+									Again, individual array elements may contain an absolute URI.
 								</li>
 							</ul>
 						</p>
@@ -657,7 +651,7 @@
 						<h4>Property</h4>
 
 						<p>
-							The array field <code>properties</code> is used to reflect one or more interactions of type Property. 
+							The array field <code>properties</code> is used to reflect one or more interactions of the Property pattern. 
 							Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or 
 							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
@@ -669,11 +663,11 @@
 							    {
 							      <i>"@type": "sensor:Temperature",</i>
 							      "name": "temperature",
-							      "valueType": "xsd:float",
+							      "valueType": { "type": "number" },
+							      "sensor:unit": "sensor:Celsius",
 							      "writable": false,
 							      "hrefs": "temp",
-							      <i>"stability": 10,</i>
-							      
+							      <i>"stability": 10</i>
 							    }
 							  ]
 								...
@@ -681,46 +675,31 @@
 						</pre>
 
 						<p>
-							There are four mandatory and three optional terms (shown as italic text in JSON snippet) defined for the <code>Property</code> type:
+							There are four mandatory and three optional (italic in JSON sample) terms defined for the Property pattern:
 						</p>
 
 						<ul>
-							<li><b>@type: [optional]</b>RDF type of the resource, which can be used for semantic disambiguation</li>
-							<li><b>name:</b> Name of the property that also defines the semantics</li>
-							<li><b>hrefs:</b>A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>valueType:</b>
-								Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
-								RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type definition.
-							</li>
-							<li><b>writable:</b> Is this property writable (true/false)</li>
-							<li><b>stability: [optional]</b> Expected maximum time of stability of the property value in ms (>0ms value; 0=unregular change;-1=no change, static value)</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
+							<li><b>hrefs:</b>A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>valueType:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
+							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
+							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
 							<li><b>security: [optional]</b>
-								Access metadata (self-contained) for securely transmitting information of the property.
-								Compared to the security field that can be found in the <a href="#thing-metadata">Thing metadata</a>, this field here can be used to apply specific security requirements that is only valid for that resources.
+								Access metadata (self-contained) for protecting this Property and securely transmitting information.
+								Compared to the security field that can be found in the <a href="#thing-metadata">Thing metadata</a>, this field here can be used to apply specific security requirements that is only valid for this resource.
 							</li>
 						</ul>
 
 						<p>
-							The hypertext reference (<code>href</code>) field must either contain
-							<ul>
-								<li>a single relative reference from the base URIs defined in the <code>protocols</code> metadata field (in case the relative path is the same for all protocols) or</li>
-								<li>an array of relative references or absolute URIs that must match the length and order of the <code>protocols</code> array of the metadata (in case the URIs of the property differ).</li>
-							</ul>
-							Absolute URIs can point to an external resource that is not hosted by the Thing directly.
+							Absolute URIs in <code>hrefs</code> can point to an external resource that is not hosted on the Thing directly.
 							This can be useful to link data into the context of the Thing, for which there is not enough space in the device itself.
-							Absolute URIs could also point to a proxy or gateway that allow access to legacy systems that might belong to a Thing that does not have the capability to translate by itself (but provides other, WoT-compatible resources).
-							This mechanism is also interesting for virtual Things that combine the services of multiple other Things (e.g., a room lighting servient that has properties for each individual light, while these linked properties are hosted directly on the lights).
-						</p>
-
-						<p class="ednote">
-							It is possible to imagine individual properties that are available over only a single protocol from the list in the metadata or even a protocol that is not listed.
-							This could be realized through a single absolute URI or an array of absolute URIs that is unrelated to the <code>protocols</code> array.
-							While this is quite easy to implement and consume with a URI parser, it might create confusion when reading or producing TDs.
-							Should we allow this?
+							Absolute URIs could also point to a proxy or gateway that allows access to legacy systems that might belong to a Thing that does not have the capability to translate by itself (but provides other, WoT-compatible resources).
+							This mechanism is also interesting for virtual Things that combine the services of multiple other Things (e.g., a room lighting servient that has Properties for each individual light, while these linked Properties are hosted directly on those lights).
 						</p>
 
 						<p>
-							If the property is writable (<code>writable=true</code>), then the property accepts the same format(s) as input as described for its output.
+							If the property is writable (<code>writable=true</code>), then the Property accepts the same format(s) as input as described for its output.
 						</p>
 
 						<p>
@@ -733,13 +712,12 @@
 						<h4>Action</h4>
 
 						<p>
-							The interaction type Action targets changes or processes on a Thing that take a certain time 
-							(i.e., actions cannot be applied instantaneously like property writes).
+							The Action interaction pattern targets changes or processes on a Thing that take a certain time to complete (i.e., actions cannot be applied instantaneously like property writes).
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
-							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the Thing.
-							
+							Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing.
 						</p>
-						<p>Within the TD, the  servient's actions are announced by the JSON array <code>actions</code>.</p>
+						
+						<p>Within the TD, the Actions of a Thing are declared in the JSON array <code>actions</code>.</p>
 
 						<pre class="example">
 							{
@@ -749,7 +727,7 @@
 							      <i>"@type": "actuator:fadeIn",</i>
 							      "name": "fadeIn",
 							      <i>"inputData":</i> {
-							        "valueType": "xsd:short",
+							        "valueType": { "type": "integer" },
 							        "actuator:unit": "actuator:ms"
 							      },
 							      "hrefs": [
@@ -763,33 +741,27 @@
 						</pre>
 						<p>There are one mandatory and four optional terms defined within the <code>Action</code> type:</p>
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the resource, which can be used for semantic disambiguation</li>
-							<li><b>name:</b> Name of the action</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation</li>
 							<li><b>inputData: [optional]</b>
-								Which input data is associated with this action. In there, specific data type characteristics can be defined such as <b>valueType</b>,
-								and the <b>optional</b> restrictions <b>min</b>, <b>max</b>, and <b>enum</b>  (also see description in <a href="#property">Property</a>) as well as <b>optional</b>
-								addition context metadata (e.g., unit ms)
+								The call parameters associated with this Action.
+								A <code>valueType</code> field defines the concrete type (see <a href="#type-system"></a> for details).
+								Additional characteristics can be given through terms defined in the context metadata (e.g., unit ms from an actuator vocabulary) similar to <a href="#property">Properties</a>).
 							</li>
-							<li><b>outputData: [optional]</b> Which data type is associated with this action (same condition as InputData above)</li>
-							<li><b>hrefs:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the action.</li>
+							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above)</li>
+							<li><b>hrefs:</b>A link or array of links to the resource implementing this Action (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Action and securely transmitting information.</li>
 						</ul>
 
 						<p>
-							The hypertext reference (<code>href</code>) field works similar to properties.
-						</p>
-
-						<p class="ednote">
-							Actions work similar to forms in hypermedia.
-							For alignment with the HATEOAS approach, the InputData field should be replaced with "Accept" information for representation formats, so that the action is not tied to an implicit serialization of the data.
-							The output data would work similar and just provide a hint for the client what to expect.
+							The hypertext reference (<code>href</code>) field works similar to Properties.
 						</p>
 
 						<p>
-							Usually, calling an action results in a response that indicates a new (sub-)resource where the ongoing action can be monitored and also controlled:
-							Updating this resource may allow to modify the process (e.g., when it is still queued and not started yet, but also during runtime if the process supports that).
-							Deleting this resource may allow the cancellation of the action.
-							Once the action completes, the sub-resource may be removed by the server; or it is marked as completed, but kept for traceability.
+							Usually, invoking an Action results in a response that indicates a new (sub-)resource, where the started Task can be monitored and also controlled:
+							Updating this Task resource may allow for modification of the process (e.g., when it is still queued and not started yet, but also during runtime if the process supports that).
+							Deleting this Task resource may allow for cancellation of the Action execution.
+							Once the Task completes, the (sub-)resource may be removed by the server; or it is marked as completed, but kept for traceability.
 							It is also possible that calling an action produces a so-called action result that is not manifested in any temporary resource nor other changes to the server (e.g., a conversion process or dry run).
 						</p>
 					</section>
@@ -798,10 +770,10 @@
 						<h4>Event</h4>
 
 						<p>
-							The interaction type <code>Event</code> enables a mechanism to be notified by the Thing on a certain condition.
+							The <code>Event</code> interaction pattern enables a mechanism to be notified by a Thing on a certain condition.
 							While some protocols such as CoAP can provide such a mechanism natively, others do not.
-							Furthermore, events might need a specific configuration that requires data sent and stored on the Thing in a standard way.
-							There are are two mandatory and two optional terms defined within the <code>Event</code> type:
+							Furthermore, Events might need a specific configuration that requires data sent and stored on the Thing in a standard way.
+							There are are two mandatory and two optional terms defined within the <code>Event</code> pattern:
 						</p>
 
 						<pre class="example">
@@ -809,8 +781,9 @@
 								...
 							  "events": [
 							    {
+							      "@type": "actuator:alert",
 							      "name": "criticalCondition",
-							      "valueType": "string",
+							      "valueType": { "type": "string" },
 							      "hrefs": [
 							        "ev",
 							        "myled/event"
@@ -822,31 +795,26 @@
 						</pre>
 
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the resource, which can be used for semantic disambiguation</li>
-							<li><b>name:</b> Name of the event</li>
-							<li><b>hrefs:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>valueType: [optional]</b> Which data type is associated with this event. This field works similar to actions</li>
-							<li><b>security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the event</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>name:</b> Name of the Event, which can also be used for simple semantic disambiguation</li>
+							<li><b>hrefs:</b>A link or array of links to the resource implementing this Event (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>valueType: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
+							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Event and securely transmitting information.</li>
 						</ul>
 
 						<p class="ednote">
 							So far, the concept of events has not been evaluated yet during the PlugFests.
 							Thus, there has been little discussion and no common practice has emerged.
-							The following text is a strawman proposal to trigger discussion.
-							The Input-/OutputData needs a similar alignment with HATEOAS as actions.
+							The following text is a proposal to trigger discussion.
 						</p>
 
 						<p>
-							The interaction with events works similar to actions with the difference that no side effects are intended on the Thing.
-							A client issues a request to the URI of an action, which may include a payload that represents the configuration data for the event mechanism.
-							The created (sub-)resource serves as a handle for the event.
+							The interaction with Events works similar to Actions with the difference that no side effects are intended on the Thing.
+							A client issues a request to the URI of an Event, which may include a payload that represents the configuration data for the Event mechanism.
+							Upon reception, the Thing creates a (sub-)resource, which serves as a handle for the Event subscription.
 							It can be monitored to receive notifications: an HTTP client would need to poll this resource, while a CoAP client would simply observe it.
-							In fact, multiple clients could use the event created by another client when they are interested in the same event configutation.
-							The event configuration can also be updated and ultimatively deleted to clean up internal notification hooks.
-						</p>
-
-						<p class="ednote">
-							Should we rather talk about servients here or is the explicit role as client beneficial?
+							Technically, multiple clients could use the subscription resource created by another client when they are interested in the same Event configutation.
+							The Event configuration can also be updated and ultimatively deleted to clean up internal notification hooks.
 						</p>
 					</section>
 				</section>
@@ -1078,7 +1046,7 @@
 Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
 					</p>
 
-					<p>The XML structure is based on <a href="https://www.w3.org/XML/EXI/docs/json/exi-for-json.html">EXI4JSON</a>. 
+					<p>The XML structure is based on <a href="https://www.w3.org/XML/EXI/docs/json/exi-for-json.html">EXI4JSON</a> [[!EXI4JSON]].
 					The structure works uniformly well for both schema-less and schema-informed use cases. 
 					</p>
 
