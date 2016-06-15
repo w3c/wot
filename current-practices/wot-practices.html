@@ -205,7 +205,7 @@
 						We currently have an implicit mapping from WoT interaction patterns to specific protocol operations such as REST or BLE methods.
 						The WoT architecture is not limited to the Protocol Bindings listed here. These simply represent the commonly used protocols at the recent PlugFests.
 					</p>
-					
+
 					<p>
 						The default interaction with Properties is <i>read</i>. When they are marked <code>writable</code>, they can also be written.
 						Actions must support invocation, which results in the creation of a handle resource (e.g., a sub-resource of the Action resource).
@@ -213,7 +213,7 @@
 						The linked handle resources may exhibit further interactions such as writing an update of the task parameters or cancellation.
 						Events offer a subscribe interaction, which results in the creation of a handle resource similar to tasks.
 					</p>
-					
+
 					<p>
 						Depending on the interaction, a payload may be optional or required.
 						For details see <a href="#interaction-patterns"></a>.
@@ -372,7 +372,7 @@
 						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure (encoding).
 						However, this is missing critical semantic information such as this resource actually represents and what unit this number has.
 					</p>
-					
+
 					<p>
 						In practice, a Thing provides further details about what kind of Thing it is and what the interactions mean.
 						This additional information is the semantic context of the Thing.
@@ -484,30 +484,63 @@
 						<h4>TD Context</h4>
 
 						<p>
-							<a>JSON-LD</a> is a serialization format for Linked Data, that is, its content should use one or more vocabularies that are uniquely defined and available on the Web.
-							Any JSON-LD document has to be defined within a specific context that points to the relevant vocabularies.
-							For instance, the term <code>Thing</code> below refers to a concept defined in the RDFS vocabulary for Thing Description at <code>http://www.w3c.org/wot/td#</code>.
-							The context object should look like this:
+							<a>JSON-LD<a> is a serialization format that adds a semantic layer on top of the JSON specification: the terms that appear in a JSON document
+							should be associated with uniquely identified concepts from shared vocabularies. This principle is part of a set of practices to publish data
+							on the Web called Linked Data, where concepts are usually identified with URIs and originate from RDF vocabularies.
+						</p>
+
+						<p>
+							The association between terms and concept URIs has to be declared in preamble of the JSON document with the keyword <code>@context</code>.
+							The expected value for <code>@context</code> can be of different kinds. A first option is to use a JSON object where keys are terms and
+							values are concepts URIs, e.g.:
 
 							<pre class="example">
 								{
 								  "@context": {
-								    "Thing": "http://www.w3c.org/wot/td#Thing",
+								    "name": "http://www.w3c.org/wot/td#name",
+										"uris": "http://www.w3c.org/wot/td#associatedUri",
+										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
+										"Thing": "http://www.w3c.org/wot/td#Thing",
 								    ...
-								  }
+									}
+								}
+							</pre>
+
+							It also possible to declare namespaces in the context instead of terms. In the example above, three of the four URIs have the same prefix:
+							<code>http://www.w3c.org/wot/td#</code>. This common part could be given a short name, refered to as a namespace (as in XML). URIs could
+							then be shortened by concatenating namespace with <code>:</code> and a local name (anywhere in the JSON-LD document). E.g.:
+
+							<pre class="example">
+								{
+								  "@context": {
+										"wot": "http://www.w3c.org/wot/td#",
+								    "name": "wot:name",
+										"uris": "wot:associatedUri",
+										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
+										"Thing": "wot:Thing",
+								    ...
+									}
 								}
 							</pre>
 						</p>
 
 						<p>
-							For convenience, a standard context including all TD vocabulary terms has been defined and made available at <code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>.
-							This way, one only needs to add this URI to the context of the Thing to import all TD terms.
-							It is recommended to include this standard context in a Thing Description, but not mandatory if the vocabulary is included in another context file.
+							For the sake of reusability, it is also possible to define an external JSON-LD context and simply give its URI as value of <code>@context</code>.
+							All JSON terms that are defined in the present document have been put in an external document, available at
+							<code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>. It is highly recommended (but not mandatory) to include this standard
+							context in a Thing Description. A basic Thing Description would contain the following declaration:
+
+							<pre class="example">
+								{
+								  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+									...
+								}
+							</pre>
 						</p>
 
 						<p>
-							As the TD vocabulary we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by reusing other vocabularies or ontologies and/or defining application-specific terms (see <a href="#td-context-extension"></a>).
-							In the following example, in addition to our standard context, the context of the Thing points to a shared vocabulary for sensors:
+							A third option is to declare an array, in case a single document involves several contexts. Array elements are either objects or strings,
+							as explained above. This option proves relevant if one wants to extend the existing TD context without modifying it. For instance:
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -515,21 +548,8 @@
 								  ...
 								}
 							</pre>
-						</p>
 
-						<p>
-							During early experimentations with TD files, a few concepts and terms
-							appeard to be recurrent, such as <code>Temperature</code>, <code>Toggle</code>
-							or <code>unit</code>. Again, to ease experimentation with the modeling
-							of Things, a vocabulary that gathers such common terms has been
-							defined at <code>https://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
-							Its content simply defines aliases for classes and properties of well-known
-							ontologies that are relevant for our activity:
-							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
-							<a href="http://www.w3.org/2005/Incubator/ssn/ssnx/qu/qu-rec20.html">Quantities &amp; Units</a>,
-							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
-							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
-							updated and is not intended to become a reference.
+							Section <a href="#td-context-extension"></a> provides a more concrete example on that topic.
 						</p>
 					</section>
 
@@ -556,7 +576,7 @@
 
 					<section>
 						<h4>Thing Metadata</h4>
-						<p>A TD will provide some generic metadata vocabularies that can be used, e.g., 
+						<p>A TD will provide some generic metadata vocabularies that can be used, e.g.,
 						to assign a name or what kind of protocols does a servient support.</p>
 						<pre class="example">
 							{
@@ -580,7 +600,7 @@
 						</pre>
 
 						<p>
-							There are three mandatory and one optional (shown as italic text in JSON snippet) vocabulary terms defined 
+							There are three mandatory and one optional (shown as italic text in JSON snippet) vocabulary terms defined
 							within metadata:
 						</p>
 
@@ -607,7 +627,7 @@
 							added such as product ID, firmware version, location, etc. These terms should then appear in the context of the Thing (as detailed in <a href="#td-context"></a>).
 						</p>
 					</section>
-					
+
 					<section>
 						<h4>Note on URI Resolution</h4>
 
@@ -649,13 +669,13 @@
 
 				<section>
 					<h3>Interaction Patterns</h3>
-					
+
 					<section>
 						<h4>Property</h4>
 
 						<p>
-							The array field <code>properties</code> is used to reflect one or more interactions of the Property pattern. 
-							Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or 
+							The array field <code>properties</code> is used to reflect one or more interactions of the Property pattern.
+							Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or
 							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
 
@@ -719,7 +739,7 @@
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
 							Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing.
 						</p>
-						
+
 						<p>Within the TD, the Actions of a Thing are declared in the JSON array <code>actions</code>.</p>
 
 						<pre class="example">
@@ -883,56 +903,56 @@
 						<h4>Simple Data</h4>
 						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
 						</p>
-	
+
 						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code> within the value range of [ 0 ... 255 ].
 						</p>
-	
+
 						<pre class="example">
-							"valueType": { 
+							"valueType": {
 								"type": "number",
 								"minimum": 0,
 								"maximum": 255,
 							}
 						</pre>
-	
+
 						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
 						</p>
-	
+
 						<pre class="example">
 							{ "value": 123 }
 						</pre>
-	
+
 						<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
 						</p>
-	
+
 						<pre class="example">
 								&lt;number>123&lt;/number>
 						</pre>
-	
+
 						<p class="note" title="Wrapping single values in a JSON object">
 							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
 						</p>
 					</section>
-	
+
 					<section>
 						<h4>Structured Data</h4>
-	
+
 						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>.
 						</p>
-	
+
 						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
-						JSON provides two distinct constructs to define a structure that can have multiple literal values. 
+						JSON provides two distinct constructs to define a structure that can have multiple literal values.
 						One is JSON object, and the other is JSON array.
 						</p>
-	
+
 						<section>
 							<h5 id="json-object">JSON Object</h5>
-		
+
 							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of
 							two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>)
 							where <code>id</code> is required to be present.
 							</p>
-		
+
 							<pre class="example">
 								"valueType": {
 								    "type": "object",
@@ -947,10 +967,10 @@
 								    "required": ["id"]
 								}
 							</pre>
-		
+
 							<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
 							</p>
-		
+
 							<pre class="example">
 								{
 									"value": {
@@ -959,10 +979,10 @@
 									}
 								}
 							</pre>
-		
+
 							<p>The above data will look the following when the data is exchanged in XML.
 							</p>
-		
+
 							<pre class="example">
 									&lt;object>
 										&lt;id>
@@ -973,7 +993,7 @@
 										&lt;/name>
 									&lt;/object>
 							</pre>
-		
+
 							<div class="note" title="RDF serialization of value types">
 								<p>
 									Using the TD model and JSON Schema in a single document may lead
@@ -986,16 +1006,16 @@
 									(see [[!JSON-LD]], Advanced Context Usage).
 								</p>
 							</div>
-		
+
 						</section>
-	
+
 						<section>
 							<h5 id="json-array">JSON Array</h5>
-		
+
 							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
 							exactly three number literals with each value within the range of [ 0 ... 255 ].
 							</p>
-		
+
 							<pre class="example">
 								"valueType": {
 								    "type": "array",
@@ -1008,10 +1028,10 @@
 								    "maxItems" : 3
 								}
 							</pre>
-		
+
 							<p>When the numbers being exchanged are 208, 32 and 144, data serialization in JSON format will look like the following.
 							</p>
-		
+
 							<pre class="example">
 								{
 									"value": [
@@ -1021,10 +1041,10 @@
 									]
 								}
 							</pre>
-		
+
 							<p>The above data will look the following when the data is exchanged in XML.
 							</p>
-		
+
 							<pre class="example">
 									&lt;array>
 										&lt;double>208&lt;/double>
@@ -1032,12 +1052,12 @@
 										&lt;double>144&lt;/double>
 									&lt;/array>
 							</pre>
-		
-		
+
+
 						</section><!-- End of "JSON Array" -->
-	
+
 					</section><!-- End of "Structured Data" -->
-	
+
 					<section>
 					<h4>Mapping to XML Schema</h4>
 
@@ -1050,10 +1070,10 @@
 					</p>
 
 					<p>The XML structure is based on EXI4JSON [[!exi-for-json]].
-					The structure works uniformly well for both schema-less and schema-informed use cases. 
+					The structure works uniformly well for both schema-less and schema-informed use cases.
 					</p>
 
-					<p class="ednote">A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
+					<p class="ednote">A complete "JSON Schema" to "XML Schema" mapping needs to be defined.
 					</p>
 
 					<section>
@@ -1077,7 +1097,7 @@
 							}
 						</pre>
 
-						<p>When the <code>object</code> is anonymous (i.e. it is the root, or participates in an <code>array</code> definition), 
+						<p>When the <code>object</code> is anonymous (i.e. it is the root, or participates in an <code>array</code> definition),
 						the above <code>object</code> definition transforms to the following XML Schema element definition.
 						</p>
 
@@ -1103,17 +1123,17 @@
 							    &lt;/xs:complexType>
 							&lt;/xs:element>
 							</pre>
-	
-							<p class="ednote">JSON schema <code>object</code> does NOT define any order. 
-							Therefore, in order to capture the constraints of JSON schema <code>object</code>, 
+
+							<p class="ednote">JSON schema <code>object</code> does NOT define any order.
+							Therefore, in order to capture the constraints of JSON schema <code>object</code>,
 							we need to use xsd:all constructs instead of xsd:sequence.
 							</p>
-	
-							<p>Otherwise (i.e. the <code>object</code> is a member of another <code>object</code> definition, thus has a name), 
+
+							<p>Otherwise (i.e. the <code>object</code> is a member of another <code>object</code> definition, thus has a name),
 							the <code>object</code> definition transforms to the following XML schema element definition.
 							Note <code><i>__name</i></code> should be replaced by the actual name of the <code>object</code>.
 							</p>
-	
+
 							<pre class="example">
 								&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 								    &lt;xs:complexType>
@@ -1142,15 +1162,15 @@
 								    &lt;/xs:complexType>
 								&lt;/xs:element>
 							</pre>
-	
+
 						</section><!-- End of "JSON Object Definition to XML Schema" -->
 
 						<section>
 							<h5>JSON Array Definition to XML Schema</h5>
-	
-							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
+
+							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>.
 							The <code>array</code> consists of exactly three number literals with each value within the value range of [ 0 ... 255 ].</p>
-	
+
 							<pre class="example">
 								{
 								    "type": "array",
@@ -1163,11 +1183,11 @@
 								    "maxItems" : 3
 								}
 							</pre>
-	
-							<p>When the <code>array</code> is anonymous (i.e. it is the root, or participates in another <code>array</code> definition), 
+
+							<p>When the <code>array</code> is anonymous (i.e. it is the root, or participates in another <code>array</code> definition),
 							the above <code>array</code> definition transforms to the following XML Schema element definition.
 							</p>
-	
+
 							<pre class="example">
 								&lt;xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 								    &lt;xs:complexType>
@@ -1184,13 +1204,13 @@
 								    &lt;/xs:complexType>
 								&lt;/xs:element>
 							</pre>
-	
-							<p>Otherwise (i.e. the <code>array</code> is a member of an <code>object</code> definition, thus has a name), 
+
+							<p>Otherwise (i.e. the <code>array</code> is a member of an <code>object</code> definition, thus has a name),
 							the <code>array</code> definition transforms to the following XML schema element definition.
 							Note <code><i>__name</i></code> should be replaced by the actual name of the <code>array</code>.
 							</p>
-	
-	
+
+
 							<pre class="example">
 								&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 								    &lt;xs:complexType>
@@ -1213,7 +1233,7 @@
 								    &lt;/xs:complexType>
 								&lt;/xs:element>
 							</pre>
-	
+
 						</section><!-- End of "JSON Array Definition to XML Schema" -->
 
 					</section><!-- End of "Mapping to XML Schema" -->
@@ -1251,7 +1271,7 @@
 							      "unit": "celsius",
 							      "reference": "threshold",
 							      "name": "myTemp",
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "writable": false,
 							      "hrefs": ["val"]
 							    }, {
@@ -1259,19 +1279,19 @@
 							      "@type": "Temperature",
 							      "unit": "celsius",
 							      "name": "myThreshold",
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "writable": true,
 							      "hrefs": ["threshold"]
 							    }
 							  ],
 							  "events": [
 							    {
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "name": "myChange",
 							      "property": "temp",
 							      "hrefs": ["val/changed"]
 							    }, {
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "name": "myWarning",
 							      "hrefs": ["val/high"]
 							    }
@@ -1316,7 +1336,7 @@
 							      "@id": "color",
 							      "@type": "RGBColor",
 							      "name": "myColor",
-							      "valueType": "integer",
+							      "valueType": { "type": "integer" },
 							      "writable": true,
 							      "hrefs": ["val"]
 							    }
@@ -1327,7 +1347,7 @@
 							      "name": "myOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "boolean"
+							        "valueType": { "type": "boolean" }
 							      },
 							      "hrefs": ["toggle"]
 							    }, {
@@ -1335,7 +1355,7 @@
 							      "name": "myFadeIn",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "integer"
+							        "valueType": { "type": "integer" }
 							      },
 							      "property": "color",
 							      "hrefs": ["fadein"]
@@ -1344,7 +1364,7 @@
 							      "name": "myFadeOut",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "integer"
+							        "valueType": { "type": "integer" }
 							      },
 							      "property": "color",
 							      "hrefs": ["fadeout"]
@@ -1352,7 +1372,7 @@
 							  ],
 							  "events": [
 							    {
-							      "valueType": "integer",
+							      "valueType": { "type": "integer" },
 							      "name": "myChange",
 							      "property": "color",
 							      "hrefs": ["changed"]
@@ -1400,7 +1420,7 @@
 							      "name": "myMasterOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "boolean"
+							        "valueType": { "type": "boolean" }
 							      },
 							      "hrefs": ["toggle"]
 							    }
@@ -1441,9 +1461,49 @@
 					<section id="td-context-extension">
 						<h4>Extending Thing Description with Other Semantic Models</h4>
 
-						@TODO How to extend the TD with contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
+						<p>
+							As the TD context we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by
+							reusing other vocabularies or ontologies and/or defining application-specific terms. In the following example, in addition
+							to our standard context, the context of the Thing points to a shared vocabulary for domotics called DogOnt:
+
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               {"dogont": "http://elite.polito.it/ontologies/dogont.owl#"}],
+								  ...
+								}
+							</pre>
+
+							DogOnt defines hundreds of concepts ranging from HVAC to units of measurement.
+						</p>
+
+						<p>
+							During early experimentations with TD files, a few concepts and terms
+							appeared to be recurrent, such as <code>Temperature</code>, <code>Toggle</code>
+							or <code>unit</code>. To ease experimentation with the modeling
+							of Things, a context that gathers such common terms has been
+							defined at <code>http://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
+							Its content simply defines aliases for classes and properties of well-known
+							ontologies that are relevant for our activity:
+							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
+							<a href="http://www.w3.org/2005/Incubator/ssn/ssnx/qu/qu-rec20.html">Quantities &amp; Units</a>,
+							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
+							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
+							updated and is not intended to become a reference. It should always be used
+							along with the standard TD context, as follows:
+
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+								  ...
+								}
+							</pre>
+						</p>
+
+						@TODO more details on contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
 					</section>
-					
+
 					<section id="td-discovery">
 						<h4>Discovery</h4>
 
@@ -1452,33 +1512,33 @@
 							In particular, the current practices at the PlugFests should become clear.
 							Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
 						</p>
-	
+
 						<p>
 							Discovering a Thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
 							The URI of the link may point to the Thing (technically the <a>servient</a>) itself, as Things often host their TD directly, or to any other location on the Web.
 							There are several approaches to aquire such links.
 							Some work independent from the <a>Protocol Binding</a>, others rely on features of a specific protocol.
 						</p>
-	
+
 						<section>
 							<h5>Manual Discovery</h5>
-	
+
 							<p>
 								The link to the TD is provided by the developer at programming time, the operator through device management, or the user through a UI.
 							</p>
 						</section>
-	
+
 						<section>
 							<h5>Repository</h5>
-	
+
 							<p>
 								The Thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
 							</p>
 						</section>
-	
+
 						<section>
 							<h5>Local Discovery</h5>
-	
+
 							<p>
 								The Thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
 								The response to a discovery request can include the TD directly or just a link.
@@ -1486,10 +1546,10 @@
 							</p>
 						</section>
 					</section>
-					
+
 					<section>
 						<h4>Security</h4>
-						
+
 						@TODO Add howto about security metadata and how to use it
 					</section>
 				</section>
@@ -1800,7 +1860,7 @@
 					<li>Enforcing security at the network interface of the Thing</li>
 					<li>
 						Protecting TD objects
-						
+
 						<p>
 							TD objects in plain form can easily be manipulated or faked by attackers.
 							This could result in security or safety breaches.
