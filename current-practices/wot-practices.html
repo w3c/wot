@@ -484,30 +484,63 @@
 						<h4>TD Context</h4>
 
 						<p>
-							<a>JSON-LD</a> is a serialization format for Linked Data, that is, its content should use one or more vocabularies that are uniquely defined and available on the Web.
-							Any JSON-LD document has to be defined within a specific context that points to the relevant vocabularies.
-							For instance, the term <code>Thing</code> below refers to a concept defined in the RDFS vocabulary for Thing Description at <code>http://www.w3c.org/wot/td#</code>.
-							The context object should look like this:
+							<a>JSON-LD<a> is a serialization format that adds a semantic layer on top of the JSON specification: the terms that appear in a JSON document
+							should be associated with uniquely identified concepts from shared vocabularies. This principle is part of a set of practices to publish data
+							on the Web called Linked Data, where concepts are usually identified with URIs and originate from RDF vocabularies.
+						</p>
+
+						<p>
+							The association between terms and concept URIs has to be declared in preamble of the JSON document with the keyword <code>@context</code>.
+							The expected value for <code>@context</code> can be of different kinds. A first option is to use a JSON object where keys are terms and
+							values are concepts URIs, e.g.:
 
 							<pre class="example">
 								{
 								  "@context": {
-								    "Thing": "http://www.w3c.org/wot/td#Thing",
+								    "name": "http://www.w3c.org/wot/td#name",
+										"uris": "http://www.w3c.org/wot/td#associatedUri",
+										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
+										"Thing": "http://www.w3c.org/wot/td#Thing",
 								    ...
-								  }
+									}
+								}
+							</pre>
+
+							It also possible to declare namespaces in the context instead of terms. In the example above, three of the four URIs have the same prefix:
+							<code>http://www.w3c.org/wot/td#</code>. This common part could be given a short name, refered to as a namespace (as in XML). URIs could
+							then be shortened by concatenating namespace with <code>:</code> and a local name (anywhere in the JSON-LD document). E.g.:
+
+							<pre class="example">
+								{
+								  "@context": {
+										"wot": "http://www.w3c.org/wot/td#",
+								    "name": "wot:name",
+										"uris": "wot:associatedUri",
+										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
+										"Thing": "wot:Thing",
+								    ...
+									}
 								}
 							</pre>
 						</p>
 
 						<p>
-							For convenience, a standard context including all TD vocabulary terms has been defined and made available at <code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>.
-							This way, one only needs to add this URI to the context of the Thing to import all TD terms.
-							It is recommended to include this standard context in a Thing Description, but not mandatory if the vocabulary is included in another context file.
+							For the sake of reusability, it is also possible to define an external JSON-LD context and simply give its URI as value of <code>@context</code>.
+							All JSON terms that are defined in the present document have been put in an external document, available at
+							<code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>. It is highly recommended (but not mandatory) to include this standard
+							context in a Thing Description. A basic Thing Description would contain the following declaration:
+
+							<pre class="example">
+								{
+								  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+									...
+								}
+							</pre>
 						</p>
 
 						<p>
-							As the TD vocabulary we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by reusing other vocabularies or ontologies and/or defining application-specific terms (see <a href="#td-context-extension"></a>).
-							In the following example, in addition to our standard context, the context of the Thing points to a shared vocabulary for sensors:
+							A third option is to declare an array, in case a single document involves several contexts. Array elements are either objects or strings,
+							as explained above. This option proves relevant if one wants to extend the existing TD context without modifying it. For instance:
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -515,21 +548,8 @@
 								  ...
 								}
 							</pre>
-						</p>
 
-						<p>
-							During early experimentations with TD files, a few concepts and terms
-							appeard to be recurrent, such as <code>Temperature</code>, <code>Toggle</code>
-							or <code>unit</code>. Again, to ease experimentation with the modeling
-							of Things, a vocabulary that gathers such common terms has been
-							defined at <code>https://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
-							Its content simply defines aliases for classes and properties of well-known
-							ontologies that are relevant for our activity:
-							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
-							<a href="http://www.w3.org/2005/Incubator/ssn/ssnx/qu/qu-rec20.html">Quantities &amp; Units</a>,
-							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
-							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
-							updated and is not intended to become a reference.
+							Section <a href="#td-context-extension"></a> provides a more concrete example on that topic.
 						</p>
 					</section>
 
@@ -1251,7 +1271,7 @@
 							      "unit": "celsius",
 							      "reference": "threshold",
 							      "name": "myTemp",
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "writable": false,
 							      "hrefs": ["val"]
 							    }, {
@@ -1259,19 +1279,19 @@
 							      "@type": "Temperature",
 							      "unit": "celsius",
 							      "name": "myThreshold",
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "writable": true,
 							      "hrefs": ["threshold"]
 							    }
 							  ],
 							  "events": [
 							    {
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "name": "myChange",
 							      "property": "temp",
 							      "hrefs": ["val/changed"]
 							    }, {
-							      "valueType": "number",
+							      "valueType": { "type": "number" },
 							      "name": "myWarning",
 							      "hrefs": ["val/high"]
 							    }
@@ -1316,7 +1336,7 @@
 							      "@id": "color",
 							      "@type": "RGBColor",
 							      "name": "myColor",
-							      "valueType": "integer",
+							      "valueType": { "type": "integer" },
 							      "writable": true,
 							      "hrefs": ["val"]
 							    }
@@ -1327,7 +1347,7 @@
 							      "name": "myOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "boolean"
+							        "valueType": { "type": "boolean" }
 							      },
 							      "hrefs": ["toggle"]
 							    }, {
@@ -1335,7 +1355,7 @@
 							      "name": "myFadeIn",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "integer"
+							        "valueType": { "type": "integer" }
 							      },
 							      "property": "color",
 							      "hrefs": ["fadein"]
@@ -1344,7 +1364,7 @@
 							      "name": "myFadeOut",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "integer"
+							        "valueType": { "type": "integer" }
 							      },
 							      "property": "color",
 							      "hrefs": ["fadeout"]
@@ -1352,7 +1372,7 @@
 							  ],
 							  "events": [
 							    {
-							      "valueType": "integer",
+							      "valueType": { "type": "integer" },
 							      "name": "myChange",
 							      "property": "color",
 							      "hrefs": ["changed"]
@@ -1400,7 +1420,7 @@
 							      "name": "myMasterOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "boolean"
+							        "valueType": { "type": "boolean" }
 							      },
 							      "hrefs": ["toggle"]
 							    }
@@ -1441,7 +1461,48 @@
 					<section id="td-context-extension">
 						<h4>Extending Thing Description with Other Semantic Models</h4>
 
-						@TODO How to extend the TD with contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
+						<p>
+							As the TD context we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by
+							reusing other vocabularies or ontologies and/or defining application-specific terms. In the following example, in addition
+							to our standard context, the context of the Thing declares a namespace pointing to a shared vocabulary for domotics called
+              <a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>:
+
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               {"dogont": "http://elite.polito.it/ontologies/dogont.owl#"}],
+								  ...
+								}
+							</pre>
+
+							DogOnt defines hundreds of concepts ranging from HVAC to units of measurement.
+						</p>
+
+						<p>
+							During early experimentations with TD files, a few concepts and terms
+							appeared to be recurrent, such as <code>Temperature</code>, <code>Toggle</code>
+							or <code>unit</code>. To ease experimentation with the modeling
+							of Things, a context that gathers such common terms has been
+							defined at <code>http://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
+							Its content simply defines aliases for classes and properties of well-known
+							ontologies that are relevant for our activity:
+							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
+							<a href="http://purl.oclc.org/NET/ssnx/qu/qu">Quantity Kinds &amp; Units</a>,
+							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
+							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
+							updated and is not intended to become a reference. It should always be used
+							along with the standard TD context, as follows:
+
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+								  ...
+								}
+							</pre>
+						</p>
+
+						@TODO more details on contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
 					</section>
 					
 					<section id="td-discovery">
