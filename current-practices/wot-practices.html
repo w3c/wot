@@ -59,7 +59,7 @@
 			</p>
 		</section>
 
-		<section id="sec-intro">
+		<section>
 			<h1>Introduction</h1>
 
 			<p>
@@ -92,13 +92,13 @@
 				<ul>
 					<li>This document gives an overview for implementers of the W3C WoT building blocks.</li>
 					<li>To get a quick introduction to the basics of WoT, continue with <a href="#sec-concepts"></a>.</li>
-					<li>To participate in the WoT PlugFests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a>.</li>
+					<li>To participate in the WoT PlugFests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#participation-howto"></a>.</li>
 					<li>An introduction to the deployment scenarios and high-level architecture can be found in the <a href="http://w3c.github.io/wot/architecture/wot-architecture.html">WoT Architecture</a> document.</li>
 				</ul>
 			</section>
 		</section>
 
-		<section id="sec-term">
+		<section>
 			<h2>Terminology</h2>
 
 			<p>
@@ -125,7 +125,7 @@
 				<dd>A registry for <a>TDs</a> that provides a Web interface to register TDs and look them up, for intance using SPARQL queries</dd>
 
 				<dt><dfn>Scripting API</dfn></dt>
-				<dd>Programming interface that allows scripts to discover Things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#sec-scripting-api"></a>)</dd>
+				<dd>Programming interface that allows scripts to discover Things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#scripting-api"></a>)</dd>
 
 				<dt><dfn data-lt="servient|servients">Servient</dfn></dt>
 				<dd>The addressable application endpoint of a Thing that makes it interactive by providing a <a>WoT Interface</a> and means to execute application logic</dd>
@@ -137,10 +137,10 @@
 				<dd>The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</dd>
 
 				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
-				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#sec-td"></a> for details)</dd>
+				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#thing-description"></a> for details)</dd>
 
 				<dt><dfn>WoT Interface</dfn></dt>
-				<dd>Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different <a>Protocol Bindings</a> (see <a href="#sec-wot-interface"></a>)</dd>
+				<dd>Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different <a>Protocol Bindings</a> (see <a href="#wot-interface"></a>)</dd>
 			</dl>
 
 		</section>
@@ -178,7 +178,7 @@
 				In the following, the technical building blocks for the Web of Things are discussed on more detail.
 			</p>
 
-			<section id="sec-wot-interface">
+			<section>
 				<h2>WoT Interface</h2>
 
 				<p>
@@ -318,7 +318,7 @@
 
 			</section>
 
-			<section id="sec-td">
+			<section>
 				<h2>Thing Description</h2>
 
 				<p>
@@ -1524,7 +1524,7 @@
 						<p class="ednote">
 							This section describes in general how a Thing (i.e., its TD) can be discovered.
 							In particular, the current practices at the PlugFests should become clear.
-							Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
+							Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#protocol-bindings"></a>.
 						</p>
 	
 						<p>
@@ -1569,7 +1569,7 @@
 				</section>
 			</section>
 
-			<section id="sec-scripting-api">
+			<section>
 				<h2>Scripting API</h2>
 
 				<p>
@@ -1990,12 +1990,12 @@
 
 			<p>
 				This section includes the goals and ideas of each WoT PlugFest in chronological order.
-				Before reflecting the "lessons learned" of each PlugFest, which drove the development of the presented practices, the document provides a <a href="#sec-plugfest-howto">howto</a> for participating in the PlugFests.</p>
+				Before reflecting the "lessons learned" of each PlugFest, which drove the development of the presented practices, the document provides a <a href="#participation-howto">howto</a> for participating in the PlugFests.</p>
 			<p class="ednote">
 				@TODO Add more detailed information along with pictures of each plugfest
 			</p>
 
-			<section id="sec-plugfest-howto">
+			<section>
 				<h2>Participation Howto</h2>
 
 				<p class="note" title="Status">
@@ -2017,7 +2017,7 @@
 							WoT Client (e.g., a Web dashboard)
 							<blockquote>
 								A WoT client implementation requires a <a>TD</a> parser and a user interface or control logic to drive the interaction with one or more other <a>Things</a>.
-								Optionally, it can implement lookup support for the <a href="#sec-repo">Repository</a>.
+								Optionally, it can implement lookup support for the <a>Repository</a>.
 								For the TD parser, a <a>JSON-LD</a> library is recommended, but it is also possible to implement a simpler parser that exploits knowledge about which parts of the TD are actually relevant for the Thing.
 								Simple WoT clients can have a limited notion of the semantics and only support interactions that match their own capabilities.
 								A simple switch, for instance, does not need to understand the RGB color model.
