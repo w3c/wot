@@ -8,7 +8,7 @@
 			var respecConfig = {
 				  specStatus:   "unofficial"
 				, editors:      [{name:"Daniel Peintner"}, {name:"Matthias Kovatsch"}]
-				, authors:      [{name:"Sebastian Käbisch"}, {name:"Victor Charpenay"}, {name:"Takuki Kamiya (Fujitsu)"}, {name:"Volunteers needed"}]
+				, authors:      [{name:"Sebastian Käbisch"}, {name:"Victor Charpenay"}, {name:"Takuki Kamiya (Fujitsu)"}, {name:"Johannes Hund (Siemens)"}, {name:"Volunteers needed"}]
 				, processVersion: 2015
 				, shortName:    "wot-tech"
 				, wg:           "Interest Group on the Web of Things"
@@ -39,7 +39,7 @@
 		<section id="abstract">
 			<p>
 				The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things (IoT) services on a worldwide basis.
-				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, protocol bindings, discovery mechanisms, and cross-cutting security & privacy considerations.
+				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, Protocol Bindings, discovery mechanisms, and cross-cutting security & privacy considerations.
 				The current practices related to WoT building blocks were also prototyped and tested in so-called PlugFests.
 				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
 				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
@@ -59,42 +59,46 @@
 			</p>
 		</section>
 
-		<section id="sec-intro">
+		<section>
 			<h1>Introduction</h1>
 
 			<p>
-				The Web of Things (WoT) interest group (IG) provides a forum for technical discussions to identify use cases and requirements for services based upon the role of Web technologies for a combination of the Internet of Things (IoT) with the Web of data.
-				The IG has been divided into four task forces that looked into building blocks for such a Web of Things: thing description (TD), scripting API & protocol bindings (AP), discovery (DI), and security & privacy (SP).
-				Apart from the planned deliverable of a technology landscape document which provides an overview of existing technology, also promising concepts and working drafts were discussed. It turned out challenging for implementers
-				to follow the current state of the WoT building blocks respectively in these discussions.
-				This is, however, very important for the mission of the <a href='#plugfests'>PlugFests</a>, where the current practices should be tested and evaluated.
-				Moreover, it is hard for newcomers to quickly get a picture of the IG activities.
+				The Web of Things (WoT) Interest Group (IG) provides a forum for technical discussions on the role of Web technologies for a combination of the Internet of Things (IoT) with the Web of data.
+				Apart from the <a href="http://w3c.github.io/wot/wot-ucr.html">Use Cases and Requirements</a> and <a href="http://w3c.github.io/wot/landscape.html">Technology Landscape</a> deliverables, the IG is also working on promising concepts and prototypical building blocks.
+				It turned out challenging for implementers to follow the current practices resulting from the IG discussions.
+				This is, however, very important for the mission of the <a href='#plugfests'>PlugFests</a>, where the current practices should be tested and evaluated through prototypes.
+				Moreover, it is hard for newcomers to quickly get a picture of the IG activities and intermediary results.
 				Thus, this document shall provide a snapshot that represents the current practices of the WoT IG.
-				It preserves the results of the PlugFests as well as the discussions between participants.
-				This document is not a technical specification, but more a working document for implementors of the prototypical WoT building blocks.
+				It preserves the latest consensus of the discussions among the Members as well as the results of the the PlugFests.
+				Note that this document is not a technical specification, but more a working document for implementors of the prototypical WoT building blocks.
 			</p>
 
 			<section>
 				<h2>Vision</h2>
 				<p>
-					...
+					The central idea of WoT is that Things can describe their capabilities and metadata in a machine-understandable format: the WoT <a>Thing Description</a> (TD), which is rooted in <a>RDF</a>.
+					The TD can be served by a Thing itself or hosted elsewhere on the Web.
+					This way, a TD can also be retrofitted on existing devices, and thereby complement existing IoT platforms and standards with rich metadata to enable interoperability across platforms.
+					WoT also supports flexible <a>Protocol Bindings</a> that enable the mapping of a semantically described Thing interaction to different protocols, since each domain has different requirements here.
+					Finally, WoT envisions to provide a common runtime environment for IoT-related apps.
+					Sensors and actuators can be improved by installing better data processing algorithms or by adding completely new features through software.
+					With a common runtime environment, aggregation apps can be instantiated in the cloud and then relocated to local hubs, or even directly onto a powerful Thing, to meet certain quality of service requirements.
 				</p>
 			</section>
 
 			<section>
 				<h2>How to get started</h2>
 
-				<p>
-					This document gives an overview for implementers over the W3C WoT building blocks and how they are connected.
-					<ul>
-						<li>To get familiar with the basics of WoT, continue with <a href="#sec-concepts"></a>.</li>
-						<li>To participate in the WoT PlugFests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#sec-plugfest-howto"></a>.</li>
-					</ul>
-				</p>
+				<ul>
+					<li>This document gives an overview for implementers of the W3C WoT building blocks.</li>
+					<li>To get a quick introduction to the basics of WoT, continue with <a href="#sec-concepts"></a>.</li>
+					<li>To participate in the WoT PlugFests, first get familar with <a href="#sec-concepts"></a> and then follow the howto in <a href="#participation-howto"></a>.</li>
+					<li>An introduction to the deployment scenarios and high-level architecture can be found in the <a href="http://w3c.github.io/wot/architecture/wot-architecture.html">WoT Architecture</a> document.</li>
+				</ul>
 			</section>
 		</section>
 
-		<section id="sec-term">
+		<section>
 			<h2>Terminology</h2>
 
 			<p>
@@ -103,31 +107,40 @@
 
 			<dl>
 				<dt><dfn>CoAP</dfn></dt>
-				<dd>Acronym for Constrained Application Protocol [[!RFC7252]]</dd>
+				<dd>Constrained Application Protocol [[!RFC7252]]</dd>
 
 				<dt><dfn>JSON-LD</dfn></dt>
-				<dd>A JSON document that is augmented with support for Linked Data by providing an <code>@context</code> property with a defining URI</dd>
+				<dd>A JSON document that is augmented with support for Linked Data by providing an <code>@context</code> property with a defining URI [[!JSON-LD]]</dd>
+
+				<dt><dfn>JWT</dfn></dt>
+				<dd>JSON Web Token [[!RFC7519]]</dd>
+
+				<dt><dfn data-lt="Protocol Bindings">Protocol Binding</dfn></dt>
+				<dd>A mapping from operations on the WoT resource model to specific operations of a protocol (see <a href="#protocol-bindings"></a>)</dd>
+
+				<dt><dfn>RDF</dfn></dt>
+				<dd>The Resource Description Framework (RDF) of the Semantic Web [[!rdf11-concepts]]</dd>
 
 				<dt><dfn>Repository</dfn></dt>
 				<dd>A registry for <a>TDs</a> that provides a Web interface to register TDs and look them up, for intance using SPARQL queries</dd>
 
 				<dt><dfn>Scripting API</dfn></dt>
-				<dd>Programming interface that allows scripts to discover things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#sec-scripting-api"></a>)</dd>
+				<dd>Programming interface that allows scripts to discover Things through a Discovery API, issue requests through a Client API, provide resources through a Server API, and access directly attached hardware through a Physical API (see <a href="#scripting-api"></a>)</dd>
 
 				<dt><dfn data-lt="servient|servients">Servient</dfn></dt>
-				<dd>System component or application endpoint that may be in client role, server role, or both and makes things interactive by providing a WoT API</dd>
+				<dd>The addressable application endpoint of a Thing that makes it interactive by providing a <a>WoT Interface</a> and means to execute application logic</dd>
 
 				<dt><dfn>SPARQL</dfn></dt>
 				<dd>A query language for semantic data</dd>
 
-				<dt><dfn>Thing</dfn></dt>
-				<dd>An entity in the Web of Things that can either be a physical artifact such as a device or a virtual representation such as a location or group of device</dd>
+				<dt><dfn data-lt="Things">Thing</dfn></dt>
+				<dd>The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</dd>
 
 				<dt><dfn data-lt="TD|TDs">Thing Description</dfn></dt>
-				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a thing (see <a href="#sec-td"></a>)</dd>
+				<dd>An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing (see <a href="#thing-description"></a> for details)</dd>
 
-				<dt><dfn>WoT API</dfn></dt>
-				<dd>Resource-oriented Web interface that allows access to servients over the network using different protocols mappings (see <a href="#sec-wot-interface"></a>)</dd>
+				<dt><dfn>WoT Interface</dfn></dt>
+				<dd>Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different <a>Protocol Bindings</a> (see <a href="#wot-interface"></a>)</dd>
 			</dl>
 
 		</section>
@@ -141,21 +154,21 @@
 
 			<p>
 				Things in the WoT architecture are represented by so-called <a>servients</a>, which are usually hosted directly on the physical thing.
-				Yet servients can also represent virtual things, for instance a collection of things (e.g., all lights in a room) or a WoT gateway for legacy devices (e.g., a Bluetooth device connected to a smartphone).
+				Yet servients can also represent virtual Things, for instance a collection of Things (e.g., all lights in a room) or a WoT gateway for legacy devices (e.g., a Bluetooth device connected to a smartphone).
 				In this latter case, servients are hosted anywhere, a smartphone, local gateway, or the cloud.
-				Servients communicate with each other through the so-called <a>WoT API</a>, a Web API that follows the recommendations of the WoT IG.
-				Servients can be in client role (i.e., they only consume other things), server role (i.e., they only provide capabilities), or both (i.e., they use other things, but also provide capabilities).
+				Servients communicate with each other through the so-called <a>WoT Interface</a>, a Web API that follows the recommendations of the WoT IG.
+				Servients can be in client role (i.e., they only consume other Things), server role (i.e., they only provide capabilities), or both (i.e., they use other Things, but also provide capabilities).
 			</p>
 
 			<p>
-				Each thing (or technically each <a>servient</a>) is described by a WoT <a>Thing Description</a> (TD).
-				The TD must be acquired to use and interact with the thing, since it describes the semantics of a thing as well as its <a>WoT API</a>.
-				Usually, things directly provide their own TD, but the TD can also be hosted externally if there is not enough space on the device or when a WoT-compatible legacy device is retrofitted with a TD.
-				To ease discovery, TDs can be registered with a well-known TD <a>repository</a>, where things of interest can be queried, for instance using <a>SPARQL</a>.
+				Each Thing is described by a WoT <a>Thing Description</a> (TD).
+				The TD must be acquired to use and interact with the Thing, since it describes the semantics of a Thing as well as its <a>WoT Interface</a>.
+				Usually, Things directly provide their own TD, but the TD can also be hosted externally if there is not enough space on the device or when a WoT-compatible legacy device is retrofitted with a TD.
+				To ease discovery, TDs can be registered with a well-known TD <a>repository</a>, where Things of interest can be queried, for instance using <a>SPARQL</a>.
 			</p>
 
 			<p>
-				The application logic of a thing can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained things.
+				The application logic of a Thing (or technically a <a>servient</a>) can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained Things.
 				Following the patterns in the Web, however, application logic should also be provided by scripts.
 				This is supported through a scripting runtime environment&mdash;similar to the Web browser&mdash;that may be provided by a servient.
 				Portability of such scripts is ensured through a common <a>Scripting API</a> that allows access to discovery, the client and server functionality of the servient, and the hardware physically attached to the servient.
@@ -165,165 +178,189 @@
 				In the following, the technical building blocks for the Web of Things are discussed on more detail.
 			</p>
 
-			<section id="sec-wot-interface">
+			<section>
 				<h2>WoT Interface</h2>
 
 				<p>
-					A WoT API is a Web API that is describable by a WoT <a>Thing Description</a> (TD).
+					A WoT Interface is a Web interface (often called "Web API") that is describable by a WoT <a>Thing Description</a> (TD).
 					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
 					Furthermore, it must suppoort the encodings and security mechanisms defined in the TD.
-					The WoT API is used for the communication between <a>servients</a>, that is, the networking protocols and interfaces (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
+					The WoT Interface is used for the communication between <a>servients</a>, that is, the networking protocols and interfaces (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
 				</p>
 
 				<section>
 					<h3>Resource Model and URIs</h3>
-					
+
 					<p>
-						
+
 					</p>
 
 					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
 				</section>
 
-				<section id="sec-protocol-mappings">
-					<h3>Protocol Mappings</h3>
+				<section>
+					<h3>Protocol Bindings</h3>
+
+					<p>
+						We currently have an implicit mapping from WoT interaction patterns to specific protocol operations such as REST or BLE methods.
+						The WoT architecture is not limited to the Protocol Bindings listed here. These simply represent the commonly used protocols at the recent PlugFests.
+					</p>
 					
 					<p>
-						WoT architecture does not limit to the mappings to what is isted here.
-						This is currently practiced at PlugFests.
+						The default interaction with Properties is <i>read</i>. When they are marked <code>writable</code>, they can also be written.
+						Actions must support invocation, which results in the creation of a handle resource (e.g., a sub-resource of the Action resource).
+						Yet Actions may also support a read to list running or queued taks as links.
+						The linked handle resources may exhibit further interactions such as writing an update of the task parameters or cancellation.
+						Events offer a subscribe interaction, which results in the creation of a handle resource similar to tasks.
+					</p>
+					
+					<p>
+						Depending on the interaction, a payload may be optional or required.
+						For details see <a href="#interaction-patterns"></a>.
 					</p>
 
 					<div class="practice">
 						<p>
-							<span id="some-practice" class="practicelab">HTTP mapping</span>
+							<span id="some-practice" class="practicelab">HTTP Binding</span>
 						</p>
 						<p class="practicedesc">
-							@TODO HTTP mapping.
+							<ul>
+								<li>
+									<b>Property</b>
+									<ul>
+										<li><b>Read:</b> GET</li>
+										<li><b>Write:</b> PUT</li>
+									</ul>
+								</li>
+								<li>
+									<b>Action</b>
+									<ul>
+										<li><b>Invoke:</b> POST</li>
+										<li><b>Update task:</b> PUT (on handle resource)</li>
+										<li><b>Cancel task:</b> DELETE (on handle resource)</li>
+									</ul>
+								</li>
+								<li>
+									<b>Event</b>
+									<ul>
+										<li><b>Subscribe:</b> POST + (Long-)Polling/Chunking/Streaming of returned handle resource</li>
+										<li><b>Update subscription:</b> PUT (on handle resource)</li>
+										<li><b>Cancel subscription:</b> DELETE (on handle resource)</li>
+									</ul>
+								</li>
+							</ul>
 						</p>
 					</div>
 
 					<div class="practice">
 						<p>
-							<span id="some-practice" class="practicelab">CoAP mapping</span>
+							<span id="some-practice" class="practicelab">CoAP Binding</span>
 						</p>
 						<p class="practicedesc">
-							@TODO CoAP mapping.
+							<ul>
+								<li>
+									<b>Property</b>
+									<ul>
+										<li><b>Read:</b> GET</li>
+										<li><b>Write:</b> PUT</li>
+									</ul>
+								</li>
+								<li>
+									<b>Action</b>
+									<ul>
+										<li><b>Invoke:</b> POST</li>
+										<li><b>Update task:</b> PUT (on handle resource)</li>
+										<li><b>Cancel task:</b> DELETE (on handle resource)</li>
+									</ul>
+								</li>
+								<li>
+									<b>Event</b>
+									<ul>
+										<li><b>Subscribe:</b> POST + Observe of returned handle resource</li>
+										<li><b>Update subscription:</b> PUT (on handle resource)</li>
+										<li>
+											<b>Cancel subscription:</b> DELETE (on handle resource)<br/>
+											Note that CoAP Observe has cancellation support. This would represent pausing the subscription, where the configuration is preserved for the Event and can be resumed through a new GET + Observe.
+										</li>
+									</ul>
+								</li>
+							</ul>
 						</p>
 					</div>
 
 					<div class="practice">
 						<p>
-							<span id="some-practice" class="practicelab">MQTT mapping</span>
+							<span id="some-practice" class="practicelab">MQTT Binding</span>
 						</p>
 						<p class="practicedesc">
-							@TODO MQTT mapping: write down Michael Koster's shim layer appraoch.
+							@TODO Help needed by MQTT implementers
+						</p>
+					</div>
+
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">BLE Binding</span>
+						</p>
+						<p class="practicedesc">
+							@TODO Help needed by BLE implementers
+						</p>
+					</div>
+
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">WebSockets Binding</span>
+						</p>
+						<p class="practicedesc">
+							@TODO Help needed by WebSockets implementers
 						</p>
 					</div>
 				</section>
 
-				<section>
-					<h3>Security Considerations</h3>
-					
-					@TODO Callee required term? SIP related? Client/Server would be better for IoT people
-					
-					
-					<p>The purpose of WoT is to expose private resources (things themselves, information they produce or information about them) at public-facing endpoints (e.g. Internet). This implies that components which expose things (servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
-						<ul>
-							<li>Authorization and authentication</li>When receiving instructions, servients must authorize such calls/requests i.e. determine whether to accept them for processing. This implies the need to authenticate the properties of callers that are used when performing authorization.
-							<li>Secure communications</li>When exchanging sensitive resources/information over a shared network, servients must demand encrypting/signing corresponding message exchanges.
-						</ul>
-						These fundamental security services depend on underpinnings esp. the provisioning of metadata (identifiers, attributes, assignments/affiliations) about system actors and the establishment of keying relations resp. shared secrets among actors that are supposed to interact in protected fashion. This section does not further elaborate on the provisioning of metadata and establishment of keys/secrets needed to implement authoriztion and authentication resp. secure communications.
-						<h4>Authorization and Authentication</h4>
-						The authorization of requested actions (instructions/requests) depends on the authentication of those properties of a caller that are relevant for authorization and that are being submitted or claimed by the caller. This can e.g. be identifiers, attributes (e.g. location), assignments (e.g. roles), affiliations (e.g. group memberships) or permissions (e.g. resource access rights). There are two basic strategies for the initial authentication of callers:
-						<ul>
-							<li>Internalization</li>The servient challenges the caller for initial authentication credentials, validates them, determines the properties of the authenticated caller, uses them to render an authorization decision and enforces this decision.
-							<li>Externalization to online TTPs</li>The servient delegates the challenging for initial authentication credentials, their validation, the determination of caller properties and evtl. the rendering of an authorization decision to an online TTP. In course of that  the servient then receives a report of the TTP (corresponding objects are called 'security token' or 'access token') and proceeds with it
-						</ul>
-						The internalization approach has a number of issues including: lack of SSO (a concern when the caller is a user agent, no real issue otherwise), tight coupling of initial authentication credentials and application protocol (a painpoint when multiple schemes/dynamics are to be covered), forcing servients into the implementation of complex, non-core functionality. For these reasons the internalization strategy is uncommon - even in unconstrained office/enterprise/Cloud IT. Since WoT is concerned with components that are (severly) constrained, it is anticipated that WoT solutions will externalize complex processing tasks in caller authentication to online TTP components by default.<br/>
-						The externalization of initial caller authentication to TTPs allows to allocate the authorization decision making as follows:
-						<ul>
-							<li>Internalization</li>The servient component performs authorization decision making and enforcement
-							<li>Externalization according push</li>The servient component performs authorization decision enforcement. Authorization decision making is done by the TTP that performs the initial authentication of callers (resource access control information travels in-band with the security token asserting the authenticated identity of the caller)
-							<li>Externalization according pull</li>The servient component performs authorization decision enforcement. Authorization decision making is done by a backend component (called by the servient).
-						</ul>
-						The externalization of initial caller authentication and the externalization of the authorization decision making according push to TTPs matches the architectural proposition of the IETF ACE working group (see "An architecture for authorization in constrained environments" at https://www.ietf.org/id/draft-ietf-ace-actors).<br/><br/>
-						The anticipated default strategy in WoT results in online TTP components as well as special-purpose objects: security tokens by which online TTPs report the results of their work back to servients. These are cryptographically protected objects that report properties of the caller (identifiers, attributes, assignments, affiliations, permissions etc) which are asserted by the online TTP. Such objects may contain resource access control information. Such objects are short-lived (normally: minutes/hours) and may be re-used during their lifetime. These objects must be signed to prevent counterfeiting and may be encrypted to preserve confidentiality.
-						<ul>
-							<li>Bearer security model</li>In case of bearer tokens submitters of security tokens do not have to provide any proof-of-possession. A real-life analogy is a cinema or concert ticket - the recipient only wants to make sure it is no counterfeit. This implies a risk that illegitimate callers may present valid security tokens. In the digital World SAML Web SSO is a prominent example of an online TTP scheme that is implementing a bearer model.
-							<li>PoP security model</li>In case of PoP (aka HoK) tokens submitters are required to supply fresh authenticator objects in addition/conjunction with security tokens. A real-life analogy is a passport - the recipient wants to make sure it is no counterfeit and is presented by the right person. In the digital World Kerberos is the most prominent example of an online TTP scheme that is implementing a PoP model.
-						</ul>
-						Note that OAuth started with PoP (OAuth 1.x), moved to bearer (OAuth 2.0 according RFC 6749/6750) to foster adaptation and currently adds PoP (current OAuth 2.0 drafts) to include high-value assets.<br/><br/>
-						In WoT no one-size-fits-all security token should be expected. Specific WoT domains such as building automation, sports/health care, industrial control systems have their own specific needs when it comes to the expression of caller properties. Moreover specific protocol stacks also have their own specific constraints that affect security token contents.<br/><br/>
-						In addition to  security tokens (that are domain and protocol stack-specific) protocols are needed to acquire and supply security tokens. The security token supply between callers and servients is the straight-forward part of this task:
-						<ul>
-							<li>Application requests</li>The application protocol requests must allow the transfer of security tokens (bearer) and/or authenticators (PoP) in a standardized way. For HTTP such standards exist (RFC 6750 for bearer tokens) resp. emerge (PoP tokens); for CoAP they do emerge. A critical issue are large security tokens/authenticators that can not be supplied inline with arbitrary application requests. The common trick to address this concern is to introduce a dedicated endpoint to which security tokens and/or authenticators can be sent in application PDUs (dedicated to the supply of security tokens and/or authenticators) during in an upfront exchange.
-							<li>Application responses</li>The application protocol (error) responses must allow to inform clients about expected security token issuing authority, expected security token type/category and protection. Current and emerging standards do not yet provide an adequate coverage for this concern.
-						</ul>
-						The security token acquisition is the more complex part of this trick. The servient components trigger exchanges between callers and their online TTP but are not involved during their execution. The requesting party may also introduce further online TTP components to support e.g. constrained callers or clients. Obviously the online TTPs need to respect the capabilities of the actual caller or its proxy. In addition to that a continental divide exists between following scenarios:
-						<ul>
-							<li>Consumer goods, owned by individual end users</li>Authorization is often conducted according a lazy policing model: access requests happen first, then the resource owner (an individual) is asked for an authorization (whether she can be assumed to be online does matter). This results in an authorization policy that is build-up dynamically
-							<li>Capital goods, owned by legal entities</li>Authorization is mostly conducted according a preemtive policing model: a (static) authorization policy is provided, then access request happen and authorization decisions are rendered without assuming any interaction with the resource ownwer or a representative
-						</ul>
-						Both cases distribute work unevenly over servients and their callers; both sides have fundamentally different working tasks and workloads in authorization and authentication:
-						<ul>
-							<li>Servient tasks</li>Understand protection needs (public, private) of served resources, challenge for security tokens (bearer) and/or authenicators (PoP), validate security tokens (bearer) and/or authenicators (PoP) and match their content against application request contents
-							<li>Caller tasks</li>React on application protocol error responses (demanding the supply of security tokens), acquire security token from online TTPs, perform initial authentication by means of a security protocol (possibly different from the application protocol, evtl. mediated by an online TTP on side of the requesting party), and supply security tokens (bearer) and/or authenticators (PoP) as part of the application protocol
-						</ul>
-						For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT APIs
-
-						The security-part of the W3C WoT PlugFest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the PlugFest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this PlugFest
-						<h4>Secure Communications</h4>
-						Communication security can be implemented in form of transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the same working tasks and workload<br/><br/>
-						Transport-level security has a long heritage in IT and presents a well-understood means in Web security which is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
-						Some WoT deployments have requirements that do not match TLS and DTLS properties, for instance multicast resp. group-oriented communications. It is also possible that (severely) constrained WoT components can not bear the overhead that is implied by the TLS and DTLS protocols. Then persistent, application-level security can help to achieve communication security.<br/>
-						In contrast to transport-level security, application-level security allows to apply cryptographic transformations in a specific/granular manner (affecting some but not all exchanged data objects) and thereby reducing the security processing burden. In case security tokens are to be used in cases where transport-level security can not be used, application-level security offers means to provide PoP for security tokens as well as authenticity for message exchanges.
-					</p>
-				</section>
 			</section>
 
-			<section id="sec-td">
+			<section>
 				<h2>Thing Description</h2>
 
 				<p>
-					The WoT Thing Description (TD) relies on the Resource Description Framework (RDF) as an underlying data model.
-					As a current serialization format of RDF JSON-LD has been proposed which provides the semantic description of
-					a Thing as well as a functional description of its <a>WoT API</a>.
-					For this, the WoT IG defined a minimal vocabulary to express the capabilities of a thing in terms of <code>Properties</code>, <code>Actions</code>, and <code>Events</code>.
-					In addition, the TD provides metadata for different communication bindings (e.g., HTTP, CoAP, etc.), representation formats, and security policies for resources.
-				</p>
-
-				<p>
-					<a href="#fig-td"></a> gives an overview which kind of relevant content can be defined in and can be extract from a TD.
+					The WoT Thing Description (TD) provides the semantic metadata of a Thing as well as a functional description of its <a>WoT Interface</a>.
+					For this, it relies on the Resource Description Framework (RDF) [[!rdf11-concepts]] as an underlying data model.
+					For now, [[!JSON-LD]] is used as the default TD serialization format.
+					The WoT IG defined a minimal vocabulary to express the capabilities of a Thing in terms of different interaction patterns: <i>Properties</i>, <i>Actions</i>, and <i>Events</i>.
+					In addition, the TD provides metadata for the different communication bindings (e.g., HTTP, CoAP, etc.), encodings (e.g., JSON, EXI, etc.), and security policies (authentication, authorization, etc.).
+					<a href="#fig-td"></a> gives an overview of the relevant content defined in a TD.
 				</p>
 
 				<figure id="fig-td">
-          <img src="td_concept.jpg" width="50%">
-          <figcaption>Concept of the Thing Description (TD)</figcaption>
+          <img src="td-concepts.png" width="60%">
+          <figcaption>Concepts of the Thing Description (TD)</figcaption>
         </figure>
 
 				<p>
-					The subsequent subsection will give a basic concept of the TD as  JSON-LD samples and more detail explaination of the
-					TD elements as well as how can it be used in a TD sample.
+					The subsequent subsection will give a brief introduction to the TD as JSON-LD samples.
+					This is followed by more detailed explainations of the TD elements, a number of more complex TD examples, and finally the considerations for use in production.
 				</p>
 
 				<section>
 					<h3>Quick Start: TD Samples</h3>
 
 					<p>
-						In the following we introduce three TD samples to show the TD's opportunities. Example 1 shows a simple TD that reflects a very basic way to describe a temperature Thing ("MyTemperatureThing") that serves a temperature property that uses JSON as an exchange data format and CoAP as application transportation protocol to request and transport the temperature value.
+						In the following, we introduce three minimal TD samples to show the prospects of the W3C Thing Descriptions.
+						Example 1 shows a simple TD that describes a temperature Thing.
+						It supports a single protocol, CoAP, and uses JSON for its encoding (or data exchange format).
+						Reading out the temperature value from a Property is the only interaction provided by the Thing.
 					</p>
 
-					<pre class="example" title="Quick Start">
+					<pre class="example" title="Data Only">
 						{
 						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
-						  "uris": "coap://www.mytemp.com:5683/",
+						  "uris": ["coap://mytemp.example.com:5683/"],
 						  "encodings": ["JSON"],
 						  "properties": [
 						    {
 						      "name": "temperature",
-						      "valueType": "xsd:float",
+						      "valueType": { "type": "number" },
 						      "writable": false,
 						      "hrefs": ["temp"]
 						    }
@@ -332,38 +369,34 @@
 					</pre>
 
 					<p>
-						Based on this information in the TD we know the basic information about a Thing. There exists one
-						resource (temperature), we know how to access it (GET coap://www.mytemp.com:5683/temp)
-						and what is a data type (float) of the data provided by the resource.
-					</p>
-
-					<p>
-						In practice a Thing is described with additional information that provides further details about what kind
-						of a Thing it is and what additional properties and capabilities it has. This information provides a semantic context
-						of a Thing. JSON-LD provides a means to extend a TD with an external (semantic) context and reuse existing contexts,
-						thereby enhancing semantic interoperability. Moreover with JSON-LD we have a mechanism to use semantically defined terms,
-						instead of dealing with meaningless strings.
+						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure (encoding).
+						However, this is missing critical semantic information such as this resource actually represents and what unit this number has.
 					</p>
 					
-					<p class="remove">
-						New text: what is the semantically context (sensor:Temperature) with additional metadata (unit is celsius),
-						and what is the underlying data type (float).
+					<p>
+						In practice, a Thing provides further details about what kind of Thing it is and what the interactions mean.
+						This additional information is the semantic context of the Thing.
+						JSON-LD provides a means to extend a TD with an external (semantic) context, which allows to reuse existing models, thereby enhancing semantic interoperability.
+						Through a context, the meaningless strings turn into semantically defined terms that are part of a linkable vocabulary.
+						Example 2 shows the integration of the <code>sensor</code> namespace and the resulting semantic enrichment of the temperature Property with a concrete <code>@type</code> and unit assignment.
 					</p>
 
-					<pre class="example">
+					<pre class="example" title="Semantic Annotations">
 						{
-						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						               {"sensor": "http://example.org/sensors#"}],
+							"@context": [
+								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								<span style="font-weight: bold; background-color: lightgrey;">{ "sensor": "http://example.org/sensors#" }</span>
+							],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
 						  "uris": ["coap://www.mytemp.com:5683/"],
 						  "encodings": ["JSON"],
 						  "properties": [
 						    {
-						      "@type": "sensor:Temperature",
+						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"@type": "sensor:Temperature",</div>
 						      "name": "temperature",
-						      "sensor:unit": "sensor:Celsius",
-						      "valueType": "xsd:float",
+						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
+						      "valueType": { "type": "number" },
 						      "writable": false,
 						      "hrefs": ["temp"]
 						    }
@@ -372,111 +405,142 @@
 					</pre>
 
 					<p>
-						Example 3 shows a more advanced TD that reflects a LED Thing ("MyLEDThing"), that supports
-						different kind of protocols (HTTP and CoAP), encodings (JSON and EXI4JSON), security
-						requirements (based on JWT), and  different interaction models (properties, actions, events) with
-						some type restrictions.
+						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP) and encodings (JSON and EXI).
+						The Thing also specifies security policies (it requires a <a>JWT</a>) and provides four different interactions (one Property, two Actions, one Event).
 					</p>
 
-					<pre class="example">
+					<pre class="example" title="More Capabilities">
 						{
-						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-						               {"actuator": "http://example.org/actuator#"}],
-						  "@type": "Thing",
-						  "name": "MyLEDThing",
-						  "uris": [
-						    "coap://www.myled.com:5683/",
-						    "http://www.myled.com:8080/myled/"
-						  ],
-						  "encodings": [ "JSON","EXI4JSON"],
-						  "security": {
-						    "cat": "token:jwt",
-						    "alg": "HS256",
-						    "as": "https://authority-issuing.org"
-						  },
-						  "properties": [
-						    {
-						      "@type": "actuator:onOffStatus",
-						      "name": "status",
-						      "valueType": "xsd:string",
-						      "writable": true,
-						      "hrefs": [ "status", "myled/status" ]
-						    }
-						  ],
-						  "actions": [
-						    {
-						      "@type": "actuator:fadeIn",
-						      "name": "fadeIn",
-						      "inputData": {
-						        "valueType": "xsd:short",
-						        "actuator:unit": "actuator:ms"
-						      },
-						      "hrefs": ["in", "myled/in"  ]
-						    },
-						    {
-						      "@type": "actuator:fadeOut",
-						      "name": "fadeOut",
-						      "inputData": {
-						        "valueType": "xsd:short",
-						        "actuator:unit": "actuator:ms"
-						      },
-						      "hrefs": ["out", "myled/out" ]
-						    }
-						  ],
-						  "events": [
-						    {
-						      "name": "criticalCondition",
-						      "valueType": "xsd:string",
-						      "hrefs": [ "ev", "myled/event" ]
-						    }
-						  ]
+							"@context": [
+								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								{ "actuator": "http://example.org/actuator#" }
+							],
+							"@type": "Thing",
+							"name": "MyLEDThing",
+							"uris": [
+								"coap://myled.example.com:5683/",
+								"http://mything.example.com:8080/myled/"
+							],
+							"encodings": [ "JSON","EXI"],
+							"security": {
+								"cat": "token:jwt",
+								"alg": "HS256",
+								"as": "https://authority-issuing.example.org"
+							},
+							"properties": [
+								{
+									"@type": "actuator:onOffStatus",
+									"name": "status",
+									"valueType": { "type": "boolean" },
+									"writable": true,
+									"hrefs": [ "pwr", "status" ]
+								}
+							],
+							"actions": [
+								{
+									"@type": "actuator:fadeIn",
+									"name": "fadeIn",
+									"inputData": {
+										"valueType": { "type": "integer" },
+										"actuator:unit": "actuator:ms"
+									},
+									"hrefs": ["in", "led/in"  ]
+								},
+								{
+									"@type": "actuator:fadeOut",
+									"name": "fadeOut",
+									"inputData": {
+										"valueType": { "type": "integer" },
+										"actuator:unit": "actuator:ms"
+									},
+									"hrefs": ["out", "led/out" ]
+								}
+							],
+							"events": [
+								{
+									"@type": "actuator:alert",
+									"name": "criticalCondition",
+									"valueType": { "type": "string" },
+									"hrefs": [ "ev", "alert" ]
+								}
+							]
 						}
 					</pre>
 
 					<p>
-						Based on this TD you are able to know that JWT is required for the interaction of Thing's resources (tokens are issued by https://authority-issuing.org and tokens
-						are signed by HS256), status can be requested (using CoAP GET coap://www.myled.com:5683/status  or HTTP GET http://www.myled.com:8080/myled/status) or modified since
-						the status property is writeable (using CoAP PUT coap://www.myled.com:5683/in or using HTTP PUT http://www.myled.com:8080/myled/myled/in with a string status payload). Actions can be
-						initiated using the resources fadeIn and fadeOut (e.g.,  using CoAP POST coap://www.myled.com:5683/in or HTTP coap://www.myled.com:5683/myled/out with a short-based payload (for ms)).
-						The "MyLEDThing" also serves an event (criticalCondition) that enables clients to be informed when an event occurs (e.g., using CoAP GET OBSERVE  coap://www.myled.com:5683/ev).
-					</p>
-
-					<p>
-						More details about the TD elements are given in the next section.
+						Based on this TD, one is able to know that a JSON Web Token (JWT) is required to interact with the resources of the Thing.
+						They are issued by <code>https://authority-issuing.example.org</code> and signed using HMAC SHA-256 (HS256).
+						The status of the Thing can be requested using a CoAP GET on <code>coap://myled.example.com:5683/pwr</code> or an HTTP GET on <code>http://mything.example.com:8080/myled/status</code>.
+						It can also modified using a PUT on the respective URIs, since Property is writable.
+						The Actions can be invoked through a POST to the resources fadeIn (<code>/in</code> for CoAP and <code>/myled/led/in</code> for HTTP) and fadeOut (<code>/out</code> for CoAP and <code>/myled/led/out</code> for HTTP) with an integer value in milliseconds serialized as JSON or EXI.
+						MyLEDThing also serves a textual Event called criticalCondition, which enables clients to be informed about problems (e.g., by sensing a CoAP GET with the Observe option to <code>coap://myled.example.com:5683/ev</code>).
 					</p>
 				</section>
 
 	 			<section>
-					<h3>Details of the TD Elements</h3>
+					<h3>Semantic Metadata</h3>
 
 					<section>
 						<h4>TD Context</h4>
 
 						<p>
-							JSON-LD is a serialization format for Linked Data, that is, its content should use one or more vocabularies that are uniquely defined and available on the Web.
-							Any JSON-LD document has to be defined within a specific context that points to the relevant vocabularies.
-							For instance, the term <code>Thing</code> refers to a concept defined in the RDFS vocabulary for Thing Description at <code>http://www.w3c.org/wot/td#</code>.
-							The context object should look like this:
-							
+							<a>JSON-LD<a> is a serialization format that adds a semantic layer on top of the JSON specification: the terms that appear in a JSON document
+							should be associated with uniquely identified concepts from shared vocabularies. This principle is part of a set of practices to publish data
+							on the Web called Linked Data, where concepts are usually identified with URIs and originate from RDF vocabularies.
+						</p>
+
+						<p>
+							The association between terms and concept URIs has to be declared in preamble of the JSON document with the keyword <code>@context</code>.
+							The expected value for <code>@context</code> can be of different kinds. A first option is to use a JSON object where keys are terms and
+							values are concepts URIs, e.g.:
+
 							<pre class="example">
 								{
 								  "@context": {
-								    "Thing": "http://www.w3c.org/wot/td#Thing",
+								    "name": "http://www.w3c.org/wot/td#name",
+										"uris": "http://www.w3c.org/wot/td#associatedUri",
+										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
+										"Thing": "http://www.w3c.org/wot/td#Thing",
 								    ...
-								  }
+									}
+								}
+							</pre>
+
+							It also possible to declare namespaces in the context instead of terms. In the example above, three of the four URIs have the same prefix:
+							<code>http://www.w3c.org/wot/td#</code>. This common part could be given a short name, refered to as a namespace (as in XML). URIs could
+							then be shortened by concatenating namespace with <code>:</code> and a local name (anywhere in the JSON-LD document). E.g.:
+
+							<pre class="example">
+								{
+								  "@context": {
+										"wot": "http://www.w3c.org/wot/td#",
+								    "name": "wot:name",
+										"uris": "wot:associatedUri",
+										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
+										"Thing": "wot:Thing",
+								    ...
+									}
 								}
 							</pre>
 						</p>
 
 						<p>
-							For convenience, a standard context including all TD vocabulary terms has been defined and made available at <code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>.
-							This way, one only needs to add this URI to the Thing's context to import all TD terms.
-							It is recommended to include this standard context in a Thing Description, but not mandatory.
+							For the sake of reusability, it is also possible to define an external JSON-LD context and simply give its URI as value of <code>@context</code>.
+							All JSON terms that are defined in the present document have been put in an external document, available at
+							<code>http://w3c.github.io/wot/w3c-wot-td-context.jsonld</code>. It is highly recommended (but not mandatory) to include this standard
+							context in a Thing Description. A basic Thing Description would contain the following declaration:
+
+							<pre class="example">
+								{
+								  "@context": "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+									...
+								}
+							</pre>
 						</p>
 
 						<p>
-							As the TD vocabulary we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by reusing other vocabularies or ontologies and/or defining application-specific terms (see <a href="#td-context-extension"></a>).
-							In the following example, in addition to our standard context, the Thing's context points to a shared vocabulary for sensors:
+							A third option is to declare an array, in case a single document involves several contexts. Array elements are either objects or strings,
+							as explained above. This option proves relevant if one wants to extend the existing TD context without modifying it. For instance:
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -484,21 +548,8 @@
 								  ...
 								}
 							</pre>
-						</p>
 
-						<p>
-							During early experimentations with TD files, a few concepts and terms
-							appeard to be recurrent, such as <code>Temperature</code>, <code>Toggle</code>
-							or <code>unit</code>. Again, to ease experimentation with the modeling
-							of Things, a vocabulary that gathers such common terms has been
-							defined at <code>https://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
-							Its content simply defines aliases for classes and properties of well-known
-							ontologies that are relevant for our activity:
-							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
-							<a href="http://www.w3.org/2005/Incubator/ssn/ssnx/qu/qu-rec20.html">Quantities &amp; Units</a>,
-							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
-							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
-							updated and is not intended to become a reference.
+							Section <a href="#td-context-extension"></a> provides a more concrete example on that topic.
 						</p>
 					</section>
 
@@ -524,8 +575,9 @@
 -->
 
 					<section>
-						<h4>Thing's Metadata</h4>
-
+						<h4>Thing Metadata</h4>
+						<p>A TD will provide some generic metadata vocabularies that can be used, e.g., 
+						to assign a name or what kind of protocols does a servient support.</p>
 						<pre class="example">
 							{
 								...
@@ -536,20 +588,20 @@
 							  ],
 							  "encodings": [
 							    "JSON",
-							    "EXI4JSON"
+							    "EXI"
 							  ],
-							  "security": {
+							  <i>"security": {
 							    "cat": "token:jwt",
 							    "alg": "HS256",
 							    "as": "https://authority-issuing.org"
-							  }
+							  }</i>
 								...
 							}
 						</pre>
 
 						<p>
-							Metadata is used to provide generic information about a thing.
-							There are three mandatory and one optional vocabulary terms defined within metadata:
+							There are three mandatory and one optional (shown as italic text in JSON snippet) vocabulary terms defined 
+							within metadata:
 						</p>
 
 						<ul>
@@ -557,7 +609,7 @@
 							<li><b>uris:</b>
 								Defines base URI for the Thing. More than one URI can be listed (as an array),
 								if various protocols are supported (e.g. HTTP and CoAP) or in specific configurations
-								(e.g. a Thing could rely on a redirection server if its URI is likely to change over time).
+								(e.g., a Thing could rely on a redirection server if its URI is likely to change over time).
 							</li>
 							<li><b>encodings:</b>
 								Which serialization formats are supported (e.g., JSON, XML, etc.). One or more can be listed (listed as an array).
@@ -565,50 +617,66 @@
 							<li><b>security: [optional]</b>
 								The security field can be used to provide access metadata (self-contained) information of the Thing
 								for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
-								Above, the security field is used to announce that JSON Web Token (JWT) has to be used to interact with Thing's resources.
+								Above, the security field is used to announce that JSON Web Token (JWT) has to be used to interact with the resources of the Thing.
 								Thereby, type is assigned by the cat field, the corresponding hashing algorithm "HS256" by the alg field, and  the issuing authority of the security token by the as field.
 							</li>
 						</ul>
 
 						<p>
 							<b>Note:</b> Besides these pre-defined terms in the TD context, additional characteristics can be
-							added such as product ID, firmware version, location, etc. These terms should then appear in the Thing's
-							context (as detailed in <a href="#td-context"></a>).
+							added such as product ID, firmware version, location, etc. These terms should then appear in the context of the Thing (as detailed in <a href="#td-context"></a>).
 						</p>
 					</section>
-
-<!--
+					
 					<section>
-						<h4>Data</h4>
+						<h4>Note on URI Resolution</h4>
 
-						<p class="ednote">
-							If encodings/serializations are part of the metadata, why aren't the data types?
-							This also has logical conflict with properties, which technically provide the data of a thing.
-							Furthermore, this should maybe become part of the represenation format carrying the data to become self-descriptive and semantically safe.
+						<p>
+							A servient can be associated to more than one URI (e.g., in case it supports several protocols).
+							The same way, links in Properties, Actions, or Events can be defined as an array instead of a single string.
+							The IETF recommendation for URI resolution [[!RFC3986]] does note fully cover that case.
+							This section is an attempt to specify how to resolve URIs in a Thing Description document.
 						</p>
 
-				 		<p class="note" title="Matthias Kovatsch">
-							Personally, I am not even sure if we need this.
-							The encoding of the value within a representation format (JSON number, EXI element, etc.) should be enough, when the property itself is fully described.
-							We do not care if the system internally represents it as an unsighend byte, signed integer, or whatever.
-							It appears to be obsolete WS-* baggage that is not required for scripting; native application logic must infer the required types from the semantic description, usually before or at compile time (e.g., a native application consuming a thing with a <code>Temperature</code> property must know how to represent it internally).
+						<p>
+							<ul>
+								<li>
+									A Thing Description can define one or more base URI in the <code>uris</code> field.
+									If only one URI is defined, the JSON value is a string.
+									If more than one URI is defined, the JSON value is a string array.
+								</li>
+								<li>
+									Each string from the <code>uris</code> JSON value must be an absolute URI that is interpreted as a protocol-specific base URI identified through the URI scheme.
+								</li>
+								<li>
+									Properties, Actions, and Events can define one or more <code>hrefs</code> values.
+									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code> must also be a string.
+									If <code>uris</code> is a string array, the JSON value of <code>hrefs</code> can be either a string or a string array.
+								</li>
+								<li>
+									If the JSON value of <code>hrefs</code> is a string, the algorithm of [[!RFC3986]] can be applied to <i>any</i> of the base URIs available.
+									Note that <code>hrefs</code> can also contain an absolute URI pointing to an external resource or a different protocol for this specific interaction.
+								</li>
+								<li>
+									If the JSON value of <code>hrefs</code> is a string array, it must contain as many elements as that of <code>uris</code>.
+									The resolution algorithm of [[!RFC3986]] must then be applied <i>index-wise</i>.
+									Again, individual array elements may contain an absolute URI.
+								</li>
+							</ul>
 						</p>
-
-						<p>This field is used to define application-specific simple and complex data types that are used by the interaction
-						models (property, action, event).</p>
-
-						<p>Per default, a subset of XML Schema simple data types is supported which includes string, int, float, byte, short, boolean,
-						unsignedByte, unsignedShort, unsignedInt, and hexBinary (=byte array).</p>
-
-						<p>An input or output data field can be also assigned as empty which is equivalent to 'void' or 'null'.</p>
 					</section>
--->
+				</section>
+
+				<section>
+					<h3>Interaction Patterns</h3>
+					
 					<section>
 						<h4>Property</h4>
-						
+
 						<p>
-							The interaction type <code>Property</code> is used to serve data of a thing.
-							This data can be static (e.g., supported mode, provided output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
+							The array field <code>properties</code> is used to reflect one or more interactions of the Property pattern. 
+							Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or 
+							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
 
 						<pre class="example">
@@ -616,12 +684,13 @@
 								...
 							  "properties": [
 							    {
-							      "@type": "sensor:Temperature",
+							      <i>"@type": "sensor:Temperature",</i>
 							      "name": "temperature",
+							      "valueType": { "type": "number" },
 							      "sensor:unit": "sensor:Celsius",
-							      "valueType": "xsd:float",
 							      "writable": false,
-							      "hrefs": "temp"
+							      "hrefs": "temp",
+							      <i>"stability": 10</i>
 							    }
 							  ]
 								...
@@ -629,46 +698,31 @@
 						</pre>
 
 						<p>
-							There are four mandatory and two optional terms defined for the <code>Property</code> type:
+							There are four mandatory and three optional (italic in JSON sample) terms defined for the Property pattern:
 						</p>
 
 						<ul>
-							<li><b>@type: [optional]</b>RDF type of the resource, which can be used for semantic disambiguation</li>
-							<li><b>name:</b> Name of the property that also defines the semantics</li>
-							<li><b>hrefs:</b>A link or array of links to the property resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>valueType:</b>
-								Which data type is associated with this property. There are different kind of ways to assign data types: You can rely on simple data types that are in context of
-								RDF/XML Schema (use xsd: prefix), JSON Schema object, or link to a external data type definition.
-							</li>
-							<li><b>writable:</b> Is this property writable (true/false)</li>
-							<li><b>stability: [optional]</b> Expected maximum time of stability of the property value in ms (0=stable/static property value)</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
+							<li><b>hrefs:</b>A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>valueType:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
+							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
+							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
 							<li><b>security: [optional]</b>
-								Access metadata (self-contained) for securely transmitting information of the property.
-								Compared to the security field that can be found in the <a href="#thing-s-metadata">Thing's metadata</a>, this field here can be used to apply specific security requirements that is only valid for that resources.
+								Access metadata (self-contained) for protecting this Property and securely transmitting information.
+								Compared to the security field that can be found in the <a href="#thing-metadata">Thing metadata</a>, this field here can be used to apply specific security requirements that is only valid for this resource.
 							</li>
 						</ul>
 
 						<p>
-							The hypertext reference (<code>href</code>) field must either contain
-							<ul>
-								<li>a single relative reference from the base URIs defined in the <code>protocols</code> metadata field (in case the relative path is the same for all protocols) or</li>
-								<li>an array of relative references or absolute URIs that must match the length and order of the <code>protocols</code> array of the metadata (in case the URIs of the property differ).</li>
-							</ul>
-							Absolute URIs can point to an external resource that is not hosted by the thing directly.
-							This can be useful to link data into the context of the thing, for which there is not enough space in the thing itself.
-							Absolute URIs could also point to a proxy or gateway that allow access to legacy systems that might belong to a thing that does not have the capability to translate by itself (but provides other, WoT-compatible resources).
-							This mechanism is also interesting for virtual things that combine the services of multiple other things (e.g., a room lighting servient that has properties for each individual light, while these linked properties are hosted directly on the lights).
-						</p>
-
-						<p class="ednote">
-							It is possible to imagine individual properties that are available over only a single protocol from the list in the metadata or even a protocol that is not listed.
-							This could be realized through a single absolute URI or an array of absolute URIs that is unrelated to the <code>protocols</code> array.
-							While this is quite easy to implement and consume with a URI parser, it might create confusion when reading or producing TDs.
-							Should we allow this?
+							Absolute URIs in <code>hrefs</code> can point to an external resource that is not hosted on the Thing directly.
+							This can be useful to link data into the context of the Thing, for which there is not enough space in the device itself.
+							Absolute URIs could also point to a proxy or gateway that allows access to legacy systems that might belong to a Thing that does not have the capability to translate by itself (but provides other, WoT-compatible resources).
+							This mechanism is also interesting for virtual Things that combine the services of multiple other Things (e.g., a room lighting servient that has Properties for each individual light, while these linked Properties are hosted directly on those lights).
 						</p>
 
 						<p>
-							If the property is writeable (<code>writeable=true</code>), then the property accepts the same format(s) as input as described for its output.
+							If the property is writable (<code>writable=true</code>), then the Property accepts the same format(s) as input as described for its output.
 						</p>
 
 						<p>
@@ -681,21 +735,22 @@
 						<h4>Action</h4>
 
 						<p>
-							The interaction type <code>Action</code> targets changes or processes on a Thing that take a certain time (i.e., actions cannot be applied instantaneously like property writes).
+							The Action interaction pattern targets changes or processes on a Thing that take a certain time to complete (i.e., actions cannot be applied instantaneously like property writes).
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
-							Usually, ongoing actions are modelled as (sub-)resources, which are created when an action request is received by the thing.
-							There are one mandatory and four optional terms defined within the <code>Action</code> type:
+							Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing.
 						</p>
 						
+						<p>Within the TD, the Actions of a Thing are declared in the JSON array <code>actions</code>.</p>
+
 						<pre class="example">
 							{
 								...
 							  "actions": [
 							    {
-							      "@type": "actuator:fadeIn",
+							      <i>"@type": "actuator:fadeIn",</i>
 							      "name": "fadeIn",
-							      "inputData": {
-							        "valueType": "xsd:short",
+							      <i>"inputData":</i> {
+							        "valueType": { "type": "integer" },
 							        "actuator:unit": "actuator:ms"
 							      },
 							      "hrefs": [
@@ -707,35 +762,29 @@
 								...
 							}
 						</pre>
-
+						<p>There are one mandatory and four optional terms defined within the <code>Action</code> type:</p>
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the resource, which can be used for semantic disambiguation</li>
-							<li><b>name:</b> Name of the action</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation</li>
 							<li><b>inputData: [optional]</b>
-								Which input data is associated with this action. In there, specific data type characteristics can be defined such as <b>valueType</b>,
-								and the <b>optional</b> restrictions <b>min</b>, <b>max</b>, and <b>enum</b>  (also see description in <a href="#property">Property</a>) as well as <b>optional</b>
-								addition context metadata (e.g., unit ms)
+								The call parameters associated with this Action.
+								A <code>valueType</code> field defines the concrete type (see <a href="#type-system"></a> for details).
+								Additional characteristics can be given through terms defined in the context metadata (e.g., unit ms from an actuator vocabulary) similar to <a href="#property">Properties</a>).
 							</li>
-							<li><b>outputData: [optional]</b> Which data type is associated with this action (same condition as InputData above)</li>
-							<li><b>hrefs:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the action.</li>
+							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above)</li>
+							<li><b>hrefs:</b>A link or array of links to the resource implementing this Action (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Action and securely transmitting information.</li>
 						</ul>
 
 						<p>
-							The hypertext reference (<code>href</code>) field works similar to properties.
-						</p>
-
-						<p class="ednote">
-							Actions work similar to forms in hypermedia.
-							For alignment with the HATEOAS approach, the InputData field should be replaced with "Accept" information for representation formats, so that the action is not tied to an implicit serialization of the data.
-							The output data would work similar and just provide a hint for the client what to expect.
+							The hypertext reference (<code>href</code>) field works similar to Properties.
 						</p>
 
 						<p>
-							Usually, calling an action results in a response that indicates a new (sub-)resource where the ongoing action can be monitored and also controlled:
-							Updating this resource may allow to modify the process (e.g., when it is still queued and not started yet, but also during runtime if the process supports that).
-							Deleting this resource may allow the cancellation of the action.
-							Once the action completes, the sub-resource may be removed by the server; or it is marked as completed, but kept for traceability.
+							Usually, invoking an Action results in a response that indicates a new (sub-)resource, where the started Task can be monitored and also controlled:
+							Updating this Task resource may allow for modification of the process (e.g., when it is still queued and not started yet, but also during runtime if the process supports that).
+							Deleting this Task resource may allow for cancellation of the Action execution.
+							Once the Task completes, the (sub-)resource may be removed by the server; or it is marked as completed, but kept for traceability.
 							It is also possible that calling an action produces a so-called action result that is not manifested in any temporary resource nor other changes to the server (e.g., a conversion process or dry run).
 						</p>
 					</section>
@@ -744,10 +793,10 @@
 						<h4>Event</h4>
 
 						<p>
-							The interaction type <code>Event</code> enables a mechanism to be notified by the thing on a certain condition.
+							The <code>Event</code> interaction pattern enables a mechanism to be notified by a Thing on a certain condition.
 							While some protocols such as CoAP can provide such a mechanism natively, others do not.
-							Furthermore, events might need a specific configuration that requires data sent and stored on the thing in a standard way.
-							There are are two mandatory and two optional terms defined within the <code>Event</code> type:
+							Furthermore, Events might need a specific configuration that requires data sent and stored on the Thing in a standard way.
+							There are are two mandatory and two optional terms defined within the <code>Event</code> pattern:
 						</p>
 
 						<pre class="example">
@@ -755,8 +804,9 @@
 								...
 							  "events": [
 							    {
+							      "@type": "actuator:alert",
 							      "name": "criticalCondition",
-							      "valueType": "xsd:string",
+							      "valueType": { "type": "string" },
 							      "hrefs": [
 							        "ev",
 							        "myled/event"
@@ -768,144 +818,285 @@
 						</pre>
 
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the resource, which can be used for semantic disambiguation</li>
-							<li><b>name:</b> Name of the event</li>
-							<li><b>hrefs:</b> A link or array of links to the action resource (can be relative to the base URI(s) in the metadata or absolute URI(s) to an external resource)</li>
-							<li><b>valueType: [optional]</b> Which data type is associated with this event. This field works similar to actions</li>
-							<li><b>security: [optional]</b> Access metadata (self-contained) for securely transmitting information of the event</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>name:</b> Name of the Event, which can also be used for simple semantic disambiguation</li>
+							<li><b>hrefs:</b>A link or array of links to the resource implementing this Event (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>valueType: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
+							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Event and securely transmitting information.</li>
 						</ul>
 
 						<p class="ednote">
 							So far, the concept of events has not been evaluated yet during the PlugFests.
 							Thus, there has been little discussion and no common practice has emerged.
-							The following text is a strawman proposal to trigger discussion.
-							The Input-/OutputData needs a similar alignment with HATEOAS as actions.
+							The following text is a proposal to trigger discussion.
 						</p>
 
 						<p>
-							The interaction with events works similar to actions with the difference that no side effects are intended on the thing.
-							A client issues a request to the URI of an action, which may include a payload that represents the configuration data for the event mechanism.
-							The created (sub-)resource serves as a handle for the event.
+							The interaction with Events works similar to Actions with the difference that no side effects are intended on the Thing.
+							A client issues a request to the URI of an Event, which may include a payload that represents the configuration data for the Event mechanism.
+							Upon reception, the Thing creates a (sub-)resource, which serves as a handle for the Event subscription.
 							It can be monitored to receive notifications: an HTTP client would need to poll this resource, while a CoAP client would simply observe it.
-							In fact, multiple clients could use the event created by another client when they are interested in the same event configutation.
-							The event configuration can also be updated and ultimatively deleted to clean up internal notification hooks.
-						</p>
-
-						<p class="ednote">
-							Should we rather talk about servients here or is the explicit role as client beneficial?
+							Technically, multiple clients could use the subscription resource created by another client when they are interested in the same Event configutation.
+							The Event configuration can also be updated and ultimatively deleted to clean up internal notification hooks.
 						</p>
 					</section>
+				</section>
+
+				<section>
+					<h3>Type System</h3>
+
+					<p>All of the three interaction types <code>Property</code>, <code>Action</code>, and <code>Event</code> can specify the type of the value acceptable as an input or expected as an output of the interaction. JSON schema [[!draft-zyp-json-schema-04]] [[!draft-fge-json-schema-validation-00]] provides a standard way to describe the structure and datatypes of data, and we use JSON schema as the notation for value types of the interaction types.
+					</p>
+
+					<p>
+						<b>Note:</b> In the embodiment of type system described in this section, JSON schema is used as an abstract description system for structured data. 
+						JSON schema is something that is already out there being used and well-known, therefore gives us a chance to get started quickly to experiment with type system idea for further contemplation. 
+						Through discussion, the following points have been noted as feedback for improvements.
+						<ul>
+							<li>JSON schema specification was designed for JSON, therefore, may not be an optimal solution as an encoding-neutral description system.</li>
+							<li>JSON schema does not provide a way to associate data elements with citations or semantic concepts defined elsewhere.</li>
+							<li>JSON schema is relatively verbose.</li>
+						</ul>
+						Note that there is an idea (<a href="https://github.com/w3c/web-of-things-framework/blob/master/documents/types.md">Proposal for the type system for Things</a>) that was incubated independently and
+						was put forward to the IG for consideration.
+					</p>
+
+					<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
+					</p>
+
+					<pre class="example">
+						{
+							...
+						  "properties": [
+						    {
+									...
+						      "name": "temperature",
+						      "valueType": { "type": "number" },
+									...
+						    }
+						  ]
+							...
+						  "events": [
+						    {
+									...
+						      "name": "criticalCondition",
+						      "valueType": { "type": "string" },
+									...
+						    }
+						  ]
+							...
+						}
+					</pre>
+
+					<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
+					</p>
+
+					<pre class="example">
+						{
+							...
+						  "actions": [
+						    {
+									...
+						      "name": "fadeIn",
+						      "inputData": {
+						        "valueType": { "type": "number" },
+						        "actuator:unit": "actuator:ms"
+						      },
+						      "outputData": {
+						        "valueType": { "type": "boolean" },
+						      },
+									...
+						    }
+						  ]
+							...
+						}
+					</pre>
 
 					<section>
-						<h4>Value Type</h4>
-
-						<p>All of the three interaction types <code>Property</code>, <code>Action</code> and <code>Event</code> can specify the type of the value acceptable as an input or expected as an output of the interaction. JSON schema provides a standard way to describe the structure and datatypes of data, and we use JSON schema as the notation for value types of the interaction types.
-						</p>
-
-						<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
-						</p>
-
-						<pre class="example">
-							{
-								...
-							  "properties": [
-							    {
-										...
-							      "name": "temperature",
-							      "valueType": { "type": "number" },
-										...
-							    }
-							  ]
-								...
-							  "events": [
-							    {
-										...
-							      "name": "criticalCondition",
-							      "valueType": { "type": "string" },
-										...
-							    }
-							  ]
-								...
-							}
-						</pre>
-
-						<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
-						</p>
-
-						<pre class="example">
-							{
-								...
-							  "actions": [
-							    {
-										...
-							      "name": "fadeIn",
-							      "inputData": {
-							        "valueType": { "type": "number" },
-							        "actuator:unit": "actuator:ms"
-							      },
-							      "outputData": {
-							        "valueType": { "type": "boolean" },
-							      },
-										...
-							    }
-							  ]
-								...
-							}
-						</pre>
-
-					<section>
-						<h5>Simple Data</h5>
+						<h4>Simple Data</h4>
 						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
 						</p>
-
-						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code>.
+	
+						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code> within the value range of [ 0 ... 255 ].
 						</p>
-
+	
 						<pre class="example">
-							"valueType": { "type": "number" },
+							"valueType": { 
+								"type": "number",
+								"minimum": 0,
+								"maximum": 255,
+							}
 						</pre>
-
+	
 						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
 						</p>
-
+	
 						<pre class="example">
 							{ "value": 123 }
 						</pre>
-
+	
 						<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
 						</p>
-
+	
 						<pre class="example">
-							&lt;value>
 								&lt;number>123&lt;/number>
-							&lt;/value>
 						</pre>
-
-						<p class="ednote">
+	
+						<p class="note" title="Wrapping single values in a JSON object">
 							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
 						</p>
 					</section>
-
+	
 					<section>
-						<h5>Structured Data</h5>
-
-						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>. 
+						<h4>Structured Data</h4>
+	
+						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>.
 						</p>
-
+	
 						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
-						JSON provides two distinct constructs to define a structure that can have multiple literal values. They are JSON object and JSON array.
+						JSON provides two distinct constructs to define a structure that can have multiple literal values. 
+						One is JSON object, and the other is JSON array.
 						</p>
+	
+						<section>
+							<h5 id="json-object">JSON Object</h5>
+		
+							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of
+							two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>)
+							where <code>id</code> is required to be present.
+							</p>
+		
+							<pre class="example">
+								"valueType": {
+								    "type": "object",
+								    "properties": {
+								        "id": {
+								            "type": "integer"
+								        },
+								        "name": {
+								            "type": "string"
+								        }
+								    },
+								    "required": ["id"]
+								}
+							</pre>
+		
+							<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
+							</p>
+		
+							<pre class="example">
+								{
+									"value": {
+										"id": 12345,
+										"name": "Web of Things"
+									}
+								}
+							</pre>
+		
+							<p>The above data will look the following when the data is exchanged in XML.
+							</p>
+		
+							<pre class="example">
+									&lt;object>
+										&lt;id>
+											&lt;number>12345&lt;/number>
+										&lt;/id>
+										&lt;name>
+											&lt;string>Web of Things&lt;/string>
+										&lt;/name>
+									&lt;/object>
+							</pre>
+		
+							<div class="note" title="RDF serialization of value types">
+								<p>
+									Using the TD model and JSON Schema in a single document may lead
+									to a name conflict:
+									<code>properties</code> is used both to declare Properties of the Thing and expected keys in a JSON object.
+							 		Depending on the use case, if a serialization of the Thing
+									Description in RDF is required, the <code>valueType</code>
+									definition should be processed with an additional JSON-LD
+									context that overrides the mapping for <code>properties</code>
+									(see [[!JSON-LD]], Advanced Context Usage).
+								</p>
+							</div>
+		
+						</section>
+	
+						<section>
+							<h5 id="json-array">JSON Array</h5>
+		
+							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
+							exactly three number literals with each value within the range of [ 0 ... 255 ].
+							</p>
+		
+							<pre class="example">
+								"valueType": {
+								    "type": "array",
+								    "items": {
+								        "type" : "number"
+								        "minimum": 0,
+								        "maximum": 255,
+								    },
+								    "minItems" : 3,
+								    "maxItems" : 3
+								}
+							</pre>
+		
+							<p>When the numbers being exchanged are 208, 32 and 144, data serialization in JSON format will look like the following.
+							</p>
+		
+							<pre class="example">
+								{
+									"value": [
+										208,
+										32,
+										144
+									]
+								}
+							</pre>
+		
+							<p>The above data will look the following when the data is exchanged in XML.
+							</p>
+		
+							<pre class="example">
+									&lt;array>
+										&lt;double>208&lt;/double>
+										&lt;double>32&lt;/double>
+										&lt;double>144&lt;/double>
+									&lt;/array>
+							</pre>
+		
+		
+						</section><!-- End of "JSON Array" -->
+	
+					</section><!-- End of "Structured Data" -->
+	
+					<section>
+					<h4>Mapping to XML Schema</h4>
+
+					<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema
+					look like when serialized to XML in parallel to corresponding JSON serializations.
+					</p>
+
+					<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
+					Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
+					</p>
+
+					<p>The XML structure is based on EXI4JSON [[!exi-for-json]].
+					The structure works uniformly well for both schema-less and schema-informed use cases. 
+					</p>
+
+					<p class="ednote">A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
+					</p>
 
 					<section>
-						<h5>JSON Object</h5>
+						<h5>JSON Object Definition to XML Schema</h5>
 
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of 
-						two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) 
-						where <code>id</code> is required to be present.
+						<p>Shown below is the JSON schema <code>object</code> definition used as the <code>valueType</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
 						</p>
 
 						<pre class="example">
-							"valueType": {
+							{
 							    "type": "object",
 							    "properties": {
 							        "id": {
@@ -919,160 +1110,155 @@
 							}
 						</pre>
 
-						<p>When the <code>id</code> number and the <code>name</code> string values being exchanged are 12345 and "Web of Things", data serialization in JSON format will look like the following.
+						<p>When the <code>object</code> is anonymous (i.e. it is the root, or participates in an <code>array</code> definition), 
+						the above <code>object</code> definition transforms to the following XML Schema element definition.
 						</p>
 
 						<pre class="example">
-							{ 
-								"value": {
-									"id": 12345,
-									"name": "Web of Things"
-								} 
-							}
-						</pre>
+							&lt;xs:element name="object" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+							    &lt;xs:complexType>
+							        &lt;xs:all>
+							            &lt;xs:element name="id">
+							                &lt;xs:complexType>
+							                  &lt;xs:sequence>
+							                    &lt;xs:element name="integer" type="xs:integer" />
+							                  &lt;/xs:sequence>
+							                &lt;/xs:complexType>
+							            &lt;/xs:element>
+							            &lt;xs:element name="name" minOccurs="0">
+							                &lt;xs:complexType>
+							                  &lt;xs:sequence>
+							                    &lt;xs:element name="string" type="xs:string" />
+							                  &lt;/xs:sequence>
+							                &lt;/xs:complexType>
+							            &lt;/xs:element>
+							        &lt;/xs:all>
+							    &lt;/xs:complexType>
+							&lt;/xs:element>
+							</pre>
+	
+							<p class="ednote">JSON schema <code>object</code> does NOT define any order. 
+							Therefore, in order to capture the constraints of JSON schema <code>object</code>, 
+							we need to use xsd:all constructs instead of xsd:sequence.
+							</p>
+	
+							<p>Otherwise (i.e. the <code>object</code> is a member of another <code>object</code> definition, thus has a name), 
+							the <code>object</code> definition transforms to the following XML schema element definition.
+							Note <code><i>__name</i></code> should be replaced by the actual name of the <code>object</code>.
+							</p>
+	
+							<pre class="example">
+								&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+								    &lt;xs:complexType>
+								        &lt;xs:sequence>
+								            &lt;xs:element name="object">
+								                &lt;xs:complexType>
+								                    &lt;xs:all>
+								                        &lt;xs:element name="id">
+								                            &lt;xs:complexType>
+								                              &lt;xs:sequence>
+								                                &lt;xs:element name="integer" type="xs:integer" />
+								                              &lt;/xs:sequence>
+								                            &lt;/xs:complexType>
+								                        &lt;/xs:element>
+								                        &lt;xs:element name="name" minOccurs="0">
+								                            &lt;xs:complexType>
+								                              &lt;xs:sequence>
+								                                &lt;xs:element name="string" type="xs:string" />
+								                              &lt;/xs:sequence>
+								                            &lt;/xs:complexType>
+								                        &lt;/xs:element>
+								                    &lt;/xs:all>
+								                &lt;/xs:complexType>
+								            &lt;/xs:element>
+								        &lt;/xs:sequence>
+								    &lt;/xs:complexType>
+								&lt;/xs:element>
+							</pre>
+	
+						</section><!-- End of "JSON Object Definition to XML Schema" -->
 
-						<p>The above data will look the following when the data is exchanged in XML.
-						</p>
-
-						<pre class="example">
-							&lt;value>
-								&lt;object>
-									&lt;id>
-										&lt;number>12345&lt;/number>
-									&lt;/id>
-									&lt;name>
-										&lt;string>Web of Things&lt;/string>
-									&lt;/name>
-								&lt;/object>
-							&lt;/value>
-						</pre>
-
-					</section>
-
-					<section>
-						<h5>JSON Array</h5>
-
-						<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of 
-						multiple number literals where the occurrence must be either twice or three times.
-						</p>
-
-						<pre class="example">
-							{
-							    "type": "array",
-							    "items": {
-							        "type" : "number"
-							    },
-							    "minOccurs" : 2,
-							    "minOccurs" : 3
-							}
-						</pre>
-
-						<p>When the numbers being exchanged are 123 and 456, data serialization in JSON format will look like the following.
-						</p>
-
-						<pre class="example">
-							{ 
-								"value": [
-									123,
-									456
-								]
-							}
-						</pre>
-
-						<p>The above data will look the following when the data is exchanged in XML.
-						</p>
-
-						<pre class="example">
-							&lt;value>
-								&lt;array>
-									&lt;double>123&lt;/double>
-									&lt;double>456&lt;/double>
-								&lt;/array>
-							&lt;/value>
-						</pre>
-
-
-					</section><!-- End of "JSON Array" -->
-
-					</section><!-- End of "Structured Data" -->
-
-					<section>
-						<h5>Mapping to XML Schema</h5>
-
-						<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema 
-						look like when serialized to XML in parallel to corresponding JSON serializations.
-						</p>
-
-						<p>This section describes how JSON schema definitions can be mapped to XML schema definitions by using the same examples.
-Given JSON schema definitions, providing the mapping to XML schema allows XML tools to directly validate serialized XML data, for example.
-						</p>
-
-					<section>
-						<h5>JSON Object to XML Schema</h5>
-
-					</section>
-
-					<section>
-						<h5>JSON Array to XML Schema</h5>
-
-					</section>
+						<section>
+							<h5>JSON Array Definition to XML Schema</h5>
+	
+							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
+							The <code>array</code> consists of exactly three number literals with each value within the value range of [ 0 ... 255 ].</p>
+	
+							<pre class="example">
+								{
+								    "type": "array",
+								    "items": {
+								        "type" : "number"
+								        "minimum": 0,
+								        "maximum": 255,
+								    },
+								    "minItems" : 3,
+								    "maxItems" : 3
+								}
+							</pre>
+	
+							<p>When the <code>array</code> is anonymous (i.e. it is the root, or participates in another <code>array</code> definition), 
+							the above <code>array</code> definition transforms to the following XML Schema element definition.
+							</p>
+	
+							<pre class="example">
+								&lt;xs:element name="array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+								    &lt;xs:complexType>
+								        &lt;xs:sequence>
+								            &lt;xs:element name="double" minOccurs="3" maxOccurs="3">
+								                &lt;xs:simpleType name="minInclusive">
+								                    &lt;xs:restriction base="xs:double">
+								                        &lt;xs:minInclusive value="0"/>
+								                        &lt;xs:maxInclusive value="255"/>
+								                    &lt;/xs:restriction>
+								                &lt;/xs:simpleType>
+								            &lt;/xs:element>
+								        &lt;/xs:sequence>
+								    &lt;/xs:complexType>
+								&lt;/xs:element>
+							</pre>
+	
+							<p>Otherwise (i.e. the <code>array</code> is a member of an <code>object</code> definition, thus has a name), 
+							the <code>array</code> definition transforms to the following XML schema element definition.
+							Note <code><i>__name</i></code> should be replaced by the actual name of the <code>array</code>.
+							</p>
+	
+	
+							<pre class="example">
+								&lt;xs:element name="<i>__name</i>" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+								    &lt;xs:complexType>
+								        &lt;xs:sequence>
+								            &lt;xs:element name="array">
+								                &lt;xs:complexType>
+								                    &lt;xs:sequence>
+								                        &lt;xs:element name="double" minOccurs="3" maxOccurs="3" >
+								                            &lt;xs:simpleType name="minInclusive">
+								                                &lt;xs:restriction base="xs:double">
+								                                    &lt;xs:minInclusive value="0"/>
+								                                    &lt;xs:maxInclusive value="255"/>
+								                                &lt;/xs:restriction>
+								                            &lt;/xs:simpleType>
+								                        &lt;/xs:element>
+								                    &lt;/xs:sequence>
+								                &lt;/xs:complexType>
+								            &lt;/xs:element>
+								        &lt;/xs:sequence>
+								    &lt;/xs:complexType>
+								&lt;/xs:element>
+							</pre>
+	
+						</section><!-- End of "JSON Array Definition to XML Schema" -->
 
 					</section><!-- End of "Mapping to XML Schema" -->
 
-					</section>
-
-					<section>
-						<h4>Note on URI Resolution</h4>
-
-						<p>
-							A Thing could be associated to more than one URI (in case it e.g. supports
-							several protocols). The same way, links to Properties, Actions or Events
-							could be defined as an array instead of a single string. URIs can also
-							be relative. The IETF recommendation for URI resolution [[!RFC3986]] does note
-							fully cover that case. This section is an attempt to specify how to
-							resolve URIs in a Thing Description document.
-						</p>
-
-						<p>
-							<ul>
-								<li>
-									A Thing Description can define one or more <code>uris</code>. If only one URI
-									is defined, the JSON value can be a plain string. If more than one URI
-									is defined, the JSON value must be a string array.
-								</li>
-								<li>
-									Each string from the JSON value should be interpreted as a base URI
-									and must be absolute.
-								</li>
-								<li>
-									A Property, an Action or an Event can define one or more <code>hrefs</code>.
-									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code>
-									must be a string. If it is a string array, the JSON value of <code>hrefs</code>
-									can be either a string or a string array.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string, it can be either a relative
-									or an absolute URI. In the former case, it should be possible to resolve it using
-									the algorithm of [[!RFC3986]] using <i>any</i> of the base URIs available.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string array, it must contain
-									as many elements as that of <code>uris</code> and each element must be a
-									relative URI. The resolution algorithm of [[!RFC3986]] should then be applied
-									<i>index-wise</i>.
-								</li>
-							</ul>
-						</p>
-					</section>
-
-				</section>
+				</section><!-- End of "Type System" -->
 
 				<section>
-					<h3>TD Samples</h3>
+					<h3>TD Examples</h3>
 
 					<p>
-						In the following, we give three examples of full TD. The first example, a
-						temperature sensor, shows how to define relations between Thing's
+						In the following, we give three examples of a full TD. The first one, a
+						temperature sensor, shows how to define relations between Thing
 						Properties. As a second example, we modeled
 						an actuator (LED lamp) where Actions have all been characterized semantically,
 						so that machines could unambiguously interpret them in an automated manner.
@@ -1082,7 +1268,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 					<section>
 						<h4>Temperature Sensor</h4>
-						
+
 						<pre class="example">
 							{
 							  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
@@ -1098,7 +1284,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "unit": "celsius",
 							      "reference": "threshold",
 							      "name": "myTemp",
-							      "valueType": "xsd:float",
+							      "valueType": { "type": "number" },
 							      "writable": false,
 							      "hrefs": ["val"]
 							    }, {
@@ -1106,19 +1292,19 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "@type": "Temperature",
 							      "unit": "celsius",
 							      "name": "myThreshold",
-							      "valueType": "xsd:float",
+							      "valueType": { "type": "number" },
 							      "writable": true,
 							      "hrefs": ["threshold"]
 							    }
 							  ],
 							  "events": [
 							    {
-							      "valueType": "xsd:float",
+							      "valueType": { "type": "number" },
 							      "name": "myChange",
 							      "property": "temp",
 							      "hrefs": ["val/changed"]
 							    }, {
-							      "valueType": "xsd:float",
+							      "valueType": { "type": "number" },
 							      "name": "myWarning",
 							      "hrefs": ["val/high"]
 							    }
@@ -1137,7 +1323,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						</p>
 
 						<p>
-							Moreover, one of the Thing's Events is linked to the measured value
+							Moreover, one of the Events of the Thing is linked to the measured value
 							(with the predicate <code>property</code>). It means
 							in that context that an event should be triggered each time <code>myTemp</code>
 							changes. The other Event does not define further semantics, it could be used either
@@ -1163,7 +1349,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "@id": "color",
 							      "@type": "RGBColor",
 							      "name": "myColor",
-							      "valueType": "xsd:unsignedInt",
+							      "valueType": { "type": "integer" },
 							      "writable": true,
 							      "hrefs": ["val"]
 							    }
@@ -1174,7 +1360,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "xsd:boolean"
+							        "valueType": { "type": "boolean" }
 							      },
 							      "hrefs": ["toggle"]
 							    }, {
@@ -1182,7 +1368,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myFadeIn",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "xsd:unsignedInt"
+							        "valueType": { "type": "integer" }
 							      },
 							      "property": "color",
 							      "hrefs": ["fadein"]
@@ -1191,7 +1377,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myFadeOut",
 							      "inputData": {
 							        "@type": "RGBColor",
-							        "valueType": "xsd:unsignedInt"
+							        "valueType": { "type": "integer" }
 							      },
 							      "property": "color",
 							      "hrefs": ["fadeout"]
@@ -1199,7 +1385,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							  ],
 							  "events": [
 							    {
-							      "valueType": "xsd:unsignedShort",
+							      "valueType": { "type": "integer" },
 							      "name": "myChange",
 							      "property": "color",
 							      "hrefs": ["changed"]
@@ -1247,7 +1433,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							      "name": "myMasterOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
-							        "valueType": "xsd:boolean"
+							        "valueType": { "type": "boolean" }
 							      },
 							      "hrefs": ["toggle"]
 							    }
@@ -1280,428 +1466,497 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							Thing associations could be useful for discovery.
 						</p>
 					</section>
-
 				</section>
 
 				<section>
-					<h3>Discovery</h3>
+					<h3>Usage</h3>
 
-					<p class="ednote">
-						This section describes in general how a thing (i.e., its TD) can be discovered.
-						In particular, the current practices at the PlugFests should become clear.
-						Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#sec-protocol-mappings"></a>.
-					</p>
-
-					<p>
-						Discovering a thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
-						The URI of the link may point to the thing itself, as things often host their TD directly, or to any other location on the Web.
-						There are several approaches to aquire such links.
-						Some work independent from the protocol binding, others rely on features of a specific protocol.
-					</p>
-
-					<section>
-						<h4>Manual Discovery</h4>
+					<section id="td-context-extension">
+						<h4>Extending Thing Description with Other Semantic Models</h4>
 
 						<p>
-							The link to the TD is provided by the developer at programming time, the operator through device management, or the user through a UI.
-						</p>
-					</section>
+							As the TD context we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by
+							reusing other vocabularies or ontologies and/or defining application-specific terms. In the following example, in addition
+							to our standard context, the context of the Thing declares a namespace pointing to a shared vocabulary for domotics called
+              <a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>:
 
-					<section>
-						<h4>Repository</h4>
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               {"dogont": "http://elite.polito.it/ontologies/dogont.owl#"}],
+								  ...
+								}
+							</pre>
+
+							DogOnt defines hundreds of concepts ranging from HVAC to units of measurement.
+						</p>
 
 						<p>
-							The thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
+							During early experimentations with TD files, a few concepts and terms
+							appeared to be recurrent, such as <code>Temperature</code>, <code>Toggle</code>
+							or <code>unit</code>. To ease experimentation with the modeling
+							of Things, a context that gathers such common terms has been
+							defined at <code>http://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
+							Its content simply defines aliases for classes and properties of well-known
+							ontologies that are relevant for our activity:
+							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
+							<a href="http://purl.oclc.org/NET/ssnx/qu/qu">Quantity Kinds &amp; Units</a>,
+							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
+							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
+							updated and is not intended to become a reference. It should always be used
+							along with the standard TD context, as follows:
+
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+								  ...
+								}
+							</pre>
 						</p>
-					</section>
 
-					<section>
-						<h4>Local Discovery</h4>
-
-						<p>
-							The thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
-							The response to a discovery request can include the TD directly or just a link.
-							For announcements, it is more common to only provide a link, since broadcasting TDs can be expensive.
-						</p>
-					</section>
-				</section>
-
-				<section id="td-context-extension">
-					<h3>Extending Thing Description with Other Semantic Models</h3>
-
-					@TODO How to extend the TD with contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
-				</section>
-
-				<section>
-					<h3>Abstract Thing Descriptions</h3>
-
-					<p class="note" title="Matthias Kovatsch">
-						This is a proposal to implement the concept of late binding.
-					</p>
-
-					<p>
-						An abstract TD contains all the semantic information of a normal TD except for the protocol and addressing information (i.e., base URIs and hrefs) as well as certain elements of the metadata that would refer to a specific instance of such a thing (e.g., name and serial number).
-						They can be compared to abstract classes or interfaces from object-oriented programming: abstract TDs define placeholders that cannot be instantiated, that is, do not belong to a concrete thing.
-						This is useful for semantic reasoning processes that require information about thing capabilities (e.g., to proof that a certain functionality can be implemented through service composition).
-						Abstract TDs also fulfill the requirement of late bindings in the application logic.
-						A script could instantiate a proxy object that exposes all capabilities of the abstract TD.
-						Only when it is accessed, a matching TD has to be discovered, so that the properties, actions, and events can be bound to the resources of an actual thing using its URIs.
-					</p>
-
-				</section>
-
-				<section>
-					<h3>Security Considerations</h3>
-
-					<p>
-						Following security concerns apply to TD:
-						<ul>
-							<li>Protecting TD objects</li>TD objects in plain form can easily be manipulated or faked by attackers. This could result in security or safety breaches. To establish the authenticity of TD objects signature mechanisms are needed. They allow to corroborate the source of the TD information and to assure the integrity of its contents.
-							<li>Describing prerequistes for accessing things</li>Components that expose things (aka servients) may expect callers to present credentials and/or to use secure communications in order to access them. Specific TD object contents are needed to express such requirements.
-						</ul>
-						These two security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related expectation for accessing things. On the other hand TD objects may express such expectations without being signed.
-					</p>
-					
-					<section>
-						<h4>Protecting TD Objects</h4>
-						
-						<p>
-							TD objects may be protected by means of signature. Signing TD objects is optional.<br/><br/>
-							If TD objects are signed then cryptographic checksums (aka signatures) are added to establish the authenticity of TD objects. Such checksums are created by the producers/issuers of TD objects and validated by consumers of TD objects (which should reject signed TD objects whose signatures are invalid). They use keying associations between the producer of the protected TD objects and its consumer(s). The checksum resp. keying association can be asymmetric (producer signs with a private key, consumers validate with the corresponding public key) or symmetric (producer and consumer use a shared secret key).<br/>
-							For TD objects expressed in JSON, IETF JOSE (JSON Object Signature and Encryption, see https://datatracker.ietf.org/wg/jose/documents/) provides the standards for computation and validation of signatures and their representation as network transfer objects (RFC 7515).<br/><br/>
-							Signing is straight-forward on the level of cryptographic primitives i.e. algorithms to generate and validate checksums. But the cryptographic algorithm that computes the checksum only reduces the amount of data that has to be protected - from potentially large (TD) to small (key) objects. Sound key management practices are needed behind the scene. Key management largely contributes to the overall price-tag of the security solution. It is also not straight-forward on the level of cryptographic objects i.e. the expression and organization of signed data and signature metadata (information about the embedding/location and transformation/normalization of signed data, information about the signature algorithm as well as the keying association etc). The solution design needs to reflect given or anticipated WoT system dynamics with respect to granularity/pooling of TD object signing. This presents a not yet addressed problem.<br/><br/>
-							On top of a commonly signature object specification such as XML Signature or CMS lots of profiling may be needed in order to make a signature mechanism meaningful for a specific domain. This is illustrated by the IETF ltans effort: IETF ltans addressed the long-term archival of digital data objects and produced a number of RFCs (RFC 4810/4998/5276/5698/6238) on top of XML Signature resp. CMS that were needed to do the trick. Another example is XAdES (https://www.w3.org/TR/XAdES/). Note: this does not try to suggest that the signing of TD objects will have the same added complexity as IETF ltans or W3C XAdES, only that specific conventions/profiles for the use of JWS or XML Signature in the TD domain will be needed.
-						</p>
+						@TODO more details on contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
 					</section>
 					
-					<section>
-						<h4>Describing Prerequistes for Accessing Things</h4>
-						
-						<p>
-							When private resources (things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing the things (servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic strategies for demanding such security mechanisms:
-							<ul>
-								<li>A priori</li>Callers know beforehand and make requests according the expectations of the callee. A prominent example for this strategy is the 'https' access scheme in URLs. It triggers clients to employ SSL/TLS in order to send HTTP requests (HTTP-over-TLS, RFC 2818).
-								<li>A posteriori</li>Callers do not know beforehand, make a request and are being told by the callee in the response or during the exchanges. An example for this strategy is the negotiation of the use of SSL/TLS as part of HTTP exchanges (TLS-in-HTTP, RFC 2817).
-							</ul>
-							The a posteriori-strategy places requirements on the application protocol esp. the contents of its error responses, not TD. In case of WoT, the a priori-strategy places requirements on TD: TD needs to be able to express security mechanisms that callers have to fulfill. This expression shall be optional because certain WoT deployments might prefer the a posteriori-strategy and do (intentionally) not want to reveal this information in TD objects.
-							<h5>Authorization and Authentication</h5>
-							This section assumes that servients externalize complex processing tasks around call authorization and caller authentication to security components (representing online TTPs). See below for a rationale.<br/>
-							Following items are needed to inform callees about security credentials/tokens that they have to present for specific resources:
-							<ul>
-								<li>Issuing authority of the security token</li>Callers need to know about the online TTP component where they need to apply for security tokens. This includes information about their configuration encompassing endpoints and supported protocols.
-								<li>Type/category of security token</li>Callers need to know which type(s) or categories of security tokens they need to apply for. An individual security token type or category is assumed to expressed by a URN (in the namespace of the security token issuer).
-								<li>Protection model for security token</li>Callers need to know the protection model of the security tokens they need to apply for. Note that bearer token are submitted in a opaque fashion, for PoP tokens an authenticator has to be created by the caller.
-							</ul>
-							<h5>Secure Communications</h5>
-							<h6>Transient Protection, Transport-Level Security</h6>
-							<p>The URL access scheme allows to express the need for secure communications (SSL/TLS or DTLS). This is part of the resource endpoint URL and there is no need for TD to specify any additional means.
-							Note that 'http' vs. 'https' resp. 'coap' vs. 'coaps' carries only boolean information. The suite of parameters that determine SSL/TLS or DTLS sessions is much larger (encompassing authentication modes and related information, encryption/signature strategies). Hence the URL access scheme does not provide a full or even rich announcement of the required settings. Since it is the best current practice in IT to rely on a simple a priori trigger (in URL access scheme) and do the rest of the work accordng the a posteriori-apporach (inband with the security protocol) there is no need for TD resp. WoT to go beyond.</p>
-							<h6>Persited Protection, Application-Level Security</h6>
-							Application-level security providing persisted protection is usually handled by specifications/conventions in the application domain. This uses specific media types such as application/json for JSON-plain and application/jose for protected JSON objects (JWS/JWE). Note that application/cbor does exist but there is not yet a IANA registration for "application/cose" (as of 2016-02-21, see http://www.iana.org/assignments/media-types).<br/><br/>
-							<b>TODO (@TF TD): the datatype part in XML Schema (https://www.w3.org/TR/xmlschema11-2/) seems to be short with respect to being able to speak about cryptographically transformed data (see RFC 7193 for e.g. application/cms). It seems hard to impossible to allow callees to express security requirements wrt to persitent application-level security based on that. I suggest to either disclaim this case or allow richer data types</b>
+					<section id="td-discovery">
+						<h4>Discovery</h4>
+
+						<p class="ednote">
+							This section describes in general how a Thing (i.e., its TD) can be discovered.
+							In particular, the current practices at the PlugFests should become clear.
+							Technology-specific mechanisms such as BLE Beacons or UPnP multicast requests should go into the corresponding sub-sections of <a href="#protocol-bindings"></a>.
 						</p>
+	
+						<p>
+							Discovering a Thing means acquiring a link to its TD, which then contains all the information to interact with it and understand its data.
+							The URI of the link may point to the Thing (technically the <a>servient</a>) itself, as Things often host their TD directly, or to any other location on the Web.
+							There are several approaches to aquire such links.
+							Some work independent from the <a>Protocol Binding</a>, others rely on features of a specific protocol.
+						</p>
+	
+						<section>
+							<h5>Manual Discovery</h5>
+	
+							<p>
+								The link to the TD is provided by the developer at programming time, the operator through device management, or the user through a UI.
+							</p>
+						</section>
+	
+						<section>
+							<h5>Repository</h5>
+	
+							<p>
+								The Thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
+							</p>
+						</section>
+	
+						<section>
+							<h5>Local Discovery</h5>
+	
+							<p>
+								The Thing is able to broadcast a discovery request locally (e.g., a CoAP multicast request for <code>/.well-known/core</code>) or to receive announcements from its proximity (e.g., BLE Beacons).
+								The response to a discovery request can include the TD directly or just a link.
+								For announcements, it is more common to only provide a link, since broadcasting TDs can be expensive.
+							</p>
+						</section>
+					</section>
+					
+					<section>
+						<h4>Security</h4>
+						
+						@TODO Add howto about security metadata and how to use it
 					</section>
 				</section>
 			</section>
 
-			<section id="sec-scripting-api">
+			<section>
 				<h2>Scripting API</h2>
 
 				<p>
-					The Scripting API is an API for Discovery, Provisioning and Control of Things in a <a href="http://www.w3.org/WoT/">Web of Things</a>.
+					The Scripting API is an API specification to have a uniform way to write scripts/applications for the web of things. 
+					It providesa means for Discovery, Provisioning and Control of Things in a <a href="http://www.w3.org/WoT/">Web of Things</a>.
 				</p>
-				
+
 				<p class="issue">
 					Portable application logic, language-independent
 				</p>
 
 				<section>
-					<h3>Servients</h3>
+					<h3>API design principles</h3>
 
-					@TODO How to use protocols correctls (e.g., (D)TLS info)
+					<p>
+					The API is designed to be language-agnostic (i.e. being applicable to different languages) to enable various runtimes.
+					The overall API philosophy is reactive, meaning a programmer will mostly be passing callback functions which get called from the framework
+					It makes uses of the promise pattern that is very popular in Javascript.
+					</p>
+
+					<p>
+					The API aims to provide means for both exposing things (as a server) and consuming things (as a client).
+					They can be retrieved from a singular entry point, it offers facotry methods to create representations of exposed and consumed things.
+					These representations offer methods to define behaviour for a thing, change the thing model or interact with the thing.
+					</p>  
+					
+					<p class="note">
+					<b>Object orientation</b>: This document is written language agnostic, but is specified using object oriented metaphors. This document will capture a proposition for the structure of the WoT scripting API and state the design principles.The translation of this metaphors for non-object oriented languages (most notably C) can be done by passing handles and structs, which is common practise, but needs further specification. Some ground rules can be named however:
+					all functions shall have a prefix
+					handles or structs replace passing of objects to the framework
+					structs represent objects being passed from the framework
+					</p>
+					
 				</section>
 
 				<section>
-					<h3>Discovery API</h3>
+					<h3 id="wot-object">WoT root entry</h3>
+
+					<p>
+						The root entry for the API is an object WoT giving access to the factory methods.
+						<br/>For non-object oriented languages, you could use <code>wot-</code> as a prefix to the factory methods.
+					</p>
+
+					<pre class="idl">
+						interface WoT {
+							Promise&lt;sequence&lt;ConsumedThing&gt;&gt; discover(ThingFilter filter);
+							Promise&lt;ConsumedThing&gt; consumeDescription(object td);
+							Promise&lt;ConsumedThing&gt; consumeDescriptionUri(DOMString uri);
+							Promise&lt;ExposedThing&gt; createThing(DOMString name);
+							Promise&lt;ExposedThing&gt; consumeDescription(object td);
+							Promise&lt;ExposedThing&gt; consumeDescriptionUri(DOMString uri);
+						};
+					</pre>
 
 					<section>
-						<h3 id="interface-thingrequest">Interface <code>ThingRequest</code></h3>
+						<h3 id="factories-for-consuming">Factories for Consuming Things</h3>
 
-						<p>
-							A <code>ThingRequest</code> is the entry point in the Scripting API to find things.
-							It has a single method <code>start()</code> that starts the discovery or lookup according to the <code>ThingFilter</code> that is passed as input of the <code>ThingRequest</code> constructor.
-						</p>
-						
-						<p>
-							PS: If the Scripting API is exposed to web pages as a JavaScript API, the User Agent may open a dialog that let users select Things the page is allowed to access after the <code>ThingRequest.start()</code> is called.
-							@TODO not Node.js example.
-							For trusted applications e.g. running in Node.js environment, the list of things found is passed to the application without asking the user.
-						</p>
-					
-						<!-- Proper WebIDL syntax -->
-						<!-- Examples: https://www.w3.org/respec/examples/webidl-contiguous.html -->
-					
-						<pre class="idl">
-							[Constructor(ThingFilter filter)]
-							interface ThingRequest {
-								Promise&lt;sequence&lt;Thing&gt;&gt; start();
-							};
-						</pre>
+						<p>Instances of the objects/structs representing a Thing are retrieved via factories.
+						These are methods of the root object that return a promise which will resolve to an array of proxy objects.</p>
+
+						<section>
+							<h3 id="discover">factory <code>discover()</code></h3>
+
+							<p>Discovery of Things can be triggered with typed filters.</p>
+
+							<b>Parameters</b>
+							<ul>
+								<li>
+									<b>type</b> type of the discovery mechanism
+								</li>
+								<li>
+									<b>filter</b> object (dictionary) with parameters for the discovery
+								</li>
+							</ul>
+
+							<b>Returns</b>
+							<p>A promise resolved to an array of <code>ConsumedThing</code> and rejected if the discovery type is not availiable or there was an error</p>
+
+							<pre class="example highlight" title="Discover Things">
+								WoT.discover("registry", {registry:"http://my.registry.org"})
+								.then(function(things) {
+									things.forEach(function(thing) { 
+										console.log("found " + thing.name);
+									});
+								})
+							</pre>
+						</section>
+
+						<section>
+							<h3 id="consumeDescription">factory <code>consumeDescription()</code></h3>
+
+							<p>This factory method csan be used to create Things based on a Thing Decription</p>
+
+							<b>Parameters</b>
+							<ul>
+								<li>
+									<b>td</b> a Thing Description
+								</li>
+							</ul>
+
+							<b>Returns</b>
+							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not availiable or there was an error</p>
+
+							<pre class="example highlight" title="access a Thing by description">
+								WoT.consumeDescription({ /*... valid thing description ...*/ })
+								.then(function(thing) {
+									console.log("found " + thing.name);
+								});
+							</pre>
+						</section>
+
+						<section>
+							<h3 id="consumeDescriptionUri">factory <code>consumeDescriptionUri()</code></h3>
+
+							<p>This factory method csan be used to create Things based on a uri of a Thing Decription</p>
+
+							<b>Parameters</b>
+							<ul>
+								<li>
+									<b>uri</b> an uri pointing to a Thing Description
+								</li>
+							</ul>
+
+							<b>Returns</b>
+							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not availiable or there was an error</p>
+
+							<pre class="example highlight" title="access a Thing by uri of Thing Description">
+								WoT.consumeDescriptionUri("http://somethingontheweb.org/td")
+									.then(function(thing) {
+										console.log("found " + thing.name });
+									})
+							</pre>
+						</section>
 					</section>
-					
 					<section>
-						<h3 id="interface-thingfilter">Interface <code>ThingFilter</code></h3>
-					
-						<p>
-							A <code>ThingFilter</code> is a dictionary that is passed as input to the <code>ThingRequest</code> constructor.
-							It may be extended in the future with additional filter properties. The current supported filter properties are:
-						</p>
-						
-						<ul>
-							<li><code>type</code>: It is a url that identify the type of the thing e.g. <code>http://example.com/things#temperature</code></li>
-							<li><code>proximity</code>: It defines how to find the requested things. See ThingProximity Interface for more details about the possible values.</li>
-							<li><code>id</code>: Each thing consists of a unique <code>id</code> (see attribute <code>Thing.id</code>). Using the <code>id</code> in the filter allows to find a Thing by its <code>id</code>. If <code>id</code> is set, all other filter parameters will be ignored.</li>
-							<li><code>server</code>: It is the end point of the WoT directory where to look to Things. If <code>server</code> is set, the value of <code>proximity</code> must be <code>remote</code>.</li>
-						</ul>
-						
-						<pre class="idl">
-							dictionary ThingFilter {
-							    DOMString? type;
-							    ThingProximity? proximity;
-							    DOMString? id;
-							    DOMString? server;
-							};
-						</pre>
-					</section>
-					
-					<section>
-						<h3 id="interface-thingproximity">Interface <code>ThingProximity</code></h3>
-					
-						<p>
-							The <code>ThingProximity</code> is a enumaration about possible values for the <code>ThingFilter.proximity</code> attribute.
-							The three values are currently supported:
-						</p>
-						
-						<ul>
-							<li><code>local</code>: It represents discovery in local networks (e.g. SSDP, mDNS/DNS-SD, ...)</li>
-							<li><code>nearby</code>: It represents all discovery technologies where the physical location is considered (BLE, Audio Watermarking, ...)</li>
-							<li><code>remote</code>: It represents lookup in WoT directories. The end point of the directory musst be supported.  </li>
-						</ul>
-						
-						<pre class="idl">
-							enum ThingProximity {
-							    &quot;local&quot;,
-							    &quot;nearby&quot;,
-							    &quot;remote&quot;
-							};
-						</pre>
+						<h3 id="factories-for-exposing">Factories for Exposing Things</h3>
+
+						<p>Instances of the objects/structs representing a Thing are retrieved via factories.
+						These are methods of the root object that return a promise which will resolve to a proxy object.</p>
+
+						<section>
+							<h3 id="createThing">factory <code>createThing()</code></h3>
+
+							<p>This factory method can be used to create new Things</p>
+
+							<b>Parameters</b>
+							<ul>
+								<li>
+									<b>name</b> the name of the newly created Thing
+								</li>
+							</ul>
+
+							<b>Returns</b>
+							<p>A promise resolved to an <code>ExposedThing</code> and rejected if the thing could not be created or there was any error</p>
+
+							<pre class="example highlight" title="creating a new exposed Thing">
+								WoT.createThing("Foo")
+									.then(function(thing) {
+										console.log("crated " + thing.name });
+									})
+							</pre>
+						</section>
+
+						<section>
+							<h3 id="createFromDescription">factory <code>createFromDescription()</code></h3>
+
+							<p>This factory method can be used to create new Things based on a TD template</p>
+
+							<b>Parameters</b>
+							<ul>
+								<li>
+									<b>td</b> a Thing Description template describing the interactions of the Thing
+								</li>
+							</ul>
+
+							<b>Returns</b>
+							<p>A promise resolved to an <code>ExposedThing</code> and rejected if the thing could not be created or there was any error</p>
+
+							<pre class="example highlight" title="creating a new exposed Thing based on a TD template">
+								WoT.createFromDescription({"name" : "Foo", "actions" : [/* ... */] })
+									.then(function(thing) {
+										console.log("crated " + thing.name });
+									})
+							</pre>
+						</section>
+
+						<section>
+							<h3 id="createFromDescriptionUri">factory <code>createFromDescriptionUri()</code></h3>
+
+							<p>This factory method can be used to create new Things based on a TD template, given by a uri pointing to the TD template.</p>
+
+							<b>Parameters</b>
+							<ul>
+								<li>
+									<b>uri</b> a uri poinzing to the Thing Description template describing the interactions of the Thing
+								</li>
+							</ul>
+
+							<b>Returns</b>
+							<p>A promise resolved to an <code>ExposedThing</code> and rejected if the thing could not be created or there was any error</p>
+
+							<pre class="example highlight" title="creating a new exposed Thing based on a TD template">
+								WoT.createFromDescriptionUri("http://some.server.org/tdtemplate.jsonld")
+									.then(function(thing) {
+										console.log("crated " + thing.name });
+									})
+							</pre>
+						</section>
+
 					</section>
 				</section>
-					
+
 				<section>
-					<h3>Client API</h3>
-					
-					<section>
-						<h4 id="interface-consumedthing">Interface <code>ConsumedThing</code></h4>
-						
-						<p>
-							<code>ConsumedThing</code> is the main interface to interact with a thing as client.</p>
-							It consists of the following attributes and functions:
-						</p>
-						
-						<ul>
-							<li><code>id</code>: is a unique identifier of a Thing.</li>
-							<li><code>type</code>: is the type of a thing. It is important to filter things by type (see <code>ThingFilter.type</code>).</li>
-							<li><code>name</code>: the human readable name of the thing.</li>
-							<li><code>reachable</code>: defines if the Thing is reachable or not. e.g. <code>reachable</code> is <code>false</code> when the control device (that runs an application using the Thing API) leaves the range of a BLE sensor and <code>true</code> if the device is in range.</li>
-							<li><code>onreachabilitychange</code>: event handle to monitor reachability of the thing. It will be triggered each time the value of the <code>reachable</code> attribute changes.</li>
-							<li><code>callAction()</code>: call an action defined in the thing description.</li>
-							<li><code>setProperty()</code>: set a new value for a property defined in the thing description.</li>
-							<li><code>getProperty()</code>: get the value of a property defined in the thing description.</li>
-							<li><code>addListener()</code>: add a new listener to an event defined in the thing description.</li>
-							<li><code>removeListener()</code>: remove an already added event listener.</li>
-							<li><code>removeAllListeners()</code>: remove all listener registered for an event defined in the thing description.</li>
-						</ul>
-					
-					
-						<pre class="idl">
-							[Constructor(ThingDescription td)]
-							interface ConsumedThing {
-							    readonly attribute DOMString id;
-							    readonly attribute DOMString type;
-							    readonly attribute DOMString name;
-							    readonly attribute boolean reachable;
-							    attribute EventHandler onreachabilitychange;
-							    Promise&lt;any&gt; callAction(DOMString actionName, any parameter);
+					<h3>Consumed Thing</h3>
+
+					<p>
+						The root entry for a placeholder object to interact with a Thing 
+					</p>
+
+					<pre class="idl">
+						interface ConsumedThing {
+								readonly attribute DOMString name;
+							    Promise&lt;any&gt; invokeAction(DOMString actionName, any parameter);
 							    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
 							    Promise&lt;any&gt; getProperty(DOMString propertyName);
-							    void addListener(DOMString eventName, ThingEventListener listener);
-							    void removeListener(DOMString eventName, ThingEventListener listener);
-							    void removeAllListeners(DOMString eventName);
-							};
-							callback ThingEventListener = void (ThingEvent event);
-						</pre>
-
-						<p>
-							A <code>ConsumedThing</code> instance can be returned as a result of discovery (see <code>ThingRequest.start()</code>) or directly by using the Thing constructor that accepts a <code>ThingDescription</code> as input.
-						</p>
-					</section>
-
-					<section>
-						<h4 id="interface-thingevent">Interface <code>ThingEvent</code></h4>
-
-						<p>The <code>ThingEvent</code> is passed as input to the event listener added to a Thing. It consists of the following attributes:</p>
-
-						<ul>
-							<li><code>name</code>: the name of the event. It allows to distinct between different event types in the event handler.</li>
-							<li><code>value</code>: the new value reported by the event.</li>
-							<li><code>source</code>: the thing that fired the event.</li>
-						</ul>
-					
-						<pre class="idl">
-							interface ThingEvent {
-							    readonly attribute DOMString name;
-							    readonly attribute any value;
-							    readonly attribute Thing source;
-							};
-						</pre>
-					</section>
-
-					<section>
-						<h4 id="interface-thingdescription">Interface <code>ThingDescription</code></h4>
-						
-						<p><code>ThingDescription</code> is a place holder for the JSON-LD spec of the Thing Description.</p>
-					
-						<pre class="idl">
-							dictionary ThingDescription {
-							    // Thing Description according to the JSON-LD TD spec.
-							};
-						</pre>
-					</section>
-				</section>
-
-				<section>
-					<h3>Server API</h3>
-					
-					<section>
-						<h4 id="interface-exposedthing">Interface <code>ExposedThing</code></h4>
-						
-						<p>
-							The interface <code>ExposedThing</code> is used for providing a thing.
-							It has methods to attach handlers that flesh out the application logic and can modify the provided interactions.
-						</p>
-					
-						<pre class="idl">
-							[Constructor(ThingDescription td), Constructor(DOMString name)]
-							interface ExposedThing {
-							    readonly attribute ThingDescription description;
-							    readonly attribute DOMString name;
-							
-							    ExposedThing addAction(DOMString actionName, DOMString parameterType, DOMString resultType);
-							    ExposedThing addProperty(DOMString propertyName, DOMString propertyType);
-							
-							    void onCall(DOMString actionName, ActionEventListener listener);
-							    void onChange(DOMString actionName, ChangeEventListener listener);
-							
-							    void addListener(DOMString eventName, ThingEventListener listener);
-							    void removeListener(DOMString eventName, ThingEventListener listener);
-							    void removeAllListeners(DOMString eventName);
-							};
-							callback ThingEventListener = void (ThingEvent event);
-							callback ChangeEventListener = void (any newValue, any OldValue, ThingEvent event);
-							callback ActionEventListener = any (any param);
-						</pre>
-					</section>
-				</section>
-
-				<section>
-					<h3>Physical API</h3>
-
-					@TODO Get content
-				</section>
-
-				<section>
-					<h3>Security Considerations</h3>
-
-					@TODO Figure out
-				</section>
-
-				<section>
-					<h3>Scripting API Examples</h3>
-					
-					<pre class="example highlight" title="Discover Things nearby">
-						var filter = {
-						    type: &quot;http://example.org#foo&quot;,
-						    proximity: &quot;nearby&quot;
+								ConsumedThing addListener(DOMString eventName, ThingEventListener listener);
+							    ConsumedThing removeListener(DOMString eventName, ThingEventListener listener);
+							    ConsumedThing removeAllListeners(DOMString eventName);
+								object getDescription();
 						};
-						var request = new ThingRequest(filter);
-						request.start().then(function(things){
-						    var thing = things[0];
-						    if(thing){
-						        // get thing basic information
-						        console.log(&quot;id: &quot;, thing.id);
-						        console.log(&quot;name: &quot;, thing.name);
-						        console.log(&quot;type: &quot;, thing.type);
-						        console.log(&quot;manufacturer: &quot;, thing.manufacturer);
-						        console.log(&quot;reachable: &quot;, thing.reachable);
-						        // store thing id locally e.g. in localStorage
-						        localStorage &amp;&amp; localStorage.setItem(&quot;thing.id&quot;,thing.id);
-						        // monitor reachability of the thing
-						        thing.onreachabilitychange = function(){
-						            console.log(&quot;reachability changed to &quot;, this.reachable);
-						            // If the thing is not reachable, then the operations callAction(), getProperty()
-									// and setProperty() will fail and the promise will be rejected with a corresponding
-									// error. The operations addListener(), removeListener() and removeAllListeners()
-									// will not fail, but events will be fired when the thing is reachable again.
-						        };
-						        // Call an action
-						        var input = ...;
-						        thing.callAction(&quot;myAction&quot;,input).then(function(output){
-						            console.log(&quot;Result of myAction()&quot;,output);
-						        }).catch(function(err){
-						            console.error(&quot;Error on call action&quot;,err);
-						        });
-						        // get and set property
-						        thing.getProperty(&quot;myProp&quot;).then(function(value){
-						            console.log(&quot;Value of myProp &quot;,value);
-						            var newValue = ...;
-						            return thing.setProperty(&quot;myProp&quot;, newValue);
-						        }).then(function(newValue){
-						            console.log(&quot;Value of myProp is now&quot;,newValue);
-						        }).catch(function(err){
-						            console.error(&quot;Error on get or set property myProp&quot;,err);
-						        });
-						        // add and remove thing event listener
-						        var myListener;
-						        thing.addListener(&quot;myEvent&quot;,myListener=function(evt){
-						            console.log(&quot;receive event &quot;,name,&quot;from thing&quot;,evt.source.name,&quot;with value&quot;,evt.value);
-						        });
-						        thing.removeListener(&quot;myEvent&quot;,myListener);
-						        thing.removeAllListeners(&quot;myEvent&quot;);
-						    };
-						}).catch(function(err){
-						    //TODO: handle error
-						});
 					</pre>
 
-					<pre class="example highlight" title="Find Thing by ID">
-						var thingId = localStorage &amp;&amp; localStorage.getItem(&quot;thing.id&quot;);
-						if(thingId){
-						    var filter = {
-						        id: thingId
-						    };
-						    var request = new ThingRequest(filter);
-						    request.start().then(function(things){
-						        var thing = things[0];
-						        if(thing){
-						            // access thing as in previous example
-						        }
-						    }).catch(function(err){
-						        //handle error
-						    });
-						}
-					</pre>
+					<p class="note">
+						<b>explanation in detail</b> to be transferred from <a href="https://github.com/w3c/wot/tree/master/proposals/restructured-scripting-api#consumedthing" target="_blank">Proposal</a> 
+					</p>
 				</section>
+
+				<section>
+					<h3>Exposed Thing</h3>
+
+					<p>
+						The root entry for a placeholder object to define behaviour for a Thing 
+					</p>
+
+					<pre class="idl">
+						interface ExposedThing {
+								readonly attribute DOMString name;
+							    Promise&lt;any&gt; invokeAction(DOMString actionName, any parameter);
+							    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
+							    Promise&lt;any&gt; getProperty(DOMString propertyName);
+								Promise&lt;any&gt; emitEvent(DOMString eventName, any payload);
+								ExposedThing addEvent(DOMString eventName, object payloadType);
+								ExposedThing addAction(DOMString actionName, object inputType, object outputType);
+								ExposedThing addProperty(DOMString propertyName, object contentType);
+								ExposedThing onInvokeAction(DOMString actionName, ActionHandler callback);
+								ExposedThing onUpdateProperty(DOMString propertyName, PropertyChangeListener callback);
+								ExposedThing addListener(DOMString eventName, ThingEventListener listener);
+							    ExposedThing removeListener(DOMString eventName, ThingEventListener listener);
+							    ExposedThing removeAllListeners(DOMString eventName);
+								object getDescription();
+						};
+					</pre>
+
+					<p class="note">
+						<b>explanation in detail</b> to be transferred from <a href="https://github.com/w3c/wot/tree/master/proposals/restructured-scripting-api#exposedthing" target="_blank">Proposal</a> 
+					</p>
+				</section>
+		</section>
+
+		<section>
+			<h1>Security Considerations</h1>
+
+			<p>
+				This section outlines the conception behind the WoT security model.
+				The following security concerns apply:
+				<ul>
+					<li>Enforcing security at the network interface of the Thing</li>
+					<li>
+						Protecting TD objects
+						
+						<p>
+							TD objects in plain form can easily be manipulated or faked by attackers.
+							This could result in security or safety breaches.
+							To establish the authenticity of TD objects signature mechanisms are needed.
+							They allow to corroborate the source of the TD information and to assure the integrity of its contents.
+						</p>
+					</li>
+					<li>Describing prerequistes for accessing Things</li>
+					<li>Components that expose Things (aka servients) may expect callers to present credentials and/or to use secure communications in order to access them. Specific TD object contents are needed to express such requirements.</li>
+				</ul>
+				These two security concerns are orthogonal: signing TD objects may be needed for TD objects which do not express any security-related expectation for accessing Things. On the other hand TD objects may express such expectations without being signed.
+			</p>
+
+			<section>
+				<h2>Security Enforcement at the WoT Interface</h2>
+
+				<p>The purpose of WoT is to expose private resources (Things themselves, information they produce, or information about them) at public-facing endpoints (e.g., Internet). This implies that components that expose Things (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic clusters of security features which are relevant for servients:
+					<ul>
+						<li>Authorization and authentication</li>When receiving instructions, servients must authorize such calls/requests i.e. determine whether to accept them for processing. This implies the need to authenticate the properties of callers that are used when performing authorization.
+						<li>Secure communications</li>When exchanging sensitive resources/information over a shared network, servients must demand encrypting/signing corresponding message exchanges.
+					</ul>
+					These fundamental security services depend on underpinnings esp. the provisioning of metadata (identifiers, attributes, assignments/affiliations) about system actors and the establishment of keying relations resp. shared secrets among actors that are supposed to interact in protected fashion. This section does not further elaborate on the provisioning of metadata and establishment of keys/secrets needed to implement authoriztion and authentication resp. secure communications.
+					<h4>Authorization and Authentication</h4>
+					The authorization of requested actions (instructions/requests) depends on the authentication of those properties of a caller that are relevant for authorization and that are being submitted or claimed by the caller. This can e.g. be identifiers, attributes (e.g. location), assignments (e.g. roles), affiliations (e.g. group memberships) or permissions (e.g. resource access rights). There are two basic strategies for the initial authentication of callers:
+					<ul>
+						<li>Internalization</li>The servient challenges the caller for initial authentication credentials, validates them, determines the properties of the authenticated caller, uses them to render an authorization decision and enforces this decision.
+						<li>Externalization to online TTPs</li>The servient delegates the challenging for initial authentication credentials, their validation, the determination of caller properties and evtl. the rendering of an authorization decision to an online TTP. In course of that  the servient then receives a report of the TTP (corresponding objects are called 'security token' or 'access token') and proceeds with it
+					</ul>
+					The internalization approach has a number of issues including: lack of SSO (a concern when the caller is a user agent, no real issue otherwise), tight coupling of initial authentication credentials and application protocol (a painpoint when multiple schemes/dynamics are to be covered), forcing servients into the implementation of complex, non-core functionality. For these reasons the internalization strategy is uncommon - even in unconstrained office/enterprise/Cloud IT. Since WoT is concerned with components that are (severly) constrained, it is anticipated that WoT solutions will externalize complex processing tasks in caller authentication to online TTP components by default.<br/>
+					The externalization of initial caller authentication to TTPs allows to allocate the authorization decision making as follows:
+					<ul>
+						<li>Internalization</li>The servient component performs authorization decision making and enforcement
+						<li>Externalization according push</li>The servient component performs authorization decision enforcement. Authorization decision making is done by the TTP that performs the initial authentication of callers (resource access control information travels in-band with the security token asserting the authenticated identity of the caller)
+						<li>Externalization according pull</li>The servient component performs authorization decision enforcement. Authorization decision making is done by a backend component (called by the servient).
+					</ul>
+					The externalization of initial caller authentication and the externalization of the authorization decision making according push to TTPs matches the architectural proposition of the IETF ACE working group (see "An architecture for authorization in constrained environments" at https://www.ietf.org/id/draft-ietf-ace-actors).<br/><br/>
+					The anticipated default strategy in WoT results in online TTP components as well as special-purpose objects: security tokens by which online TTPs report the results of their work back to servients. These are cryptographically protected objects that report properties of the caller (identifiers, attributes, assignments, affiliations, permissions etc) which are asserted by the online TTP. Such objects may contain resource access control information. Such objects are short-lived (normally: minutes/hours) and may be re-used during their lifetime. These objects must be signed to prevent counterfeiting and may be encrypted to preserve confidentiality.
+					<ul>
+						<li>Bearer security model</li>In case of bearer tokens submitters of security tokens do not have to provide any proof-of-possession. A real-life analogy is a cinema or concert ticket - the recipient only wants to make sure it is no counterfeit. This implies a risk that illegitimate callers may present valid security tokens. In the digital World SAML Web SSO is a prominent example of an online TTP scheme that is implementing a bearer model.
+						<li>PoP security model</li>In case of PoP (aka HoK) tokens submitters are required to supply fresh authenticator objects in addition/conjunction with security tokens. A real-life analogy is a passport - the recipient wants to make sure it is no counterfeit and is presented by the right person. In the digital World Kerberos is the most prominent example of an online TTP scheme that is implementing a PoP model.
+					</ul>
+					Note that OAuth started with PoP (OAuth 1.x), moved to bearer (OAuth 2.0 according RFC 6749/6750) to foster adaptation and currently adds PoP (current OAuth 2.0 drafts) to include high-value assets.<br/><br/>
+					In WoT no one-size-fits-all security token should be expected. Specific WoT domains such as building automation, sports/health care, industrial control systems have their own specific needs when it comes to the expression of caller properties. Moreover specific protocol stacks also have their own specific constraints that affect security token contents.<br/><br/>
+					In addition to  security tokens (that are domain and protocol stack-specific) protocols are needed to acquire and supply security tokens. The security token supply between callers and servients is the straight-forward part of this task:
+					<ul>
+						<li>Application requests</li>The application protocol requests must allow the transfer of security tokens (bearer) and/or authenticators (PoP) in a standardized way. For HTTP such standards exist (RFC 6750 for bearer tokens) resp. emerge (PoP tokens); for CoAP they do emerge. A critical issue are large security tokens/authenticators that can not be supplied inline with arbitrary application requests. The common trick to address this concern is to introduce a dedicated endpoint to which security tokens and/or authenticators can be sent in application PDUs (dedicated to the supply of security tokens and/or authenticators) during in an upfront exchange.
+						<li>Application responses</li>The application protocol (error) responses must allow to inform clients about expected security token issuing authority, expected security token type/category and protection. Current and emerging standards do not yet provide an adequate coverage for this concern.
+					</ul>
+					The security token acquisition is the more complex part of this trick. The servient components trigger exchanges between callers and their online TTP but are not involved during their execution. The requesting party may also introduce further online TTP components to support e.g. constrained callers or clients. Obviously the online TTPs need to respect the capabilities of the actual caller or its proxy. In addition to that a continental divide exists between following scenarios:
+					<ul>
+						<li>Consumer goods, owned by individual end users</li>Authorization is often conducted according a lazy policing model: access requests happen first, then the resource owner (an individual) is asked for an authorization (whether she can be assumed to be online does matter). This results in an authorization policy that is build-up dynamically
+						<li>Capital goods, owned by legal entities</li>Authorization is mostly conducted according a preemtive policing model: a (static) authorization policy is provided, then access request happen and authorization decisions are rendered without assuming any interaction with the resource ownwer or a representative
+					</ul>
+					Both cases distribute work unevenly over servients and their callers; both sides have fundamentally different working tasks and workloads in authorization and authentication:
+					<ul>
+						<li>Servient tasks</li>Understand protection needs (public, private) of served resources, challenge for security tokens (bearer) and/or authenicators (PoP), validate security tokens (bearer) and/or authenicators (PoP) and match their content against application request contents
+						<li>Caller tasks</li>React on application protocol error responses (demanding the supply of security tokens), acquire security token from online TTPs, perform initial authentication by means of a security protocol (possibly different from the application protocol, evtl. mediated by an online TTP on side of the requesting party), and supply security tokens (bearer) and/or authenticators (PoP) as part of the application protocol
+					</ul>
+					For client-side and server-side support APIs this obvious results in fundamentally different security task that have to be facilitated by WoT Interfaces.
+
+					The security-part of the W3C WoT PlugFest in Nice showed the ability to create mutually interoperable and security-enabled WoT component implementations (by different vendors). The security-enabling at the PlugFest focussed on the authorization of actions (sent to servients) and the authenticator of actors (WoT clients). It utilized online third-party components to which the servients and clients delegated the complex processing tasks in authorization and authentication and utilized trusted assertions (aka access/security tokens) to report back to servients and clients. This follows architetural models and protocols which emerge from IETF working groups (including OAuth and ACE). See https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#Security for more info about the security-enabling and its results for this PlugFest
+					<h4>Secure Communications</h4>
+					Communication security can be implemented in form of transient, transport-level security (e.g. TLS, DTLS) and/or persistent, application-level security (e.g. JOSE, COSE). Both approaches result in symmetry with respect to the work-split across servients and their callers; both sides basically have the same working tasks and workload<br/><br/>
+					Transport-level security has a long heritage in IT and presents a well-understood means in Web security which is carrying critical use cases. If TLS resp. DTLS match the constraints of WoT deployments they should be used to secure communications.<br/><br/>
+					Some WoT deployments have requirements that do not match TLS and DTLS properties, for instance multicast resp. group-oriented communications. It is also possible that (severely) constrained WoT components can not bear the overhead that is implied by the TLS and DTLS protocols. Then persistent, application-level security can help to achieve communication security.<br/>
+					In contrast to transport-level security, application-level security allows to apply cryptographic transformations in a specific/granular manner (affecting some but not all exchanged data objects) and thereby reducing the security processing burden. In case security tokens are to be used in cases where transport-level security can not be used, application-level security offers means to provide PoP for security tokens as well as authenticity for message exchanges.
+				</p>
+			</section>
+
+			<section>
+				<h2>Describing Prerequistes for Accessing Things</h2>
+
+				<p>
+					When private resources (Things themselves, information they produce or information about them) get exposed at public-facing endpoints (e.g. Internet) then the components that are exposing theThings (i.e., servients) must enforce security: credentials have to be presented, communication exchanges have to be encrypted/signed etc. There are two basic strategies for demanding such security mechanisms:
+					<ul>
+						<li>A priori</li>Callers know beforehand and make requests according the expectations of the callee. A prominent example for this strategy is the 'https' access scheme in URLs. It triggers clients to employ SSL/TLS in order to send HTTP requests (HTTP-over-TLS, RFC 2818).
+						<li>A posteriori</li>Callers do not know beforehand, make a request and are being told by the callee in the response or during the exchanges. An example for this strategy is the negotiation of the use of SSL/TLS as part of HTTP exchanges (TLS-in-HTTP, RFC 2817).
+					</ul>
+					The a posteriori-strategy places requirements on the application protocol esp. the contents of its error responses, not TD. In case of WoT, the a priori-strategy places requirements on TD: TD needs to be able to express security mechanisms that callers have to fulfill. This expression shall be optional because certain WoT deployments might prefer the a posteriori-strategy and do (intentionally) not want to reveal this information in TD objects.
+					<h5>Authorization and Authentication</h5>
+					This section assumes that servients externalize complex processing tasks around call authorization and caller authentication to security components (representing online TTPs). See below for a rationale.<br/>
+					Following items are needed to inform callees about security credentials/tokens that they have to present for specific resources:
+					<ul>
+						<li>Issuing authority of the security token</li>Callers need to know about the online TTP component where they need to apply for security tokens. This includes information about their configuration encompassing endpoints and supported protocols.
+						<li>Type/category of security token</li>Callers need to know which type(s) or categories of security tokens they need to apply for. An individual security token type or category is assumed to expressed by a URN (in the namespace of the security token issuer).
+						<li>Protection model for security token</li>Callers need to know the protection model of the security tokens they need to apply for. Note that bearer token are submitted in a opaque fashion, for PoP tokens an authenticator has to be created by the caller.
+					</ul>
+					<h5>Secure Communications</h5>
+					<h6>Transient Protection, Transport-Level Security</h6>
+					<p>The URL access scheme allows to express the need for secure communications (SSL/TLS or DTLS). This is part of the resource endpoint URL and there is no need for TD to specify any additional means.
+					Note that 'http' vs. 'https' resp. 'coap' vs. 'coaps' carries only boolean information. The suite of parameters that determine SSL/TLS or DTLS sessions is much larger (encompassing authentication modes and related information, encryption/signature strategies). Hence the URL access scheme does not provide a full or even rich announcement of the required settings. Since it is the best current practice in IT to rely on a simple a priori trigger (in URL access scheme) and do the rest of the work accordng the a posteriori-apporach (inband with the security protocol) there is no need for TD resp. WoT to go beyond.</p>
+					<h6>Persited Protection, Application-Level Security</h6>
+					Application-level security providing persisted protection is usually handled by specifications/conventions in the application domain. This uses specific media types such as application/json for JSON-plain and application/jose for protected JSON objects (JWS/JWE). Note that application/cbor does exist but there is not yet a IANA registration for "application/cose" (as of 2016-02-21, see http://www.iana.org/assignments/media-types).<br/><br/>
+					<b>TODO (@TF TD): the datatype part in XML Schema (https://www.w3.org/TR/xmlschema11-2/) seems to be short with respect to being able to speak about cryptographically transformed data (see RFC 7193 for e.g. application/cms). It seems hard to impossible to allow callees to express security requirements wrt to persitent application-level security based on that. I suggest to either disclaim this case or allow richer data types</b>
+				</p>
+			</section>
+
+			<section>
+				<h2>Protecting TD Objects</h2>
+
+				<p>
+					TD objects may be protected by means of signature. Signing TD objects is optional.<br/><br/>
+					If TD objects are signed then cryptographic checksums (aka signatures) are added to establish the authenticity of TD objects. Such checksums are created by the producers/issuers of TD objects and validated by consumers of TD objects (which should reject signed TD objects whose signatures are invalid). They use keying associations between the producer of the protected TD objects and its consumer(s). The checksum resp. keying association can be asymmetric (producer signs with a private key, consumers validate with the corresponding public key) or symmetric (producer and consumer use a shared secret key).<br/>
+					For TD objects expressed in JSON, IETF JOSE (JSON Object Signature and Encryption, see https://datatracker.ietf.org/wg/jose/documents/) provides the standards for computation and validation of signatures and their representation as network transfer objects (RFC 7515).<br/><br/>
+					Signing is straight-forward on the level of cryptographic primitives i.e. algorithms to generate and validate checksums. But the cryptographic algorithm that computes the checksum only reduces the amount of data that has to be protected - from potentially large (TD) to small (key) objects. Sound key management practices are needed behind the scene. Key management largely contributes to the overall price-tag of the security solution. It is also not straight-forward on the level of cryptographic objects i.e. the expression and organization of signed data and signature metadata (information about the embedding/location and transformation/normalization of signed data, information about the signature algorithm as well as the keying association etc). The solution design needs to reflect given or anticipated WoT system dynamics with respect to granularity/pooling of TD object signing. This presents a not yet addressed problem.<br/><br/>
+					On top of a commonly signature object specification such as XML Signature or CMS lots of profiling may be needed in order to make a signature mechanism meaningful for a specific domain. This is illustrated by the IETF ltans effort: IETF ltans addressed the long-term archival of digital data objects and produced a number of RFCs (RFC 4810/4998/5276/5698/6238) on top of XML Signature resp. CMS that were needed to do the trick. Another example is XAdES (https://www.w3.org/TR/XAdES/). Note: this does not try to suggest that the signing of TD objects will have the same added complexity as IETF ltans or W3C XAdES, only that specific conventions/profiles for the use of JWS or XML Signature in the TD domain will be needed.
+				</p>
 			</section>
 		</section>
 
@@ -1710,23 +1965,23 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 			<p>
 				This section includes the goals and ideas of each WoT PlugFest in chronological order.
-				Before reflecting the "lessons learned" of each PlugFest, which drove the development of the presented practices, the document provides a <a href="#sec-plugfest-howto">howto</a> for participating in the PlugFests.</p>
+				Before reflecting the "lessons learned" of each PlugFest, which drove the development of the presented practices, the document provides a <a href="#participation-howto">howto</a> for participating in the PlugFests.</p>
 			<p class="ednote">
 				@TODO Add more detailed information along with pictures of each plugfest
 			</p>
 
-			<section id="sec-plugfest-howto">
+			<section>
 				<h2>Participation Howto</h2>
 
 				<p class="note" title="Status">
-					The current status of the howto is <a href="#plugfest-montreal">Montreal (2016-04)</a>
+					The current status of the howto is <a href="#plugfest-beijing">Beijing (2016-07)</a>
 				</p>
 
 				<p>
 					This howto is kept up to date with the requirements for the latest/upcoming edition of the PlugFest.
 					To participate in an upcoming PlugFest, prepare an implemention by deciding on the following questions.
 					The answers to these questions will also be needed when registering for a PlugFest by filling out a table in the corresponding PlugFest page in the <a href="https://www.w3.org/WoT/IG/wiki/Main_Page#Face_to_Face_Meetings">WoT IG Wiki</a>.
-					Note that might be additional options in the future when more features are defined or more protocol bindings become popular in the PlugFest.
+					Note that there might be additional options in the future when more features are defined or more <a>Protocol Bindings</a> become popular in the PlugFest.
 				</p>
 
 				<section>
@@ -1734,26 +1989,36 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 
 					<ol>
 						<li>
-							WoT Client (e.g., a Web dashboard or controller)
+							WoT Client (e.g., a Web dashboard)
 							<blockquote>
-								A WoT client implementation requires a <a href="#sec-td">TD</a> parser, a user interface or control logic to drive the interaction with one or more things.
-								For the TD parser, a JSON-LD library and RDF support are recommended, to reason about the TD of consumed things.
-								Optionally, it can implement lookup support for the <a href="#sec-repo">Repository</a>.
+								A WoT client implementation requires a <a>TD</a> parser and a user interface or control logic to drive the interaction with one or more other <a>Things</a>.
+								Optionally, it can implement lookup support for the <a>Repository</a>.
+								For the TD parser, a <a>JSON-LD</a> library is recommended, but it is also possible to implement a simpler parser that exploits knowledge about which parts of the TD are actually relevant for the Thing.
+								Simple WoT clients can have a limited notion of the semantics and only support interactions that match their own capabilities.
+								A simple switch, for instance, does not need to understand the RGB color model.
+								Powerful WoT clients, however, may have full RDF support and require access to Linked Data to reason about the metadata and interactions provided by the TD.
 							</blockquote>
 						</li>
 						<li>
-							WoT Server (e.g., a thing that only provides functionality, but does not use other things)
+							WoT Server (e.g., a Thing that only provides functionality, but does not use other Things)
 							<blockquote>
 								A WoT server requires resource handlers that implement Properties, Actions, or Events.
-								The <a href="#sec-td">TD</a> can be static or dynamically generated based on the implementd resources.
+								The <a>TD</a> can vary between static or dynamically generated based on the implementd interactions.
 								For this, a simple JSON library is enough, as the vocabulary is fully known at design time.
-								Optionally, it can implement support for repository registration.
+								A WoT server should also implement support for TD Repository registration.
 							</blockquote>
 						</li>
 						<li>
-							WoT Servient (e.g., a virtual thing that composes multiple other things and provides a higher-level TD)
+							WoT Servient (e.g., a virtual Thing that composes multiple other Things and provides a higher-level TD)
 							<blockquote>
-								A WoT <a>servient</a> needs to implement both client and server requirements.
+								A WoT <a>servient</a> is capable of thing-to-thing interaction.
+								It needs to implement both server and client requirements.
+								The server part is usually used to configure the Thing, so it knows which interaction to select on the other Thing(s).
+								A powerful Thing might only need rough information such as all Things at location X and then uses semantic match between itself and the capabilities of the discovered Things.
+								A smart switch, for instance, has the notion of being on or off, and hence binds to the first <code>onOffStatus</code> interaction it finds on discovered lamps.
+								Resource-constrained Things usually need the exact wiring configuration by a user or comissioning tool.
+								A smartphone app, for instance, can be used to write the TD of a specific lamp together with the <code>@id</code> value of the desired interaction to the configuration Properties of a energy-harvesting switch.
+								The client part then starts the interaction with the other Thing(s) by constructing messages based on the given TD and implemented <a>Protocol Bindings</a>.
 							</blockquote>
 						</li>
 					</ol>
@@ -1766,21 +2031,21 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 						<li>
 							HTTP
 							<blockquote>
-								The classic Web protocol is currently most common for clients (e.g., with a Web UI) and more powerful things.
+								The classic Web protocol is currently most common for clients (e.g., with a Web UI) and more powerful Things.
 								There is a plethory of HTTP frameworks available for most languages and platforms.
 							</blockquote>
 						</li>
 						<li>
 							CoAP
 							<blockquote>
-								This protocol is predominant for resource-constrained things.
+								This protocol is predominant for resource-constrained Things.
 								Several different CoAP implementations and frameworks can be found <a href="http://coap.technology/impls.html">here</a>.
 							</blockquote>
 						</li>
 						<li>
 							Additional Protocols
 							<blockquote>
-								To evaluate more protocol bindings, implementors are welcome to bring things with alternative protocol stacks to the PlugFests.
+								To evaluate more <a>Protocol Bindings</a>, implementors are welcome to bring Things with alternative protocol stacks to the PlugFests.
 								Some protocols might require a shim layer to allow for the resource model of WoT.
 							</blockquote>
 						</li>
@@ -1811,14 +2076,14 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							Native Code</li>
 							<blockquote>
 								The application logic is implemented directly in the firmware or a supported language of the protocol framework.
-								This is the default for resource-constrained things that serve a specific purpose.
+								This is the default for resource-constrained Things that serve a specific purpose.
 							</blockquote>
 						</li>
 						<li>
 							Scripting
 							<blockquote>
 								Having the application logic in scripted apps means that the servient must implement a runtime environment that provides the <a>Scripting API</a>.
-								Node.js may provide a good initial prototype for a WoT runtime environment on more powerful things or cloud servients.
+								Node.js may provide a good initial prototype for a WoT runtime environment on more powerful Things or cloud servients.
 								In the embedded world, Lua is a popular scripting language that could be used for portable apps.
 							</blockquote>
 						</li>
@@ -1830,12 +2095,12 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 			<section id="plugfest-sapporo">
 				<h2>Sapporo (2015-10)</h2>
 
-				<p>This first WoT PlugFest elaborated, based on a JSON-LD thing description, server and client role of "thing".
+				<p>This first WoT PlugFest elaborated, based on a JSON-LD Thing Description, server and client role of a Thing.
 				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI encodings.</p>
 				<p>More information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_29-30_October_2015,_Sapporo,_Japan#Plugfest">wiki</a> page.</p>
 				<h3>Goals</h3>
 				<ul>
-					<li>Interoperable applications by means of a thing description only</li>
+					<li>Interoperable applications by means of a Thing Description only</li>
 				</ul>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
@@ -1850,10 +2115,10 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 				<p>Based on the previous <a href="#sapporo-2015-10">PlugFest in Sapporo</a> four advances will be proposed
 				   (more information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_2016,_January,_26th_%E2%80%93_28th,_France,_Nice#PlugFest">wiki</a> page).</p>
 				<ul>
-					<li>Security: using new security mechanisms that emerged for protecting new styles of Web applications (Web/REST APIs, browser-based/mobile apps) in the things space</li>
-					<li>APIs: generic APIs to program behavior for a thing or interact with a thing</li>
-					<li>Thing registries: practical registration and discovery of a thing</li>
-					<li>HATEOAS: application of REST-based hypermedia controls in the thing world</li>
+					<li>Security: using new security mechanisms that emerged for protecting new styles of Web applications (Web/REST APIs, browser-based/mobile apps) in the Things space</li>
+					<li>APIs: generic APIs to program behavior for a Thing or interact with a Thing</li>
+					<li>Thing registries: practical registration and discovery of a Thing</li>
+					<li>HATEOAS: application of REST-based hypermedia controls in the Thing world</li>
 				</ul>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
@@ -1862,8 +2127,8 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							<li>Protocols: how to set up IP addresses?</li>
 							<li>How to setup data types with restrictions, e.g. with ranges?</li>
 							<li>Security: Which resources has access restrictions?</li>
-							<li>How to deal with the situation a thing changes its capabilities?</li>
-							<li>How to share interactions of a TD across several things?</li>
+							<li>How to deal with the situation a Thing changes its capabilities?</li>
+							<li>How to share interactions of a TD across several Things?</li>
 							<li>De-coupling: semantics / relation types from links</li>
 							<li>REST-based topics:
 								<ul>
@@ -1885,7 +2150,7 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 							<li>The security token form-factor JWT is versatile but lacks a standard way of  distinguishing different types</li>
 							<li>CoAP lacks adaptation of the HTTP authorization framework (RFCs 2617/7235)</li>
 							<li>CoAP stacks lack programmatic/declarative ways of telling the runtime to enforce the presence of valid security tokens (for certain resources)</li>
-							<li>WoT lacks consideration on whether that should be expressed in thing descriptions (opt. item for domains that prefer a-priori strategies)</li>
+							<li>WoT lacks consideration on whether that should be expressed in Thing Descriptions (opt. item for domains that prefer a-priori strategies)</li>
 							<li>OAuth resp. ACE miss some coverage for cross-domain cases</li>
 						</ul>
 					</li>
@@ -1907,11 +2172,11 @@ Given JSON schema definitions, providing the mapping to XML schema allows XML to
 					<li>Thing-to-thing communication and interactions</li>
 					<li><a href="#scripting-api">Scripting API</a></li>
 				</ul>
-				<p>Former PlugFest participants are well aware of the available thing acting and sensing capabilities.
+				<p>Former PlugFest participants are well aware of the available actuation and sensing capabilities of Things.
 				   That said, we would like to stimulate new scenarios based on what we have seen so far
-				   (e.g., discover thing properties and combine them with other thing actions and/or events). Feel free
+				   (e.g., discover Properties and combine them with Actions and/or Events of other Things). Feel free
 				   to come up with rather sophisticated real-world use-cases.
-				   Please also make use of the discovery to improve PlugFest preperation and enable onsite combination of things.</p>
+				   Please also make use of the discovery to improve PlugFest preperation and enable onsite combination of Things.</p>
 				<p>It is time to stress what we elaborated so far to actually proof it!</p>
 				<h3>Outcome &amp; Findings</h3>
 				<ul>
