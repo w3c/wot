@@ -157,6 +157,7 @@
           <li>URIs for identifying Things</li>
           <li>A variety of protocols for accessing Things, since no one protocol will be appropriate in all contexts</li>
           <li>Linked Data for describing Things as a basis for interoperability and discovery, playing an analogous role to HTML for Web pages</li>
+          <li>Plug-ins for domain-specific features such as special type systems or security mechanisms</li>
         </ul>
 
         <p>URIs can be used to access machine-interpretable descriptions of Things. These descriptions enable the automatic generation of scriptable objects, whose interaction possibilities correspond to those of the Thing the object stands for. An object on one host can also act as a proxy for an object on another host, for instance to host a device shadow in the cloud. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols and communication patterns best suited to the context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms. Web page scripts can access Things through software objects generated from Thing descriptions, or even host Things themselves, subject to the protocols supported by Web browsers and the enforced security model.</p>
@@ -184,7 +185,7 @@
             </tr>
             <tr>
               <th>Transfer</th>
-              <td>Addressing of elements and message exchange patterns; HTTP, CoAP, MQTT, BLE GATT</td>
+              <td>Addressing of elements and message exchange patterns; HTTP, CoAP, MQTT, WebSockets, Bluetooth GATT, and others</td>
             </tr>
             <tr>
               <th>Transport</th>
@@ -270,9 +271,11 @@
         <p>To enable interoperability, the Working Group will seek to define standard bindings to common platforms and protocols which the server exposes to clients or other servers, in close collaboration with the industry alliances and standards development organizations responsible for these. This includes definition of mappings from the interactions at the Thing Layer to:</p>
 
         <ul>
-          <li><p>Transfer layer communication patterns, push, pull, pub-sub, bi-directional messaging, etc.</p></li>
-          <li><p>Specific protocols at the transport layer, e.g., REST-based protocols such as HTTP and CoAP, pub-sub protocols such as MQTT, and raw channel-based protocols such as WebSockets. Bindings to non-IP transports such as Bluetooth Low Energy may also be defined.</p></li>
+          <li>Transfer layer communication patterns, push, pull, pub-sub, bi-directional messaging, etc.</li>
+          <li>Specific protocols at the transfer layer, e.g., REST-based protocols such as HTTP and CoAP, pub-sub protocols such as MQTT, and raw channel-based protocols such as WebSockets</li>
         </ul>
+        
+        <p>The Web of Things has a multi-protocol architecture and bindings to both IP and non-IP transports (e.g., Bluetooth Low Energy) may be defined.</p>
 
         <div id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
