@@ -149,34 +149,34 @@
       <section id="introduction" class="introduction">
         <h2>Introduction</h2>
 
-        <p>There is broad agreement about the huge potential for services for the Internet of Things (IoT), but this is being held back by fragmentation across many platforms and standards as well as a rapid evolution of the low-level IoT technologies themselves. This Working Group will define inter-platform standards that simplify application development and enable interoperability across a broad range of platforms and associated standards. The starting point is the idea of things that stand for physical or abstract entities, whether connected or not. These can be exposed to applications by software objects with data and interaction models describing the capabilities of the object. These software objects can represent local resources, e.g., sensors and actuators attached to the device running an application script, or remote things, where the object acts as a proxy resources on another device.</p>
+        <p>There is broad agreement about the huge potential for services for the Internet of Things (IoT), but this is being held back by fragmentation across many platforms and standards as well as a rapid evolution of the low-level IoT technologies themselves. This Working Group will define inter-platform standards that simplify application development and enable interoperability across a broad range of platforms and associated standards. The starting point is the idea of Things that stand for physical or abstract entities, whether connected or not. These can be exposed to applications by software objects with data and interaction models describing the capabilities of the object. These software objects can represent local resources, e.g., sensors and actuators attached to the device running an application script, or remote Things, where the object acts as a proxy resources on another device.</p>
 
-        <p>The approach is based upon the fundamentals of Web architecture:</p>
+        <p>The approach is based upon the fundamentals of the Web architecture:</p>
 
         <ul>
-          <li>URIs for identifying things</li>
-          <li>A variety of protocols for accessing things, since no one protocol will be appropriate in all contexts</li>
-          <li>Linked Data for describing things as a basis for interoperability and discovery, playing an analogous role to HTML for Web pages</li>
+          <li>URIs for identifying Things</li>
+          <li>A variety of protocols for accessing Things, since no one protocol will be appropriate in all contexts</li>
+          <li>Linked Data for describing Things as a basis for interoperability and discovery, playing an analogous role to HTML for Web pages</li>
         </ul>
 
-        <p>URIs can be used to access machine-interpretable descriptions of things. These descriptions enable the automatic generation of scriptable objects, whose interaction possibilities correspond to those of the thing the object stands for. An object on one host can also act as a proxy for an object on another host, for instance to host a device shadow in the cloud. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols and communication patterns best suited to the context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms. Web page scripts can access things through software objects generated from thing descriptions, or even host things themselves, subject to the protocols supported by Web browsers and enforced security model.</p>
+        <p>URIs can be used to access machine-interpretable descriptions of Things. These descriptions enable the automatic generation of scriptable objects, whose interaction possibilities correspond to those of the Thing the object stands for. An object on one host can also act as a proxy for an object on another host, for instance to host a device shadow in the cloud. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols and communication patterns best suited to the context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms. Web page scripts can access Things through software objects generated from Thing descriptions, or even host Things themselves, subject to the protocols supported by Web browsers and the enforced security model.</p>
 
         <p>
         	<img style="display:block;width:60%;margin:auto" alt="WoT concept overview" src="wot-wg-2016-figure.png" />
           <span class="caption">Note: this illustrates the concepts, but is not intended as an architecture diagram.</span>
         </p>
 
-        <p>The above figure illustrates the concepts that enable WoT-enabled devices and services (so-called "servients") to interact with existing platforms and the Web infrastructure. The semantic models used in the descriptions for things can also augment existing platforms, thereby enabling thing-to-thing interaction not only among WoT-enabled things, but also with other IoT devices.</p>
+        <p>The above figure illustrates the concepts that enable WoT-enabled devices and services (so-called "servients") to interact with existing platforms and the Web infrastructure. The semantic models used in the descriptions for Things can also augment existing platforms, thereby enabling Thing-to-Thing interaction not only among WoT-enabled Things, but also with other IoT devices.</p>
 
         <p>Note: For a description of potential architectures, see the <a href="https://w3c.github.io/wot/architecture/wot-architecture.html">WoT Interest Group architecture document</a>.</p>
 
-        <p>The following diagram shows how the abstraction layer for "things" fits into the communications stack.</p>
+        <p>The following diagram shows how the abstraction layer for "Things" fits into the communications stack.</p>
 
         <p>
           <table class="" style="width:60%">
             <tr>
               <th>Application</th>
-              <td>Programs that define the interactions of a thing, consuming and exposing APIs for control of sensors and actuators</td>
+              <td>Programs that define the interactions of a Thing, consuming and exposing APIs for control of sensors and actuators</td>
             </tr>
             <tr>
               <th>Things</th>
@@ -200,7 +200,7 @@
 
         <a href="wot-ig-2016-relationship.png"><img id="relationships" src="wot-ig-2016-relationship.png" alt="Relationship between WoT WG and WoT IG" /></a>
 
-        <p>The Web of Things Working Group will define Web technology standards to enable services that span different IoT platforms and standards, with a view to countering fragmentation and enabling a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realize the full potential for the IoT. In short, we seek to extend the Web from a Web of pages to a Web of things.</p>
+        <p>The Web of Things Working Group will define Web technology standards to enable services that span different IoT platforms and standards, with a view to countering fragmentation and enabling a global market of services and associated software tools. This is expected to drive down the costs and risks involved in developing services, and help realize the full potential for the IoT. In short, we seek to extend the Web from a Web of pages to a Web of Things.</p>
 
         <p>There are many possible applications across a wide range of domains, e.g., homes, offices, healthcare, cities, electrical grids, retail and manufacturing. The key to realizing the Web of Things is the metadata that provides the basis for semantic interoperability. This Working Group will focus on the metadata vocabularies that are useful across a broad range of application domains. In addition, we plan work on scripting APIs exposed to application developers, and bindings to common platforms and protocols in collaboration with the standards development organizations responsible for these.</p>
 
@@ -218,23 +218,23 @@
           <ul>
             <li>Metadata for describing the data and interaction models exposed to applications, the choice of communications patterns, and the information needed for interoperating with other platforms and protocols, including security settings and privacy policies</li>
             <li>Serialization formats for metadata suitable for processing on resource-constrained devices</li>
-            <li>Platform-independent application-facing APIs for things and their lifecycle</li>
+            <li>Platform-independent application-facing APIs for Things and their lifecycle</li>
             <li>Bindings from the abstract messages to specific platforms and protocols in collaboration with the corresponding organizations</li>
           </ul>
         </div>
 
         <h3>Thing Description</h3>
 
-        <p>The Working Group will develop solutions to describe things through metadata and declarations of their capabilities (e.g., possible interactions). This work includes the definition of different vocabularies and serialization formats of such a Thing Description.</p>
+        <p>The Working Group will develop solutions to describe Things through metadata and declarations of their capabilities (e.g., possible interactions). This work includes the definition of different vocabularies and serialization formats of such a Thing Description.</p>
 
         <ul>
-          <li><p>A Linked Data vocabulary for describing things in terms of the data and interaction models they expose to applications (e.g., interaction patterns such as Properties, Actions, and Events as described in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Interest Group current practices document</a>). This will cover thing lifecycles, datatypes, including streams, integrity constraints, and provision for early and late binding. This cross-domain vocabulary will be designed for use in combination with vocabularies for domain specific-semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage interdependencies, and is analogous to the role of metadata for package management in the Linux operating system.</p></li>
+          <li><p>A Linked Data vocabulary for describing Things in terms of the data and interaction models they expose to applications (e.g., interaction patterns such as Properties, Actions, and Events as described in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Interest Group current practices document</a>). This will cover Thing lifecycles, datatypes, including streams, integrity constraints, and provision for early and late binding. This cross-domain vocabulary will be designed for use in combination with vocabularies for domain specific-semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage interdependencies, and is analogous to the role of metadata for package management in the Linux operating system.</p></li>
 
           <li><p>A Linked Data vocabulary for security and privacy metadata as a basis for platforms to determine how to securely interoperate. This will build upon emerging standards and best practices for securing exchanges, and includes metadata relating to authentication, authorization, secure communication and privacy policies. The use of such metadata will be optional (to support deployments which prefer to inform the requester via error responses rather than upfront). It will support, but not mandate, the utilization of online trusted third party services (such as OAuth/ACE authorization servers). It will support a variety of security token form factors (e.g., JSON, CBOR), domain-specific security token contents (e.g., building automation), various security models (bearer, proof-of-possession). It will support a variety of protocols for their acquisition (e.g., OAuth) and supply (e.g., CoAP). Support for secure communications will initially focus on transport-level security (e.g., TLS and DTLS).</p></li>
 
           <li><p>A Linked Data vocabulary for communications metadata. This will enable platforms to determine how to interoperate given a choice of protocols, data formats, and encodings, as well as different communication patterns, e.g., push, pull, pub-sub, and peer-to-peer. Communications metadata may be needed to describe the multiplexing of data from different sensors, different approaches to buffering data, and the interoperability requirements for communicating with battery- or ambient-powered devices that spend a lot of their time asleep to conserve power.</p></li>
 
-          <li><p>Serialization formats and encodings for metadata suitable for processing on resource-constrained platforms and designed to appeal to application developers. This includes the definition of standard terms and their bindings to URIs in the Resource Description Framework (RDF), so that it is not necessary for resource-constrained platforms to dereference these terms when constructing the software objects corresponding to the data models for things. Where practical this will be based upon existing formats and encodings.</p></li>
+          <li><p>Serialization formats and encodings for metadata suitable for processing on resource-constrained platforms and designed to appeal to application developers. This includes the definition of standard terms and their bindings to URIs in the Resource Description Framework (RDF), so that it is not necessary for resource-constrained platforms to dereference these terms when constructing the software objects corresponding to the data models for Things. Where practical this will be based upon existing formats and encodings.</p></li>
         </ul>
 
         <h3>Scripting APIs</h3>
@@ -242,16 +242,16 @@
         <p>The Working Group will seek to specify a suite of APIs exposed to applications covering the following:</p>
 
         <ul>
-          <li><p>Interactions with things and reactions/handlers to provide the functionality of a thing. This includes APIs both for applications acting in the client role interacting with a thing as well as APIs for applications in the server role, exposing a thing.</p></li>
+          <li><p>Interactions with Things and reactions/handlers to provide the functionality of a Thing. This includes APIs both for applications acting in the client role interacting with a Thing as well as APIs for applications in the server role, exposing a Thing.</p></li>
 
-          <li><p>Discovery for local and remote cases, abstracting away from the details of the discovery mechanisms. This will cover a range of approaches: things on the same host, things nearby, things on the same network, things listed in a repository, and discovery based upon formal or crowd-sourced semantics and social relationships.</p></li>
+          <li><p>Discovery for local and remote cases, abstracting away from the details of the discovery mechanisms. This will cover a range of approaches: Things on the same host, Things nearby, Things on the same network, Things listed in a repository, and discovery based upon formal or crowd-sourced semantics and social relationships.</p></li>
 
           <li>
           	<p>Cross-platform security frameworks including authentication, authorization, and secure communication, as well as the means for their establishment through provisioning of metadata and keying associations. This will enable the use of security frameworks, such as IETF OAuth and ACE, according to the specific tasks for the client (e.g., security credentials acquisition and supply), and for the server (e.g., security token enforcement and validation), as well as common tasks (e.g., registration). A goal is to decouple applications from the implementations of the security frameworks. This introduces online trusted-third party components to which constrained WoT components delegate specific processing tasks (such as authentication and authorization). It requires trusted assertions that report about such processing events as well as protocols to trigger such processing.</p>
             <p>Support for secure communications will initially focus on transport-level security (e.g., TLS and DTLS). This task will utilize 3rd party defined security frameworks and protocols including their extension points. The profiling of their usage is in scope of this task. The specification of own (new from scratch) exchanges is out-of-scope</p>
           </li>
 
-          <li><p>Thing lifecycles, e.g., registering and creating things, either from a thing description or using scripting and enabling applications to be aware of lifecycle transitions</p></li>
+          <li><p>Thing lifecycles, e.g., registering and creating Things, either from a Thing description or using scripting and enabling applications to be aware of lifecycle transitions</p></li>
 
           <li><p>Cross-cutting concerns, e.g., internationalization, accessibility, and privacy</p></li>
 
