@@ -1592,7 +1592,7 @@
 
 					<p>
 					The API aims to provide means for both exposing things (as a server) and consuming things (as a client).
-					They can be retrieved from a singular entry point, it offers facotry methods to create representations of exposed and consumed things.
+					They can be retrieved from a singular entry point, it offers factory methods to create representations of exposed and consumed things.
 					These representations offer methods to define behaviour for a thing, change the thing model or interact with the thing.
 					</p>  
 					
@@ -1646,7 +1646,7 @@
 							</ul>
 
 							<b>Returns</b>
-							<p>A promise resolved to an array of <code>ConsumedThing</code> and rejected if the discovery type is not availiable or there was an error</p>
+							<p>A promise resolved to an array of <code>ConsumedThing</code> and rejected if the discovery type is not available or there was an error</p>
 
 							<pre class="example highlight" title="Discover Things">
 								WoT.discover("registry", {registry:"http://my.registry.org"})
@@ -1661,7 +1661,7 @@
 						<section>
 							<h3 id="consumeDescription">factory <code>consumeDescription()</code></h3>
 
-							<p>This factory method csan be used to create Things based on a Thing Decription</p>
+							<p>This factory method can be used to create Things based on a Thing Decription</p>
 
 							<b>Parameters</b>
 							<ul>
@@ -1671,7 +1671,7 @@
 							</ul>
 
 							<b>Returns</b>
-							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not availiable or there was an error</p>
+							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not available or there was an error</p>
 
 							<pre class="example highlight" title="access a Thing by description">
 								WoT.consumeDescription({ /*... valid thing description ...*/ })
@@ -1684,7 +1684,7 @@
 						<section>
 							<h3 id="consumeDescriptionUri">factory <code>consumeDescriptionUri()</code></h3>
 
-							<p>This factory method csan be used to create Things based on a uri of a Thing Decription</p>
+							<p>This factory method can be used to create Things based on a uri of a Thing Decription</p>
 
 							<b>Parameters</b>
 							<ul>
@@ -1694,7 +1694,7 @@
 							</ul>
 
 							<b>Returns</b>
-							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not availiable or there was an error</p>
+							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not available or there was an error</p>
 
 							<pre class="example highlight" title="access a Thing by uri of Thing Description">
 								WoT.consumeDescriptionUri("http://somethingontheweb.org/td")
