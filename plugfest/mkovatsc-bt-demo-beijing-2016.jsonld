@@ -1,0 +1,146 @@
+{
+	"@context": [
+		"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+		{"BACnet": "http://bacowl.sourceforge.net/2012/bacnet.ttl"},
+		{"BACtype": "http://n.ethz.ch/student/ganeshr/bacnet/bacnettypes.json"},
+		{"HVAC": "http://n.ethz.ch/student/ganeshr/bacnet/hvac_ont.owl"}
+	],
+	"name":"Room Automation CNB H110",
+	"uris":["coap://172.16.100.xx:5683/CNB/H110/RoomAutomation/", "http://172.16.100.xx/CNB/H110/RoomAutomation/", "bacnet://172.16.100.xx/"],
+	"encodings": [ "JSON", "ASN.1" ],
+	"@id":"1_0_93",
+	"properties":[
+		{
+			"@type": [ "HVAC:TemperatureSensor", "BACnet:AnalogInputObject:presentValue" ],
+			"name": "Room temperature",
+			"_comment": "Issue: directly observable Properties",
+			"writable": false,
+			"valueType": "BACtype:Real",
+			"hrefs": [ "HVAC/RoomTemperature", "HVAC/RoomTemperature", "/0/74/85" ],
+			"@id": "1_0_74_85"
+		},
+		{
+			"@type": ["BACnet:AnalogInputObject:statusFlags" ],
+			"name": "Room temperature status",
+			"_comment": "Example of bitstring type. Issue: type system",
+			"writable": false,
+			"valueType": "BACtype:StatusFlags",
+			"hrefs": [ "HVAC/RoomTemperatureSF", "HVAC/RoomTemperatureSF", "/0/74/111" ],
+			"@id": "1_0_74_111"
+		},
+		{
+			"@type": ["HVAC:Setpoint", "BACnet:AnalogValueObject:presentValue"],
+			"name": "Temperature setpoint",
+			"writable": true,
+			"valueType": "BACtype:Real",
+			"hrefs": ["HVAC/TemperatureSetpoint", "HVAC/TemperatureSetpoint", "/2/14/85"],
+			"@id": "1_2_14_85"
+		},
+		{
+			"@type": [ "HVAC:Output", "BACnet:AnalogOutputObject:presentValue" ],
+			"name": "Fan speed",
+			"_comment": "Issue: asymettric data types involved in read-write",
+			"writable": true,
+			"valueType": "BACtype:PropertyValueNumeric",
+			"hrefs": [ "HVAC/Fan/Speed", "HVAC/Fan/Speed", "/1/57/85" ],
+			"@id": "1_2_43_85_R"
+		},
+		{
+			"@type": ["BACnet:AnalogOutputObject:priorityArray" ],
+			"name": "Fan output priority",
+			"_comment": "Example of an array whose elements are of hetrogenous types (sequence of BACnet::Any). Issue: type system",
+			"writable": false,
+			"valueType": "BACtype:PriorityArray",
+			"hrefs": [ "HVAC/Fan/PriorityArray", "HVAC/Fan/Priority", "/1/57/87" ],
+			"@id": "1_2_224_87"
+		},
+		{
+			"@type": [ "HVAC:Input", "BACnet:BinaryValueObject:presentValue" ],
+			"name": "Occupancy",
+			"_comment": "Issue: directly observable Properties",
+			"writable": false,
+			"valueType": "BACtype:Boolean",
+			"hrefs": [ "OccupancyStatus", "OccupancyStatus", "/5/70/85" ],
+			"@id": "1_5_70_85"
+		},
+		{
+			"_comment": "Vocabulary for @type unfinished",
+			"@type": [ "HVAC:Output" ],
+			"name": "Light brightness",
+			"writable": true,
+			"valueType": "BACtype:PropertyValueNumeric",
+			"hrefs": [ "Lighting/Light1/Brightness", "Lighting/Light1/Brightness", "/2/224/85" ],
+			"@id": "1_2_224_85"
+		},
+		{
+			"@type": [ "BACnet:TrendLogObject:logBuffer" ],
+			"name": "Temperature history",
+			"_comment": "Stream of timestamped values. Issue: parameterization for ReadRange)",
+			"writable": false,
+			"valueType": "BACtype:LogRecords",
+			"hrefs": [ "HVAC/RoomTemperature/Trend/Values", "HVAC/RoomTemperature/Trend/Values", "/20/5/131" ],
+			"@id": "1_20_5:131"
+		},
+		{
+			"@type": [ "BACnet:TrendLogObject:logDeviceObjectProperty" ],
+			"name": "Trend logger reference",
+			"_comment": "Example of complex type",
+			"writable": true,
+			"valueType": "BACtype:DeviceObjectPropertyReference",
+			"hrefs": [ "HVAC/RoomTemperature/Trend/Source", "HVAC/RoomTemperature/Trend/Source", "/20/5/132" ],
+			"@id": "1_20_5:132"
+		},
+		{
+			"@type": "BACnet:FileObject",
+			"name": "Config file",
+			"_comment": "Example of binary data. Issue: property-specific encoding (Media Types?)",
+			"writable": false,
+			"valueType": {
+				"type": "array",
+				"items": { "type": "integer" }
+			},
+			"hrefs": [ "Files/ConfigFile", "Files/ConfigFile", "/10/301/0" ],
+			"@id": "1_10_301:0"
+		},
+		{
+			"@type": "BACnet:FileObject",
+			"name": "Product Image",
+			"_comment": "Example of binary data. Issue: property-specific encoding (Media Types?)",
+			"writable": false,
+			"valueType": {
+				"type": "array",
+				"items": { "type": "integer" }
+			},
+			"hrefs": [ "Files/ImageFile", "Files/ImageFile", "/10/302/0" ],
+			"@id": "1_10_302:0"
+		}
+	],
+	"actions":[
+		{
+			"_comment": "Vocabulary for @type unfinished",
+			"name": "Sun blind position",
+			"inputData": { "valueType": "BACtype:BlindsPosition" },
+			"outputData": { "valueType": "BACtype:BlindsControlActionMonitor" },
+			"hrefs": [ "Actions/BlindsControl", "Actions/BlindsControl", "/BlindsControlAction" ],
+			"@id": "1_10_789:1"
+		},
+		{
+			"_comment": "Vocabulary for @type unfinished",
+			"name": "Temperature loop",
+			"inputData": { "valueType": "BACtype:Real" },
+			"outputData": { "valueType": "BACtype:TemperatureControlActionMonitor" },
+			"hrefs": [ "Actions/TemperatureControl", "Actions/TemperatureControl", "/TemperatureControlAction" ],
+			"@id": "1_10_301:1"
+		}			   		
+	],
+	"events":[
+		{
+			"_comment": "Vocabulary for @type unfinished",
+			"name": "Change of value",
+			"inputData": { "valueType": "BACtype:COVSubscriptionParameters" },
+			"outputData": { "valueType": "BACtype:COVNotification" },
+			"hrefs": [ "EventSource/CovEvent", "EventSource/CovEvent", "/SubscribeCOV" ],
+			"@id": "1_10_790:1"
+		}
+	]
+}
