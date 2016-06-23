@@ -412,7 +412,109 @@
 									<span id="some-practice" class="practicelab">Client (C) Security over HTTP</span>
 								</p>
 								<p class="practicedesc">
-									@TODO Configuration ..
+									<ul>
+										<li>
+											<b>Registration</b>
+											<p>Registration is done according [[!RFC7591]] and described in the following.</p>
+											<p>Create a HTTP request with JSON request content as in the following prototype and send it via TLS to the AM.</p>
+											
+											<p class="ednote">The following process provides details for the PlugFest and should be moved to a decicated section given that it does not fall anymore into the category "Concepts and Building Blocks".</p>
+											
+											<span class="note">For the PlugFest use URL:
+											<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/register</code>. <br />
+											Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+											
+											<div>
+												<p>
+													<b>Request</b> <br />
+													<code>POST /iam-services/0.1/oidc/am/register HTTP/1.1</code>
+												</p>
+												
+												<p>
+													<b>Request headers</b> <br />
+													<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+													<code>Content-Type: application/json</code> <br />
+													<code>Accept: application/json</code>
+												</p>
+												
+												<p>
+													<b>Request body</b> <br />
+													<code>{</code> <br />
+													<code>  "client_name": "yourClientName",</code> <br />
+													<code>  "grant_types": ["client_credentials"]</code> <br />
+													<code>}</code>
+												</p>
+												
+												<p>
+													<span class="note">Naming convention: replace all values prefixed "your" with your value i.e. use any string of your choice instead "yourClientName"</span>
+												</p>
+											</div>
+											
+											<div>
+												<p><b>Response</b></p>
+												<p>
+													Check that you get a 201 Created response and extract the value of "client_id" (this value is called &lt;c_id&gt; in the following) and the value of "client_secret" (called &lt;c_secret&gt; in the following) from the JSON response body. A response body prototype is:
+												</p>
+												<pre class="nolinks">
+{
+	"client_id": "889d02cf-16dd-4934-9341-a754088faxyz",
+	"client_secret": "ahd5MU42J0hIxPXzhUhjJHt2d0Oc5M6B644CtuwUlE9zpSuF14-kXYZ"
+}
+												</pre>
+												<p>Store &lt;c_id&gt; and &lt;c_secret&gt; for use during the token acquisition.</p>
+											</div>
+										</li>
+										<li>
+											<b>Token Acquisition</b>
+											<p>Create a HTTP request as in the following prototype and send it via TLS to the AM.</p>
+											<span class="note">For the PlugFest use URL:
+											<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/token</code>. <br />
+											Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+											
+											<div>
+												<p>
+													<b>Request</b> <br />
+													<code>POST /iam-services/0.1/oidc/am/token HTTP/1.1</code>
+												</p>
+												
+												<p>
+													<b>Request headers</b> <br />
+													<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+													<code>Content-Type: application/x-www-form-urlencoded</code> <br />
+													<code>Accept: application/json</code> <br />
+													<code>Authorization: Basic Base64(&lt;c_id&gt;:&lt;c_secret&gt;)</code>
+												</p>
+												
+												<p>
+													<b>Request body</b> <br />
+													<code>grant_type=client_credentials</code>
+												</p>
+											</div>
+											
+											<div>
+												<p><b>Response</b></p>
+												<p>
+													Check that you get a 200 OK response and extract the value of the <code>access_token</code> member from the JSON response body. A response body prototype is:
+												</p>
+												<pre class="nolinks">
+{
+	"access_token": "eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJzdWIiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJpc3MiOiJodHRwczpcL1wvYW0uY29tcGFueS1zLmNvbTo4NDQzXC9pYW0tc2VydmljZXNcLzAuMVwvb2lkY1wvYW1cLyIsInR5cCI6Im9yZzp3Mzp3b3Q6and0OmFtOmFzLXdyYXA6bWluIiwiYXNfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlKOS5leUpoZFdRaU9pSk9hV05sVUd4MVoyWmxjM1JTVXlJc0luTjFZaUk2SW1GaU9XSTNZMkkzTFRaak5EQXRORGRtTlMwNU1HSTRMVEUxT1dZek5EUXdNakU1TmlJc0ltbHpjeUk2SWs1cFkyVlFiSFZuWm1WemRFRlRJaXdpZEhsd0lqb2liM0puT25jek9uZHZkRHBxZDNRNllYTTZiV2x1SWl3aWFuUnBJam9pWTJZeU5UTm1PV1l0WXpVME5pMDBZbVF4TFRoa1ptUXROamcyTURabE16UmhOalEwSW4wLmZlcVZFZF9JdXk1Q2FPNDhhb0RuWUhfOTlPX1ZlYncxMDdLdXpSclRpc1RBeHZkY1JaWjZaS3RPVWZkOUNlclYzaG1rQWF0LUNXUElCckxMOUZXTFhRIiwianRpIjoiN2MyMjFmMWItZjNkNC00ZTc4LWE4ZWQtOGRmOWUxNGNjMWM5In0.Le_Y90zsO92MyDgbKxUCr3eUNU8Z7-QKc0u0RSr26MHN1za2EUQ1wOoJhLDXR2dFo9geFf7mBbiM77EP6h0ldA",
+	"token_type": "bearer",
+	"expires_in": 3600
+}
+												</pre>
+												<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for JWT validation hints).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called &lt;as_token&gt; in the following.</p>
+											</div>
+											
+											
+										</li>
+										<li>
+											<b>Operation when requesting HTTP to a protected endpoint</b>
+											<ol>
+												<li>Attach an <code>Authorization: Bearer &lt;as_token&gt;</code> header to HTTP requests to RS. </li>
+											</ol>
+										</li>
+									</ul>
 								</p>
 							</div>
 							
