@@ -318,12 +318,101 @@
 				
 				<section>
 					<h3>Security Mechanisms</h3>
+					<p class="ednote">
+						This section will shortly provide best practices about how to establish the authorization and the authentication
+						of WoT interactions depending on the actual protocol in use.
+						At this time we would like to point to the <a href="https://www.w3.org/WoT/IG/wiki/images/0/0c/Security_4_Plugfest_%E2%80%93_HowTo.pdf" >HowTo description</a> used at the Nice PlugFest. That said, the technical details are the same as used in the previous PlugFests.
+					</p>
+					
+					<p>@TODO check whether incorporated security mechanisms are in sync with Nice PlugFest</p>
+					
+					<p>The security mechanisms in this section describe how to to establish the authorization and the authentication of WoT interactions for the following components:</p>
+					<ul>
+						<li>A <b>Resource server</b> (RS) responding to requests via HTTP or CoAP</li>
+						<li>A <b>Client</b> (C) sending requests via HTTP or CoAP</li>
+					</ul>
+					
+					<p>
+						Note that adding security is regarded to be optional. Moreover, the mechanisms currently described provide basic protection of the interactions. Doing so is intentional to offer a <i>low entry-barrier</i> to encourage many security-enabled PlugFest implementations. For that purpose it is fully intentional to take various shortcuts. For production use additional considerations and additional security mechanisms/checks will typically be required.
+					</p>
+					
+					<p>
+						The architectural security model adopted from IETFF ACE define also the following components:
+					</p>
+					<ul>
+						<li>An <b>Authorization Manager</b> (AM) representing multiple clients</li>
+						<li>An <b>Authorization Server</b> (AS) representing multiple resource servers</li>
+					</ul>
+
+						
+					<p>For a security-enabled PlugFest implementation <a href="#simple-request-authorization-and-caller-authentication"><i>Request Authorization and Caller Authentication</i></a> is considered to be the primary goal while <a href="#message-authentication-and-encryption"><i>Message Authentication and Encryption</i></a> represents a subordinate security goal for now.</p>
+						
+					<section>
+						<h4><i>Simple</i> Request Authorization and Caller Authentication</h4>
+						<p>The goal is to authorize requests and (implicitly) authenticate callers by means of bearer security token (JWT, see [[!RFC7519]]) with minimal contents.</p>
+						<p class="issue">For the protection of high-value resources, PoP  respectively HoK models may be required instead of bearer tokens.</p>
+						
+						<section>
+							<h5>Communications via HTTP</h5>
+								
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Resource Server (RS) Security over HTTP</span>
+								</p>
+								<p class="practicedesc">
+									@TODO Configure the RS component with
+								</p>
+							</div>
+							
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Client (C) Security over HTTP</span>
+								</p>
+								<p class="practicedesc">
+									@TODO Configuration ..
+								</p>
+							</div>
+							
+						</section>
+						
+						<section>
+							<h5>Communications via CoAP</h5>
+						
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Resource Server (RS) Security over CoAP</span>
+								</p>
+								<p class="practicedesc">
+									@TODO XXX
+								</p>
+							</div>
+							
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Client (C) Security over CoAP</span>
+								</p>
+								<p class="practicedesc">
+									@TODO XXX
+								</p>
+							</div>
+						
+						</section>
+					</section>
+					
+					<section>
+						<h4><i>Advanced</i> Request Authorization and Caller Authentication</h4>
 						<p class="ednote">
-							This section will shortly provide best practices about how to establish the authorization and the authentication
-							of WoT interactions depending on the actual protocol in use.
-							At this time we would like to point to the <a href="https://www.w3.org/WoT/IG/wiki/images/0/0c/Security_4_Plugfest_%E2%80%93_HowTo.pdf" >HowTo description<a/> used at the Nice PlugFest. That said, the technical details are the same as used in the previous PlugFests.
+							The Authorization Manager&nbsp;(AM) and Authorization Server&nbsp;(AS) components also support a more advanced way of request authorization that supplies a JWT bearer security token with actual access control information in style of AIF (draft-bormann-core-ace-aif-03).
 						</p>
-					<p>@TODO extract and incorporate details from Nice PlugFest</p>
+						<p>@TODO integrate advanced level of request authorization and caller authentication</p>
+					</section>
+					
+					<section>
+						<h4>Message Authentication and Encryption</h4>
+						<p>Message authentication and encryption is done by means of TLS (for HTTP) and DTLS (for CoAP). </p>
+						<p>@TODO add adequate information how message authentication and encryption is to be done</p>
+					</section>
+					
 				</section>
 
 			</section>
