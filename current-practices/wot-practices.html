@@ -360,7 +360,50 @@
 									<span id="some-practice" class="practicelab">Resource Server (RS) Security over HTTP</span>
 								</p>
 								<p class="practicedesc">
-									@TODO Configure the RS component with
+									<ul>
+										<li>
+											<b>Configure the RS component with</b>
+											<ul>
+												<li>RS id: <code>NicePlugfestRS</code></li>
+												<li>AS issuer name: <code>NicePlugfestAS</code></li>
+												<li>
+													AS public signature verification key for ES256, the following JWK object
+													<pre class="nolinks">
+{
+	"keys": [{
+		"kty": "EC",
+		"use": "sig",
+		"crv": "P-256",
+		"kid": "PlugFestNice",
+		"x": "CQsJZUvJWx5yB5EwuipDXRDye4Ybg0wwqxpGgZtcl3w",
+		"y": "qzYskD2N7GrGDSgo6N9pPLXMIwr6jowFGyqsTJGmpz4",
+		"alg": "ES256"
+	}]
+}
+													</pre>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<b>Operation when receiving a HTTP request at a protected endpoint</b>
+											<ol>
+												<li>Check if the request contains an <code>Authorization</code> header. Respond with a 401 error if not</li>
+												<li>Check if the request contains an <code>Authorization: Bearer</code>-header with non-null/empty contents. Respond with a 401 error if not</li>
+												<li>Check if the value of the <code>Authorization: Bearer</code>-header is a JWT object. Respond with a 401 error if not</li>
+												<li>Check if the JWT object is signed. Respond with a 401 error if not</li>
+												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see above). Respond with a 401 error if invalid</li>
+												<li>
+													Check the contents of the JWT object
+													<ul>
+														<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 401 error if not</li>
+														<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 401 error if not</li>
+													</ul>
+												</li>
+												<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
+											</ol>
+										</li>
+										<li>For more background see [[!RFC6750]] (HTTP Bearer tokens) and [[!RFC7519]] (JWT), [[!RFC7517]] (JWK). For JWT libraries in various programming languages see <a href="http://jwt.io/#libraries-io">http://jwt.io</a>.</li>
+									</ul>
 								</p>
 							</div>
 							
