@@ -351,6 +351,8 @@
 						<h4><i>Simple</i> Request Authorization and Caller Authentication</h4>
 						<p>The goal is to authorize requests and (implicitly) authenticate callers by means of bearer security token (JWT, see [[!RFC7519]]) with minimal contents.</p>
 						<p class="issue">For the protection of high-value resources, PoP  respectively HoK models may be required instead of bearer tokens.</p>
+																	
+						<p class="ednote">The following process provides details for the PlugFest and should be moved to a decicated section given that it does not fall anymore into the category "Concepts and Building Blocks".</p>
 						
 						<section>
 							<h5>Communications via HTTP</h5>
@@ -367,7 +369,7 @@
 												<li>RS id: <code>NicePlugfestRS</code></li>
 												<li>AS issuer name: <code>NicePlugfestAS</code></li>
 												<li>
-													AS public signature verification key for ES256, the following JWK object
+													AS public signature verification key for ES256 use the following JWK object
 													<pre class="nolinks">
 {
 	"keys": [{
@@ -418,8 +420,6 @@
 											<p>Registration is done according [[!RFC7591]] and described in the following.</p>
 											<p>Create a HTTP request with JSON request content as in the following prototype and send it via TLS to the AM.</p>
 											
-											<p class="ednote">The following process provides details for the PlugFest and should be moved to a decicated section given that it does not fall anymore into the category "Concepts and Building Blocks".</p>
-											
 											<span class="note">For the PlugFest use URL:
 											<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/register</code>. <br />
 											Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
@@ -453,7 +453,7 @@
 											<div>
 												<p><b>Response</b></p>
 												<p>
-													Check that you get a 201 Created response and extract the value of "client_id" (this value is called &lt;c_id&gt; in the following) and the value of "client_secret" (called &lt;c_secret&gt; in the following) from the JSON response body. A response body prototype is:
+													Check that you get a 201 Created response and extract the value of <code>client_id</code> (this value is called <code>&lt;c_id&gt;</code> in the following) and the value of <code>client_secret</code> (called <code>&lt;c_secret&gt;</code> in the following) from the JSON response body. A response body prototype is:
 												</p>
 												<pre class="nolinks">
 {
@@ -461,7 +461,7 @@
 	"client_secret": "ahd5MU42J0hIxPXzhUhjJHt2d0Oc5M6B644CtuwUlE9zpSuF14-kXYZ"
 }
 												</pre>
-												<p>Store &lt;c_id&gt; and &lt;c_secret&gt; for use during the token acquisition.</p>
+												<p>Store <code>&lt;c_id&gt;</code> and <code>&lt;c_secret&gt;</code> for use during the token acquisition.</p>
 											</div>
 										</li>
 										<li>
@@ -503,7 +503,7 @@
 	"expires_in": 3600
 }
 												</pre>
-												<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for JWT validation hints).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called &lt;as_token&gt; in the following.</p>
+												<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for JWT validation hints).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called <code>&lt;as_token&gt;</code> in the following.</p>
 											</div>
 											
 											
