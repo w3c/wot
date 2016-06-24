@@ -363,12 +363,12 @@
 								</p>
 								<p class="practicedesc">
 									<ul>
-										<li>
-											<b>Configure the RS component with</b>
+										<li id="sec-security-rs-configuration-http">
+											<b>Configuration</b> of the RS component:
 											<ul>
 												<li>RS id: <code>NicePlugfestRS</code></li>
 												<li>AS issuer name: <code>NicePlugfestAS</code></li>
-												<li>
+												<li  id="sec-security-as-public-key-es256">
 													AS public signature verification key for ES256 use the following JWK object
 													<pre class="nolinks">
 {
@@ -386,14 +386,20 @@
 												</li>
 											</ul>
 										</li>
+										<li id="sec-security-rs-registration-http">
+											<b>Registration</b>
+											<ul>
+												<li>Skipped for RSs that support ES256 for now.</li>
+											</ul>
+										</li>
 										<li>
-											<b>Operation when receiving a HTTP request at a protected endpoint</b>
+											<b>Operation</b> when receiving a HTTP request at a protected endpoint
 											<ol>
 												<li>Check if the request contains an <code>Authorization</code> header. Respond with a 401 error if not</li>
 												<li>Check if the request contains an <code>Authorization: Bearer</code>-header with non-null/empty contents. Respond with a 401 error if not</li>
 												<li>Check if the value of the <code>Authorization: Bearer</code>-header is a JWT object. Respond with a 401 error if not</li>
 												<li>Check if the JWT object is signed. Respond with a 401 error if not</li>
-												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see above). Respond with a 401 error if invalid</li>
+												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 401 error if invalid</li>
 												<li>
 													Check the contents of the JWT object
 													<ul>
@@ -509,7 +515,7 @@
 											
 										</li>
 										<li>
-											<b>Operation when requesting HTTP to a protected endpoint</b>
+											<b>Operation</b> when requesting HTTP to a protected endpoint
 											<ol>
 												<li>Attach an <code>Authorization: Bearer &lt;as_token&gt;</code> header to HTTP requests to RS. </li>
 											</ol>
@@ -528,7 +534,37 @@
 									<span id="some-practice" class="practicelab">Resource Server (RS) Security over CoAP</span>
 								</p>
 								<p class="practicedesc">
-									@TODO XXX
+									<ul>
+										<li>
+											<b>Configuration</b> of the RS component
+											<ul>
+												<li>Same as for HTTP communications. See <a href="#sec-security-rs-configuration-http">above</a>.</li>
+											</ul>
+										</li>
+										<li>
+											<b>Registration</b>
+											<ul>
+												<li>Same as for HTTP communications. See <a href="#sec-security-rs-registration-http">above</a></li>
+											</ul>
+										</li>
+										<li>
+											<b>Operation</b> when receiving a CoAP request at a protected endpoint
+											<ol>
+												<li>Check if the request contains  a CoAP option 65000 with non-null/empty contents. Respond with a 4.01 error if not</li>
+												<li>Check if the value of the CoAP option 65000 content is <code>Bearer &lt;jwt_token&gt;</code> with a non-null/empty <code>&lt;jwt_token&gt;</code>. Respond with a 4.01 error if not</li>
+												<li>Check if the JWT object is signed. Respond with a 4.01 error if not</li>
+												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 4.01 error if invalid</li>
+												<li>
+													Check the contents of the JWT object
+													<ul>
+														<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 4.01 error if not</li>
+														<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 4.01 error if not</li>
+													</ul>
+												</li>
+												<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
+											</ol>
+										</li>
+									</ul>
 								</p>
 							</div>
 							
