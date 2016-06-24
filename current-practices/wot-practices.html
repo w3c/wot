@@ -421,7 +421,7 @@
 								</p>
 								<p class="practicedesc">
 									<ul>
-										<li>
+										<li id="sec-security-c-registration-http">
 											<b>Registration</b>
 											<p>Registration is done according [[!RFC7591]] and described in the following.</p>
 											<p>Create a HTTP request with JSON request content as in the following prototype and send it via TLS to the AM.</p>
@@ -470,7 +470,7 @@
 												<p>Store <code>&lt;c_id&gt;</code> and <code>&lt;c_secret&gt;</code> for use during the token acquisition.</p>
 											</div>
 										</li>
-										<li>
+										<li id="sec-security-c-token-aquisition-http">
 											<b>Token Acquisition</b>
 											<p>Create a HTTP request as in the following prototype and send it via TLS to the AM.</p>
 											<span class="note">For the PlugFest use URL:
@@ -516,9 +516,9 @@
 										</li>
 										<li>
 											<b>Operation</b> when requesting HTTP to a protected endpoint
-											<ol>
+											<ul>
 												<li>Attach an <code>Authorization: Bearer &lt;as_token&gt;</code> header to HTTP requests to RS. </li>
-											</ol>
+											</ul>
 										</li>
 									</ul>
 								</p>
@@ -537,15 +537,11 @@
 									<ul>
 										<li>
 											<b>Configuration</b> of the RS component
-											<ul>
-												<li>Same as for HTTP communications. See <a href="#sec-security-rs-configuration-http">above</a>.</li>
-											</ul>
+											<p>Same as for HTTP communications. See <a href="#sec-security-rs-configuration-http">above</a>.</p>
 										</li>
 										<li>
 											<b>Registration</b>
-											<ul>
-												<li>Same as for HTTP communications. See <a href="#sec-security-rs-registration-http">above</a></li>
-											</ul>
+											<p>Same as for HTTP communications. See <a href="#sec-security-rs-registration-http">above</a></p>
 										</li>
 										<li>
 											<b>Operation</b> when receiving a CoAP request at a protected endpoint
@@ -573,7 +569,23 @@
 									<span id="some-practice" class="practicelab">Client (C) Security over CoAP</span>
 								</p>
 								<p class="practicedesc">
-									@TODO XXX
+									<ul>
+										<li>
+											<b>Registration</b>
+											<p>Same as for HTTP communications. See <a href="#sec-security-c-registration-http">above</a>.</p>
+										</li>
+										<li id="sec-security-c-token-aquisition-http">
+											<b>Token Acquisition</b>
+											<p>Same as for HTTP communications. See <a href="#sec-security-c-token-aquisition-http">above</a>.</p>
+										</li>
+										<li>
+											<b>Operation</b> when requesting CoAP to a protected endpoint
+											<ul>
+												<li>Attach an <code>Bearer &lt;as_token&gt;</code> as value of the CoAP option 65000
+to CoAP requests to RS. </li>
+											</ul>
+										</li>
+									</ul>
 								</p>
 							</div>
 						
