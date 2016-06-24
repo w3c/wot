@@ -337,6 +337,300 @@
 						</p>
 					</div>
 				</section>
+				
+				<section>
+					<h3>Security Mechanisms</h3>
+					
+					<!-- <p>@TODO check whether incorporated security mechanisms are in sync with Nice PlugFest</p> -->
+					
+					<p>The security mechanisms in this section describe how to to establish the authorization and the authentication of WoT interactions for the following components:</p>
+					<ul>
+						<li>A <b>Resource server</b> (RS) responding to requests via HTTP or CoAP</li>
+						<li>A <b>Client</b> (C) sending requests via HTTP or CoAP</li>
+					</ul>
+					
+					<p>
+						Note that adding security is regarded to be optional. Moreover, the mechanisms currently described provide basic protection of the interactions. Doing so is intentional to offer a <i>low entry-barrier</i> to encourage many security-enabled PlugFest implementations. For that purpose it is fully intentional to take various shortcuts. For production use additional considerations and additional security mechanisms/checks will typically be required.
+					</p>
+					
+					<p>
+						The architectural security model adopted from IETF ACE define also the following components:
+					</p>
+					<ul>
+						<li>An <b>Authorization Manager</b> (AM) representing multiple clients</li>
+						<li>An <b>Authorization Server</b> (AS) representing multiple resource servers</li>
+					</ul>
+
+						
+					<p>For a security-enabled PlugFest implementation <a href="#simple-request-authorization-and-caller-authentication"><i>Request Authorization and Caller Authentication</i></a> is considered to be the primary goal while <a href="#message-authentication-and-encryption"><i>Message Authentication and Encryption</i></a> represents a subordinate security goal for now.</p>
+					
+					<p class="ednote">
+						We would like to point out that the technical details are the same as in previous PlugFests (see <a href="https://www.w3.org/WoT/IG/wiki/images/0/0c/Security_4_Plugfest_%E2%80%93_HowTo.pdf" >HowTo description</a> from Nice PlugFest). That said, this is also the reason that some <i>identifiers</i> and <i>names</i> relate to Nice (e.g., <code> NicePlugfestRS</code> or <code>NicePlugfestAS</code>).
+					</p>
+						
+					<section>
+						<h4><i>Simple</i> Request Authorization and Caller Authentication</h4>
+						<p>The goal is to authorize requests and (implicitly) authenticate callers by means of bearer security token (JWT, see [[!RFC7519]]) with minimal contents.</p>
+						<p class="issue">For the protection of high-value resources, PoP  respectively HoK models may be required instead of bearer tokens.</p>
+																	
+						<p class="ednote">The following security communication practices provide details for PlugFests and might be moved to a decicated section given that it does not fall anymore into the scope of this section, namely "Concepts &amp; Building Blocks".</p>
+						
+						<section>
+							<h5>Communications via HTTP</h5>
+								
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Resource Server (RS) Security over HTTP</span>
+								</p>
+								<p class="practicedesc">
+									<ul>
+										<li id="sec-security-rs-configuration-http">
+											<b>Configuration</b> of the RS component:
+											<ul>
+												<li>RS id: <code>NicePlugfestRS</code></li>
+												<li>AS issuer name: <code>NicePlugfestAS</code></li>
+												<li  id="sec-security-as-public-key-es256">
+													AS public signature verification key for ES256 use the following JWK object
+													<pre class="nolinks">
+{
+	"keys": [{
+		"kty": "EC",
+		"use": "sig",
+		"crv": "P-256",
+		"kid": "PlugFestNice",
+		"x": "CQsJZUvJWx5yB5EwuipDXRDye4Ybg0wwqxpGgZtcl3w",
+		"y": "qzYskD2N7GrGDSgo6N9pPLXMIwr6jowFGyqsTJGmpz4",
+		"alg": "ES256"
+	}]
+}
+													</pre>
+												</li>
+											</ul>
+										</li>
+										<li id="sec-security-rs-registration-http">
+											<b>Registration</b>
+											<p>Skipped for RSs that support ES256 for now.</p>
+										</li>
+										<li>
+											<b>Operation</b> when receiving a HTTP request at a protected endpoint
+											<ol>
+												<li>Check if the request contains an <code>Authorization</code> header. Respond with a 401 error if not</li>
+												<li>Check if the request contains an <code>Authorization: Bearer</code>-header with non-null/empty contents. Respond with a 401 error if not</li>
+												<li>Check if the value of the <code>Authorization: Bearer</code>-header is a JWT object. Respond with a 401 error if not</li>
+												<li>Check if the JWT object is signed. Respond with a 401 error if not</li>
+												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 401 error if invalid</li>
+												<li>
+													Check the contents of the JWT object
+													<ul>
+														<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 401 error if not</li>
+														<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 401 error if not</li>
+													</ul>
+												</li>
+												<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
+											</ol>
+										</li>
+										<li></li>
+									</ul>
+								</p>
+							</div>
+							
+							<p class="note" id="sec-security-background">
+								For more background see [[!RFC6750]] (HTTP Bearer tokens), [[!RFC7519]] (JWT), and [[!RFC7517]] (JWK). <br />
+								For JWT libraries in various programming languages see <a href="http://jwt.io/#libraries-io">http://jwt.io</a>.
+							</p>
+							
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Client (C) Security over HTTP</span>
+								</p>
+								<p class="practicedesc">
+									<ul>
+										<li id="sec-security-c-registration-http">
+											<b>Registration</b>
+											<p>Registration is done according [[!RFC7591]] and described in the following.</p>
+											<p>Create a HTTP request with JSON request content as in the following prototype and send it via TLS to the AM.</p>
+											
+											<span class="note">For the PlugFest use URL:
+											<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/register</code>. <br />
+											Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+											
+											<div>
+												<p>
+													<b>Request</b> <br />
+													<code>POST /iam-services/0.1/oidc/am/register HTTP/1.1</code>
+												</p>
+												
+												<p>
+													<b>Request headers</b> <br />
+													<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+													<code>Content-Type: application/json</code> <br />
+													<code>Accept: application/json</code>
+												</p>
+												
+												<p>
+													<b>Request body</b> <br />
+													<code>{</code> <br />
+													<code>  "client_name": "yourClientName",</code> <br />
+													<code>  "grant_types": ["client_credentials"]</code> <br />
+													<code>}</code>
+												</p>
+												
+												<p>
+													<span class="note">Naming convention: replace all values prefixed "your" with your value i.e. use any string of your choice instead "yourClientName"</span>
+												</p>
+											</div>
+											
+											<div>
+												<p><b>Response</b></p>
+												<p>
+													Check that you get a 201 Created response and extract the value of <code>client_id</code> (this value is called <code>&lt;c_id&gt;</code> in the following) and the value of <code>client_secret</code> (called <code>&lt;c_secret&gt;</code> in the following) from the JSON response body. A response body prototype is:
+												</p>
+												<pre class="nolinks">
+{
+	"client_id": "889d02cf-16dd-4934-9341-a754088faxyz",
+	"client_secret": "ahd5MU42J0hIxPXzhUhjJHt2d0Oc5M6B644CtuwUlE9zpSuF14-kXYZ"
+}
+												</pre>
+												<p>Store <code>&lt;c_id&gt;</code> and <code>&lt;c_secret&gt;</code> for use during the token acquisition.</p>
+											</div>
+										</li>
+										<li id="sec-security-c-token-aquisition-http">
+											<b>Token Acquisition</b>
+											<p>Create a HTTP request as in the following prototype and send it via TLS to the AM.</p>
+											<span class="note">For the PlugFest use URL:
+											<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/token</code>. <br />
+											Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+											
+											<div>
+												<p>
+													<b>Request</b> <br />
+													<code>POST /iam-services/0.1/oidc/am/token HTTP/1.1</code>
+												</p>
+												
+												<p>
+													<b>Request headers</b> <br />
+													<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+													<code>Content-Type: application/x-www-form-urlencoded</code> <br />
+													<code>Accept: application/json</code> <br />
+													<code>Authorization: Basic Base64(&lt;c_id&gt;:&lt;c_secret&gt;)</code>
+												</p>
+												
+												<p>
+													<b>Request body</b> <br />
+													<code>grant_type=client_credentials</code>
+												</p>
+											</div>
+											
+											<div>
+												<p><b>Response</b></p>
+												<p>
+													Check that you get a 200 OK response and extract the value of the <code>access_token</code> member from the JSON response body. A response body prototype is:
+												</p>
+												<pre class="nolinks">
+{
+	"access_token": "eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJzdWIiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJpc3MiOiJodHRwczpcL1wvYW0uY29tcGFueS1zLmNvbTo4NDQzXC9pYW0tc2VydmljZXNcLzAuMVwvb2lkY1wvYW1cLyIsInR5cCI6Im9yZzp3Mzp3b3Q6and0OmFtOmFzLXdyYXA6bWluIiwiYXNfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlKOS5leUpoZFdRaU9pSk9hV05sVUd4MVoyWmxjM1JTVXlJc0luTjFZaUk2SW1GaU9XSTNZMkkzTFRaak5EQXRORGRtTlMwNU1HSTRMVEUxT1dZek5EUXdNakU1TmlJc0ltbHpjeUk2SWs1cFkyVlFiSFZuWm1WemRFRlRJaXdpZEhsd0lqb2liM0puT25jek9uZHZkRHBxZDNRNllYTTZiV2x1SWl3aWFuUnBJam9pWTJZeU5UTm1PV1l0WXpVME5pMDBZbVF4TFRoa1ptUXROamcyTURabE16UmhOalEwSW4wLmZlcVZFZF9JdXk1Q2FPNDhhb0RuWUhfOTlPX1ZlYncxMDdLdXpSclRpc1RBeHZkY1JaWjZaS3RPVWZkOUNlclYzaG1rQWF0LUNXUElCckxMOUZXTFhRIiwianRpIjoiN2MyMjFmMWItZjNkNC00ZTc4LWE4ZWQtOGRmOWUxNGNjMWM5In0.Le_Y90zsO92MyDgbKxUCr3eUNU8Z7-QKc0u0RSr26MHN1za2EUQ1wOoJhLDXR2dFo9geFf7mBbiM77EP6h0ldA",
+	"token_type": "bearer",
+	"expires_in": 3600
+}
+												</pre>
+												<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for <a href="#sec-security-background">JWT validation hints</a>).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called <code>&lt;as_token&gt;</code> in the following.</p>
+											</div>
+											
+											
+										</li>
+										<li>
+											<b>Operation</b> when requesting HTTP to a protected endpoint
+											<ul>
+												<li>Attach an <code>Authorization: Bearer &lt;as_token&gt;</code> header to HTTP requests to RS. </li>
+											</ul>
+										</li>
+									</ul>
+								</p>
+							</div>
+							
+						</section>
+						
+						<section>
+							<h5>Communications via CoAP</h5>
+						
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Resource Server (RS) Security over CoAP</span>
+								</p>
+								<p class="practicedesc">
+									<ul>
+										<li>
+											<b>Configuration</b> of the RS component
+											<p>Same as for HTTP communications. See <a href="#sec-security-rs-configuration-http">above</a>.</p>
+										</li>
+										<li>
+											<b>Registration</b>
+											<p>Same as for HTTP communications. See <a href="#sec-security-rs-registration-http">above</a></p>
+										</li>
+										<li>
+											<b>Operation</b> when receiving a CoAP request at a protected endpoint
+											<ol>
+												<li>Check if the request contains  a CoAP option 65000 with non-null/empty contents. Respond with a 4.01 error if not</li>
+												<li>Check if the value of the CoAP option 65000 content is <code>Bearer &lt;jwt_token&gt;</code> with a non-null/empty <code>&lt;jwt_token&gt;</code>. Respond with a 4.01 error if not</li>
+												<li>Check if the JWT object is signed. Respond with a 4.01 error if not</li>
+												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 4.01 error if invalid</li>
+												<li>
+													Check the contents of the JWT object
+													<ul>
+														<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 4.01 error if not</li>
+														<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 4.01 error if not</li>
+													</ul>
+												</li>
+												<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
+											</ol>
+										</li>
+									</ul>
+								</p>
+							</div>
+							
+							<div class="practice">
+								<p>
+									<span id="some-practice" class="practicelab">Client (C) Security over CoAP</span>
+								</p>
+								<p class="practicedesc">
+									<ul>
+										<li>
+											<b>Registration</b>
+											<p>Same as for HTTP communications. See <a href="#sec-security-c-registration-http">above</a>.</p>
+										</li>
+										<li id="sec-security-c-token-aquisition-http">
+											<b>Token Acquisition</b>
+											<p>Same as for HTTP communications. See <a href="#sec-security-c-token-aquisition-http">above</a>.</p>
+										</li>
+										<li>
+											<b>Operation</b> when requesting CoAP to a protected endpoint
+											<ul>
+												<li>Attach a <code>Bearer &lt;as_token&gt;</code> as value of the CoAP option 65000
+to CoAP requests to RS. </li>
+											</ul>
+										</li>
+									</ul>
+								</p>
+							</div>
+						
+						</section>
+					</section>
+					
+					<section>
+						<h4><i>Advanced</i> Request Authorization and Caller Authentication</h4>
+						<p class="ednote">
+							The Authorization Manager&nbsp;(AM) and Authorization Server&nbsp;(AS) components also support a more advanced way of request authorization that supplies a JWT bearer security token with actual access control information in style of AIF (draft-bormann-core-ace-aif-03).
+						</p>
+						<p>@TODO integrate advanced level of request authorization and caller authentication</p>
+					</section>
+					
+					<section>
+						<h4>Message Authentication and Encryption</h4>
+						<p>Message authentication and encryption is done by means of TLS (for HTTP) and DTLS (for CoAP). </p>
+						<p>@TODO add adequate information how message authentication and encryption is to be done</p>
+					</section>
+					
+				</section>
 
 			</section>
 
