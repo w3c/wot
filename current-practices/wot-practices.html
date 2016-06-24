@@ -318,13 +318,8 @@
 				
 				<section>
 					<h3>Security Mechanisms</h3>
-					<p class="ednote">
-						This section will shortly provide best practices about how to establish the authorization and the authentication
-						of WoT interactions depending on the actual protocol in use.
-						At this time we would like to point to the <a href="https://www.w3.org/WoT/IG/wiki/images/0/0c/Security_4_Plugfest_%E2%80%93_HowTo.pdf" >HowTo description</a> used at the Nice PlugFest. That said, the technical details are the same as used in the previous PlugFests.
-					</p>
 					
-					<p>@TODO check whether incorporated security mechanisms are in sync with Nice PlugFest</p>
+					<!-- <p>@TODO check whether incorporated security mechanisms are in sync with Nice PlugFest</p> -->
 					
 					<p>The security mechanisms in this section describe how to to establish the authorization and the authentication of WoT interactions for the following components:</p>
 					<ul>
@@ -337,7 +332,7 @@
 					</p>
 					
 					<p>
-						The architectural security model adopted from IETFF ACE define also the following components:
+						The architectural security model adopted from IETF ACE define also the following components:
 					</p>
 					<ul>
 						<li>An <b>Authorization Manager</b> (AM) representing multiple clients</li>
@@ -346,13 +341,17 @@
 
 						
 					<p>For a security-enabled PlugFest implementation <a href="#simple-request-authorization-and-caller-authentication"><i>Request Authorization and Caller Authentication</i></a> is considered to be the primary goal while <a href="#message-authentication-and-encryption"><i>Message Authentication and Encryption</i></a> represents a subordinate security goal for now.</p>
+					
+					<p class="ednote">
+						We would like to point out that the technical details are the same as in previous PlugFests (see <a href="https://www.w3.org/WoT/IG/wiki/images/0/0c/Security_4_Plugfest_%E2%80%93_HowTo.pdf" >HowTo description</a> from Nice PlugFest). That said, this is also the reason that some <i>identifiers</i> and <i>names</i> relate to Nice (e.g., <code> NicePlugfestRS</code> or <code>NicePlugfestAS</code>).
+					</p>
 						
 					<section>
 						<h4><i>Simple</i> Request Authorization and Caller Authentication</h4>
 						<p>The goal is to authorize requests and (implicitly) authenticate callers by means of bearer security token (JWT, see [[!RFC7519]]) with minimal contents.</p>
 						<p class="issue">For the protection of high-value resources, PoP  respectively HoK models may be required instead of bearer tokens.</p>
 																	
-						<p class="ednote">The following process provides details for the PlugFest and should be moved to a decicated section given that it does not fall anymore into the category "Concepts and Building Blocks".</p>
+						<p class="ednote">The following security communication practices provide details for PlugFests and might be moved to a decicated section given that it does not fall anymore into the scope of this section, namely "Concepts &amp; Building Blocks".</p>
 						
 						<section>
 							<h5>Communications via HTTP</h5>
@@ -388,9 +387,7 @@
 										</li>
 										<li id="sec-security-rs-registration-http">
 											<b>Registration</b>
-											<ul>
-												<li>Skipped for RSs that support ES256 for now.</li>
-											</ul>
+											<p>Skipped for RSs that support ES256 for now.</p>
 										</li>
 										<li>
 											<b>Operation</b> when receiving a HTTP request at a protected endpoint
@@ -410,10 +407,15 @@
 												<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
 											</ol>
 										</li>
-										<li>For more background see [[!RFC6750]] (HTTP Bearer tokens) and [[!RFC7519]] (JWT), [[!RFC7517]] (JWK). For JWT libraries in various programming languages see <a href="http://jwt.io/#libraries-io">http://jwt.io</a>.</li>
+										<li></li>
 									</ul>
 								</p>
 							</div>
+							
+							<p class="note" id="sec-security-background">
+								For more background see [[!RFC6750]] (HTTP Bearer tokens), [[!RFC7519]] (JWT), and [[!RFC7517]] (JWK). <br />
+								For JWT libraries in various programming languages see <a href="http://jwt.io/#libraries-io">http://jwt.io</a>.
+							</p>
 							
 							<div class="practice">
 								<p>
@@ -509,7 +511,7 @@
 	"expires_in": 3600
 }
 												</pre>
-												<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for JWT validation hints).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called <code>&lt;as_token&gt;</code> in the following.</p>
+												<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for <a href="#sec-security-background">JWT validation hints</a>).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called <code>&lt;as_token&gt;</code> in the following.</p>
 											</div>
 											
 											
@@ -581,7 +583,7 @@
 										<li>
 											<b>Operation</b> when requesting CoAP to a protected endpoint
 											<ul>
-												<li>Attach an <code>Bearer &lt;as_token&gt;</code> as value of the CoAP option 65000
+												<li>Attach a <code>Bearer &lt;as_token&gt;</code> as value of the CoAP option 65000
 to CoAP requests to RS. </li>
 											</ul>
 										</li>
