@@ -170,10 +170,6 @@
 		<section id="sec-concepts">
 			<h1>Concepts &amp; Building Blocks</h1>
 
-			<p class="ednote">
-				This introduction shall give a quick overview over the overall architecture before going into detail.
-			</p>
-
 			<p>
 				Things in the WoT architecture are represented by so-called <a>servients</a>, which are usually hosted directly on the physical thing.
 				Yet servients can also represent virtual Things, for instance a collection of Things (e.g., all lights in a room) or a WoT gateway for legacy devices (e.g., a Bluetooth device connected to a smartphone).
@@ -181,6 +177,11 @@
 				Servients communicate with each other through the so-called <a>WoT Interface</a>, a Web API that follows the recommendations of the WoT IG.
 				Servients can be in client role (i.e., they only consume other Things), server role (i.e., they only provide capabilities), or both (i.e., they use other Things, but also provide capabilities).
 			</p>
+			
+			<figure id="fig-servient-native">
+        <img src="servient-native.png" width="60%" />
+        <figcaption>Things are implemented by a servient and communicate through their WoT Interface.</figcaption>
+      </figure>
 
 			<p>
 				Each Thing is described by a WoT <a>Thing Description</a> (TD).
@@ -188,6 +189,11 @@
 				Usually, Things directly provide their own TD, but the TD can also be hosted externally if there is not enough space on the device or when a WoT-compatible legacy device is retrofitted with a TD.
 				To ease discovery, TDs can be registered with a well-known TD <a>repository</a>, where Things of interest can be queried, for instance using <a>SPARQL</a>.
 			</p>
+			
+			<figure id="fig-servient-script">
+        <img src="servient-script.png" width="60%" />
+        <figcaption>Servients can also host a runtime environment that allows application logic to be implemented in portable scripts.</figcaption>
+      </figure>
 
 			<p>
 				The application logic of a Thing (or technically a <a>servient</a>) can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained Things.
@@ -207,17 +213,19 @@
 					A WoT Interface is a Web interface (often called "Web API") that is describable by a WoT <a>Thing Description</a> (TD).
 					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
 					Furthermore, it must suppoort the encodings and security mechanisms defined in the TD.
-					The WoT Interface is used for the communication between <a>servients</a>, that is, the networking protocols and interfaces (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
+					The WoT Interface is used for the communication between <a>servients</a> unsing networking protocols (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
 				</p>
 
 				<section>
 					<h3>Resource Model and URIs</h3>
 
 					<p>
-
+						Based on the fundamentals of the Web, the interactions with a Thing are modeled as Web resources, which are identified and addressable through URIs.
+						The first part of a URI is the scheme, which identifies the protocol used, e.g., <code>http://...</code>, <code>ftp://...</code>, or <code>rtp://...</code>.
+						Depending on the application requirements, the Web already allows to switch between protocols, for instance when an HTML page retrieved over HTTP has a link to a stream provided over the Real-Time Transport Protocol (RTP).
+						Similarly, Thing interactions can be available over different or even multiple protocols, indicated by the scheme of the URIs.
+						See <a href=#thing-description"></a> later for more details on the addressing of interaction resources.
 					</p>
-
-					@TODO How to use security metadata correctly, servers should hide unauthorized resources, etc.
 				</section>
 
 				<section>
@@ -225,7 +233,8 @@
 
 					<p>
 						We currently have an implicit mapping from WoT interaction patterns to specific protocol operations such as REST or BLE methods.
-						The WoT architecture is not limited to the Protocol Bindings listed here. These simply represent the commonly used protocols at the recent PlugFests.
+						The WoT architecture is not limited to the Protocol Bindings listed here.
+						These simply represent the commonly used protocols at the recent PlugFests.
 					</p>
 					
 					<p>
