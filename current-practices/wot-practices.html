@@ -2317,7 +2317,7 @@ to CoAP requests to RS. </li>
 							WoT Client (e.g., a Web dashboard)
 							<blockquote>
 								A WoT client implementation requires a <a>TD</a> parser and a user interface or control logic to drive the interaction with one or more other <a>Things</a>.
-								Optionally, it can implement lookup support for the <a>Repository</a>.
+								Optionally, it can implement lookup support for the <a>Repository</a> (also see <a href="#repository">3.2.6.2.2 Repository</a>. An HowTo how such a lookup can be realised can be found <a href="https://github.com/thingweb/thingweb-repository#returns-a-list-of-tds-based-on-a-sparql-query-pattern-eg-a-client-queries-the-repository-for-a-td-with-a-specific-thing-uri" target="_blank">here</a>. 
 								For the TD parser, a <a>JSON-LD</a> library is recommended, but it is also possible to implement a simpler parser that exploits knowledge about which parts of the TD are actually relevant for the Thing.
 								Simple WoT clients can have a limited notion of the semantics and only support interactions that match their own capabilities.
 								A simple switch, for instance, does not need to understand the RGB color model.
@@ -2330,7 +2330,7 @@ to CoAP requests to RS. </li>
 								A WoT server requires resource handlers that implement Properties, Actions, or Events.
 								The <a>TD</a> can vary between static or dynamically generated based on the implementd interactions.
 								For this, a simple JSON library is enough, as the vocabulary is fully known at design time.
-								A WoT server should also implement support for TD Repository registration.
+								A WoT server should also implement support for TD Repository registration. A registration HowTo can be found <a href="https://github.com/thingweb/thingweb-repository#interacting-with-a-thingweb-repository-server" target="_blank">here</a>.
 							</blockquote>
 						</li>
 						<li>
