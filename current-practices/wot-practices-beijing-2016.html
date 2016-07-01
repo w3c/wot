@@ -213,7 +213,7 @@
 					A WoT Interface is a Web interface (often called "Web API") that is describable by a WoT <a>Thing Description</a> (TD).
 					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
 					Furthermore, it must suppoort the encodings and security mechanisms defined in the TD.
-					The WoT Interface is used for the communication between <a>servients</a> unsing networking protocols (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
+					The WoT Interface is used for the communication between <a>servients</a> using networking protocols (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
 				</p>
 
 				<section>
@@ -694,7 +694,7 @@ to CoAP requests to RS. </li>
 					</pre>
 
 					<p>
-						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property; also see CoAP protocol binding <a href="#protocol-bindings">here</a>) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure (encoding).
+						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure (encoding).
 						However, this is missing critical semantic information such as this resource actually represents and what unit this number has.
 					</p>
 					
@@ -831,7 +831,7 @@ to CoAP requests to RS. </li>
 								}
 							</pre>
 
-							It also possible to declare namespaces in the context instead of terms. In the example above, three of the four URIs have the same prefix:
+							It is also possible to declare namespaces in the context instead of terms. In the example above, three of the four URIs have the same prefix:
 							<code>http://www.w3c.org/wot/td#</code>. This common part could be given a short name, refered to as a namespace (as in XML). URIs could
 							then be shortened by concatenating namespace with <code>:</code> and a local name (anywhere in the JSON-LD document). E.g.:
 
@@ -1029,7 +1029,7 @@ to CoAP requests to RS. </li>
 						<ul>
 							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
 							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
-							<li><b>hrefs:</b>A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>hrefs:</b> A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
 							<li><b>valueType:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
 							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
 							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
@@ -1916,7 +1916,7 @@ to CoAP requests to RS. </li>
 
 					<p>
 					The API is designed to be language-agnostic (i.e. being applicable to different languages) to enable various runtimes.
-					The overall API philosophy is reactive, meaning a programmer will mostly be passing callback functions which get called from the framework
+					The overall API philosophy is reactive, meaning a programmer will mostly be passing callback functions which get called from the framework.
 					It makes uses of the promise pattern that is very popular in Javascript.
 					</p>
 
@@ -1930,7 +1930,7 @@ to CoAP requests to RS. </li>
 					<b>Object orientation</b>: This document is written language agnostic, but is specified using object oriented metaphors. This document will capture a proposition for the structure of the WoT scripting API and state the design principles.The translation of this metaphors for non-object oriented languages (most notably C) can be done by passing handles and structs, which is common practise, but needs further specification. Some ground rules can be named however:
 					all functions shall have a prefix
 					handles or structs replace passing of objects to the framework
-					structs represent objects being passed from the framework
+					structs represent objects being passed from the framework.
 					</p>
 					
 				</section>
