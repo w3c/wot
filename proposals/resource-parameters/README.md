@@ -12,7 +12,11 @@ Typically, (REST) resources are used with query parameters such as /resource?par
 
 ...
 "parameters": {"par1" : { "type": "number" },
+
                "par2" : { "type": "string" },
+               
               ...    
+              
               }
+              
 ...
