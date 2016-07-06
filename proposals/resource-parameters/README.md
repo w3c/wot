@@ -10,9 +10,10 @@ Typically, (REST) resources are used with query parameters such as /resource?par
 #First Ideas
 1)  define query parameters in the same way as the inputValue/outputValues and define a new field 'parameters', e.g.,
 
-...<br /> 
+```
 "parameters": {"par1" : { "type": "number" },<br /> 
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"par2" : { "type": "string" },<br /> 
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br />     
+               "par2" : { "type": "string" },<br /> 
+               ...      
               }<br /> 
               ...
+```
