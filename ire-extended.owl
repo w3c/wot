@@ -33,7 +33,6 @@
         <owl:versionInfo rdf:datatype="&xsd;float">0.7</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">Original version: http://www.loa-cnr.it/ontologies/IRE/IRE.owl</rdfs:comment>
         <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
-        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/KCO/KCO.owl#"/>
     </owl:Ontology>
     
 
@@ -120,7 +119,7 @@
 
     <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#hasWebLocation">
         <rdfs:range rdf:resource="http://w3c.github.io/wot/ire-extended.owl#AbstractWebLocation"/>
-        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/KCO.owl#ComputationalObject"/>
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/ire-extended.owl#WebResource"/>
     </owl:ObjectProperty>
     
 
@@ -164,8 +163,8 @@
 
     <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#webLocationOf">
         <rdfs:domain rdf:resource="http://w3c.github.io/wot/ire-extended.owl#AbstractWebLocation"/>
+        <rdfs:range rdf:resource="http://w3c.github.io/wot/ire-extended.owl#WebResource"/>
         <owl:inverseOf rdf:resource="http://w3c.github.io/wot/ire-extended.owl#hasWebLocation"/>
-        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/KCO.owl#ComputationalObject"/>
     </owl:ObjectProperty>
     
 
@@ -268,7 +267,7 @@
     <!-- http://w3c.github.io/wot/ire-extended.owl#Resource -->
 
     <owl:Class rdf:about="http://w3c.github.io/wot/ire-extended.owl#Resource">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/KCO.owl#ComputationalObject"/>
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
         <rdfs:comment rdf:datatype="&xsd;string">A computational object that might be seen as a proxy for some entity.
 Possible: a resource can enter a resolution method.</rdfs:comment>
     </owl:Class>
@@ -282,10 +281,6 @@ Possible: a resource can enter a resolution method.</rdfs:comment>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://w3c.github.io/wot/ire-extended.owl#ProxyResource"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&DUL;realizes"/>
-                        <owl:someValuesFrom rdf:resource="&inf;formal-expression"/>
-                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor"/>
                         <owl:onClass rdf:resource="&DUL;Entity"/>
@@ -360,20 +355,6 @@ Possible: a resource can enter a resolution method.</rdfs:comment>
     <!-- http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion -->
 
     <owl:Class rdf:about="&DUL;SpaceRegion"/>
-    
-
-
-    <!-- http://www.loa-cnr.it/ontologies/InformationObjects.owl#formal-expression -->
-
-    <owl:Class rdf:about="&inf;formal-expression">
-        <rdfs:subClassOf rdf:resource="&DUL;InformationObject"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/KCO.owl#ComputationalObject -->
-
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/KCO.owl#ComputationalObject"/>
 </rdf:RDF>
 
 
