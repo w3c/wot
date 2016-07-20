@@ -25,6 +25,7 @@
         <creator rdf:datatype="&xsd;string">W3C Web of Things Interest Group</creator>
         <identifier rdf:datatype="&xsd;anyURI">http://www.w3c.org/wot/td</identifier>
         <owl:imports rdf:resource="http://w3c.github.io/wot/ire-extended.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
     </owl:Ontology>
     
 
@@ -81,6 +82,18 @@
     
 
 
+    <!-- http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor"/>
+    
+
+
     <!-- http://w3c.github.io/wot/wot.owl#dependsOn -->
 
     <owl:ObjectProperty rdf:about="&wot;dependsOn">
@@ -93,6 +106,14 @@
 
     <owl:ObjectProperty rdf:about="&wot;forProperty">
         <rdfs:range rdf:resource="&wot;Property"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wot;Action"/>
+                    <rdf:Description rdf:about="&wot;Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -194,8 +215,8 @@
     <!-- http://w3c.github.io/wot/wot.owl#isInteractionOf -->
 
     <owl:ObjectProperty rdf:about="&wot;isInteractionOf">
-        <owl:inverseOf rdf:resource="&wot;hasInteraction"/>
         <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor"/>
+        <owl:inverseOf rdf:resource="&wot;hasInteraction"/>
     </owl:ObjectProperty>
     
 
@@ -213,18 +234,6 @@
     <owl:ObjectProperty rdf:about="&wot;isThingDescriptionOf">
         <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor -->
-
-    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor"/>
-    
-
-
-    <!-- http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor -->
-
-    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor"/>
     
 
 
@@ -308,11 +317,35 @@
     
 
 
+    <!-- http://w3c.github.io/wot/ire-extended.owl#ProxyResource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/ire-extended.owl#ProxyResource"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/ire-extended.owl#SemanticResource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/ire-extended.owl#SemanticResource"/>
+    
+
+
     <!-- http://w3c.github.io/wot/wot.owl#Action -->
 
     <owl:Class rdf:about="&wot;Action">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Abstract"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <owl:disjointWith rdf:resource="&wot;Event"/>
         <owl:disjointWith rdf:resource="&wot;Property"/>
+        <rdfs:comment>Real-world entity characterizing particular time intervals, possibly influencing some Properties. Non-immediate natural phenomena (e.g. heating) or functionalities provided by a cyber-physical system (open, close, switch, toggle. . . ) are Actions.</rdfs:comment>
     </owl:Class>
     
 
@@ -320,7 +353,20 @@
     <!-- http://w3c.github.io/wot/wot.owl#Event -->
 
     <owl:Class rdf:about="&wot;Event">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Abstract"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasConstituent"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <owl:disjointWith rdf:resource="&wot;Property"/>
+        <rdfs:comment>Real-world entity characterizing particular instants, possibly related to some Properties. State changes or sensor measurements are
+Events.</rdfs:comment>
     </owl:Class>
     
 
@@ -351,13 +397,17 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://w3c.github.io/wot/ire-extended.owl#ProxyResource"/>
+        <rdfs:comment>Web resource of arbitrary content format acting as a digital proxy for any real-world entity that is not already digital information. Such entities can be physical quantities like temperature or pressure, natural phenomena like raise of temperature or object motion, arbitrary states like on/off, etc.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://w3c.github.io/wot/wot.owl#Property -->
 
-    <owl:Class rdf:about="&wot;Property"/>
+    <owl:Class rdf:about="&wot;Property">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
+        <rdfs:comment>Time-independent real-world entity that is neither an Action, nor an Event. For instance, physical quantities (temperature, pressure, brigthness. . . ) are Properties.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -371,7 +421,9 @@
 
     <!-- http://w3c.github.io/wot/wot.owl#Thing -->
 
-    <owl:Class rdf:about="&wot;Thing"/>
+    <owl:Class rdf:about="&wot;Thing">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Entity"/>
+    </owl:Class>
     
 
 
@@ -390,6 +442,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>Semantic resource formally describing a unique WoT Thing that a software agent can interact with. Examples of WoT Things include building rooms, manufactured products, mechanical systems but also digital control devices, i.e. any real-world entity without a priori restriction.</rdfs:comment>
     </owl:Class>
     
 
@@ -399,18 +452,6 @@
     <owl:Class rdf:about="&wot;UpdatePropertyAction">
         <rdfs:subClassOf rdf:resource="&wot;Action"/>
     </owl:Class>
-    
-
-
-    <!-- http://w3c.github.io/wot/ire-extended.owl#ProxyResource -->
-
-    <owl:Class rdf:about="http://w3c.github.io/wot/ire-extended.owl#ProxyResource"/>
-    
-
-
-    <!-- http://w3c.github.io/wot/ire-extended.owl#SemanticResource -->
-
-    <owl:Class rdf:about="http://w3c.github.io/wot/ire-extended.owl#SemanticResource"/>
 </rdf:RDF>
 
 
