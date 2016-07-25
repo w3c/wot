@@ -149,7 +149,7 @@
       <section id="introduction" class="introduction">
         <h2>Introduction</h2>
 
-        <p>There is broad agreement about the huge potential for services for the Internet of Things (IoT), but this is being held back by fragmentation across many platforms and standards as well as a rapid evolution of the low-level IoT technologies themselves. This Working Group will define inter-platform standards that simplify application development and enable interoperability across a broad range of platforms and associated standards. The starting point is the idea of Things that stand for physical or virtual entities, whether connected or not. These can be exposed to applications by software objects with data and interaction models describing the capabilities of the object. These software objects can represent local resources, e.g., sensors and actuators attached to the device running an application script, or remote Things, where the object acts as a proxy resources on another device.</p>
+        <p>There is broad agreement about the huge potential for services for the Internet of Things (IoT), which however, are being held back by fragmentation across many platforms and standards as well as a rapid evolution of the low-level IoT technologies themselves. This Working Group will define complementing inter-platform standards that simplify application development and enable interoperability across a broad range of platforms and associated standards. The starting point is the idea of Things that stand for physical or virtual entities, whether connected or not. These can be exposed to applications by software objects with data and interaction models describing the capabilities of the entities. These software objects can represent local resources, e.g., sensors and actuators attached to the device running an application script, or remote Things, where the object acts as a proxy for resources on another device.</p>
 
         <p>The approach is based upon the fundamentals of the Web architecture:</p>
 
@@ -160,18 +160,16 @@
           <li>Plug-ins for domain-specific features such as special type systems or security mechanisms</li>
         </ul>
 
-        <p>URIs can be used to access machine-interpretable descriptions of Things. These descriptions enable the automatic generation of scriptable objects, whose interaction possibilities correspond to those of the Thing the object stands for. An object on one host can also act as a proxy for an object on another host, for instance to host a device shadow in the cloud. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols and communication patterns best suited to the context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms. Web page scripts can access Things through software objects generated from Thing descriptions, or even host Things themselves, subject to the protocols supported by Web browsers and the enforced security model.</p>
+        <p>URIs can be used to access machine-interpretable descriptions of Things. These descriptions enable the automatic generation of scriptable objects, whose interaction capabilities correspond to those of the Thing the object stands for. The application logic using the software objects can reside on Things directly. It can also be moved to other hosts such as local integration hubs or the cloud, for instance to provide a globally reachable device shadow. Application developers are shielded from the implementation details of how objects are coupled, allowing platform developers to choose the transport protocols and communication patterns best suited to the context. Servers can be provided at a wide range of scales from microcontrollers to cloud-based server farms. Web page scripts can access Things through software objects generated from Thing descriptions, or even host Things themselves, subject to the protocols supported by Web browsers and the enforced security model.</p>
 
         <p>
         	<img style="display:block;width:60%;margin:auto" alt="WoT concept overview" src="wot-wg-2016-figure.png" />
           <span class="caption">Note: this illustrates the concepts, but is not intended as an architecture diagram.</span>
         </p>
 
-        <p>The above figure illustrates the concepts that enable WoT-enabled devices and services (so-called "servients") to interact with existing platforms and the Web infrastructure. The semantic models used in the descriptions for Things can also augment existing platforms, thereby enabling Thing-to-Thing interaction not only among WoT-enabled Things, but also with other IoT devices.</p>
+        <p>The above figure illustrates the concepts that enable WoT-enabled devices and services to interact with existing platforms and the Web infrastructure. The semantic models used in the descriptions for Things can also augment existing platforms, thereby enabling Thing-to-Thing interaction not only among WoT-enabled Things, but also with other IoT devices. Note: for a description of potential architectures, see the <a href="https://w3c.github.io/wot/architecture/wot-architecture.html">WoT Interest Group architecture document</a>.</p>
 
-        <p>Note: For a description of potential architectures, see the <a href="https://w3c.github.io/wot/architecture/wot-architecture.html">WoT Interest Group architecture document</a>.</p>
-
-        <p>The following diagram shows how the abstraction layer for "Things" fits into the communications stack.</p>
+        <p>The following diagram shows how the abstraction layer for Things fits into the communications stack.</p>
 
         <p>
           <table class="" style="width:60%">
