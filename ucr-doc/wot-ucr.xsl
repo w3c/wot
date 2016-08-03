@@ -41,11 +41,12 @@
             <body>
                 <section id="abstract">
                     <p>
+                        The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things (IoT) services on a worldwide basis.
                         This document is used to collect IoT use cases from different domains for the Standardisation work in the W3C WoT groups.
                         The domain use cases are dissaminated to identify so-called <b>building-blocks</b>
                         that are common across the different domains as well as <b>non-functional</b> requirements. <br/>
                         The identified <b>building blocks</b> are inputs to the investigation and standardisation work.<br/>
-                        The technology candidates awere moved into the <a href="https://w3c.github.io/wot/landscape.html">tech landscape</a> document. 
+                        The technology candidates for the respective <b>building blocks</b> were moved into the <a href="https://w3c.github.io/wot/landscape.html">tech landscape</a> document. 
                     </p>
                 </section>
                 <section id="use-cases">
