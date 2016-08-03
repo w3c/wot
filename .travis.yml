@@ -17,7 +17,6 @@ after_success:
   - cp wot-ucr-tmp.html page/wot-ucr.html
   - cp tech-landscape/landscape.html page/landscape.html
   - cp -R current-practices/ page/
-  - cp page/current-practices/wot-practices.html page/current-practices/wot-practices-beijing-2016.html
   - cp -R architecture/ page/
   - cp -R charters/ page/
   - mkdir -p page/proposals/explicit-bindings
