@@ -1433,7 +1433,15 @@
           <ul>
             <li> DAP Generic Sensor API <b>(Johannes to outreach to tobie langel for basic design principles)</b></li>
             <li> Vehicle API <b>(Kaz to outreach chair)</b></li>
-            <li> Physical API such as <a href="https://rawgit.com/browserobo/WebGPIO/master/index.html">Web GPIO API</a>, <a href="https://rawgit.com/browserobo/WebI2C/master/index.html">Web I2C API</a> <b>(Kaz to outreach to Mozilla Japan)</b></li>
+            <li> Physical API such as <a href="https://rawgit.com/browserobo/WebGPIO/master/index.html">WebGPIO API</a>, <a href="https://rawgit.com/browserobo/WebI2C/master/index.html">WebI2C API</a>:
+            <a href="https://www.w3.org/community/browserobo/">Browsers and Robotics CG</a> is developing APIs for direct physical device (sensor, actuator) control 
+            via a general-purpose I/O (such as GPIO/I2C) from Webapps. Since those are very generic APIs that do not depend on devices, it is required to operate under the conditions of device safety (without destroying the devices). The concept of the API may be related to WoT IG work. Furthermore, in the future, there may be a variety of things and their APIs, so the concept may become a basis to discuss how to operate things safely.
+            However, we have to consider that there might be several perspective and implementation method of GPIO/I2C operation, for example,
+            <ul>
+            	<li> An improvement to current browser functionality for direct control devices from browsers. </li>
+            	<li> An improvement to server side JavaScript (such as node.js) in order to control devices from the server side JavaScript (<a href="https://github.com/fivdi/onoff">example</a>). </li>
+            </ul>
+            </li>
             <li> johnnyfive <b>(Johannes to outreach github-&gt; maintainer )</b></li>
           </ul>
         </section>
@@ -1443,7 +1451,12 @@
             <li> node.js <b>(Tibor)</b></li>
             <li> micropython</li>
             <li> Arduino <b>(Dave Raggett)</b></li>
-            <li> <a href="http://mozopenhard.mozillafactory.org/">Chirimen</a> / <a href="https://wiki.mozilla.org/B2G">B2G</a> <b>(Kaz to outreach to Mozilla Japan)</b></li>
+            <li><a href="http://chirimen.org">CHIRIMEN</a>:
+            “CHIRIMEN” is a development environment that allows to control the physical devices (such as sensors and actuators) by Web browser technology. 
+            Their implementation includes hardware as a board computer, Web browser software (currently using B2G), and low-level device APIs 
+            (<a href="https://rawgit.com/browserobo/WebGPIO/master/index.html">WebGPIO API</a> and <a href="https://rawgit.com/browserobo/WebI2C/master/index.html">WebI2C API</a> etc.) 
+            to control physical devices by web apps or JavaScript. It is developed by CHIRIMEN Open Hardware community and code-named “CHIRIMEN”. Their hardware and software have
+            been released as <a href="https://github.com/chirimen-oh/release">open source</a>.</li>
             <li> ARM mbed</li>
             <li> NodeMCU <b>(Johannes to outreach)</b></li>
             <li> Jerryscript </li>
