@@ -86,7 +86,7 @@
 
       <p class="issue"><i>Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public email list</a>, and you are encouraged to file issues on github, but please use the label "WG Charter". The GitHub URL for this document is <a href="https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html">https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html</a>.</i></p>
 
-      <p class="mission">The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/WG/">Web of Things Working Group</a> is to counter the fragmentation of the Internet of Things by introducing a Web-based abstraction layer complementing existing IoT platforms and standards. We seek to reduce cost and time to market through reusable technological building blocks and the global reach of Web standards.</p>
+      <p class="mission">The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/WG/">Web of Things Working Group</a> is to counter the fragmentation of the Internet of Things by introducing a Web-based abstraction layer complementing existing IoT platforms and standards. This Working Group Charter covers those aspects that the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> believes are mature enough to progress to W3C Recommendations. Further background is available in the accompanying <a href="https://www.w3.org/2016/08/wot-white-paper/">white paper</a>.</p>
 
       <div class="noprint">
         <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Web of Things Working Group.</a></p>
@@ -149,20 +149,14 @@
       <section id="introduction" class="introduction">
         <h2>Introduction</h2>
 
-        <p>There is broad agreement about the huge potential for services for the Internet of Things (IoT), which however, are being held back by fragmentation across many platforms and standards as well as a rapid evolution of the low-level IoT technologies themselves. This Working Group will define complementing inter-platform standards that simplify application development and enable interoperability across a broad range of platforms and associated standards. The starting point is the idea of Things that stand for physical or virtual entities, whether connected or not. These can be exposed to applications by software objects with data and interaction models describing the capabilities of the entities. A detailed background can be found in the <a href="https://www.w3.org/2016/08/wot-white-paper/">White Paper for the Web of Things</a>.</p>
-
-        <a href="wot-ig-2016-relationship.png"><img id="relationships" src="wot-ig-2016-relationship.png" alt="Relationship between WoT WG and WoT IG" /></a>
-
-        <p>This Working group is tasked with the standardization of the four technological building blocks that were identified by the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> (IG) as being key to realizing the Web of Things. The initial concepts are detailed in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Current Practices document</a> of the IG and summarized in the <a href="#scope">Scope</a> section. There already has been successful incubation of the building blocks in the IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>. There, several companies and research institutes already presented and tested their WoT prototypes. First open-source implementations are also already available.</p>
-
-        <p>While the WG is tasked to write standards-track specifications and test suites, the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> will provide support and look into long-term goals for the Web of Things. The IG will organize and run PlugFests to evaluate the current working assumptions, reach out and collaborate with interested organizations, vendors, and communities, and explore new areas to identify work that is ready for transfer to the W3C Recommendation Track (i.e., any W3C working group).</p>
+        <p>This working group is tasked with the standardization of the four technological building blocks that were identified by the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> (IG) as being key to realizing the Web of Things. The initial concepts are detailed in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Current Practices document</a> of the IG and summarized in the <a href="#scope">Scope</a> section. There already has been successful incubation of the building blocks in the IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>. There, several companies and research institutes already presented and tested their WoT prototypes. First open-source implementations are also already available.</p>
 
       </section>
 
       <section id="scope" class="scope" style="clear:both;">
         <h2>Scope</h2>
         
-        <p>The Working Group has four items in scope to enable interoperability across IoT platforms: the standadization of three individual buiding blocks and the integration of one cross-cutting as detailed in the sub-sections.</p>
+        <p>The Working Group has four items in scope to enable interoperability across IoT platforms: the standardization of three individual building blocks and the integration of one cross-cutting as detailed in the sub-sections.</p>
         
         <div class="summary">
           <p style="text-align:center;font-style:italic">Scope Summary</p>
@@ -177,7 +171,7 @@
 
         <h3>Thing Description</h3>
 
-        <p>The Working Group will develop solutions to describe Things through metadata and declarations of their capabilities (e.g., possible interactions). This work includes the definition of different <i>machine-understandable vocabularies</i> based on triples and linkable graphs as well as serialization formats of such a Thing Description. The aim is to be comaptible with existing vocabularies and tools (e.g., Linked Open Data, Schema.org, Resource Description Framework (RDF), semantic reasoners, etc.).</p>
+        <p>The Working Group will develop solutions to describe Things through metadata and declarations of their capabilities (e.g., possible interactions). This work includes the definition of different <i>machine-understandable vocabularies</i> based on triples and linkable graphs as well as serialization formats of such a Thing Description. The aim is to be compatible with existing vocabularies and tools (e.g., Linked Open Data, Schema.org, Resource Description Framework (RDF), semantic reasoners, etc.).</p>
 
         <ul>
           <li>A common vocabulary for describing Things in terms of the data and interaction models they expose to applications (e.g., interaction patterns such as Properties, Actions, and Events as described in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Interest Group current practices document</a>). This will cover Thing lifecycles, datatypes, including streams, integrity constraints, and provision for early and late binding. This cross-domain vocabulary will be designed for use in combination with vocabularies for domain-specific semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage interdependencies and is analogous to the role of metadata for package management in the Linux operating system.</li>
