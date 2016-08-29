@@ -1,0 +1,139 @@
+{
+    "Attribute": {
+        "Identification": {
+            "ThingID": "vehiclebox20160713-001",
+            "ThingName": "myvehiclebox",
+            "ThingType": "车载盒子",//VehicleBox
+            "Keywords": ""
+        },
+        "Characteristic": {
+            "CoreFunction": "控制车辆、上报车辆状态",//Control Vehicle Devices and Upload Vehicle Status
+            "Appearance": "有按钮和LED灯",//Buttons and LEDs
+            "Evironment": "",
+            "Production": {
+                "ProducerName": "四海万联",
+                "Model": "SOIW-T100F01V01",
+                "ProduceTime": "2016-01-01",
+                "ValidTime": "2016-01-01",
+                "Comment": ""
+            },
+            "Environment": "常温"//Normal Temperature
+        }
+    },
+    "State": {
+        "Working": {
+            "UsingState": [],
+            "FaultState": [],
+            "ResourceConsuming": ""
+        },
+        "Location": {
+            "NetworkLocation": {
+                "IPAddress": {
+                    "IP": "",
+                    "UserName": "",
+                    "Password": ""
+                },
+                "MacAddress": "",
+                "OtherAddress": ""
+            },
+            "GeoLocation": {
+                "Country": "中国",
+                "Province": "北京市",
+                "City": "北京市",
+                "DetailLocation": "",
+                "Longitude": "",
+                "Latitude": "",
+                "Altitude": "",
+                "County": "海淀区",
+                "Community": "vision hotel"
+            },
+            "TimeReference": ""
+        }
+    },
+    "Action": {
+        "Interface": [
+            {
+                "InterfaceParameter": [
+                    {
+                        "ParameterID": "id",
+                        "ParameterType": "enum int",
+                        "ParameterComment": "按钮的标识",//Button Identification
+                        "Value": "1,2,3",
+                        "ValueComment": "按钮1,按钮2,按钮3"//Button 1,2,3
+                    }
+                ],
+                "InterfaceResult": [],
+                "InterfaceID": "button_click",
+                "InterfaceName": "按钮按下",//Button Pressed
+                "InterfaceDirection": "up"
+            },
+            {
+                "InterfaceParameter": [
+                    {
+                        "ParameterID": "id",
+                        "ParameterType": "enum int",
+                        "ParameterComment": "LED灯代表的标识",//LED Representation of Devices
+                        "Value": "1,2,3,4",
+                        "ValueComment": "1-汽车引擎,2-闪灯报警,3-汽车空调,4-车门"//1-Engine, 2-Lights, 3-AirConditioner, 4-Door
+                    },
+                    {
+                        "ParameterID": "command",
+                        "ParameterType": "enum string",
+                        "ParameterComment": "控制指令开或者关",//Control On and Off
+                        "Value": "on,off",
+                        "ValueComment": "开,关"//On, Off
+                    }
+                ],
+                "InterfaceResult": [],
+                "InterfaceID": "led_control",
+                "InterfaceName": "LED灯控制",//Led Controler
+                "InterfaceDirection": "down"
+            }
+        ],
+        "Accessibility": {
+            "Communication": {
+                "ComMethod": "Ethernet",
+                "ComProtocol": "StandardProtocol"
+            },
+            "Administration": {
+                "Contact": "18812345678",
+                "ContactAddress": "",
+                "ContactComment": "",
+                "LegalConstraints": "",
+                "SecurityConstraints": "private"
+            }
+        }
+    },
+    "Capability": {
+        "Function": [
+            {
+                "FunctionID": "button_click",
+                "FunctionName": "按钮按下",//Button Pressed
+                "FunctionEffect": "按钮被按下时上报",//Trigger When Button Pressed
+                "FunctionRelate": {
+                    "InterfaceID": "button_click"
+                }
+            },
+            {
+                "FunctionID": "led_control",
+                "FunctionName": "LED灯控制",//Led Controler
+                "FunctionEffect": "控制LED灯亮",//Switch On and Off the LEDs
+                "FunctionRelate": {
+                    "InterfaceID": "led_control"
+                }
+            }
+        ],
+        "Data": [
+            {
+                "DataID": "",
+                "DataType": "",
+                "DataEffect": "",
+                "DataRelate": [
+                    {
+                        "InterfaceID": ""
+                    }
+                ]
+            }
+        ]
+    }
+}
