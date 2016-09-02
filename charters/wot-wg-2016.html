@@ -86,7 +86,7 @@
 
       <p class="issue"><i>Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public email list</a>, and you are encouraged to file issues on github, but please use the label "WG Charter". The GitHub URL for this document is <a href="https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html">https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html</a>.</i></p>
 
-      <p class="mission">The Web of Things seeks to counter the fragmentation of the IoT though standardized metadata that enables easy integration across IoT platforms and application domains. This Working Group Charter covers those aspects that the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> believes are mature enough to progress to W3C Recommendations. Further background is available in the accompanying <a href="http://w3c.github.io/wot/charters/wot-white-paper-2016.html">white paper</a>.</p>
+      <p class="mission">The Web of Things seeks to counter the fragmentation of the IoT through standard complementing building blocks (e.g., metadata and APIs) that enable easy integration across IoT platforms and application domains. This Working Group Charter covers those aspects that the <a href="https://www.w3.org/2016/07/wot-ig-charter.html">Web of Things Interest Group</a> believes are mature enough to progress to W3C Recommendations. Further background is available in the accompanying <a href="http://w3c.github.io/wot/charters/wot-white-paper-2016.html">white paper</a>.</p>
 
       <div class="noprint">
         <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Web of Things Working Group.</a></p>
@@ -162,10 +162,10 @@
           <p style="text-align:center;font-style:italic">Scope Summary</p>
           
           <ul>
-            <li>Semantic vocabularies for describing the data and interaction models exposed to applications, the choice of communications patterns provided by protocols, and serialization formats thereof suitable for processing on resource-constrained devices and transmission over constrained networks</li>
-            <li>Platform-independent application-facing APIs for Thing-to-Thing interaction and Thing lifecycle management</li>
-            <li>Bindings from the abstract messages to specific platforms and protocols in collaboration with the corresponding organizations</li>
-            <li>Cross-cutting mechanisms to describe and implement security and privacy policies to enable secure and safe interaction across different IoT platforms</li>
+            <li>Thing Description: Semantic vocabularies for describing the data and interaction models exposed to applications, the choice of communications patterns provided by protocols, and serialization formats thereof suitable for processing on resource-constrained devices and transmission over constrained networks</li>
+            <li>Scripting APIs: Platform-independent application-facing APIs for Thing-to-Thing interaction and Thing lifecycle management</li>
+            <li>Bindings to Common Platforms and Protocols: Bindings from the abstract messages to specific platforms and protocols in collaboration with the corresponding organizations</li>
+            <li>Cross-cutting Security and Privacy: Mechanisms integrated into the other building blocks to describe and implement security and privacy policies to enable secure and safe interaction across different IoT platforms</li>
           </ul>
         </div>
 
@@ -192,16 +192,14 @@
 
           <li>Discovery for local and remote cases, abstracting away from the details of the discovery mechanisms. This will cover a range of approaches: Things on the same host, Things nearby, Things on the same network, Things listed in a repository, and discovery based upon formal or crowd-sourced semantics and social relationships.</li>
 
-          <li>
-		    <p>Cross-platform security frameworks including authentication, authorization, and secure communication, as well as the means for their establishment through provisioning of metadata and keying associations. This will enable the use of security frameworks, such as IETF OAuth and ACE, according to the specific tasks for the client (e.g., security credentials acquisition and supply), and for the server (e.g., security token enforcement and validation), as well as common tasks (e.g., registration). A goal is to decouple applications from the implementations of the security frameworks. This introduces online trusted-third party components to which constrained WoT components delegate specific processing tasks (such as authentication and authorization). It requires trusted assertions that report about such processing events as well as protocols to trigger such processing.</p>
-            <p>Support for secure communications will initially focus on transport-level security (e.g., TLS and DTLS) but also object security is considered where relevant. This task will utilize 3rd party defined security frameworks and protocols including their extension points. The profiling of their usage is in scope of this task. The specification of own (new from scratch) exchanges is out-of-scope</p>
+          <li>Cross-platform security frameworks including authentication, authorization, and secure communication, as well as the means for their establishment through provisioning of metadata and keying associations. This will enable the use of security frameworks, such as IETF OAuth and ACE, according to the specific tasks for the client (e.g., security credentials acquisition and supply), and for the server (e.g., security token enforcement and validation), as well as common tasks (e.g., registration). A goal is to decouple applications from the implementations of the security frameworks. This introduces online trusted-third party components to which constrained WoT components delegate specific processing tasks (such as authentication and authorization). It requires trusted assertions that report about such processing events as well as protocols to trigger such processing.
           </li>
 
           <li>Thing lifecycles, e.g., registering and creating Things, either from a Thing description or using scripting and enabling applications to be aware of lifecycle transitions.</li>
 
           <li>Error handling that unifies the different error reports provided by different platforms and protocols.</li>
 
-          <li>Cross-cutting concerns, e.g., internationalization, accessibility, and privacy.</p></li>
+          <li>Cross-cutting concerns, e.g., internationalization, accessibility, and privacy.</li>
 
         </ul>
 
@@ -218,6 +216,10 @@
         </ul>
         
         <p>The Web of Things has a multi-protocol architecture and bindings to both IP and non-IP transports (e.g., Bluetooth Low Energy) may be defined.</p>
+        
+        <h3>Cross-cutting Security and Privacy</h3>
+
+        <p>The mechanisms for security and privacy must be cross-cutting over the descriptions, scripting APIs, and bindings. Thus, they are detailed within the corresponding building blocks above. In general, support for secure communications will initially focus on transport-level security (e.g., TLS and DTLS), but also object security is considered where relevant. This task will utilize 3rd party defined security frameworks and protocols including their extension points. The profiling of their usage is in scope of this task. The specification of own (new from scratch) frameworks is out-of-scope.
 
         <div id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
@@ -259,7 +261,7 @@
           <dl>
             <dt id="wot-td" class="spec"><a href="#">WoT Architecture</a></dt>
             <dd>
-              <p>This specification confines the scenarios targeted by the Web of Things and defines the high-level architecture for the individual WoT building blocks. The document will be based on the <a href="https://w3c.github.io/wot/architecture/wot-architecture.html">WoT Interest Group architecture document</a>.</p>
+              <p>This specification defines the high-level architecture for the individual WoT building blocks as well as necessary platform configurations. Furthermore, it confines the deployment scenarios targeted by the Web of Things. The document will be based on the <a href="https://w3c.github.io/wot/architecture/wot-architecture.html">WoT Interest Group architecture document</a>.</p>
 
               <p class="draft-status"><b>Draft state:</b> discussion and implementation experience in the Web of Things Interest Group</p>
 
