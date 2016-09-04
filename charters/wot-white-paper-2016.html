@@ -71,6 +71,16 @@
       }
       #interop img {
         width:60%;
+        min-width:32em;
+      }
+      #concepts {
+        font-style:italic;
+        font-size:smaller;
+        text-align:center;
+      }
+      #concepts img {
+        width:70%;
+        min-width:32em;
       }
       #thing-layer {
         background-color:#EEE;
@@ -130,8 +140,8 @@
         
         <p>Applications can discover Thing descriptions in a variety of ways. Nearby Things, e.g. using Bluetooth beacons, Things on the same local area network, and Things listed in a repository, e.g. a hub or cloud-based service. Metadata enables searching for Things based upon their descriptions and relationships. Devices may expose their metadata directly, or it could be held separately. This allows the Web of Things to support existing IoT devices, including those too constrained to handle the metadata themselves. This is illustrated in the following diagram:</p>
 
-        <p>
-          <img style="display:block;width:70%;margin:auto" alt="WoT concept overview" src="wot-wg-2016-figure.png" />
+        <p id="concepts">
+          <a href="wot-wg-2016-figure.png"><img alt="WoT concept overview" src="wot-wg-2016-figure.png" /></a>
           <!-- <span class="caption">Note: this illustrates the concepts, but is not intended as an architecture diagram.</span> -->
         </p>
 
