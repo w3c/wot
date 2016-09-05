@@ -21,6 +21,8 @@ after_success:
   - cp -R charters/ page/
   - mkdir -p page/proposals/explicit-bindings
   - cp  proposals/explicit-bindings/abstract-transfer-layer.html page/proposals/explicit-bindings/abstract-transfer-layer.html
+  - cp  proposals/ontology/ire-extended.owl page/ire-extended.owl
+  - cp  proposals/ontology/wot.owl page/wot.owl
   - cd page
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - git add wot-ucr.html
@@ -29,5 +31,7 @@ after_success:
   - git add architecture/
   - git add charters/
   - git add proposals/explicit-bindings/abstract-transfer-layer.html
+  - git add ire-extended.owl
+  - git add wot.owl
   - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then git diff-index --quiet --cached HEAD || git commit -m"automated commit from Travis CI"; fi
   - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then git push https://github.com/w3c/wot.git gh-pages; fi
