@@ -9,7 +9,7 @@ control devices, i.e. any real-world entity without a priori restriction.
 proxy for any real-world entity that is not already digital information. Such
 entities can be physical quantities like temperature or pressure, natural
 phenomena like raise of temperature or object motion, arbitrary states like
-on/off, etc.
+on/off, etc.
 - __Property__ - Time-independent real-world entity that is neither an Action,
 nor an Event. For instance, physical quantities (temperature, pressure,
 brigthness...) are Properties.
