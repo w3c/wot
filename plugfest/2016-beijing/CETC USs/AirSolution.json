@@ -1,0 +1,314 @@
+{
+    "Attribute": {
+        "Identification": {
+            "ThingID": "airsolution20160713-001",
+            "ThingName": "myairsolution",
+            "ThingType": "会呼吸的家",//Breathing House
+            "Keywords": ""
+        },
+        "Characteristic": {
+            "CoreFunction": "空气解决方案",//Air Solution
+            "Appearance": "设备组合",//Device Combo
+            "Evironment": "",
+            "Production": {
+                "ProducerName": "领耀东方",
+                "Model": "001",
+                "ProduceTime": "2016-01-01",
+                "ValidTime": "2016-01-01",
+                "Comment": ""
+            },
+            "Environment": "常温"//Normal Temperature
+        }
+    },
+    "State": {
+        "Working": {
+            "UsingState": [],
+            "FaultState": [],
+            "ResourceConsuming": ""
+        },
+        "Location": {
+            "NetworkLocation": {
+                "IPAddress": {
+                    "IP": "",
+                    "UserName": "",
+                    "Password": ""
+                },
+                "MacAddress": "",
+                "OtherAddress": ""
+            },
+            "GeoLocation": {
+                "Country": "中国",
+                "Province": "北京市",
+                "City": "北京市",
+                "DetailLocation": "",
+                "Longitude": "",
+                "Latitude": "",
+                "Altitude": "",
+                "County": "海淀区",
+                "Community": "vision hotel"
+            },
+            "TimeReference": ""
+        }
+    },
+    "Action": {
+        "Interface": [
+            {
+                "InterfaceParameter": [
+                    {
+                        "ParameterID": "setMode",
+                        "ParameterType": "enum string",
+                        "ParameterComment": "工作模式",//Working Mode
+                        "Value": "energySaving,normal,efficient,beOut",
+                        "ValueComment": "节能模式,标准模式,高效模式,离家模式"//Energy Saving, Standard, Efficent, Away
+                    }
+                ],
+                "InterfaceResult": [],
+                "InterfaceID": "setMode",
+                "InterfaceName": "设置模式",//Set Mode
+                "InterfaceDirection": "down"
+            },
+            {
+                "InterfaceParameter": [],
+                "InterfaceResult": [
+                    {
+                        "ResultID": "indoorTemp",
+                        "ResultType": "string",
+                        "ResultComment": "室内空气温度",//Indoor Temperature
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "-50~70",
+                        "ValueComment": "室内温度值"//Indoor Temperature Value
+                    },
+                    {
+                        "ResultID": "indoorHumi",
+                        "ResultType": "string",
+                        "ResultComment": "室内湿度",//Indoor Humidity
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0~100",
+                        "ValueComment": "室内湿度（以5%为单位）"//Indoor Humidity Value
+                    },
+                    {
+                        "ResultID": "PM2.5",
+                        "ResultType": "string",
+                        "ResultComment": "室内pm2.5",//Indoor PM2.5
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0~9999",
+                        "ValueComment": "室内pm2.5值"//Indoor PM2.5 Value
+                    },
+                    {
+                        "ResultID": "CO2",
+                        "ResultType": "string",
+                        "ResultComment": "室内co2浓度",//Indoor Carbon Dioxide Concentration
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0~9999",
+                        "ValueComment": "室内co2浓度值"//Indoor Carbon Dioxide Concentration Value
+                    },
+                    {
+                        "ResultID": "formaldehyde",
+                        "ResultType": "string",
+                        "ResultComment": "室内甲醛浓度",//Indoor Methanal Concentration
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0.00~40.00",
+                        "ValueComment": "室内甲醛浓度值"//Indoor Methanal Concentration Value
+                    }
+                ],
+                "InterfaceID": "getStatus",
+                "InterfaceName": "获取状态",//Get Status
+                "InterfaceDirection": "down-up"
+            },
+            {
+                "InterfaceParameter": [
+                    {
+                        "ParameterID": "temperature",
+                        "ParameterType": "enum string",
+                        "ParameterComment": "环境温度状态",//Enviroment Temperature Status
+                        "Value": "2,1,0,-1,-2",
+                        "ValueComment": "热,偏热,正常,偏冷,冷"//Warmer, Warm, Normal, Cold, Colder
+                    }
+                ],
+                "InterfaceResult": [],
+                "InterfaceID": "setTemp",
+                "InterfaceName": "设置冷热",//Set Temperature
+                "InterfaceDirection": "down"
+            },
+            {
+                "InterfaceParameter": [
+                    {
+                        "ParameterID": "humidity",
+                        "ParameterType": "enum string",
+                        "ParameterComment": "环境湿度状态",//Enviroment Humidity Status
+                        "Value": "2,1,0,-1,-2",
+                        "ValueComment": "湿,偏湿,正常,偏干,干"//Wetter, Wet, Normal, Dry, Drier
+                    }
+                ],
+                "InterfaceResult": [],
+                "InterfaceID": "setHumi",
+                "InterfaceName": "设置干湿",//Set Humidity
+                "InterfaceDirection": "down"
+            },
+            {
+                "InterfaceParameter": [
+                    {
+                        "ParameterID": "func",
+                        "ParameterType": "string",
+                        "ParameterComment": "设置家电设备功能",//Set Devices Function
+                        "Value": "0~0",
+                        "ValueComment": "设置家电设备功能"//Set Devices Function
+                    },
+                    {
+                        "ParameterID": "deviceId",
+                        "ParameterType": "string",
+                        "ParameterComment": "设备标识",//Device Identification
+                        "Value": "0~0",
+                        "ValueComment": "设备标识"//Device Identification
+                    }
+                ],
+                "InterfaceResult": [
+                    {
+                        "ResultID": "result",
+                        "ResultType": "string",
+                        "ResultComment": "返回值结果",//Return Result
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0~0",
+                        "ValueComment": "返回值结果"//Return Result
+                    },
+                    {
+                        "ResultID": "deviceId",
+                        "ResultType": "string",
+                        "ResultComment": "设备标识",//Device Identification
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0~0",
+                        "ValueComment": "设备标识"//Device Identification
+                    }
+                ],
+                "InterfaceID": "setDevice",
+                "InterfaceName": "设置设备",//Set Device
+                "InterfaceDirection": "down-up"
+            },
+            {
+                "InterfaceParameter": [
+                    {
+                        "ParameterID": "func",
+                        "ParameterType": "string",
+                        "ParameterComment": "获取家电设备状态",//Get Status
+                        "Value": "0~0",
+                        "ValueComment": "家电设备状态"//Status
+                    },
+                    {
+                        "ParameterID": "deviceId",
+                        "ParameterType": "string",
+                        "ParameterComment": "设备标识",//Device Identification
+                        "Value": "0~0",
+                        "ValueComment": "设备标识"//Device Identification
+                    }
+                ],
+                "InterfaceResult": [
+                    {
+                        "ResultID": "result",
+                        "ResultType": "string",
+                        "ResultComment": "状态值",//Status Value
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0~0",
+                        "ValueComment": "状态值"//Status Value
+                    },
+                    {
+                        "ResultID": "deviceId",
+                        "ResultType": "string",
+                        "ResultComment": "设备标识",//Device Identification
+                        "value": "",
+                        "valueComment": "",
+                        "Value": "0~0",
+                        "ValueComment": "设备标识"//Device Identification
+                    }
+                ],
+                "InterfaceID": "getDeviceStatus",
+                "InterfaceName": "获取设备状态",//Get Status
+                "InterfaceDirection": "down-up"
+            }
+        ],
+        "Accessibility": {
+            "Communication": {
+                "ComMethod": "Ethernet",
+                "ComProtocol": "StandardProtocol"
+            },
+            "Administration": {
+                "Contact": "18812345678",
+                "ContactAddress": "",
+                "ContactComment": "",
+                "LegalConstraints": "",
+                "SecurityConstraints": "public"
+            }
+        }
+    },
+    "Capability": {
+        "Function": [
+            {
+                "FunctionID": "setMode",
+                "FunctionName": "设置模式",//Set Mode
+                "FunctionEffect": "工作模式设置",//Set Working Mode
+                "FunctionRelate": {
+                    "InterfaceID": "setMode"
+                }
+            },
+            {
+                "FunctionID": "getStatus",
+                "FunctionName": "获取状态",//Get Status
+                "FunctionEffect": "获取室内空气状态",//Get Indoor Air Status
+                "FunctionRelate": {
+                    "InterfaceID": "getStatus"
+                }
+            },
+            {
+                "FunctionID": "setTemp",
+                "FunctionName": "设置冷热",//Set Temperature
+                "FunctionEffect": "设置环境温度",//Set Enviroment Emperature
+                "FunctionRelate": {
+                    "InterfaceID": "setTemp"
+                }
+            },
+            {
+                "FunctionID": "setHumi",
+                "FunctionName": "设置干湿",//Set Humidity
+                "FunctionEffect": "设置环境湿度",//Set Enviroment Humidity
+                "FunctionRelate": {
+                    "InterfaceID": "setHumi"
+                }
+            },
+            {
+                "FunctionID": "setDevice",
+                "FunctionName": "设置设备",//Set Device
+                "FunctionEffect": "设置单个设备",//Set Single Device
+                "FunctionRelate": {
+                    "InterfaceID": "setDevice"
+                }
+            },
+            {
+                "FunctionID": "getDeviceStatus",
+                "FunctionName": "获取设备状态",//Get Status
+                "FunctionEffect": "获取单个设备状态",//Get Single Device Status
+                "FunctionRelate": {
+                    "InterfaceID": "getDeviceStatus"
+                }
+            }
+        ],
+        "Data": [
+            {
+                "DataID": "",
+                "DataType": "",
+                "DataEffect": "",
+                "DataRelate": [
+                    {
+                        "InterfaceID": ""
+                    }
+                ]
+            }
+        ]
+    }
+}
