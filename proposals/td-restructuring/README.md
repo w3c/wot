@@ -32,7 +32,7 @@ This document shall initiate the discussion to make some rearrangements of the T
  * @type (interaction model property and action is characterized here)
  * name
  * endpoint
-  * url
-  * encoding
+   * url
+   * encoding
 * valueType/inputType/outputType
 * writable
