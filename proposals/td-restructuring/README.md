@@ -17,7 +17,7 @@ This document shall initiate the discussion to make some rearrangements of the T
 * 'I'm unsure if my resource is property or action based'. E.g., LED status which is changeable/writeable
 * How about I need something in between (also see discussion about explicit vs. implicit TD knowledge [https://github.com/w3c/wot/tree/master/proposals/explicit-bindings])
 * Resources shall be self-contained. Because of …
-* .. e.g., there are 20 resources provided by the Thing. Client is only interested in one of them
+* .. e.g., there are 20 resources provided by the Thing. A client is only interested in one.
 * .. different protocols / encodings used for different resources
 * Currently, endpoint information are distributed over the TD, e.g., url, hrefs, encoding
 * I have a subscribable property, shall I characterize it as an event?
