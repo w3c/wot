@@ -23,7 +23,7 @@ This document shall initiate the discussion to make some rearrangements of the T
 * I have a subscribable property, shall I characterize it as an event? (e.g., temperature value)
 
 ##  Restructuring Proposal
-1.	Going back to the TD structure similar which we used for the TD version 1 (declare property, action, and event with the @type)
+1.	Going back to the TD structure similar which we used for the TD version 1 (declare property, action, and event within @type)
 2.	Include all communication metadata information within the resource model
 
 ### Sample
@@ -34,8 +34,8 @@ This document shall initiate the discussion to make some rearrangements of the T
  * endpoint
    * url
     * encoding
-* valueType/inputType/outputType
-* writable
+ * valueType/inputType/outputType
+ * writable
 
 ## Proposed Next Steps
 Setup web meetings about this topic. Get an agreed TD version until end of October (still 3 month time for next plugfest).
