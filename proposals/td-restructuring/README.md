@@ -37,5 +37,5 @@ This document shall initiate the discussion to make some rearrangements of the T
 * valueType/inputType/outputType
 * writable
 
-## Next step
-Setup web meetings about this topic.
+## Proposed Next Steps
+Setup web meetings about this topic. Get an agreed TD version until end of October (still 3 month time for next plugfest).
