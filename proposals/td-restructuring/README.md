@@ -19,12 +19,12 @@ This document shall initiate the discussion to make some rearrangements of the T
 * Resources shall be self-contained. Because of …
 * .. e.g., there are 20 resources provided by the Thing. A client is only interested in one.
 * .. different protocols / encodings used for different resources
-* Currently, endpoint information are distributed over the TD, e.g., url, hrefs, encoding
+* Currently, endpoint information are distributed over the TD, e.g., urls, hrefs, encoding
 * I have a subscribable property, shall I characterize it as an event?
 
 ##  Restructuring Proposal
-1.	Going back to the structure which we used for the TD version 1
-2.	Include all communication metadata information within the resource model
+1.	Going back to the TD structure similar which we used for the TD version 1 (declare property, action, and event with the @type)
+2.	Include all communication metadata information within the resource model 
 
 ## Sample
 * name (e.g., name of the Thing)
