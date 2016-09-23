@@ -33,6 +33,6 @@ This document shall initiate the discussion to make some rearrangements of the T
  * name
  * endpoint
    * url
-   * encoding
+    * encoding
 * valueType/inputType/outputType
 * writable
