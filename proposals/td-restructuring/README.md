@@ -14,7 +14,7 @@ This document shall initiate the discussion to make some rearrangements of the T
 
 
  ## Feedbacks
-* 'I'm unsure if my resource is property or action based'. E.g., LED status which is changeable/writeable
+* 'I'm unsure if my resource is property or action based'. E.g., LED status which is changeable/writable
 * How about I need something in between (also see discussion about explicit vs. implicit TD knowledge [https://github.com/w3c/wot/tree/master/proposals/explicit-bindings])
 * Resources shall be self-contained. Because of …
 * .. e.g., there are 20 resources provided by the Thing. A client is only interested in one.
