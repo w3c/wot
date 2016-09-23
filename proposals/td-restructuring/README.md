@@ -26,7 +26,7 @@ This document shall initiate the discussion to make some rearrangements of the T
 1.	Going back to the TD structure similar which we used for the TD version 1 (declare property, action, and event with the @type)
 2.	Include all communication metadata information within the resource model
 
-## Sample
+### Sample
 * name (e.g., name of the Thing)
 * interaction (or name it offering?)
  * @type (interaction model property and action is characterized here)
@@ -36,3 +36,6 @@ This document shall initiate the discussion to make some rearrangements of the T
     * encoding
 * valueType/inputType/outputType
 * writable
+
+## Next step
+Setup web meetings about this topic.
