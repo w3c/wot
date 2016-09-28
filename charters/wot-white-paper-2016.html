@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>White Paper for the Web of Things</title>
+
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/Guide/pubrules-style.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css" />
+    <style type="text/css">
+      #abstract {
+        font-style: italic;
+        margin-left: 4em;
+        margin-right: 5em;
+      }
+      ul#navbar {
+        font-size: small;
+      }
+      dt.spec {
+        font-weight: bold;
+      }
+      dt.spec new {
+        background: yellow;
+      }
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+      #section-out-of-scope dt {
+        font-weight: bold;
+        margin-top: 0.5em;
+      }
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+      .todo {
+        color: red;
+      }
+      footer {
+        font-size: small;
+      }
+      span.caption {
+        display: block;
+        text-align: center;
+        font-style: italic;
+      }
+      div.summary {
+        margin-top: 0.5em;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 0.5em;
+        background: rgb(240,240,255);
+        border: solid 1px black;
+      }
+      #relationships {
+      	display: block;
+      	float: right;
+        margin-left: 0.6em;
+        width:40%;
+        min-width:250px;
+        max-width:936px;
+      }
+      #interop {
+        font-style:italic;
+        font-size:smaller;
+        text-align:center;
+      }
+      #interop img {
+        width:60%;
+        min-width:40em;
+      }
+      #concepts {
+        font-style:italic;
+        font-size:smaller;
+        text-align:center;
+      }
+      #concepts img {
+        width:70%;
+        min-width:40em;
+      }
+      #thing-layer {
+        background-color:#EEE;
+      }
+      #beijing-f2f {
+        font-style:italic;
+        font-size:smaller;
+        text-align:center;
+      }
+      #beijing-f2f img {
+        width:80%;
+      }
+      #beijing-plugfest {
+        float:right;
+        width:40%;
+        margin: 0px 0px 10px 10px;
+        font-style:italic;
+        font-size:smaller;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72" /></a>
+        <a class="domainlogo" title="domain:ubi" href="http://w3.org/UbiWeb/"><img src="https://www.w3.org/Icons/ubi212" alt="Ubiquitous Web Domain"></a>
+      </p>
+    </header>
+    <main>
+      <h1 id="title">White Paper for the Web of Things</h1>
+
+      <p class="issue"><i>Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[White%20Paper]%20your%20comment">Web of Things Interest Group public email list</a></i></p>
+
+      <p id="abstract">The Web of Things seeks to counter the fragmentation of the IoT by using and extending existing, standardized Web technologies (e.g., metadata and APIs) in order to enable easy integration across IoT platforms and application domains.  Extending existing Web standards will reduce costs for developing and deploying IoT services through the global reach of these standards, enable open markets of services, and unleash the power of the network effect.</p>
+      
+      <p id="interop"><img src="platform-interoperation2.png" alt="metadata as basis for platform interoperation" /><br />Metadata enables different IoT platforms to interoperate and form part of the Web of Things</p>
+      
+      <section id="introduction" class="introduction">
+        <h2>Introduction</h2>
+
+        <p>There is broad agreement about the huge potential for services for the Internet of Things (IoT), however, this potential is being held back by fragmentation with a lack of interoperability across platforms, a bewildering variety of standards and a rapid evolution of the low-level IoT technologies themselves. The Web of Things proposes to counter this fragmentation through metadata that enables easy integration across IoT platforms, and which simplifies application development through a common interaction model that is independent of the underlying protocols. This is expected to drive down the costs and risks involved in developing services, and help realize the full potential for the IoT. In short, we seek to extend the Web from a Web of pages to a Web of Things. There are many possible applications across a wide range of domains, e.g., homes, offices, healthcare, cities, electrical grids, retail and manufacturing.</p> 
+        
+        <p>The starting point is the idea of Things that stand for physical or virtual entities, whether connected or not. These are exposed to applications as software objects with APIs corresponding to the Thing's properties, actions and events. These software objects can represent local resources, e.g., sensors and actuators attached to the device running an application script, or remote Things, where the object acts as a proxy for resources on another device.</p>
+
+        <p>The approach is based upon the fundamentals of <a href="http://www.w3.org/standards/webarch/">Web architecture</a>:</p>
+
+        <ul>
+          <li>URIs for identifying Things and their descriptions</li>
+          <li>A variety of protocols for accessing Things, since no one protocol will be appropriate in all contexts</li>
+          <li>Metadata for describing Things as a basis for interoperability and discovery, and playing an analogous role to HTML for Web pages</li>
+          <!--
+          <li>Plug-ins for domain-specific features such as special type systems or security mechanisms</li>-->
+        </ul>
+
+        <p>URIs can be used to access machine-interpretable descriptions of Things. These descriptions enable the automatic generation of scriptable objects, whose interaction capabilities correspond to those of the Thing the object stands for. The application logic using the software objects can be hosted on the same device as the Thing, or on other devices such as a local hub or a cloud platform. Application developers are shielded from the implementation details of how objects are coupled to Things, allowing platform developers to choose the transport protocols and communication patterns best suited to the context.</p>
+        
+        <p>Applications can discover Thing descriptions in a variety of ways. Nearby Things, e.g. using Bluetooth beacons, Things on the same local area network, and Things listed in a repository, e.g. a hub or cloud-based service. Metadata enables searching for Things based upon their descriptions and relationships. Devices may expose their metadata directly, or it could be held separately. This allows the Web of Things to support existing IoT devices, including those too constrained to handle the metadata themselves. This is illustrated in the following diagram:</p>
+
+        <p id="concepts">
+          <a href="wot-wg-2016-figure.png"><img alt="WoT concept overview" src="wot-wg-2016-figure.png" /></a>
+          <!-- <span class="caption">Note: this illustrates the concepts, but is not intended as an architecture diagram.</span> -->
+        </p>
+
+        <p>The following table shows how the abstraction layer for Things fits into the communications stack.</p>
+
+        <p>
+          <table class="" style="width:70%">
+            <tr>
+              <td rowspan="2">Application Developer (WoT focus)</td>
+              <th>Application</th>
+              <td>Programs that either implement a Thing's behavior, or which interact with a Thing, e.g. exposing or utilizing APIs for control of sensors and actuators, and access to associated metadata</td>
+            </tr>
+            <tr id="thing-layer">
+              <th>Things</th>
+              <td>Software objects that expose the compound state of devices or digital services; data and interaction model, metadata, semantic annotation, Thing Description</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Platform Developer (IoT focus)</td>
+              <th>Transfer</th>
+              <td>Addressing of elements and message exchange patterns such as push, pull, pub/sub, peer to peer, buffering, multiplexing, support for devices which spend much of their time sleeping; and bindings to communication protocols such as HTTP, CoAP, MQTT, WebSockets, Bluetooth GATT, and many others</td>
+            </tr>
+            <tr>
+              <th>Transport</th>
+              <td>Addressing of application endpoints and transmission of messages; UDP, TCP as well as non-IP based transports</td>
+            </tr>
+            <tr>
+              <th>Network</th>
+              <td>Addressing of network nodes and routing of packets across interconnected networks; IP (including profiles such as 6LoWPAN or Thread)</td>
+            </tr>
+          </table>
+          <span class="caption">The Web of Things decouples the application layer from the transfer protocols.</span>
+        </p>
+      </section>
+
+      <section id="wot" class="introduction">
+        <h2>Web of Things in the W3C</h2>
+
+        <a href="wot-ig-2016-relationship.png"><img id="relationships" src="wot-ig-2016-relationship.png" alt="Relationship between WoT WG and WoT IG" /></a>
+
+        <p>W3C held a <a href="http://www.w3.org/2014/02/wot/">workshop on the Web of Things</a> in mid 2014 to bring people together to discuss the potential and timeliness for starting work. The <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group</a> was launched at the start of 2015 and has focused on gathering use cases and requirements, a technology landscape survey, architectural patterns, and experimental verification of the proposed building blocks through a series of PlugFests (see <a href="#incubation">Section&nbsp;2</a>).</p>
+        
+        <p>W3C is now proposing to launch a Web of Things Working Group to standardize those aspects that the Interest Group believes are mature enough to progress to W3C Recommendations. This Working Group will focus on the metadata vocabularies that are useful across a broad range of application domains. In addition, we plan work on scripting APIs exposed to application developers, and bindings to common platforms and protocols in collaboration with the standards development organizations responsible for these.</p>
+
+        <p>Security and privacy is a major concern for the IoT. The Web of Things needs to enable end-to-end security across IoT platforms. This will require standards for security metadata as a basis for one platform to identify how to securely interoperate with another. The Working Group will also address application focusing APIs for cross-platform security frameworks.</p>
+
+        <p>The Web of Things Interest Group will play a complementary role to the Working Group. While the Working Group is tasked to write standards-track specifications and test suites, the Interest Group will organize and run PlugFests to evaluate the current working assumptions, reach out and collaborate with interested organizations, vendors, and communities, and explore new areas to identify work that is ready for transfer to the W3C Recommendation Track (i.e., any W3C Working Group).</p>
+        
+        <!-- replace link to charter with "../wot-wg-charter.html" before W3M review -->
+        <p>The <a href="https://w3c.github.io/wot/charters/wot-wg-2016.html">Web of Things Working Group Charter</a> deliberately excludes standardization of domain-specific metadata vocabularies. There are already many industry specific organizations who could help with this. In addition, there is a growing realization of the need for agile processes for working with metadata vocabularies at an early stage of maturity. This would encourage sharing, early feedback and dissemination of best practices. Further work is needed to build a shared understanding across IoT industry alliances and standards development organizations, as we seek collaboratively to unlock the massive potential of the IoT.</p>
+        
+        <p id="beijing-f2f"><img alt="Interest Group photo from 2016 Beijing face to face" src="wot-f2f-beijing-2016.jpg" /><br />
+        <i>Web of Things Interest Group, Beijing, 2016</i></p>
+      </section>
+      
+      <section id="incubation" class="introduction">
+        <h2>Incubation of Technical Proposals</h2>
+
+        <p>The Web of Things Interest Group has played in important role for the incubation of the technical proposals. Along with surveying the landscape and collecting use cases, the IG gained practical experiences through a succession of so-called PlugFests held as part of the Interest Group's regular face-to-face meetings. The finding have been collected in the <a href="https://w3c.github.io/wot/current-practices/wot-practices.html">Current Practices</a> document, which is continuously updated to link the conceptional work to running implementations of the Web of Things building blocks.</p>
+
+        <p>
+          <div id="beijing-plugfest">
+            <img alt="Photo from 2016 Beijing PlugFest" src="wot-plugfest-beijing-2016.jpg" width="100%" /><br />
+            Web of Things PlugFest, Beijing, 2016
+          </div>
+          The first PlugFest took place in Sapporo during TPAC 2015. The Interest Group gained first experiences with the Thing Description and the communication patterns of Things using different protocols and encodings. In January 2016, the PlugFest was extended with four aspects: integration of security mechanisms, generic APIs to program behavior, repository-based discovery, and support for REST-based hypermedia controls. The third PlugFest in Montreal in April 2016 was used to broaden and stabalize the building blocks across the different implementations. The Beijing PlugFest in July 2016 was a milestone for the W3C WoT activities, as for the first time, all envisioned building blocks came to life in different cross-company, cross-domain collaboration scenarios. The participating companies showed among other features:
+          <ul>
+            <li>a WoT app running in the browser to interact with Things using UI elements generated from the Thing Description.</li>
+            <li>a smartphone offering WoT-based access to off-the-shelf Bluetooth devices.</li>
+            <li>a portable script migrated to a local industrial controller to control an air conditioner in Japan.</li>
+            <li>mashing up Things across multiple protocol bindings including HTTP, CoAP, BACnet, and Lemonbeat.</li>
+          </ul>
+        </p>
+
+        <p>By now, several companies and institutes such as Fraunhofer, Fujitsu, Panasonic, RWE, Samsung SmartThings, and Siemens have implemented the currently proposed building blocks in different prototypes. These range from embedded sensor nodes over home appliances to industrial controllers, smartphones, and Web apps. Software implementations exist in company closed source as well as open-source projects such as <a href="https://github.com/thingweb">ThingWeb</a> or the <a href="https://github.com/connectIOT/iotivity-servient">IoTivity WoT Servient</a>. Furthermore, a number of WoT-related <a href="https://www.w3.org/WoT/IG/wiki/Implementations">open source projects</a> announced their interest in the ongoing work.</p>
+      </section>
+      
+      <section id="summary" class="introduction">
+      <h2>Summary</h2>
+      
+         <p>W3C is seeking to accelerate the growth of the IoT through Web technology standards that complement existing standards, simplify application development, and enable interoperation across platforms. The <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group</a>, which was launched in early 2015, is continuing work on identifying and maturing building blocks, and preparing the ground for transfer to the W3C Recommendation Track. This has resulted in a <a href="https://w3c.github.io/wot/charters/wot-wg-2016.html">draft charter for a proposed Web of Things Working Group</a> to standardize cross domain metadata vocabularies and APIs. Further charter proposals are anticipated as the Interest Group continues its work, e.g. on areas such as semantic interoperability, security, and privacy, as the technical work reaches an appropriate level of maturity. We invite interested parties to <a href="http://www.w3.org/Consortium/membership">join the W3C</a> and participate in realizing the huge potential of the IoT.</p>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <address>
+        <a href="mailto:dsr@w3.org">Dave Raggett</a>, <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a>, <a href="mailto:yingying@w3.org">Yingying Chen</a>
+      </address>
+      <p class="copyright">
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016
+        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+        (
+        <a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+        <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+        <a href="http://www.keio.ac.jp/">Keio</a>,
+        <a href="http://ev.buaa.edu.cn/">Beihang</a>
+        ), All Rights Reserved.
+
+        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+      </p>
+
+    </footer>
+  </body>
+</html>

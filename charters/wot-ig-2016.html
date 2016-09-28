@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+
+    <title>Web of Things Interest Group Charter</title>
+
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/Guide/pubrules-style.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css" />
+    
+    <style type="text/css">
+      ul#navbar {
+        font-size: small;
+      }
+      dt.spec {
+        font-weight: bold;
+      }
+      dt.spec new {
+        background: yellow;
+      }
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+      .todo {
+        color: red;
+      }
+      footer {
+        font-size: small;
+      }
+      span.caption {
+        display: block;
+        text-align: center;
+        font-style: italic;
+      }
+      section {
+        clear: both;
+      }
+      div.summary {
+        clear: both;
+        margin-top: 0.5em;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 0.5em;
+        background: rgb(240,240,255);
+        border: solid 1px black;
+      }
+      #relationships {
+        float:right;
+        margin-left: 0.6em;
+        width:40%;
+        min-width:250px;
+        max-width:936px;
+      }
+      #deliverables dt {
+        font-weight: bold;
+        margin-top: 0.5em;
+      }
+    </style>
+</head>
+  
+<body>
+  
+<header id="header">
+    <aside>
+        <ul id="navbar">
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          <li><a href="#patentpolicy">Patent Policy</a></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+    </aside>
+    
+    <p><a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72" /></a> <a class="domainlogo" title="domain:ubi" href="http://w3.org/UbiWeb/"><img src="https://www.w3.org/Icons/ubi212" alt="Ubiquitous Web Domain"></a></p>
+</header>
+
+
+<main>
+      <h1 id="title">Web of Things Interest Group Charter</h1>
+
+      <p class="issue"><i>
+      	Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public e-mail list</a>, and you are encouraged to file <a href="https://github.com/w3c/wot/issues">issues</a> on GitHub and open <a href="https://github.com/w3c/wot/pulls">pull-requests</a> with concrete proposals.
+      	The GitHub location of this document is <a href="https://github.com/w3c/wot/tree/master/charters/wot-ig-2016.html">https://github.com/w3c/wot/tree/master/charters/wot-ig-2016.html</a>.
+      </i></p>
+
+      <p class="mission">The <strong>mission</strong> of the <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group</a> is to counter the fragmentation of the Internet of Things by introducing a Web-based abstraction layer capable of interconnecting existing Internet of Things platforms and complementing available standards. We aim to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect. As a W3C Interest Group, we are seeking to build a shared understanding of the Web of Things, and to identify opportunities for initiating standards track work within W3C working groups. Liaisons between W3C, industry alliances and standards development organizations are already in discussion for two critical areas: semantic interoperability and end-to-end security across different platforms.</p>
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/75874/join">Join the Web of Things Interest Group</a>.</p>
+      </div>
+
+<section id="details">
+    <table class="summary-table">
+        <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              <i class="todo">(date of the "Call for Participation", when the charter is approved)</i>
+            </td>
+          </tr>
+          <tr id="Duration">
+            <th>
+              End date
+            </th>
+            <td>
+              <i class="todo">(same end date as the proposed working group charter -- end of 2018)</i>
+            </td>
+          </tr>
+<!--
+          <tr class="todo">
+            <th>Charter extension</th>
+            <td>See <a href="#history">Change History</a>.
+              <span class="issue">(<b>Note:</b> Only include this row if this is a charter extension.)</span>
+            </td>
+          </tr>
+-->
+          <tr>
+            <th>
+              Chairs
+            </th>
+            <td>
+              Jörg Heuer (Siemens)</i>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Team Contacts
+            </th>
+            <td>
+              <a href="mailto:dsr@w3.org">Dave Raggett,</a> (0.2 <abbr title="Full-Time Equivalent">FTE</abbr>), <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>), <a href="mailto:yingying@w3.org">Yingying Chen</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)</i>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+              <strong>Teleconferences:</strong> Weekly with additional topic-specific calls as appropriate.<br />
+              <strong>Face-to-face:</strong> We will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, with no more than 4 face-to-face meetings in total per year.
+            </td>
+          </tr>
+    </table>
+</section>
+
+
+
+<section id="intro" class="scope">
+    <h2>Introduction</h2>
+		
+    <p>The Internet of Things (IoT) suffers from a lack of interoperability across platforms. As a result developers are faced with data silos, high costs, and limited market potential. This can be likened to the situation before the Internet, when there were competing non-interoperable networking technologies. The Internet makes it easy to develop networked applications independently of those technologies. The W3C is seeking to do the same for the Internet of Things with the Web of Things.</p>
+	
+    <p>To achieve this goal for cross-platform interoperability, we need platform-independent APIs for application developers and a means for different platforms to discover how to inter-operate with one another. The approach we are taking is based upon rich metadata that describes the data and interaction models exposed to applications, and the communications and security requirements for platforms to communicate effectively. A further aspect is the need to enable platforms to share the same meaning when they exchange data. We are therefore seeking to enable expression of the semantics of things and the domain constraints associated with them, building upon W3C's extensive work on RDF and Linked Data. This is the second charter for the Web of Things Interest Group and continues the work on identifying requirements for the technology building blocks for the application layer that forms the Web of Things.</p>
+    
+    <p>The Web of Things is founded on the <a href="http://www.w3.org/TR/2004/REC-webarch-20041215/">Architecture of the World Wide Web</a>. Things stand for physical or abstract entities such as sensor nodes and services encompassing multiple devices, respectively. Each thing is identified with a URI. This URI can be followed to access the thing's description, which can include its relationship to other things, analogous to links in HTML. The Web of Things also allows for on-device data processing and direct thing-to-thing interaction. For this, things can provide a standardized vendor neutral runtime environment for portable apps, similar to Web apps running in every browser. Due to the variations in requirements across application domains, there are many protocols. Things can be interacted with on many kinds of platforms and devices ranging from resource-constrained IoT devices and less constrained gateways to cloud-based server farms. In addition, Web browsers may be used for the human-machine interface for services based around the Web of Things.</p>
+    
+    <p>The short term priority for the Interest Group is to draft a proposed charter for a Working Group that specifies work items that the Interest Group believes are ready for progression along the W3C Recommendation track. In the mid-term, the priority is to demonstrate how the Web of Things can be used across a wide range of IoT platforms in collaboration with the corresponding consortia and organizations. This will include work on metadata for describing particular platforms, as well as work on semantic models and constraints, and enabling end-to-end security across different platforms. In the long term, the priority will be on enabling open markets of services on the scale of the Web.</p>
+</section>
+
+<section id="scope" class="scope">
+    <h2>Scope</h2>
+
+    <div class="summary">
+        <p style="text-align:center;font-style:italic">Scope Summary</p>
+        <ul>
+            <li>Support the proposed Web of Things Working Group</li>
+            <li>Organize and run PlugFests to evaluate the current working assumptions in regards to Web of Things technologies</li>
+            <li>Reach out and collaborate with interested organizations, vendors, and communities in support of the Interest Group's mission</li>
+            <li>Explore areas and identify work that is ready for transfer to the W3C Recommendation Track</li>
+        </ul>
+    </div>
+
+    <p>
+      <a href="wot-ig-2016-relationship.png"><img id="relationships" src="wot-ig-2016-relationship.png" alt="relationship between WoT IG and WG" /></a>
+      The Web of Things Interest Group (WoT IG) is a forum for discussion of ideas relating to the Web of Things and is intended to complement the role of the proposed Web of Things Working Group. In particular, the Interest Group will propose new Work Items for the Working Group based upon new use case considerations and discussions with IoT developer communities, industry alliances, and standards development organizations. Vice versa, the Interest Group will consider new topics that are submitted to it by the Working Group.
+    </p>
+    
+    <p>The Interest Group will identify requirements for standardization in two ways: first, by exploring use cases and requirements for a broad range of application domains, and second, through examining the requirements for integrating a broad range of IoT platforms into the Web of Things. Two areas that have already been identified as critical are semantic interoperability and end-to-end security across different platforms. The Interest Group will work on these in coordination with external groups to address their needs.</p>
+    
+    <p>In the mid term, this is expected to include an exploration of the role of semantic technologies for representing and applying domain constraints, and an exploration of the role of trust assumptions for enabling end-to-end security across platforms using standards defined by different organizations. This work would combine implementation experience with in-depth analysis. The Interest Group is seeking to broaden the range of participants to provide the necessary skills and resources to conduct this work.</p>
+
+    <p>An important activity is the operation of PlugFests to collect interoperability implementation experience and to validate the current working assumptions of the technological building blocks discussed in the Web of Things Interest Group as well as proposed Working Group. These events enable developers to get together to test their implementations and facilitates networking between partners and experts. The Interest Group will seek to encourage work on open source projects and community evaluation of the Web of Things. In more detail, PlugFests allow participants to:</p>
+    
+    <ul>
+      <li>assist with preparing implementation reports for WoT WG Candidate Recommendations</li>
+      <li>test-drive upcoming or proposed technologies for the W3C Recommendation Track</li>
+      <li>take part in interoperability experiments across implementations for ideas at different levels of maturity</li>
+      <li>reach out to other communities and new Members through an OpenDay for non-Members, which usually includes a demo track</li>
+    </ul>
+    
+    <p>In the long term, the Interest Group will use the practical experience gained from these experiments as a basis for identifying new work items. Further ideas for topic areas are expected from discussions and expert presentations of IoT projects, including for example, decentralised IoT systems and the role of blockchains. Another example is the exploration of ideas for a vendor neutral Web platform for apps that are installed on home gateways. The Interest Group will incubate work items for the Web of Things until they are ready for transfer to the W3C Recommendation Track, either in existing Working Groups, such as the Web of Things Working Group, or in new working groups.</p>
+
+</section>
+
+<section id="deliverables">
+
+	<h2>Deliverables</h2>
+
+	<p>More detailed milestones and updated publication schedules are available on the <a class="todo" href="https://www.w3.org/WoT/IG/wiki/PubStatus">group publication status page</a>.</p>
+
+	<h3>Short-term Deliverables</h3>
+	
+	<p>The first set of deliverables listed here were started during the first charter period. They mainly represent supportive input for the proposed Web of Things Working Group.</p>
+
+	<dl>
+		<dt><a href="http://w3c.github.io/wot/wot-ucr.html">Use Cases and Requirements</a></dt>
+		<dd>
+			<p>This document will collect use cases from a range of application domains, and identify requirements that are shared across domains and those that are specific to each domain.</p>
+			<p><b>Editor:</b> Johannes Hund</p>
+			<p class="milestone"><b>Expected completion:</b> First Publication of IG Note in Q3 2016</p>
+		</dd>
+
+		<dt><a href="http://w3c.github.io/wot/landscape.html">Technology Landscape</a></dt>
+		<dd>
+			<p>This document will look at existing practices and standards, and identify opportunities for new work.</p>
+			<p><b>Editor:</b> Soumya Kanti Datta</p>
+			<p class="milestone"><b>Expected completion:</b> First Publication of IG Note in Q3 2016</p>
+		</dd>
+
+		<dt><a href="http://w3c.github.io/wot/architecture/wot-architecture.html">Architecture</a></dt>
+		<dd>
+			<p>This document will provide a high-level overview of the architectural components of the Web of Things.</p>
+			<p><b>Editor:</b> Kazuo Kajimoto</p>
+			<p class="milestone"><b>Expected completion:</b> First Publication of IG Note in Q3 2016</p>
+		</dd>
+
+		<dt><a href="http://w3c.github.io/wot/current-practices/wot-practices.html">Current Practices</a></dt>
+		<dd>
+			<p>This document will describe building blocks that have been evaluated through prototypes and the PlugFests.
+			<p><b>Editors:</b> Daniel Peintner, Matthias Kovatsch</p>
+			<p class="milestone"><b>Expected completion:</b> Continous releases for each PlugFest</p>
+		</dd>
+	</dl>
+
+	<h3>Long-term Deliverables</h3>
+
+	<p>These deliverables cover critical areas for the Interest Group's mission. Note that to help with these, we are seeking new participants with expertise in the areas of embedded systems, IoT platforms and protocols, security, data types, and semantic modelling. In particular, we expect deliverables that report on in-depth practical studies on:</p>
+
+	<ul>
+		<li>Enabling end-to-end security across a hetergeneous set of platforms</li>
+		<li>The role of semantic models and domain constraints as a basis for interoperability, which will include work on the role of APIs for providing developers with a more convenient way to work with semantic models</li>
+	</ul>
+
+	<p>Additional deliverables may be added by the Interest Group as appropriate to explore specific topics in greater depth.</p>
+	
+</section>
+
+<section id="coordination">
+
+    <h2>Coordination</h2>
+
+    <p>For all specifications, this Interest Group will seek <a href="https://www.w3.org/Guide/Charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a href="https://www.w3.org/2015/Process-20150901/#RecsWD" title="First Public Working Draft">FPWD</a> and <a href="https://www.w3.org/2015/Process-20150901/#RecsCR" title="Candidate Recommendation">CR</a>, and should be issued when major changes occur in a specification.</p>
+    
+    <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/2015/Process-20150901/#WGCharter">W3C Process Document</a>:</p>
+
+    <div>
+    <h3 id="w3c-coordination">W3C Groups</h3>
+    <dl>
+        <dt>Web of Things Working Group</dt>
+        <dd>The charter for this group is in preparation, and when it is operating, will be the most important W3C group for the Web of Things Interest Group to coordinate with.</dd>
+        <dt><a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a></dt>
+        <dd>For coordination on impacts of Web of Things technologies on accessibility to users with disabilities.</dd>
+        <dt><a href="http://www.w3.org/2001/sw/interest/">Semantic Web Interest Group</a></dt>
+        <dd>For expertise on enabling the expression of semantic models and domain constraints as part of the Web of Things, and the identification of best practices.</dd
+        <dt><a href="http://www.w3.org/2015/spatial/wiki/Main_Page">Spatial Data on the Web Working Group</a></dt>
+        <dd>For collaboration on semantic descriptions, e.g. the Semantic Sensor Network Ontology.</dd>
+        <dt><a href="http://www.w3.org/2014/data-shapes/wiki/Main_Page">RDF Data Shapes Working Group</a></dt>
+        <dd>For expertise on expressing structural constraints on RDF graphs in relation to domain models.</dd>
+        <dt><a href="http://www.w3.org/Privacy/">Privacy Interest Group</a></dt>
+        <dd>For collaboration on privacy considerations for the Web of Things.</dd>
+        <dt><a href="http://www.w3.org/Security/wiki/IG">Web Security Interest Group</a></dt>
+        <dd>For collaboration on areas of mutual interest in respect to security for the Web of Things.</dd>
+        <dt><a href="http://www.w3.org/2009/dap/">Device and Sensors Working Group</a></dt>
+        <dd>For coordination on APIs for sensors and actuators.</dd>
+        <dt><a href="http://www.w3.org/auto/">Web and Automotive Business &amp; Working Groups</a></dt>
+        <dd>For collaboration on technologies and requirements relating to connected cars and the Web of Things.</dd>
+        <dt><a href="http://www.w3.org/XML/EXI/">Efficient XML Interchange Working Group</a></dt>
+        <dd>In relation to efficient interchange for thing descriptions.</dd>
+    </dl>
+
+    <h3 id="external-coordination">External Organizations</h3>
+    
+    <p>To succeed in establishing inter-platform standards, W3C needs to coordinate with IoT alliances and standards development organizations. The following provides examples of organizations with which the Interest Group has already had significant coordination, during the period of the first charter. A <a href="https://www.w3.org/WoT/IG/wiki/How_does_W3C_compare_to_other_organizations">longer list</a> is available on the Interest Group wiki.</p>
+          
+    <dl>
+        <dt><a href="http://openconnectivity.org">Open Connectivity Foundation</a></dt>
+        <dd>For collaboration on integrating OCF based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
+        <dt><a href="http://www.onem2m.org">oneM2M</a></dt>
+        <dd>For collaboration on integrating M2M based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
+        <dt><a href="http://www.gsma.com">GSMA</a></dt>
+        <dd>For coordination in respect to the interests of Network Operators.</dd>
+        <dt><a href="https://datatracker.ietf.org/wg/ace/charter/">IETF Authentication and Authorization for Constrained Environments (ace) Working Group</a></dt>
+        <dd>In respect to security building blocks for the Web of Things.</dd>
+        <dt><a href="https://datatracker.ietf.org/doc/charter-ietf-core/">IETF Core Working Group</a></dt>
+        <dd>In respect to protocol bindings for the CoAP protocol.</dd>
+        <dt><a href="https://datatracker.ietf.org/doc/charter-irtf-t2trg/">IRTF Thing to Thing Research Group</a></dt>
+        <dd>For coordination of matters of mutual interest in relation to the Web of Things.</dd>
+        <dt><a href="http://www.iiconsortium.org">Industrial Internet Consortium</a></dt>
+        <dd>For collaboration on use cases, requirements and architecture for the Web of Things.</dd>
+        <dt><a href="https://opcfoundation.org">OPC Foundation</a></dt>
+        <dd>For collaboration on semantic interoperability and end to end security across platforms.</dd>
+        <dt><a href="http://www.plattform-i40.de/I40/Navigation/EN/Home/home.html">Plattform Industrie 4.0</a></dt>
+        <dd>For collaboration on use cases and requirements for smart manufacturing, including semantic interoperability and end to end security across platforms.</dd>
+    </dl>
+    </div>
+</section>
+
+<section class="participation">
+    <h2 id="participation">Participation</h2>
+    
+    <p>To be successful, this interest group is expected to have 6 or more active participants for its duration, including representatives from the key implementors and active Editors for each document. The Chairs and document Editors are expected to contribute half of a day per week towards the Interest Group. There is no minimum requirement for other Participants.</p>
+        
+    <p>The group encourages questions, comments, and issues on its public mailing lists and document repositories as described in <a href='#communication'>Communication</a>.</p>
+
+</section>
+
+<section id="communication">
+    <h2>Communication</h2>
+    
+    <p id="public">Technical discussions for this Interest Group are conducted in <a href="https://www.w3.org/2015/Process-20150901/#confidentiality-levels">public</a>. Meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository and may permit direct public contribution requests.</p>
+
+    <p>Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="http://www.w3.org/WoT/WG/">Web of Things Interest Group home page.</a></p>
+    
+    <p>Most Web of Things Interest Group teleconferences will focus on discussion of particular specifications and will be conducted on an as-needed basis.</p>
+    
+    <p>This group primarily conducts its technical work on the public mailing list <a id="public-name" href="mailto:public-wot-ig@w3.org">public-wot-ig@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-wot-ig/">archive</a>). The public is invited to post messages to this list.</p>
+    
+    <p>The group may use a Member-confidential mailing list for administrative purposes and, at the discretion of the Chairs and Members of the group, for Member-only discussions in special cases when a participant requests such a discussion. </p>
+</section>
+
+<section id="decisions">
+    <h2>Decision Policy</h2>
+    
+    <p>This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/2015/Process-20150901/#Consensus"> W3C Process Document (section 3.3</a>). Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with Members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+    
+    <p>However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote, and record a decision along with any objections.</p>
+    
+    <p>To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional. A call for consensus (CfC) will be issued for all resolutions (for example, via email and/or web-based survey), with a response period from one week to 10 working days, depending on the chair's evaluation of the group consensus on the issue. If no objections are raised on the mailing list by the end of the response period, the resolution will be considered to have consensus as a resolution of the Interest Group.</p>
+    
+    <p>All decisions made by the group should be considered resolved unless and until new information becomes available, or unless reopened at the discretion of the Chairs or the Director.</p>
+    
+    <p>This charter is written in accordance with the <a href="https://www.w3.org/Consortium/Process/policies#Votes">W3C Process Document (Section 3.4, Votes)</a>, and includes no voting procedures beyond what the Process Document requires.</p>
+    
+</section>
+
+<section id="patentpolicy">
+    <h2 id="patentpolicy">Patent Disclosures</h2>
+
+    <p>The Web of Things Interest Group provides an opportunity to share perspectives on the topic addressed by this charter. W3C reminds Interest Group participants of their obligation to comply with patent disclosure obligations as set out in <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">Section 6</a> of the W3C Patent Policy. While the Interest Group does not produce Recommendation-track documents, when Interest Group participants review Recommendation-track specifications from Working Groups, the patent disclosure obligations do apply.</p>
+
+    <p>For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.</p>
+
+</section>
+
+<section id="licensing">
+    <h2>Licensing</h2>
+    
+    <p>This Interest Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
+    
+</section>
+
+<section id="about">
+    <h2>About this Charter</h2>
+    
+    <p>This charter has been created according to <a href="https://www.w3.org/Consortium/Process/groups#GAGeneral">section 5.2</a> of the <a href="https://www.w3.org/Consortium/Process">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.</p>
+
+<!--
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+          <p class="issue"><b>Note:</b> Only include this section if this is a charter extension. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/Charter#extension">Charter Guidebook (section 4)</a>.</p>
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/2015/Process-20150901/#CharterReview">W3C Process Document (section 5.2.3)</a>:</p>
+          <table class="history">
+            <tbody>
+              <tr>
+                <th>
+                  Charter Period
+                </th>
+                <th>
+                  Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+                <th>
+                  Changes
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Initial Charter</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Charter Extension</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Rehartered</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <p class="todo">[description of change to charter, with link to new deliverable item in charter] <b>Note:</b> use the class <code>new</code> for all new deliverables, for ease of recognition.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+-->
+</section>
+</main>
+
+<hr />
+
+<footer>
+    <address>
+        <a href="mailto:dsr@w3.org">Dave Raggett</a>, <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a>, <a href="mailto:yingying@w3.org">Yingying Chen</a>
+    </address>
+    
+    <p class="copyright">
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016
+        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+        (
+        <a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+        <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+        <a href="http://www.keio.ac.jp/">Keio</a>,
+        <a href="http://ev.buaa.edu.cn/">Beihang</a>
+        ), All Rights Reserved.
+
+        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+    </p>
+    
+    <p>
+        <!-- $Date: 2016/05/24 08:53:53 $ -->
+    </p>
+</footer>
+
+</body>
+</html>

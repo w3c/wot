@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Web of Things Working Group Charter</title>
+
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/Guide/pubrules-style.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css" />
+    <style type="text/css">
+      ul#navbar {
+        font-size: small;
+      }
+      dt.spec {
+        font-weight: bold;
+      }
+      dt.spec new {
+        background: yellow;
+      }
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+      #section-out-of-scope dt {
+        font-weight: bold;
+        margin-top: 0.5em;
+      }
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+      .todo {
+        color: red;
+      }
+      footer {
+        font-size: small;
+      }
+      span.caption {
+        display: block;
+        text-align: center;
+        font-style: italic;
+      }
+      div.summary {
+        margin-top: 0.5em;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 0.5em;
+        background: rgb(240,240,255);
+        border: solid 1px black;
+      }
+      #relationships {
+      	display: block;
+      	float: right;
+        margin-left: 0.6em;
+        width:40%;
+        min-width:250px;
+        max-width:936px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          <li><a href="#patentpolicy">Patent Policy</a></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72" /></a>
+        <a class="domainlogo" title="domain:ubi" href="http://w3.org/UbiWeb/"><img src="https://www.w3.org/Icons/ubi212" alt="Ubiquitous Web Domain"></a>
+      </p>
+    </header>
+    <main>
+      <h1 id="title">Web of Things Working Group Charter</h1>
+
+      <p class="issue"><i>Comments are welcome on the <a href="mailto:public-wot-ig@w3.org?subject=[WG%20Charter]%20your%20comment">Web of Things Interest Group public email list</a>, and you are encouraged to file issues on github, but please use the label "WG Charter". The GitHub URL for this document is <a href="https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html">https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html</a>.</i></p>
+
+      <p class="mission">The Web of Things seeks to counter the fragmentation of the IoT through standard complementing building blocks (e.g., metadata and APIs) that enable easy integration across IoT platforms and application domains. This Working Group Charter covers those aspects that the <a href="https://www.w3.org/2016/07/wot-ig-charter.html">Web of Things Interest Group</a> believes are mature enough to progress to W3C Recommendations. Further background is available in the accompanying <a href="http://w3c.github.io/wot/charters/wot-white-paper-2016.html">white paper</a>.</p>
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Web of Things Working Group.</a></p>
+      </div>
+
+      <section id="details">
+        <table class="summary-table">
+          <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+            </td>
+          </tr>
+          <tr id="Duration">
+            <th>
+              End date
+            </th>
+            <td>
+              31 December 2018 (same end date as the IG)
+            </td>
+          </tr>
+<!--
+          <tr class="todo">
+            <th>Charter extension</th>
+            <td>See <a href="#history">Change History</a>.
+              <span class="issue">(<b>Note:</b> Only include this row if this is a charter extension.)</span>
+            </td>
+          </tr>
+-->
+          <tr>
+            <th>
+              Chairs
+            </th>
+            <td>
+              <i class="todo">[chair name]</i>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Team Contacts
+            </th>
+            <td>
+              <a href="mailto:dsr@w3.org">Dave Raggett,</a> (0.2 <abbr title="Full-Time Equivalent">FTE</abbr>), <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>), <a href="mailto:yingying@w3.org">Yingying Chen</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)</i>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+              <strong>Teleconferences:</strong> Weekly with additional topic specific calls as appropriate.<br />
+              <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, with no more than 4 face to face meetings in total per year.
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="introduction" class="introduction">
+        <h2>Introduction</h2>
+
+        <p>This working group is tasked with the standardization of four technological building blocks that were identified by the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> (IG) as being key to realizing the Web of Things. These building blocks will complement existing standards to enable cross-platform and cross-domain interoperability, as opposed to creating yet another IoT standard. The initial concepts are detailed in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Current Practices document</a> of the IG and summarized in the <a href="#scope">Scope</a> section. There has already been successful incubation of these building blocks in multiple IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>, where several companies and research institutes have presented and tested their WoT prototypes. First open-source implementations are also already available.</p>
+
+      </section>
+
+      <section id="scope" class="scope" style="clear:both;">
+        <h2>Scope</h2>
+        
+        <p>The Working Group has four items in scope to enable interoperability across IoT platforms: the standardization of three individual building blocks and the integration of one cross-cutting as detailed in the sub-sections.</p>
+        
+        <div class="summary">
+          <p style="text-align:center;font-style:italic">Scope Summary</p>
+          
+          <ul>
+            <li>Thing Description: Semantic vocabularies for describing the data and interaction models exposed to applications, the choice of communications patterns provided by protocols, and serialization formats thereof suitable for processing on resource-constrained devices and transmission over constrained networks</li>
+            <li>Scripting APIs: Platform-independent application-facing APIs for Thing-to-Thing interaction and Thing lifecycle management</li>
+            <li>Bindings to Common Platforms and Protocols: Bindings from the abstract messages to specific platforms and protocols in collaboration with the corresponding organizations</li>
+            <li>Cross-cutting Security and Privacy: Mechanisms integrated into the other building blocks to describe and implement security and privacy policies to enable secure and safe interaction across different IoT platforms</li>
+          </ul>
+        </div>
+
+        <h3>Thing Description</h3>
+
+        <p>The Working Group will develop solutions to describe Things through metadata and declarations of their capabilities (e.g., possible interactions). This work includes the definition of different <i>machine-understandable vocabularies</i> based on triples and linkable graphs as well as serialization formats of such a Thing Description. The aim is to be compatible with existing vocabularies and tools (e.g., Linked Open Data, Schema.org, Resource Description Framework (RDF), semantic reasoners, etc.).</p>
+
+        <ul>
+          <li>A common vocabulary for describing Things in terms of the data and interaction models they expose to applications (e.g., interaction patterns such as Properties, Actions, and Events as described in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Interest Group current practices document</a>). This will cover Thing lifecycles, datatypes (including streams and integrity constraints), and provision for early and late binding. This cross-domain vocabulary will be designed for use in combination with vocabularies for domain-specific semantics and metadata. Consideration will be given to the means for describing the stability of data models and metadata, and how they evolve over time. This is needed to manage interdependencies and is analogous to the role of metadata for package management in the Linux operating system.</li>
+
+          <li>A common vocabulary for security and privacy metadata as a basis for platforms to determine how to securely interoperate. This will build upon emerging standards and best practices for securing exchanges, and includes metadata relating to authentication, authorization, secure communication, and privacy policies. The use of such metadata will be optional (to support deployments that prefer to inform the requester via error responses rather than upfront). It will support, but not mandate, the utilization of online trusted third party services such as authorization servers. It will support a variety of security token form factors of established serialization formats, domain-specific security token contents (e.g., building automation), and various security models. It will support a variety of protocols for their acquisition and for transportation. Support for secure communications will consider transport as well as application-level security.</li>
+
+          <li>A common vocabulary for communications metadata. This will enable platforms to determine how to interoperate given a choice of protocols, data formats, and encodings, as well as different communication patterns, e.g., push, pull, pub-sub, and peer-to-peer. Communications metadata may be needed to describe the multiplexing of data from different sensors, different approaches to buffering data, and the interoperability requirements for communicating with battery- or ambient-powered devices that spend a lot of their time asleep to conserve power.</li>
+
+          <li>Serialization formats for the Thing Description suitable for processing on resource-constrained platforms and designed to appeal to application developers. The encoding shall allow for resource-efficient instantiation of the software objects that reflect the data and interaction models of Things. Where practical, this will be based upon existing formats and encodings (e.g., EXI- or CBOR-compressed JSON-LD).</li>
+        </ul>
+
+        <h3>Scripting APIs</h3>
+
+        <p>The Working Group will seek to specify a suite of APIs exposed to applications covering the following:</p>
+
+        <ul>
+          <li>Interactions with Things and reactions/handlers to provide the functionality of a Thing. This includes APIs both for applications acting in the client role interacting with a Thing as well as APIs for applications in the server role, exposing a Thing.</li>
+
+          <li>Discovery for local and remote cases, abstracting away from the details of the discovery mechanisms. This will cover a range of approaches: Things on the same host, Things nearby, Things on the same network, Things listed in a repository, and discovery based upon formal or crowd-sourced semantics and social relationships.</li>
+
+          <li>Cross-platform security frameworks including authentication, authorization, and secure communication, as well as the means for their establishment through provisioning of metadata and keying associations. This will enable the use of security frameworks, such as IETF OAuth and ACE, according to the specific tasks for the client (e.g., security credentials acquisition and supply), and for the server (e.g., security token enforcement and validation), as well as common tasks (e.g., registration). A goal is to decouple applications from the implementations of the security frameworks. This introduces online trusted-third party components to which constrained WoT components delegate specific processing tasks (such as authentication and authorization). It requires trusted assertions that report about such processing events as well as protocols to trigger such processing.
+          </li>
+
+          <li>Thing lifecycles, e.g., registering and creating Things, either from a Thing description or using scripting and enabling applications to be aware of lifecycle transitions.</li>
+
+          <li>Error handling that unifies the different error reports provided by different platforms and protocols.</li>
+
+          <li>Cross-cutting concerns, e.g., internationalization, accessibility, and privacy.</li>
+
+        </ul>
+
+        <p>Where practical, APIs will be defined in ways that are independent of the choice of programming languages. The scope includes APIs for User Agents/browsers as well as APIs for faceless applications in a runtime environment such as node.js. The underlying assumptions and contracts between the runtime environment and the application (e.g., security policies and callback signatures) will be well-defined.</p>
+
+
+        <h3>Bindings to Common Platforms and Protocols</h3>
+
+        <p>To enable interoperability, the Working Group will seek to define standard bindings to common platforms and protocols in close collaboration with the industry alliances and standards development organizations responsible for these. This includes definition of mappings from the interactions at the Thing Layer to:</p>
+
+        <ul>
+          <li>Transfer layer communication patterns such as push, pull, pub-sub, bi-directional messaging, etc.</li>
+          <li>Specific protocols at the transfer layer, e.g., REST-based protocols such as HTTP and CoAP, pub-sub protocols such as MQTT, and raw channel-based protocols such as WebSockets</li>
+        </ul>
+        
+        <p>The Web of Things has a multi-protocol architecture and bindings to both IP and non-IP transports (e.g., Bluetooth Low Energy) may be defined.</p>
+        
+        <p>Support for secure communications will initially focus on transport-level security (e.g., TLS and DTLS), but also object security is considered where relevant. This task will utilize 3rd party defined security frameworks and protocols including their extension points. The profiling of their usage is in scope of this task. The specification of own (new from scratch) frameworks is out-of-scope.</p>
+        
+        <h3>Cross-cutting Security and Privacy</h3>
+
+        <p>The mechanisms for security and privacy must be cross-cutting over the descriptions, scripting APIs, and bindings. Thus, they are detailed within the corresponding building blocks above.</p>
+
+        <div id="section-out-of-scope">
+          <h3 id="out-of-scope">Out of Scope</h3>
+          
+          <p>The following features are out of scope, and will not be addressed by this working group:</p>
+
+          <dl class="out-of-scope">
+            <dt>Application- and domain-specific metadata vocabularies</dt>
+            <dd>The Working Group is restricted to work on cross-domain vocabularies.</dd>
+            <dt>APIs and security frameworks specific to particular platforms external to the W3C</dt>
+            <dd>The scope of the Working Group is restricted to APIs and security frameworks that are applicable across platforms.</dd>
+            <dt>Modification of protocols</dt>
+            <dd>If during work on protocol bindings, it becomes apparent that changes are needed to protocols, the Web of Things Working Group will rely on the organization responsible for the protocol to make the changes. It is out of scope for the Working Group to standardize such changes itself.</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h3>Success Criteria</h3>
+          
+          <p>In order to advance to  <a href="https://www.w3.org/2015/Process-20150901/#RecsCR" title="Proposed Recommendation">Proposed Recommendation</a>, each specification is expected to have at least two independent implementations of each of feature defined in the specification.</p>
+          <p>Each specification should contain a section detailing any known security or privacy implications for implementers, Web authors, and end users.</p>
+        </div>
+      </section>
+
+
+
+      <section id="deliverables">
+        <h2>Deliverables</h2>
+
+        <p>More detailed milestones and updated publication schedules are available on the <a href="https://www.w3.org/WoT/WG/wiki/PubStatus">group publication status page</a>.</p>
+
+        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, or otherwise reach a stable state.</p>
+
+        <div id="normative">
+          <h3>Normative Specifications</h3>
+          
+          <p>The working group will deliver the following W3C normative specifications:</p>
+
+          <dl>
+            <dt id="wot-td" class="spec"><a href="#">WoT Architecture</a></dt>
+            <dd>
+              <p>This specification defines the high-level architecture for the individual WoT building blocks as well as necessary platform configurations. Furthermore, it confines the deployment scenarios targeted by the Web of Things. The document will be based on the <a href="https://w3c.github.io/wot/architecture/wot-architecture.html">WoT Interest Group architecture document</a>.</p>
+
+              <p class="draft-status"><b>Draft state:</b> discussion and implementation experience in the Web of Things Interest Group</p>
+
+              <p class="milestone"><b>First Public Working Draft:</b> 2 months after charter commencement</p>
+              <p class="milestone"><b>Expected completion:</b> 16 months after charter commencement </p>
+            </dd>
+
+            <dt id="wot-td" class="spec"><a href="#">WoT Thing Description</a></dt>
+            <dd>
+              <p>This specification defines an ontology and a binding to short names for cross-domain metadata for the Web of Things, including the data model exposed to applications, as well as security and communications metadata.</p>
+
+              <p class="draft-status"><b>Draft state:</b> discussion and implementation experience in the Web of Things Interest Group</p>
+
+              <p class="milestone"><b>First Public Working Draft:</b> 4 months after charter commencement</p>
+              <p class="milestone"><b>Expected completion:</b> 22 months after charter commencement </p>
+            </dd>
+
+            <dt id="wot-apis" class="spec"><a href="#">WoT Scripting APIs</a></dt>
+            <dd>
+              <p>This specification defines a suite of cross-domain APIs for Application developers for the Web of Things.</p>
+
+              <p class="draft-status"><b>Draft state:</b> discussion and implementation experience in the Web of Things Interest Group</p>
+
+              <p class="milestone"><b>First Public Working Draft:</b> 4 months after charter commencement</p>
+              <p class="milestone"><b>Expected completion:</b> 22 months after charter commencement </p>
+            </dd>
+
+            <dt id="wot-bindings" class="spec"><a href="#">WoT Protocol Bindings</a></dt>
+            <dd>
+              <p>This specification defines bindings from the Web of Things to some common protocols and encodings.</p>
+
+              <p class="draft-status"><b>Draft state:</b> discussion and implementation experience in the Web of Things Interest Group</p>
+
+              <p class="milestone"><b>First Public Working Draft:</b> 4 months after charter commencement</p>
+              <p class="milestone"><b>Expected completion:</b> 22 months after charter commencement </p>
+            </dd>
+          </dl>
+        </div>
+
+        <div id="ig-other-deliverables">
+          <h3>Other Deliverables</h3>
+
+          <dl>
+            <dt id="wot-test-cases" class="spec"><a href="#">WoT Test Cases</a></dt>
+            <dd>
+              <p>This document is part of the W3C CR process test suite and defines test cases corresponding to technical issues addressed by the WG. They also help to evaluate the interoperability among the test suite implementations as well as external implementations, e.g., open source projects.</p>
+
+              <p class="draft-status"><b>Draft state:</b> discussion in the Web of Things Interest Group</p>
+
+              <p class="milestone"><b>First Public Working Draft:</b> 4 months after charter commencement</p>
+              <p class="milestone"><b>Expected completion:</b> 22 months after charter commencement </p>
+            </dd>
+          </dl>
+          
+          <p>Other non-normative documents may be created such as:</p>
+          
+          <ul>
+            <li>Use case and requirement documents;</li>
+            <li>Test suite and implementation report for the specifications;</li>
+            <li>Guidelines for designing Web of Things bindings to protocols;</li>
+            <li>Primer or Best Practice documents to support Web developers when designing applications.</li>
+          </ul>
+          
+          <p>The Working Group expects to provide open source implementations for the specifications.</p>
+        </div>
+      </section>
+
+
+
+      <section id="coordination">
+        <h2>Coordination</h2>
+
+        <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/Guide/Charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a href="https://www.w3.org/2015/Process-20150901/#RecsWD" title="First Public Working Draft">FPWD</a> and <a href="https://www.w3.org/2015/Process-20150901/#RecsCR" title="Candidate Recommendation">CR</a>, and should be issued when major changes occur in a specification.</p>
+
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/2015/Process-20150901/#WGCharter">W3C Process Document</a>:</p>
+
+        <div>
+          <h3 id="w3c-coordination">W3C Groups</h3>
+
+          <dl>
+            <dt><a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a></dt>
+            <dd>The Web of Things Interest Group provides a forum for discussion of use cases and requirements, for investigation of areas that need further study before transfer to the standardization track, and for outreach and collaboration with industry alliances and standards development organizations. The Web of Things Working Group may ask the Interest Group to look into issues that are found to be insufficiently mature for immediate standardization, The Interest Group will take the lead on work on testing, e.g., organization of PlugFest events, test frameworks, and joint work with other organizations on interoperability testing.</dd>
+            <dt><a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a></dt>
+            <dd>For coordination on impacts of Web of Things technologies on accessibility to users with disabilities.</dd>
+            <dt><a href="http://www.w3.org/2009/dap/">Device and Sensors Working Group</a></dt>
+            <dd>For coordination on APIs for sensors and actuators.</dd>
+            <dt><a href="http://www.w3.org/XML/EXI/">Efficient XML Interchange Working Group</a></dt>
+            <dd>In relation to efficient interchange of Thing descriptions and data.</dd>
+            <dt><a href="http://www.w3.org/2015/spatial/wiki/Main_Page">Spatial Data on the Web Working Group</a></dt>
+            <dd>For collaboration on semantic descriptions, e.g. the Semantic Sensor Network Ontology.</dd>
+            <dt><a href="http://www.w3.org/auto/">Web and Automotive Business &amp; Working Groups</a></dt>
+            <dd>For collaboration on technologies and requirements relating to connected cars and the Web of Things.</dd>
+          </dl>
+          
+          <h3 id="external-coordination">External Organizations</h3>
+          
+          <dl>
+            <dt><a href="https://datatracker.ietf.org/wg/ace/charter/">IETF Authentication and Authorization for Constrained Environments (ace) Working Group</a></dt>
+            <dd>In respect to security building blocks for the Web of Things.</dd>
+            <dt><a href="https://datatracker.ietf.org/doc/charter-ietf-core/">IETF Core Working Group</a></dt>
+            <dd>In respect to protocol bindings for the CoAP protocol.</dd>
+            <dt><a href="http://www.onem2m.org">OneM2M</a></dt>
+            <dd>For collaboration on integrating M2M based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
+            <dt><a href="https://opcfoundation.org">OPC Foundation</a></dt>
+            <dd>For collaboration on semantic interoperability and end to end security across platforms.</dd>
+            <dt><a href="http://openconnectivity.org">Open Connectivity Foundation</a></dt>
+            <dd>For collaboration on integrating OCF based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
+          </dl>
+        </div>
+      </section>
+
+
+
+      <section class="participation">
+        <h2 id="participation">Participation</h2>
+        
+        <p>To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a day per week towards the Working Group. There is no minimum requirement for other Participants.</p>
+        
+        <p>The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>.</p>
+        
+        <p>The group also welcomes non-Members to contribute technical submissions for consideration, with the agreement from each participant to Royalty-Free licensing of those submissions under the W3C Patent Policy.</p>
+      </section>
+
+
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public">
+          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/2015/Process-20150901/#confidentiality-levels">public</a>. Meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository, and may permit direct public contribution requests.
+        </p>
+        <p>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="http://www.w3.org/WoT/WG/">Web of Things Working Group home page.</a>
+        </p>
+        <p>
+          Most Web of Things Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+        </p>
+        <p>
+          This group primarily conducts its technical work on the public mailing list <a id="public-name" href="mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-wot-wg/">archive</a>). The public is invited to post messages to this list.
+        </p>
+        <p>
+          The group may use a Member-confidential mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
+        </p>
+      </section>
+
+
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p>
+          This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/2015/Process-20150901/#Consensus"> W3C Process Document (section 3.3</a>). Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+        <p>
+           However, if a decision is necessary for timely progress, but consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote, and record a decision along with any objections.
+        </p>
+        <p>
+          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
+
+          A call for consensus (CfC) will be issued for all resolutions (for example, via email and/or Web-based survey), with a response period from one week to 10 working days, depending on the chair's evaluation of the group consensus on the issue.
+
+          If no objections are raised on the mailing list by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
+        </p>
+        <p>
+          All decisions made by the group should be considered resolved unless and until new information becomes available, or unless reopened at the discretion of the Chairs or the Director.
+        </p>
+        <p>
+          This charter is written in accordance with the <a href="https://www.w3.org/Consortium/Process/policies#Votes">W3C Process Document (Section 3.4, Votes)</a>, and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+
+
+      <section id="patentpolicy">
+        <h2>
+          Patent Policy
+        </h2>
+        <p>
+          This Working Group operates under the <a href="http://w3.org/Consortium/Patent-Policy-20040205/">W3C Patent Policy</a> (5 February 2004 Version). To promote the widest adoption of Web standards, W3C seeks to issue Recommendations that can be implemented, according to this policy, on a Royalty-Free basis.
+
+          For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.
+        </p>
+      </section>
+
+
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>This Working Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
+      </section>
+
+
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p>
+          This charter has been created according to <a href="https://www.w3.org/Consortium/Process/groups#GAGeneral">section 5.2</a> of the <a href="https://www.w3.org/Consortium/Process">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+        </p>
+
+<!--
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+          <p class="issue"><b>Note:</b> Only include this section if this is a charter extension. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/Charter#extension">Charter Guidebook (section 4)</a>.</p>
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/2015/Process-20150901/#CharterReview">W3C Process Document (section 5.2.3)</a>:</p>
+          <table class="history">
+            <tbody>
+              <tr>
+                <th>
+                  Charter Period
+                </th>
+                <th>
+                  Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+                <th>
+                  Changes
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Initial Charter</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Charter Extension</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Rehartered</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <p class="todo">[description of change to charter, with link to new deliverable item in charter] <b>Note:</b> use the class <code>new</code> for all new deliverables, for ease of recognition.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+-->
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <address>
+        <a href="mailto:dsr@w3.org">Dave Raggett</a>, <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a>, <a href="mailto:yingying@w3.org">Yingying Chen</a>
+      </address>
+      <p class="copyright">
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016
+        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+        (
+        <a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+        <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+        <a href="http://www.keio.ac.jp/">Keio</a>,
+        <a href="http://ev.buaa.edu.cn/">Beihang</a>
+        ), All Rights Reserved.
+
+        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+      </p>
+      <p>
+        <!-- $Date: 2015/04/30 16:53:49 $ -->
+      </p>
+    </footer>
+  </body>
+</html>
