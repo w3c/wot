@@ -59,6 +59,7 @@ types, seems a reasonable/possible approach.
     <th>JSON Schema</th>
     <th>Schema.org</th>
     <th>Proposal from <a href="https://github.com/w3c/wot/issues/122">issue #122</a></th>
+    <th>YANG</td>
     <th>Notes</td>
   </tr>
   <tr>
@@ -66,13 +67,17 @@ types, seems a reasonable/possible approach.
     <td>?loosely coupled?</td>
     <td>Strong community</td>
     <td>None</td>
-    <td>Schema.org vocabulary is shared between different parties (e.g., Bing, Google, Yahoo)</td>
+    <td>Networking, mainly SDN community</td>
+    <td>Schema.org vocabulary is shared between different parties (e.g., Bing, Google, Yahoo)<br/><br/>
+    There is no official RFC or tools how to convert YANG to JSON.  RFC  https://tools.ietf.org/html/rfc6110 describes mapping YANG to DSDL.
+    </td>
   </tr>
   <tr>
     <td>Tool support for validation</td>
     <td>Yes e.g.  http://jsonschemalint.com/</td>
     <td>Partially, e.g. https://developers.google.com/structured-data/testing-tool/</td>
     <td>None</td>
+    <td>Yes<br/> http://www.yangvalidator.com/</td>
     <td>Google's tool only check against existing classes and data types.</td>
   </tr>
   <tr>
@@ -106,6 +111,16 @@ types, seems a reasonable/possible approach.
 }
       </pre>
     </td>
+    <td>
+      <pre>
+typedef new-int32-type {
+  type int32 {
+    range "min..13";
+  }
+}
+     </pre>
+     https://tools.ietf.org/html/rfc6020#page-111
+    </td>
     <td>The third stucture does not differentiate between <i>quantities</i> and the <i>values</i> these quantities are associated with</td>
   </tr>
 
@@ -130,6 +145,20 @@ types, seems a reasonable/possible approach.
   "enum": ["file", "memory"]
 }
       </pre>
+    </td>
+    <td>
+      <pre>
+leaf new-enum {
+  type enumeration {
+    enum zero;
+    enum one;
+    enum five {
+     value 5;
+    }
+  }
+}      
+      </pre>
+      value must be integer
     </td>
     <td>Enumerations values might not be of type "string", e.g. dates (see [example of US holidays](https://www.w3.org/TR/xmlschema-2/#rf-enumeration))</td>
   </tr>
@@ -179,6 +208,17 @@ types, seems a reasonable/possible approach.
 }
       </pre>
     </td>
+    <td>
+      <pre>
+container thermometer {
+  leaf temperature {
+    type int32 {
+      range "-30..100";
+    }
+  }
+}      
+      </pre>
+    </td>
     <td>A request to the schema.org community is needed to extend its model</td>
   </tr>
   <tr>
@@ -224,6 +264,21 @@ types, seems a reasonable/possible approach.
       </pre>
     </td>
     <td>
+      <pre>
+typedef temperature {
+  type int32 {
+    range range "-30..100";
+  }
+}
+...      
+container thermometer {
+  leaf value {
+    type temperature;
+  }
+}      
+      </pre>
+    </td>
+    <td>
       In the third structure, property2 must be identical to property1? Is
       property2 needed then?
     </td>
@@ -246,9 +301,9 @@ that still need to be reviewed.
 
 ### Mapping to JSON/CBOR/EXIforJSON
 
-By means of JSON schema mapping to JSON instances seems straightforward. 
+By means of JSON schema mapping to JSON instances seems straightforward.
 
-One question that remains is whether JSON payload needs to be wrapped in one way or the other. 
+One question that remains is whether JSON payload needs to be wrapped in one way or the other.
 
 
 | Not wrapped   | Wrapped   |
@@ -279,7 +334,7 @@ The following is an example JSON schema defining a JSON object.
 }
 ```
 
-transforms to 
+transforms to
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -307,7 +362,7 @@ Here is another example JSON schema defining a JSON array.
 }
 ```
 
-transforms to 
+transforms to
 
 ```xml
 <xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -324,6 +379,6 @@ transforms to
 </xs:complexType>
 ```
 
-Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence. 
+Note1: JSON schema does NOT define any order. That said, we would need to use xsd:all constructs instead of xsd:sequence.
 
-Note2: A complete "JSON Schema" to "XML Schema" mapping needs to be defined. 
+Note2: A complete "JSON Schema" to "XML Schema" mapping needs to be defined.
