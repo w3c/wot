@@ -3,12 +3,12 @@ See also https://github.com/bergos/wot-examples
 
 # Motivation
 
-Need for hypermedia control, e.g. to control Actions/Events (or subscriptions)
-in a RESTful fashion. Relates to current discussion about explicit/implicit
-declaration at interaction level.
+Need for hypermedia control, e.g. to control Actions/Events (or subscriptions).
+Relates to current discussion about explicit/implicit declaration at interaction
+level.
 
 Hydra supports URI templates (with parameterization - see e.g. issue #237),
-error type declarations
+error type declarations.
 
 # Issues
 
@@ -64,6 +64,31 @@ with the JSON-LD context:
     {
       "hydra": ""http://www.w3.org/ns/hydra/core#,
       "uris": "hydra:entryPoint"
+    }
+  ]
+}
+```
+
+Example with templated link:
+```
+{
+  "properties": [
+    {
+      "@id": "obs",
+      "@type": "ssn:Observation",
+      "hrefs": [
+        "@type": "TemplatedLink",
+        "property": {
+          "@type": "IriTemplate",
+          "template" val{?timestamp}",
+          "mapping": [
+            "variable": "timestamp",
+            "property": "ssn:observationTime",
+            "required": true
+          ]
+        },
+        "supportedOperation": [ ... ]
+      ]
     }
   ]
 }
