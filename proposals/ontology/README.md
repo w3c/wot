@@ -21,9 +21,14 @@ switch, toggle...) are Actions.
 related to some Properties. State changes or sensor measurements are Events.
 
 For a formal definition of these concepts, see
-http://w3c.github.io/wot/proposals/ontology/wot.owl. It is based on the IRE
-(Identifier/Resource/Entity) ontology. See
+http://w3c.github.io/wot/wot.owl. The ontology axioms are also detailed in a
+workshop paper ([pdf](https://swit.smartsdk.eu/wp-content/uploads/2016/10/3-An-Ontology-for-the-Web-of-Things.pdf):
+
+> Charpenay, V. & Käbisch S., & Kosch H. (2016), Introducing Thing Descriptions
+and Interactions: An Ontology for the Web of Things. _To be published_.
+
+See also the IRE (Identifier/Resource/Entity) ontology design pattern, on
+which our proposal is based:
 
 > Presutti, V., & Gangemi, A. (2010). Identity of Resources and Entities on the Web. In M. Lytras, & A. Sheth (Eds.) Progressive Concepts for Semantic Web Evolution: Applications and Developments (pp. 123-147). Hershey, PA: Information Science Reference. doi:10.4018/978-1-60566-992-2.ch007
 
-More details to be published in a workshop paper.
