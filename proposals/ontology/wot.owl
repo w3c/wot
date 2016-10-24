@@ -18,14 +18,14 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://w3c.github.io/wot/wot.owl">
-        <owl:versionInfo rdf:datatype="&xsd;decimal">2.1</owl:versionInfo>
-        <created rdf:datatype="&xsd;string">2015-08-14</created>
+        <owl:versionInfo rdf:datatype="&xsd;decimal">2.2</owl:versionInfo>
+        <created rdf:datatype="&xsd;date">2015-08-14</created>
+        <wot2:modified rdf:datatype="&xsd;date">2016-10-24</wot2:modified>
         <title rdf:datatype="&xsd;string">Thing Description Model</title>
         <rdfs:comment rdf:datatype="&xsd;string">This ontology describes Things as specified by the Thing Description Model.</rdfs:comment>
         <creator rdf:datatype="&xsd;string">W3C Web of Things Interest Group</creator>
         <identifier rdf:datatype="&xsd;anyURI">http://www.w3c.org/wot/td</identifier>
         <owl:imports rdf:resource="http://w3c.github.io/wot/ire-extended.owl"/>
-        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
     </owl:Ontology>
     
 
@@ -338,17 +338,7 @@
     <!-- http://w3c.github.io/wot/wot.owl#Action -->
 
     <owl:Class rdf:about="&wot2;Action">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
-                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
         <owl:disjointWith rdf:resource="&wot2;Event"/>
         <owl:disjointWith rdf:resource="&wot2;Property"/>
         <rdfs:comment xml:lang="en">Real-world entity characterizing particular time intervals, possibly influencing some Properties. Non-immediate natural phenomena (e.g. heating) or functionalities provided by a cyber-physical system (open, close, switch, toggle...) are Actions.</rdfs:comment>
@@ -359,17 +349,7 @@
     <!-- http://w3c.github.io/wot/wot.owl#Event -->
 
     <owl:Class rdf:about="&wot2;Event">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
-                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
         <owl:disjointWith rdf:resource="&wot2;Property"/>
         <rdfs:comment xml:lang="en">Real-world entity characterizing particular instants, possibly related to some Properties. State changes or sensor measurements are Events.</rdfs:comment>
     </owl:Class>
