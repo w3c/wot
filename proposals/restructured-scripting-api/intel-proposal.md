@@ -29,13 +29,16 @@ The main use case for discovery is finding a [`Thing`](#thing) by its name, URL,
 
 Discovery is an open ended client side process, usually based on multicast request or a direct request to a `Thing`. Therefore applications can start the discovery process, but cannot reliably cancel or stop it, nor can discovery be reliably completed. Depending on the underlying protocols, there may or may not be a timeout on discovery.
 
+However, applications (or implementations) could ignore discovery results after "canceling" discovery, so a `cancel()` method may be exposed.
+
 Applications should get access to `Thing`s as soon as they are discovered.
 
 The following patterns could be used with discovery.
 
 ### 1. Discovery function with filter and callback
 ```javascript
-  Promise<void> find(ThingFilter filter, ThingFoundCallback listener);
+  Promise<void> startDiscovery(ThingFilter filter, ThingFoundCallback onfound);
+  void stopDiscovery(optional ThingFilter filter);
 
   callback ThingFoundCallback = void (ConsumedThing);
 
@@ -54,10 +57,8 @@ wot.find({ type: "wot/lightmeter" }, function(thing) {
 });
 
 ```
-
 This approach is simple and can be used with constrained runtimes.
-Events cannot be used exclusively because adding listeners does not support filters.
-Observables with signal semantics could be used in the future.
+Discovery requests are associated with their filters, therefore cancellation takes the filter as argument. If no filters provided, `stopDiscovery()` will remove all current filters and will stop notifying the application about all further discoveries. A subsequent `startDiscovery()` may enable new filters.
 
 ### 2. Discovery with starting function and event
 ```javascript
@@ -79,6 +80,8 @@ wot.find({ type: "wot/lightmeter" });
 
 The `listener` argument to `find()` is optional, and when provided, the implementation will add it as a listener to `onthingfound`. This is a convenience in order to avoid keeping in mind that starting the discovery is not enough, the developer also needs to add a listener, otherwise won't get a `Thing`.
 
+Applications can remove the listener from the `onthingfound` event, thereby canceling the discovery in the sense of removing the associated filter and ignoring further discovery results.
+
 ```javascript
 wot.find({ type: "wot/lightmeter" }, function(event) {
   var thing = event.thing;
@@ -86,6 +89,75 @@ wot.find({ type: "wot/lightmeter" }, function(event) {
 });
 ```
 This approach uses Events, which is a bit controversial, given the choice between `EventTarget` and `EventEmitter`. In the future, Observables may be used instead.
+
+### 3. Discovery by subscribing to an event with a filter
+This approach extends the `addListener()` method of `EventEmitter` or `addEventListener()` method of `EventTarget` with adding an extra optional parameter for a dictionary filter. Therefore a starting function is not needed.
+
+```javascript
+  attribute EventHandler onthingfound;
+```
+By adding a listener and a filter to `onthingfound`, the discovery process is started. By removing the listener and filter, the discovery process is canceled.
+
+This approach is controversial for the following reasons:
+- extending `EventEmitter` and `EventTarget` may not be received well
+- managing which listener is associated with which filter, and combinations of adding and removing listeners is complex.
+
+### 4. Discovery with simple Observables
+
+```javascript
+  DiscoverySubscription find(ThingFilter filter,
+                             ThingFoundCallback onfound);
+
+  callback ThingFoundCallback = void (ConsumedThing);
+
+  interface DiscoverySubscription {
+    void cancel();
+  };
+```
+
+A subscription is always associated with a single listener and optional filter(s).
+
+In the simplest form a `DiscoverySubscription` provides a way to cancel the discovery, i.e. remove the given `filter` and ignore further discovery results.
+
+```javascript
+var discovery = wot.find({ type: "wot/lightmeter" }, function(thing) {
+      console.log("Thing found: " + thing.url);
+    });
+
+// ... later ...
+discovery.cancel();
+```
+
+In practice this should be enough for covering WoT discovery, and could be augmented later if needed, for example with functionality for adding more filters, and replacing the listener, etc.
+
+```javascript
+  interface DiscoverySubscription {
+    // remove one filter, or all filters with also stopping the listener
+    void cancel(optional ThingFilter filter);
+
+    // replace the listener and return `this` for chaining
+    DiscoverySubscription onfound(ThingFoundCallback onfound);
+
+    // add a filter and return `this` for chaining
+    DiscoverySubscription filter(ThingFilter filter);
+  };
+```
+
+When `cancel()` is given one filter, only that filter is removed, and the listener continues to be invoked. When all filters are removed one by one, the listener is invoked with any results until `cancel()` without arguments is called.
+When `cancel()` is given no arguments, it removed all filters and stops invoking the listener.
+
+So applications could say
+
+```javascript
+var discovery = wot.find()
+    .filter({ type: "wot/lightmeter" });
+    .onfound(function(thing) {
+      console.log("Thing found: " + thing.url);
+    });
+
+// ... later ...
+discovery.cancel();
+```
 
 <a name="wot"></a>
 The WoT object
