@@ -9,11 +9,11 @@
     <link rel="stylesheet" type="text/css" href="https://www.w3.org/Guide/pubrules-style.css" />
     <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css" />
     <style type="text/css">
-      ul#navbar {
-        font-size: small;
-      }
       dt.spec {
         font-weight: bold;
+      }
+      ul#navbar {
+        font-size: small;
       }
       dt.spec new {
         background: yellow;
@@ -149,24 +149,59 @@
       <section id="introduction" class="introduction">
         <h2>Introduction</h2>
 
-        <p>This working group is tasked with the standardization of four technological building blocks that were identified by the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> (IG) as being key to realizing the Web of Things. These building blocks will complement existing standards to enable cross-platform and cross-domain interoperability, as opposed to creating yet another IoT standard. The initial concepts are detailed in the <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Current Practices document</a> of the IG and summarized in the <a href="#scope">Scope</a> section. There has already been successful incubation of these building blocks in multiple IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>, where several companies and research institutes have presented and tested their WoT prototypes. First open-source implementations are also already available.</p>
+        <p>This working group is tasked with the standardization of four technological building blocks 
+           identified by the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> (IG) 
+           as being key to realizing the Web of Things. 
+           These building blocks will complement existing 
+           and emerging standards by focusing on enabling cross-platform and cross-domain interoperability, 
+           as opposed to creating yet another IoT standard. 
+           The initial concepts are detailed in the 
+           <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Current Practices document</a> 
+           of the IG and summarized in the <a href="#scope">Scope</a> section. 
+           There has already been successful incubation of these building blocks in 
+           multiple IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>, 
+           where several companies and research institutes have presented and tested their WoT prototypes. 
+           First open-source implementations are also already available.</p>
 
       </section>
 
       <section id="scope" class="scope" style="clear:both;">
         <h2>Scope</h2>
         
-        <p>The Working Group has four items in scope to enable interoperability across IoT platforms: the standardization of three individual building blocks and the integration of one cross-cutting as detailed in the sub-sections.</p>
+        <p>The Working Group has four items in scope to enable interoperability across IoT platforms:</p>
         
         <div class="summary">
-          <p style="text-align:center;font-style:italic">Scope Summary</p>
+          <p style="text-align:left;font-style:italic">Scope Summary</p>
           
-          <ul>
-            <li>Thing Description: Semantic vocabularies for describing the data and interaction models exposed to applications, the choice of communications patterns provided by protocols, and serialization formats thereof suitable for processing on resource-constrained devices and transmission over constrained networks</li>
-            <li>Scripting APIs: Platform-independent application-facing APIs for Thing-to-Thing interaction and Thing lifecycle management</li>
-            <li>Bindings to Common Platforms and Protocols: Bindings from the abstract messages to specific platforms and protocols in collaboration with the corresponding organizations</li>
-            <li>Cross-cutting Security and Privacy: Mechanisms integrated into the other building blocks to describe and implement security and privacy policies to enable secure and safe interaction across different IoT platforms</li>
-          </ul>
+          <dl>
+            <dt>Thing Description:</dt>
+            <dd>Semantic vocabularies for describing the data and interaction models exposed to applications, 
+                the choice of communications patterns provided by protocols, 
+                and serialization formats suitable for processing on resource-constrained devices and 
+                transmission over constrained networks.</dd>
+            <dt>Scripting APIs:</dt>
+            <dd>Platform-independent application-facing APIs for Thing-to-Thing interaction 
+                and Thing lifecycle management.</dd>
+            <dt>Bindings to Common Platforms and Protocols:<dt>
+            <dd>Bindings from the abstract messages to specific platforms and protocols in collaboration with the 
+                corresponding organizations.</dd>
+            <dt>Cross-cutting Security and Privacy Policies and Mechanisms:<dt>
+            <dd>Mechanisms integrated into the other building blocks to describe and implement security and 
+                privacy policies to enable secure and safe interaction across different IoT platforms.</dd>
+          </dl>
+          <p>Of these, the first deliverable, the normative Thing Description standard, is central, 
+            with the other items playing supporting roles.
+            The Scripting API is also normative but simply serves to provide a standardized and convenient way to access 
+            the functionality of the Thing Description from a programming language in order to build concrete applications.  
+            The Thing description will include abstract mechanisms for binding to arbitrary protocols,
+            but the third item, Binding, provides actual mappings to specific concrete protocols.
+            In particular it demonstrates how bindings to protocols of wide interest in IoT systems can be accomplished.
+            The Security and Privacy deliverable is normative, 
+            but while considered separately its implementation is integrated into the other deliverables.
+          </p>
+          <p>
+            Details for each of these are given below.
+          </p>
         </div>
 
         <h3>Thing Description</h3>
