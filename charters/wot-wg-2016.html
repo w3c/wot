@@ -208,20 +208,47 @@
 
         <h3>Bindings to Common Platforms and Protocols</h3>
 
-        <p>To enable interoperability, the Working Group will seek to define standard bindings to common platforms and protocols in close collaboration with the industry alliances and standards development organizations responsible for these. This includes definition of mappings from the interactions at the Thing Layer to:</p>
+        <p>While the Thing Description will provide general mechanisms to describe arbitrary protocols,
+          to enable interoperability, 
+          the Working Group will define standard bindings for common protocols.
+          These standard bindings will be created in close collaboration with the industry alliances 
+          and standards development organizations responsible for these. 
+          This includes definition of mappings from the interactions at the Thing Layer to:</p>
 
         <ul>
           <li>Transfer layer communication patterns such as push, pull, pub-sub, bi-directional messaging, etc.</li>
-          <li>Specific protocols at the transfer layer, e.g., REST-based protocols such as HTTP and CoAP, pub-sub protocols such as MQTT, and raw channel-based protocols such as WebSockets</li>
+          <li>Specific protocols at the transfer layer, 
+            e.g., 
+            REST-based protocols such as HTTP and CoAP, 
+            pub-sub protocols such as MQTT, 
+            and raw channel-based protocols such as WebSockets</li>
         </ul>
         
-        <p>The Web of Things has a multi-protocol architecture and bindings to both IP and non-IP transports (e.g., Bluetooth Low Energy) may be defined.</p>
+        <p>The Web of Things has a multi-protocol architecture and bindings to both IP and non-IP transports 
+          (e.g., Bluetooth Low Energy) may be defined.</p>
         
-        <p>Support for secure communications will initially focus on transport-level security (e.g., TLS and DTLS), but also object security is considered where relevant. This task will utilize 3rd party defined security frameworks and protocols including their extension points. The profiling of their usage is in scope of this task. The specification of own (new from scratch) frameworks is out-of-scope.</p>
+        <p>Support for secure communications will initially focus on transport-level security 
+          (e.g., TLS and DTLS), 
+          but also object security may also be considered where relevant. 
+          This task will utilize 3rd party defined security frameworks and protocols including their extension points. 
+          The profiling of their usage is in scope of this task. 
+          The specification of own (new from scratch) frameworks is out-of-scope.</p>
+        
+        <p>This deliverable is informative by nature since the intended capabilities 
+          of the Thing Description could be used to describe any protocol, even common ones, from first principles.
+          However, interoperability will be enhanced by providing and encouraging the use of 
+          standard bindings for common protocols when possible.
+        </p>
         
         <h3>Cross-cutting Security and Privacy</h3>
 
-        <p>The mechanisms for security and privacy must be cross-cutting over the descriptions, scripting APIs, and bindings. Thus, they are detailed within the corresponding building blocks above.</p>
+        <p>The mechanisms for security and privacy must be cross-cutting over the descriptions, scripting APIs, and bindings. 
+          Thus, they have already been discussed within the corresponding building blocks above.</p>
+        <p>However, in order to enhance the security of WoT systems, we will also generate and implement a security testing
+          plan which will include adversarial testing of the proposed standards and its implementations.  
+          We will only recommend an implementation of the proposed standards for use in production once it has 
+          passed such testing.
+        </p>
 
         <div id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
