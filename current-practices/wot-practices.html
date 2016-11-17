@@ -1,6 +1,7 @@
-<!DOCTYPE html [
+<!DOCTYPE html>
+<!--<!DOCTYPE html [
     <!ENTITY nbsp "&#160;"> 
-]>
+]>-->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -212,7 +213,7 @@
 				<p>
 					A WoT Interface is a Web interface (often called "Web API") that is describable by a WoT <a>Thing Description</a> (TD).
 					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
-					Furthermore, it must suppoort the encodings and security mechanisms defined in the TD.
+					Furthermore, it must support the mediaTypes and security mechanisms defined in the TD.
 					The WoT Interface is used for the communication between <a>servients</a> using networking protocols (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
 				</p>
 
@@ -639,7 +640,7 @@ to CoAP requests to RS. </li>
 					For this, it relies on the Resource Description Framework (RDF) [[!rdf11-concepts]] as an underlying data model.
 					For now, [[!JSON-LD]] is used as the default TD serialization format.
 					The WoT IG defined a minimal vocabulary to express the capabilities of a Thing in terms of different interaction patterns: <i>Properties</i>, <i>Actions</i>, and <i>Events</i>.
-					In addition, the TD provides metadata for the different communication bindings (e.g., HTTP, CoAP, etc.), encodings (e.g., JSON, EXI, etc.), and security policies (authentication, authorization, etc.).
+					In addition, the TD provides metadata for the different communication bindings (e.g., HTTP, CoAP, etc.), mediaTypes (e.g., "application/json", "application/exi", etc.), and security policies (authentication, authorization, etc.).
 					<a href="#fig-td"></a> gives an overview of the relevant content defined in a TD.
 				</p>
 
@@ -659,7 +660,7 @@ to CoAP requests to RS. </li>
 					<p>
 						In the following, we introduce three minimal TD samples to show the prospects of the W3C Thing Descriptions.
 						Example 1 shows a simple TD that describes a temperature Thing.
-						It supports a single protocol, CoAP, and uses JSON for its encoding (or data exchange format).
+						It supports a single protocol, CoAP, and uses JSON for data exchange.
 						Reading out the temperature value from a Property is the only interaction provided by the Thing.
 					</p>
 
@@ -669,7 +670,7 @@ to CoAP requests to RS. </li>
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
 						  "uris": ["coap://mytemp.example.com:5683/"],
-						  "encodings": ["JSON"],
+						  "mediaTypes": ["application/json"],
 						  "properties": [
 						    {
 						      "name": "temperature",
@@ -682,7 +683,7 @@ to CoAP requests to RS. </li>
 					</pre>
 
 					<p>
-						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property; also see CoAP protocol binding <a href="#protocol-bindings">here</a>) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure (encoding).
+						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property; also see CoAP protocol binding <a href="#protocol-bindings">here</a>) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure.
 						However, this is missing critical semantic information such as this resource actually represents and what unit this number has.
 					</p>
 					
@@ -703,7 +704,7 @@ to CoAP requests to RS. </li>
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
 						  "uris": ["coap://www.mytemp.com:5683/"],
-						  "encodings": ["JSON"],
+						  "mediaTypes": ["application/json"],
 						  "properties": [
 						    {
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"@type": "sensor:Temperature",</div>
@@ -718,7 +719,7 @@ to CoAP requests to RS. </li>
 					</pre>
 
 					<p>
-						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP) and encodings (JSON and EXI).
+						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP) and mediaTypes (JSON and EXI).
 						The Thing also specifies security policies (it requires a <a>JWT</a>) and provides four different interactions (one Property, two Actions, one Event).
 					</p>
 
@@ -734,7 +735,7 @@ to CoAP requests to RS. </li>
 								"coap://myled.example.com:5683/",
 								"http://mything.example.com:8080/myled/"
 							],
-							"encodings": [ "JSON","EXI"],
+							"mediaTypes": ["application/json", "application/exi"],
 							"security": {
 								"cat": "token:jwt",
 								"alg": "HS256",
@@ -899,9 +900,9 @@ to CoAP requests to RS. </li>
 							    "coap://www.myled.com:5683/",
 							    "http://www.myled.com:8080/myled/"
 							  ],
-							  "encodings": [
-							    "JSON",
-							    "EXI"
+							  "mediaTypes": [
+							    "application/json",
+							    "application/exi"
 							  ],
 							  <i>"security": {
 							    "cat": "token:jwt",
@@ -924,8 +925,8 @@ to CoAP requests to RS. </li>
 								if various protocols are supported (e.g. HTTP and CoAP) or in specific configurations
 								(e.g., a Thing could rely on a redirection server if its URI is likely to change over time).
 							</li>
-							<li><b>encodings:</b>
-								Which serialization formats are supported (e.g., JSON, XML, etc.). One or more can be listed (listed as an array).
+							<li><b>mediaTypes:</b>
+								Which mediaTypes [[!RFC6838]] are supported (e.g., "application/json", "application/xml", etc.). One or more can be listed (listed as an array).
 							</li>
 							<li><b>security: [optional]</b>
 								The security field can be used to provide access metadata (self-contained) information of the Thing
@@ -1589,7 +1590,7 @@ to CoAP requests to RS. </li>
 							  "@type": "Sensor",
 							  "name": "myTempSensor",
 							  "uris" : ["coap:///www.example.com:5683/temp"],
-							  "encodings": ["JSON"],
+							  "mediaTypes": ["application/json"],
 							  "properties": [
 							    {
 							      "@id": "val",
@@ -1656,7 +1657,7 @@ to CoAP requests to RS. </li>
 							  "name": "myLED",
 							  "uris" : ["coap://www.example.com:5683/led",
 							            "http://www.example.com:80/led"],
-							  "encodings": ["JSON"],
+							  "mediaTypes": ["application/json"],
 							  "properties": [
 							    {
 							      "@id": "color",
@@ -1739,7 +1740,7 @@ to CoAP requests to RS. </li>
 							  "name": "myMasterLED",
 							  "uris" : ["coap://www.example.com:5683/master",
 							            "http://www.example.com:80/master"],
-							  "encodings": ["JSON"],
+							  "mediaTypes": ["application/json"],
 							  "actions": [
 							    {
 							      "@type": "Toggle",
@@ -2414,7 +2415,7 @@ to CoAP requests to RS. </li>
 				<h2>Sapporo (2015-10)</h2>
 
 				<p>This first WoT PlugFest elaborated, based on a JSON-LD Thing Description, server and client role of a Thing.
-				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI encodings.</p>
+				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI data formats.</p>
 				<p>More information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_29-30_October_2015,_Sapporo,_Japan#Plugfest">wiki</a> page.</p>
 				<h3>Goals</h3>
 				<ul>
