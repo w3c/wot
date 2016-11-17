@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>WoT Current Practices</title>
-		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async class="remove"></script>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
 		<script class="remove">
 			var respecConfig = {
 				  specStatus:   "unofficial"
@@ -62,7 +62,7 @@
 		<section id="abstract">
 			<p>
 				The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things (IoT) services on a worldwide basis.
-				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, Protocol Bindings, discovery mechanisms, and cross-cutting security & privacy considerations.
+				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, Protocol Bindings, discovery mechanisms, and cross-cutting security &amp; privacy considerations.
 				The current practices related to WoT building blocks were also prototyped and tested in so-called PlugFests.
 				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
 				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
@@ -196,7 +196,7 @@
 			<p>
 				The application logic of a Thing (or technically a <a>servient</a>) can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained Things.
 				Following the patterns in the Web, however, application logic should also be provided by scripts.
-				This is supported through a scripting runtime environment&mdash;similar to the Web browser&mdash;that may be provided by a servient.
+				This is supported through a scripting runtime environment&#x2014;similar to the Web browser&#x2014;that may be provided by a servient.
 				Portability of such scripts is ensured through a common <a>Scripting API</a> that allows access to discovery, the client and server functionality of the servient, and the hardware physically attached to the servient.
 			</p>
 
