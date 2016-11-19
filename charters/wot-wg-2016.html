@@ -161,7 +161,7 @@
            There has already been successful incubation of these building blocks in 
            multiple IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>, 
            where several companies and research institutes have presented and tested their WoT prototypes. 
-           First open-source implementations are also already available.</p>
+           Initial open-source implementations are also already available.</p>
 
       </section>
 
@@ -174,35 +174,35 @@
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           
           <dl>
-            <dt>Thing Description:</dt>
+            <dt><strong>Thing Description:</strong></dt>
             <dd>Semantic vocabularies for describing the data and interaction models exposed to applications, 
                 the choice of communications patterns provided by protocols, 
                 and serialization formats suitable for processing on resource-constrained devices and 
                 transmission over constrained networks.</dd>
-            <dt>Scripting APIs:</dt>
-            <dd>Platform-independent application-facing APIs for Thing-to-Thing interaction 
+            <dt><strong>Scripting API:</strong></dt>
+            <dd>Platform-independent application-facing API for Thing-to-Thing interaction 
                 and Thing lifecycle management.</dd>
-            <dt>Bindings to Common Platforms and Protocols:<dt>
-            <dd>Bindings from the abstract messages to specific platforms and protocols in collaboration with the 
+            <dt><strong>Binding Templates:</strong><dt>
+            <dd>Example mappings from the abstract messages to specific common platforms and protocols in collaboration with the 
                 corresponding organizations.</dd>
-            <dt>Cross-cutting Security and Privacy Policies and Mechanisms:<dt>
-            <dd>Mechanisms integrated into the other building blocks to describe and implement security and 
+            <dt><strong>Security and Privacy:</strong><dt>
+            <dd>Cross-cutting policies and mechanisms integrated into the other building blocks to describe and implement security and 
                 privacy policies to enable secure and safe interaction across different IoT platforms.</dd>
           </dl>
+        </div>
           <p>Of these, the first deliverable, the normative Thing Description standard, is central, 
             with the other items playing supporting roles.
             The Scripting API is also normative but simply serves to provide a standardized and convenient way to access 
             the functionality of the Thing Description from a programming language in order to build concrete applications.  
-            The Thing description will include abstract mechanisms for binding to arbitrary protocols,
-            but the third item, Binding, provides actual mappings to specific concrete protocols.
-            In particular it demonstrates how bindings to protocols of wide interest in IoT systems can be accomplished.
+            Binding Templates are informational and provide mappings to concrete protocols.  
+            This deliverable also provides templates for describing further protocol mappings through
+            the Thing Description.
             The Security and Privacy deliverable is normative, 
             but while considered separately its implementation is integrated into the other deliverables.
           </p>
           <p>
             Details for each of these are given below.
           </p>
-        </div>
 
         <h3>Thing Description</h3>
 
