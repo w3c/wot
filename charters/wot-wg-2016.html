@@ -183,9 +183,9 @@
           <li>Serialization formats for the Thing Description suitable for processing on resource-constrained platforms and designed to appeal to application developers. The encoding shall allow for resource-efficient instantiation of the software objects that reflect the data and interaction models of Things. Where practical, this will be based upon existing formats and encodings (e.g., EXI- or CBOR-compressed JSON-LD).</li>
         </ul>
 
-        <h3>Scripting APIs</h3>
+        <h3>Scripting API</h3>
 
-        <p>The Working Group will seek to specify a suite of APIs exposed to applications covering the following:</p>
+        <p>The Working Group will seek to specify an API exposed to applications covering the following:</p>
 
         <ul>
           <li>Interactions with Things and reactions/handlers to provide the functionality of a Thing. 
@@ -199,7 +199,11 @@
             Things nearby, 
             Things on the same network, 
             Things listed in a repository, 
-            and discovery based upon formal or crowd-sourced semantics and social relationships.</li>
+            and discovery based upon formal or crowd-sourced semantics and social relationships.
+            The API will support a Thing lifecycle including registering and creating Things, either
+            from a Thing Description or using scripting.   The API will make applications aware of
+            lifecycle transitions.
+          </li>
 
           <li>Cross-platform security frameworks including authentication, 
             authorization, 
@@ -216,15 +220,6 @@
             It requires trusted assertions that report about such processing events as well 
             as protocols to trigger such processing.
           </li>
-
-          <li>Thing lifecycles, e.g., registering and creating Things, 
-            either from a Thing description or using scripting and 
-            enabling applications to be aware of lifecycle transitions.</li>
-
-          <li>Error handling that unifies the different error reports provided by different platforms and protocols.</li>
-
-          <li>Cross-cutting concerns, e.g., internationalization, accessibility, and privacy.</li>
-
         </ul>
 
         <p>Where practical, APIs will be defined in ways that are independent of the choice of programming languages. 
