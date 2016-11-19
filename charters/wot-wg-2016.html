@@ -318,12 +318,12 @@
           the Thing Description delivarable will have priority.</p>
 
 
-        <h3>Bindings to Common Platforms and Protocols</h3>
+        <h3>Binding Templates</h3>
 
         <p>While the Thing Description will provide general mechanisms to describe arbitrary protocols,
           to enable interoperability, 
-          the Working Group will define standard bindings for common protocols.
-          These standard bindings will be created in close collaboration with the industry alliances 
+          the Working Group will define standard binding templates for common protocols.
+          These standard binding templates will be created in close collaboration with the industry alliances 
           and standards development organizations responsible for these. 
           This includes definition of mappings from the interactions at the Thing Layer to:</p>
 
@@ -339,25 +339,22 @@
         <p>The Web of Things has a multi-protocol architecture and bindings to both IP and non-IP transports 
           (e.g., Bluetooth Low Energy) may be defined.</p>
         
-        <p>Support for secure communications will initially focus on transport-level security 
-          (e.g., TLS and DTLS), 
-          but also object security may also be considered where relevant. 
-          This task will utilize 3rd party defined security frameworks and protocols including their extension points. 
-          The profiling of their usage is in scope of this task. 
-          The specification of own (new from scratch) frameworks is out-of-scope.</p>
+        <p>Support for secure communications will be included, as defined by the Security and Privacy deliverable.</p>
         
-        <p>This deliverable is informative by nature since the intended capabilities 
+        <p>The Binding Templates deliverable is informative by nature since the intended capabilities 
           of the Thing Description could be used to describe any protocol, even common ones, from first principles.
           However, interoperability will be enhanced by providing and encouraging the use of 
-          standard bindings for common protocols when possible.
+          standard binding templates for common protocols when possible.
         </p>
         
-        <h3>Cross-cutting Security and Privacy</h3>
+        <h3>Security and Privacy</h3>
 
         <p>The mechanisms for security and privacy must be cross-cutting over the descriptions, scripting APIs, and bindings. 
-          Thus, they have already been discussed within the corresponding building blocks above.</p>
-        <p>However, in order to enhance the security of WoT systems, we will also generate and implement a security testing
-          plan which will include adversarial testing of the proposed standards and its implementations.  
+         The Thing Description and the Scripting API will support both transport and object security using best practices,
+          and the Binding Templates will support the use of appropriate security for the protocols they map to.
+        </p>
+        <p>In order to enhance the security of WoT systems, we will also generate and implement a security testing
+          plan which will include both functional and adversarial testing of the proposed standards and its implementations.  
           We will only recommend an implementation of the proposed standards for use in production once it has 
           passed such testing.
         </p>
@@ -371,7 +368,8 @@
             <dt>Application- and domain-specific metadata vocabularies</dt>
             <dd>The Working Group is restricted to work on cross-domain vocabularies.</dd>
             <dt>APIs and security frameworks specific to particular platforms external to the W3C</dt>
-            <dd>The scope of the Working Group is restricted to APIs and security frameworks that are applicable across platforms.</dd>
+            <dd>The scope of the Working Group is restricted to APIs and security frameworks that are applicable across platforms.
+            We will not define new security mechanisms but will use existing mechanisms and best practices.</dd>
             <dt>Modification of protocols</dt>
             <dd>If during work on protocol bindings, it becomes apparent that changes are needed to protocols, the Web of Things Working Group will rely on the organization responsible for the protocol to make the changes. It is out of scope for the Working Group to standardize such changes itself.</dd>
           </dl>
