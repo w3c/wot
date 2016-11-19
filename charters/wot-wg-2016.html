@@ -171,19 +171,19 @@
 
         <h3>Thing Description</h3>
 
-        <p>The Working Group will develop solutions to describe Things through metadata and declarations of their capabilities (e.g., possible interactions). 
+        <p>The Working Group will develop solutions to describe Things through metadata and declarations of their capabilities 
+           (e.g., possible interactions). 
            This work includes the definition of different <i>machine-understandable vocabularies</i> based on triples and 
            linkable graphs as well as serialization formats of such a Thing Description. 
-           The aim is to be compatible with existing vocabularies and tools 
-           (e.g., Linked Open Data, Schema.org, Resource Description Framework (RDF), semantic reasoners, etc.).
            The Thing Description will be aimed at enabling scalable and automated tooling, including but not limited to search, 
            automated bridging, service composition, validation, and development abstractions.
-           While the Thing Description will enable the use of powerful semantic tooling, it will be designed in such a way
-           that even constrained devices can use it, if only by generating metadata to be interpreted by more powerful
-           systems.  
-           In particular, the Thing Description standard will provide a sufficiently powerful base vocabulary that
-           it will not be <em>necessary</em> for constrained systems to do RDF or other semantic processing, although we will 
-           enable more powerful systems to do so.
+           While enabling the use of powerful tooling, the Thing Description will be designed in such a way
+           that even constrained devices can use it.
+           In particular, for basic usages there will not be an explicit dependence on RDF and
+           it will not be necessary for constrained systems to perform explicit semantic processing.
+           However, to enable more complex usages, the Thing Description will include extension points 
+           to allow the use of semantic vocabularies and tools 
+           (e.g., Linked Open Data, Schema.org, Resource Description Framework (RDF), semantic reasoners, etc.).
         </p>
         <p>The Thing Description will include the following components:</p>
         <ul>
@@ -225,15 +225,15 @@
             and the interoperability requirements for communicating with battery-powered or ambient-powered devices 
             that spend a lot of their time asleep to conserve power.
           </li>
-
-          <li>Serialization formats for the Thing Description suitable for use by resource-constrained platforms
+        </ul>
+        <p> Serialization formats for the Thing Description suitable for use by resource-constrained platforms
             will be provided
             and designed to appeal to application developers. 
             The encoding shall allow for resource-efficient instantiation of the software objects that 
             reflect the data and interaction models of Things. 
             Where practical, 
-            this will be based upon existing formats and encodings (e.g., EXI- or CBOR-compressed JSON-LD).</li>
-        </ul>
+            this will be based upon existing formats and encodings (e.g., EXI- or CBOR-compressed JSON-LD).
+        </p>
 
         <h3>Scripting APIs</h3>
 
