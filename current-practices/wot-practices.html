@@ -69,7 +69,8 @@
 				The current practices related to WoT building blocks were also prototyped and tested in so-called PlugFests.
 				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
 				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
-				While this document is not a technical specification, it aims at helping implementers to get a quick overview of the WoT building blocks.
+				While this document is not a technical specification, it aims at helping implementers to get a 
+				overview of the WoT building blocks.
 				Furthermore, it includes reports from past PlugFests and follow-up discussions, which explain the rational behind the current practices.
 			</p>
 		</section>
@@ -711,7 +712,7 @@ to CoAP requests to RS. </li>
 						      "@type": ["Property",<div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:Temperature"</div>],
 						      "name": "temperature",
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
-						      "outputType": {"valueType": { "type": "boolean" }},
+						      "outputType": {"valueType": { "type": "number" }},
 						      "writable": false,
 						      "endpoints": [{
 						        "uri" : "coap://mytemp.example.com:5683/",
