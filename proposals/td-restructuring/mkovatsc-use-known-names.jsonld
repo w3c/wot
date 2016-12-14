@@ -10,11 +10,11 @@
 		"outputType": { "valueType": { "type": "number" }},
 		"links": [{ // let's call it similar to HTML: Link, but plural since we have an array
 			"href" : "temp", //
-			"type": "application/cbor" // name "type" is taken from RFC5988 "Web Linking" -- yes we have other types, e.g., in the JSON Schema part...
+			"mediaType": "application/cbor" // RFC5988 uses "type" -- conflict with "type" from JSON Schema; need to find solution
 		},
 		{
 			"href" : "http://mytemp.example.com:8080/temp",
-			"type": "application/json", // following RFC5988, we can only define one media type
+			"mediaType": "application/json", // following RFC5988, we can only define one media type
 		}]
 	},
 	{
@@ -24,7 +24,7 @@
 		"outputType": "blob", // application (=user code) must know Media Type; following { "valueType": ..."blob" } would then imply a blob in a container described by this schema, but there is no container
 		"links": [{
 			"href" : "ico",
-			"type": "image/jpeg" // this example shows that media type is interaction-specific
+			"mediaType": "image/jpeg" // this example shows that media type is interaction-specific
 		}]
 	}]
 }
