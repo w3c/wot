@@ -675,8 +675,8 @@ to CoAP requests to RS. </li>
                               "name": "temperature",
                               "outputType": {"valueType": { "type": "number" }},
                               "writable": false,
-                              "endpoints": [{
-                                "uri" : "coap://mytemp.example.com:5683/temp",
+                              "links": [{
+                                "href" : "coap://mytemp.example.com:5683/temp",
                                 "mediaType": "application/json"
                                 }]
                             }
@@ -714,8 +714,8 @@ to CoAP requests to RS. </li>
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
 						      "outputType": {"valueType": { "type": "number" }},
 						      "writable": false,
-						      "endpoints": [{
-						        "uri" : "coap://mytemp.example.com:5683/",
+						      "links": [{
+						        "href" : "coap://mytemp.example.com:5683/",
 						        "mediaType": "application/json"
 						        }]
 						    }
@@ -738,14 +738,7 @@ to CoAP requests to RS. </li>
 							],
 							"@type": "Thing",
 							"name": "MyLEDThing",
-							"endpoints": [
-								{
-									"uri" : "coap://myled.example.com:5683/",
-									"mediaType": "application/exi"
-								},{
-									"uri" : "http://mything.example.com:8080/myled/",
-									"mediaType": "application/JSON"
-								}],
+							"base": "coap://myled.example.com:5683/",
 							"security": {
 									"cat": "token:jwt",
 									"alg": "HS256",
@@ -757,7 +750,14 @@ to CoAP requests to RS. </li>
 									"name": "status",
 									"valueType": { "type": "boolean" },
 									"writable": true,
-									"hrefs": [ "pwr", "status" ]
+									"links": [{
+										"href" : "pwr", //
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/status",
+										"mediaType": "application/json"
+									}]
 								},
 								{
 									"@type": ["Action","actuator:fadeIn"],
@@ -766,7 +766,14 @@ to CoAP requests to RS. </li>
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"hrefs": ["in", "in"  ]			
+									"links": [{
+										"href" : "in", //
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/in",
+										"mediaType": "application/json"
+									}]									
 								},
 								{
 									"@type": ["Action","actuator:fadeOut"],
@@ -775,14 +782,21 @@ to CoAP requests to RS. </li>
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"hrefs": ["out", "out" ]
+									"links": [{
+										"href" : "out", //
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/out",
+										"mediaType": "application/json"
+									}]									
 								},
 								{
 									"@type": ["Event","actuator:alert"],
 									"name": "criticalCondition",
 									"valueType": { "type": "string" },
-									"endpoints": [{
-						              "uri" : "coap://myled.example.com:5683/ev",
+									"links": [{
+						              "uri" : "ev",
 						              "mediaType": "application/exi"
 						            }]	
 								}
