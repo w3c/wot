@@ -675,8 +675,8 @@ to CoAP requests to RS. </li>
                               "name": "temperature",
                               "outputType": {"valueType": { "type": "number" }},
                               "writable": false,
-                              "endpoints": [{
-                                "uri" : "coap://mytemp.example.com:5683/temp",
+                              "links": [{
+                                "href" : "coap://mytemp.example.com:5683/temp",
                                 "mediaType": "application/json"
                                 }]
                             }
@@ -687,7 +687,7 @@ to CoAP requests to RS. </li>
 					<p>
 					    Based on this content, we know there exists one <i>Property</i> interaction resource with the name <i>temperature</i>. In addition, information is provided 
 					    such as that this Property is accessable over the CoAP protocol with a GET method (see CoAP protocol binding <a href="#protocol-bindings">here</a>) 
-					    at <code>coap://mytemp.example.com:5683/temp</code> (announced within the endoind structure by the <i>uri</i> ky), which will return a number (TD type system) 
+					    at <code>coap://mytemp.example.com:5683/temp</code> (announced within the endoind structure by the <i>href</i> kye), which will return a number (TD type system) 
 					    inside a JSON structure (JSON as payload format is announced by the <i>mediaType</i> field). <!-- However, this is missing critical semantic information such as this resource actually represents and what unit this number has.  -->
 					</p>
 					
@@ -714,8 +714,8 @@ to CoAP requests to RS. </li>
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
 						      "outputType": {"valueType": { "type": "number" }},
 						      "writable": false,
-						      "endpoints": [{
-						        "uri" : "coap://mytemp.example.com:5683/",
+						      "links": [{
+						        "href" : "coap://mytemp.example.com:5683/",
 						        "mediaType": "application/json"
 						        }]
 						    }
@@ -725,8 +725,8 @@ to CoAP requests to RS. </li>
 
 					<p>
 						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP), mediaTypes (JSON and EXI), and security 
-						policies (it requires a <a>JWT</a> for interaction). This example also shows the definition of the endpoint information in a global manner. More precisely, a global defined endpoint is valid for defined interaction
-						resources.  Indivdualiziation of the URI's resource is done by the <i>hrefs</i> key within the interaction definitions.
+						policies (it requires a <a>JWT</a> for interaction). This example also shows the definition of the endpoint information in a global manner. More precisely, a global defined <i>base</i> URI is valid for defined interaction
+						resources.  Indivdualiziation of the URI's resource is done by the <i>href</i> key within the interaction definitions.
 						<!--The Thing also specifies security policies (it requires a <a>JWT</a>) and provides four different interactions (one Property, two Actions, one Event).-->
 					</p>
 
@@ -738,14 +738,7 @@ to CoAP requests to RS. </li>
 							],
 							"@type": "Thing",
 							"name": "MyLEDThing",
-							"endpoints": [
-								{
-									"uri" : "coap://myled.example.com:5683/",
-									"mediaType": "application/exi"
-								},{
-									"uri" : "http://mything.example.com:8080/myled/",
-									"mediaType": "application/JSON"
-								}],
+							"base": "coap://myled.example.com:5683/",
 							"security": {
 									"cat": "token:jwt",
 									"alg": "HS256",
@@ -757,7 +750,14 @@ to CoAP requests to RS. </li>
 									"name": "status",
 									"valueType": { "type": "boolean" },
 									"writable": true,
-									"hrefs": [ "pwr", "status" ]
+									"links": [{
+										"href" : "pwr", //
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/status",
+										"mediaType": "application/json"
+									}]
 								},
 								{
 									"@type": ["Action","actuator:fadeIn"],
@@ -766,7 +766,14 @@ to CoAP requests to RS. </li>
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"hrefs": ["in", "in"  ]			
+									"links": [{
+										"href" : "in", //
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/in",
+										"mediaType": "application/json"
+									}]									
 								},
 								{
 									"@type": ["Action","actuator:fadeOut"],
@@ -775,14 +782,21 @@ to CoAP requests to RS. </li>
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"hrefs": ["out", "out" ]
+									"links": [{
+										"href" : "out", //
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/out",
+										"mediaType": "application/json"
+									}]									
 								},
 								{
 									"@type": ["Event","actuator:alert"],
 									"name": "criticalCondition",
 									"valueType": { "type": "string" },
-									"endpoints": [{
-						              "uri" : "coap://myled.example.com:5683/ev",
+									"links": [{
+						              "uri" : "ev",
 						              "mediaType": "application/exi"
 						            }]	
 								}
@@ -793,7 +807,7 @@ to CoAP requests to RS. </li>
 					<p>
 						Based on this TD, one is able to know that a JSON Web Token (JWT) is required to interact with the resources of the Thing.
 						They are issued by <code>https://authority-issuing.example.org</code> and signed using HMAC SHA-256 (HS256).
-						The status of the Thing can be requested using a CoAP GET on <code>coap://myled.example.com:5683/pwr</code> (base URI from the global scope endpoint
+						The status of the Thing can be requested using a CoAP GET on <code>coap://myled.example.com:5683/pwr</code> (<i>base</i> URI from the global scope endpoint
 						definition plus the href) or an 
 						HTTP GET on <code>http://mything.example.com:8080/myled/status</code>. It can also modified using a PUT on the respective URIs, since Property is writable.
 						The Actions can be invoked through a POST to the resources fadeIn (<code>/in</code> for CoAP and <code>/myled/in</code> for HTTP) and fadeOut (<code>/out</code> 
@@ -910,15 +924,7 @@ to CoAP requests to RS. </li>
 							{
 								...
 							  "name": "MyLED",
-							  "endpoints": [
-								{
-									"uri" : "coap://myled.example.com:5683/",
-									"mediaType": "application/exi"
-								},{
-									"uri" : "http://mything.example.com:8080/myled/",
-									"mediaType": "application/JSON"
-								}]
-
+							  "base": "coap://myled.example.com:5683/"
 								...
 							}
 						</pre>
@@ -930,19 +936,7 @@ to CoAP requests to RS. </li>
 
 						<ul>
 							<li><b>name:</b> Name of the Thing (string-based)</li>
-							<li><b>endpoints: [optional]</b> More than one endpoint infromation can be listed (as an array),
-								if various protocols and/or media types are supported (e.g. HTTP, CoAP, XML, and JSON) or in specific configurations
-								(e.g., a Thing could rely on a redirection server if its URI is likely to change over time). The inner structure of a endpoint instance is defined with:
-								<ul>
-								<li>
-								<b>uri:</b>
-								Defines base URI for the Thing. 
-								</li>
-								<li><b>mediaType:</b>
-									Which mediaTypes [[!RFC6838]] are supported (e.g., "application/json", "application/xml", etc.). One or more can be listed (listed as an array).
-								</li>
-								</ul>
-							</li>
+							<li><b>base: [optional]</b> Define base URI that is valid for all defined local interaction resources</li>
 							<li><b>security: [optional]</b>
 								The security field can be used to provide access metadata (self-contained) information of the Thing
 								for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
@@ -1017,8 +1011,8 @@ to CoAP requests to RS. </li>
 							      "name": "temperature",
 							      "outputType": {"valueType": { "type": "number" }},
 							      "writable": false,
-							      "endpoints": [{
-							      	"uri" : "coap://mytemp.example.com:5683/temp",
+							      "links": [{
+							      	"href" : "coap://mytemp.example.com:5683/temp",
 							      	"mediaType": "application/json"
 							      }],
 							      <i>"stability": 10</i>
@@ -1036,12 +1030,7 @@ to CoAP requests to RS. </li>
 							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
 							<li><b>outputType:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
 							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
-							<li>choice (only hrefs OR endpoints can occur):
-							<ul>
-							<li><b>hrefs:</b> A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
-								<li><b>endpoints:</b> Local endpoint definition (overwrite global defined endoint defintion if exist). Content is identical as described the endpoint within the metadata part (see <a href="#thing-metadata"></a>) </li>	
-							</ul>
-							</li>
+							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>	
 							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
 							<li><b>security: [optional]</b>
 								Access metadata (self-contained) for protecting this Property and securely transmitting information.
@@ -1088,10 +1077,10 @@ to CoAP requests to RS. </li>
 							        "valueType": { "type": "integer" },
 							        "actuator:unit": "actuator:ms"
 							      },
-							      "hrefs": [
-							        "in",
-							        "myled/in"
-							      ]
+							      "links": [{
+							      	"href" : "coap://mytemp.example.com:5683/in",
+							      	"mediaType": "application/json"
+							      }]
 							    }
 							  ]
 								...
@@ -1107,12 +1096,7 @@ to CoAP requests to RS. </li>
 								Additional characteristics can be given through terms defined in the context metadata (e.g., unit ms from an actuator vocabulary) similar to <a href="#property">Properties</a>).
 							</li>
 							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above)</li>
-							<li>choice (only hrefs OR endpoints can occur):
-								<ul>
-									<li><b>hrefs:</b> A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
-									<li><b>endpoints:</b> Local endpoint definition (overwrite global defined endoint defintion if exist). Content is identical as described the endpoint within the metadata part (see <a href="#thing-metadata"></a>) </li>	
-								</ul>
-							</li>
+							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Action and securely transmitting information.</li>
 						</ul>
 
@@ -1147,10 +1131,10 @@ to CoAP requests to RS. </li>
 							      "@type": ["Event", "actuator:alert"],
 							      "name": "criticalCondition",
 							      "outputType": {"valueType": { "type": "string" }},
-							      "hrefs": [
-							        "ev",
-							        "myled/event"
-							      ]
+							      "links": [{
+							      	"href" : "coap://mytemp.example.com:5683/ev",
+							      	"mediaType": "application/json"
+							      }]
 							    }
 							  ]
 								...
@@ -1160,12 +1144,7 @@ to CoAP requests to RS. </li>
 						<ul>
 							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
 							<li><b>name:</b> Name of the Event, which can also be used for simple semantic disambiguation</li>
-							<li>choice (only hrefs OR endpoints can occur):
-								<ul>
-									<li><b>hrefs:</b> A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
-									<li><b>endpoints:</b> Local endpoint definition (overwrite global defined endoint defintion if exist). Content is identical as described the endpoint within the metadata part (see <a href="#thing-metadata"></a>) </li>	
-								</ul>
-							</li>
+							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
 							<li><b>outputType: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Event and securely transmitting information.</li>
 						</ul>
@@ -1620,11 +1599,7 @@ to CoAP requests to RS. </li>
 							               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
 							  "@type": "Sensor",
 							  "name": "myTempSensor",
-							  "endpoints": [
-							    {
-							      "uri" : "coap:///www.example.com:5683/temp/",
-							      "mediaType": "application/json"
-							    }],
+							 "base" : "coap:///www.example.com:5683/temp/",
 							  "interactions": [
 							    {
 							      "@id": "val",
@@ -1634,7 +1609,10 @@ to CoAP requests to RS. </li>
 							      "name": "myTemp",
 							      "outputType": {"valueType": { "type": "number" }},
 							      "writable": false,
-							      "hrefs": ["val"]
+							      "links": [{
+							      	"href" : "val",
+							      	"mediaType": "application/json"
+							      }]
 							    }, {
 							      "@id": "threshold",
 							      "@type": ["Property","Temperature"],
@@ -1642,14 +1620,20 @@ to CoAP requests to RS. </li>
 							      "name": "myThreshold",
 							      "outputType": {"valueType": { "type": "number" }},
 							      "writable": true,
-							      "hrefs": ["threshold"]
+							     	"links": [{
+							      	"href" : "thr",
+							      	"mediaType": "application/json"
+							      }]
 							    },
 							    {
 							      "@type": ["Event"],
 							      "outputType": {"valueType": { "type": "number" }},
 							      "name": "myChange",
 							      "property": "temp",
-							      "hrefs": ["val/changed"]
+							       "links": [{
+							      	"href" : "val/changed",
+							      	"mediaType": "application/json"
+							      }]
 							    }, {
 							      "@type": ["Event"],
 							      "outputType": {"valueType": { "type": "number" }},
@@ -1780,12 +1764,12 @@ to CoAP requests to RS. </li>
 							        "@type": "OnOff",
 							        "valueType": { "type": "boolean" }
 							      },
-							      "endpoints": [
+							      "links": [
 							      {
-							        "uri" : "coap://www.example.com:5683/master",
+							        "href" : "coap://www.example.com:5683/master",
 							        "mediaType": "application/json"
 							      },{
-							        "uri" : "http://www.example.com:80/master",
+							        "href" : "http://www.example.com:80/master",
 							        "mediaType": "application/json"
 							      }]
 							    }
