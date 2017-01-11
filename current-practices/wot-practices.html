@@ -748,7 +748,7 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Property","actuator:onOffStatus"],
 									"name": "status",
-									"outputData": { "type": "boolean" },
+									"outputData": {"valueType": { "type": "boolean" }},
 									"writable": true,
 									"links": [{
 										"href" : "pwr", 
@@ -794,7 +794,7 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Event","actuator:alert"],
 									"name": "criticalCondition",
-									"outputData": { "type": "string" },
+									"outputData": {"valueType": { "type": "string" }},
 									"links": [{
 						              "uri" : "ev",
 						              "mediaType": "application/exi"
