@@ -3,7 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY wot2 "http://w3c.github.io/wot/wot.owl#" >
+    <!ENTITY wot2 "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -12,12 +12,12 @@
 
 <rdf:RDF xmlns="http://www.w3c.org/wot/td#"
      xml:base="http://www.w3c.org/wot/td"
-     xmlns:wot2="http://w3c.github.io/wot/wot.owl#"
+     xmlns:wot2="http://w3c.github.io/wot/w3c-wot-td-ontology.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://w3c.github.io/wot/wot.owl">
+    <owl:Ontology rdf:about="http://w3c.github.io/wot/w3c-wot-td-ontology.owl">
         <owl:versionInfo rdf:datatype="&xsd;decimal">2.2</owl:versionInfo>
         <created rdf:datatype="&xsd;date">2015-08-14</created>
         <wot2:modified rdf:datatype="&xsd;date">2016-10-24</wot2:modified>
@@ -25,7 +25,7 @@
         <rdfs:comment rdf:datatype="&xsd;string">This ontology describes Things as specified by the Thing Description Model.</rdfs:comment>
         <creator rdf:datatype="&xsd;string">W3C Web of Things Interest Group</creator>
         <identifier rdf:datatype="&xsd;anyURI">http://www.w3c.org/wot/td</identifier>
-        <owl:imports rdf:resource="http://w3c.github.io/wot/ire-extended.owl"/>
+        <owl:imports rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl"/>
     </owl:Ontology>
     
 
@@ -41,31 +41,31 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#created -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#created -->
 
     <owl:AnnotationProperty rdf:about="&wot2;created"/>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#creator -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#creator -->
 
     <owl:AnnotationProperty rdf:about="&wot2;creator"/>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#identifier -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#identifier -->
 
     <owl:AnnotationProperty rdf:about="&wot2;identifier"/>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#modified -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#modified -->
 
     <owl:AnnotationProperty rdf:about="&wot2;modified"/>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#title -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#title -->
 
     <owl:AnnotationProperty rdf:about="&wot2;title"/>
     
@@ -82,19 +82,19 @@
     
 
 
-    <!-- http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor -->
 
-    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor"/>
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor"/>
     
 
 
-    <!-- http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor -->
 
-    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor"/>
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor"/>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#dependsOn -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#dependsOn -->
 
     <owl:ObjectProperty rdf:about="&wot2;dependsOn">
         <rdfs:subPropertyOf rdf:resource="&wot2;isAssociatedTo"/>
@@ -102,7 +102,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#forProperty -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#forProperty -->
 
     <owl:ObjectProperty rdf:about="&wot2;forProperty">
         <rdfs:range rdf:resource="&wot2;Property"/>
@@ -118,7 +118,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasAction -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasAction -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasAction">
         <rdfs:range rdf:resource="&wot2;Action"/>
@@ -128,7 +128,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasEvent -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasEvent -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasEvent">
         <rdfs:range rdf:resource="&wot2;Event"/>
@@ -138,7 +138,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasInput -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasInput -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasInput">
         <rdfs:domain rdf:resource="&wot2;Action"/>
@@ -146,7 +146,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasInteraction -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasInteraction -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasInteraction">
         <rdfs:range rdf:resource="&wot2;Interaction"/>
@@ -154,7 +154,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasOutput -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasOutput -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasOutput">
         <rdfs:domain rdf:resource="&wot2;Action"/>
@@ -162,7 +162,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasProperty -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasProperty -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasProperty">
         <rdfs:range rdf:resource="&wot2;Property"/>
@@ -172,7 +172,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasThingDescription -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasThingDescription -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasThingDescription">
         <owl:inverseOf rdf:resource="&wot2;isThingDescriptionOf"/>
@@ -180,7 +180,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasValueType -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasValueType -->
 
     <owl:ObjectProperty rdf:about="&wot2;hasValueType">
         <rdfs:domain>
@@ -195,7 +195,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#isAssociatedTo -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isAssociatedTo -->
 
     <owl:ObjectProperty rdf:about="&wot2;isAssociatedTo">
         <rdfs:range rdf:resource="&wot2;Thing"/>
@@ -204,7 +204,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#isChildOf -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isChildOf -->
 
     <owl:ObjectProperty rdf:about="&wot2;isChildOf">
         <rdfs:subPropertyOf rdf:resource="&wot2;isAssociatedTo"/>
@@ -212,16 +212,16 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#isInteractionOf -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isInteractionOf -->
 
     <owl:ObjectProperty rdf:about="&wot2;isInteractionOf">
-        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor"/>
         <owl:inverseOf rdf:resource="&wot2;hasInteraction"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#isParentOf -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isParentOf -->
 
     <owl:ObjectProperty rdf:about="&wot2;isParentOf">
         <rdfs:subPropertyOf rdf:resource="&wot2;isAssociatedTo"/>
@@ -229,10 +229,10 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#isThingDescriptionOf -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isThingDescriptionOf -->
 
     <owl:ObjectProperty rdf:about="&wot2;isThingDescriptionOf">
-        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor"/>
     </owl:ObjectProperty>
     
 
@@ -254,7 +254,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasName -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasName -->
 
     <owl:DatatypeProperty rdf:about="&wot2;hasName">
         <rdfs:range rdf:resource="&xsd;string"/>
@@ -272,7 +272,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasPriority -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasPriority -->
 
     <owl:DatatypeProperty rdf:about="&wot2;hasPriority">
         <rdfs:comment>In case of more than one protocol binding, defines an order to suggest which protocol(s) should be used in priority.</rdfs:comment>
@@ -281,7 +281,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#hasStability -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasStability -->
 
     <owl:DatatypeProperty rdf:about="&wot2;hasStability">
         <rdfs:comment>Characterizes how often the property likely changes. Expressed in ms.</rdfs:comment>
@@ -291,7 +291,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#isWritable -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isWritable -->
 
     <owl:DatatypeProperty rdf:about="&wot2;isWritable">
         <rdfs:domain rdf:resource="&wot2;Property"/>
@@ -300,13 +300,13 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#supportsEncoding -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#supportsEncoding -->
 
     <owl:DatatypeProperty rdf:about="&wot2;supportsEncoding"/>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#supportsSecurity -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#supportsSecurity -->
 
     <owl:DatatypeProperty rdf:about="&wot2;supportsSecurity"/>
     
@@ -323,19 +323,19 @@
     
 
 
-    <!-- http://w3c.github.io/wot/ire-extended.owl#ProxyResource -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource -->
 
-    <owl:Class rdf:about="http://w3c.github.io/wot/ire-extended.owl#ProxyResource"/>
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
     
 
 
-    <!-- http://w3c.github.io/wot/ire-extended.owl#SemanticResource -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource -->
 
-    <owl:Class rdf:about="http://w3c.github.io/wot/ire-extended.owl#SemanticResource"/>
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource"/>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#Action -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Action -->
 
     <owl:Class rdf:about="&wot2;Action">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
@@ -346,7 +346,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#Event -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Event -->
 
     <owl:Class rdf:about="&wot2;Event">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
@@ -356,7 +356,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#Interaction -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Interaction -->
 
     <owl:Class rdf:about="&wot2;Interaction">
         <rdfs:label>Interaction</rdfs:label>
@@ -364,9 +364,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3c.github.io/wot/ire-extended.owl#ProxyResource"/>
+                    <rdf:Description rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/ire-extended.owl#informalExactProxyFor"/>
+                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
@@ -381,13 +381,13 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://w3c.github.io/wot/ire-extended.owl#ProxyResource"/>
+        <rdfs:subClassOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
         <rdfs:comment xml:lang="en">Web resource of arbitrary content format acting as a digital proxy for any real-world entity that is not already digital information. Such entities can be physical quantities like temperature or pressure, natural phenomena like raise of temperature or object motion, arbitrary states like on/off, etc.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#Property -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Property -->
 
     <owl:Class rdf:about="&wot2;Property">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
@@ -396,7 +396,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#PropertyChangedEvent -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#PropertyChangedEvent -->
 
     <owl:Class rdf:about="&wot2;PropertyChangedEvent">
         <rdfs:subClassOf rdf:resource="&wot2;Event"/>
@@ -404,7 +404,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#Thing -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Thing -->
 
     <owl:Class rdf:about="&wot2;Thing">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
@@ -412,15 +412,15 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#ThingDescription -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#ThingDescription -->
 
     <owl:Class rdf:about="&wot2;ThingDescription">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3c.github.io/wot/ire-extended.owl#SemanticResource"/>
+                    <rdf:Description rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/ire-extended.owl#formalExactProxyFor"/>
+                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor"/>
                         <owl:onClass rdf:resource="&wot2;Thing"/>
                         <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -432,7 +432,7 @@
     
 
 
-    <!-- http://w3c.github.io/wot/wot.owl#UpdatePropertyAction -->
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#UpdatePropertyAction -->
 
     <owl:Class rdf:about="&wot2;UpdatePropertyAction">
         <rdfs:subClassOf rdf:resource="&wot2;Action"/>

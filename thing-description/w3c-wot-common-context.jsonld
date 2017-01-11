@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "qu": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#",
+    "dogont": "http://elite.polito.it/ontologies/dogont.owl#",
+    "lgdo": "http://linkedgeodata.org/ontology/",
+    "schema": "http://schema.org/",
+
+    "reference": {
+      "@id": "schema:valueReference",
+      "@type": "@id"
+    },
+    "Temperature": "qu:temperature",
+    "Brightness": "qu:quantityOfLight",
+    "Distance": "qu:distance",
+    "Speed": "qu:speed",
+    "PowerConsumption": "qu:energy",
+    "OnOff": "dogont:OnOffState",
+    "RGBColor": "dogont:ColorStateRGB",
+    "RGBColorRed": "dogont:RedStateValue",
+    "RGBColorGreen": "dogont:GreenStateValue",
+    "RGBColorBlue": "dogont:BlueStateValue",
+
+    "unit": {
+      "@id": "qu:unit",
+      "@type": "@id"
+    },
+    "celsius": "qu:degreeCelsius",
+    "kelvin": "qu:kelvin",
+    "m": "qu:meter",
+    "mm": "qu:millimeter",
+    "mile": "qu:mile",
+    "inch": "qu:inch",
+    "kmh": "qu:kilometerPerHour",
+    "mph": "qu:milePerHour",
+    "kwh": "qu:kilowattHour",
+    "joule": "qu:joule",
+
+    "On": "dogont:OnCommand",
+    "Off": "dogont:OffCommand",
+    "Toggle": "dogont:ToggleCommand",
+    "Start": "dogont:StartCommand",
+    "Stop": "dogont:StopCommand",
+    "IncreaseColor": "dogont:IncreaseColorCommand",
+    "DecreaseColor": "dogont:DecreaseColorCommand",
+
+    "Lamp": "dogont:Lamp",
+    "Lighting": "dogont:Lighting",
+    "TrafficLight": "lgdo:StreetLamp",
+    "Switch": "dogont:OnOffSwitch",
+    "Fan": "dogont:Fan",
+    "Door": "dogont:Door",
+    "Car": "schema:Car",
+
+    "min": "schema:minValue",
+    "max": "schema:maxvalue"
+  }
+}
