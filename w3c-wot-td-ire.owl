@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY KCO "http://www.loa-cnr.it/ontologies/KCO/KCO.owl#" >
+    <!ENTITY dol "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" >
+    <!ENTITY edns "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#" >
+    <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+    <!ENTITY inf "http://www.loa-cnr.it/ontologies/InformationObjects.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://w3c.github.io/wot/w3c-wot-td-ire.owl#"
+     xml:base="http://w3c.github.io/wot/w3c-wot-td-ire.owl"
+     xmlns:inf="http://www.loa-cnr.it/ontologies/InformationObjects.owl#"
+     xmlns:dol="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:edns="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:KCO="http://www.loa-cnr.it/ontologies/KCO/KCO.owl#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#">
+    <owl:Ontology rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl">
+        <owl:versionInfo rdf:datatype="&xsd;float">0.7</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;string">Original version: http://www.loa-cnr.it/ontologies/IRE/IRE.owl</rdfs:comment>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:AnnotationProperty rdf:about="&skos;closeMatch"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#anyURI -->
+
+    <rdfs:Datatype rdf:about="&xsd;anyURI"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="&xsd;string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#approximateProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#approximateProxyFor">
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#WebResource"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#exactProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#exactProxyFor">
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor">
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#exactProxyFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasWebLocation -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasWebLocation">
+        <rdfs:range rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#AbstractWebLocation"/>
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#WebResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor">
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#Resource"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#exactProxyFor"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#nonResolvableProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#nonResolvableProxyFor">
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor">
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#Resource"/>
+        <rdfs:range rdf:resource="&DUL;Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#resolvableProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#resolvableProxyFor">
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#webLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#webLocationOf">
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#AbstractWebLocation"/>
+        <rdfs:range rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#WebResource"/>
+        <owl:inverseOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasWebLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAbout -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isAbout"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isReferenceOf -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isReferenceOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;realizes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasIdentifier">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&DUL;SpaceRegion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasURI -->
+
+    <owl:DatatypeProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasURI">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#AbstractWebLocation"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#AbstractWebLocation -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#AbstractWebLocation">
+        <rdfs:subClassOf rdf:resource="&DUL;SpaceRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#WebResource"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#proxyFor"/>
+                        <owl:someValuesFrom rdf:resource="&DUL;Entity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#WebResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#ResolutionMethod -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ResolutionMethod">
+        <rdfs:subClassOf rdf:resource="&DUL;Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#Resource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#Resource">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A computational object that might be seen as a proxy for some entity.
+Possible: a resource can enter a resolution method.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor"/>
+                        <owl:onClass rdf:resource="&DUL;Entity"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#WebResource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#WebResource">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#Resource"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#approximateProxyFor"/>
+                                <owl:onClass rdf:resource="&DUL;Entity"/>
+                                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#exactProxyFor"/>
+                                <owl:onClass rdf:resource="&DUL;Entity"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#hasWebLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#AbstractWebLocation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#Resource"/>
+        <skos:closeMatch rdf:resource="http://www.w3.org/ns/hydra/core#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity -->
+
+    <owl:Class rdf:about="&DUL;Entity"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="&DUL;InformationObject"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization -->
+
+    <owl:Class rdf:about="&DUL;InformationRealization"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method -->
+
+    <owl:Class rdf:about="&DUL;Method"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SpaceRegion -->
+
+    <owl:Class rdf:about="&DUL;SpaceRegion"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
