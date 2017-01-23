@@ -1,0 +1,21 @@
+// GET {wt}/system
+
+// 200 OK
+// Link: <http://webofthings.org/system>; rel="meta"
+
+{
+	"firmwareVersion": "4.0",
+	"upSince": "2015-10-31T23:59:59.000Z",
+	"_connections":{  
+		"ip": "198.39.3.2",
+		"port": 8585,
+		"rootUrl": "http://localhost:8585/",
+		"publicUrl": "http://devices.webofthings.io/"	    	
+	},
+	"_identifiers":{
+		"serialNumber":"AX2332-00021",
+		"ean":"9399392392"
+	},
+	"_myCustomMeta1":{},
+	"_myCustomMeta2":{}
+}

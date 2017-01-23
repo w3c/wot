@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY wot2 "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3c.org/wot/td#"
+     xml:base="http://www.w3c.org/wot/td"
+     xmlns:wot2="http://w3c.github.io/wot/w3c-wot-td-ontology.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://w3c.github.io/wot/w3c-wot-td-ontology.owl">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">2.2</owl:versionInfo>
+        <created rdf:datatype="&xsd;date">2015-08-14</created>
+        <wot2:modified rdf:datatype="&xsd;date">2016-10-24</wot2:modified>
+        <title rdf:datatype="&xsd;string">Thing Description Model</title>
+        <rdfs:comment rdf:datatype="&xsd;string">This ontology describes Things as specified by the Thing Description Model.</rdfs:comment>
+        <creator rdf:datatype="&xsd;string">W3C Web of Things Interest Group</creator>
+        <identifier rdf:datatype="&xsd;anyURI">http://www.w3c.org/wot/td</identifier>
+        <owl:imports rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#created -->
+
+    <owl:AnnotationProperty rdf:about="&wot2;created"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#creator -->
+
+    <owl:AnnotationProperty rdf:about="&wot2;creator"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#identifier -->
+
+    <owl:AnnotationProperty rdf:about="&wot2;identifier"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#modified -->
+
+    <owl:AnnotationProperty rdf:about="&wot2;modified"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#title -->
+
+    <owl:AnnotationProperty rdf:about="&wot2;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor -->
+
+    <owl:ObjectProperty rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="&wot2;dependsOn">
+        <rdfs:subPropertyOf rdf:resource="&wot2;isAssociatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#forProperty -->
+
+    <owl:ObjectProperty rdf:about="&wot2;forProperty">
+        <rdfs:range rdf:resource="&wot2;Property"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wot2;Action"/>
+                    <rdf:Description rdf:about="&wot2;Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasAction -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasAction">
+        <rdfs:range rdf:resource="&wot2;Action"/>
+        <rdfs:domain rdf:resource="&wot2;Thing"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasEvent">
+        <rdfs:range rdf:resource="&wot2;Event"/>
+        <rdfs:domain rdf:resource="&wot2;Thing"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasInput -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasInput">
+        <rdfs:domain rdf:resource="&wot2;Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasInteraction -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasInteraction">
+        <rdfs:range rdf:resource="&wot2;Interaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasOutput">
+        <rdfs:domain rdf:resource="&wot2;Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasProperty">
+        <rdfs:range rdf:resource="&wot2;Property"/>
+        <rdfs:domain rdf:resource="&wot2;Thing"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasThingDescription -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasThingDescription">
+        <owl:inverseOf rdf:resource="&wot2;isThingDescriptionOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasValueType -->
+
+    <owl:ObjectProperty rdf:about="&wot2;hasValueType">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wot2;Event"/>
+                    <rdf:Description rdf:about="&wot2;Property"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isAssociatedTo -->
+
+    <owl:ObjectProperty rdf:about="&wot2;isAssociatedTo">
+        <rdfs:range rdf:resource="&wot2;Thing"/>
+        <rdfs:domain rdf:resource="&wot2;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isChildOf -->
+
+    <owl:ObjectProperty rdf:about="&wot2;isChildOf">
+        <rdfs:subPropertyOf rdf:resource="&wot2;isAssociatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isInteractionOf -->
+
+    <owl:ObjectProperty rdf:about="&wot2;isInteractionOf">
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor"/>
+        <owl:inverseOf rdf:resource="&wot2;hasInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isParentOf -->
+
+    <owl:ObjectProperty rdf:about="&wot2;isParentOf">
+        <rdfs:subPropertyOf rdf:resource="&wot2;isAssociatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isThingDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="&wot2;isThingDescriptionOf">
+        <rdfs:subPropertyOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="&wot2;hasName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wot2;Action"/>
+                    <rdf:Description rdf:about="&wot2;Event"/>
+                    <rdf:Description rdf:about="&wot2;Property"/>
+                    <rdf:Description rdf:about="&wot2;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasPriority -->
+
+    <owl:DatatypeProperty rdf:about="&wot2;hasPriority">
+        <rdfs:comment>In case of more than one protocol binding, defines an order to suggest which protocol(s) should be used in priority.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#hasStability -->
+
+    <owl:DatatypeProperty rdf:about="&wot2;hasStability">
+        <rdfs:comment>Characterizes how often the property likely changes. Expressed in ms.</rdfs:comment>
+        <rdfs:domain rdf:resource="&wot2;Property"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#isWritable -->
+
+    <owl:DatatypeProperty rdf:about="&wot2;isWritable">
+        <rdfs:domain rdf:resource="&wot2;Property"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#supportsEncoding -->
+
+    <owl:DatatypeProperty rdf:about="&wot2;supportsEncoding"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#supportsSecurity -->
+
+    <owl:DatatypeProperty rdf:about="&wot2;supportsSecurity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource -->
+
+    <owl:Class rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource"/>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Action -->
+
+    <owl:Class rdf:about="&wot2;Action">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <owl:disjointWith rdf:resource="&wot2;Event"/>
+        <owl:disjointWith rdf:resource="&wot2;Property"/>
+        <rdfs:comment xml:lang="en">Real-world entity characterizing particular time intervals, possibly influencing some Properties. Non-immediate natural phenomena (e.g. heating) or functionalities provided by a cyber-physical system (open, close, switch, toggle...) are Actions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Event -->
+
+    <owl:Class rdf:about="&wot2;Event">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <owl:disjointWith rdf:resource="&wot2;Property"/>
+        <rdfs:comment xml:lang="en">Real-world entity characterizing particular instants, possibly related to some Properties. State changes or sensor measurements are Events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Interaction -->
+
+    <owl:Class rdf:about="&wot2;Interaction">
+        <rdfs:label>Interaction</rdfs:label>
+        <rdfs:label>WoT Resource</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#informalExactProxyFor"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#ProxyResource"/>
+        <rdfs:comment xml:lang="en">Web resource of arbitrary content format acting as a digital proxy for any real-world entity that is not already digital information. Such entities can be physical quantities like temperature or pressure, natural phenomena like raise of temperature or object motion, arbitrary states like on/off, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Property -->
+
+    <owl:Class rdf:about="&wot2;Property">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment xml:lang="en">Time-independent real-world entity that is neither an Action, nor an Event. For instance, physical quantities (temperature, pressure, brigthness...) are Properties.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#PropertyChangedEvent -->
+
+    <owl:Class rdf:about="&wot2;PropertyChangedEvent">
+        <rdfs:subClassOf rdf:resource="&wot2;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#Thing -->
+
+    <owl:Class rdf:about="&wot2;Thing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#ThingDescription -->
+
+    <owl:Class rdf:about="&wot2;ThingDescription">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3c.github.io/wot/w3c-wot-td-ire.owl#SemanticResource"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3c.github.io/wot/w3c-wot-td-ire.owl#formalExactProxyFor"/>
+                        <owl:onClass rdf:resource="&wot2;Thing"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Semantic resource formally describing a unique WoT Thing that a software agent can interact with. Examples of WoT Things include building rooms, manufactured products, mechanical systems but also digital control devices, i.e. any real-world entity without a priori restriction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3c.github.io/wot/w3c-wot-td-ontology.owl#UpdatePropertyAction -->
+
+    <owl:Class rdf:about="&wot2;UpdatePropertyAction">
+        <rdfs:subClassOf rdf:resource="&wot2;Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

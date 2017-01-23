@@ -9,7 +9,7 @@
             <head>
                 <title>Use Cases and Requirements for the Web of Things</title>
                 <meta charset="utf-8"/>
-                    <script src="//www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
+                    <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
                     <script class="remove">
                         var respecConfig = {
                         specStatus: "unofficial",
@@ -40,10 +40,41 @@
             </head>
             <body>
                 <section id="abstract">
-                    <p>This document describes Use Cases and Requirements for the Web of Things.</p>
+                    <p>
+                        The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things (IoT) services on a worldwide basis.
+                        This document is used to collect IoT use cases from different domains for the Standardisation work in the W3C WoT groups.
+                        The domain use cases are dissaminated to identify so-called <b>building-blocks</b>
+                        that are common across the different domains as well as <b>non-functional</b> requirements. <br/>
+                        The identified <b>building blocks</b> are inputs to the investigation and standardisation work.<br/>
+                        The technology candidates for the respective <b>building blocks</b> were moved into the <a href="https://w3c.github.io/wot/landscape.html">tech landscape</a> document. 
+                    </p>
                 </section>
-                <section id="use-cases">
-                    <h2>Use Cases</h2>
+		<section id='sotd'>
+		<p>
+			This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of this technical report can be found in the W3C technical reports index at <a href="http://www.w3.org/TR/" arget="_blank">http://www.w3.org/TR/.</a>
+		</p>
+		<p>
+			This collection of exemplary use cases is the result of discussion in the <a href="https://www.w3.org/WoT/IG/" target="_blank">Web of Things Interest Group</a>.
+
+			The Web of Things Interest Group believes that Working Groups such as a potential The Web of Things Working Group or others will provide recommendations 
+			that simplify the application development and interoperabilty for the mentioned use cases. 
+
+			The Web of Things Interest Group may continue to discuss other areas of IoT that have not already been raised in this document, 
+			as well as refine the stated use cases and requirements.
+		</p><p>
+			This document was published by the Web of Things Interest Group as an Interest Group Note. 
+
+			If you wish to make comments regarding this document, please send them to <a href="mailto:public-wot-ig@w3.org">public-wot-ig@w3.org</a> 
+			(<a class="sub" title="subscribe to public-wot-ig@w3.org" href="mailto:public-wot-ig-request@w3.org?subject=subscribe">subscribe</a>, <a href="https://lists.w3.org/Archives/Public/public-wot-ig/" target="_blank">archives</a>). All feedback is welcome.
+			</p><p>
+			Publication as an Interest Group Note does not imply endorsement by the W3C Membership. 
+			This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.<br />
+
+			The disclosure obligations of the Participants of this group are described in the <a href="https://www.w3.org/2016/07/wot-ig-charter.html" target="_blank">charter</a>.
+		</p>
+		</section>
+		<section id="use-cases">
+		<h2>Use Cases</h2>
 
                     <xsl:apply-templates select="/ucr/usecase[generate-id(.)=generate-id(key('domain',@domain)[1])]"/>
                 </section>

@@ -1,0 +1,59 @@
+// GET {wt}
+// 200 OK
+// Link: <product/>; rel="product"
+// Link: <system/>; rel="system"
+// Link: <properties/>; rel="properties"
+// Link: <events/>; rel="events"
+// Link: <actions/>; rel="action"
+// Link: <meta/>; rel="meta"
+// Link: <help/>; rel="help"
+// Link: <ui/>; rel="ui"
+
+{
+	"id":"cart1",
+	"createdAd":"2012-08-24T17:29:11.683Z", 
+	"updatedAd":"2012-08-24T17:29:11.683Z", 
+	"name":"Shopping Cart",
+	"description":"Shopping Cart that updates its location as it moves",
+	"tags":["cart","device","test"],
+	"customFields":{"size":"20","color":"blue"},
+	"links":{
+		"product": {
+			"link" : "http://api.evrythng.com/products/8838830wfoifj3jfo4i",
+			"title" : "Product this Web Thing is based on"
+		},
+		"system":{
+	 	  "link": "system/",
+	 	  "title": "Configurations of this Web Thing."			
+		},
+	 	"properties": {
+	 	  "link": "properties/",
+	 	  "title": "Properties of this Web Thing."
+	 	},
+	 	"events": {
+	 	  "link": "events/",
+	 	  "title": "Events of this Web Thing."
+	 	},
+	 	"actions": {
+	 	  "link": "actions/",
+	 	  "title": "Actions of this Web Thing."
+	 	},
+	 	"meta": {
+	 	  "link": "http://w3c.org/schemas/webthing/",
+	 	  "title": "Metadata"
+	 	},
+	 	"help": {
+	 	  "link": "http://webofthings.org/docs/pi/",
+	 	  "title": "Documentation"
+	 	},
+	 	"ui": {
+	 	  "link": "ui/",
+	 	  "title": "User Interface"
+	 	},
+	 	"_myCustomLinkRelType":{
+	 	  "link": "custom/",
+	 	  "schema": "http://webofthings.org/schemas/custom.html",
+	 	  "title": "My custom resource"
+	 	} 	
+	}
+}

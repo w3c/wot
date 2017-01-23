@@ -1,0 +1,29 @@
+// GET {wt}/events/batteryLow/
+
+// 200 OK
+// Paginated
+// Link: <http://webofthings.org/events/batteryLow>; rel="meta" 
+// Link: <model/>; rel="model"
+
+[
+	{
+		"id":56,
+		"type":"batteryLow",
+		"name":"Low Battery",
+	    "timestamp":"2015-06-14T18:33:25.938Z",
+		"value":{
+			"state":"CRITICAL"
+		},
+		"tags":["alert"]
+	},
+	{
+		"id":55,
+		"type":"batteryLow",
+		"name":"Low Battery",
+	    "timestamp":"2015-06-12T12:30:22.172Z",
+		"value":{
+			"state":"REPLACE"
+		},
+		"tags":["warning"]
+	}
+]

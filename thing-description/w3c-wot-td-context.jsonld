@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "td": "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
+    "name": "td:name",
+    "uris": {
+      "@id": "td:hasThingDescription",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "hrefs": {
+      "@id": "td:hasInteraction",
+      "@type": "@id",
+      "@container": "@set"
+    },
+	"Interaction": "td:Interaction",
+    "priority": {
+      "@id": "td:hasPriority",
+      "@type": "xsd:integer"
+    },
+    "encodings": {
+      "@id": "td:supportsEncoding",
+      "@container": "@set"
+    },
+    "security": "td:supportsSecurity",
+    "properties": {
+      "@id": "td:hasProperty",
+      "@container": "@set"
+    },
+	"Property": "td:Property",
+    "valueType": "td:hasValueType",
+    "stability": {
+      "@id": "td:hasStability",
+      "@type": "xsd:integer"
+    },
+    "writable": {
+      "@id": "td:isWritable",
+      "@type": "xsd:boolean"
+    },
+    "events": {
+      "@id": "td:hasEvent",
+      "@container": "@set"
+    },
+    "Event": "td:Event",
+    "property": {
+      "@id": "td:forProperty",
+      "@type": "@id"
+    },
+    "inputData":  {
+      "@id": "td:hasInput"
+    },
+    "outputData": {
+      "@id": "td:hasOutput"
+    },
+    "actions": {
+      "@id": "td:hasAction",
+      "@container": "@set"
+    },
+    "Action": "td:Action",
+    "associations": "td:isAssociatedTo",
+    "child": "td:isChildOf",
+    "parent": "td:isParentOf"
+  }
+}

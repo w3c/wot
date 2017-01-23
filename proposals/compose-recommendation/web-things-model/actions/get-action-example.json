@@ -1,0 +1,23 @@
+// GET {wt}/actions/upgradeFirmware/
+// 200 OK
+// Link: <http://webofthings.org/actions/upgradefirmware>; rel="meta"
+// Link: <model/>; rel="model"
+
+[
+	{
+		"id":223,
+		"value":{
+			"delay":30,
+			"mode":"SOFT"
+		},
+	    "timestamp":"2015-06-14T18:33:25.938Z"
+	},
+	{
+		"id":222,
+		"value":{
+			"delay":60,
+			"mode":"FORCE"
+		},
+		"timestamp":"2015-06-14T14:22:23.233Z"
+	}
+]

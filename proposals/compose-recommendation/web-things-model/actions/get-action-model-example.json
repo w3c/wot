@@ -1,0 +1,71 @@
+// GET {wt}/actions/upgradeFirmware/model
+// 200 OK
+// Link: <http://webofthings.org/actions/upgradefirmware>; rel="meta"
+
+{
+	"id":"upgradeFirmware",
+	"name":"Upgrade Device Firmware",  
+	"description":"Loads a new firmware from the cloud and installs it.",
+	"values": {
+		"delay":{
+			"name":"Upgrade Delay",
+			"type":"integer",
+			"required":true,
+			"minValue":0,
+			"maxValue":120,
+			"unit":"seconds"
+		},
+		"url":{
+			"name":"Firmware URL",
+			"description":"The URL to get the firmware from (should contain the credentials).",
+			"required":true,
+			"type":"string"
+		},
+		"requester":{
+			"name":"Request User ID",
+			"description":"Your user ID (optional) ",
+			"type":"string"
+		}
+	},
+	"customFields":{
+		"permission":"admin",
+		"priority":"high"
+	}	
+}
+
+// GET {wt}/actions/reboot/model
+// 200 OK
+// Link: <http://webofthings.org/actions/reboot>; rel="meta"
+
+{
+	"id":"reboot",
+	"name":"Reboot",  
+	"description":"Reboots the device.",
+	"values": {
+		"delay":{
+			"type":"integer",
+			"required":true,
+			"minValue":0,
+			"maxValue":120,
+			"unit":"seconds"
+		},
+		"mode":{
+			"description":"What type of reboot mode",
+			"type":"string",
+			"default":"FORCE",
+			"enum":{
+				"FORCE":"Quits all processes and shuts down the system",
+				"SOFT":"Waits all processes to finish before rebooting the device"
+			}
+		},
+		"requester":{
+			"description":"Your user ID (optional) ",
+			"type":"string"
+		}
+	},
+	"customFields":{
+		"status":"inactive",
+		"permission":"admin"
+	}	
+}
+
