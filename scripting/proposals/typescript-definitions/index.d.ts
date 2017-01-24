@@ -157,7 +157,7 @@ export interface DynamicThing extends ExposedThing {
     /**
      * declare a new eventsource for the thing
      */
-    addEvent(eventName: string): DynamicThing
+    addEvent(eventName: string, semanticType? : SemanticType[]): DynamicThing
 
     /**
      * remove a property from the thing
@@ -180,6 +180,10 @@ export interface DynamicThing extends ExposedThing {
  * To be discussed: simple form based on default context?
  */
 declare class SemanticType {
+
+    /** name / identifier */
     public name : string;
+
+    /** the context, e.g. URI for JSON-LD*/
     public context : string;
 }
