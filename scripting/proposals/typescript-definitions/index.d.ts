@@ -144,7 +144,7 @@ export interface DynamicThing extends ExposedThing {
      * @param propertyName Name of the property
      * @param valueType type specification of the value (JSON schema) 
      */
-    addProperty(propertyName: string, valueType: Object): DynamicThing
+    addProperty(propertyName: string, valueType: Object, semanticType? : SemanticType[]): DynamicThing
 
     /**
      * declare a new action for the thing
@@ -152,7 +152,7 @@ export interface DynamicThing extends ExposedThing {
      * @param inputType type specification of the parameter (optional, JSON schema)
      * @param outputType type specification of the return value (optional, JSON schema)
      */
-    addAction(actionName: string, inputType?: Object, outputType?: Object): DynamicThing
+    addAction(actionName: string, inputType?: Object, outputType?: Object, semanticType? : SemanticType[]): DynamicThing
 
     /**
      * declare a new eventsource for the thing
@@ -173,4 +173,13 @@ export interface DynamicThing extends ExposedThing {
      * remove an event from the thing
      */
     removeEvent(eventName: string): boolean
+}
+
+/**
+ * Semantic type for an interaction, eqiv. to the TD entries
+ * To be discussed: simple form based on default context?
+ */
+declare class SemanticType {
+    public name : string;
+    public context : string;
 }
