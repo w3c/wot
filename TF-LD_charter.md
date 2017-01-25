@@ -1,4 +1,4 @@
-# Web of ThinksThings Linked Data and Semantic Processing Task Force
+# Web of Things Linked Data and Semantic Processing Task Force
 
 **Confidentiality**: proceedings are public
 
