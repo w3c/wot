@@ -10,7 +10,7 @@
 
 ## Introduction
 
-The Web of things seeks to unlock the potential of the IoT by defining an abstraction layer that decouples applications from the details of the underlying IoT platforms, protocols and communications patterns. This is based upon the idea that things standing for physical or abstract entities are exposed to applications as software objects. These objects expose properties, actions, events and metadata, and are subject to application contracts that also define service level agreements around security, privacy, non-functional properties (e.g., location, price etc.) and the underlying IoT platforms. These contracts are formally defined in terms of W3C's Linked Data framework as a*lingua franca*, enabling multiple serializations such as JSON, XML, Turtle and so forth.
+The Web of things seeks to unlock the potential of the IoT by defining an abstraction layer that decouples applications from the details of the underlying IoT platforms, protocols and communications patterns. This is based upon the idea that things standing for physical or abstract entities are exposed to applications as software objects. These objects expose properties, actions, events and metadata, and are subject to application contracts that also define service level agreements around security, privacy, non-functional properties (e.g., location, price etc.) and the underlying IoT platforms. These contracts are formally defined in terms of W3C's Linked Data framework as a *lingua franca*, enabling multiple serializations such as JSON, XML, Turtle and so forth.
 
 ![contracts](contracts.png)
 
