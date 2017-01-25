@@ -12,7 +12,7 @@
 
 The Web of things seeks to unlock the potential of the IoT by defining an abstraction layer that decouples applications from the details of the underlying IoT platforms, protocols and communications patterns. This is based upon the idea that things standing for physical or abstract entities are exposed to applications as software objects. These objects expose properties, actions, events and metadata, and are subject to application contracts that also define service level agreements around security, privacy, non-functional properties (e.g., location, price etc.) and the underlying IoT platforms. These contracts are formally defined in terms of W3C's Linked Data framework as a*lingua franca*, enabling multiple serializations such as JSON, XML, Turtle and so forth.
 
-![contracts](/home/dsr/Documents/contracts.png)
+![contracts](contracts.png)
 
 The application contracts can be used by application platforms to create the software objects for applications to interact with things. The contracts include the metadata needed by application platforms to drive particular IoT platforms. Semantic models can be used to support validation of application contracts, including domain constraints, validation of data, discovery based on the kinds of things, their relationships and context, and to ensure semantic interoperability for compositions of services.
 
