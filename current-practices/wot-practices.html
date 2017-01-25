@@ -2156,15 +2156,20 @@ to CoAP requests to RS. </li>
 					</p>
 
 					<pre class="idl">
+						interface SemanticType {
+							attribute DOMString name;
+							attribute DOMString context;
+						};
+
 						interface ExposedThing {
 								readonly attribute DOMString name;
 							    Promise&lt;any&gt; invokeAction(DOMString actionName, any parameter);
 							    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
 							    Promise&lt;any&gt; getProperty(DOMString propertyName);
 								Promise&lt;any&gt; emitEvent(DOMString eventName, any payload);
-								ExposedThing addEvent(DOMString eventName, object payloadType);
-								ExposedThing addAction(DOMString actionName, object inputType, object outputType);
-								ExposedThing addProperty(DOMString propertyName, object contentType);
+								ExposedThing addEvent(DOMString eventName, object payloadType, optional SemanticType[] semanticType);
+								ExposedThing addAction(DOMString actionName, object inputType, object outputType, optional SemanticType[] semanticType);
+								ExposedThing addProperty(DOMString propertyName, object contentType, optional SemanticType[] semanticType);
 								ExposedThing onInvokeAction(DOMString actionName, ActionHandler callback);
 								ExposedThing onUpdateProperty(DOMString propertyName, PropertyChangeListener callback);
 								ExposedThing addListener(DOMString eventName, ThingEventListener listener);
