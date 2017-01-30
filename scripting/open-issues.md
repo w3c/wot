@@ -9,12 +9,15 @@ To be discussed on the face to face:
 - WoT WG scripting deliverables: scripting cases, API specification, etc.
 - ways to contribute, editors, workflows
 - ways to integrate with WoT IG reports, e.g. the [WoT Best Practices](http://w3c.github.io/wot/current-practices/wot-practices.html#scripting-api) document.
+- interplay of WG and IG regarding scripting API
 
 ## Issues on language bindings
 
 ### Specifying multiple language bindings in the Scripting API specification
 - Whether/how to use WebIDL (generic)
 - Whether/how to use TypeScript (better for JavaScript)
+- Define deliverable and hirarchy (e.g. JavaScript resp. TypeScript def as master and derived an agnostic IDL spec for other languages)
+- If abstract IDLs like Franca could be an option for non-js portation
 
 ## Issues on JavaScript API specification
 ### Asynchronous programming guidelines
@@ -71,6 +74,15 @@ Proposals:
 - discuss the algorithm
 - discuss provisioning and security implications.
 
+#### More lifecycle methods for local Exposedthings
+
+So farvthe root object does only offer to create ``ExposedThings`` but does not offer methods to:
+- delete/unlink them
+  - proposal: ``WoT.deleteThing(exposedThing)``
+- retrieve them (discovery only allows client-side interaction)
+  - Proposal: add methods to retrieve a local exposedthing (by name, generic discovery)
+
+
 ### Consumed Thing client API
 
 The current API is
@@ -126,5 +138,8 @@ Issues:
 - need an API to notify listeners (clients) about changes not made by them
 - API for adding properties, actions, events etc (i.e. changing Thing Description) is problematic
 - Thing description should be available as a mix-in object, or as a property?
+- splitting into dynamicThing (dynamic interface) and exposedThing (static interface)
+- Error types to be thrown by handlers
+
 
 Feel free to add issues, and modify existing ones.
