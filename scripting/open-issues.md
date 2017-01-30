@@ -107,6 +107,10 @@ Issues:
 - check event handling
 - check return type of `getDescription()`.
 
+### Client API for deleting remote Things
+
+### Client API for updating (or provisioning) TD itself
+
 ### Exposed Thing (server) API
 The current API is
 ```javascript
@@ -141,5 +145,15 @@ Issues:
 - splitting into dynamicThing (dynamic interface) and exposedThing (static interface)
 - Error types to be thrown by handlers
 
+### Provisioning
+- How to set up a WoT network:
+  * provisioning the underlying protocol stack
+  * provisioning WoT specific identification and models (TD)
+- What are the WoT network functions (e.g. TD database) that need to be handled by the Scripting API.
+- How to discover, install, configure, update, delete WoT scripts/programs.
+- How to do provisioning:
+  * with a browser page,
+  * with an app,
+  * with a network function (e.g. gateway/servient).
 
 Feel free to add issues, and modify existing ones.
