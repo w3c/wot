@@ -1,0 +1,34 @@
+// GET {wt}/*/subscriptions
+// 200 OK
+[
+	{
+		"id" : 2349,
+		"subscriberId":"ServiceObject-123213213",
+		"type":"httpCallback",
+		"resource":"/properties/temperature",
+		"customFields":{
+			"callbackUrl":"http://www.compose-project.eu/so/ServiceObject-123213213/callback"	
+		}
+	},
+	{
+		"id" : 2350,
+		"subscriberId":"ServiceObject-123213213",
+		"type":"websockets",
+		"resource":"/properties/location",			
+		"customFields":{
+			"websocketUrl":"wss://www.compose-project.eu/WebObject-2423529879879875/streams/location"
+		}
+	}
+]
+
+// GET {wt}/*/subscriptions/2349
+// 200 OK
+{
+		"id" : 2349,
+		"subscriberId":"ServiceObject-123213213",
+		"type":"httpCallback",
+		"resource":"/properties/temperature",
+		"customFields":{
+			"callbackUrl":"http://www.compose-project.eu/so/ServiceObject-123213213/callback"	
+		}
+}

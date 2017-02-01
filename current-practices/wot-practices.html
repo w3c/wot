@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+<!--<!DOCTYPE html [
+    <!ENTITY nbsp "&#160;"> 
+]>-->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<title>WoT Current Practices</title>
-		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async class="remove"></script>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
 		<script class="remove">
 			var respecConfig = {
 				  specStatus:   "unofficial"
@@ -62,18 +65,19 @@
 		<section id="abstract">
 			<p>
 				The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies to enable discovery and interoperability of Internet of Things (IoT) services on a worldwide basis.
-				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, Protocol Bindings, discovery mechanisms, and cross-cutting security & privacy considerations.
+				The discussions of the IG already shaped preliminary WoT building blocks: the WoT Thing Description (TD), a Scripting API, Protocol Bindings, discovery mechanisms, and cross-cutting security &amp; privacy considerations.
 				The current practices related to WoT building blocks were also prototyped and tested in so-called PlugFests.
 				The documentation of these WoT building blocks, however, are usually scattered across multiple drafts, meeting minutes, wiki entries, slides, and even verbal agreements.
 				Thus, this document tries to provide an overall snapshot of the current practices of the WoT interest group in a single location.
-				While this document is not a technical specification, it aims at helping implementers to get a quick overview of the WoT building blocks.
+				While this document is not a technical specification, it aims at helping implementers to get a 
+				overview of the WoT building blocks.
 				Furthermore, it includes reports from past PlugFests and follow-up discussions, which explain the rational behind the current practices.
 			</p>
 		</section>
 
 		<section id="sotd">
 			<p>
-				This document is an intermediary release of the current practices that were used at the Beijing 2016 PlugFest of the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a>.
+				This document is an intermediary release of the current practices that were used at the Santa Clara 2017 PlugFest of the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a>.
 				The IG believes that most of the recommendations listed in this document will be refined and addressed after each new PlugFest event, where individual and task force proposals are evaluated and tested.
 				In particular, this series of notes will document the current status of discussions within the IG for implementers of the drafted building blocks.
 			</p>
@@ -177,7 +181,7 @@
 			</p>
 			
 			<figure id="fig-servient-native">
-        <img src="servient-native.png" width="60%" />
+				<img src="servient-native.png" style="width:60%"  />
         <figcaption>Things are implemented by a servient and communicate through their WoT Interface.</figcaption>
       </figure>
 
@@ -189,14 +193,14 @@
 			</p>
 			
 			<figure id="fig-servient-script">
-        <img src="servient-script.png" width="60%" />
+				<img src="servient-script.png" style="width:60%" />
         <figcaption>Servients can also host a runtime environment that allows application logic to be implemented in portable scripts.</figcaption>
       </figure>
 
 			<p>
 				The application logic of a Thing (or technically a <a>servient</a>) can be implemented natively, for instance in the device firmware, which is expected to be common for very resource-constrained Things.
 				Following the patterns in the Web, however, application logic should also be provided by scripts.
-				This is supported through a scripting runtime environment&mdash;similar to the Web browser&mdash;that may be provided by a servient.
+				This is supported through a scripting runtime environment&#x2014;similar to the Web browser&#x2014;that may be provided by a servient.
 				Portability of such scripts is ensured through a common <a>Scripting API</a> that allows access to discovery, the client and server functionality of the servient, and the hardware physically attached to the servient.
 			</p>
 
@@ -210,7 +214,7 @@
 				<p>
 					A WoT Interface is a Web interface (often called "Web API") that is describable by a WoT <a>Thing Description</a> (TD).
 					That means it provides Web resources that implement the interaction patterns of Properties, Actions, and Events.
-					Furthermore, it must suppoort the encodings and security mechanisms defined in the TD.
+					Furthermore, it must support the mediaTypes and security mechanisms defined in the TD.
 					The WoT Interface is used for the communication between <a>servients</a> using networking protocols (as opposed to the <a>Scripting API</a>, which is used for the communication between a script and the runtime environment within a servient.
 				</p>
 
@@ -222,7 +226,7 @@
 						The first part of a URI is the scheme, which identifies the protocol used, e.g., <code>http://...</code>, <code>ftp://...</code>, or <code>rtp://...</code>.
 						Depending on the application requirements, the Web already allows to switch between protocols, for instance when an HTML page retrieved over HTTP has a link to a stream provided over the Real-Time Transport Protocol (RTP).
 						Similarly, Thing interactions can be available over different or even multiple protocols, indicated by the scheme of the URIs.
-						See <a href=#thing-description"></a> later for more details on the addressing of interaction resources.
+						See <a href="#thing-description"></a> later for more details on the addressing of interaction resources.
 					</p>
 				</section>
 
@@ -252,69 +256,65 @@
 						<p>
 							<span id="some-practice" class="practicelab">HTTP Binding</span>
 						</p>
-						<p class="practicedesc">
-							<ul>
-								<li>
-									<b>Property</b>
-									<ul>
-										<li><b>Read:</b> GET</li>
-										<li><b>Write:</b> PUT</li>
-									</ul>
-								</li>
-								<li>
-									<b>Action</b>
-									<ul>
-										<li><b>Invoke:</b> POST</li>
-										<li><b>Update task:</b> PUT (on handle resource)</li>
-										<li><b>Cancel task:</b> DELETE (on handle resource)</li>
-									</ul>
-								</li>
-								<li>
-									<b>Event</b>
-									<ul>
-										<li><b>Subscribe:</b> POST + (Long-)Polling/Chunking/Streaming of returned handle resource</li>
-										<li><b>Update subscription:</b> PUT (on handle resource)</li>
-										<li><b>Cancel subscription:</b> DELETE (on handle resource)</li>
-									</ul>
-								</li>
-							</ul>
-						</p>
+						<ul class="practicedesc">
+							<li>
+								<b>Property</b>
+								<ul>
+									<li><b>Read:</b> GET</li>
+									<li><b>Write:</b> PUT</li>
+								</ul>
+							</li>
+							<li>
+								<b>Action</b>
+								<ul>
+									<li><b>Invoke:</b> POST</li>
+									<li><b>Update task:</b> PUT (on handle resource)</li>
+									<li><b>Cancel task:</b> DELETE (on handle resource)</li>
+								</ul>
+							</li>
+							<li>
+								<b>Event</b>
+								<ul>
+									<li><b>Subscribe:</b> POST + (Long-)Polling/Chunking/Streaming of returned handle resource</li>
+									<li><b>Update subscription:</b> PUT (on handle resource)</li>
+									<li><b>Cancel subscription:</b> DELETE (on handle resource)</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 
 					<div class="practice">
 						<p>
 							<span id="some-practice" class="practicelab">CoAP Binding</span>
 						</p>
-						<p class="practicedesc">
-							<ul>
-								<li>
-									<b>Property</b>
-									<ul>
-										<li><b>Read:</b> GET</li>
-										<li><b>Write:</b> PUT</li>
-									</ul>
-								</li>
-								<li>
-									<b>Action</b>
-									<ul>
-										<li><b>Invoke:</b> POST</li>
-										<li><b>Update task:</b> PUT (on handle resource)</li>
-										<li><b>Cancel task:</b> DELETE (on handle resource)</li>
-									</ul>
-								</li>
-								<li>
-									<b>Event</b>
-									<ul>
-										<li><b>Subscribe:</b> POST + Observe of returned handle resource</li>
-										<li><b>Update subscription:</b> PUT (on handle resource)</li>
-										<li>
-											<b>Cancel subscription:</b> DELETE (on handle resource)<br/>
-											Note that CoAP Observe has cancellation support. This would represent pausing the subscription, where the configuration is preserved for the Event and can be resumed through a new GET + Observe.
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</p>
+						<ul class="practicedesc">
+							<li>
+								<b>Property</b>
+								<ul>
+									<li><b>Read:</b> GET</li>
+									<li><b>Write:</b> PUT</li>
+								</ul>
+							</li>
+							<li>
+								<b>Action</b>
+								<ul>
+									<li><b>Invoke:</b> POST</li>
+									<li><b>Update task:</b> PUT (on handle resource)</li>
+									<li><b>Cancel task:</b> DELETE (on handle resource)</li>
+								</ul>
+							</li>
+							<li>
+								<b>Event</b>
+								<ul>
+									<li><b>Subscribe:</b> POST + Observe of returned handle resource</li>
+									<li><b>Update subscription:</b> PUT (on handle resource)</li>
+									<li>
+										<b>Cancel subscription:</b> DELETE (on handle resource)<br/>
+										Note that CoAP Observe has cancellation support. This would represent pausing the subscription, where the configuration is preserved for the Event and can be resumed through a new GET + Observe.
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 
 					<div class="practice">
@@ -389,16 +389,15 @@
 								<p>
 									<span id="some-practice" class="practicelab">Resource Server (RS) Security over HTTP</span>
 								</p>
-								<p class="practicedesc">
-									<ul>
-										<li id="sec-security-rs-configuration-http">
-											<b>Configuration</b> of the RS component:
-											<ul>
-												<li>RS id: <code>NicePlugfestRS</code></li>
-												<li>AS issuer name: <code>NicePlugfestAS</code></li>
-												<li  id="sec-security-as-public-key-es256">
-													AS public signature verification key for ES256 use the following JWK object
-													<pre class="nolinks">
+								<ul class="practicedesc">
+									<li id="sec-security-rs-configuration-http">
+										<b>Configuration</b> of the RS component:
+										<ul>
+											<li>RS id: <code>NicePlugfestRS</code></li>
+											<li>AS issuer name: <code>NicePlugfestAS</code></li>
+											<li  id="sec-security-as-public-key-es256">
+												AS public signature verification key for ES256 use the following JWK object
+												<pre class="nolinks">
 {
 	"keys": [{
 		"kty": "EC",
@@ -410,35 +409,34 @@
 		"alg": "ES256"
 	}]
 }
-													</pre>
-												</li>
-											</ul>
-										</li>
-										<li id="sec-security-rs-registration-http">
-											<b>Registration</b>
-											<p>Skipped for RSs that support ES256 for now.</p>
-										</li>
-										<li>
-											<b>Operation</b> when receiving a HTTP request at a protected endpoint
-											<ol>
-												<li>Check if the request contains an <code>Authorization</code> header. Respond with a 401 error if not</li>
-												<li>Check if the request contains an <code>Authorization: Bearer</code>-header with non-null/empty contents. Respond with a 401 error if not</li>
-												<li>Check if the value of the <code>Authorization: Bearer</code>-header is a JWT object. Respond with a 401 error if not</li>
-												<li>Check if the JWT object is signed. Respond with a 401 error if not</li>
-												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 401 error if invalid</li>
-												<li>
-													Check the contents of the JWT object
-													<ul>
-														<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 401 error if not</li>
-														<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 401 error if not</li>
-													</ul>
-												</li>
-												<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
-											</ol>
-										</li>
-										<li></li>
-									</ul>
-								</p>
+												</pre>
+											</li>
+										</ul>
+									</li>
+									<li id="sec-security-rs-registration-http">
+										<b>Registration</b>
+										<p>Skipped for RSs that support ES256 for now.</p>
+									</li>
+									<li>
+										<b>Operation</b> when receiving a HTTP request at a protected endpoint
+										<ol>
+											<li>Check if the request contains an <code>Authorization</code> header. Respond with a 401 error if not</li>
+											<li>Check if the request contains an <code>Authorization: Bearer</code>-header with non-null/empty contents. Respond with a 401 error if not</li>
+											<li>Check if the value of the <code>Authorization: Bearer</code>-header is a JWT object. Respond with a 401 error if not</li>
+											<li>Check if the JWT object is signed. Respond with a 401 error if not</li>
+											<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 401 error if invalid</li>
+											<li>
+												Check the contents of the JWT object
+												<ul>
+													<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 401 error if not</li>
+													<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 401 error if not</li>
+												</ul>
+											</li>
+											<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
+										</ol>
+									</li>
+									<li></li>
+								</ul>
 							</div>
 							
 							<p class="note" id="sec-security-background">
@@ -450,109 +448,107 @@
 								<p>
 									<span id="some-practice" class="practicelab">Client (C) Security over HTTP</span>
 								</p>
-								<p class="practicedesc">
-									<ul>
-										<li id="sec-security-c-registration-http">
-											<b>Registration</b>
-											<p>Registration is done according [[!RFC7591]] and described in the following.</p>
-											<p>Create a HTTP request with JSON request content as in the following prototype and send it via TLS to the AM.</p>
+								<ul class="practicedesc">
+									<li id="sec-security-c-registration-http">
+										<b>Registration</b>
+										<p>Registration is done according [[!RFC7591]] and described in the following.</p>
+										<p>Create a HTTP request with JSON request content as in the following prototype and send it via TLS to the AM.</p>
+										
+										<span class="note">For the PlugFest use URL:
+										<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/register</code>. <br />
+										Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+										
+										<div>
+											<p>
+												<b>Request</b> <br />
+												<code>POST /iam-services/0.1/oidc/am/register HTTP/1.1</code>
+											</p>
 											
-											<span class="note">For the PlugFest use URL:
-											<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/register</code>. <br />
-											Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+											<p>
+												<b>Request headers</b> <br />
+												<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+												<code>Content-Type: application/json</code> <br />
+												<code>Accept: application/json</code>
+											</p>
 											
-											<div>
-												<p>
-													<b>Request</b> <br />
-													<code>POST /iam-services/0.1/oidc/am/register HTTP/1.1</code>
-												</p>
-												
-												<p>
-													<b>Request headers</b> <br />
-													<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
-													<code>Content-Type: application/json</code> <br />
-													<code>Accept: application/json</code>
-												</p>
-												
-												<p>
-													<b>Request body</b> <br />
-													<code>{</code> <br />
-													<code>  "client_name": "yourClientName",</code> <br />
-													<code>  "grant_types": ["client_credentials"]</code> <br />
-													<code>}</code>
-												</p>
-												
-												<p>
-													<span class="note">Naming convention: replace all values prefixed "your" with your value i.e. use any string of your choice instead "yourClientName"</span>
-												</p>
-											</div>
+											<p>
+												<b>Request body</b> <br />
+												<code>{</code> <br />
+												<code>  "client_name": "yourClientName",</code> <br />
+												<code>  "grant_types": ["client_credentials"]</code> <br />
+												<code>}</code>
+											</p>
 											
-											<div>
-												<p><b>Response</b></p>
-												<p>
-													Check that you get a 201 Created response and extract the value of <code>client_id</code> (this value is called <code>&lt;c_id&gt;</code> in the following) and the value of <code>client_secret</code> (called <code>&lt;c_secret&gt;</code> in the following) from the JSON response body. A response body prototype is:
-												</p>
-												<pre class="nolinks">
+											<p>
+												<span class="note">Naming convention: replace all values prefixed "your" with your value i.e. use any string of your choice instead "yourClientName"</span>
+											</p>
+										</div>
+										
+										<div>
+											<p><b>Response</b></p>
+											<p>
+												Check that you get a 201 Created response and extract the value of <code>client_id</code> (this value is called <code>&lt;c_id&gt;</code> in the following) and the value of <code>client_secret</code> (called <code>&lt;c_secret&gt;</code> in the following) from the JSON response body. A response body prototype is:
+											</p>
+											<pre class="nolinks">
 {
 	"client_id": "889d02cf-16dd-4934-9341-a754088faxyz",
 	"client_secret": "ahd5MU42J0hIxPXzhUhjJHt2d0Oc5M6B644CtuwUlE9zpSuF14-kXYZ"
 }
-												</pre>
-												<p>Store <code>&lt;c_id&gt;</code> and <code>&lt;c_secret&gt;</code> for use during the token acquisition.</p>
-											</div>
-										</li>
-										<li id="sec-security-c-token-aquisition-http">
-											<b>Token Acquisition</b>
-											<p>Create a HTTP request as in the following prototype and send it via TLS to the AM.</p>
-											<span class="note">For the PlugFest use URL:
-											<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/token</code>. <br />
-											Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+											</pre>
+											<p>Store <code>&lt;c_id&gt;</code> and <code>&lt;c_secret&gt;</code> for use during the token acquisition.</p>
+										</div>
+									</li>
+									<li id="sec-security-c-token-aquisition-http">
+										<b>Token Acquisition</b>
+										<p>Create a HTTP request as in the following prototype and send it via TLS to the AM.</p>
+										<span class="note">For the PlugFest use URL:
+										<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/token</code>. <br />
+										Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
+										
+										<div>
+											<p>
+												<b>Request</b> <br />
+												<code>POST /iam-services/0.1/oidc/am/token HTTP/1.1</code>
+											</p>
 											
-											<div>
-												<p>
-													<b>Request</b> <br />
-													<code>POST /iam-services/0.1/oidc/am/token HTTP/1.1</code>
-												</p>
-												
-												<p>
-													<b>Request headers</b> <br />
-													<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
-													<code>Content-Type: application/x-www-form-urlencoded</code> <br />
-													<code>Accept: application/json</code> <br />
-													<code>Authorization: Basic Base64(&lt;c_id&gt;:&lt;c_secret&gt;)</code>
-												</p>
-												
-												<p>
-													<b>Request body</b> <br />
-													<code>grant_type=client_credentials</code>
-												</p>
-											</div>
+											<p>
+												<b>Request headers</b> <br />
+												<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+												<code>Content-Type: application/x-www-form-urlencoded</code> <br />
+												<code>Accept: application/json</code> <br />
+												<code>Authorization: Basic Base64(&lt;c_id&gt;:&lt;c_secret&gt;)</code>
+											</p>
 											
-											<div>
-												<p><b>Response</b></p>
-												<p>
-													Check that you get a 200 OK response and extract the value of the <code>access_token</code> member from the JSON response body. A response body prototype is:
-												</p>
-												<pre class="nolinks">
+											<p>
+												<b>Request body</b> <br />
+												<code>grant_type=client_credentials</code>
+											</p>
+										</div>
+										
+										<div>
+											<p><b>Response</b></p>
+											<p>
+												Check that you get a 200 OK response and extract the value of the <code>access_token</code> member from the JSON response body. A response body prototype is:
+											</p>
+											<pre class="nolinks">
 {
 	"access_token": "eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJzdWIiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJpc3MiOiJodHRwczpcL1wvYW0uY29tcGFueS1zLmNvbTo4NDQzXC9pYW0tc2VydmljZXNcLzAuMVwvb2lkY1wvYW1cLyIsInR5cCI6Im9yZzp3Mzp3b3Q6and0OmFtOmFzLXdyYXA6bWluIiwiYXNfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlKOS5leUpoZFdRaU9pSk9hV05sVUd4MVoyWmxjM1JTVXlJc0luTjFZaUk2SW1GaU9XSTNZMkkzTFRaak5EQXRORGRtTlMwNU1HSTRMVEUxT1dZek5EUXdNakU1TmlJc0ltbHpjeUk2SWs1cFkyVlFiSFZuWm1WemRFRlRJaXdpZEhsd0lqb2liM0puT25jek9uZHZkRHBxZDNRNllYTTZiV2x1SWl3aWFuUnBJam9pWTJZeU5UTm1PV1l0WXpVME5pMDBZbVF4TFRoa1ptUXROamcyTURabE16UmhOalEwSW4wLmZlcVZFZF9JdXk1Q2FPNDhhb0RuWUhfOTlPX1ZlYncxMDdLdXpSclRpc1RBeHZkY1JaWjZaS3RPVWZkOUNlclYzaG1rQWF0LUNXUElCckxMOUZXTFhRIiwianRpIjoiN2MyMjFmMWItZjNkNC00ZTc4LWE4ZWQtOGRmOWUxNGNjMWM5In0.Le_Y90zsO92MyDgbKxUCr3eUNU8Z7-QKc0u0RSr26MHN1za2EUQ1wOoJhLDXR2dFo9geFf7mBbiM77EP6h0ldA",
 	"token_type": "bearer",
 	"expires_in": 3600
 }
-												</pre>
-												<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for <a href="#sec-security-background">JWT validation hints</a>).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called <code>&lt;as_token&gt;</code> in the following.</p>
-											</div>
-											
-											
-										</li>
-										<li>
-											<b>Operation</b> when requesting HTTP to a protected endpoint
-											<ul>
-												<li>Attach an <code>Authorization: Bearer &lt;as_token&gt;</code> header to HTTP requests to RS. </li>
-											</ul>
-										</li>
-									</ul>
-								</p>
+											</pre>
+											<p>Decode the value of the <code>access_token</code> value. This provides a JWT structure. Optionally validate it (see above for <a href="#sec-security-background">JWT validation hints</a>).  Extract the value of the <code>as_token</code> member in the JWT payload. This value is called <code>&lt;as_token&gt;</code> in the following.</p>
+										</div>
+										
+										
+									</li>
+									<li>
+										<b>Operation</b> when requesting HTTP to a protected endpoint
+										<ul>
+											<li>Attach an <code>Authorization: Bearer &lt;as_token&gt;</code> header to HTTP requests to RS. </li>
+										</ul>
+									</li>
+								</ul>
 							</div>
 							
 						</section>
@@ -564,60 +560,56 @@
 								<p>
 									<span id="some-practice" class="practicelab">Resource Server (RS) Security over CoAP</span>
 								</p>
-								<p class="practicedesc">
-									<ul>
-										<li>
-											<b>Configuration</b> of the RS component
-											<p>Same as for HTTP communications. See <a href="#sec-security-rs-configuration-http">above</a>.</p>
-										</li>
-										<li>
-											<b>Registration</b>
-											<p>Same as for HTTP communications. See <a href="#sec-security-rs-registration-http">above</a></p>
-										</li>
-										<li>
-											<b>Operation</b> when receiving a CoAP request at a protected endpoint
-											<ol>
-												<li>Check if the request contains  a CoAP option 65000 with non-null/empty contents. Respond with a 4.01 error if not</li>
-												<li>Check if the value of the CoAP option 65000 content is <code>Bearer &lt;jwt_token&gt;</code> with a non-null/empty <code>&lt;jwt_token&gt;</code>. Respond with a 4.01 error if not</li>
-												<li>Check if the JWT object is signed. Respond with a 4.01 error if not</li>
-												<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 4.01 error if invalid</li>
-												<li>
-													Check the contents of the JWT object
-													<ul>
-														<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 4.01 error if not</li>
-														<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 4.01 error if not</li>
-													</ul>
-												</li>
-												<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
-											</ol>
-										</li>
-									</ul>
-								</p>
+								<ul class="practicedesc">
+									<li>
+										<b>Configuration</b> of the RS component
+										<p>Same as for HTTP communications. See <a href="#sec-security-rs-configuration-http">above</a>.</p>
+									</li>
+									<li>
+										<b>Registration</b>
+										<p>Same as for HTTP communications. See <a href="#sec-security-rs-registration-http">above</a></p>
+									</li>
+									<li>
+										<b>Operation</b> when receiving a CoAP request at a protected endpoint
+										<ol>
+											<li>Check if the request contains  a CoAP option 65000 with non-null/empty contents. Respond with a 4.01 error if not</li>
+											<li>Check if the value of the CoAP option 65000 content is <code>Bearer &lt;jwt_token&gt;</code> with a non-null/empty <code>&lt;jwt_token&gt;</code>. Respond with a 4.01 error if not</li>
+											<li>Check if the JWT object is signed. Respond with a 4.01 error if not</li>
+											<li>Check if the signature of the JWT object is valid. This is to be checked with AS public signature verification key (see <a href="#sec-security-as-public-key-es256">above</a>). Respond with a 4.01 error if invalid</li>
+											<li>
+												Check the contents of the JWT object
+												<ul>
+													<li>Check if the value of "<code>iss</code>" is <code>NicePlugfestAS</code>. Respond with a 4.01 error if not</li>
+													<li>Check if the value of "<code>aud</code>" is <code>NicePlugfestRS</code>. Respond with a 4.01 error if not</li>
+												</ul>
+											</li>
+											<li>Accept the request as well as "<code>sub</code>" as the originator of the request and process it as usual</li>
+										</ol>
+									</li>
+								</ul>
 							</div>
 							
 							<div class="practice">
 								<p>
 									<span id="some-practice" class="practicelab">Client (C) Security over CoAP</span>
 								</p>
-								<p class="practicedesc">
-									<ul>
-										<li>
-											<b>Registration</b>
-											<p>Same as for HTTP communications. See <a href="#sec-security-c-registration-http">above</a>.</p>
-										</li>
-										<li id="sec-security-c-token-aquisition-http">
-											<b>Token Acquisition</b>
-											<p>Same as for HTTP communications. See <a href="#sec-security-c-token-aquisition-http">above</a>.</p>
-										</li>
-										<li>
-											<b>Operation</b> when requesting CoAP to a protected endpoint
-											<ul>
-												<li>Attach a <code>Bearer &lt;as_token&gt;</code> as value of the CoAP option 65000
+								<ul class="practicedesc">
+									<li>
+										<b>Registration</b>
+										<p>Same as for HTTP communications. See <a href="#sec-security-c-registration-http">above</a>.</p>
+									</li>
+									<li id="sec-security-c-token-aquisition-http">
+										<b>Token Acquisition</b>
+										<p>Same as for HTTP communications. See <a href="#sec-security-c-token-aquisition-http">above</a>.</p>
+									</li>
+									<li>
+										<b>Operation</b> when requesting CoAP to a protected endpoint
+										<ul>
+											<li>Attach a <code>Bearer &lt;as_token&gt;</code> as value of the CoAP option 65000
 to CoAP requests to RS. </li>
-											</ul>
-										</li>
-									</ul>
-								</p>
+										</ul>
+									</li>
+								</ul>
 							</div>
 						
 						</section>
@@ -649,13 +641,13 @@ to CoAP requests to RS. </li>
 					For this, it relies on the Resource Description Framework (RDF) [[!rdf11-concepts]] as an underlying data model.
 					For now, [[!JSON-LD]] is used as the default TD serialization format.
 					The WoT IG defined a minimal vocabulary to express the capabilities of a Thing in terms of different interaction patterns: <i>Properties</i>, <i>Actions</i>, and <i>Events</i>.
-					In addition, the TD provides metadata for the different communication bindings (e.g., HTTP, CoAP, etc.), encodings (e.g., JSON, EXI, etc.), and security policies (authentication, authorization, etc.).
+					In addition, the TD provides metadata for the different communication bindings (e.g., HTTP, CoAP, etc.), mediaTypes (e.g., "application/json", "application/exi", etc.), and security policies (authentication, authorization, etc.).
 					<a href="#fig-td"></a> gives an overview of the relevant content defined in a TD.
 				</p>
 
 				<figure id="fig-td">
-          <img src="td-concepts.png" width="60%">
-          <figcaption>Concepts of the Thing Description (TD)</figcaption>
+					<img src="td-concepts.png" style="width:60%" />
+					<figcaption>Concepts of the Thing Description (TD)</figcaption>
         </figure>
 
 				<p>
@@ -668,32 +660,35 @@ to CoAP requests to RS. </li>
 
 					<p>
 						In the following, we introduce three minimal TD samples to show the prospects of the W3C Thing Descriptions.
-						Example 1 shows a simple TD that describes a temperature Thing.
-						It supports a single protocol, CoAP, and uses JSON for its encoding (or data exchange format).
-						Reading out the temperature value from a Property is the only interaction provided by the Thing.
+						Example 1 shows a simple TD that describes a temperature Thing with the name <i>MyTemperatureThing</i>.
+						
 					</p>
 
 					<pre class="example" title="Data Only">
-						{
-						  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
-						  "@type": "Thing",
-						  "name": "MyTemperatureThing",
-						  "uris": ["coap://mytemp.example.com:5683/"],
-						  "encodings": ["JSON"],
-						  "properties": [
-						    {
-						      "name": "temperature",
-						      "valueType": { "type": "number" },
-						      "writable": false,
-						      "hrefs": ["temp"]
-						    }
-						  ]
-						}
+                        {
+                          "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+                          "@type": "Thing",
+                          "name": "MyTemperatureThing",
+                          "interactions": [
+                            {
+                              "@type": ["Property"],
+                              "name": "temperature",
+                              "outputData": {"valueType": { "type": "number" }},
+                              "writable": false,
+                              "links": [{
+                                "href" : "coap://mytemp.example.com:5683/temp",
+                                "mediaType": "application/json"
+                                }]
+                            }
+                          ]
+                        }
 					</pre>
 
 					<p>
-						Based on this information, we know there exists one resource that we can access over CoAP (base URI scheme) with a GET (because it is a Property; also see CoAP protocol binding <a href="#protocol-bindings">here</a>) at <code>coap://mytemp.example.com:5683/temp</code> (base URI plus href), which will return a number (TD type system) inside a JSON structure (encoding).
-						However, this is missing critical semantic information such as this resource actually represents and what unit this number has.
+					    Based on this content, we know there exists one <i>Property</i> interaction resource with the name <i>temperature</i>. In addition, information is provided 
+					    such as that this Property is accessable over the CoAP protocol with a GET method (see CoAP protocol binding <a href="#protocol-bindings">here</a>) 
+					    at <code>coap://mytemp.example.com:5683/temp</code> (announced within the endoind structure by the <i>href</i> kye), which will return a number (TD type system) 
+					    inside a JSON structure (JSON as payload format is announced by the <i>mediaType</i> field). <!-- However, this is missing critical semantic information such as this resource actually represents and what unit this number has.  -->
 					</p>
 					
 					<p>
@@ -701,35 +696,38 @@ to CoAP requests to RS. </li>
 						This additional information is the semantic context of the Thing.
 						JSON-LD provides a means to extend a TD with an external (semantic) context, which allows to reuse existing models, thereby enhancing semantic interoperability.
 						Through a context, the meaningless strings turn into semantically defined terms that are part of a linkable vocabulary.
-						Example 2 shows the integration of the <code>sensor</code> namespace and the resulting semantic enrichment of the temperature Property with a concrete <code>@type</code> and unit assignment.
+						Example 2 shows the integration of the <code>sensor</code> namespace and the resulting semantic enrichment of the temperature 
+						Property with an additional entry within the <code>@type</code> and unit assignment.
 					</p>
 
 					<pre class="example" title="Semantic Annotations">
 						{
-							"@context": [
-								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-								<span style="font-weight: bold; background-color: lightgrey;">{ "sensor": "http://example.org/sensors#" }</span>
-							],
+						"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+									 <span style="font-weight: bold; background-color: lightgrey;">{ "sensor": "http://example.org/sensors#" }</span>
+									],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
-						  "uris": ["coap://www.mytemp.com:5683/"],
-						  "encodings": ["JSON"],
-						  "properties": [
+						  "interactions": [
 						    {
-						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"@type": "sensor:Temperature",</div>
+						      "@type": ["Property",<div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:Temperature"</div>],
 						      "name": "temperature",
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
-						      "valueType": { "type": "number" },
+						      "outputData": {"valueType": { "type": "number" }},
 						      "writable": false,
-						      "hrefs": ["temp"]
+						      "links": [{
+						        "href" : "coap://mytemp.example.com:5683/",
+						        "mediaType": "application/json"
+						        }]
 						    }
 						  ]
-						}
+						}						
 					</pre>
 
 					<p>
-						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP) and encodings (JSON and EXI).
-						The Thing also specifies security policies (it requires a <a>JWT</a>) and provides four different interactions (one Property, two Actions, one Event).
+						Example 3 shows a more advanced TD reflecting an LED Thing that supports multiple protocols (CoAP and HTTP), mediaTypes (JSON and EXI), and security 
+						policies (it requires a <a>JWT</a> for interaction). This example also shows the definition of the endpoint information in a global manner. More precisely, a global defined <i>base</i> URI is valid for defined interaction
+						resources.  Indivdualiziation of the URI's resource is done by the <i>href</i> key within the interaction definitions.
+						<!--The Thing also specifies security policies (it requires a <a>JWT</a>) and provides four different interactions (one Property, two Actions, one Event).-->
 					</p>
 
 					<pre class="example" title="More Capabilities">
@@ -740,51 +738,67 @@ to CoAP requests to RS. </li>
 							],
 							"@type": "Thing",
 							"name": "MyLEDThing",
-							"uris": [
-								"coap://myled.example.com:5683/",
-								"http://mything.example.com:8080/myled/"
-							],
-							"encodings": [ "JSON","EXI"],
+							"base": "coap://myled.example.com:5683/",
 							"security": {
-								"cat": "token:jwt",
-								"alg": "HS256",
-								"as": "https://authority-issuing.example.org"
-							},
-							"properties": [
+									"cat": "token:jwt",
+									"alg": "HS256",
+									"as": "https://authority-issuing.example.org"
+								},
+							"interactions": [
 								{
-									"@type": "actuator:onOffStatus",
+									"@type": ["Property","actuator:onOffStatus"],
 									"name": "status",
-									"valueType": { "type": "boolean" },
+									"outputData": {"valueType": { "type": "boolean" }},
 									"writable": true,
-									"hrefs": [ "pwr", "status" ]
-								}
-							],
-							"actions": [
+									"links": [{
+										"href" : "pwr", 
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/status",
+										"mediaType": "application/json"
+									}]
+								},
 								{
-									"@type": "actuator:fadeIn",
+									"@type": ["Action","actuator:fadeIn"],
 									"name": "fadeIn",
 									"inputData": {
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"hrefs": ["in", "led/in"  ]
+									"links": [{
+										"href" : "in", 
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/in",
+										"mediaType": "application/json"
+									}]									
 								},
 								{
-									"@type": "actuator:fadeOut",
+									"@type": ["Action","actuator:fadeOut"],
 									"name": "fadeOut",
 									"inputData": {
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"hrefs": ["out", "led/out" ]
-								}
-							],
-							"events": [
+									"links": [{
+										"href" : "out", 
+										"mediaType": "application/exi" 
+									},
+									{
+										"href" : "http://mytemp.example.com:8080/out",
+										"mediaType": "application/json"
+									}]									
+								},
 								{
-									"@type": "actuator:alert",
+									"@type": ["Event","actuator:alert"],
 									"name": "criticalCondition",
-									"valueType": { "type": "string" },
-									"hrefs": [ "ev", "alert" ]
+									"outputData": {"valueType": { "type": "string" }},
+									"links": [{
+						              "href" : "ev",
+						              "mediaType": "application/exi"
+						            }]	
 								}
 							]
 						}
@@ -793,10 +807,15 @@ to CoAP requests to RS. </li>
 					<p>
 						Based on this TD, one is able to know that a JSON Web Token (JWT) is required to interact with the resources of the Thing.
 						They are issued by <code>https://authority-issuing.example.org</code> and signed using HMAC SHA-256 (HS256).
-						The status of the Thing can be requested using a CoAP GET on <code>coap://myled.example.com:5683/pwr</code> or an HTTP GET on <code>http://mything.example.com:8080/myled/status</code>.
-						It can also modified using a PUT on the respective URIs, since Property is writable.
-						The Actions can be invoked through a POST to the resources fadeIn (<code>/in</code> for CoAP and <code>/myled/led/in</code> for HTTP) and fadeOut (<code>/out</code> for CoAP and <code>/myled/led/out</code> for HTTP) with an integer value in milliseconds serialized as JSON or EXI.
-						MyLEDThing also serves a textual Event called criticalCondition, which enables clients to be informed about problems (e.g., by sensing a CoAP GET with the Observe option to <code>coap://myled.example.com:5683/ev</code>).
+						The status of the Thing can be requested using a CoAP GET on <code>coap://myled.example.com:5683/pwr</code> (<i>base</i> URI from the global scope endpoint
+						definition plus the href) or an 
+						HTTP GET on <code>http://mything.example.com:8080/myled/status</code>. It can also modified using a PUT on the respective URIs, since Property is writable.
+						The Actions can be invoked through a POST to the resources fadeIn (<code>/in</code> for CoAP and <code>/myled/in</code> for HTTP) and fadeOut (<code>/out</code> 
+						for CoAP and <code>/myled/out</code> for HTTP) with an integer value in milliseconds serialized as JSON or EXI. Please note, all this protocol 
+						binding assumptions are explained <a href="#protocol-bindings">here</a>.
+						MyLEDThing also serves for the CoAP protocol an Event called criticalCondition, which enables clients to be informed about problems (enabled by the CoAP GET with the Observe 
+						option to <code>coap://myled.example.com:5683/ev</code>). This event sample also shows the local scope definition of the endpoint which 
+						overwrite global defined endpoint information. Such a mechanism allows to restrict or expand endpoint oppertunities of indivdual interaction resources.
 					</p>
 				</section>
 
@@ -876,7 +895,7 @@ to CoAP requests to RS. </li>
 						</p>
 					</section>
 
-<!--
+
 					<section>
 						<h4>Security</h4>
 
@@ -895,7 +914,7 @@ to CoAP requests to RS. </li>
 
 
 					</section>
--->
+
 
 					<section>
 						<h4>Thing Metadata</h4>
@@ -905,19 +924,7 @@ to CoAP requests to RS. </li>
 							{
 								...
 							  "name": "MyLED",
-							  "uri": [
-							    "coap://www.myled.com:5683/",
-							    "http://www.myled.com:8080/myled/"
-							  ],
-							  "encodings": [
-							    "JSON",
-							    "EXI"
-							  ],
-							  <i>"security": {
-							    "cat": "token:jwt",
-							    "alg": "HS256",
-							    "as": "https://authority-issuing.org"
-							  }</i>
+							  "base": "coap://myled.example.com:5683/"
 								...
 							}
 						</pre>
@@ -929,14 +936,7 @@ to CoAP requests to RS. </li>
 
 						<ul>
 							<li><b>name:</b> Name of the Thing (string-based)</li>
-							<li><b>uris:</b>
-								Defines base URI for the Thing. More than one URI can be listed (as an array),
-								if various protocols are supported (e.g. HTTP and CoAP) or in specific configurations
-								(e.g., a Thing could rely on a redirection server if its URI is likely to change over time).
-							</li>
-							<li><b>encodings:</b>
-								Which serialization formats are supported (e.g., JSON, XML, etc.). One or more can be listed (listed as an array).
-							</li>
+							<li><b>base: [optional]</b> Define base URI that is valid for all defined local interaction resources</li>
 							<li><b>security: [optional]</b>
 								The security field can be used to provide access metadata (self-contained) information of the Thing
 								for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
@@ -1005,17 +1005,18 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							  "properties": [
+							 "interactions": [
 							    {
-							      <i>"@type": "sensor:Temperature",</i>
+							      "@type": ["Property"],
 							      "name": "temperature",
-							      "valueType": { "type": "number" },
-							      "sensor:unit": "sensor:Celsius",
+							      "outputData": {"valueType": { "type": "number" }},
 							      "writable": false,
-							      "hrefs": "temp",
+							      "links": [{
+							      	"href" : "coap://mytemp.example.com:5683/temp",
+							      	"mediaType": "application/json"
+							      }],
 							      <i>"stability": 10</i>
-							    }
-							  ]
+							    },
 								...
 							}
 						</pre>
@@ -1025,11 +1026,11 @@ to CoAP requests to RS. </li>
 						</p>
 
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Property is the default value)</li>
 							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
-							<li><b>hrefs:</b> A link or array of links to the resource implementing this Property (see also <a href="#note-on-uri-resolution"></a>)</li>
-							<li><b>valueType:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
+							<li><b>outputData:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
 							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
+							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>	
 							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
 							<li><b>security: [optional]</b>
 								Access metadata (self-contained) for protecting this Property and securely transmitting information.
@@ -1038,7 +1039,7 @@ to CoAP requests to RS. </li>
 						</ul>
 
 						<p>
-							Absolute URIs in <code>hrefs</code> can point to an external resource that is not hosted on the Thing directly.
+							Absolute URIs in <code>hrefs</code> or endoint can point to an external resource that is not hosted on the Thing directly.
 							This can be useful to link data into the context of the Thing, for which there is not enough space in the device itself.
 							Absolute URIs could also point to a proxy or gateway that allows access to legacy systems that might belong to a Thing that does not have the capability to translate by itself (but provides other, WoT-compatible resources).
 							This mechanism is also interesting for virtual Things that combine the services of multiple other Things (e.g., a room lighting servient that has Properties for each individual light, while these linked Properties are hosted directly on those lights).
@@ -1068,18 +1069,18 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							  "actions": [
+							  "interactions": [
 							    {
-							      <i>"@type": "actuator:fadeIn",</i>
+							      "@type": ["Action", "actuator:fadeIn"],
 							      "name": "fadeIn",
 							      <i>"inputData":</i> {
 							        "valueType": { "type": "integer" },
 							        "actuator:unit": "actuator:ms"
 							      },
-							      "hrefs": [
-							        "in",
-							        "myled/in"
-							      ]
+							      "links": [{
+							      	"href" : "coap://mytemp.example.com:5683/in",
+							      	"mediaType": "application/json"
+							      }]
 							    }
 							  ]
 								...
@@ -1087,7 +1088,7 @@ to CoAP requests to RS. </li>
 						</pre>
 						<p>There are one mandatory and four optional terms defined within the <code>Action</code> type:</p>
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Action is the default entry)</li>
 							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation</li>
 							<li><b>inputData: [optional]</b>
 								The call parameters associated with this Action.
@@ -1095,7 +1096,7 @@ to CoAP requests to RS. </li>
 								Additional characteristics can be given through terms defined in the context metadata (e.g., unit ms from an actuator vocabulary) similar to <a href="#property">Properties</a>).
 							</li>
 							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above)</li>
-							<li><b>hrefs:</b>A link or array of links to the resource implementing this Action (see also <a href="#note-on-uri-resolution"></a>)</li>
+							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Action and securely transmitting information.</li>
 						</ul>
 
@@ -1125,15 +1126,15 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							  "events": [
+							  "interactions": [
 							    {
-							      "@type": "actuator:alert",
+							      "@type": ["Event", "actuator:alert"],
 							      "name": "criticalCondition",
-							      "valueType": { "type": "string" },
-							      "hrefs": [
-							        "ev",
-							        "myled/event"
-							      ]
+							      "outputData": {"valueType": { "type": "string" }},
+							      "links": [{
+							      	"href" : "coap://mytemp.example.com:5683/ev",
+							      	"mediaType": "application/json"
+							      }]
 							    }
 							  ]
 								...
@@ -1143,8 +1144,8 @@ to CoAP requests to RS. </li>
 						<ul>
 							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
 							<li><b>name:</b> Name of the Event, which can also be used for simple semantic disambiguation</li>
-							<li><b>hrefs:</b>A link or array of links to the resource implementing this Event (see also <a href="#note-on-uri-resolution"></a>)</li>
-							<li><b>valueType: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
+							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
+							<li><b>outputData: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Event and securely transmitting information.</li>
 						</ul>
 
@@ -1598,36 +1599,44 @@ to CoAP requests to RS. </li>
 							               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
 							  "@type": "Sensor",
 							  "name": "myTempSensor",
-							  "uris" : ["coap:///www.example.com:5683/temp"],
-							  "encodings": ["JSON"],
-							  "properties": [
+							 "base" : "coap:///www.example.com:5683/temp/",
+							  "interactions": [
 							    {
 							      "@id": "val",
-							      "@type": "Temperature",
+							      "@type": ["Property","Temperature"],
 							      "unit": "celsius",
 							      "reference": "threshold",
 							      "name": "myTemp",
-							      "valueType": { "type": "number" },
+							      "outputData": {"valueType": { "type": "number" }},
 							      "writable": false,
-							      "hrefs": ["val"]
+							      "links": [{
+							      	"href" : "val",
+							      	"mediaType": "application/json"
+							      }]
 							    }, {
 							      "@id": "threshold",
-							      "@type": "Temperature",
+							      "@type": ["Property","Temperature"],
 							      "unit": "celsius",
 							      "name": "myThreshold",
-							      "valueType": { "type": "number" },
+							      "outputData": {"valueType": { "type": "number" }},
 							      "writable": true,
-							      "hrefs": ["threshold"]
-							    }
-							  ],
-							  "events": [
+							     	"links": [{
+							      	"href" : "thr",
+							      	"mediaType": "application/json"
+							      }]
+							    },
 							    {
-							      "valueType": { "type": "number" },
+							      "@type": ["Event"],
+							      "outputData": {"valueType": { "type": "number" }},
 							      "name": "myChange",
 							      "property": "temp",
-							      "hrefs": ["val/changed"]
+							       "links": [{
+							      	"href" : "val/changed",
+							      	"mediaType": "application/json"
+							      }]
 							    }, {
-							      "valueType": { "type": "number" },
+							      "@type": ["Event"],
+							      "outputData": {"valueType": { "type": "number" }},
 							      "name": "myWarning",
 							      "hrefs": ["val/high"]
 							    }
@@ -1654,7 +1663,7 @@ to CoAP requests to RS. </li>
 							an external agent would not have sufficient information to interpret it.
 						</p>
 					</section>
-
+<!--
 					<section>
 						<h4>LED Actuator</h4>
 
@@ -1666,7 +1675,7 @@ to CoAP requests to RS. </li>
 							  "name": "myLED",
 							  "uris" : ["coap://www.example.com:5683/led",
 							            "http://www.example.com:80/led"],
-							  "encodings": ["JSON"],
+							  "mediaTypes": ["application/json"],
 							  "properties": [
 							    {
 							      "@id": "color",
@@ -1738,7 +1747,7 @@ to CoAP requests to RS. </li>
 							(as defined in DogOnt).
 						</p>
 					</section>
-
+-->
 					<section>
 						<h4>LED Master Switch</h4>
 						<pre class="example">
@@ -1747,18 +1756,22 @@ to CoAP requests to RS. </li>
 							               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
 							  "@type": "Lamp",
 							  "name": "myMasterLED",
-							  "uris" : ["coap://www.example.com:5683/master",
-							            "http://www.example.com:80/master"],
-							  "encodings": ["JSON"],
-							  "actions": [
+							  "interactions": [
 							    {
-							      "@type": "Toggle",
+							      "@type": ["Actions", "Toggle"],
 							      "name": "myMasterOnOff",
 							      "inputData": {
 							        "@type": "OnOff",
 							        "valueType": { "type": "boolean" }
 							      },
-							      "hrefs": ["toggle"]
+							      "links": [
+							      {
+							        "href" : "coap://www.example.com:5683/master",
+							        "mediaType": "application/json"
+							      },{
+							        "href" : "http://www.example.com:80/master",
+							        "mediaType": "application/json"
+							      }]
 							    }
 							  ],
 							  "associations": [
@@ -1769,7 +1782,7 @@ to CoAP requests to RS. </li>
 							    { "hrefs": ["coap://www.example.com:5683/4"] },
 							    { "hrefs": ["coap://www.example.com:5683/5"] },
 							    { "hrefs": ["coap://www.example.com:5683/6"] },
-							    { "hrefs": ["coap://www.example.com:5683/7"] },
+							    { "hrefs": ["coap://www.example.com:5683/7"] }
 							  ]
 							}
 						</pre>
@@ -1871,7 +1884,7 @@ to CoAP requests to RS. </li>
 							<p>
 								The Thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
 							</p>
-							<img src="discovery_repository.png" width="60%">
+							<img src="discovery_repository.png" style="width:60%" />
 							<p>
 								The figure shows the basic concept of the usage of a repository: 1) A servient register its TD to a known TD repository. 2) Another servient does a lookup/search/querying (e.g., via SPARQL) at the TD repository. 3) The repository answers with one ore more relevant TDs. Also a subset of TD’s content can be in the result set (e.g., only relevant properties, actions, and/or events are included). 4) Based on the repository’s result set, a connection can be initiated. 
 
@@ -1947,8 +1960,8 @@ to CoAP requests to RS. </li>
 							Promise&lt;ConsumedThing&gt; consumeDescription(object td);
 							Promise&lt;ConsumedThing&gt; consumeDescriptionUri(DOMString uri);
 							Promise&lt;ExposedThing&gt; createThing(DOMString name);
-							Promise&lt;ExposedThing&gt; consumeDescription(object td);
-							Promise&lt;ExposedThing&gt; consumeDescriptionUri(DOMString uri);
+							Promise&lt;ExposedThing&gt; createFromDescription(object td);
+							Promise&lt;ExposedThing&gt; createFromDescriptionUri(DOMString uri);
 						};
 					</pre>
 
@@ -2143,15 +2156,20 @@ to CoAP requests to RS. </li>
 					</p>
 
 					<pre class="idl">
+						interface SemanticType {
+							attribute DOMString name;
+							attribute DOMString context;
+						};
+
 						interface ExposedThing {
 								readonly attribute DOMString name;
 							    Promise&lt;any&gt; invokeAction(DOMString actionName, any parameter);
 							    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
 							    Promise&lt;any&gt; getProperty(DOMString propertyName);
 								Promise&lt;any&gt; emitEvent(DOMString eventName, any payload);
-								ExposedThing addEvent(DOMString eventName, object payloadType);
-								ExposedThing addAction(DOMString actionName, object inputType, object outputType);
-								ExposedThing addProperty(DOMString propertyName, object contentType);
+								ExposedThing addEvent(DOMString eventName, object payloadType, optional SemanticType[] semanticType);
+								ExposedThing addAction(DOMString actionName, object inputType, object outputType, optional SemanticType[] semanticType);
+								ExposedThing addProperty(DOMString propertyName, object contentType, optional SemanticType[] semanticType);
 								ExposedThing onInvokeAction(DOMString actionName, ActionHandler callback);
 								ExposedThing onUpdateProperty(DOMString propertyName, PropertyChangeListener callback);
 								ExposedThing addListener(DOMString eventName, ThingEventListener listener);
@@ -2424,7 +2442,7 @@ to CoAP requests to RS. </li>
 				<h2>Sapporo (2015-10)</h2>
 
 				<p>This first WoT PlugFest elaborated, based on a JSON-LD Thing Description, server and client role of a Thing.
-				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI encodings.</p>
+				   Protocols such as CoAP, HTTP and WebSocket were combined with JSON and EXI data formats.</p>
 				<p>More information can be found on the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting_29-30_October_2015,_Sapporo,_Japan#Plugfest">wiki</a> page.</p>
 				<h3>Goals</h3>
 				<ul>

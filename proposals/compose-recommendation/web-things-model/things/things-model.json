@@ -1,0 +1,12 @@
+// GET {wt}/things
+
+// 200 OK
+// Link: <http://webofthings.org/things>; rela="meta"
+[
+	{
+		"id":"<String>",
+		"name":"<String>",
+		"rootUrl":"<String>"
+	},
+	...
+]

@@ -1,0 +1,19 @@
+// GET {wt}/events/
+
+// Link: <subscriptions/>; rel="subscriptions"
+// Link: <http://webofthings.org/events/>; rel="meta"
+
+[
+	{
+		"id":"deviceError",
+		"name":"Device Error",
+	}, 
+	{
+		"id":"batteryLow",
+		"name":"Low Battery",  
+	},
+	{
+		"id":"myCustomEventType",
+		"name":"My Event",  
+	}
+]

@@ -1,0 +1,15 @@
+// GET {wt}/properties/{propertyName}/model
+// 200 OK
+// Link: <http://webofthings.org/property>; rel="meta" 
+ 
+{
+	"id":"<String>",
+	"name":"<String>",
+	"description":"<String>",
+	"tags":"[<String>,...]",
+	"customFields":"<customFields>",
+	"values":{
+		"<valueName>":"<valueObject>",
+		...
+	}
+}
