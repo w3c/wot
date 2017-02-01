@@ -899,11 +899,13 @@ to CoAP requests to RS. </li>
 					<section>
 						<h4>Security</h4>
 
-						<div class="example"><div class="example-title"><span>Example 2</span>: Context for the TD</div><pre class="example">{
-							...
-							"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
-							...
-						}</pre></div>
+						<pre class="example">
+							{
+								...
+								"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
+								...
+							}
+						</pre>
 
 						The <b>(optional)</b> security field can be used to provide access metadata (self-contained) information of the Thing
 						for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
