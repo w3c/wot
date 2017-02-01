@@ -938,7 +938,7 @@ to CoAP requests to RS. </li>
 
 						<ul>
 							<li><b>name:</b> Name of the Thing (string-based)</li>
-							<li><b>base: [optional]</b> Define base URI that is valid for all defined local interaction resources</li>
+							<li><b>base: [optional]</b> Define base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]]</li>
 							<li><b>security: [optional]</b>
 								The security field can be used to provide access metadata (self-contained) information of the Thing
 								for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
@@ -950,44 +950,6 @@ to CoAP requests to RS. </li>
 						<p>
 							<b>Note:</b> Besides these pre-defined terms in the TD context, additional characteristics can be
 							added such as product ID, firmware version, location, etc. These terms should then appear in the context of the Thing (as detailed in <a href="#td-context"></a>).
-						</p>
-					</section>
-					
-					<section>
-						<h4>Note on URI Resolution</h4>
-
-						<p>
-							A servient can be associated to more than one URI (e.g., in case it supports several protocols).
-							The same way, links in Properties, Actions, or Events can be defined as an array instead of a single string.
-							The IETF recommendation for URI resolution [[!RFC3986]] does note fully cover that case.
-							This section is an attempt to specify how to resolve URIs in a Thing Description document.
-						</p>
-
-						<p>
-							<ul>
-								<li>
-									A Thing Description can define one or more base URI in the <code>uris</code> field.
-									If only one URI is defined, the JSON value is a string.
-									If more than one URI is defined, the JSON value is a string array.
-								</li>
-								<li>
-									Each string from the <code>uris</code> JSON value must be an absolute URI that is interpreted as a protocol-specific base URI identified through the URI scheme.
-								</li>
-								<li>
-									Properties, Actions, and Events can define one or more <code>hrefs</code> values.
-									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code> must also be a string.
-									If <code>uris</code> is a string array, the JSON value of <code>hrefs</code> can be either a string or a string array.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string, the algorithm of [[!RFC3986]] can be applied to <i>any</i> of the base URIs available.
-									Note that <code>hrefs</code> can also contain an absolute URI pointing to an external resource or a different protocol for this specific interaction.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string array, it must contain as many elements as that of <code>uris</code>.
-									The resolution algorithm of [[!RFC3986]] must then be applied <i>index-wise</i>.
-									Again, individual array elements may contain an absolute URI.
-								</li>
-							</ul>
 						</p>
 					</section>
 				</section>
