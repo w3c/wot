@@ -3,24 +3,27 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "td": "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
     "name": "td:name",
-    "uris": {
+    "base": {
       "@id": "td:hasThingDescription",
-      "@type": "@id",
-      "@container": "@set"
+      "@type": "@id"
     },
     "hrefs": {
       "@id": "td:hasInteraction",
       "@type": "@id",
       "@container": "@set"
     },
+    "href": {
+      "@id": "td:hasInteraction",
+      "@type": "@id"
+    },
 	"Interaction": "td:Interaction",
+	"interactions": {
+	  "@id": "td:hasInteraction",
+      "@type": "@id"
+	}
     "priority": {
       "@id": "td:hasPriority",
       "@type": "xsd:integer"
-    },
-    "encodings": {
-      "@id": "td:supportsEncoding",
-      "@container": "@set"
     },
     "security": "td:supportsSecurity",
     "properties": {
