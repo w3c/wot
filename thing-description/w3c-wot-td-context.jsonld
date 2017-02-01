@@ -2,6 +2,7 @@
   "@context": {
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "td": "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
+	"Thing": "td:Thing",
     "name": "td:name",
     "base": {
       "@id": "td:hasThingDescription",
@@ -18,9 +19,13 @@
     },
 	"Interaction": "td:Interaction",
 	"interactions": {
+	  "@id": "td:isAssociatedTo",
+      "@type": "@set"
+	},
+	"links": {
 	  "@id": "td:hasInteraction",
-      "@type": "@id"
-	}
+	  "@type": "@set"
+	},
     "priority": {
       "@id": "td:hasPriority",
       "@type": "xsd:integer"
