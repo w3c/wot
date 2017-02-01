@@ -839,10 +839,10 @@ to CoAP requests to RS. </li>
 							<pre class="example">
 								{
 								  "@context": {
-								    "name": "http://www.w3c.org/wot/td#name",
-										"uris": "http://www.w3c.org/wot/td#associatedUri",
+								    "name": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#name",
+										"base": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#associatedUri",
 										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
-										"Thing": "http://www.w3c.org/wot/td#Thing",
+										"Thing": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#Thing",
 								    ...
 									}
 								}
@@ -855,9 +855,9 @@ to CoAP requests to RS. </li>
 							<pre class="example">
 								{
 								  "@context": {
-										"wot": "http://www.w3c.org/wot/td#",
+										"wot": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
 								    "name": "wot:name",
-										"uris": "wot:associatedUri",
+										"base": "wot:associatedUri",
 										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
 										"Thing": "wot:Thing",
 								    ...
