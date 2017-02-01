@@ -957,11 +957,16 @@ to CoAP requests to RS. </li>
 				<section>
 					<h3>Interaction Patterns</h3>
 					
+						<p>
+							An interaction in the context of the Web of Things is an exchange of data between a Web client and a Thing.
+							This data can be either given as input by the client, returned as output by the Thing or both.
+							Three interaction patterns have been defined so far: Property, Action and Event.
+						</p>
+					
 					<section>
 						<h4>Property</h4>
 
 						<p>
-							The array field <code>properties</code> is used to reflect one or more interactions of the Property pattern. 
 							Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or 
 							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
@@ -1027,8 +1032,6 @@ to CoAP requests to RS. </li>
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
 							Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing.
 						</p>
-						
-						<p>Within the TD, the Actions of a Thing are declared in the JSON array <code>actions</code>.</p>
 
 						<pre class="example">
 							{
