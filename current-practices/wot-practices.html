@@ -395,19 +395,21 @@
 										<ul>
 											<li>RS id: <code>NicePlugfestRS</code></li>
 											<li>AS issuer name: <code>NicePlugfestAS</code></li>
-											<li  id="sec-security-as-public-key-es256">
-												AS public signature verification key for ES256 use the following JWK object
+											<li  id="sec-security-as-public-key">
+												AS public signature verification key for RS256 use the JWK object obtained from <a href="https://plugfest.thingweb.io:8443/wos/0.1/oauth/jwk" title="AS key">https://plugfest.thingweb.io:8443/wos/0.1/oauth/jwk</a>
+												Which is for this plugfest equal to:
 												<pre class="nolinks">
 {
-	"keys": [{
-		"kty": "EC",
-		"use": "sig",
-		"crv": "P-256",
-		"kid": "PlugFestNice",
-		"x": "CQsJZUvJWx5yB5EwuipDXRDye4Ybg0wwqxpGgZtcl3w",
-		"y": "qzYskD2N7GrGDSgo6N9pPLXMIwr6jowFGyqsTJGmpz4",
-		"alg": "ES256"
-	}]
+	keys: [
+		{
+			kty: "RSA",
+			e: "AQAB",
+			use: "sig",
+			kid: "273993369",
+			alg: "RS256",
+			n: "3lh9zHIe3Zi4mfYpl7AwU25dP4Axvt4WTpM2_l86YX8DBFeBzvuTE5U2yIpH_Cs9vUZnMjkwok3ez8SKzvFb6mTlPY9Lfu6Gk7_dfsolFKJoq97aNbHU_i47YOQG_Ecni4i6DhWcDKQkyA6KFAmjZZ_gxZJekisSkewuKSmDo8M"
+		}
+	]
 }
 												</pre>
 											</li>
@@ -415,7 +417,7 @@
 									</li>
 									<li id="sec-security-rs-registration-http">
 										<b>Registration</b>
-										<p>Skipped for RSs that support ES256 for now.</p>
+										<p>Skipped for RSs that support RS256 for now.</p>
 									</li>
 									<li>
 										<b>Operation</b> when receiving a HTTP request at a protected endpoint
@@ -455,18 +457,18 @@
 										<p>Create a HTTP request with JSON request content as in the following prototype and send it via TLS to the AM.</p>
 										
 										<span class="note">For the PlugFest use URL:
-										<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/register</code>. <br />
+										<code>https://plugfest.thingweb.io:8443/wos/0.1/oauth/register</code>. <br />
 										Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
 										
 										<div>
 											<p>
 												<b>Request</b> <br />
-												<code>POST /iam-services/0.1/oidc/am/register HTTP/1.1</code>
+												<code>POST /wos/0.1/oauth/register HTTP/1.1</code>
 											</p>
 											
 											<p>
 												<b>Request headers</b> <br />
-												<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+												<code>Host: plugfest.thingweb.io</code> <br />
 												<code>Content-Type: application/json</code> <br />
 												<code>Accept: application/json</code>
 											</p>
@@ -502,18 +504,18 @@
 										<b>Token Acquisition</b>
 										<p>Create a HTTP request as in the following prototype and send it via TLS to the AM.</p>
 										<span class="note">For the PlugFest use URL:
-										<code>https://ec2-54-154-59-218.eu-west-1.compute.amazonaws.com/iam-services/0.1/oidc/am/token</code>. <br />
+										<code>https://plugfest.thingweb.io:8443/wos/0.1/oauth/token</code>. <br />
 										Note that the registration endpoint is unprotected for the purpose of the Plugfest.</span>
 										
 										<div>
 											<p>
 												<b>Request</b> <br />
-												<code>POST /iam-services/0.1/oidc/am/token HTTP/1.1</code>
+												<code>POST /wos/0.1/oauth/token HTTP/1.1</code>
 											</p>
 											
 											<p>
 												<b>Request headers</b> <br />
-												<code>Host: ec2-54-154-59-218.eu-west-1.compute.amazonaws.com</code> <br />
+												<code>Host: plugfest.thingweb.io</code> <br />
 												<code>Content-Type: application/x-www-form-urlencoded</code> <br />
 												<code>Accept: application/json</code> <br />
 												<code>Authorization: Basic Base64(&lt;c_id&gt;:&lt;c_secret&gt;)</code>
@@ -532,7 +534,7 @@
 											</p>
 											<pre class="nolinks">
 {
-	"access_token": "eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJzdWIiOiJhYjliN2NiNy02YzQwLTQ3ZjUtOTBiOC0xNTlmMzQ0MDIxOTYiLCJpc3MiOiJodHRwczpcL1wvYW0uY29tcGFueS1zLmNvbTo4NDQzXC9pYW0tc2VydmljZXNcLzAuMVwvb2lkY1wvYW1cLyIsInR5cCI6Im9yZzp3Mzp3b3Q6and0OmFtOmFzLXdyYXA6bWluIiwiYXNfdG9rZW4iOiJleUpoYkdjaU9pSkZVekkxTmlKOS5leUpoZFdRaU9pSk9hV05sVUd4MVoyWmxjM1JTVXlJc0luTjFZaUk2SW1GaU9XSTNZMkkzTFRaak5EQXRORGRtTlMwNU1HSTRMVEUxT1dZek5EUXdNakU1TmlJc0ltbHpjeUk2SWs1cFkyVlFiSFZuWm1WemRFRlRJaXdpZEhsd0lqb2liM0puT25jek9uZHZkRHBxZDNRNllYTTZiV2x1SWl3aWFuUnBJam9pWTJZeU5UTm1PV1l0WXpVME5pMDBZbVF4TFRoa1ptUXROamcyTURabE16UmhOalEwSW4wLmZlcVZFZF9JdXk1Q2FPNDhhb0RuWUhfOTlPX1ZlYncxMDdLdXpSclRpc1RBeHZkY1JaWjZaS3RPVWZkOUNlclYzaG1rQWF0LUNXUElCckxMOUZXTFhRIiwianRpIjoiN2MyMjFmMWItZjNkNC00ZTc4LWE4ZWQtOGRmOWUxNGNjMWM5In0.Le_Y90zsO92MyDgbKxUCr3eUNU8Z7-QKc0u0RSr26MHN1za2EUQ1wOoJhLDXR2dFo9geFf7mBbiM77EP6h0ldA",
+	"access_token": "eyJraWQiOiIyNzM5OTMzNjkiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2MTAyYjk4NC1lNGI0LTQ5ZjctYmRiZC1hOGViMWY0ZmQxMzYiLCJzdWIiOiI2MTAyYjk4NC1lNGI0LTQ5ZjctYmRiZC1hOGViMWY0ZmQxMzYiLCJpc3MiOiJodHRwczpcL1wvcGx1Z2Zlc3QudGhpbmd3ZWIuaW86ODQ0M1wvd29zXC8wLjFcL29hdXRoXC8iLCJ0eXAiOiJvcmc6dzM6d290Omp3dDphbTphcy13cmFwOm1pbiIsImFzX3Rva2VuIjoiZXlKcmFXUWlPaUl5TnpNNU9UTXpOamtpTENKaGJHY2lPaUpTVXpJMU5pSjkuZXlKemRXSWlPaUkyTVRBeVlqazROQzFsTkdJMExUUTVaamN0WW1SaVpDMWhPR1ZpTVdZMFptUXhNellpTENKaGRXUWlPaUpPYVdObFVHeDFaMlpsYzNSU1V5SXNJbWx6Y3lJNklrNXBZMlZRYkhWblptVnpkRUZUSWl3aWRIbHdJam9pYjNKbk9uY3pPbmR2ZERwcWQzUTZZWE02YldsdUlpd2lhblJwSWpvaU5qWmxaRGs0TURJdE1XWTNZaTAwWWpGaExXRm1NVE10TlRFNE1UZGtNRGMwWVdObEluMC5ub2xsWTFfWHQ1b2llM3EtdHFzbjJZejBqNmhTUEJOQnRDMWdVQmFKRjc4VDZjLUc4UVB6MVo4aVNUdzRmV2JmRE9yNFV0cjNmTFNkbi00Q0NKb0xGbWIxQWp1eTBaNGMybmdhbTJCSVB2d0RubzZoLTRHbXFkLU01cnNQV2EteS1md3I0Yi0yVFdiY2p2Vm9xb0wyWDR1c2RMeHNLcDFza0Z6YUxCVUpmTTQiLCJqdGkiOiI0M2U4MjJlMC00N2VhLTRlOWQtYmVhYi1hNGNmZjRkOGNhZjAifQ.axhPGhk6BCP0WgzojCtwWIcpw7kmG53Gb4TiopYLMAhXPfzPmqpEZKBYWQmDeRNkFVx2xjmmw1MAam-HIfyHJbTWQAP68tKq9HIfHt6I0XraG0hvb-RP8ECEmm7pPWw1F4GntKebrjP4TawmoQpmn9MLaBuxhTpcGMo8UTkOmqA",
 	"token_type": "bearer",
 	"expires_in": 3600
 }
