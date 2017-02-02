@@ -841,10 +841,10 @@ to CoAP requests to RS. </li>
 							<pre class="example">
 								{
 								  "@context": {
-								    "name": "http://www.w3c.org/wot/td#name",
-										"uris": "http://www.w3c.org/wot/td#associatedUri",
+								    "name": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#name",
+										"base": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#associatedUri",
 										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
-										"Thing": "http://www.w3c.org/wot/td#Thing",
+										"Thing": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#Thing",
 								    ...
 									}
 								}
@@ -857,9 +857,9 @@ to CoAP requests to RS. </li>
 							<pre class="example">
 								{
 								  "@context": {
-										"wot": "http://www.w3c.org/wot/td#",
+										"wot": "https://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
 								    "name": "wot:name",
-										"uris": "wot:associatedUri",
+										"base": "wot:associatedUri",
 										"unit": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20#unit",
 										"Thing": "wot:Thing",
 								    ...
@@ -901,11 +901,13 @@ to CoAP requests to RS. </li>
 					<section>
 						<h4>Security</h4>
 
-						<div class="example"><div class="example-title"><span>Example 2</span>: Context for the TD</div><pre class="example">{
-							...
-							"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
-							...
-						}</pre></div>
+						<pre class="example">
+							{
+								...
+								"security": {"cat":"token:jwt", "alg":"HS256", "as":"https://authority-issuing.org"},
+								...
+							}
+						</pre>
 
 						The <b>(optional)</b> security field can be used to provide access metadata (self-contained) information of the Thing
 						for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
@@ -938,7 +940,7 @@ to CoAP requests to RS. </li>
 
 						<ul>
 							<li><b>name:</b> Name of the Thing (string-based)</li>
-							<li><b>base: [optional]</b> Define base URI that is valid for all defined local interaction resources</li>
+							<li><b>base: [optional]</b> Define base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]]</li>
 							<li><b>security: [optional]</b>
 								The security field can be used to provide access metadata (self-contained) information of the Thing
 								for securely transmitting information via all its resources. Also see Section <a href="#security-considerations"></a>.
@@ -952,54 +954,21 @@ to CoAP requests to RS. </li>
 							added such as product ID, firmware version, location, etc. These terms should then appear in the context of the Thing (as detailed in <a href="#td-context"></a>).
 						</p>
 					</section>
-					
-					<section>
-						<h4>Note on URI Resolution</h4>
-
-						<p>
-							A servient can be associated to more than one URI (e.g., in case it supports several protocols).
-							The same way, links in Properties, Actions, or Events can be defined as an array instead of a single string.
-							The IETF recommendation for URI resolution [[!RFC3986]] does note fully cover that case.
-							This section is an attempt to specify how to resolve URIs in a Thing Description document.
-						</p>
-
-						<p>
-							<ul>
-								<li>
-									A Thing Description can define one or more base URI in the <code>uris</code> field.
-									If only one URI is defined, the JSON value is a string.
-									If more than one URI is defined, the JSON value is a string array.
-								</li>
-								<li>
-									Each string from the <code>uris</code> JSON value must be an absolute URI that is interpreted as a protocol-specific base URI identified through the URI scheme.
-								</li>
-								<li>
-									Properties, Actions, and Events can define one or more <code>hrefs</code> values.
-									If the JSON value of <code>uris</code> is a string, that of <code>hrefs</code> must also be a string.
-									If <code>uris</code> is a string array, the JSON value of <code>hrefs</code> can be either a string or a string array.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string, the algorithm of [[!RFC3986]] can be applied to <i>any</i> of the base URIs available.
-									Note that <code>hrefs</code> can also contain an absolute URI pointing to an external resource or a different protocol for this specific interaction.
-								</li>
-								<li>
-									If the JSON value of <code>hrefs</code> is a string array, it must contain as many elements as that of <code>uris</code>.
-									The resolution algorithm of [[!RFC3986]] must then be applied <i>index-wise</i>.
-									Again, individual array elements may contain an absolute URI.
-								</li>
-							</ul>
-						</p>
-					</section>
 				</section>
 
 				<section>
 					<h3>Interaction Patterns</h3>
 					
+						<p>
+							An interaction in the context of the Web of Things is an exchange of data between a Web client and a Thing.
+							This data can be either given as input by the client, returned as output by the Thing or both.
+							Three interaction patterns have been defined so far: Property, Action and Event.
+						</p>
+					
 					<section>
 						<h4>Property</h4>
 
 						<p>
-							The array field <code>properties</code> is used to reflect one or more interactions of the Property pattern. 
 							Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or 
 							dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).
 						</p>
@@ -1065,8 +1034,6 @@ to CoAP requests to RS. </li>
 							Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc.
 							Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing.
 						</p>
-						
-						<p>Within the TD, the Actions of a Thing are declared in the JSON array <code>actions</code>.</p>
 
 						<pre class="example">
 							{

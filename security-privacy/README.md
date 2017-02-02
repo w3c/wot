@@ -1,5 +1,7 @@
 # Interest Group on the Web of Things - Security and Privacy
-Github repository of the task force on security and privacy 
+Github repository of the task force on security and privacy
+
+[Task Force Charter](https://github.com/w3c/wot/blob/master/security-privacy/SecurityPrivacyCharter.md)
 
 Following artifacts are provided in this folder:
 
