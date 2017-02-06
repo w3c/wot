@@ -20,11 +20,13 @@
 	"Interaction": "td:Interaction",
 	"interactions": {
 	  "@id": "td:isAssociatedTo",
-      "@type": "@set"
+      "@type": "@id",
+      "@container": "@set"
 	},
 	"links": {
 	  "@id": "td:hasInteraction",
-	  "@type": "@set"
+      "@type": "@id",
+      "@container": "@set"
 	},
     "priority": {
       "@id": "td:hasPriority",
