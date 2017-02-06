@@ -1599,7 +1599,7 @@ to CoAP requests to RS. </li>
 							      "outputData": {"valueType": { "type": "number" }},
 							      "name": "myChange",
 							      "property": "temp",
-							       "links": [{
+							      "links": [{
 							      	"href" : "val/changed",
 							      	"mediaType": "application/json"
 							      }]
@@ -1607,7 +1607,10 @@ to CoAP requests to RS. </li>
 							      "@type": ["Event"],
 							      "outputData": {"valueType": { "type": "number" }},
 							      "name": "myWarning",
-							      "hrefs": ["val/high"]
+							      "links": [{
+							      	"href" : "val/high",
+							      	"mediaType": "application/json"
+							      }]
 							    }
 							  ]
 							}
