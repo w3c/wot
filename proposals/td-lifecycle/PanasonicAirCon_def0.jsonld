@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "wot":"http://w3c.github.io/wot/w3c-wot-td-context.jsonld#",
+    "td": "http://www.w3c.org/wot/td#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sch":"http://schema.org/",
+    "air":"http://133.242.180.86/HomeAirCon_def0.jsonld#"
+  },
+  "wot:name":"PanasonicAirConditioner",
+  "@type": "wot:Thing",
+  "wot:interactions": [
+      {
+         "@include": {
+             "@id":"air:interactions",
+             "@remove":["windVolumeLevel"],
+             "@substitute":{
+                "@type": "wot:Property",
+                "wot:name": "desiredTemp",
+                "wot:valueType": {
+                   "@type": "xsd:number",
+                   "sch:minValue": 160,
+                   "sch:maxValue": 300
+                },
+                "wot:writable": true
+             }
+         }
+      },
+      {
+         "@type": "wot:Property",
+         "wot:name": "PowerSave",
+         "wot:valueType": {
+             "@type": "xsd:number",
+             "sch:minValue": 60,
+             "sch:maxValue": 80
+          },
+          "wot:writable": true
+      }
+   ]
+}
