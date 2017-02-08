@@ -19,6 +19,9 @@ To be discussed on the face to face:
 - Define deliverable and hirarchy (e.g. JavaScript resp. TypeScript def as master and derived an agnostic IDL spec for other languages)
 - If abstract IDLs like Franca could be an option for non-js portation
 
+## Implications on TD
+* F2F: TD model should also enable short scripts, in particular for ExposedThings
+
 ## Issues on JavaScript API specification
 ### Asynchronous programming guidelines
 - when and how to use Promises vs callbacks vs Observables
@@ -106,9 +109,11 @@ interface ConsumedThing {
 Issues:
 - How does the application know what Interactions are available?
   * F2F: app has asumptions based on what it requested to discover or what the developer intended to do.
+  * F2F: currently getDescription(), but that is quite raw; maybe API that returns pre-parsed snippets to iterate (getInteractions())
 - How to access the semantic descriptions?
-  * F2F: currently getTD(), but that is quite raw; should provide more specific access through API
+  * F2F: currently getDescription(), but that is quite raw; should provide more specific access through API
 - return type of `invokeAction()`; algorithm
+  * F2F: Need to cover long-running actions, also see hypermedia case; could return an observable object, could be also promise that resloves when finished
 - check names for `set/getProperty`;
 - properties that belong to the representation vs meta-properties that belong the `ConsumedThing`
 - check event handling
@@ -147,7 +152,7 @@ interface ExposedThing {
 
 Issues:
 - Semantic annotations
-  * F2F: need API to add @context entry, @type to Thing, and @type to Interactions
+  * F2F: need API to add @context entry, @type, metadata entries to Thing, and @type to Interactions
 - Security annotations
   * F2F: need API to fill in security description; Thing-level, Interaction-level?
 - discuss algorithm of `invokeAction()` (local invocation)
