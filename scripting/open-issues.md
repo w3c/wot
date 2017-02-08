@@ -33,6 +33,9 @@ It is returned by `require()` statement in Node.js implementations, or attached 
 ### Client API
 
 #### Discovery
+
+* F2F: Let's add an API for the repo/RD to register, update, and deregister
+
 The current signature is
 ```javascript
 Promise<sequence<ConsumedThing>> discover(ThingFilter filter);
@@ -101,6 +104,10 @@ interface ConsumedThing {
 ```
 
 Issues:
+- How does the application know what Interactions are available?
+  * F2F: app has asumptions based on what it requested to discover or what the developer intended to do.
+- How to access the semantic descriptions?
+  * F2F: currently getTD(), but that is quite raw; should provide more specific access through API
 - return type of `invokeAction()`; algorithm
 - check names for `set/getProperty`;
 - properties that belong to the representation vs meta-properties that belong the `ConsumedThing`
@@ -108,6 +115,8 @@ Issues:
 - check return type of `getDescription()`.
 
 ### Client API for deleting remote Things
+
+* F2F: Lifecycle use case, cloud mirror
 
 ### Client API for updating (or provisioning) TD itself
 
@@ -137,10 +146,15 @@ interface ExposedThing {
 ```
 
 Issues:
+- Semantic annotations
+  * F2F: need API to add @context entry, @type to Thing, and @type to Interactions
+- Security annotations
+  * F2F: need API to fill in security description; Thing-level, Interaction-level?
 - discuss algorithm of `invokeAction()` (local invocation)
 - discuss local hooks on `set/getProperty()`
 - need an API to notify listeners (clients) about changes not made by them
 - API for adding properties, actions, events etc (i.e. changing Thing Description) is problematic
+  * F2F: Use publish-me API to have clear points in time where changed TD is announced
 - Thing description should be available as a mix-in object, or as a property?
 - splitting into dynamicThing (dynamic interface) and exposedThing (static interface)
 - Error types to be thrown by handlers
