@@ -44,3 +44,10 @@ The strongest connection will be to the Web of things WG, but there is also like
 ### Relationships to Groups External to the W3C
 
 The Task Force will coordinate with external groups to exchange information and build a shared understanding. This includes IoT alliances and SDOs, as well as communities focusing on Linked Data, IoT pilots and so forth.
+
+## Background
+
+- [Joint White Paper on Semantic Interoperability for the Web of Things](https://www.researchgate.net/publication/307122744_Semantic_Interoperability_for_the_Web_of_Things)
+- [IAB IoT Semantic Interoperability Workshop 2016](https://www.iab.org/activities/workshops/iotsi/)
+- [W3C Linked Data page](https://www.w3.org/standards/semanticweb/data)
+- [Slides from Santa Clara F2F, Feb 2017](https://www.w3.org/WoT/IG/wiki/images/9/9c/Wot-linked-data-tf.pdf)
