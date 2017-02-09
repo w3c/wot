@@ -37,7 +37,8 @@ To be discussed on the face to face:
 Based on current consensus (formed during scripting calls), Promises should be used for asynchronous operations with one-shot result (either success or fail), and callbacks (later Observables) should be used for asynchronous operations with multiple-shot results (e.g. open ended protocol requests such as discovery).
 
 * F2F: When there is one definite outcome (either success or fail) we use Promise. When there might be no or multiple outcomes, we use callbacks.
-* F2F: Callbacks prepare for better for multi-language support. Should check Observable-based solution.
+* F2F: Callbacks prepare for better for multi-language support. Should check Observable-based solution
+* F2F: Reach out to ECMA or similar to get statement on Observables
 
 ### Root API object
 
@@ -68,9 +69,9 @@ Alternatives:
 
 * F2F: Go with `Promise discover(optional ThingFilter filter, optional ThingDiscoveryCallback listener);` for now
 * F2F: Start proposal with Observable, which would allow cancel (stop retrieving RD results, reject further multicast responses, ...)
-* F2F: Reach out to ECMA or similar to get statement on Observables
 
-#### Remote creation of Things based on Things Description
+#### Client API to creaate ConsumedThings based on TD
+
 The current API is
 ```javascript
 Promise<ConsumedThing> consumeDescription(object td);
@@ -82,29 +83,7 @@ Proposals:
 - discuss the algorithm
 - discuss provisioning and security implications.
 
-#### Create local Things as servers
-The current API is
-```javascript
-Promise<ExposedThing> createThing(DOMString name);
-Promise<ExposedThing> createFromDescription(object td);
-Promise<ExposedThing> createFromDescriptionUri(DOMString uri);
-```
-
-Proposals:
-- check naming
-- discuss the algorithm
-- discuss provisioning and security implications.
-
-#### More lifecycle methods for local Exposedthings
-
-So farvthe root object does only offer to create ``ExposedThings`` but does not offer methods to:
-- delete/unlink them
-  - proposal: ``WoT.deleteThing(exposedThing)``
-- retrieve them (discovery only allows client-side interaction)
-  - Proposal: add methods to retrieve a local exposedthing (by name, generic discovery)
-
-
-### Consumed Thing client API
+#### ConsumedThing
 
 The current API is
 ```javascript
@@ -132,15 +111,41 @@ Issues:
 - check names for `set/getProperty`;
 - properties that belong to the representation vs meta-properties that belong the `ConsumedThing`
 - check event handling
-- check return type of `getDescription()`.
+- check return type of `getDescription()`
 
-### Client API for deleting remote Things
+#### Client API for deleting ConsumedThings
 
-* F2F: Lifecycle use case, cloud mirror
+Lifecycle use case, cloud mirror
 
-### Client API for updating (or provisioning) TD itself
+* F2F: Synchronization Task Force works on proposal that relies on app scripts without need for standardized APIs. Standard vocabulary to annotate Actions etc. can ensure interoperability
 
-### Server API (ExposedThing)
+#### Client API for updating (or provisioning) TD itself
+
+### Server API
+
+#### Create local Things as servers
+The current API is
+```javascript
+Promise<ExposedThing> createThing(DOMString name);
+Promise<ExposedThing> createFromDescription(object td);
+Promise<ExposedThing> createFromDescriptionUri(DOMString uri);
+```
+
+Proposals:
+- check naming
+- discuss the algorithm
+- discuss provisioning and security implications.
+
+#### More lifecycle methods for local Exposedthings
+
+So farvthe root object does only offer to create ``ExposedThings`` but does not offer methods to:
+- delete/unlink them
+  - proposal: ``WoT.deleteThing(exposedThing)``
+- retrieve them (discovery only allows client-side interaction)
+  - Proposal: add methods to retrieve a local exposedthing (by name, generic discovery)
+
+#### ExposedThing
+
 The current API is
 ```javascript
 interface ExposedThing {
