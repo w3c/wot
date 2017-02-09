@@ -37,17 +37,18 @@ To be discussed on the face to face:
 Based on current consensus (formed during scripting calls), Promises should be used for asynchronous operations with one-shot result (either success or fail), and callbacks (later Observables) should be used for asynchronous operations with multiple-shot results (e.g. open ended protocol requests such as discovery).
 
 * F2F: When there is one definite outcome (either success or fail) we use Promise. When there might be no or multiple outcomes, we use callbacks.
-* F2F: Callbacks prepare for better for multi-language support.
+* F2F: Callbacks prepare for better for multi-language support. Should check Observable-based solution.
 
 ### Root API object
 
 It is returned by `require()` statement in Node.js implementations, or attached to a built-in object like `navigator` in browser implementations. It contains functionality for client API (discover, remotely create, delete, retrieve, update, notify Things) and server API (locally create/register Things with a Thing Description).
 
+* F2F: Check browser compatibility: what can they give us, global object? (there is already a global object)
+* F2F: Check the assumptions of script writers (global Object, new, ..)
+
 ### Client API
 
 #### Discovery
-
-* F2F: Let's add an API for the repo/RD to register, update, and deregister
 
 The current signature is
 ```javascript
@@ -64,6 +65,10 @@ Promise discover(optional ThingFilter filter, optional ThingDiscoveryCallback li
 Alternatives:
 - Promise resolves if the protocol request was successfully made, and then the listener is called with every new discovered Thing object.
 - Promise resolves to an Observable (-like object) that can be used for attaching listeners, handling errors and for canceling or muting the discovery process as well.
+
+* F2F: Go with `Promise discover(optional ThingFilter filter, optional ThingDiscoveryCallback listener);` for now
+* F2F: Start proposal with Observable, which would allow cancel (stop retrieving RD results, reject further multicast responses, ...)
+* F2F: Reach out to ECMA or similar to get statement on Observables
 
 #### Remote creation of Things based on Things Description
 The current API is
@@ -135,7 +140,7 @@ Issues:
 
 ### Client API for updating (or provisioning) TD itself
 
-### Exposed Thing (server) API
+### Server API (ExposedThing)
 The current API is
 ```javascript
 interface ExposedThing {
@@ -161,6 +166,8 @@ interface ExposedThing {
 ```
 
 Issues:
+- How to make it available to the outside, in particular when building it programatically
+  * F2F: Let's add an API for the repo/RD to register, update, and deregister
 - Semantic annotations
   * F2F: need API to add @context entry, @type, metadata entries to Thing, and @type to Interactions
 - Security annotations
