@@ -15,19 +15,29 @@ To be discussed on the face to face:
 
 ### Specifying multiple language bindings in the Scripting API specification
 - Whether/how to use WebIDL (generic)
+  * F2F: can handle Promise
 - Whether/how to use TypeScript (better for JavaScript)
+  * F2F: can handle Promise
 - Define deliverable and hirarchy (e.g. JavaScript resp. TypeScript def as master and derived an agnostic IDL spec for other languages)
 - If abstract IDLs like Franca could be an option for non-js portation
+
+* F2F: Should make sure we cover the big languages (JavaScript, Java, C/C++, Python, ..., Ruby?, Lua?, ...)
+* F2F: WebIDL has browser baggage, thus TypeScript might be better
+* F2F: Let's to WebIDL and TypeScript. Look into converter tool. Can point out WebIDL deficiencies to W3C and fix it
 
 ## Implications on TD
 * F2F: TD model should also enable short scripts, in particular for ExposedThings
 
 ## Issues on JavaScript API specification
 ### Asynchronous programming guidelines
+
 - when and how to use Promises vs callbacks vs Observables
 - what event system(s) to support.
 
 Based on current consensus (formed during scripting calls), Promises should be used for asynchronous operations with one-shot result (either success or fail), and callbacks (later Observables) should be used for asynchronous operations with multiple-shot results (e.g. open ended protocol requests such as discovery).
+
+* F2F: When there is one definite outcome (either success or fail) we use Promise. When there might be no or multiple outcomes, we use callbacks.
+* F2F: Callbacks prepare for better for multi-language support.
 
 ### Root API object
 
