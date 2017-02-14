@@ -45,6 +45,21 @@ The strongest connection will be to the Web of things WG, but there is also like
 
 The Task Force will coordinate with external groups to exchange information and build a shared understanding. This includes IoT alliances and SDOs, as well as communities focusing on Linked Data, IoT pilots and so forth.
 
+## Short and longer term objectives
+
+The first six months:
+
+* Clarifying the Linked Data model for things in terms of use cases and commercial IoT standards
+* Clarifying the metadata needed for describing IoT platforms
+* Validation of thing descriptions
+* Validation for semantic interoperability
+
+Further out:
+
+* Linked Data requirements for security, privacy and terms & conditions
+* Coordination with other groups on units of measure, etc.
+* Metadata for websites to advertise their Web of things services you can install on a home hub
+
 ## Background
 
 - [Joint White Paper on Semantic Interoperability for the Web of Things](https://www.researchgate.net/publication/307122744_Semantic_Interoperability_for_the_Web_of_Things)
