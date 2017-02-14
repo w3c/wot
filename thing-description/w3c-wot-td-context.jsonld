@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "td": "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
+    "Thing": "td:Thing",
+    "name": "td:name",
+    "base": {
+      "@id": "td:hasThingDescription",
+      "@type": "@id"
+    },
+    "hrefs": {
+      "@id": "td:hasInteraction",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "href": {
+      "@id": "td:hasInteraction",
+      "@type": "@id"
+    },
+    "Interaction": "td:Interaction",
+    "interactions": {
+      "@id": "td:isAssociatedTo",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "links": {
+      "@id": "td:hasInteraction",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "priority": {
+      "@id": "td:hasPriority",
+      "@type": "xsd:integer"
+    },
+    "security": "td:supportsSecurity",
+    "properties": {
+      "@id": "td:hasProperty",
+      "@container": "@set"
+    },
+    "Property": "td:Property",
+    "valueType": "td:hasValueType",
+    "stability": {
+      "@id": "td:hasStability",
+      "@type": "xsd:integer"
+    },
+    "writable": {
+      "@id": "td:isWritable",
+      "@type": "xsd:boolean"
+    },
+    "events": {
+      "@id": "td:hasEvent",
+      "@container": "@set"
+    },
+    "Event": "td:Event",
+    "property": {
+      "@id": "td:forProperty",
+      "@type": "@id"
+    },
+    "inputData":  {
+      "@id": "td:hasInput"
+    },
+    "outputData": {
+      "@id": "td:hasOutput"
+    },
+    "actions": {
+      "@id": "td:hasAction",
+      "@container": "@set"
+    },
+    "Action": "td:Action",
+    "associations": "td:isAssociatedTo",
+    "child": "td:isChildOf",
+    "parent": "td:isParentOf"
+  }
+}

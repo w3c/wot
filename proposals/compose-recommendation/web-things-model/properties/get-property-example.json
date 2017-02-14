@@ -1,0 +1,20 @@
+// GET {wt}/properties/acceleration/
+// Read acceleration values
+// Paginated
+// 200 OK
+// Link <model/>; rel="model"
+
+[
+    {
+        "x":11,
+        "y":1,
+        "z":-4.4,
+        "timestamp":"2015-06-14T14:30:00.000Z"
+    },
+    {
+        "x":3.4,
+        "y":-1,
+        "z":-4.6,
+        "timestamp":"2015-06-14T14:00:00.000Z"
+    }
+]

@@ -1,0 +1,39 @@
+compcat OutDt 
+{
+  "@context": "", 
+  "wot:interactions": [
+     {
+       "wot:writable": true, 
+       "wot:valueType": {"@type": "xsd:boolean"}, 
+       "@type": "wot:Property", 
+       "wot:name": "operationStatus"
+     }, 
+     {
+       "wot:valueType": {"@type": "xsd:string"}, 
+       "@type": "wot:Property", 
+       "wot:name": "operationMode"
+     }, 
+     {
+       "wot:writable": true, 
+       "wot:valueType": {
+         "sch:maxValue": 300, 
+         "sch:minValue": 160, 
+         "@type": "xsd:number"
+       }, 
+       "@type": "wot:Property", 
+       "wot:name": "desiredTemp"
+     }, 
+     {
+       "wot:writable": true, 
+       "wot:valueType": {
+         "sch:maxValue": 80, 
+         "sch:minValue": 60, 
+         "@type": "xsd:number"
+       }, 
+       "@type": "wot:Property", 
+       "wot:name": "PowerSave"
+     }
+  ], 
+  "@type": "wot:Thing", 
+  "wot:name": "PanasonicAirConditioner"
+}

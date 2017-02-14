@@ -1,0 +1,18 @@
+﻿{
+  "@context": {
+    "wot":"http://w3c.github.io/wot/w3c-wot-td-context.jsonld#",
+    "td": "http://www.w3c.org/wot/td#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sch": "http://schema.org"
+  },
+  "@type": "td:Thing",
+  "wot:name":"echonet",
+  "wot:interactions": [
+       {
+       "@type": "wot:Property",
+       "wot:name": "operationStatus",
+       "wot:valueType": { "@type": "xsd:boolean" },
+       "wot:writable": true
+      }
+  ]
+}

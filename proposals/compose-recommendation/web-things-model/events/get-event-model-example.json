@@ -1,0 +1,23 @@
+// GET {wt}/events/batteryLow/model
+
+
+// 200 OK
+// Link: <http://webofthings.org/events/batteryLow>; rel="meta" 
+
+{
+	"id":"batteryLow",
+	"name":"Low Battery",  
+	"description":"Triggered once when battery drops below 2.8v.",
+	"values":{
+		"state":{
+			"type":"String",
+			"enum":{
+				"REPLACE":"It's time to replace the battery.",
+				"CRITICAL":"This device will die anytime soon"
+			}	
+		}
+	},
+	"customFields":{
+		"status":"active"
+	}	
+}

@@ -1,0 +1,77 @@
+// POST {wt}/properties/
+[
+    {
+        "id":"temperature",
+        "value":{
+            "temp":24,
+            "timestamp":"2015-06-14T14:30:00.000Z",
+        }
+    },
+    {
+        "id":"acceleration",
+        "value":{
+            "x":-22,
+            "y":2.1,
+            "z":3,
+            "timestamp":"2015-06-14T14:30:00.000Z"
+        }
+    }
+]
+
+// 201 CREATED
+// Location: {wt}/properties/
+
+
+// POST {wt}/properties/temperature/
+[
+    {
+        "temp":24
+    }
+]
+
+// 201 CREATED
+// Location: {wt}/properties/temperature/
+[
+    {
+        "temp":24,
+        "timestamp":"2015-06-14T14:30:00.000Z"
+    }
+]
+
+
+
+
+
+// Creates acceleration sensor reading (bulk)
+// POST {wt}/properties/acceleration/
+[
+    {
+        "x":11,
+        "y":1,
+        "z":-4.4,
+        "timestamp":"2015-06-14T14:30:00.000Z"
+    },
+    {
+        "x":3.4,
+        "y":-1,
+        "z":-4.6,
+        "timestamp":"2015-06-14T14:00:00.000Z"
+    }
+]
+
+// 201 CREATED
+// Location: {wt}/properties/acceleration/
+[
+    {
+        "x":11,
+        "y":1,
+        "z":-4.4,
+        "timestamp":"2015-06-14T14:30:00.000Z"
+    },
+    {
+        "x":3.4,
+        "y":-1,
+        "z":-4.6,
+        "timestamp":"2015-06-14T14:00:00.000Z"
+    }
+]
