@@ -10,11 +10,11 @@ of systems designed according to the W3C WoT recommendation and conformant with 
 
 **Initial Chair:** Michael McCool
 
-**Initial Members:** Michael McCool, Michael Koster, Yongjing Zhang, Jonghong Jeon (restricted to W3C members who are also OCF members)
+**Initial Members:** Michael McCool, Michael Koster, Yongjing Zhang, Jonghong (Jonathan) Jeon (restricted to W3C members who are also OCF members)
 
 **Initial Team Contact:** Dave Raggett
 
-**Meeting Schedule:** Fridays, 11:00am JST
+**Meeting Schedule:** Tuesdays, 22:00 JST
 
 
 ## Table of Contents
@@ -28,9 +28,9 @@ of systems designed according to the W3C WoT recommendation and conformant with 
 # Goals
 Subgoals will include:
 * Enabling the use of web technologies enabled by the W3C WoT recommendations to OCF devices
+* Reconcile OCF data model and information provided in the W3C WoT Thing Description
 * Defining common semantic vocabulary (ontology), data, and interaction models
   * Linking to external ontologies and data models
-* Demonstrating applications of semantic web to IoT in general and OCF devices in particular
 * Demonstrate access to OCF resources from W3C WoT interfaces
   * Prototypes and POCs
 
@@ -43,12 +43,13 @@ Benefits to OCF of this liaison will include:
 Benefits to W3C WoT of this liaison will include:
 * Driving concrete use cases for Thing Description
 * Extending the applicability of W3C WoT recommendations to the OCF ecosystem
+* Allowing use of OCF devices as test cases for the WoT specification
 
 # Scope
 The OCF/WoT Liaison Task Force is responsible for:
 * Ensuring W3C WoT WG recommendations can interoperate with and enable OCF devices
 * Reviewing evolving OCF public standards and advising the WoT on strategic direction
-* Communicating with the OCF on evolving W3C work
+* Communicating with the OCF on evolving W3C WoT work
 
 # Deliverables 
 In each of the four major deliverables of the W3C WoT WG, 
@@ -58,6 +59,8 @@ working with other WoT IG and WG Task Forces as appropriate:
 * Work with the Thing Description TF to ensure Thing Descriptions can describe OCF Devices
 * Work with the Scripting TF to ensure that OCF Devices can be accessed from W3C WoT Scripting API
 * Work with the Security TF to enable end-to-end security when using W3C WoT in combination with OCF
+* Work with other IG TFs as appropriate to enhance interoperability
+* Generate recommendations to OCF to improve interoperability with W3C WoT standards
 
 # Relationships to External Groups
 This task force will need to work with the OCF. 
