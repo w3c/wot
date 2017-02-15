@@ -58,6 +58,7 @@ types, seems a reasonable/possible approach.
     <th>Feature</th>
     <th>JSON Schema</th>
     <th>Schema.org</th>
+    <th>Shape Expressions</th>
     <th>Proposal from <a href="https://github.com/w3c/wot/issues/122">issue #122</a></th>
     <th>YANG</td>
     <th>Notes</td>
@@ -66,6 +67,7 @@ types, seems a reasonable/possible approach.
     <td>Community</td>
     <td>?loosely coupled?</td>
     <td>Strong community</td>
+    <td></td>
     <td>None</td>
     <td>Networking, mainly SDN community</td>
     <td>Schema.org vocabulary is shared between different parties (e.g., Bing, Google, Yahoo)<br/><br/>
@@ -76,6 +78,7 @@ types, seems a reasonable/possible approach.
     <td>Tool support for validation</td>
     <td>Yes e.g.  http://jsonschemalint.com/</td>
     <td>Partially, e.g. https://developers.google.com/structured-data/testing-tool/</td>
+    <td></td>
     <td>None</td>
     <td>Yes<br/> http://www.yangvalidator.com/</td>
     <td>Google's tool only check against existing classes and data types.</td>
@@ -102,6 +105,7 @@ types, seems a reasonable/possible approach.
 }
       </pre>
     </td>
+    <td></td>
     <td>
       <pre>
 {
@@ -139,6 +143,7 @@ typedef new-int32-type {
     <td>
       <i>Not applicable</i>
     </td>
+    <td></td>
     <td>
       <pre>
 {
@@ -198,6 +203,7 @@ leaf new-enum {
 ]
       </pre>
     </td>
+    <td></td>
     <td>
       <pre>
 {
@@ -254,6 +260,7 @@ container thermometer {
 ]
       </pre>
     </td>
+    <td></td>
     <td>
       <pre>
 "property1": {
