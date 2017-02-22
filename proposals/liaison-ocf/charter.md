@@ -40,6 +40,7 @@ Benefits to OCF of this liaison will include:
   * Ex: semantic web, MMI, geolocation, RDF, web services, web id, etc.
 * Provide additional descriptive capabilities beyond the OCF data models
   * Enabling new capabilities, such as service composition, advanced development models, etc.
+
 Benefits to W3C WoT of this liaison will include:
 * Driving concrete use cases for Thing Description
 * Extending the applicability of W3C WoT recommendations to the OCF ecosystem
@@ -52,7 +53,7 @@ The OCF/WoT Liaison Task Force is responsible for:
 * Communicating with the OCF on evolving W3C WoT work
 
 # Deliverables 
-In each of the four major deliverables of the W3C WoT WG, 
+In each of the four major deliverables of the W3C WoT WG,
 the OCF/WoT Liaison Task Force will review and provide input on recommendation-track deliverables,
 working with other WoT IG and WG Task Forces as appropriate:
 * Recommend an W3C WoT protocol Binding Template for OCF protocols
@@ -63,10 +64,10 @@ working with other WoT IG and WG Task Forces as appropriate:
 * Generate recommendations to OCF to improve interoperability with W3C WoT standards
 
 # Relationships to External Groups
-This task force will need to work with the OCF. 
+This task force will need to work with the OCF.
 Recommendations to the W3C WoT will only be released once the corresponding OCF standard is public.
 However, all members of this task force will also be OCF members and so will have access to pre-publication
-versions of the proposed OCF standards.   
+versions of the proposed OCF standards.
 This will allow them to develop proposals as the OCF standards develop.
 
 # Participation
@@ -75,32 +76,32 @@ As OCF membership is based on organizations, not individual, in practice this me
 this Task Force may not themselves be individually active in the OCF, although this is preferrable.
 
 # Communication
-The WoT/OCF Liaison TF will primairly conduct its work in closed meetings due to the need to follow 
-the IP rules set by OCF.   
-However, they will produce documents that can be released to and discussed 
+The WoT/OCF Liaison TF will primairly conduct its work in closed meetings due to the need to follow
+the IP rules set by OCF.
+However, they will produce documents that can be released to and discussed
 with the rest of the W3C WoT IG and WG once the corresponding OCF standards have been made public.
-Additional communications may also be released after review by other OCF members; the members of this 
+Additional communications may also be released after review by other OCF members; the members of this
 group will also be members of an OCF/WoT Liaison task force within the OCF.
 
 The task force will use the Web of Things Working Group home page to provide updated public information about its activities.
 
-Information about the group (deliverables, participants, face-to-face meetings, teleconfrences, etc.) 
+Information about the group (deliverables, participants, face-to-face meetings, teleconfrences, etc.)
 will be made available from the Web of Things Working Group home page, although access to meetings and minutes
 will be restricted according to the policy noted above.
 
 # Decision Policy
-As Explained in the Process Document ([section 3.3](https://www.w3.org/Consortium/Process/policies#Consensus)), 
-this group will seek to make decisions when there is consensus.  
-In cases where there is a need to formally produce a group resolution about a particular issue, 
-its Chair will put a question about the issue to the group and gather responses (including any formal objections); 
-then, after due consideration of all the responses, 
+As Explained in the Process Document ([section 3.3](https://www.w3.org/Consortium/Process/policies#Consensus)),
+this group will seek to make decisions when there is consensus.
+In cases where there is a need to formally produce a group resolution about a particular issue,
+its Chair will put a question about the issue to the group and gather responses (including any formal objections);
+then, after due consideration of all the responses,
 the Chair will record a group resolution (possibly after a formal vote and also along with responding to any formal objections).
 
 # About This Charter
-This charter for the Task Force within the Web of Things WG has been created according to 
-[section 6.2](https://www.w3.org/Consortium/Process/groups#GAGeneral) 
-of the [Process Document](https://www.w3.org/Consortium/Process).  
-In the event of a conflict between this document or the provisions of any charter and the W3C Process, 
+This charter for the Task Force within the Web of Things WG has been created according to
+[section 6.2](https://www.w3.org/Consortium/Process/groups#GAGeneral)
+of the [Process Document](https://www.w3.org/Consortium/Process).
+In the event of a conflict between this document or the provisions of any charter and the W3C Process,
 the W3C Process shall take precedence.
 
 ---
