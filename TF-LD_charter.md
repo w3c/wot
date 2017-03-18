@@ -52,7 +52,7 @@ The first six months:
 * Clarifying the Linked Data model for things in terms of use cases and commercial IoT standards
 * Clarifying the metadata needed for describing IoT platforms
 * Validation of thing descriptions
-* Validation for semantic interoperability
+* The role of validation and inference for semantic interoperability
 
 Further out:
 
