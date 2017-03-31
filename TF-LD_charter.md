@@ -23,13 +23,16 @@ The Linked Data and Semantic Processing Task Force is responsible for:
 ### The Linked Data for Application and Platform Contracts
 
 - Gathering and surveying a broad range of existing and proposed use cases for the Web of things, and identifying Linked Data requirements for the application contracts exposed by application platforms.
-- Working on alignement of W3C WoT WG TD ontology with ontologies and data models from other standardization activities (e.g., OCF, oneM2M, Industrie 4.0 etc.) to ensure interoperability.
+- Working on alignment of W3C WoT WG TD ontology with ontologies and data models from other standardization activities (e.g., OCF, oneM2M, Industrie 4.0 etc.) to ensure interoperability.
 - Creating demos and test suites to explore the requirements, and for use in outreach
 - Exploration of the requirements for vendors to describe their product's unique features
 - Exploration of areas where shared standards are appropriate, e.g. physical units
 
 ### Thing Description Recipes
-- Working on a semantic specification of a reusable templates for WoT applications, called Thing Description Recipes.
+
+IoT standards suites often specify devices as a composition of separately specified interface definitions, e.g. OCF defines devices in terms of sets of resources, whilst oneM2M defines devices in terms of modules. This is syntactic modularization. Real or virtual devices can also be defined at a semantic level in terms of a composition of semantic models that the device implements. Both kinds of modularization are valuable.
+
+- Working on means to specify reusable syntactic and semantic templates for WoT applications.
 - Semantic constraints and Non Function Properties for TD Recipes.
 - Publishing and discovery of Recipes by using Linked Data principles.
 - Implementations of Recipes (matching ingredients of a Recipe and implementation based on WoT Scripting API).
