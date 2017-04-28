@@ -24,9 +24,9 @@ The Linked Data and Semantic Processing Task Force is responsible for:
 
 - Gathering and surveying a broad range of existing and proposed use cases for the Web of things, and identifying Linked Data requirements for the application contracts exposed by application platforms.
 - Working on alignment of W3C WoT WG TD ontology with ontologies and data models from other standardization activities (e.g., OCF, oneM2M, Industrie 4.0 etc.) to ensure interoperability.
-- Creating demos and test suites to explore the requirements, and for use in outreach
-- Exploration of the requirements for vendors to describe their product's unique features
-- Exploration of areas where shared standards are appropriate, e.g. physical units
+- Creating demos and test suites to explore the requirements, and for use in outreach.
+- Exploration of the requirements for vendors to describe their product's unique features.
+- Exploration of areas where shared standards are appropriate, e.g. physical units.
 
 ### Thing Description Recipes
 
@@ -42,9 +42,17 @@ IoT standards suites often specify devices as a composition of separately specif
 - Use case stories, best practices and tools that enrich WoT Thing Description with application- and domain-specific vocabularies.
 - Demonstrations on Thing Description enriched with common or standardized semantic vocabularies (e.g., iot.schema.org), showing innovative applications that can use information from different vertical domains, as well as repurposing of WoT applications based on semantic re-mapping.
 
-### Semantic Constraints and Validation/Inferencing for the Thing Description Model
-- Incubation of techniques for validation and transformation of Linked Data (RDF Data Shapes, OWL, OWL integrity constraints) and evaluation in terms of expressiveness, performance, adequacy to the TD model.
-- Use cases, architectures for reasoning over WoT data (e.g. stream processing, distributed reasoning).
+### Semantic Processing for Web of Things
+- Identify and evaluate applicability of Semantic/Linked Data processing features (e.g., SPARQL-like querying, reasoning, data schema alignment, service composition and distributed processing/reasoning, query federation etc.).
+- Incubation of techniques for Linked Data generation and transformation (RDF, RDF(S), OWL).
+- Incubation of techniques for semantic constraints and validation of Linked Data (RDF Data Shapes, OWL, OWL integrity constraints) and evaluation in terms of expressiveness, performance, adequacy to the TD model.
+- Use cases and architectures for reasoning over WoT data (e.g. stream processing, distributed reasoning).
+
+### Semantic/Linked Data Tool chains for Web of Things
+
+- Propose Semantic/Linked Data Tool chains for Web of Things with resepct to identified Semantic/Linked Data processing features.
+- Evaluate efficiency, performance and scalability of Semantic Tool chains(e.g., transformation, mapping, validation, quering/reasoning) in different WoT hardware settings and scenarios.
+- Investigate the portability of open source tools to resource-constraint IoT devices.
 
 ### Common Activities
 - Coordination with other Web of Things IG task forces
