@@ -30,9 +30,10 @@ The Linked Data and Semantic Processing Task Force is responsible for:
 
 ### Thing Description Recipes
 
-IoT standards suites often specify devices as a composition of separately specified interface definitions, e.g. OCF defines devices in terms of sets of resources, whilst oneM2M defines devices in terms of modules. This is syntactic modularization. Real or virtual devices can also be defined at a semantic level in terms of a composition of semantic models that the device implements. Both kinds of modularization are valuable.
+IoT standards suites often specify devices as a composition of separately specified interface definitions, e.g. OCF defines devices in terms of sets of resources, whilst oneM2M defines devices in terms of modules. This concept can be extended for a composition of resources from multiple devices, thereby creating a WoT application. Both kinds of compositions are valuable.
 
 - Working on means to specify reusable syntactic and semantic modules for WoT applications.
+- Creating compositions of resources from multiple devices in form of Recipes, where the compositions are based on reusable syntactic and semantic modules.
 - Semantic constraints and Non Functional Properties for TD Recipes.
 - Publishing and discovery of Recipes by using Linked Data principles.
 - Implementations of Recipes (matching ingredients of a Recipe and implementation based on WoT Scripting API).
