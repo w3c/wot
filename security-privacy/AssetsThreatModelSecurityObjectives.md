@@ -1,0 +1,179 @@
+## WoT Threat Model &amp; Security Objectives
+
+**WoT Primary Stakeholders**
+
+This section list primary WoT stakeholders.
+
+| **Description** | **Role** | **Business-driven security goals** | **Interesting edge cases** |
+| --- | --- | --- | --- |
+| Thing manufacturer (OEM)  | Producer of the HW thing, might define and make TD available for everyone, implements WoT runtime, certifies thing to be WoT compliant. | Don&#39;t want the things to be used in any form of attacks (loss of reputation, possible legal consequences in some countries). Want to satisfy security requirements of solution users and solution providers for better sales.
+| Solution provider (solution integrator) | Uses things from OEMs to build various WoT end solutions specific to particular WoT use case(s). OEM might also be a solution provider at the same time. Might define new TDs for things or modify TDs provided by manufacturers. Might use scripting API and runtime provided to implement their solution or might do a full reflash of the thing.  Solution provider&#39;s scripts and their configuration data might require confidentiality and/or integrity | Don&#39;t want their solution to be a target of attacks (loss of reputation, possible legal consequences in some countries). Want to satisfy security requirements of solution users for better sales. Don&#39;t want security to interfere with usability for better sales (usability vs. security). Want solution to be robust and not easily falling down to DoS (at least basic DoS resistance). Want to hide their proprietary scripts and other relevant data from other parties.          <br />***Any security obligations towards OEMs?*** | There might be several independent solution providers on a single HW Thing. Need to be able to support their isolation within WoT runtime, as well as sharing solution user preferences. |
+| Solution user | This might be physical user(s) (as John and his family in their smart home) or an abstract user (as company running the factory). Solutions users might differ in their access to the WoT solution capabilities and transferred data (might be able to configure certain parts of solution only or only use solution as it is). | Don&#39;t want their data to be exposed to any other solution user, solution provider or OEM unless intended (Data confidentiality).Don&#39;t want their data to be modified unless intended (Data integrity).    | Access to the user data might be configurable not only based &quot;who&quot; is the entity accessing data (AC subject), its role, type of access, but also on the time and context data. |
+
+In addition to the above stakeholders, we might need to define a notion of &quot; **Security Owner**&quot;. It defines an entity that provisions a thing with the security root of trust and sets up initial policies on who can provision/update/remove scripts to/from the WoT runtime, if such model is supported. WoT might generally have a number of independent security owners, each with its own set of provisioned certificates and/or credentials. The exact hierarchy of owners that WoT wants to support is to be discussed. ***Todo: this needs more discussion.***
+
+**Assets**
+
+This section lists all WoT Assets that are important from security point of view.
+
+| **Description** | **Who should have access (Trust Model)** | **Attack Points** |
+| --- | --- | --- |
+| **Thing Description(TD)**<br />Access Control policies for TDs and resources it provides  are part of TDs and they are managed in discretionary access control model way (owner of TD set the AC policy). Some contents of TDs might be privacy sensitive and therefore should not be shared without a need. TDs integrity is crucial for the system correct operation. | TDs owner: full access Others: read only for minimal required part. | Storage on thing itself, cloud storage, in-transfer (network) including TD updates. |
+| **Solution user data** Can be highly privacy sensitive and confidential. | Different solution users might have different level of access to this data based on the use case. Non-authorized access must be minimized since access even to small amount of information (for example last timestamp when door lock API was used) might have severe privacy converns (allows to detect that owner has been away from his house) Mechanism should be flexible to configure and include also RBAC.  Others: should have no access unless specifically allowed | Storage on thing itself, solution provider storage (remote cloud or other), in-transfer (network) |
+| **Solution provider scripts and their configuration data** | Solution provider: full accessOthers: no access | Storage on the thing itself, remote storage (if scripts are backed up to a remote storage), in-transfer only for initial provisioning and scripts updates |
+| **Thing&#39;s resources, WoT Infrastructure resources** | Resources should only be used for legitimate purposes and be available when required. | WoT exposed API |
+| **WoT controlled environment** | WoT devices that have actuator capabilities are able to affect the physical environment around them. Such capability must only be used by authorized entities and for legitimate purposes only | WoT exposed API |
+| **WoT indirectly transmitted behavoir information** Amount of communication between different things, APIs used, distribution of communication over time, etc. | It must not be possible to collect/identify the   | In-trasfer data and usage of WoT API  |
+| ***Todo: list all the keys/credentials that are used on the level. They will be assets and they will be needed if WoT plans to have its own access control policies and enforce it. The exact list would depend on chosen solution. First step is to obtain the list of protocols that WoT plans to support.*** |   |   |
+
+If in the future the WoT model is extended to allow dynamic installation of scripts inside WoT runtime, the following assets are added:
+
+| **Description** | **Who should have access (Trust Model)** | **Attack Points** |
+| --- | --- | --- |
+| Script provisioning/updates policies.<br />Defines who can install/remove new scripts into WOT runtime, update existing ones |  |   |
+
+If in the future the WoT model is extended to allow co-existence of different independent solution providers on a single physical device, the following assets are added:
+
+| **Description** | **Who should have access (Trust Model)** | **Attack Points** |
+| --- | --- | --- |
+| Access control policies for co-existing solution providers.<br />Not required if initially a simple model of &quot;full isolation&quot; is applied to scripts, their execution environment and processed data when having more than two solution providers sharing the same WoT runtime. |   | Storage on the thing itself, remote storage (if they are backed up to a remote storage), in-transfer for initial provisioning and policy updates |
+
+**Adversaries**
+
+The following adversaries are in-scope for the WoT threat model: 
+
+| Persona | Motivation | Attacker type |
+| --- | --- | --- |
+| Non-WoT End Point Attacker  | Tries to get authorized access/modify any asset stored at the non-WoT end points (Cloud, non-WoT devices etc.) Reasons: monetary, fame etc. | Remote or local attack |
+| WoT Network attacker | Unauthorised access or modification of any stakeholder's asset. Denial of service. Taking control of WoT network part. Reasons: monetary, fame etc. | Network attack: an attacker has a network access to the WoT network, able to use WoT API, perform MitM attacks, drop, delay, reorder, re-play, inject messages. |
+| Malicious authorized solution user | Unauthorized access of private data of other solution users or other stakeholders (eavesdropping). Unauthorized modification of data of any stakeholder (modification of sensor data). Obtaining higher privileges that originally intended (hotel guest trying to control overall hotel lighting). | Local physical access, WoT configuration point (smartphone, web interface, washing machine interface, etc.). |
+| Malicious unauthorized solution user | Similar to above, but with no prior access to the WoT system (guest in a house, guest in a factory) | Limited local physical network access, can use proximity factor |
+| Malware developer - 1 | Unauthorised access or modification of any stakeholder's asset. Denial of service. Taking control of WoT network part. Reasons: monetary, fame etc. | Unprivileged software adversary: application intentionally gets installed or code injected into WoT configuration point (user&#39;s smartphone, browser, etc.) or in WoT runtime itself using WoT API |
+|   |   |   |
+
+If in the future the WoT model is extended to allow co-existence of different independent solution providers on a single physical device, the following adversaries are added:
+
+| Persona | Motivation | Attacker type |
+| --- | --- | --- |
+| Malicious solution provider | Tries to get access or modify other solution providers scripts or data, tries to access or modify solution users data from another solution provider. | Unprivileged software adversary: solution provider scripts running inside WoT runtime |
+
+If in the future the WoT model is extended to allow dynamic installation of scripts inside WoT runtime, the following adversaries are added:
+
+| Persona | Motivation | Attacker type |
+| --- | --- | --- |
+| Malware developer - 2 | Same as WoT network attacker | Same as for Malware developer - 1, but in addition WoT management API can be used to install attacker's code into WoT runtime.  |
+
+The following adversaries are out of the scope for the WoT threat model:
+
+| Persona | Motivation | Attacker type |
+| --- | --- | --- |
+| Malicious OEM  | Intentionally installs HW, firmware or other lower sw level backdoors, rootkits etc. in order to get unauthorized access to WoT assets or affect WoT system in any form | Local physical access, privileged access |
+| Careless OEM  | In order to reduce production costs substitutes original HW parts with low quality parts potentially impacting security. | Local physical access, privileged access |
+| Careless Solution provider  | In order to reduce solution deployment costs utilizes low quality SW, performs poor testing, misconfigures things, TDs and access control policies. | Local physical access, prilividged access |
+
+**Attack surfaces**
+
+In order to correctly define WoT attack surfaces one needs to determine elements of the system that are untrusted (can be potentially compromised), system trusted computing base (TCB) (core system that we assume to be trusted), system's process boundaries and entry points. Figure 1 presents high-level view on WoT architecture with important from security point of view elements. 
+
+<div  style="text-align: center;"><img  src="WoTArchSecurityView.png" title="WoT High-Level Architecture Security View" /></div>
+ <p  style="text-align: center;">Fig.1 WoT High-Level Architecture Security View</p>
+ <p  style="text-align: left;">
+ 
+ Figure 1 currently presents one trust model, where application scripts are not considered trusted, while the rest of system is. Also, on this figure, both WoT Runtime and Protocol Bindings are considered within one process and security boundary, while in practice implementation can differ.
+***Todo at F2F discussions: we need to have a trust model defined. This means that either we assume the worst case model from security point of view or we try to create a number of different security models that WoT supports***  
+
+The following WoT attack surfaces are in-scope for the WoT Security model:
+
+| **System Element** | **Compromise Type(s)** | **Assets exposed** | **Attack Method** |
+| --- | --- | --- | --- |
+| WoT Runtime | Component compromise | TDs, solution user data, Thing&#39;s resources, WoT Infrastructure resources, WoT controlled environment, solution provider data/scripts | Local attack by WoT scripts (if we assume them to be untrusted), network attack using WoT API |
+| WoT Client and Server APIs | Modification/access to TDs, user data modification/data confidentiality, Unauthorized execution of APIs, DoS | TDs, solution user data, Thing&#39;s resources, WoT Infrastructure resources, WoT controlled environment, WoT indirectly transmitted behaviour information | Network attack |
+| WoT Discovery API/Service |Modification/access to TDs, Thing&#39;s resources, WoT Infrastructure resources, WoT indirectly transmitted behaviour information | TDs, Thing&#39;s resources, WoT Infrastructure resources | Network attack |
+| Protocol Bindings | User data modification/data confidentiality, Unauthorized execution of APIs, DoS | Solution user data, Thing&#39;s resources, WoT Infrastructure resources, WoT controlled environment | Local attack by WoT Script |
+| Platform Services | User data modification/data confidentiality, Unauthorized execution of APIs, DoS | Solution user data, Thing&#39;s resources, WoT Infrastructure resources, WoT controlled environment | Local attack by WoT Script |
+
+If we consider application scripts from the Figure 1 being untrusted (together with assumption about a single process running both WoT Runtime and Protocol Bindings), then ultimately all of WoT Runtime and Protocol bindings becomes untrusted element. So, we might want in the first model to consider scripts being trusted entities. ***todo: discuss at F2F***
+
+If in the future the WoT model is extended to allow dynamic installation of scripts inside WoT runtime, the following attack surfaces are added:
+
+| **System Element** | **Compromise Type(s)** | **Assets exposed** | **Attack Method** |
+| --- | --- | --- | --- |
+| WoT Script Management API  | Compromise of application scripts, including installing older version of legitimate scripts (rollback) |  Solution provider scripts and their execution environment | Network attack  |
+
+If in the future the WoT model is extended to allow co-existence of different independent solution providers on a single physical device, the following attack surfaces are added:
+
+| **System Element** | **Compromise Type(s)** | **Assets exposed** | **Attack Method** |
+| --- | --- | --- | --- |
+| WoT Script | Component compromise | TDs, solution user data, solution provider data/scripts | Local attack by other WoT scripts |
+
+
+The following WoT attack surfaces are out-of-scope for the WoT Security model:
+
+| **System Element** | **Compromise Type(s)** | **Assets exposed** | **Attack Method** |
+| --- | --- | --- | --- |
+| Non-WoT endpoints (cloud, other devices) | Component compromise | TDs, solution user data, WoT Infrastructure resources | Network attack, Local attack |
+| End things themselves | Component compromise on levels below WoT | Modification/access to TDs, Thing&#39;s resources, WoT Infrastructure resources | Local attack, physical attack |
+
+
+**Threats**
+
+This section lists all WoT threats, both in-scope and out-of-scope.
+
+| **Name** | **Adversary** | **Asset** | **Attack method and pre-conditions** |
+| --- | --- | --- | --- |
+| Non-WoT End Point - 1 | All attacker types | TDs, data from solution users, WoT Infrastructure resources stored at non-WoT end points (Cloud, non-WoT devices etc.)  | **Attack method** : Any remote or local attack method that results in attacker to obtain unauthorized access or modify assets stored at the Non-WoT End Point or cause a DoS attack on the service itself. |
+| Non-WoT-End-Point - 2 | All attacker types | TDs, data from solution users, WoT Infrastructure resources stored at non-WoT end points (Cloud, non-WoT devices etc.)  | **Pre-conditions:** An attacker has an access to the WoT configuration point interface (via smartphone, browser, etc.) either legitimately (authorized user) or by compromising it locally via malware (malware developer-1).<br />**Attack method:** Any remote attack method using provided configuration interface that results in attacker to obtain unauthorized access or modify assets stored at the Non-WoT End Point infrastructure |
+| WoT Thing <br />(***currently it incorporates all kinds of attacks on level below WoT runtime. Might break it up a bit later one***) | All attacker types | TDs, data from solution users, Application scripts and their configuration, WoT Infrastructure resources | **Attack method** : Any local or remote attack method on levels below WoT runtime that results in attacker to obtain unauthorized access or modify assets stored at things, or cause DoS attack on thing or WoT infrastructure. |
+| WoT API - Unauthorized API access | Network attacker, Malware developer 1, Malicious users, Malicious solution provider | Unauthorized access to an asset provided via WoT API (WoT controlled environment, users data, non-public parts of TDs, etc.) | **Pre-conditions:** An attacker with an access to the WoT client API<br />**Attack method** : Any remote or local attack method using WoT API with the purpose of obtaining unauthorized access to a WoT asset |
+| WoT DoS | WoT Network attacker, Malware developer - 1, Malicious authorized solution user | Things resources, WoT Infrastructure resources, Infrastructure operability | **Pre-conditions:** General preconditions for network attacker with access to the WoT API<br />**Attack method** : Any attack method using WoT API in order to cause DoS to an end thing, device or infrastructure (calling WoT API methods that require processing, sending too many messages etc.) or to disturb the service operation by intentional dropping all or selective WoT messages |
+| WoT Protocol - TD Integrity | Network attacker, Malware developer 1, Malicious users, Malicious solution provider | TDs integrity in-transfer | **Pre-conditions:** General preconditions for network attacker with access to the WoT API<br />**Attack method** : Any attack method on TDs in-transfer with the purpose of its modification, including its freshness. |
+| WoT Protocol - TD Confidentiality | Network attacker, Malware developer 1, Malicious users, Malicious solution provider | TDs confidentiality in-transfer | **Pre-conditions:** General preconditions for network attacker with access to the WoT API<br />**Attack method** : Any attack method on TDs in-transfer with the purpose of obtaining unauthorized access to non-public parts of TDs |
+| WoT Protocol - Solution User Data Integrity | Network attacker, Malware developer 1, Malicious users, Malicious solution provider | Solution user data integrity in-transfer | **Pre-conditions:** General preconditions for network attacker with access to the WoT API<br />**Attack method** : Any attack method on solution user data in-transfer with the purpose of its modification, including sequence of received data and its freshness.|
+| WoT Protocol - Solution User Data Confidentiality| Network attacker, Malware developer 1, Malicious users, Malicious solution provider | Solution user data confidentiality in-transfer | **Pre-conditions:** General preconditions for network attacker with access to the WoT API<br />**Attack method** : Any attack method on solution user data in-transfer with the purpose of obtaining unauthorized access to the solution user data |
+| WoT API - Side Channels | Network attacker, Malicious users, Malicious solution provider | WoT indirectly transmitted behaviour information | **Pre-conditions:** General preconditions for network attacker with access to the WoT client API<br />**Attack method** : Passive observation of WoT network and messages with the intention to learn some behavioural and operational patterns |
+| ***Todo: add all the treats respective to the credentials/policy management if any*** |   |   |   |
+
+If in the future the WoT model is extended to allow dynamic installation of scripts inside WoT runtime, the following threats are added:
+
+| **Name** | **Adversary** | **Asset** | **Attack method and pre-conditions** |
+| --- | --- | --- | --- |
+| WoT Script Mgm API - 1 | Network attacker, Malware developer, Malicious user | Execution inside WoT Runtime(stepping stone to other further local attacks) and all assets within WoT Runtime | **Attack method**: Attacker installs its own script into WoT runtime using WoT Script Management API |
+| WoT Script Mgm API - 2 | Network attacker, Malware developer | Things resources, Infrastructure operability | **Attack method**: Attacker misuses WoT Script Management API to cause DoS on things or infrastructure, including deleting, corrupting WoT scripts |
+
+If in the future the WoT model is extended to allow co-existence of different independent solution providers on a single physical device, it would imply that we might have different WoT scripts from different solution providers running in the same WoT. This brings the following new threats in addition to the above ones (they come as a result of a need to separate execution environments between different providers):
+
+| **Name** | **Adversary** | **Asset** | **Attack method and pre-conditions** |
+| --- | --- | --- | --- |
+| WoT Script - Confidentiality | Malicious solution provider, Malware developer 2 and 3, Malicious user | Solution provider scripts and configuration confidentiality | **Pre-conditions:** An attacker has a full control over the script running inside WoT runtime either legitimately (solution provider script) or by compromising a solution provider script or by installing its own script by other means.<br />**Attack method**: Any local attack method on another script running in the same WoT runtime that results in attacker in obtaining knowledge about script or its configuration |
+| WoT Script - Integrity| Malicious solution provider, Malware developer 2 and 3, Malicious user (if users have an ability to install new scripts) | Solution provider scripts and configuration integrity | **Pre-conditions:** An attacker has a full control over the script running inside WoT runtime either legitimately (solution provider script) or by compromising a solution provider script or by installing its own script by other means.<br />**Attack method** : Any local attack method on another script running in the same WoT runtime that results in attacker in modifying script or its configuration, including rolling back to an older version of a script |
+| WoT Local - TD Integrity | Malicious solution provider, Malware developer 2 and 3, Malicious user (if users have an ability to install new scripts) | TDs integrity as stored on a thing | **Pre-conditions:** An attacker has a full control over the script running inside WoT runtime either legitimately (solution provider script) or by compromising a solution provider script or by installing its own script by other means.<br />**Attack method**: Any local attack method on another script running in the same WoT runtime that results in attacker unauthorized modification of TDs, including rolling back to an older script version |
+| WoT Local - TD Confidentiality | Malicious solution provider, Malware developer 2 and 3, Malicious user (if users have an ability to install new scripts) | TDs integrity as stored on a thing | **Pre-conditions:** An attacker has a full control over the script running inside WoT runtime either legitimately (solution provider script) or by compromising a solution provider script or by installing its own script by other means.<br />**Attack method**: Any local attack method on another script running in the same WoT runtime that results in attacker unauthorized access to non-public parts of TDs. |
+| WoT Local - Solution User Data Integrity | Malicious solution provider, Malware developer 2 and 3, Malicious user (if users have an ability to install new scripts) | Solution user data integrity as stored/processed on a thing | **Pre-conditions:** An attacker has a full control over the script running inside WoT runtime either legitimately (solution provider script) or by compromising a solution provider script or by installing its own script by other means.<br />**Attack method**: Any local attack method on another script running in the same WoT runtime that results in attacker in being able to modify solution user data |
+| WoT Local - Solution User Data Confidentiality | Malicious solution provider, Malware developer 2 and 3, Malicious user (if users have an ability to install new scripts) | Solution user data confidentiality as stored/processed on a thing | **Pre-conditions:** An attacker has a full control over the script running inside WoT runtime either legitimately (solution provider script) or by compromising a solution provider script or by installing its own script by other means.<br />**Attack method** : Any local attack method on another script running in the same WoT runtime that results in attacker getting unauthorized access to the solution user data |
+| WoT Local - DoS | Malicious solution provider, Malware developer 2 and 3, Malicious user (if users have an ability to install new scripts) | Thing resources, Infrastructure operability of other solution providers | **Pre-conditions:** An attacker has a full control over the script running inside WoT runtime either legitimately (solution provider script) or by compromising a solution provider script or by installing its own script by other means.<br />**Attack method** : Any local attack method with the goal of consuming things or infrastructure resources that disturb legitimate operation of co-existing providers.
+
+
+**Security objectives**
+
+This section lists all the WoT threats that are considered in-scope with a respective suggested countermeasure.
+
+| **Threat name** | **Mitigation** |
+| --- | --- |
+| WoT API | TBD  |
+| WoT Protocol - TD Integrity | TBD |
+| WoT Protocol - TD Confidentiality | TBD  |
+| WoT Protocol - Solution User Data Integrity  | TBD  |
+| WoT Protocol - Solution User Data Confidentiality  | TBD  |
+
+**Security non-objectives**
+
+This section lists all the WoT threats that are considered out-of-scope with the reasoning for such decision.
+
+| **Threat name** | **Reasoning &amp; recommendation** |
+| --- | --- |
+| Non-WoT End Point - 1 | **Reasoning** : The security of non-WoT end points and their external interfaces is out of the WoT scope. **Recommendations** : Solution providers and OEMs are recommended to use industry best security practices when designing their non-WoT End points, protocols and interfaces. |
+| WoT Thing | **Reasoning** : Security of the levels below WoT Runtime is out of WoT scope. **Recommendations** : OEMs and solution providers are recommended to use industry best security practices when designing all levels below WoT Runtime. |
+| WoT DoS | TBD  |
+| WoT Side Channels |  TBD |
+|   |   |
+|   |   |
