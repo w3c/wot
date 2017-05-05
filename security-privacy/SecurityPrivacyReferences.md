@@ -28,6 +28,10 @@
 
 [Iic15] Industrial Internet Consortium: [http://www.iiconsortium.org/IIRA.htm Industrial Internet Reference Architecture] (registration required), June 2015
 
+[IicRA17] Industrial Internet Consortium Reference Architecture: [http://www.iiconsortium.org/IIRA.htm The Industrial Internet of Things Volume G1: Reference Architecture IIC:PUB:G1:V1.80:20170131] (registration required), Jan 2017
+
+[IicSF16] Industrial Internet Consortium Security Framework: [http://www.iiconsortium.org/IISF.htm The Industrial Internet of Things Volume G4: Security Framework IIC:PUB:G4:V1.0:PB:20160926] (registration required), Sept 2016
+
 [Jon14] Jones, M.: [http://www.niso.org/apps/group_public/download.php/14003/SP_Jones_JSON_isqv26no3.pdf A JSON-Based Identity Protocol Suite]. Information Standards Quarterly, vol. 26, no. 3, 2014, pp. 19–22 
 
 [Ken03] Kent, S.; Millet, L. (eds): [http://www.nap.edu/openbook.php?isbn=0309088968 Who Goes There? Authentication Through the Lens of Privacy]. The National Academies Press, Washington D.C., 2003
