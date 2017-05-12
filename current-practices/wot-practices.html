@@ -2292,7 +2292,7 @@ to CoAP requests to RS. </li>
 				<h2>Participation Howto</h2>
 
 				<p class="note" title="Status">
-					The current status of the howto is <a href="#plugfest-beijing">Beijing (2016-07)</a>
+					The current status of the howto is <a href="#plugfest-osaka-2017">Osaka (2017-05)</a>
 				</p>
 
 				<p>
@@ -2500,6 +2500,230 @@ to CoAP requests to RS. </li>
 				<ul>
 					<li>TBD</li>
 				</ul>
+			</section>
+			
+			<section id="plugfest-osaka-2017">
+				<h2>Osaka (2017-05)</h2>
+
+				<p>Find PlugFest organization and contributor details on
+				the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting,_May_2017,_Osaka,_Japan#PlugFest">WoT Osaka PlugFest wiki page</a>.</p>
+				
+				<p>The WoT TestThing Thing Description (TD) for the PlugFest is shown below.
+				Please note that the Link URIs are only valid for a locally running TestThing. Your TestThing implementation should provide the correct, globally reachable Links.
+				</p>
+				
+				<pre class="example">
+{
+	"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+	"@type": "Thing",
+	"name": "TestThing",
+	"interactions": [{
+		"@type": ["Property"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/bool",
+			"mediaType": "application/json"
+		}],
+		"name": "bool",
+		"outputData": {
+			"valueType": {
+				"type": "boolean"
+			}
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/int",
+			"mediaType": "application/json"
+		}],
+		"name": "int",
+		"outputData": {
+			"valueType": {
+				"type": "integer"
+			}
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/num",
+			"mediaType": "application/json"
+		}],
+		"name": "num",
+		"outputData": {
+			"valueType": {
+				"type": "number"
+			}
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/string",
+			"mediaType": "application/json"
+		}],
+		"name": "string",
+		"outputData": {
+			"valueType": {
+				"type": "string"
+			}
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/array",
+			"mediaType": "application/json"
+		}],
+		"name": "array",
+		"outputData": {
+			"valueType": {
+				"type": "array"
+			}
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/object",
+			"mediaType": "application/json"
+		}],
+		"name": "object",
+		"outputData": {
+			"valueType": {
+				"type": "object",
+				"properties": {
+					"prop1": {
+						"type": "integer"
+					},
+					"prop2": {
+						"type": "string"
+					}
+				},
+				"required": {
+					"0": "prop1",
+					"1": "prop2"
+				}
+			}
+		},
+		"writable": true
+	}, {
+		"@type": ["Action"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/void-void",
+			"mediaType": "application/json"
+		}],
+		"name": "void-void"
+	}, {
+		"@type": ["Action"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/void-int",
+			"mediaType": "application/json"
+		}],
+		"name": "void-int",
+		"outputData": {
+			"valueType": {
+				"type": "integer"
+			}
+		}
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+			"valueType": {
+				"type": "integer"
+			}
+		},
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/int-void",
+			"mediaType": "application/json"
+		}],
+		"name": "int-void"
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+			"valueType": {
+				"type": "integer"
+			}
+		},
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/int-int",
+			"mediaType": "application/json"
+		}],
+		"name": "int-int",
+		"outputData": {
+			"valueType": {
+				"type": "integer"
+			}
+		}
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+			"valueType": {
+				"type": "string"
+			}
+		},
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/int-string",
+			"mediaType": "application/json"
+		}],
+		"name": "int-string"
+	}, {
+		"@type": ["Action"],
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/void-complex",
+			"mediaType": "application/json"
+		}],
+		"name": "void-complex",
+		"outputData": {
+			"valueType": {
+				"type": "object",
+				"properties": {
+					"prop1": {
+						"type": "integer"
+					},
+					"prop2": {
+						"type": "string"
+					}
+				},
+				"required": {
+					"0": "prop1",
+					"1": "prop2"
+				}
+			}
+		}
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+			"valueType": {
+				"type": "object",
+				"properties": {
+					"prop1": {
+						"type": "integer"
+					},
+					"prop2": {
+						"type": "string"
+					}
+				},
+				"required": {
+					"0": "prop1",
+					"1": "prop2"
+				}
+			}
+		},
+		"links": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/complex-void",
+			"mediaType": "application/json"
+		}],
+		"name": "complex-void"
+	}]
+}
+				</pre>
+				
+				<h3>Outcome &amp; Findings</h3>
+				<ul>
+					<li>TBD</li>
+				</ul>
+				
 			</section>
 		</section>
 
