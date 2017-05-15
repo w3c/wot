@@ -1207,43 +1207,53 @@ to CoAP requests to RS. </li>
 
 					<section>
 						<h4>Simple Data</h4>
-						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
+						<p>
+							With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
+							JSON Schema allows the following definitions in the <code>type</code> field:
+							<ul>
+								<li>boolean</li>
+								<li>integer</li>
+								<li>number</li>
+								<li>string</li>
+								<li>array</li>
+								<li>object</li>
+							</ul>
 						</p>
 	
-						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code> within the value range of [ 0 ... 255 ].
+						<p>Consider the following <code>valueType</code> definition which defines the value to be an <code>integer</code> within the value range of [ 0 ... 255 ].
 						</p>
 	
 						<pre class="example">
 							"valueType": { 
-								"type": "number",
+								"type": "integer",
 								"minimum": 0,
 								"maximum": 255,
 							}
 						</pre>
 	
-						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
+						<p>When the <code>integer</code> being exchanged is 123, data serialization in JSON format will look like the following:
 						</p>
 	
 						<pre class="example">
-							{ "value": 123 }
+							123
 						</pre>
 	
 						<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
 						</p>
 	
 						<pre class="example">
-								&lt;number>123&lt;/number>
+								&lt;integer>123&lt;/integer>
 						</pre>
 	
 						<p class="note" title="Wrapping single values in a JSON object">
-							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
+							W3C WoT now follows <a href="https://tools.ietf.org/html/rfc7159">RFC 7159</a>, which allows sending simple types in the root of the document. There is no wrapping of values into an object.
 						</p>
 					</section>
 	
 					<section>
 						<h4>Structured Data</h4>
 	
-						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>.
+						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>integer</code>.
 						</p>
 	
 						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
@@ -1279,10 +1289,8 @@ to CoAP requests to RS. </li>
 		
 							<pre class="example">
 								{
-									"value": {
-										"id": 12345,
-										"name": "Web of Things"
-									}
+									"id": 12345,
+									"name": "Web of Things"
 								}
 							</pre>
 		
@@ -1292,7 +1300,7 @@ to CoAP requests to RS. </li>
 							<pre class="example">
 									&lt;object>
 										&lt;id>
-											&lt;number>12345&lt;/number>
+											&lt;integer>12345&lt;/integer>
 										&lt;/id>
 										&lt;name>
 											&lt;string>Web of Things&lt;/string>
@@ -1339,24 +1347,22 @@ to CoAP requests to RS. </li>
 							</p>
 		
 							<pre class="example">
-								{
-									"value": [
-										208,
-										32,
-										144
-									]
-								}
+								[
+									208,
+									32,
+									144
+								]
 							</pre>
 		
 							<p>The above data will look the following when the data is exchanged in XML.
 							</p>
 		
 							<pre class="example">
-									&lt;array>
-										&lt;number>208&lt;/number>
-										&lt;number>32&lt;/number>
-										&lt;number>144&lt;/number>
-									&lt;/array>
+								&lt;array>
+									&lt;number>208&lt;/number>
+									&lt;number>32&lt;/number>
+									&lt;number>144&lt;/number>
+								&lt;/array>
 							</pre>
 		
 		
