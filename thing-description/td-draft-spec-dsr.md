@@ -189,7 +189,7 @@ When td:import is used at the level of a thing the properties, actions and event
 
 # A Mapping from JSON to Linked Data
 
-Interaction models can be declared in JSON as an alternative to other serialisations of Linked Data. This makes the models easier to understand than compared to using [JSON-LD](https://www.w3.org/TR/json-ld/). Here is an example of an interaction model expressed first as Turtle and then as JSON
+Interaction models can be declared in JSON as an alternative to other serialisations of Linked Data. This makes the models easier to understand than compared to using [JSON-LD](https://www.w3.org/TR/json-ld/), particularly so for more complex models. Here is an example of an interaction model expressed first as Turtle and then as JSON
 
 ```Turtle
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
