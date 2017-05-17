@@ -44,14 +44,14 @@ Interaction models may define additional named data types in terms of the above 
 The Boolean data type is declared using the predicate _td:type_ with the the RDF node  _td:boolean_ as its object.
 
 ### Numbers
-These are declared using the predicate _td:type_ whose object is either the RDF node _td:number_ .
+These are declared using the predicate _td:type_ whose object is the RDF node _td:number_ .
 
 Lower and upper limits for numeric values can be declared using the predicates _td:min_ and _td:max_, whose object must be a numeric literal. The limits are inclusive, e.g. setting a min of 0 declares that the value must be zero or above, whilst setting a max of 9 declares that the value must be 9 or less.
 
 The precision of numbers is platform dependent.
 
 ### Integers
-These are declared using the predicate _td:type_ whose object is either the RDF node _td:integer_ .
+These are declared using the predicate _td:type_ whose object is the RDF node _td:integer_ .
 
 Lower and upper limits for numeric values can be declared using the predicates _td:min_ and _td:max_, whose object must be a integer literal. The limits are inclusive, e.g. setting a min of 0 declares that the value must be zero or above, whilst setting a max of 9 declares that the value must be 9 or less.
 
