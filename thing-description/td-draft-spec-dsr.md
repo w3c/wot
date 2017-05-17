@@ -1,6 +1,6 @@
 # Draft Specification for Thing Descriptions
 
-_This is an initial draft specification for the core interaction model, and has been produced to see if I can better understand what people is looking for — Dave Raggett_
+_This is an initial draft specification for the core interaction model, and has been produced to see if I can better understand what people are looking for — Dave Raggett_
 
 ## Introduction
 
