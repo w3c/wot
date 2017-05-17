@@ -322,7 +322,7 @@ If the value of a JSON object property acting as a name is a string, this is int
 ```
 {
 	"properties" : {
-    	"switch" : "boolean"
+    		"switch" : "boolean"
 	}
 }
 ```
