@@ -38,7 +38,7 @@ The interaction model for things is based upon a core set of data types. In summ
 * Unions of data types
 * Things as first class types using the URI for their interaction models
 
-Interaction models may define additional named data types in terms of the above data types. For example, a Point could be defined as a Vector of Numbers for the x, y and z axes. A Polygon could then be defined as an ordered collection of Points.
+Interaction models may define additional named data types in terms of the above data types. For example, a Point could be defined as a Vector of Numbers for the x, y and z axes. A Polygon could then be defined as an ordered collection of Points. Named types may include arbitrary metadata, e.g. min/max constraints, units of measure, sampling rate, accuracy, as well as contextual information, e.g. where a sensor is located and what it is measuring, when it was last calibrated and so forth.
 
 ### Booleans
 The Boolean data type is declared using the predicate _td:type_ with the the RDF node  _td:boolean_ as its object.
@@ -181,6 +181,31 @@ Events are defined in the same way as properties, but using _td:event_ in place 
 ### Metadata
 
 The RDF nodes for thing descriptions, properties, actions, events and arguments may be the subject for triples that define metadata.
+
+### Application defined types
+
+The _td:typedef_ predicate can be used to reference application defined types along with associated metadata. The object for the td:typedef predicate must be the subject for the _td:name_ predicate whose object is an RDF string literal for the name of the type.  Here is an example that defines a temperature type and uses it for different rooms in a home:
+
+```
+@prefix haim: <http://example.org/haim#> .
+@prefix units: <http://example.org/units#> .
+@prefix td: <http://www.w3.org/ns/td#> .
+
+<http://example.com/home> a td:thing ;
+	td:typedef _:1 ;
+	td:property _:2 .
+_:1 td:name "temperatureSensor" ;
+	a units:temperature ;
+	td:type td:number ;
+	td:min -10 ;
+	td:max 100 ;
+	td:units units:celcius .
+_:2 td:name "temperature" ;
+	td:type _:1 ;
+	haim:location haim:room ;
+	td:collection td:unordered .
+```
+This defines a thing that exposes a collection of temperature readings from different rooms in a home. It makes use of the ontology for describing different rooms as an enumeration (something that has been done by ECHOnet). 
 
 ### Syntactic modularity
 IoT standards suites such as OCF and oneM2M, etc. commonly define interfaces and compose them into the definitions for classes of devices. This can be modelled in RDF using the predicate _td:import_ whose object is the URI for a thing. This allows the interaction model for a thing to be defined as a composition of the interaction models for other things.
