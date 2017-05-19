@@ -207,7 +207,7 @@ _:2 td:name "temperature" ;
 	haim:location haim:room ;
 	td:collection td:unordered .
 ```
-This defines a thing that exposes a collection of temperature readings from different rooms in a home. It makes use of the ontology for describing different rooms as an enumeration (something that has been done by ECHOnet). 
+This defines a thing that exposes a collection of temperature readings from different rooms in a home. It makes use of an ontology for describing different rooms as an enumeration (something that has been done by ECHOnet). 
 
 ### Syntactic modularity
 IoT standards suites such as OCF and oneM2M, etc. commonly define interfaces and compose them into the definitions for classes of devices. This can be modelled in RDF using the predicate _td:import_ whose object is the URI for a thing. This allows the interaction model for a thing to be defined as a composition of the interaction models for other things.
