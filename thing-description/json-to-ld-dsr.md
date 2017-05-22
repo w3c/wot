@@ -56,7 +56,7 @@ The JSON object property names "@context",  "@prefix" and "@base" are reserved. 
 
 Nested JSON objects are interpreted as either defining predicates, or defining names, alternating between them at each successive level of nesting. In the following example properties, type, units and writeable are interpreted as predicates, whilst acceleration is interpreted as a name.
 
-````JSON
+```JSON
 {
     "@context": "context.json",
     "properties": {
@@ -99,7 +99,7 @@ In addition, the URI for the interaction model is used to declare that the given
 
 Applying this algorithm to the previous example, we get:
 
-```
+```Turtle
 @prefix td: <http://www.w3.org/ns/td#> .
 
 <http://example/accelerometer> a td:thing ;
@@ -126,7 +126,7 @@ If the value of a JSON object property acting as name is a JSON array, the array
 
 which translates to:
 
-```
+```Turtle
 @prefix td: <http://www.w3.org/ns/td#> .
 
 <http://example.com/color> a td:thing ;
@@ -148,7 +148,7 @@ If the value of a JSON object property acting as a name is a string, this is int
 
 is translated to:
 
-```
+```Turtle
 @prefix td: <http://www.w3.org/ns/td#> .
 
 <http://example.com/switch> a td:thing ;
@@ -185,7 +185,7 @@ Here is an example that defines a type named acceleration and use it for each ax
 
 which translates to:
 
-```
+```Turtle
 @prefix td: <http://www.w3.org/ns/td#> .
 
 <http://example.com/acceleration> a td:thing ;
@@ -231,7 +231,7 @@ Note that this example could be rewritten using a Vector, e.g.
 
 which translates to:
 
-```
+```Turtle
 @prefix td: <http://www.w3.org/ns/td#> .
 
 <http://example.com/acceleration> a td:thing ;
