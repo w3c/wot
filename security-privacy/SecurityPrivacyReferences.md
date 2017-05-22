@@ -10,6 +10,8 @@
 
 [Bru14] Brubaker, C. et al.: [https://www.cs.utexas.edu/~shmat/shmat_oak14.pdf Using Frankencerts for Automated Adversarial Testing of Certificate Validation in SSL/TLS Implementations]. IEEE Security Privacy, 2014, pp. 114-129
 
+[Coo13] Cooper, A. et al: [https://tools.ietf.org/html/rfc6973 Privacy Considerations for Internet Protocols]. IETF RFC 6973 (IAB Guideline), July 2013.
+
 [Dur13] Durumeric, Z. et al.: [http://conferences.sigcomm.org/imc/2013/papers/imc257-durumericAemb.pdf Analysis of the HTTPS Certificate Ecosystem]. Proc. of the 2013 conference on Internet measurement conference. October 2013
 
 [Ell00] Ellison, C.; Schneier, B.: [https://www.schneier.com/paper-pki.pdf Ten Risks of PKI: What You’re not Being Told about Public Key Infrastructure]. Computer Security Journal, v 16, n 1, 2000, pp. 1-7
@@ -26,11 +28,15 @@
 
 [Hea13] Hearn, M.: [http://googleblog.blogspot.de/2013/02/an-update-on-our-war-against-account.html An update on our war against account hijackers]. Blog Feb 2013
 
+[IETFACE] IETF Authentication and Authorization for Constrained Environments (ACE) WG: [https://tools.ietf.org/wg/ace/].
+
 [Iic15] Industrial Internet Consortium: [http://www.iiconsortium.org/IIRA.htm Industrial Internet Reference Architecture] (registration required), June 2015
 
-[IicRA17] Industrial Internet Consortium Reference Architecture: [http://www.iiconsortium.org/IIRA.htm The Industrial Internet of Things Volume G1: Reference Architecture IIC:PUB:G1:V1.80:20170131] (registration required), Jan 2017
+[IicRA17] Industrial Internet Consortium: [http://www.iiconsortium.org/IIRA.htm The Industrial Internet of Things Volume G1: Reference Architecture IIC:PUB:G1:V1.80:20170131] (registration required), Jan 2017
 
-[IicSF16] Industrial Internet Consortium Security Framework: [http://www.iiconsortium.org/IISF.htm The Industrial Internet of Things Volume G4: Security Framework IIC:PUB:G4:V1.0:PB:20160926] (registration required), Sept 2016
+[IicSF16] Industrial Internet Consortium: [http://www.iiconsortium.org/IISF.htm The Industrial Internet of Things Volume G4: Security Framework IIC:PUB:G4:V1.0:PB:20160926] (registration required), Sept 2016
+
+[ISF17] IoT Security Foundation: [https://iotsecurityfoundation.org/best-practice-guidelines/ IoT Security Foundation Best Practice Guidelines].  Web page May 17.
 
 [Jon14] Jones, M.: [http://www.niso.org/apps/group_public/download.php/14003/SP_Jones_JSON_isqv26no3.pdf A JSON-Based Identity Protocol Suite]. Information Standards Quarterly, vol. 26, no. 3, 2014, pp. 19–22 
 
@@ -42,15 +48,23 @@
 
 [Mel15] Melzer, D.: [http://c.ymcdn.com/sites/www.issa.org/resource/resmgr/journalpdfs/feature0615.pdf Securing the Industrial Internet of Things]. June 2015
 
+[Mic17] Microsoft: [https://docs.microsoft.com/en-us/azure/iot-suite/iot-security-architecture Internet of Things security architecture].  STRIDE threat model for IoT.  Web page Jan 2017.
+
 [Moo02] Moors, T.: [http://www.csd.uoc.gr/~hy435/material/moors.pdf A critical review of “End-to-end arguments in system design”]. Proc. of the IEEE International Conference on Communications, 2002 
 
 [Nis15] NIST: Guide to Industrial Control Systems (ICS) Security. NIST Special Publication 800-82
 
 [Oos10] Oosdijk, M. et al.: [https://tnc2011.terena.org/getfile/696 Provisioning scenarios in identity federations]. Surfnet Research Paper, 2010
 
+[Owa17] OWASP: [https://www.owasp.org/index.php/Threat_Risk_Modeling Threat Risk Modeling].  Web page Jan 2017.
+
+[Res03] E. Rescorla, E. et al.: [https://tools.ietf.org/html/rfc3552 Guidelines for Writing RFC Text on Security Considerations]. IETF RFC 3552 (IAB Guideline), 2003.
+
 [Sch14] Schneier, B.: [http://www.wired.com/2014/01/theres-no-good-way-to-patch-the-internet-of-things-and-thats-a-huge-problem/ The Internet of Things Is Wildly Insecure — And Often Unpatchable]. Wired Jan. 2014
 
 [Sch99] Scheier, B.; Shostack, A.: [https://www.schneier.com/paper-smart-card-threats.pdf Breaking Up Is Hard To Do: Modeling Security Threats for Smart Cards]. USENIX Workshop on Smart Card Technology, USENIX Press, 1999, pp. 175-185
+
+[She14] Shelby Z. et al.: [https://tools.ietf.org/rfc/rfc7252.txt The Constrained Application Protocol (CoAP)]. IETF RFC 7252, June 2014
 
 [Vol00] Vollbrecht, J. et al.: [https://tools.ietf.org/rfc/rfc2904.txt AAA Authorization Framework]. IETF RFC 2904, Aug. 2000
 
