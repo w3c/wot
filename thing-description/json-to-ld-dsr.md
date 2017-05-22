@@ -56,9 +56,9 @@ The JSON object property names "@context",  "@prefix" and "@base" are reserved. 
 
 Nested JSON objects are interpreted as either defining predicates, or defining names, alternating between them at each successive level of nesting. In the following example properties, type, units and writeable are interpreted as predicates, whilst acceleration is interpreted as a name.
 
-```Son
+````JSON
 {
-	"@context": "context.json",
+    "@context": "context.json",
     "properties": {
         "acceleration": {
             "type": "number",
@@ -112,7 +112,7 @@ _:1 td:name "acceleration" ;
 
 If the value of a JSON object property acting as name is a JSON array, the array items are interpreted as defining an enumeration. For example:
 
-```
+```JSON
 {
     "properties": {
         "color": [
@@ -138,7 +138,7 @@ _:1 td:name "color" ;
 
 If the value of a JSON object property acting as a name is a string, this is interpreted as a type, and mapped to a predicate using the context. For example:
 
-```
+```JSON
 {
     "properties" : {
         "switch" : "boolean"
@@ -163,7 +163,7 @@ If the name of a JSON object property acting as a predicate is "types", then its
 
 Here is an example that defines a type named acceleration and use it for each axis of an accelerometer:
 
-```
+```JSON
 {
     "types": {
         "acceleration": {
@@ -208,7 +208,7 @@ _:5 td:name "z" ;
 
 Note that this example could be rewritten using a Vector, e.g.
 
-```
+```JSON
 {
     "types": {
         "acceleration": {
