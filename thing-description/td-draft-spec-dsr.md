@@ -4,7 +4,7 @@ _This is an initial draft specification for the core interaction model, and has 
 
 ## Introduction
 
-The Internet of Things suffers from fragmentation with many platforms and barriers to integration. The Web of Things provides an interoperability framework that aims to reduce the effort and risk for providing  services and enable open markets of services across a broad range of IoT platforms.
+The Internet of Things suffers from fragmentation with many platforms and barriers to integration. The Web of Things seeks to stimulate growth in the size and sophistication of markets of services for the IoT. This is based upon defining open standards for an interoperability framework that aims to reduce the effort and risk for providing  services, and enable open markets of services across a broad range of IoT platforms.
 
 The Web of Things deals with local or remote, physical or abstract, things that applications can either provide or consume as software objects. Applications are decoupled from the underlying protocols, data formats, as well as their encodings, and communication patterns. This makes it easy to provide and consume services across a wide range of platforms and standards.
 
