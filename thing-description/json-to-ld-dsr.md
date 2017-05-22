@@ -80,12 +80,12 @@ The default context could thus take the form:
 
 ```JSON
 {
-	"@prefix" : {
-		"td" : "<http://www.w3.org/ns/td#>",
-	},
-	"properties" : "td:property",
-	"actions" : "td:action",
-	"events" : "td:event"
+    "@prefix" : {
+        "td" : "<http://www.w3.org/ns/td#>",
+    },
+    "properties" : "td:property",
+    "actions" : "td:action",
+    "events" : "td:event"
 }
 ```
 
@@ -116,7 +116,7 @@ If the value of a JSON object property acting as name is a JSON array, the array
 {
     "properties": {
         "color": [
-        	"red",
+            "red",
             "green",
             "blue"
         ]
@@ -140,9 +140,9 @@ If the value of a JSON object property acting as a name is a string, this is int
 
 ```
 {
-	"properties" : {
-    	"switch" : "boolean"
-	}
+    "properties" : {
+        "switch" : "boolean"
+    }
 }
 ```
 
@@ -220,9 +220,10 @@ Note that this example could be rewritten using a Vector, e.g.
     },
     "properties": {
         "value": {
-            "type": "vector" [
+            "vector": [
             	"x", "y", "z"
-            ]
+            ],
+	    "type": "acceleration"
         }
     }
 }
