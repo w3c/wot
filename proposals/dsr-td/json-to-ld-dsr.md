@@ -259,9 +259,71 @@ _:5 td:order 2 ;
 
 Note that in JSON "vector" declares the set of coordinate names, whilst "type" declares the type used for each of the coordinates.
 
-When a JSON object property acts as a name, and the propertyu value is a JKSON object, then that object must declare "type" as a JSON object property except for "unions".
+When a JSON object property acts as a name, and the propertyu value is a JSON object, then that object must declare "type" as a JSON object property except for union. Here is an example:
 
-This approach has been applied to a wide range of examples, see:
+```JSON
+{
+    "types": {
+        "product": {
+            "union": [
+                "meat",
+                "fruit",
+                "vegetables"
+            ]
+        },
+        "meat": {
+            "enum": [
+                "chicken",
+                "beef",
+                "pork"
+            ]
+        },
+        "fruit": {
+            "enum": [
+                "apples",
+                "oranges",
+                "grapes"
+            ]
+        },
+        "vegetables": {
+            "enum": [
+                "potatoes",
+                "carrots",
+                "peas"
+            ]
+        }
+    },
+    "properties": {
+        "basket": {
+            "type": "product",
+            "quantity": "number",
+            "collection": "ordered"
+        }
+    }
+}
+```
+The union is expressed as a JSON Array where each item is either the name of a core type or application defined type, or it is a JSON object that defines the type in situe, e.g.
+
+```JSON
+{
+    "properties": {
+        "power": {
+            "union": [
+	        {
+		    "type": "boolean"
+		},
+		{
+		    "type": "number"
+		}
+	    ]
+	}
+    }
+}
+```
+
+## Examples for a variety of use cases
+
+The approach described in this specification has been applied to a wide range of examples, see:
 
 * https://www.w3.org/WoT/demos/td2ttl/
 * https://www.w3.org/WoT/demos/td2ttl/oic.html
