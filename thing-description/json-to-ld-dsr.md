@@ -51,8 +51,11 @@ and
     }
 }
 ```
+## @context
 
-The JSON object property names "@context",  "@prefix" and "@base" are reserved.  The value of "@context" is a URI that links to a file consisting of a single JSON object that maps names to RDF node URIs. "@context" is likewise reserved for links to further contexts. "@context" is used to translate JSON object property names representing RDF predicates to URIs. Context files may use "@prefix" to bind namespace prefixes to a string, that is then used to expand prefixed names to URIs using the same algorithm as [Turtle](https://www.w3.org/TR/turtle/). The value for "@prefix" must be a JSON object whose property names are interpreted as prefix declarations, and the values as the URI for the namespace. "@base" may be used to define a base URI for expanding relative URIs.
+The JSON object property names "@context",  "@prefix" and "@base" are reserved.  The value of "@context" is a URI that links to a file consisting of a single JSON object that maps names to RDF node URIs. "@context" may be used within the context file as a JSON object property whose value is either a URI linking to a further context, or the value is an array of such URIs. "@context" is used to translate JSON object property names representing RDF predicates to URIs. Context files may use "@prefix" as a JSON object property as a means to bind namespace prefixes to a string. This string is then used to expand prefixed names to URIs using the same algorithm as [Turtle](https://www.w3.org/TR/turtle/). The value for "@prefix" must be a JSON object whose property names are interpreted as prefix declarations, and the values as the URI for the namespace. "@base" may be used to define a base URI for expanding relative URIs.
+
+## JSON object properties defining predicates or names
 
 Nested JSON objects are interpreted as either defining predicates, or defining names, alternating between them at each successive level of nesting. In the following example properties, type, units and writeable are interpreted as predicates, whilst acceleration is interpreted as a name.
 
@@ -248,11 +251,15 @@ _:2 td:name "value" ;
     td:itemType _:1 .
 _:3 td:order 0 ;
 	td:name "x" .
-_:4 td:order 2 ;
+_:4 td:order 1 ;
 	td:name "y" .
-_:5 ud:order 3 ;
+_:5 td:order 2 ;
 	td:name "z" . 
 ```
+
+Note that in JSON "vector" declares the set of coordinate names, whilst "type" declares the type used for each of the coordinates.
+
+When a JSON object property acts as a name, and the propertyu value is a JKSON object, then that object must declare "type" as a JSON object property except for "unions".
 
 This approach has been applied to a wide range of examples, see:
 
