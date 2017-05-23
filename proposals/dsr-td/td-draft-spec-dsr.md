@@ -124,6 +124,14 @@ Things can be identified via the URI for their interaction model. This allows th
 
 ## Interaction Model
 
+Interaction models are programming language and serialisation independent models of how applications can interact with local or remote, physical or abstract things. An interaction model could be one of the following:
+
+1. A complete interaction model for a specific instance of a device
+2. A complete interaction model for a class of devices, e.g. a particular model of air conditioner
+3. A partial interaction model for use in compositions, e.g. a model for a binary on/off switch
+
+Partial interaction models are useful for describing devices in terms of sets of resources. This reflects common practice for IoT standards suites, see the later section on syntactic modularity. The distinction between a model of a specific instance of a device compared to a model of a class of devices, is that it also involves metadata specific to that instance.
+
 The interaction model for a thing consists of:
 
 * Zero or more _properties_
