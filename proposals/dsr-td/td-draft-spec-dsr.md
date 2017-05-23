@@ -67,7 +67,7 @@ Valid strings may be constrained to match a given regular expression (as defined
 **Question**: are there any further constraints on valid strings, e.g. on permitted characters?
 
 ### Objects
-Objects consist of a set of name/value pairs. For each such name there must be a triple with the predicate _td:property_. The object for this triple must be the subject of a triple with the predicate _td:name_ whose object is an RDF string literal for the given name. Objects can be nested arbitrarily, but only as trees and not as general graphs. An object must not be defined as a descendent of itself. The data types for named values can be declared using any of the core types or application defined types.
+Objects consist of a set of name/value pairs. For each such name there must be a triple with the predicate _td:property_. The object for this triple must be the subject of a triple with the predicate _td:name_ whose object is an RDF string literal for the given name. Objects may be nested arbitrarily with the restriction that no object is a descendant of itself. The data types for named values can be declared using any of the core types or application defined types.
 
 **Question**: should we use rdfs:label rather than td:name?
 
@@ -96,7 +96,7 @@ _:1 td:name "rank" ;
 ```
 
 ### Unions
-Unions are used when the value can belong to one of several data types. These are declared using the predicate _td:type_ whose object is  the RDF node _td:union_. The set of permitted named data types are declared using the predicate _td:item_ whose object must be the subject of a td:type that identifies a core type or an application defined type, together with any associated metadata. Unions may be nested with the restriction that a union must not appear as a descendent of itself.
+Unions are used when the value can belong to one of several data types. These are declared using the predicate _td:type_ whose object is  the RDF node _td:union_. The set of permitted named data types are declared using the predicate _td:item_ whose object must be the subject of a td:type that identifies a core type or an application defined type, together with any associated metadata. Unions may be nested arbitrarily with the restriction that no union is a descendant of itself.
 
 Here is a an example where a property value is a union of a string and a number:
 
