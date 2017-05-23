@@ -194,7 +194,7 @@ The RDF nodes for thing descriptions, properties, actions, events and arguments 
 
 ### Application defined types
 
-The _td:typedef_ predicate can be used to reference application defined types along with associated metadata. The object for the td:typedef predicate must be the subject for the _td:name_ predicate whose object is an RDF string literal for the name of the type.  Here is an example that defines a temperature type and uses it for different rooms in a home:
+The _td:typedef_ predicate can be used to reference application defined types along with associated metadata. The object for the td:typedef predicate must be the subject for the _td:name_ predicate whose object is an RDF string literal for the name of the type. The name should uniquely identify the type within the context of a given interaction model. Here is an example that defines a temperature type and uses it for different rooms in a home:
 
 ```
 @prefix haim: <http://example.org/haim#> .
