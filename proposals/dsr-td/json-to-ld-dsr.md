@@ -8,7 +8,7 @@ The Web of Things deals with local or remote, physical or abstract, things that 
 
 Each thing in the Web of Things requires a description of its interaction model. This must be accessible via a Uniform Resource Identifier (URI), see [RFC3986](https://www.ietf.org/rfc/rfc3986.txt). The interaction model provides a [programming language independent abstract description](td-draft-spec-dsr.md) of how applications can interact with things in terms of their properties, actions, events and metadata.
 
-Interaction models can be declared in JSON as an alternative to other serialisations of Linked Data. This makes the models easier to understand than other serializations, including [JSON-LD](https://www.w3.org/TR/json-ld/), particularly so for more complex models. Here is an example of an interaction model expressed first as Turtle and then as JSON:
+Interaction models can be declared using the JavaScript Object Notation (as described in [RFC7493](https://tools.ietf.org/html/rfc7493)) as an alternative to other serialisations of Linked Data. This makes the models easier to understand than other serializations, including [JSON-LD](https://www.w3.org/TR/json-ld/), particularly so for more complex models. Here is an example of an interaction model expressed first as Turtle and then as JSON:
 
 ```Turtle
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
