@@ -88,7 +88,8 @@ The default context could thus take the form:
     },
     "properties" : "td:property",
     "actions" : "td:action",
-    "events" : "td:event"
+    "events" : "td:event",
+    "types" : "td:typdef"
 }
 ```
 
@@ -162,7 +163,7 @@ _:1 td:name "switch" ;
 
 If the string cannot be mapped to an RDF node, this constitutes an error. It is also an error if the value of a JSON object property acting as name is neither a string nor an object.
 
-If the name of a JSON object property acting as a predicate is "types", then its value must be a JSON object whose property names are interpreted as the names of application defined  types. The property value is interpreted in the regular way. The type name can then be used in the same way as the names for core types.
+If the name of a JSON object property acting as a predicate is "types", then its value must be a JSON object whose property names are interpreted as the names of application defined  types. The property value is interpreted in the regular way. The type name can then be used in the same way as the names for core types. The "types" object must not be used to redefine an existing type.
 
 Here is an example that defines a type named acceleration and use it for each axis of an accelerometer:
 
