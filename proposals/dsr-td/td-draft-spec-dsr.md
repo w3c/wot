@@ -67,7 +67,7 @@ Valid strings may be constrained to match a given regular expression (as defined
 **Question**: are there any further constraints on valid strings, e.g. on permitted characters?
 
 ### Objects
-Objects consist of a set of name/value pairs. For each such name there must be a triple with the predicate _td:property_. The object for this triple must be the subject of a triple with the predicate _td:name_ whose object is an RDF string literal for the given name. Objects can be nested arbitrarily, but only as trees and not as general graphs. The data types for named values can be declared using any of the core types or application defined types.
+Objects consist of a set of name/value pairs. For each such name there must be a triple with the predicate _td:property_. The object for this triple must be the subject of a triple with the predicate _td:name_ whose object is an RDF string literal for the given name. Objects can be nested arbitrarily, but only as trees and not as general graphs. An object must not be defined as a descendent of itself. The data types for named values can be declared using any of the core types or application defined types.
 
 **Question**: should we use rdfs:label rather than td:name?
 
