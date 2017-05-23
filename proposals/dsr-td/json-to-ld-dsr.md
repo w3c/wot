@@ -95,9 +95,9 @@ The default context could thus take the form:
 
 "@context" may be used in the interaction model at any level where the JSON object properties will be interpreted as predicates.
 
-For each JSON object property that is interpreted as a name, an RDF node is constructed, e.g. as a new blank node. The name is then declared as an RDF string literal for a triple with the predicate _td:name_. The node then becomes the subject for all predicates defined by a JSON object that is the value of the name.
+For each JSON object property that is interpreted as a name, an RDF node is constructed, e.g. as a new blank node. This node then becomes the subject for all predicates defined by the JSON object that is the value of the named JSON object property. The name is declared as an RDF string literal for the object of a triple, whose predicate is _td:name_, and whose subject is the aforementioned node.
 
-When JSON object properties are interpreted as predicates, and their values are string literals, these values are mapped to URIs via the context. You can disable this mapping by declaring the string as null in an inner context. In general, contexts are searched for mappings starting with the current JSON object and ascending the hierarchy of nested JSON objects until the default context has been searched. If no mapping is found, the string value is translated as is. If a mapping cannot be found for a predicate, this constitutes an error. 
+When JSON object properties are interpreted as predicates, and their values are string literals, these values are mapped to URIs via the context. You can disable this mapping by declaring the string as null in an inner context. In general, contexts are searched for mappings starting with the current JSON object and ascending the hierarchy of nested JSON objects until the default context has been searched. If no mapping is found, or it is null, the string value is translated as is. If a mapping cannot be found for a predicate, this constitutes an error. 
 
 In addition, the URI for the interaction model is used to declare that the given thing is an instance of the class _td:thing_. The prefix declarations in the context are used to generate the corresponding declarations when transforming to Turtle.
 
