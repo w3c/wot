@@ -96,7 +96,7 @@ _:1 td:name "rank" ;
 ```
 
 ### Unions
-Unions are used when the value can belong to one of several data types. These are declared using the predicate _td:type_ whose object is  the RDF node _td:union_. The set of permitted named data types are declared using the predicate _td:item_ whose object must be an RDF string literal for a named value.
+Unions are used when the value can belong to one of several data types. These are declared using the predicate _td:type_ whose object is  the RDF node _td:union_. The set of permitted named data types are declared using the predicate _td:item_ whose object must be the subject of a td:type that identifies a core type or an application defined type, together with any associated metadata. Unions may be nested with the restriction that a union must not appear as a descendent of itself.
 
 Here is a an example where a property value is a union of a string and a number:
 
