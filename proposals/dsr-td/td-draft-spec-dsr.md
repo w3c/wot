@@ -42,10 +42,6 @@ The interaction model for things is based upon a core set of data types. In summ
 
 Interaction models may define additional named data types in terms of the above data types. For example, a Point could be defined as a Vector of Numbers for the x, y and z axes. A Polygon could then be defined as an ordered collection of Points. Named types may include arbitrary metadata, e.g. min/max constraints, units of measure, sampling rate, accuracy, as well as contextual information, e.g. where a sensor is located and what it is measuring, when it was last calibrated and so forth.
 
-The names for data types must uniquely identify the data type within a given interaction model. This implies that the names for application types cannot be the same as the names for core types. Moreover, each application type must have a distinct name.
-
-**Question**: do we relax this constraint to enable localisation of names for different human languages, exploiting RDF's language tag for string literals?
-
 ### Booleans
 The Boolean data type is declared using the predicate _td:type_ with the the RDF node  _td:boolean_ as its object.
 
