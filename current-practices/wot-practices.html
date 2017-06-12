@@ -671,13 +671,13 @@ to CoAP requests to RS. </li>
                           "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
                           "@type": "Thing",
                           "name": "MyTemperatureThing",
-                          "interactions": [
+                          "interaction": [
                             {
                               "@type": ["Property"],
                               "name": "temperature",
-                              "outputData": {"valueType": { "type": "number" }},
+                              "outputData": { "type": "number" },
                               "writable": false,
-                              "links": [{
+                              "link": [{
                                 "href" : "coap://mytemp.example.com:5683/temp",
                                 "mediaType": "application/json"
                                 }]
@@ -709,14 +709,14 @@ to CoAP requests to RS. </li>
 									],
 						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
-						  "interactions": [
+						  "interaction": [
 						    {
 						      "@type": ["Property",<div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:Temperature"</div>],
 						      "name": "temperature",
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
-						      "outputData": {"valueType": { "type": "number" }},
+						      "outputData":  { "type": "number" },
 						      "writable": false,
-						      "links": [{
+						      "link": [{
 						        "href" : "coap://mytemp.example.com:5683/",
 						        "mediaType": "application/json"
 						        }]
@@ -746,13 +746,13 @@ to CoAP requests to RS. </li>
 									"alg": "HS256",
 									"as": "https://authority-issuing.example.org"
 								},
-							"interactions": [
+							"interaction": [
 								{
 									"@type": ["Property","actuator:onOffStatus"],
 									"name": "status",
-									"outputData": {"valueType": { "type": "boolean" }},
+									"outputData": { "type": "boolean" },
 									"writable": true,
-									"links": [{
+									"link": [{
 										"href" : "pwr", 
 										"mediaType": "application/exi" 
 									},
@@ -768,7 +768,7 @@ to CoAP requests to RS. </li>
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"links": [{
+									"link": [{
 										"href" : "in", 
 										"mediaType": "application/exi" 
 									},
@@ -784,7 +784,7 @@ to CoAP requests to RS. </li>
 										"valueType": { "type": "integer" },
 										"actuator:unit": "actuator:ms"
 									},
-									"links": [{
+									"link": [{
 										"href" : "out", 
 										"mediaType": "application/exi" 
 									},
@@ -796,8 +796,8 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Event","actuator:alert"],
 									"name": "criticalCondition",
-									"outputData": {"valueType": { "type": "string" }},
-									"links": [{
+									"outputData": { "type": "string" },
+									"link": [{
 						              "href" : "ev",
 						              "mediaType": "application/exi"
 						            }]	
@@ -976,13 +976,13 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							 "interactions": [
+							 "interaction": [
 							    {
 							      "@type": ["Property"],
 							      "name": "temperature",
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData":{ "type": "number" },
 							      "writable": false,
-							      "links": [{
+							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/temp",
 							      	"mediaType": "application/json"
 							      }],
@@ -1001,7 +1001,7 @@ to CoAP requests to RS. </li>
 							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
 							<li><b>outputData:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
 							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
-							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>	
+							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>	
 							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
 							<li><b>security: [optional]</b>
 								Access metadata (self-contained) for protecting this Property and securely transmitting information.
@@ -1038,7 +1038,7 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@type": ["Action", "actuator:fadeIn"],
 							      "name": "fadeIn",
@@ -1046,7 +1046,7 @@ to CoAP requests to RS. </li>
 							        "valueType": { "type": "integer" },
 							        "actuator:unit": "actuator:ms"
 							      },
-							      "links": [{
+							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/in",
 							      	"mediaType": "application/json"
 							      }]
@@ -1065,7 +1065,7 @@ to CoAP requests to RS. </li>
 								Additional characteristics can be given through terms defined in the context metadata (e.g., unit ms from an actuator vocabulary) similar to <a href="#property">Properties</a>).
 							</li>
 							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above)</li>
-							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
+							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Action and securely transmitting information.</li>
 						</ul>
 
@@ -1095,12 +1095,12 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@type": ["Event", "actuator:alert"],
 							      "name": "criticalCondition",
-							      "outputData": {"valueType": { "type": "string" }},
-							      "links": [{
+							      "outputData":  { "type": "string" },
+							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/ev",
 							      	"mediaType": "application/json"
 							      }]
@@ -1113,7 +1113,7 @@ to CoAP requests to RS. </li>
 						<ul>
 							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
 							<li><b>name:</b> Name of the Event, which can also be used for simple semantic disambiguation</li>
-							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
+							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>
 							<li><b>outputData: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Event and securely transmitting information.</li>
 						</ul>
@@ -1195,9 +1195,8 @@ to CoAP requests to RS. </li>
 						        "valueType": { "type": "number" },
 						        "actuator:unit": "actuator:ms"
 						      },
-						      "outputData": {
-						        "valueType": { "type": "boolean" },
-						      },
+						      "outputData":{ "type": "boolean" },
+						      
 									...
 						    }
 						  ]
@@ -1575,16 +1574,16 @@ to CoAP requests to RS. </li>
 							  "@type": "Sensor",
 							  "name": "myTempSensor",
 							 "base" : "coap:///www.example.com:5683/temp/",
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@id": "val",
 							      "@type": ["Property","Temperature"],
 							      "unit": "celsius",
 							      "reference": "threshold",
 							      "name": "myTemp",
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData": { "type": "number" },
 							      "writable": false,
-							      "links": [{
+							      "link": [{
 							      	"href" : "val",
 							      	"mediaType": "application/json"
 							      }]
@@ -1593,9 +1592,9 @@ to CoAP requests to RS. </li>
 							      "@type": ["Property","Temperature"],
 							      "unit": "celsius",
 							      "name": "myThreshold",
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData": { "type": "number" },
 							      "writable": true,
-							     	"links": [{
+							     	"link": [{
 							      	"href" : "thr",
 							      	"mediaType": "application/json"
 							      }]
@@ -1605,15 +1604,15 @@ to CoAP requests to RS. </li>
 							      "outputData": {"valueType": { "type": "number" }},
 							      "name": "myChange",
 							      "property": "temp",
-							      "links": [{
+							      "link": [{
 							      	"href" : "val/changed",
 							      	"mediaType": "application/json"
 							      }]
 							    }, {
 							      "@type": ["Event"],
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData":  { "type": "number" },
 							      "name": "myWarning",
-							      "links": [{
+							      "link": [{
 							      	"href" : "val/high",
 							      	"mediaType": "application/json"
 							      }]
@@ -1734,7 +1733,7 @@ to CoAP requests to RS. </li>
 							               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
 							  "@type": "Lamp",
 							  "name": "myMasterLED",
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@type": ["Actions", "Toggle"],
 							      "name": "myMasterOnOff",
@@ -1742,7 +1741,7 @@ to CoAP requests to RS. </li>
 							        "@type": "OnOff",
 							        "valueType": { "type": "boolean" }
 							      },
-							      "links": [
+							      "link": [
 							      {
 							        "href" : "coap://www.example.com:5683/master",
 							        "mediaType": "application/json"
@@ -2523,80 +2522,80 @@ to CoAP requests to RS. </li>
 	"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
 	"@type": "Thing",
 	"name": "TestThing",
-	"interactions": [{
+	"interaction": [{
 		"@type": ["Property"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/properties/bool",
 			"mediaType": "application/json"
 		}],
 		"name": "bool",
 		"outputData": {
-			"valueType": {
+			 {
 				"type": "boolean"
 			}
-		},
+		,
 		"writable": true
 	}, {
 		"@type": ["Property"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/properties/int",
 			"mediaType": "application/json"
 		}],
 		"name": "int",
 		"outputData": {
-			"valueType": {
+			
 				"type": "integer"
-			}
+			
 		},
 		"writable": true
 	}, {
 		"@type": ["Property"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/properties/num",
 			"mediaType": "application/json"
 		}],
 		"name": "num",
 		"outputData": {
-			"valueType": {
+			
 				"type": "number"
-			}
+		
 		},
 		"writable": true
 	}, {
 		"@type": ["Property"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/properties/string",
 			"mediaType": "application/json"
 		}],
 		"name": "string",
 		"outputData": {
-			"valueType": {
+		
 				"type": "string"
-			}
+		
 		},
 		"writable": true
 	}, {
 		"@type": ["Property"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/properties/array",
 			"mediaType": "application/json"
 		}],
 		"name": "array",
 		"outputData": {
-			"valueType": {
+			
 				"type": "array"
-			}
+			
 		},
 		"writable": true
 	}, {
 		"@type": ["Property"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/properties/object",
 			"mediaType": "application/json"
 		}],
 		"name": "object",
 		"outputData": {
-			"valueType": {
+			
 				"type": "object",
 				"properties": {
 					"prop1": {
@@ -2610,36 +2609,36 @@ to CoAP requests to RS. </li>
 					"0": "prop1",
 					"1": "prop2"
 				}
-			}
+			
 		},
 		"writable": true
 	}, {
 		"@type": ["Action"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/actions/void-void",
 			"mediaType": "application/json"
 		}],
 		"name": "void-void"
 	}, {
 		"@type": ["Action"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/actions/void-int",
 			"mediaType": "application/json"
 		}],
 		"name": "void-int",
 		"outputData": {
-			"valueType": {
+			
 				"type": "integer"
-			}
+			
 		}
 	}, {
 		"@type": ["Action"],
 		"inputData": {
-			"valueType": {
+			
 				"type": "integer"
-			}
+			
 		},
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/actions/int-void",
 			"mediaType": "application/json"
 		}],
@@ -2647,41 +2646,41 @@ to CoAP requests to RS. </li>
 	}, {
 		"@type": ["Action"],
 		"inputData": {
-			"valueType": {
+			
 				"type": "integer"
-			}
+			
 		},
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/actions/int-int",
 			"mediaType": "application/json"
 		}],
 		"name": "int-int",
 		"outputData": {
-			"valueType": {
+			
 				"type": "integer"
-			}
+			
 		}
 	}, {
 		"@type": ["Action"],
 		"inputData": {
-			"valueType": {
+			
 				"type": "string"
-			}
+			
 		},
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/actions/int-string",
 			"mediaType": "application/json"
 		}],
 		"name": "int-string"
 	}, {
 		"@type": ["Action"],
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/actions/void-complex",
 			"mediaType": "application/json"
 		}],
 		"name": "void-complex",
 		"outputData": {
-			"valueType": {
+			
 				"type": "object",
 				"properties": {
 					"prop1": {
@@ -2696,11 +2695,11 @@ to CoAP requests to RS. </li>
 					"1": "prop2"
 				}
 			}
-		}
+		
 	}, {
 		"@type": ["Action"],
 		"inputData": {
-			"valueType": {
+		
 				"type": "object",
 				"properties": {
 					"prop1": {
@@ -2714,9 +2713,9 @@ to CoAP requests to RS. </li>
 					"0": "prop1",
 					"1": "prop2"
 				}
-			}
+			
 		},
-		"links": [{
+		"link": [{
 			"href": "http://127.0.0.1:8080/TestThing/actions/complex-void",
 			"mediaType": "application/json"
 		}],
