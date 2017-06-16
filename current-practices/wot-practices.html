@@ -1160,22 +1160,22 @@ to CoAP requests to RS. </li>
 					<pre class="example">
 						{
 							...
-						  "properties": [
+						  "interaction": [
+							...
 						    {
-									...
+						      "@type": ["Property"],
 						      "name": "temperature",
 						      "valueType": { "type": "number" },
 									...
-						    }
-						  ]
+						    },
 							...
-						  "events": [
 						    {
-									...
+						      "@type": ["Event"],
 						      "name": "criticalCondition",
 						      "valueType": { "type": "string" },
 									...
 						    }
+							...
 						  ]
 							...
 						}
@@ -1187,18 +1187,19 @@ to CoAP requests to RS. </li>
 					<pre class="example">
 						{
 							...
-						  "actions": [
+						  "interaction": [
+							...
 						    {
-									...
+						      "@type": ["Action"],
 						      "name": "fadeIn",
 						      "inputData": {
 						        "valueType": { "type": "number" },
 						        "actuator:unit": "actuator:ms"
 						      },
 						      "outputData":{ "type": "boolean" },
-						      
 									...
 						    }
+							...
 						  ]
 							...
 						}
@@ -1573,7 +1574,7 @@ to CoAP requests to RS. </li>
 							               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
 							  "@type": "Sensor",
 							  "name": "myTempSensor",
-							 "base" : "coap:///www.example.com:5683/temp/",
+							  "base" : "coap:///www.example.com:5683/temp/",
 							  "interaction": [
 							    {
 							      "@id": "val",
