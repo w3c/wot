@@ -669,7 +669,7 @@ to CoAP requests to RS. </li>
 					<pre class="example" title="Data Only">
                         {
                           "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
-                          "@type": "Thing",
+                          "@type": [ "Thing" ],
                           "name": "MyTemperatureThing",
                           "interaction": [
                             {
@@ -707,7 +707,7 @@ to CoAP requests to RS. </li>
 						"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 									 <span style="font-weight: bold; background-color: lightgrey;">{ "sensor": "http://example.org/sensors#" }</span>
 									],
-						  "@type": "Thing",
+						  "@type": [ "Thing" ],
 						  "name": "MyTemperatureThing",
 						  "interaction": [
 						    {
@@ -738,7 +738,7 @@ to CoAP requests to RS. </li>
 								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 								{ "actuator": "http://example.org/actuator#" }
 							],
-							"@type": "Thing",
+							"@type": [ "Thing" ],
 							"name": "MyLEDThing",
 							"base": "coap://myled.example.com:5683/",
 							"security": {
@@ -2521,7 +2521,7 @@ to CoAP requests to RS. </li>
 				<pre class="example">
 {
 	"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
-	"@type": "Thing",
+	"@type": [ "Thing" ],
 	"name": "TestThing",
 	"interaction": [{
 		"@type": ["Property"],
