@@ -764,10 +764,7 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Action","actuator:fadeIn"],
 									"name": "fadeIn",
-									"inputData": {
-										"valueType": { "type": "integer" },
-										"actuator:unit": "actuator:ms"
-									},
+									"inputData": { "type": "integer" },
 									"link": [{
 										"href" : "in", 
 										"mediaType": "application/exi" 
@@ -780,10 +777,7 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Action","actuator:fadeOut"],
 									"name": "fadeOut",
-									"inputData": {
-										"valueType": { "type": "integer" },
-										"actuator:unit": "actuator:ms"
-									},
+									"inputData": { "type": "integer" },
 									"link": [{
 										"href" : "out", 
 										"mediaType": "application/exi" 
@@ -1042,10 +1036,7 @@ to CoAP requests to RS. </li>
 							    {
 							      "@type": ["Action", "actuator:fadeIn"],
 							      "name": "fadeIn",
-							      <i>"inputData":</i> {
-							        "valueType": { "type": "integer" },
-							        "actuator:unit": "actuator:ms"
-							      },
+							      <i>"inputData":</i> { "type": "integer" },
 							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/in",
 							      	"mediaType": "application/json"
@@ -1057,15 +1048,11 @@ to CoAP requests to RS. </li>
 						</pre>
 						<p>There are one mandatory and four optional terms defined within the <code>Action</code> type:</p>
 						<ul>
-							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Action is the default entry)</li>
-							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation</li>
-							<li><b>inputData: [optional]</b>
-								The call parameters associated with this Action.
-								A <code>valueType</code> field defines the concrete type (see <a href="#type-system"></a> for details).
-								Additional characteristics can be given through terms defined in the context metadata (e.g., unit ms from an actuator vocabulary) similar to <a href="#property">Properties</a>).
-							</li>
-							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above)</li>
-							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>
+							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Action is the default entry).</li>
+							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation.</li>
+							<li><b>inputData: [optional]</b> The call parameters associated with this Action.</li>
+							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above).</li>
+							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition.</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Action and securely transmitting information.</li>
 						</ul>
 
@@ -1154,7 +1141,7 @@ to CoAP requests to RS. </li>
 						was put forward to the IG for consideration.
 					</p>
 
-					<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
+					<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>outputData</code> with JSON schema definition as its content. In the following example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
 					</p>
 
 					<pre class="example">
@@ -1165,14 +1152,14 @@ to CoAP requests to RS. </li>
 						    {
 						      "@type": ["Property"],
 						      "name": "temperature",
-						      "valueType": { "type": "number" },
+						      "outputData": { "type": "number" },
 									...
 						    },
 							...
 						    {
 						      "@type": ["Event"],
 						      "name": "criticalCondition",
-						      "valueType": { "type": "string" },
+						      "outputData": { "type": "string" },
 									...
 						    }
 							...
@@ -1181,7 +1168,7 @@ to CoAP requests to RS. </li>
 						}
 					</pre>
 
-					<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
+					<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
 					</p>
 
 					<pre class="example">
@@ -1192,10 +1179,7 @@ to CoAP requests to RS. </li>
 						    {
 						      "@type": ["Action"],
 						      "name": "fadeIn",
-						      "inputData": {
-						        "valueType": { "type": "number" },
-						        "actuator:unit": "actuator:ms"
-						      },
+						      "inputData": { "type": "number" },
 						      "outputData":{ "type": "boolean" },
 									...
 						    }
@@ -1220,11 +1204,11 @@ to CoAP requests to RS. </li>
 							</ul>
 						</p>
 	
-						<p>Consider the following <code>valueType</code> definition which defines the value to be an <code>integer</code> within the value range of [ 0 ... 255 ].
+						<p>Consider the following <code>inputData</code> definition which defines the value to be an <code>integer</code> within the value range of [ 0 ... 255 ].
 						</p>
 	
 						<pre class="example">
-							"valueType": { 
+							"inputData": { 
 								"type": "integer",
 								"minimum": 0,
 								"maximum": 255,
@@ -1253,10 +1237,10 @@ to CoAP requests to RS. </li>
 					<section>
 						<h4>Structured Data</h4>
 	
-						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>integer</code>.
+						<p>In the previous section, we used an example <code>inputData</code> definition consisting of a single <code>integer</code>.
 						</p>
 	
-						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
+						<p>Since we are using JSON schema to describe <code>inputData</code>, it is also possible to define value types that have more than one literal value.
 						JSON provides two distinct constructs to define a structure that can have multiple literal values. 
 						One is JSON object, and the other is JSON array.
 						</p>
@@ -1264,13 +1248,13 @@ to CoAP requests to RS. </li>
 						<section>
 							<h5 id="json-object">JSON Object</h5>
 		
-							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of
+							<p>The following is an example <code>inputData</code> definition that defines the value to be an <code>object</code> that consists of
 							two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>)
 							where <code>id</code> is required to be present.
 							</p>
 		
 							<pre class="example">
-								"valueType": {
+								"inputData": {
 								    "type": "object",
 								    "properties": {
 								        "id": {
@@ -1308,30 +1292,29 @@ to CoAP requests to RS. </li>
 									&lt;/object>
 							</pre>
 		
-							<div class="note" title="RDF serialization of value types">
+							<!-- <div class="note" title="RDF serialization of value types">
 								<p>
 									Using the TD model and JSON Schema in a single document may lead
 									to a name conflict:
 									<code>properties</code> is used both to declare Properties of the Thing and expected keys in a JSON object.
-							 		Depending on the use case, if a serialization of the Thing
-									Description in RDF is required, the <code>valueType</code>
-									definition should be processed with an additional JSON-LD
-									context that overrides the mapping for <code>properties</code>
-									(see [[!JSON-LD]], Advanced Context Usage).
+							 		Depending on the use case, if a serialization of the Thing Description in RDF is required, the value type
+                  definition for <code>inputData</code> and <code>outputData</code> should be processed with an additional
+                  JSON-LD context that overrides the mapping for <code>properties</code>
+                  (see [[!JSON-LD]], Advanced Context Usage).
 								</p>
-							</div>
+							</div> -->
 		
 						</section>
 	
 						<section>
 							<h5 id="json-array">JSON Array</h5>
 		
-							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
+							<p>The following is an example <code>inputData</code> definition that defines the value to be an <code>array</code> that consists of
 							exactly three number literals with each value within the range of [ 0 ... 255 ].
 							</p>
 		
 							<pre class="example">
-								"valueType": {
+								"inputData": {
 								    "type": "array",
 								    "items": {
 								        "type" : "number",
@@ -1373,7 +1356,7 @@ to CoAP requests to RS. </li>
 					<section>
 					<h4>Mapping to XML Schema</h4>
 
-					<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema
+					<p>In the previous section, examples showed what those data whose value type are described using JSON schema
 					look like when serialized to XML in parallel to corresponding JSON serializations.
 					</p>
 
@@ -1391,7 +1374,7 @@ to CoAP requests to RS. </li>
 					<section>
 						<h5>JSON Object Definition to XML Schema</h5>
 
-						<p>Shown below is the JSON schema <code>object</code> definition used as the <code>valueType</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
+						<p>Shown below is the JSON schema <code>object</code> definition used as the <code>inputData</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
 						</p>
 
 						<pre class="example">
@@ -1480,7 +1463,7 @@ to CoAP requests to RS. </li>
 						<section>
 							<h5>JSON Array Definition to XML Schema</h5>
 	
-							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
+							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>inputData</code> in Section <a href="#json-array">JSON Array</a>. 
 							The <code>array</code> consists of exactly three number literals with each value within the value range of [ 0 ... 255 ].</p>
 	
 							<pre class="example">
@@ -1602,7 +1585,7 @@ to CoAP requests to RS. </li>
 							    },
 							    {
 							      "@type": ["Event"],
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData": { "type": "number" },
 							      "name": "myChange",
 							      "property": "temp",
 							      "link": [{
@@ -1738,10 +1721,7 @@ to CoAP requests to RS. </li>
 							    {
 							      "@type": ["Actions", "Toggle"],
 							      "name": "myMasterOnOff",
-							      "inputData": {
-							        "@type": "OnOff",
-							        "valueType": { "type": "boolean" }
-							      },
+							      "inputData": { "type": "boolean" },
 							      "link": [
 							      {
 							        "href" : "coap://www.example.com:5683/master",
@@ -1753,14 +1733,14 @@ to CoAP requests to RS. </li>
 							    }
 							  ],
 							  "associations": [
-							    { "hrefs": ["coap://www.example.com:5683/0"] },
-							    { "hrefs": ["coap://www.example.com:5683/1"] },
-							    { "hrefs": ["coap://www.example.com:5683/2"] },
-							    { "hrefs": ["coap://www.example.com:5683/3"] },
-							    { "hrefs": ["coap://www.example.com:5683/4"] },
-							    { "hrefs": ["coap://www.example.com:5683/5"] },
-							    { "hrefs": ["coap://www.example.com:5683/6"] },
-							    { "hrefs": ["coap://www.example.com:5683/7"] }
+							    { "href": "coap://www.example.com:5683/0" },
+							    { "href": "coap://www.example.com:5683/1" },
+							    { "href": "coap://www.example.com:5683/2" },
+							    { "href": "coap://www.example.com:5683/3" },
+							    { "href": "coap://www.example.com:5683/4" },
+							    { "href": "coap://www.example.com:5683/5" },
+							    { "href": "coap://www.example.com:5683/6" },
+							    { "href": "coap://www.example.com:5683/7" }
 							  ]
 							}
 						</pre>
