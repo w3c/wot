@@ -1771,19 +1771,25 @@ to CoAP requests to RS. </li>
 						<p>
 							As the TD context we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by
 							reusing other vocabularies or ontologies and/or defining application-specific terms. In the following example, in addition
-							to our standard context, the context of the Thing declares a namespace pointing to a shared vocabulary for domotics called
-              <a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>:
+							to our standard context, the Thing Description declares a namespace for the 
+              <a href="http://uri.etsi.org/m2m/saref">Smart Appliance Reference Ontology (SAREF)</a>:
 
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-								               {"dogont": "http://elite.polito.it/ontologies/dogont.owl#"}],
-								  ...
+								               {"saref": "http://uri.etsi.org/m2m/saref#"}],
+								  "@type": [ "Thing", "saref:BuildingSpace" ],
+                  ...
 								}
 							</pre>
 
-							DogOnt defines hundreds of concepts ranging from HVAC to units of measurement.
-						</p>
+							This way, the TD can refer to the concept of building space, as defined by
+              SAREF, with the CURIE <code>saref:BuildingSpace</code>. Formally, a building
+              space is something that has geo-coordinates and that contains building objets
+              (like doors or windows) and devices (like sensors) [[!smartM2M]]. The TD states
+              that the Thing it models is also a building space. One can assume this thing
+              exposes properties such as room temperature, brightness, number of persons, ...
+            </p>
 
 						<p>
 							During early experimentations with TD files, a few concepts and terms
@@ -1791,25 +1797,87 @@ to CoAP requests to RS. </li>
 							or <code>unit</code>. To ease experimentation with the modeling
 							of Things, a context that gathers such common terms has been
 							defined at <code>http://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
-							Its content simply defines aliases for classes and properties of well-known
-							ontologies that are relevant for our activity:
-							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
-							<a href="http://purl.oclc.org/NET/ssnx/qu/qu">Quantity Kinds &amp; Units</a>,
-							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
-							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
-							updated and is not intended to become a reference. It should always be used
+							Its content simply defines aliases for some SAREF classes and properties.
+              This file is not intended to become a reference. It should always be used
 							along with the standard TD context, as follows:
 
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 								               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
-								  ...
+								  "@type": [ "Thing", "BuildingSpace" ],
+                  ...
 								}
 							</pre>
 						</p>
 
-						@TODO more details on contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
+						<p>
+              The table below shows SAREF concepts that can be used along with either
+              <code>Thing</code>, <code>Property</code> or <code>Action</code> as
+              <code>@type</code> annotations, like in the examples above. The common
+              context contains mapping for both terms with and without prefix, for the
+              convenience of the user. This means that e.g. <code>BuildingSpace</code> and
+              <code>saref:BuildingSpace</code> map to the same SAREF concept.
+            
+              <table>
+                <tr>
+                  <th style="text-align:center">Thing</th>
+                  <th style="text-align:center">Property</th>
+                  <th style="text-align:center">Action</th>
+                </tr>
+                <tr style="vertical-align:top">
+                  <td>
+                    <ul>
+                      <li><code>BuildingSpace</code></li>
+                      <li><code>Door</code></li>
+                      <li><code>Window</code></li>
+                      <li><code>Switch</code></li>
+                      <li><code>Sensor</code></li>
+                      <li><code>Meter</code></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><code>Temperature</code></li>
+                      <li><code>Humidity</code></li>
+                      <li><code>Energy</code></li>
+                      <li><code>Light</code></li>
+                      <li><code>Motion</code></li>
+                      <li><code>Occupancy</code></li>
+                      <li><code>Power</code></li>
+                      <li><code>Pressure</code></li>
+                      <li><code>MultiLevelState</code></li>
+                      <li><code>OnOffState</code></li>
+                      <li><code>OpenCloseState</code></li>
+                      <li><code>StartStopState</code></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><code>ToggleCommand</code></li>
+                      <li><code>StartCommand</code></li>
+                      <li><code>StopCommand</code></li>
+                      <li><code>StepUpCommand</code></li>
+                      <li><code>StepDownCommand</code></li>
+                      <li><code>SetLevelCommand</code></li>
+                      <li><code>OnCommand</code></li>
+                      <li><code>OffCommand</code></li>
+                      <li><code>OpenCommand</code></li>
+                      <li><code>CloseCommand</code></li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </p>
+            
+            <p>
+              Besides SAREF, many vocabularies are of interest for WoT, such as W3C
+              SSN [[vocab-ssn-20170504]], <a href="http://iot.webschemas.org/">iot.schema.org</a>
+              and vocabularies developed in the context of research projects such as the
+              <a href="http://iot.linkeddata.es/def/core/index-en.html">Vicinity core ontology</a>,
+              <a href="https://mobility.big-iot.org/">BIG IoT's domain models</a> or the
+              <a href="http://ci.emse.fr/seas/">SEAS ontology</a>.
+            </p>
 					</section>
 					
 					<section id="td-discovery">
