@@ -669,7 +669,7 @@ to CoAP requests to RS. </li>
 					<pre class="example" title="Data Only">
                         {
                           "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
-                          "@type": [ "Thing" ],
+                          "@type": "Thing",
                           "name": "MyTemperatureThing",
                           "interaction": [
                             {
@@ -707,7 +707,7 @@ to CoAP requests to RS. </li>
 						"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 									 <span style="font-weight: bold; background-color: lightgrey;">{ "sensor": "http://example.org/sensors#" }</span>
 									],
-						  "@type": [ "Thing" ],
+						  "@type": "Thing",
 						  "name": "MyTemperatureThing",
 						  "interaction": [
 						    {
@@ -738,7 +738,7 @@ to CoAP requests to RS. </li>
 								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 								{ "actuator": "http://example.org/actuator#" }
 							],
-							"@type": [ "Thing" ],
+							"@type": "Thing",
 							"name": "MyLEDThing",
 							"base": "coap://myled.example.com:5683/",
 							"security": {
@@ -997,7 +997,7 @@ to CoAP requests to RS. </li>
 						</p>
 
 						<ul>
-							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Property is the default value)</li>
+							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Property is the default value) within an array structure. Additional vocabulary can be added to the array structure to further enrich the Property with semantics.</li>
 							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
 							<li><b>outputData:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
 							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
@@ -1057,7 +1057,7 @@ to CoAP requests to RS. </li>
 						</pre>
 						<p>There are one mandatory and four optional terms defined within the <code>Action</code> type:</p>
 						<ul>
-							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Action is the default entry)</li>
+							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Action is the default entry) within an array structure. Additional vocabulary can be added to the array structure to further enrich the Array with semantics.</li>
 							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation</li>
 							<li><b>inputData: [optional]</b>
 								The call parameters associated with this Action.
@@ -1111,7 +1111,7 @@ to CoAP requests to RS. </li>
 						</pre>
 
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Event is the default entry) within an array structure. Additional vocabulary can be added to the array structure to further enrich the Event with semantics.</li>
 							<li><b>name:</b> Name of the Event, which can also be used for simple semantic disambiguation</li>
 							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>
 							<li><b>outputData: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
@@ -1160,22 +1160,22 @@ to CoAP requests to RS. </li>
 					<pre class="example">
 						{
 							...
-						  "interaction": [
-							...
+						  "properties": [
 						    {
-						      "@type": ["Property"],
+									...
 						      "name": "temperature",
 						      "valueType": { "type": "number" },
 									...
-						    },
+						    }
+						  ]
 							...
+						  "events": [
 						    {
-						      "@type": ["Event"],
+									...
 						      "name": "criticalCondition",
 						      "valueType": { "type": "string" },
 									...
 						    }
-							...
 						  ]
 							...
 						}
@@ -1187,19 +1187,18 @@ to CoAP requests to RS. </li>
 					<pre class="example">
 						{
 							...
-						  "interaction": [
-							...
+						  "actions": [
 						    {
-						      "@type": ["Action"],
+									...
 						      "name": "fadeIn",
 						      "inputData": {
 						        "valueType": { "type": "number" },
 						        "actuator:unit": "actuator:ms"
 						      },
 						      "outputData":{ "type": "boolean" },
+						      
 									...
 						    }
-							...
 						  ]
 							...
 						}
@@ -1574,7 +1573,7 @@ to CoAP requests to RS. </li>
 							               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
 							  "@type": "Sensor",
 							  "name": "myTempSensor",
-							  "base" : "coap:///www.example.com:5683/temp/",
+							 "base" : "coap:///www.example.com:5683/temp/",
 							  "interaction": [
 							    {
 							      "@id": "val",
@@ -2521,7 +2520,7 @@ to CoAP requests to RS. </li>
 				<pre class="example">
 {
 	"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
-	"@type": [ "Thing" ],
+	"@type": "Thing",
 	"name": "TestThing",
 	"interaction": [{
 		"@type": ["Property"],
