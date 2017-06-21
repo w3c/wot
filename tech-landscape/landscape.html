@@ -10,7 +10,7 @@
           ,   editors:      [{name:"Volunteers needed"}]
           ,   authors:      [{name:"Volunteers needed"},
                              <!-- authors for discovery part (order according to # of Wiki activities : -->
-                             {name:"Arne Bröring"},{name:"Soumya Kanti Datta"},{name:"Ari Keränen"}, {name:"Jaime Jiménez"}, {name:"Louay Bassbous"}, {name:"Francois Daoust"}, {name:"Dave Raggett"}, {name: "Tibor Z Pardi"}, {name: "Kazuyuki Ashimura"}] 
+                             {name:"Arne Bröring"},{name:"Soumya Kanti Datta"},{name:"Ari Keränen"}, {name:"Jaime Jiménez"}, {name:"Louay Bassbous"}, {name:"Francois Daoust"}, {name:"Dave Raggett"}, {name: "Tibor Z Pardi"}, {name: "Kazuyuki Ashimura"}, {name: "Michael McCool"}] 
           ,   processVersion: 2016
           ,   shortName:    "wot-tech"
           , wg:           "Interest Group on the Web of Things"
@@ -233,14 +233,14 @@
         <li><strong>Data Types:</strong> No explicit choice. SAREF is currently only an ontology to translate information from and between communication standards.</li>
         </ul>
         </li>
-        <li><p>oneM2M (Martin)</p>
+        <li><p>oneM2M (TODO)</p>
         <ul>
-        <li><strong>Background of the technology:</strong> The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.</li>
-        <li><strong>Consortium:</strong> SAREF consortium</li>
-        <li><strong>Tool/Development Support:</strong> ontology tools: SPARQL engine &amp; RDF Parser etc.</li>
-        <li><strong>Resource identification:</strong> URIs</li>
-        <li><strong>Query capabilities:</strong> SPARQL queries</li>
-        <li><strong>Data Types:</strong> XSD</li>
+        <li><strong>Background of the technology:</strong></li>
+        <li><strong>Consortium:</strong> <a href="http://www.onem2m.org/">oneM2M</a></li>
+        <li><strong>Tool/Development Support:</strong> </li>
+        <li><strong>Resource identification:</strong> </li>
+        <li><strong>Query capabilities:</strong> </li>
+        <li><strong>Data Types:</strong> </li>
         </ul>
         </li>
         </ul>
@@ -456,11 +456,11 @@
         resource, one can specify supported methods (GET, POST, etc), parameters if
         any and the structure of its content. It follows the principles of
         design first and model-driven engineering to allow for more automation in
-        the development of Web applications.</li>
-        <li><strong>Consortium:</strong> onw community, including Cisco, VMWare, Spotify.</li>
+        the development of Web applications. OIC and OCF use RAML for decribing their resources and interaction models, with the exception of observe/notify.</li>
+        <li><strong>Consortium:</strong> own community, including Cisco, VMWare, Spotify.</li>
         <li><strong>Tool Support:</strong> see <a href="http://raml.org/projects/projects">RAML projects</a>
         (50+ projects). Enables code generation (for both client and server sides),
-        API validation, automatic documentation and integrated development.  </li>
+        API validation, automatic documentation and integrated development. OCF supports <a href="https://openconnectivity.org/developer/oneiota-data-model-tool">oneIoTa</a>, a tool used to document, validate, and distribute data models for OCF. </li>
         <li><strong>Underlying Language/Model/Serialization Formats:</strong> YAML</li>
         </ul>
         </li>
@@ -468,7 +468,8 @@
         <ul>
         <li><strong>Background of the technology:</strong> RESTful API specification framework.
         Formerly known as <a href="http://swagger.io/">Swagger</a>. Its specification has almost
-        the same features as RAML, JSON-based.</li>
+        the same features as RAML, but is JSON-based. 
+        OCF 1.0 has specified use of OpenAPI v2 for introspection data.</li>
         <li><strong>Consortium:</strong> own community supported by the Linux Foundation. Members
         include Google, IBM, Microsoft, Paypal and others.</li>
         <li><strong>Tool Support:</strong> see <a href="http://swagger.io/tools/">Swagger tools</a>. Enables
