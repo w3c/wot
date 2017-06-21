@@ -1,74 +1,49 @@
 {
   "@context": {
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "td": "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
+    "td": "http://iot.linkeddata.es/def/wot#",
     "Thing": "td:Thing",
     "name": "td:name",
     "base": {
-      "@id": "td:hasThingDescription",
+      "@id": "td:baseURI",
       "@type": "@id"
     },
-    "hrefs": {
-      "@id": "td:hasInteraction",
-      "@type": "@id",
-      "@container": "@set"
-    },
+    "Link": "td:Link",
     "href": {
-      "@id": "td:hasInteraction",
+      "@id": "td:href",
       "@type": "@id"
+    },
+    "mediaType": {
+      "@id": "td:hasMediaType"
     },
     "Interaction": "td:Interaction",
-    "interactions": {
-      "@id": "td:isAssociatedTo",
+    "interaction": {
+      "@id": "td:providesInteractionPattern",
       "@type": "@id",
       "@container": "@set"
     },
-    "links": {
-      "@id": "td:hasInteraction",
-      "@type": "@id",
-      "@container": "@set"
+    "link": {
+      "@id": "td:isAccessibleThrough",
+      "@type": "@id"
     },
-    "priority": {
-      "@id": "td:hasPriority",
-      "@type": "xsd:integer"
-    },
-    "security": "td:supportsSecurity",
-    "properties": {
-      "@id": "td:hasProperty",
-      "@container": "@set"
-    },
+    "security": "td:implementsSecurity",
     "Property": "td:Property",
-    "valueType": "td:hasValueType",
-    "stability": {
-      "@id": "td:hasStability",
-      "@type": "xsd:integer"
+    "required": {
+      "@id": "td:isRequired",
+      "@type": "xsd:boolean"
     },
     "writable": {
       "@id": "td:isWritable",
       "@type": "xsd:boolean"
     },
-    "events": {
-      "@id": "td:hasEvent",
-      "@container": "@set"
-    },
     "Event": "td:Event",
-    "property": {
-      "@id": "td:forProperty",
-      "@type": "@id"
-    },
-    "inputData":  {
-      "@id": "td:hasInput"
+    "Action": "td:Action",
+    "inputData": {
+      "@id": "td:hasInputData"
     },
     "outputData": {
-      "@id": "td:hasOutput"
+      "@id": "td:hasOutputData"
     },
-    "actions": {
-      "@id": "td:hasAction",
-      "@container": "@set"
-    },
-    "Action": "td:Action",
-    "associations": "td:isAssociatedTo",
-    "child": "td:isChildOf",
-    "parent": "td:isParentOf"
+    "child": "td:isChildOf"
   }
 }
