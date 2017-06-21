@@ -1459,6 +1459,33 @@
           </ul>
         </section>
         <section>
+          <h2> Edge Computing</h2>
+          <p>Edge computing, also known as fog computing, applies cloud computing mechanisms to distributed computing, but 
+          extended to support computing devices "close" to the end user, such as in the networking infrastructure or on a local
+          compute-offload device.  Such edge computing devices can be used to provide various useful services for IoT (resource 
+          directories, bridging) or provide compute services for specific functions (for example, face recognition or speech
+          processing).
+          <ul>
+          <li><b>AWS Greengrass</b> (Michael McCool)
+            <ul>
+            <li>Made available by <a href="https://aws.amazon.com/greengrass"></a>Amazon Web Services</li>
+            <li>Supports a function-as-a-service model similar to that of AWS Lambda, but on customer-managed devices</li>
+            <li>Functions need to be stateless, but can manage state in remote services (eg databases)</li>
+            <li>Meant to execute only short transactions</li>
+            <li>Limited ability to support additional outgoing network connections</li>
+            <li>Multiple languages supported, as well as AWS APIs and security model</li>
+            </ul>
+          </li>
+          <li><b>OpenFog</b> (Michael McCool)
+            <ul>
+            <li>Consortium to promote and set standards for fog computing: <a href="https://www.openfogconsortium.org">OpenFog</a>
+            <li>Explicitly spans cloud to IoT, includes AI services</li>
+            <li>Working on standards for reference architectures and software stacks for OpenFog nodes</li>
+            </ul>
+          </li>
+          </ul>
+        </section>
+        <section>
           <h2> Scripting APIs to Physical Things</h2>
           <ul>
             <li> DAP Generic Sensor API <b>(Johannes to outreach to tobie langel for basic design principles)</b></li>
