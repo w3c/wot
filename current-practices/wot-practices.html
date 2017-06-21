@@ -2145,9 +2145,9 @@ to CoAP requests to RS. </li>
 							    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
 							    Promise&lt;any&gt; getProperty(DOMString propertyName);
 								Promise&lt;any&gt; emitEvent(DOMString eventName, any payload);
-								ExposedThing addEvent(DOMString eventName, object payloadType, optional SemanticType[] semanticType);
-								ExposedThing addAction(DOMString actionName, object inputType, object outputType, optional SemanticType[] semanticType);
-								ExposedThing addProperty(DOMString propertyName, object contentType, optional SemanticType[] semanticType);
+								ExposedThing addEvent(DOMString eventName, object payloadType, optional sequence&lt;SemanticType&gt; semanticTypes);
+								ExposedThing addAction(DOMString actionName, object inputType, object outputType, optional sequence&lt;SemanticType&gt; semanticTypes);
+								ExposedThing addProperty(DOMString propertyName, object contentType, optional sequence&lt;SemanticType&gt; semanticTypes);
 								ExposedThing onInvokeAction(DOMString actionName, ActionHandler callback);
 								ExposedThing onUpdateProperty(DOMString propertyName, PropertyChangeListener callback);
 								ExposedThing addListener(DOMString eventName, ThingEventListener listener);
