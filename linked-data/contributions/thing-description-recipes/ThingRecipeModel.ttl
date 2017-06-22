@@ -1,0 +1,140 @@
+# baseURI: http://example.org/thingRecipeModel
+# imports: http://www.w3c.org/wot/td
+# prefix: thingRecipe
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix td: <http://www.w3c.org/wot/td#> .
+@prefix thingRecipe: <http://example.org/thingRecipeModel#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/thingRecipeModel>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3c.org/wot/td> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+thingRecipe:Create
+  rdf:type thingRecipe:_Operation ;
+.
+thingRecipe:Delete
+  rdf:type thingRecipe:_Operation ;
+.
+thingRecipe:NFPs
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:Notify
+  rdf:type thingRecipe:_Operation ;
+.
+thingRecipe:Observe
+  rdf:type thingRecipe:_Operation ;
+.
+thingRecipe:Retrieve
+  rdf:type thingRecipe:_Operation ;
+.
+thingRecipe:ThingRecipe
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:Update
+  rdf:type thingRecipe:_Operation ;
+.
+thingRecipe:Variable
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:_ConfigAttributes
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:_Operation
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          thingRecipe:_Operation
+          [
+            rdf:type owl:Class ;
+            owl:oneOf (
+                thingRecipe:Create
+                thingRecipe:Delete
+                thingRecipe:Notify
+                thingRecipe:Observe
+                thingRecipe:Retrieve
+                thingRecipe:Update
+              ) ;
+          ]
+        ) ;
+    ] ;
+.
+thingRecipe:_T2TInteraction
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:_T2TInteractions
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:_ThingIngredients
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:configAttributes
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          td:Event
+          td:Action
+          td:Property
+        ) ;
+    ] ;
+  rdfs:range thingRecipe:_ConfigAttributes ;
+.
+thingRecipe:hasIngredients
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain thingRecipe:ThingRecipe ;
+  rdfs:range thingRecipe:_ThingIngredients ;
+.
+thingRecipe:hasNFPs
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain thingRecipe:ThingRecipe ;
+  rdfs:range thingRecipe:NFPs ;
+.
+thingRecipe:hasOperation
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain thingRecipe:_T2TInteractions ;
+  rdfs:range thingRecipe:_Operation ;
+.
+thingRecipe:t2tInteractions
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain thingRecipe:ThingRecipe ;
+  rdfs:range thingRecipe:_T2TInteractions ;
+.
+thingRecipe:t2tInteractsWith
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain thingRecipe:_T2TInteractions ;
+  rdfs:range thingRecipe:_ThingIngredients ;
+.
+thingRecipe:thingIngredients
+  rdf:type rdf:Property ;
+  rdfs:domain thingRecipe:_ThingIngredients ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          td:Action
+          td:Event
+          td:Property
+        ) ;
+    ] ;
+.
+thingRecipe:thingRecipeInstUri
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:anyURI ;
+.
+thingRecipe:thingRecipeUri
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:anyURI ;
+.
