@@ -1,60 +1,58 @@
 # baseURI: http://example.org/thingRecipeModel
-# imports: http://www.w3c.org/wot/td
+# imports: http://iot.linkeddata.es/def/wot#
 # prefix: thingRecipe
 
+@prefix common: <http://iot.schema.org/common#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix td: <http://www.w3c.org/wot/td#> .
+@prefix schema: <http://schema.org/> .
+@prefix td: <http://iot.linkeddata.es/def/wot#> .
 @prefix thingRecipe: <http://example.org/thingRecipeModel#> .
+@prefix wot: <http://iot.linkeddata.es/def/wot##> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/thingRecipeModel>
   rdf:type owl:Ontology ;
-  owl:imports <http://www.w3c.org/wot/td> ;
-  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  owl:imports td: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+thingRecipe:ConfigurationAttribute
+  rdf:type owl:Class ;
+  rdfs:comment "Configuration attribute of a Recipe instance. For example, intial state of an actuator." ;
+  rdfs:label "Configuration Attribute" ;
+  rdfs:subClassOf owl:Thing ;
 .
 thingRecipe:Create
-  rdf:type thingRecipe:_Operation ;
+  rdf:type thingRecipe:Operation ;
+  rdfs:comment "An operation that creates a resource." ;
+  rdfs:label "Create" ;
 .
 thingRecipe:Delete
-  rdf:type thingRecipe:_Operation ;
+  rdf:type thingRecipe:Operation ;
+  rdfs:comment "An operation that deletes a resource." ;
+  rdfs:label "Delete" ;
 .
-thingRecipe:NFPs
+thingRecipe:NonFunctionalProperty
   rdf:type owl:Class ;
+  rdfs:comment "A non functional property defines an overall property of a Thing as a whole or of a particular aspect and not a specific function of it, e.g., location, price, licence etc." ;
+  rdfs:label "Non Functional Property" ;
   rdfs:subClassOf owl:Thing ;
 .
 thingRecipe:Notify
-  rdf:type thingRecipe:_Operation ;
+  rdf:type thingRecipe:Operation ;
+  rdfs:comment "An operation that provides a notification about a resource." ;
+  rdfs:label "Notify" ;
 .
-thingRecipe:Observe
-  rdf:type thingRecipe:_Operation ;
-.
-thingRecipe:Retrieve
-  rdf:type thingRecipe:_Operation ;
-.
-thingRecipe:ThingRecipe
+thingRecipe:Operation
   rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-.
-thingRecipe:Update
-  rdf:type thingRecipe:_Operation ;
-.
-thingRecipe:Variable
-  rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-.
-thingRecipe:_ConfigAttributes
-  rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
-.
-thingRecipe:_Operation
-  rdf:type owl:Class ;
+  rdfs:comment "An operation from a set of abstract protocol operations." ;
+  rdfs:label "Operation" ;
   rdfs:subClassOf owl:Thing ;
   owl:equivalentClass [
       rdf:type owl:Class ;
       owl:intersectionOf (
-          thingRecipe:_Operation
+          thingRecipe:Operation
           [
             rdf:type owl:Class ;
             owl:oneOf (
@@ -69,19 +67,46 @@ thingRecipe:_Operation
         ) ;
     ] ;
 .
-thingRecipe:_T2TInteraction
+thingRecipe:RecipeInteraction
   rdf:type owl:Class ;
+  rdfs:comment "Interaction of a Recipe." ;
+  rdfs:label "Recipe Interaction" ;
   rdfs:subClassOf owl:Thing ;
 .
-thingRecipe:_T2TInteractions
+thingRecipe:Retrieve
+  rdf:type thingRecipe:Operation ;
+  rdfs:comment "An operation that retrieves the state of an Interaction Pattern." ;
+  rdfs:label "Retrieve" ;
+.
+thingRecipe:Subscribe
+  rdf:type thingRecipe:Operation ;
+  rdfs:comment "An operation that subscribes to an Interaction Pattern." ;
+  rdfs:label "Subscribe" ;
+.
+thingRecipe:T2TInteraction
   rdf:type owl:Class ;
+  rdfs:comment "An interaction between two ingredients of a Recipe." ;
+  rdfs:label "Thing to Thing Interaction" ;
   rdfs:subClassOf owl:Thing ;
 .
-thingRecipe:_ThingIngredients
+thingRecipe:ThingIngredient
   rdf:type owl:Class ;
+  rdfs:comment "An ingredient of a Recipe. An ingredient is an Interaction Pattern (e.g., Event, Property or Action). Ingredients of a Recipe can belong to different Things." ;
+  rdfs:label "Thing Ingredient" ;
   rdfs:subClassOf owl:Thing ;
 .
-thingRecipe:configAttributes
+thingRecipe:ThingRecipe
+  rdf:type owl:Class ;
+  rdfs:comment "A recipe to create a Web of Things application." ;
+  rdfs:label "Thing Recipe" ;
+  rdfs:subClassOf owl:Thing ;
+.
+thingRecipe:Update
+  rdf:type thingRecipe:Operation ;
+  rdfs:comment "An operation that updates the state of an Interaction Pattern." ;
+  rdfs:label "Update" ;
+.
+thingRecipe:configurationAttribute
   rdf:type owl:ObjectProperty ;
   rdfs:domain [
       rdf:type owl:Class ;
@@ -91,36 +116,42 @@ thingRecipe:configAttributes
           td:Property
         ) ;
     ] ;
-  rdfs:range thingRecipe:_ConfigAttributes ;
+  rdfs:range thingRecipe:ConfigurationAttribute ;
 .
-thingRecipe:hasIngredients
+thingRecipe:hasIngredient
   rdf:type owl:ObjectProperty ;
   rdfs:domain thingRecipe:ThingRecipe ;
-  rdfs:range thingRecipe:_ThingIngredients ;
+  rdfs:range thingRecipe:ThingIngredient ;
 .
-thingRecipe:hasNFPs
+thingRecipe:hasNonFunctionalProperty
   rdf:type owl:ObjectProperty ;
   rdfs:domain thingRecipe:ThingRecipe ;
-  rdfs:range thingRecipe:NFPs ;
+  rdfs:range thingRecipe:NonFunctionalProperty ;
 .
 thingRecipe:hasOperation
   rdf:type owl:ObjectProperty ;
-  rdfs:domain thingRecipe:_T2TInteractions ;
-  rdfs:range thingRecipe:_Operation ;
+  rdfs:domain thingRecipe:RecipeInteraction ;
+  rdfs:range thingRecipe:Operation ;
 .
-thingRecipe:t2tInteractions
+thingRecipe:isInterctionPatternOf
+  rdf:type rdf:Property ;
+  schema:domainIncludes thingRecipe:ThingIngredient ;
+  schema:rangeIncludes common:Capability ;
+  rdfs:label "is Interction Pattern of" ;
+.
+thingRecipe:t2tInteraction
   rdf:type owl:ObjectProperty ;
   rdfs:domain thingRecipe:ThingRecipe ;
-  rdfs:range thingRecipe:_T2TInteractions ;
+  rdfs:range thingRecipe:RecipeInteraction ;
 .
 thingRecipe:t2tInteractsWith
   rdf:type owl:ObjectProperty ;
-  rdfs:domain thingRecipe:_T2TInteractions ;
-  rdfs:range thingRecipe:_ThingIngredients ;
+  rdfs:domain thingRecipe:RecipeInteraction ;
+  rdfs:range thingRecipe:ThingIngredient ;
 .
-thingRecipe:thingIngredients
+thingRecipe:thingIngredient
   rdf:type rdf:Property ;
-  rdfs:domain thingRecipe:_ThingIngredients ;
+  rdfs:domain thingRecipe:ThingIngredient ;
   rdfs:range [
       rdf:type owl:Class ;
       owl:unionOf (

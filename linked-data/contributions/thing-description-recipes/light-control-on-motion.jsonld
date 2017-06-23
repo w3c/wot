@@ -9,11 +9,11 @@
   "recipeId" : { "@id": "http://www.w3.org/ns/td-recipe/LightControlOnMotionDetection"},
   "comment": "The recipe creates an application which detects the motion in a room and
               turns on or turns off the light in  the room.",
-  "hasIngredients" : [
+  "hasIngredient" : [
  {
-  "thingIngredients" : [
+  "thingIngredient" : [
   { "@type" : "building:MotionStatus",
-    "iot:Capability" : 
+    "isInteractionPatternOf" : 
 	{"@type" : "building:MotionDetectorLightSwitch"}},
 	"ssn:onPlatform" :{
       "@id": "_:ub2bL69C1",
@@ -21,9 +21,9 @@
     }]  
  },
  {
-  "thingIngredients" : [  
+  "thingIngredient" : [  
   { "@type": "building:LightOn",
-    "iot:Capability" : 
+    "isInteractionPatternOf" : 
 	{"@type" : "building:MotionDetectorLightSwitch"},
 	"ssn:onPlatform" :{
       "@id": "_:ub2bL69C1",
@@ -37,7 +37,7 @@
       "@type": "building:Room"
     }}
   ]}],	
- "t2tInteractions":[
+ "t2tInteraction":[
    {
      "t2tInteractsWith":[
      {"@type" : "building:MotionStatus",
@@ -53,4 +53,3 @@
 	 {"@type" : "building:LightOff",
 	  "operation" : "Update"}]
 	}]
-}
