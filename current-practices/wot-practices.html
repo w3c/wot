@@ -1871,7 +1871,75 @@ to CoAP requests to RS. </li>
             </p>
             
             <p>
-              Besides SAREF, many vocabularies are of interest for WoT, such as W3C
+              Moreover, our common context introduces a new term, <code>actsUpon</code>,
+              to express on which property an action is acting, if both are modeled in the
+              same Thing Description. For instance, a thermostat that can regulate the
+              temperature of a room can be modeled as follows (note the use of the additional
+              JSON-LD keyword <code>@type</code>):
+
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+								  "@type": [ "Thing" ],
+								  "interactions": [
+                    {
+                      "@id": "_:temp",
+                      "@type": ["Property", "Temperature"],
+                      "outputData":  { "type": "number" },
+                      ...
+                    }, {
+                      "@type": ["Action", "SetLevelCommand"],
+                      "actsUpon": "_:temp",
+                      "inputData": { "type": "number" },
+                      ...
+                    }
+								  ]
+								}
+							</pre>
+            </p>
+            
+            <p>
+              In the following, we give examples of modeling for some devices that appeared
+              in past PlugFests (the full Thing Descriptions can be found
+              <a href="https://github.com/w3c/wot/tree/master/thing-description/examples">on Github</a>):
+              
+              <table>
+                <tr>
+                  <th>Device</th>
+                  <th>Semantic Modeling</th>
+                </tr>
+                <tr>
+                  <td>LED lamp</td>
+                  <td><code>Switch</code> that has two actions: a <code>OnCommand</code> and a <code>OffCommand</code>.</td>
+                </tr>
+                <tr>
+                  <td>LED lamp (with dimming)</td>
+                  <td><code>Switch</code> that has one writable <code>Light</code> property (that is also of type <code>MultiLevelState</code>) and two actions: a <code>StepUpCommand</code> and a <code>StepDownCommand</code>, where each <code>actsUpon</code> the <code>Light</code> property.</td>
+                </tr>
+                <tr>
+                  <td>Brightness sensor</td>
+                  <td><code>BuildingSpace</code> that has one <code>Light</code> property.</td>
+                </tr>
+                <tr>
+                  <td>Human detection sensor</td>
+                  <td><code>BuildingSpace</code> that has one <code>Occupancy</code> property.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://echonet.jp/introduce_en/gz-000182/">Home Air Conditioner</a></td>
+                  <td><code>BuildingSpace</code> that has one writable <code>Temperature</code> property (that is also of type <code>MultiLevelState</code>) and two actions: a <code>StepUpCommand</code> and a <code>StepDownCommand</code>, where each <code>actsUpon</code> the <code>Temperature</code> property.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.tinkerforge.com/en/shop/kits/starter-kit-weather-station.html">Weather station</a></td>
+                  <td><code>geo:SpatialThing</code><sup>*</sup> that has four readable properties: <code>Temperature</code>, <code>Humidity</code>, <code>Pressure</code> and <code>Light</code>.</td>
+                </tr>
+              </table>
+            </p>
+            
+            <small>(*) the prefix <code>geo</code> is introduced here. It also includes terms to specify the geo-location of a spatial entity: <code>geo:long</code> and <code>geo:lat</code>, also used in the examples on Github.</small>
+            
+            <p>
+              Beside SAREF, many vocabularies are of interest for WoT, such as W3C
               SSN [[vocab-ssn-20170504]], <a href="http://www.onem2m.org/ontology/Base_Ontology/oneM2M_Base_Ontology-V_3_2_0.owl">oneM2M Base Ontology</a>, <a href="http://iot.webschemas.org/">iot.schema.org</a>
               and vocabularies developed in the context of research projects such as the
               <a href="http://iot.linkeddata.es/def/core/index-en.html">Vicinity core ontology</a>,

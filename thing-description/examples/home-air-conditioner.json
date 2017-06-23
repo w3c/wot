@@ -1,0 +1,44 @@
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": [ "Thing", "BuildingSpace" ],
+  "name": "Home air conditioner",
+  "interactions": [
+    {
+      "@id": "_:temp",
+      "name": "thermostat",
+      "@type": ["Property", "Temperature", "MultiLevelState"],
+      "inputType": { "type": "number" },
+      "outputType": { "type": "number" },
+      "writable": "true",
+      "link": [
+        {
+          "href": "coap://example.org/ac/temp",
+          "mediaType": "application/json"
+        }
+      ]
+    }, {
+      "name": "increase temperature",
+      "@type": ["Action", "StepUpCommand"],
+      "inputData":  { "type": "number" },
+      "actsUpon": "_:temp",
+      "link": [
+        {
+          "href": "coap://example.org/ac/up",
+          "mediaType": "application/json"
+        }
+      ]
+    }, {
+      "name": "decrease temperature",
+      "@type": ["Action", "StepDownCommand"],
+      "inputData":  { "type": "number" },
+      "actsUpon": "_:temp",
+      "link": [
+        {
+          "href": "coap://example.org/ac/down",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}

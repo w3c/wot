@@ -1,0 +1,21 @@
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": [ "Thing", "BuildingSpace" ],
+  "name": "Human detection sensor",
+  "geo:long": 11.45667,
+  "geo:lat": 5.43784,
+  "interactions": [
+    {
+      "name": "human presence",
+      "@type": ["Property", "Occupancy"],
+      "outputData":  { "type": "number" },
+      "link": [
+        {
+          "href": "coap://example.org/sensor/presence",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}

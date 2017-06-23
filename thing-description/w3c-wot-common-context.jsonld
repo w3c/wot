@@ -1,7 +1,8 @@
 {
   "@context": {
     "saref": "http://uri.etsi.org/m2m/saref#",
-
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    
     "BuildingSpace": "saref:BuildingSpace",
     "Door": "saref:Door",
     "Window": "saref:Window",
@@ -31,6 +32,8 @@
     "OnCommand": "saref:OnCommand",
     "OffCommand": "saref:OffCommand",
     "OpenCommand": "saref:OpenCommand",
-    "CloseCommand": "saref:CloseCommand"
+    "CloseCommand": "saref:CloseCommand",
+    
+    "actsUpon": "saref:actsUpon"
   }
 }
