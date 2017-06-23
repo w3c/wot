@@ -7,8 +7,7 @@
   }],
   "name" : "LightControlOnMotionDetection",
   "recipeId" : { "@id": "http://www.w3.org/ns/td-recipe/LightControlOnMotionDetection"},
-  "comment": "The recipe creates an application which detects the motion in a room and
-              turns on or turns off the light in  the room.",
+  "comment": "The recipe creates an application which detects the motion in a room and turns on or turns off the light in  the room.",
   "hasIngredient" : [
  {
   "thingIngredient" : [
@@ -53,3 +52,4 @@
 	 {"@type" : "building:LightOff",
 	  "operation" : "Update"}]
 	}]
+}
