@@ -1,0 +1,54 @@
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": [ "Thing", "geo:SpatialThing" ],
+  "name": "WatherStation",
+  "geo:long": 11.45667,
+  "geo:lat": 5.43784,
+  "interactions": [
+    {
+      "name": "temperature",
+      "@type": ["Property", "Temperature"],
+      "outputData":  { "type": "number" },
+      "link": [
+        {
+          "href": "coap://example.org/station/temperature",
+          "mediaType": "application/json"
+        }
+      ]
+    }, 
+    {
+      "name": "humidity",
+      "@type": ["Property", "Humidity"],
+      "outputData":  { "type": "number" },
+      "link": [
+        {
+          "href": "coap://example.org/station/humidity",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    {
+      "name": "pressure",
+      "@type": ["Property", "Pressure"],
+      "outputData":  { "type": "number" },
+      "link": [
+        {
+          "href": "coap://example.org/station/pressure",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    {
+      "name": "brightness",
+      "@type": ["Property", "Light"],
+      "outputData":  { "type": "number" },
+      "link": [
+        {
+          "href": "coap://example.org/station/brightness",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}

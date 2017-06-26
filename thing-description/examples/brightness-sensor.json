@@ -1,0 +1,34 @@
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": [ "Thing", "BuildingSpace" ],
+  "geo:long": 54.5476878,
+  "geo:lat": 12.45787,
+  "name": "Brightness sensor",
+  "interactions": [
+    {
+      "name": "brightness",
+      "@type": ["Property", "Light"],
+      "outputData":  {
+        "type": "object",
+        "properties": {
+          "value": {
+            "@id": "saref:hasValue",
+            "type": "number"
+          },
+          "unit": {
+            "@id": "saref:isMeasuredIn",
+            "@type": "@id",
+            "type": "string"
+          }
+        }
+      },
+      "link": [
+        {
+          "href": "coap://example.org/sensor/light",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}
