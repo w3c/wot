@@ -1,0 +1,192 @@
+{
+  "@context": [
+    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    { "sch": "http://thingschema.org/example/schema" }
+  ],
+  "@type": ["thing", "sch:light"],
+  "name": "Example Light Thing",
+  "interaction": [
+    {
+      "@type": ["property", "sch:switch"],
+      "name": "on/off switch state",
+      "outputData": {
+        "type": "object",
+        "properties": {
+          "switchstate": {
+            "type": "boolean",
+            "@type": ["sch:switch.state"]
+          }
+        }
+      },
+      "writeable": true,
+      "link": [
+        {
+          "href": "coaps:[fdfd::22]/example/light/onoff",
+          "content-format": 1000,
+          "rt": ["oic.r.binary.switch"],
+          "if": ["oic.if.a"],
+          "method.set": "post",
+          "outputschema": {
+            "type": "object",
+            "properties": {
+              "onoff": {
+                "value": "{{switchstate}}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["property", "sch:level"],
+      "name": "brightness level",
+      "outputData": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "number",
+            "@type": ["sch:level.value"]
+          }
+        }
+      },
+      "writeable": true,
+      "link": [
+        {
+          "href": "coaps:[fdfd::22]/example/light/brightness",
+          "content-format": 1000,
+          "rt": ["oic.r.light.brightness"],
+          "if": ["oic.if.a"],
+          "method.set": "post",
+          "outputschema": {
+            "type": "object",
+            "properties": {
+              "brightness": {
+                "value": "{{level}}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["property", "sch:transitiontime"],
+      "name": "transition time for moveto level",
+      "outputData": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "number",
+            "@type": ["sch:transitiontime.value"]
+          }
+        }
+      },
+      "writeable": true,
+      "link": [
+        {
+          "href": "coaps:[fdfd::22]/example/light/brightness",
+          "content-format": 1000,
+          "rt": ["oic.r.light.brightness"],
+          "if": ["oic.if.a"],
+          "method.set": "post",
+          "outputschema": {
+            "type": "object",
+            "properties": {
+              "brightness": {
+                "value": "{{level}}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "semtype": ["action", "sch:turnon"],
+      "name": "turn the light on",
+      "inputData": {},
+      "link": [
+        {
+          "href": "coaps:[fdfd::22]/example/light/onoff",
+          "content-format": 1000,
+          "method.invoke": "post",
+          "rt": ["oic.r.binary.switch"],
+          "if": ["oic.if.a"],
+          "inputschema": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "value": true,
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["action", "sch:turnoff"],
+      "name": "turn the light on",
+      "inputData": {},
+      "link": [
+        {
+          "href": "coaps:[fdfd::22]/example/light/onoff",
+          "content-format": 1000,
+          "method.invoke": "post",
+          "rt": ["oic.r.binary.switch"],
+          "if": ["oic.if.a"],
+          "inputschema": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "value": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["action", "sch:movetolevel"],
+      "name": "set brightness level",
+      "inputData": {
+        "type": "object",
+        "properties": {
+          "targetlevel": {
+            "type": "number",
+            "@type": ["sch:level.value"]
+          },
+          "transitiontime": {
+            "type": "number",
+            "@type": ["sch:transitiontime.value"]
+          }
+        }
+      },
+      "link": [
+        {
+          "href": "coaps:[fdfd::22]/example/light/",
+          "content-format": 1000,
+          "method.invoke": "post",
+          "rt": ["oic.r.light"],
+          "if": ["oic.if.b"],
+          "inputschema": {
+            "type": "object",
+            "properties": {
+              "href": {
+                "value": ""
+              },
+              "rep": {
+                "type": "object",
+                "properties": {
+                  "brightness": {
+                    "value": "{{targetlevel}}"
+                  },
+                  "ramptime": {
+                    "value": "{{transitiontime}}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
