@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    { "sch": "http://thingschema.org/example/schema" }
+  ],
+  "@type": ["thing", "sch:motionsensor"],
+  "name": "Example Motion Sensor Thing",
+  "interaction": [
+    {
+      "@ype": ["property", "sch:motionstate"],
+      "name": "motion detector output state",
+      "writeable": false,
+      "outputData": {
+        "type": "object",
+        "properties": {
+          "motionstate": {
+            "type": "boolean",
+            "@type": "sch:motionstate.value"
+          }
+        }
+      },
+      "link": [
+        {
+          "href": "coaps://[fdfd::17]/example/motion/detected",
+          "content-format": 1000,
+          "rt": ["oic.r.sensor.motion"],
+          "if": ["oic.if.s"],
+          "method.set": "post",
+          "outputschema": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "value": "{{motionstate}}"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
