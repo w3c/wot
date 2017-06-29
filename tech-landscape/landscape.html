@@ -233,14 +233,22 @@
         <li><strong>Data Types:</strong> No explicit choice. SAREF is currently only an ontology to translate information from and between communication standards.</li>
         </ul>
         </li>
-        <li><p>oneM2M (TODO)</p>
+        <li><p>Smart Device Template (used by oneM2M)</p>
         <ul>
-        <li><strong>Background of the technology:</strong></li>
-        <li><strong>Consortium:</strong> <a href="http://www.onem2m.org/">oneM2M</a></li>
-        <li><strong>Tool/Development Support:</strong> </li>
-        <li><strong>Resource identification:</strong> </li>
-        <li><strong>Query capabilities:</strong> </li>
-        <li><strong>Data Types:</strong> </li>
+        <li><strong>Background of the technology:</strong> The 
+		<a href="https://github.com/Homegateway/SmartDeviceTemplate/blob/master/SDT/schema3.0/docs/Introduction.md">SDT</a> 
+		is a modular XML/XSI-based data models with support for access control and delegation.
+		Developed initially by the (now-defunct) <a href="http://www.homegatewayinitiative.org/">Home Gateway Initiative (HGI)</a>, 
+		it has recently been adopted by oneM2M.  
+		However, oneM2M also has prior work on its 
+		<a href="http://www.onem2m.org/images/files/deliverables/Release2/TR-0017-Home_Domain_Abstract_Information_Model-V2_0_0.pdf">own abstract information models.</a>
+		</li>
+        <li><strong>Consortium:</strong><a href="http://www.onem2m.org/">oneM2M</a></li>
+        <li><strong>Tool/Development Support:</strong> XML/XSI tools are applicable (e.g. validation).  Support by OSGi in Eclipse.  
+		<a href="https://github.com/ankraft/SDTTool">SDTTool</a> to convert to various formats and generate documentation.</li>
+        <li><strong>Resource identification:</strong> unique identifiers (strings).</li>
+        <li><strong>Query capabilities:</strong> XML search tools.</li>
+        <li><strong>Data Types:</strong> XML tools and schemas.</li>
         </ul>
         </li>
         </ul>
