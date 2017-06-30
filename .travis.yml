@@ -23,7 +23,7 @@ after_success:
   - mkdir -p page/proposals/explicit-bindings
   - cp proposals/explicit-bindings/abstract-transfer-layer.html page/proposals/explicit-bindings/abstract-transfer-layer.html
   - cp thing-description/w3c-wot-td-context.jsonld page/w3c-wot-td-context.jsonld
-  - cp thing-description/w3c-wot-example-context.jsonld page/w3c-wot-example-context.jsonld
+  - cp thing-description/w3c-wot-common-context.jsonld page/w3c-wot-common-context.jsonld
   - cp thing-description/w3c-wot-td-ontology.owl page/w3c-wot-td-ontology.owl
   - cp thing-description/w3c-wot-td-ire.owl page/w3c-wot-td-ire.owl
   - cd page
