@@ -21,7 +21,7 @@
       "writeable": true,
       "link": [
         {
-          "href": "http://10.0.0.17/light",
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
           "mediatype": "application/json",
           "rt": ["oic.r.switch.binary"],
           "if": ["oic.if.baseline"],
@@ -55,7 +55,7 @@
       "writeable": true,
       "link": [
         {
-          "href": "http://10.0.0.17/light",
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
           "mediatype": "application/json",
           "rt": ["oic.r.light.dimming"],
           "if": ["oic.if.baseline"],
@@ -90,7 +90,7 @@
       "writeable": true,
       "link": [
         {
-          "href": "http://10.0.0.17/light",
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
           "mediatype": "application/json",
           "rt": ["oic.r.light.ramptime"],
           "if": ["oic.if.baseline"],
@@ -112,7 +112,7 @@
       "inputData": {},
       "link": [
         {
-          "href": "http://10.0.0.17/light",
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
           "mediatype": "application/json",
           "method.invoke": "post",
           "rt": ["oic.r.switch.binary"],
@@ -134,7 +134,7 @@
       "inputData": {},
       "link": [
         {
-          "href": "http://10.0.0.17/light",
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
           "mediatype": "application/json",
           "method.invoke": "post",
           "rt": ["oic.r.switch.binary"],
@@ -175,7 +175,7 @@
       },
       "link": [
         {
-          "href": "http://10.0.0.17/light",
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
           "mediatype": "application/json",
           "method.invoke": "post",
           "rt": ["oic.r.light.dimming", "oic.r.light.ramptime"],
