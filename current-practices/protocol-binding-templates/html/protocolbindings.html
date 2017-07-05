@@ -88,8 +88,15 @@
     <section>
       <h2>Assumptions and Design Principles</h2>
 
+      <section>
+      <h3>Thing Description</h3>
+      <p>
+<a href="#fig-td-example"></a> below is an example Thing Description, illustrating two parts. The upper part contains is a description of an interaction, and the lower part is an associated link, which contains the protocol binding.
+      </p>
+      </section>
+      
 	  <figure id="fig-td-example">
-		<img src="images/td-example.png" style="width:75%"  />
+		<img src="images/td-example.png" style="width:95%"  />
     <figcaption>Example of a Thing Description</figcaption>
       </figure>
       
@@ -101,14 +108,14 @@ The interaction description part of a Thing Description describes an event, acti
       </section>
       
 	  <figure id="fig-interaction">
-		<img src="images/interaction-description.png" style="width:75%"  />
+		<img src="images/interaction-description.png" style="width:65%"  />
     <figcaption>Interaction Description Part</figcaption>
       </figure>
       
       <section>
       <h3>Protocol Binding</h3>
       <p> 
-Protocol bindings map abstract WoT interactions to concrete protocol operations. There is currently a set of generic REST protocol bindings for HTTP and CoAP, which are defined in the Current Practices document. The default protocol binding is determined by the URI scheme of the link (http or coap), and follows a well-defined REST API for events, actions, and properties.
+Protocol bindings map abstract WoT interactions to concrete protocol operations. The "link" block provides one or more links that point to entry points used to initiate the protocol operations. 
       </p>
       </section>
       
@@ -120,7 +127,7 @@ Protocol bindings map abstract WoT interactions to concrete protocol operations.
       <section>
       <h3>Protocol Adaptation</h3>
       <p>
-Device protocols from various standards organizations have peculiar patterns for exposing the low level "traits" that the protocol uses to encapsulate and communicate information. 
+Device protocols from various standards organizations have peculiar patterns for exposing the device features that the protocol uses to encapsulate and communicate information. 
       </p>
       <p>
 For example, OCF Resource Types expose a REST API that uses IETF concepts of Resource Type (rt) and Interface Type (if). By contrast, LWM2M/IPSO Smart Objects expose an hierarchy of object ID (collections) and resource ID (items) where the ID numbers provide the semantic identification. 
@@ -133,10 +140,13 @@ These may all use a common communication protocol like CoAP, and representation 
       <section>
       <h3>Discovery</h3>
       <p>
-Discovery of things and traits that map to TD interactions is outside the scope of protocol bindings as currently defined; in this specification we only cover the event, action, property part of the interaction model. 
+Discovery of things and features of things that map to TD interactions is outside the scope of protocol bindings as currently defined; in this specification we only cover the event, action, property part of the interaction model. 
       </p>
       <p>
 It is assumed that discovery of things on the connected device ecosystem results in a set of discoverable Thing Description instances, corresponding to the discovered things, and will then use the TD discovery mechanisms already defined in the W3C WoT WG/IG.
+      </p>
+      <p>
+For example, there could be a discovery process for each device ecosystem that finds new devices, creates TD instances, and publishes them to a TD directory.
       </p>
       </section>
 
@@ -185,7 +195,7 @@ The interaction description contains the interaction type, additional semantic a
       </p>
       
 	  <figure id="fig-interaction-spec">
-		<img src="images/interaction-description.png" style="width:75%"  />
+		<img src="images/interaction-description.png" style="width:65%"  />
         <figcaption>Interaction Description</figcaption>
       </figure>
       
@@ -211,32 +221,27 @@ The "link" element of an interaction description points to and describes how the
       
 
       <p>
-For things that expose the low level protocol traits in a REST and REST-like API, the Protocol Binding is constructed somewhat like an HTML submission form. Metadata in the binding template describes which REST method to use, and any other options that are required to be transmitted in the request or parsed from the response.
+For things that expose the device features in a REST and REST-like API, the Protocol Binding is constructed somewhat like an HTML submission form. Metadata in the binding template describes which REST method to use, and any other options that are required to be transmitted in the request or parsed from the response.
       </p>
       <p>
-The example OCF protocol binding contains values for Resource Type (rt) and Interface Type (if) required to interact with the appropriate low level traits.
+The example OCF protocol binding contains values for Resource Type (rt) and Interface Type (if) required to interact with the appropriate device features.
       </p>
       </section>      
 
     </section>
 
     <section>
-      <h2>Integration Patterns</h2>
+      <h2>Architecture</h2>
 
-	  <figure id="fig-integration-patterns">
-		<img src="images/integration-patterns.png" style="width:80%"  />
-        <figcaption>Integration Patterns</figcaption>
-      </figure>
-      
       <section>
-      <h3>WoT Client Proxy Integration Pattern</h3>
+      <h3>WoT Servient Architecture</h3>
       <p> 
 In the client Proxy integration pattern, the WoT Consumed Thing interface is exposed as a proxy for the device or connected thing. Application middleware, for example node-wot, consumes the thing description, including the protocol binding teplates. 
       </p>
       
-	  <figure id="fig-client-proxy">
-		<img src="images/client-proxy.png" style="width:50%"  />
-        <figcaption>Client Proxy Pattern</figcaption>
+	  <figure id="fig-arch-context">
+		<img src="images/arch-context.png" style="width:80%"  />
+        <figcaption>Integration Architecture</figcaption>
       </figure>
       
       <p>
@@ -244,87 +249,13 @@ When an interaction is invoked, the application middleware fills out the templat
       </p>
       </section>
 
-      <section>
-      <h3>WoT Server Proxy Integration Pattern</h3>
-      <p> 
-In the server proxy integration pattern, the Thing Description and Protocol Binding templates are consumed by application middleware which exposes the low level device traits using the WoT Exposed Thing interface as a proxy exposing the traits using the default generic WoT HTTP or CoAP protocol binding.
-      </p>
-
-	  <figure id="fig-server-proxy">
-		<img src="images/server-proxy.png" style="width:50%"  />
-        <figcaption>Server Proxy Pattern</figcaption>
-      </figure>
-      
-      <p>
-When an interaction is invoked using the WoT exposed thing, the middleware proxy constructs a request using the protocol binding template and processes the response using the template. The response data are returned to the requesting WoT client using the generic WoT protocol.
-      </p>
-      </section>
-
     </section>
-    
+        
     <section>
-      <h2>Mapping traits to TD interactions</h2>
- 
-      <section>
-      <h3>Thing traits vs. actions, events, and properties</h3>
-      <p> 
-The traits exposed by things from different device ecosystems vary considerably in the structure of the interactions and the level of semantic identification of their affordances. For example, OCF devices expose a REST API with asynchronous notification (CRUD+N) in which actions are invoked simply by setting property values. There are batch update options that allow multiple parameters to be passed using this pattern. 
-      </p>
-      <p>
-Since actions are not formally defined in all device ecosystems, but may be composed from updates and options, there needs to be a high level definition for actions that can be then mapped to device traits. Likewise, WoT Property get/set operations may need to have additional settings to correctly interact with the low level traits, for example using Observe/Notify or Publish/Subscribe for asynchronous interactions and event subscriptions.
-      </p>
-      </section>
-      
-      <section>
-      <h3>Thing Capabilities</h3>
-      <p> 
-For the sake of interoperability, there need to be some standardized actions defined, for example to dim a light, or to turn something on and off.
-      </p>
-      <p>
-One approach is to create abstract capabilities that define properties and related actions and events, to accomplish a single purpose. For example, the capability to turn something on and off would be represented by a state variable property with a boolean type, a property for a delay value, and some actions to turn on, turn off, toggle, delay turn off, etc. The low level traits that are exposed by the devices are then mapped to capabilities using the TD with protocol bindings. 
-      </p>
-      <p>
-For example, the on/off capability "switch" is defined with a state property of type boolean, and two actions, one for turning on and one for turning off. The protocol binding specifies that a boolean value of true is applied to the state property for the turn on action, and a boolean value of false is applied for a turn off action.
-      </p>
-      <p>
-These capabilities may be defined as constructions of semantic identifiers from various ontologies and vocabularies. 
-      </p>
-      <p>
-The examples are based on on/off, level control, and motion sensing capabilities with their respective events, actions, and properties. As illustrated by the light example, the capabilities may be composed into a TD, providing a thing that has multiple capabilities exposed through a set of well known event, action, and property types and application classes.
-      </p>
-      </section>
-
-    </section>
-    
-    <section class='appendix'>
-      <h2>Glossary</h2>
-      <p>
-Thing Description
-      </p>
-      <p>
-Interaction Description
-      </p>
-      <p>
-Protocol Binding
-      </p>
-      <p>
-Semantic Annotation
-      </p>
-      <p>
-Thing traits
-      </p>
-      <p>
-Capabilities
-      </p>
-      <p>
-CRUD+N
-      </p>
-    </section>
-    
-    <section class='appendix'>
       <h2>Examples</h2>
       <p>
-      <a href="https://github.com/mjkoster/wot-protocol-binding/tree/master/td-examples-plugfest">TD Examples for Plugfest</a>
+      Example TD files that implement the features described in this document are available for download or review at  
+      <a href="https://github.com/w3c/wot/tree/master/current-practices/protocol-binding-templates/td-examples-plugfest">TD Examples for Plugfest</a>
       </p>
     </section>
   </body>

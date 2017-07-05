@@ -3,8 +3,8 @@
     "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
     { "sch": "http://thingschema.org/example/schema" }
   ],
-  "@type": ["thing", "sch:light"],
-  "name": "Example Light Thing",
+  "@type": ["thing", "sch:light", "sch:switch", "sch:level"],
+  "name": "Example Light Thing with switch and level capabilities",
   "interaction": [
     {
       "@type": ["property", "sch:switch"],
@@ -13,23 +13,23 @@
         "type": "object",
         "properties": {
           "switchstate": {
-            "type": "boolean",
-            "@type": ["sch:switch.state"]
+            "@type": ["sch:switch.state"],
+            "type": "boolean"
           }
         }
       },
       "writeable": true,
       "link": [
         {
-          "href": "coaps:[fdfd::22]/example/light/onoff",
-          "content-format": 1000,
-          "rt": ["oic.r.binary.switch"],
-          "if": ["oic.if.a"],
+          "href": "http://10.0.0.17/light",
+          "mediatype": "application/json",
+          "rt": ["oic.r.switch.binary"],
+          "if": ["oic.if.baseline"],
           "method.set": "post",
           "outputschema": {
             "type": "object",
             "properties": {
-              "onoff": {
+              "value": {
                 "value": "{{switchstate}}"
               }
             }
@@ -44,23 +44,26 @@
         "type": "object",
         "properties": {
           "level": {
+            "@type": ["sch:level.value"],
             "type": "number",
-            "@type": ["sch:level.value"]
+            "min": 0,
+            "max": 254,
+            "multipleOf": 1
           }
         }
       },
       "writeable": true,
       "link": [
         {
-          "href": "coaps:[fdfd::22]/example/light/brightness",
-          "content-format": 1000,
-          "rt": ["oic.r.light.brightness"],
-          "if": ["oic.if.a"],
+          "href": "http://10.0.0.17/light",
+          "mediatype": "application/json",
+          "rt": ["oic.r.light.dimming"],
+          "if": ["oic.if.baseline"],
           "method.set": "post",
           "outputschema": {
             "type": "object",
             "properties": {
-              "brightness": {
+              "dimming": {
                 "value": "{{level}}"
               }
             }
@@ -70,29 +73,33 @@
     },
     {
       "@type": ["property", "sch:transitiontime"],
-      "name": "transition time for moveto level",
+      "name": "transition time for level changes",
       "outputData": {
         "type": "object",
         "properties": {
-          "level": {
+          "transitiontime": {
+            "@type": ["sch:transitiontime.value"],
             "type": "number",
-            "@type": ["sch:transitiontime.value"]
+            "min": 0,
+            "max": 65535,
+            "multipleOf": 1,
+            "units": "ucum:ds"
           }
         }
       },
       "writeable": true,
       "link": [
         {
-          "href": "coaps:[fdfd::22]/example/light/brightness",
-          "content-format": 1000,
-          "rt": ["oic.r.light.brightness"],
-          "if": ["oic.if.a"],
+          "href": "http://10.0.0.17/light",
+          "mediatype": "application/json",
+          "rt": ["oic.r.light.ramptime"],
+          "if": ["oic.if.baseline"],
           "method.set": "post",
           "outputschema": {
             "type": "object",
             "properties": {
-              "brightness": {
-                "value": "{{level}}"
+              "ramptime": {
+                "value": "{{transitiontime}}"
               }
             }
           }
@@ -100,16 +107,16 @@
       ]
     },
     {
-      "semtype": ["action", "sch:turnon"],
+      "@type": ["action", "sch:turnon"],
       "name": "turn the light on",
       "inputData": {},
       "link": [
         {
-          "href": "coaps:[fdfd::22]/example/light/onoff",
-          "content-format": 1000,
+          "href": "http://10.0.0.17/light",
+          "mediatype": "application/json",
           "method.invoke": "post",
-          "rt": ["oic.r.binary.switch"],
-          "if": ["oic.if.a"],
+          "rt": ["oic.r.switch.binary"],
+          "if": ["oic.if.baseline"],
           "inputschema": {
             "type": "object",
             "properties": {
@@ -127,11 +134,11 @@
       "inputData": {},
       "link": [
         {
-          "href": "coaps:[fdfd::22]/example/light/onoff",
-          "content-format": 1000,
+          "href": "http://10.0.0.17/light",
+          "mediatype": "application/json",
           "method.invoke": "post",
-          "rt": ["oic.r.binary.switch"],
-          "if": ["oic.if.a"],
+          "rt": ["oic.r.switch.binary"],
+          "if": ["oic.if.baseline"],
           "inputschema": {
             "type": "object",
             "properties": {
@@ -150,38 +157,37 @@
         "type": "object",
         "properties": {
           "targetlevel": {
+            "@type": ["sch:level.value"],
             "type": "number",
-            "@type": ["sch:level.value"]
+            "min": 0,
+            "max": 254,
+            "multipleOf": 1
           },
           "transitiontime": {
+            "@type": ["sch:transitiontime.value"],
             "type": "number",
-            "@type": ["sch:transitiontime.value"]
+            "min": 0,
+            "max": 65535,
+            "multipleOf": 1,
+            "units": "ucum:ds"
           }
         }
       },
       "link": [
         {
-          "href": "coaps:[fdfd::22]/example/light/",
-          "content-format": 1000,
+          "href": "http://10.0.0.17/light",
+          "mediatype": "application/json",
           "method.invoke": "post",
-          "rt": ["oic.r.light"],
-          "if": ["oic.if.b"],
+          "rt": ["oic.r.light.dimming", "oic.r.light.ramptime"],
+          "if": ["oic.if.baseline"],
           "inputschema": {
             "type": "object",
             "properties": {
-              "href": {
-                "value": ""
+              "dimming": {
+                "value": "{{targetlevel}}"
               },
-              "rep": {
-                "type": "object",
-                "properties": {
-                  "brightness": {
-                    "value": "{{targetlevel}}"
-                  },
-                  "ramptime": {
-                    "value": "{{transitiontime}}"
-                  }
-                }
+              "ramptime": {
+                "value": "{{transitiontime}}"
               }
             }
           }
