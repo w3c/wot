@@ -4,14 +4,14 @@
 | ----------------| ------------| ----------- | ------- |
 | Booleans | boolean | xsd:boolean | |
 | Numbers | number | xsd:float, xsd:double, xsd:decimal | |
-| Integers | integer | xsd:decimal | [oic.r.colour.saturation](oic-r-colour-saturation) |
+| Integers | integer | xsd:decimal | [oic.r.colour.saturation](#oicrcoloursaturation) |
 | Strings | string | xsd:string | |
-| Objects | object | owl:Restriction ; owl:allValuesFrom | [oic.r.button](oic-r-button) |
-| Ordered collections of a given data type | array + items | rdf:List | [oic.r.temperature](oic-r-temperature) |
+| Objects | object | owl:Restriction ; owl:allValuesFrom | [oic.r.button](#oicrbutton) |
+| Ordered collections of a given data type | array + items | rdf:List | [oic.r.temperature](#oicrtemperature) |
 | Unordered collections of a given data type | . | ~ | |
-| Vectors | array + items + (min = max) | rdf:List, owl:min/maxCardinality  | [oic.r.sensor.magneticFieldDirection](oic-r-sensor-magneticFieldDirection) |
-| Enumerations | object + enum | owl:oneOf | [oic.r.door](oic-r-door) |
-| Unions of data types | anyOf | owl:unionOf | [oic.r.sensor.carbon*oxide](oic-r-sensor-carbonoxide) |
+| Vectors | array + items + (min = max) | rdf:List, owl:min/maxCardinality  | [oic.r.sensor.magneticFieldDirection](#oicrsensormagneticFieldDirection) |
+| Enumerations | object + enum | owl:oneOf | [oic.r.door](#oicrdoor) |
+| Unions of data types | anyOf | owl:unionOf | [oic.r.sensor.carbon*oxide](#oicrsensorcarbonoxide) |
 | Things | ? | td:Thing | | |
 
 ## oic.r.colour.saturation
