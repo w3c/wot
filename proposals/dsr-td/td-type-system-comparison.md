@@ -15,6 +15,7 @@
 | Things | ? | td:Thing | | |
 
 ## oic.r.colour.saturation
+Proposal:
 ```json
 {
     "type": "integer",
@@ -23,6 +24,7 @@
 }
 ```
 
+JSON Schema:
 ```json
 {
   "type": "integer",
@@ -32,6 +34,18 @@
 }
 ```
 
+OWL (JSON-LD):
+```json
+{
+    "withRestrictions": [
+        { "minimum": 0 },
+        { "maximum": 100 }
+    ],
+    "onDatatype": "integer"
+}
+```
+
+OWL (Turtle):
 ```
 [
     owl:withRestrictions (
@@ -43,6 +57,7 @@
 ```
 
 ## oic.r.button
+Proposal:
 ```json
 {
     "value": {
@@ -52,6 +67,7 @@
 }
 ```
 
+JSON Schema:
 ```json
 {
   "properties": {
@@ -63,6 +79,15 @@
 }
 ```
 
+OWL (JSON-LD):
+```json
+{
+    "allValuesFrom": "boolean",
+    "onProperty": "ocf:value"
+}
+```
+
+OWL (Turtle):
 ```
 [
     owl:allValuesFrom xsd:boolean ;
@@ -71,6 +96,7 @@
 ```
 
 ## oic.r.temperature
+Proposal:
 ```json
 {
     "type": "?",
@@ -78,6 +104,7 @@
 }
 ```
 
+JSON Schema:
 ```json
 {
     "type": "array",
@@ -85,6 +112,15 @@
 }
 ```
 
+OWL (JSON-LD):
+```json
+{
+    "qualifiedCardinality": 3,
+    "onProperty": "ocf:value"
+}
+```
+
+OWL (Turtle):
 ```
 [
     owl:qualifiedCardinality "3" ;
@@ -93,6 +129,7 @@
 ```
 
 ## oic.r.sensor.magneticFieldDirection
+Proposal:
 ```json
 {
     "vector": [
@@ -104,6 +141,7 @@
 }
 ```
 
+JSON Schema:
 ```json
 {
   "properties": {
@@ -122,6 +160,7 @@
 ```
 
 ## oic.r.door
+Proposal:
 ```json
 {
     "enum": [
@@ -131,6 +170,7 @@
 }
 ```
 
+JSON Schema:
 ```json
 {
   "enum": ["Open","Closed"],
@@ -138,6 +178,14 @@
 }
 ```
 
+OWL (JSON-LD):
+```json
+{
+    "oneOf": ["Open", "Closed"]
+}
+```
+
+OWL (Turtle):
 ```
 [
     owl:oneOf ("Open" "Closed")
@@ -145,6 +193,7 @@
 ```
 
 ## oic.r.sensor.carbon*oxide
+Proposal:
 ```json
 {
     "union": [
@@ -154,6 +203,7 @@
 }
 ```
 
+JSON Schema:
 ```json
 {
   "anyOf": [
@@ -163,6 +213,14 @@
 }
 ```
 
+OWL (JSON-LD):
+```json
+{
+    "unionOf": ["ocf:CarbonMonoxide", "ocf:CarbonDioxide"]
+}
+```
+
+OWL (Turtle):
 ```
 [
     owl:unionOf (ocf:CarbonMonoxide ocf:CarbonDioxide)
