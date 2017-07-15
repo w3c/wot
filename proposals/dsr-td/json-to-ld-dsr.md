@@ -72,6 +72,8 @@ Nested JSON objects are interpreted as either defining predicates, or defining n
 }
 ```
 
+Note that @context is optional in cases where the default context is sufficient.
+
 The default context is assumed to contain the following mappings 
 
 * "properties" to _td:property_

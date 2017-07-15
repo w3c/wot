@@ -21,8 +21,8 @@
       },
       "link": [
         {
-          "href": "coaps://[fdfd::17]/example/motion/detected",
-          "content-format": 1000,
+          "href": "http://10.0.0.17:8000/api/oic/motion?di=39d2e776-f709-4528-9667-0ccb44977ab0",
+          "mediatype": "application/json",
           "rt": ["oic.r.sensor.motion"],
           "if": ["oic.if.s"],
           "method.set": "post",
