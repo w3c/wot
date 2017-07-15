@@ -112,22 +112,6 @@ JSON Schema:
 }
 ```
 
-OWL (JSON-LD):
-```json
-{
-    "qualifiedCardinality": 3,
-    "onProperty": "ocf:value"
-}
-```
-
-OWL (Turtle):
-```
-[
-    owl:qualifiedCardinality "3" ;
-    owl:onProperty ocf:value .
-]
-```
-
 ## oic.r.sensor.magneticFieldDirection
 Proposal:
 ```json
@@ -157,6 +141,24 @@ JSON Schema:
     }
   }
 }
+```
+
+OWL (JSON-LD):
+```json
+{
+    "qualifiedCardinality": 3,
+    "onProperty": "ocf:value",
+    "onDataRange": "double"
+}
+```
+
+OWL (Turtle):
+```
+[
+    owl:qualifiedCardinality "3" ;
+    owl:onProperty ocf:value ;
+    owl:onDataRange xsd:double .
+]
 ```
 
 ## oic.r.door
