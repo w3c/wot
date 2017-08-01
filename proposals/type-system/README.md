@@ -333,11 +333,14 @@ JSON Schema appears a good candidate and it is recommended for complex data
 type specification. However, it still needs to be mapped to RDF, so that type
 definitions can be semantically annotated.
 
+A further comparison has been made to evaluate the interplay between JSON Schema
+and RDF, and more specifically with OWL.
+See [here](https://github.com/w3c/wot/tree/master/proposals/type-system/owl-comparison.md).
+
 Moreover, further languages have been proposed
 ([CDDL](https://tools.ietf.org/html/draft-greevenbosch-appsawg-cbor-cddl-08),
 [YANG](https://tools.ietf.org/html/draft-ietf-netmod-rfc6020bis-12))
 that still need to be reviewed.
-
 
 ## Mappings to Encodings
 

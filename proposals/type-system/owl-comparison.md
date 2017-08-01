@@ -1,4 +1,10 @@
-# Comparison with JSON Schema & OWL
+# Comparison of Type Systems for 
+
+This comparison is intended to show, on the one hand, the adequacy of
+JSON Schema with the requirements of the Web of Things (the examples
+are taken from the [Open Connectivity Foundation](http://oneiota.org/))
+and, on the other hand, the small gap to be filled between JSON Schema
+and semantic typing as expressed e.g. in OWL.
 
 | Proposed types | JSON Schema | OWL         | Example |
 | ----------------| ------------| ----------- | ------- |
