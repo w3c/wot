@@ -1,4 +1,4 @@
-# Comparison of Type Systems for 
+# Comparison of Type Systems with OWL
 
 This comparison is intended to show, on the one hand, the adequacy of
 JSON Schema with the requirements of the Web of Things (the examples
