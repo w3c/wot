@@ -67,7 +67,7 @@ types, seems a reasonable/possible approach.
     <td>Community</td>
     <td>?loosely coupled?</td>
     <td>Strong community</td>
-    <td></td>
+    <td>Semantic Web community</td>
     <td>None</td>
     <td>Networking, mainly SDN community</td>
     <td>Schema.org vocabulary is shared between different parties (e.g., Bing, Google, Yahoo)<br/><br/>
@@ -78,7 +78,7 @@ types, seems a reasonable/possible approach.
     <td>Tool support for validation</td>
     <td>Yes e.g.  http://jsonschemalint.com/</td>
     <td>Partially, e.g. https://developers.google.com/structured-data/testing-tool/</td>
-    <td></td>
+    <td>Yes e.g. http://shacl.org/playground/</td>
     <td>None</td>
     <td>Yes<br/> http://www.yangvalidator.com/</td>
     <td>Google's tool only check against existing classes and data types.</td>
@@ -105,7 +105,14 @@ types, seems a reasonable/possible approach.
 }
       </pre>
     </td>
-    <td></td>
+    <td>
+      <pre>
+[
+  sh:datatype xsd:integer ;
+  sh:maxInclusive "13" .
+]
+      </pre>
+    </td>
     <td>
       <pre>
 {
@@ -143,7 +150,13 @@ typedef new-int32-type {
     <td>
       <i>Not applicable</i>
     </td>
-    <td></td>
+    <td>
+      <pre>
+[
+  sh:in ("file" "memory")
+]
+      </pre>
+    </td>
     <td>
       <pre>
 {
@@ -203,7 +216,20 @@ leaf new-enum {
 ]
       </pre>
     </td>
-    <td></td>
+    <td>
+      <pre>
+[
+  sh:property [
+    sh:path ex:id ;
+    sh:datatype xsd:integer
+  ] ;
+  sh:property [
+    sh:path ex:name ;
+    sh:datatype xsd:string
+  ]
+] .
+      </pre>
+    </td>
     <td>
       <pre>
 {
@@ -260,7 +286,16 @@ container thermometer {
 ]
       </pre>
     </td>
-    <td></td>
+    <td>
+      <pre>
+<valType1> a sh:NodeShape ;
+           sh:datatype xsd:double .
+[
+  sh:property ex:property1 ;
+  sh:node <valType1>
+]
+      </pre>
+    </td>
     <td>
       <pre>
 "property1": {
@@ -282,7 +317,7 @@ container thermometer {
   leaf value {
     type temperature;
   }
-}      
+}
       </pre>
     </td>
     <td>
@@ -298,11 +333,14 @@ JSON Schema appears a good candidate and it is recommended for complex data
 type specification. However, it still needs to be mapped to RDF, so that type
 definitions can be semantically annotated.
 
+A further comparison has been made to evaluate the interplay between JSON Schema
+and RDF, and more specifically with OWL.
+See [here](https://github.com/w3c/wot/tree/master/proposals/type-system/owl-comparison.md).
+
 Moreover, further languages have been proposed
 ([CDDL](https://tools.ietf.org/html/draft-greevenbosch-appsawg-cbor-cddl-08),
 [YANG](https://tools.ietf.org/html/draft-ietf-netmod-rfc6020bis-12))
 that still need to be reviewed.
-
 
 ## Mappings to Encodings
 
