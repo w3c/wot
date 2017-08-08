@@ -1,0 +1,122 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    font-family: Open Sans, sans-serif;
+    font-family: sans-serif;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: #47525d;
+}
+
+h2 {
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+
+p {
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+p a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #0072ff;
+}
+
+
+.btn-reverse {
+    background-color: transparent;
+    border: 1px solid #0072ff;
+    border-radius: 2px;
+    padding: 7px 15px 7px 15px;
+}
+
+.btn-negative {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: #0072ff;
+    padding: 7px 15px 7px 15px;
+}
+
+.btn-reverse-negative {
+background-color: transparent;
+border: 1px solid white;
+border-radius: 3px;
+color: white;
+padding: 7px 15px 7px 15px;
+}
+
+a.btn {
+}
+
+a.btn-reverse {
+}
+
+.container {
+}
+
+.container-fluid {
+    width: 100%;
+
+}
+
+.sr-only {
+    display: none;
+}
+
+
+footer {
+    background-color: white;
+    border-top: 0px;
+}
+
+
+section.featureset { margin-bottom: 2em;}
+
+table { border-collapse: collapse; width: 100%}
+tbody th { text-align:left;}
+thead th { background-color: #0070cc; color: #eee; padding: 0 0.3em;}
+th, td { border-bottom:  thin solid; border-top:  thin solid;}
+tbody th, tbody td { padding-left: 0.5em;}
+td.maturity { text-align: center; padding: 0;}
+td.maturity img { vertical-align: middle; }
+td img + img { margin-left: 0.25em; }
+
+dl dt { margin-bottom: 0.3em;  font-size:1.1em;}
+dl dd{ margin-bottom: 1em;}
+
+
+@media (min-width: 768px) {
+
+    header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 60px;
+        z-index: 3;
+        background-color: rgba(255,255,255,0.9);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+
+    footer {
+        background-color: white;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+}
