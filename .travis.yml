@@ -18,7 +18,6 @@ after_success:
   - cp tech-landscape/landscape.html page/landscape.html
   - cp -R current-practices/ page/
 #  - cp page/current-practices/wot-practices.html page/current-practices/wot-practices-duesseldorf-2017.html
-  - cp -R architecture/ page/
   - cp -R charters/ page/
   - mkdir -p page/proposals/explicit-bindings
   - cp proposals/explicit-bindings/abstract-transfer-layer.html page/proposals/explicit-bindings/abstract-transfer-layer.html
@@ -31,7 +30,6 @@ after_success:
   - git add wot-ucr.html
   - git add landscape.html
   - git add current-practices/
-  - git add architecture/
   - git add charters/
   - git add proposals/explicit-bindings/abstract-transfer-layer.html
   - git add w3c-wot-td-context.jsonld
