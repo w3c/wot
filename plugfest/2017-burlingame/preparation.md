@@ -2,7 +2,7 @@
 
 # 1. Servients structure
 
-![images](/images/Servients_TPAC2017.png)
+![images](images/Servients_TPAC2017.png)
 
 # 2. Servients and Protocols for the Plugfest
 
