@@ -11,18 +11,28 @@ To setup a larger scale system, the gateawy functions are required to connect mu
 
 # 1.2. Use case
 
-The drawing below is an use case for the next plugfest. This is a smarthome application that an application on a smartphone can control an air conditioner in a house. 
+The drawing below is an use case for the next plugfest. This is the smarthome application that the application on the smartphone can control the air conditioner in the house. The agent and the gateway have gateway functions that connects with appliations, devices, and gateways.
 
-
+![Use case](images/smarthome.png)
 
 # 2. Servients
-## 2.1 Servients structure
+
+## 2.1 4-layered Servients
+
+3 types of WoT Servients:
+* Device Servient: WoT Servient with Exposed Thing, e.g. devices
+* Application Servient: WoT Servient with Comsumed Thing, e.g. applications
+* Proxy Servient: WoT Servient with both Exposed and Comsumed Thing, e.g. gateways
+
+
+
+## 2.2 Servients from plugfest participants
 
 The following figure shows diagrams of Servients that the participants provide for the plugest. 
 
 ![Servients](images/Servients_TPAC2017.png)
 
-## 2.2 Servients and Protocols
+## 2.4 Servients and Protocols
 
 | Servients | Fujitsu | Panasonic | Internet Research Institute | Siemens | Lemonbeat | Intel | SmartThings | EUROCOM | |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -34,9 +44,19 @@ The following figure shows diagrams of Servients that the participants provide f
 | =Protocol | HTTP | | | | | | | | | |
 | Device | LED light, Air conditioner, Blind | LED light, Air conditioner, Robot cleaner | | | | | | | | |
 
-## 2.3 Application scenarios
+# 3. Application scenarios
 
-# 3. High level description of Issues
+# 3.1 Scenario 1
+
+[overview] Brief introdction of the application you propose.
+[proposer] Name, affiliation of the proposer
+[servients] Servients 
+
+# 3.2 Scenario 2
+
+# 3.3 Scenario 3
+
+# 4. High level description of Issues
 
 ## Fujitsu’s issues
 * Interface between Servients
@@ -55,18 +75,25 @@ The following figure shows diagrams of Servients that the participants provide f
 ## Intel’s issues
 ## SmartThings’s issues
 ## IRI’s issues
-## xxx’s issues
+## Comapany name’s issues
 
 # 4. Deadline and Schedule
 
-## Oct. 18
+## Deadlines
+### Oct. 18
 * Complete the table “Servient and protocol”
   * Who provides which servients?
 * Collection of TD for the Servients on the plugfest
 * Application scenarios
-## Oct. 25
+### Oct. 25
 * Specify Inter-Servient interface
-## Open: 9am-6pm on Nov. 4, 5
+
+## Plugfest and demonstration
+### Nov. 4, 5 (Fujitsu)
+* OPEN: 9am-6pm on Nov. 4 and 5
 * 1st day: preparation and plugfest
 * 2nd day: plugfest in the morning 
 * demonstration and discussion in the afternoon
+### Nov. 8 (TPAC2017)
+* Demonstrations
+
