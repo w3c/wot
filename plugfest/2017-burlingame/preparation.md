@@ -19,12 +19,14 @@ The drawing below is an use case for the next plugfest. This is the smarthome ap
 
 ## 2.1 4-layered Servients
 
-3 types of WoT Servients:
+3 types of WoT Servients was derived from the use case described in 1.2. These are defined below:  
 * Device Servient: WoT Servient with Exposed Thing, e.g. devices
 * Application Servient: WoT Servient with Comsumed Thing, e.g. applications
 * Proxy Servient: WoT Servient with both Exposed and Comsumed Thing, e.g. gateways
 
-!4-layered model](images/4-layer_model.png)
+The Proxy Servient are seperated to 2 types fo them, Remote Proxy and Local Proxy. The Remote Proxy Servient is deployed on the Internet and connected with the Applicationd Serivent and the Local Proxy Servient. The Local Proxy Servient is done on the Local network and connects with the Remote Proxy Servient and the Device Servient. The layered diagram is shown below.
+
+![4-layered model](images/4layered_model.png)
 
 ## 2.2 Servients from plugfest participants
 
@@ -46,15 +48,17 @@ The following figure shows diagrams of Servients that the participants provide f
 
 # 3. Application scenarios
 
-# 3.1 Scenario 1
+## 3.1 Scenario 1
 
 [overview] Brief introdction of the application you propose.
+
 [proposer] Name, affiliation of the proposer
+
 [servients] Servients 
 
-# 3.2 Scenario 2
+## 3.2 Scenario 2
 
-# 3.3 Scenario 3
+## 3.3 Scenario 3
 
 # 4. High level description of Issues
 
