@@ -29,13 +29,13 @@
   * Life cycle management of TD
   * TD repositories on the Servient
 
-## Intel’s issues
-## SmartThings’s issues
-## Siemens’s issues
 ## Panasonic’s issues
 * Event operation using WSS
+## Siemens’s issues
+## Intel’s issues
+## SmartThings’s issues
 ## IRI’s issues
-## Xxx’s issues
+## xxx’s issues
 
 # 4. Deadline and Schedule
 
