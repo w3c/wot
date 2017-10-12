@@ -24,7 +24,7 @@ The drawing below is an use case for the next plugfest. This is the smarthome ap
 * Application Servient: WoT Servient with Comsumed Thing, e.g. applications
 * Proxy Servient: WoT Servient with both Exposed and Comsumed Thing, e.g. gateways
 
-
+!4-layered model](images/4-layer_model.png)
 
 ## 2.2 Servients from plugfest participants
 
