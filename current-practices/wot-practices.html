@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<!--<!DOCTYPE html [
+<!DOCTYPE html [
     <!ENTITY nbsp "&#160;"> 
-]>-->
+]>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -12,7 +11,7 @@
 				  specStatus:   "unofficial"
 				, charterDisclosureURI : "https://www.w3.org/2016/07/wot-ig-charter.html#patentpolicy"
 				, editors:      [{name:"Matthias Kovatsch (Siemens)"}, {name:"Daniel Peintner (Siemens)"}]
-				, authors:      [{name:"Victor Charpenay (Siemens)"}, {name:"Johannes Hund (Siemens)"}, {name:"Sebastian Käbisch (Siemens)"}, {name:"Takuki Kamiya (Fujitsu)"}]
+				, authors:      [{name:"Victor Charpenay (Siemens)"}, {name:"Johannes Hund (Siemens)"}, {name:"Sebastian Käbisch (Siemens)"}, {name:"Takuki Kamiya (Fujitsu)"}, {name:"Michael Koster (SmartThings/Samsung)"}]
 				, processVersion: 2017
 				, shortName:    "wot-practices"
 				, wg:           "Interest Group on the Web of Things"
@@ -343,6 +342,17 @@
 							@TODO Help needed by WebSockets implementers
 						</p>
 					</div>
+					
+					<div class="practice">
+						<p>
+							<span id="some-practice" class="practicelab">OCF Binding</span>
+						</p>
+						<p class="practicedesc">
+							@TODO Help needed by OCF implementers
+							<br />
+							An initial contribution is provided <a href="protocol-binding-templates\html\protocolbindings.html">here</a>.
+						</p>
+					</div>
 				</section>
 				
 				<section>
@@ -669,15 +679,15 @@ to CoAP requests to RS. </li>
 					<pre class="example" title="Data Only">
                         {
                           "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
-                          "@type": "Thing",
+                          "@type": ["Thing"],
                           "name": "MyTemperatureThing",
-                          "interactions": [
+                          "interaction": [
                             {
                               "@type": ["Property"],
                               "name": "temperature",
-                              "outputData": {"valueType": { "type": "number" }},
+                              "outputData": { "type": "number" },
                               "writable": false,
-                              "links": [{
+                              "link": [{
                                 "href" : "coap://mytemp.example.com:5683/temp",
                                 "mediaType": "application/json"
                                 }]
@@ -707,16 +717,16 @@ to CoAP requests to RS. </li>
 						"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 									 <span style="font-weight: bold; background-color: lightgrey;">{ "sensor": "http://example.org/sensors#" }</span>
 									],
-						  "@type": "Thing",
+						  "@type": ["Thing"],
 						  "name": "MyTemperatureThing",
-						  "interactions": [
+						  "interaction": [
 						    {
 						      "@type": ["Property",<div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:Temperature"</div>],
 						      "name": "temperature",
 						      <div style="font-weight: bold;  background-color:lightgrey; display:inline">"sensor:unit": "sensor:Celsius",</div>
-						      "outputData": {"valueType": { "type": "number" }},
+						      "outputData":  { "type": "number" },
 						      "writable": false,
-						      "links": [{
+						      "link": [{
 						        "href" : "coap://mytemp.example.com:5683/",
 						        "mediaType": "application/json"
 						        }]
@@ -738,7 +748,7 @@ to CoAP requests to RS. </li>
 								"http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 								{ "actuator": "http://example.org/actuator#" }
 							],
-							"@type": "Thing",
+							"@type": ["Thing"],
 							"name": "MyLEDThing",
 							"base": "coap://myled.example.com:5683/",
 							"security": {
@@ -746,13 +756,13 @@ to CoAP requests to RS. </li>
 									"alg": "HS256",
 									"as": "https://authority-issuing.example.org"
 								},
-							"interactions": [
+							"interaction": [
 								{
 									"@type": ["Property","actuator:onOffStatus"],
 									"name": "status",
-									"outputData": {"valueType": { "type": "boolean" }},
+									"outputData": { "type": "boolean" },
 									"writable": true,
-									"links": [{
+									"link": [{
 										"href" : "pwr", 
 										"mediaType": "application/exi" 
 									},
@@ -764,11 +774,8 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Action","actuator:fadeIn"],
 									"name": "fadeIn",
-									"inputData": {
-										"valueType": { "type": "integer" },
-										"actuator:unit": "actuator:ms"
-									},
-									"links": [{
+									"inputData": { "type": "integer" },
+									"link": [{
 										"href" : "in", 
 										"mediaType": "application/exi" 
 									},
@@ -780,11 +787,8 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Action","actuator:fadeOut"],
 									"name": "fadeOut",
-									"inputData": {
-										"valueType": { "type": "integer" },
-										"actuator:unit": "actuator:ms"
-									},
-									"links": [{
+									"inputData": { "type": "integer" },
+									"link": [{
 										"href" : "out", 
 										"mediaType": "application/exi" 
 									},
@@ -796,8 +800,8 @@ to CoAP requests to RS. </li>
 								{
 									"@type": ["Event","actuator:alert"],
 									"name": "criticalCondition",
-									"outputData": {"valueType": { "type": "string" }},
-									"links": [{
+									"outputData": { "type": "string" },
+									"link": [{
 						              "href" : "ev",
 						              "mediaType": "application/exi"
 						            }]	
@@ -947,6 +951,7 @@ to CoAP requests to RS. </li>
 								Above, the security field is used to announce that JSON Web Token (JWT) has to be used to interact with the resources of the Thing.
 								Thereby, type is assigned by the cat field, the corresponding hashing algorithm "HS256" by the alg field, and  the issuing authority of the security token by the as field.
 							</li>
+							<li><b>@type: [optional]</b> RDF type of this Thing Descripton that defines the semantics through a Linked Data vocabulary (Thing is the default entry) within an array structure. Additional vocabulary can be added to the array structure to further enrich the Array with semantics.</li>
 						</ul>
 
 						<p>
@@ -976,13 +981,13 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							 "interactions": [
+							 "interaction": [
 							    {
 							      "@type": ["Property"],
 							      "name": "temperature",
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData":{ "type": "number" },
 							      "writable": false,
-							      "links": [{
+							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/temp",
 							      	"mediaType": "application/json"
 							      }],
@@ -997,11 +1002,11 @@ to CoAP requests to RS. </li>
 						</p>
 
 						<ul>
-							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Property is the default value)</li>
+							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Property is the default value) within an array structure. Additional vocabulary can be added to the array structure to further enrich the Property with semantics.</li>
 							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
 							<li><b>outputData:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
 							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
-							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>	
+							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>	
 							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
 							<li><b>security: [optional]</b>
 								Access metadata (self-contained) for protecting this Property and securely transmitting information.
@@ -1038,15 +1043,12 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@type": ["Action", "actuator:fadeIn"],
 							      "name": "fadeIn",
-							      <i>"inputData":</i> {
-							        "valueType": { "type": "integer" },
-							        "actuator:unit": "actuator:ms"
-							      },
-							      "links": [{
+							      <i>"inputData":</i> { "type": "integer" },
+							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/in",
 							      	"mediaType": "application/json"
 							      }]
@@ -1057,15 +1059,11 @@ to CoAP requests to RS. </li>
 						</pre>
 						<p>There are one mandatory and four optional terms defined within the <code>Action</code> type:</p>
 						<ul>
-							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Action is the default entry)</li>
-							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation</li>
-							<li><b>inputData: [optional]</b>
-								The call parameters associated with this Action.
-								A <code>valueType</code> field defines the concrete type (see <a href="#type-system"></a> for details).
-								Additional characteristics can be given through terms defined in the context metadata (e.g., unit ms from an actuator vocabulary) similar to <a href="#property">Properties</a>).
-							</li>
-							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above)</li>
-							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
+							<li><b>@type:</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Action is the default entry).</li>
+							<li><b>name:</b> Name of the Action, which can also be used for simple semantic disambiguation.</li>
+							<li><b>inputData: [optional]</b> The call parameters associated with this Action.</li>
+							<li><b>outputData: [optional]</b> Which data is resulting from this Action (same condition as <code>inputData</code> above).</li>
+							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition.</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Action and securely transmitting information.</li>
 						</ul>
 
@@ -1095,12 +1093,12 @@ to CoAP requests to RS. </li>
 						<pre class="example">
 							{
 								...
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@type": ["Event", "actuator:alert"],
 							      "name": "criticalCondition",
-							      "outputData": {"valueType": { "type": "string" }},
-							      "links": [{
+							      "outputData":  { "type": "string" },
+							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/ev",
 							      	"mediaType": "application/json"
 							      }]
@@ -1111,9 +1109,9 @@ to CoAP requests to RS. </li>
 						</pre>
 
 						<ul>
-							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary</li>
+							<li><b>@type: [optional]</b> RDF type of the interaction that defines the semantics through a Linked Data vocabulary (Event is the default entry) within an array structure. Additional vocabulary can be added to the array structure to further enrich the Event with semantics.</li>
 							<li><b>name:</b> Name of the Event, which can also be used for simple semantic disambiguation</li>
-							<li><b>links:</b> Local link definitions (as array) with href and mediaType definition</li>
+							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>
 							<li><b>outputData: [optional]</b> Configuration data associated with this Event. This field works similar to the one of the Action pattern.</li>
 							<li><b>security: [optional]</b> Access metadata (self-contained) for protecting this Event and securely transmitting information.</li>
 						</ul>
@@ -1154,7 +1152,7 @@ to CoAP requests to RS. </li>
 						was put forward to the IG for consideration.
 					</p>
 
-					<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition. In the example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
+					<p>For <code>Property</code> and <code>Event</code> interaction types, each property or event can specify its value type using <code>outputData</code> with JSON schema definition as its content. In the following example, <code>temperature</code> property and <code>criticalCondition</code> event are defined as  <code>number</code> and <code>string</code>, respectively.
 					</p>
 
 					<pre class="example">
@@ -1164,7 +1162,7 @@ to CoAP requests to RS. </li>
 						    {
 									...
 						      "name": "temperature",
-						      "valueType": { "type": "number" },
+						      "outputData": { "type": "number" },
 									...
 						    }
 						  ]
@@ -1173,7 +1171,7 @@ to CoAP requests to RS. </li>
 						    {
 									...
 						      "name": "criticalCondition",
-						      "valueType": { "type": "string" },
+						      "outputData": { "type": "string" },
 									...
 						    }
 						  ]
@@ -1181,7 +1179,7 @@ to CoAP requests to RS. </li>
 						}
 					</pre>
 
-					<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type using <code>valueType</code> with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
+					<p>Similarly, for <code>Action</code> interaction type, each action can specify its input and/or output value type with JSON schema definition as its content. The following is an example value type definition for an action. In the example, <code>fadeIn</code> action is defined to have <code>inputData</code> of type <code>number</code> and <code>outputData</code> of type <code>boolean</code>.
 					</p>
 
 					<pre class="example">
@@ -1191,13 +1189,9 @@ to CoAP requests to RS. </li>
 						    {
 									...
 						      "name": "fadeIn",
-						      "inputData": {
-						        "valueType": { "type": "number" },
-						        "actuator:unit": "actuator:ms"
-						      },
-						      "outputData": {
-						        "valueType": { "type": "boolean" },
-						      },
+						      "inputData": { "type": "number" },
+						      "outputData":{ "type": "boolean" },
+						      
 									...
 						    }
 						  ]
@@ -1207,46 +1201,56 @@ to CoAP requests to RS. </li>
 
 					<section>
 						<h4>Simple Data</h4>
-						<p>With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
+						<p>
+							With value types described by means of JSON schema, serialization of data exchanged between servients is straightforward when it is in JSON format.
+							JSON Schema allows the following definitions in the <code>type</code> field:
+							<ul>
+								<li>boolean</li>
+								<li>integer</li>
+								<li>number</li>
+								<li>string</li>
+								<li>array</li>
+								<li>object</li>
+							</ul>
 						</p>
 	
-						<p>Consider the following <code>valueType</code> definition which defines the value to be a <code>number</code> within the value range of [ 0 ... 255 ].
+						<p>Consider the following <code>inputData</code> definition which defines the value to be an <code>integer</code> within the value range of [ 0 ... 255 ].
 						</p>
 	
 						<pre class="example">
-							"valueType": { 
-								"type": "number",
+							"inputData": { 
+								"type": "integer",
 								"minimum": 0,
 								"maximum": 255,
 							}
 						</pre>
 	
-						<p>When the <code>number</code> being exchanged is 123, data serialization in JSON format will look like the following.
+						<p>When the <code>integer</code> being exchanged is 123, data serialization in JSON format will look like the following:
 						</p>
 	
 						<pre class="example">
-							{ "value": 123 }
+							123
 						</pre>
 	
 						<p>The same data (i.e. a number of 123) will look like the following when the data is exchanged in XML.
 						</p>
 	
 						<pre class="example">
-								&lt;number>123&lt;/number>
+								&lt;integer>123&lt;/integer>
 						</pre>
 	
 						<p class="note" title="Wrapping single values in a JSON object">
-							At the time of this writing, some JSON parsers and serializers seem to have problems with value-only literals. Also, whether a single literal such as "hello" is itself a valid JSON instance depends on the JSON specification (RFC vs. ECMA). Therefore, wrapping the value with a top-level object seems to be prudent.
+							W3C WoT now follows <a href="https://tools.ietf.org/html/rfc7159">RFC 7159</a>, which allows sending simple types in the root of the document. There is no wrapping of values into an object.
 						</p>
 					</section>
 	
 					<section>
 						<h4>Structured Data</h4>
 	
-						<p>In the previous section, we used an example <code>valueType</code> definition consisting of a single <code>number</code>.
+						<p>In the previous section, we used an example <code>inputData</code> definition consisting of a single <code>integer</code>.
 						</p>
 	
-						<p>Since we are using JSON schema to describe <code>valueType</code>, it is also possible to define value types that have more than one literal value.
+						<p>Since we are using JSON schema to describe <code>inputData</code>, it is also possible to define value types that have more than one literal value.
 						JSON provides two distinct constructs to define a structure that can have multiple literal values. 
 						One is JSON object, and the other is JSON array.
 						</p>
@@ -1254,13 +1258,13 @@ to CoAP requests to RS. </li>
 						<section>
 							<h5 id="json-object">JSON Object</h5>
 		
-							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>object</code> that consists of
+							<p>The following is an example <code>inputData</code> definition that defines the value to be an <code>object</code> that consists of
 							two named literals  <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>)
 							where <code>id</code> is required to be present.
 							</p>
 		
 							<pre class="example">
-								"valueType": {
+								"inputData": {
 								    "type": "object",
 								    "properties": {
 								        "id": {
@@ -1279,10 +1283,8 @@ to CoAP requests to RS. </li>
 		
 							<pre class="example">
 								{
-									"value": {
-										"id": 12345,
-										"name": "Web of Things"
-									}
+									"id": 12345,
+									"name": "Web of Things"
 								}
 							</pre>
 		
@@ -1292,7 +1294,7 @@ to CoAP requests to RS. </li>
 							<pre class="example">
 									&lt;object>
 										&lt;id>
-											&lt;number>12345&lt;/number>
+											&lt;integer>12345&lt;/integer>
 										&lt;/id>
 										&lt;name>
 											&lt;string>Web of Things&lt;/string>
@@ -1300,30 +1302,29 @@ to CoAP requests to RS. </li>
 									&lt;/object>
 							</pre>
 		
-							<div class="note" title="RDF serialization of value types">
+							<!-- <div class="note" title="RDF serialization of value types">
 								<p>
 									Using the TD model and JSON Schema in a single document may lead
 									to a name conflict:
 									<code>properties</code> is used both to declare Properties of the Thing and expected keys in a JSON object.
-							 		Depending on the use case, if a serialization of the Thing
-									Description in RDF is required, the <code>valueType</code>
-									definition should be processed with an additional JSON-LD
-									context that overrides the mapping for <code>properties</code>
-									(see [[!JSON-LD]], Advanced Context Usage).
+							 		Depending on the use case, if a serialization of the Thing Description in RDF is required, the value type
+                  definition for <code>inputData</code> and <code>outputData</code> should be processed with an additional
+                  JSON-LD context that overrides the mapping for <code>properties</code>
+                  (see [[!JSON-LD]], Advanced Context Usage).
 								</p>
-							</div>
+							</div> -->
 		
 						</section>
 	
 						<section>
 							<h5 id="json-array">JSON Array</h5>
 		
-							<p>The following is an example <code>valueType</code> definition that defines the value to be an <code>array</code> that consists of
+							<p>The following is an example <code>inputData</code> definition that defines the value to be an <code>array</code> that consists of
 							exactly three number literals with each value within the range of [ 0 ... 255 ].
 							</p>
 		
 							<pre class="example">
-								"valueType": {
+								"inputData": {
 								    "type": "array",
 								    "items": {
 								        "type" : "number",
@@ -1339,24 +1340,22 @@ to CoAP requests to RS. </li>
 							</p>
 		
 							<pre class="example">
-								{
-									"value": [
-										208,
-										32,
-										144
-									]
-								}
+								[
+									208,
+									32,
+									144
+								]
 							</pre>
 		
 							<p>The above data will look the following when the data is exchanged in XML.
 							</p>
 		
 							<pre class="example">
-									&lt;array>
-										&lt;number>208&lt;/number>
-										&lt;number>32&lt;/number>
-										&lt;number>144&lt;/number>
-									&lt;/array>
+								&lt;array>
+									&lt;number>208&lt;/number>
+									&lt;number>32&lt;/number>
+									&lt;number>144&lt;/number>
+								&lt;/array>
 							</pre>
 		
 		
@@ -1367,7 +1366,7 @@ to CoAP requests to RS. </li>
 					<section>
 					<h4>Mapping to XML Schema</h4>
 
-					<p>In the previous section, examples showed what those data whose <code>valueType</code> are described using JSON schema
+					<p>In the previous section, examples showed what those data whose value type are described using JSON schema
 					look like when serialized to XML in parallel to corresponding JSON serializations.
 					</p>
 
@@ -1385,7 +1384,7 @@ to CoAP requests to RS. </li>
 					<section>
 						<h5>JSON Object Definition to XML Schema</h5>
 
-						<p>Shown below is the JSON schema <code>object</code> definition used as the <code>valueType</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
+						<p>Shown below is the JSON schema <code>object</code> definition used as the <code>inputData</code> in Section <a href="#json-object">JSON Object</a>. The <code>object</code> consists of two named literals <code>id</code> (of type <code>integer</code>) and <code>name</code> (of type <code>string</code>) where <code>id</code> is required to be present.
 						</p>
 
 						<pre class="example">
@@ -1474,7 +1473,7 @@ to CoAP requests to RS. </li>
 						<section>
 							<h5>JSON Array Definition to XML Schema</h5>
 	
-							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>valueType</code> in Section <a href="#json-array">JSON Array</a>. 
+							<p>Shown below is the JSON schema <code>array</code> definition used as the <code>inputData</code> in Section <a href="#json-array">JSON Array</a>. 
 							The <code>array</code> consists of exactly three number literals with each value within the value range of [ 0 ... 255 ].</p>
 	
 							<pre class="example">
@@ -1569,16 +1568,16 @@ to CoAP requests to RS. </li>
 							  "@type": "Sensor",
 							  "name": "myTempSensor",
 							 "base" : "coap:///www.example.com:5683/temp/",
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@id": "val",
 							      "@type": ["Property","Temperature"],
 							      "unit": "celsius",
 							      "reference": "threshold",
 							      "name": "myTemp",
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData": { "type": "number" },
 							      "writable": false,
-							      "links": [{
+							      "link": [{
 							      	"href" : "val",
 							      	"mediaType": "application/json"
 							      }]
@@ -1587,27 +1586,27 @@ to CoAP requests to RS. </li>
 							      "@type": ["Property","Temperature"],
 							      "unit": "celsius",
 							      "name": "myThreshold",
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData": { "type": "number" },
 							      "writable": true,
-							     	"links": [{
+							     	"link": [{
 							      	"href" : "thr",
 							      	"mediaType": "application/json"
 							      }]
 							    },
 							    {
 							      "@type": ["Event"],
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData": { "type": "number" },
 							      "name": "myChange",
 							      "property": "temp",
-							      "links": [{
+							      "link": [{
 							      	"href" : "val/changed",
 							      	"mediaType": "application/json"
 							      }]
 							    }, {
 							      "@type": ["Event"],
-							      "outputData": {"valueType": { "type": "number" }},
+							      "outputData":  { "type": "number" },
 							      "name": "myWarning",
-							      "links": [{
+							      "link": [{
 							      	"href" : "val/high",
 							      	"mediaType": "application/json"
 							      }]
@@ -1728,15 +1727,12 @@ to CoAP requests to RS. </li>
 							               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
 							  "@type": "Lamp",
 							  "name": "myMasterLED",
-							  "interactions": [
+							  "interaction": [
 							    {
 							      "@type": ["Actions", "Toggle"],
 							      "name": "myMasterOnOff",
-							      "inputData": {
-							        "@type": "OnOff",
-							        "valueType": { "type": "boolean" }
-							      },
-							      "links": [
+							      "inputData": { "type": "boolean" },
+							      "link": [
 							      {
 							        "href" : "coap://www.example.com:5683/master",
 							        "mediaType": "application/json"
@@ -1747,14 +1743,14 @@ to CoAP requests to RS. </li>
 							    }
 							  ],
 							  "associations": [
-							    { "hrefs": ["coap://www.example.com:5683/0"] },
-							    { "hrefs": ["coap://www.example.com:5683/1"] },
-							    { "hrefs": ["coap://www.example.com:5683/2"] },
-							    { "hrefs": ["coap://www.example.com:5683/3"] },
-							    { "hrefs": ["coap://www.example.com:5683/4"] },
-							    { "hrefs": ["coap://www.example.com:5683/5"] },
-							    { "hrefs": ["coap://www.example.com:5683/6"] },
-							    { "hrefs": ["coap://www.example.com:5683/7"] }
+							    { "href": "coap://www.example.com:5683/0" },
+							    { "href": "coap://www.example.com:5683/1" },
+							    { "href": "coap://www.example.com:5683/2" },
+							    { "href": "coap://www.example.com:5683/3" },
+							    { "href": "coap://www.example.com:5683/4" },
+							    { "href": "coap://www.example.com:5683/5" },
+							    { "href": "coap://www.example.com:5683/6" },
+							    { "href": "coap://www.example.com:5683/7" }
 							  ]
 							}
 						</pre>
@@ -1785,19 +1781,25 @@ to CoAP requests to RS. </li>
 						<p>
 							As the TD context we have developed is intended to be minimal, it is strongly recommended to extend it for each Thing by
 							reusing other vocabularies or ontologies and/or defining application-specific terms. In the following example, in addition
-							to our standard context, the context of the Thing declares a namespace pointing to a shared vocabulary for domotics called
-              <a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>:
+							to our standard context, the Thing Description declares a namespace for the 
+              <a href="http://uri.etsi.org/m2m/saref">Smart Appliance Reference Ontology (SAREF)</a>:
 
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-								               {"dogont": "http://elite.polito.it/ontologies/dogont.owl#"}],
-								  ...
+								               {"saref": "http://uri.etsi.org/m2m/saref#"}],
+								  "@type": [ "Thing", "saref:BuildingSpace" ],
+                  ...
 								}
 							</pre>
 
-							DogOnt defines hundreds of concepts ranging from HVAC to units of measurement.
-						</p>
+							This way, the TD can refer to the concept of building space, as defined by
+              SAREF, with the CURIE <code>saref:BuildingSpace</code>. Formally, a building
+              space is something that has geo-coordinates and that contains building objets
+              (like doors or windows) and devices (like sensors) [[!smartM2M]]. The TD states
+              that the Thing it models is also a building space. One can assume this thing
+              exposes properties such as room temperature, brightness, number of persons, ...
+            </p>
 
 						<p>
 							During early experimentations with TD files, a few concepts and terms
@@ -1805,25 +1807,155 @@ to CoAP requests to RS. </li>
 							or <code>unit</code>. To ease experimentation with the modeling
 							of Things, a context that gathers such common terms has been
 							defined at <code>http://w3c.github.io/wot/w3c-wot-common-context.jsonld</code>.
-							Its content simply defines aliases for classes and properties of well-known
-							ontologies that are relevant for our activity:
-							<a href="http://elite.polito.it/ontologies/dogont.owl">DogOnt</a>,
-							<a href="http://purl.oclc.org/NET/ssnx/qu/qu">Quantity Kinds &amp; Units</a>,
-							<a href="http://linkedgeodata.org/ontology/">LinkedGeoData</a> and
-							<a href="http://schema.org/">Schema.org</a>. This file will likely be frequently
-							updated and is not intended to become a reference. It should always be used
+							Its content simply defines aliases for some SAREF classes and properties.
+              This file is not intended to become a reference. It should always be used
 							along with the standard TD context, as follows:
 
 							<pre class="example">
 								{
 								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
 								               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
-								  ...
+								  "@type": [ "Thing", "BuildingSpace" ],
+                  ...
 								}
 							</pre>
 						</p>
 
-						@TODO more details on contextual semantics (e.g., domain independent and dependant semantic models, ontologies etc.).
+						<p>
+              The table below shows SAREF concepts that can be used along with either
+              <code>Thing</code>, <code>Property</code> or <code>Action</code> as
+              <code>@type</code> annotations, like in the examples above. The common
+              context contains mapping for both terms with and without prefix, for the
+              convenience of the user. This means that e.g. <code>BuildingSpace</code> and
+              <code>saref:BuildingSpace</code> map to the same SAREF concept.
+            
+              <table>
+                <tr>
+                  <th style="text-align:center">Thing</th>
+                  <th style="text-align:center">Property</th>
+                  <th style="text-align:center">Action</th>
+                </tr>
+                <tr style="vertical-align:top">
+                  <td>
+                    <ul>
+                      <li><code>BuildingSpace</code></li>
+                      <li><code>Door</code></li>
+                      <li><code>Window</code></li>
+                      <li><code>Switch</code></li>
+                      <li><code>Sensor</code></li>
+                      <li><code>Meter</code></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><code>Temperature</code></li>
+                      <li><code>Humidity</code></li>
+                      <li><code>Energy</code></li>
+                      <li><code>Light</code></li>
+                      <li><code>Motion</code></li>
+                      <li><code>Occupancy</code></li>
+                      <li><code>Power</code></li>
+                      <li><code>Pressure</code></li>
+                      <li><code>MultiLevelState</code></li>
+                      <li><code>OnOffState</code></li>
+                      <li><code>OpenCloseState</code></li>
+                      <li><code>StartStopState</code></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><code>ToggleCommand</code></li>
+                      <li><code>StartCommand</code></li>
+                      <li><code>StopCommand</code></li>
+                      <li><code>StepUpCommand</code></li>
+                      <li><code>StepDownCommand</code></li>
+                      <li><code>SetLevelCommand</code></li>
+                      <li><code>OnCommand</code></li>
+                      <li><code>OffCommand</code></li>
+                      <li><code>OpenCommand</code></li>
+                      <li><code>CloseCommand</code></li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </p>
+            
+            <p>
+              Moreover, our common context introduces a new term, <code>actsUpon</code>,
+              to express on which property an action is acting, if both are modeled in the
+              same Thing Description. For instance, a thermostat that can regulate the
+              temperature of a room can be modeled as follows (note the use of the additional
+              JSON-LD keyword <code>@type</code>):
+
+							<pre class="example">
+								{
+								  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+								               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+								  "@type": [ "Thing" ],
+								  "interactions": [
+                    {
+                      "@id": "_:temp",
+                      "@type": ["Property", "Temperature"],
+                      "outputData":  { "type": "number" },
+                      ...
+                    }, {
+                      "@type": ["Action", "SetLevelCommand"],
+                      "actsUpon": "_:temp",
+                      "inputData": { "type": "number" },
+                      ...
+                    }
+								  ]
+								}
+							</pre>
+            </p>
+            
+            <p>
+              In the following, we give examples of modeling for some devices that appeared
+              in past PlugFests (the full Thing Descriptions can be found
+              <a href="https://github.com/w3c/wot/tree/master/thing-description/examples">on Github</a>):
+              
+              <table>
+                <tr>
+                  <th>Device</th>
+                  <th>Semantic Modeling</th>
+                </tr>
+                <tr>
+                  <td>LED lamp</td>
+                  <td><code>Switch</code> that has two actions: a <code>OnCommand</code> and a <code>OffCommand</code>.</td>
+                </tr>
+                <tr>
+                  <td>LED lamp (with dimming)</td>
+                  <td><code>Switch</code> that has one writable <code>Light</code> property (that is also of type <code>MultiLevelState</code>) and two actions: a <code>StepUpCommand</code> and a <code>StepDownCommand</code>, where each <code>actsUpon</code> the <code>Light</code> property.</td>
+                </tr>
+                <tr>
+                  <td>Brightness sensor</td>
+                  <td><code>BuildingSpace</code> that has one <code>Light</code> property.</td>
+                </tr>
+                <tr>
+                  <td>Human detection sensor</td>
+                  <td><code>BuildingSpace</code> that has one <code>Occupancy</code> property.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://echonet.jp/introduce_en/gz-000182/">Home Air Conditioner</a></td>
+                  <td><code>BuildingSpace</code> that has one writable <code>Temperature</code> property (that is also of type <code>MultiLevelState</code>) and two actions: a <code>StepUpCommand</code> and a <code>StepDownCommand</code>, where each <code>actsUpon</code> the <code>Temperature</code> property.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.tinkerforge.com/en/shop/kits/starter-kit-weather-station.html">Weather station</a></td>
+                  <td><code>geo:SpatialThing</code><sup>*</sup> that has four readable properties: <code>Temperature</code>, <code>Humidity</code>, <code>Pressure</code> and <code>Light</code>.</td>
+                </tr>
+              </table>
+            </p>
+            
+            <small>(*) the prefix <code>geo</code> is introduced here. It also includes terms to specify the geo-location of a spatial entity: <code>geo:long</code> and <code>geo:lat</code>, also used in the examples on Github.</small>
+            
+            <p>
+              Beside SAREF, many vocabularies are of interest for WoT, such as W3C
+              SSN [[vocab-ssn-20170504]], <a href="http://www.onem2m.org/ontology/Base_Ontology/oneM2M_Base_Ontology-V_3_2_0.owl">oneM2M Base Ontology</a>, <a href="http://iot.webschemas.org/">iot.schema.org</a>
+              and vocabularies developed in the context of research projects such as the
+              <a href="http://iot.linkeddata.es/def/core/index-en.html">Vicinity core ontology</a>,
+              <a href="https://mobility.big-iot.org/">BIG IoT's domain models</a> or the
+              <a href="http://ci.emse.fr/seas/">SEAS ontology</a>.
+            </p>
 					</section>
 					
 					<section id="td-discovery">
@@ -1855,10 +1987,11 @@ to CoAP requests to RS. </li>
 	
 							<p>
 								The Thing (or a commissioning tool) registers the TD with a well-known repository, which also provides a look-up mechanism (potentially supporting filtering).
+                An implementation of the repository is available <a href="http://plugfest.thingweb.io:8081/">here</a> (if the server is not online, you can also run your own instance: see <a href="https://github.com/thingweb/thingweb-repository/">our Github repository</a>).
 							</p>
 							<img src="discovery_repository.png" style="width:60%" />
 							<p>
-								The figure shows the basic concept of the usage of a repository: 1) A servient register its TD to a known TD repository. 2) Another servient does a lookup/search/querying (e.g., via SPARQL) at the TD repository. 3) The repository answers with one ore more relevant TDs. Also a subset of TD’s content can be in the result set (e.g., only relevant properties, actions, and/or events are included). 4) Based on the repository’s result set, a connection can be initiated. 
+								The figure shows the basic concept of the usage of a repository: 1) A servient registers its TD to a known TD repository. 2) Another servient does a lookup/search/querying (e.g., via SPARQL) at the TD repository. 3) The repository answers with one ore more relevant TDs. Also a subset of TD’s content can be in the result set (e.g., only relevant properties, actions, and/or events are included). 4) Based on the repository’s result set, a connection can be initiated. 
 
 							</p>
 						</section>
@@ -1883,278 +2016,22 @@ to CoAP requests to RS. </li>
 			</section>
 
 			<section>
-				<h2>Scripting API</h2>
+				<h2>WoT Scripting API</h2>
 
 				<p>
-					The Scripting API is an API specification to have a uniform way to write scripts/applications for the web of things. 
-					It provides means for Discovery, Provisioning and Control of Things in a <a href="http://www.w3.org/WoT/">Web of Things</a>.
+					The WoT Scripting API is an API specification to have a uniform way to write applications for the Web of Things.
+					It provides means for discovery, provisioning, and control of Things.
+				</p>
+				
+				<p>
+					For details refer to the Editor's Draft of the <a href="https://w3c.github.io/wot-scripting-api/">Web of Things (WoT) Scripting API specification</a>.
+					Further reading is provided in the <a href="https://github.com/w3c/wot-scripting-api/blob/master/rationale.md">Rationale</a> and the <a href="https://github.com/w3c/wot-scripting-api/blob/master/primer.md">Primer</a> documents.
 				</p>
 
 				<p class="issue">
-					Portable application logic, language-independent
+					Provide examples for a quick start with the Scripting API.
 				</p>
-
-				<section>
-					<h3>API design principles</h3>
-
-					<p>
-					The API is designed to be language-agnostic (i.e. being applicable to different languages) to enable various runtimes.
-					The overall API philosophy is reactive, meaning a programmer will mostly be passing callback functions which get called from the framework.
-					It makes uses of the promise pattern that is very popular in Javascript.
-					</p>
-
-					<p>
-					The API aims to provide means for both exposing things (as a server) and consuming things (as a client).
-					They can be retrieved from a singular entry point, it offers factory methods to create representations of exposed and consumed things.
-					These representations offer methods to define behaviour for a thing, change the thing model or interact with the thing.
-					</p>  
-					
-					<p class="note">
-					<b>Object orientation</b>: This document is written language agnostic, but is specified using object oriented metaphors. This document will capture a proposition for the structure of the WoT scripting API and state the design principles.The translation of this metaphors for non-object oriented languages (most notably C) can be done by passing handles and structs, which is common practise, but needs further specification. Some ground rules can be named however:
-					all functions shall have a prefix
-					handles or structs replace passing of objects to the framework
-					structs represent objects being passed from the framework.
-					</p>
-					
-				</section>
-
-				<section>
-					<h3 id="wot-object">WoT root entry</h3>
-
-					<p>
-						The root entry for the API is an object WoT giving access to the factory methods.
-						<br/>For non-object oriented languages, you could use <code>wot-</code> as a prefix to the factory methods.
-					</p>
-
-					<pre class="idl">
-						interface WoT {
-							Promise&lt;sequence&lt;ConsumedThing&gt;&gt; discover(ThingFilter filter);
-							Promise&lt;ConsumedThing&gt; consumeDescription(object td);
-							Promise&lt;ConsumedThing&gt; consumeDescriptionUri(DOMString uri);
-							Promise&lt;ExposedThing&gt; createThing(DOMString name);
-							Promise&lt;ExposedThing&gt; createFromDescription(object td);
-							Promise&lt;ExposedThing&gt; createFromDescriptionUri(DOMString uri);
-						};
-					</pre>
-
-					<section>
-						<h3 id="factories-for-consuming">Factories for Consuming Things</h3>
-
-						<p>Instances of the objects/structs representing a Thing are retrieved via factories.
-						These are methods of the root object that return a promise which will resolve to an array of proxy objects.</p>
-
-						<section>
-							<h3 id="discover">factory <code>discover()</code></h3>
-
-							<p>Discovery of Things can be triggered with typed filters.</p>
-
-							<b>Parameters</b>
-							<ul>
-								<li>
-									<b>type</b> type of the discovery mechanism
-								</li>
-								<li>
-									<b>filter</b> object (dictionary) with parameters for the discovery
-								</li>
-							</ul>
-
-							<b>Returns</b>
-							<p>A promise resolved to an array of <code>ConsumedThing</code> and rejected if the discovery type is not available or there was an error</p>
-
-							<pre class="example highlight" title="Discover Things">
-								WoT.discover("registry", {registry:"http://my.registry.org"})
-								.then(function(things) {
-									things.forEach(function(thing) { 
-										console.log("found " + thing.name);
-									});
-								})
-							</pre>
-						</section>
-
-						<section>
-							<h3 id="consumeDescription">factory <code>consumeDescription()</code></h3>
-
-							<p>This factory method can be used to create Things based on a Thing Decription</p>
-
-							<b>Parameters</b>
-							<ul>
-								<li>
-									<b>td</b> a Thing Description
-								</li>
-							</ul>
-
-							<b>Returns</b>
-							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not available or there was an error</p>
-
-							<pre class="example highlight" title="access a Thing by description">
-								WoT.consumeDescription({ /*... valid thing description ...*/ })
-								.then(function(thing) {
-									console.log("found " + thing.name);
-								});
-							</pre>
-						</section>
-
-						<section>
-							<h3 id="consumeDescriptionUri">factory <code>consumeDescriptionUri()</code></h3>
-
-							<p>This factory method can be used to create Things based on a uri of a Thing Decription</p>
-
-							<b>Parameters</b>
-							<ul>
-								<li>
-									<b>uri</b> an uri pointing to a Thing Description
-								</li>
-							</ul>
-
-							<b>Returns</b>
-							<p>A promise resolved to a <code>ConsumedThing</code> and rejected if the thing is not available or there was an error</p>
-
-							<pre class="example highlight" title="access a Thing by uri of Thing Description">
-								WoT.consumeDescriptionUri("http://somethingontheweb.org/td")
-									.then(function(thing) {
-										console.log("found " + thing.name });
-									})
-							</pre>
-						</section>
-					</section>
-					<section>
-						<h3 id="factories-for-exposing">Factories for Exposing Things</h3>
-
-						<p>Instances of the objects/structs representing a Thing are retrieved via factories.
-						These are methods of the root object that return a promise which will resolve to a proxy object.</p>
-
-						<section>
-							<h3 id="createThing">factory <code>createThing()</code></h3>
-
-							<p>This factory method can be used to create new Things</p>
-
-							<b>Parameters</b>
-							<ul>
-								<li>
-									<b>name</b> the name of the newly created Thing
-								</li>
-							</ul>
-
-							<b>Returns</b>
-							<p>A promise resolved to an <code>ExposedThing</code> and rejected if the thing could not be created or there was any error</p>
-
-							<pre class="example highlight" title="creating a new exposed Thing">
-								WoT.createThing("Foo")
-									.then(function(thing) {
-										console.log("crated " + thing.name });
-									})
-							</pre>
-						</section>
-
-						<section>
-							<h3 id="createFromDescription">factory <code>createFromDescription()</code></h3>
-
-							<p>This factory method can be used to create new Things based on a TD template</p>
-
-							<b>Parameters</b>
-							<ul>
-								<li>
-									<b>td</b> a Thing Description template describing the interactions of the Thing
-								</li>
-							</ul>
-
-							<b>Returns</b>
-							<p>A promise resolved to an <code>ExposedThing</code> and rejected if the thing could not be created or there was any error</p>
-
-							<pre class="example highlight" title="creating a new exposed Thing based on a TD template">
-								WoT.createFromDescription({"name" : "Foo", "actions" : [/* ... */] })
-									.then(function(thing) {
-										console.log("crated " + thing.name });
-									})
-							</pre>
-						</section>
-
-						<section>
-							<h3 id="createFromDescriptionUri">factory <code>createFromDescriptionUri()</code></h3>
-
-							<p>This factory method can be used to create new Things based on a TD template, given by a uri pointing to the TD template.</p>
-
-							<b>Parameters</b>
-							<ul>
-								<li>
-									<b>uri</b> a uri poinzing to the Thing Description template describing the interactions of the Thing
-								</li>
-							</ul>
-
-							<b>Returns</b>
-							<p>A promise resolved to an <code>ExposedThing</code> and rejected if the thing could not be created or there was any error</p>
-
-							<pre class="example highlight" title="creating a new exposed Thing based on a TD template">
-								WoT.createFromDescriptionUri("http://some.server.org/tdtemplate.jsonld")
-									.then(function(thing) {
-										console.log("crated " + thing.name });
-									})
-							</pre>
-						</section>
-
-					</section>
-				</section>
-
-				<section>
-					<h3>Consumed Thing</h3>
-
-					<p>
-						The root entry for a placeholder object to interact with a Thing 
-					</p>
-
-					<pre class="idl">
-						interface ConsumedThing {
-								readonly attribute DOMString name;
-							    Promise&lt;any&gt; invokeAction(DOMString actionName, any parameter);
-							    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
-							    Promise&lt;any&gt; getProperty(DOMString propertyName);
-								ConsumedThing addListener(DOMString eventName, ThingEventListener listener);
-							    ConsumedThing removeListener(DOMString eventName, ThingEventListener listener);
-							    ConsumedThing removeAllListeners(DOMString eventName);
-								object getDescription();
-						};
-					</pre>
-
-					<p class="note">
-						<b>explanation in detail</b> to be transferred from <a href="https://github.com/w3c/wot/tree/master/proposals/restructured-scripting-api#consumedthing" target="_blank">Proposal</a> 
-					</p>
-				</section>
-
-				<section>
-					<h3>Exposed Thing</h3>
-
-					<p>
-						The root entry for a placeholder object to define behaviour for a Thing 
-					</p>
-
-					<pre class="idl">
-						interface SemanticType {
-							attribute DOMString name;
-							attribute DOMString context;
-						};
-
-						interface ExposedThing {
-								readonly attribute DOMString name;
-							    Promise&lt;any&gt; invokeAction(DOMString actionName, any parameter);
-							    Promise&lt;any&gt; setProperty(DOMString propertyName, any newValue);
-							    Promise&lt;any&gt; getProperty(DOMString propertyName);
-								Promise&lt;any&gt; emitEvent(DOMString eventName, any payload);
-								ExposedThing addEvent(DOMString eventName, object payloadType, optional SemanticType[] semanticType);
-								ExposedThing addAction(DOMString actionName, object inputType, object outputType, optional SemanticType[] semanticType);
-								ExposedThing addProperty(DOMString propertyName, object contentType, optional SemanticType[] semanticType);
-								ExposedThing onInvokeAction(DOMString actionName, ActionHandler callback);
-								ExposedThing onUpdateProperty(DOMString propertyName, PropertyChangeListener callback);
-								ExposedThing addListener(DOMString eventName, ThingEventListener listener);
-							    ExposedThing removeListener(DOMString eventName, ThingEventListener listener);
-							    ExposedThing removeAllListeners(DOMString eventName);
-								object getDescription();
-						};
-					</pre>
-
-					<p class="note">
-						<b>explanation in detail</b> to be transferred from <a href="https://github.com/w3c/wot/tree/master/proposals/restructured-scripting-api#exposedthing" target="_blank">Proposal</a> 
-					</p>
-				</section>
+			</section>
 		</section>
 
 		<section>
@@ -2292,7 +2169,7 @@ to CoAP requests to RS. </li>
 				<h2>Participation Howto</h2>
 
 				<p class="note" title="Status">
-					The current status of the howto is <a href="#plugfest-beijing">Beijing (2016-07)</a>
+					The current status of the howto is <a href="#plugfest-duesseldorf-2017">D&uuml;sseldorf (2017-07)</a>
 				</p>
 
 				<p>
@@ -2501,6 +2378,243 @@ to CoAP requests to RS. </li>
 					<li>TBD</li>
 				</ul>
 			</section>
+			
+			<section id="plugfest-osaka-2017">
+				<h2>Osaka (2017-05)</h2>
+
+				<p>Find PlugFest organization and contributor details on
+				the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting,_May_2017,_Osaka,_Japan#PlugFest">WoT Osaka PlugFest wiki page</a>.</p>
+				
+				<p>The WoT TestThing Thing Description (TD) for the PlugFest is shown below.
+				Please note that the Link URIs are only valid for a locally running TestThing. Your TestThing implementation should provide the correct, globally reachable Links.
+				</p>
+				
+				<pre class="example">
+{
+	"@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+	"@type": "Thing",
+	"name": "TestThing",
+	"interaction": [{
+		"@type": ["Property"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/bool",
+			"mediaType": "application/json"
+		}],
+		"name": "bool",
+		"outputData": {
+			 {
+				"type": "boolean"
+			}
+		,
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/int",
+			"mediaType": "application/json"
+		}],
+		"name": "int",
+		"outputData": {
+			
+				"type": "integer"
+			
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/num",
+			"mediaType": "application/json"
+		}],
+		"name": "num",
+		"outputData": {
+			
+				"type": "number"
+		
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/string",
+			"mediaType": "application/json"
+		}],
+		"name": "string",
+		"outputData": {
+		
+				"type": "string"
+		
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/array",
+			"mediaType": "application/json"
+		}],
+		"name": "array",
+		"outputData": {
+			
+				"type": "array"
+			
+		},
+		"writable": true
+	}, {
+		"@type": ["Property"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/properties/object",
+			"mediaType": "application/json"
+		}],
+		"name": "object",
+		"outputData": {
+			
+				"type": "object",
+				"properties": {
+					"prop1": {
+						"type": "integer"
+					},
+					"prop2": {
+						"type": "string"
+					}
+				},
+				"required": {
+					"0": "prop1",
+					"1": "prop2"
+				}
+			
+		},
+		"writable": true
+	}, {
+		"@type": ["Action"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/void-void",
+			"mediaType": "application/json"
+		}],
+		"name": "void-void"
+	}, {
+		"@type": ["Action"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/void-int",
+			"mediaType": "application/json"
+		}],
+		"name": "void-int",
+		"outputData": {
+			
+				"type": "integer"
+			
+		}
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+			
+				"type": "integer"
+			
+		},
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/int-void",
+			"mediaType": "application/json"
+		}],
+		"name": "int-void"
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+			
+				"type": "integer"
+			
+		},
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/int-int",
+			"mediaType": "application/json"
+		}],
+		"name": "int-int",
+		"outputData": {
+			
+				"type": "integer"
+			
+		}
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+			
+				"type": "string"
+			
+		},
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/int-string",
+			"mediaType": "application/json"
+		}],
+		"name": "int-string"
+	}, {
+		"@type": ["Action"],
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/void-complex",
+			"mediaType": "application/json"
+		}],
+		"name": "void-complex",
+		"outputData": {
+			
+				"type": "object",
+				"properties": {
+					"prop1": {
+						"type": "integer"
+					},
+					"prop2": {
+						"type": "string"
+					}
+				},
+				"required": {
+					"0": "prop1",
+					"1": "prop2"
+				}
+			}
+		
+	}, {
+		"@type": ["Action"],
+		"inputData": {
+		
+				"type": "object",
+				"properties": {
+					"prop1": {
+						"type": "integer"
+					},
+					"prop2": {
+						"type": "string"
+					}
+				},
+				"required": {
+					"0": "prop1",
+					"1": "prop2"
+				}
+			
+		},
+		"link": [{
+			"href": "http://127.0.0.1:8080/TestThing/actions/complex-void",
+			"mediaType": "application/json"
+		}],
+		"name": "complex-void"
+	}]
+}
+				</pre>
+				
+				<h3>Outcome &amp; Findings</h3>
+				<ul>
+					<li>TBD</li>
+				</ul>
+				
+			</section>
+			
+			
+			<section id="plugfest-duesseldorf-2017">
+				<h2>D&uuml;sseldorf (2017-07)</h2>
+				
+				<p>Find PlugFest organization and contributor details on
+					the dedicated <a href="https://www.w3.org/WoT/IG/wiki/F2F_meeting,_9-13_July_2017,_D%C3%BCsseldorf,_Germany#PlugFest">WoT D&uuml;sseldorf PlugFest wiki page</a>.</p>
+				
+				<p class="ednote">Add more information about the actual PlugFest.
+				</p>
+				
+			</section>
+			
 		</section>
 
 		<section>
@@ -2538,3 +2652,4 @@ if(dschk() == 1) { if(typeof (dsSetTimers) != "undefined") { dsSetTimers(1454572
 //]]>
 	</script>
 </html>
+

@@ -1,0 +1,198 @@
+{
+  "@context": [
+    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    { "sch": "http://thingschema.org/example/schema" }
+  ],
+  "@type": ["thing", "sch:light", "sch:switch", "sch:level"],
+  "name": "Example Light Thing with switch and level capabilities",
+  "interaction": [
+    {
+      "@type": ["property", "sch:switch"],
+      "name": "on/off switch state",
+      "outputData": {
+        "type": "object",
+        "properties": {
+          "switchstate": {
+            "@type": ["sch:switch.state"],
+            "type": "boolean"
+          }
+        }
+      },
+      "writeable": true,
+      "link": [
+        {
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
+          "mediatype": "application/json",
+          "rt": ["oic.r.switch.binary"],
+          "if": ["oic.if.baseline"],
+          "method.set": "post",
+          "outputschema": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "value": "{{switchstate}}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["property", "sch:level"],
+      "name": "brightness level",
+      "outputData": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "@type": ["sch:level.value"],
+            "type": "number",
+            "min": 0,
+            "max": 254,
+            "multipleOf": 1
+          }
+        }
+      },
+      "writeable": true,
+      "link": [
+        {
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
+          "mediatype": "application/json",
+          "rt": ["oic.r.light.dimming"],
+          "if": ["oic.if.baseline"],
+          "method.set": "post",
+          "outputschema": {
+            "type": "object",
+            "properties": {
+              "dimming": {
+                "value": "{{level}}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["property", "sch:transitiontime"],
+      "name": "transition time for level changes",
+      "outputData": {
+        "type": "object",
+        "properties": {
+          "transitiontime": {
+            "@type": ["sch:transitiontime.value"],
+            "type": "number",
+            "min": 0,
+            "max": 65535,
+            "multipleOf": 1,
+            "units": "ucum:ds"
+          }
+        }
+      },
+      "writeable": true,
+      "link": [
+        {
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
+          "mediatype": "application/json",
+          "rt": ["oic.r.light.ramptime"],
+          "if": ["oic.if.baseline"],
+          "method.set": "post",
+          "outputschema": {
+            "type": "object",
+            "properties": {
+              "ramptime": {
+                "value": "{{transitiontime}}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["action", "sch:turnon"],
+      "name": "turn the light on",
+      "inputData": {},
+      "link": [
+        {
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
+          "mediatype": "application/json",
+          "method.invoke": "post",
+          "rt": ["oic.r.switch.binary"],
+          "if": ["oic.if.baseline"],
+          "inputschema": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "value": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["action", "sch:turnoff"],
+      "name": "turn the light on",
+      "inputData": {},
+      "link": [
+        {
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
+          "mediatype": "application/json",
+          "method.invoke": "post",
+          "rt": ["oic.r.switch.binary"],
+          "if": ["oic.if.baseline"],
+          "inputschema": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "value": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["action", "sch:movetolevel"],
+      "name": "set brightness level",
+      "inputData": {
+        "type": "object",
+        "properties": {
+          "targetlevel": {
+            "@type": ["sch:level.value"],
+            "type": "number",
+            "min": 0,
+            "max": 254,
+            "multipleOf": 1
+          },
+          "transitiontime": {
+            "@type": ["sch:transitiontime.value"],
+            "type": "number",
+            "min": 0,
+            "max": 65535,
+            "multipleOf": 1,
+            "units": "ucum:ds"
+          }
+        }
+      },
+      "link": [
+        {
+          "href": "http://10.0.0.17:8000/api/oic/light?di=39d2e776-f709-4528-9667-0ccb44977ab0",
+          "mediatype": "application/json",
+          "method.invoke": "post",
+          "rt": ["oic.r.light.dimming", "oic.r.light.ramptime"],
+          "if": ["oic.if.baseline"],
+          "inputschema": {
+            "type": "object",
+            "properties": {
+              "dimming": {
+                "value": "{{targetlevel}}"
+              },
+              "ramptime": {
+                "value": "{{transitiontime}}"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
