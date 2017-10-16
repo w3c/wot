@@ -36,15 +36,110 @@ The following figure shows diagrams of Servients that the participants provide f
 
 ## 2.4 Servients and Protocols
 
-| Servients | Fujitsu | Panasonic | Internet Research Institute | Siemens | Lemonbeat | Intel | SmartThings | EUROCOM | |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Application | Scripting, NodeRED | Scripting, NodeRED | NodeRED | | | | | | | |
-| =Protocol | HTTP(S) | HTTPS+WSS | HTTP(S) | | | | | | | |
-| Remote proxy | Server | | | | | | | | | |
-| =Protocol | HTTP(S) | | | | | | | | | |
-| Local proxy | Gateway | | | | | | | | | |
-| =Protocol | HTTP | | | | | | | | | |
-| Device | LED light, Air conditioner, Blind | LED light, Air conditioner, Robot cleaner | | | | | | | | |
+<table>
+<tr>
+  <th>Servients</th>
+  <th>Fujitsu</th>
+  <th colspan=2>Panasonic</th>
+  <th>Internet Research Institute</th>
+  <th>Siemens</th>
+  <th>Lemonbeat</th>
+  <th>Intel</th>
+  <th>SmartThings</th>
+  <th>EUROCOM</th>
+  <th></th>
+</tr>
+<tr>
+  <th>Application</th>
+  <td>Scripting, NodeRED</td>
+  <td colspan=2>Scripting, NodeRED</td>
+  <td>NodeRED</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th>=Protocol</th>
+  <td>HTTP(S)</td>
+  <td>HTTPS</td>
+  <td>HTTPS+WSS</td>
+  <td>HTTP(S)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th>Remote proxy</th>
+  <td>Server</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th>=Protocol</th>
+  <td>HTTP(S)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th>Local proxy</th>
+  <td>Gateway</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th>=Protocol</th>
+  <td>HTTP</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th>Device</th>
+  <td>LED light, Air conditioner, Blind</td>
+  <td>LED light, Air conditioner, Robot Cleaner</td>
+  <td>Human Detection Sensor, Amazon Echo, Google Home</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</table>
 
 # 3. Application scenarios
 
