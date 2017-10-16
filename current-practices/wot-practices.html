@@ -1160,21 +1160,17 @@ to CoAP requests to RS. </li>
 					<pre class="example">
 						{
 							...
-						  "properties": [
+						  "interaction": [
 						    {
-									...
+						      "@type": ["Property"],
 						      "name": "temperature",
-						      "outputData": { "type": "number" },
-									...
-						    }
-						  ]
-							...
-						  "events": [
-						    {
-									...
+						      "outputData": { "@type": "Number" },
+						    	...
+						    }, {
+						      "@type": ["Event"],
 						      "name": "criticalCondition",
-						      "outputData": { "type": "string" },
-									...
+						      "outputData": { "@type": "String" },
+						    	...
 						    }
 						  ]
 							...
@@ -1187,14 +1183,13 @@ to CoAP requests to RS. </li>
 					<pre class="example">
 						{
 							...
-						  "actions": [
+						  "interaction": [
 						    {
-									...
+						      "@type": ["Action"],
 						      "name": "fadeIn",
-						      "inputData": { "type": "number" },
-						      "outputData":{ "type": "boolean" },
-						      
-									...
+						      "inputData": { "@type": "Number" },
+						      "outputData":{ "@type": "Boolean" },
+						    	...
 						    }
 						  ]
 							...
@@ -1221,7 +1216,7 @@ to CoAP requests to RS. </li>
 	
 						<pre class="example">
 							"inputData": { 
-								"type": "integer",
+								"@type": "Integer",
 								"minimum": 0,
 								"maximum": 255,
 							}
@@ -1267,15 +1262,20 @@ to CoAP requests to RS. </li>
 		
 							<pre class="example">
 								"inputData": {
-								    "type": "object",
-								    "properties": {
-								        "id": {
-								            "type": "integer"
-								        },
-								        "name": {
-								            "type": "string"
+								    "@type": "Object",
+								    "field": [
+								      {
+								        "name": "id",
+								        "value": {
+								            "@type": "Integer"
 								        }
-								    },
+								      }, {
+								        "name": "name",
+								        "value": {
+								            "@type": "String"
+								        }
+								      }
+								    ],
 								    "required": ["id"]
 								}
 							</pre>
@@ -1327,9 +1327,9 @@ to CoAP requests to RS. </li>
 		
 							<pre class="example">
 								"inputData": {
-								    "type": "array",
+								    "@type": "Array",
 								    "items": {
-								        "type" : "number",
+								        "@type" : "Number",
 								        "minimum": 0,
 								        "maximum": 255
 								    },
@@ -1391,15 +1391,20 @@ to CoAP requests to RS. </li>
 
 						<pre class="example">
 							{
-							    "type": "object",
-							    "properties": {
-							        "id": {
-							            "type": "integer"
-							        },
-							        "name": {
-							            "type": "string"
+							    "@type": "Object",
+							    "field": [
+							      {
+							        "name": "id",
+							        "value": {
+							            "@type": "Integer"
 							        }
-							    },
+							      }, {
+							        "name": "name",
+							        "value": {
+							            "@type": "String"
+							        }
+							      }
+							    ],
 							    "required": ["id"]
 							}
 						</pre>
@@ -1480,9 +1485,9 @@ to CoAP requests to RS. </li>
 	
 							<pre class="example">
 								{
-								    "type": "array",
+								    "@type": "Array",
 								    "items": {
-								        "type" : "number"
+								        "@type" : "Number"
 								        "minimum": 0,
 								        "maximum": 255,
 								    },
