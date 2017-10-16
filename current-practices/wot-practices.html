@@ -987,6 +987,7 @@ to CoAP requests to RS. </li>
 							      "name": "temperature",
 							      "outputData":{ "type": "number" },
 							      "writable": false,
+							      "observable": false,
 							      "link": [{
 							      	"href" : "coap://mytemp.example.com:5683/temp",
 							      	"mediaType": "application/json"
@@ -1006,6 +1007,7 @@ to CoAP requests to RS. </li>
 							<li><b>name:</b> Name of the Property, which can also be used for simple semantic disambiguation</li>
 							<li><b>outputData:</b> Which data type is associated with this Property (see <a href="#type-system"></a> for details)</li>
 							<li><b>writable:</b> Is this Property writable (<code>true</code>/<code>false</code>)</li>
+              <li><b>observable:</b> Indicates whether a remote servient can subscribe to ("observe") the Property, to receive change notifications or periodic updates (<code>true</code>/<code>false</code>). These notifications distinguish themselves from Events by the fact that they may be ignored by the remote servient, while the delivery of every single Event should be guaranteed.</li>
 							<li><b>link:</b> Local link definitions (as array) with href and mediaType definition</li>	
 							<li><b>stability: [optional]</b> Expected period in ms the Property value is expected not to change (>0=estimated period; 0=irregular change; -1=static value)</li>
 							<li><b>security: [optional]</b>
