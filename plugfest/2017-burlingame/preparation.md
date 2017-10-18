@@ -36,7 +36,7 @@ The following figure shows diagrams of Servients that the participants provide f
 
 ## 2.4 Servients and Protocols
 
-| Servients | Fujitsu | Panasonic | Internet Research Institute | Siemens | Lemonbeat | Intel | SmartThings | EUROCOM | |
+| Servients | Fujitsu | Panasonic | Internet Research Institute | Siemens | Lemonbeat | Intel | SmartThings | EURECOM | |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Application | Scripting, NodeRED | Scripting, NodeRED | NodeRED | | | | | | | |
 | =Protocol | HTTP(S) | HTTPS+WSS | HTTP(S) | | | | | | | |
