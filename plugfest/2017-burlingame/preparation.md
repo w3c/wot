@@ -75,7 +75,19 @@ The following figure shows diagrams of Servients that the participants provide f
 
 ## Panasonic’s issues
 * Event operation using WSS
+
 ## Siemens’s issues
+* TD Model
+  * Event representation (TD-style "Event Description" with Interactions to confirm/resolve?)
+  * Complex Action representation (TD-style "Action Description" with Interactions to monitor/update/cancel?)
+  * Semantic annotations
+* Connectivity
+  * Interoperable firewall and NAT traversal patterns
+  * WebSocket usage without definition of a new protocol (WSS as pure data pipe; Panasonic's event-handle might be to avoid race condition in event delivery?)
+* Thing Description management
+  * Identity management (e.g., when in multiple Directories, partial rewrite for proxy addresses, etc.)
+  * Life cycle management of TD
+
 ## Intel’s issues
 ## SmartThings’s issues
 ## IRI’s issues
