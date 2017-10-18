@@ -4,16 +4,30 @@
 
 This document describes the information related to the next plugfest in Sunnyvale and demonstration in TPAC, Burlingame in November.
 
-# 1.1 Backgroud
+## 1.1 Backgroud
 
 In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by dirfferent menbers. They were combinations of application and device, or deivce to device. These application and devices were compatible to WoT anc talked with it.
 To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. Since some Servients may be connected to the local network and the others to the Internet, new issues for these connections should be considered such as security, firewall and NAT, device mangement and so on. This plugfest wiil be good opportunity to new issues to resoluve in the futre in WoT-WG.
 
-# 1.2. Use case
+## 1.2 Use case
 
 The drawing below is an use case for the next plugfest. This is the smarthome application that the application on the smartphone can control the air conditioner in the house. The agent and the gateway have gateway functions that connects with appliations, devices, and gateways.
 
 ![Use case](images/smarthome.png)
+
+## 1.3 Available Services
+
+* [PlugFest Playground](http://plugfest.thingweb.io/)
+* [Thing Directory](http://plugfest.thingweb.io:8081/api.json) (Swagger Documentation)
+  * [HTTP interface](http://plugfest.thingweb.io:8081/td)
+  * [CoAP interface](coap://plugfest.thingweb.io:5681/td)
+* [WebUI](http://plugfest.thingweb.io/webui/)
+
+## 1.4 Available Code
+
+* [Servient (node-wot)](https://github.com/thingweb/node-wot)
+* [Thing Directory (Thingweb Directory)](https://github.com/thingweb/thingweb-directory)
+* ...
 
 # 2. Servients
 
