@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>JSON Web Thing Description</title>
+    <script
+     src='https://www.w3.org/Tools/respec/respec-w3c-common'
+     class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+        specStatus: "IG-NOTE",
+        editors: [{
+          name: "Ben Francis",
+          company: "Mozilla Corporation",
+          companyURL: "https://mozilla.com/",
+          w3cid: 51527
+        },
+        {
+          name: 'Dominique Guinard',
+          company: 'EVRYTHNG',
+          companyURL: 'http://evrythng.com/'
+        },],
+        processVersion: 2017,
+        shortName: "json-td",
+      };
+    </script>
+    <style>
+    table {
+      width: 100%;
+      border: solid 1px #005A9C;
+      border-collapse: collapse;
+    }
+    th {
+      background-color: #005A9C;
+      color: white;
+    }
+    td, th {
+      border: solid 1px #005A9C;
+      padding: 4px;
+    }
+    </style>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>This document describes an experimental plain JSON serialization of a <a href="https://www.w3.org/TR/2017/WD-wot-thing-description-20170914/">Web of Things (WoT) Thing Description</a>. The Thing Description provides machine readable metadata describing a physical device connected to the World Wide Web.</p>
+    </section>
+    <section id='sotd'>
+      <p>
+
+      </p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <p>The goal of the Web of Things is to create a decentralized Internet of Things by giving connected devices URLs on the web to make them linkable and discoverable, and defining a standard data model and APIs to make them interoperable.</p>
+      <p>In this document we propose a plain JSON serialisation of a Web Thing Description with a default semantic context denoted by an <code>application/thing+json</code> media type (not yet submitted for IANA registration). The basic description format can be extended with semantic annotations using JSON-LD.</p>
+    </section>
+    <section>
+      <h2>Web Thing Description</h2>
+      <p>The Thing Description provides a vocabulary for describing physical devices connected to the World Wide Web in a machine readable format.</p>
+      <div class="example">
+        <div class="example-title marker">
+          Example
+        </div>
+        <pre>
+{
+  "name":"My Lamp",
+  "type": "thing",
+  "description": "A web connected lamp",
+  "properties": {
+    "on": {
+      "type": "boolean,
+      "description": "Whether the lamp is turned on",
+      "href": "/things/lamp/properties/on"
+    }
+  },
+  "actions": {
+    "toggle": {
+      "description": "Toggle the lamp on and off"
+    }
+  },
+  "events": {
+    "overheating": {
+      "description": "The lamp has exceeded its safe operating temperature"
+    }
+  }
+}
+        </pre>
+      </div>
+
+      <section>
+        <h3><code>name</code> member</h3>
+        <p>The name member is a user friendly string which describes the device. This can be set to any value by the device creator and may include a brand name or model number.</p>
+      </section>
+      <section>
+        <h3><code>type</code> member</h3>
+        <p>The type member defines the type of device described by the Thing Description. This specification will define some primitive thing types as part of a default web thing context (e.g. <code>onOffSwitch</code> and <code>binarySensor</code>). The type system is extensible via schemas using JSON-LD, see <a href="#extensibility-with-json-ld">Extensibility with JSON-LD</a>.</p>
+      </section>
+      <section>
+        <h3><code>description</code> member</h3>
+        <p>The description member is a user friendly string which describes the device and its functions. This can be set to any value by the device creator.</p>
+      </section>
+      <section>
+        <h3><code>properties</code> member</h3>
+        <p>The properties member is a map of property objects which describe readable and/or writable attributes of a device. Examples might include a on/off state, a brightness level or a temperature threshold.</p>
+      </section>
+      <section>
+        <h3><code>actions</code> member</h3>
+        <p>The actions member is a map of action objects which describe functions that can be carried out on a device. Actions are used when the setting of properties alone is not sufficient to affect a required change in state, such as actions which have a different outcome depending on provided arguments or previous state, or take a certain amount of time to complete. Examples might include fading in a light, toggling an on/off switch, moving a robot or brewing a cup of coffee.</p>
+      </section>
+      <section>
+        <h3><code>events</code> member</h3>
+        <p>The events member is a map of event objects which define the types of events which may be emitted by a device when a certain condition is met. Examples might include a temperature sensor or fill level sensor reaching a certain threshold.</p>
+      </section>
+      <section>
+        <h3><code>Property</code> object</h3>
+        <p>A property object describes an attribute of a Thing and is indexed by a property name. A property description may include its type, unit, minimum value, maximimum value, writability, description and a reference to a URL for getting and setting the value of the property.</p>
+      </section>
+      <section>
+        <h3><code>Action</code> object</h3>
+        <p>An action object describes a function which can be carried out on a device. An action description may include action parameters and a human friendly description which describes what the action does.</p>
+      </section>
+      <section>
+        <h3><code>Event</code> object</h3>
+        <p>An event object describes a type of event which may be emitted by a device. This may include the type of values which may be included in the event and a human friendly description which describes what the event means.</p>
+      </section>
+    </section>
+    <section>
+      <h2>Alternative Encodings</h2>
+      <p>The JSON serialization is just one encoding for the Thing description, but other encodings such as XML, JSON-LD or CBOR may be used. Alternative encodings are beyond the scope of this specification but may be defined separately.</p>
+      <p>References to alternative available encodings may be provided using Link HTTP response headers with the alternate link relation. A client can express a preference for a particular encoding using HTTP content negotiation.</p>
+    </section>
+    <section>
+      <h2>Extensibility with JSON-LD</h2>
+      <p>The Web Thing Description format uses a schema based system which allows anyone to define their own Web Thing types and share them with others in order to encourage interoperability. <a href="https://json-ld.org/">JSON-LD</a> notation is used to add semantic annotations to a Thing Description in order to establish a shared semantic context and define a Web Thing type.</p>
+      <div class="example">
+        <div class="example-title marker">
+          Example
+        </div>
+        <pre>{
+  "@context": "http://iot.schema.org",
+  "@type": "Toaster",
+  "name":"Acme Toaster",
+  "description": "A web connected toaster",
+  "properties": {
+    "on": {
+      "type": "boolean",
+      "description": "Whether the toaster is currently heating bread",
+      "href": "/properties/on"
+    },
+    "timeRemaining": {
+      "type": "number",
+      "unit": "seconds",
+      "href": "/properties/timeRemaining"
+    }
+  },
+  "actions": {
+    "pop": {
+      "description": "Pop up the toast"
+    }
+  },
+  "events": {
+    "ready": {
+      "description": "Your toast is ready!"
+    }
+  }
+}</pre>
+      </div>
+      <p>The <code>@context</code> property provides an IRI which defines a globally unique "context" within which types are defined. The optional <code>@type</code> property specifies a Web Thing type from that context to be applied to the thing being described.</p>
+      <div class="note">When no <code>@context</code> property is supplied, a default Web Thing context is assumed (to be defined) and <code>type</code> is equivalent to <code>@type</code>.</div>
+    </section>
+  </body>
+</html>
