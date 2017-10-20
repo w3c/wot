@@ -92,7 +92,7 @@ AVS adapter (running in AWS cloud) will access TDs from Thing directory and map 
 Alexa Home Skill semantics.  All Things so annotated will then be controllable and observable from an
 Echo device.
 
-[proposer] Michael McCool
+[proposer] Michael McCool, Intel
 
 [servients] All tagged devices.  In addition, the AVS adapter will read in TDs and can be considered to be
 a "consuming" servient (running in the cloud).
