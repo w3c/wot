@@ -526,7 +526,7 @@ Content-Type: application/ld+json
                 boolean                writable = true;
                 sequence<SemanticType> semanticTypes;
                 ThingDescription       description;
-                PropertyHandler        handler;
+                PropertyHandler        onWrite;
                 any                    value;
               };
             </pre>
@@ -615,6 +615,35 @@ Content-Type: application/ld+json
           </ul>
 				</section>
 			</section>
+      
+			<section>
+				<h2>Test Suite</h2>
+        <p>
+          The main component so far is the TestThing.
+          It is defined by a TD template and a script and all PlugFest implementations shall be prepared as follows.
+        </p>
+        <p>
+          Note: A TD template shall be a TD that does not include instance specific information such as `@id` or `href`.
+        </p>
+        <section>
+          <h3>WoT Clients</h3>
+          <p>
+            WoT Clients shall be prepared to be able to consume all TDs that have one or more features included in the TestThing TD template and shall probe all the Interactions defines.
+          </p>
+        </section>
+        <section>
+          <h3>WoT Servers</h3>
+          <p>
+            All implementations that support WoT Servers shall implement the TestThing according to its TD template. The template must be completed with instance-specific information.
+          </p>
+        </section>
+        <section>
+          <h3>WoT Runtimes</h3>
+          <p>
+            All implementations that implement the WoT Scripting API, and hence support a WoT Runtime, shall be able to execute the TestThing script.
+          </p>
+        </section>
+      </section>
       
 			<section class="remove">
 				<h2>WoT Security and Privacy</h2>
