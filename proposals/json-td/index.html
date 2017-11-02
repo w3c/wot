@@ -48,7 +48,8 @@
   <body>
     <section id='abstract'>
       <p>This document describes an experimental plain JSON serialization of a <a href="https://www.w3.org/TR/2017/WD-wot-thing-description-20170914/">Web of Things (WoT) Thing Description</a>. The Thing Description provides machine readable metadata describing a physical device connected to the World Wide Web.</p>
-      <p>This document builds upon the models proposed in [[web-thing-model]] and [[building-web-of-things]]. TODO: Ben: add Mozilla's proposal</p>
+      <p>This document builds upon the models proposed in [[web-thing-model]] and [[building-web-of-things]].</p>
+      //TODO: Ben to add the mozilla submission?
     </section>
     <section id='sotd'>
       <p>
@@ -78,11 +79,26 @@
       "type": "boolean,
       "description": "Whether the lamp is turned on",
       "href": "/things/lamp/properties/on"
+    },
+    "lightLevel" :
+    {
+      "type": "integer",
+      "description": "The level of light from 0-100",
+      "min" : 0,
+      "max" : 100,
+      "href": "/things/lamp/properties/lightLevel"
     }
   },
   "actions": {
     "toggle": {
+      "type" : "boolean",
       "description": "Toggle the lamp on and off"
+    },
+    "dim": {
+        "type" : "integer",
+        "min" : 0,
+        "max" : 100,
+        "description": "Change the level of light"
     }
   },
   "events": {
@@ -106,7 +122,7 @@
       </section>
       <section>
         <h3><code>type</code> member</h3>
-        <p>The type member defines the type of device described by the Thing Description. This specification will define some primitive thing types as part of a default web thing context (e.g., <code>onOffSwitch</code> and <code>binarySensor</code>).
+        <p>The type member defines the type of device described by the Thing Description. Some primitive thing types may be defined as part of a default web thing context (e.g., <code>onOffSwitch</code> and <code>binarySensor</code>).
           The type system is extensible via schemas using JSON-LD, see <a href="#extensibility-with-json-ld">Extensibility with JSON-LD</a>.</p>
       </section>
       <section>
@@ -131,20 +147,19 @@
       </section>
       <section>
         <h3><code>Property</code> object</h3>
-        <p>A property object describes an attribute of a Thing and is indexed by a property name.
-           and a reference to a URL for getting and setting the value of the property.</p>
+        <p>A property object describes an attribute of a Thing. It contains a <code>href</code> reference to a URL for getting the value of the property as well as all the fields of a <a href="#value-object"><code>value</code> object</a>.</p>
       </section>
       <section>
         <h3><code>Action</code> object</h3>
-        <p>An action object describes a function which can be carried out on a device. An action may include parameters as a <code>data</code> field containing a <a href="#value-object">value object</a>. An action may also have <code>name</code> and a human friendly <code>description</code> which describes what the action does.
+        <p>An action object describes a function which can be carried out on a device. An action may include parameters as a <code>data</code> field containing a <a href="#value-object">value object</a>.
       </section>
       <section>
         <h3><code>Event</code> object</h3>
-        <p>An event object describes a type of event which may be emitted by a device. An event may include parameters as a <code>data</code> field containing a <a href="#value-object">value object</a>. An event may also have <code>name</code> and a human friendly <code>description</code> which describes what the event was about.
+        <p>An event object describes a type of event which may be emitted by a device. An event includes parameters as a <code>data</code> field containing a <a href="#value-object">value object</a>. An event may also have <code>name</code> and a human friendly <code>description</code> which describes what the event was about.
       </section>
       <section>
         <h3><code>Value</code> object</h3>
-        <p>Several objects also embed a value object. A value object contains the description of a set of values identified by their name. This includes <code>name</code>, <code>unit</code> (value using one the (case-insensitive) full names defined in the International System of Units [[SI]], e.g., "meter per second squared"), <code>min</code> value, <code>max</code> value and <code>description</code> and <code>type</code>.</p>
+        <p>Several objects also embed a value object. A value object contains the description of a set of values identified by their name. This may include <code>unit</code> (value using one the case-insensitive full names defined in the International System of Units [[SI]], e.g., "meter per second squared"), <code>min</code> value, <code>max</code> value and <code>description</code> and <code>type</code>.</p>
         <p>Where <code>type</code> is one of:
         <code>string</code>,
         <code>integer</code>,
