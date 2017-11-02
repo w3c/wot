@@ -206,7 +206,7 @@ One or more base uri are assigned to the servients to enable to be access from r
 
 ![images](images/UseCase.png)
 
-### a1.2 Things directories on proxy servients
+### A1.2 Things directories on proxy servients
 The figure shows below is a directory structure for management of things in a servient. This example is the thing directory for the remote proxy servient “remoteProxy”, Base url for the remote proxy servient. 
 
 ![images](images/ThingDirStructure.png)
