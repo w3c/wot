@@ -42,27 +42,48 @@ The Proxy Servient are seperated to 2 types fo them, Remote Proxy and Local Prox
 
 ![4-layered model](images/4layered_model.png)
 
-## 2.2 Servients from plugfest participants
+## 2.2 Servients and Protocols
+
+<table>
+ <tr><th>Servients</th><th colspan=2>Fujitsu</th><th colspan=2>Panasonic</th><th>Internet Reserach Institute</th><th colspan=2>Siemens</th><th>Lemonbeat</th><th colspan=2>Intel</th><th colspan=2>SmartThings</th><th>EURECOM</th><th></th></tr>
+ <tr><th>Application</th><th>Scripting App.</th><th>NodeRED</th><th>Scripting App.</th><th>NodeRED</th><th>NodeRED</th><th>Scripting App.</th><th>WebUI</th><th></th><th>AWS WoT Skill</th><th>AlexNet Recog Service</th><th>NodeRED Local</th><th>NodeRED Remote</th><th></th><th></th></tr>
+ <tr><th>=protocol</th><th>HTTP</th><th>HTTP(s)</th><th colspan=2></th><th>HTTP(s)</th><th>HTTP, CoAP, BACnet, Modbus</th><th>HTTP, CoAP
+</th><th></th><th colspan=2>HTTPS</th><th colspan=2>HTTP</th><th></th><th></th></tr>
+ <tr><th>Remote Proxy</th><th colspan=2>Fujitsu Cloud</th><th colspan=2></th><th></th><th colspan=2>WoS Messaging Service</th><th></th><th colspan=2>Cloud proxy shadow</th><th colspan=2>Remote Gateway</th><th></th><th></th>
+ <tr><th>=protocol</th><th colspan=2>HTTP(s)+WS</th><th colspan=2></th><th></th><th colspan=2>(tunnel)</th><th></th><th colspan=2>HTTPS/CoAP(s)</th><th colspan=2>Multi</th><th></th><th></th>
+ <tr><th>Local Proxy</th><th>Local Gateway</th><th>Local Gateway</th><th colspan=2></th><th></th><th colspan=2>WoS Messaging Service, TD Registration Agent</th><th></th><th colspan=2>Local Proxy</th><th colspan=2>Local gateway</th><th></th><th></th></tr>
+ <tr><th>=Protocol</th><th>HTTP</th><th>HTTP</th><th>HTTPS</th><th>HTTPS+WSS</th><th></th><th colspan=2>HTTP</th><th>HTTP</th><th colspan=2>CoAP</th><th colspan=2>Multi</th><th>???</th><th></th></tr>
+ <tr><th>Device</th><th>Sensors(Luminance sensor, Humidity sensor, Temperature sensor, Accelerometer)</th><th>Air conditioner, LED light, Blind</th><th>LED light, Air conditioner, Robot Cleaner</th><th>Human Detection Sensor, Amazon Echo, Google Home</th><th></th><th colspan=2>Remote Festo Plant (valve, pump, levelmeter), BACnet Demonstrator, Logo! Demonstrator, RGB LED Light</th><th>Sensors(Luminance sensor, Humidity sensor, Temperature sensor), Binary actuator</th><th colspan=2>OCF RGB light, OCF Light, OCF Buzzer, OCF temperture, OCF Button, OCF Proximity, OCF Slider, Still camera</th><th colspan=2>Dimmable Light(OCF), Motion Sensor(OCF), Dimmable Light(ST), Motion Sensor(ST), Gas Sensor(IPSO), PM2.5 Sensor(IPSO), Temperature Sensor(IPSO), Humidity Sensor(IPSO), Loudness Sensor(IPSO), Illuminance Sensor(IPSO), PIR Sensor(IPSO), Barometer Sensor(IPSO), OCF Bridge</th><th>Sensors and Actuators in the car(BMW X5)</th><th></th></tr>
+</table>
+
+## 2.3 Servients from plugfest participants
 
 The following figure shows diagrams of Servients that the participants provide for the plugest. 
 
-![Servients](images/Servients_TPAC2017.png)
+![Servients](images/Servients_TPAC2017r2.png)
 
-## 2.4 Servients and Protocols
+# 3. Plugfest scenarios
 
-| Servients | Fujitsu | Panasonic | Internet Research Institute | Siemens | Lemonbeat | Intel | SmartThings | EURECOM | |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Application | Scripting, NodeRED | Scripting, NodeRED | NodeRED | | | Scripting | | | | |
-| =Protocol | HTTP(S) | HTTPS+WSS | HTTP(S) | | | HTTP,WSS,CoAP | | | | |
-| Remote proxy | Server | | | | | Cloud (AWS) | | | | |
-| =Protocol | HTTP(S) | | | | |HTTPS,WSS | | | | |
-| Local proxy | Gateway | | | | |Gateway | | | | |
-| =Protocol | HTTP | | | | |HTTP(S),CoAP | | | | |
-| Device | LED light, Air conditioner, Blind | LED light, Air conditioner, Robot cleaner | | | |Motion,Light,Buzzer,Gas,Illumination,Button,Still Camera,Person Recog (AI Service) | | | | |
+## 3.1 main part 
 
-# 3. Application scenarios
+### 3.1.1 Scenario 1
+Remote application servients connect to each Remote proxy and device servient. Each participant setup and check the behavior before the connections. 
 
-## 3.1 Scenario 1: Smart Alarm System
+![Scenario](images/PlugfestScenario1.png)
+
+### 3.1.2 Scenario 2
+A remote proxy servient can accept request from an application and operate local devices via a local proxy servient. The remote proxy has a Thing directory that keeps the TDs corresponding to all devices. The application can get the TD from it.
+
+![Scenario](images/PlugfestScenario2.png)
+
+### 3.1.3 Scenario 3
+Local application servients connect to each local proxy and device servient.
+
+![Scenario](images/PlugfestScenario2.png)
+
+## 3.2 additional part
+
+## 3.2.1 Scenario 1: Smart Alarm System
 [overview] When a motion sensor associated with one or
 more still cameras is triggered,
 the camera takes a picture and sends it to a person detection compute service running on a local gateway.
@@ -86,7 +107,7 @@ Note that the Thing Descriptions for the OCF devices above will be generated by 
 However, other devices are expected to talk to the OCF devices directly using information in the TD.
 There will also be a OCF/HTTP bridge running so the OCF devices can be connected to via either HTTP or CoAP.
 
-## 3.2 Scenario 2: Voice Control
+## 3.2.2 Scenario 2: Voice Control
 [overview] Support generic voice control for all semantically annotated Things.
 AVS adapter (running in AWS cloud) will access TDs from Thing directory and map iot.schema.org semantic tags to 
 Alexa Home Skill semantics.  All Things so annotated will then be controllable and observable from an
@@ -147,27 +168,212 @@ a "consuming" servient (running in the cloud).
   * Application servient: providing application logic
   * Integration with AVS, including security and authentication requirements
 
-## SmartThings’s issues
-## IRI’s issues
-## Comapany name’s issues
-
-# 4. Deadline and Schedule
-
-## Deadlines
-### Oct. 18
-* Complete the table “Servient and protocol”
-  * Who provides which servients?
-* Collection of TD for the Servients on the plugfest
-* Application scenarios
-### Oct. 25
-* Specify Inter-Servient interface
+# 5. Schedule on the plugfest and TPAC
 
 ## Plugfest and demonstration
 ### Nov. 4, 5 (Fujitsu)
-* OPEN: 9am-6pm on Nov. 4 and 5
-* 1st day: preparation and plugfest
-* 2nd day: plugfest in the morning 
-* demonstration and discussion in the afternoon
+OPEN: 9am-5pm
+Nov.4 (1st day)
+* 9am: open and setup
+* 10am-2pm: scenario 1 and scenario 2 (local proxies and devices)
+* (12am-1pm) lunch
+* 2pm-5pm: scenario 2 (full) and scenario 3
+
+Nov.5 (2nd day)
+* 9am-12am: application development
+* 12am-1pm: lunch
+* 1pm-5pm: demonstrations and discussion for TPAC breakout on 8th.
+
 ### Nov. 8 (TPAC2017)
-* Demonstrations
+The demonstration on TPAC will be separated 2 parts. 1st part is the main to show the interoperability with 8 members. It will be w
+
+Main demonstration is to show the interoperability with 8 members.
+* Explain the purpose and the points of this plugfest
+* Some applications will be shown in the main table
+* Q & A
+
+Other demonstrations from members if required.
+* If some members prepare own demonstrations, we have a session for them after main session.
+* Who want to show in this session?
+
+# Appendix: Inter-Servient interface
+
+## Sequence Diagrams
+
+## A1. Preparation
+### A1.1 Use Case
+One or more base uri are assigned to the servients to enable to be access from remote and local servients.
+
+![images](images/UseCase.png)
+
+### A1.2 Things directories on proxy servients
+The figure shows below is a directory structure for management of things in a servient. This example is the thing directory for the remote proxy servient “remoteProxy”, Base url for the remote proxy servient. 
+
+![images](images/ThingDirStructure.png)
+
+## A2. Sequence diagrams
+### A2.1 Register
+A device servient is registered to the local proxy servient and remote proxy servient. The proxy servient returned the TD with public uri. The proxy servients have TD repositories to store TDs registered from the other servients.
+
+![images](images/seq_register.png)
+
+*Example: using HTTP*
+
+(1) HTTP POST http://lps.example.com/Things/register<BR>
+Body: TD<BR>
+(2) 201 Created<BR>
+
+(3) (1) HTTP POST http://lps.example.com/Things/register<BR>
+Body: TD<BR>
+
+(4) 201 Created<BR>
+
+## A2.2 Lookup
+An application servient can lookup TDs registered the remote proxy servient with its URI. If the URI indicates the servient, it returns the list of the devices connected. If the URI specifies the devices registered on the proxy servient, it returns TD of it.
+
+![images](images/seq_lookup.png)
+
+*Example: using HTTP*
+
+(11) HTTP GET http://rps.example.com/Things/<BR>
+Body: none<BR>
+
+(12) 200 OK<BR>
+Body: list of registered things [FujitsuAirConditioner, PanasonicAirConditioner, …]<BR>
+
+(13) HTTP GET http://rps.example.com/Things/deviceName<BR>
+Body: none<BR>
+
+(14) 200 OK<BR>
+Body: TD
+
+## A2.3 Get property
+The application servient sends a request to get the value of the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
+
+![images](images/seq_getproperty.png)
+
+*Example: using HTTP*
+
+The application gets a value of a certain property of the device servient. For this purpose, it gets the URI for the property from TD of the device servient.
+
+(21) HTTP GET http://rps.example.com/lps1/Things/deviceName/Property/temperature<BR>
+Body: none<BR>
+
+The remote proxy gets the URI for the property from TD of the device servient registered in the repository. "glps.example.com" is global address which can be accessed from remote proxy.
+
+(22) HTTP GET http://glps.example.com/Things/deviceName/Property/temperature<BR>
+Body: none<BR>
+
+The local proxy gets the URI for the property from TD of the device servient registered in the repository.
+
+(23) HTTP GET http://192.169.1.2/Things/deviceName/Property/temperature<BR>
+Body: none<BR>
+
+(24) 200 OK<BR>
+Body: 25(value)<BR>
+
+(25) 200 OK<BR>
+Body: 25(value)<BR>
+
+(26) 200 OK<BR>
+Body: 25(value)<BR>
+
+## A2.4 Set property
+The application servient sends a request to set the value to the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
+
+![images](images/seq_setproperty.png)
+
+*Example: using HTTP*
+
+The application puts a value of a certain property of the device servient. For this purpose, it gets the URI for the property from TD of the device servient.
+
+(31) HTTP PUT http://rps.example.com/lps1/Things/deviceName/Property/status<BR>
+Body: ON<BR>
+
+The remote proxy puts the URI for the property from TD of the device servient registered in the repository.
+"glps.example.com" is global address which can be accessed from remote proxy.
+
+(32) HTTP PUT http://glps.example.com/Things/deviceName/Property/status<BR>
+Body: ON<BR>
+
+## A2.5 Subscribe and Event
+The application servient sends a request to subscribe the property of the device servient to the remote proxy servient. The device servient keep to send the value of the specified property periodically.
+
+![images](images/seq_subscribe.png)
+
+*Example: using HTTP*
+
+The application subscribes an event of the device servient to be periodically notified. The application gets URI for this event and send a request to the remote proxy servient.
+
+(41) HTTP POST http://rps.example.com/lps1/Things/deviceName/Event/change<BR>
+Body: none<BR>
+
+The remote proxy gets the URI for the event from TD of the device servient registered in the repository.
+
+(42) HTTP POST http://glps.example.com/Things/deviceName/Event/change<BR>
+Body: none<BR>
+
+The local proxy gets the URI for this event from TD of the device servient registered in the repository.
+
+(43) HTTP POST http://192.169.1.2/Things/deviceName/Event/change<BR>
+Body: none<BR>
+
+The device servient sends a notify to the application via the local and remote proxy servient with Server Sent Events specified by W3C.  The device responses “200 OK” with a header “Context-Type: text/event-stream”.
+
+(44)-(46) 200 OK<BR>
+Context-Type:text/event-stream<BR>
+Body: none<BR>
+
+If this subscription succeeded, the events keep to be notified to the application via the local and remote proxy servients. This event is sent as chunk data.
+
+(47)-(49) <BR>
+Body: data:25(value)<BR>
+
+## A2.6 Unsubscribe
+The application servient sends a request to unsubscribe to the remote proxy servient to stop to notify the event from the device servient.
+
+![images](images/seq_unsubscribe.png)
+
+*Example: using HTTP*
+
+The application unsubscribes the event “change. The application deletes URI for this event and send a request to the remote proxy servient.
+
+(51) HTTP DELETE http://rps.example.com/lps1/Things/deviceName/Event/change<BR>
+Body: none<BR>
+
+The remote proxy gets the URI for the event from TD of the device servient unregistered in the repository.
+
+(52) HTTP DELETE http://glps.example.com/Things/deviceName/Event/change<BR>
+Body: none<BR>
+
+The local proxy gets the URI for this event from TD of the device servient unregistered in the repository.
+
+(53) HTTP DELETE http://192.169.1.2/Things/deviceName/Event/change<BR>
+Body: none<BR>
+
+The device servient stops sending event and returns the response with “200 OK”.
+
+(54)-(56) 200 OK<BR>
+Body: none<BR>
+
+### A2.7 Unregister
+The device servient unregister from the local proxy servient before shutdown. The local proxy servient unregister this device servient from the remote proxy not to access from the application.
+
+![images](images/seq_unregister.png)
+
+*Example: using HTTP*
+
+(61) HTTP DELETE http://lps.example.com/Things/deviceName<BR>
+Body: none<BR>
+
+(62) 200 OK<BR>
+       Body:none<BR>
+
+(63) HTTP POST http://rps.example.com/Things/deviceName<BR>
+Body: none<BR>
+
+(64) 200 OK<BR>
+Body:none<BR>
+
+
 
