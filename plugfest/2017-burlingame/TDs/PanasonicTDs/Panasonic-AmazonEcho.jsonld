@@ -1,0 +1,32 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"
+    ],
+    "name": "MyEchoP1",
+    "base": "https://xxxxxxxx/wot-ver2/things/amazonecho/1/",
+    "security": {
+        "cat": "token:jwt",
+        "alg": "ES256",
+        "as": "https://plugfest.thingweb.io:8443/"
+    },
+    "interaction": [
+      {
+        "@type": ["Event"],
+        "name": "ask",
+        "outputData": {
+          "type": "object",
+          "field": [
+            {
+              "name": "actionType",
+              "value": {"type": "string"}
+            }
+          ]
+        },
+        "link": [{
+          "href": "ask",
+          "mediaType": "application/json"
+        }]
+      }
+    ]
+}
