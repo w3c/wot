@@ -6,12 +6,12 @@ This document describes the information related to the next plugfest in Sunnyval
 
 ## 1.1 Backgroud
 
-In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by dirfferent menbers. They were combinations of application and device, or deivce to device. These application and devices were compatible to WoT anc talked with it.
-To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. Since some Servients may be connected to the local network and the others to the Internet, new issues for these connections should be considered such as security, firewall and NAT, device mangement and so on. This plugfest wiil be good opportunity to new issues to resoluve in the futre in WoT-WG.
+In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to WoT and talked with it.
+To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. Since some Servients may be connected to the local network and the others to the Internet, new issues for these connections should be considered such as security, firewall and NAT, device management and so on. This plugfest will be good opportunity to new issues to resoluve in the future in WoT-WG.
 
 ## 1.2 Use case
 
-The drawing below is an use case for the next plugfest. This is the smarthome application that the application on the smartphone can control the air conditioner in the house. The agent and the gateway have gateway functions that connects with appliations, devices, and gateways.
+The drawing below is an use case for the next plugfest. This is the smarthome application that the application on the smartphone can control the air conditioner in the house. The agent and the gateway have gateway functions that connects with applications, devices, and gateways.
 
 ![Use case](images/smarthome.png)
 
@@ -35,8 +35,8 @@ The drawing below is an use case for the next plugfest. This is the smarthome ap
 
 3 types of WoT Servients was derived from the use case described in 1.2. These are defined below:  
 * Device Servient: WoT Servient with Exposed Thing, e.g. devices
-* Application Servient: WoT Servient with Comsumed Thing, e.g. applications
-* Proxy Servient: WoT Servient with both Exposed and Comsumed Thing, e.g. gateways
+* Application Servient: WoT Servient with Consumed Thing, e.g. applications
+* Proxy Servient: WoT Servient with both Exposed and Consumed Thing, e.g. gateways
 
 The Proxy Servient are seperated to 2 types fo them, Remote Proxy and Local Proxy. The Remote Proxy Servient is deployed on the Internet and connected with the Applicationd Serivent and the Local Proxy Servient. The Local Proxy Servient is done on the Local network and connects with the Remote Proxy Servient and the Device Servient. The layered diagram is shown below.
 
@@ -53,7 +53,7 @@ The Proxy Servient are seperated to 2 types fo them, Remote Proxy and Local Prox
  <tr><th>=protocol</th><th colspan=2>HTTP(s)+WS</th><th colspan=2></th><th></th><th colspan=2>(tunnel)</th><th></th><th colspan=2>HTTPS/CoAP(s)</th><th colspan=2>Multi</th><th></th><th></th>
  <tr><th>Local Proxy</th><th>Local Gateway</th><th>Local Gateway</th><th colspan=2></th><th></th><th colspan=2>WoS Messaging Service, TD Registration Agent</th><th></th><th colspan=2>Local Proxy</th><th colspan=2>Local gateway</th><th></th><th></th></tr>
  <tr><th>=Protocol</th><th>HTTP</th><th>HTTP</th><th>HTTPS</th><th>HTTPS+WSS</th><th></th><th colspan=2>HTTP</th><th>HTTP</th><th colspan=2>CoAP</th><th colspan=2>Multi</th><th>???</th><th></th></tr>
- <tr><th>Device</th><th>Sensors(Luminance sensor, Humidity sensor, Temperature sensor, Accelerometer)</th><th>Air conditioner, LED light, Blind</th><th>LED light, Air conditioner, Robot Cleaner</th><th>Human Detection Sensor, Amazon Echo, Google Home</th><th></th><th colspan=2>Remote Festo Plant (valve, pump, levelmeter), BACnet Demonstrator, Logo! Demonstrator, RGB LED Light</th><th>Sensors(Luminance sensor, Humidity sensor, Temperature sensor), Binary actuator</th><th colspan=2>OCF RGB light, OCF Light, OCF Buzzer, OCF temperture, OCF Button, OCF Proximity, OCF Slider, Still camera</th><th colspan=2>Dimmable Light(OCF), Motion Sensor(OCF), Dimmable Light(ST), Motion Sensor(ST), Gas Sensor(IPSO), PM2.5 Sensor(IPSO), Temperature Sensor(IPSO), Humidity Sensor(IPSO), Loudness Sensor(IPSO), Illuminance Sensor(IPSO), PIR Sensor(IPSO), Barometer Sensor(IPSO), OCF Bridge</th><th>Sensors and Actuators in the car(BMW X5)</th><th></th></tr>
+ <tr><th>Device</th><th>Sensors(Luminance sensor, Humidity sensor, Temperature sensor, Accelerometer), Rotating Light</th><th>Air conditioner, LED light, Blind</th><th>LED light, Air conditioner, Robot Cleaner</th><th>Human Detection Sensor, Amazon Echo, Google Home</th><th></th><th colspan=2>Remote Festo Plant (valve, pump, levelmeter), BACnet Demonstrator, Logo! Demonstrator, RGB LED Light</th><th>Sensors(Luminance sensor, Humidity sensor, Temperature sensor), Binary actuator</th><th colspan=2>OCF RGB light, OCF Light, OCF Buzzer, OCF temperture, OCF Button, OCF Proximity, OCF Slider, Still camera</th><th colspan=2>Dimmable Light(OCF), Motion Sensor(OCF), Dimmable Light(ST), Motion Sensor(ST), Gas Sensor(IPSO), PM2.5 Sensor(IPSO), Temperature Sensor(IPSO), Humidity Sensor(IPSO), Loudness Sensor(IPSO), Illuminance Sensor(IPSO), PIR Sensor(IPSO), Barometer Sensor(IPSO), OCF Bridge</th><th>Sensors and Actuators in the car(BMW X5)</th><th></th></tr>
 </table>
 
 ## 2.3 Servients from plugfest participants
@@ -171,21 +171,40 @@ a "consuming" servient (running in the cloud).
 # 5. Schedule on the plugfest and TPAC
 
 ## Plugfest and demonstration
-### Nov. 4, 5 (Fujitsu)
-OPEN: 9am-5pm
-Nov.4 (1st day)
-* 9am: open and setup
-* 10am-2pm: scenario 1 and scenario 2 (local proxies and devices)
-* (12am-1pm) lunch
-* 2pm-5pm: scenario 2 (full) and scenario 3
+The demonstration on TPAC will be separated to 2 parts. The first part is the main to show the over view and some features of Web of Things in a single session. The second part is additional demonstrations from some participants in parallel sessions if needed.
 
-Nov.5 (2nd day)
-* 9am-12am: application development
-* 12am-1pm: lunch
-* 1pm-5pm: demonstrations and discussion for TPAC breakout on 8th.
+### Nov. 4, 5 (Fujitsu)
+'''Nov. 4'''
+
+*9am:
+** open and setup
+
+*10am-2pm:
+** testing each module by each team
+
+*(12am-1pm) lunch
+
+*2pm-5pm:
+** testing each module by each team
+** some of the teams may start integration
+
+'''Nov. 5'''
+
+*9am-12am:
+** integration and application development
+** scenario 1, 2 and 3
+
+*12am-1pm: lunch
+
+*1pm-5pm:
+** demonstrations and discussion for TPAC breakout on 8th.
 
 ### Nov. 8 (TPAC2017)
-The demonstration on TPAC will be separated 2 parts. 1st part is the main to show the interoperability with 8 members. It will be w
+The demonstration on TPAC will be separated 2 parts. The first part is the main to show the over view and some features of Web of Things in a single session. The second part is additional demonstrations from some participants in parallel sessions if needed.
+
+The main demonstration is composed of some applications, each of which wll be developed under the collaborations with 8 companies in the plugfest in Nov. 4 and 5. It is based on 3 or 4 layered model with application, remote / local proxies, and device Servients from the results of the interoperability tests. It will be single session to show a series of some demonstrations at the main table.
+
+The additional demonstrations are shown by some companies that want to appeal their own features to be proposed in the future meeting in WoT-IG/WG. 
 
 Main demonstration is to show the interoperability with 8 members.
 * Explain the purpose and the points of this plugfest
@@ -374,6 +393,35 @@ Body: none<BR>
 
 (64) 200 OK<BR>
 Body:none<BR>
+
+## A3. Sequence diagrams using WebScoket
+
+Another sequence diagrams to go beyond NAT and firewall is described in this section. WebScoket is used for the connection between remote and local proxy servient. In this case, the local proxy servient creates WebSocket connection to the remote proxy servient and keep it until closing. The messages between the remote and local proxy servients described in session A2 are carried over this WebSocket connection.
+
+### A3.1 Setup the connection
+
+![images](images/seq_setup_ws.png)
+
+
+### A3.2 Get property
+
+![images](images/seq_getproperty_ws.png)
+
+
+### A3.3 Set property
+
+![images](images/seq_setproperty_ws.png)
+
+
+### A3.4 Subscribe and Event
+
+![images](images/seq_subscribe_ws.png)
+
+### A3.5 Unsubscribe
+
+![images](images/seq_unsubscribe_ws.png)
+
+
 
 
 
