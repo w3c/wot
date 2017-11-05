@@ -1,0 +1,162 @@
+{
+  "@context": [
+    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+	  {"iot": "http://iotschema.org/"}
+  ],
+  "base": "http://0m2m.net:1880",
+  "@type": [ "Thing", "iot:Light" ],
+  "name": "Lamp",
+  "interaction": [
+    {
+      "name": "Switch State",
+      "@type": ["Property", "iot:SwitchStatus"],
+      "outputData":  {
+        "type": "object",
+        "observable": "true",
+        "field": [
+          {
+            "name": "on",
+            "value": {
+              "@type": ["iot:StateData"],
+              "type": "boolean"
+            }
+          }
+        ]
+      },
+      "link": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:getProperty",
+          "http:methodName": "http:get"
+        },
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:setProperty",
+          "http:methodName": "http:post"
+        }
+      ]
+    },
+    {
+      "name": "Current brightness",
+      "@type": ["Property", "iot:CurrentDimmer"],
+      "outputData": {
+        "type": "object",
+        "observable": "true",
+        "field": [
+          {
+            "name": "bri",
+            "value": {
+              "type": "integer",
+              "@type": ["iot:DimmerData" ],
+              "min": 0,
+              "max": 255
+            }
+          }
+        ]
+      },
+      "link": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:getProperty",
+          "http:methodName": "http:get"
+        },
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:setProperty",
+          "http:methodName": "http:post"
+        }
+      ]
+    },
+    {
+      "name": "Switch On",
+      "@type": ["Action", "iot:TurnOn"],
+      "outputData":  {
+        "type": "object",
+        "field": [
+          {
+            "name": "on",
+            "value": true
+          }
+        ]
+      },
+      "link": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:invokeAction",
+          "http:methodName": "http:post"
+        }
+      ]
+    },
+    {
+      "name": "Switch Off",
+      "@type": ["Action", "iot:TurnOff"],
+      "outputData":  {
+        "type": "object",
+        "field": [
+          {
+            "name": "on",
+            "value": false
+          }
+        ]
+      },
+      "link": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:invokeAction",
+          "http:methodName": "http:post"
+        }
+      ]
+    },
+    {
+      "name": "Set brightness level",
+      "@type": ["Action", "iot:SetDimmer"],
+      "inputData": {
+        "type": "object",
+        "field": [
+          {
+            "name": "bri",
+            "value": {
+              "type": "integer",
+              "@type": ["iot:DimmerData"],
+              "min": 0,
+              "max": 255
+            }
+          },
+          {
+            "name": "duration",
+            "value": {
+              "type": "integer",
+              "@type": ["iot:RampTimeData"],
+              "min": 0,
+              "max": 65535
+            }
+          },
+          {
+            "name": "on",
+            "value": {
+              "type": "boolean",
+              "@type": ["iot:StateData"],
+              "min": 0,
+              "max": 65535
+            }
+          }
+        ]
+      },
+      "link": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:invokeAction",
+          "http:methodName": "http:post"
+        }
+      ]
+    }
+  ]
+}
