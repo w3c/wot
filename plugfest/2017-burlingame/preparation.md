@@ -174,8 +174,7 @@ a "consuming" servient (running in the cloud).
 The demonstration on TPAC will be separated to 2 parts. The first part is the main to show the over view and some features of Web of Things in a single session. The second part is additional demonstrations from some participants in parallel sessions if needed.
 
 ### Nov. 4, 5 (Fujitsu)
-'''Nov. 4'''
-
+**Nov. 4**
 * 9am:
   * open and setup
 * 10am-2pm:
@@ -185,7 +184,7 @@ The demonstration on TPAC will be separated to 2 parts. The first part is the ma
   * testing each module by each team
   * some of the teams may start integration
 
-'''Nov. 5'''
+**Nov. 5**
 * 9am-12am:
   * integration and application development
   * scenario 1, 2 and 3
