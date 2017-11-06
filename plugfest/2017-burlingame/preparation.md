@@ -63,11 +63,12 @@ The following figure shows diagrams of Servients that the participants provide f
 ![Servients](images/Servients_TPAC2017r2.png)
 
 # 3. Plugfest scenarios
+The demonstration on TPAC will be separated to 2 parts. The first part is the main to show the over view and some features of Web of Things in a single session. The second part is additional demonstrations from some participants in parallel sessions if needed.
 
 ## 3.1 main part 
 
 ### 3.1.1 Scenario 1
-Remote application servients connect to each Remote proxy and device servient. Each participant setup and check the behavior before the connections. 
+Remote application servients connect to each Remote proxy and device servient. Each participant setup and check the behavior before the connections. 
 
 ![Scenario](images/PlugfestScenario1.png)
 
@@ -191,6 +192,11 @@ The demonstration on TPAC will be separated to 2 parts. The first part is the ma
 * 12am-1pm: lunch
 * 1pm-5pm:
   * demonstrations and discussion for TPAC breakout on 8th.
+
+### Plugfest result on Nov. 5
+The tentative result of the plugfest is as follows:
+
+![images](images/PlugfestResult_Nov5.png)
 
 ### Nov. 8 (TPAC2017)
 The demonstration on TPAC will be separated 2 parts. The first part is the main to show the over view and some features of Web of Things in a single session. The second part is additional demonstrations from some participants in parallel sessions if needed.
