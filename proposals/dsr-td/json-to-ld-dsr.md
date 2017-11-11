@@ -167,7 +167,7 @@ If the string cannot be mapped to an RDF node, this constitutes an error. It is 
 
 If the name of a JSON object property acting as a predicate is "types", then its value must be a JSON object whose property names are interpreted as the names of application defined  types. The property value is interpreted in the regular way. The type name can then be used in the same way as the names for core types. The "types" object must not be used to redefine an existing type.
 
-If the name of a JSON object property acting as a predicate, and its value is an array, each item in the array is translated into the object for a triple with the given subject and predicate. It the array item is a JSON object, that object's properties are interpreted as predicates as translated in the regular way, including the generation of a new RDF node. It is an error for the array item to itself be an array. If the array item is null, the item is skipped and doesn't generate a tripple.
+If the name of a JSON object property acting as a predicate, and its value is an array, each item in the array is translated into the object for a triple with the given subject and predicate. If the array item is a JSON object, that object's properties are interpreted as predicates as translated in the regular way, including the generation of a new RDF node. It is an error for the array item to itself be an array. If the array item is null, the item is skipped and doesn't generate a tripple.
 
 Here is an example that defines a type named acceleration and use it for each axis of an accelerometer:
 
@@ -183,9 +183,11 @@ Here is an example that defines a type named acceleration and use it for each ax
     },
     "properties": {
         "value": {
-            "x": "acceleration",
-            "y": "acceleration",
-            "z": "acceleration"
+	    "properties" : {
+                "x": "acceleration",
+                "y": "acceleration",
+                "z": "acceleration"
+	    }
         }
     }
 }
