@@ -12,6 +12,6 @@ The images with an "ssm" suffix are 350 x 916 and are meant only for
 preview.
 The images with an "sm" suffix are 4800 x 12562 pixels and are
 suitable for small 16" x 40" vertical banners at 300 dpi.
-The images without prefixes are
+The images without suffixes are
 suitable for printing on 32" x 80" vertical banners at 300 dpi
 but are fairly large (9600 x 25125 pixels).
