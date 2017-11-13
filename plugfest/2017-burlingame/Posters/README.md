@@ -2,9 +2,9 @@ Posters prepared for and displayed for TPAC 2017 in Burlingame.
 
 ![Proxies](Poster1_Proxy_ssm.png "Proxies")
 ![Architecture](Poster2_Architecture_ssm.png "Architecture")
-![Scripting](Poster_3_Scripting.png "Scripting")
-![Semantics](Poster_4_Semantics.png "Semantics")
-![Synchronization](Poster_5_Synchronization.png "Synchronization")
+![Scripting](Poster3_Scripting_ssm.png "Scripting")
+![Semantics](Poster4_Semantics_ssm.png "Semantics")
+![Synchronization](Poster5_Synchronization_ssm.png "Synchronization")
 
 This archive contains both source vector graphics files (SVG or PPT),
 derived vector graphics files (PDF) and rasterized images (PNG).
