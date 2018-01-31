@@ -2,20 +2,35 @@
 
 # 1. Introduction
 
-This document describes the information related to the next plugfest in Prague F2F meeting.
+This document describes a general information related to the next plugfest in Prague F2F meeting. The detail specification will be descirbed in the guideline document, please see https://github.com/w3c/wot/edit/master/plugfest/2018-prague/guideline.md.
 
 ## 1.1 Backgroud
 
-TBD
+In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers. 
+The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles. 
+
+![buriling plugfest](images/burlingame.png)
 
 ## 1.2 Use case
 
-TBD
+Some use cases are described in below but not limited to the followings.
+
+(1) Smart home
+This is the smarthome application that the application on the smartphone can control the air conditioner in the house. The agent and the gateway have gateway functions that connects with applications, devices, and gateways.
+
+![Use case 1](images/smarthome.png)
+
+(2) Smart factory
+
+![Use case 2](images/smartfactory.png)
+
+(3) Connected car
+
+![Use case 3](images/connectedcar.png)
 
 # 2. Servients
 
 ## 2.1 4-layered Servients
-Notes: 
 
 3 types of WoT Servients was derived from the use case described in 1.2. These are defined below:  
 * Device Servient: WoT Servient with Exposed Thing, e.g. devices
@@ -25,7 +40,7 @@ Notes:
 The Proxy Servient are seperated to 2 types fo them, Remote Proxy and Local Proxy. The Remote Proxy Servient is deployed on the Internet and connected with the Applicationd Serivent and the Local Proxy Servient. The Local Proxy Servient is done on the Local network and connects with the Remote Proxy Servient and the Device Servient. The layered diagram is shown below.
 
 ## 2.2 Servients and Protocols
-Notes: The following contents has been just copied from Barlingame table. Please modify this.
+Notes: The following contents has been just copied from Barlingame table. Please modify below directly or this powerpoint, https://github.com/w3c/wot/tree/master/plugfest/2017-burlingame/servients_prague.pptx
 
 <table>
  <tr><th>Servients</th><th colspan=2>Fujitsu</th><th colspan=2>Panasonic</th><th>Internet Reserach Institute</th><th colspan=2>Siemens</th><th>Lemonbeat</th><th colspan=2>Intel</th><th colspan=2>SmartThings</th><th>EURECOM</th><th></th></tr>
