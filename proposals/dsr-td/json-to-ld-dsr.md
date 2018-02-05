@@ -99,7 +99,7 @@ The default context could thus take the form:
 
 For each JSON object property that is interpreted as a name, an RDF node is constructed, e.g. as a new blank node. This node then becomes the subject for all predicates defined by the JSON object that is the value of the named JSON object property. The name is declared as an RDF string literal for the object of a triple, whose predicate is _td:name_, and whose subject is the aforementioned node.
 
-When JSON object properties are interpreted as predicates, and their values are string literals, these values are mapped to URIs via the context. You can disable this mapping by declaring the string as null in an inner context. In general, contexts are searched for mappings starting with the current JSON object and ascending the hierarchy of nested JSON objects until the default context has been searched. If no mapping is found, or it is null, the string value is translated as is. If a mapping cannot be found for a predicate, this constitutes an error. When JSON object properties are interpreted as predicates, and the property value is null, the property is skipped and doesn't generate a tripple.
+When JSON object properties are interpreted as predicates, the context is searched for the mapping from the object property name to an RDF URI. In general, contexts are searched for mappings starting with the current JSON object and ascending the hierarchy of nested JSON objects until the default context has been searched. If no mapping is found for a JSON object property interpreted as a predicate, then a blank node is generated as the subject of triple with predicate td:name and a string literal corresponding to the JSON object property name as the object. This deals with the situation where the thing description lacks an application specific context. A warning should be generated as the missing definition may be unintentional.
 
 In addition, the URI for the interaction model is used to declare that the given thing is an instance of the class _td:thing_. The prefix declarations in the context are used to generate the corresponding declarations when transforming to Turtle.
 
@@ -163,11 +163,9 @@ _:1 td:name "switch" ;
 	td:type td:boolean . 
 ```
 
-If the string cannot be mapped to an RDF node, this constitutes an error. It is also an error if the value of a JSON object property acting as name is neither a string nor an object.
-
-**Issue**: Should the case of a missing predicate URI be treated by generating a blank node and a triple that binds that node to the string literal given in the JSON input? This would handle the potentially common case where developers have failed to declare an application specific context for the application's predicates.
-
 If the name of a JSON object property acting as a predicate is "types", then its value must be a JSON object whose property names are interpreted as the names of application defined  types. The property value is interpreted in the regular way. The type name can then be used in the same way as the names for core types. The "types" object must not be used to redefine an existing type.
+
+If a string interpreted as the name of a type cannot be mapped to an RDF node, i.e. the string doesn't match a core type or an application defined type, this constitutes an error. It is also an error if the value of a JSON object property acting as name is neither a string nor an object.
 
 If the name of a JSON object property acting as a predicate, and its value is an array, each item in the array is translated into the object for a triple with the given subject and predicate. If the array item is a JSON object, that object's properties are interpreted as predicates as translated in the regular way, including the generation of a new RDF node. It is an error for the array item to itself be an array. If the array item is null, the item is skipped and doesn't generate a tripple.
 
