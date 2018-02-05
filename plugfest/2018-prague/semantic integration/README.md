@@ -1,0 +1,1 @@
+Put here material required for demonstration of semantic integration at the Prague Plugfest, e.g., scenarios that emphasis the need for semantic integration, semantic artifacts such as queries for semantic discovery, iot.schema.org Capabilities, Recipes etc.
