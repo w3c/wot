@@ -58,9 +58,13 @@ Notes: The following contents has been just copied from Barlingame table. Please
 
 TBD
 
-# 3 Plugefest scenarios
+# 3 Plugfest scenarios
 
-TBD
+Examples of scenarii involving semantic querying:
+- outlier detection: gather temperature data from different sources and compare them
+- energy saving: turn heating off when a window opens in the same room
+- meta-action: switch on a light either by changing its value or by invoking an action
+- circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
 
 # 4 Schedule
 
