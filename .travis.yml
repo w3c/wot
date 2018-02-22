@@ -21,6 +21,9 @@ after_success:
   - cp -R charters/ page/
   - mkdir -p page/proposals/explicit-bindings
   - cp proposals/explicit-bindings/abstract-transfer-layer.html page/proposals/explicit-bindings/abstract-transfer-layer.html
+  - mkdir -p page/proposals/json-td
+  - cp proposals/json-td/index.html page/proposals/json-td/index.html
+  - cp proposals/json-td/README.md page/proposals/json-td/README.md
   - cp thing-description/w3c-wot-td-context.jsonld page/w3c-wot-td-context.jsonld
   - cp thing-description/w3c-wot-common-context.jsonld page/w3c-wot-common-context.jsonld
   - cp thing-description/w3c-wot-td-ontology.owl page/w3c-wot-td-ontology.owl
@@ -32,6 +35,8 @@ after_success:
   - git add current-practices/
   - git add charters/
   - git add proposals/explicit-bindings/abstract-transfer-layer.html
+  - git add proposals/json-td/index.html
+  - git add proposals/json-td/README.md
   - git add w3c-wot-td-context.jsonld
   - git add w3c-wot-example-context.jsonld
   - git add w3c-wot-td-ontology.owl
