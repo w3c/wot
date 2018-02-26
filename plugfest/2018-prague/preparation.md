@@ -69,3 +69,19 @@ Examples of scenarii involving semantic querying:
 # 4 Schedule
 
 TBD
+
+
+# 5 Changes from previous PlugFest in Burlingame
+
+## 5.1 TD changes
+
+* link --> form
+  form has "rel" field now also
+* Property outputData --> Property schema
+* Action inputData --> Action inputSchema
+  Action outputData --> Action outputSchema
+* Event outputData --> Event schema
+* Type System changes
+  fields --> field
+  value --> schema
+
