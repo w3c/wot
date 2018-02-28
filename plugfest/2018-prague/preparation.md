@@ -56,7 +56,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
 
 ## 2.3 Servients from plugfest participants ( diagram )
 
-TBD
+![Basic framework for PlurFests using Fujitsu's proxies](images/20180228-plugfest.png)
 
 # 3 Plugfest scenarios
 
