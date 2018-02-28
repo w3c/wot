@@ -135,7 +135,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td>Sensors(Luminance sensor, Humidity sensor, Temperature sensor, Accelerometer), Rotating Light</td>
     <td>Air conditioner, LED light, Blind</td>
     <td>LED light, Air conditioner (home/car), Robot Cleaner, Amazon Echo Dot, Google Home mini</td>
-    <td>WoT Simulator</td>
+    <td>WoT Simulator, Google Home mini</td>
     <td></td>
     <td colspan="2">Remote Festo Plant (valve, pump, levelmeter), BACnet Demonstrator, Logo! Demonstrator, RGB LED Light</td>
     <td>Sensors(Luminance sensor, Humidity sensor, Temperature sensor), Binary actuator</td>
@@ -150,8 +150,8 @@ Each description is shown below.
 ### 2.2.1 Application Servients
 
 Panasonic:
- - Scripting App.: Panasonic demo applications.
- - NodeRED: would like to connect to the all servients.
+ - Scripting App.: Panasonic demo applications. (Local/Internet+LAN/HTTPS(+WSS))
+ - NodeRED: would like to connect to the all servients. (Local/Internet+LAN/HTTPS(+WSS))
 
 ### 2.2.2 Remote Proxy Servients
 
@@ -160,13 +160,14 @@ Panasonic:
 ### 2.2.4 Device Servients
 
 Panasonic:
- - LED light: on/off, RGB properties
- - Air conditioner (home): on/off, mode, temperature, wind level properties and events
- - Air conditioner (car): on/off, number properties
- - Robot Cleaner: on, turn left/right, go straight, go home, go area 1/2/3 actions
- - Amazon Echo Dot: "home"/"bye" property and event
- - Google Home mini: "home"/"bye" property and event, speech action
- - WoT Simulator: can simulate the WoT devices easily.
+ - LED light: on/off, RGB properties (Remote/Internet/HTTPS)
+ - Air conditioner home: on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
+ - Air conditioner car: on/off, number properties (Remote/Internet/HTTPS)
+ - Robot Cleaner: on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
+ - Amazon Echo Dot: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
+ - Google Home mini: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
+ - Google Home mini: speech action (Local/LAN/HTTP)
+ - WoT Simulator: can simulate the WoT devices easily. (Local/LAN/HTTP)
 
 ### 2.3 Servients from plugfest participants ( diagram )
 
