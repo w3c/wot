@@ -1,49 +1,166 @@
 {
-  "@context": {
+  "@context" : {
+    "td": "http://www.w3.org/ns/td#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "td": "http://iot.linkeddata.es/def/wot#",
-    "Thing": "td:Thing",
-    "name": "td:name",
-    "base": {
-      "@id": "td:baseURI",
-      "@type": "@id"
+    "outputSchema" : {
+      "@id" : "http://www.w3.org/ns/td#outputSchema",
+      "@type" : "@id"
     },
-    "Link": "td:Link",
-    "href": {
-      "@id": "td:href",
-      "@type": "@id"
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
     },
-    "mediaType": {
-      "@id": "td:hasMediaType"
+    "Link" : {
+      "@id" : "http://www.w3.org/ns/td#Link"
     },
-    "Interaction": "td:Interaction",
-    "interaction": {
-      "@id": "td:providesInteractionPattern",
-      "@type": "@id",
-      "@container": "@set"
+    "interaction" : {
+      "@id" : "http://www.w3.org/ns/td#interaction",
+      "@type" : "@id"
     },
-    "link": {
-      "@id": "td:isAccessibleThrough",
-      "@type": "@id"
+    "security" : {
+      "@id" : "http://www.w3.org/ns/td#security",
+      "@type" : "@id"
     },
-    "security": "td:implementsSecurity",
-    "Property": "td:Property",
-    "required": {
-      "@id": "td:isRequired",
-      "@type": "xsd:boolean"
+    "Thing" : {
+      "@id" : "http://www.w3.org/ns/td#Thing"
     },
-    "writable": {
-      "@id": "td:isWritable",
-      "@type": "xsd:boolean"
+    "DataSchema" : {
+      "@id" : "http://www.w3.org/ns/td#DataSchema"
     },
-    "Event": "td:Event",
-    "Action": "td:Action",
-    "inputData": {
-      "@id": "td:hasInputData"
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
-    "outputData": {
-      "@id": "td:hasOutputData"
+    "form" : {
+      "@id" : "http://www.w3.org/ns/td#form",
+      "@type" : "@id"
     },
-    "child": "td:isChildOf"
+    "schema" : {
+      "@id" : "http://www.w3.org/ns/td#schema",
+      "@type" : "@id"
+    },
+    "Event" : {
+      "@id" : "http://www.w3.org/ns/td#Event"
+    },
+    "base" : {
+      "@id" : "http://www.w3.org/ns/td#base",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "anchor" : {
+      "@id" : "http://www.w3.org/ns/td#anchor"
+    },
+    "href" : {
+      "@id" : "http://www.w3.org/ns/td#href",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "name" : {
+      "@id" : "http://www.w3.org/ns/td#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "observable" : {
+      "@id" : "http://www.w3.org/ns/td#observable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Form" : {
+      "@id" : "http://www.w3.org/ns/td#Form"
+    },
+    "Security" : {
+      "@id" : "http://www.w3.org/ns/td#Security"
+    },
+    "writable" : {
+      "@id" : "http://www.w3.org/ns/td#writable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Property" : {
+      "@id" : "http://www.w3.org/ns/td#Property"
+    },
+    "link" : {
+      "@id" : "http://www.w3.org/ns/td#link",
+      "@type" : "@id"
+    },
+    "rel" : {
+      "@id" : "http://www.w3.org/ns/td#rel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mediaType" : {
+      "@id" : "http://www.w3.org/ns/td#mediaType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "InteractionPattern" : {
+      "@id" : "http://www.w3.org/ns/td#InteractionPattern"
+    },
+    "Action" : {
+      "@id" : "http://www.w3.org/ns/td#Action"
+    },
+    "inputSchema" : {
+      "@id" : "http://www.w3.org/ns/td#inputSchema",
+      "@type" : "@id"
+    },
+    "anyOf" : {
+      "@id" : "http://www.w3.org/ns/td#anyOf",
+      "@type" : "@id"
+    },
+    "allOf" : {
+      "@id" : "http://www.w3.org/ns/td#allOf",
+      "@type" : "@id"
+    },
+    "object" : {
+      "@id" : "http://www.w3.org/ns/td#Object"
+    },
+    "number" : {
+      "@id" : "http://www.w3.org/ns/td#Number"
+    },
+    "maxItems" : {
+      "@id" : "http://www.w3.org/ns/td#maxItems",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "minItems" : {
+      "@id" : "http://www.w3.org/ns/td#minItems",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "items" : {
+      "@id" : "http://www.w3.org/ns/td#items",
+      "@type" : "@id"
+    },
+    "field" : {
+      "@id" : "http://www.w3.org/ns/td#field",
+      "@type" : "@id"
+    },
+    "integer" : {
+      "@id" : "http://www.w3.org/ns/td#Integer"
+    },
+    "string" : {
+      "@id" : "http://www.w3.org/ns/td#String"
+    },
+    "required" : {
+      "@id" : "http://www.w3.org/ns/td#required",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "oneOf" : {
+      "@id" : "http://www.w3.org/ns/td#oneOf",
+      "@type" : "@id"
+    },
+    "DataField" : {
+      "@id" : "http://www.w3.org/ns/td#DataField"
+    },
+    "description" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "array" : {
+      "@id" : "http://www.w3.org/ns/td#Array"
+    },
+    "enum" : {
+      "@id" : "http://www.w3.org/ns/td#enum",
+      "@type" : "@id"
+    },
+    "boolean" : {
+      "@id" : "http://www.w3.org/ns/td#Boolean"
+    },
+    "type": {
+      "@id" : "http://www.w3.org/ns/td#schemaType",
+      "@type": "@vocab"
+    }
   }
 }
