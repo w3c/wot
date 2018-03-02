@@ -1,0 +1,23 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"
+    ],
+    "name": "MySensorP1",
+    "base": "https://xxxxxxxx/wot-ver2/things/sensor/1/",
+    "security": {
+        "cat": "token:jwt",
+        "alg": "ES256",
+        "as": "https://plugfest.thingweb.io:8443/"
+    },
+    "interaction": [
+      {
+        "@type": ["Event"],
+        "name": "detect",
+        "link": [{
+          "href": "detect",
+          "mediaType": "application/json"
+        }]
+      }
+    ]
+}

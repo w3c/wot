@@ -1,0 +1,23 @@
+{
+  "@type"               : ["Thing"]
+ ,"@context"            : [ "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",   "https://w3c.github.io/wot/w3c-wot-common-context.jsonld" ]
+
+ ,"name"                : "Fujitsu-BrightnessSensorA42D"
+ ,"base"                : "http://sspf.wot.fujitsu_demo.local:4000/Things/Fujitsu-BrightnessSensorA42D/"
+ ,"security"            : [{
+                              "cat": "token:jwt",
+                              "alg": "ES256",
+                              "as": "https://plugfest.thingweb.io:8443/"
+                          }]
+ ,"interaction": 
+   [
+  	{
+            "@type"     : ["Property"]
+	   ,"name"      : "MeasuredIllu"
+           ,"link"      : [ { "href" : "Property/MeasuredIllu",  "mediaType": "text/plain"}]
+           ,"writable"  : false
+
+           ,"outputData": { "type": "number" }
+	}
+  ]
+}

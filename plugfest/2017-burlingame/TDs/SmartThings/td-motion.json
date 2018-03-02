@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+	  {"iot": "http://iotschema.org/"}
+  ],
+  "base": "http://0m2m.net:1880",
+  "@type": [ "Thing", "iot:MotionControl" ],
+  "name": "Motion Sensor",
+  "interaction": [
+    {
+      "name": "Motion State",
+      "@type": ["Property", "iot:MotionDetected"],
+      "outputData":  {
+        "type": "array",
+        "observable": "true",
+        "items": [
+          {
+            "type": "object",
+            "field": [
+              {
+                "name": "n",
+                "value": "5700"
+              },
+              {
+                "name": "vb",
+                "value": {
+                  "@type": ["iot:stateData"],
+                  "type": "boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "link": [
+        {
+          "href": "/3300/2",
+          "mediatype": "application/json",
+          "rel": "td:getProperty",
+          "http:methodName": "http:get"
+        },
+        {
+          "href": "/3300/2",
+          "mediatype": "application/json",
+          "rel": "td:setProperty",
+          "http:methodName": "http:post"
+        },
+        {
+          "href": "mqtt://0m2m.net:1883/plugfest/subscriptions/Motion",
+          "rel": "td:observe",
+          "mqtt:methodName": "mqtt:subscribe"
+        }
+      ]
+    }
+  ]
+}
