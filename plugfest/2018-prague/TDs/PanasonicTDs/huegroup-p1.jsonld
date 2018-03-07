@@ -18,11 +18,19 @@
         "name": "operationStatus",
         "schema": {"type":"boolean"},
         "writable": true,
-        "observable": false,
-        "form": [{
-          "href": "operationStatus",
-          "mediaType": "application/json"
-        }]
+        "observable": true,
+        "form": [
+          {
+            "href": "operationStatus",
+            "mediaType": "application/json"
+          },
+          {
+            "href": "https://xxxxxxxx:8003/poll/huegroup/1/operationStatus",
+            "mediaType": "application/json",
+            "subProtocol": "LongPoll",
+            "rel": "observe"
+          }
+        ]
       },
       {
         "@type": ["Property", "iot:CurrentColour"],
@@ -45,11 +53,19 @@
           ]
         },
         "writable": true,
-        "observable": false,
-        "form": [{
-          "href": "color",
-          "mediaType": "application/json"
-        }]
+        "observable": true,
+        "form": [
+          {
+            "href": "color",
+            "mediaType": "application/json"
+          },
+          {
+            "href": "https://xxxxxxxx:8003/poll/huegroup/1/color",
+            "mediaType": "application/json",
+            "subProtocol": "LongPoll",
+            "rel": "observe"
+          }
+        ]
       }
     ]
 }
