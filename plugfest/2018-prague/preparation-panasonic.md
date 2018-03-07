@@ -2,45 +2,11 @@
 
 # 1. Introduction
 
-This document describes a general information related to the next plugfest in Prague F2F meeting. The detail specification will be descirbed  in the guideline document, please see https://github.com/w3c/wot/blob/master/plugfest/2018-prague/guideline.md.
-
-## 1.1 Backgroud
-
-In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to WoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers.
-The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles.
-
-![buriling plugfest](images/burlingame.png)
-
-## 1.2 Use case
-
-Some use cases are described in below but not limited to the followings.
-
-(1) Smart home
-This is the smarthome application that the application on the smartphone can control the air conditioner in the house. The agent and the gateway have gateway functions that connects with applications, devices, and gateways.
-
-![Use case 1](images/smarthome.png)
-
-(2) Smart factory
-
-![Use case 2](images/smartfactory.png)
-
-(3) Connected car
-
-![Use case 3](images/connectedcar.png)
-
 # 2. Servients
 
 ## 2.1 4-layered Servients
 
-3 types of WoT Servients was derived from the use case described in 1.2. These are defined below:  
-* Device Servient: WoT Servient with Exposed Thing, e.g. devices
-* Application Servient: WoT Servient with Consumed Thing, e.g. applications
-* Proxy Servient: WoT Servient with both Exposed and Consumed Thing, e.g. gateways
-
-The Proxy Servient are seperated to 2 types fo them, Remote Proxy and Local Proxy. The Remote Proxy Servient is deployed on the Internet and connected with the Applicationd Serivent and the Local Proxy Servient. The Local Proxy Servient is done on the Local network and connects with the Remote Proxy Servient and the Device Servient. The layered diagram is shown below.
-
 ## 2.2 Servients and Protocols
-Notes: The following contents has been just copied from Barlingame table. Please modify below directly or this powerpoint, https://github.com/w3c/wot/tree/master/plugfest/2018-prague/servients_prague.pptx
 
 <table>
   <tr>
@@ -160,7 +126,7 @@ Panasonic:
 ### 2.2.4 Device Servients
 
 Panasonic:
- - LED light: on/off, RGB properties (Remote/Internet/HTTPS)
+ - [LED light](TDs/PanasonicTDs/huegroup-p1.jsonld): on/off, RGB properties (Remote/Internet/HTTPS)
  - Air conditioner home: on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
  - Air conditioner car: on/off, number properties (Remote/Internet/HTTPS)
  - Robot Cleaner: on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
@@ -171,8 +137,6 @@ Panasonic:
 
 ### 2.3 Servients from plugfest participants ( diagram )
 
-TBD
-
 # 3 Topics
 
 Panasonic:
@@ -180,12 +144,4 @@ Panasonic:
 
 # 4 Plugfest scenarios
 
-Examples of scenarii involving semantic querying:
-- outlier detection: gather temperature data from different sources and compare them
-- energy saving: turn heating off when a window opens in the same room
-- meta-action: switch on a light either by changing its value or by invoking an action
-- circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
-
 # 5 Schedule
-
-TBD
