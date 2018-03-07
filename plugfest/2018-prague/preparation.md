@@ -69,3 +69,18 @@ Examples of scenarii involving semantic querying:
 # 4 Schedule
 
 TBD
+
+# 5 Requirements for PlugFest Setting
+
+| Participant | Power           | Space            | Network | Display | Remarks |
+|-------------|-----------------|------------------|---------|---------|---------|
+| Panasonic   | 2 plugs, Type-C | 1 table, 3 seats | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 8001, 8003, 8091 | 1 | |
+| Fujitsu     | 1 plug,  Type-C | 1 table, 4 seats | Wi-Fi | 1 | |
+| IRI         | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 1 | |
+| Siemens     | 3 plugs, Type-C | 1 table, 2 seats | Wi-Fi | 1 | |
+| Intel       | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 1 | |
+| SmartThings | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 0 | |
+| EURECOM     | 1 plug,  Type-C | 1 table, 2 seats | Wi-Fi | 0 | |
+| Oracle      | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 0 | |
+| Hitachi     | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 0 | |
+| Others      | 1 plug,  Type-C | 1 table, 3 seats | Wi-Fi | 0 | |
