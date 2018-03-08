@@ -239,6 +239,12 @@ Notes:
   fields --> field
   value --> schema
   
+# 7 Implementation guidelines
+
+* "name" field of Thing Description shall be unique among the things which will be registered to Fujitsu Proxy.  
+  Recommended convention is 'Company name'+'Thing name'  
+  e.g.) "name": "PanasonicAirConditionerP1"
+
 # Appendix A: Sequence diagrams specified in Fujitsu's proxy servients
 
 Appendix A describes sequence diagram among application, remote / local proxies, and device servient implemented for this plugfest by Fujitsu.
