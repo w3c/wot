@@ -17,13 +17,15 @@ after_success:
   - cp wot-ucr-tmp.html page/wot-ucr.html
   - cp tech-landscape/landscape.html page/landscape.html
   - cp -R current-practices/ page/
-  - cp page/current-practices/wot-practices.html page/current-practices/wot-practices-santa-clara-2017.html
-  - cp -R architecture/ page/
+#  - cp page/current-practices/wot-practices.html page/current-practices/wot-practices-duesseldorf-2017.html
   - cp -R charters/ page/
   - mkdir -p page/proposals/explicit-bindings
   - cp proposals/explicit-bindings/abstract-transfer-layer.html page/proposals/explicit-bindings/abstract-transfer-layer.html
+  - mkdir -p page/proposals/json-td
+  - cp proposals/json-td/index.html page/proposals/json-td/index.html
+  - cp proposals/json-td/README.md page/proposals/json-td/README.md
   - cp thing-description/w3c-wot-td-context.jsonld page/w3c-wot-td-context.jsonld
-  - cp thing-description/w3c-wot-example-context.jsonld page/w3c-wot-example-context.jsonld
+  - cp thing-description/w3c-wot-common-context.jsonld page/w3c-wot-common-context.jsonld
   - cp thing-description/w3c-wot-td-ontology.owl page/w3c-wot-td-ontology.owl
   - cp thing-description/w3c-wot-td-ire.owl page/w3c-wot-td-ire.owl
   - cd page
@@ -31,9 +33,10 @@ after_success:
   - git add wot-ucr.html
   - git add landscape.html
   - git add current-practices/
-  - git add architecture/
   - git add charters/
   - git add proposals/explicit-bindings/abstract-transfer-layer.html
+  - git add proposals/json-td/index.html
+  - git add proposals/json-td/README.md
   - git add w3c-wot-td-context.jsonld
   - git add w3c-wot-example-context.jsonld
   - git add w3c-wot-td-ontology.owl

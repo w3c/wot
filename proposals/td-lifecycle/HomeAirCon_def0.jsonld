@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "wot":"http://w3c.github.io/wot/w3c-wot-td-context.jsonld#",
+    "td": "http://www.w3c.org/wot/td#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sch": "http://schema.org/",
+    "eco": "http://133.242.180.86/Echonet_def0.jsonld#"
+  },
+  "@type": "td:Thing",
+  "wot:name":"HomeAirConditioner",
+  "wot:interactions": [
+      {
+       "@include": "eco:interactions"
+      },
+      {
+       "@type": "wot:Property",
+       "wot:name": "operationMode",
+       "wot:valueType": { "@type": "xsd:string" }
+      },
+      {
+       "@type": "wot:Property",
+       "wot:name": "desiredTemp",
+       "wot:valueType": {
+         "@type": "xsd:number",
+         "sch:minValue": 16,
+         "sch:maxValue": 30
+        },
+       "wot:writable": true
+      },
+      {
+       "@type": "wot:Property",
+       "wot:name": "windVolumeLevel",
+       "wot:valueType": {
+         "@type": "xsd:number",
+         "sch:minValue": 0,
+         "sch:maxValue": 8
+        },
+       "wot:writable": true
+      }
+  ]
+}

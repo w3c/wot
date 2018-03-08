@@ -23,3 +23,7 @@ The directory contains these contents:
 We mainly use Github issues for discussion. Please use the [*Scripting*](https://github.com/w3c/wot/issues?q=is%3Aissue+is%3Aopen+label%3AScripting) label for API related issues. File issues, comment on existing issues, review pull requests. Fork the repository, add your proposals, and make a pull request.
 
 For email discussions the [public-wot-ig](http://lists.w3.org/Archives/Public/public-wot-ig/) mailing list is used. Please mark scripting API related emails with the `[scripting]` prefix in the subject line.
+
+### Open issues
+
+Open issues are summarized in [open-issues.md](./open-issues.md).

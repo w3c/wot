@@ -1,0 +1,29 @@
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": [ "Thing", "Switch" ],
+  "name": "LED lamp",
+  "interactions": [
+    {
+      "name": "switch on",
+      "@type": ["Action", "OnCommand"],
+      "inputData":  { "type": "boolean" },
+      "link": [
+        {
+          "href": "coap://example.org/lamp/on",
+          "mediaType": "application/json"
+        }
+      ]
+    }, {
+      "name": "switch off",
+      "@type": ["Action", "OffCommand"],
+      "inputData":  { "type": "boolean" },
+      "link": [
+        {
+          "href": "coap://example.org/lamp/on",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}

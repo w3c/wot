@@ -1,0 +1,41 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"
+    ],
+    "name": "MyElectricBulletinBoardP2",
+    "base": "https://xxxxxxxx/wot-ver2/things/electricBulletinBoard/2/",
+    "security": {
+        "cat": "token:jwt",
+        "alg": "ES256",
+        "as": "https://plugfest.thingweb.io:8443/"
+    },
+    "interaction": [
+      {
+        "@type": ["Property"],
+        "name": "operationStatus",
+        "outputData": {"type":"boolean"},
+        "writable": true,
+        "observable": false,
+        "link": [{
+            "href": "operationStatus",
+            "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property"],
+        "name": "desiredTemp",
+        "outputData": {
+            "type": "number",
+            "minimum": 16,
+            "maximum": 30
+        },
+        "writable": true,
+        "observable": false,
+        "link": [{
+          "href": "desiredTemp",
+          "mediaType": "application/json"
+        }]
+      }
+    ]
+}

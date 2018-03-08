@@ -25,6 +25,8 @@ Layer (CRUD+ON)
     - issue: range of expects/returns is hydra:Class => clients expect supported Properties and operations
 - use TD as hydra:ApiSpecification, aligning `wot:associatedURI` with `hydra:entryPoint`
 - define Hydra Links instead of plain URIs as values for `hrefs`
+   - issue: redundancy introduced (e.g. with `writable`)
+   - issue: verbosity of Hydra. simplification? (Are TDs hand-written?)
 
 Example:
 ```

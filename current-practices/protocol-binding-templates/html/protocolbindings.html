@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--<!DOCTYPE html [
+    <!ENTITY nbsp "&#160;"> 
+]>-->
+<html>
+  <head>
+    <title>WoT Protocol Binding Templates</title>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
+    <!-- 
+      === NOTA BENE ===
+      For the three scripts below, if your spec resides on dev.w3 you can check them
+      out in the same tree and use relative links so that they'll work offline,
+     -->
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
+    <script class='remove'>
+      var respecConfig = {
+          // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
+          specStatus:           "unofficial",
+          
+          // the specification's short name, as in http://www.w3.org/TR/short-name/
+          shortName:            "",
+
+          // if your specification has a subtitle that goes below the main
+          // formal title, define it here
+          // subtitle   :  "an excellent document",
+
+          // if you wish the publication date to be other than today, set this
+          // publishDate:  "2009-08-06",
+
+          // if the specification's copyright date is a range of years, specify
+          // the start date here:
+          // copyrightStart: "2005"
+
+          // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+          // and its maturity status
+          // previousPublishDate:  "1977-03-15",
+          // previousMaturity:  "WD",
+
+          // if there a publicly available Editor's Draft, this is the link
+          edDraftURI:           "",
+
+          // if this is a LCWD, uncomment and set the end of its review period
+          // lcEnd: "2009-08-05",
+
+          // if you want to have extra CSS, append them to this list
+          // it is recommended that the respec.css stylesheet be kept
+          extraCSS:             ["http://dev.w3.org/2009/dap/ReSpec.js/css/respec.css"],
+
+          // editors, add as many as you like
+          // only "name" is required
+          editors:  [
+              { name: "Michael Koster", url: "",
+                company: "", companyURL: "" },
+          ],
+
+          // authors, add as many as you like. 
+          // This is optional, uncomment if you have authors as well as editors.
+          // only "name" is required. Same format as editors.
+
+          //authors:  [
+          //    { name: "Your Name", url: "http://example.org/",
+          //      company: "Your Company", companyURL: "http://example.com/" },
+          //],
+          
+          // name of the WG
+          wg:           "Interest Group on the Web of Things",
+          
+          // URI of the public WG page
+          wgURI:        "http://www.w3.org/WoT/IG/",
+          
+          // name (with the @w3c.org) of the public mailing to which comments are due
+          wgPublicList: "public-wot-ig",
+          
+          // URI of the patent status for this WG, for Rec-track documents
+          // !!!! IMPORTANT !!!!
+          // This is important for Rec-track documents, do not copy a patent URI from a random
+          // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+          // Team Contact.
+          wgPatentURI:  "",
+      };
+    </script>
+  </head>
+  <body>
+    <section id='abstract'>
+      WoT Protocol Binding Templates.
+    </section>
+    
+    <section>
+      <h2>Assumptions and Design Principles</h2>
+
+      <section>
+      <h3>Thing Description</h3>
+      <p>
+<a href="#fig-td-example"></a> below is an example Thing Description, illustrating two parts. The upper part contains is a description of an interaction, and the lower part is an associated link, which contains the protocol binding.
+      </p>
+      </section>
+      
+	  <figure id="fig-td-example">
+		<img src="images/td-example.png" style="width:95%"  />
+    <figcaption>Example of a Thing Description</figcaption>
+      </figure>
+      
+      <section>
+      <h3>TD Interaction Description</h3>
+      <p>
+The interaction description part of a Thing Description describes an event, action, or property interaction which is exposed by a thing. Each interaction description contains semantic annotation that describes the type of interaction and its application class, and one or more link elements containing URIs that point to the API entry points for the interaction.
+      </p>
+      </section>
+      
+	  <figure id="fig-interaction">
+		<img src="images/interaction-description.png" style="width:65%"  />
+    <figcaption>Interaction Description Part</figcaption>
+      </figure>
+      
+      <section>
+      <h3>Protocol Binding</h3>
+      <p> 
+Protocol bindings map abstract WoT interactions to concrete protocol operations. The "link" block provides one or more links that point to entry points used to initiate the protocol operations. 
+      </p>
+      </section>
+      
+	  <figure id="fig-protocol-binding">
+		<img src="images/protocol-binding-template.png" style="width:75%"  />
+    <figcaption>Protocol Binding Part</figcaption>
+      </figure>
+      
+      <section>
+      <h3>Protocol Adaptation</h3>
+      <p>
+Device protocols from various standards organizations have peculiar patterns for exposing the device features that the protocol uses to encapsulate and communicate information. 
+      </p>
+      <p>
+For example, OCF Resource Types expose a REST API that uses IETF concepts of Resource Type (rt) and Interface Type (if). By contrast, LWM2M/IPSO Smart Objects expose an hierarchy of object ID (collections) and resource ID (items) where the ID numbers provide the semantic identification. 
+      </p>
+      <p>
+These may all use a common communication protocol like CoAP, and representation format like CBOR or JSON, but then require special options like resource type, interface type, content-formats, data types, and payload schemas. 
+      </p>
+      </section>
+      
+      <section>
+      <h3>Discovery</h3>
+      <p>
+Discovery of things and features of things that map to TD interactions is outside the scope of protocol bindings as currently defined; in this specification we only cover the event, action, property part of the interaction model. 
+      </p>
+      <p>
+It is assumed that discovery of things on the connected device ecosystem results in a set of discoverable Thing Description instances, corresponding to the discovered things, and will then use the TD discovery mechanisms already defined in the W3C WoT WG/IG.
+      </p>
+      <p>
+For example, there could be a discovery process for each device ecosystem that finds new devices, creates TD instances, and publishes them to a TD directory.
+      </p>
+      </section>
+
+      <section>
+      <h3>TD Structure</h3>
+      <p> 
+Except for the link element, the interaction description has the same structure for all instances of a particular thing, regardless of the protocol binding being used. The  protocol binding template is implemented as an extension to the "link" element of the interaction pattern description. 
+      </p>
+      </section>
+
+      <section>
+      <h3>Input and output data</h3>
+      <p> 
+Input and Output Data are described in the interaction description and applied to the protocol binding using the information in the "link" element as a binding template. 
+      </p>
+      <p>
+Any data constraints imposed by the underlying ecosystem, such has range, units, resolution/granularity must be exposed by the interaction description in the inputData and outputData elements of the Inteaction Description. The implementation may provide a means to translate and convert units and scales between the WoT Scripting API and the underlying device traits.
+      </p>
+      </section>
+
+      <section>
+      <h3>Isolation</h3>
+      <p> 
+The interaction description part and protocol template ("link") part are meant to be isolated from each other and are coupled only through the inputData and outputData elements. There must be therefore consistent labeling of data elements between the interaction description and the binding template.
+      </p>
+      </section>
+
+      <section>
+      <h3>General purpose protocol driver</h3>
+      <p> 
+There needs to be enough information in the binidng template to enable a generic protocol driver to construct requests using input data elements and parse output data elements from responses. 
+      </p>
+      <p>
+For example, binding templates for RESTful protocols will look like submission forms, describing the method and options to use to construct the request, as well as a structural description or template to be used to construct and parse data payloads.
+      </p>
+      </section>
+      
+    </section>
+
+    <section>
+      <h2>Design Specification</h2>
+      <section>
+      <h3>Extension of the Interaction Description</h3>
+      <p>
+The interaction description contains the interaction type, additional semantic annotation for the interaction, and the input data and output data descriptors. 
+      </p>
+      
+	  <figure id="fig-interaction-spec">
+		<img src="images/interaction-description.png" style="width:65%"  />
+        <figcaption>Interaction Description</figcaption>
+      </figure>
+      
+       
+      <p>
+The inputData and outputData elements need to be able to accept multiple data items to support complex interactions. For example, an action may accept target value and transition time parameters to invoke. The implementation must pass data values between events, actions, and properties exposed to the scripting API, and the lower level traits exposed by the underlying thing protocols. This is done by labeling the data items with key names using json-schema "property" constructs. 
+      </p>
+      <p>
+The inputData and outputData elements may be annotated with additional value constraints that are inherited from the low level thing traits. These value constraints may be expressed in json-schema validation constructs such as minimum and maximum, minLength, maxLength, etc.. Additional constraints may be specified using appropriate json-schema validation keywords and extended keywords.
+      </p>
+      </section>
+      
+      <section>
+      <h3>Extension of the "link" element</h3>
+      <p>
+The "link" element of an interaction description points to and describes how the ecosystem specific driver is to interact with the low level thing API to carry out the interaction, e.g. set property, invoke action.
+      </p>
+      
+      <figure id="fig-protocol-binding-spec">
+		<img src="images/protocol-binding-template.png" style="width:75%"  />
+        <figcaption>Protocol Binding Part</figcaption>
+      </figure>
+      
+
+      <p>
+For things that expose the device features in a REST and REST-like API, the Protocol Binding is constructed somewhat like an HTML submission form. Metadata in the binding template describes which REST method to use, and any other options that are required to be transmitted in the request or parsed from the response.
+      </p>
+      <p>
+The example OCF protocol binding contains values for Resource Type (rt) and Interface Type (if) required to interact with the appropriate device features.
+      </p>
+      </section>      
+
+    </section>
+
+    <section>
+      <h2>Architecture</h2>
+
+      <section>
+      <h3>WoT Servient Architecture</h3>
+      <p> 
+In the client Proxy integration pattern, the WoT Consumed Thing interface is exposed as a proxy for the device or connected thing. Application middleware, for example node-wot, consumes the thing description, including the protocol binding teplates. 
+      </p>
+      
+	  <figure id="fig-arch-context">
+		<img src="images/arch-context.png" style="width:80%"  />
+        <figcaption>Integration Architecture</figcaption>
+      </figure>
+      
+      <p>
+When an interaction is invoked, the application middleware fills out the template and uses the template to construct requests and parse responses involving the low level traits exposed by the device. The protocol binding execution may be isolated from the WoT application script execution using the protocol binding template as a well defined API payload format.
+      </p>
+      </section>
+
+    </section>
+        
+    <section>
+      <h2>Examples</h2>
+      <p>
+      Example TD files that implement the features described in this document are available for download or review at  
+      <a href="https://github.com/w3c/wot/tree/master/current-practices/protocol-binding-templates/td-examples-plugfest">TD Examples for Plugfest</a>
+      </p>
+    </section>
+  </body>
+</html>

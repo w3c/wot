@@ -1,0 +1,55 @@
+{
+  "@context" : ["http://www.w3.org/ns/td-recipe-context.jsonld",
+    {"iot": "http://iot.schema.org/core#",
+    "schema": "http://schema.org/",
+    "building": "http://iot.schema.org/domain/building#",
+	"ssn": "http://www.w3.org/ns/ssn/"
+  }],
+  "name" : "LightControlOnMotionDetection",
+  "recipeId" : { "@id": "http://www.w3.org/ns/td-recipe/LightControlOnMotionDetection"},
+  "comment": "The recipe creates an application which detects the motion in a room and turns on or turns off the light in  the room.",
+  "hasIngredient" : [
+ {
+  "thingIngredient" : [
+  { "@type" : "building:MotionStatus",
+    "isInteractionPatternOf" : 
+	{"@type" : "building:MotionDetectorLightSwitch"}},
+	"ssn:onPlatform" :{
+      "@id": "_:ub2bL69C1",
+      "@type": "building:Room"
+    }]  
+ },
+ {
+  "thingIngredient" : [  
+  { "@type": "building:LightOn",
+    "isInteractionPatternOf" : 
+	{"@type" : "building:MotionDetectorLightSwitch"},
+	"ssn:onPlatform" :{
+      "@id": "_:ub2bL69C1",
+      "@type": "building:Room"
+    }},
+  { "@type": "building:LightOff",
+    "iot:Capability" : 
+	{"@type" : "building:MotionDetectorLightSwitch"},
+	"ssn:onPlatform" :{
+      "@id": "_:ub2bL69C1",
+      "@type": "building:Room"
+    }}
+  ]}],	
+ "t2tInteraction":[
+   {
+     "t2tInteractsWith":[
+     {"@type" : "building:MotionStatus",
+	  "operation" : "Subscribe"},
+	 {"@type" : "building:LightOn",
+	  "operation" : "Update"}
+	]
+	},
+	{
+	 "t2tInteractsWith":[ 
+     {"@type" : "building:MotionStatus",
+	  "operation" : "Subscribe"},
+	 {"@type" : "building:LightOff",
+	  "operation" : "Update"}]
+	}]
+}

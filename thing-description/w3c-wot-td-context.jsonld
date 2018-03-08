@@ -1,64 +1,166 @@
 {
-  "@context": {
+  "@context" : {
+    "td": "http://www.w3.org/ns/td#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "td": "http://w3c.github.io/wot/w3c-wot-td-ontology.owl#",
-    "name": "td:name",
-    "uris": {
-      "@id": "td:hasThingDescription",
-      "@type": "@id",
-      "@container": "@set"
+    "outputSchema" : {
+      "@id" : "http://www.w3.org/ns/td#outputSchema",
+      "@type" : "@id"
     },
-    "hrefs": {
-      "@id": "td:hasInteraction",
-      "@type": "@id",
-      "@container": "@set"
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
     },
-	"Interaction": "td:Interaction",
-    "priority": {
-      "@id": "td:hasPriority",
-      "@type": "xsd:integer"
+    "Link" : {
+      "@id" : "http://www.w3.org/ns/td#Link"
     },
-    "encodings": {
-      "@id": "td:supportsEncoding",
-      "@container": "@set"
+    "interaction" : {
+      "@id" : "http://www.w3.org/ns/td#interaction",
+      "@type" : "@id"
     },
-    "security": "td:supportsSecurity",
-    "properties": {
-      "@id": "td:hasProperty",
-      "@container": "@set"
+    "security" : {
+      "@id" : "http://www.w3.org/ns/td#security",
+      "@type" : "@id"
     },
-	"Property": "td:Property",
-    "valueType": "td:hasValueType",
-    "stability": {
-      "@id": "td:hasStability",
-      "@type": "xsd:integer"
+    "Thing" : {
+      "@id" : "http://www.w3.org/ns/td#Thing"
     },
-    "writable": {
-      "@id": "td:isWritable",
-      "@type": "xsd:boolean"
+    "DataSchema" : {
+      "@id" : "http://www.w3.org/ns/td#DataSchema"
     },
-    "events": {
-      "@id": "td:hasEvent",
-      "@container": "@set"
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
-    "Event": "td:Event",
-    "property": {
-      "@id": "td:forProperty",
-      "@type": "@id"
+    "form" : {
+      "@id" : "http://www.w3.org/ns/td#form",
+      "@type" : "@id"
     },
-    "inputData":  {
-      "@id": "td:hasInput"
+    "schema" : {
+      "@id" : "http://www.w3.org/ns/td#schema",
+      "@type" : "@id"
     },
-    "outputData": {
-      "@id": "td:hasOutput"
+    "Event" : {
+      "@id" : "http://www.w3.org/ns/td#Event"
     },
-    "actions": {
-      "@id": "td:hasAction",
-      "@container": "@set"
+    "base" : {
+      "@id" : "http://www.w3.org/ns/td#base",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "Action": "td:Action",
-    "associations": "td:isAssociatedTo",
-    "child": "td:isChildOf",
-    "parent": "td:isParentOf"
+    "anchor" : {
+      "@id" : "http://www.w3.org/ns/td#anchor"
+    },
+    "href" : {
+      "@id" : "http://www.w3.org/ns/td#href",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "name" : {
+      "@id" : "http://www.w3.org/ns/td#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "observable" : {
+      "@id" : "http://www.w3.org/ns/td#observable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Form" : {
+      "@id" : "http://www.w3.org/ns/td#Form"
+    },
+    "Security" : {
+      "@id" : "http://www.w3.org/ns/td#Security"
+    },
+    "writable" : {
+      "@id" : "http://www.w3.org/ns/td#writable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Property" : {
+      "@id" : "http://www.w3.org/ns/td#Property"
+    },
+    "link" : {
+      "@id" : "http://www.w3.org/ns/td#link",
+      "@type" : "@id"
+    },
+    "rel" : {
+      "@id" : "http://www.w3.org/ns/td#rel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mediaType" : {
+      "@id" : "http://www.w3.org/ns/td#mediaType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "InteractionPattern" : {
+      "@id" : "http://www.w3.org/ns/td#InteractionPattern"
+    },
+    "Action" : {
+      "@id" : "http://www.w3.org/ns/td#Action"
+    },
+    "inputSchema" : {
+      "@id" : "http://www.w3.org/ns/td#inputSchema",
+      "@type" : "@id"
+    },
+    "anyOf" : {
+      "@id" : "http://www.w3.org/ns/td#anyOf",
+      "@type" : "@id"
+    },
+    "allOf" : {
+      "@id" : "http://www.w3.org/ns/td#allOf",
+      "@type" : "@id"
+    },
+    "object" : {
+      "@id" : "http://www.w3.org/ns/td#Object"
+    },
+    "number" : {
+      "@id" : "http://www.w3.org/ns/td#Number"
+    },
+    "maxItems" : {
+      "@id" : "http://www.w3.org/ns/td#maxItems",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "minItems" : {
+      "@id" : "http://www.w3.org/ns/td#minItems",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "items" : {
+      "@id" : "http://www.w3.org/ns/td#items",
+      "@type" : "@id"
+    },
+    "field" : {
+      "@id" : "http://www.w3.org/ns/td#field",
+      "@type" : "@id"
+    },
+    "integer" : {
+      "@id" : "http://www.w3.org/ns/td#Integer"
+    },
+    "string" : {
+      "@id" : "http://www.w3.org/ns/td#String"
+    },
+    "required" : {
+      "@id" : "http://www.w3.org/ns/td#required",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "oneOf" : {
+      "@id" : "http://www.w3.org/ns/td#oneOf",
+      "@type" : "@id"
+    },
+    "DataField" : {
+      "@id" : "http://www.w3.org/ns/td#DataField"
+    },
+    "description" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "array" : {
+      "@id" : "http://www.w3.org/ns/td#Array"
+    },
+    "enum" : {
+      "@id" : "http://www.w3.org/ns/td#enum",
+      "@type" : "@id"
+    },
+    "boolean" : {
+      "@id" : "http://www.w3.org/ns/td#Boolean"
+    },
+    "type": {
+      "@id" : "http://www.w3.org/ns/td#schemaType",
+      "@type": "@vocab"
+    }
   }
 }

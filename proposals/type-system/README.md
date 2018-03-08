@@ -58,6 +58,8 @@ types, seems a reasonable/possible approach.
     <th>Feature</th>
     <th>JSON Schema</th>
     <th>Schema.org</th>
+    <th><a href="https://www.w3.org/TR/shacl/">SHACL</a></th>
+	<th><a href="http://shex.io/shex-semantics/index.html">ShEx</a></th>
     <th>Proposal from <a href="https://github.com/w3c/wot/issues/122">issue #122</a></th>
     <th>YANG</td>
     <th>Notes</td>
@@ -66,6 +68,8 @@ types, seems a reasonable/possible approach.
     <td>Community</td>
     <td>?loosely coupled?</td>
     <td>Strong community</td>
+    <td>Semantic Web community</td>
+	<td>Semantic Web community</td>
     <td>None</td>
     <td>Networking, mainly SDN community</td>
     <td>Schema.org vocabulary is shared between different parties (e.g., Bing, Google, Yahoo)<br/><br/>
@@ -76,6 +80,8 @@ types, seems a reasonable/possible approach.
     <td>Tool support for validation</td>
     <td>Yes e.g.  http://jsonschemalint.com/</td>
     <td>Partially, e.g. https://developers.google.com/structured-data/testing-tool/</td>
+    <td>Yes e.g. http://shacl.org/playground/</td>
+	<td>Yes e.g. http://rawgit.com/shexSpec/shex.js/master/doc/shex-simple.html</td>
     <td>None</td>
     <td>Yes<br/> http://www.yangvalidator.com/</td>
     <td>Google's tool only check against existing classes and data types.</td>
@@ -100,6 +106,21 @@ types, seems a reasonable/possible approach.
     "maxValue": 13
   }
 }
+      </pre>
+    </td>
+    <td>
+      <pre>
+[
+  sh:datatype xsd:integer ;
+  sh:maxInclusive "13" .
+]
+      </pre>
+    </td>
+	<td>
+      <pre>
+[
+  ex:id xsd:integer MaxInclusive 13
+]
       </pre>
     </td>
     <td>
@@ -138,6 +159,18 @@ typedef new-int32-type {
     </td>
     <td>
       <i>Not applicable</i>
+    </td>
+    <td>
+      <pre>
+[
+  sh:in ("file" "memory")
+]
+      </pre>
+    </td>
+	<td>
+      <pre>
+:enum ["file" "memory"];
+      </pre>
     </td>
     <td>
       <pre>
@@ -200,6 +233,28 @@ leaf new-enum {
     </td>
     <td>
       <pre>
+[
+  sh:property [
+    sh:path ex:id ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:name ;
+    sh:datatype xsd:string
+  ]
+] .
+      </pre>
+    </td>
+	<td>
+      <pre>
+ex:id xsd:integer;
+ex:name xsd:string?
+      </pre>
+    </td>
+    <td>
+      <pre>
 {
   "type": {
     "id": "integer",
@@ -256,6 +311,33 @@ container thermometer {
     </td>
     <td>
       <pre>
+&lt;valType1&gt; a sh:NodeShape ;
+[
+  sh:property [
+    sh:path :valueType ;
+    sh:datatype xsd:double ;
+  ]
+]
+[
+  sh:property [
+    sh:class &lt;valType1&gt; .
+    sh:path :valueType ;
+  ]
+]
+      </pre>
+    </td>
+	<td>
+      <pre>
+&lt;valType1&gt;{
+  :valueType xsd:double;
+}
+[	  
+  :valueType  @&lt;valType1&gt;
+]
+      </pre>
+    </td>
+    <td>
+      <pre>
 "property1": {
   "type": "number",
   ...
@@ -275,7 +357,7 @@ container thermometer {
   leaf value {
     type temperature;
   }
-}      
+}
       </pre>
     </td>
     <td>
@@ -291,11 +373,14 @@ JSON Schema appears a good candidate and it is recommended for complex data
 type specification. However, it still needs to be mapped to RDF, so that type
 definitions can be semantically annotated.
 
+A further comparison has been made to evaluate the interplay between JSON Schema
+and RDF, and more specifically with OWL.
+See [here](https://github.com/w3c/wot/tree/master/proposals/type-system/owl-comparison.md).
+
 Moreover, further languages have been proposed
 ([CDDL](https://tools.ietf.org/html/draft-greevenbosch-appsawg-cbor-cddl-08),
 [YANG](https://tools.ietf.org/html/draft-ietf-netmod-rfc6020bis-12))
 that still need to be reviewed.
-
 
 ## Mappings to Encodings
 

@@ -1,0 +1,23 @@
+{
+  "@type"               : ["Thing"]
+ ,"@context"            : [ "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",   "https://w3c.github.io/wot/w3c-wot-common-context.jsonld" ]
+
+ ,"name"                : "Fujitsu-iHouseBlindOpen"
+ ,"security"            : [{
+                              "cat": "token:jwt",
+                              "alg": "ES256",
+                              "as": "https://plugfest.thingweb.io:8443/"
+                          }]
+ ,"interaction":
+   [
+        {
+            "@type"     : ["Property"]
+	   ,"name"      : "OperationStatus"
+           ,"link"     : [ { "href" : "http://fujitsu.example.com:4444/FJ-FCGWSSPFA-F80F416A84B5/Things/Fujitsu_iHouse-BlindOpen/Property/OperationStatus",  "mediaType": "text/plain"}]
+           ,"writable"  : true
+
+           ,"outputData": { "type": "string" }
+        }
+  ]
+
+}

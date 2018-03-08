@@ -1,0 +1,42 @@
+{
+  "@context": ["http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "http://w3c.github.io/wot/w3c-wot-common-context.jsonld"],
+  "@type": [ "Thing", "Switch" ],
+  "name": "LED lamp (with dimming)",
+  "interactions": [
+    {
+      "@id": "_:light",
+      "name": "brightness level",
+      "@type": ["Property", "Light", "MultiLevelState"],
+      "outputType": { "type": "number" },
+      "link": [
+        {
+          "href": "coap://example.org/lamp/light",
+          "mediaType": "application/json"
+        }
+      ]
+    }, {
+      "name": "increase brightness",
+      "@type": ["Action", "StepUpCommand"],
+      "inputData":  { "type": "number" },
+      "actsUpon": "_:light",
+      "link": [
+        {
+          "href": "coap://example.org/lamp/up",
+          "mediaType": "application/json"
+        }
+      ]
+    }, {
+      "name": "decrease brightness",
+      "@type": ["Action", "StepDownCommand"],
+      "inputData":  { "type": "number" },
+      "actsUpon": "_:light",
+      "link": [
+        {
+          "href": "coap://example.org/lamp/down",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  ]
+}
