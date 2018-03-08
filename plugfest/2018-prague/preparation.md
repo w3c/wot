@@ -206,18 +206,24 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 
 # 5 Requirements for PlugFest Setting
 
-| Participant | Power           | Space            | Network | Display | Remarks |
-|-------------|-----------------|------------------|---------|---------|---------|
-| Panasonic   | 2 plugs, Type-C | 1 table, 3 seats | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 8001, 8003, 8091 | 1 | |
-| Fujitsu     | 1 plug,  Type-C | 1 table, 4 seats | Wi-Fi | 1 | |
-| IRI         | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 1 | |
-| Siemens     | 3 plugs, Type-C | 1 table, 2 seats | Wi-Fi | 1 | |
-| Intel       | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 1 | |
-| SmartThings | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 0 | |
-| EURECOM     | 1 plug,  Type-C | 1 table, 2 seats | Wi-Fi | 0 | |
-| Oracle      | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 0 | |
-| Hitachi     | 1 plug,  Type-C | 1 table, 1 seat  | Wi-Fi | 0 | |
-| Others      | 1 plug,  Type-C | 1 table, 3 seats | Wi-Fi | 0 | |
+| Participant | Number of Participants | Number of Power outlets | Network | Remarks |
+|-------------|------------------------|-------------------------|---------|---------|
+| Panasonic   | 3                      | 2                       | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 8001, 8003, 8091 | |
+| Fujitsu     |                        |                         | Wi-Fi   |         |
+| IRI         |                        |                         | Wi-Fi   |         |
+| Siemens     |                        |                         | Wi-Fi   |         |
+| Intel       |                        |                         | Wi-Fi   |         |
+| SmartThings |                        |                         | Wi-Fi   |         |
+| EURECOM     |                        |                         | Wi-Fi   |         |
+| Oracle      |                        |                         | Wi-Fi   |         |
+| Hitachi     |                        |                         | Wi-Fi   |         |
+| Others      |                        |                         | Wi-Fi   |         |
+
+Notes: 
+ - Deadline is March 21st.
+ - Power outlets Type-A will be provided by the venue.
+ - Anyone who has requirements for ports outside of 80/443/22 should send an email to Oracle.
+ - You have to bring displays, if need.
 
 # 6 Changes from previous PlugFest in Burlingame
 
