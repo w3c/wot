@@ -221,7 +221,7 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 
 Notes: 
  - Deadline is March 21st.
- - Power outlets Type-A are provided by the venue.
+ - Power outlets Type-A will be provided by the venue.
  - Anyone who has requirements for ports outside of 80/443/22 should send an email to Oracle.
  - You have to bring displays, if need.
 
