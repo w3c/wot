@@ -127,12 +127,12 @@ Panasonic:
 
 Panasonic:
  - [LED light](TDs/PanasonicTDs/huegroup-p1.jsonld): on/off, RGB properties (Remote/Internet/HTTPS)
- - Air conditioner home: on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
- - Air conditioner car: on/off, number properties (Remote/Internet/HTTPS)
- - Robot Cleaner: on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
- - Amazon Echo Dot: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
- - Google Home mini: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
- - Google Home mini: speech action (Local/LAN/HTTP)
+ - [Air conditioner home](TDs/PanasonicTDs/air-conditioner-p1.jsonld): on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
+ - [Air conditioner car](TDs/PanasonicTDs/electric-bulletin-board-p2.jsonld): on/off, number properties (Remote/Internet/HTTPS)
+ - [Robot Cleaner](TDs/PanasonicTDs/cleaner-p1.jsonld): on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
+ - [Amazon Echo Dot](TDs/PanasonicTDs/amazon-echo-p1.jsonld): "Coming"/"Going" event (Local/Internet/HTTPS(+WSS))
+ - [Google Home mini](TDs/PanasonicTDs/google-home-p1.jsonld): "Coming"/"Going" event (Local/Internet/HTTPS(+WSS))
+ - [Google Home mini](TDs/PanasonicTDs/google-home-p2.jsonld): speech action (Local/LAN/HTTP)
  - WoT Simulator: can simulate the WoT devices easily. (Local/LAN/HTTP)
 
 ### 2.3 Servients from plugfest participants ( diagram )
