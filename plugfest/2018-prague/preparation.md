@@ -194,20 +194,20 @@ Examples of scenario involving semantic querying:
 - circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
 
 ## 3.1 Event / Observable using HTTP Long Polling
- - Participants
+- Participants
   - Panasonic, Fujitsu, (welcome to join)
- - Purpose
+- Purpose
   - We would like to test "Event" and "observable" interoperability using "HTTP Long polling" as a first step.
- - Application Scenarios
+- Application Scenarios
   - When an application receives an event / observes and detects that the property status is changed using "HTTP Long polling", the application informs through a light and a voice.
- - Functionality and Roles
+- Functionality and Roles
   - Application
-     - Node-RED
+    - Node-RED
   - Proxy
-     - Fujitsu Cloud, Local Gateway
+    - Fujitsu Cloud, Local Gateway
   - Device
-     - LED light, Air conditioner, Amazon Echo Dot, Google Home mini, Sensors, Rotating Light
- - Steps
+    - LED light, Air conditioner, Amazon Echo Dot, Google Home mini, Sensors, Rotating Light
+- Steps
   1. TD of devices are registered to Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.1)
   2. Application retrieves TDs from Fujitsu Remote Proxy. (Sequence A.2)
   3. Application subscribes Amazon Echo's "ask" event / starts observing Air conditioner's "operationStatus" property. (Sequence A.5)
