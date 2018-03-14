@@ -188,10 +188,19 @@ Panasonic:
 # 3 Plugfest scenarios
 
 Examples of scenario involving semantic querying:
-- outlier detection: gather temperature data from different sources and compare them
-- energy saving: turn heating off when a window opens in the same room
-- meta-action: switch on a light either by changing its value or by invoking an action
-- circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
+- Outlier detection: gather temperature data from different sources and compare them
+- Energy saving: turn heating off when a window opens in the same room
+- Meta-action: switch on a light either by changing its value or by invoking an action
+- Circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
+- An application which detects the motion in a room and controls the AC operation in  a room. 
+Devices: air conditioner (Fujitsu and Panasonic), human detection sensor (Panasonic and SmartThings)
+- An application which controls the AC in  a room based on the room temperature.
+Devices: air conditioner (Fujitsu and Panasonic), temperature sensor (Lemonbeat, Intel, SmartThings)
+- An application which controls a lamp in  a room based on the brightness in the room.
+Devices: light (Fujitsu, Intel, SmartThings), Luminous sensor (Lemonbeat, SmartThings)
+- An application which controls a lamp in  a room based on the motion detection in the room.
+Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic and SmartThings)
+
 
 Panasonic:
    - would like to test "observable" and "Event" interoperability using "HTTP Long polling" as a first step.
