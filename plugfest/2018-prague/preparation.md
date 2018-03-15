@@ -214,6 +214,8 @@ Examples of scenario involving semantic querying:
   4. Application receives Amazon Echo's "ask" event / detects Air conditioner's "operationStatus" property is changed. (Sequence A.5)
   5. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
   6. TD of devices are unregistered from Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.7)
+- Security Consideration
+  - JSON Web Token (JWT) should be added, when you access to Panasonic servient.
 
 # 4 Schedule
 
