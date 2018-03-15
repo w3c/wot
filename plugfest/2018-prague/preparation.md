@@ -226,6 +226,7 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | EURECOM     |                        |                         | Wi-Fi   |         |
 | Oracle      |                        |                         | Wi-Fi   |         |
 | Hitachi     |                        |                         | Wi-Fi   |         |
+| Paciello    | 1                      | 1                       | Wi-Fi   |         |
 | Others      |                        |                         | Wi-Fi   |         |
 
 Notes: 
