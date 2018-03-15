@@ -202,8 +202,29 @@ Devices: light (Fujitsu, Intel, SmartThings), Luminous sensor (Lemonbeat, SmartT
 Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic and SmartThings)
 
 
-Panasonic:
-   - would like to test "observable" and "Event" interoperability using "HTTP Long polling" as a first step.
+## 3.1 Event / Observable using HTTP Long Polling
+- Participants
+  - Panasonic, Fujitsu, (welcome to join)
+- Purpose
+  - We would like to test "Event" and "observable" interoperability using "HTTP Long polling" as a first step.
+- Application Scenarios
+  - When an application receives an event / observes and detects that the property status is changed using "HTTP Long polling", the application informs through a light and a voice.
+- Functionality and Roles
+  - Application
+    - Node-RED
+  - Proxy
+    - Fujitsu Cloud, Local Gateway
+  - Device
+    - LED light, Air conditioner, Amazon Echo Dot, Google Home mini, Sensors, Rotating Light
+- Steps
+  1. TD of devices are registered to Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.1)
+  2. Application retrieves TDs from Fujitsu Remote Proxy. (Sequence A.2)
+  3. Application subscribes Amazon Echo's "ask" event / starts observing Air conditioner's "operationStatus" property. (Sequence A.5)
+  4. Application receives Amazon Echo's "ask" event / detects Air conditioner's "operationStatus" property is changed. (Sequence A.5)
+  5. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
+  6. TD of devices are unregistered from Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.7)
+- Security Consideration
+  - JSON Web Token (JWT) should be added, when you access to Panasonic servient.
 
 # 4 Schedule
 
