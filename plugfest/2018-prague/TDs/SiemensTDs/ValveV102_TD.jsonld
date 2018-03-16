@@ -1,0 +1,38 @@
+{
+    "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+                {
+	              "iot": "http://iotschema.org/"
+				}],
+    "@type": ["Thing", "iot:Valve"],
+    "name": "Valve",
+    "base": "coap://193.168.2.199:5683",
+    "interaction": [
+        {
+            "@type": ["Property", "iot:OperationStatus"],
+            "name": "Status",
+            "schema": {"type": "boolean"},
+            "writable": false,
+            "observable": false,
+            "form": [{
+                "href": "/status",
+                "mediaType": "application/json"
+            }]
+        },
+        {
+            "@type": ["Action", "iot:TurnOn"],
+            "name": "OpenPneumaticValve",
+            "form": [{
+                "href": "/open",
+                "mediaType": "application/json"
+            }]
+        },
+        {
+            "@type": ["Action", "iot:TurnOff"],
+            "name": "ClosePneumaticValve",
+            "form": [{
+                "href": "/close",
+                "mediaType": "application/json"
+            }]
+        } 
+    ]
+}
