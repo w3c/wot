@@ -1,0 +1,111 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+        {"iot": "http://iotschema.org/"}
+    ],
+    "@type": ["Thing", "iot:ConnectedCar"],
+    "name": "BMW_X5_TD",
+    "base": "http://xxxxxxxx/v2/north/",
+    "interaction" : [
+      {
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "gearPosition",
+        "schema": {"type":"string"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "sensor/gearPosition",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "left-front-door",
+        "schema": {"type":"boolean"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "sensor/left-front-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "right-front-door",
+        "schema": {"type":"boolean"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "sensor/right-front-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "left-rear-door",
+        "schema": {"type":"boolean"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "sensor/left-rear-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "right-rear-door",
+        "schema": {"type":"boolean"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "sensor/right-rear-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:ChangeStatus"],
+        "name": "left-front-door",
+        "schema": {"type":"boolean"},
+        "writable": true,
+        "observable": false,
+        "form": [{
+          "href": "actuator/left-front-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:ChangeStatus"],
+        "name": "right-front-door",
+        "schema": {"type":"boolean"},
+        "writable": true,
+        "observable": false,
+        "form": [{
+          "href": "actuator/right-front-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:ChangeStatus"],
+        "name": "left-rear-door",
+        "schema": {"type":"boolean"},
+        "writable": true,
+        "observable": false,
+        "form": [{
+          "href": "actuator/left-rear-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:ChangeStatus"],
+        "name": "right-rear-door",
+        "schema": {"type":"boolean"},
+        "writable": true,
+        "observable": false,
+        "form": [{
+          "href": "actuator/right-rear-door",
+          "mediaType": "application/json"
+        }]
+      }
+    ]
+}
