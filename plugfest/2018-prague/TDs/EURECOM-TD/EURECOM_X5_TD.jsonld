@@ -9,7 +9,7 @@
     "base": "http://xxxxxxxx/v2/north/",
     "interaction" : [
       {
-        "@type": ["Property", "iot:CurrentStatus"],
+        "@type": ["Property", "iot:CurrentPosition"],
         "name": "gearPosition",
         "schema": {"type":"string"},
         "writable": false,
@@ -20,9 +20,9 @@
         }]
       },
       {
-        "@type": ["Property", "iot:CurrentStatus"],
+        "@type": ["Property", "iot:CurrentPosition"],
         "name": "left-front-door",
-        "schema": {"type":"boolean"},
+        "schema": {"type":"string"},
         "writable": false,
         "observable": false,
         "form": [{
@@ -31,9 +31,9 @@
         }]
       },
       {
-        "@type": ["Property", "iot:CurrentStatus"],
+        "@type": ["Property", "iot:CurrentPosition"],
         "name": "right-front-door",
-        "schema": {"type":"boolean"},
+        "schema": {"type":"string"},
         "writable": false,
         "observable": false,
         "form": [{
@@ -42,9 +42,9 @@
         }]
       },
       {
-        "@type": ["Property", "iot:CurrentStatus"],
+        "@type": ["Property", "iot:CurrentPosition"],
         "name": "left-rear-door",
-        "schema": {"type":"boolean"},
+        "schema": {"type":"string"},
         "writable": false,
         "observable": false,
         "form": [{
@@ -53,9 +53,9 @@
         }]
       },
       {
-        "@type": ["Property", "iot:CurrentStatus"],
+        "@type": ["Property", "iot:CurrentPosition"],
         "name": "right-rear-door",
-        "schema": {"type":"boolean"},
+        "schema": {"type":"string"},
         "writable": false,
         "observable": false,
         "form": [{
@@ -64,46 +64,68 @@
         }]
       },
       {
-        "@type": ["Property", "iot:ChangeStatus"],
-        "name": "left-front-door",
-        "schema": {"type":"boolean"},
-        "writable": true,
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "left-front-window",
+        "schema": {"type":"string"},
+        "writable": false,
         "observable": false,
         "form": [{
-          "href": "actuator/left-front-door",
+          "href": "actuator/left-front-window/status",
           "mediaType": "application/json"
         }]
       },
       {
-        "@type": ["Property", "iot:ChangeStatus"],
-        "name": "right-front-door",
-        "schema": {"type":"boolean"},
-        "writable": true,
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "right-front-window",
+        "schema": {"type":"string"},
+        "writable": false,
         "observable": false,
         "form": [{
-          "href": "actuator/right-front-door",
+          "href": "actuator/right-front-window/status",
           "mediaType": "application/json"
         }]
       },
       {
-        "@type": ["Property", "iot:ChangeStatus"],
-        "name": "left-rear-door",
-        "schema": {"type":"boolean"},
-        "writable": true,
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "left-rear-window",
+        "schema": {"type":"string"},
+        "writable": false,
         "observable": false,
         "form": [{
-          "href": "actuator/left-rear-door",
+          "href": "actuator/left-rear-window/status",
           "mediaType": "application/json"
         }]
       },
       {
-        "@type": ["Property", "iot:ChangeStatus"],
-        "name": "right-rear-door",
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "right-rear-window",
+        "schema": {"type":"string"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "actuator/right-rear-window/status",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action", "iot:ChangeStatus"],
+        "name": "left-headlight",
         "schema": {"type":"boolean"},
         "writable": true,
         "observable": false,
         "form": [{
-          "href": "actuator/right-rear-door",
+          "href": "actuator/left-headlight/turnon",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action", "iot:ChangeStatus"],
+        "name": "right-headlight",
+        "schema": {"type":"boolean"},
+        "writable": true,
+        "observable": false,
+        "form": [{
+          "href": "actuator/left-headlight/turnon",
           "mediaType": "application/json"
         }]
       }
