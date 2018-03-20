@@ -239,7 +239,7 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
 | Panasonic   | 3                      | 2                       | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 8001, 8003, 8091 | |
-| Fujitsu     |                        |                         | Wi-Fi   |         |
+| Fujitsu     | 4                      | 2                       | Wi-Fi   |         |
 | IRI         |                        |                         | Wi-Fi   |         |
 | Siemens     |                        |                         | Wi-Fi   |         |
 | Intel       |                        |                         | Wi-Fi   |         |
