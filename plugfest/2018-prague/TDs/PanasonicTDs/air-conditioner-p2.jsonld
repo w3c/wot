@@ -29,7 +29,7 @@
         "name": "operationMode",
         "schema": {
           "type":"string",
-          "oneOf": [
+          "enum": [
             "Auto", "Cooling", "Heating", "Dehumidifying", "Blast"
           ]
         },
@@ -86,7 +86,7 @@
               "name": "operationMode",
               "schema": {
                 "type": "string",
-                "oneOf": [
+                "enum": [
                   "Auto", "Cooling", "Heating", "Dehumidifying", "Blast"
                 ]
               }
