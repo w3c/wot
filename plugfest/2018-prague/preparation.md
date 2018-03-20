@@ -239,7 +239,7 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
 | Panasonic   | 3                      | 2                       | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 8001, 8003, 8091 | |
-| Fujitsu     |                        |                         | Wi-Fi   |         |
+| Fujitsu     | 4                      | 2                       | Wi-Fi   |         |
 | IRI         |                        |                         | Wi-Fi   |         |
 | Siemens     |                        |                         | Wi-Fi   |         |
 | Intel       |                        |                         | Wi-Fi   |         |
@@ -247,6 +247,7 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | EURECOM     |                        |                         | Wi-Fi   |         |
 | Oracle      |                        |                         | Wi-Fi   |         |
 | Hitachi     |                        |                         | Wi-Fi   |         |
+| Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
 
 Notes: 
@@ -255,19 +256,6 @@ Notes:
  - Anyone who has requirements for ports outside of 80/443/22 should send an email to Oracle.
  - You have to bring displays, if need.
 
-# 6 Changes from previous PlugFest in Burlingame
-
-## 6.1 TD changes
-
-* link --> form
-  form has "rel" field now also
-* Property outputData --> Property schema
-* Action inputData --> Action inputSchema
-  Action outputData --> Action outputSchema
-* Event outputData --> Event schema
-* Type System changes
-  fields --> field
-  value --> schema
   
 # 7 Implementation guidelines
 
@@ -443,3 +431,16 @@ Body: none<BR>
 
 (64) 200 OK<BR>
 Body:none<BR>
+  
+# Appendix B: Changes from previous PlugFest in Burlingame
+## B1 TD changes
+* new link term on the top level
+* link --> form
+  form has "rel" field now also
+* Property outputData --> Property schema
+* Action inputData --> Action inputSchema
+  Action outputData --> Action outputSchema
+* Event outputData --> Event schema
+* Type System changes
+  fields --> field
+  value --> schema

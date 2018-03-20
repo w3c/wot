@@ -1,0 +1,32 @@
+{
+  "@type"               : ["Thing"]
+ ,"@context"            : [ "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",   "https://w3c.github.io/wot/w3c-wot-common-context.jsonld" ]
+
+ ,"name"                : "Fujitsu_BrightnessSensorA2AB"
+ ,"base"                : "http://10.25.154.87:18081/Things/Fujitsu_BrightnessSensorA2AB/"
+ ,"security"            : [{
+                              "cat": "token:jwt",
+                              "alg": "ES256",
+                              "as": "https://plugfest.thingweb.io:8443/"
+                          }]
+ ,"interaction": 
+   [
+  	{
+            "@type"     : ["Property"]
+	   ,"name"      : "MeasuredIllu"
+           ,"form"      : [ { "href" : "Property/MeasuredIllu",  "mediaType": "text/plain"}]
+           ,"writable"  : false
+           ,"observable": false
+
+           ,"schema": { "type": "number" }
+	},
+	{
+           "@type"     : ["Property"]
+          ,"name"      : "IlluChanged"
+          ,"form"      : [ { "href" : "Poll/IlluChanged", "mediaType" : "text/plain", "rel":"observe"}]
+          ,"writable"  : false
+          ,"observable": true
+          ,"schema": { "type": "number" }
+        }
+  ]
+}
