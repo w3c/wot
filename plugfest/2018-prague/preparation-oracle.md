@@ -2,12 +2,12 @@
 
 # 1. Introduction
 
-This document describes a general information related to the next plugfest in Prague F2F meeting. The detail specification will be descirbed in the guideline document, please see https://github.com/w3c/wot/blob/master/plugfest/2018-prague/guideline.md.
+This document describes a general information related to the next plugfest in Prague F2F meeting. The detail specification will be described in the guideline document, please see https://github.com/w3c/wot/blob/master/plugfest/2018-prague/guideline.md.
 
 ## 1.1 Backgroud
 
-In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers. 
-The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles. 
+In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateway functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to achieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controllers.
+The figure below shows the diagram of all the Servients connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Servients or protocol converters with legacy device, such as home appliances, building facilities, factory facilities and vehicles.
 
 ![buriling plugfest](images/burlingame.png)
 
@@ -37,7 +37,7 @@ This is the smarthome application that the application on the smartphone can con
 * Application Servient: WoT Servient with Consumed Thing, e.g. applications
 * Proxy Servient: WoT Servient with both Exposed and Consumed Thing, e.g. gateways
 
-The Proxy Servient are seperated to 2 types fo them, Remote Proxy and Local Proxy. The Remote Proxy Servient is deployed on the Internet and connected with the Applicationd Serivent and the Local Proxy Servient. The Local Proxy Servient is done on the Local network and connects with the Remote Proxy Servient and the Device Servient. The layered diagram is shown below.
+The Proxy Servient are separated to 2 types fo them, Remote Proxy and Local Proxy. The Remote Proxy Servient is deployed on the Internet and connected with the Application Serivent and the Local Proxy Servient. The Local Proxy Servient is done on the Local network and connects with the Remote Proxy Servient and the Device Servient. The layered diagram is shown below.
 
 ![4-layered model](images/4layered_model.png)
 
@@ -160,11 +160,6 @@ Panasonic:
  - Scripting App.: Panasonic demo applications. (Local/Internet+LAN/HTTPS(+WSS))
  - NodeRED: would like to connect to the all servients. (Local/Internet+LAN/HTTPS(+WSS))
 
-Hitachi: (not yet fully implemented)
- - Collect data from Things via Remote Proxy Servient(s) and visualize its data.
-   - NodeRED
-   - Logstash + Elasticsearch + Kibana
-
 ### 2.4.2 Remote Proxy Servients
 ### 2.4.3 Local Proxy Servients
 
@@ -174,21 +169,42 @@ Fujitsu:
  - Registry and discovery opeartions
  - Read and Write properties operations
  - Event operation
- 
+
  See Appendix for the sequence diagrams and the interfaces between applications/devices and proxies.
 
 ### 2.4.4 Device Servients
 
 Panasonic:
  - [LED light](TDs/PanasonicTDs/huegroup-p1.jsonld): on/off, RGB properties (Remote/Internet/HTTPS)
- - [Air conditioner home](TDs/PanasonicTDs/air-conditioner-p1.jsonld): on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
- - [Air conditioner car](TDs/PanasonicTDs/electric-bulletin-board-p2.jsonld): on/off, number properties (Remote/Internet/HTTPS)
- - [Robot Cleaner](TDs/PanasonicTDs/cleaner-p1.jsonld): on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
- - [Amazon Echo Dot](TDs/PanasonicTDs/amazon-echo-p1.jsonld): "Coming"/"Going" event (Local/Internet/HTTPS(+WSS))
- - [Google Home mini](TDs/PanasonicTDs/google-home-p1.jsonld): "Coming"/"Going" event (Local/Internet/HTTPS(+WSS))
- - [Google Home mini](TDs/PanasonicTDs/google-home-p2.jsonld): speech action (Local/LAN/HTTP)
+ - Air conditioner home: on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
+ - Air conditioner car: on/off, number properties (Remote/Internet/HTTPS)
+ - Robot Cleaner: on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
+ - Amazon Echo Dot: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
+ - Google Home mini: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
+ - Google Home mini: speech action (Local/LAN/HTTP)
  - WoT Simulator: can simulate the WoT devices easily. (Local/LAN/HTTP)
 
+# 2.5 Reference Cloud Environment
+
+Oracle and Siemens worked together to integrate the node-wot reference implementation with the Oracle IoT Cloud Service product.
+
+The reference implementation and integration is available for participants at the plug fest to test interoperability scenarios.
+The integration is described in [Oracle+node-wot_Integration_concept.pptx](docs/Oracle+node-wot_Integration_concept.pptx)
+
+The integration works both ways, i.e. for exposed and consumed things:
+
+* Devices managed by the Oracle IoT Cloud Service can be consumed by WoT Things. 
+* WoT Things can be consumed by Devices in the IoT Cloud service.
+ 
+The IoT Cloud Service manages devices via so-called device-models, which are a blueprint for device instances. Device models are very similar to Thing Descriptions.
+
+Thing Descriptions can be automatically translated to Device Models with a small converter, the so called td2dm.js. This converter runs under node.js and is available here [td2dm.js](TDs/OracleTDs).
+
+# 2.6. Device Simulator
+
+The Oracle IoT Cloud Service Product contains a device simulator, that permits to create and test a Device Model, before the actual physical device is available.
+
+The simulator can be used at the plug fest. We have created simulations based on TDs from Siemens, Fujitsu, Panasonic and Eurecom. 
 
 # 3 Plugfest scenarios
 
@@ -197,7 +213,7 @@ Examples of scenario involving semantic querying:
 - Energy saving: turn heating off when a window opens in the same room
 - Meta-action: switch on a light either by changing its value or by invoking an action
 - Circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
-- An application which detects the motion in a room and controls the AC operation in  a room. 
+- An application which detects the motion in a room and controls the AC operation in  a room.
 Devices: air conditioner (Fujitsu and Panasonic), human detection sensor (Panasonic and SmartThings)
 - An application which controls the AC in  a room based on the room temperature.
 Devices: air conditioner (Fujitsu and Panasonic), temperature sensor (Lemonbeat, Intel, SmartThings)
@@ -230,8 +246,27 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
   6. TD of devices are unregistered from Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.7)
 - Security Consideration
   - JSON Web Token (JWT) should be added, when you access to Panasonic servient.
-- Note
-  - Air conditioners (PanasonicAirConditionerP1 and PanasonicAirConditionerP2) don't support a parallel access, so an application should access these things in series.
+
+## 3.2. IoT Cloud Integration Scenarios
+
+- Participants
+	- Siemens, Oracle, others are very welcome
+
+### Demo Scenarios
+#### Physical Festo Plant
+- Festo Plant sends regular status info and alerts to Oracle IoT Cloud Service
+- WoT Clients can control Festo Plant valve and pump via IoT CS
+- Stand-alone HTTP Server displays alerts raised by Festo Plant
+
+#### Simulated Festo Plant
+- Festo Simulator on IoT CS is exposed via Oracle Server API+TD and reports status and alerts to WoT Clients
+- WoT Clients can control the Festo Simulator running on IoT CS via Oracle Server API+TD 
+
+#### Integrating other Things and Devices
+- Other device simulators on IoT CS can be exposed by IoT CS and consumed by WoT-Clients
+- Other node-WoT Servients can expose Things to IoT CS using Oracle binding
+
+
 
 # 4 Schedule
 
@@ -246,24 +281,24 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
 | Panasonic   | 3                      | 2                       | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 8001, 8003, 8091 | |
-| Fujitsu     | 4                      | 2                       | Wi-Fi   |         |
+| Fujitsu     |                        |                         | Wi-Fi   |         |
 | IRI         |                        |                         | Wi-Fi   |         |
-| Siemens     | 4+(1)                  | 2                       | Wi-Fi   |         |
-| Intel       | 1                      | 1                       | Wi-Fi and/or wired Ethernet | External ports: 22, 80, 443. Will bring own router and power bar.   |
-| SmartThings | 1                      | 1                       | Wi-Fi   | 4sq ft table space |
-| EURECOM     | 2                      | 2                       | Wi-Fi   |         |
-| Oracle      | 1                      | 1                       | Wi-Fi   |         |
-| Hitachi     | 1                      | 1                       | Wi-Fi(Ports: 443/tcp,443/udp(optional))   | use for note PC to access corporate servers via VPN. |
+| Siemens     |                        |                         | Wi-Fi   |         |
+| Intel       |                        |                         | Wi-Fi   |         |
+| SmartThings |                        |                         | Wi-Fi   |         |
+| EURECOM     |                        |                         | Wi-Fi   |         |
+| Oracle      |                        |                         | Wi-Fi   |         |
+| Hitachi     |                        |                         | Wi-Fi   |         |
 | Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
 
-Notes: 
+Notes:
  - Deadline is March 21st.
  - Power outlets Type-A will be provided by the venue.
  - Anyone who has requirements for ports outside of 80/443/22 should send an email to Oracle.
  - You have to bring displays, if need.
 
-  
+
 # 7 Implementation guidelines
 
 * "name" field of Thing Description shall be unique among the things which will be registered to Fujitsu Proxy.  
@@ -438,7 +473,7 @@ Body: none<BR>
 
 (64) 200 OK<BR>
 Body:none<BR>
-  
+
 # Appendix B: Changes from previous PlugFest in Burlingame
 ## B1 TD changes
 * new link term on the top level
