@@ -160,6 +160,11 @@ Panasonic:
  - Scripting App.: Panasonic demo applications. (Local/Internet+LAN/HTTPS(+WSS))
  - NodeRED: would like to connect to the all servients. (Local/Internet+LAN/HTTPS(+WSS))
 
+Hitachi: (not yet fully implemented)
+ - Collect data from Things via Remote Proxy Servient(s) and visualize its data.
+   - NodeRED
+   - Logstash + Elasticsearch + Kibana
+
 ### 2.4.2 Remote Proxy Servients
 ### 2.4.3 Local Proxy Servients
 
@@ -246,7 +251,7 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | SmartThings |                        |                         | Wi-Fi   |         |
 | EURECOM     |                        |                         | Wi-Fi   |         |
 | Oracle      |                        |                         | Wi-Fi   |         |
-| Hitachi     |                        |                         | Wi-Fi   |         |
+| Hitachi     | 1                      | 1                       | Wi-Fi(Ports: 443/tcp,443/udp(optional))   | use for note PC to access corporate servers via VPN. |
 | Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
 
