@@ -242,7 +242,7 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | Fujitsu     | 4                      | 2                       | Wi-Fi   |         |
 | IRI         |                        |                         | Wi-Fi   |         |
 | Siemens     |                        |                         | Wi-Fi   |         |
-| Intel       |                        |                         | Wi-Fi   |         |
+| Intel       | 1                      | 1                       | Wi-Fi and/or wired Ethernet | External ports: 22, 80, 443. Will bring own router and power bar.   |
 | SmartThings |                        |                         | Wi-Fi   |         |
 | EURECOM     |                        |                         | Wi-Fi   |         |
 | Oracle      |                        |                         | Wi-Fi   |         |
