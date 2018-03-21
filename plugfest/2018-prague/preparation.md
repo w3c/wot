@@ -189,6 +189,8 @@ Panasonic:
  - [Google Home mini](TDs/PanasonicTDs/google-home-p2.jsonld): speech action (Local/LAN/HTTP)
  - WoT Simulator: can simulate the WoT devices easily. (Local/LAN/HTTP)
 
+(Note: Panasonic Remote Servients requires JSON Web Token. Also actual URL is hidden. Please contact)
+
 
 # 3 Plugfest scenarios
 
@@ -218,20 +220,25 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
   - Application
     - Node-RED
   - Proxy
-    - Fujitsu Cloud, Local Gateway
+    - Remote and Local Gateway
   - Device
     - LED light, Air conditioner, Amazon Echo Dot, Google Home mini, Sensors, Rotating Light
 - Steps
-  1. TD of devices are registered to Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.1)
-  2. Application retrieves TDs from Fujitsu Remote Proxy. (Sequence A.2)
-  3. Application subscribes Amazon Echo's "ask" event / starts observing Air conditioner's "operationStatus" property. (Sequence A.5)
-  4. Application receives Amazon Echo's "ask" event / detects Air conditioner's "operationStatus" property is changed. (Sequence A.5)
-  5. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
-  6. TD of devices are unregistered from Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.7)
+  1. TD of devices are registered to Local Proxy manually, or using POSTMAN. (Sequence A.1)
+  2. Application retrieves TDs from Remote Proxy. (Sequence A.2)
+  3. Applicatoin reads TD, subscribe event / observe property and receive changes (see following diagram)
+  ![images](images/seq_http_longpoll.png)
+    - Pattern 1: Property observe
+      - Application reads air-conditioner-p1.jsonld TD, finds properties with "observable": true and its form with "rel": "observe" and "subProtocol": "LongPoll", then calls HTTP GET to corresponding "href" which will be pending until the property changes.
+      - Application receives GET response and detects that the property has changed.
+    - Pattern 2: Event
+      - Application reads amazon-echo-p1.jsonld TD, finds "ask" event and its form with "subProtocol":"LongPoll", then calls HTTP GET to corresponding "href" which will be pending until the event fires.
+      - Application receives GET response and detects that the event has fired.
+  4. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
+  5. Repeats 3. to 4.
+  6. TD of devices are unregistered from Local Proxy manually, or using POSTMAN. (Sequence A.7)
 - Security Consideration
-  - JSON Web Token (JWT) should be added, when you access to Panasonic servient.
-- Note
-  - Air conditioners (PanasonicAirConditionerP1 and PanasonicAirConditionerP2) don't support a parallel access, so an application should access these things in series.
+  - JSON Web Token (JWT) is needed, when you access to Panasonic servient.
 
 # 4 Schedule
 
