@@ -1,0 +1,55 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+        {"iot": "http://iotschema.org/"}
+    ],
+    "@type": ["Thing", "iot:LightControl"],
+    "name": "PanasonicHueP3",
+    "base": "https://xxxxxxxx/wot-ver2/things/hue/3/",
+    "security": [{
+        "cat": "token:jwt",
+        "alg": "ES256",
+        "as": "https://plugfest.thingweb.io:8443/"
+    }],
+    "interaction": [
+      {
+        "@type": ["Property", "iot:OperationStatus"],
+        "name": "operationStatus",
+        "schema": {"type":"boolean"},
+        "writable": true,
+        "observable": false,
+        "form": [{
+          "href": "operationStatus",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:CurrentColour"],
+        "name": "rgbValue",
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "red",
+              "schema": {"type": "number", "minimum": 0, "maximum": 255}
+            },
+            {
+              "name": "green",
+              "schema": {"type": "number", "minimum": 0, "maximum": 255}
+            },
+            {
+              "name": "blue",
+              "schema": {"type": "number", "minimum": 0, "maximum": 255}
+            }
+          ]
+        },
+        "writable": true,
+        "observable": false,
+        "form": [{
+          "href": "color",
+          "mediaType": "application/json"
+        }]
+      }
+    ]
+}

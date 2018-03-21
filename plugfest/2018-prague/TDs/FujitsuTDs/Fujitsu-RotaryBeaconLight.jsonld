@@ -1,0 +1,25 @@
+{
+  "@type"               : ["Thing"]
+ ,"@context"            : [ "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",   "https://w3c.github.io/wot/w3c-wot-common-context.jsonld" ]
+
+ ,"name"                : "Fujitsu_RotaryBeaconLight"
+ ,"base"                : "http://10.25.154.87:18081/Things/Fujitsu_RotaryBeaconLight/"
+ ,"security"            : [{
+                              "cat": "token:jwt",
+                              "alg": "ES256",
+                              "as": "https://plugfest.thingweb.io:8443/"
+                          }]
+ ,"interaction":
+   [
+        {
+            "@type"     : ["Property"]
+	   ,"name"      : "OperationStatus"
+           ,"form"      : [ { "href" : "Property/OperationStatus",  "mediaType": "text/plain"}]
+           ,"writable"  : true
+           ,"observable": false
+
+           ,"schema": { "type": "string" }
+        }
+  ]
+
+}

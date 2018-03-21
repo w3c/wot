@@ -1,0 +1,29 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+        {"iot": "http://iotschema.org/"}
+    ],
+    "@type": ["Thing"],
+    "name": "PanasonicGoogleHomeP2",
+    "base": "http://xxxxxxxx/",
+    "interaction": [
+      {
+        "@type": ["Action"],
+        "name": "speech",
+        "inputSchema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "text",
+              "schema": {"type": "string"}
+            }
+          ]
+        },
+        "form": [{
+          "href": "google-home-notifier",
+          "mediaType": "application/json"
+        }]
+      }
+    ]
+}

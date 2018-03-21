@@ -1,0 +1,70 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+        {"iot": "http://iotschema.org/"}
+    ],
+    "@type": ["Thing"],
+    "name": "PanasonicCleanerP1",
+    "base": "https://xxxxxxxx/wot-ver2/things/cleaner/1/",
+    "security": [{
+        "cat": "token:jwt",
+        "alg": "ES256",
+        "as": "https://plugfest.thingweb.io:8443/"
+    }],
+    "interaction": [
+      {
+        "@type": ["Action", "iot:TurnOn"],
+        "name": "operationPower",
+        "form": [{
+          "href": "operationPower",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action"],
+        "name": "turnRight",
+        "form": [{
+          "href": "turnRight",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action"],
+        "name": "turnLeft",
+        "form": [{
+          "href": "turnLeft",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action"],
+        "name": "goStraight",
+        "form": [{
+          "href": "goStraight",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action", "iot:TurnOff"],
+        "name": "goHome",
+        "form": [{
+          "href": "goHome",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action"],
+        "name": "specifyArea",
+        "inputSchema": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 3
+        },
+        "form": [{
+          "href": "specifyArea",
+          "mediaType": "application/json"
+        }]
+      }
+    ]
+}

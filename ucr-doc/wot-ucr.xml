@@ -5,44 +5,44 @@
     <usecase id="building-automation" author="dret" domain="home_automation">
         <title>Building Automation</title>
         <p>Buildings often have a large variety of components such as Heating, Venting, and Air Conditioning (HVAC), lighting systems, and possibly more specialized systems such as support for reserving rooms electronically. Very often, these systems are not provided by a single supplier. Instead, landscapes of heterogeneous systems develop over time. Interoperability becomes a paramount challenge, as there should be a single way how interactions with the overall building automation infrastructure are possible. Furthermore, sensors, controllers, and actors of one system serving one specific use case can be useful for other use cases and can also enable new cross-domain applications and services to amplify comfort, security, and operational efficiency in smart buildings.</p>
-        <p>Possibly, building automation scenarios can have layered services, such for example when it comes to temperature sensing. While the basic functionality of the building automation system might only include to get information about the current temperature in a variety of places, there also might be a "temperature history" service. This service might allow more advanced features such as accessing the complete history of temperature measurements, and possible even more advanced functionalities such as queries in this dataset. By combining available data (e.g., weather forcast and occupancy of meeting rooms), room temperatures and future cooling/heating demand can be predicted to increase (e.g., an office building's) energy efficiency. Again, such an advanced service should be accessible in the same way as the more basic services, so that developers can access all these services in a uniform way.</p>
+        <p>Building automation scenarios can have layered services,for example when it comes to temperature sensing. While the basic functionality of the system might only include getting information about the current temperature in a variety of places, there might also be a "temperature history" service. This service might allow more advanced features such as accessing the complete history of temperature measurements, and possible even more advanced functionality such as queries in this dataset. By combining available data (e.g. weather forecast and occupancy of meeting rooms), room temperatures and future cooling/heating demand can be predicted to increase (e.g. an office building's) energy efficiency. Again, such an advanced service should be accessible in the same way as the more basic services, so that developers can access all these services in a uniform way.</p>
         <ul>
-            <li reqref="resource-description">Applications may want to get an understanding of what kind of sensors and other capabilities are exposed as part of the building automation system. In such a case, it is necessary that available resources can be described or are describing themselves, preferably using a framework that makes those descriptions uniform even if the underlying sensors or services are using different implementation and communication technologies.</li>
-            <li reqref="push">Applications may want to be notified of certain events in the building automation system, without having to listen to a continuous event stream from it. In such a case, it is advantageous for the building automation system to support some kind of push mechanism, so that application can subscribe to these events, and will be notified when they happen. This increases the workload of the building automation system (it has to keep track of subscribers), but may make development of certain classes of applications much easier.</li>
+            <li reqref="resource-description">Applications may want to get an understanding of what kind of sensors and other capabilities are exposed as part of the building automation system. In such a case, it is necessary that available resources can be described or are describing themselves, preferably using a framework that makes those descriptions uniform even if the underlying sensors or services are using different implementations and communication technologies.</li>
+            <li reqref="push">Applications may want to be notified of certain events in the building automation system, without having to listen to a continuous event stream from it. In such a case, it is advantageous for the system to support some kind of push mechanism, so that applications can subscribe to these events and will be notified when they happen. This increases the workload of the building automation system (it has to keep track of subscribers), but may make development of certain classes of applications much easier.</li>
         </ul>
     </usecase>
     <usecase id="bakery" author="stefan" domain="logistics">
         <title>Order Management System</title>
-        <p>In companies like a large industry bakery you have storage facilities like silos to store production materials. In order to keep track of the amount of production material in the silos, level radar devices are used. The measurement data is collected by an order management system.</p>
+        <p>In companies like a large industrial bakery there are storage facilities like silos to store raw materials. In order to keep track of the amount of material in the silos, level radar devices can be used. The measurement data is collected by an order management system.</p>
         <p>As soon as the production material falls below a certain threshold, the system sends an order to a delivery company.</p>
         <ul>
             <li reqref="resource-description">At some point in the system, the measurement value has to be enriched with some meta-information (e.g., timestamp, unit, id, ...).</li>
             <li reqref="data-exchange-format">The bakery's order management has to interact with the order management system of the delivery company.</li>
-            <li reqref="object-memory">For perishable ingredients like milk or cheese, the due date can be estimated much more precisely if an object memory is kept for them. Also it can be a way to prove the origin and freshness of ingridients</li>
+            <li reqref="object-memory">For perishable ingredients like milk or cheese, the due date can be estimated much more precisely if an object memory is kept for them. Also it can be a way to prove the origin and freshness of ingredients</li>
             <li reqref="layered-comm">Given a commonality of interfacing protocols to heterogeneous ordering systems, layered communication enables a better reusability across several ordering systems. While the interaction primitives, transport protocol and representation might likely be the same for many systems, a difference in data structure demands a clear layering of the communication.</li>
         </ul>
     </usecase>
     <usecase id="adaptive-building" author="h0ru5" domain="home_automation">
         <title>Adaptive Building</title>
-        <p>Each employee in an office building specifies a preference profile (temperature, light setup, table height, ...). Due to his company badge or his smartphone the building can automatically influence the building automation system around him based on his current location and preference profile.</p>
-        <p>Besides an increase of comfort in general, personal profiles can also be used to assist people with special needs. For instance, in case of emergency, the acustic alarm sirens are insufficient for death people. Other mechanisms like flashing lights or mobile device notifications that are available in the person's proximity need to be used.</p>
-        <p>In case of several people in the same room (e.g. a meeting), a meditation is needed. This is also the case in other cross-influenced situations and if overall goals are set to be achieved, such as energy saving.</p>
+        <p>Each employee in an office building specifies a preference profile (temperature, light setup, table height, ...). Using information from company IDs/badges or smartphones the building can automatically influence the building automation system around individuals based on their current location and preference profile.</p>
+        <p>Besides an increase of comfort in general, personal profiles can also be used to assist people with special needs. For instance, in case of emergency, the acoustic alarm sirens are insufficient for deaf people. Other mechanisms like flashing lights or mobile device notifications that are available in the person's proximity need to be used.</p>
+        <p>In case of several people in the same room (e.g. a meeting), mediation is needed. This is also the case in other cross-influenced situations and if overall goals are set to be achieved, such as energy saving.</p>
         <ul>
-            <li reqref="ensemble-discovery">Dynamical selection of the surrounding/affecting resources to create the desired comfort level.</li>
+            <li reqref="ensemble-discovery">Dynamic selection of the surrounding/affecting resources to create the desired comfort level.</li>
             <li reqref="multi-stakeholder-operation">Multiple people in the same room require automatic mediation of desired comfort levels.</li>
-            <li reqref="lifecycle-mgmt">The appearance and disappearance of users requires means to orchestrate the lifecycle of users/stakeholders.</li>
+            <li reqref="lifecycle-mgmt">The appearance and disappearance of users requires a means to orchestrate the lifecycle of users/stakeholders.</li>
             <li reqref="resource-description">The environment around a user must be conceivable by the system in a way that does not require manual engineering.</li>
-            <li reqref="privacy">Since the system would rely on informations which person  is in what room at what time, it can allow a very fine-grained movement profile, which is sensitve information</li>
+            <li reqref="privacy">Since the system would rely on information on which person is in each room at any time, it can allow a very fine-grained movement profile, which is sensitive information</li>
             <li reqref="trust">The infrastructure has to secure personal profile information in order to prohibit unauthorized access or manipulation.</li>
         </ul>
     </usecase>
     <usecase id="shift-of-function" author="h0ru5" domain="manufacturing">
         <title>Shift of Function in Automation Systems</title>
-        <p>In a factory, the automation function does not run on a large central system, but decision-making is increasingly decentralized, i.e., shifted "downwards" towards the machine or control panels on the shop flor. With the advent of the digitization, the demand for a flexible production in small batch sizes or the production of multi-variant mass products arises in many manufactoring industries. The production process can be adaptive if product memories specify the machining; appropriate paths along the production line can be discovered dynamically.</p>
+        <p>In a factory, the automation function does not run on a large central system, but decision-making is increasingly decentralized, i.e., shifted "downwards" towards the machine or control panels on the shop floor. With the advent of the digitization, the demand for a flexible production in small batch sizes or the production of multi-variant mass products arises in many manufactoring industries. The production process can be adaptive if product memories specify the machining; appropriate paths along the production line can be discovered dynamically.</p>
         <p>In order to introduce such a new automation function, the function can first be run supervised inside the central system and then shifted downwards, e.g. installed on a field device.</p>
         <ul>
             <li reqref="embedded-runtime">A seamless shift of functions requires an embedded runtime which allows the simple implementation, monitoring and debugging of applications.</li>
-            <li reqref="lifecycle-mgmt">The appearance and disappearance of devices as well as the software management on the devices itself requires means to orchestrate the lifecycle of individual devices resp. components.</li>
+            <li reqref="lifecycle-mgmt">The appearance and disappearance of devices as well as the software management on the devices itself requires a means to orchestrate the lifecycle of individual device's respective components.</li>
             <li reqref="resource-description">At some point in the system, the measurement value has to be enriched with some meta-information (e.g., timestamp, unit, id, ...).</li>
             <li reqref="layered-comm">In heterogeneous systems, the seamless shift of functionality requires a clear and consistent layering of application protocols since the functionality is focused on the data structure and should be agnostic of the underlying application layer protocol layers.</li>
             <!-- embedded is a must -->
@@ -54,22 +54,22 @@
         <p>The individual DERs often have a primary use on their own, with electric generation/consumption being a side-effect resp. secondary use. This results in negotiations/collaborations between many different parties e.g. such as the DER owner, the VPP operator, the grid operator and others.</p>
         <ul>
             <li reqref="multi-stakeholder-operation">Multiple involved parties have to find a common mode of operation</li>
-            <li reqref="lifecycle-mgmt">Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance of DERs as well as the software management on the devices itself requires means to orchestrate the lifecycle of individual devices resp. components.</li>
+            <li reqref="lifecycle-mgmt">Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance of DERs as well as the software management on the devices itself requires a means to orchestrate the lifecycle of individual device's respective components.</li>
             <li reqref="embedded-runtime">Especially for DERs in remote locations, maintaining a close couple control loop can be expensive if feasible at all. Therefore, it is desirable to be able to offload control logic to the DER itself.</li>
             <li reqref="ensemble-discovery">In order to dynamically find matching DERs needed for the operational goal of a VPP, a registry with different options of DER discovery is needed.</li>
             <li reqref="data-exchange-format">The different stakeholders have to interact and therefore need a common data format.</li>
             <li reqref="resource-description">The DER has to describe itself to enable discovery of single DERs and ensembles, also the operational data needs to be understood by the different stakeholders without engineering effort.</li>
-            <li reqref="push">As there is a fan-out with many devices that probably have a rate-limited connection connecting to one single command central, a bidirectional communication mechanism is needed rather tzhan polling for the reverse direction</li>
-            <li reqref="privacy">As fine-grained metering informtion provides sensitve data about a household, the system should show a high digree of privacy</li>
-            <li reqref="trust">Since the data exchange between the virtual power plant and the distibuted energy resource leads to a physical action that invokves high currents and monetary flows, the integrity of both parties and the exchanges data is crucial</li>
-            <li reqref="object-memory">As multiple and interchangable stakeholdes are involved in the application, a backlog of the object is beneficial for scrollkeeping</li>
+            <li reqref="push">As there is a fan-out with many devices that probably have a rate-limited connection connecting to one single command centre, a bidirectional communication mechanism is needed rather than polling for the reverse direction</li>
+            <li reqref="privacy">As fine-grained metering informtion provides sensitive data about a household, the system should show a high digree of privacy</li>
+            <li reqref="trust">Since the data exchange between the virtual power plant and the distributed energy resource leads to a physical action that invokes high currents and monetary flows, the integrity of both parties and the exchange's data is crucial</li>
+            <li reqref="object-memory">As multiple and interchangable stakeholders are involved in the application, a backlog of the object is beneficial for scrollkeeping</li>
             <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serialization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
         </ul>
     </usecase>
     <usecase id="automation-factories" author="stefan" domain="manufacturing">
         <title>Service Platform for Automation Factories</title>
         <p>Manufacturing plants and process automation plants not only have to be monitored on-site but also from remote locations. That is for example to compare KPI (key performance indicators) of different manufacturing sites and optimization of the production processes and outputs based on the collected data, for diagnosis, remote service support or predictive maintenance.</p>
-        <p>For such a system you need a platform that collects the data from field level devices, from control level and also from applications on MES level. Applications can connect to the platform to retrieve the data for further processing (e.g., optimization algorithms). The open platform enables the connection between data points provided from devices/applications of different companies to applications from different parties (e.g., a software that provides trouble shooting information combined with online status information of devices in an optical head-mounted display).
+        <p>For such a system you need a platform that collects the data from field level devices, from control level and also from applications on MES level. Applications can connect to the platform to retrieve the data for further processing (e.g., optimization algorithms). The open platform enables the connection between data points provided from devices/applications of different companies to applications from different parties (e.g. software that provides trouble-shooting information combined with online status information of devices in an optical head-mounted display).
         </p>
         <ul>
             <li reqref="resource-description">At some point in the system, the data has to be enriched with some meta-information (e.g. timestamp, unit, id).</li>
@@ -79,7 +79,7 @@
     </usecase>
     <usecase id="smart-maintenance" author="mju" domain="manufacturing">
         <title>Optimal Maintenance in Connected Industries</title>
-        <p>Continuous condition monitoring of machines and production systems allow for understanding the current operational performance of a production system. Furthermore, by observing the deterioration of machines or analyzing the causes of defects, typical event patterns and causally determined correlations in more complex systems can be learned and used to predict future maintenance demand. Precise predictions require a large amount of high quality monitoring data in order to achieve the promised aims of reducing the percentage of unplanned maintenance and downtime. Many defects can be diagnosed, and sometimes fixed, remotely if the maintenance service provider accesses historical and live machine data. Furthermore, previous maintenance and repair reports provide useful knowledge to find a solution quickly.</p>
+        <p>Continuous condition monitoring of machines and production systems allow an understanding of the current operational performance of a production system. Furthermore, by observing the deterioration of machines or analyzing the causes of defects, typical event patterns and causally determined correlations in more complex systems can be learned and used to predict future maintenance demand. Precise predictions require a large amount of high quality monitoring data in order to achieve the promised aims of reducing the percentage of unplanned maintenance and downtime. Many defects can be diagnosed, and sometimes fixed, remotely if the maintenance service provider accesses historical and live machine data. Furthermore, previous maintenance and repair reports provide useful knowledge to find a solution quickly.</p>
         <p>An efficient maintenance strategy dispatches technicians according to the current maintenance demand, downtime probabilities, available resources, preferences of the machine operator, in conjunction with economic trade-offs. In particular, the dispatching for an optimal maintenance strategy needs to integrate the predicted maintenance demand with various other information sources like skills and experiences of available service technicians, information of installed machines and systems, availability of potentially useful tools and spare parts, time limits of forthcoming production orders, etc.</p>
         <ul>
             <li reqref="resource-description">The collected data has to be enriched with meta-information. This allows for a flexible integration and interpretation of the data that is used to optimize the dispatching of service technicians. Not only machines, sensors and their data points, but also the data from and about installed systems in the factory, personal, control panels and systems, as well as interfaces to (MES, ERP) applications should be self-descriptive with a flexible schema open for future extensions.</li>
@@ -92,22 +92,22 @@
     </usecase>
     <usecase id="emobility" author="h0ru5" domain="transportation">
         <title>E-Mobility</title>
-        <p>Te process of charging an e-car diverts greatly from a simple pumping of gas. It involves several players apart from the obvious car, chargespot and car owner, such as electricity providers and clearing houses</p>
+        <p>The process of charging an e-car differs greatly from simply pumping fuel. It involves several players apart from the obvious car, chargespot and car owner, such as electricity providers and clearing houses</p>
         <p>An e-car and the chargespot negotiate different parameters affecting the charging process, such as voltages, currents, time it takes to charge etc., but also information like how the electricity will be payed for, how much was already transferred etc.</p>
         <ul>
             <li reqref="lifecycle-mgmt">Managing EVs and Fleets such as buses, cars etc. requires the ability to handle dynamic systems.</li>
             <li reqref="data-exchange-format">A standardized data format is needed when different transport/electricity providers and different devices are involved.</li>
             <li reqref="push">Both components may want to be notified of certain events in the charging system, without having to listen to a continuous event stream from it. This allows a more lightweight implementation.</li>
             <li reqref="trust">Since a financial transaction is directly involved, it is important that both sides can enter a trust relationship.</li>
-            <li reqref="integrity">To avoid man-in-the middle attacks and fraud by alteration, the integrity of all exchanges messages must be confirmable</li>
+            <li reqref="integrity">To avoid man-in-the middle attacks and fraud by alteration, the integrity of all message exchanges must be confirmable</li>
             <li reqref="object-memory">...</li>
-            <li reqref="layered-comm">Since the same data contents are transferred over several communication links (such as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle to fleet operation, etc.), it is neccessary that the communication of the information/contets can be transferred independent of the different transports or serialization formats used</li>
+            <li reqref="layered-comm">Since the same data contents are transferred over several communication links (such as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle to fleet operation, etc.), it is neccessary that the communication of the information/contexts can be transferred independent of the different transports or serialization formats used</li>
         </ul>
     </usecase>
     <usecase id="device-management" author="cabo" domain="other">
       <title>Device, Network, and Application Management</title>
       <p>
-        A device, its network environment, and the applications
+        A device, its network environment and the applications
         installed on the device, need to be managed.  The relevant
         resources are typically represented in a hierarchical fashion
         (as modelled in the YANG schema language) and exchanged as
@@ -165,9 +165,9 @@
         <title>Lifecycle Management for Industrial Automation Systems</title>
         <p>An industrial automation systems (IAS) needs to be managed throughout different phases of its lifecycle, e.g., development, engineering, operation, maintenance, optimization, and other phases. The lifecycle management is a challenging task due to various reasons. For instance, it is a task that involves various stakeholders (e.g., domain engineers, software engineers, system engineers, system installers etc.) and hence it is an error-prone task, it is often handled in a safety critical environment, it needs to be maintained over a longer timeframe (during which some of the stakeholders or parts of the system may not be available) and so forth.</p>
         <p>Let us consider a use case scenario which, throughout the lifecycle management of an IAS, considers following tasks: Development of a new automation function, service or an app based on available resources and domain knowledge; Support for resource discovery, optimal selection and choreography of resources; Parametrization of resources, functions, services and apps; Support for adaptive services running in a dynamic environment (i.e., physical resources appear and disappear); Monitoring and diagnosis of resources, functions, services and apps; Optimization of automation workflows involving different resources and different lifecycle phases.</p>
-        <p>From these activities, as found in a typical lifecycle management of an IAS, one can derive following requirements:</p>
+        <p>From these activities, as found in a typical lifecycle management of an IAS, one can derive the following requirements:</p>
         <ul>
-            <li reqref="resource-description">When a new application, service or a function needs to be developed, parametrized, maintained or optimized, it is required to get understanding about physical resources involved in such a task. In this case, resources (sensors, actuators, controllers etc.) can be described or self-described in a uniform way, i.e., they expose their properties, functionalities and roles in a uniform way although they may be implemented with different technologies. It would be desired that Resource Description relies on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).</li>
+            <li reqref="resource-description">When a new application, service or a function needs to be developed, parametrized, maintained or optimized, it is required to get an understanding about the physical resources involved in such a task. In this case, resources (sensors, actuators, controllers etc.) can be described or self-described in a uniform way, i.e., they expose their properties, functionalities and roles in a uniform way although they may be implemented with different technologies. It would be desired that Resource Description relies on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).</li>
             <li reqref="data-exchange-format">Different stakeholders have to interact between themselves. Also, each of them needs to interact with different resources. To support exchange of data between different parties a common data exchange format is needed.</li>
             <li reqref="resource-choreography">A language that enables resources to be choreographed, parametrized, wired and invoked. The language also features a communication protocol which enables collaboration during these tasks (e.g., checks constraints when resources are combined).</li>
             <li reqref="ensemble-discovery">Resources need be discoverable based on their Resource Description (e.g., properties, functionalities and roles). The discovery also needs to be enabled in a dynamic environment where physical resources appear and disappear during lifecycle phases.</li>
@@ -213,9 +213,9 @@
     <usecase id="flood-monitoring" author="Edoardo Pignotti" domain="smart_cities">
         <title>Community-based Flood Monitoring</title>
         <p>Flood warning systems are often based on blanket reports from local authorities and environment agencies, which are based on, limited resources and a small number of expensive, professional sensors.</p>
-        <p>If John wants to determine if his property will be affected by water, it needs access to flooding information at a street level and understand how connected water streams might effect the water level near his property. Such process requires higher resolution data on the streams, groundwater and complex basins riddling cities and villages.</p>
-        <p>John is part of a community-based initiative where members provide access to water level data by radio connected low cost sensors in their properties. It is very important for John to understand the quality of the information it has access too in order to make better decisions about what flood defences to use.</p>
-        <p>Privacy is also am important factor as sensors could be deployed in areas of low-density population and John does not want that other people can infer what kind of flood damages his property might have ensued.</p>
+        <p>If John wants to determine if his property will be affected by water, it needs access to flooding information at a street level and to understand how connected water streams might affect the water level near his property. Such a process requires higher resolution data on the streams, groundwater and complex basins riddling cities and villages.</p>
+        <p>John is part of a community-based initiative where members provide access to water level data by radio connected low cost sensors in their properties. It is very important for John to understand the quality of the information it has access to in order to make better decisions about what flood defences to use.</p>
+        <p>Privacy is also am important factor as sensors could be deployed in areas of low-density population and John does not want other people to infer what kind of flood damage his property might have suffered.</p>
         <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Apr/0031.html</p>
         <details>
             <title>How does this translate to a technical description?</title>
@@ -230,7 +230,7 @@
             <p>main: smart cities / other utilities / monitoring water levels for flood warnings</p>
         </details>
         <details>
-            <title>What interaction pattern with or btw things can be observed?</title>
+            <title>What interaction pattern with or between things can be observed?</title>
             <p>Resource Description: In the system, the data has to be enriched with some meta-information (e.g. timestamp, location, data quality indicators, provenance, etc.).</p>
             <p>Thing registration: sensors and gateways are registered with services in the cloud.</p>
             <p>Data subscription: agents subscribe to data streams generated by devices in the sensor network or other external data sources.</p>
@@ -244,7 +244,7 @@
             <p>Discovery of devices and related data sources</p>
         </details>
         <ul>
-            <li reqref="privacy">Privacy is also am important factor as sensors could be deployed in areas of low-density population and John does not want that other people can infer what kind of flood damages his property might have ensued.</li>
+            <li reqref="privacy">Privacy is also am important factor as sensors could be deployed in areas of low-density population and John does not want that other people to infer what kind of flood damages his property might have suffered.</li>
             <li reqref="synchronous">Data streams need to be manipulated and transformed in real time</li>
             <li reqref="data-exchange-format">Data from the sensors need to be reliably transmitted to cloud services</li>
             <li reqref="resource-description">In the system, the data has to be enriched with some meta-information (e.g. timestamp, location, data quality indicators, provenance, etc.)</li>
@@ -255,12 +255,12 @@
     <usecase id="health-monitoring" author="claesnilsson" domain="healthcare_and_medical">
         <title>Remote health monitoring system</title>
         <p>John is retired and lives alone in his own apartment. He has bad legs and there is a constant risk that he falls. If that happens he is not able to rise from the floor without help. In addition, John suffers from heart arrhythmias and diabetes.</p>
-        <p>Due to John's condition he needs remote monitoring by his healthcare provider. He therefore wears a wristband capable of continuously monitoring his heart rate and detect irregular heart rhythms as well as detecting a fall situation. A future version of the wristband will also be capable of non-invasive monitoring of his blood glucose level. The wristband communicates wirelessly with John's healthcare provider. This remote monitoring system could be seen as a complement to a normal home alarm system for elderly people with which old persons manually could call an emergency service. The differences are that the wristband system detects severe conditions automatically, which is needed if the old person is confused or gets unconscious, and also has the possibility to measure medical parameters such as heart rate and heart rhythm.</p>
+        <p>Due to John's condition he needs remote monitoring by his healthcare provider. He therefore wears a wristband capable of continuously monitoring his heart rate and detect irregular heart rhythms as well as detecting a fall situation. A future version of the wristband will also be capable of non-invasive monitoring of his blood glucose level. The wristband communicates wirelessly with John's healthcare provider. This remote monitoring system could be seen as a complement to a normal home alarm system for elderly people with which old people can manually call an emergency service. The differences are that the wristband system detects severe conditions automatically, which is needed if the person is confused or is unconscious, and also has the possibility to measure medical parameters such as heart rate and heart rhythm.</p>
         <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Mar/0057.html</p>
         <details>
             <title>How does this translate to a technical Description</title>
-            <p>When the system is in operation everything works automatic without any user interface. The remote monitoring application runs in a cloud server and can communicate with the wristband. A local router, situated for example in a Smartphone, may be needed to translate between a local communication method such as Bluetooth Low Energy and the mobile network or wifi, but at application level end-to-end security and communication through firewalls are achieved. The communication must be reliable and the power consumption in the wristband low to achieve long battery life.</p>
-            <p>User interaction is only required at system installation. The user, or another trusted person, e.g. a relative, health care personnel or personal assistant, has to use a web browser to log in to the remote monitoring application and the user has to approve that the application has access to his/her wristband using an existing authorize system, e.g. OAuth.</p>
+            <p>When the system is in operation everything works automatically without any user interface. The remote monitoring application runs in a cloud server and can communicate with the wristband. A local router, situated for example in a Smartphone, may be needed to translate between a local communication method such as Bluetooth Low Energy and the mobile network or wifi, but at application level end-to-end security and communication through firewalls are achieved. The communication must be reliable and the power consumption in the wristband low to achieve long battery life.</p>
+            <p>User interaction is only required at system installation. The user, or another trusted person, e.g. a relative, health care personnel or personal assistant, has to use a web browser to log in to the remote monitoring application and the user has to approve that the application has access to his/her wristband using an existing authorization system, e.g. OAuth.</p>
             <p>To provide service discovery for applications the wristband, during the system installation, is registered in a discovery service that contains a service description for the wristband. This service description states for example manufacturer, owner and the APIs to access the resources of the wristband.</p>
         </details>
         <details>
@@ -268,7 +268,7 @@
             <p>main: Smart lifecare / Healthcare and medical / Remote patient monitoring and care</p>
         </details>
         <details>
-            <title>What interaction pattern with or btw things can be observed</title>
+            <title>What interaction pattern with or between things can be observed</title>
             <p>Registration and authorization:  Registration of IoT device to make it discoverable and accessible by applications. Registration and authorization of applications to access resources on IoT devices.</p>
             <p>User interface: User interface only for registration and authorization. Operation is "user interface less".</p>
             <p>Security: End-to-end security cloud service - IoT device</p>
@@ -287,13 +287,13 @@
         <ul>
             <li reqref="data-exchange-format">communication must be reliable</li>
             <li reqref="push">alarm system: wristband system detects severe conditions </li>
-            <li reqref="privacy">The user, or another trusted person, e.g. a relative, health care personnel or personal assistant, has to use a web browser to log in to the remote monitoring application and the user has to approve that the application has access to his/her wristband using an existing authorize system, e.g. OAuth.</li>
+            <li reqref="privacy">The user, or another trusted person, e.g. a relative, health care personnel or personal assistant, has to use a web browser to log in to the remote monitoring application and the user has to approve that the application has access to his/her wristband using an existing authorization system, e.g. OAuth.</li>
         </ul>
     </usecase>
     
     <usecase id="ecg" author="draggett" domain="healthcare_and_medical">
         <title>Remote Electrocardiogram (ECG)</title>
-            <p>Ebele is a nurse in a large medical district covering many villages.  Today she is visiting Imani who has been complaining of weakness and chest pains.  Ebele uses her mobile phone to consult the doctor who is a clinic in a town eighty miles away. The doctor asks her to perform an ECG on Imani. She attaches the electrodes to Imani's chest and plugs them into the remote ECG monitor. This streams the data in real time over the mobile network to the clinic where the doctor is based. The doctor examines the ECG and spots signs of arrythmia, and directs Ebele to put Imani on a course of Tambocor.</p>
+            <p>Ebele is a nurse in a large medical district covering many villages.  Today she is visiting Imani who has been complaining of weakness and chest pains.  Ebele uses her mobile phone to consult the doctor who is a clinic in a town eighty kilometers away. The doctor asks her to perform an ECG on Imani. She attaches the electrodes to Imani's chest and plugs them into the remote ECG monitor. This streams the data in real time over the mobile network to the clinic where the doctor is based. The doctor examines the ECG and spots signs of arrythmia, and directs Ebele to put Imani on a course of medication.</p>
         <details>
             <title>How does this translate to a technical Description?</title>
             <p>The remote ECG monitor has a multichannel signal processing board that combines the readings from the electrodes to generate a clean analog output.  This is fed to the ADC in a microcontroller, which streams the digitised samples over the mobile network to a server in the clinic. The data is then forwarded to the doctor's terminal for analysis.</p>
@@ -310,13 +310,13 @@
 
     <usecase id="integrated-home-automation" author="Takuki Kamiya" domain="home_automation">
         <title>Integrated Home Automation, Demand Response and security</title>
-        <p>Many households nowadays use one or more of Home Automation service,
-            Demand-Response (DR) service or Securities and more. For DR subscription
+        <p>Many households nowadays use one or more Home Automation service,
+            Demand-Response (DR) service or Security service. For DR subscription
             and operation, a home gateway device communicates with an aggregator to
-            shed energy use on when asked. Home automation, typically also with
+            shed energy use when asked. Home automation, typically also with
             a home gateway, enables cloud-based monitoring and control of home
-            devices based-on pre-defined rules that perform actions based on
-            conditions or triggers such as weather forecast or push on doorbells.
+            devices based on pre-defined rules that perform actions based on
+            conditions or triggers such as weather forecast or pushed doorbells.
             Security services also install sensors and provide cloud-based control
             of security features such as arming/disarming and monitoring.</p>
         <p>There is an increasing need to integrate those discrete services from
@@ -336,31 +336,30 @@
     </usecase>
     <usecase id="Smart_home" author="Kazuaki Nimura" domain="home_automation">
         <title>Smart home</title>
-        <p>Katherine prefer to living in comfortable condition. 
+        <p>Katherine prefers to control the comfort of her living environment. 
            She has an air conditioner at home and  has been using her 
-           smartphone to controlling it since a controller application on the 
+           smartphone to control it since a controller application on the 
            smartphone can more precisely control based on her preference 
-           instead of using a remote controller that comes with.
-	   Recently she bought a home hub. Then now she can use another 
-           attentive feature that can turn-on the air conditioner from outside 
-           using the smartphone and the application a little bit before 
-           arriving at home to preparing more comfortable room temperature 
-           for her.
+           instead of using a remote controller that it comes with.
+	   Recently she bought a home hub. Now she can use another 
+           feature that can turn on the air conditioner from outside 
+           using the smartphone and the application, just before 
+           arriving at home to prepare a more comfortable room temperature.
         </p>
         <p>Requirements:</p>
-        <p>- An application on a smartphone can search devices possible to 
-            control both on local network and remote network.</p>
-        <p>- An application on a smartphone can understand the property of 
-            searched devices.</p>
-        <p>- An application on a smartphone can send commands without caring 
+        <p>- An application on a smartphone can search devices which can be 
+            controlled both on local network and remote network.</p>
+        <p>- An application on a smartphone can understand the properties of 
+            discovered devices.</p>
+        <p>- An application on a smartphone can send commands without caring about
             the network connection underneath.</p>
             <p>Related Building Blocks:</p>
-        <p>- Abstracted discovery mechanism that applications can queries 
-            devices possible to use both locally and remotely.</p>
-        <p>- Abstracted device representation that applications can understand 
+        <p>- Abstracted discovery mechanism that applications can query 
+            usable devices both locally and remotely.</p>
+        <p>- Abstracted device representation that applications use to understand 
             capabilities of devices to articulate a command to send. </p>
-        <p>- Abstraction APIs that applications can access devices with 
-            network agnostic.</p>
+        <p>- Abstraction APIs so applications can access devices in a
+            network agnostic manner.</p>
         <details>
             <title>How does this translate to a technical Description</title>
         </details>
@@ -370,7 +369,7 @@
         <p>Katherine is a frequent business traveler. She stays in a variety of
             different hotels in many cities and different countries. In each hotel room
             she is able to control the lighting, heating/air conditioning, locks, alarm
-            clock, water temperature, and entertainment in her room. If someone knocks
+            clock, water temperature and entertainment in her room. If someone knocks
             on the door she can see who's there from the TV or from her phone (a
             security camera is outside her door). Control is available from her mobile
             device, or she may be able to interact with the hotel room's services
@@ -388,7 +387,7 @@
             approaching the room. </p>
         <p>The user would also like to have her preferences made known when she checks
             in. For example, the room should automatically know her preferred room
-            temperature, preferred units (metric vs. English), and her preferred
+            temperature, preferred units (metric vs. imperial), and her preferred
             language. However, her preferences may have to be overridden by the hotel
             (for example, if she prefers a temperature that is too high or too low, or
             if her preferred language is not available). In that case, she needs to be
@@ -418,7 +417,7 @@
             <p>Smart buildings</p>
         </details>
         <details>
-            <title>What interaction pattern with or btw things can be observed </title>
+            <title>What interaction pattern with or between things can be observed </title>
             <p>The hotel communicates with the room to allow/block access to control of a
                 room as required when a guest checks in/checks out.</p>
             <p>The security camera communicates with the phone and/or the TV so that the
