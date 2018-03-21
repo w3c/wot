@@ -6,8 +6,8 @@ This document describes a general information related to the next plugfest in Pr
 
 ## 1.1 Backgroud
 
-In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers.
-The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles.
+In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers. 
+The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles. 
 
 ![buriling plugfest](images/burlingame.png)
 
@@ -160,11 +160,6 @@ Panasonic:
  - Scripting App.: Panasonic demo applications. (Local/Internet+LAN/HTTPS(+WSS))
  - NodeRED: would like to connect to the all servients. (Local/Internet+LAN/HTTPS(+WSS))
 
-Hitachi: (not yet fully implemented)
- - collect properties of things via Remote Proxy Servient(s) and visualize them.
-   - Node-RED
-   - Logstash + Elasticsearch + Kibana
-
 ### 2.4.2 Remote Proxy Servients
 ### 2.4.3 Local Proxy Servients
 
@@ -174,7 +169,7 @@ Fujitsu:
  - Registry and discovery opeartions
  - Read and Write properties operations
  - Event operation
-
+ 
  See Appendix for the sequence diagrams and the interfaces between applications/devices and proxies.
 
 ### 2.4.4 Device Servients
@@ -197,7 +192,7 @@ Examples of scenario involving semantic querying:
 - Energy saving: turn heating off when a window opens in the same room
 - Meta-action: switch on a light either by changing its value or by invoking an action
 - Circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
-- An application which detects the motion in a room and controls the AC operation in  a room.
+- An application which detects the motion in a room and controls the AC operation in  a room. 
 Devices: air conditioner (Fujitsu and Panasonic), human detection sensor (Panasonic and SmartThings)
 - An application which controls the AC in  a room based on the room temperature.
 Devices: air conditioner (Fujitsu and Panasonic), temperature sensor (Lemonbeat, Intel, SmartThings)
@@ -251,17 +246,17 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | SmartThings |                        |                         | Wi-Fi   |         |
 | EURECOM     |                        |                         | Wi-Fi   |         |
 | Oracle      |                        |                         | Wi-Fi   |         |
-| Hitachi     | 1                      | 1                       | Wi-Fi(443/udp,tcp) |use note PC only (VPN access to corporate servers)   |
+| Hitachi     |                        |                         | Wi-Fi   |         |
 | Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
 
-Notes:
+Notes: 
  - Deadline is March 21st.
  - Power outlets Type-A will be provided by the venue.
  - Anyone who has requirements for ports outside of 80/443/22 should send an email to Oracle.
  - You have to bring displays, if need.
 
-
+  
 # 7 Implementation guidelines
 
 * "name" field of Thing Description shall be unique among the things which will be registered to Fujitsu Proxy.  
@@ -436,7 +431,7 @@ Body: none<BR>
 
 (64) 200 OK<BR>
 Body:none<BR>
-
+  
 # Appendix B: Changes from previous PlugFest in Burlingame
 ## B1 TD changes
 * new link term on the top level
