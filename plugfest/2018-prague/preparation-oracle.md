@@ -188,8 +188,13 @@ Panasonic:
 
 Oracle and Siemens worked together to integrate the node-wot reference implementation with the Oracle IoT Cloud Service product.
 
+![](images/mgmt_console.png)
 The reference implementation and integration is available for participants at the plug fest to test interoperability scenarios.
 The integration is described in [Oracle+node-wot_Integration_concept.pptx](docs/Oracle+node-wot_Integration_concept.pptx)
+
+The Oracle IoT Cloud Service visualizes incoming messages and allows to look at message content.
+
+![](images/mgmt_console_messages.png)
 
 The integration works both ways, i.e. for exposed and consumed things:
 
@@ -198,13 +203,25 @@ The integration works both ways, i.e. for exposed and consumed things:
  
 The IoT Cloud Service manages devices via so-called device-models, which are a blueprint for device instances. Device models are very similar to Thing Descriptions.
 
+![](images/mgmt_console_edit_DM.png)
+
 Thing Descriptions can be automatically translated to Device Models with a small converter, the so called td2dm.js. This converter runs under node.js and is available here [td2dm.js](TDs/OracleTDs).
 
 # 2.6. Device Simulator
 
 The Oracle IoT Cloud Service Product contains a device simulator, that permits to create and test a Device Model, before the actual physical device is available.
 
-The simulator can be used at the plug fest. We have created simulations based on TDs from Siemens, Fujitsu, Panasonic and Eurecom. 
+![](images/sim_festo.png)
+
+![](images/sim_chart.png)
+
+The simulator can be used at the plug fest. 
+
+![](images/sim_3_instances.png)
+
+We have created simulations based on TDs from Siemens, Fujitsu, Panasonic and Eurecom. 
+
+![](images/sim_overview.png)
 
 # 3 Plugfest scenarios
 
