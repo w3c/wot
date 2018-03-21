@@ -248,11 +248,11 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | Panasonic   | 3                      | 2                       | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 8001, 8003, 8091 | |
 | Fujitsu     | 4                      | 2                       | Wi-Fi   |         |
 | IRI         |                        |                         | Wi-Fi   |         |
-| Siemens     |                        |                         | Wi-Fi   |         |
+| Siemens     | 4+(1)                  | 2                       | Wi-Fi   |         |
 | Intel       | 1                      | 1                       | Wi-Fi and/or wired Ethernet | External ports: 22, 80, 443. Will bring own router and power bar.   |
-| SmartThings |                        |                         | Wi-Fi   |         |
-| EURECOM     |                        |                         | Wi-Fi   |         |
-| Oracle      |                        |                         | Wi-Fi   |         |
+| SmartThings | 1                      | 1                       | Wi-Fi   | 4sq ft table space |
+| EURECOM     | 2                      | 2                       | Wi-Fi   |         |
+| Oracle      | 1                      | 1                       | Wi-Fi   |         |
 | Hitachi     | 1                      | 1                       | Wi-Fi(Ports: 443/tcp,443/udp(optional))   | use for note PC to access corporate servers via VPN. |
 | Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
