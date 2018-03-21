@@ -223,6 +223,7 @@ We have created simulations based on TDs from Siemens, Fujitsu, Panasonic and Eu
 
 ![Device Simulator - Overview](images/sim_overview.png)
 
+
 # 3 Plugfest scenarios
 
 Examples of scenario involving semantic querying:
@@ -282,8 +283,6 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
 #### Integrating other Things and Devices
 - Other device simulators on IoT CS can be exposed by IoT CS and consumed by WoT-Clients
 - Other node-WoT Servients can expose Things to IoT CS using Oracle binding
-
-
 
 # 4 Schedule
 

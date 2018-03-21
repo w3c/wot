@@ -15,7 +15,8 @@
     },
     "interaction" : {
       "@id" : "http://www.w3.org/ns/td#interaction",
-      "@type" : "@id"
+      "@type" : "@id",
+      "@container": "@list"
     },
     "security" : {
       "@id" : "http://www.w3.org/ns/td#security",
@@ -32,7 +33,8 @@
     },
     "form" : {
       "@id" : "http://www.w3.org/ns/td#form",
-      "@type" : "@id"
+      "@type" : "@id",
+      "@container": "@list"
     },
     "schema" : {
       "@id" : "http://www.w3.org/ns/td#schema",
@@ -42,19 +44,16 @@
       "@id" : "http://www.w3.org/ns/td#Event"
     },
     "base" : {
-      "@id" : "http://www.w3.org/ns/td#base",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@id" : "http://www.w3.org/ns/td#base"
     },
     "anchor" : {
       "@id" : "http://www.w3.org/ns/td#anchor"
     },
     "href" : {
-      "@id" : "http://www.w3.org/ns/td#href",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+      "@id" : "http://www.w3.org/ns/td#href"
     },
     "name" : {
-      "@id" : "http://www.w3.org/ns/td#name",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@id" : "http://www.w3.org/ns/td#name"
     },
     "observable" : {
       "@id" : "http://www.w3.org/ns/td#observable",
@@ -78,15 +77,14 @@
     },
     "link" : {
       "@id" : "http://www.w3.org/ns/td#link",
-      "@type" : "@id"
+      "@type" : "@id",
+      "@container": "@list"
     },
     "rel" : {
-      "@id" : "http://www.w3.org/ns/td#rel",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@id" : "http://www.w3.org/ns/td#rel"
     },
     "mediaType" : {
-      "@id" : "http://www.w3.org/ns/td#mediaType",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@id" : "http://www.w3.org/ns/td#mediaType"
     },
     "InteractionPattern" : {
       "@id" : "http://www.w3.org/ns/td#InteractionPattern"

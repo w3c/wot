@@ -160,6 +160,11 @@ Panasonic:
  - Scripting App.: Panasonic demo applications. (Local/Internet+LAN/HTTPS(+WSS))
  - NodeRED: would like to connect to the all servients. (Local/Internet+LAN/HTTPS(+WSS))
 
+Hitachi: (not yet fully implemented)
+ - Collect data from Things via Remote Proxy Servient(s) and visualize its data.
+   - NodeRED
+   - Logstash + Elasticsearch + Kibana
+
 ### 2.4.2 Remote Proxy Servients
 ### 2.4.3 Local Proxy Servients
 
@@ -176,12 +181,12 @@ Fujitsu:
 
 Panasonic:
  - [LED light](TDs/PanasonicTDs/huegroup-p1.jsonld): on/off, RGB properties (Remote/Internet/HTTPS)
- - Air conditioner home: on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
- - Air conditioner car: on/off, number properties (Remote/Internet/HTTPS)
- - Robot Cleaner: on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
- - Amazon Echo Dot: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
- - Google Home mini: "home"/"bye" property and event (Local/Internet/HTTPS(+WSS))
- - Google Home mini: speech action (Local/LAN/HTTP)
+ - [Air conditioner home](TDs/PanasonicTDs/air-conditioner-p1.jsonld): on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
+ - [Air conditioner car](TDs/PanasonicTDs/electric-bulletin-board-p2.jsonld): on/off, number properties (Remote/Internet/HTTPS)
+ - [Robot Cleaner](TDs/PanasonicTDs/cleaner-p1.jsonld): on, turn left/right, go straight, go home, go area 1/2/3 actions (Remote/Internet/HTTPS)
+ - [Amazon Echo Dot](TDs/PanasonicTDs/amazon-echo-p1.jsonld): "Coming"/"Going" event (Local/Internet/HTTPS(+WSS))
+ - [Google Home mini](TDs/PanasonicTDs/google-home-p1.jsonld): "Coming"/"Going" event (Local/Internet/HTTPS(+WSS))
+ - [Google Home mini](TDs/PanasonicTDs/google-home-p2.jsonld): speech action (Local/LAN/HTTP)
  - WoT Simulator: can simulate the WoT devices easily. (Local/LAN/HTTP)
 
 
@@ -225,6 +230,8 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
   6. TD of devices are unregistered from Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.7)
 - Security Consideration
   - JSON Web Token (JWT) should be added, when you access to Panasonic servient.
+- Note
+  - Air conditioners (PanasonicAirConditionerP1 and PanasonicAirConditionerP2) don't support a parallel access, so an application should access these things in series.
 
 # 4 Schedule
 
@@ -242,11 +249,11 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | Fujitsu     | 4                      | 2                       | Wi-Fi   |         |
 | IRI         |                        |                         | Wi-Fi   |         |
 | Siemens     |                        |                         | Wi-Fi   |         |
-| Intel       |                        |                         | Wi-Fi   |         |
+| Intel       | 1                      | 1                       | Wi-Fi and/or wired Ethernet | External ports: 22, 80, 443. Will bring own router and power bar.   |
 | SmartThings |                        |                         | Wi-Fi   |         |
 | EURECOM     |                        |                         | Wi-Fi   |         |
 | Oracle      |                        |                         | Wi-Fi   |         |
-| Hitachi     |                        |                         | Wi-Fi   |         |
+| Hitachi     | 1                      | 1                       | Wi-Fi(Ports: 443/tcp,443/udp(optional))   | use for note PC to access corporate servers via VPN. |
 | Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
 
