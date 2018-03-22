@@ -43,7 +43,7 @@
 			<td>Device</td>
 			<td colspan="2">
         <p>Local: BMW X5, BMW S7</p>
-    		<p>EURECOM: Remote BMW X5</p>
+    		<p>Remote (EURECOM): Remote BMW X5</p>
 			</td>
 		</tr>
 	</tbody>
