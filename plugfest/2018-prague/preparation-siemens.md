@@ -80,6 +80,21 @@ Siemens:
 Siemens:
  - Integrating long-poll support into node-wot - work-in-progress
 
+## 3.2. IoT Cloud Integration Scenarios
+
+### Festo Live
+- Festo Plant sends regular status info and alerts to Oracle IoT Cloud Service
+- WoT Clients can control Festo Plant valve and pump via IoT CS
+- Stand-alone HTTP Server displays alerts raised by Festo Plant
+
+<img src="images/plugfest-prague-2018-siemens-festolive.png"/>
+
+1. Local node-wot proxy consumes CoAP-based Things augmenting the Festo plant
+2. Local node-wot proxy exposes [Festo Live](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) Thing over Oracle IoT Cloud Service binding (and local HTTP binding, lightgreen TD)
+3. Oracle IoT Cloud Service receives Property values and can send Action invocations to node-wot proxy via the (proprietary) Oracle binding
+4. Oracle IoT Cloud Service exposes [Festo Live](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) Thing over RESTful Oracle IoT Cloud Service Server API, which was extended with a TD
+5. WoT Clients can consume [Festo Live](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) Thing from Oracle IoT Cloud Service
+
 # 4 Schedule
 
 # 5 Requirements for PlugFest Setting
