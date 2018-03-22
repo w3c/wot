@@ -90,7 +90,7 @@ Siemens:
 <img src="images/plugfest-prague-2018-siemens-festolive.png"/>
 
 1. Local node-wot proxy consumes CoAP-based Things augmenting the Festo plant
-2. Local node-wot proxy exposes [Festo Live](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) Thing over Oracle IoT Cloud Service binding (and local HTTP binding, lightgreen TD)
+2. Local node-wot proxy exposes [local Festo Live](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive_TD.jsonld) Thing over Oracle IoT Cloud Service binding (and local HTTP binding, lightgreen TD)
 3. Oracle IoT Cloud Service receives Property values and can send Action invocations to node-wot proxy via the (proprietary) Oracle binding
 4. Oracle IoT Cloud Service exposes [Festo Live](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) Thing over RESTful Oracle IoT Cloud Service Server API, which was extended with a TD
 5. WoT Clients can consume [Festo Live](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) Thing from Oracle IoT Cloud Service
