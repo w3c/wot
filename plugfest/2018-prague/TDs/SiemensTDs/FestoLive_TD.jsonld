@@ -3,7 +3,7 @@
         "https://w3c.github.io/wot/w3c-wot-td-context.jsonld"
     ],
     "@type": [
-        "Thing"
+        "Thing", "iot:Pump", "iot:Valve", "iot:FloatSwitch", "iot:UltrasonicSensing", "iot:ProximitySensing"
     ],
     "name": "FestoLive",
     "security": [
@@ -14,13 +14,12 @@
     "interaction": [
         {
             "name": "PumpStatus",
-            "@type": [
-                "Property"
-            ],
+            "@type": ["Property", "iot:OperationStatus"],
             "schema": {
                 "type": "boolean"
             },
             "writable": true,
+			"observable": true,
             "form": [
                 {
                     "href": "http://192.168.56.1:8080/FestoLive/properties/PumpStatus",
@@ -31,12 +30,13 @@
         {
             "name": "ValveStatus",
             "@type": [
-                "Property"
+                "Property", "iot:OperationStatus"
             ],
             "schema": {
                 "type": "boolean"
             },
             "writable": true,
+			"observable": true,
             "form": [
                 {
                     "href": "http://192.168.56.1:8080/FestoLive/properties/ValveStatus",
@@ -47,12 +47,13 @@
         {
             "name": "Tank102LevelValue",
             "@type": [
-                "Property"
+                "Property", "iot:CurrentLevel"
             ],
             "schema": {
                 "type": "number"
             },
             "writable": false,
+			"observable": true,
             "form": [
                 {
                     "href": "http://192.168.56.1:8080/FestoLive/properties/Tank102LevelValue",
@@ -63,12 +64,13 @@
         {
             "name": "Tank102OverflowStatus",
             "@type": [
-                "Property"
+                "Property", "iot:FloatSwitch"
             ],
             "schema": {
                 "type": "boolean"
             },
             "writable": false,
+			"observable": true,
             "form": [
                 {
                     "href": "http://192.168.56.1:8080/FestoLive/properties/Tank102OverflowStatus",
@@ -79,12 +81,13 @@
         {
             "name": "Tank101MaximumLevelStatus",
             "@type": [
-                "Property"
+                "Property", "iot:OperationStatus"
             ],
             "schema": {
                 "type": "boolean"
             },
             "writable": false,
+			"observable": true,
             "form": [
                 {
                     "href": "http://192.168.56.1:8080/FestoLive/properties/Tank101MaximumLevelStatus",
@@ -95,12 +98,13 @@
         {
             "name": "Tank101MinimumLevelStatus",
             "@type": [
-                "Property"
+                "Property", "iot:OperationStatus"
             ],
             "schema": {
                 "type": "boolean"
             },
             "writable": false,
+			"observable": true,
             "form": [
                 {
                     "href": "http://192.168.56.1:8080/FestoLive/properties/Tank101MinimumLevelStatus",
@@ -111,12 +115,13 @@
         {
             "name": "Tank101OverflowStatus",
             "@type": [
-                "Property"
+                "Property", "iot:FloatSwitch"
             ],
             "schema": {
                 "type": "boolean"
             },
             "writable": false,
+			"observable": true,
             "form": [
                 {
                     "href": "http://192.168.56.1:8080/FestoLive/properties/Tank101OverflowStatus",
@@ -127,7 +132,7 @@
         {
             "name": "OpenValve",
             "@type": [
-                "Action"
+                "Action", "iot:TurnOn"
             ],
             "form": [
                 {
@@ -139,7 +144,7 @@
         {
             "name": "CloseValve",
             "@type": [
-                "Action"
+                "Action", "iot:TurnOff"
             ],
             "form": [
                 {
@@ -151,7 +156,7 @@
         {
             "name": "StartPump",
             "@type": [
-                "Action"
+                "Action", "iot:TurnOn"
             ],
             "form": [
                 {
@@ -163,7 +168,7 @@
         {
             "name": "StopPump",
             "@type": [
-                "Action"
+                "Action", "iot:TurnOff"
             ],
             "form": [
                 {
