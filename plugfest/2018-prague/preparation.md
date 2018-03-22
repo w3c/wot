@@ -104,7 +104,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">(tunnel)</td>
     <td></td>
     <td colspan="2">HTTPS/CoAP(s)</td>
-    <td colspan="2">Multi</td>
+    <td colspan="2">HTTP + MQTT</td>
     <td></td>
   </tr>
   <tr>
@@ -129,7 +129,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">HTTP</td>
     <td>HTTP</td>
     <td colspan="2">CoAP</td>
-    <td colspan="2">Multi</td>
+    <td colspan="2">HTTP + MQTT</td>
     <td>HTTP</td>
   </tr>
   <tr>
