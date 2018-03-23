@@ -1,0 +1,193 @@
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld"
+    ],
+    "@type": [
+        "Thing", "iot:Pump", "iot:Valve", "iot:FloatSwitch", "iot:UltrasonicSensing", "iot:ProximitySensing"
+    ],
+    "name": "FestoLive",
+    "security": [
+        {
+            "description": "node-wot development Servient, no security"
+        }
+    ],
+    "interaction": [
+        {
+            "name": "PumpStatus",
+            "@type": ["Property", "iot:OperationStatus"],
+            "schema": {
+                "type": "boolean"
+            },
+            "writable": true,
+			"observable": true,
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/properties/PumpStatus",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "ValveStatus",
+            "@type": [
+                "Property", "iot:OperationStatus"
+            ],
+            "schema": {
+                "type": "boolean"
+            },
+            "writable": true,
+			"observable": true,
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/properties/ValveStatus",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "Tank102LevelValue",
+            "@type": [
+                "Property", "iot:CurrentLevel"
+            ],
+            "schema": {
+                "type": "number"
+            },
+            "writable": false,
+			"observable": true,
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/properties/Tank102LevelValue",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "Tank102OverflowStatus",
+            "@type": [
+                "Property", "iot:FloatSwitch"
+            ],
+            "schema": {
+                "type": "boolean"
+            },
+            "writable": false,
+			"observable": true,
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/properties/Tank102OverflowStatus",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "Tank101MaximumLevelStatus",
+            "@type": [
+                "Property", "iot:OperationStatus"
+            ],
+            "schema": {
+                "type": "boolean"
+            },
+            "writable": false,
+			"observable": true,
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/properties/Tank101MaximumLevelStatus",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "Tank101MinimumLevelStatus",
+            "@type": [
+                "Property", "iot:OperationStatus"
+            ],
+            "schema": {
+                "type": "boolean"
+            },
+            "writable": false,
+			"observable": true,
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/properties/Tank101MinimumLevelStatus",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "Tank101OverflowStatus",
+            "@type": [
+                "Property", "iot:FloatSwitch"
+            ],
+            "schema": {
+                "type": "boolean"
+            },
+            "writable": false,
+			"observable": true,
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/properties/Tank101OverflowStatus",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "OpenValve",
+            "@type": [
+                "Action", "iot:TurnOn"
+            ],
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/actions/OpenValve",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "CloseValve",
+            "@type": [
+                "Action", "iot:TurnOff"
+            ],
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/actions/CloseValve",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "StartPump",
+            "@type": [
+                "Action", "iot:TurnOn"
+            ],
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/actions/StartPump",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "StopPump",
+            "@type": [
+                "Action", "iot:TurnOff"
+            ],
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/actions/StopPump",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "EmergencyStop",
+            "@type": [
+                "Action"
+            ],
+            "form": [
+                {
+                    "href": "http://192.168.56.1:8080/FestoLive/actions/EmergencyStop",
+                    "mediaType": "application/json"
+                }
+            ]
+        }
+    ]
+}

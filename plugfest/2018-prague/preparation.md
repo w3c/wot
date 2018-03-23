@@ -6,8 +6,8 @@ This document describes a general information related to the next plugfest in Pr
 
 ## 1.1 Backgroud
 
-In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers. 
-The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles. 
+In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers.
+The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles.
 
 ![buriling plugfest](images/burlingame.png)
 
@@ -104,7 +104,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">(tunnel)</td>
     <td></td>
     <td colspan="2">HTTPS/CoAP(s)</td>
-    <td colspan="2">Multi</td>
+    <td colspan="2">HTTP + MQTT</td>
     <td></td>
   </tr>
   <tr>
@@ -129,7 +129,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">HTTP</td>
     <td>HTTP</td>
     <td colspan="2">CoAP</td>
-    <td colspan="2">Multi</td>
+    <td colspan="2">HTTP + MQTT</td>
     <td>HTTP</td>
   </tr>
   <tr>
@@ -142,7 +142,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">Remote Festo Plant (valve, pump, levelmeter), BACnet Demonstrator, Logo! Demonstrator, RGB LED Light</td>
     <td>Sensors(Luminance sensor, Humidity sensor, Temperature sensor), Binary actuator</td>
     <td colspan="2">OCF RGB light, OCF Light, OCF Buzzer, OCF temperture, OCF Button, OCF Proximity, OCF Slider, Still camera</td>
-    <td colspan="2">Dimmable Light(OCF), Motion Sensor(OCF), Dimmable Light(ST), Motion Sensor(ST), Gas Sensor(IPSO), PM2.5 Sensor(IPSO), Temperature Sensor(IPSO), Humidity Sensor(IPSO), Loudness Sensor(IPSO), Illuminance Sensor(IPSO), PIR Sensor(IPSO), Barometer Sensor(IPSO), OCF Bridge</td>
+    <td colspan="2">Dimmable Light(ST), Motion Sensor(IPSO), Loudness Sensor(IPSO), Illuminance Sensor(IPSO),
     <td>Sensors and Actuators in the car(BMW X5)</td>
   </tr>
 </table>
@@ -174,7 +174,7 @@ Fujitsu:
  - Registry and discovery opeartions
  - Read and Write properties operations
  - Event operation
- 
+
  See Appendix for the sequence diagrams and the interfaces between applications/devices and proxies.
 
 ### 2.4.4 Device Servients
@@ -197,7 +197,7 @@ Examples of scenario involving semantic querying:
 - Energy saving: turn heating off when a window opens in the same room
 - Meta-action: switch on a light either by changing its value or by invoking an action
 - Circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
-- An application which detects the motion in a room and controls the AC operation in  a room. 
+- An application which detects the motion in a room and controls the AC operation in  a room.
 Devices: air conditioner (Fujitsu and Panasonic), human detection sensor (Panasonic and SmartThings)
 - An application which controls the AC in  a room based on the room temperature.
 Devices: air conditioner (Fujitsu and Panasonic), temperature sensor (Lemonbeat, Intel, SmartThings)
@@ -250,20 +250,20 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | IRI         |                        |                         | Wi-Fi   |         |
 | Siemens     | 4+(1)                  | 2                       | Wi-Fi   |         |
 | Intel       | 1                      | 1                       | Wi-Fi and/or wired Ethernet | External ports: 22, 80, 443. Will bring own router and power bar.   |
-| SmartThings | 1                      | 1                       | Wi-Fi   | 4sq ft table space |
+| SmartThings | 1                      | 1                       | Wired   | 4sq ft table space |
 | EURECOM     | 2                      | 2                       | Wi-Fi   |         |
 | Oracle      | 1                      | 1                       | Wi-Fi   |         |
 | Hitachi     | 1                      | 1                       | Wi-Fi(Ports: 443/tcp,443/udp(optional))   | use for note PC to access corporate servers via VPN. |
 | Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
 
-Notes: 
+Notes:
  - Deadline is March 21st.
  - Power outlets Type-A will be provided by the venue.
  - Anyone who has requirements for ports outside of 80/443/22 should send an email to Oracle.
  - You have to bring displays, if need.
 
-  
+
 # 7 Implementation guidelines
 
 * "name" field of Thing Description shall be unique among the things which will be registered to Fujitsu Proxy.  
@@ -438,7 +438,7 @@ Body: none<BR>
 
 (64) 200 OK<BR>
 Body:none<BR>
-  
+
 # Appendix B: Changes from previous PlugFest in Burlingame
 ## B1 TD changes
 * new link term on the top level
