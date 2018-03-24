@@ -16,8 +16,8 @@
 		"@type": ["Thing","auto:Car","vss:Vehicle"],
 		"name": "BMW_S7",
 		"auto:brand":"BMW",
-		"base": "http://xxxxxxxxxx:5000/",
-		"@id":"CarThing",
+		"base": "http://192.168.1.222/",
+		"@id":"http://192.168.1.222/MyCarThing",
 		"security":[{
 			"cat":"token:jwt",
 			"alg":"ES256",
