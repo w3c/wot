@@ -33,18 +33,18 @@ This is the smarthome application that the application on the smartphone can con
 All servients should register their TDs to a central Thing Directory for discovery purposes.
 Thingweb's Directory should be used for this purpose. To register a TD, send:
 ```
-POST  http://plugfest.thingweb.io:8081/td
+POST http://plugfest.thingweb.io:8081/td
 Content-Type: application/ld+json
-{... your TD ...}
+Body: {... your TD ...}
 ```
 
-to which the server should reply with the location of the created resource for your TD (`http://plugfest.thingweb.io:8081/td/04fg5a` in that case):
+to which the server should reply with the location of the created resource for your TD (`http://plugfest.thingweb.io:8081/td/{your-handle}`):
 ```
 201 Created
-Location: /td/04fg5a
+Location: /td/{your-handle}
 ```
 
-A GUI is also available at http://plugfest.thingweb.io:8081 to manually register TDs (_no error handling yet_).
+A GUI is also available at http://plugfest.thingweb.io:8081/ to manually register TDs (_no error reporting yet_).
 
 ## 2.1 4-layered Servients
 
