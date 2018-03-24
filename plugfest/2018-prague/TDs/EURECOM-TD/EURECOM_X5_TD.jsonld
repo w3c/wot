@@ -6,7 +6,7 @@
     ],
     "@type": ["Thing", "iot:ConnectedCar"],
     "name": "BMW_X5_TD",
-    "base": "http://xxxxxxxx/v2/north/",
+    "base": "http://192.168.1.122/v2/north/",
     "interaction" : [
       {
         "@type": ["Property", "iot:CurrentPosition"],
