@@ -276,7 +276,7 @@ The local proxy gets the URL for this event from TD of the device servient regis
 (43) HTTP POST http://192.169.1.2/Things/deviceName/Event/change<BR>
 Body: none<BR>
 
-The device servient sends a notify to the application via the local and remote proxy servient with Server Sent Events specified by W3C.  The device inserts the header of "Context-Type: text / event-stream" and responds with "200 OK".
+The device servient sends a notify to the application via the local and remote proxy servient with Server Sent Events specified by W3C.  The device responses “200 OK” with a header “Context-Type: text/event-stream”.
 
 (44)-(46) 200 OK<BR>
 Context-Type:text/event-stream<BR>
@@ -347,7 +347,7 @@ This flow of step from (41) to (46) will be repeated during the application send
 In this case, “Unsubscribe” message dose not exist. If the application servient stop the subscription, it stop to send the request (47).
 
 
-### A7 Unregister
+### A8 Unregister
 The device servient unregister from the local proxy servient before shutdown. The local proxy servient unregister this device servient from the remote proxy not to access from the application.
 
 ![images](images/seq_unregister.png)
