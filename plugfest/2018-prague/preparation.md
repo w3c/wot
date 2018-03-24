@@ -30,6 +30,22 @@ This is the smarthome application that the application on the smartphone can con
 
 # 2. Servients
 
+All servients should register their TDs to a central Thing Directory for discovery purposes.
+Thingweb's Directory should be used for this purpose. To register a TD, send:
+```
+POST  http://plugfest.thingweb.io:8081/td
+Content-Type: application/ld+json
+{... your TD ...}
+```
+
+to which the server should reply with the location of the created resource for your TD (`http://plugfest.thingweb.io:8081/td/04fg5a` in that case):
+```
+201 Created
+Location: /td/04fg5a
+```
+
+A GUI is also available at http://plugfest.thingweb.io:8081 to manually register TDs (_no error handling yet_).
+
 ## 2.1 4-layered Servients
 
 3 types of WoT Servients was derived from the use case described in 1.2. These are defined below:  
