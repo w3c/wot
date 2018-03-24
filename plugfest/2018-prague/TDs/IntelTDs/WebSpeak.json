@@ -1,0 +1,31 @@
+{
+  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+               "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+               {
+                   "iot": "http://iotschema.org/",
+                   "http": "http://iotschema.org/protocol/http"
+               }
+  ],
+  "@type": ["Thing"],
+  "name": "Intel-WebSpeak-upsq.local",
+  "@id": "urn:uuid:a7e2ce8d-6ad1-54a2-939f-d51e9c2745b7",
+  
+  "interaction": [
+    {
+      "@type": ["Action"],
+      "name": "say",
+      "inputSchema": {
+          "type": "string"
+      }, 
+      "form": [
+        {
+          
+          "href": "http://upsq.local:8086/api/say",
+          "mediaType": "application/json",
+          "rel": ["invokeAction"],
+          "http:methodName": "POST"
+        }
+      ]
+    }
+  ]
+}
