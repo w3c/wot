@@ -65,7 +65,7 @@
         {
             "name": "Tank102OverflowStatus",
             "@type": [
-                "Property", "iot:FloatSwitch"
+                "Property", "iot:OverflowStatus"
             ],
             "schema": {
                 "type": "boolean"
@@ -116,7 +116,7 @@
         {
             "name": "Tank101OverflowStatus",
             "@type": [
-                "Property", "iot:FloatSwitch"
+                "Property", "iot:OverflowStatus"
             ],
             "schema": {
                 "type": "boolean"
