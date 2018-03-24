@@ -1,0 +1,111 @@
+{
+    @context: [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+        {
+            iot: "http://iotschema.org/",
+            http: "http://iotschema.org/protocol/http"
+        }
+    ],
+    @type: [
+        "Thing"
+    ],
+    name: "SimpleWebCamera",
+    @id: "urn:dev:wot:camera-hostname",
+    security: [
+        {
+            @id: "basic-config",
+            scheme: "basic"
+        }
+    ],
+    interaction: [
+        {
+            @type: [
+                "Property",
+                "iot:CurrentLevel"
+            ],
+            name: "exposure",
+            schema: {
+                type: "object",
+                @type: [
+                    "iot:LevelData"
+                ],
+                field: [
+                    {
+                        name: "exposure",
+                        schema: {
+                            type: "integer",
+                            minimum: 0,
+                            maximum: 600
+                        }
+                    }       
+                ],
+                required: [
+                    "exposure"
+                ]
+            },
+            writable: true,
+            observable: true,
+            form: [
+                {
+                    href: "http://upsq.local/api/exposure",
+                    mediaType: "application/json",
+                    rel: [
+                        "readProperty"
+                    ],
+                    http:methodName: "GET",
+                    security: "basic-config"
+                },
+                {
+                    href: "http://upsq.local/api/exposure",
+                    mediaType: "application/json",
+                    rel: [
+                        "writeProperty"
+                    ],
+                    http:methodName: "POST",
+                    security: "basic-config"
+                },
+                {
+                    href: "http://upsq.local/api/exposure",
+                    rel: [
+                        "observeProperty"
+                    ],
+                    http:methodName: "GET",
+                    subProtocol: "LongPoll",
+                    security: "basic-config"
+                }
+            ]
+        },
+        {
+            @type: [
+                "Property"
+            ],
+            name: "frame",
+            schema: {
+                type: "string"
+            },
+            writable: false,
+            observable: true,
+            form: [
+                {
+                    href: "http://upsq.local/api/frame",
+                    mediaType: "image/jpeg",
+                    rel: [
+                        "readProperty"
+                    ],
+                    http:methodName: "GET",
+                    security: "basic-config"
+                },
+                {
+                    href: "http://upsq.local/api/frame",
+                    rel: [
+                        "observeProperty"
+                    ],
+                    http:methodName: "GET",
+                    subProtocol: "LongPoll",
+                    security: "basic-config"
+                }
+            ]
+        }
+    ]
+}

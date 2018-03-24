@@ -189,6 +189,8 @@ Panasonic:
  - [Google Home mini](TDs/PanasonicTDs/google-home-p2.jsonld): speech action (Local/LAN/HTTP)
  - WoT Simulator: can simulate the WoT devices easily. (Local/LAN/HTTP)
 
+(Note: Panasonic Remote Servients requires JSON Web Token. Also actual URL is hidden. Please contact)
+
 
 # 3 Plugfest scenarios
 
@@ -218,20 +220,25 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
   - Application
     - Node-RED
   - Proxy
-    - Fujitsu Cloud, Local Gateway
+    - Remote and Local Gateway
   - Device
     - LED light, Air conditioner, Amazon Echo Dot, Google Home mini, Sensors, Rotating Light
 - Steps
-  1. TD of devices are registered to Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.1)
-  2. Application retrieves TDs from Fujitsu Remote Proxy. (Sequence A.2)
-  3. Application subscribes Amazon Echo's "ask" event / starts observing Air conditioner's "operationStatus" property. (Sequence A.5)
-  4. Application receives Amazon Echo's "ask" event / detects Air conditioner's "operationStatus" property is changed. (Sequence A.5)
-  5. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
-  6. TD of devices are unregistered from Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.7)
+  1. TD of devices are registered to Local Proxy manually, or using POSTMAN. (Sequence A.1)
+  2. Application retrieves TDs from Remote Proxy. (Sequence A.2)
+  3. Applicatoin reads TD, subscribe event / observe property and receive changes (see following diagram)
+  ![images](images/seq_http_longpoll.png)
+    - Pattern 1: Property observe
+      - Application reads air-conditioner-p1.jsonld TD, finds properties with "observable": true and its form with "rel": "observe" and "subProtocol": "LongPoll", then calls HTTP GET to corresponding "href" which will be pending until the property changes.
+      - Application receives GET response and detects that the property has changed.
+    - Pattern 2: Event
+      - Application reads amazon-echo-p1.jsonld TD, finds "ask" event and its form with "subProtocol":"LongPoll", then calls HTTP GET to corresponding "href" which will be pending until the event fires.
+      - Application receives GET response and detects that the event has fired.
+  4. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
+  5. Repeats 3. to 4.
+  6. TD of devices are unregistered from Local Proxy manually, or using POSTMAN. (Sequence A.7)
 - Security Consideration
-  - JSON Web Token (JWT) should be added, when you access to Panasonic servient.
-- Note
-  - Air conditioners (PanasonicAirConditionerP1 and PanasonicAirConditionerP2) don't support a parallel access, so an application should access these things in series.
+  - JSON Web Token (JWT) is needed, when you access to Panasonic servient.
 
 # 4 Schedule
 
@@ -314,7 +321,7 @@ Body: TD
 ## A3 Read property
 The application servient sends a request to read the value of the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
 
-![images](images/seq_getproperty.png)
+![images](images/seq_readproperty.png)
 
 *Example: using HTTP*
 
@@ -345,7 +352,7 @@ Body: 25(value)<BR>
 ## A4 Write property
 The application servient sends a request to write the value to the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
 
-![images](images/seq_setproperty.png)
+![images](images/seq_writeproperty.png)
 
 *Example: using HTTP*
 
@@ -360,8 +367,9 @@ The remote proxy puts the URL for the property from TD of the device servient re
 (32) HTTP PUT http://glps.example.com/Things/deviceName/Property/status<BR>
 Body: ON<BR>
 
-## A5 Subscribe and Event
-The application servient sends a request to subscribe the property of the device servient to the remote proxy servient. The device servient keep to send the value of the specified property periodically.
+## A5 Subscribe and Event with Server Sent Event method
+The application servient can obtain the change or the current status of the device servient via proxy servient using subscription procedures. The application servient sends a request to subscribe the property of the device servient via the remote and local proxy servient. The device servient keep to send the value of the specified property periodically.
+Diagram A5 and A6 show the sequence diagarms for Subcribtion, Event handling, and Unsubscription for stopping event handling with using Server Sent Event method. 
 
 ![images](images/seq_subscribe.png)
 
@@ -393,7 +401,7 @@ If this subscription succeeded, the events keep to be notified to the applicatio
 (47)-(49) <BR>
 Body: data:25(value)<BR>
 
-## A6 Unsubscribe
+## A6 Unsubscribe with Server Sent Event method
 The application servient sends a request to unsubscribe to the remote proxy servient to stop to notify the event from the device servient.
 
 ![images](images/seq_unsubscribe.png)
@@ -420,7 +428,38 @@ The device servient stops sending event and returns the response with “200 OK�
 (54)-(56) 200 OK<BR>
 Body: none<BR>
 
-### A7 Unregister
+### A7 Subbscribe and Event with Long Polliing method
+Diagram A7 shows another implmentation for event handling with the Long Polling method.
+The application servient sends a request to subscribe the property of the device servient to the remote proxy servient. The device servient keep to send the value of the specified property periodically or when some events happen until the application unsubscribes.
+
+![images](images/seq_subscribe_longpolling.png)
+
+*Example: using HTTP*
+
+The application subscribes an event of the device servient to be notified. The application gets URI for this event and send a request to the remote proxy servient.
+
+(41) HTTP GET http://rps.example.com/lps1/Things/deviceName/Poll/eventName
+Body: none
+
+The remote proxy gets the URI for the event from TD of the device servient registered in the repository.
+
+(42) HTTP GET http://lps.example.com/Things/deviceName/Poll/eventName
+Body: none
+
+The local proxy gets the URI for this event from TD of the device servient registered in the repository.
+
+(43) HTTP GET http://device.example.com/poll/device/changed
+Body: none
+
+The device servient doesn’t send a response immediately and keep this connection until an event happens. When the value of the property is changed, the device servient sends an event notification to the application via the local and remote proxy servient with Long Polling method. The device responses “200 OK” with a value.
+
+(44)-(46) 200 OK
+Body: value
+
+This flow of step from (41) to (46) will be repeated during the application sending requests.
+In this case, “Unsubscribe” message dose not exist. If the application servient stop the subscription, it stop to send the request (47).
+
+### A8 Unregister
 The device servient unregister from the local proxy servient before shutdown. The local proxy servient unregister this device servient from the remote proxy not to access from the application.
 
 ![images](images/seq_unregister.png)

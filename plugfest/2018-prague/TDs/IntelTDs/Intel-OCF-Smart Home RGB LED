@@ -1,0 +1,105 @@
+{
+    @context: [
+        "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+        {
+            iot: "http://iotschema.org/"
+        },
+        {
+            http: "http://www.w3.org/2011/http/"
+        }
+    ],
+    base: "http://192.168.1.102:8000/api/oic",
+    @type: [
+        "Thing",
+        "Light",
+        "iot:Light",
+        "iot:Actuator"
+    ],
+    name: "Intel-OCF-Smart Home RGB LED (1)",
+    interaction: [
+        {
+            name: "Light Colour",
+            @type: [
+                "Property",
+                "iot:CurrentColour"
+            ],
+            link: [
+                {
+                    href: "/a/rgbled1?di=6a0f7806-335e-4c84-a4a4-c223a62ef754",
+                    mediatype: "application/json",
+                    http:methodName: "http:post",
+                    rel: "setProperty"
+                },
+                {
+                    href: "/a/rgbled1?di=6a0f7806-335e-4c84-a4a4-c223a62ef754",
+                    mediatype: "application/json",
+                    http:methodName: "http:get",
+                    rel: "getProperty"
+                }
+            ],
+            inputData: {
+                type: "object",
+                fields: [
+                    {
+                        name: "rgbValue",
+                        value: {
+                            type: "array",
+                            items: [
+                                {
+                                    @type: [
+                                        "iot:RColourData"
+                                    ],
+                                    type: "number"
+                                },
+                                {
+                                    @type: [
+                                        "iot:GColourData"
+                                    ],
+                                    type: "number"
+                                },
+                                {
+                                    @type: [
+                                        "iot:BColourData"
+                                    ],
+                                    type: "number"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            outputData: {
+                type: "object",
+                fields: [
+                    {
+                        name: "rgbValue",
+                        value: {
+                            type: "array",
+                            items: [
+                                {
+                                    @type: [
+                                        "iot:RColourData"
+                                    ],
+                                    type: "number"
+                                },
+                                {
+                                    @type: [
+                                        "iot:GColourData"
+                                    ],
+                                    type: "number"
+                                },
+                                {
+                                    @type: [
+                                        "iot:BColourData"
+                                    ],
+                                    type: "number"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
