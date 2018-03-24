@@ -207,7 +207,7 @@ Body: TD
 ## A3 Read property
 The application servient sends a request to read the value of the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
 
-![images](images/seq_getproperty.png)
+![images](images/seq_readproperty.png)
 
 *Example: using HTTP*
 
@@ -238,7 +238,7 @@ Body: 25(value)<BR>
 ## A4 Write property
 The application servient sends a request to write the value to the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
 
-![images](images/seq_setproperty.png)
+![images](images/seq_writeproperty.png)
 
 *Example: using HTTP*
 
@@ -253,8 +253,9 @@ The remote proxy puts the URL for the property from TD of the device servient re
 (32) HTTP PUT http://glps.example.com/Things/deviceName/Property/status<BR>
 Body: ON<BR>
 
-## A5 Subscribe and Event
-The application servient sends a request to subscribe the property of the device servient to the remote proxy servient. The device servient keep to send the value of the specified property periodically.
+## A5 Subscribe and Event with Server Sent Event method
+The application servient can obtain the change or the current status of the device servient via proxy servient using subscription procedures. The application servient sends a request to subscribe the property of the device servient via the remote and local proxy servient. The device servient keep to send the value of the specified property periodically.
+Diagram A5 and A6 show the sequence diagarms for Subcribtion, Event handling, and Unsubscription for stopping event handling with using Server Sent Event method. 
 
 ![images](images/seq_subscribe.png)
 
@@ -275,7 +276,7 @@ The local proxy gets the URL for this event from TD of the device servient regis
 (43) HTTP POST http://192.169.1.2/Things/deviceName/Event/change<BR>
 Body: none<BR>
 
-The device servient sends a notify to the application via the local and remote proxy servient with Server Sent Events specified by W3C.  The device responses “200 OK” with a header “Context-Type: text/event-stream”.
+The device servient sends a notify to the application via the local and remote proxy servient with Server Sent Events specified by W3C.  The device inserts the header of "Context-Type: text / event-stream" and responds with "200 OK".
 
 (44)-(46) 200 OK<BR>
 Context-Type:text/event-stream<BR>
@@ -286,7 +287,7 @@ If this subscription succeeded, the events keep to be notified to the applicatio
 (47)-(49) <BR>
 Body: data:25(value)<BR>
 
-## A6 Unsubscribe
+## A6 Unsubscribe with Server Sent Event method
 The application servient sends a request to unsubscribe to the remote proxy servient to stop to notify the event from the device servient.
 
 ![images](images/seq_unsubscribe.png)
@@ -312,6 +313,39 @@ The device servient stops sending event and returns the response with “200 OK�
 
 (54)-(56) 200 OK<BR>
 Body: none<BR>
+
+### A7 Subbscribe and Event with Long Polliing method
+Diagram A7 shows another implmentation for event handling with the Long Polling method.
+The application servient sends a request to subscribe the property of the device servient to the remote proxy servient. The device servient keep to send the value of the specified property periodically or when some events happen until the application unsubscribes.
+
+
+![images](images/seq_subscribe_longpolling.png)
+
+*Example: using HTTP*
+
+The application subscribes an event of the device servient to be notified. The application gets URI for this event and send a request to the remote proxy servient.
+
+(41) HTTP GET http://rps.example.com/lps1/Things/deviceName/Poll/eventName
+Body: none
+
+The remote proxy gets the URI for the event from TD of the device servient registered in the repository.
+
+(42) HTTP GET http://lps.example.com/Things/deviceName/Poll/eventName
+Body: none
+
+The local proxy gets the URI for this event from TD of the device servient registered in the repository.
+
+(43) HTTP GET http://device.example.com/poll/device/changed
+Body: none
+
+The device servient doesn’t send a response immediately and keep this connection until an event happens. When the value of the property is changed, the device servient sends an event notification to the application via the local and remote proxy servient with Long Polling method. The device responses “200 OK” with a value.
+
+(44)-(46) 200 OK
+Body: value
+
+This flow of step from (41) to (46) will be repeated during the application sending requests.
+In this case, “Unsubscribe” message dose not exist. If the application servient stop the subscription, it stop to send the request (47).
+
 
 ### A7 Unregister
 The device servient unregister from the local proxy servient before shutdown. The local proxy servient unregister this device servient from the remote proxy not to access from the application.
