@@ -240,7 +240,11 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
 - Security Consideration
   - JSON Web Token (JWT) is needed, when you access to Panasonic servient.
 
-# 4 Schedule
+# 4 Tools
+
+The [Thingweb project](https://github.com/thingweb/) provides various tools to view TDs (WebUI), test them (Thingweb playground) and register and discover them (Thingweb Directory). See [plugfest.thingweb.io](http://plugfest.thingweb.io/) for more details.
+
+# 5 Schedule
 
 Sat 24.3.18:  9:00-18:00  
 Sun 25.3.18:  9:00-18:00  
@@ -248,7 +252,7 @@ Sun 25.3.18:  9:00-18:00
 Venue: Oracle Czechia Office
 U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 
-# 5 Requirements for PlugFest Setting
+# 6 Requirements for PlugFest Setting
 
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
