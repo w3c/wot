@@ -4,9 +4,7 @@
 
 # 2. Servients
 
-## 2.1 4-layered Servients
-
-## 2.2 Servients and Protocols
+## 2.1 Servients and Protocols
 
 <table>
 	<tbody>
@@ -49,33 +47,42 @@
 	</tbody>
 </table>
 
-### 2.2.1 Application Servients
+### 2.2 Application Servients
 
-- Application servient
-- SPARQL endpoint
+#### Application servient (basic scenarii): http://192.168.1.108/
+-  Consume TD: http://192.168.1.108/discover
+-  Run scenario 1-2-3: http://192.168.1.108/scenario1 (change last char)
+#### SPARQL endpoint
+- http://192.168.1.108/query
 
-### 2.2.2 Remote Proxy Servients
+### 2.3 Device Servients
 
-### 2.2.3 Local Proxy Servients
-
-### 2.2.4 Device Servients
-
-- BMW X5 (simulated)
-- BMW S7 (simulated)
+#### BMW X5 (simulated): http://192.168.1.122 (local) and http://18.195.11.116 (remote)
+- TD: http://192.168.1.122/v2/north/wot/td
+- example (gear position property) : http://192.168.1.122/v2/north/sensor/gearPosition
+- example (turnon left headlight action) :  http://192.168.1.122/v2/north/actuator/left-headlight/turnon - payload:{"turnon":"true"}
+#### BMW S7 (simulated): http://192.168.1.222 (/td /consumetd)
+- TD: http://192.168.1.222/td
+- consumed TD: http://192.168.1.222/consumetd
+- example (speed property) : http://192.168.1.222/wot/bk/property/speed
+- example (activate DSC action) : http://192.168.1.222/wot/bk/action/activate-ESC
 
 # 3 Plugfest scenarios
 
 ## Automotive use cases:
-- Check ifa door is open or a belt unbuckled while the vehicle is moving
+- Check if door is open or a belt unbuckled while the vehicle is moving
 - Activate the DSC if the temperature is below 0°C, desacitive it if it is above
 - Define new destination coordinates for stopping when the fuel range or tire pressure are critical.
 
 ## Semantic queries
+- in the application servient: /query opens a SPARL endpoint for querying a TD. You specify the URI of the TD and the query.
 
-# 4 Schedule
+# 4 Implementation guidelines
 
-# 5 Requirements for PlugFest Setting
+## Properties:
+- Read: HTTP GET over the href of the property
+- Write: HTTP POST over the href of the property with {[value]} as payload
 
-# 6 Changes from previous PlugFest in Burlingame
-
-# 7 Implementation guidelines
+## Actions:
+- S7: HTTP GET over the href of the Action
+- X5: HTTP POST over the href of the Action with payload
