@@ -108,6 +108,28 @@
         }]
       },
       {
+        "@type": ["Property", "iot:HeadLightStatus"],
+        "name": "left-headlight",
+        "schema": {"type":"String"},
+        "writable": false,
+        "observable": true,
+        "form": [{
+          "href": "actuator/left-headlight/status",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:HeadLightStatus"],
+        "name": "right-headlight",
+        "schema": {"type":"String"},
+        "writable": false,
+        "observable": true,
+        "form": [{
+          "href": "actuator/left-headlight/status",
+          "mediaType": "application/json"
+        }]
+      },
+      {
         "@type": ["Action", "iot:ChangeStatus"],
         "name": "left-headlight",
         "schema": {"type":"boolean"},
