@@ -36,6 +36,7 @@
             "form": [
                 {
                     "href": "http://192.168.1.19:8080/EventSource/events/onchange",
+                    "subProtocol": "LongPoll",
                     "mediaType": "application/json"
                 }
             ]
