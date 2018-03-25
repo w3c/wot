@@ -1,0 +1,198 @@
+{
+
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld"
+    ],
+    "@type": [
+        "Thing"
+    ],
+    "name": "unicorn",
+    "security": [
+        {
+            "description": "node-wot development Servient, no security"
+        }
+    ],
+    "interaction": [
+        {
+            "name": "brightness",
+            "@type": [
+                "Property"
+            ],
+            "schema": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+            },
+            "writable": true,
+            "observable": false,
+            "form": [
+                {
+                    "href": "http://192.168.1.23:8080/unicorn/properties/brightness",
+                    "mediaType": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.23:5683/unicorn/properties/brightness",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "color",
+            "@type": [
+                "Property"
+            ],
+            "schema": {
+                "type": "object",
+                "field": [
+                    {
+                        "name": "r",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        }
+                    },
+                    {
+                        "name": "g",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        }
+                    },
+                    {
+                        "name": "b",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        }
+                    }
+                ]
+            },
+            "writable": true,
+            "observable": false,
+            "form": [
+                {
+                    "href": "http://192.168.1.23:8080/unicorn/properties/color",
+                    "mediaType": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.23:5683/unicorn/properties/color",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "gradient",
+            "@type": [
+                "Action"
+            ],
+            "inputSchema": {
+                "type": "array",
+                "item": {
+                    "type": "object",
+                    "field": [
+                        {
+                            "name": "r",
+                            "schema": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 255
+                            }
+                        },
+                        {
+                            "name": "g",
+                            "schema": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 255
+                            }
+                        },
+                        {
+                            "name": "b",
+                            "schema": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 255
+                            }
+                        }
+                    ]
+                },
+                "minItems": 2
+            },
+            "form": [
+                {
+                    "href": "http://192.168.1.23:8080/unicorn/actions/gradient",
+                    "mediaType": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.23:5683/unicorn/actions/gradient",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "forceColor",
+            "@type": [
+                "Action"
+            ],
+            "inputSchema": {
+                "type": "object",
+                "field": [
+                    {
+                        "name": "r",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        }
+                    },
+                    {
+                        "name": "g",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        }
+                    },
+                    {
+                        "name": "b",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        }
+                    }
+                ]
+            },
+            "form": [
+                {
+                    "href": "http://192.168.1.23:8080/unicorn/actions/forceColor",
+                    "mediaType": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.23:5683/unicorn/actions/forceColor",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "cancel",
+            "@type": [
+                "Action"
+            ],
+            "form": [
+                {
+                    "href": "http://192.168.1.23:8080/unicorn/actions/cancel",
+                    "mediaType": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.23:5683/unicorn/actions/cancel",
+                    "mediaType": "application/json"
+                }
+            ]
+        }
+    ]
+
+}
