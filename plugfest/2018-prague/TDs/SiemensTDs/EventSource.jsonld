@@ -20,7 +20,7 @@
             ],
             "form": [
                 {
-                    "href": "http://192.168.1.19:8080/EventSource/actions/reset",
+                    "href": "http://192.168.1.21:8080/EventSource/actions/reset",
                     "mediaType": "application/json"
                 }
             ]
@@ -35,7 +35,7 @@
             },
             "form": [
                 {
-                    "href": "http://192.168.1.19:8080/EventSource/events/onchange",
+                    "href": "http://192.168.1.21:8080/EventSource/events/onchange",
                     "subProtocol": "LongPoll",
                     "mediaType": "application/json"
                 }
