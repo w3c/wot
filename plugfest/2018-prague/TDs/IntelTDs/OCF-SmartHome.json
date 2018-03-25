@@ -11,16 +11,268 @@
       "base":"http://192.168.1.102:8000/api/oic",
       "@type":[
          "Thing",
+         "Motion",
+         "iot:MotionControl",
+         "iot:Sensor"
+      ],
+      "name":"Intel-OCF-Smart Home Motion (1)",
+      "@id":"urn:uuid:5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+      "interaction":[
+         {
+            "name":"motion",
+            "@type":[
+               "Property",
+               "Occupancy",
+               "iot:MotionDetected"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:StateData"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@context":[
+         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+         {
+            "iot":"http://iotschema.org/",
+            "http":"http://www.w3.org/2011/http/"
+         }
+      ],
+      "base":"http://192.168.1.102:8000/api/oic",
+      "@type":[
+         "Thing",
+         "Switch",
+         "iot:Sensor",
+         "iot:BinarySwitch"
+      ],
+      "name":"Intel-OCF-Smart Home Button (1touch)",
+      "@id":"urn:uuid:3932ae08-31b4-4882-b299-5d488ec8775c",
+      "interaction":[
+         {
+            "name":"status",
+            "@type":[
+               "Property",
+               "OnOffState",
+               "iot:SwitchStatus"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@context":[
+         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+         {
+            "iot":"http://iotschema.org/",
+            "http":"http://www.w3.org/2011/http/"
+         }
+      ],
+      "base":"http://192.168.1.102:8000/api/oic",
+      "@type":[
+         "Thing",
+         "Temperature",
+         "iot:TemperatureSensing",
+         "iot:Sensor"
+      ],
+      "name":"Intel-OCF-Smart Home Temperature (1)",
+      "@id":"urn:uuid:598859c7-afd6-4bc9-a7ec-7f4c6e74454d",
+      "interaction":[
+         {
+            "name":"temperature",
+            "@type":[
+               "Property",
+               "MultiLevelState",
+               "iot:Temperature"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/temperature1?di=598859c7-afd6-4bc9-a7ec-7f4c6e74454d",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/temperature1?di=598859c7-afd6-4bc9-a7ec-7f4c6e74454d",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:TemperatureData"
+                     ],
+                     "schema":{
+                        "type":"number"
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@context":[
+         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+         {
+            "iot":"http://iotschema.org/",
+            "http":"http://www.w3.org/2011/http/"
+         }
+      ],
+      "base":"http://192.168.1.102:8000/api/oic",
+      "@type":[
+         "Thing",
+         "Switch",
+         "iot:Sensor",
+         "iot:BinarySwitch"
+      ],
+      "name":"Intel-OCF-Smart Home Toggle (1)",
+      "@id":"urn:uuid:f057c263-58db-4cb1-9470-bba9344e1ba8",
+      "interaction":[
+         {
+            "name":"status",
+            "@type":[
+               "Property",
+               "OnOffState",
+               "iot:SwitchStatus"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@context":[
+         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+         {
+            "iot":"http://iotschema.org/",
+            "http":"http://www.w3.org/2011/http/"
+         }
+      ],
+      "base":"http://192.168.1.102:8000/api/oic",
+      "@type":[
+         "Thing",
          "Light",
          "iot:LightControl",
          "iot:Actuator",
          "iot:BinarySwitch"
       ],
-      "name":"Intel-OCF-Smart Home LED (1mosfet)",
+      "name":"Intel-OCF-336db92b-45f6-496b-997c-e196ba7b49fd",
       "@id":"urn:uuid:336db92b-45f6-496b-997c-e196ba7b49fd",
       "interaction":[
          {
-            "name":"Switch Status",
+            "name":"status",
             "@type":[
                "Property",
                "OnOffState",
@@ -62,7 +314,7 @@
             }
          },
          {
-            "name":"Turn On",
+            "name":"on",
             "@type":[
                "Action",
                "OnCommand",
@@ -104,7 +356,7 @@
             }
          },
          {
-            "name":"Turn Off",
+            "name":"off",
             "@type":[
                "Action",
                "OffCommand",
@@ -160,14 +412,162 @@
       "@type":[
          "Thing",
          "Light",
+         "iot:LightControl",
+         "iot:Actuator",
+         "iot:BinarySwitch"
+      ],
+      "name":"Intel-OCF-5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+      "@id":"urn:uuid:5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+      "interaction":[
+         {
+            "name":"status",
+            "@type":[
+               "Property",
+               "OnOffState",
+               "iot:SwitchStatus"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         },
+         {
+            "name":"on",
+            "@type":[
+               "Action",
+               "OnCommand",
+               "iot:TurnOn"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         },
+         {
+            "name":"off",
+            "@type":[
+               "Action",
+               "OffCommand",
+               "iot:TurnOff"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@context":[
+         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+         {
+            "iot":"http://iotschema.org/",
+            "http":"http://www.w3.org/2011/http/"
+         }
+      ],
+      "base":"http://192.168.1.102:8000/api/oic",
+      "@type":[
+         "Thing",
+         "Light",
          "iot:Light",
          "iot:Actuator"
       ],
-      "name":"Intel-OCF-Smart Home RGB LED (1)",
+      "name":"Intel-OCF-6a0f7806-335e-4c84-a4a4-c223a62ef754",
       "@id":"urn:uuid:6a0f7806-335e-4c84-a4a4-c223a62ef754",
       "interaction":[
          {
-            "name":"Light Colour",
+            "name":"colour",
             "@type":[
                "Property",
                "iot:CurrentColour"
@@ -238,24 +638,25 @@
       "base":"http://192.168.1.102:8000/api/oic",
       "@type":[
          "Thing",
-         "Temperature",
-         "iot:TemperatureSensing",
-         "iot:Sensor"
+         "Light",
+         "iot:LightControl",
+         "iot:Actuator",
+         "iot:BinarySwitch"
       ],
-      "name":"Intel-OCF-Smart Home Temperature (1)",
-      "@id":"urn:uuid:598859c7-afd6-4bc9-a7ec-7f4c6e74454d",
+      "name":"Intel-OCF-8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+      "@id":"urn:uuid:8c2c6907-ed4a-4527-8f23-57df6999b8aa",
       "interaction":[
          {
-            "name":"Temperature",
+            "name":"status",
             "@type":[
                "Property",
-               "MultiLevelState",
-               "iot:Temperature"
+               "OnOffState",
+               "iot:SwitchStatus"
             ],
             "form":[
                [
                   {
-                     "href":"/a/temperature1?di=598859c7-afd6-4bc9-a7ec-7f4c6e74454d",
+                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -263,7 +664,7 @@
                      ]
                   },
                   {
-                     "href":"/a/temperature1?di=598859c7-afd6-4bc9-a7ec-7f4c6e74454d",
+                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -278,10 +679,94 @@
                   {
                      "name":"value",
                      "@type":[
-                        "iot:TemperatureData"
+                        "iot:Toggle"
                      ],
                      "schema":{
-                        "type":"number"
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         },
+         {
+            "name":"on",
+            "@type":[
+               "Action",
+               "OnCommand",
+               "iot:TurnOn"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         },
+         {
+            "name":"off",
+            "@type":[
+               "Action",
+               "OffCommand",
+               "iot:TurnOff"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
                      }
                   }
                ]
@@ -306,11 +791,11 @@
          "iot:Actuator",
          "iot:BinarySwitch"
       ],
-      "name":"Intel-OCF-Smart Home LED (1relay)",
-      "@id":"urn:uuid:5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+      "name":"Intel-OCF-397a9167-88bc-4b52-844a-dade5b772c30",
+      "@id":"urn:uuid:397a9167-88bc-4b52-844a-dade5b772c30",
       "interaction":[
          {
-            "name":"Switch Status",
+            "name":"status",
             "@type":[
                "Property",
                "OnOffState",
@@ -319,7 +804,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -327,7 +812,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -352,7 +837,7 @@
             }
          },
          {
-            "name":"Turn On",
+            "name":"on",
             "@type":[
                "Action",
                "OnCommand",
@@ -361,7 +846,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -369,7 +854,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -394,7 +879,7 @@
             }
          },
          {
-            "name":"Turn Off",
+            "name":"off",
             "@type":[
                "Action",
                "OffCommand",
@@ -403,7 +888,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -411,7 +896,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -468,520 +953,15 @@
       "base":"http://192.168.1.102:8000/api/oic",
       "@type":[
          "Thing",
-         "Light",
-         "iot:LightControl",
-         "iot:Actuator",
-         "iot:BinarySwitch"
-      ],
-      "name":"Intel-OCF-Smart Home LED (0green)",
-      "@id":"urn:uuid:6573313c-da1e-4068-beb1-884b0c4c3c5d",
-      "interaction":[
-         {
-            "name":"Switch Status",
-            "@type":[
-               "Property",
-               "OnOffState",
-               "iot:SwitchStatus"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         },
-         {
-            "name":"Turn On",
-            "@type":[
-               "Action",
-               "OnCommand",
-               "iot:TurnOn"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         },
-         {
-            "name":"Turn Off",
-            "@type":[
-               "Action",
-               "OffCommand",
-               "iot:TurnOff"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         }
-      ]
-   },
-   {
-      "@context":[
-         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-         {
-            "iot":"http://iotschema.org/",
-            "http":"http://www.w3.org/2011/http/"
-         }
-      ],
-      "base":"http://192.168.1.102:8000/api/oic",
-      "@type":[
-         "Thing",
-         "iot:Actuator",
-         "iot:BinarySwitch"
-      ],
-      "name":"Intel-OCF-Smart Home Buzzer (0)",
-      "@id":"urn:uuid:893e9dbb-a298-4123-a041-80f386115958",
-      "interaction":[
-         {
-            "name":"Switch Status",
-            "@type":[
-               "Property",
-               "OnOffState",
-               "iot:SwitchStatus"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         },
-         {
-            "name":"Turn On",
-            "@type":[
-               "Action",
-               "OnCommand",
-               "iot:TurnOn"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         },
-         {
-            "name":"Turn Off",
-            "@type":[
-               "Action",
-               "OffCommand",
-               "iot:TurnOff"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         }
-      ]
-   },
-   {
-      "@context":[
-         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-         {
-            "iot":"http://iotschema.org/",
-            "http":"http://www.w3.org/2011/http/"
-         }
-      ],
-      "base":"http://192.168.1.102:8000/api/oic",
-      "@type":[
-         "Thing",
-         "Light",
-         "iot:LightControl",
-         "iot:Actuator",
-         "iot:BinarySwitch"
-      ],
-      "name":"Intel-OCF-Smart Home LED (0mosfet)",
-      "@id":"urn:uuid:ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-      "interaction":[
-         {
-            "name":"Switch Status",
-            "@type":[
-               "Property",
-               "OnOffState",
-               "iot:SwitchStatus"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         },
-         {
-            "name":"Turn On",
-            "@type":[
-               "Action",
-               "OnCommand",
-               "iot:TurnOn"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         },
-         {
-            "name":"Turn Off",
-            "@type":[
-               "Action",
-               "OffCommand",
-               "iot:TurnOff"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         }
-      ]
-   },
-   {
-      "@context":[
-         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-         {
-            "iot":"http://iotschema.org/",
-            "http":"http://www.w3.org/2011/http/"
-         }
-      ],
-      "base":"http://192.168.1.102:8000/api/oic",
-      "@type":[
-         "Thing",
-         "Switch",
-         "iot:Sensor",
-         "iot:BinarySwitch"
-      ],
-      "name":"Intel-OCF-Smart Home Toggle (0)",
-      "@id":"urn:uuid:4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
-      "interaction":[
-         {
-            "name":"Switch Status",
-            "@type":[
-               "Property",
-               "OnOffState",
-               "iot:SwitchStatus"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         }
-      ]
-   },
-   {
-      "@context":[
-         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-         {
-            "iot":"http://iotschema.org/",
-            "http":"http://www.w3.org/2011/http/"
-         }
-      ],
-      "base":"http://192.168.1.102:8000/api/oic",
-      "@type":[
-         "Thing",
          "Meter",
          "iot:IlluminanceSensing",
          "iot:Sensor"
       ],
-      "name":"Intel-OCF-Smart Home Illuminance (0)",
+      "name":"Intel-OCF-3255959d-741c-4b2b-81c2-42a4caa2223e",
       "@id":"urn:uuid:3255959d-741c-4b2b-81c2-42a4caa2223e",
       "interaction":[
          {
-            "name":"Illuminance",
+            "name":"illuminance",
             "@type":[
                "Property",
                "MultiLevelState",
@@ -1036,78 +1016,15 @@
       "base":"http://192.168.1.102:8000/api/oic",
       "@type":[
          "Thing",
-         "Motion",
-         "iot:MotionControl",
-         "iot:Sensor"
-      ],
-      "name":"Intel-OCF-Smart Home Motion (1)",
-      "@id":"urn:uuid:5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-      "interaction":[
-         {
-            "name":"Motion Detected",
-            "@type":[
-               "Property",
-               "Occupancy",
-               "iot:MotionDetected"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:StateData"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         }
-      ]
-   },
-   {
-      "@context":[
-         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-         {
-            "iot":"http://iotschema.org/",
-            "http":"http://www.w3.org/2011/http/"
-         }
-      ],
-      "base":"http://192.168.1.102:8000/api/oic",
-      "@type":[
-         "Thing",
          "Switch",
          "iot:Sensor",
          "iot:BinarySwitch"
       ],
-      "name":"Intel-OCF-Smart Home Toggle (1)",
-      "@id":"urn:uuid:f057c263-58db-4cb1-9470-bba9344e1ba8",
+      "name":"Intel-OCF-4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
+      "@id":"urn:uuid:4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
       "interaction":[
          {
-            "name":"Switch Status",
+            "name":"status",
             "@type":[
                "Property",
                "OnOffState",
@@ -1116,7 +1033,7 @@
             "form":[
                [
                   {
-                     "href":"/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+                     "href":"/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1124,7 +1041,7 @@
                      ]
                   },
                   {
-                     "href":"/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+                     "href":"/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1167,11 +1084,11 @@
          "iot:Actuator",
          "iot:BinarySwitch"
       ],
-      "name":"Intel-OCF-Smart Home LED (1red)",
-      "@id":"urn:uuid:8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+      "name":"Intel-OCF-6573313c-da1e-4068-beb1-884b0c4c3c5d",
+      "@id":"urn:uuid:6573313c-da1e-4068-beb1-884b0c4c3c5d",
       "interaction":[
          {
-            "name":"Switch Status",
+            "name":"status",
             "@type":[
                "Property",
                "OnOffState",
@@ -1180,7 +1097,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1188,7 +1105,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1213,7 +1130,7 @@
             }
          },
          {
-            "name":"Turn On",
+            "name":"on",
             "@type":[
                "Action",
                "OnCommand",
@@ -1222,7 +1139,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1230,7 +1147,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1255,7 +1172,7 @@
             }
          },
          {
-            "name":"Turn Off",
+            "name":"off",
             "@type":[
                "Action",
                "OffCommand",
@@ -1264,7 +1181,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1272,70 +1189,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
-                     "mediaType":"application/json",
-                     "http:methodName":"POST",
-                     "rel":[
-                        "writeProperty"
-                     ]
-                  }
-               ]
-            ],
-            "schema":{
-               "type":"object",
-               "field":[
-                  {
-                     "name":"value",
-                     "@type":[
-                        "iot:Toggle"
-                     ],
-                     "schema":{
-                        "type":"boolean"
-                     }
-                  }
-               ]
-            }
-         }
-      ]
-   },
-   {
-      "@context":[
-         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-         {
-            "iot":"http://iotschema.org/",
-            "http":"http://www.w3.org/2011/http/"
-         }
-      ],
-      "base":"http://192.168.1.102:8000/api/oic",
-      "@type":[
-         "Thing",
-         "Switch",
-         "iot:Sensor",
-         "iot:BinarySwitch"
-      ],
-      "name":"Intel-OCF-Smart Home Button (1touch)",
-      "@id":"urn:uuid:3932ae08-31b4-4882-b299-5d488ec8775c",
-      "interaction":[
-         {
-            "name":"Switch Status",
-            "@type":[
-               "Property",
-               "OnOffState",
-               "iot:SwitchStatus"
-            ],
-            "form":[
-               [
-                  {
-                     "href":"/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
-                     "mediaType":"application/json",
-                     "http:methodName":"GET",
-                     "rel":[
-                        "readProperty"
-                     ]
-                  },
-                  {
-                     "href":"/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+                     "href":"/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1378,11 +1232,11 @@
          "iot:Actuator",
          "iot:BinarySwitch"
       ],
-      "name":"Intel-OCF-Smart Home LED (0red)",
-      "@id":"urn:uuid:c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+      "name":"Intel-OCF-ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
+      "@id":"urn:uuid:ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
       "interaction":[
          {
-            "name":"Switch Status",
+            "name":"status",
             "@type":[
                "Property",
                "OnOffState",
@@ -1391,7 +1245,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1399,7 +1253,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1424,7 +1278,7 @@
             }
          },
          {
-            "name":"Turn On",
+            "name":"on",
             "@type":[
                "Action",
                "OnCommand",
@@ -1433,7 +1287,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1441,7 +1295,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1466,7 +1320,7 @@
             }
          },
          {
-            "name":"Turn Off",
+            "name":"off",
             "@type":[
                "Action",
                "OffCommand",
@@ -1475,7 +1329,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1483,7 +1337,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "href":"/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1521,16 +1375,14 @@
       "base":"http://192.168.1.102:8000/api/oic",
       "@type":[
          "Thing",
-         "Light",
-         "iot:LightControl",
          "iot:Actuator",
          "iot:BinarySwitch"
       ],
-      "name":"Intel-OCF-Smart Home LED (0blue)",
-      "@id":"urn:uuid:397a9167-88bc-4b52-844a-dade5b772c30",
+      "name":"Intel-OCF-893e9dbb-a298-4123-a041-80f386115958",
+      "@id":"urn:uuid:893e9dbb-a298-4123-a041-80f386115958",
       "interaction":[
          {
-            "name":"Switch Status",
+            "name":"status",
             "@type":[
                "Property",
                "OnOffState",
@@ -1539,7 +1391,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1547,7 +1399,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1572,7 +1424,7 @@
             }
          },
          {
-            "name":"Turn On",
+            "name":"on",
             "@type":[
                "Action",
                "OnCommand",
@@ -1581,7 +1433,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1589,7 +1441,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1614,7 +1466,7 @@
             }
          },
          {
-            "name":"Turn Off",
+            "name":"off",
             "@type":[
                "Action",
                "OffCommand",
@@ -1623,7 +1475,7 @@
             "form":[
                [
                   {
-                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
                      "mediaType":"application/json",
                      "http:methodName":"GET",
                      "rel":[
@@ -1631,7 +1483,7 @@
                      ]
                   },
                   {
-                     "href":"/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+                     "href":"/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
                      "mediaType":"application/json",
                      "http:methodName":"POST",
                      "rel":[
@@ -1673,11 +1525,11 @@
          "iot:MotionControl",
          "iot:Sensor"
       ],
-      "name":"Intel-OCF-Smart Home Motion (0)",
+      "name":"Intel-OCF-0800f07a-178d-48ec-9ddf-d8a941071298",
       "@id":"urn:uuid:0800f07a-178d-48ec-9ddf-d8a941071298",
       "interaction":[
          {
-            "name":"Motion Detected",
+            "name":"motion",
             "@type":[
                "Property",
                "Occupancy",
@@ -1710,6 +1562,154 @@
                      "name":"value",
                      "@type":[
                         "iot:StateData"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   {
+      "@context":[
+         "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+         "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+         {
+            "iot":"http://iotschema.org/",
+            "http":"http://www.w3.org/2011/http/"
+         }
+      ],
+      "base":"http://192.168.1.102:8000/api/oic",
+      "@type":[
+         "Thing",
+         "Light",
+         "iot:LightControl",
+         "iot:Actuator",
+         "iot:BinarySwitch"
+      ],
+      "name":"Intel-OCF-c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+      "@id":"urn:uuid:c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+      "interaction":[
+         {
+            "name":"status",
+            "@type":[
+               "Property",
+               "OnOffState",
+               "iot:SwitchStatus"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         },
+         {
+            "name":"on",
+            "@type":[
+               "Action",
+               "OnCommand",
+               "iot:TurnOn"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
+                     ],
+                     "schema":{
+                        "type":"boolean"
+                     }
+                  }
+               ]
+            }
+         },
+         {
+            "name":"off",
+            "@type":[
+               "Action",
+               "OffCommand",
+               "iot:TurnOff"
+            ],
+            "form":[
+               [
+                  {
+                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "mediaType":"application/json",
+                     "http:methodName":"GET",
+                     "rel":[
+                        "readProperty"
+                     ]
+                  },
+                  {
+                     "href":"/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+                     "mediaType":"application/json",
+                     "http:methodName":"POST",
+                     "rel":[
+                        "writeProperty"
+                     ]
+                  }
+               ]
+            ],
+            "schema":{
+               "type":"object",
+               "field":[
+                  {
+                     "name":"value",
+                     "@type":[
+                        "iot:Toggle"
                      ],
                      "schema":{
                         "type":"boolean"
@@ -1736,11 +1736,11 @@
          "iot:TemperatureSensing",
          "iot:Sensor"
       ],
-      "name":"Intel-OCF-Smart Home Temperature (0)",
+      "name":"Intel-OCF-f2305852-4f82-47ce-871d-a0af237932c1",
       "@id":"urn:uuid:f2305852-4f82-47ce-871d-a0af237932c1",
       "interaction":[
          {
-            "name":"Temperature",
+            "name":"temperature",
             "@type":[
                "Property",
                "MultiLevelState",
