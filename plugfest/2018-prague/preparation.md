@@ -30,6 +30,22 @@ This is the smarthome application that the application on the smartphone can con
 
 # 2. Servients
 
+All servients should register their TDs to a central Thing Directory for discovery purposes.
+Thingweb's Directory should be used for this purpose. To register a TD, send:
+```
+POST http://plugfest.thingweb.io:8081/td
+Content-Type: application/ld+json
+Body: {... your TD ...}
+```
+
+to which the server should reply with the location of the created resource for your TD (`http://plugfest.thingweb.io:8081/td/{your-handle}`):
+```
+201 Created
+Location: /td/{your-handle}
+```
+
+A GUI is also available at http://plugfest.thingweb.io:8081/ to manually register TDs (_no error reporting yet_).
+
 ## 2.1 4-layered Servients
 
 3 types of WoT Servients was derived from the use case described in 1.2. These are defined below:  
@@ -179,7 +195,7 @@ Fujitsu:
 
 ### 2.4.4 Device Servients
 
-Panasonic:
+#### Panasonic
  - [LED light](TDs/PanasonicTDs/huegroup-p1.jsonld): on/off, RGB properties (Remote/Internet/HTTPS)
  - [Air conditioner home](TDs/PanasonicTDs/air-conditioner-p1.jsonld): on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
  - [Air conditioner car](TDs/PanasonicTDs/electric-bulletin-board-p2.jsonld): on/off, number properties (Remote/Internet/HTTPS)
@@ -191,6 +207,9 @@ Panasonic:
 
 (Note: Panasonic Remote Servients requires JSON Web Token. Also actual URL is hidden. Please contact)
 
+#### Siemens
+ - [FestoLive](https://raw.githubusercontent.com/w3c/wot/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld): PumpStatus, ValveStatus, Tank102LevelValue, Tank102OverflowStatus, Tank101MaximumLevelStatus, Tank101MinimumLevelStatus, Tank101OverflowStatus (Remote/Internet/HTTPS(+Webhook))
+ - [EventSource](https://raw.githubusercontent.com/w3c/wot/master/plugfest/2018-prague/TDs/SiemensTDs/EventSource.jsonld): reset, onchange (Local/WLAN/HTTP or [self-hosted](https://github.com/thingweb/node-wot/blob/master/examples/scripts/example-event.js))
 
 # 3 Plugfest scenarios
 
@@ -240,7 +259,11 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
 - Security Consideration
   - JSON Web Token (JWT) is needed, when you access to Panasonic servient.
 
-# 4 Schedule
+# 4 Tools
+
+The [Thingweb project](https://github.com/thingweb/) provides various tools to view TDs (WebUI), test them (Thingweb playground) and register and discover them (Thingweb Directory). See [plugfest.thingweb.io](http://plugfest.thingweb.io/) for more details.
+
+# 5 Schedule
 
 Sat 24.3.18:  9:00-18:00  
 Sun 25.3.18:  9:00-18:00  
@@ -248,7 +271,7 @@ Sun 25.3.18:  9:00-18:00
 Venue: Oracle Czechia Office
 U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 
-# 5 Requirements for PlugFest Setting
+# 6 Requirements for PlugFest Setting
 
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
@@ -276,6 +299,15 @@ Notes:
 * "name" field of Thing Description shall be unique among the things which will be registered to Fujitsu Proxy.  
   Recommended convention is 'Company name'+'Thing name'  
   e.g.) "name": "PanasonicAirConditionerP1"
+  
+  
+# 8 Setup for the plugfest
+
+Fujitsu's local proxy serviernt address:
+
+Local proxy:  IP address=192.168.1.99,   port=18081
+
+Regarding to the information about our remote procy, please contact to Fujitsu members.
 
 # Appendix A: Sequence diagrams specified in Fujitsu's proxy servients
 
