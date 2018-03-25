@@ -27,11 +27,11 @@
             "observable": false,
             "form": [
                 {
-                    "href": "http://192.168.1.23:8080/unicorn/properties/brightness",
+                    "href": "http://192.168.1.23:8080/Unicorn/properties/brightness",
                     "mediaType": "application/json"
                 },
                 {
-                    "href": "coap://192.168.1.23:5683/unicorn/properties/brightness",
+                    "href": "coap://192.168.1.23:5683/Unicorn/properties/brightness",
                     "mediaType": "application/json"
                 }
             ]
@@ -74,11 +74,11 @@
             "observable": false,
             "form": [
                 {
-                    "href": "http://192.168.1.23:8080/unicorn/properties/color",
+                    "href": "http://192.168.1.23:8080/Unicorn/properties/color",
                     "mediaType": "application/json"
                 },
                 {
-                    "href": "coap://192.168.1.23:5683/unicorn/properties/color",
+                    "href": "coap://192.168.1.23:5683/Unicorn/properties/color",
                     "mediaType": "application/json"
                 }
             ]
@@ -123,11 +123,11 @@
             },
             "form": [
                 {
-                    "href": "http://192.168.1.23:8080/unicorn/actions/gradient",
+                    "href": "http://192.168.1.23:8080/Unicorn/actions/gradient",
                     "mediaType": "application/json"
                 },
                 {
-                    "href": "coap://192.168.1.23:5683/unicorn/actions/gradient",
+                    "href": "coap://192.168.1.23:5683/Unicorn/actions/gradient",
                     "mediaType": "application/json"
                 }
             ]
@@ -168,11 +168,11 @@
             },
             "form": [
                 {
-                    "href": "http://192.168.1.23:8080/unicorn/actions/forceColor",
+                    "href": "http://192.168.1.23:8080/Unicorn/actions/forceColor",
                     "mediaType": "application/json"
                 },
                 {
-                    "href": "coap://192.168.1.23:5683/unicorn/actions/forceColor",
+                    "href": "coap://192.168.1.23:5683/Unicorn/actions/forceColor",
                     "mediaType": "application/json"
                 }
             ]
@@ -184,11 +184,11 @@
             ],
             "form": [
                 {
-                    "href": "http://192.168.1.23:8080/unicorn/actions/cancel",
+                    "href": "http://192.168.1.23:8080/Unicorn/actions/cancel",
                     "mediaType": "application/json"
                 },
                 {
-                    "href": "coap://192.168.1.23:5683/unicorn/actions/cancel",
+                    "href": "coap://192.168.1.23:5683/Unicorn/actions/cancel",
                     "mediaType": "application/json"
                 }
             ]
