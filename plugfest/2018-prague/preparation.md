@@ -195,7 +195,7 @@ Fujitsu:
 
 ### 2.4.4 Device Servients
 
-Panasonic:
+#### Panasonic
  - [LED light](TDs/PanasonicTDs/huegroup-p1.jsonld): on/off, RGB properties (Remote/Internet/HTTPS)
  - [Air conditioner home](TDs/PanasonicTDs/air-conditioner-p1.jsonld): on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
  - [Air conditioner car](TDs/PanasonicTDs/electric-bulletin-board-p2.jsonld): on/off, number properties (Remote/Internet/HTTPS)
@@ -207,6 +207,9 @@ Panasonic:
 
 (Note: Panasonic Remote Servients requires JSON Web Token. Also actual URL is hidden. Please contact)
 
+#### Siemens
+ - [FestoLive](https://raw.githubusercontent.com/w3c/wot/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld): PumpStatus, ValveStatus, Tank102LevelValue, Tank102OverflowStatus, Tank101MaximumLevelStatus, Tank101MinimumLevelStatus, Tank101OverflowStatus (Remote/Internet/HTTPS(+Webhook))
+ - [EventSource](https://raw.githubusercontent.com/w3c/wot/master/plugfest/2018-prague/TDs/SiemensTDs/EventSource.jsonld): reset, onchange (Local/WLAN/HTTP or [self-hosted](https://github.com/thingweb/node-wot/blob/master/examples/scripts/example-event.js))
 
 # 3 Plugfest scenarios
 
