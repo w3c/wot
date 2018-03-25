@@ -302,9 +302,9 @@ Notes:
 
 Fujitsu's local proxy serviernt address:
 
-Remote proxy: IP address=210.251.160.19, port=4444
-
 Local proxy:  IP address=192.168.1.99,   port=18081
+
+Regarding to the information about our remote procy, please contact to Fujitsu members.
 
 # Appendix A: Sequence diagrams specified in Fujitsu's proxy servients
 
