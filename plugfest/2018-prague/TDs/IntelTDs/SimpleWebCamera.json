@@ -47,7 +47,7 @@
           "security": "basic-config"
         },
         {
-          "href": "http://upsq.local:8080/api/exposure",
+          "href": "http://upsq.local:8080/api/exposure/observe",
           "rel": ["observeProperty"],
           "http:methodName": "GET",
           "subProtocol": "LongPoll",
@@ -70,21 +70,8 @@
         },
         {
           
-          "href": "http://upsq.local:8080/api/frame",
+          "href": "http://upsq.local:8080/api/frame/observe",
           "rel": ["observeProperty"],
-          "http:methodName": "GET",
-          "subProtocol": "LongPoll"
-        }
-      ]
-    },
-    {
-      "@type": ["Event"],
-      "name": "newframe",
-      "form": [
-        {
-          
-          "href": "http://upsq.local:8080/api/newframe",
-          "rel": ["subscribeEvent"],
           "http:methodName": "GET",
           "subProtocol": "LongPoll"
         }
@@ -130,9 +117,10 @@
       "form": [
         {
           
-          "href": "http://upsq.local:8080/api/crop",
+          "href": "http://upsq.local:8080/api/frame/crop",
           "mediaType": "image/jpeg",
-          "http:methodName": "GET"
+          "rel": ["invokeAction"],
+          "http:methodName": "POST"
         }
       ]
     }

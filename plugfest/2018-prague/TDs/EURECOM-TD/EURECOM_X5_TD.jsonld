@@ -54,6 +54,17 @@
       },
       {
         "@type": ["Property", "iot:CurrentPosition"],
+        "name": "rear-door",
+        "schema": {"type":"string"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "sensor/-door",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Property", "iot:CurrentPosition"],
         "name": "right-rear-door",
         "schema": {"type":"string"},
         "writable": false,
@@ -108,9 +119,20 @@
         }]
       },
       {
+        "@type": ["Property", "iot:CurrentStatus"],
+        "name": "rear-door",
+        "schema": {"type":"string"},
+        "writable": false,
+        "observable": false,
+        "form": [{
+          "href": "actuator/rear-door/status",
+          "mediaType": "application/json"
+        }]
+      },
+      {
         "@type": ["Property", "iot:HeadLightStatus"],
         "name": "left-headlight",
-        "schema": {"type":"String"},
+        "schema": {"type":"string"},
         "writable": false,
         "observable": true,
         "form": [{
@@ -121,7 +143,7 @@
       {
         "@type": ["Property", "iot:HeadLightStatus"],
         "name": "right-headlight",
-        "schema": {"type":"String"},
+        "schema": {"type":"string"},
         "writable": false,
         "observable": true,
         "form": [{
@@ -131,10 +153,59 @@
       },
       {
         "@type": ["Action", "iot:ChangeStatus"],
+        "name": "seat-warmer",
+        "inputSchema": {
+              "type": "object",
+              "field": [
+                {
+                  "name": "turnon",
+                  "schema": {
+                    "type": "string",
+                    "enum": ["true", "false"]
+                  }
+                }
+              ]
+            },
+        "form": [{
+          "href": "actuator/seat-warmer/turnon",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action", "iot:ChangeStatus"],
+        "name": "rear-door",
+        "inputSchema": {
+              "type": "object",
+              "field": [
+                {
+                  "name": "rear_door_open",
+                  "schema": {
+                    "type": "string",
+                    "enum": ["true", "false"]
+                  }
+                }
+              ]
+            },
+        "form": [{
+          "href": "actuator/rear-door/open",
+          "mediaType": "application/json"
+        }]
+      },
+      {
+        "@type": ["Action", "iot:ChangeStatus"],
         "name": "left-headlight",
-        "schema": {"type":"boolean"},
-        "writable": true,
-        "observable": false,
+        "inputSchema": {
+              "type": "object",
+              "field": [
+                {
+                  "name": "turnon",
+                  "schema": {
+                    "type": "string",
+                    "enum": ["true", "false"]
+                  }
+                }
+              ]
+            },
         "form": [{
           "href": "actuator/left-headlight/turnon",
           "mediaType": "application/json"
@@ -143,9 +214,18 @@
       {
         "@type": ["Action", "iot:ChangeStatus"],
         "name": "right-headlight",
-        "schema": {"type":"boolean"},
-        "writable": true,
-        "observable": false,
+        "inputSchema": {
+              "type": "object",
+              "field": [
+                {
+                  "name": "turnon",
+                  "schema": {
+                    "type": "string",
+                    "enum": ["true", "false"]
+                  }
+                }
+              ]
+            },
         "form": [{
           "href": "actuator/left-headlight/turnon",
           "mediaType": "application/json"
