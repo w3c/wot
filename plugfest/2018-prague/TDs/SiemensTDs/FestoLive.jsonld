@@ -17,7 +17,13 @@
             "name": "PumpStatus",
             "@type": ["Property", "iot:OperationStatus"],
             "schema": {
-                "type": "boolean"
+                "type": "object",
+                "field": [
+                    {
+                        "name": "PumpStatus",
+                        "schema": { "type": "boolean" }
+                    }
+                ]
             },
             "writable": false,
             "observable": false,
@@ -34,7 +40,13 @@
                 "Property", "iot:OperationStatus"
             ],
             "schema": {
-                "type": "boolean"
+                "type": "object",
+                "field": [
+                    {
+                        "name": "ValveStatus",
+                        "schema": { "type": "boolean" }
+                    }
+                ]
             },
             "writable": false,
             "observable": false,
@@ -51,7 +63,13 @@
                 "Property", "iot:CurrentLevel"
             ],
             "schema": {
-                "type": "number"
+                "type": "object",
+                "field": [
+                    {
+                        "name": "Tank102LevelValue",
+                        "schema": { "type": "number" }
+                    }
+                ]
             },
             "writable": false,
             "observable": false,
@@ -65,10 +83,16 @@
         {
             "name": "Tank102OverflowStatus",
             "@type": [
-                "Property", "iot:FloatSwitch"
+                "Property", "iot:OverflowStatus"
             ],
             "schema": {
-                "type": "boolean"
+                "type": "object",
+                "field": [
+                    {
+                        "name": "Tank102OverflowStatus",
+                        "schema": { "type": "boolean" }
+                    }
+                ]
             },
             "writable": false,
             "observable": false,
@@ -85,7 +109,13 @@
                 "Property", "iot:OperationStatus"
             ],
             "schema": {
-                "type": "boolean"
+                "type": "object",
+                "field": [
+                    {
+                        "name": "Tank101MaximumLevelStatus",
+                        "schema": { "type": "boolean" }
+                    }
+                ]
             },
             "writable": false,
             "observable": false,
@@ -102,7 +132,13 @@
                 "Property", "iot:OperationStatus"
             ],
             "schema": {
-                "type": "boolean"
+                "type": "object",
+                "field": [
+                    {
+                        "name": "Tank101MinimumLevelStatus",
+                        "schema": { "type": "boolean" }
+                    }
+                ]
             },
             "writable": false,
             "observable": false,
@@ -116,10 +152,16 @@
         {
             "name": "Tank101OverflowStatus",
             "@type": [
-                "Property", "iot:FloatSwitch"
+                "Property", "iot:OverflowStatus"
             ],
             "schema": {
-                "type": "boolean"
+                "type": "object",
+                "field": [
+                    {
+                        "name": "Tank101OverflowStatus",
+                        "schema": { "type": "boolean" }
+                    }
+                ]
             },
             "writable": false,
             "observable": false,
@@ -136,8 +178,16 @@
                 "Action", "iot:TurnOn"
             ],
             "inputSchema": {
-                "type": "boolean",
-                "const": true
+                "type": "object",
+                "field": [
+                    {
+                        "name": "value",
+                        "schema": {
+                            "type": "boolean",
+                            "const": true
+                        }
+                    }
+                ]
             },
             "form": [
                 {
@@ -152,8 +202,16 @@
                 "Action", "iot:TurnOff"
             ],
             "inputSchema": {
-                "type": "boolean",
-                "const": true
+                "type": "object",
+                "field": [
+                    {
+                        "name": "value",
+                        "schema": {
+                            "type": "boolean",
+                            "const": true
+                        }
+                    }
+                ]
             },
             "form": [
                 {
@@ -168,8 +226,16 @@
                 "Action", "iot:TurnOn"
             ],
             "inputSchema": {
-                "type": "boolean",
-                "const": true
+                "type": "object",
+                "field": [
+                    {
+                        "name": "value",
+                        "schema": {
+                            "type": "boolean",
+                            "const": true
+                        }
+                    }
+                ]
             },
             "form": [
                 {
@@ -184,8 +250,16 @@
                 "Action", "iot:TurnOff"
             ],
             "inputSchema": {
-                "type": "boolean",
-                "const": true
+                "type": "object",
+                "field": [
+                    {
+                        "name": "value",
+                        "schema": {
+                            "type": "boolean",
+                            "const": true
+                        }
+                    }
+                ]
             },
             "form": [
                 {
@@ -200,8 +274,16 @@
                 "Action"
             ],
             "inputSchema": {
-                "type": "boolean",
-                "const": true
+                "type": "object",
+                "field": [
+                    {
+                        "name": "value",
+                        "schema": {
+                            "type": "boolean",
+                            "const": true
+                        }
+                    }
+                ]
             },
             "form": [
                 {

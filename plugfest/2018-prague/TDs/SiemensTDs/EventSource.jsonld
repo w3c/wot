@@ -1,0 +1,46 @@
+{
+
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld"
+    ],
+    "@type": [
+        "Thing"
+    ],
+    "name": "EventSource",
+    "security": [
+        {
+            "description": "node-wot development Servient, no security"
+        }
+    ],
+    "interaction": [
+        {
+            "name": "reset",
+            "@type": [
+                "Action"
+            ],
+            "form": [
+                {
+                    "href": "http://192.168.1.21:8080/EventSource/actions/reset",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        {
+            "name": "onchange",
+            "@type": [
+                "Event"
+            ],
+            "schema": {
+                "type": "number"
+            },
+            "form": [
+                {
+                    "href": "http://192.168.1.21:8080/EventSource/events/onchange",
+                    "subProtocol": "LongPoll",
+                    "mediaType": "application/json"
+                }
+            ]
+        }
+    ]
+
+}
