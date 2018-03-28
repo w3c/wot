@@ -1,7 +1,8 @@
 {
-    "@context": [
-        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld"
-    ],
+    "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+                {
+	              "iot": "http://iotschema.org/"
+				}],
     "@type": [
         "Thing", "iot:Pump", "iot:Valve", "iot:FloatSwitch", "iot:UltrasonicSensing", "iot:ProximitySensing"
     ],
