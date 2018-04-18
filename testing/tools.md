@@ -6,3 +6,6 @@
     - Target date: third week of April
 * Thing Description Validation
     - http://plugfest.thingweb.io/playground/
+    
+## W3C Tools
+* https://github.com/w3c/web-platform-tests
