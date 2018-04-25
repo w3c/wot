@@ -4,6 +4,7 @@
 
 ### Mark Normative Assertions
 * See https://www.w3.org/TR/appmanifest/#conformance
+* Include conformance block
 
 ### Test Descriptions
 * Update from 2016 and track/derive from current specification
