@@ -2,6 +2,9 @@
 
 ## To Do
 
+### Mark Normative Assertions
+* See https://www.w3.org/TR/appmanifest/#conformance
+
 ### Test Descriptions
 * Update from 2016 and track/derive from current specification
 * Confirm spec converage (all normative assertions should be covered)
