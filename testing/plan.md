@@ -6,7 +6,7 @@
     - Target date: third week of April
 * Update specifications with clear normative assertions
     - Per task force - person assigned
-    - Follow RFC2119: MUST (NOT), MAY (NOT), SHOULD (NOT) in all-caps to mark assertions
+    - Follow RFC2119
     - Target date: beginning of May
 * Extract normative assertions
     - Ideally automatic; but worst case, manual
