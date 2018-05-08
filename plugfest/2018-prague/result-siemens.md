@@ -1,12 +1,33 @@
-### 2.4.1 Application Servients
+### 2.4.1 Application Servients: Overflow Protection in FESTO Plant
 
-- T.B.D. @danicic
+![siemens_recipe_application](images/siemens-recipe-application.png)
+
+Recipe is a semantic template that models mash-ups of WoT Things.
+[Overflow Protection Recipe] (https://github.com/w3c/wot/blob/master/plugfest/2018-prague/semantic%20integration/Recipes/OverflowProtection.jsonld): If the overflow in the tank occurs, then drain the liquid out.Demo: Siemens-Oracle: FESTO plant accessed over Oracle Cloud
+![Recipe_Overflow_Protection_on_FESTO_WS](images/Recipe-Overflow-Protection-on-FESTO-WS.png)
+    
+    - Realization steps
+        1 Discover a Recipe for your application
+            - using Thing Directory and iotschema.org
+        2 Discover Thing Descriptions to implement it
+            - using Thing Directory and iotschema.org
+        3 Generate a script code
+            - automated script generation based on Recipe
+        4 Implement application logic
+            - implementing a simple script to detec when the ovrflow is detected
+        Recipe Engine automates tasks (1) - (3).
 
     - Composition
+        - [Festo Plant](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) (in Munich, proxied TD)
+        - Accessible through Oracle IoT Cloud Service Server API
         - [node-wot](https://github.com/thingweb/node-wot)
-        - ...
+        - [Thingweb Directory](http://plugfest.thingweb.io:8081/)
+        - [iot.schema.org](http://iotschema.org/)
     - PlugFest Result
-        - Connected with ...
+        - FESTO devices exposed as Oracle IoT Cloud Service devices
+        - FESTO devices, float sensor and pneumatic valve, connected with each other over Oracle IoT Cloud 
+        - Discovery of Things with [iot.schema.org](http://iotschema.org/) 
+        - Application script generation automated with Recipe Engine
 
 ### 2.4.2 Remote Proxy Servients
 
