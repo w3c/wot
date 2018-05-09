@@ -48,7 +48,8 @@ Summary of network API (see TDs for details):
            [(observe)](https://tiktok.mmccool.org:28444/api/exposure/observe) -
     [crop](https://tiktok.mmccool.org:28444/api/crop)
     
-### Camera 1
+#### Camera 1
+#### Camera 2
 Another camera or two.  This one can be pointed at some of the other dev kits (eg the OCF Smart Home Demo)
 to facilitate remote testing and demonstration.
       
