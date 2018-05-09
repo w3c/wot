@@ -4,7 +4,7 @@
 
 [Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check it into a public github repo as part of a test suite...).
 
-### Simple Web Camera Thing
+### Simple Web Camera
 
 #### Camera 0
 
