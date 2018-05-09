@@ -8,7 +8,7 @@ This document describes the result of WoT plugfest held in Prague on 24-5 of Mar
 
 Oracle, Ericsson, EURECOM, Fujitsu, Hitachi, Intel, Internet Research Institute, The Paciello Group, Panasonic, SmartThings/Samsung Research, Siemens, Technical University of Munich(TUM)
 
-## 1.2 All servients
+## 1.2 WoT Servients
 
 The drawing below is the ocnfiguration for the Prague plugfest.
 
