@@ -47,6 +47,10 @@ Summary of network API (see TDs for details):
     [exposure](https://tiktok.mmccool.org:28444/api/exposure)
            [(observe)](https://tiktok.mmccool.org:28444/api/exposure/observe) -
     [crop](https://tiktok.mmccool.org:28444/api/crop)
+    
+### Camera 1
+Another camera or two.  This one can be pointed at some of the other dev kits (eg the OCF Smart Home Demo)
+to facilitate remote testing and demonstration.
       
 ### Web Speak
 Speech synthesizer service
