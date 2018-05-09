@@ -6,7 +6,7 @@
 
 #### Camera 0
 
-Network API is as follows:
+Summary of network API (see TDs for details):
 * `/api` - get Thing Description
     * `/frame` - get last frame captured
         - `/observe` get next frame captured when ready (long polling)
