@@ -47,4 +47,16 @@ Summary of network API (see TDs for details):
     [exposure](https://tiktok.mmccool.org:28444/api/exposure)
            [(observe)](https://tiktok.mmccool.org:28444/api/exposure/observe) -
     [crop](https://tiktok.mmccool.org:28444/api/crop)
+      
+### Web Speak
+Speech synthesizer service
+TO DO: working, need to get online (similar structure to camera).   However, hard to test
+remotely unless I also implement a "microphone" service...  may add capability to return an
+audio file.
 
+### OCF Smart Home Demo
+Simulated OCF devices as well as instantiation using Grove sensors and an Edison.
+TO DO: working, still need to get online (needs proxy for authentication).
+See [repo.](https://github.com/intel/SmartHome-Demo).  Also have plans to get working on
+alternative hardware (eg Artik dev kit and/or ESP32) using 
+[iotivity-constrained](https://github.com/iotivity/iotivity-constrained).
