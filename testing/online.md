@@ -8,6 +8,8 @@
 
 #### Camera 0
 
+![Example image from camera 0](IMAGES/9E518EA3-95D0-499E-A293-085EAA03C106.jpeg)
+
 Summary of network API (see TDs for details):
 * `/api` - get Thing Description
     * `/frame` - get last frame captured
