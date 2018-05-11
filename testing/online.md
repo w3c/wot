@@ -58,7 +58,11 @@ audio file.
 
 ### OCF Smart Home Demo
 Simulated OCF devices as well as actual physical instantiation using Grove sensors and Edisons.
-See [repo.](https://github.com/intel/SmartHome-Demo).
+See [repo](https://github.com/intel/SmartHome-Demo).  As an example, try the following (but you may have to
+look up an updated `di` in the TD or the `oic/res`, as well as providing the "basic" authentication information in the headers):
+* [https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4] - MOSFET LED 0
+    - GET - returns JSON payload for light status
+    - POST - updates light status with JSON payload
 
 [Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
