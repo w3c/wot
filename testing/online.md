@@ -2,11 +2,12 @@
 
 ## Intel
 
-[Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check it into a public github repo as part of a test suite...).
-
 ### Simple Web Camera
 Example image is given below.  Note that this does not auto-update; I am working on that, but it needs client-side script support (eg to follow the frame "observe" interaction) so will have to be implemented in HTML.
+
 ![Example image from camera 0](IMAGES/9E518EA3-95D0-499E-A293-085EAA03C106.jpeg)
+
+[Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
 Summary of network API (see TDs for details):
 * `/api` - get Thing Description
@@ -56,8 +57,15 @@ remotely unless I also implement a "microphone" service...  may add capability t
 audio file.
 
 ### OCF Smart Home Demo
-Simulated OCF devices as well as instantiation using Grove sensors and an Edison.
-TO DO: working, still need to get online (needs proxy for authentication).
-See [repo.](https://github.com/intel/SmartHome-Demo).  Also have plans to get working on
+Simulated OCF devices as well as actual physical instantiation using Grove sensors and Edisons.
+See [repo.](https://github.com/intel/SmartHome-Demo).
+
+[Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
+
+#### HTTPS Proxy and Basic Auth
+* OCF Gateway (IoT REST API Server)
+    - [`oic/res`](https://portal.mmccool.net:9023/api/oic/res)
+
+Also have plans to get working on
 alternative hardware (eg Artik dev kit and/or ESP32) using 
 [iotivity-constrained](https://github.com/iotivity/iotivity-constrained).
