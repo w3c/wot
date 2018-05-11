@@ -65,6 +65,10 @@ See [repo.](https://github.com/intel/SmartHome-Demo).
 #### HTTPS Proxy and Basic Auth
 * OCF Gateway (IoT REST API Server)
     - [`oic/res`](https://portal.mmccool.net:9023/api/oic/res)
+    
+#### HTTPS Proxy and Digest Auth
+* OCF Gateway (IoT REST API Server)
+    - [`oic/res`](https://portal.mmccool.net:9024/api/oic/res)
 
 Also have plans to get working on
 alternative hardware (eg Artik dev kit and/or ESP32) using 
