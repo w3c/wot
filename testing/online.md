@@ -64,7 +64,7 @@ look up an updated `di` in the TD or the `oic/res`, as well as providing the "ba
     - GET - returns JSON payload for light status
     - POST - updates light status with JSON payload
 
-[Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
+[Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
 #### HTTPS Proxy and Basic Auth
 * OCF Gateway (IoT REST API Server)
