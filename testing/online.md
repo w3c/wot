@@ -51,10 +51,13 @@ Summary of network API (see TDs for details):
     
       
 ### Web Speak
-Speech synthesizer service
-TO DO: working, need to get online (similar structure to camera).   However, hard to test
-remotely unless I also implement a "microphone" service...  may add capability to return an
-audio file.
+Speech synthesizer service.
+
+TO DO: working, need to get it online still (using a similar structure to the camera service above).
+However, it is hard to test this service
+remotely unless I also implement a "microphone" service.
+I should look into adding the capability to return an
+audio file both for this service and for a microphone service.
 
 ### OCF Smart Home Demo
 Simulated OCF devices as well as actual physical instantiation using Grove sensors and Edisons.
@@ -63,6 +66,7 @@ look up an updated `di` in the TD or the `oic/res`, as well as providing the "ba
 * [https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4] - MOSFET LED 0
     - GET - returns JSON payload for light status
     - POST - updates light status with JSON payload
+You can use the camera service above to check if the light is physically on or off.
 
 [Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
