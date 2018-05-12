@@ -66,7 +66,22 @@ look up an updated `di` in the TD or the `oic/res`, as well as providing the "ba
 * [https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4] - MOSFET LED 0
     - GET - returns JSON payload for light status
     - POST - updates light status with JSON payload
-You can use the camera service above to check if the light is physically on or off.
+    
+For example, to get the current status of the light, you can use
+```
+curl https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4 --basic --user "<username>:<password>"
+```
+To turn on the light, you can use
+```
+curl https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4 --basic --user "<username>:<password>" -d '{"value":true}'
+```
+and to turn it off,
+```
+curl https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4 --basic --user "<username>:<password>" -d '{"value":false}'
+```
+    
+You can use the camera service above to check if the light is physically on or off.  Note that this is a very
+bright light and will tend to wash out the camera exposure when it is on.
 
 [Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
