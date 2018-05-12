@@ -93,6 +93,8 @@ bright light and will tend to wash out the camera exposure when it is on.
     - [`system`](https://portal.mmccool.net:9023/api/system)
 * Edge Thing Directory (thingweb-directory running on gateway)
     - [`etdir`](https://portal.mmccool.net:9025)
+* Metadata Bridge (ocf-wot-metadata-bridge running on gateway)
+    - [`md`](https://portal.mmccool.net:9029)
 * Thing Directory (thingweb-directory running in cloud)
     - [`tdir`](https://portal.mmccool.net:9026)
     
@@ -102,6 +104,8 @@ bright light and will tend to wash out the camera exposure when it is on.
     - [`system`](https://portal.mmccool.net:9024/api/system)
 * Edge Thing Directory (thingweb-directory running on gateway)
     - [`etdir`](https://portal.mmccool.net:9026)
+* Metadata Bridge (ocf-wot-metadata-bridge running on gateway)
+    - [`md`](https://portal.mmccool.net:9030)
 * Thing Directory (thingweb-directory running in cloud)
     - [`tdir`](https://portal.mmccool.net:9028)
 
