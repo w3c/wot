@@ -5,7 +5,7 @@
 ### Simple Web Camera
 Example image is given below.  Note that this does not auto-update; I am working on that, but it needs client-side script support (eg to follow the frame "observe" interaction) so will have to be implemented in HTML.
 
-![Example image from camera 0](IMAGES/9E518EA3-95D0-499E-A293-085EAA03C106.jpeg)
+![Example image from camera 0](IMAGES/light_observe.jpeg)
 
 [Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
