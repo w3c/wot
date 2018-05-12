@@ -78,8 +78,9 @@ curl <url> --basic --user "<username>:<password>" -d '{"value":true}'
 ```
 and to turn it off, another POST using
 ```
-curl https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4 --basic --user "<username>:<password>" -d '{"value":false}'
+curl <url> --basic --user "<username>:<password>" -d '{"value":false}'
 ```
+Of course you can also try `--digest` and other URLs given in the resources below.
     
 You can use the camera service above to check if the light is physically on or off.  Note that this is a very
 bright light and will tend to wash out the camera exposure when it is on.
