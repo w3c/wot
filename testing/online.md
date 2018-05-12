@@ -67,15 +67,16 @@ look up an updated `di` in the TD or the `oic/res`, as well as providing the "ba
     - GET - returns JSON payload for light status
     - POST - updates light status with JSON payload
     
-For example, to get the current status of the light, you can use
+For example, to get the current status of the light, using the URL above and the authentication information below,
+you can issue a GET using
 ```
-curl https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4 --basic --user "<username>:<password>"
+curl <url> --basic --user "<username>:<password>"
 ```
-To turn on the light, you can use
+To turn on the light, you can issue a POST using
 ```
-curl https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4 --basic --user "<username>:<password>" -d '{"value":true}'
+curl <url> --basic --user "<username>:<password>" -d '{"value":true}'
 ```
-and to turn it off,
+and to turn it off, another POST using
 ```
 curl https://portal.mmccool.net:9023/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4 --basic --user "<username>:<password>" -d '{"value":false}'
 ```
