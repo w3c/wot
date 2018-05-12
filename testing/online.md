@@ -67,12 +67,22 @@ look up an updated `di` in the TD or the `oic/res`, as well as providing the "ba
 [Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
 #### HTTPS Proxy and Basic Auth
-* OCF Gateway (IoT REST API Server)
+* OCF Gateway (IoT REST API Server running on gateway)
     - [`oic/res`](https://portal.mmccool.net:9023/api/oic/res)
+    - [`system`](https://portal.mmccool.net:9023/api/system)
+* Edge Thing Directory (thingweb-directory running on gateway)
+    - [`etdir`](https://portal.mmccool.net:9025)
+* Thing Directory (thingweb-directory running in cloud)
+    - [`tdir`](https://portal.mmccool.net:9026)
     
 #### HTTPS Proxy and Digest Auth
-* OCF Gateway (IoT REST API Server)
+* OCF Gateway (IoT REST API Server running on gateway)
     - [`oic/res`](https://portal.mmccool.net:9024/api/oic/res)
+    - [`system`](https://portal.mmccool.net:9024/api/system)
+* Edge Thing Directory (thingweb-directory running on gateway)
+    - [`etdir`](https://portal.mmccool.net:9026)
+* Thing Directory (thingweb-directory running in cloud)
+    - [`tdir`](https://portal.mmccool.net:9028)
 
 Also have plans to get working on
 alternative hardware (eg Artik dev kit and/or ESP32) using 
