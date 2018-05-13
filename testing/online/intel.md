@@ -90,6 +90,11 @@ bright light and will tend to wash out the camera exposure when it is on.
 TDs are available from the services below, but in case the services
 are down [here are cached results](intel_sample_tds.jsonld).
 
+**Caveats**:
+* TD registration with the Thing Directory is currently broken so the Thing Directories are empty.
+* TDs contain use local addresses.  Replace the `base` with a base address for one of the portals, such
+  as `https://portal.mmccool.net:9023/api/oic`, to get a TD usable from outside the local network.
+
 #### HTTPS Proxy and Basic Auth
 * OCF Gateway (IoT REST API Server running on gateway)
     - [`oic/res`](https://portal.mmccool.net:9023/api/oic/res)
