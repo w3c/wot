@@ -100,7 +100,10 @@ are down [here are cached results](intel_sample_tds.jsonld).
     - [`oic/res`](https://portal.mmccool.net:9023/api/oic/res)
     - [`system`](https://portal.mmccool.net:9023/api/system)
 * Edge Thing Directory (thingweb-directory running on gateway)
-    - [`etdir`](https://portal.mmccool.net:9025)
+    - [`etdir`](https://portal.mmccool.net:9025) -
+      returns TDs with local links, not usable outside local network.
+      Given here for information only, normally access to this service would not be provided outside the local
+      network.
 * Metadata Bridge (ocf-wot-metadata-bridge running on gateway)
     - [`md`](https://portal.mmccool.net:9029)
 * Thing Directory (thingweb-directory running in cloud)
@@ -111,7 +114,10 @@ are down [here are cached results](intel_sample_tds.jsonld).
     - [`oic/res`](https://portal.mmccool.net:9024/api/oic/res)
     - [`system`](https://portal.mmccool.net:9024/api/system)
 * Edge Thing Directory (thingweb-directory running on gateway)
-    - [`etdir`](https://portal.mmccool.net:9026)
+    - [`etdir`](https://portal.mmccool.net:9026) -
+      returns TDs with local links, not usable outside local network.
+      Given here for information only, normally access to this service would not be provided outside the local
+      network.
 * Metadata Bridge (ocf-wot-metadata-bridge running on gateway)
     - [`md`](https://portal.mmccool.net:9030)
 * Thing Directory (thingweb-directory running in cloud)
