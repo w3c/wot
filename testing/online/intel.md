@@ -87,6 +87,9 @@ bright light and will tend to wash out the camera exposure when it is on.
 
 [Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
+TDs are available from the services below, but in case the services
+are down [here are cached results](intel_sample_tds.jsonld).
+
 #### HTTPS Proxy and Basic Auth
 * OCF Gateway (IoT REST API Server running on gateway)
     - [`oic/res`](https://portal.mmccool.net:9023/api/oic/res)
