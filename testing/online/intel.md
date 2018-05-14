@@ -92,7 +92,8 @@ are down [here are cached results](intel_sample_tds.jsonld).
 
 **Caveats**:
 * TD registration with the Thing Directory is currently broken so the Thing Directories are empty.
-* TDs contain use local addresses.  Replace the `base` with a base address for one of the portals, such
+* Only TDs with local addresses are currently provided.  However, the actual devices are accessible through
+  the cloud portal.  Replace the `base` with a base address for one of the portals, such
   as `https://portal.mmccool.net:9023/api/oic`, to get a TD usable from outside the local network.
   
 #### Guide to Resources
