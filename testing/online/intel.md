@@ -94,34 +94,53 @@ are down [here are cached results](intel_sample_tds.jsonld).
 * TD registration with the Thing Directory is currently broken so the Thing Directories are empty.
 * TDs contain use local addresses.  Replace the `base` with a base address for one of the portals, such
   as `https://portal.mmccool.net:9023/api/oic`, to get a TD usable from outside the local network.
+  
+#### Guide to Resources
+As the resources are available under multiple URLs (different portals and authentication mechanisms)
+common elements are explained here.
+* OCF Gateway (IoT REST API Server; running on gateway) - Normally Hidden.
+    - Access to network API provided by IoT REST API Server running on the local gateway,
+      which translates OCF CoAP network interfaces to HTTP network interfaces.
+    - These are visible only for test purposes.  In an actual deployment they should be hidden (eg 
+      blocked by the gateway firewall locally and definitely not tunnelled up to the cloud portal)
+      to enhance privacy and security.  In particular, listing what IoT devices are available is
+      a privacy risk and advertising what software and hardware is running
+      on a gateway is a security risk (as it makes it easier to identify vulnerable systems.)
+    - **oic/res**: OCF resource metadata.
+    - **system**: Description of gateway hardware. 
+* Metadata Bridge (ocf-wot-metadata-bridge running on gateway) - Normally Hidden.
+    - Access to network API of OCF-WoT metadata bridge.
+      Normally access to this would not
+      be provided, even over the local network, as the API just provides a list of TDs generated and
+      debugging information.  As the TDs are made available to via the Thing Directories in normal
+      operation, this API is only relevant for testing.
+    - **md**: Returns an array of generated TDs with global links.
+    - **emd**: Returns an array of generated TDs with local links.
+* Thing Directory (thingweb-directory)
+    - Allows semantic search (SPARQL queries) of registered Thing Descriptions.
+    - **tdir**: Thing Directory.  Returns TDs with global links.
+    - **etdir**: Edge Thing Directory.  Returns TDs with local links.
+      Given here for information only, normally access to this service would not be provided outside the local
+      network, as the links use IPv4 addresses only valid locally.  However, on the local network this 
+      Thing Directory allows access to local devices without needing to go to the cloud.
 
 #### HTTPS Proxy and Basic Auth
-* OCF Gateway (IoT REST API Server running on gateway)
-    - [`oic/res`](https://portal.mmccool.net:9023/api/oic/res)
-    - [`system`](https://portal.mmccool.net:9023/api/system)
-* Edge Thing Directory (thingweb-directory running on gateway)
-    - [`etdir`](https://portal.mmccool.net:9025) -
-      returns TDs with local links, not usable outside local network.
-      Given here for information only, normally access to this service would not be provided outside the local
-      network.
-* Metadata Bridge (ocf-wot-metadata-bridge running on gateway)
-    - [`md`](https://portal.mmccool.net:9029)
-* Thing Directory (thingweb-directory running in cloud)
-    - [`tdir`](https://portal.mmccool.net:9026)
+Via California Digital Ocean Portal:
+* OCF Gateway: [oic/res](https://portal.mmccool.net:9023/api/oic/res) -
+               [system](https://portal.mmccool.net:9023/api/system)
+* Metadata Bridge: [emd](https://portal.mmccool.net:9029) -
+                   [md](https://portal.mmccool.net:9031)
+* Thing Directories: [etdir](https://portal.mmccool.net:9025) -
+                     [tdir](https://portal.mmccool.net:9027)
     
 #### HTTPS Proxy and Digest Auth
-* OCF Gateway (IoT REST API Server running on gateway)
-    - [`oic/res`](https://portal.mmccool.net:9024/api/oic/res)
-    - [`system`](https://portal.mmccool.net:9024/api/system)
-* Edge Thing Directory (thingweb-directory running on gateway)
-    - [`etdir`](https://portal.mmccool.net:9026) -
-      returns TDs with local links, not usable outside local network.
-      Given here for information only, normally access to this service would not be provided outside the local
-      network.
-* Metadata Bridge (ocf-wot-metadata-bridge running on gateway)
-    - [`md`](https://portal.mmccool.net:9030)
-* Thing Directory (thingweb-directory running in cloud)
-    - [`tdir`](https://portal.mmccool.net:9028)
+Via California Digital Ocean Portal:
+* OCF Gateway: [oic/res](https://portal.mmccool.net:9024/api/oic/res) -
+               [system](https://portal.mmccool.net:9024/api/system)
+* Metadata Bridge: [emd](https://portal.mmccool.net:9030) -
+                   [md](https://portal.mmccool.net:9032)
+* Thing Directories: [etdir](https://portal.mmccool.net:9026) -
+                     [tdir](https://portal.mmccool.net:9028)
 
 Also have plans to get working on
 alternative hardware (eg Artik dev kit and/or ESP32) using 
