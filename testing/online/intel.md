@@ -118,11 +118,14 @@ common elements are explained here.
     - **emd**: Returns an array of generated TDs with local links.
 * Thing Directory (thingweb-directory)
     - Allows semantic search (SPARQL queries) of registered Thing Descriptions.
-    - **tdir**: Thing Directory.  Returns TDs with global links.
-    - **etdir**: Edge Thing Directory.  Returns TDs with local links.
+    - **tdir**: Thing Directory.  Returns TDs with global links.  Running in cloud portal, can consolidate TDs from
+      multiple edge systems.
+    - **etdir**: Edge Thing Directory.  Returns TDs with local links.  Running on gateway.
       Given here for information only, normally access to this service would not be provided outside the local
-      network, as the links use IPv4 addresses only valid locally.  However, on the local network this 
-      Thing Directory allows access to local devices without needing to go to the cloud.
+      network serviced by a particular gateway, as the links use IPv4 addresses only valid locally.
+      However, on the local network this 
+      Thing Directory allows access to local devices without needing to go to the cloud, which has advantages
+      in some use cases (enhanced privacy, lower latency, greater resilience, etc).
 
 #### HTTPS Proxy and Basic Auth
 Via California Digital Ocean Portal:
