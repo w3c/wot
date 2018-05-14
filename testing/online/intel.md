@@ -53,11 +53,9 @@ Summary of network API (see TDs for details):
 ### Web Speak
 Speech synthesizer service.
 
-TO DO: working, need to get it online still (using a similar structure to the camera service above).
-However, it is hard to test this service
-remotely unless I also implement a "microphone" service.
-I should look into adding the capability to return an
-audio file both for this service and for a microphone service.
+TO DO: Service is working, but need to get it online still (using a similar structure to the camera service above).
+However, it is hard to test this service remotely unless a "microphone" service is also available.
+Will look into adding the capability to return an audio file both for this service and for a microphone service.
 
 ### OCF Smart Home Demo
 Simulated OCF devices as well as actual physical instantiation using Grove sensors and Edisons.
@@ -146,6 +144,6 @@ Via California Digital Ocean Portal:
 * Thing Directories: [etdir](https://portal.mmccool.net:9026) -
                      [tdir](https://portal.mmccool.net:9028)
 
-Also have plans to get working on
+TO DO: Get additional OCF endpoints working on
 alternative hardware (eg Artik dev kit and/or ESP32) using 
 [iotivity-constrained](https://github.com/iotivity/iotivity-constrained).
