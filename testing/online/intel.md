@@ -105,26 +105,33 @@ common elements are explained here.
       to enhance privacy and security.  In particular, listing what IoT devices are available is
       a privacy risk and advertising what software and hardware is running
       on a gateway is a security risk (as it makes it easier to identify vulnerable systems.)
+    - Accessing the resource URL actually triggers a discovery scan which is (a) not scalable to 
+      large numbers of outside systems (b) takes a few seconds to complete.
     - **oic/res**: OCF resource metadata.
     - **system**: Description of gateway hardware. 
 * Metadata Bridge (ocf-wot-metadata-bridge running on gateway) - Normally Hidden.
     - Access to network API of OCF-WoT metadata bridge.
       Normally access to this would not
       be provided, even over the local network, as the API just provides a list of TDs generated and
-      debugging information.  As the TDs are made available to via the Thing Directories in normal
+      debugging information.  As the TDs are made available via the Thing Directories below in normal
       operation, this API is only relevant for testing.
-    - **md**: Returns an array of generated TDs with global links.
+    - The metadata bridge periodically scans the OCF metadata and caches TDs, so this
+      should return an array of TDs immediately but the information may be slightly stale.
+      In particular, new OCF devices may not appear here (or in the Thing Directories) until
+      a scan has been triggered, which is currently configured to happen every 10s or so.
     - **emd**: Returns an array of generated TDs with local links.
+    - **md**: Returns an array of generated TDs with global links.
 * Thing Directory (thingweb-directory)
     - Allows semantic search (SPARQL queries) of registered Thing Descriptions.
-    - **tdir**: Thing Directory.  Returns TDs with global links.  Running in cloud portal, can consolidate TDs from
-      multiple edge systems.
-    - **etdir**: Edge Thing Directory.  Returns TDs with local links.  Running on gateway.
-      Given here for information only, normally access to this service would not be provided outside the local
-      network serviced by a particular gateway, as the links use IPv4 addresses only valid locally.
+    - **etdir**: Edge Thing Directory that returns TDs with local links, this service is running on an edge gateway.
+      An access URL is given here for testing only.
+      Normally access to this service would not be provided outside the local
+      network serviced by a particular gateway, as the links use IPv4 addresses that are only valid locally.
       However, on the local network this 
       Thing Directory allows access to local devices without needing to go to the cloud, which has advantages
-      in some use cases (enhanced privacy, lower latency, greater resilience, etc).
+      in some use cases (enhanced privacy, lower latency, and greater resilience).
+    - **tdir**: Thing Directory.  Returns TDs with global links.  Running in the cloud, this directory is
+      visible to the global internet and can consolidate TDs from multiple edge systems.
 
 #### HTTPS Proxy and Basic Auth
 Via California Digital Ocean Portal:
