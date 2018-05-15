@@ -60,3 +60,50 @@
         - Registered to Fujitsu proxy.
         - Connected with Panasonic Scripting App locally and through proxy.
         - Connected with Panasonic Node RED, orchestrated with Fujitsu Brightness Sensor.
+
+# 3. Considerations
+## 3.1 Evaluation against "Checking point for the plugfest" from [PlugfestSummary180418.pdf](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/docs/PlugfestSummary180418.pdf) by Matsukura-san
+
+1. Connect with remote/local proxy (narrow waist model)
+    - Both Application Servients and Device Servients are successfully connected to Fujitsu remote/local proxy.
+
+2. Application servient
+    - Supported both Scripting App and NodeRED
+    - Future work: cross domain scenario (home, mobility, social infrastructure, etc) with meaningful scenario.
+
+3. Connect with node-wot
+    - (Not connected)
+
+4. Scripting API
+    - Support Consumed Thing in JavaScript scripting API.
+    - (Exposed Thing not supported)
+
+5. Thing Directory
+    - Did not provide directory by ourselves.
+    - Registered and retrieved TDs to/from Fujitsu's directory through a tool (Advanced REST Client and POSTMAN).
+    - Future work: Automatic registration when starting WoT Server; Integrated retrieval from WoT Client.
+
+6. Many kinds of device servients
+    - Several Local and Remote Device Servients are provided (See [2.4.4](result-panasonic.md#244-device-servients))
+
+7. Semantic discovery
+    - Some TDs support semantic annotation.
+    - Future work: Application using semantic discovery with meaningful scenario.
+
+8. Security, Accessibility
+    - HTTPS and bearer token are supported
+    - Future work: Authentication
+
+9. Event handling with long polling
+    - Supported by some Device Servients (Air-conditioner and Lighting on Simulator)
+
+10. Device simulators
+    - Device Simulator works on Raspberry-Pi, PC and cloud.
+
+## 3.2 Issues faced at site
+1. CORS issue when using Scripting app on browser.
+    - To be accessed by browser through XMLHTTPRequest, WoT Servients need to add "Access-Control-Allow-Origin: * " header in it's response to the requests including OPTIONS method.
+2. Multiple "form" issue when using Fujitsu proxy
+    - Fujitsu proxy currently does not support multiple "form" for one property.
+    - In Panasonic TD, "read/write" and "observe" to a same property is expressed as two different HTTP endpoints  
+      ->changes to two different property were necessary.
