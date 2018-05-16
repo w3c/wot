@@ -1,13 +1,42 @@
 # Online Test Things and Systems
 
 ## Intel
+This demonstration systems includes a combination of devices with both web-service and OCF network interfaces
+and shows how they can be coordinated.
+As an example web-based device,
+a simple web camera directly supporting an HTTP network interface has been implemented
+which provides its own Thing Description.
+In addition, the system includes a running implementation of the OCF Smart Home Demo.
+The OCF Smart Home Demo in turn includes a number of CoAP-based devices.
+These OCF devices are supported by a CoAP/HTTP bridge service and a metadata translator service running on a gateway.
+The metadata translator automatically and dynamically generates Thing Descriptions from OCF metadata.
+Multiple portals running in the cloud supports secure remote access,
+demonstrating both end-to-end private tunnels and proxied tunnels for NAT traversal.
+Secure remote access is supported by HTTPS and multiple authentication mechanisms.
+Finally, simultaneous gateway and cloud portal Thing Directory services support
+both local and remote discoverability and access.
+
+### Authentication
+The Simple Web Camera service supports end-to-end security
+(the endpoint itself handles TLS and authentication; the gateway and proxy only provide transport of an encrypted stream
+without access to it)
+and so the "Direct Authentication Credentials" should be used.
+The other services use the proxy tunnel configuration
+(a service in the cloud portal provides a TLS endpoint
+and authentication) and so the "Proxy Authentication Credentials"
+credentials should be used.
+
+* [Direct Authentication Credentials](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html)
+* [Proxy Authentication Credentials](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
+
+W3C WoT membership required to access these credentials.
+Please do not repost them in a public forum (for example, do not check the keys into a public github repo as part of a test suite, post on forum, share in a public messaging system, etc).
+These will be updated peroidically so if an access does not work, check that you have the latest version.
 
 ### Simple Web Camera
 Example image is given below.  Note that this does not auto-update; I am working on that, but it needs client-side script support (eg to follow the frame "observe" interaction) so will have to be implemented in HTML.
 
 ![Example image from camera 0](IMAGES/intel_light_observe.jpeg)
-
-[Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
 Summary of network API (see TDs for details):
 * `/api` - get Thing Description
@@ -48,8 +77,7 @@ Summary of network API (see TDs for details):
     [exposure](https://tiktok.mmccool.org:28444/api/exposure)
            [(observe)](https://tiktok.mmccool.org:28444/api/exposure/observe) -
     [crop](https://tiktok.mmccool.org:28444/api/crop)
-    
-      
+       
 ### Web Speak
 Speech synthesizer service.
 
@@ -82,8 +110,6 @@ Of course you can also try `--digest` and other URLs given in the resources belo
     
 You can use the camera service above to check if the light is physically on or off.  Note that this is a very
 bright light and will tend to wash out the camera exposure when it is on.
-
-[Authentication information](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html) - W3C WoT membership required to access.  Please do not repost in a public forum (for example, do not check the keys into a public github repo as part of a test suite...).
 
 TDs are available from the services below, but in case the services
 are down [here are cached results](intel_sample_tds.jsonld).
