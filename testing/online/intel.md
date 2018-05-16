@@ -1,6 +1,4 @@
-# Online Test Things and Systems
-
-## Intel
+# Intel - Smart Home Demo including OCF Devices and NAT Traversal
 This demonstration systems includes a combination of devices
 with both web-service and OCF network interfaces
 and shows how they can be coordinated.
