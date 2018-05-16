@@ -4,17 +4,17 @@
 
 Oracle provides a test instance of the IoT Cloud Service product and the Digital Twin Simulator for use by the WoT Workgroup for interoperability testing.
 
-This services are continuously available and online for interoperability testing by WoT WG members.
+Both services are continuously available and online for interoperability testing by WoT WG members.
 
 They can be used for:
 
 * integrating devices to monitor and control from the IoT Cloud Service
-* monitor and control simulated devices from node-WoT 
+* monitoring and controlling simulated devices from node-WoT 
 * integrating other WoT reference implementations with the IoT Cloud Service
 
 ### IoT Cloud Service
 
-The IoT Cloud Service is a SaaS platform offering that enables management on control of thousands of devices and processing of messages and alerts. 
+The IoT Cloud Service is a PaaS platform that enables management on control of thousands of devices and processing of messages and alerts. 
 
 ![](IMAGES/oracle_mgmt_console.png)
 

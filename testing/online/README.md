@@ -20,3 +20,12 @@ and cloud portal Thing Directory services support both local and remote discover
 ## [Oracle - IoT CloudService and Digital Twin Simulator](oracle.md)
 Oracle provides a test instance of the IoT Cloud Service product and the Digital Twin Simulator
 for use by the WoT Workgroup for interoperability testing.  
+
+Both services are continuously available and online for interoperability testing by WoT WG members.
+
+They can be used for:
+
+* integrating devices to monitor and control from the IoT Cloud Service
+* monitoring and controlling simulated devices from node-WoT
+* integrating other WoT reference implementations with the IoT Cloud Service
+
