@@ -9,7 +9,7 @@
 * Thing Validation
     - Check that a Thing satisfies its Thing Description
 * TD -> Oracle DM Converter
-    - the tools/oracle folder contains a simple node application "td2dm.js" to convert a TD to the "device model" format for import in the Oracle IoT Cloud Service
+    - the tools/oracle folder contains a node application "td2dm.js" to convert a TD to the "device model" format for import in the Oracle IoT Cloud Service
     
 ## W3C Tools
 * https://github.com/w3c/web-platform-tests
