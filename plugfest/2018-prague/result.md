@@ -103,7 +103,22 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ### Panasonic
    Several Local and Remote Device Servients are provided (See 2.4.4)
 
-## 2.7 Semantic discovery
+
+## 2.7 Device simulators
+
+![device simulators](images/diagram10.png)
+
+### Fujitsu
+   (future work)
+
+### Hitachi
+   (future work)
+
+### Panasonic
+   Device Simulator works on Raspberry-Pi, PC and cloud.
+
+
+## 2.8 Semantic discovery
 
 ![semantic discovery](images/diagram07.png)
 
@@ -117,7 +132,7 @@ The drawing below is the ocnfiguration for the Prague plugfest.
    Some TDs support semantic annotation.
    Future work: Application using semantic discovery with meaningful scenario.
 
-## 2.8 Security, Accessibility
+## 2.9 Security
 
 ![security accessibility](images/diagram08.png)
 
@@ -131,7 +146,21 @@ The drawing below is the ocnfiguration for the Prague plugfest.
    HTTPS and bearer token are supported
    Future work: Authentication
 
-## 2.9 Event handling with long polling
+## 2.10 Accessibility
+
+![security accessibility](images/diagram08.png)
+
+### Fujitsu
+   (future work)
+
+### Hitachi
+   (future work)
+
+### Panasonic
+   (future work)
+
+
+## 2.11 Event handling with long polling
 
 ![event handling](images/diagram09.png)
 
@@ -144,18 +173,6 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ### Panasonic
    Supported by some Device Servients (Air-conditioner and Lighting on Simulator)
 
-## 2.10 Device simulators
-
-![device simulators](images/diagram10.png)
-
-### Fujitsu
-   (future work)
-
-### Hitachi
-   (future work)
-
-### Panasonic
-   Device Simulator works on Raspberry-Pi, PC and cloud.
 
 # 3. Issues for the next plugfest
 
