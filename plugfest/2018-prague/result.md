@@ -64,7 +64,7 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ![scripting api](images/diagram04.png)
 
 ### Fujitsu
-   (Nimura-san will insert here)
+   We provide application servient that supports ConsumedThing of ScriptingAPI and device servient that supports ExposedThing of ScriptingAPI.
 
 ### Hitachi 
    (future work)
