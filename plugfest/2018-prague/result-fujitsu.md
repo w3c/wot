@@ -23,11 +23,6 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ### Fujitsu
    We provide remote/local proxy and our application(node-red) and devices connect them.
 
-### Hitachi
-   It is useful for application developer (on the Internet) to aggregate all local device servient access.
-
-### Panasonic
-   Both Application Servients and Device Servients are successfully connected to Fujitsu remote/local proxy.
 
 ## 2.2 Application servient
 
@@ -37,14 +32,6 @@ The drawing below is the ocnfiguration for the Prague plugfest.
    We use Node-RED to lookup TD and set/get property value and Action.
    Nimura-san use scripting api.
 
-### Hitachi
-   Our Servients are example of "minimal Servient implementations", which is mentioned in [the Architecture document](https://w3c.github.io/wot-architecture/#application).  We can easily connect to WoT device using IoT tools that support HTTP REST API call.
-   It might be a good idea to check connectivity of other existing IoT tools for broader adoption of WoT.
-   And also, it may be better to mention legacy *applications* (i.e. existing, commonly-used IoT tools) connectivity in the Architecture document, same as legacy *devices*.
-
-### Panasonic
-   Supported both Scripting App and NodeRED
-   Future work: cross domain scenario (home, mobility, social infrastructure, etc) with meaningful scenario.
 
 ## 2.3 Connect with node-wot
 
@@ -53,11 +40,6 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ### Fujitsu
    (future work)
 
-### Hitachi
-   (future work)
-
-### Panasonic
-   (future work)
 
 ## 2.4 Scripting API
 
@@ -66,12 +48,6 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ### Fujitsu
    (Nimura-san will insert here)
 
-### Hitachi 
-   (future work)
-
-### Panasonic
-   Support Consumed Thing in JavaScript scripting API.
-   (Exposed Thing not supported)
 
 ## 2.5 Thing Directory 
 
@@ -80,13 +56,6 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ### Fujitsu
    We provide simple one. Application Servients can lookup TDs by specifying the device's name.
 
-### Hitachi
-   We just crawl all TDs in Fujitsu's directory.  Using search functions from application servient is future work.
-
-### Panasonic
-   Did not provide directory by ourselves.
-   Registered and retrieved TDs to/from Fujitsu's directory through a tool (Advanced REST Client and POSTMAN).
-   Future work: Automatic registration when starting WoT Server; Integrated retrieval from WoT Client.
 
 ## 2.6 Many kinds of device servients
 
@@ -96,66 +65,46 @@ The drawing below is the ocnfiguration for the Prague plugfest.
    Local Devices: Rotary Beacon Light(connectet by EtherCAT) and Brightness Sensor(connectet by BLE)
    Remote Devices(in Japan): LED Light, Blind and Airconditioner (connected by Echonet LITE)
 
-### Hitachi
-   Our application only collect properties on each devices.  Not yet utilized each characteristic of device.
-   Utilizing them based on semantic annotations is future work.
 
-### Panasonic
-   Several Local and Remote Device Servients are provided (See 2.4.4)
-
-## 2.7 Semantic discovery
-
-![semantic discovery](images/diagram07.png)
-
-### Fujitsu
-   (future work)
-
-### Hitachi
-   (future work)
-
-### Panasonic
-   Some TDs support semantic annotation.
-   Future work: Application using semantic discovery with meaningful scenario.
-
-## 2.8 Security, Accessibility
-
-![security accessibility](images/diagram08.png)
-
-### Fujitsu
-   We use bearer token for access the remote/local proxy.
-
-### Hitachi
-   We used bearer token for access the remote proxy.  The token is received by a mail and is included in configuration file by hand.  These process is needed to improve using more sophisticated manner (e.g. OAuth etc.)
-
-### Panasonic
-   HTTPS and bearer token are supported
-   Future work: Authentication
-
-## 2.9 Event handling with long polling
-
-![event handling](images/diagram09.png)
-
-### Fujitsu
-   Brightness Sensor support long polling
-
-### Hitachi
-   (future work)
-
-### Panasonic
-   Supported by some Device Servients (Air-conditioner and Lighting on Simulator)
-
-## 2.10 Device simulators
+## 2.7 Device simulators
 
 ![device simulators](images/diagram10.png)
 
 ### Fujitsu
    (future work)
 
-### Hitachi
+
+## 2.8 Semantic discovery
+
+![semantic discovery](images/diagram07.png)
+
+### Fujitsu
    (future work)
 
-### Panasonic
-   Device Simulator works on Raspberry-Pi, PC and cloud.
+
+## 2.9 Security
+
+![security accessibility](images/diagram08.png)
+
+### Fujitsu
+   We use bearer token for access the remote/local proxy.
+
+
+## 2.10 Accessibility
+
+![security accessibility](images/diagram08.png)
+
+### Fujitsu
+   (future work)
+
+
+## 2.11 Event handling with long polling
+
+![event handling](images/diagram09.png)
+
+### Fujitsu
+   Brightness Sensor support long polling
+
 
 # 3. Issues for the next plugfest
 
