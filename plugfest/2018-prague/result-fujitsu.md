@@ -21,10 +21,8 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ![connect with proxies](images/diagram01.png)
 
 ### Fujitsu
-   We provide one remote proxy in Nagoya and two local proxies.
-   One local proxy is placed in Smart Home in Japan, and three devices(LED Light, AirConditioner, Blind) connect it by ECHONET Lite.
-   Another local proxy is placed in PlugFest Place, and two devices(Rotating Light, Brightness Sensor) connect it.
-   And our application(node-red) connect remote proxy and control devices.
+   We provide remote/local proxy and our application(node-red) and devices connect them.
+
 
 ## 2.2 Application servient
 
@@ -48,7 +46,7 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ![scripting api](images/diagram04.png)
 
 ### Fujitsu
-   (Nimura-san will insert here)
+   We provide Application Servient that supports ConsumedThing of ScriptingAPI and Device Servient that support ExposedThing of ScriptingAPI.
 
 
 ## 2.5 Thing Directory 
@@ -105,7 +103,6 @@ The drawing below is the ocnfiguration for the Prague plugfest.
 ![event handling](images/diagram09.png)
 
 ### Fujitsu
-   Our Remote and Local proxy support SSE and Long Polling.
    Brightness Sensor support long polling
 
 
