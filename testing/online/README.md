@@ -29,7 +29,7 @@ They can be used for:
 * monitoring and controlling simulated devices from node-WoT
 * integrating other WoT reference implementations with the IoT Cloud Service
 
-## [Mozilla - Web of Things Gateway]
+## [Mozilla - Web of Things Gateway](https://w3c-interop.mozilla-iot.org/)
 
 A test instance of the Mozilla's Web of Things gateway has been made available at https://w3c-interop.mozilla-iot.org/
 
