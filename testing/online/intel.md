@@ -16,6 +16,10 @@ Secure remote access is supported by HTTPS and multiple authentication mechanism
 Finally, simultaneous gateway and cloud portal Thing Directory services support
 both local and remote discoverability and access.
 
+In the diagram below, secure, encrypted connections are shown in green and unencrypted connections
+in red.  Red connections are only used within a system (eg behind a firewall) or over an encrypted
+tunnel.
+
 ### System Architecture
 ![System Architecture](IMAGES/intel_architecture.png)
 
