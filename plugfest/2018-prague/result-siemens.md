@@ -1,17 +1,17 @@
-### 2.4.1 Automated Generation of Thing Description with [iot.schema.org](iotschema.org)
+### 2.4.1 Automated Generation of Thing Description with [iot.schema.org](http://iotschema.org/)
 
 - Goal of the demo is to demonstrate:
-	- Automated generation of Thing Descriptions that are semantically annotated with iot.schema.org
+	- Automated generation of Thing Descriptions that are semantically annotated with [iot.schema.org](http://iotschema.org/)
 	- Semantic validation of Thing Descriptions
 
 - Realization steps 
 	- For your Thing (device):
-		- Specify shape constraints from iotschema.org 
+		- Specify shape constraints from [iot.schema.org](http://iotschema.org/)
 		- Generate a Thing Description
 
 ![siemens_td_generation_with_iotschema](images/td_generation_concept_with_iot.schema.org.png)
 
-Example: TD Template Generation with [iot.schema.org](iotschema.org)
+Example: TD Template Generation with [iot.schema.org](http://iotschema.org/)
 
 ![siemens_td_generation_with_iotschema_example](images/td_generation_with_iot.schema.org.png)
 
