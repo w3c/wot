@@ -18,7 +18,10 @@ both local and remote discoverability and access.
 
 In the diagram below, secure, encrypted connections are shown in green and unencrypted connections
 in red.  Red connections are only used within a system (eg behind a firewall) or over an encrypted
-tunnel.
+tunnel.  This diagram only shows the "production" network connections potentially useful in a 
+real deployment.  The actual test system includes a number of other access points for test
+purposes (all access points are however protected by tunnelling them through the proxy, so
+authentication is required to access them).
 
 ### System Architecture
 ![System Architecture](IMAGES/intel_architecture.png)
