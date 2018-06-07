@@ -29,6 +29,11 @@ They can be used for:
 * monitoring and controlling simulated devices from node-WoT
 * integrating other WoT reference implementations with the IoT Cloud Service
 
+A converter for converting the Thing Description to the Device Model import format 
+for the Oracle IoT Cloud service and Simulator is available and was published for the Prague plugest TD version.
+A new release for the Bandung TD will be created.
+If you need more information, please contact mailto://Michael.Lagally@oracle.com
+
 ## [Mozilla - Things Gateway](https://github.com/mozilla-iot/wiki/wiki/Test-Gateway-Instance)
 
 A test instance of Mozilla's open source Web of Things [gateway implementation](https://github.com/mozilla-iot/gateway) has been made available at https://w3c-interop.mozilla-iot.org/
