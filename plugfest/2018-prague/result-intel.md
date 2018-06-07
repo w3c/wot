@@ -8,7 +8,7 @@
 * Two Edison Endpoint Nodes with various sensors (Button, Illuminance, Motion), actuators (Light, RGB and single-color LEDs, Buzzer) and a USB Camera
 * Local network switch
 
-### Test Software
+## Test Software
 
 ### Things
 * Web Camera Thing
@@ -52,3 +52,17 @@
         - Both CoAP and HTTP network interfaces
     * Automatic Thing Directory registration (Siemens Thing Directory)
         - Relatively short timeout allows updates when devices disabled
+
+## Collaborations
+
+### Paciello Group, RWE
+Accessibility scenarios using Web Speech service to reflect device status.
+
+### Siemens
+Automatic registration of OCF devices with Thing Directory using automatically-generated TDs dynamically created from introspected OCF metadata.
+
+### Panasonic
+Registration of Things with Panasonic proxy service.
+
+### Oracle
+Emulation of Things in Oracle IoT Cloud as digital twins.

@@ -1,4 +1,25 @@
-### 2.4.1 Application Servients: Overflow Protection in FESTO Plant
+### 2.4.1 Automated Generation of Thing Description with [iot.schema.org](http://iotschema.org/)
+
+- Goal of the demo is to demonstrate:
+	- Automated generation of Thing Descriptions that are semantically annotated with [iot.schema.org](http://iotschema.org/)
+	- Semantic validation of Thing Descriptions
+
+- Realization steps 
+	- For your Thing (device):
+		- Specify shape constraints from [iot.schema.org](http://iotschema.org/)
+		- Generate a Thing Description
+
+![siemens_td_generation_with_iotschema](images/td_generation_concept_with_iot.schema.org.png)
+
+Example: TD Template Generation with [iot.schema.org](http://iotschema.org/)
+
+![siemens_td_generation_with_iotschema_example](images/td_generation_with_iot.schema.org.png)
+
+- Examples of [iot.schema.org shapes](https://github.com/iot-schema-collab/iotschema/tree/master/shapes) 
+- Code for [TD Template Generation](https://github.com/aparnasai/iotschema/tree/iotschema-TDGenerator/SHACL), branch: iotschema-TDGenerator
+
+		
+### 2.4.2 Application Servients: Overflow Protection in FESTO Plant
 
 ![siemens_recipe_application](images/siemens-recipe-application.png)
 
@@ -30,7 +51,7 @@
 	- Discovery of Things with [iot.schema.org](http://iotschema.org/) 
 	- Application script generation automated with Recipe Engine
 
-### 2.4.2 Remote Proxy Servients
+### 2.4.3 Remote Proxy Servients
 
 ![oracle-iot-cs-festolive](images/siemens_oracle_festolive.PNG)
 
@@ -43,7 +64,7 @@
       - Proxied Property reads (fill level, overflow sensors, actuator status)
       - Proxied Action invocations (start/stop pump, open/close valve)
 
-### 2.4.3 Local Proxy Servients
+### 2.4.4 Local Proxy Servients
 
 ![binding-oracle](images/plugfest-prague-2018-siemens-festolive.png)
 
@@ -55,7 +76,7 @@
       - Consume CoAP-based Things (W3C WoT, described by TD)
       - Expose as Oracle IoT Cloud Service devices (Oracle product, own device model and protocol)
 
-### 2.4.4 Device Servients
+### 2.4.5 Device Servients
 
 - [Festo Plant](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld) (in Munich, proxied TD)
     - Composition
