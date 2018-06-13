@@ -179,10 +179,53 @@ Each participant is expected to fill in the following table to share between the
   </tr>
 </table>
 
-## 2.2 Issues
+## 2.2 Checking points for the next plugfest
 
-Please describe you issues on the next plugfest.
+These were described in result.md in Prague plugfest.
 
+### (1) Connect with remote/local proxy
+
+### (2) Application servients
+
+### (3) Connect with node-wot
+
+### (4) Scripting API
+
+### (5) Thing Directory operation
+
+### (6) Device Servients
+
+### (7) Device simulators
+
+### (8) Semantic integration
+
+### (9) Security
+
+### (10) Accessibility
+
+### (11) Event handling
+
+## 2.3 Other issues
+
+The following points are picked up from Koster-san's material.
+
+### (1) Validate the simplified TD
+
+### (2) Extended Actions
+
+### (3) Notification - websockets, webhooks
+
+### (4) Discovery using Feature of Interest annotation
+
+### (5) Application Scenarios, recipes
+
+### (6) Proxy integration with Thing Directory
+
+### (7) New security patterns
+
+### (8) Test Framework
+
+### (9) Other
 
 # 3 Schedule
 
