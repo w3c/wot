@@ -227,6 +227,10 @@ The following points are picked up from Koster-san's material.
 
 ### (9) Other
 
+## 2.3 Use cases
+
+Please make orchestration use cases using WoT.
+
 # 3 Schedule
 
 Sat 30.6.18:  9:00-18:00  
