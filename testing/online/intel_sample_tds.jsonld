@@ -1,0 +1,1393 @@
+// 20180513175115
+// https://portal.mmccool.net:9030/
+
+[
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing"
+    ],
+    "@id": "urn:uuid:d5af8955-71cc-dc91-6bac-0e1bf5e86749",
+    "name": "Intel-OCF-d5af8955-71cc-dc91-6bac-0e1bf5e86749",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:6573313c-da1e-4068-beb1-884b0c4c3c5d",
+    "name": "Intel-OCF-6573313c-da1e-4068-beb1-884b0c4c3c5d",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0green?di=6573313c-da1e-4068-beb1-884b0c4c3c5d",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:397a9167-88bc-4b52-844a-dade5b772c30",
+    "name": "Intel-OCF-397a9167-88bc-4b52-844a-dade5b772c30",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0blue?di=397a9167-88bc-4b52-844a-dade5b772c30",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:893e9dbb-a298-4123-a041-80f386115958",
+    "name": "Intel-OCF-893e9dbb-a298-4123-a041-80f386115958",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
+    "name": "Intel-OCF-ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+    "name": "Intel-OCF-c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led0red?di=c331fb1b-8568-48be-9033-4aaaa95bf2cf",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Switch",
+      "iot:Sensor",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
+    "name": "Intel-OCF-4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing"
+    ],
+    "@id": "urn:uuid:fb6481e0-79e1-4be0-99c1-df9bcbb898a0",
+    "name": "Intel-OCF-fb6481e0-79e1-4be0-99c1-df9bcbb898a0",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Motion",
+      "iot:MotionControl",
+      "iot:Sensor"
+    ],
+    "@id": "urn:uuid:0800f07a-178d-48ec-9ddf-d8a941071298",
+    "name": "Intel-OCF-0800f07a-178d-48ec-9ddf-d8a941071298",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "Occupancy",
+          "iot:MotionDetected"
+        ],
+        "name": "motion",
+        "form": [
+          [
+            {
+              "href": "/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:StateData"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Temperature",
+      "iot:TemperatureSensing",
+      "iot:Sensor"
+    ],
+    "@id": "urn:uuid:f2305852-4f82-47ce-871d-a0af237932c1",
+    "name": "Intel-OCF-f2305852-4f82-47ce-871d-a0af237932c1",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "MultiLevelState",
+          "iot:Temperature"
+        ],
+        "name": "temperature",
+        "form": [
+          [
+            {
+              "href": "/a/temperature0?di=f2305852-4f82-47ce-871d-a0af237932c1",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:TemperatureData"
+              ],
+              "schema": {
+                "type": "number"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Meter",
+      "iot:IlluminanceSensing",
+      "iot:Sensor"
+    ],
+    "@id": "urn:uuid:3255959d-741c-4b2b-81c2-42a4caa2223e",
+    "name": "Intel-OCF-3255959d-741c-4b2b-81c2-42a4caa2223e",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "MultiLevelState",
+          "iot:Illuminance"
+        ],
+        "name": "illuminance",
+        "form": [
+          [
+            {
+              "href": "/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:IlluminanceData"
+              ],
+              "schema": {
+                "type": "number"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+    "name": "Intel-OCF-8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Temperature",
+      "iot:TemperatureSensing",
+      "iot:Sensor"
+    ],
+    "@id": "urn:uuid:086d490d-90c6-4785-a677-c911bd2af919",
+    "name": "Intel-OCF-086d490d-90c6-4785-a677-c911bd2af919",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "MultiLevelState",
+          "iot:Temperature"
+        ],
+        "name": "temperature",
+        "form": [
+          [
+            {
+              "href": "/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:TemperatureData"
+              ],
+              "schema": {
+                "type": "number"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+    "name": "Intel-OCF-5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led1relay?di=5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Switch",
+      "iot:Sensor",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:3932ae08-31b4-4882-b299-5d488ec8775c",
+    "name": "Intel-OCF-3932ae08-31b4-4882-b299-5d488ec8775c",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:336db92b-45f6-496b-997c-e196ba7b49fd",
+    "name": "Intel-OCF-336db92b-45f6-496b-997c-e196ba7b49fd",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "on",
+        "@type": [
+          "Action",
+          "OnCommand",
+          "iot:TurnOn"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "off",
+        "@type": [
+          "Action",
+          "OffCommand",
+          "iot:TurnOff"
+        ],
+        "form": [
+          [
+            {
+              "href": "/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Switch",
+      "iot:Sensor",
+      "iot:BinarySwitch"
+    ],
+    "@id": "urn:uuid:f057c263-58db-4cb1-9470-bba9344e1ba8",
+    "name": "Intel-OCF-f057c263-58db-4cb1-9470-bba9344e1ba8",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "name": "status",
+        "form": [
+          [
+            {
+              "href": "/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:Toggle"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:Light",
+      "iot:Actuator"
+    ],
+    "@id": "urn:uuid:ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+    "name": "Intel-OCF-ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "iot:CurrentColour"
+        ],
+        "name": "colour",
+        "form": [
+          [
+            {
+              "href": "/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "rgbValue",
+              "schema": {
+                "type": "array",
+                "items": [
+                  {
+                    "@type": [
+                      "iot:RColourData"
+                    ],
+                    "type": "number"
+                  },
+                  {
+                    "@type": [
+                      "iot:GColourData"
+                    ],
+                    "type": "number"
+                  },
+                  {
+                    "@type": [
+                      "iot:BColourData"
+                    ],
+                    "type": "number"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Motion",
+      "iot:MotionControl",
+      "iot:Sensor"
+    ],
+    "@id": "urn:uuid:5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+    "name": "Intel-OCF-5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+    "base": "http://192.168.10.39:8000/api/oic",
+    "interaction": [
+      {
+        "@type": [
+          "Property",
+          "Occupancy",
+          "iot:MotionDetected"
+        ],
+        "name": "motion",
+        "form": [
+          [
+            {
+              "href": "/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+              "mediaType": "application/json"
+            }
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "field": [
+            {
+              "name": "value",
+              "@type": [
+                "iot:StateData"
+              ],
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
