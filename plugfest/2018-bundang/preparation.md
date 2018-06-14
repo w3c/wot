@@ -1,30 +1,56 @@
 # PlugFest Preparation for Bundang F2F 2018
 
 # 1. Introduction
-
-This document describes a general information related to the next plugfest in Bundang F2F meeting. 
+ 
+This document describes general information related to the next plugfest in Bundang F2F meeting. 
 The rest of this section shows the results of the last plugfest held in Prague on March 24-25.
 
-## 1.1 Last pluegfest
+## 1.1 Last plugfest
 
-The following figure is the result of Prague plugfest.
+The following figure is the result of the Prague plugfest.
 
 ![prague plugfest](images/prague_result.png)
 
 ## 1.2 Participants and Servients
 
-THe following is list of participants and servients described in "preparation.md" of Prague plugfest.
+The following is a list of the participants and servients described in the "preparation.md" of the Prague plugfest.
 
 <table>
   <tr>
     <th>Participants</th>
-    <th>Appliation</th>
+    <th>Application</th>
     <th>=protocol=</th>
     <th>Remote proxy</th>
     <th>=protocol=</th>
     <th>Local proxy</th>
     <th>=protocol=</th>
     <th>Device</th>
+  </tr>
+  <tr>
+    <th rowspan="3">Intel</th>
+    <td>OCF Smart Home</td>
+    <td>HTTPS</td>
+    <td rowspan="3">Digital Ocean and AWS</td>
+    <td">SSH Tunnel + Remote Proxy</td>
+    <td>IoT REST API Server</td>
+    <td>CoAP</td>
+    <td>Button, Light, RGB LED, Buzzer, Temperature, Illuminance, Motion</td>
+  </tr>
+  <tr>
+    <td>Web Camera</td>
+    <td>HTTPS</td>
+    <td">SSH Tunnel + Remote Port Forwarding</td>
+    <td>Direct via tunnel</td>
+    <td>HTTPS</td>
+    <td>Camera</td>
+  </tr>
+  <tr>
+    <td>Web Speech</td>
+    <td>HTTPS</td>
+    <td">SSH Tunnel + Remote Port Forwarding</td>
+    <td>Direct via tunnel</td>
+    <td>HTTPS</td>
+    <td>Speaker</td>
   </tr>
   <tr>
     <th rowspan="2">Fujitsu</th>
@@ -59,7 +85,7 @@ THe following is list of participants and servients described in "preparation.md
     <td>LED light, Air conditioner (home/car), Robot Cleaner, Amazon Echo Dot, Google Home mini</td>
   </tr>
   <tr>
-    <th>Internet Reserach Institute</th>
+    <th>Internet Research Institute</th>
     <td>NodeRED</td>
     <td>HTTP(s)</td>
     <td></td>
@@ -121,9 +147,9 @@ THe following is list of participants and servients described in "preparation.md
 </table>
 
 
-# 2. Next plutfest
+# 2. Next plugfest
 
-This section is described for Bundang plugfest held on June 30 and July 1.
+This section describes the Bundang plugfest held on June 30 and July 1.
 
 ## 2.1 Participants and Servients
 
@@ -181,7 +207,7 @@ Each participant is expected to fill in the following table to share between the
 
 ## 2.2 Checking points for the next plugfest
 
-These were described in result.md in Prague plugfest.
+These were described in result.md in the Prague plugfest.
 
 ### (1) Connect with remote/local proxy
 
