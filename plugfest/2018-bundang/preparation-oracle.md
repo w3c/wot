@@ -235,8 +235,8 @@ These were described in result.md in the Prague plugfest.
 
 ### (3) Connect with node-wot
 
-The Oracle IoT Cloud Service and the devices in the Digital Twin Simulator are accessible via a node-WoT instance,
-which has an Oracle binding. 
+The Oracle IoT Cloud Service and the devices in the Digital Twin Simulator are accessible via a node-WoT instance
+which includes an Oracle binding. 
 This binding provides the integration between the IoT Cloud Service Product and the node-WoT reference implementation.
 
 ### (4) Scripting API
