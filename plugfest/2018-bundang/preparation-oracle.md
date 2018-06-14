@@ -287,6 +287,7 @@ This device model can be exported and the corresponding Thing Description can be
 This dm2td converter is provided in the "tools" folder.
 
 Oracle offers to assist other Plugfest participants to create simulated devices on demand.
+If you are interested, please contact Michael.Lagally@oracle.com - preferably already before the plug fest.
 
 ### (8) Semantic integration
 
