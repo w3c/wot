@@ -1,6 +1,6 @@
 # PlugFest Preparation for Bundang F2F 2018
 
-# 2. Next plutfest
+# 2. Next plugfest
 
 This section is described for Bundang plugfest held on June 30 and July 1.
 
