@@ -54,7 +54,10 @@ This section describes the Bundang plugfest held on June 30 and July 1.
 This table is not 100% complete, as it does not describe all the services
 running on the gateways or cloud servers, yet.
 
-To augment the table below, here is an architectural drawing:
+To augment the table below, here is an architectural drawing.  The arrows are
+colored as follows: red - insecure HTTP/TCP; green - secure HTTPS/TLS (encrypted, authenticated),
+blue - CoAP/UDP (currently insecure).
+
 ![Intel WoT Plugfest - Architecture](images/Intel_Architecture_Bundang.svg)
 
 Devices being brought to plugfest:
