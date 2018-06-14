@@ -366,7 +366,7 @@ at least not yet).
 The "name" field of Thing Description shall be of the following form: "IntelDeviceNumberLocation", where
 Location will be one of "Local" (at the Plugfest) or "Remote" (in the remote lab).  Number will be
 used to distinguish multiple copies of the same kind of device (the sensor nodes are mostly duplicates
-of each other).  The Number will always be at least 1 even if there is only one kind of device.
+of each other).  The Number will always be at least 1 even if there is only one instance of that kind of device.
 
 Examples:
   * IntelRGB2Remote
