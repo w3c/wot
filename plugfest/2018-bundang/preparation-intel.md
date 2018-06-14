@@ -51,7 +51,67 @@ This section describes the Bundang plugfest held on June 30 and July 1.
 
 ## 2.1 Participants and Servients
 
-This table is not 100% complete, as it does not describe all the services running on the gateway, yet.
+This table is not 100% complete, as it does not describe all the services
+running on the gateways or cloud servers, yet.
+
+To augment the table below, here is an architectural drawing:
+![Intel WoT Plugfest - Architecture](images/Intel_Architecture_Bundang.svg)
+
+Devices being brought to plugfest:
+1. 1x Sensor Node.
+    - Supporting physical OCF Smart Home Demo sensors.
+2. 1x UP Core
+    - Web Speech.   
+    - Simple Web Camera   
+3. 1x UP Squared Gateway   
+    - IoT REST API Server
+    - OCF Metadata Translator
+    - Thing Directory
+    - Thing Validator
+    - SSH Reverse Tunnel "callers" (call into cloud servers to bypass NAT)
+    - OCF Smart Home simulated devices
+    - Application servient(s) (node-wot)
+
+Devices remaining in the lab but accessible remotely over the network:
+1. 2x Sensor Node.
+    - Supporting physical OCF Smart Home Demo sensors.
+2. 1x UP Core
+    - Web Speech.   
+    - Simple Web Camera   
+3. 1x UP Squared Gateway   
+    - IoT REST API Server
+    - OCF Metadata Translator
+    - Thing Directory
+    - Thing Validator
+    - SSH Reverse Tunnel "callers" (call into cloud servers to bypass NAT)
+    - OCF Smart Home simulated devices
+    - Application servient(s) (node-wot)
+4. FOSCAM IP Camera
+    - tilt/pan, zoom, streaming, night vision, and speaker/microphone
+    - REST API + WS, made available via cloud proxy
+5. Power Management
+    - so all devices can be power-cycled
+    - REST API made available via cloud proxy
+6. Remote Lamp
+    - to provide light for the camera when it is night in Japan
+    - the camera can function using only IR, but then color is not available
+7. Power cycling control of network bridges
+    - via a backup network
+
+Devices 1 and 2 will have TDs.  Devices 4 and 5 have REST APIs, and (time
+permitting) *may* be set up
+with TDs describing a subset of their services (but note that power-cycling the 
+gateway may disrupt other services!  I may set up one port with a light though
+so operating on it can be observed via the FOSCAM camera).
+Device 6 and 7 are available via Sonoff
+devices which have a proprietary service to control them (not accessible to WoT,
+at least not yet).
+
+Here is a preview of the images that that will be available of the lab via
+the FOSCAM:
+![Intel WoT Lab - Visible Light](images/Intel_WoT_Lab_Visible.jpg)
+![Intel WoT Lab - IR Light](images/Intel_WoT_Lab_IR.jpg)
+
 
 <table>
   <tr>
@@ -306,57 +366,6 @@ Venue: TTA
 
 # 4 Requirements for PlugFest Setting
 
-Devices being brought to plugfest:
-1. 1x Sensor Node.
-    - Supporting physical OCF Smart Home Demo sensors.
-2. 1x UP Core
-    - Web Speech.   
-    - Simple Web Camera   
-3. 1x UP Squared Gateway   
-    - IoT REST API Server
-    - OCF Metadata Translator
-    - Thing Directory
-    - Thing Validator
-    - SSH Reverse Tunnel "callers" (call into cloud servers to bypass NAT)
-    - OCF Smart Home simulated devices
-    - Application servient(s) (node-wot)
-
-Devices remaining in Japan but accessible over the network:
-1. 2x Sensor Node.
-    - Supporting physical OCF Smart Home Demo sensors.
-2. 1x UP Core
-    - Web Speech.   
-    - Simple Web Camera   
-3. 1x UP Squared Gateway   
-    - IoT REST API Server
-    - OCF Metadata Translator
-    - Thing Directory
-    - Thing Validator
-    - SSH Reverse Tunnel "callers" (call into cloud servers to bypass NAT)
-    - OCF Smart Home simulated devices
-    - Application servient(s) (node-wot)
-4. FOSCAM IP Camera
-    - tilt/pan, zoom, streaming, night vision, and speaker/microphone
-    - REST API + WS, made available via cloud proxy
-5. Power Management
-    - so all devices can be power-cycled
-    - REST API made available via cloud proxy
-6. Remote Lamp
-    - to provide light for the camera when it is night in Japan
-    - the camera can function using only IR, but then color is not available
-7. Power cycling control of network bridges
-    - via a backup network
-
-Devices 1 and 2 will have TDs.  Devices 4 and 5 have REST APIs, and (time
-permitting) *may* be set up
-with TDs describing a subset of their services (but note that power-cycling the 
-gateway may disrupt other services!  I may set up one port with a light though
-so operating on it can be observed via the FOSCAM camera).
-Device 6 and 7 are available via Sonoff 
-devices which have a proprietary service to control them (not accessible to WoT,
-at least not yet).
-
-
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
 | Intel       | 1                      | 1                       | Wi-Fi and/or wired Ethernet | External ports: 22, 80, 443. Will bring own router and power bar.   |
@@ -374,5 +383,4 @@ Examples:
   * IntelSpeech1Remote
   * IntelCamera1Local
   * IntelFOSCAM1Remote
-
 
