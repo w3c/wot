@@ -258,6 +258,7 @@ These device simulations are exposed via node-WoT and behave just like regular n
 The simulator can serve for:
 * visualizing a device from a TD in a Web UI
 * testing interoperability with node-WoT based devices
+* defining a new device and generating a TD
 
 #### Simulated devices
 Oracle provides "out of the box" device simulators for a variety of devices that are managed by the Digital Twin Simulator.
@@ -266,10 +267,12 @@ The initial set of devices are a simulated Festo plant (Siemens), a Connected Ca
 simulated devices that were built from the TDs from the Prague Plug Fest. 
 
 ##### Festo Simulator
-...
+![prague plugfest](images/sim_festo.png)
 
 ##### Connected Car
-...
+
+![prague plugfest](images/sim_festo.png)
+
 ##### HVAC
 ...
 ##### Smart Factory
