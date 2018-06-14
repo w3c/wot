@@ -21,7 +21,7 @@ See the corresponding section of [preparation.md](preparation.md) for informatio
     <td>OCF Smart Home</td>
     <td>HTTPS</td>
     <td rowspan="3">Digital Ocean and AWS</td>
-    <td">SSH Tunnel + Remote Proxy</td>
+    <td">SSH Tunnel and Remote Proxy</td>
     <td>IoT REST API Server</td>
     <td>CoAP</td>
     <td>Button, Light, RGB LED, Buzzer, Temperature, Illuminance, Motion</td>
@@ -29,7 +29,7 @@ See the corresponding section of [preparation.md](preparation.md) for informatio
   <tr>
     <td>Web Camera</td>
     <td>HTTPS</td>
-    <td">SSH Tunnel + Remote Port Forwarding</td>
+    <td">SSH Tunnel and Remote Port Forwarding</td>
     <td>Direct via tunnel</td>
     <td>HTTPS</td>
     <td>Camera</td>
@@ -37,7 +37,7 @@ See the corresponding section of [preparation.md](preparation.md) for informatio
   <tr>
     <td>Web Speech</td>
     <td>HTTPS</td>
-    <td">SSH Tunnel + Remote Port Forwarding</td>
+    <td">SSH Tunnel and Remote Port Forwarding</td>
     <td>Direct via tunnel</td>
     <td>HTTPS</td>
     <td>Speaker</td>
