@@ -51,7 +51,7 @@ This section describes the Bundang plugfest held on June 30 and July 1.
 
 ## 2.1 Participants and Servients
 
-Each participant is expected to fill in the following table to share between them.
+This table is not 100% complete, as it does not describe all the services running on the gateway, yet.
 
 <table>
   <tr>
@@ -65,14 +65,14 @@ Each participant is expected to fill in the following table to share between the
     <th>Device</th>
   </tr>
   <tr>
-    <th rowspan="3">Intel</th>
+    <th rowspan="5">Intel</th>
     <td>OCF Smart Home</td>
     <td>HTTPS with<br/>
         Basic Auth or<br/>
         Digest Auth
     </td>
-    <td rowspan="3">Digital Ocean and AWS</td>
-    <td>SSH Tunnel + Remote Proxy</td>
+    <td rowspan="5">Digital Ocean and AWS</td>
+    <td>SSH Tunnel and Remote Proxy</td>
     <td>IoT REST API Server</td>
     <td>CoAP (direct)<br/>
         HTTP (via local proxy)
@@ -93,7 +93,7 @@ Each participant is expected to fill in the following table to share between the
         Digest Auth<br/>
     </td>
     <td>SSH Tunnel<br/>
-         +<br/>
+         and<br/>
          Remote Port Forwarding</td>
     <td>Direct via tunnel</td>
     <td>HTTPS with
@@ -107,7 +107,7 @@ Each participant is expected to fill in the following table to share between the
         Digest Auth<br/>
     </td>
     <td>SSH Tunnel<br/>
-         +<br/>
+         and<br/>
          Remote Port Forwarding</td>
     <td>Direct via tunnel</td>
     <td>HTTPS with
