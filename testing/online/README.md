@@ -29,3 +29,14 @@ They can be used for:
 * monitoring and controlling simulated devices from node-WoT
 * integrating other WoT reference implementations with the IoT Cloud Service
 
+## [Mozilla - Things Gateway](https://github.com/mozilla-iot/wiki/wiki/Test-Gateway-Instance)
+
+A test instance of Mozilla's open source Web of Things [gateway implementation](https://github.com/mozilla-iot/gateway) has been made available at https://w3c-interop.mozilla-iot.org/
+
+**Note:** this gateway implements Mozilla's [Web Thing API](https://iot.mozilla.org/wot) proposal which currently diverges from the W3C WoT TD specification.
+However, the Mozilla team hopes for it to converge with the Working Group's Thing Description specification over time.
+There is some basic documentation on how to use the test instance on the [wiki](https://github.com/mozilla-iot/wiki/wiki/Test-Gateway-Instance).
+All added "things" will be cleared every 24 hours.
+
+If you have any questions you can ask them on [Discourse](https://discourse.mozilla.org/c/iot), or find us in #iot on irc.mozilla.org.
+Ben Francis, the Mozilla contact, also hangs out in #wot on irc.w3.org. If you find bugs, please file them on [GitHub](https://github.com/mozilla-iot/gateway/issues).

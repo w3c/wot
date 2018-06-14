@@ -6,15 +6,22 @@ As an example web-based device,
 a simple web camera directly supporting an HTTP network interface has been implemented
 which provides its own Thing Description.
 In addition, the system includes a running implementation of the OCF Smart Home Demo.
-The OCF Smart Home Demo in turn includes a number of CoAP-based devices.
+The OCF Smart Home Demo in turn includes a number of CoAP-based OCF devices.
 These OCF devices are supported by a CoAP/HTTP bridge service
 and a metadata translator service running on a gateway.
 The metadata translator automatically and dynamically generates Thing Descriptions from OCF metadata.
-Multiple portals running in the cloud supports secure remote access,
+Multiple portals running in the cloud support secure remote access,
 demonstrating both end-to-end private tunnels and proxied tunnels for NAT traversal.
-Secure remote access is supported by HTTPS and multiple authentication mechanisms.
+Secure remote access is supported by HTTPS and multiple authentication mechanisms are demonstrated.
 Finally, simultaneous gateway and cloud portal Thing Directory services support
 both local and remote discoverability and access.
+
+In the diagram below, secure, encrypted connections are shown in green and unencrypted connections
+in red.  Red connections are only used within a system (eg behind a firewall) or over an encrypted
+tunnel.  This diagram only shows the "production" network connections potentially useful in a 
+real deployment.  The actual test system includes a number of other access points for test
+purposes (all access points are however protected by tunnelling them through the proxy, so
+authentication is required to access them).
 
 ### System Architecture
 ![System Architecture](IMAGES/intel_architecture.png)
