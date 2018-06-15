@@ -253,12 +253,16 @@ This is a flexible simulation environment, which hosts multiple instances of var
 simulation engine that allows the functional definition of a simulated device from a Web user interface.
 It allows to build new device simulations with very small effort.
 
+![prague plugfest](Oracle_sim_time_series.gif)
+
+
 These device simulations are exposed via node-WoT and behave just like regular node-WoT devices.
 
 The simulator can serve for:
 * visualizing a device from a TD in a Web UI
 * testing interoperability with node-WoT based devices
 * defining a new device and generating a TD
+* generating device data based on a functional simulation model
 
 #### Simulated devices
 Oracle provides "out of the box" device simulators for a variety of devices that are managed by the Digital Twin Simulator.
@@ -267,27 +271,33 @@ The initial set of devices are a simulated Festo plant (Siemens), a Connected Ca
 simulated devices that were built from the TDs from the Prague Plug Fest. 
 
 ##### Festo Simulator
-![prague plugfest](images/sim_festo.png)
+![Oracle_Simulator](images/Oracle-sim_festo.png)
 
 ##### Connected Car
 
-![prague plugfest](images/sim_festo.png)
+![Oracle_Simulator](images/Oracle-sim_connected_car.png)
 
 ##### HVAC
 ...
-##### Smart Factory
-...
+
+##### Fujitsu
+
+![Oracle_Simulator](images/Oracle-sim_3_fujitsu_instances.png)
+
+##### Panasonic
+
+![Oracle_Simulator](images/Oracle-sim_panasonic.png)
 
 #### Additional Device Simulations - TD import
 Additional Device simulations can be easily defined by importing a device description in the 
 Oracle Device Model format into the simulator.
 The Device Model can be automatically generated from a Thing Description using the td2dm converter. 
-This td2dm converter is provided in the "tools" folder.
+This td2dm converter is provided in the "oracle-tools" folder.
 
 #### Generating Thing Descriptions 
 Alternatively, a device model for a new device can be easily created in the Oracle IoT Cloud Service using the management console.
 This device model can be exported and the corresponding Thing Description can be automatically generated using the dm2td converter.
-This dm2td converter is provided in the "tools" folder.
+This dm2td converter is provided in the "oracle-tools" folder.
 
 Oracle offers to assist other Plugfest participants to create simulated devices on demand.
 If you are interested, please contact Michael.Lagally@oracle.com - preferably already before the plug fest.
