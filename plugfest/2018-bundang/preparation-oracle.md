@@ -253,7 +253,7 @@ This is a flexible simulation environment, which hosts multiple instances of var
 simulation engine that allows the functional definition of a simulated device from a Web user interface.
 It allows to build new device simulations with very small effort.
 
-![prague plugfest](Oracle_sim_time_series.gif)
+![Oracle_Simulator](images/Oracle-sim_overview.png)
 
 
 These device simulations are exposed via node-WoT and behave just like regular node-WoT devices.
@@ -263,6 +263,8 @@ The simulator can serve for:
 * testing interoperability with node-WoT based devices
 * defining a new device and generating a TD
 * generating device data based on a functional simulation model
+
+![Oracle_Simulator](images/Oracle_sim_time_series.gif)
 
 #### Simulated devices
 Oracle provides "out of the box" device simulators for a variety of devices that are managed by the Digital Twin Simulator.
@@ -275,10 +277,11 @@ simulated devices that were built from the TDs from the Prague Plug Fest.
 
 ##### Connected Car
 
-![Oracle_Simulator](images/Oracle-sim_connected_car.png)
+![Oracle_Simulator](images/Oracle-sim_connected_car.gif)
 
 ##### HVAC
-...
+
+![Oracle_Simulator](images/Oracle-sim_hvac.png)
 
 ##### Fujitsu
 
