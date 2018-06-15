@@ -247,7 +247,7 @@ This binding provides the integration between the IoT Cloud Service Product and 
 
 ### (7) Device simulators
 
-#### Digital Twin Simulator
+#### Oracle Digital Twin Simulator
 Oracle provides a Digital Twin Simulator for W3C WoT members, which is part of the Oracle IoT Cloud Service product.
 This is a flexible simulation environment, which hosts multiple instances of various devices and a
 simulation engine that allows the functional definition of a simulated device from a Web user interface.
@@ -300,7 +300,7 @@ This td2dm converter is provided in the "oracle-tools" folder.
 #### Generating Thing Descriptions 
 Alternatively, a device model for a new device can be easily created in the Oracle IoT Cloud Service using the management console.
 This device model can be exported and the corresponding Thing Description can be automatically generated using the dm2td converter.
-This dm2td converter is provided in the "oracle-tools" folder.
+The dm2td converter is provided in the "oracle-tools" folder.
 
 Oracle offers to assist other Plugfest participants to create simulated devices on demand.
 If you are interested, please contact Michael.Lagally@oracle.com - preferably already before the plug fest.
