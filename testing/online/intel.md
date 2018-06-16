@@ -1,4 +1,6 @@
 # Intel - Smart Home Demo including OCF Devices and NAT Traversal
+**NOTE: TEMPORARILY OFFLINE WHILE PREPARING FOR BUNDANG PLUGFEST.**
+
 This demonstration systems includes a combination of devices
 with both web-service and OCF network interfaces
 and shows how they can be coordinated.
