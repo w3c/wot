@@ -28,6 +28,7 @@ if (verbose) console.log(dm);
 if (verbose) console.log("-----");
 
 var td={};
+td['@context']=["https://w3c.github.io/wot/w3c-wot-td-context.jsonld" ];
 td.name=dm.name;
 td.description=dm.description;
 td.id=dm.urn;

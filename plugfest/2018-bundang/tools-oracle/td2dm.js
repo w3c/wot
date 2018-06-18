@@ -42,42 +42,47 @@ dm.actions=[];
 //dm.formats=[];
 //dm.links=[];
 
-for(var exKey in td.interaction) {
-    if (verbose) console.log("key:"+exKey+", value:"+td.interaction[exKey]);
-    var iac=td.interaction[exKey];
-    if (verbose) console.log(iac);
-    if (verbose) console.log(iac["@type"][0]); // property, action or event
-    var iacType=iac["@type"][0]
-
-    if (iacType === "Property") {
-      if (verbose) console.log("===== Prop ========");
-      var prop={};
-      prop.name=iac.name;
-      prop.description=iac.form[0].href;
-      prop.type=iac.schema.type.toUpperCase();
-      if (iac.schema.minimum != iac.schema.maximum) {
-        prop.range=iac.schema.minimum+","+iac.schema.maximum;
+for (var p in td.properties) {
+    if (verbose) console.log(p);
+    var prop={};
+    prop.name=p;
+    var iac=td.properties[p];
+    prop.description=iac.label;
+    if (iac.properties) {
+      prop.type=iac.properties.type.toUpperCase();
+      if (iac.properties.minimum != iac.properties.maximum) {
+        prop.range=iac.properties.minimum+","+iac.properties.maximum;
       }
-      prop.writable=iac.writable;
-      dm.attributes.push(prop);
-      if (verbose) console.log(prop);
-
-    } else if (iacType === "Action" ) {
-      var act={};
-      act.name=iac.name;
-      act.description=iac.form[0].href;
-      dm.actions.push(act);
-      if (verbose) console.log(act);
-
-    } else if (iacType === "Event" ) {
-      var evt={};
-      evt.name=iac.name;
-      evt.description=iac.form[0].href;
-      if (verbose) console.log(act);
     } else {
-      process.exit(-1);
+       prop.type=iac.type;
     }
+    prop.writable=iac.writable;
+    dm.attributes.push(prop);
+    if (verbose) console.log(prop);
+}
 
+if (verbose) console.log("-----");
+
+for (var a in td.actions) {
+    if (verbose) console.log(iac);
+    var act={};
+    act.name=a;
+    var iac=td.actions[a];
+    act.description=iac.label;
+
+    dm.actions.push(act);
+    if (verbose) console.log(act);
+}
+
+if (verbose) console.log("-----");
+
+for (var e in td.events) {
+    if (verbose) console.log(iac);
+    var evt={};
+    var iac=td.events[e];
+    evt.name=e;
+    evt.description=iac.description;
+    if (verbose) console.log(act);
 }
 if (verbose) console.log("-----");
 
