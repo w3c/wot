@@ -73,7 +73,6 @@ These were described in result.md in Prague plugfest.
 
 #### Fujitsu
    We use Node-RED to lookup TD and set/get property value and Action.
-   Nimura-san use scripting api.
 
 ### (3) Connect with node-wot
 
@@ -83,8 +82,7 @@ These were described in result.md in Prague plugfest.
 ### (4) Scripting API
 
 #### Fujitsu
-   We provide application servient that supports ConsumedThing of ScriptingAPI and device servient that supports 
-   ExposedThing of ScriptingAPI.
+   We provide application servient supporting ConsumedThing. However no enhancement from last F2F.
 
 ### (5) Thing Directory operation
 
@@ -112,6 +110,9 @@ These were described in result.md in Prague plugfest.
 #### Fujitsu
    We use bearer token for access the remote/local proxy.
    And also use bearer token between remote proxy and local proxy.
+   (future work)
+   To support security metadata to be included in TD.
+   To provides secure transfer between Thing Directory and WoT Client/Server.
 
 ### (10) Accessibility
 
