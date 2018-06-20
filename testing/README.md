@@ -3,8 +3,9 @@
 Logistics and planning for testing and validation.
 
 * [Status](status.md)
+* [Conventions](conventions.md)
 * [Tools](tools.md)
 * [Plan](plan.md)
 * [To Do](todo.md)
 * [To Consider](consider.md)
-* [Online Test Things](online.md)
+* [Online Test Things and Systems](online/README.md)

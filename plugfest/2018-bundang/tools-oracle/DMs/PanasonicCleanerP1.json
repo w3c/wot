@@ -1,0 +1,85 @@
+{
+  "urn": "urn:com:PanasonicTDs:PanasonicCleanerP1",
+  "name": "PanasonicCleanerP1",
+  "description": "https://xxxxxxxx/wot-ver2/things/cleaner/1/",
+  "system": false,
+  "draft": false,
+  "created": 1527609696589,
+  "createdAsString": "2018-05-29T16:01:36.589Z",
+  "lastModified": 1527610356323,
+  "lastModifiedAsString": "2018-05-29T16:12:36.323Z",
+  "userLastModified": "IoTAdmin",
+  "attributes": [
+    {
+      "description": "Speed in km/h",
+      "name": "speed",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "alias": "ora_lat",
+      "name": "ora_latitude",
+      "range": "-90.0,90.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_lon",
+      "name": "ora_longitude",
+      "range": "-180.0,180.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_alt",
+      "name": "ora_altitude",
+      "type": "NUMBER",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "description": "operationPower",
+      "name": "operationPower"
+    },
+    {
+      "description": "turnRight",
+      "name": "turnRight"
+    },
+    {
+      "description": "turnLeft",
+      "name": "turnLeft"
+    },
+    {
+      "description": "goStraight",
+      "name": "goStraight"
+    },
+    {
+      "description": "goHome",
+      "name": "goHome"
+    },
+    {
+      "description": "specifyArea",
+      "name": "specifyArea"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3APanasonicTDs%3APanasonicCleanerP1",
+      "rel": "self"
+    },
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3APanasonicTDs%3APanasonicCleanerP1",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3APanasonicTDs%3APanasonicCleanerP1/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
