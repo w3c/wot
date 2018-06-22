@@ -1,12 +1,28 @@
-# PlugFest Preparation for Bundang F2F 2018
+# PlugFest Preparation for Bundang 2018
 
-# 2. Next plugfest
+This document describes the Bundang PlugFest held on June 30 and July 1.
 
-This section describes the Bundang plugfest held on June 30 and July 1.
+A summary of the previous Prague PlugFest can be found [here](https://github.com/w3c/wot/blob/master/plugfest/2018-prague/result.md).
 
-## 2.1 Participants and Servients
+Features marked with <i>italics</i> are work-in-progress.
 
-Each participant is expected to fill in the following table to share between them.
+## 1 PlugFest Infrastructure
+This section lists the infrastructure available for the PlugFest, which can be used for individual testing (see [Section 3.1](#31-testing-individually))
+
+### 1.1 Public Thing Directories
+
+* N/A
+
+### 1.2 Public Proxies
+
+* N/A
+
+### 1.3 Public Tools -- was (o8) Test Framework
+
+* Online WoT Server Simulator available (contact to kawaguchi.toru [at] jp.panasonic.com to get access information).
+
+## 2 Participants and Servients
+
 
 <table>
   <tr>
@@ -43,130 +59,147 @@ Each participant is expected to fill in the following table to share between the
   </tr>
 </table>
 
-## 2.2 Checking points for the next plugfest
 
+## 3 Checking points for the next plugfest
 
-### (1) Connect with remote/local proxy
-Remote devices in Osaka Lab and devices simulated by online simulator are exposing WoT server on the cloud, so connection to remote/local proxy is essentially not necessary (although it's possible).
+### 3.1 Testing Individually
+The following checking points can be completed by the participant alone by using the PlugFest infrastructure (TD Playground, Thing Directory, Proxies).
 
-Devices simulated by local simulator will expose WoT server locally, so to access these devices from outside, connection to remote/local proxy is necessary.
+#### 3.1.1 Validate Simplified TDs -- was Other Issues (1)
 
-In Prague, connection through Fujitsu proxy was successful. In Bundang, we expect to connect through other proxies as well.
+* Panasonic will validate their updated TDs
 
-### (2) Application servients
-We will use generic WoT client on browser which is consisted of HTML/JavaScript code and JavaScript library (client side subset of WoT Scripting API) to read TD and access servients, ether locally or on the cloud/proxy. To avoid CORS restriction, it might be necessary to use browser with non-secure mode, such as Vivaldi.
+#### 3.1.2 Register with Thing Directory -- was (5)
 
-Complementary, we will also use NodeRED.
+* Panasonic will register all Things with the Directory
 
-### (3) Connect with node-wot
-We will try to connect any servients using Node-WoT where possible during Plugfest.
+#### 3.1.3 Connect with Remote/Local Proxy -- was (1)
 
-Currently we have no plan to use Node-WoT as a library.
+* Panasonic will register local Things with the Fujitsu local proxy.
+* Registeration to other proxies TBD
 
-### (4) Scripting API
-As written in (2), we implement subset of Scripting API and use it in Generic WoT Client on browser.
+#### 3.1.4 Connect with node-wot -- was (3)
 
-### (5) Thing Directory operation
-In Prague, manual registration to Fujitsu directory (=proxy) was successful. In Bundang, we expect to register to other directories as well.
+* N/A (Currently Panasonic does not use node-wot to implement Things or applications)
 
-### (6) Device Servients
-We will expose device servients on the cloud, which will be connected to remote devices such as Air conditioner, Lighting and Robotics Cleaner, located at our lab in Osaka. Result of the operation can be seen through Hangout video. Servients on the cloud and devices in the lab are connected by proprietary tunneling method.
+#### 3.1.5 Scripting API -- was (4)
+* Panasonic wrote Generic HTML Client script against the Wot Scripting API implemented as JavaScript library.
 
-We will bring Google Home Mini to Bundang, which also exposes device servient on the cloud, accepting event subscription and emits event when particular keywords are spoken to.
+### 3.2 Testing in Client Role
+The following checking points must be completed together with a partner in server role.
 
-### (7) Device simulators
-We will set up device simulator on the cloud, which simulates devices such as Air Conditioner, Lighting and Robotics Cleaner and exposes servients, looking similar to device servients connected to physical devices at our lab in Osaka.
+#### 3.2.1 Metadata Handling
 
-We will bring Raspberry Pi to Bundang, which runs same simulator program as on the cloud, to simulate locally connected WoT device servients.
+* Panasonic will use WoT Scripting API implemented as JavaScirpt library, which can consume any Thing metadata with HTTP bindings.
+* Panasonic will use NodeRED with the node which can consume any Thing metadata with HTTP bindings.
 
-### (8) Semantic integration
-We already have some semantic annotation on our AirConditioner TD. We will check iotschema.org and put semantic annotation to other TDs as well.
+#### 3.2.2 Property Handling -- was part of (2)
 
-### (9) Security
-WoT interfaces to the Servients on the cloud (for remote devices in Osaka Lab, online simulater and Google Home Mini) are protected by HTTPS and bearer token. We have dedicated server for PUSH notification which also supports TLS (HTTPS for long polling and WSS for WebSocket), but currently does not require token, due to difficulty to handle WebSocket custom header on browser.
+* Panasonic implements the following get bindings
+   * HTTP(S)
+* Panasonic implements the following set bindings
+   * HTTP(S)
+* Panasonic implements the following observe bindings
+   * HTTP(S)+Longpoll
+   * WebSocket
 
-In addition, HTML user interface to the online simulator is protected by HTTPS and basic authentication. Please contact to Panasonic stuff to get details.  
+#### 3.2.3 Action Handling -- was part of (2)
 
-WoT interface to the Local simulater uses HTTP and not protected.
+* Panasonic implements the following invoke bindings
+   * HTTP(S)
 
-### (10) Accessibility
-At the moment no Accessibility scenario has been considered.
+#### 3.2.4 Event Handling -- was part of (11)
 
-### (11) Event handling
-Currently, following device servients are possible to invoke PUSH notification:
-- AirConditioner (Property observe, Event)
-- Lighting (Property observe)
-- Google Home Mini (Event)
+* Panasonic implements the following subscribe bindings
+   * HTTP(S)+Longpoll
+   * WebSocket
 
-For above servients and our generic WoT Client, HTTP long polling is already supported. Details are as follows:
-- URI: written in "href" field in the "form" of TD where interaction type is property and "rel" is "observe" or interaction type is event, starting from "http" or "https".
-- Sub Protocol: "subProtocol" field in the "form" of TD is set to "LongPoll".
-- Subscribe: GET from above URI.
-- Notification: GET response returns. Payload is JSON data of property or event  without any headers or footers.
-- Unsubscribe: disconnect pending GET from above URI.
+#### 3.2.5 Security -- was part of (9)
 
+* Panasonic can consume the following Security Schemes:
+   * basic
+   * digest
+   * bearer
 
-In addition, we plan to implement simple WebSocket bindings to above servients as well as generic WoT Client. Details are as follows:
-- URI: written in "href" field in the "form" of TD where interaction type is property and "rel" is "observe" or inter type is event, starting from "ws" or "wss".
-- Sub Protocol: no specific "subProtocol" field in the "form" of TD is not used.
-- Subscribe: connect WebSocket to above URI.
-- Notification: JSON data of property or event is transmitted through above WebSocket connection without any headers or footers.
-- Unsubscribe: disconnect WebSocket from above URI.
+#### 3.2.6 Semantic integration -- was part of (8)
 
-## 2.3 Other issues
+* Panasonic will use manual queries for the Thing Directory to find specific Things of the test partner (no integration to client this time).
 
-### (1) Validate the simplified TD
-We will update all our TDs aligning to new simplified TD format.
+#### 3.2.7 Accessibility -- was (10)
 
-### (2) Extended Actions
-Currently we have no plan to support Extended Actions.   
-We currently support actions in Robotics Cleaner but it does not have  any monitoring mechanism of invoked actions.
+* N/A (Panasonic does not implement Accessibility front-ends for Things)
 
-### (3) Notification - websockets, webhooks
-As mentioned in 2.2 (11), we will implement simple WebSocket for Property observe and Event notification.
+### 3.3 Testing in Server Role
+The following checking points must be completed together with a partner in client role.
 
-### (4) Discovery using Feature of Interest annotation
-To be investigated.
+#### 3.3.1 Metadata
 
-### (5) Application Scenarios, recipes
-Currently we have smart home application with simple "I'm Home" and "Bye" scenario triggerd by voice command through Google Home.  
+* Panasonic will expose Things as listed in the table
 
-We'd like to find out convincing application scenarios orchestrating devices from smart home and other areas, such as automotive, building or industry.
+#### 3.3.2 Properties -- was part of (6) and (7)
 
-### (6) Proxy integration with Thing Directory
-Currently we have no plan to provide proxy and directory.
+Panasonic implements the following get bindings
+  * HTTP(S)
+* Panasonic implements the following set bindings
+  * HTTP(S)
+* Panasonic implements the following observe bindings
+  * HTTP(S)+Longpoll
+  * WebSocket
 
-### (7) New security patterns
-As mentioned in 2.2, WoT interfaces to servient on the cloud are protected by HTTPS and bearer token.
+#### 3.3.3 Actions -- was part of (6) and (7)
 
-### (8) Test Framework
-We will provide Online Simulator for testing.
+* Panasonic implements the following invoke bindings
+   * HTTP(S)
 
-### (9) Other
+#### 3.3.4 Events -- was part of (11)
 
-## 2.4 Use cases
+* Panasonic implements the following subscribe bindings
+   * HTTP(S)+Longpoll
+   * WebSocket
 
+#### 3.3.5 Security -- was part of (9)
 
-As mentioned in 2.3, we'd like to find out convincing application scenarios orchestrating devices from smart home and other areas, such as automotive, building or industry.
+* Panasonic will offer the following Security Schemes:
+   * bearer
 
+#### 3.3.6 Semantic Integration -- was part of (8)
 
-# 3 Schedule
+* Panasonic will annotate their Things with iot.schema.org vocabulary
 
-Sat 30.6.18:  9:00-18:00  
-Sun 1.7.18:  9:00-18:00  
+### 3.4 Other issues
 
-Venue: TTA
+#### 3.4.1 Running Actions and Event Instances -- was Other Issues (2)
 
-# 4 Requirements for PlugFest Setting
+* N/A (Future study)
+
+#### 3.4.2 Discovery using Feature of Interest -- was Other Issues (4)
+
+* N/A (Future study)
+
+#### 3.4.3 New Security Patterns -- was Other Issues (7)
+
+* N/A (What does "New Security Patterns" particularly mean?)
+
+#### 3.4.4 Miscellaneous -- was Other Issues (9)
+
+* N/A
+
+## 4 Use cases -- was Other Issues (5) and (6)
+
+* Panasonic currently has smart home application with simple "I'm Home" and "Bye" scenario triggered by voice command through Google Home.
+* Panasonic want to find out some meaningful scenarios, such as:
+  - Multiple ecosystem orchestration in smart home area, such as collaboration of Echonet device and OCF device.
+  - Smart home and other area orchestration, such as automotive, building, industry or smart city infrastructure.
+
+## 5 Requirements for PlugFest Environment
 
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
 | Panasonic   | 3                      | 2                       | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 3000, 3001, 3002, 3003, 3004, 8001, 8003 | |
 
+## 6 Implementation Guidelines
 
-# 5 Implementation guidelines
 ## request to proxy implementors
-
-I would like to ask proxies to support multiple bindings per each property and event. We use multiple bindings to distinguish:
-- "read/write" and "observe" of Property
-- multiple method of notification (property observe and event) such as HTTP long polling and simple WebSocket.
+Panasonic would like to ask proxies to support multiple bindings per each property and event. We use multiple bindings to distinguish:
+- "read/write" and "observe" of particular property
+- multiple method of notification (property observe or event subscribe) such as HTTP long polling and simple WebSocket.
