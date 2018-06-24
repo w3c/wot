@@ -37,7 +37,7 @@ This section lists the infrastructure available for the PlugFest, which can be u
   <!-- adapt rowspan as needed to have each application and each Thing in their own cells -->
   <tr>
     <th>Hitachi</th>
-    <td><a ref="http://github.com/node-red/node-red-nodegen">Node generator for Node-RED</a></td>
+    <td><a href="http://github.com/node-red/node-red-nodegen">Node generator for Node-RED</a></td>
     <td>HTTP<i>(S)</i></td>
     <td>(N/A)</td>
     <td>(N/A)</td>
