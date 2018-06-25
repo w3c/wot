@@ -8,9 +8,22 @@ var fs = require("fs");
 var path = require("path");
 var baseDir = ".";
 
+let appId="DD8B372C-D924-4EC9-A1BD-B0B8B5312A88";
+let iotCSServer="129.150.193.97";
+
+if (process.argv.length<5) {
+   console.log ("Usage: node dm2td.jsdm2td.js <deviceModel.json> <IoTCSServer> <applicationID> <deviceId> [-v]");
+   console.log ("node tools-oracle/dm2td.js tools-oracle/DMs/Festo_Plant.json 129.150.193.97 DD8B372C-D924-4EC9-A1BD-B0B8B5312A88 880CF1CA-A391-42CD-ADBF-7D5980B0C755");
+   process.exit (-1);
+}
+
 var filename=process.argv[2];
 
-var verbose=process.argv[3] ==="-v";
+iotCSServer = process.argv[3];
+appId = process.argv[4];
+var deviceId = process.argv[5];
+
+var verbose=process.argv[6] ==="-v";
 
 if (verbose) console.log(`td-dm started`);
 
@@ -32,7 +45,8 @@ td['@context']=["https://w3c.github.io/wot/w3c-wot-td-context.jsonld" ];
 td.name=dm.name;
 td.description=dm.description;
 td.id=dm.urn;
-td.base="http://<tbd>";
+let deviceUrn=dm.urn.replace(":","%3A");
+td.base="https://"+iotCSServer+"/iot/api/v2/apps/"+appId+"/devices/"+deviceId+"/deviceModels/"+deviceUrn;
 var now=new Date(Date.now());
 td.createdAsString=now.toISOString();
 td.created=now.valueOf();
