@@ -45,8 +45,12 @@ td['@context']=["https://w3c.github.io/wot/w3c-wot-td-context.jsonld" ];
 td.name=dm.name;
 td.description=dm.description;
 td.id=dm.urn;
+<<<<<<< HEAD
 let deviceUrn=dm.urn.replace(":","%3A");
 td.base="https://"+iotCSServer+"/iot/api/v2/apps/"+appId+"/devices/"+deviceId+"/deviceModels/"+deviceUrn;
+=======
+td.base="http://<tbd>";
+>>>>>>> 1fa51955ea546ae67b759d07bd05248e93e75c39
 var now=new Date(Date.now());
 td.createdAsString=now.toISOString();
 td.created=now.valueOf();

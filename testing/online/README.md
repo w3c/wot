@@ -3,7 +3,7 @@
 ## [Intel - Smart Home Demo including OCF Devices and NAT Traversal](intel.md)
 Intel provides a Smart Home Demo including a combination of devices with both
 web-service and OCF network interfaces.
-As an example web-based device, 
+As an example web-based device,
 a simple web camera directly supporting an HTTP network interface has been implemented which provides its
 own Thing Description.
 In addition, the system includes a running implementation of the OCF Smart Home Demo.
@@ -40,3 +40,10 @@ All added "things" will be cleared every 24 hours.
 
 If you have any questions you can ask them on [Discourse](https://discourse.mozilla.org/c/iot), or find us in #iot on irc.mozilla.org.
 Ben Francis, the Mozilla contact, also hangs out in #wot on irc.w3.org. If you find bugs, please file them on [GitHub](https://github.com/mozilla-iot/gateway/issues).
+
+## [Panasonic - WoT Server Simulator](panasonic.md)
+Panasonic provides online WoT Server Simulator for use by the WoT Workgroup for interoperability testing.
+
+This service is continuously available and online for interoperability testing by WoT WG members.
+
+It can be used for testing particular functionality of WoT Client as well as validating corresponding piece of specification.
