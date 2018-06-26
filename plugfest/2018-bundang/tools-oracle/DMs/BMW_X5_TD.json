@@ -1,0 +1,97 @@
+{
+  "urn": "urn:com:EURECOM-TDs:BMW_X5_TD",
+  "name": "BMW_X5_TD",
+  "description": "http://xxxxxxxx/v2/north/",
+  "system": false,
+  "draft": false,
+  "created": 1527610384769,
+  "createdAsString": "2018-05-29T16:13:04.769Z",
+  "lastModified": 1527610384769,
+  "lastModifiedAsString": "2018-05-29T16:13:04.769Z",
+  "userLastModified": "IoTAdmin",
+  "attributes": [
+    {
+      "description": "sensor/gearPosition",
+      "name": "gearPosition",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "sensor/left-front-door",
+      "name": "left-front-door",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "sensor/right-front-door",
+      "name": "right-front-door",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "sensor/leftRearDoor",
+      "name": "leftRearDoor",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "sensor/rightRearDoor",
+      "name": "rightRearDoor",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "actuator/left-front-window/status",
+      "name": "left-front-window",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "actuator/right-front-window/status",
+      "name": "right-front-window",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "actuator/leftRearWindow/status",
+      "name": "leftRearWindow",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "actuator/rightRearWindow/status",
+      "name": "rightRearWindow",
+      "type": "STRING",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "description": "actuator/left-headlight/turnon",
+      "name": "left-headlight"
+    },
+    {
+      "description": "actuator/left-headlight/turnon",
+      "name": "right-headlight"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3AEURECOM-TDs%3ABMW_X5_TD",
+      "rel": "self"
+    },
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3AEURECOM-TDs%3ABMW_X5_TD",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3AEURECOM-TDs%3ABMW_X5_TD/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

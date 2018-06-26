@@ -1,0 +1,150 @@
+{
+  "urn": "urn:com:eurecom:car:bmw_7s_3",
+  "name": "BMW_7S_3",
+  "description": "Eurecom model + fog detection",
+  "system": false,
+  "draft": false,
+  "created": 1527609568165,
+  "createdAsString": "2018-05-29T15:59:28.165Z",
+  "lastModified": 1527609568165,
+  "lastModifiedAsString": "2018-05-29T15:59:28.165Z",
+  "userLastModified": "IoTAdmin",
+  "attributes": [
+    {
+      "description": "wot/bk/property/speed",
+      "name": "speed",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/latitude",
+      "name": "current_Latitude",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/longitude",
+      "name": "current_Longitude",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/destination_latitude",
+      "name": "destination_Latitude",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "description": "wot/bk/property/destination_longitude",
+      "name": "Destination_Longitude",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "description": "wot/bk/property/front_left_door_isopen",
+      "name": "left_front_door_status",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "description": "wot/bk/property/front_left_seat_isbelted",
+      "name": "left_front_seat_isbelted",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/temperature",
+      "name": "temperature",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/ESC",
+      "name": "ESC",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/travelled_distance",
+      "name": "travelled_distance",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/fuelrange",
+      "name": "fuelrange",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "wot/bk/property/tire_pressure_warning",
+      "name": "tire_pressure_warning",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "name": "Humidity",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "name": "Lamp_Switch",
+      "type": "BOOLEAN",
+      "writable": true
+    }
+  ],
+  "actions": [
+    {
+      "description": "wot/bk/action/activate_ESC",
+      "name": "activateESC"
+    },
+    {
+      "description": "wot/bk/action/desactivate_ESC",
+      "name": "desactivateESC"
+    },
+    {
+      "description": "fog",
+      "name": "fog"
+    },
+    {
+      "description": "turnLightOff",
+      "name": "turnLightOff"
+    },
+    {
+      "description": "turnLightOn",
+      "name": "turnLightOn"
+    }
+  ],
+  "formats": [
+    {
+      "urn": "urn:com:eurecom:bmw:fog",
+      "name": "fog_alert",
+      "description": "fog_alert",
+      "type": "ALERT",
+      "deviceModel": "urn:com:eurecom:car:bmw_7s_3",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:eurecom:car:bmw_7s_3",
+      "sourceType": "DEVICE_MODEL"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3Aeurecom%3Acar%3Abmw_7s_3",
+      "rel": "self"
+    },
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3Aeurecom%3Acar%3Abmw_7s_3",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3Aeurecom%3Acar%3Abmw_7s_3/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

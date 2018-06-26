@@ -1,0 +1,153 @@
+{
+  "urn": "urn:com:siemens:wot:FestoPlant",
+  "name": "Festo Plant",
+  "description": "Device Model for the Siemens Festo Plant",
+  "system": false,
+  "draft": false,
+  "created": 1527609652060,
+  "createdAsString": "2018-05-29T16:00:52.060Z",
+  "lastModified": 1527609652060,
+  "lastModifiedAsString": "2018-05-29T16:00:52.060Z",
+  "userLastModified": "IoTAdmin",
+  "attributes": [
+    {
+      "name": "PumpStatus",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "name": "Tank101levelvalue",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "Tank101maximumLevelStatus",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "name": "Tank101minimumLevelStatus",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "name": "Tank101overflowStatus",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "name": "Tank102levelvalue",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "Tank102overflowStatus",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "name": "ValveStatus",
+      "type": "BOOLEAN",
+      "writable": true
+    }
+  ],
+  "actions": [
+    {
+      "alias": "CloseValve",
+      "argType": "BOOLEAN",
+      "description": "Closes valve",
+      "name": "CloseValve"
+    },
+    {
+      "alias": "EmergencyStop",
+      "description": "Stops process",
+      "name": "EmergencyStop"
+    },
+    {
+      "alias": "OpenValve",
+      "argType": "BOOLEAN",
+      "description": "Opens valve",
+      "name": "OpenValve"
+    },
+    {
+      "alias": "StartPump",
+      "argType": "BOOLEAN",
+      "description": "Starts pump",
+      "name": "StartPump"
+    },
+    {
+      "alias": "StopPump",
+      "argType": "BOOLEAN",
+      "description": "Stops pump",
+      "name": "StopPump"
+    }
+  ],
+  "formats": [
+    {
+      "urn": "urn:com:siemens:wot:festo:Tank101maximumLevelStatus",
+      "name": "Tank101maximumLevelStatus",
+      "description": "Tank101maximumLevelStatus",
+      "type": "ALERT",
+      "deviceModel": "urn:com:siemens:wot:FestoPlant",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:siemens:wot:FestoPlant",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:siemens:wot:festo:Tank101minimumLevelStatus",
+      "name": "Tank101minimumLevelStatus",
+      "description": "Tank101minimumLevelStatus",
+      "type": "ALERT",
+      "deviceModel": "urn:com:siemens:wot:FestoPlant",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:siemens:wot:FestoPlant",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:siemens:wot:festo:Tank101overflowStatus",
+      "name": "Tank101overflowStatus",
+      "description": "Tank101overflowStatus",
+      "type": "ALERT",
+      "deviceModel": "urn:com:siemens:wot:FestoPlant",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:siemens:wot:FestoPlant",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:siemens:wot:festo:Tank102OverflowStatus",
+      "name": "Tank102overflowStatus",
+      "description": "Tank102overflowStatus",
+      "type": "ALERT",
+      "deviceModel": "urn:com:siemens:wot:FestoPlant",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:siemens:wot:FestoPlant",
+      "sourceType": "DEVICE_MODEL"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3Asiemens%3Awot%3AFestoPlant",
+      "rel": "self"
+    },
+    {
+      "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3Asiemens%3Awot%3AFestoPlant",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://129.150.193.97:443/iot/webapi/v2/deviceModels/urn%3Acom%3Asiemens%3Awot%3AFestoPlant/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
