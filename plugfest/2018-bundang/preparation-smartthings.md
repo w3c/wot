@@ -1,12 +1,5 @@
-# PlugFest Preparation for Bundang F2F 2018
 
-# 2. Next plugfest
-
-This section describes the Bundang plugfest held on June 30 and July 1.
-
-## 2.1 Participants and Servients
-
-Each participant is expected to fill in the following table to share between them.
+## 2 Participants and Servients
 
 <table>
   <tr>
@@ -20,120 +13,198 @@ Each participant is expected to fill in the following table to share between the
     <th>Device</th>
   </tr>
   <tr>
-    <th rowspan="4">SmartThings</th>
-    <td rowspan="2">node-wot script</td>
-    <td rowspan="4">HTTP</td>
-    <td rowspan="4">node-wot</td>
-    <td rowspan="4">HTTPS</td>
-    <td rowspan="4">node-wot</td>
-    <td rowspan="2">HTTPS</td>
-    <td>(Conneted via SmartThings) Color Light, Motion Sensor, Button Switch</td>
-  </tr>
-  <tr>
-    <td>(Proxy to LAN) Color Light, Motion Sensor, Button Switch</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Scripting App.</td>
+    <th rowspan="6">SmartThings</th>
+    <td>node-wot script (LAN and Remote)</td>
     <td>HTTP</td>
-    <td>Color Light, Motion Sensor, Button Switch</td>
+    <td>node-wot</td>
+    <td>HTTPS</td>
+    <td>node-wot bridge</td>
+    <td>HTTP</td>
+    <td>Philips Hue Light Bulb</td>
   </tr>
   <tr>
+    <td>node-wot script (LAN and Remote)</td>
+    <td>HTTP</td>
+    <td>node-wot bridge</td>
+    <td>HTTP</td>
+    <td>node-wot bridge</td>
+    <td>MQTT</td>
+    <td>Node-RED Model House: lights, heater, thermostat, illuminance, motion, sound pressure</td>
+  </tr>
+  <tr>
+    <td>node-wot script (Remote)</td>
+    <td>HTTP</td>
+    <td>node-wot bridge</td>
+    <td></td>
+    <td></td>
+    <td>HTTPS</td>
+    <td>SmartThings Cloud Endpoint: motion, dimmable light bulb</td>
+  </tr>
+  <tr>
+    <td>node-wot script (LAN)</td>
+    <td>HTTP</td>
+    <td>node-wot bridge to local proxy</td>
+    <td>HTTP</td>
+    <td>node-wot remote => local proxy</td>
+    <td>HTTPS</td>
+    <td>SmartThings Cloud Endpoint: motion, dimmable light bulb</td>
+  </tr>
+  <tr>
+    <td>node-wot script (LAN and Remote)</td>
+    <td>HTTP</td>
+    <td>node-wot</td>
+    <td>HTTP</td>
+    <td>node-wot</td>
     <td>CoAP</td>
-    <td>(Located locally) IKEA light</td>
+    <td>IKEA dimmable light Bulb</td>
+  </tr>
+  <tr>
+    <td>node-wot script (LAN and Remote)</td>
+    <td>HTTP</td>
+    <td>node-wot</td>
+    <td>HTTP</td>
+    <td>node-wot</td>
+    <td>CoAP</td>
+    <td>OCF Demonstrator: motion sensor, LED indicator</td>
   </tr>
 </table>
 
-## 2.2 Checking points for the next plugfest
+## 3 Checking points for the next plugfest
+
+### 3.1 Testing Individually
+The following checking points can be completed by the participant alone by using the PlugFest infrastructure (TD Playground, Thing Directory, Proxies).
+
+#### 3.1.1 Validate Simplified TDs -- was Other Issues (1)
+
+* SmartThings will use the simplified TD format with copious semantic annotation and strange protocol bindings. This will test the ability of the validator to accept a range of input patterns.
+
+#### 3.1.2 Register with Thing Directory -- was (5)
+
+* SmartThings will register TDs with both local and remote shared thing directory instances. Applications will be hosted locally and remotely.
+
+#### 3.1.3 Connect with Remote/Local Proxy -- was (1)
+
+* SmartThings will use both local and remote proxies to expose LAN devices to cloud based applicaitons, and to expose cloud based device APIs to local applications.
+
+#### 3.1.4 Connect with node-wot -- was (3)
+
+* SmartThings will use node-wot to host applications using the Consumed Thing API, to bridge ecosystem protocols to applications, and to act as both local-to-remote and remote-to-local proxy patterns.
+
+#### 3.1.5 Scripting API -- was (4)
+
+* SmartThings will use the Scripting API for applications and for things exposed by bridges and proxies.
+
+### 3.2 Testing in Client Role
+The following checking points must be completed together with a partner in server role.
+
+#### 3.2.1 Metadata Handling
+
+* SmartThings will use iotschema annotation for capabilities, interactions, and data. Some TDs will be annotated with iotschema Feature of Interest. Some interactions will be labeled with units conversions.
+
+#### 3.2.2 Property Handling -- was part of (2)
+
+* SmartThings implements the following get bindings
+   * HTTP, CoAP, MQTT
+* SmartThings implements the following set bindings
+   * HTTP, CoAP, MQTT
+* SmartThings implements the following observe bindings
+   * HTTP, CoAP, MQTT
+
+#### 3.2.3 Action Handling -- was part of (2)
+
+* SmartThings implements the following invoke bindings
+   * HTTP, CoAP, MQTT
+
+#### 3.2.4 Event Handling -- was part of (11)
+
+* SmartThings implements the following subscribe bindings
+   * HTTP+LongPoll, CoAP, MQTT (node-wot supported + out-of-band MQTT))
+
+#### 3.2.5 Security -- was part of (9)
+
+* SmartThings can consume the following Security Schemes:
+* DTLS for Consumed CoAP things from OCF and IKEA
+* HTTPS for webhook connection to SmartThings
+* HTTPS for cloud-exposed things
 
 
-### (1) Connect with remote/local proxy
-SmartThings cloud will expose an "endpoint app" to a node-wot instance in the cloud.
+#### 3.2.6 Semantic integration -- was part of (8)
 
-The node-wot cloud instance will be proxied to the plugfest LAN using node-wot
+* SmartThings will use iotschema annotation for capabilities, interactions, and data. Some TDs will be annotated with iotschema Feature of Interest. Some interactions will be labeled with units conversions.
 
-Local devices will be exposed using a local LAN node-wot instance
+#### 3.2.7 Accessibility -- was (10)
 
-Devices on the local node-wot instance will be proxied to the cloud node-wot instance
+* N/A
 
-### (2) Application servients
-We will use node-wot as local and cloud based application servients. Devices proxied from the LAN will be integrated with devices exposed in the cloud. Devices proxied from the cloud will be integrated with local LAN devices using a local application servient.
+### 3.3 Testing in Server Role
+The following checking points must be completed together with a partner in client role.
 
-### (3) Connect with node-wot
-Node-wot will be used as device servient bridging to IKEA and SmartThings ecosystems
+#### 3.3.1 Metadata
 
-Node-wot will be used as proxy servients for local and cloud connected Devices
+* SmartThings will use iotschema annotation for capabilities, interactions, and data. Some TDs will be annotated with iotschema Feature of Interest. Some interactions will be labeled with units conversions.
 
-Node-wot willbe use as both local and cloud based application servients
+#### 3.3.2 Properties -- was part of (6) and (7)
 
-### (4) Scripting API
-THe scripting API will be used for application logic
+* SmartThings implements the following get bindings
+   * HTTP, CoAP, MQTT
+* SmartThings implements the following set bindings
+   * HTTP, CoAP, MQTT
+* SmartThings implements the following observe bindings
+   * HTTP, CoAP, MQTT
 
-### (5) Thing Directory operation
-We will use both local LAN and cloud located Thing Directories. The proxy will be expected to register the things it re-exposes
+#### 3.3.3 Actions -- was part of (6) and (7)
 
-### (6) Device Servients
-We plan to use device servients on the LAN and in the cloud to bridge IKEA and SmartThings ecosystems.
+* SmartThings implements the following invoke bindings
+   * HTTP, CoAP, MQTT
 
-### (7) Device simulators
-No device simulators
+#### 3.3.4 Events -- was part of (11)
 
-### (8) Semantic integration
-TDs will be semantically annotated using iot.schema.org vocabulary
+* SmartThings implements the following emit bindings
+   * HTTP+LongPoll, CoAP, MQTT
 
-We will experimant with feature of interest annotation using links and by adding triples directly to the TD
+#### 3.3.5 Security -- was part of (9)
 
-### (9) Security
-WE will use HTTPS where possible
+* SmartThings will offer the following Security Schemes:
+   * DTLS for CoAP things from OCF and IKEA
+   * HTTPS for webhook receiver connection to SmartThings
+   * HTTPS for cloud-exposed things
 
-### (10) Accessibility
-We will construct accessibility scenarios as we proceed.
+#### 3.3.6 Semantic Integration -- was part of (8)
 
-### (11) Event handling
-We will experiment with event handling over HTTP using long polling and web callbacks
+* SmartThings will use iotschema.org annotation for capabilities, interactions, data, and Feature of Interest, and will prototype some range conversion annotation. Application discovery will test filtering by semantic category and value e.g. temperature capability associated with the living room
 
-## 2.3 Other issues
+### 3.4 Other issues
 
-### (1) Validate the simplified TD
-We will use the simple TD format with JSON-LD annotation
+#### 3.4.1 Running Actions and Event Instances -- was Other Issues (2)
 
-### (2) Extended Actions
-Currently we have no plan to support Extended Actions.
+* SmartThings will use simple acrions and events
 
-### (3) Notification - websockets, webhooks
-As mentioned in 2.2 (11), we will implement long polling and web hooks
+#### 3.4.2 Discovery using Feature of Interest -- was Other Issues (4)
 
-### (4) Discovery using Feature of Interest annotation
-Will be prototyped using links and RDF triples in JSON-LD
+* SmartThings will test FoI based discovery
 
-### (5) Application Scenarios, recipes
-Ad-hoc recipes and scripts
+#### 3.4.3 New Security Patterns -- was Other Issues (7)
 
-### (6) Proxy integration with Thing Directory
-We will use local and remote proxies, exposing things in both directions, from cloud to local as well as local to Cloud
+* SmartThings will work on automating the DTLS binding for CoAP on LAN based devices, and use https for cloud based APIs
 
-### (7) New security patterns
-No new security patterns are contemplated at this time
+#### 3.4.4 Miscellaneous -- was Other Issues (9)
 
-### (8) Test Framework
-We will use test frameworks that are avvailable
+* SmartThings will prototype use of a Dynamic Link binding pattern to provide pub/sub based data sources and sinks for exposed things.
 
-### (9) Other
+## 4 Use cases -- was Other Issues (5) and (6)
 
-## 2.4 Use cases
+* SmartThings will test a pattern for using a servient to bridge applications using a common protocol binding to diverse device ecosystems. Example ecosystems are Philips Hue and IKEA Tradfri.
+* SmartTings will test a cloud-to-cloud integration where a WoT servient acts as a proxy for interoperable applications and services can manage SmartThings connected things.
+* SmartThings will test the use of a Dynamic Link (Dynlink) pattern to integrate MQTT data sources and data sinks for interactions.
+* SmartThings will test the integration of both local and remote proxies with Thing Directories. A proxy will automatically register its exposed things with the appropriately reachable Thing Directory.
+* SmartThings will test Feature of Interest annotation and discovery filtering. There will be a modeled house with feature of interest annotation on various lights and other affordances.
 
-# 3 Schedule
-
-Sat 30.6.18:  9:00-18:00
-Sun 1.7.18:  9:00-18:00
-
-Venue: TTA
-
-# 4 Requirements for PlugFest Setting
+## 5 Requirements for PlugFest Environment
 
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
-| SmartThings | 1                      | 1                       | Wi-Fi(b/g/n), Ports: 22, 80, 443, 1880, 1883, 3000, 3001, 3002, 3003, 3004, 8001, 8003, 8080 | |
+| SmartThings | 1                      | 1                       | Wi-Fi, Wired Ethernet, Ports: 3000-9999 TCP and UDP| N/A |
 
+## 6 Implementation Guidelines
 
-# 5 Implementation guidelines
-## request to proxy implementors
+N/A
