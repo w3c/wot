@@ -37,9 +37,9 @@ This section lists the infrastructure available for the PlugFest, which can be u
   <tr>
     <th rowspan="6">Siemens</th>
     <td rowspan="6">node-wot</td>
-    <td rowspan="6">HTTP(S)+Longpoll, <i>HTTP(S)+Webhooks</i>, CoAP(<i>S</i>), <i>WebSockets</i></td>
+    <td rowspan="6">HTTP(S)+Longpoll, <i>HTTP(S)+Webhooks</i>, CoAP(<i>S</i>), <i>WebSockets</i>, MQTT</td>
     <td rowspan="6">(N/A)</td>
-    <td rowspan="6">HTTP(S)+Longpoll, CoAP(<i>S</i>), <i>WebSockets</i>, Modbus, BACnet, Oracle IoT CS, <i>Fujitsu</i></td>
+    <td rowspan="6">HTTP(S)+Longpoll, CoAP(<i>S</i>), <i>WebSockets</i>, Modbus, BACnet, Oracle IoT CS, <i>Fujitsu</i>, MQTT</td>
     <td rowspan="6">node-wot</td>
     <td>HTTPS+Webhooks</td>
     <td>Festo Plant (Remote via Oracle IoT CS)</td>
