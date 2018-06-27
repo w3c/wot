@@ -1,0 +1,33 @@
+# baseURI: http://example.org/festoPA
+# prefix: festoPA
+
+@prefix festoPA: <http://example.org/festoPA#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix iot: <http://iotschema.org/> .
+
+<http://example.org/festoPA>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+festoPA:FestoPAWorkstation
+  rdf:type iot:LiquidMixingSystem ;
+  rdfs:label "Festo PAWorkstation"^^xsd:string ;
+.
+festoPA:Tank101
+  rdf:type iot:LiquidTank ;
+  rdfs:label "Tank101"^^xsd:string ;
+.
+festoPA:Tank102
+  rdf:type iot:LiquidTank ;
+  rdfs:label "Tank102"^^xsd:string ;
+.
+festoPA:Pipe1
+  rdf:type iot:LiquidPipe ;
+  rdfs:label "Pipe1"^^xsd:string ;
+.
+festoPA:Pipe2
+  rdf:type iot:LiquidPipe ;
+  rdfs:label "Pipe2"^^xsd:string ;
+.

@@ -1,0 +1,67 @@
+{
+  "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "name": "PanasonicCleanerP1",
+  "id": "urn:uuid:4a94e5ab-1f58-4ef5-b770-6dcb48e5595c",
+  "base": "https://xxxxxxxx/wot-ver2/things/cleaner/1/",
+  "security": [{
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorizationUrl": "https://plugfest.thingweb.io:8443/"
+  }],
+  "actions": {
+    "operationPower": {
+      "@type": "iot:TurnOn",
+      "label": "operationPower",
+      "forms": [{
+        "href": "operationPower",
+        "mediaType": "application/json"
+      }]
+    },
+    "turnRight": {
+      "label": "turnRight",
+      "forms": [{
+        "href": "turnRight",
+        "mediaType": "application/json"
+      }]
+    },
+    "turnLeft": {
+      "label": "turnLeft",
+      "forms": [{
+        "href": "turnLeft",
+        "mediaType": "application/json"
+      }]
+    },
+    "goStraight": {
+      "label": "goStraight",
+      "forms": [{
+        "href": "goStraight",
+        "mediaType": "application/json"
+      }]
+    },
+    "goHome": {
+      "label": "goHome",
+      "forms": [{
+        "href": "goHome",
+        "mediaType": "application/json"
+      }]
+    },
+    "specifyArea": {
+      "label": "specifyArea",
+      "input": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 3
+      },
+      "forms": [{
+        "href": "specifyArea",
+        "mediaType": "application/json"
+      }]
+    }
+  }
+}

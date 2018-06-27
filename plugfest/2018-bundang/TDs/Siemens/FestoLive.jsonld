@@ -1,7 +1,9 @@
 {
     "@context": [
         "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-        {"iot": "http://iotschema.org/"}
+        {"iot": "http://iotschema.org/",
+		 "festoPA":"http://example.com/FestoPA/"
+		}
     ],
     "@type": [
         "Thing",
@@ -11,12 +13,15 @@
         "iot:UltrasonicSensing",
         "iot:ProximitySensing"
     ],
+	"iot:isAssociatedWith" : {"@id": "festoPA:FestoPAWorkstation", "@type": "iot:LiquidMixingSystem"},
     "name": "FestoLive",
     "id": "urn:dev:wot:siemens:festolive",
     "security": [{"scheme": "basic"}],
     "properties": {
         "PumpStatus": {
             "@type": "iot:OperationStatus",
+			"capability": "iot:Pump",
+			"isPropertyOf": {"@id": "festoPA:Pipe2", "@type": "iot:LiquidPipe"},
             "type": "object",
             "properties": {"PumpStatus": {"type": "boolean"}},
             "writable": false,
@@ -28,6 +33,8 @@
         },
         "ValveStatus": {
             "@type": "iot:OperationStatus",
+			"capability": "iot:Valve",
+			"isPropertyOf": {"@id": "festoPA:Pipe1", "@type": "iot:LiquidPipe"},
             "type": "object",
             "properties": {"ValveStatus": {"type": "boolean"}},
             "writable": false,
@@ -39,6 +46,8 @@
         },
         "Tank102LevelValue": {
             "@type": "iot:CurrentLevel",
+			"capability": "iot:UltrasonicSensing",
+			"isPropertyOf": {"@id": "festoPA:Tank102", "@type": "iot:LiquidTank"},
             "type": "object",
             "properties": {"Tank102LevelValue": {"type": "number"}},
             "writable": false,
@@ -50,6 +59,8 @@
         },
         "Tank102OverflowStatus": {
             "@type": "iot:OverflowStatus",
+			"capability": "iot:FloatSwitch",
+			"isPropertyOf": {"@id": "festoPA:Tank102", "@type": "iot:LiquidTank"},
             "type": "object",
             "properties": {"Tank102OverflowStatus": {"type": "boolean"}},
             "writable": false,
@@ -61,6 +72,8 @@
         },
         "Tank101MaximumLevelStatus": {
             "@type": "iot:OperationStatus",
+			"capability": "iot:ProximitySensing",
+			"isPropertyOf": {"@id": "festoPA:Tank101", "@type": "iot:LiquidTank"},
             "type": "object",
             "properties": {"Tank101MaximumLevelStatus": {"type": "boolean"}},
             "writable": false,
@@ -72,6 +85,8 @@
         },
         "Tank101MinimumLevelStatus": {
             "@type": "iot:OperationStatus",
+			"capability": "iot:ProximitySensing",
+			"isPropertyOf": {"@id": "festoPA:Tank101", "@type": "iot:LiquidTank"},
             "type": "object",
             "properties": {"Tank101MinimumLevelStatus": {"type": "boolean"}},
             "writable": false,
@@ -83,6 +98,8 @@
         },
         "Tank101OverflowStatus": {
             "@type": "iot:OverflowStatus",
+			"capability": "iot:FloatSwitch",
+			"isPropertyOf": {"@id": "festoPA:Tank101", "@type": "iot:LiquidTank"},
             "type": "object",
             "properties": {"Tank101OverflowStatus": {"type": "boolean"}},
             "writable": false,
@@ -96,8 +113,11 @@
     "actions": {
         "OpenValve": {
             "@type": "iot:TurnOn",
+			"capability": "iot:Valve",
+			"isActionOf": {"@id": "festoPA:Pipe1", "@type": "iot:LiquidPipe"},
             "input": {
                 "type": "object",
+				"iot:hasFeatureOfInterest": { "@id": "Pipe1", "@type": "iot:LiquidPipe" },
                 "properties": {"value": {
                     "type": "boolean",
                     "const": true
@@ -110,8 +130,11 @@
         },
         "CloseValve": {
             "@type": "iot:TurnOff",
+			"capability": "iot:Valve",
+			"isActionOf": {"@id": "festoPA:Pipe1", "@type": "iot:LiquidPipe"},
             "input": {
                 "type": "object",
+				"iot:hasFeatureOfInterest": { "@id": "Pipe1", "@type": "iot:LiquidPipe" },
                 "properties": {"value": {
                     "type": "boolean",
                     "const": true
@@ -124,8 +147,11 @@
         },
         "StartPump": {
             "@type": "iot:TurnOn",
+			"capability": "iot:Pump",
+			"isActionOf": {"@id": "festoPA:Pipe2", "@type": "iot:LiquidPipe"},
             "input": {
                 "type": "object",
+				"iot:hasFeatureOfInterest": { "@id": "Pipe2", "@type": "iot:LiquidPipe" },
                 "properties": {"value": {
                     "type": "boolean",
                     "const": true
@@ -138,9 +164,12 @@
         },
         "StopPump": {
             "name": "StopPump",
+			"capability": "iot:Pump",
+			"isActionOf": {"@id": "festoPA:Pipe2", "@type": "iot:LiquidPipe"},
             "@type": "iot:TurnOff",
             "input": {
                 "type": "object",
+				"iot:hasFeatureOfInterest": { "@id": "Pipe2", "@type": "iot:LiquidPipe" },
                 "properties": {"value": {
                     "type": "boolean",
                     "const": true
