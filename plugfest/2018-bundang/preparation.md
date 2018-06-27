@@ -237,6 +237,10 @@ The following points are picked up from Koster-san's material.
 
 ### (1) Validate the simplified TD
 
+Use either [Thing Description Playground](http://plugfest.thingweb.io/playground/) or validate your TD against the JSON Schema called td-schema-bundang.json, found in this directory. You can use any JSON Schema validator that supports Draft 6, such as [ajv](https://www.npmjs.com/package/ajv) as an npm package or [JSON Schema Lint](https://jsonschemalint.com/#/version/draft-06/markup/json) as a GUI.
+
+To use Thing Description Playground locally, download it from the Github [repository](https://github.com/thingweb/thingweb-playground), go to WebContent and open index.html in a browser.
+
 ### (2) Extended Actions
 
 ### (3) Notification - websockets, webhooks

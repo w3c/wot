@@ -1,0 +1,21 @@
+{
+  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+  "@type": "Thing",
+  "name": "Fujitsu-RotaryBeaconLight",
+  "id": "urn:com:fujitsu:iot:rotarybeaconlight",
+  "base" : "http://10.25.154.87:18081/Things/Fujitsu_RotaryBeaconLight/",
+  "properties": {
+  	"OperationStatus": {
+		"@type": "iot:OperationStatus",
+		"type": "string",
+		"writable": true,
+		"observable": false,
+		"forms": [{
+			"href" : "Property/OperationStatus",
+			"mediaType": "application/json"
+		}]
+	}
+  },
+  "actions":{},
+  "events":{}
+}
