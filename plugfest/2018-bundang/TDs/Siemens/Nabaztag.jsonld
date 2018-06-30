@@ -1,112 +1,133 @@
 {
-  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
-  "@type": ["Thing"],
-  "name": "Nabaztag",
-  "description": "Nabaztag: Armenian for 'hare'",
-  "actions": {
-    "SoundCom": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/communication"
-      }]
-    },
-    "SoundAck": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/ack"
-      }]
-    },
-    "SoundAbort": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/abort"
-      }]
-    },
-    "LeftUp": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/left?p=2&d=0"
-      }]
-    },
-    "LeftDown": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/left?p=12&d=0"
-      }]
-    },
-    "NoseOff": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/nose?v=0"
-      }]
-    },
-    "NosePanic": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/nose?v=4"
-      }]
-    },
-    "BellyStock0": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/stock?v=0"
-      }]
-    },
-    "BellyStock1": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/stock?v=1"
-      }]
-    },
-    "BellyStock2": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/stock?v=2"
-      }]
-    },
-    "BellyStock3": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/stock?v=3"
-      }]
-    },
-    "BellyStock4": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/stock?v=4"
-      }]
-    },
-    "BellyStock5": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/stock?v=5"
-      }]
-    },
-    "BellyStock6": {
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/stock?v=6"
-      }]
-    },
-    "LeftEar": {
-      "uriSchema": {
-        "p" : { "type": "integer", "minimum": 0, "maximum": 16, "@type": "example:SomeKindOfAngle" },
-        "d" : { "type": "integer", "minimum": 0, "maximum": 1, "@type": "example:Direction" }
-      },
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/left{?p,d}"
-      }]
-    },
-    "RightEar": {
-      "uriSchema": {
-        "p" : { "type": "integer", "minimum": 0, "maximum": 16, "@type": "example:SomeKindOfAngle" },
-        "d" : { "type": "integer", "minimum": 0, "maximum": 1, "@type": "example:Direction" }
-      },
-      "forms": [{
-        "http:method": "GET",
-        "href" : "http://192.168.1.25/right{?p,d}"
-      }]
-    },
-  }
+	"@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+	"@type": ["Thing"],
+	"id": "urn:dev:wot:siemens:nabaztag",
+	"name": "Nabaztag",
+	"description": "Nabaztag: Armenian for 'hare'",
+	"actions": {
+		"SoundCom": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/communication"
+			}]
+		},
+		"SoundAck": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/ack"
+			}]
+		},
+		"SoundAbort": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/abort"
+			}]
+		},
+		"LeftUp": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/left?p=2&d=0"
+			}]
+		},
+		"LeftDown": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/left?p=12&d=0"
+			}]
+		},
+		"NoseOff": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/nose?v=0"
+			}]
+		},
+		"NosePanic": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/nose?v=4"
+			}]
+		},
+		"BellyStock0": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/stock?v=0"
+			}]
+		},
+		"BellyStock1": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/stock?v=1"
+			}]
+		},
+		"BellyStock2": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/stock?v=2"
+			}]
+		},
+		"BellyStock3": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/stock?v=3"
+			}]
+		},
+		"BellyStock4": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/stock?v=4"
+			}]
+		},
+		"BellyStock5": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/stock?v=5"
+			}]
+		},
+		"BellyStock6": {
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/stock?v=6"
+			}]
+		},
+		"LeftEar": {
+			"uriSchema": {
+				"p": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 16,
+					"@type": "example:SomeKindOfAngle"
+				},
+				"d": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 1,
+					"@type": "example:Direction"
+				}
+			},
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/left{?p,d}"
+			}]
+		},
+		"RightEar": {
+			"uriSchema": {
+				"p": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 16,
+					"@type": "example:SomeKindOfAngle"
+				},
+				"d": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 1,
+					"@type": "example:Direction"
+				}
+			},
+			"forms": [{
+				"http:method": "GET",
+				"href": "http://192.168.1.25/right{?p,d}"
+			}]
+		}
+	}
 }
