@@ -18,6 +18,7 @@ var content=fs.readFileSync('./'+filename);
 var path=filename.substring(0, filename.lastIndexOf("/"));
 // get package directory name
 var pkg=path.substring(path.lastIndexOf("/")+1);
+pkg = "oracle";
 // strip path and extension
 var plainfn=path.substring(filename.lastIndexOf("/")+1, filename.lastIndexOf("."));
 
@@ -54,7 +55,7 @@ for (var p in td.properties) {
         prop.range=iac.properties.minimum+","+iac.properties.maximum;
       }
     } else {
-       prop.type=iac.type;
+       prop.type=iac.type.toUpperCase();;
     }
     prop.writable=iac.writable;
     dm.attributes.push(prop);
