@@ -1,0 +1,28 @@
+{
+  "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "name": "PanasonicGoogleHomeP3",
+  "id": "urn:uuid:8a6ba6c4-1a4f-4f8d-896b-ad92109a2818",
+  "base": "http://zzzzzzzz/",
+  "actions": {
+    "speech": {
+      "label": "speech",
+      "input": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "forms": [{
+        "href": "google-home-notifier",
+        "mediaType": "application/json"
+      }]
+    }
+  }
+}

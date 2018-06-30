@@ -1,0 +1,92 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": "Thing",
+  "name": "PanasonicSimulatedHueGroup1",
+  "id": "p-wot:PanasonicSimulatedHueGroup1",
+  "base": "https://xxxxxxxx/wot/things/PanasonicSimulatedHueGroup1/",
+  "security": [
+    {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorizationUrl": "https://plugfest.thingweb.io:8443/"
+    }
+  ],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "label": "power",
+      "type": "boolean",
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "power",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedHueGroup1/power",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedHueGroup1/power",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    },
+    "rgbValue": {
+      "@type": "iot:CurrentColour",
+      "label": "rgbValue",
+      "type": "object",
+      "properties": {
+        "red": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "green": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "rgbValue",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedHueGroup1/rgbValue",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedHueGroup1/rgbValue",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    }
+  }
+}
