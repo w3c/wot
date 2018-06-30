@@ -1,0 +1,103 @@
+{
+    "name": "keti_iot_sensor",
+    "description": "KETI Environment IoT Sensor",
+    "@context": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "@type": "Thing",
+    "security": [ ],
+    "properties": {
+        "volatile_organic_compound": {
+            "type": "float",
+            "description": "volatile organic compound",
+            "iot:custom": "nothing",
+            "observable": true,
+            "writeable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.117:8080/keti_iot_sensor/properties/volatile_organic_compound",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        "light": {
+            "type": "float",
+            "description": "light lux",
+            "iot:custom": "nothing",
+            "observable": true,
+            "writeable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.117:8080/keti_iot_sensor/properties/light",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        "sound_level": {
+            "type": "float",
+            "description": "sound level",
+            "iot:custom": "nothing",
+            "observable": true,
+            "writeable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.117:8080/keti_iot_sensor/properties/sound_level",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        "microwave": {
+            "type": "float",
+            "description": "microwave value",
+            "iot:custom": "nothing",
+            "observable": true,
+            "writeable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.117:8080/keti_iot_sensor/properties/microwave",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        "carbon_dioxide": {
+            "type": "float",
+            "description": "carbon_dioxide value",
+            "iot:custom": "nothing",
+            "observable": true,
+            "writeable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.117:8080/keti_iot_sensor/properties/carbon_dioxide",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        "humidity": {
+            "type": "float",
+            "description": "humidity value",
+            "iot:custom": "nothing",
+            "observable": true,
+            "writeable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.117:8080/keti_iot_sensor/properties/humidity",
+                    "mediaType": "application/json"
+                }
+            ]
+        },
+        "temperature": {
+            "type": "float",
+            "description": "temperature value",
+            "iot:custom": "nothing",
+            "observable": true,
+            "writeable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.117:8080/keti_iot_sensor/properties/temperature",
+                    "mediaType": "application/json"
+                }
+            ]
+        }
+    },
+    "actions": { },
+    "events": { },
+    "links": [ ]
+}
