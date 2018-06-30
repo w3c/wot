@@ -1,5 +1,5 @@
 {
-  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",{"iot": "http://iotschema.org/"}],
   "@type": "Thing",
   "name": "Fujitsu-WiFiAgent240AC4114764",
   "id": "urn:dev:wot:com:fujitsu:wifiagent",
