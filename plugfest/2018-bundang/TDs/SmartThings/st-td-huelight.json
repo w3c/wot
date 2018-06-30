@@ -3,7 +3,7 @@
   "name": "st-lamp-01",
   "description": "Philips Hue Lamp",
   "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability", "iot:HScolorCapability", "iot:ColorTemperatureCapability"],
-  "id": "9b1a5896-75bf-481d-b29f-4e35c68196d5",
+  "id": "urn:uuid:9b1a5896-75bf-481d-b29f-4e35c68196d5",
   "base": "http://{hue-bridge-address}/api/{hue-userid}/",
   "properties": {
     "state": {
@@ -63,9 +63,8 @@
   },
   "onoff": {
     "label": "OnOff",
-    "@type": "iot:SwitchStatus",
-    "description": "On/off switch state",
     "@type": ["iot:SwitchStatus"],
+    "description": "On/off switch state",
     "type": "object",
     "properties": {
       "on": {
