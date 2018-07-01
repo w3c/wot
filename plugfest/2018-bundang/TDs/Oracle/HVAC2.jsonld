@@ -6,6 +6,7 @@
 	"description": "HVAC device model",
 	"id": "urn:com:oracle:iot:device:hvac",
 	"base": "https://129.150.193.97/iot/api/v2/apps/DD8B372C-D924-4EC9-A1BD-B0B8B5312A88/devices/20BD255A-2865-45FC-9E32-1AA93ABE636D/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac",
+	"security": [{ "scheme" : "basic"	}],
 	"createdAsString": "2018-06-27T13:06:18.617Z",
 	"created": 1530104778617,
 	"lastModifiedAsString": "2018-06-27T13:06:18.617Z",

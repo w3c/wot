@@ -1,0 +1,85 @@
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Switch",
+      "iot:Sensor",
+      "iot:BinarySwitch"
+    ],
+    "id": "urn:uuid:f057c263-58db-4cb1-9470-bba9344e1ba8",
+    "name": "Intel-OCF-f057c263-58db-4cb1-9470-bba9344e1ba8",
+    "properties": {
+      "status": {
+        "label": "On/Off Status",
+        "writable": false,
+        "observable": true,
+        "@type": [
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:Toggle"
+            ],
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
