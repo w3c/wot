@@ -1,1 +1,126 @@
-TBA
+{
+    "@context": [
+        "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+        {"iot": "http://iotschema.org/"
+        }
+    ],
+    "@type": "Thing",
+    "name": "BMW-X5",
+    "id": "urn:dev:wot:eurecom:connected:car",
+    "security": [{"scheme": "basic"}],
+    "properties": {
+        "gearPosition": {
+            "@type": "iot:gearPosition",
+            "type": "object",
+            "properties": {"gearPosition": {"type": "string"}},
+            "writable": false,
+            "observable": false,
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/sensor/gearPosition",
+                "mediaType": "application/json"
+            }]
+        },
+        "LeftFrontDoorStatus": {
+            "@type": "iot:DoorStatus",
+            "type": "object",
+            "properties": {"ValveStatus": {"type": "string"}},
+            "writable": false,
+            "observable": false,
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/sensor/left-front-door",
+                "mediaType": "application/json"
+            }]
+        },
+        "RightFrontDoorStatus": {
+            "@type": "iot:DoorStatus",
+            "type": "object",
+            "properties": {"ValveStatus": {"type": "string"}},
+            "writable": false,
+            "observable": false,
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/sensor/right-front-door",
+                "mediaType": "application/json"
+            }]
+        },
+        "LeftRearDoorStatus": {
+            "@type": "iot:DoorStatus",
+            "type": "object",
+            "properties": {"ValveStatus": {"type": "string"}},
+            "writable": false,
+            "observable": false,
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/sensor/left-rear-door",
+                "mediaType": "application/json"
+            }]
+        },
+        "RightRearDoorStatus": {
+            "@type": "iot:DoorStatus",
+            "type": "object",
+            "properties": {"ValveStatus": {"type": "string"}},
+            "writable": false,
+            "observable": false,
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/sensor/right-rear-door",
+                "mediaType": "application/json"
+            }]
+        },
+    },
+    "actions": {
+        "LeftFrontWindowOpen": {
+            "@type": "iot:TurnOn",
+            "input": {
+                "type": "object"
+                },
+                "properties": {"value": {
+                    "type": "string",
+                }}
+            },
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/actuator/left-front-window/status",
+                "mediaType": "application/json"
+            }]
+        },
+        "LeftFrontWindowClose": {
+            "@type": "iot:TurnOff",
+            "input": {
+                "type": "object"
+                },
+                "properties": {"value": {
+                    "type": "string"
+                }}
+            },
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/actuator/left-front-window/status",
+                "mediaType": "application/json"
+            }]
+        },
+        "RightFrontWindowOpen": {
+            "@type": "iot:TurnOn",
+            "input": {
+                "type": "object"
+                },
+                "properties": {"value": {
+                    "type": "string",
+                }}
+            },
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/actuator/right-front-window/status",
+                "mediaType": "application/json"
+            }]
+        },
+        "RightFrontWindowClose": {
+            "@type": "iot:TurnOff",
+            "input": {
+                "type": "object"
+                },
+                "properties": {"value": {
+                    "type": "string"
+                }}
+            },
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/actuator/left-front-window/status",
+                "mediaType": "application/json"
+            }]
+        }
+    }
+}
