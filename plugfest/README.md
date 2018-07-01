@@ -1,7 +1,7 @@
 # WoT PlugFest
 
 ## Bundang 2018
-* [Preparation Wiki](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_30_June-5_July_2018,_Bundang,_Korea.html)
+* [Preparation Wiki](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_30_June-5_July_2018,_Bundang,_Korea)
 * [Demonstration Material](https://github.com/w3c/wot/tree/master/plugfest/2018-bundang)
 
 ## Santa Clara 2017
