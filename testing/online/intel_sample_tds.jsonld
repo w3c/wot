@@ -1,4 +1,4 @@
-// 20180701101027
+// 20180701110158
 // http://upsq0.local:8091/
 
 [
@@ -17,300 +17,7 @@
       "iot:Actuator",
       "iot:BinarySwitch"
     ],
-    "@id": "urn:uuid:5081db06-f405-4ecf-bcdd-2424bf5af1ca",
-    "name": "Intel-OCF-5081db06-f405-4ecf-bcdd-2424bf5af1ca",
-    "properties": {
-      "status": {
-        "label": "On/Off Status",
-        "writable": true,
-        "observable": true,
-        "@type": [
-          "OnOffState",
-          "iot:SwitchStatus"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:StateData"
-            ],
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "actions": {
-      "on": {
-        "label": "Turn On",
-        "description": "Set light status to on (maximum brightness)",
-        "@type": [
-          "TurnOn",
-          "iot:TurnOn"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:StateData"
-            ],
-            "type": "boolean",
-            "const": true
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      },
-      "off": {
-        "label": "Turn Off",
-        "description": "Set light status to off (minimum brightness)",
-        "@type": [
-          "TurnOff",
-          "iot:TurnOff"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:StateData"
-            ],
-            "type": "boolean",
-            "const": false
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "@context": [
-      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-      {
-        "iot": "http://iotschema.org/"
-      }
-    ],
-    "@type": [
-      "Thing",
-      "Motion",
-      "iot:MotionControl",
-      "iot:Sensor"
-    ],
-    "@id": "urn:uuid:5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-    "name": "Intel-OCF-5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-    "properties": {
-      "motion": {
-        "label": "Motion Sense Status",
-        "writable": false,
-        "observable": true,
-        "@type": [
-          "Occupancy",
-          "iot:MotionDetected"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:StateData"
-            ],
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "@context": [
-      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-      {
-        "iot": "http://iotschema.org/"
-      }
-    ],
-    "@type": [
-      "Thing",
-      "Light",
-      "iot:LightControl",
-      "iot:Actuator",
-      "iot:BinarySwitch"
-    ],
-    "@id": "urn:uuid:8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+    "id": "urn:uuid:8c2c6907-ed4a-4527-8f23-57df6999b8aa",
     "name": "Intel-OCF-8c2c6907-ed4a-4527-8f23-57df6999b8aa",
     "properties": {
       "status": {
@@ -323,6 +30,9 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "value": {
             "@type": [
               "iot:StateData"
@@ -340,7 +50,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "basic"
@@ -349,7 +59,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "basic"
@@ -358,7 +68,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "digest"
@@ -367,7 +77,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "digest"
@@ -387,6 +97,9 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "value": {
             "@type": [
               "iot:StateData"
@@ -405,7 +118,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "basic"
@@ -414,7 +127,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "basic"
@@ -423,7 +136,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "digest"
@@ -432,7 +145,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "digest"
@@ -450,6 +163,9 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "value": {
             "@type": [
               "iot:StateData"
@@ -468,7 +184,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "basic"
@@ -477,7 +193,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "basic"
@@ -486,7 +202,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "digest"
@@ -495,89 +211,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "@context": [
-      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-      {
-        "iot": "http://iotschema.org/"
-      }
-    ],
-    "@type": [
-      "Thing",
-      "Temperature",
-      "iot:TemperatureSensing",
-      "iot:Sensor"
-    ],
-    "@id": "urn:uuid:086d490d-90c6-4785-a677-c911bd2af919",
-    "name": "Intel-OCF-086d490d-90c6-4785-a677-c911bd2af919",
-    "properties": {
-      "temperature": {
-        "label": "Room Temperature",
-        "writable": false,
-        "observable": true,
-        "@type": [
-          "MultiLevelState",
-          "iot:Temperature"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:TemperatureData"
-            ],
-            "type": "number"
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
             "security": [
               {
                 "scheme": "digest"
@@ -602,7 +236,7 @@
       "iot:Sensor",
       "iot:BinarySwitch"
     ],
-    "@id": "urn:uuid:f057c263-58db-4cb1-9470-bba9344e1ba8",
+    "id": "urn:uuid:f057c263-58db-4cb1-9470-bba9344e1ba8",
     "name": "Intel-OCF-f057c263-58db-4cb1-9470-bba9344e1ba8",
     "properties": {
       "status": {
@@ -615,6 +249,9 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "value": {
             "@type": [
               "iot:Toggle"
@@ -632,7 +269,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
             "security": [
               {
                 "scheme": "basic"
@@ -641,7 +278,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
             "security": [
               {
                 "scheme": "basic"
@@ -650,7 +287,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
             "security": [
               {
                 "scheme": "digest"
@@ -659,300 +296,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "@context": [
-      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-      {
-        "iot": "http://iotschema.org/"
-      }
-    ],
-    "@type": [
-      "Thing",
-      "Light",
-      "iot:LightControl",
-      "iot:Actuator",
-      "iot:BinarySwitch"
-    ],
-    "@id": "urn:uuid:336db92b-45f6-496b-997c-e196ba7b49fd",
-    "name": "Intel-OCF-336db92b-45f6-496b-997c-e196ba7b49fd",
-    "properties": {
-      "status": {
-        "label": "On/Off Status",
-        "writable": true,
-        "observable": true,
-        "@type": [
-          "OnOffState",
-          "iot:SwitchStatus"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:StateData"
-            ],
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "actions": {
-      "on": {
-        "label": "Turn On",
-        "description": "Set light status to on (maximum brightness)",
-        "@type": [
-          "TurnOn",
-          "iot:TurnOn"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:StateData"
-            ],
-            "type": "boolean",
-            "const": true
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      },
-      "off": {
-        "label": "Turn Off",
-        "description": "Set light status to off (minimum brightness)",
-        "@type": [
-          "TurnOff",
-          "iot:TurnOff"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:StateData"
-            ],
-            "type": "boolean",
-            "const": false
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "@context": [
-      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
-      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-      {
-        "iot": "http://iotschema.org/"
-      }
-    ],
-    "@type": [
-      "Thing",
-      "Switch",
-      "iot:Sensor",
-      "iot:BinarySwitch"
-    ],
-    "@id": "urn:uuid:3932ae08-31b4-4882-b299-5d488ec8775c",
-    "name": "Intel-OCF-3932ae08-31b4-4882-b299-5d488ec8775c",
-    "properties": {
-      "status": {
-        "label": "On/Off Status",
-        "writable": false,
-        "observable": true,
-        "@type": [
-          "OnOffState",
-          "iot:SwitchStatus"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "@type": [
-              "iot:Toggle"
-            ],
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "value"
-        ],
-        "forms": [
-          {
-            "mediaType": "application/json",
-            "href": "http://192.168.1.241:8000/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c"
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
-            "security": [
-              {
-                "scheme": "basic"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
-            "security": [
-              {
-                "scheme": "digest"
-              }
-            ]
-          },
-          {
-            "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
             "security": [
               {
                 "scheme": "digest"
@@ -977,7 +321,7 @@
       "iot:Light",
       "iot:Actuator"
     ],
-    "@id": "urn:uuid:ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+    "id": "urn:uuid:ae9b3aa5-1476-4fcb-9908-dd96a293572d",
     "name": "Intel-OCF-ae9b3aa5-1476-4fcb-9908-dd96a293572d",
     "properties": {
       "colour": {
@@ -989,6 +333,9 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "rgbValue": {
             "@type": [
               "iot:ColourData"
@@ -1032,7 +379,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "basic"
@@ -1041,7 +388,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "basic"
@@ -1050,7 +397,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "digest"
@@ -1059,7 +406,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "digest"
@@ -1079,6 +426,9 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "rgbValue": {
             "@type": [
               "iot:ColourData"
@@ -1119,7 +469,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "basic"
@@ -1128,7 +478,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "basic"
@@ -1137,7 +487,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "digest"
@@ -1146,7 +496,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "digest"
@@ -1164,6 +514,9 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "rgbValue": {
             "@type": [
               "iot:ColourData"
@@ -1204,7 +557,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9023/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "basic"
@@ -1213,7 +566,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9023/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "basic"
@@ -1222,7 +575,7 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://portal.mmccool.net:9024/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
             "security": [
               {
                 "scheme": "digest"
@@ -1231,7 +584,702 @@
           },
           {
             "mediaType": "application/json",
-            "href": "https://tiktok.mmccool.org:9024/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Temperature",
+      "iot:TemperatureSensing",
+      "iot:Sensor"
+    ],
+    "id": "urn:uuid:086d490d-90c6-4785-a677-c911bd2af919",
+    "name": "Intel-OCF-086d490d-90c6-4785-a677-c911bd2af919",
+    "properties": {
+      "temperature": {
+        "label": "Room Temperature",
+        "writable": false,
+        "observable": true,
+        "@type": [
+          "MultiLevelState",
+          "iot:Temperature"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:TemperatureData"
+            ],
+            "type": "number"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Motion",
+      "iot:MotionControl",
+      "iot:Sensor"
+    ],
+    "id": "urn:uuid:5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+    "name": "Intel-OCF-5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+    "properties": {
+      "motion": {
+        "label": "Motion Sense Status",
+        "writable": false,
+        "observable": true,
+        "@type": [
+          "Occupancy",
+          "iot:MotionDetected"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:StateData"
+            ],
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/motion1?di=5dc3f14e-4976-44d4-bfe8-57838db97ab5",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "id": "urn:uuid:5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+    "name": "Intel-OCF-5081db06-f405-4ecf-bcdd-2424bf5af1ca",
+    "properties": {
+      "status": {
+        "label": "On/Off Status",
+        "writable": true,
+        "observable": true,
+        "@type": [
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:StateData"
+            ],
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "actions": {
+      "on": {
+        "label": "Turn On",
+        "description": "Set light status to on (maximum brightness)",
+        "@type": [
+          "TurnOn",
+          "iot:TurnOn"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:StateData"
+            ],
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      },
+      "off": {
+        "label": "Turn Off",
+        "description": "Set light status to off (minimum brightness)",
+        "@type": [
+          "TurnOff",
+          "iot:TurnOff"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:StateData"
+            ],
+            "type": "boolean",
+            "const": false
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Light",
+      "iot:LightControl",
+      "iot:Actuator",
+      "iot:BinarySwitch"
+    ],
+    "id": "urn:uuid:336db92b-45f6-496b-997c-e196ba7b49fd",
+    "name": "Intel-OCF-336db92b-45f6-496b-997c-e196ba7b49fd",
+    "properties": {
+      "status": {
+        "label": "On/Off Status",
+        "writable": true,
+        "observable": true,
+        "@type": [
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:StateData"
+            ],
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "actions": {
+      "on": {
+        "label": "Turn On",
+        "description": "Set light status to on (maximum brightness)",
+        "@type": [
+          "TurnOn",
+          "iot:TurnOn"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:StateData"
+            ],
+            "type": "boolean",
+            "const": true
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      },
+      "off": {
+        "label": "Turn Off",
+        "description": "Set light status to off (minimum brightness)",
+        "@type": [
+          "TurnOff",
+          "iot:TurnOff"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:StateData"
+            ],
+            "type": "boolean",
+            "const": false
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/led1mosfet?di=336db92b-45f6-496b-997c-e196ba7b49fd",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Switch",
+      "iot:Sensor",
+      "iot:BinarySwitch"
+    ],
+    "id": "urn:uuid:3932ae08-31b4-4882-b299-5d488ec8775c",
+    "name": "Intel-OCF-3932ae08-31b4-4882-b299-5d488ec8775c",
+    "properties": {
+      "status": {
+        "label": "On/Off Status",
+        "writable": false,
+        "observable": true,
+        "@type": [
+          "OnOffState",
+          "iot:SwitchStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:Toggle"
+            ],
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/button1touch?di=3932ae08-31b4-4882-b299-5d488ec8775c",
             "security": [
               {
                 "scheme": "digest"
