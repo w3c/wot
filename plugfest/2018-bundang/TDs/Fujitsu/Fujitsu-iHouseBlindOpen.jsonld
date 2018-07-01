@@ -1,0 +1,20 @@
+{
+  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",{"iot": "http://iotschema.org/"}],
+  "@type": "Thing",
+  "name": "Fujitsu-iHouseBlindOpen",
+  "id": "urn:com:fujitsu:iot:ihouse:blind:open",
+  "properties": {
+  	"OperationStatus": {
+		"@type": "iot:OperationStatus",
+		"type": "string",
+		"writable": true,
+		"observable": false,
+		"forms": [{
+			"href" : "http://center.fujitsu.com/FJ-FCGWSSPFA-F80F416A84B5/Things/Fujitsu-iHouseBlindOpen/Property/OperationStatus",
+			"mediaType": "text/plain"
+		}]
+	}
+  },
+  "actions":{},
+  "events":{}
+}

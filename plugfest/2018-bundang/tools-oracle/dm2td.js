@@ -1,6 +1,6 @@
 // Author: Michael.Lagally@oracle.com
 // Created: 7.5.2018
-// Last modified: 7.5.2018
+// Last modified: 26.6.2018
 
 "use strict";
 
@@ -8,9 +8,22 @@ var fs = require("fs");
 var path = require("path");
 var baseDir = ".";
 
+let appId="DD8B372C-D924-4EC9-A1BD-B0B8B5312A88";
+let iotCSServer="129.150.193.97";
+
+if (process.argv.length<5) {
+   console.log ("Usage: node dm2td.jsdm2td.js <deviceModel.json> <IoTCSServer> <applicationID> <deviceId> [-v]");
+   console.log ("Example: node tools-oracle/dm2td.js tools-oracle/DMs/Festo_Plant.json 129.150.193.97 DD8B372C-D924-4EC9-A1BD-B0B8B5312A88 FFC9E5B7-61E4-4B79-82AC-76DA9266949B");
+   process.exit (-1);
+}
+
 var filename=process.argv[2];
 
-var verbose=process.argv[3] ==="-v";
+iotCSServer = process.argv[3];
+appId = process.argv[4];
+var deviceId = process.argv[5];
+
+var verbose=process.argv[6] ==="-v";
 
 if (verbose) console.log(`td-dm started`);
 
@@ -32,7 +45,10 @@ td['@context']=["https://w3c.github.io/wot/w3c-wot-td-context.jsonld" ];
 td.name=dm.name;
 td.description=dm.description;
 td.id=dm.urn;
-td.base="http://<tbd>";
+let deviceUrn=dm.urn.replace(/:/g ,"%3A");
+let base = "https://"+iotCSServer+"/iot/api/v2/apps/"+appId+"/devices/"+deviceId+"/deviceModels/"+deviceUrn;
+td.base=base;
+td.security=[{ "scheme" : "basic"	}];
 var now=new Date(Date.now());
 td.createdAsString=now.toISOString();
 td.created=now.valueOf();
@@ -57,6 +73,11 @@ for(var exKey in dm.attributes) {
     } else {
       prop.label=iac.alias;
     };
+    prop.forms = [{
+      "href" :  base+"/attributes/"+iac.name,
+      "mediaType": "application/json"
+    }];
+
 
     if (verbose) console.log(prop);
 
@@ -85,6 +106,11 @@ for(var exKey in dm.actions) {
     } else {
       act.label=iac.alias;
     };
+
+    act.forms = [{
+      "href" : base+"/actions/"+act.name,
+      "mediaType": "application/json"
+    }];
 
     td.actions[iac.name]=act;
 }

@@ -68,6 +68,9 @@ These were described in result.md in Prague plugfest.
    We provide one remote proxy in Nagoya and two local proxies.
    One local proxy is placed in Smart Home in Japan, and three devices(LED Light, AirConditioner, Blind) connect it by ECHONET Lite.
    Another local proxy is placed in PlugFest Place, and two devices(Rotating Light, Brightness Sensor) connect it.
+   
+   We'll try to connect to Siemens proxy with our remote and local proxies.
+   We also try to connect to Oracle IoT Cloud with our remote proxy using the interface adapter.
 
 ### (2) Application servients
 
@@ -87,7 +90,10 @@ These were described in result.md in Prague plugfest.
 ### (5) Thing Directory operation
 
 #### Fujitsu
-   We provide simple one. Application Servients can lookup TDs by specifying the device's name.
+   We provide TD directories on the local network and the Internet.
+   This directories has two simple interfaces to register and to search TDs. If device servients have to register their TDs to the directory, applications can search and get them in the directories. See details in Appendix A1.
+   
+   We'll try to coonect to Siemens directory.
 
 ### (6) Device Servients
 
@@ -110,7 +116,8 @@ These were described in result.md in Prague plugfest.
 #### Fujitsu
    We use bearer token for access the remote/local proxy.
    And also use bearer token between remote proxy and local proxy.
-   (future work)
+
+  (future work)
    To support security metadata to be included in TD.
    To provides secure transfer between Thing Directory and WoT Client/Server.
 

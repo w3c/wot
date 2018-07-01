@@ -1,0 +1,138 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": "Thing",
+  "name": "PanasonicSimulatedAirConditioner5",
+  "id": "p-wot:PanasonicSimulatedAirConditioner5",
+  "base": "https://xxxxxxxx/wot/things/PanasonicSimulatedAirConditioner5/",
+  "security": [
+    {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorizationUrl": "https://plugfest.thingweb.io:8443/"
+    }
+  ],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "label": "power",
+      "type": "boolean",
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "power",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedAirConditioner5/power",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedAirConditioner5/power",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    },
+    "operationMode": {
+      "@type": "iot:RunMode",
+      "label": "operationMode",
+      "type": "string",
+      "enum": [
+        "Auto",
+        "Cooling",
+        "Heating",
+        "Dehumidifying",
+        "Blast"
+      ],
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "operationMode",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedAirConditioner5/operationMode",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedAirConditioner5/operationMode",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    },
+    "desiredTemp": {
+      "@type": "iot:TargetTemperature",
+      "label": "desiredTemp",
+      "type": "number",
+      "minimum": 16,
+      "maximum": 30,
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "desiredTemp",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedAirConditioner5/desiredTemp",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedAirConditioner5/desiredTemp",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    },
+    "windVolumeLevel": {
+      "@type": "iot:WindStrength",
+      "label": "windVolumeLevel",
+      "type": "number",
+      "minimum": 1,
+      "maximum": 3,
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "windVolumeLevel",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedAirConditioner5/windVolumeLevel",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedAirConditioner5/windVolumeLevel",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    }
+  }
+}
