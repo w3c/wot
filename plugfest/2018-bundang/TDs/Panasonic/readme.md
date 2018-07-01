@@ -17,4 +17,5 @@
 
 - **Correct URL and JWT will be informed you locally.**
     - For the security reason, the URL in TD is tentative.
+      - For your convenience, [TDs for online access to lab devices](panasonic_lab_online_TDs.zip) are put in encrypted zip form. Please use the password as same as Plugfest Wireless LAN.
     - JSON Web Token(JWT) should be added, when you access to Panasonic servient.
