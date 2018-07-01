@@ -1,0 +1,85 @@
+  {
+    "@context": [
+      "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+      "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+      {
+        "iot": "http://iotschema.org/"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "Temperature",
+      "iot:TemperatureSensing",
+      "iot:Sensor"
+    ],
+    "id": "urn:uuid:086d490d-90c6-4785-a677-c911bd2af919",
+    "name": "Intel-OCF-086d490d-90c6-4785-a677-c911bd2af919",
+    "properties": {
+      "temperature": {
+        "label": "Room Temperature",
+        "writable": false,
+        "observable": true,
+        "@type": [
+          "MultiLevelState",
+          "iot:Temperature"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "@type": [
+              "iot:TemperatureData"
+            ],
+            "type": "number"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "forms": [
+          {
+            "mediaType": "application/json",
+            "href": "http://192.168.1.241:8000/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919"
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9023/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9023/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "basic"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://portal.mmccool.net:9024/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          },
+          {
+            "mediaType": "application/json",
+            "href": "https://tiktok.mmccool.org:9024/api/oic/a/temperature1?di=086d490d-90c6-4785-a677-c911bd2af919",
+            "security": [
+              {
+                "scheme": "digest"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

@@ -1,10 +1,22 @@
 {
-  "@context": { "iot": "https://iot.schema.org/" },
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {"iot": "http://iotschema.org/",
+     "http": "http://www.w3.org/2011/http#"}
+  ],
   "name": "st-lamp-01",
   "description": "Philips Hue Lamp",
   "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability", "iot:HScolorCapability", "iot:ColorTemperatureCapability"],
-  "id": "9b1a5896-75bf-481d-b29f-4e35c68196d5",
-  "base": "http://{hue-bridge-address}/api/{hue-userid}/",
+  "id": "urn:uuid:9b1a5896-75bf-481d-b29f-4e35c68196d5",
+  "base": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/",
+  "security": [
+    {
+      "scheme": "apikey",
+      "userid": "b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m",
+      "in": "path"
+    }
+  ],
   "properties": {
     "state": {
       "type": "object",
@@ -48,7 +60,7 @@
     },
     "forms": [
       {
-      "href": "lights/12/state",
+      "href": "lights/24/state",
       "mediaType": "application/json",
       "rel": "readProperty",
       "http:methodName": "GET"
@@ -63,9 +75,8 @@
   },
   "onoff": {
     "label": "OnOff",
-    "@type": "iot:SwitchStatus",
-    "description": "On/off switch state",
     "@type": ["iot:SwitchStatus"],
+    "description": "On/off switch state",
     "type": "object",
     "properties": {
       "on": {
@@ -73,7 +84,7 @@
       }
     },
     "forms": [{
-      "href": "lights/12/state",
+      "href": "lights/24/state",
       "mediaType": "application/json"
     }]
   },
@@ -88,7 +99,11 @@
         "minimum": 0,
         "maximum": 254
       }
-    }
+    },
+    "forms": [{
+      "href": "lights/24/state",
+      "mediaType": "application/json"
+    }]
   },
   "actions": {
     "turnon": {
@@ -98,11 +113,11 @@
       "input":{
         "type": "object",
         "properties": {
-          "on": { "value": true }
+          "on": { "type": "boolean", "const": true }
         }
       },
       "forms": [{
-        "href": "lights/12/state",
+        "href": "lights/24/state",
         "inputMediaType": "application/json",
         "http:methodName": "POST"
         }]
@@ -114,11 +129,12 @@
       "input":{
         "type": "object",
         "properties": {
-          "on": { "value": false }
+          "type": "boolean",
+          "on": { "type": "boolean", "const": false }
         }
       },
       "forms": [{
-        "href": "lights/12/state",
+        "href": "lights/24/state",
         "inputMediaType": "application/json",
         "http:methodName": "POST"
         }]
@@ -147,7 +163,7 @@
         }
       },
       "forms": [{
-        "href": "lights/12/state",
+        "href": "lights/24/state",
         "inputMediaType": "application/json",
         "http:methodName": "POST"
       }]
@@ -176,7 +192,7 @@
         }
       },
       "forms": [{
-        "href": "lights/12/state",
+        "href": "lights/24/state",
         "inputMediaType": "application/json",
         "http:methodName": "POST"
       }]

@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": "Thing",
+  "name": "PanasonicSimulatedRoomLight5",
+  "id": "p-wot:PanasonicSimulatedRoomLight5",
+  "base": "https://xxxxxxxx/wot/things/PanasonicSimulatedRoomLight5/",
+  "security": [
+    {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorizationUrl": "https://plugfest.thingweb.io:8443/"
+    }
+  ],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "label": "power",
+      "type": "boolean",
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "power",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedRoomLight5/power",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedRoomLight5/power",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    },
+    "color": {
+      "@type": "iot:CurrentColour",
+      "label": "color",
+      "type": "string",
+      "enum": [
+        "red",
+        "blue",
+        "white"
+      ],
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "color",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedRoomLight5/color",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty",
+          "security": []
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedRoomLight5/color",
+          "mediaType": "application/json",
+          "rel": "observeProperty",
+          "security": []
+        }
+      ]
+    },
+    "luminance": {
+      "@type": "iot:CurrentLevel",
+      "label": "luminance",
+      "type": "number",
+      "writable": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "luminance",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  },
+  "events": {
+    "alert": {
+      "label": "alert",
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "event/alert",
+          "mediaType": "application/json",
+          "subProtocol": "X-Panasonic-LateBinding"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedRoomLight5/alert",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedRoomLight5/alert",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "detect": {
+      "label": "detect",
+      "type": "null",
+      "forms": [
+        {
+          "href": "event/detect",
+          "mediaType": "application/json",
+          "subProtocol": "X-Panasonic-LateBinding"
+        },
+        {
+          "href": "https://yyyyyyyy/poll/PanasonicSimulatedRoomLight5/detect",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "wss://yyyyyyyy/wot/things/PanasonicSimulatedRoomLight5/detect",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  }
+}
