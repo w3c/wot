@@ -11,7 +11,6 @@
     "properties": {
         "gearPosition": {
             "@type": "iot:gearPosition",
-            "capability": "iot:gear",
             "type": "object",
             "properties": {"gearPosition": {"type": "string"}},
             "writable": false,
@@ -21,9 +20,9 @@
                 "mediaType": "application/json"
             }]
         },
+
         "LeftFrontDoorStatus": {
             "@type": "iot:DoorStatus",
-            "capability": "iot:Valve",
             "type": "object",
             "properties": {"ValveStatus": {"type": "string"}},
             "writable": false,
@@ -33,9 +32,9 @@
                 "mediaType": "application/json"
             }]
         },
+
         "RightFrontDoorStatus": {
             "@type": "iot:DoorStatus",
-            "capability": "iot:Valve",
             "type": "object",
             "properties": {"ValveStatus": {"type": "string"}},
             "writable": false,
@@ -45,9 +44,9 @@
                 "mediaType": "application/json"
             }]
         },
+
         "LeftRearDoorStatus": {
             "@type": "iot:DoorStatus",
-            "capability": "iot:Valve",
             "type": "object",
             "properties": {"ValveStatus": {"type": "string"}},
             "writable": false,
@@ -57,9 +56,9 @@
                 "mediaType": "application/json"
             }]
         },
+
         "RightRearDoorStatus": {
             "@type": "iot:DoorStatus",
-            "capability": "iot:Valve",
             "type": "object",
             "properties": {"ValveStatus": {"type": "string"}},
             "writable": false,
@@ -68,66 +67,90 @@
                 "href": "https://18.195.1.116/v2/north/sensor/right-rear-door",
                 "mediaType": "application/json"
             }]
-        },
+        }
     },
+
     "actions": {
-        "LeftFrontWindowOpen": {
+        "LeftHeadlightOn": {
             "@type": "iot:TurnOn",
-            "capability": "iot:Valve",
             "input": {
-                "type": "object"
-                },
+                "type": "object",
                 "properties": {"value": {
-                    "type": "string",
+                    "type": "boolean"
                 }}
             },
             "forms": [{
-                "href": "https://18.195.1.116/v2/north/actuator/left-front-window/status",
+                "href": "https://18.195.1.116/v2/north/actuator/left-headlight/on",
                 "mediaType": "application/json"
             }]
         },
-        "LeftFrontWindowClose": {
-            "@type": "iot:TurnOff",
-            "capability": "iot:Valve",
+
+        "RightHeadlightOn": {
+            "@type": "iot:TurnOn",
             "input": {
-                "type": "object"
-                },
+                "type": "object",
                 "properties": {"value": {
                     "type": "string"
                 }}
             },
             "forms": [{
+                "href": "https://18.195.1.116/v2/north/actuator/right-headlight/on",
+                "mediaType": "application/json"
+            }]
+        },
+
+        "LeftFrontWindowOpen": {
+            "@type": "iot:LeftFrontWindow",
+            "input": {
+                "type": "object",
+                "properties" :
+                    {"value": { "type": "number", "minimum": 0, "maximum":100, "mid":50
+                    }}
+                },
+            "forms": [{
                 "href": "https://18.195.1.116/v2/north/actuator/left-front-window/status",
                 "mediaType": "application/json"
             }]
         },
+
         "RightFrontWindowOpen": {
-            "@type": "iot:TurnOn",
-            "capability": "iot:Valve",
+            "@type": "iot:RightFrontWindow",
             "input": {
-                "type": "object"
+                "type": "object",
+                "properties" :
+                    {"value": { "type": "number", "minimum": 0, "maximum":100, "mid":50
+                    }}
                 },
-                "properties": {"value": {
-                    "type": "string",
-                }}
-            },
             "forms": [{
                 "href": "https://18.195.1.116/v2/north/actuator/right-front-window/status",
                 "mediaType": "application/json"
             }]
         },
-        "RightFrontWindowClose": {
-            "@type": "iot:TurnOff",
-            "capability": "iot:Valve",
+
+        "RightRearWindow": {
+            "@type": "iot:RightRearWindow",
             "input": {
-                "type": "object"
+                "type": "object",
+                "properties" :
+                    {"value": { "type": "number", "minimum": 0, "maximum":100, "mid":50
+                    }}
                 },
-                "properties": {"value": {
-                    "type": "string"
-                }}
-            },
             "forms": [{
-                "href": "https://18.195.1.116/v2/north/actuator/left-front-window/status",
+                "href": "https://18.195.1.116/v2/north/actuator/right-rear-window/status",
+                "mediaType": "application/json"
+            }]
+        },
+
+        "LeftRearWindowOpen": {
+            "@type": "iot:LeftRearWindow",
+            "input": {
+                "type": "object",
+                "properties" :
+                    {"value": { "type": "number", "minimum": 0, "maximum":100, "mid":50
+                    }}
+                },
+            "forms": [{
+                "href": "https://18.195.1.116/v2/north/actuator/right-front-window/status",
                 "mediaType": "application/json"
             }]
         }
