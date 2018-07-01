@@ -10,7 +10,6 @@
     "voc": {
       "type": "number",
       "description": "volatile organic compound",
-      "iot:custom": "nothing",
       "observable": true,
       "writeable": false,
       "forms": [
@@ -32,7 +31,6 @@
     "light": {
       "type": "number",
       "description": "light lux",
-      "iot:custom": "nothing",
       "observable": true,
       "writeable": false,
       "forms": [
@@ -54,7 +52,6 @@
     "sound": {
       "type": "number",
       "description": "sound level",
-      "iot:custom": "nothing",
       "observable": true,
       "writeable": false,
       "forms": [
@@ -76,7 +73,6 @@
     "detect": {
       "type": "number",
       "description": "microwave value",
-      "iot:custom": "nothing",
       "observable": true,
       "writeable": false,
       "forms": [
@@ -89,7 +85,6 @@
     "co2": {
       "type": "number",
       "description": "carbon_dioxide value",
-      "iot:custom": "nothing",
       "observable": true,
       "writeable": false,
       "forms": [
@@ -111,7 +106,6 @@
     "humidity": {
       "type": "number",
       "description": "humidity value",
-      "iot:custom": "nothing",
       "observable": true,
       "writeable": false,
       "forms": [
@@ -133,7 +127,6 @@
     "temperature": {
       "type": "number",
       "description": "temperature value",
-      "iot:custom": "nothing",
       "observable": true,
       "writeable": false,
       "forms": [
@@ -215,7 +208,8 @@
       "forms": [
         {
           "href": "http://192.168.1.249:8080/keti_iot_sensor3/events/onoverflow_voc",
-          "mediaType": "application/json"
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
         }
       ]
     },
@@ -224,7 +218,8 @@
       "forms": [
         {
           "href": "http://192.168.1.249:8080/keti_iot_sensor3/events/onunderflow_light",
-          "mediaType": "application/json"
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
         }
       ]
     },
@@ -233,7 +228,8 @@
       "forms": [
         {
           "href": "http://192.168.1.249:8080/keti_iot_sensor3/events/onoverflow_sound",
-          "mediaType": "application/json"
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
         }
       ]
     },
@@ -242,7 +238,8 @@
       "forms": [
         {
           "href": "http://192.168.1.249:8080/keti_iot_sensor3/events/ondetect",
-          "mediaType": "application/json"
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
         }
       ]
     },
@@ -251,7 +248,8 @@
       "forms": [
         {
           "href": "http://192.168.1.249:8080/keti_iot_sensor3/events/onoverflow_co2",
-          "mediaType": "application/json"
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
         }
       ]
     },
@@ -260,7 +258,8 @@
       "forms": [
         {
           "href": "http://192.168.1.249:8080/keti_iot_sensor3/events/onoverflow_humidity",
-          "mediaType": "application/json"
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
         }
       ]
     },
@@ -269,7 +268,8 @@
       "forms": [
         {
           "href": "http://192.168.1.249:8080/keti_iot_sensor3/events/onoverflow_temperature",
-          "mediaType": "application/json"
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
         }
       ]
     }
