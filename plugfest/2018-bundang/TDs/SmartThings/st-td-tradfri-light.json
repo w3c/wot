@@ -2,21 +2,14 @@
   "@context": [
     "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
     "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
-    {"iot": "http://iotschema.org/",
-     "http": "http://www.w3.org/2011/http#"}
+    {"iot": "http://iotschema.org/"}
   ],
   "name": "st-lamp-01",
   "description": "Philips Hue Lamp",
   "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability"],
   "id": "urn:uuid:fb60aafa-2e8a-4c51-a104-8639af043569",
   "base": "coaps://10.0.0.15:5684",
-  "security": [
-    {
-      "scheme": "coap+dtls",
-      "id": "DSAzac0V7VzQc",
-      "psk": "F0YpBnSCL9rXowZ8"
-    }
-  ],
+  "security": [{ "scheme": "psk" }],
   "properties": {
     "state": {
       "type": "object",
