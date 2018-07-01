@@ -3,11 +3,12 @@
   "@type": "Thing",
   "name": "Fujitsu-RotaryBeaconLight",
   "id": "urn:com:fujitsu:iot:rotarybeaconlight",
-  "base" : "http://x.x.x.x:8081/Things/Fujitsu_RotaryBeaconLight/",
+  "base" : "http://192.168.1.99:8081/Things/Fujitsu_RotaryBeaconLight/",
   "properties": {
   	"OperationStatus": {
 		"@type": "iot:OperationStatus",
 		"type": "string",
+		"enum": ["ON", "OFF"],
 		"writable": true,
 		"observable": false,
 		"forms": [{
