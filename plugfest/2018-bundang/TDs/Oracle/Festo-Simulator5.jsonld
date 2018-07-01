@@ -6,6 +6,7 @@
 	"description": "Device Model for the Siemens Festo Plant",
 	"id": "urn:com:siemens:wot:FestoPlant",
 	"base": "https://129.150.193.97/iot/api/v2/apps/DD8B372C-D924-4EC9-A1BD-B0B8B5312A88/devices/785F9F60-BA8B-43A1-989C-6019059917A0/deviceModels/urn%3Acom%3Asiemens%3Awot%3AFestoPlant",
+	"security": [{ "scheme" : "basic"	}],
 	"createdAsString": "2018-06-27T13:10:10.983Z",
 	"created": 1530105010983,
 	"lastModifiedAsString": "2018-06-27T13:10:10.983Z",
