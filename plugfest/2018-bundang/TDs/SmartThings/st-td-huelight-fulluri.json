@@ -53,53 +53,53 @@
             }
           }
         }
-      }
+      },
+      "forms": [
+        {
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
+        "mediaType": "application/json"
+        }
+      ]
     },
-    "forms": [
-      {
-      "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
-      "mediaType": "application/json"
-      }
-    ]
-  },
-  "onoff": {
-    "label": "OnOff",
-    "@type": ["iot:SwitchStatus"],
-    "description": "On/off switch state",
-    "type": "object",
-    "properties": {
-      "state": {
-        "type": "object",
-        "properties": {
-          "on": {
-            "@type": "iot:SwitchData",
-            "type": "boolean"
+    "onoff": {
+      "label": "OnOff",
+      "@type": ["iot:SwitchStatus"],
+      "description": "On/off switch state",
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "object",
+          "properties": {
+            "on": {
+              "@type": "iot:SwitchData",
+              "type": "boolean"
+            }
           }
         }
-      }
+      },
+      "forms": [{
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
+        "mediaType": "application/json"
+      }]
     },
-    "forms": [{
-      "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
-      "mediaType": "application/json"
-    }]
-  },
-  "brightness": {
-    "label": "Brightness",
-    "@type": ["iot:CurrentLevel"],
-    "description": "Current Brightness Level",
-    "type": "object",
-    "properties": {
-      "bri": {
-        "@type": "iot:LevelData",
-        "type": "integer",
-        "minimum": 0,
-        "maximum": 254
-      }
-    },
-    "forms": [{
-      "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
-      "mediaType": "application/json"
-    }]
+    "brightness": {
+      "label": "Brightness",
+      "@type": ["iot:CurrentLevel"],
+      "description": "Current Brightness Level",
+      "type": "object",
+      "properties": {
+        "bri": {
+          "@type": "iot:LevelData",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 254
+        }
+      },
+      "forms": [{
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
+        "mediaType": "application/json"
+      }]
+    }
   },
   "actions": {
     "turnon": {
@@ -159,7 +159,7 @@
         }
       },
       "forms": [{
-        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24/state",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/state",
         "inputMediaType": "application/json",
         "http:methodName": "PUT"
       }]
