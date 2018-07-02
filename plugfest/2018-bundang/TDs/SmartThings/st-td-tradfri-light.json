@@ -8,8 +8,8 @@
   "description": "Philips Hue Lamp",
   "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability"],
   "id": "urn:uuid:fb60aafa-2e8a-4c51-a104-8639af043569",
-  "base": "coaps://10.0.0.15:5684",
   "security": [{ "scheme": "psk" }],
+  "base": "coaps://10.0.0.15:5684",
   "properties": {
     "state": {
       "type": "object",
@@ -99,93 +99,93 @@
           "mediaType": "application/json"
         }
       ]
+    }
+  },
+  "actions": {
+    "turnon": {
+      "label": "TurnOn",
+      "@type": ["iot:TurnOnAction"],
+      "description": "Action to turn the light on",
+      "input":{
+        "type": "object",
+        "properties": {
+          "3311": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "5850": { "type": "boolean", "const": true }
+                }
+              }
+            ]
+          }
+        },
+        "forms": [
+          {
+            "href": "/15001/65544",
+            "mediaType": "application/json"
+          }
+        ]
+      }
     },
-    "actions": {
-      "turnon": {
-        "label": "TurnOn",
-        "@type": ["iot:TurnOnAction"],
-        "description": "Action to turn the light on",
-        "input":{
-          "type": "object",
-          "properties": {
-            "3311": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "5850": { "type": "boolean", "const": true }
+    "turnoff": {
+      "label": "TurnOff",
+      "@type": ["iot:TurnOffAction"],
+      "description": "Action to turn the light off",
+      "input":{
+        "type": "object",
+        "properties": {
+          "3311": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "5850": { "type": "boolean", "const": false }
+                }
+              }
+            ]
+          }
+        },
+        "forms": [
+          {
+            "href": "/15001/65544",
+            "mediaType": "application/json"
+          }
+        ]
+      }
+    },
+    "setlevel": {
+      "label": "SetLevel",
+      "@type": ["iot:SetLevelAction"],
+      "description": "Action to change the brightness of the light",
+      "input":{
+        "type": "object",
+        "properties": {
+          "3311": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "5851": {
+                    "type": "number",
+                    "@type": "iot:LevelData",
+                    "minimum": 0,
+                    "maximum": 254
                   }
                 }
-              ]
-            }
-          },
-          "forms": [
-            {
-              "href": "/15001/65544",
-              "mediaType": "application/json"
-            }
-          ]
-        }
-      },
-      "turnoff": {
-        "label": "TurnOff",
-        "@type": ["iot:TurnOffAction"],
-        "description": "Action to turn the light off",
-        "input":{
-          "type": "object",
-          "properties": {
-            "3311": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "5850": { "type": "boolean", "const": false }
-                  }
-                }
-              ]
-            }
-          },
-          "forms": [
-            {
-              "href": "/15001/65544",
-              "mediaType": "application/json"
-            }
-          ]
-        }
-      },
-      "setlevel": {
-        "label": "SetLevel",
-        "@type": ["iot:SetLevelAction"],
-        "description": "Action to change the brightness of the light",
-        "input":{
-          "type": "object",
-          "properties": {
-            "3311": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "5851": {
-                      "type": "number",
-                      "@type": "iot:LevelData",
-                      "minimum": 0,
-                      "maximum": 254
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "forms": [
-            {
-              "href": "/15001/65544",
-              "mediaType": "application/json"
-            }
-          ]
-        }
+              }
+            ]
+          }
+        },
+        "forms": [
+          {
+            "href": "/15001/65544",
+            "mediaType": "application/json"
+          }
+        ]
       }
     }
   }
