@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {"iot": "http://iotschema.org/",
+     "http": "http://www.w3.org/2011/http#"}
+  ],
+  "base": "http://159.203.213.90:1880",
+  "id": "urn:uuid:c3068abb-7781-4ab4-9c0b-012408e9e758",
+  "@type": [ "Thing", "iot:MotionControl" ],
+  "name": "Motion Sensor",
+  "properties": {
+    "MotionState": {
+      "writable": false,
+      "observable": true,
+      "@type": ["Property", "iot:MotionDetected"],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "string",
+            "const": "5700"
+          },
+          "vb": {
+            "@type": ["iot:stateData"],
+            "type": "boolean"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/3300/2",
+          "mediaType": "application/json",
+          "rel": "readProperty",
+          "http:methodName": "GET"
+        },
+        {
+          "href": "/3300/2",
+          "mediaType": "application/json",
+          "rel": "writeProperty",
+          "http:methodName": "POST"
+        }
+      ]
+    }
+  },
+  "events": {
+    "MotionEvent": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "string",
+            "const": "5700"
+          },
+          "vb": {
+            "@type": ["iot:stateData"],
+            "type": "boolean"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "mqtt://0m2m.net:1883/plugfest/subscriptions/Motion",
+          "mediaType": "application/json",
+          "rel": "subscribeEvent",
+          "mqtt:qos":  0,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 8
+        }
+      ]
+    }
+  }
+}

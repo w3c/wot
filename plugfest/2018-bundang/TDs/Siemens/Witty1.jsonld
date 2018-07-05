@@ -1,0 +1,50 @@
+{
+	"@context": [
+		"https://w3c.github.io/wot/w3c-wot-td-context.jsonld"
+	],
+	"@type": [
+		"Thing"
+	],
+  "id": "urn:dev:wot:siemens:witty1",
+	"name": "Witty1",
+	"description": "Witty Cloud ESP8266 sensor node",
+	"properties": {
+		"brightness": {
+			"type": "integer",
+			"minimum": 0,
+			"maximum": 1024,
+			"writable": false,
+			"observable": false,
+			"forms": [{
+				"href": "coap://192.168.1.28/brightness",
+				"mediaType": "application/json"
+			}]
+		},
+		"color": {
+			"type": "object",
+			"properties": {
+				"r": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 512
+				},
+				"g": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 512
+				},
+				"b": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 512
+				}
+			},
+			"writable": true,
+			"observable": false,
+			"forms": [{
+				"href": "coap://192.168.1.28/color",
+				"mediaType": "application/json"
+			}]
+		}
+	}
+}

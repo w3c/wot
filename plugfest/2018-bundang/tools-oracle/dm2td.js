@@ -48,6 +48,7 @@ td.id=dm.urn;
 let deviceUrn=dm.urn.replace(/:/g ,"%3A");
 let base = "https://"+iotCSServer+"/iot/api/v2/apps/"+appId+"/devices/"+deviceId+"/deviceModels/"+deviceUrn;
 td.base=base;
+td.security=[{ "scheme" : "basic"	}];
 var now=new Date(Date.now());
 td.createdAsString=now.toISOString();
 td.created=now.valueOf();

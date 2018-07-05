@@ -1,0 +1,30 @@
+{
+
+    "name": "EventSource-WS",
+    "@context": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "@type": "Thing",
+    "security": [ ],
+    "properties": { },
+    "actions": {
+        "reset": {
+            "forms": [
+                {
+                    "href": "http://192.168.1.21:8080/EventSource/actions/reset",
+                    "mediaType": "application/json"
+                }
+            ]
+        }
+    },
+    "events": {
+        "onchange": {
+            "type": "number",
+            "forms": [
+                {
+                    "href": "ws://192.168.1.21:8080/EventSource/events/onchange",
+                    "mediaType": "application/json"
+                }
+            ]
+        }
+    },
+    "links": [ ]
+}

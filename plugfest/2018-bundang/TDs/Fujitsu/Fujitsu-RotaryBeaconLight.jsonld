@@ -1,18 +1,19 @@
 {
-  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld"],
+  "@context": ["https://w3c.github.io/wot/w3c-wot-td-context.jsonld",{"iot": "http://iotschema.org/"}],
   "@type": "Thing",
   "name": "Fujitsu-RotaryBeaconLight",
   "id": "urn:com:fujitsu:iot:rotarybeaconlight",
-  "base" : "http://10.25.154.87:18081/Things/Fujitsu_RotaryBeaconLight/",
+  "base" : "http://192.168.1.99:8081/Things/Fujitsu_RotaryBeaconLight/",
   "properties": {
   	"OperationStatus": {
 		"@type": "iot:OperationStatus",
 		"type": "string",
+		"enum": ["ON", "OFF"],
 		"writable": true,
 		"observable": false,
 		"forms": [{
 			"href" : "Property/OperationStatus",
-			"mediaType": "application/json"
+			"mediaType": "text/plain"
 		}]
 	}
   },
