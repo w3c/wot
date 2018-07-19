@@ -40,12 +40,6 @@
           "mediaType": "application/json",
           "rel": "writeProperty",
           "http:methodName": "POST"
-        },
-        {
-          "href": "mqtt://0m2m.net:1883/plugfest/subscriptions/Motion",
-          "mediaType": "application/json",
-          "rel": "observeProperty",
-          "mqtt:commandCode": 8
         }
       ]
     }
@@ -70,7 +64,7 @@
         {
           "href": "mqtt://0m2m.net:1883/plugfest/subscriptions/Motion",
           "mediaType": "application/json",
-          "rel": "observeProperty",
+          "rel": "subscribeEvent",
           "mqtt:qos":  0,
           "mqtt:retain" : false,
           "mqtt:commandCode": 8

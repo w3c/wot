@@ -85,7 +85,7 @@
         }
       ]
     },
-    "Switch Off": {
+    "SwitchOff": {
       "@type": ["Action", "iot:TurnOff"],
       "input":  {
         "type": "object",
@@ -105,7 +105,7 @@
         }
       ]
     },
-    "Set brightness level": {
+    "SetBrightnessLevel": {
       "@type": ["Action", "iot:SetLevel"],
       "input": {
         "type": "object",
