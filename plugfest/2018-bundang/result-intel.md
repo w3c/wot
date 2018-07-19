@@ -1,9 +1,10 @@
 # PlugFest Preparation for Bundang F2F 2018
-This document is for Intel's plugfest preparation.
+This document is for Intel's plugfest results.
 
 # 1. Introduction
  
-See the corresponding section of [preparation.md](preparation.md) for information on the last plugfest.
+See the corresponding section of [preparation.md](preparation.md) for general information on the plugfest.
+See the corresponding section of [intel-preparation.md](intel-preparation.md) for information on Intel's preparation.
 
 <table>
   <tr>
@@ -205,31 +206,7 @@ the FOSCAM:
 These were described in result.md in the Prague plugfest.
 
 ### (1) Connect with remote/local proxy
-Remote access is supported by various mechanisms based on SSH tunnels and proxy services running on one of two cloud
-servers (one based in California at Digital Ocean, one based in Japan at AWS):
-1. Direct tunnel with remote port forwarding.  In this case, the device itself implements TLS but uses a certificate
-   appropriate for the remote endpoint, not the local device.  The web service is hosted on the device but via the tunnel
-   the port is made available on a cloud server and exposed to the internet.  
-2. Tunnel to remote proxy.  In this case the device hosts only an unsecured protocol, such as HTTP, which is forwarded
-   over a tunnel to a cloud server but NOT mapped directly to a remote port.  Instead a proxy service supporting
-   HTTPS and authentication accepts access requests on the devices' behalf, authenticates and secures them, and then
-   passes the requests and responses back and forth.  This is a transparent proxy: the accessing devices do not
-   know they are talking to the proxy; it seems as if the device is running in the cloud.
-3. Tunnel from local proxy.  The same proxy service as in 2 runs on the local gateway, and implements an authenticated
-   service that is then tunnelled and mapped to a remote port as in 1.
-Note that in the above scenarios local services may use HTTP and may be unprotected, except for local network security
-(eg WiFi encryption).  If this is undesirable a self-signed certificate can be used locally OR local SSH tunnels can be used
-to protect local traffic.
-
-In addition to the above to support secure remote access, a proxy service, known as the "IoT REST API Server",
-will be running on the local gateways to map OCF CoAP to and from HTTP.  
-
-In general, there will be "local" services running at the plugfest (behind a NAT) and "local" services running
-in a lab in Japan (behind a different NAT), both talking to two separate cloud portals.  This will allow testing of
-scenarios involving NAT-NAT traversal.
-
-Note that the remote devices will be observable via a network camera, a FOSCAM, which will be made available
-via a transparent proxy as well.
+Accomplished as described in the preparation document.
 
 ### (2) Application servients
 
