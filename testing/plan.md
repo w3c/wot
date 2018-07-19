@@ -21,7 +21,31 @@ defined in the non-normative [W3C WoT Best Security Practices].
 Thing Description validation is the process of determining whether a given Thing Description file
 satisfies the specification in the [W3C WoT Thing Description]() document.
 
+In summary, Thing Descriptions can be validated at four levels:
+1. JSON syntax validation.  This simply checks that a TD is a valid JSON document.
+   Note that JSON-LD 1.1 files must also be valid JSON.
+2. Validation against a JSON Schema.  A Thing Description can be validated
+   using a JSON validator using a JSON Schema.  This checks for several normative
+   structural requirements, for example, whether mandatory elements are present
+   and whether they have acceptable types.  Note: a single JSON Schema cannot
+   catch several classes of error in TDs due to extension vocabularies, which
+   allow additional structures defined by the extension to occur in many places.
+   Due to this, the base TD JSON Schema is necessarily tolerant of additional
+   properties in these places.
+3. Validation against a JSONLD ontology. This tests the RDF structure and 
+   vocabulary.  It can check that (for example) no words are used that are
+   not defined in an in-context vocabulary.
+4. Validation against OWL ontology.  TD uses several interferencing rules
+   based on OWL, and additional tests can be used to verify that inferenced
+   values (for example) are consistent.
+
 ## Thing Network Interface Testing
+
+**TODO: Describe Ege's Network testing**
+
+## Scripting API Testing
+
+**TODO: Describe Scripting API Test Suite**
 
 ## Security Testing
 Security Testing is the process of testing a given implementation of a Thing for
