@@ -141,7 +141,7 @@ The following checking points must be completed together with a partner in clien
 
 ### 7.3 Implementaion aspect
 #### 7.3.1 Application Servients
-- There is ambiguity in the interpretation of TD
+- There are some ambiguity in the interpretation of TD
   - How to select most suitable access method from multiple form entries?
 - Ease of adoption from existing IoT tool (such as Node-RED), Cloud service (Oracle/AWS/GCP/Azure/etc.)
   is important aspect of Web of Things.
