@@ -9,7 +9,6 @@
   "description": "Philips Hue Lamp",
   "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability", "iot:HScolorCapability", "iot:ColorTemperatureCapability"],
   "id": "urn:uuid:9b1a5896-75bf-481d-b29f-4e35c68196d5",
-  "base": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/",
   "properties": {
     "state": {
       "type": "object",
@@ -57,7 +56,7 @@
       },
       "forms": [
         {
-        "href": "lights/24",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
         "mediaType": "application/json"
         }
       ]
@@ -79,7 +78,7 @@
         }
       },
       "forms": [{
-        "href": "lights/24",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
         "mediaType": "application/json"
       }]
     },
@@ -97,7 +96,7 @@
         }
       },
       "forms": [{
-        "href": "lights/24",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24",
         "mediaType": "application/json"
       }]
     }
@@ -114,7 +113,7 @@
         }
       },
       "forms": [{
-        "href": "lights/24/state",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24/state",
         "inputMediaType": "application/json",
         "http:methodName": "PUT"
         }]
@@ -131,7 +130,7 @@
         }
       },
       "forms": [{
-        "href": "lights/24/state",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24/state",
         "inputMediaType": "application/json",
         "http:methodName": "PUT"
         }]
@@ -160,7 +159,7 @@
         }
       },
       "forms": [{
-        "href": "lights/state",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/state",
         "inputMediaType": "application/json",
         "http:methodName": "PUT"
       }]
@@ -189,7 +188,7 @@
         }
       },
       "forms": [{
-        "href": "lights/24/state",
+        "href": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/lights/24/state",
         "inputMediaType": "application/json",
         "http:methodName": "PUT"
       }]
