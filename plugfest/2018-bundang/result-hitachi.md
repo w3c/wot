@@ -13,56 +13,56 @@
 
 #### 3.1.2 Register with Thing Directory -- was (5)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.1.3 Connect with Remote/Local Proxy -- was (1)
 
-* Hitachi will connect our application with Remote/Local Proxy
+* Hitachi: connect our application with Remote/Local Proxy
   - We conneced Fujitsu's RotaryBeaconLight via Fujitsu's remote proxy.
 
 #### 3.1.4 Connect with node-wot -- was (3)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.1.5 Scripting API -- was (4)
 
-* N/A
+* Hitachi: N/A
 
 ### 3.2 Testing in Client Role
 The following checking points must be completed together with a partner in server role.
 
 #### 3.2.1 Metadata Handling
 
-* Hitachi will try to incorporate Metadata in Node-RED contexts or messages.
+* Hitachi: incorporate Metadata in Node-RED contexts or messages.
   - Our implementation uses label/description for Node-RED editor UI.
   - Use of semantic metadata ("iot:...", etc.) is future work.
 
 #### 3.2.2 Property Handling -- was part of (2)
 
-* We checked following bindings
+* Hitachi: checked following bindings
   * Get bindings: HTTP(S)
   * Set bindings: HTTP(S)
   * Observe bindings: HTTP(S)+Longpoll
 
 #### 3.2.3 Action Handling -- was part of (2)
 
-* We checked following bindings
+* Hitachi: checked following bindings
    * Invoke: HTTP(S)
 
 #### 3.2.4 Event Handling -- was part of (11)
 
-* We checked following bindings
+* Hitachi:  following bindings
    * Subscribe: HTTP(S)+Longpoll
 
 #### 3.2.5 Security -- was part of (9)
 
-* We checked that out client consume following Security Schemes:
+* Hitachi: our client consume following Security Schemes:
    * basic
    * digest
    * bearer
-* We need security metadata for designate HTTP header name for API key
-  - Panasonic's simulator uses "X-PWOT-TOKEN" header.
-  - for example, OpenAPI 3.0 uses following security metadata (see https://swagger.io/docs/specification/authentication/api-keys/ )
+   * We need security metadata to designate HTTP header name for API key
+     - Panasonic's simulator uses "X-PWOT-TOKEN" header.
+     - for example, OpenAPI 3.0 uses following security metadata (see https://swagger.io/docs/specification/authentication/api-keys/ )
 ```yaml
   securitySchemes:
     ApiKeyAuth:        # arbitrary name for the security scheme
@@ -73,56 +73,56 @@ The following checking points must be completed together with a partner in serve
 
 #### 3.2.6 Semantic integration -- was part of (8)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.2.7 Accessibility -- was (10)
 
-* N/A
+* Hitachi: N/A
 
 ### 3.3 Testing in Server Role
 The following checking points must be completed together with a partner in client role.
 
 #### 3.3.1 Metadata
 
-* N/A
+* Hitachi: N/A
 
 #### 3.3.2 Properties -- was part of (6) and (7)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.3.3 Actions -- was part of (6) and (7)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.3.4 Events -- was part of (11)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.3.5 Security -- was part of (9)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.3.6 Semantic Integration -- was part of (8)
 
-* N/A
+* Hitachi: N/A
 
 ### 3.4 Other issues
 
 #### 3.4.1 Running Actions and Event Instances -- was Other Issues (2)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.4.2 Discovery using Feature of Interest -- was Other Issues (4)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.4.3 New Security Patterns -- was Other Issues (7)
 
-* N/A
+* Hitachi: N/A
 
 #### 3.4.4 Miscellaneous -- was Other Issues (9)
 
-* N/A
+* Hitachi: N/A
 
 ## 7 Matsukura-san's Checking points (revised)
 
@@ -146,7 +146,7 @@ The following checking points must be completed together with a partner in clien
 - Ease of adoption from existing IoT tool (such as Node-RED), Cloud service (Oracle/AWS/GCP/Azure/etc.)
   is important aspect of Web of Things.
   - add a description of "Legacy IoT Tool/Service" in Architecture document (in Chapter 7)?
-#### 7.3.2 Device Servients
+####  7.3.2 Device Servients
 #### 7.3.3 Node-wot as a servient
 #### 7.3.4 Scripting API implementation
 #### 7.3.5 Device simulators, Test framework
