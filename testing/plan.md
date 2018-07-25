@@ -25,6 +25,27 @@ section of the (non-normative)
 [W3C WoT Security and Privacy Considerations](https://w3c.github.io/wot-security/) 
 document.
 
+## Normative Assertions
+The starting point for testing is the set of normative assertions
+in the specifications.  For each normative assertion, a testing strategy
+needs to be defined.  A tool has been developed to extract each normative
+assertion from the specification documents and associate each one
+with a specific test specification.  
+
+Here are links to the 
+current output of this tools for the relevant specifications:
+- [W3C WoT Thing Description - Test Specifications](https://rawgit.com/mmccool/wot-thing-description/assertions2/testing/plan.html)
+    * Currently incomplete, see [WoT TD PR#170](https://github.com/w3c/wot-thing-description/pull/170)
+    * Also needs to be applied to protocol bindings and scripting API
+    * Some normative assertions given in non-HTML form (SHACL, WDL, tables, etc.) are not yet covered
+
+Structuring tests around the normative assertions
+is important for validation of the standard, as each assertion
+needs to be associated with a mechanism for testing it.
+However, in practice testing of implementations falls into a set of
+categories subject to particular tools, testing approaches, and "test suites".
+These categories are described in the following sections.
+
 ## Thing Description Validation
 Thing Description validation is the process of determining whether a given Thing Description file
 satisfies the specification in the
@@ -50,13 +71,47 @@ In summary, Thing Descriptions can be validated at four levels:
    based on OWL, and additional tests can be used to verify that inferenced
    values (for example) are consistent.
 
+The application of the above tests is currently performed using the 
+[Thingweb Playground](http://plugfest.thingweb.io/playground/) tool using
+code and schemas defined in the
+[Thingweb Playground Git Repo](https://github.com/thingweb/thingweb-playground).
+   * This currently runs the above tests in a browser.
+   * Porting these tools so they can be invoked on the command
+     line or as a service would be useful.
+   * The schemas and other defining validation specifications
+     should be moved to the corresponding specification repository.
+
 ## Thing Network Interface Testing
 
-**TODO: Describe Ege's Network testing**
+Things expose network APIs and these network APIs are described in Thing
+Descriptions.  Part of testing a Thing should be to confirm that it actually
+provides a network API consistent with its Thing Description.
+
+The [WoT Test Bench](https://github.com/jplaui/testbench) tool does this.
+Given a TD, it generates and executes a set of network calls to exercise and
+validate the described API.
+    * A limitation of this tool is that it cannot validate aspects of
+      the network API that must be initiated by the Thing, such as events.
+    * We may want to consider augmenting Things with a standard test API
+      so that a Thing can be put into a "test mode" and events triggered
+      remotely.
 
 ## Scripting API Testing
 
-**TODO: Describe Scripting API Test Suite**
+Currently the [node-wot](https://github.com/eclipse/thingweb.node-wot)
+implementation of the WoT Scripting API and servient
+runtime includes a set of test cases and a "Test Thing".
+    * These should be decoupled from node-wot, turned into an
+      independent test suite, and be made applicable to any WoT
+      runtime implementation.
+    * Normative assertions in the WoT Scripting API that need to be 
+      tested as part of the Test Suite need to be identified and 
+      suitable tests implemented.
+    * As part of the WoT Scripting API is specified using WDL and/or
+      typescript definitions these aspects can be verified using those
+      tools rather than implementation tests.  In particular, the 
+      signature of the WoT Scripting API calls can be verified using
+      these tools rather than (or in addition to) runtime tests.
 
 ## Security Testing
 Security Testing is the process of testing a given implementation of a Thing for
@@ -154,7 +209,26 @@ to detect.
 
 ### MQTT
 
-**TODO: Details: DTLS testing, password cracking, etc.**
+**TODO: Details: DTLS testing etc.**
+
+### Network Configuration Testing
+
+Several services associated with the WoT, such as proxies, need to be 
+tested in the context of specific network configurations, such as 
+segmented networks (eg a network with Things located behind one or
+more NATs and needing the help of proxies to provide access from
+the rest of the network).
+
+While proxy services and NAT traversal mechanisms are not part of the
+formal normative deliverables for the WoT, their correct functioning
+are important to the practical usage and deployment of a WoT system.
+
+In order to test such services, a suitable network configuration needs
+to be established.
+   * This can be done using VLAN technology, e.g. by setting up
+     software-defined virtual networks mimicing appropriate test configurations.
+   * Enabling remote access to such virtual test networks would
+     also be useful to support "virtual plugfests".
 
 ## Task Tracker
 * Investigate Spec Tracking tools
