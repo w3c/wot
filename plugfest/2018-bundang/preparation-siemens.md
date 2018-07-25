@@ -20,6 +20,8 @@ This section lists the infrastructure available for the PlugFest, which can be u
 
 * Siemens TD Playground at http://plugfest.thingweb.io/playground/
 * Eclipse Thingweb node-wot available at https://github.com/eclipse/thingweb.node-wot
+* TD based Test Bench at https://github.com/jplaui/testbench
+  - Will be available also a service where you can submit a TD and test the Thing associated with it.
 
 ## 2 Participants and Servients
 
