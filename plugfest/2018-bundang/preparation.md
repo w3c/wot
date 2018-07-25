@@ -241,6 +241,7 @@ Use either [Thing Description Playground](http://plugfest.thingweb.io/playground
 
 To use Thing Description Playground locally, download it from the Github [repository](https://github.com/thingweb/thingweb-playground), go to WebContent and open index.html in a browser.
 
+
 ### (2) Extended Actions
 
 ### (3) Notification - websockets, webhooks
