@@ -7,18 +7,19 @@ and implementations following them, are to be tested and validated:
 - [W3C WoT Protocol Bindings](https://w3c.github.io/wot-binding-templates/)
 - [W3C WoT Scripting API](https://w3c.github.io/wot-scripting-api/)
 
-In addition, the [Web of Things WG Charter](https://www.w3.org/2016/12/wot-wg-2016.html)
+The [Web of Things WG Charter](https://www.w3.org/2016/12/wot-wg-2016.html)
 also requires security validation.
-General security and privacy considerations for all possible WoT implementations are
-discussed in the 
+General security and privacy considerations for WoT implementations are
+discussed in the non-normative 
 [W3C WoT Security and Privacy Considerations](https://w3c.github.io/wot-security/) 
-document but this document is non-normative.  In addition, the WoT specifications
-do allow description of insecure interfaces by design (some existing 
+document.
+Note that the WoT specification
+allows description of insecure interfaces by design (some existing 
 "brownfield" devices may simply be insecure and describing them with a WoT 
 Thing Description will not change this) but
 the intention is that it is _possible_ to perform secure WoT implementations.
 Therefore security testing is limited to the security configurations
-defined in the  
+defined in the
 [Best Practices](https://w3c.github.io/wot-security#best-practices)
 section of the (non-normative)
 [W3C WoT Security and Privacy Considerations](https://w3c.github.io/wot-security/) 
@@ -26,7 +27,9 @@ document.
 
 ## Thing Description Validation
 Thing Description validation is the process of determining whether a given Thing Description file
-satisfies the specification in the [W3C WoT Thing Description]() document.
+satisfies the specification in the
+[W3C WoT Thing Description](https://w3c.github.io/wot-thing-description/)
+document.
 
 In summary, Thing Descriptions can be validated at four levels:
 1. JSON syntax validation.  This simply checks that a TD is a valid JSON document.
