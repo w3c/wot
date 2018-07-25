@@ -90,28 +90,28 @@ provides a network API consistent with its Thing Description.
 The [WoT Test Bench](https://github.com/jplaui/testbench) tool does this.
 Given a TD, it generates and executes a set of network calls to exercise and
 validate the described API.
-    * A limitation of this tool is that it cannot validate aspects of
-      the network API that must be initiated by the Thing, such as events.
-    * We may want to consider augmenting Things with a standard test API
-      so that a Thing can be put into a "test mode" and events triggered
-      remotely.
+   * A limitation of this tool is that it cannot validate aspects of
+     the network API that must be initiated by the Thing, such as events.
+   * We may want to consider augmenting Things with a standard test API
+     so that a Thing can be put into a "test mode" and events triggered
+     remotely.
 
 ## Scripting API Testing
 
 Currently the [node-wot](https://github.com/eclipse/thingweb.node-wot)
 implementation of the WoT Scripting API and servient
 runtime includes a set of test cases and a "Test Thing".
-    * These should be decoupled from node-wot, turned into an
-      independent test suite, and be made applicable to any WoT
-      runtime implementation.
-    * Normative assertions in the WoT Scripting API that need to be 
-      tested as part of the Test Suite need to be identified and 
-      suitable tests implemented.
-    * As part of the WoT Scripting API is specified using WDL and/or
-      typescript definitions these aspects can be verified using those
-      tools rather than implementation tests.  In particular, the 
-      signature of the WoT Scripting API calls can be verified using
-      these tools rather than (or in addition to) runtime tests.
+   * These should be decoupled from node-wot, turned into an
+     independent test suite, and be made applicable to any WoT
+     runtime implementation.
+   * Normative assertions in the WoT Scripting API that need to be 
+     tested as part of the Test Suite need to be identified and 
+     suitable tests implemented.
+   * As part of the WoT Scripting API is specified using WDL and/or
+     typescript definitions these aspects can be verified using those
+     tools rather than implementation tests.  In particular, the 
+     signature of the WoT Scripting API calls can be verified using
+     these tools rather than (or in addition to) runtime tests.
 
 ## Security Testing
 Security Testing is the process of testing a given implementation of a Thing for
