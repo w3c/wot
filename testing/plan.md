@@ -33,7 +33,7 @@ assertion from the specification documents and associate each one
 with a specific test specification.  
 
 Here are links to the 
-current output of this tools for the relevant specifications:
+current output of this tool for the relevant specifications:
 - [W3C WoT Thing Description - Test Specifications](https://rawgit.com/mmccool/wot-thing-description/assertions2/testing/plan.html)
     * Currently incomplete, see [WoT TD PR#170](https://github.com/w3c/wot-thing-description/pull/170)
     * Also needs to be applied to protocol bindings and scripting API
