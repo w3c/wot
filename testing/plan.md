@@ -75,9 +75,10 @@ The application of the above tests is currently performed using the
 [Thingweb Playground](http://plugfest.thingweb.io/playground/) tool using
 code and schemas defined in the
 [Thingweb Playground Git Repo](https://github.com/thingweb/thingweb-playground).
-   * This currently runs the above tests in a browser.
-   * Porting these tools so they can be invoked on the command
-     line or as a service would be useful.
+These tests can now be run using either the browser or a command-line
+scriptable interface.
+
+### To Do:
    * The schemas and other defining validation specifications
      should be moved to the corresponding specification repository.
 
@@ -90,6 +91,8 @@ provides a network API consistent with its Thing Description.
 The [WoT Test Bench](https://github.com/jplaui/testbench) tool does this.
 Given a TD, it generates and executes a set of network calls to exercise and
 validate the described API.
+
+### To Do:
    * A limitation of this tool is that it cannot validate aspects of
      the network API that must be initiated by the Thing, such as events.
    * We may want to consider augmenting Things with a standard test API
@@ -101,14 +104,16 @@ validate the described API.
 Currently the [node-wot](https://github.com/eclipse/thingweb.node-wot)
 implementation of the WoT Scripting API and servient
 runtime includes a set of test cases and a "Test Thing".
+
+### To Do:
    * These should be decoupled from node-wot, turned into an
      independent test suite, and be made applicable to any WoT
      runtime implementation.
    * Normative assertions in the WoT Scripting API that need to be 
      tested as part of the Test Suite need to be identified and 
      suitable tests implemented.
-   * As part of the WoT Scripting API is specified using WDL and/or
-     typescript definitions these aspects can be verified using those
+   * As part of the WoT Scripting API is specified using WebIDL and/or
+     TypeScript definitions these aspects can be verified using those
      tools rather than implementation tests.  In particular, the 
      signature of the WoT Scripting API calls can be verified using
      these tools rather than (or in addition to) runtime tests.
@@ -223,8 +228,9 @@ While proxy services and NAT traversal mechanisms are not part of the
 formal normative deliverables for the WoT, their correct functioning
 are important to the practical usage and deployment of a WoT system.
 
-In order to test such services, a suitable network configuration needs
-to be established.
+### To Do:
+   * In order to test such services, a suitable network configuration needs
+     to be established.
    * This can be done using VLAN technology, e.g. by setting up
      software-defined virtual networks mimicing appropriate test configurations.
    * Enabling remote access to such virtual test networks would
@@ -239,17 +245,18 @@ to be established.
     - Per task force - person assigned
     - Follow RFC2119
     - Target date: beginning of May
-    - Status: done, but needs to be updated in revised specifications.
+    - Status: Partially done.  Some gaps and needs to be updated in revised specifications.
 * Extract normative assertions
     - Ideally automatic; but worst case, manual
     - Target date: mid-May
-    - Status: Tool implemented, but PR now not mergable.
+    - Status: Partially done. Tool implemented, TD assertions marked up, but PR needs to be merged.   
+      The tool is only deployed so far for TD, needs to also be applied to Scriptiong API.
 * Update Test Definitions
     - Per deliverable – satisfy W3C requirements
     - Should track specification updates
     - Could associate with pull requests
     - Target date: mid-June
-    - Status: Still in progress.
+    - Status: Still in progress.  Normative assertion extraction tool does support a separate file giving test specifications.
 * Implement tests
     - Compare with current tests; check off definitions
         - Target date: end of June
