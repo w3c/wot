@@ -26,7 +26,7 @@
   - Tried to the Siemens directory, but could not.
   
 * Hitachi: 
-  - NG
+  - Fail
 
 * Panasonic:
   - OK
@@ -53,24 +53,24 @@
 #### 3.1.4 Implement Servient using node-wot -- was (3)
 
 * Fujitsu: 
-  - NA
+  - Out of Time
 
 * Hitachi: 
-  - NA
+  - Out of Time
 
 * Panasonic: 
-  - NA
+  - Out of Time
 
 #### 3.1.5 Scripting API -- was (4)
 
 * Fujitsu: 
-  - NA
+  - Out of Time
 
 * Hitachi: 
-  - NA
+  - Out of Time
 
 * Panasonic: 
-  - NA 
+  - Out of Time 
 
 ### 3.2 Testing in Client Role
 The following checking points must be completed together with a partner in server role.
@@ -78,7 +78,7 @@ The following checking points must be completed together with a partner in serve
 #### 3.2.1 Metadata Handling
 
 * Fujitsu: 
-  - NA
+  - Out of Time
 
 * Hitachi: incorporate Metadata in Node-RED contexts or messages.
   - OK
@@ -120,14 +120,14 @@ The following checking points must be completed together with a partner in serve
 #### 3.2.3 Action Handling -- was part of (2)
 
 * Fujitsu: 
-  - NA
+  - Out of Time
 
 * Hitachi: 
   - OK
     - Invoke: HTTP(S)
     
 * Panasonic
-  - NA
+  - Out of Time
 
 #### 3.2.4 Event Handling -- was part of (11)
 
@@ -178,24 +178,24 @@ The following checking points must be completed together with a partner in serve
 #### 3.2.6 Semantic integration -- was part of (8)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
 
 * Panasonic:
-  - NA
+  - Out of Time
 
 #### 3.2.7 Accessibility -- was (10)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
   
 * Panasonic:
-  - NA
+  - Out of Time
 
 ### 3.3 Testing in Server Role
 The following checking points must be completed together with a partner in client role.
@@ -203,10 +203,10 @@ The following checking points must be completed together with a partner in clien
 #### 3.3.1 Metadata
 
 * Fujitsu:
-  - NA
+  - Out of Time
   
 * Hitachi:
-  - NA
+  - Out of Time
 
 * Panasonic:
   - OK
@@ -223,7 +223,7 @@ The following checking points must be completed together with a partner in clien
     - Set bindings: HTTP
    
 * Hitachi:
-  - NA
+  - Out of Time
  
 * Panasonic:
   - OK
@@ -235,10 +235,10 @@ The following checking points must be completed together with a partner in clien
 #### 3.3.3 Actions -- was part of (6) and (7)
 
 * Fujitsu:
-  - NA
+  - Out of Time
   
 * Hitachi:
-  - NA
+  - Out of Time
   
 * Panasonic:
   - OK
@@ -253,7 +253,7 @@ The following checking points must be completed together with a partner in clien
     - Subscribe: HTTP(s)+SSE
 
 * Hitachi:  
-  - NA
+  - Out of Time
 
 * Panasonic:  
   - OK
@@ -263,10 +263,10 @@ The following checking points must be completed together with a partner in clien
 #### 3.3.5 Security -- was part of (9)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
 
 * Panasonic:
   - OK
@@ -277,56 +277,56 @@ The following checking points must be completed together with a partner in clien
 #### 3.3.6 Semantic Integration -- was part of (8)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
   
 * Panasonic:
-  - NA
+  - Out of Time
   
 ### 3.4 Other issues
 
 #### 3.4.1 Running Actions and Event Instances -- was Other Issues (2)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
   
 * Panasonic:
-  - NA
+  - Out of Time
   
 #### 3.4.2 Discovery using Feature of Interest -- was Other Issues (4)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
   
 * Panasonic:
-  - NA
+  - Out of Time
   
 #### 3.4.3 New Security Patterns -- was Other Issues (7)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
   
 * Panasonic:
-  - NA
+  - Out of Time
   
 #### 3.4.4 Miscellaneous -- was Other Issues (9)
 
 * Fujitsu:
-  - NA
+  - Out of Time
 
 * Hitachi:
-  - NA
+  - Out of Time
   
 * Panasonic:
-  - NA
+  - Out of Time
