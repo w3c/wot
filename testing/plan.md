@@ -158,7 +158,7 @@ vulnerabilities.
 Even though we cannot prove a negative, we should test both positive and negative security.
 * Positive security testing checks an interface under normal operation and verifies that access is not
   granted if incorrect credentials are supplied, and is if they are.  This is essentially
-  just functional testing of the security implementation's, and will consist of a set
+  just functional testing of the security implementation, and will consist of a set
   of specific test cases both with and without the correct credentials.
 * Negative security checks for vulnerabilities, i.e. unintentional, non-functional behaviour
   that allows unauthorized access.
@@ -272,7 +272,7 @@ secure variant should be based on variants in common use.  An example
 would be the secure configuration supported by AWS IoT.
 
 #### To Do
-    * Details of MQTT TLS test encapsulation
+   * Details of MQTT TLS test encapsulation
 
 ### Network Configuration Testing
 Several services associated with the WoT, such as proxies, need to be 
