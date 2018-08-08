@@ -270,6 +270,8 @@ MQTT has no standard secure variant.  However, it can be encapsulated
 in TLS.  We define and use such a secure variant for testing.  This
 secure variant should be based on variants in common use.  An example
 would be the secure configuration supported by AWS IoT.
+Since MQTT is frequently used with session resumption, this configuration
+should be tested.  MQTT is also often used with PSK.
 
 #### To Do
    * Details of MQTT TLS test encapsulation
