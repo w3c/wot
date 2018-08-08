@@ -14,9 +14,13 @@
   - There are some ambiguity in the interpretation of TD
     - How to select most suitable access method from multiple form entries?
 
-+ Panasonic
+* Panasonic
   - OK
   - Checked with using Thing Description Playground.
+  
+* Siemens
+  - OK
+  - Comment: TDs available at https://github.com/w3c/wot/tree/master/plugfest/2018-bundang/TDs/Siemens
 
 #### 3.1.2 Interact with Thing Directory -- was (5)
 
@@ -32,7 +36,12 @@
   - OK
   - Registered all Things to the directory.
     - Some TDs in [repository](https://github.com/w3c/wot/tree/master/plugfest/2018-bundang/TDs/Panasonic) such as [Simulator Air Conditioner](https://github.com/w3c/wot/blob/master/plugfest/2018-bundang/TDs/Panasonic/simulator/PanasonicSimulatedAirConditioner1.jsonld) have been registered to Fujitsu Local Proxy/Directory manually by using YARC on Raspberry Pi, and have been discovered through its Remote Proxy/Directory by using ARC on PC.
-    - <b>Interaction with things on Remote Proxy was NOT successful due to some internal issue of the proxy</b>.  
+    - <b>Interaction with things on Remote Proxy was NOT successful due to some internal issue of the proxy</b>. 
+
+* Siemens
+  - Fail
+  - Issue: Current sandbox does not fulfill high RAM requirements of GraphDB, so that Directory frequently crashes
+  - Comment: Will move to better sandbox, possibly from Eclipse Thingweb
 
 #### 3.1.3 Interact with Remote/Local Proxy -- was (1)
 
@@ -49,6 +58,10 @@
 * Panasonic:
   - OK
   - Connected Fujitsu's Proxies. ???
+  
+* Siemens
+  - OK
+  - Comment: Registered with Oracle remote proxy (festolive) and Fujitsu local proxy
 
 #### 3.1.4 Implement Servient using node-wot -- was (3)
 
@@ -60,7 +73,11 @@
 
 * Panasonic: 
   - Out of Time
-
+  
+* Siemens
+  - OK
+  - Comment: Implemented both Things and applications with node-wot
+  
 #### 3.1.5 Scripting API -- was (4)
 
 * Fujitsu: 
@@ -71,6 +88,10 @@
 
 * Panasonic: 
   - Out of Time 
+  
+* Siemens
+  - OK
+  - Comment: Scripts stored under TODO and node-wot examples/scripts/ folder
 
 ### 3.2 Testing in Client Role
 The following checking points must be completed together with a partner in server role.
@@ -99,6 +120,10 @@ The following checking points must be completed together with a partner in serve
     - Siemens's [EventSource-WS](https://github.com/w3c/wot/blob/master/plugfest/2018-bundang/TDs/Siemens/EventSource-WS.jsonld)
     - KETI's [IoT Sensor](https://github.com/w3c/wot/blob/master/plugfest/2018-bundang/TDs/KETI/keti_iot_sensor1.jsonld)
 
+* Siemens
+  - OK
+  - Comment: node-wot parsed TDs from Fujitsu, Intel, KETI, Panasonic, Oracle, and SmartThings
+
 #### 3.2.2 Property Handling -- was part of (2)
 
 * Fujitsu: 
@@ -116,6 +141,15 @@ The following checking points must be completed together with a partner in serve
   - OK
     - Get bindings: HTTP(S)
     - Set bindings: HTTP(S)
+    
+* Siemens
+  - OK
+    - Get bindings: HTTP(S), CoAP(S)
+    - Set bindigns: HTTP(S), CoAP(S)
+    - Comment: CoAP(S) finished testing with SmartThings at IETF 102 Hackathon
+  - Out of Time
+    - Observe bindings:
+    - Comment: Planned to implement for HTTP(S)+LongPoll, CoAP(S) Observe, WebSockets, and MQTT
 
 #### 3.2.3 Action Handling -- was part of (2)
 
@@ -124,10 +158,15 @@ The following checking points must be completed together with a partner in serve
 
 * Hitachi: 
   - OK
-    - Invoke: HTTP(S)
+    - Invoke bindings: HTTP(S)
     
 * Panasonic
   - Out of Time
+  
+* Siemens
+  - OK
+    - Invoke bindings: HTTP(S), CoAP(S), MQTT
+    - Comment: CoAP(S) finished testing with SmartThings at IETF 102 Hackathon
 
 #### 3.2.4 Event Handling -- was part of (11)
 
@@ -136,6 +175,7 @@ The following checking points must be completed together with a partner in serve
     - Subscribe: HTTP(s)+Longpoll
     - Subscribe: WebSocket
     - Subscribe: HTTP(s)+SSE
+    - Commnt: Finished testing at Prague Plugfest
 
 * Hitachi:  
   - OK
@@ -145,6 +185,13 @@ The following checking points must be completed together with a partner in serve
   - OK
     - Subscribe: HTTP(S)+Longpoll
     - Subscribe: WebSocket
+    
+* Siemens
+  - OK
+    - Subscribe: HTTP(S)+Longpoll
+  - Out of Time
+    - Subscribe: HTTP(S)+Webhooks
+    - Subscribe: Websockets
 
 #### 3.2.5 Security -- was part of (9)
 
@@ -175,6 +222,13 @@ The following checking points must be completed together with a partner in serve
     - basic 
     - bearer
 
+* Siemens
+  - OK
+    - basic
+    - bearer
+    - psk
+    - Comment: Patched in for CoAPS and was added later to TD spec
+    
 #### 3.2.6 Semantic integration -- was part of (8)
 
 * Fujitsu:
@@ -185,6 +239,10 @@ The following checking points must be completed together with a partner in serve
 
 * Panasonic:
   - Out of Time
+  
+* Siemens
+  - Fail
+  - Issue: Thingweb Directory crashes prevented querying 
 
 #### 3.2.7 Accessibility -- was (10)
 
@@ -197,6 +255,9 @@ The following checking points must be completed together with a partner in serve
 * Panasonic:
   - Out of Time
 
+* Siemens:
+  - Out of Time
+  
 ### 3.3 Testing in Server Role
 The following checking points must be completed together with a partner in client role.
 
@@ -214,7 +275,10 @@ The following checking points must be completed together with a partner in clien
   - exposed thing descriptions of online real things with real URI in [zip file](https://github.com/w3c/wot/blob/master/plugfest/2018-bundang/TDs/Panasonic/panasonic_lab_online_TDs.zip) with password protected (same as WiFi password of W3CWOT).
   - exposed thing descriptions online simulated things with real URI at simulator portal (available to only WoT members who requests access information).
   
-  
+* Siemens
+  - OK
+  - Comment: See https://github.com/w3c/wot/tree/master/plugfest/2018-bundang/TDs/Siemens
+
 #### 3.3.2 Properties -- was part of (6) and (7)
 
 * Fujitsu: 
@@ -230,7 +294,15 @@ The following checking points must be completed together with a partner in clien
     - Get bindings: HTTP(S)
     - Set bindings: HTTP(S)
     - Observe bindings: HTTP(S)+Longpoll, WebSocket
-  
+
+* Siemens:
+  - OK
+    - HTTP(S)
+    - CoAP(S)
+  - Out of Time
+    - HTTP(S)+Longpoll
+    - MQTT
+    - WebSockets
 
 #### 3.3.3 Actions -- was part of (6) and (7)
 
@@ -243,6 +315,10 @@ The following checking points must be completed together with a partner in clien
 * Panasonic:
   - OK
   - invoke bindings: HTTP(S)
+
+* Siemens:
+  - OK
+  - invoke bindings: HTTP(S), CoAP(S), MQTT
 
 #### 3.3.4 Events -- was part of (11)
 
@@ -260,6 +336,12 @@ The following checking points must be completed together with a partner in clien
     - Subscribe: HTTP(S)+Longpoll
     - Subscribe: WebSocket
 
+* Siemens
+  - OK
+    - Subscribe: HTTP(S)+Longpoll, Websockets, MQTT
+  - Out of Time
+    - Subscribe: HTTP(S)+Webhooks, CoAP(S)    
+
 #### 3.3.5 Security -- was part of (9)
 
 * Fujitsu:
@@ -274,6 +356,10 @@ The following checking points must be completed together with a partner in clien
     - <b>Security field of TD has to be set to {"schema": "apikey", "in": "header", "pname": "X-PWOT-TOKEN"}</b>
     - <b>wot-servient.conf.json of Node-WoT has to be set to {"credential": {"\<Thing's id>": {"apikey": "\<Token value>"}}} </b>
 
+* Siemens:
+  - Out of Time
+  - Comment: Planned to implement for HTTP/WebSocket, CoAP, and MQTT
+  
 #### 3.3.6 Semantic Integration -- was part of (8)
 
 * Fujitsu:
@@ -284,6 +370,10 @@ The following checking points must be completed together with a partner in clien
   
 * Panasonic:
   - Out of Time
+  
+* Siemens
+  - OK
+  - Comment: Festo Plant also annotated with Feature of Interest iot.schema.org vocabulary
   
 ### 3.4 Other issues
 
@@ -298,6 +388,10 @@ The following checking points must be completed together with a partner in clien
 * Panasonic:
   - Out of Time
   
+* Siemens:
+  - Out of TIme
+  - Issue: node-wot implementation not finished in time
+  
 #### 3.4.2 Discovery using Feature of Interest -- was Other Issues (4)
 
 * Fujitsu:
@@ -309,6 +403,10 @@ The following checking points must be completed together with a partner in clien
 * Panasonic:
   - Out of Time
   
+* Siemens:
+  - Comment: Festo Live is annotated
+  - Issue: No queries because of Thingweb Directory issues
+
 #### 3.4.3 New Security Patterns -- was Other Issues (7)
 
 * Fujitsu:
@@ -319,7 +417,11 @@ The following checking points must be completed together with a partner in clien
   
 * Panasonic:
   - Out of Time
-  
+
+* Siemens:
+  - OK
+  - Comment: Added `psk` scheme for CoAPS
+
 #### 3.4.4 Miscellaneous -- was Other Issues (9)
 
 * Fujitsu:
@@ -330,3 +432,14 @@ The following checking points must be completed together with a partner in clien
   
 * Panasonic:
   - Out of Time
+  
+* Siemens:
+  - Out of Time
+
+
+## 4 Use Case
+
+* Siemens:
+  - Comment: Siemens focused on individual feature testing
+
+
