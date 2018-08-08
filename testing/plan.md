@@ -46,13 +46,18 @@ However, in practice testing of implementations falls into a set of
 categories subject to particular tools, testing approaches, and "test suites".
 These categories are described in the following sections.
 
+### To Do
+* Better coverage of normative assertions, e.g. for constraints specified in ontology files
+* Specific testing plans for each normative assertion for Thing Description deliverable
+* Normative assertions and specific testing plan for each for Scripting API deliverable
+
 ## Thing Description Validation
 Thing Description validation is the process of determining whether a given Thing Description file
 satisfies the specification in the
 [W3C WoT Thing Description](https://w3c.github.io/wot-thing-description/)
 document.
 
-In summary, Thing Descriptions can be validated at four levels:
+In summary, Thing Descriptions can be validated in the following ways:
 1. JSON syntax validation.  This simply checks that a TD is a valid JSON document.
    Note that JSON-LD 1.1 files must also be valid JSON.
 2. Validation against a JSON Schema.  A Thing Description can be validated
@@ -70,8 +75,11 @@ In summary, Thing Descriptions can be validated at four levels:
 4. Validation against OWL ontology.  TD uses several interferencing rules
    based on OWL, and additional tests can be used to verify that inferenced
    values (for example) are consistent.
+5. Special case processing (currently not performed; TBD).
+   If necessary, special-purpose tools may need to be built to validate any requirements not
+   captured by the above four approaches.
 
-The application of the above tests is currently performed using the 
+The application of the first four of the above tests is currently performed using the 
 [Thingweb Playground](http://plugfest.thingweb.io/playground/) tool using
 code and schemas defined in the
 [Thingweb Playground Git Repo](https://github.com/thingweb/thingweb-playground).
@@ -79,11 +87,9 @@ These tests can now be run using either the browser or a command-line
 scriptable interface.
 
 ### To Do:
-   * The schemas and other defining validation specifications
-     should be moved to the corresponding specification repository.
+   * Determine if any special-purpose processing is needed for any normative assertion.
 
 ## Thing Network Interface Testing
-
 Things expose network APIs and these network APIs are described in Thing
 Descriptions.  Part of testing a Thing should be to confirm that it actually
 provides a network API consistent with its Thing Description.
@@ -98,9 +104,29 @@ validate the described API.
    * We may want to consider augmenting Things with a standard test API
      so that a Thing can be put into a "test mode" and events triggered
      remotely.
+ 
+## Fuzz Testing
+Thing Network Testing primarily checks functionality, but not behaviour
+under unexpected input.  This form of testing is especially useful for
+revealing security vulnerabilities, including unknown vulnerabilities.
+
+There are
+[many fuzz testing suites available](https://wildfire.blazeinfosec.com/fuzzing-proprietary-protocols-with-scapy-radamsa-and-a-handful-of-pcaps/)
+for HTTP-based web services
+and some of these can be extended to CoAP and MQTT.  An example is
+[Scapy](https://scapy.net/); other options include
+[Burp](https://en.wikipedia.org/wiki/Burp_suite) (which is however limited to HTTP)
+and [Radamsa](https://gitlab.com/akihe/radamsa).
+
+One issue is how to generate input so that it tests the appropriate levels of 
+security in the Thing's interface, e.g. input should reach the protocol bindings
+level without getting discarded earlier.
+
+### To Do
+   * Determine if any of the tools above are suitable for fuzz testing WoT devices
+     or if we should extend the Thing Network Interface Testing tool.
 
 ## Scripting API Testing
-
 Currently the [node-wot](https://github.com/eclipse/thingweb.node-wot)
 implementation of the WoT Scripting API and servient
 runtime includes a set of test cases and a "Test Thing".
@@ -123,20 +149,30 @@ Security Testing is the process of testing a given implementation of a Thing for
 insecurities.  It is not possible to prove if the WoT specification is secure,
 it's not even possible to prove if a specific implementation of Thing is secure,
 but it is possible to test for known insecurities in the implementation of
-a specific Thing.  What testing should demonstrate is that it is _possible_ to
+a specific Thing.  WoT testing should demonstrate is that it is _possible_ to
 implement a Thing satisfying the WoT specification that is free from a reasonably
-complete set of known vulnerabilities.
+complete set of known vulnerabilities, and is robust enough in the face of 
+unexpected input that we can have some confidence that it is free of unknown
+vulnerabilities.
 
-WoT security testing should be focused on testing whether unauthorized access to
-a specific device exposing a network interface described by a WoT Thing Description
-is possible.  We do _not_ test the following:
+Even though we cannot prove a negative, we should test both positive and negative security.
+* Positive security testing checks an interface under normal operation and verifies that access is not
+  granted if incorrect credentials are supplied, and is if they are.  This is essentially
+  just functional testing of the security implementation's, and will consist of a set
+  of specific test cases both with and without the correct credentials.
+* Negative security checks for vulnerabilities, i.e. unintentional, non-functional behaviour
+  that allows unauthorized access.
+
+The latter "negative" form of WoT security testing should be focused on testing whether
+unauthorized access to a specific device exposing a network interface described by a
+WoT Thing Description is possible.  We do _not_ test the following:
 1. Whether a device is safe from a malicious script, that is, we do not test
    whether the WoT Scripting API is secure.  This is based on the assumption that
    the scripts executed in a WoT runtime are from a trusted source.
 2. Security of setup, key distribution, or provisioning.  WoT security testing
-   only considers security testing during a device's "operational phase", 
+   should only consider security testing during a device's "operational phase", 
    e.g. after on-boarding and key provisioning have been performed.
-3. Protocols other than HTTP, CoAP, and MQTT.  The WoT TD specification has
+3. Protocols other HTTP, CoAP, and MQTT.  The WoT TD specification has
    extension points to allow the description of Things with network
    interfaces based on other protocols.  However it would be impossible
    to define tests for any possible protocol, so we limit testing to those
@@ -147,9 +183,13 @@ is possible.  We do _not_ test the following:
    network interfaces to insecure devices, for example, Things with no
    access controls or payload security.  However, in this case, security
    testing does not tell us anything we don't know.  Instead we focus testing
-   on implementations that _should_ be secure.
+   on implementations that _should_ be secure.  In particular, we will not
+   only limit testing to HTTP, CoAP, and MQTT, we will limit testing to 
+   the _secure variants_ of these protocols: HTTPS, CoAPS, 
+   and [MQTTS](https://www.hivemq.com/blog/mqtt-security-fundamentals-tls-ssl),
+   which combine the base protocol with either TLS or DTLS.
 5. Delivery of the TD. Several aspects of security and privacy in a WoT
-   system do depend on delivering the TD securely: preventing access to it
+   system depend on delivering the TD securely: preventing access to it
    by unauthorized users and validating that it was delivered without
    modification from a trusted and authenticated source.  However, the 
    WoT specification does not currently
@@ -157,8 +197,9 @@ is possible.  We do _not_ test the following:
    standard interface for a Thing Directory or discovery mechanism.
 6. Proxy services.  Practical WoT systems may have to use proxies or
    other mechanisms for NAT traversal, state caching, or privacy masking,
-   among other applications.  These proxies may have web APIs
-   that may be insecure.  We do not test for this and a security failure
+   among other applications.  These proxies may also have web APIs for
+   management functions that may be insecure.
+   We do not test for this and a security failure
    due to an insecure proxy should not necessarily be interpreted as 
    a security failure of the target Thing itself.
 7. Gateway security.  Many WoT systems may have to direct network traffic
@@ -168,8 +209,12 @@ is possible.  We do _not_ test the following:
 
 The following sections break down the testing strategy by protocol.
 
-### HTTP
-Things based on HTTP are essentially web services, and can be tested using
+### HTTPS
+As noted above, we only test the secure variant of HTTP, HTTPS, which
+combines the base HTTP protocol with TLS.  HTTP inself is known to be
+insecure.
+
+Things based on HTTPS are essentially web services, and can be tested using
 existing best practices for testing the security of such services.
 
 For example, TLS security can be tested using online services such as
@@ -208,16 +253,28 @@ subject to brute-force attack. The use of a weak password is
 not a failure of the implementation itself, which is what we want
 to detect.  
 
-### CoAP
+### CoAPS
+As noted above, we only test secure variants of protocols.
+For CoAP, this is DTLS, so we can use DTLS testing tools.
+In addition, CoAP devices may have already been tested
+following the requirements of other standards, eg. OCF or LwM2M.
+We will not repeat those tests, although our positive testing
+may have to satisfy the access requirements of such standards
+in order to allow other forms of testing.
 
-**TODO: Details: DTLS testing, OCF/LwM2M certification, etc.**
+#### To Do
+   * Details of DTLS testing
 
-### MQTT
+### MQTTS
+MQTT has no standard secure variant.  However, it can be encapsulated
+in TLS.  We define and use such a secure variant for testing.  This
+secure variant should be based on variants in common use.  An example
+would be the secure configuration supported by AWS IoT.
 
-**TODO: Details: DTLS testing etc.**
+#### To Do
+    * Details of MQTT TLS test encapsulation
 
 ### Network Configuration Testing
-
 Several services associated with the WoT, such as proxies, need to be 
 tested in the context of specific network configurations, such as 
 segmented networks (eg a network with Things located behind one or
