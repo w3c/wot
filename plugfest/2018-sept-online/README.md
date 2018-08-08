@@ -6,6 +6,10 @@
    - input and output data
 * action and event descriptions
 
+# Scenarios
+
+?
+
 # Logistics
 
 * OpenVPN server - virtual LAN (McCool)
@@ -26,8 +30,11 @@
 # Validation and Testing
 
 * TD Validation (McCool)
+   - Syntactic validation
+   - Semantic validation
 * Network Testing Tool (Ege)
-* Security validation (McCool)
+* Security Validation (McCool)
+* Scripting API Testing (Matthias)
 
 # Documentation
 
