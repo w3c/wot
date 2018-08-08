@@ -34,10 +34,9 @@ with a specific test specification.
 
 Here are links to the 
 current output of this tool for the relevant specifications:
-- [W3C WoT Thing Description - Test Specifications](https://rawgit.com/mmccool/wot-thing-description/assertions2/testing/plan.html)
-    * Currently incomplete, see [WoT TD PR#170](https://github.com/w3c/wot-thing-description/pull/170)
-    * Also needs to be applied to protocol bindings and scripting API
-    * Some normative assertions given in non-HTML form (SHACL, WDL, tables, etc.) are not yet covered
+- [W3C WoT Thing Description - Test Specifications](https://rawgit.com/w3c/wot-thing-description/master/testing/plan.html)
+- [W3C WoT Scripting API - Test Specifications](https://rawgit.com/w3c/wot-scipting-api/master/testing/plan.html)
+- [W3C WoT Protocol Bindings - Test Specifications](https://rawgit.com/w3c/wot-binding-templates/master/testing/plan.html)
 
 Structuring tests around the normative assertions
 is important for validation of the standard, as each assertion
@@ -47,9 +46,10 @@ categories subject to particular tools, testing approaches, and "test suites".
 These categories are described in the following sections.
 
 ### To Do
-* Better coverage of normative assertions, e.g. for constraints specified in ontology files
+* Better coverage of normative assertions, e.g. for constraints specified in ontology, SHACL, and WebIDL files, tables, etc.
 * Specific testing plans for each normative assertion for Thing Description deliverable
 * Normative assertions and specific testing plan for each for Scripting API deliverable
+* Normative assertions and specific testing plan for each for Protocol Bindings deliverable
 
 ## Thing Description Validation
 Thing Description validation is the process of determining whether a given Thing Description file
