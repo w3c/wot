@@ -4,9 +4,9 @@
    - all devices should support secure access
    - test more schemes, including for CoAP and MQTT
    - definitions
-* event subscription and cancellation
+* Event subscription and cancellation
    - input and output data
-* action and event descriptions
+* Action and event descriptions
 
 # Scenarios
 
@@ -14,15 +14,17 @@
 
 # Logistics
 
-* OpenVPN server - virtual LAN (McCool)
-* Virtual NAT - bridge in OpenVPN server to internet (McCool)
+* OpenVPN server 
+   - Virtual LAN (McCool)
+* Virtual NAT 
+   - Bridge in OpenVPN server to internet (McCool)
 * WebEx (Kaz)
 * Google Hangout (Matthias)
 
 # Services
 
 * OAuth2 authorization server (McCool)
-  - maybe also distribute VPN keys
+   - maybe also distribute VPN keys
 * Thing directory service
 
 # Proxies
