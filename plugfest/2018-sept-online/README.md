@@ -1,7 +1,9 @@
 # Goals
 
-* security schemes
-* security definitions
+* Security
+   - all devices should support secure access
+   - test more schemes, including for CoAP and MQTT
+   - definitions
 * event subscription and cancellation
    - input and output data
 * action and event descriptions
