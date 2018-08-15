@@ -1,10 +1,10 @@
 # WoT PlugFest
 
 ## Lyon 2018
-To do.
+* [Preparation Wiki]()
 
 ## Online 2018 September
-To do.
+* [Preparation Wiki]()
 
 ## Bundang 2018
 * [Preparation Wiki](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_30_June-5_July_2018,_Bundang,_Korea)
