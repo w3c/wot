@@ -7,7 +7,8 @@ Features marked with <i>italics</i> are work-in-progress, and hence not confirme
 ## 1 PlugFest Infrastructure
 This section lists the infrastructure available for the PlugFest, which can be used for individual testing (see [Section 3.1](#31-testing-individually))
 
-* OpenVPN Virtual LAN
+* OpenVPN Virtual LAN (with Intel support)
+* F-Interop Virtual LAN
 
 ### 1.1 Public Thing Directories
 
