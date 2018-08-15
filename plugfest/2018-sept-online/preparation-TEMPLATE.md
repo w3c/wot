@@ -1,11 +1,13 @@
 # PlugFest Preparation for Online September 2018
 
-This document describes the Bundang PlugFest held on June 30 and July 1.
+This document describes the Online PlugFest on Sept 25 to 28.
 
 Features marked with <i>italics</i> are work-in-progress, and hence not confirmed to be available during the PlugFest.
 
 ## 1 PlugFest Infrastructure
 This section lists the infrastructure available for the PlugFest, which can be used for individual testing (see [Section 3.1](#31-testing-individually))
+
+* OpenVPN Virtual LAN
 
 ### 1.1 Public Thing Directories
 
