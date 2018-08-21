@@ -46,7 +46,7 @@
             "@type": ["iot:LevelData" ],
             "type": "integer",
             "min": 0,
-            "max": 255
+            "max": 254
           },
       "forms": [
         {
@@ -85,7 +85,7 @@
         }
       ]
     },
-    "Switch Off": {
+    "SwitchOff": {
       "@type": ["Action", "iot:TurnOff"],
       "input":  {
         "type": "object",
@@ -105,7 +105,7 @@
         }
       ]
     },
-    "Set brightness level": {
+    "SetBrightnessLevel": {
       "@type": ["Action", "iot:SetLevel"],
       "input": {
         "type": "object",
@@ -114,7 +114,7 @@
             "@type": ["iot:LevelData"],
             "type": "integer",
             "min": 0,
-            "max": 255
+            "max": 254
           },
           "duration": {
             "@type": ["iot:TransitionTimeData"],

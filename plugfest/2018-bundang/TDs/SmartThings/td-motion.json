@@ -15,21 +15,19 @@
       "observable": true,
       "@type": ["Property", "iot:MotionDetected"],
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "n": {
-              "type": "string",
-              "const": "5700"
-            },
-            "vb": {
-              "@type": ["iot:stateData"],
-              "type": "boolean"
-            }
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "string",
+            "const": "5700"
+          },
+          "vb": {
+            "@type": ["iot:stateData"],
+            "type": "boolean"
           }
         }
-      ],
+      },
       "forms": [
         {
           "href": "/3300/2",
@@ -42,25 +40,36 @@
           "mediaType": "application/json",
           "rel": "writeProperty",
           "http:methodName": "POST"
-        },
-        {
-          "href": "mqtt://0m2m.net:1883/plugfest/subscriptions/Motion",
-          "mediaType": "application/json",
-          "rel": "observeProperty",
-          "mqtt:commandCode": 8
         }
       ]
     }
   },
-  "actions": {
-    "connect": {
-      "@type": ["mqtt:connect"]
-    },
-    "forms": [
-      {
-        "href": "mqtt://0m2m.net:1883",
-        "mqtt:commandCode": 1
-      }
-    ]
+  "events": {
+    "MotionEvent": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "string",
+            "const": "5700"
+          },
+          "vb": {
+            "@type": ["iot:stateData"],
+            "type": "boolean"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "mqtt://0m2m.net:1883/plugfest/subscriptions/Motion",
+          "mediaType": "application/json",
+          "rel": "subscribeEvent",
+          "mqtt:qos":  0,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 8
+        }
+      ]
+    }
   }
 }

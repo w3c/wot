@@ -7,3 +7,4 @@ Also captured [at plugfest](intel-all.jsonld).  This is an array containing all 
 * [OCF Button](intel-button.jsonld)
 * [OCF Temperature](intel-temperature.jsonld)
 * [OCF Illuminance](intel-illuminance.jsonld)
+* [Simple Webcam](intel-simple-webcam.jsonld)

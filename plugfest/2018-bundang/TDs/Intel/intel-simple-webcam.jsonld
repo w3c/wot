@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {
+      "iot": "http://iotschema.org/",
+      "http": "http://iotschema.org/protocol/http"
+    }
+  ],
+  "@type": [
+    "Thing"
+  ],
+  "name": "SimpleWebCamera-core2.local",
+  "id": "urn:uuid:130c8ec7-f25c-582b-b1de-fbf5feebdf39",
+  "properties": {
+    "exposure": {
+      "@type": [
+        "iot:CurrentLevel"
+      ],
+      "label": "Exposure",
+      "type": "object",
+      "properties": {
+        "exposure": {
+          "@type": [
+            "iot:LevelData"
+          ],
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 600
+        },
+        "required": [
+          "exposure"
+        ]
+      },
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "http://core2.local:8081/api/exposure",
+          "mediaType": "application/json",
+          "rel": [
+            "readProperty"
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "http://core2.local:8081/api/exposure",
+          "mediaType": "application/json",
+          "rel": [
+            "writeProperty"
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "http://core2.local:8081/api/exposure/observe",
+          "rel": [
+            "observeProperty"
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    },
+    "frame": {
+      "label": "frame",
+      "writable": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "http://core2.local:8081/api/frame",
+          "mediaType": "image/jpeg",
+          "rel": [
+            "readProperty"
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "http://core2.local:8081/api/frame/observe",
+          "rel": [
+            "observeProperty"
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "crop": {
+      "label": "Crop",
+      "input": {
+        "type": "object",
+        "properties": {
+          "xo": {
+            "label": "x origin (pixels)",
+            "type": "integer",
+            "minimum": 0
+          },
+          "yo": {
+            "label": "y origin (pixels)",
+            "type": "integer",
+            "minimum": 0
+          },
+          "x": {
+            "label": "x size (pixels)",
+            "type": "integer",
+            "minimum": 0
+          },
+          "y": {
+            "label": "y size (pixels)",
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "x",
+          "y"
+        ]
+      },
+      "forms": [
+        {
+          "href": "http://core2.local:8081/api/frame/crop",
+          "mediaType": "image/jpeg",
+          "rel": [
+            "invokeAction"
+          ],
+          "http:methodName": "POST"
+        }
+      ]
+    }
+  }
+}
