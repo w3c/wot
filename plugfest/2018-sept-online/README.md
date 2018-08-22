@@ -66,15 +66,15 @@ Ex: Access control and security system
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
    
 |Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan| 
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---| 
+|:---|:---|:---|:---|:---|:---|:---|
 |A| 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00|  
 |B| 22:00-1d| 01:00| 06:00| 07:00| 13:00| 14:00| 
 |C| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00|  
 
 Companies who cannot make certain times mark an X:
 |Company |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`| 
-|:---|:---|:---|:---|:---| 
-|Intel |A| X| -| -| -| 
+|:---|:---|:---|:---|:---|:---| 
+|Intel |A| X| -| -| -|  
 |Intel |B| -| -| -| -| 
 |Intel |B| -| -| -| -| 
 
