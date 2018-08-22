@@ -16,6 +16,7 @@ Cloud Thing Directories
 * [Thingweb-Directory](https://github.com/thingweb/thingweb-directory) running at https://portal.mmccool.net:8090.
 * [Thingweb-Directory](https://github.com/thingweb/thingweb-directory) running at https://tiktok.mmccool.org:8090.
 * [Authentication credentials]() - to be distributed via W3C email and/or use OAuth2
+
 Local LAN Thing Directories (simulated local LANs using OpenVPN)
 * [Thingweb-Directory](https://github.com/thingweb/thingweb-directory) running at http://gateway.local:8090 on VLAN1.
 * [Thingweb-Directory](https://github.com/thingweb/thingweb-directory) running at http://gateway.local:8090 on VLAN2.
@@ -26,16 +27,17 @@ Local LAN Thing Directories (simulated local LANs using OpenVPN)
 
 ### 1.2 Public Proxies
 
-* [SimpleReverseProxy]() running at https://portal.mmccool.net
-** Port xxxx: proxied access to OCF devices on VLAN1
-** Port xxxx: proxied access to camera service on VLAN1
-** Port xxxx: proxied access to speech service on VLAN1
-** Port xxxx: proxied access to Thing Directory on VLAN1 (testing only)
-* [SimpleReverseProxy]() running at https://tiktok.mmccool.org
-** Port xxxx: proxied access to OCF devices on VLAN2
-** Port xxxx: proxied access to camera service on VLAN2
-** Port xxxx: proxied access to speech service on VLAN2
-** Port xxxx: proxied access to Thing Directory on VLAN2 (testing only)
+[SimpleReverseProxy]() running at https://portal.mmccool.net
+* Port xxxx: proxied access to OCF devices on VLAN1
+* Port xxxx: proxied access to camera service on VLAN1
+* Port xxxx: proxied access to speech service on VLAN1
+* Port xxxx: proxied access to Thing Directory on VLAN1 (testing only)
+    
+[SimpleReverseProxy]() running at https://tiktok.mmccool.org
+* Port xxxx: proxied access to OCF devices on VLAN2
+* Port xxxx: proxied access to camera service on VLAN2
+* Port xxxx: proxied access to speech service on VLAN2
+* Port xxxx: proxied access to Thing Directory on VLAN2 (testing only)
 
 ### 1.3 Public Tools
 
@@ -43,10 +45,12 @@ OAuth2
 * OAuth2 Authentication server at https://portal.mmccool.net:6000.
 * OAuth2 Authentication server at https://tiktok.mmccool.org:6000.
 * [Authentication credentials]() - to be distributed via W3C email and/or use OAuth2
+
 OpenVPN 
 * OpenVPN server at https://portal.mmccool.net:9010 (VLAN1).
 * OpenVPN server at https://tiktok.mmccool.org:9010 (VLAN2).
 * [Authentication credentials]() - to be distributed via W3C email and/or use OAuth2
+
 Validation
 * [Thingweb Playground](https://github.com/thingweb/thingweb-playground) running at https://portal.mmccool.net:10000.
 * [Thingweb Playground](https://github.com/thingweb/thingweb-playground) running at https://tiktok.mmccool.org:10000.
@@ -238,6 +242,7 @@ The following in combination with HTTPS (HTTP + TLS)
 * digest
 * oauth2
 * apikey
+
 The following in combination with CoAPS (CoAP + DTLS)
 * psk
 * cert
@@ -366,6 +371,7 @@ The following in combination with HTTPS (HTTP + TLS)
 * digest
 * oauth2
 * apikey
+
 The following in combination with CoAPS (CoAP + DTLS)
 * psk
 * cert
@@ -387,7 +393,7 @@ The following in combination with CoAPS (CoAP + DTLS)
 
 #### 3.4.3 New Security Patterns
 
-* OAuth2
+OAuth2
    * Will provide authentication server
 
 #### 3.4.4 Miscellaneous
