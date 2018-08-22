@@ -31,8 +31,8 @@
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
    
-| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan| bgcolor(#FFFFDD)Tue.<br/>Sep. 25| bgcolor(#FFFFDD)Wed.<br/>Sep. 26| bgcolor(#FFFFDD)Thu.<br/>Sep. 27| bgcolor(#FFFFDD)Fri.<br/>Sep. 28|
-|---:|---:|---:|---:|---:|---:|:---|:---|:---|:---|
+| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan| bgcolor(#FFFFDD):Tue.<br/>Sep. 25| bgcolor(#FFFFDD):Wed.<br/>Sep. 26| bgcolor(#FFFFDD):Thu.<br/>Sep. 27| bgcolor(#FFFFDD):Fri.<br/>Sep. 28|
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00| -| -| -| -|
 | 22:00-1d| 01:00| 06:00| 07:00| 13:00| 14:00| -| -| -| -| 
 | 06:00| 09:00| 14:00| 15:00| 21:00| 22:00| -| -| -| -|
