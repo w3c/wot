@@ -30,6 +30,73 @@
    - Thu 2:00pm (+16h)
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
+
+<table cellspacing="0" cols="6" border="0">
+<tr>
+<th align="left" class="time">US<br/>Pacific</th>
+<th align="left" class="time">US<br/>Eastern</th>
+<th align="left" class="time">UTC</th>
+<th align="left" class="time">UK</th>
+<th align="left" class="time">EU</th>
+<th align="left" class="time">China</th>
+<th align="left" class="time">Korea<br/>Japan</th>
+
+<th align="left" class="day">Tue</th>
+<th align="left" class="day">Wed</th>
+<th align="left" class="day">Thu</th>
+<th align="left" class="day">Fri</th>
+</tr>
+
+<!-- ===================================== -->
+<tr>
+<td align="right">14:00-1d</td>
+<td align="right">17:00-1d</td>
+<td align="right">21:00-1d</td>
+<td align="right">22:00-1d</td>
+<td align="right">23:00-1d</td>
+<td align="right">05:00</td>
+<td align="right">06:00</td>
+
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+
+<!-- ===================================== -->
+<tr>
+<td align="right">22:00-1d</td>
+<td align="right">1:00</td>
+<td align="right">5:00</td>
+<td align="right">6:00</td>
+<td align="right">7:00</td>
+<td align="right">13:00</td>
+<td align="right">14:00</td>
+
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+
+<!-- ===================================== -->
+<tr>
+<td align="right">6:00</td>
+<td align="right">9:00</td>
+<td align="right">13:00</td>
+<td align="right">14:00</td>
+<td align="right">15:00</td>
+<td align="right">21:00</td>
+<td align="right">22:00</td>
+
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+
+</table>
+
 * Google Hangout (Matthias)
 
 # Services
