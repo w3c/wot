@@ -41,7 +41,7 @@
 <th align="left" class="time">China</th>
 <th align="left" class="time">Korea<br/>Japan</th>
 
-<th align="left" class="day" style="background-color: #FFFFDD">Tue<br/>Sep. 25</th>
+<th align="left" class="day" style="bgcolor: #FFFFDD">Tue<br/>Sep. 25</th>
 <th align="left" class="day" style="background-color: #FFFFDD">Wed<br/>Sep. 26</th>
 <th align="left" class="day" style="background-color: #FFFFDD">Thu<br/>Sep. 27</th>
 <th align="left" class="day" style="background-color: #FFFFDD">Fri<br/>Sep. 28</th>
