@@ -30,72 +30,12 @@
    - Thu 2:00pm (+16h)
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
-
-<table cellspacing="0" cols="6" border="0">
-<tr>
-<th align="left" class="time">US<br/>Pacific</th>
-<th align="left" class="time">US<br/>Eastern</th>
-<th align="left" class="time">UTC</th>
-<th align="left" class="time">UK</th>
-<th align="left" class="time">EU</th>
-<th align="left" class="time">China</th>
-<th align="left" class="time">Korea<br/>Japan</th>
-
-<th align="left" class="day" style="bgcolor: #FFFFDD">Tue<br/>Sep. 25</th>
-<th align="left" class="day" style="background-color: #FFFFDD">Wed<br/>Sep. 26</th>
-<th align="left" class="day" style="background-color: #FFFFDD">Thu<br/>Sep. 27</th>
-<th align="left" class="day" style="background-color: #FFFFDD">Fri<br/>Sep. 28</th>
-</tr>
-
-<!-- ===================================== -->
-<tr>
-<td align="right">14:00-1d</td>
-<td align="right">17:00-1d</td>
-<td align="right">21:00-1d</td>
-<td align="right">22:00-1d</td>
-<td align="right">23:00-1d</td>
-<td align="right">05:00</td>
-<td align="right">06:00</td>
-
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left">-</td>
-</tr>
-
-<!-- ===================================== -->
-<tr>
-<td align="right">22:00-1d</td>
-<td align="right">1:00</td>
-<td align="right">5:00</td>
-<td align="right">6:00</td>
-<td align="right">7:00</td>
-<td align="right">13:00</td>
-<td align="right">14:00</td>
-
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left">-</td>
-</tr>
-
-<!-- ===================================== -->
-<tr>
-<td align="right">6:00</td>
-<td align="right">9:00</td>
-<td align="right">13:00</td>
-<td align="right">14:00</td>
-<td align="right">15:00</td>
-<td align="right">21:00</td>
-<td align="right">22:00</td>
-
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left">-</td>
-</tr>
-
-</table>
+   
+| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan| bgcolor(#FFFFDD)Tue.<br/>Sep. 25| bgcolor(#FFFFDD)Wed.<br/>Sep. 26| bgcolor(#FFFFDD)Thu.<br/>Sep. 27| bgcolor(#FFFFDD)Fri.<br/>Sep. 28|
+|---:|---:|---:|---:|---:|---:|:---|:---|:---|:---|
+| 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00| -| -| -| -|
+| 22:00-1d| 01:00| 06:00| 07:00| 13:00| 14:00| -| -| -| -| 
+| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00| -| -| -| -|
 
 * Google Hangout (Matthias)
 
