@@ -41,10 +41,10 @@
 <th align="left" class="time">China</th>
 <th align="left" class="time">Korea<br/>Japan</th>
 
-<th align="left" class="day">Tue</th>
-<th align="left" class="day">Wed</th>
-<th align="left" class="day">Thu</th>
-<th align="left" class="day">Fri</th>
+<th align="left" class="day" style="background-color: #FFFFDD">Tue<br/>Sep. 25</th>
+<th align="left" class="day" style="background-color: #FFFFDD">Wed<br/>Sep. 26</th>
+<th align="left" class="day" style="background-color: #FFFFDD">Thu<br/>Sep. 27</th>
+<th align="left" class="day" style="background-color: #FFFFDD">Fri<br/>Sep. 28</th>
 </tr>
 
 <!-- ===================================== -->
