@@ -73,6 +73,22 @@ for(var exKey in dm.attributes) {
     } else {
       prop.label=iac.alias;
     };
+
+    let name=prop.name;
+    // added object properties
+    prop.type="object";
+    prop.properties= {};
+    prop.properties[name]={
+        "type": iac.type.toLowerCase(),
+        "writable": false
+    };
+    if (iac.writable) {
+      prop.properties.value={
+          "type": iac.type.toLowerCase(),
+          "writable": true
+      };
+    };
+
     prop.forms = [{
       "href" :  base+"/attributes/"+iac.name,
       "mediaType": "application/json"
