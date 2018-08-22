@@ -32,6 +32,10 @@ Scenario: Automatically turn off devices when user leaves the room
 - Turn on a surveillance camera (Intel)
 - Control other devices (Hitachi)
 
+## Enterprise integration scenario
+
+Scenario: Access control and security system
+
 ## Industrial integration scenario
 
 Scenario: Automatically protect citizens when a chemical plant has an accident
