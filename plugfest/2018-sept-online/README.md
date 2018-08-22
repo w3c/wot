@@ -1,5 +1,6 @@
 # Goals
 
+## Target Features
 * Security
    - all devices should support secure access
    - test more schemes, including for CoAP and MQTT
@@ -8,9 +9,13 @@
    - input and output data
 * Action and event descriptions
 
+## Out of Scope Features (Defer until Lyon)
+
+## Testing
 * Demonstrate WoT interoperability across products for different domains:
    - Interoperability scenario for industrial IoT
-   - Interoperability scenario for home IoT 
+   - Interoperability scenario for home IoT  
+* Functional Test Development
 
 # Scenarios
 
