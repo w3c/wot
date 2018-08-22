@@ -8,35 +8,35 @@
    - input and output data
 * Action and event descriptions
 
-* Interoperability scenario for industrial IoT
-* Interoperability scenario for home IoT 
+* Demonstrate WoT interoperability across products for different domains:
+   - Interoperability scenario for industrial IoT
+   - Interoperability scenario for home IoT 
 
 # Scenarios
 
+
 ## Home integration scenario
 
-Scenario: Automatically turn off devices when user leaves the room
-Monitor room occupancy (KETI Sensor)
-Detect when room is empty and trigger the following actions (Oracle)
-Close window blinds (Fujitu)
-Clean the room (Panasonic)
-Turn on a MQTT device (Siemens)
-Turn off the lights (Smart things)
-Turn on a surveillance camera (Intel)
-Control other devices (Hitachi)
+Scenario: Automatically turn off devices when user leaves the room  
+- Monitor room occupancy (KETI Sensor)  
+- Detect when room is empty and trigger the following actions (Oracle)
+- Close window blinds (Fujitu)
+- Clean the room (Panasonic)
+- Turn on a MQTT device (Siemens)
+- Turn off the lights (Smart things)
+- Turn on a surveillance camera (Intel)
+- Control other devices (Hitachi)
 
 ## Industrial integration scenario
 
 Scenario: Automatically protect citizens when a chemical plant has an accident
-Monitor environment condition in multiple locations (KETI-sensors)
-Discover anomaly, critical condition and trigger the following actions (Oracle)
-Drain the tank in a chemical factory (Siemens)
-Flash a warning light (Fujitsu)
-Turn off all air conditioners (Panasonic)
-Deliver a video stream of the critical location (Intel)
-Broadcast an alert message (Hitachi)
-
-
+- Monitor environment condition in multiple locations (KETI-sensors)
+- Discover anomaly, critical condition and trigger the following actions (Oracle)
+- Drain the tank in a chemical factory (Siemens)
+- Flash a warning light (Fujitsu)
+- Turn off all air conditioners (Panasonic)
+- Deliver a video stream of the critical location (Intel)
+- Broadcast an alert message (Hitachi)
 
 # Logistics
 
@@ -83,3 +83,4 @@ Broadcast an alert message (Hitachi)
 * [Panasonic simulator tools/panasonic.html]
 * [Preparation template preparation-TEMPLATE.md] (Matthias)
 * [Results template result-TEMPLATE.md] (Matthias)
+* [https://www.w3.org/WoT/IG/wiki/images/e/ed/WoT_adoption.pptx]
