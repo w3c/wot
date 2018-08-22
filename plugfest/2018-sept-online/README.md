@@ -32,10 +32,6 @@ Scenario: Automatically turn off devices when user leaves the room
 - Turn on a surveillance camera (Intel)
 - Control other devices (Hitachi)
 
-## Enterprise integration scenario
-
-Scenario: Access control and security system
-
 ## Industrial integration scenario
 
 Scenario: Automatically protect citizens when a chemical plant has an accident
@@ -46,6 +42,9 @@ Scenario: Automatically protect citizens when a chemical plant has an accident
 - Turn off all air conditioners (Panasonic)
 - Deliver a video stream of the critical location (Intel)
 - Broadcast an alert message (Hitachi)
+
+# Possible Future Scenario: Enterprise integration scenario
+Ex: Access control and security system
 
 # Logistics
 
@@ -66,11 +65,18 @@ Scenario: Automatically protect citizens when a chemical plant has an accident
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
    
-| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00| -| -| -| -|
-| 22:00-1d| 01:00| 06:00| 07:00| 13:00| 14:00| -| -| -| -| 
-| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00| -| -| -| -|
+|Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan| 
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+|A| 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00| 
+|B| 22:00-1d| 01:00| 06:00| 07:00| 13:00| 14:00| 
+|C| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00| 
+
+Companies who cannot make certain times mark an X:
+|Company |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
+|:---|:---|:---|:---|:---|
+|Intel |A| X| -| -| -|
+|Intel |B| -| -| -| -| 
+|Intel |B| -| -| -| -|
 
 * Google Hangout (Matthias)
 
