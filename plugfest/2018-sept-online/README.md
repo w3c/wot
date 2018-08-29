@@ -19,7 +19,6 @@
 
 # Scenarios
 
-
 ## Home integration scenario
 
 Scenario: Automatically turn off devices when user leaves the room  
@@ -89,10 +88,34 @@ Companies should note what slots they will be able to attend here:
 * Logistics: Joint session on XXX from YYY to ZZZ
 
 ## Testing
+* Companies:
+* Goals:
+* Logistics: 
 
 ## Security
+* Companies:
+* Goals:
+* Logistics: 
 
 ## Semantics
+* Companies:
+* Goals:
+* Logistics: 
+
+## Proxies
+* Companies:
+* Goals:
+* Logistics: 
+
+## Industrial Scenario Development
+* Companies:
+* Goals:
+* Logistics: 
+
+## Home Scenario Development
+* Companies:
+* Goals:
+* Logistics: 
 
 # Services
 
