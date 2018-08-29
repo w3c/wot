@@ -81,6 +81,19 @@ Companies should note what slots they will be able to attend here:
 
 * Google Hangout (Matthias)
 
+# Projects
+
+## Accessibility
+* Companies: Intel and ...
+* Goals: ...
+* Logistics: Joint session on XXX from YYY to ZZZ
+
+## Testing
+
+## Security
+
+## Semantics
+
 # Services
 
 * OAuth2 authorization server (McCool)
