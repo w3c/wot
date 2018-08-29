@@ -477,7 +477,8 @@ The following checking points must be completed together with a partner in clien
   - Out of Time
   
 * Oracle:
-  - A new simulator was created for the KETI environment sensor based on KEIT's TD
+  - A new simulator was created for the KETI environment sensor based on KETI's TD
+  - Simulated devices were hooked up to the Asset Monitoring applciation as demonstrated on the open day. 
 
 ## 4 Use Case
 
