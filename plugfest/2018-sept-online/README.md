@@ -1,5 +1,6 @@
 # Goals
 
+## Target Features
 * Security
    - all devices should support secure access
    - test more schemes, including for CoAP and MQTT
@@ -8,9 +9,13 @@
    - input and output data
 * Action and event descriptions
 
+## Out of Scope Features (Defer until Lyon)
+
+## Testing
 * Demonstrate WoT interoperability across products for different domains:
    - Interoperability scenario for industrial IoT
-   - Interoperability scenario for home IoT 
+   - Interoperability scenario for home IoT  
+* Functional Test Development
 
 # Scenarios
 
@@ -38,6 +43,9 @@ Scenario: Automatically protect citizens when a chemical plant has an accident
 - Deliver a video stream of the critical location (Intel)
 - Broadcast an alert message (Hitachi)
 
+# Possible Future Scenario: Enterprise integration scenario
+Ex: Access control and security system
+
 # Logistics
 
 * OpenVPN server 
@@ -56,6 +64,20 @@ Scenario: Automatically protect citizens when a chemical plant has an accident
    - Thu 2:00pm (+16h)
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
+   
+|Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan| 
+|:---|:---|:---|:---|:---|:---|:---|
+|A| 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00|  
+|B| 22:00-1d| 01:00| 06:00| 07:00| 13:00| 14:00| 
+|C| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00|  
+
+Companies who cannot make certain times mark an X:
+|Company |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`| 
+|:---|:---|:---|:---|:---|:---| 
+|Intel |A| X| -| -| -|  
+|Intel |B| -| -| -| -| 
+|Intel |B| -| -| -| -| 
+
 * Google Hangout (Matthias)
 
 # Services

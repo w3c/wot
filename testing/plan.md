@@ -255,7 +255,19 @@ to detect.
 
 ### CoAPS
 As noted above, we only test secure variants of protocols.
-For CoAP, this is DTLS, so we can use DTLS testing tools.
+We also test only the baseline UDP version, not the TCP/TLS or WS
+version.  The TCP/TLS version is interesting and applicable to WoT devices
+but is omitted as a scope control measure, since TLS is already
+tested with HTTPS.
+For CoAP, the secure protocol over UDP defined in the base
+standard is DTLS, so we can use DTLS testing tools.
+
+The CoAP standard defines three authentication methods to be use
+with DTLS: pre-shared (symmetric) keys, raw public (asymmetric) keys,
+and X509 certificate-based (asymmetric) keys.
+We test only these three specific authentication methods,
+and not all possible methods that could be configured under DTLS.
+
 In addition, CoAP devices may have already been tested
 following the requirements of other standards, eg. OCF or LwM2M.
 We will not repeat those tests, although our positive testing
