@@ -21,6 +21,10 @@
 * Siemens
   - OK
   - Comment: TDs available at https://github.com/w3c/wot/tree/master/plugfest/2018-bundang/TDs/Siemens
+  
+* Oracle:
+  - OK
+  - Comment: There were some TD2DM + DM2TD converter fixes created during the plug fest. See https://github.com/mlagally/wot/tree/master/plugfest/2018-bundang/tools-oracle 
 
 #### 3.1.2 Interact with Thing Directory -- was (5)
 
@@ -123,6 +127,10 @@ The following checking points must be completed together with a partner in serve
 * Siemens
   - OK
   - Comment: node-wot parsed TDs from Fujitsu, Intel, KETI, Panasonic, Oracle, and SmartThings
+  
+* Oracle
+  - OK 
+  - Comment: The TD2DM converter parsed TDs from Fujitsu, Intel, KETI, Panasonic, Oracle, and SmartThings
 
 #### 3.2.2 Property Handling -- was part of (2)
 
@@ -150,6 +158,10 @@ The following checking points must be completed together with a partner in serve
   - Out of Time
     - Observe bindings:
     - Comment: Planned to implement for HTTP(S)+LongPoll, CoAP(S) Observe, WebSockets, and MQTT
+    
+* Oracle
+  - OK
+  - Comment: mapping is required for non-primitive types, i.e. for array and object properties
 
 #### 3.2.3 Action Handling -- was part of (2)
 
@@ -167,6 +179,10 @@ The following checking points must be completed together with a partner in serve
   - OK
     - Invoke bindings: HTTP(S), CoAP(S), MQTT
     - Comment: CoAP(S) finished testing with SmartThings at IETF 102 Hackathon
+    
+* Oracle
+  - OK
+    - Invoke bindings: HTTP(S)
 
 #### 3.2.4 Event Handling -- was part of (11)
 
@@ -229,6 +245,10 @@ The following checking points must be completed together with a partner in serve
     - psk
     - Comment: Patched in for CoAPS and was added later to TD spec
     
+* Oracle
+  - OK
+    - basic
+    
 #### 3.2.6 Semantic integration -- was part of (8)
 
 * Fujitsu:
@@ -278,7 +298,11 @@ The following checking points must be completed together with a partner in clien
 * Siemens
   - OK
   - Comment: See https://github.com/w3c/wot/tree/master/plugfest/2018-bundang/TDs/Siemens
-
+  
+* Oracle
+  - OK
+  - Comment: Property interactions were tested with devices from Panasonic, Siemens and Fujitsu.
+  
 #### 3.3.2 Properties -- was part of (6) and (7)
 
 * Fujitsu: 
@@ -303,6 +327,11 @@ The following checking points must be completed together with a partner in clien
     - HTTP(S)+Longpoll
     - MQTT
     - WebSockets
+    
+ * Oracle:
+  - OK
+    - HTTP(S)
+  
 
 #### 3.3.3 Actions -- was part of (6) and (7)
 
@@ -319,6 +348,10 @@ The following checking points must be completed together with a partner in clien
 * Siemens:
   - OK
   - invoke bindings: HTTP(S), CoAP(S), MQTT
+  
+ - Oracle:
+ - OK
+ - Invoke actions on device simulator and on Siemens, Panasonic and Fujitsu devices
 
 #### 3.3.4 Events -- was part of (11)
 
@@ -435,7 +468,9 @@ The following checking points must be completed together with a partner in clien
   
 * Siemens:
   - Out of Time
-
+  
+* Oracle:
+  - A new simulator was created for the KETI environment sensor based on KEIT's TD
 
 ## 4 Use Case
 
