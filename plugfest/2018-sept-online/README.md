@@ -71,13 +71,13 @@ Ex: Access control and security system
 |B| 22:00-1d| 01:00| 06:00| 07:00| 13:00| 14:00|
 |C| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00|
 
-Companies who cannot make certain times mark an X:
+Companies should note what slots they will be able to attend here:
 
-|Company |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
-|:---|:---|:---|:---|:---|:---|
-|Intel |A| X| -| -| -|
-|Intel |B| -| -| -| -|
-|Intel |C| -| -| -| -|
+|Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
+|:---|:---   |:---   |:---   |:---   |
+|A   |       | Intel | Intel | Intel |
+|B   | Intel | Intel | Intel | Intel |
+|C   | Intel | Intel | Intel | Intel |
 
 * Google Hangout (Matthias)
 
