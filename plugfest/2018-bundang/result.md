@@ -46,6 +46,9 @@
   - Fail
   - Issue: Current sandbox does not fulfill high RAM requirements of GraphDB, so that Directory frequently crashes
   - Comment: Will move to better sandbox, possibly from Eclipse Thingweb
+  
+* Oracle
+  - N/A
 
 #### 3.1.3 Interact with Remote/Local Proxy -- was (1)
 
@@ -53,7 +56,7 @@
   - OK
   - Provided 1 Remote proxy and 2 Local proxy that were set in Bundang and in the Smart home in Japan.
   - Connected some application Servients and devices Servients from other members
-  - Also connetected Oracle IoT Cloud Service with using Oraclbe binding on the Local proxy.
+  - Also connetected Oracle IoT Cloud Service with using Oracle binding on the Local proxy.
   
 * Hitachi: connect our application with Remote/Local Proxy
   - OK
@@ -66,6 +69,10 @@
 * Siemens
   - OK
   - Comment: Registered with Oracle remote proxy (festolive) and Fujitsu local proxy
+  
+* Oracle:
+  - OK
+  - Comment: Connected with Node-WoT and Fujitsu's Local proxy
 
 #### 3.1.4 Implement Servient using node-wot -- was (3)
 
