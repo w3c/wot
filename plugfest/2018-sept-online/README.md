@@ -12,6 +12,8 @@
    - Action and event descriptions (at least one implementation)
 * Semantics
    - Exercise iotschema.org to achieve interoperability in scenarios below
+* Protocol Bindings
+   - URI Templates
 
 ## Out of Scope Features (Defer until Lyon)
 
