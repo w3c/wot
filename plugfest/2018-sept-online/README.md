@@ -2,12 +2,18 @@
 
 ## Target Features
 * Security
-   - all devices should support secure access
-   - test more schemes, including for CoAP and MQTT
-   - definitions
-* Event subscription and cancellation
-   - input and output data
-* Action and event descriptions
+    - All devices should support secure access
+    - Test all schemes and protocol combinations 
+      in [security best practices](https://github.com/w3c/wot-security/blob/master/wot-security-best-practices.md)
+    - Definitions
+* Action and event patterns
+   - Input and output data for actions
+   - Event subscription and cancellation
+   - Action and event descriptions (at least one implementation)
+* Semantics
+   - Exercise iotschema.org to achieve interoperability in scenarios below
+* Protocol Bindings
+   - URI Templates
 
 ## Out of Scope Features (Defer until Lyon)
 
