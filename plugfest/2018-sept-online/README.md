@@ -3,7 +3,7 @@
 ## Target Features
 * Security
     - All devices should support secure access
-    - Test all schemes and protocol combinations 
+    - Test all schemes and protocol combinations
       in [security best practices](https://github.com/w3c/wot-security/blob/master/wot-security-best-practices.md)
     - Definitions
 * Action and event patterns
@@ -31,10 +31,10 @@ The following scenarios validate the interoperability of devices across differen
 
 Scenario: Automatically turn off devices when user leaves the room  
 
-### Description: 
+### Description:
 The KETI environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
 When the "room empty" condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
-the room is cleaned by a vacuum cleaner, the lights are turned off, window blinds are closed and 
+the room is cleaned by a vacuum cleaner, the lights are turned off, window blinds are closed and
 a survceillence camera is turned on.
 
 ### Device interactions
@@ -73,9 +73,9 @@ Ex: Access control and security system
 
 # Logistics
 
-* OpenVPN server 
+* OpenVPN server
    - Virtual LAN (McCool)
-* Virtual NAT 
+* Virtual NAT
    - Bridge in OpenVPN server to internet (McCool)
 * WebEx (Kaz) (Japan Time)
    - Tues 6:00am (-40h) (tentative, Monday night in some timezones)
@@ -89,7 +89,7 @@ Ex: Access control and security system
    - Thu 2:00pm (+16h)
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
-   
+
 |Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan|
 |:---|:---|:---|:---|:---|:---|:---|
 |A| 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00|
@@ -100,9 +100,10 @@ Companies should note what slots they will be able to attend here:
 
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
 |:---|:---   |:---   |:---   |:---   |
-|A   |       | Intel | Intel | Intel |
-|B   | Intel | Intel | Intel | Intel |
-|C   | Intel | Intel | Intel | Intel |
+|A   | (Panasonic)      | Intel (Panasonic) | Intel (Panasonic) | Intel |
+|B   | Intel  Panasonic | Intel  Panasonic  | Intel  Panasonic  | Intel |
+|C   | Intel (Panasonic)| Intel (Panasonic) | Intel (Panasonic) | Intel |
+
 
 * Google Hangout (Matthias)
 
@@ -116,32 +117,32 @@ Companies should note what slots they will be able to attend here:
 ## Testing
 * Companies:
 * Goals:
-* Logistics: 
+* Logistics:
 
 ## Security
 * Companies:
 * Goals:
-* Logistics: 
+* Logistics:
 
 ## Semantics
 * Companies:
 * Goals:
-* Logistics: 
+* Logistics:
 
 ## Proxies
 * Companies:
 * Goals:
-* Logistics: 
+* Logistics:
 
 ## Industrial Scenario Development
 * Companies:
 * Goals:
-* Logistics: 
+* Logistics:
 
 ## Home Scenario Development
 * Companies:
 * Goals:
-* Logistics: 
+* Logistics:
 
 # Services
 
@@ -152,7 +153,7 @@ Companies should note what slots they will be able to attend here:
 
 # Proxies
 
-? 
+?
 
 # Validation and Testing
 
