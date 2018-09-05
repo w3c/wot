@@ -115,22 +115,22 @@ Companies should note what slots they will be able to attend here:
 * Logistics: Joint session on XXX from YYY to ZZZ
 
 ## Testing
-* Companies:
+* Companies: Intel and ...
 * Goals:
 * Logistics:
 
 ## Security
-* Companies:
+* Companies: Intel and ...
 * Goals:
 * Logistics:
 
 ## Semantics
-* Companies:
+* Companies: Intel and ...
 * Goals:
 * Logistics:
 
 ## Proxies
-* Companies:
+* Companies: Intel and ...
 * Goals:
 * Logistics:
 
