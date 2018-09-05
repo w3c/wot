@@ -205,7 +205,7 @@ The following checking points can be completed by the participant alone by using
 
 #### 3.2.8 Semantic integration
 
-* Panasonic will test semantic search via Thing Directory provided by other company.
+* N/A
 
 #### 3.2.9 Accessibility
 Accessibility turns a machine-understandable WoT Interface described by a TD into an accessible user interface of certain kind.
