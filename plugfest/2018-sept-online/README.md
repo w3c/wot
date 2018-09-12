@@ -30,9 +30,9 @@ The following scenarios validate the interoperability of devices across differen
 Note: we may want to define some smaller, simpler scenarios for testing; but we also need a "meaty" scenario for demonstration
 purposes at TPAC.
 
-## Home integration scenario
+## Home integration scenarios
 
-Scenario: Automatically turn off devices when user leaves the room  
+Scenario 1: Automatically turn off devices when user leaves the room  
 
 ### Description:
 The KETI environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
@@ -50,9 +50,9 @@ a survceillence camera is turned on.
 - Turn on a surveillance camera (Intel)
 - Control other devices (Hitachi)
 
-## Industrial integration scenario
+## Industrial integration scenarios
 
-Scenario: Automatically alert and protect citizens when a chemical plant has an accident
+Scenario 1: Automatically alert and protect citizens when a chemical plant has an accident
 
 ### Description
 The KETI environment sensor is capable of measuring air quality by measuring the oxygen level.
