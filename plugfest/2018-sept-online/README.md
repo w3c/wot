@@ -164,6 +164,14 @@ Companies should note what slots they will be able to attend here:
 * Security Validation (McCool)
 * Scripting API Testing (Matthias)
 
+* Resources from CMA testing framework:
+   - https://cta-wave.github.io/WMAS2017/
+   - https://webapitests2017.ctawave.org/
+   - https://github.com/cta-wave/WMAS2017/blob/master/wmas2017-subset.sh
+   - https://github.com/web-platform-tests/wpt
+   - https://www.w3.org/2017/12/webmediaapi.html
+   - https://github.com/cta-wave/WMAS2017
+
 # Documentation
 
 * [Panasonic simulator tools/panasonic.html]
