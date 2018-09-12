@@ -27,6 +27,9 @@
 
 The following scenarios validate the interoperability of devices across different manufactuers.
 
+Note: we may want to define some smaller, simpler scenarios for testing; but we also need a "meaty" scenario for demonstration
+purposes at TPAC.
+
 ## Home integration scenario
 
 Scenario: Automatically turn off devices when user leaves the room  
@@ -68,8 +71,13 @@ pubish alert messages and make voice announcements.
 - Make voice announcements (Intel)
 - Broadcast an alert message (Hitachi)
 
-# Possible Future Scenario: Enterprise integration scenario
+## Possible Future Scenarios: 
+# Enterprise integration scenarios
 Ex: Access control and security system
+Ex: Energy management in a smart building/smart city
+# Transportation scenarios
+Ex: Fleet management
+Ex: Shipping and inventory control (supply chain management)
 
 # Logistics
 
