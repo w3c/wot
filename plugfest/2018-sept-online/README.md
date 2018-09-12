@@ -189,6 +189,8 @@ Companies should note what slots they will be able to attend here:
 * OAuth2 authorization server (McCool)
    - maybe also distribute VPN keys
    - supported by Intel
+   - Plan A is everyone should have an internet-visible service with authentication
+   - VPN is just for emulating a local network for testing
 * Thing directory service
 
 # Proxies
