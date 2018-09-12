@@ -1,1 +1,1 @@
-Place to put short messaging material.
+# Web of Things marketing material.
