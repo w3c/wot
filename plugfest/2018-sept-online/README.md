@@ -100,21 +100,9 @@ Companies should note what slots they will be able to attend here:
 
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
 |:---|:---                 |:---                 |:---                 |:---                 |
-|A   | (Panasonic) <BR/> Smart Things 
-     | Intel <BR/> (Panasonic) <BR/> Smart Things 
-     | Intel <BR/> (Panasonic) <BR/> Smart Things 
-     | Intel <BR/> Smart Things 
-     |
-|B   | Intel <BR/> Panasonic <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi
-     | Intel <BR/> Panasonic <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi
-     | Intel <BR> Panasonic <BR/>(Oracle) <BR/> Fujitsu <BR/> Hitachi
-     | Intel <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi
-     |
-|C   | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi)
-     | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi
-     | Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi)
-     | Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi)
-     |
+|A   | (Panasonic) <BR/> Smart Things | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> Smart Things |
+|B   | Intel <BR/> Panasonic <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi | Intel <BR/> Panasonic <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi | Intel <BR> Panasonic <BR/>(Oracle) <BR/> Fujitsu <BR/> Hitachi | Intel <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi |
+|C   | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi | Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) | Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi)|
 
 
 * Google Hangout (Matthias)
