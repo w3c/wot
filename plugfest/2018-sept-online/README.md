@@ -99,10 +99,10 @@ Ex: Access control and security system
 Companies should note what slots they will be able to attend here:
 
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
-|:---|:---   |:---   |:---   |:---   |
-|A   | (Panasonic)      | Intel <BR> (Panasonic) | Intel <BR> (Panasonic) | Intel |
-|B   | Intel <BR> Panasonic | Intel <BR> Panasonic  | Intel <BR> Panasonic  | Intel |
-|C   | Intel <BR> (Panasonic)| Intel <BR> (Panasonic) | Intel <BR> (Panasonic) | Intel |
+|:---|:---                 |:---                 |:---                 |:---                 |
+|A   | (Panasonic)         | Intel <BR/> (Panasonic) | Intel <BR/> (Panasonic) | Intel |
+|B   | Intel <BR/> Panasonic <BR/> (Oracle) | Intel <BR/> Panasonic <BR/> (Oracle)  | Intel <BR> Panasonic <BR/>(Oracle)  | Intel <BR/> (Oracle) |
+|C   | Intel <BR> (Panasonic) <BR/> Oracle | Intel <BR> (Panasonic)<BR/> Oracle | Intel <BR> (Panasonic) <BR/> Oracle| Intel<BR/> Oracle |
 
 
 * Google Hangout (Matthias)
