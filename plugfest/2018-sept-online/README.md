@@ -120,29 +120,50 @@ Companies should note what slots they will be able to attend here:
 * Logistics:
 
 ## Security
-* Companies: Intel and ...
+* Companies: Intel, Panasonic and ...
 * Goals:
+  - (Panasonic) Verify access control to servient endpoint is working correctly according to thing description
 * Logistics:
+  - (Panasonic)
+    - Our servients support access control via bearer token.
+    - Server available at 24/7 on Tue, Wed and Thu. Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
 ## Semantics
-* Companies: Intel and ...
+* Companies: Intel, Panasonic and ...
 * Goals:
+  - (Panasonic) Demonstrate how semantic annotation can benefit real world application.
 * Logistics:
+  - (Panasonic)
+    - We will register TD of online things manually to thingweb directory and search them by semantic annotation.
+    - Server available at 24/7 on Tue, Wed and Thu. Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu so we can try semantic search during these slots. Please ask for support outside of these slots if necessary.
 
 ## Proxies
-* Companies: Intel and ...
+* Companies: Intel, Panasonic (if possible) and ...
 * Goals:
+  - (Panasonic) Verify local thing in VPN is accessible from the internet
 * Logistics:
+  - (Panasonic)
+    - We will register local thing (simulator) manually to local proxy in the VPN.
+    - We will access to the thing from client (Generic, NodeRED), via remote proxy on the internet.
+    - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu so we can try registration and access during these slots. Please ask for support outside of these slots if necessary.
 
 ## Industrial Scenario Development
-* Companies:
+* Companies:Panasonic and ...
 * Goals:
+  - (Panasonic) Demonstrate how WoT works in Smart industry area
 * Logistics:
+  - (Panasonic)
+    - We will provide air-conditioner servient through cloud (both real/simulator)
+    - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
 ## Home Scenario Development
-* Companies:
+* Companies:Panasonic and ...
 * Goals:
+  - (Panasonic) Demonstrate how WoT works in Smart home area.
 * Logistics:
+  - (Panasonic)
+    - We will provide robotics-cleaner servient through cloud (both real/simulator)
+    - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
 # Services
 
