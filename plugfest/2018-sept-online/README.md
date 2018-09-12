@@ -100,9 +100,9 @@ Companies should note what slots they will be able to attend here:
 
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
 |:---|:---                 |:---                 |:---                 |:---                 |
-|A   | (Panasonic)         | Intel <BR/> (Panasonic) | Intel <BR/> (Panasonic) | Intel |
+|A   | (Panasonic) <BR/> Smart Things | Intel <BR/> (Panasonic) <BR/> Smart Things| Intel <BR/> (Panasonic) <BR/> Smart Things| Intel <BR/> Smart Things|
 |B   | Intel <BR/> Panasonic <BR/> (Oracle) | Intel <BR/> Panasonic <BR/> (Oracle)  | Intel <BR> Panasonic <BR/>(Oracle)  | Intel <BR/> (Oracle) |
-|C   | Intel <BR> (Panasonic) <BR/> Oracle | Intel <BR> (Panasonic)<BR/> Oracle | Intel <BR> (Panasonic) <BR/> Oracle| Intel<BR/> Oracle |
+|C   | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things| Intel <BR> (Panasonic)<BR/> Oracle <BR/> Smart Things| Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things| Intel<BR/> Oracle<BR/> Smart Things |
 
 
 * Google Hangout (Matthias)
