@@ -1,5 +1,8 @@
-# Web of Things Marketing Material.
+# Web of Things Marketing Material
 
+The following is WIP and not yet ready for release.
+
+## From Intel
 * [Things1.jpg](Things1.jpg) [Things1.txt](Things1.txt)
 * [Things2.jpg](Things2.jpg) [Things2.txt](Things2.txt)
 * [Things3.jpg](Things3.jpg) [Things3.txt](Things3.txt)
