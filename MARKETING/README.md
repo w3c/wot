@@ -1,6 +1,8 @@
 # Web of Things Marketing Material
 
-The following is WIP and not yet ready for release.
+**The following is WIP and not yet ready for release.** 
+
+For detailed captions and high-resolution images, please follow the links.
 
 ## From Intel
 ![Things1](Things1_thumbnail.jpg)  
