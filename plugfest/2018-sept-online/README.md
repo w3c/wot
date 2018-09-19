@@ -228,7 +228,8 @@ Companies should note what slots they will be able to attend here:
 
 # Validation and Testing
 
-* TD Validation (McCool)
+* TD Validation
+   - http://plugfest.thingweb.io/playground/
    - Syntactic validation
    - Semantic validation
 * Network Testing Tool (Ege)
