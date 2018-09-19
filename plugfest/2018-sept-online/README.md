@@ -82,6 +82,19 @@ Ex: Shipping and inventory control (supply chain management)
 
 # Logistics
 
+* Oracle IoT Cloud Service Instance
+  Like in the previous plug fests there is an instance of the Oracle IoT Cloud Service available for interoperability tests.
+  It is shared among all plug fest participants, so please coordinate with Michael.Lagally@oracle.com if you have questions.
+  The management console is available at:
+  https://129.150.200.242/ui 
+  The instance is using the same password, as previously communicated to individual companies. Please let Michael.Lagally@oracle.com know if you require access.
+  
+* Oracle Digital Twin Simulator
+  There is an instance of the Oracle Digital Twin Simulator for plug fest participants. It hosts several simulations, such as a HVAC, Pump, Truck, Connected Car. Instances of simulated devices can be provided for plug fest participants on request.
+  Please let Michael.Lagally@oracle.com know if you require a simulated device instance.
+  The login page is at:
+https://129.150.200.242/ds
+
 * OpenVPN servers (McCool)
    - Running on DigitalOcean instances in Frankfurt
    - Addresses are vlan1:104.248.39.149 and vlan2:104.248.39.147
