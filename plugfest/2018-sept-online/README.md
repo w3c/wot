@@ -82,10 +82,25 @@ Ex: Shipping and inventory control (supply chain management)
 
 # Logistics
 
-* OpenVPN server
-   - Virtual LAN (McCool)
-* Virtual NAT
-   - Bridge in OpenVPN server to internet (McCool)
+* OpenVPN servers (McCool)
+   - Running on DigitalOcean instances in Frankfurt
+   - Addresses are vlan1:104.248.39.149 and vlan2:104.248.39.147
+   - CA is at 104.248.39.148
+   - WIP: set up DNS records to make these vlan1.mmccool.net, vlan2.mmccool.net, ca.mmccool.net
+   - Using this configuration: https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04 
+   - Client configuration files (.ovpn) available upon request by email
+   - All systems connected to the VPN can see each other as if they were on a local network
+   - There is also a NAT between them and the internet
+   - Currently the NAT is configured to only allow SSH traffic in, but anything else out
+   - To connect to the VPN you need to use 1194/udp.  
+   - If your local configuration does not allow this talk to me, I can configure a server using 443/tcp
+* VPN Bridge (WIP; McCool)
+   - Physical bridge to connect local network to VPN using hardware with multiple physical interfaces
+   - To allow use of devices unable to run an OpenVPN client themselves
+   - Something like this, using hostapd: https://askubuntu.com/questions/926116/share-my-vpn-connection-with-other-lan-users
+* Oauth2 server (WIP; McCool)
+   - Plan is to use the following: https://www.npmjs.com/package/node-oauth2-server
+   - Server to be at auth.mmccool.net
 * WebEx (Kaz) (Japan Time)
    - Tues 6:00am (-40h) (tentative, Monday night in some timezones)
    - Tues 2:00pm (-32h)
