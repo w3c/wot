@@ -99,6 +99,7 @@ https://129.150.200.242/ds
    - Running on DigitalOcean instances in Frankfurt
    - Addresses are vlan1:104.248.39.149 and vlan2:104.248.39.147
    - CA is at 104.248.39.148
+   - If you want VPN access please send an email to michael.mccool@intel.com and indicate how many IPs you need. 
    - WIP: set up DNS records to make these vlan1.mmccool.net, vlan2.mmccool.net, ca.mmccool.net
    - Using this configuration: https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04 
    - Client configuration files (.ovpn) available upon request by email
