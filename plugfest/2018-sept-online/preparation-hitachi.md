@@ -2,6 +2,8 @@
 
 This document describes the Online PlugFest on Sept 25 to 28.
 
+**DRAFT: Work in Progress**
+
 Features marked with <i>italics</i> are work-in-progress, and hence not confirmed to be available during the PlugFest.
 
 ## 1 PlugFest Infrastructure
@@ -18,7 +20,7 @@ N/A
 
 ### 1.3 Public Tools
 
-* node-red-nodegen for generating WoT node (github repository URL: TBD)
+* <i>node-red-nodegen for generating WoT node (github repository URL: TBD)</i>
 
 ## 2 Participants and Servients
 
@@ -336,4 +338,19 @@ This section should cover ideas such as Proxy-Directory integration and concrete
 ## 6 Implementation Guidelines
 This section should cover documentation of own implementation including tools in Section 1 or requests to others.
 
-tbd.
+### 6.1 Building node-red-nodegen 
+
+- git clone <i>(repository address: tbd.)</i>
+- cd node-red-nodegen
+- git checkout webofthings
+- ...
+
+### 6.2 Create original node from Thing Description
+
+- node-red-nodegen example.jsonld
+  - node is genereted at ./node-red-contrib-example-thing
+- cd ~/.node-red
+- npm install /PATH/TO/node-red-contrib-example-thing
+- node-red
+
+Then, you can use Example Thing node on Node-RED flow editor.
