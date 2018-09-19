@@ -353,7 +353,7 @@ Follow the instruction in [Node-RED official document](https://nodered.org/docs/
 
 #### 6.1.2 Create a node from Thing Description
 
-- node-red-nodegen <i>your</i>.jsonld
+- node bin/node-red-nodegen.js <i>your</i>.jsonld
   - node is genereted at ./node-red-contrib-wot<i>yourthingname</i>
 - cd ~/.node-red
 - npm install /PATH/TO/node-red-contrib-wot<i>yourthingname</i>
