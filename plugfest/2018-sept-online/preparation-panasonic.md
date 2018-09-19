@@ -341,8 +341,12 @@ The following checking points must be completed together with a partner in clien
 
 #### 3.3.7 Security
 
-The following in combination with HTTPS (HTTP + TLS) are supported by both Online Simulator and Smart Home
+The following in combination with HTTPS (HTTP + TLS) are supported by both Online Simulator and Smart Home devices in labo.
 * bearer
+
+Panasonic also hosts Authentication server online during plugfest. The authentication server accepts user_id and password which will be given to plugfest participants privately. The server then returns bearer token which can be used to access Panasonic online things above.
+
+See [Implementation Guideline](#6-implementation-guidelines) for details.
 
 
 #### 3.3.8 Semantic integration
@@ -379,6 +383,34 @@ This section should cover ideas such as Proxy-Directory integration and concrete
 | Panasonic | 2                | ?                       | Wi-Fi?, Ethernet?, Ports: ? |         |
 
 ## 6 Implementation Guidelines
-This section should cover documentation of own implementation including tools in Section 1 or requests to others.
 
-NA at the moment
+### 6.1 Authentication server
+
+Panasonic authentication server has following API:
+
+- URL: Written in the security section of TDs
+- METHOD: POST
+- Requeest body: application/json
+
+  ```
+  {
+    "id": "xxxx",
+    "password": "yyyy"
+  }
+  ```
+
+  Note: id and password are distributed to plugest participants privately.
+
+- Response body: application/json
+
+  ```
+  {
+    "token": "eyJ...CJ9.eyJ3b3SIsImlhdCI6MTUyNDIwMjI0N...TG4ifQ.9n9...VT-k"
+  }
+  ```
+
+The value of the token is used to access Panasonic WoT interface in following request header:
+
+```
+  Authorization: Bearer <token>
+```
