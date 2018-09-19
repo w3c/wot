@@ -20,7 +20,7 @@ N/A
 
 ### 1.3 Public Tools
 
-* <i>node-red-nodegen for generating WoT node (github repository URL: TBD)</i>
+* <i>node-red-nodegen for generating WoT node (repository URL: TBD)</i>
 
 ## 2 Participants and Servients
 
@@ -55,7 +55,7 @@ The following checking points can be completed by the participant alone by using
 
 #### 3.1.1 Validate TDs
 
-* Hitachi will validate TDs and generate Node-RED node modules.
+* NA 
 
 #### 3.1.2 Register with Thing Directory
 
@@ -182,7 +182,7 @@ The following checking points must be completed together with a partner in serve
 #### 3.2.7 Security
 
 * Encryption: HTTPS
-* Authentication: basic, digest, bearer, apikey
+* Authentication: basic, digest, bearer, _apikey_
 
 #### 3.2.8 Semantic integration
 
@@ -327,7 +327,7 @@ The following checking points must be completed together with a partner in clien
 ## 4 Use cases
 This section should cover ideas such as Proxy-Directory integration and concrete application scenarios that need contributions from others or list collaborations.
 
-* Under consideration
+* Under consideration.
 
 ## 5 Requirements for PlugFest Environment
 
@@ -338,19 +338,25 @@ This section should cover ideas such as Proxy-Directory integration and concrete
 ## 6 Implementation Guidelines
 This section should cover documentation of own implementation including tools in Section 1 or requests to others.
 
-### 6.1 Building node-red-nodegen 
+### 6.1 Usage instruction for node-red-nodegen
+
+#### 6.1.0 Node-RED installation
+
+Follow the instruction in [Node-RED official document](https://nodered.org/docs/getting-started/installation).
+
+#### 6.1.1 Build node-red-nodegen 
 
 - git clone <i>(repository address: tbd.)</i>
 - cd node-red-nodegen
 - git checkout webofthings
-- ...
+- npm install
 
-### 6.2 Create original node from Thing Description
+#### 6.1.2 Create a node from Thing Description
 
-- node-red-nodegen example.jsonld
-  - node is genereted at ./node-red-contrib-example-thing
+- node-red-nodegen <i>your</i>.jsonld
+  - node is genereted at ./node-red-contrib-wot<i>yourthingname</i>
 - cd ~/.node-red
-- npm install /PATH/TO/node-red-contrib-example-thing
+- npm install /PATH/TO/node-red-contrib-wot<i>yourthingname</i>
 - node-red
 
-Then, you can use Example Thing node on Node-RED flow editor.
+Then, you can see your Thing node on the pallet (left pane of Node-RED flow editor).
