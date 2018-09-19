@@ -1,9 +1,10 @@
-# Goals
+# Online Plugfest
+------------------------
 
 ## Target Features
 * Security
     - All devices should support secure access
-    - Test all schemes and protocol combinations 
+    - Test all schemes and protocol combinations
       in [security best practices](https://github.com/w3c/wot-security/blob/master/wot-security-best-practices.md)
     - Definitions
 * Action and event patterns
@@ -27,14 +28,17 @@
 
 The following scenarios validate the interoperability of devices across different manufactuers.
 
-## Home integration scenario
+Note: we may want to define some smaller, simpler scenarios for testing; but we also need a "meaty" scenario for demonstration
+purposes at TPAC.
 
-Scenario: Automatically turn off devices when user leaves the room  
+## Home integration scenarios
 
-### Description: 
+Scenario 1: Automatically turn off devices when user leaves the room  
+
+### Description:
 The KETI environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
 When the "room empty" condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
-the room is cleaned by a vacuum cleaner, the lights are turned off, window blinds are closed and 
+the room is cleaned by a vacuum cleaner, the lights are turned off, window blinds are closed and
 a survceillence camera is turned on.
 
 ### Device interactions
@@ -47,9 +51,9 @@ a survceillence camera is turned on.
 - Turn on a surveillance camera (Intel)
 - Control other devices (Hitachi)
 
-## Industrial integration scenario
+## Industrial integration scenarios
 
-Scenario: Automatically alert and protect citizens when a chemical plant has an accident
+Scenario 1: Automatically alert and protect citizens when a chemical plant has an accident
 
 ### Description
 The KETI environment sensor is capable of measuring air quality by measuring the oxygen level.
@@ -68,15 +72,35 @@ pubish alert messages and make voice announcements.
 - Make voice announcements (Intel)
 - Broadcast an alert message (Hitachi)
 
-# Possible Future Scenario: Enterprise integration scenario
+## Possible Future Scenarios: 
+# Enterprise integration scenarios
 Ex: Access control and security system
+Ex: Energy management in a smart building/smart city
+# Transportation scenarios
+Ex: Fleet management
+Ex: Shipping and inventory control (supply chain management)
 
 # Logistics
 
-* OpenVPN server 
-   - Virtual LAN (McCool)
-* Virtual NAT 
-   - Bridge in OpenVPN server to internet (McCool)
+* OpenVPN servers (McCool)
+   - Running on DigitalOcean instances in Frankfurt
+   - Addresses are vlan1:104.248.39.149 and vlan2:104.248.39.147
+   - CA is at 104.248.39.148
+   - WIP: set up DNS records to make these vlan1.mmccool.net, vlan2.mmccool.net, ca.mmccool.net
+   - Using this configuration: https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04 
+   - Client configuration files (.ovpn) available upon request by email
+   - All systems connected to the VPN can see each other as if they were on a local network
+   - There is also a NAT between them and the internet
+   - Currently the NAT is configured to only allow SSH traffic in, but anything else out
+   - To connect to the VPN you need to use 1194/udp.  
+   - If your local configuration does not allow this talk to me, I can configure a server using 443/tcp
+* VPN Bridge (WIP; McCool)
+   - Physical bridge to connect local network to VPN using hardware with multiple physical interfaces
+   - To allow use of devices unable to run an OpenVPN client themselves
+   - Something like this, using hostapd: https://askubuntu.com/questions/926116/share-my-vpn-connection-with-other-lan-users
+* Oauth2 server (WIP; McCool)
+   - Plan is to use the following: https://www.npmjs.com/package/node-oauth2-server
+   - Server to be at auth.mmccool.net
 * WebEx (Kaz) (Japan Time)
    - Tues 6:00am (-40h) (tentative, Monday night in some timezones)
    - Tues 2:00pm (-32h)
@@ -89,7 +113,7 @@ Ex: Access control and security system
    - Thu 2:00pm (+16h)
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
-   
+
 |Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan|
 |:---|:---|:---|:---|:---|:---|:---|
 |A| 14:00-1d| 17:00-1d| 22:00-1d| 23:00-1d| 05:00| 06:00|
@@ -99,10 +123,11 @@ Ex: Access control and security system
 Companies should note what slots they will be able to attend here:
 
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
-|:---|:---   |:---   |:---   |:---   |
-|A   |       | Intel | Intel | Intel |
-|B   | Intel | Intel | Intel | Intel |
-|C   | Intel | Intel | Intel | Intel |
+|:---|:---                 |:---                 |:---                 |:---                 |
+|A   | (Panasonic) <BR/> Smart Things | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> Smart Things |
+|B   | Intel <BR/> Panasonic <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Panasonic <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> Panasonic <BR/>(Oracle) <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> (Oracle) <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens |
+|C   | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens |
+
 
 * Google Hangout (Matthias)
 
@@ -112,47 +137,81 @@ Companies should note what slots they will be able to attend here:
 * Companies: Intel and ...
 * Goals: ...
 * Logistics: Joint session on XXX from YYY to ZZZ
+* Plan:
 
-## Testing
-* Companies:
+## Automated Testing and Validation
+* Companies: Intel, Siemens, and Smart Things (semantics) ...; Ege
 * Goals:
-* Logistics: 
+   - Review testing frameworks: W3C and CMA
+   - Prototype some testing tools and approaches
+* Logistics:
+* Plan:
+   - Review existing tools
+   - Prototype some testing approaches
 
 ## Security
-* Companies:
+* Companies: Intel, Panasonic and (Siemens) ...
 * Goals:
-* Logistics: 
+  - (Panasonic) Verify access control to servient endpoint is working correctly according to thing description
+* Logistics:
+* Plan:
+  - (Panasonic)
+    - Our servients support access control via bearer token.
+    - Server available at 24/7 on Tue, Wed and Thu. Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
 ## Semantics
-* Companies:
+* Companies: Intel, Panasonic, Smart Things and ...
 * Goals:
-* Logistics: 
+  - (Panasonic) Demonstrate how semantic annotation can benefit real world application.
+* Logistics:
+* Plan:
+  - (Panasonic)
+    - We will register TD of online things manually to thingweb directory and search them by semantic annotation.
+    - Server available at 24/7 on Tue, Wed and Thu. Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu so we can try semantic search during these slots. Please ask for support outside of these slots if necessary.
 
 ## Proxies
-* Companies:
+* Companies: Intel, Panasonic (if possible), Fujitsu and ...
 * Goals:
-* Logistics: 
+  - (Panasonic) Verify local thing in VPN is accessible from the internet
+* Logistics:
+* Plan:
+  - (Panasonic)
+    - We will register local thing (simulator) manually to local proxy in the VPN.
+    - We will access to the thing from client (Generic, NodeRED), via remote proxy on the internet.
+    - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu so we can try registration and access during these slots. Please ask for support outside of these slots if necessary.
 
 ## Industrial Scenario Development
-* Companies:
+* Companies: Panasonic, Oracle and ...
 * Goals:
-* Logistics: 
+  - (Panasonic) Demonstrate how WoT works in Smart industry area
+* Logistics:
+* Plan:
+  - (Panasonic)
+    - We will provide air-conditioner servient through cloud (both real/simulator)
+    - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
 ## Home Scenario Development
-* Companies:
+* Companies: Panasonic, Oracle and ...
 * Goals:
-* Logistics: 
+  - (Panasonic) Demonstrate how WoT works in Smart home area.
+* Logistics:
+* Plan:
+  - (Panasonic)
+    - We will provide robotics-cleaner servient through cloud (both real/simulator)
+    - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
 # Services
 
 * OAuth2 authorization server (McCool)
    - maybe also distribute VPN keys
    - supported by Intel
+   - Plan A is everyone should have an internet-visible service with authentication
+   - VPN is just for emulating a local network for testing
 * Thing directory service
 
 # Proxies
 
-? 
+?
 
 # Validation and Testing
 
@@ -162,6 +221,14 @@ Companies should note what slots they will be able to attend here:
 * Network Testing Tool (Ege)
 * Security Validation (McCool)
 * Scripting API Testing (Matthias)
+
+* Resources from CMA testing framework:
+   - https://cta-wave.github.io/WMAS2017/
+   - https://webapitests2017.ctawave.org/
+   - https://github.com/cta-wave/WMAS2017/blob/master/wmas2017-subset.sh
+   - https://github.com/web-platform-tests/wpt
+   - https://www.w3.org/2017/12/webmediaapi.html
+   - https://github.com/cta-wave/WMAS2017
 
 # Documentation
 
