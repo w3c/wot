@@ -388,7 +388,7 @@ This section should cover ideas such as Proxy-Directory integration and concrete
 
 Panasonic authentication server has following API:
 
-- URL: Written in the security section of TDs
+- URL: https://w3c.p-wot.com:8443/auth
 - METHOD: POST
 - Requeest body: application/json
 
