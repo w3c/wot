@@ -154,7 +154,9 @@ https://129.150.200.242/ds
 * Oauth2 server (WIP; McCool)
    - Plan is to use the following: https://www.npmjs.com/package/node-oauth2-server
    - Server to be at auth.mmccool.net
-* WebEx (Kaz)<!-- (Japan Time)
+* WebEx (Kaz)
+<!---
+   (Japan Time)
    - Tues 3:00pm (-31h)
    - Tues 10:00pm (-24h)
    - Wed 9:00am (-13h)
@@ -164,7 +166,8 @@ https://129.150.200.242/ds
    - Thu 9:00am (+11h)
    - Thu 3:00pm (+17h)
    - Thu 10:00pm (+24h)
-   - Fri 6:00am (+32h) (tentative, Friday morning in Asia)-->
+   - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
+-->
    Click "A", "B" or "C" to get the concrete WebEx information.
 
 |Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan|
