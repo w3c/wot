@@ -97,17 +97,44 @@ https://129.150.200.242/ds
 
 * OpenVPN servers (McCool)
    - Running on DigitalOcean instances in Frankfurt
-   - Addresses are vlan1:104.248.39.149 and vlan2:104.248.39.147
-   - CA is at 104.248.39.148
-   - If you want VPN access please send an email to michael.mccool@intel.com and indicate how many IPs you need. 
-   - WIP: set up DNS records to make these vlan1.mmccool.net, vlan2.mmccool.net, ca.mmccool.net
-   - Using this configuration: https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04 
-   - Client configuration files (.ovpn) available upon request by email
-   - All systems connected to the VPN can see each other as if they were on a local network
-   - There is also a NAT between them and the internet
-   - Currently the NAT is configured to only allow SSH traffic in, but anything else out
-   - To connect to the VPN you need to use 1194/udp.  
-   - If your local configuration does not allow this talk to me, I can configure a server using 443/tcp
+   - Addresses are 
+       - vlan1.mmccool.net (should be at 104.248.39.149) port 1194 (udp) or port 443 (tcp)
+       - vlan2.mmccool.net (should be at 104.248.39.147) port 1194 (tcp) or port 443 (tcp)
+       - CA is at ca.mmccool.net (should be 104.248.39.148)
+   - If you want VPN access please send an email to michael.mccool@intel.com
+       - Indicate how many machines you will connect
+       - I will send a `<config>.ovpn` file, where `<config>` will be a unique name for your device
+   - To install openvpn client on Linux (see Digital Ocean link below for more info):
+     ```
+     sudo apt-get install openvpn
+     ```
+   - To run manually after installation:
+     ```
+     sudo openvpn <config>.ovpn
+     ```
+     where `<config>` should be replaced with the unique name for your device.
+     Now look at output of `ifconfig`: you should see a new network, and the default gateway should
+     be redirected so it is used automatically.
+   - To run as a service that starts automatically at boot
+     ```
+     sudo cp <config>.ovpn /etc/openvpn/<config>.conf
+     sudo systemctl start openvpn@<config>
+     sudo systemctl enable openvpn@<config>
+     ```
+     where `<config>` should be replaced with the name of your config file, which is
+     unique for each device on the network.
+   - Details:
+       - Port 1194/DP is preferred for performance, use 443/TCP if your firewall blocks it
+       - WIP: bridging the UDP and TCP VPNs.  Right now they are separate subnetworks
+       - VLAN1 and VLAN2 are intentionally separate networks.
+       - They are also connected to the 
+         internet via a one-way NAT (all outgoing traffic is permitted, no incoming traffic)
+   - Using this configuration from Digital Ocean:
+       - https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04 
+       - Note these is a TUN network and does not provide DCHP, mDNS, etc
+       - In practice this means you need to know the IP address of the device you wish to connect
+       - Also, currently IP addresses may change each time you restart the VPN client on a device
+       - You also have to run an OpenVPN client on each device you connect
 * VPN Bridge (WIP; McCool)
    - Physical bridge to connect local network to VPN using hardware with multiple physical interfaces
    - To allow use of devices unable to run an OpenVPN client themselves
