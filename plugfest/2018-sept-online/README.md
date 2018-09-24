@@ -109,20 +109,31 @@ https://129.150.200.242/ds
      sudo apt-get install openvpn
      ```
    - To run manually after installation:
+     List the files in '/etc/openvpn'; if `update-resolve-conf` exists, edit the `<config>.ovpn` file
+     and uncomment the three lines starting with `script-security`.  Save.
+     Whenever you need to start the VPN, issue the following command,
      ```
      sudo openvpn <config>.ovpn
      ```
      where `<config>` should be replaced with the unique name for your device.
      Now look at output of `ifconfig`: you should see a new network, and the default gateway should
      be redirected so it is used automatically.
+     To stop the VPN simply kill the above program.
    - To run as a service that starts automatically at boot
+     First, edit the config file as above.  Then issue
      ```
      sudo cp <config>.ovpn /etc/openvpn/<config>.conf
      sudo systemctl start openvpn@<config>
      sudo systemctl enable openvpn@<config>
      ```
      where `<config>` should be replaced with the name of your config file, which is
-     unique for each device on the network.
+     unique for each device on the network.  
+     The VPN will be started and will start automatically at boot (note though that your IP may
+     vary).
+     To check the status, issue
+     ```
+     tail -f /var/log/openvpn/openvpn.log
+     ```
    - Details:
        - Port 1194/UDP is preferred for performance, use 443/TCP if your firewall blocks it
        - WIP: bridging the UDP and TCP VPNs.  Right now they are separate subnetworks
