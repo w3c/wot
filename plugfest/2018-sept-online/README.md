@@ -124,20 +124,21 @@ https://129.150.200.242/ds
      where `<config>` should be replaced with the name of your config file, which is
      unique for each device on the network.
    - Details:
-       - Port 1194/DP is preferred for performance, use 443/TCP if your firewall blocks it
+       - Port 1194/UDP is preferred for performance, use 443/TCP if your firewall blocks it
        - WIP: bridging the UDP and TCP VPNs.  Right now they are separate subnetworks
        - VLAN1 and VLAN2 are intentionally separate networks.
        - They are also connected to the 
          internet via a one-way NAT (all outgoing traffic is permitted, no incoming traffic)
    - Using this configuration from Digital Ocean:
        - https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04 
-       - Note these is a TUN network and does not provide DCHP, mDNS, etc
+       - Note these are TUN (IP) networks and does not provide DCHP, mDNS, ARP discovery, etc
        - In practice this means you need to know the IP address of the device you wish to connect
        - Also, currently IP addresses may change each time you restart the VPN client on a device
        - You also have to run an OpenVPN client on each device you connect
 * VPN Bridge (WIP; McCool)
    - Physical bridge to connect local network to VPN using hardware with multiple physical interfaces
-   - To allow use of devices unable to run an OpenVPN client themselves
+   - Needs a TAP (IP VPN), not TUN... working on it, but decided to at least get the TUN networks above going
+   - Should allow use of devices unable to run an OpenVPN client themselves; ideally, just need to run on a "router" 
    - Something like this, using hostapd: https://askubuntu.com/questions/926116/share-my-vpn-connection-with-other-lan-users
 * Oauth2 server (WIP; McCool)
    - Plan is to use the following: https://www.npmjs.com/package/node-oauth2-server
