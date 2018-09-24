@@ -182,6 +182,8 @@ Companies should note what slots they will be able to attend here:
 
 
 * Google Hangout (Matthias)
+   - Used to video stream remote devices such as Festo Live or Panasonic Lab
+   - https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI
 
 # Projects
 
