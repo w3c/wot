@@ -168,17 +168,17 @@ https://129.150.200.242/ds
 
 |Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan|
 |:---|:---|:---|:---|:---|:---|:---|
-|[https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0019.html A]| 17:00-1d| 20:00-1d| 01:00| 02:00| 08:00| 09:00|
-|[https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html B]| 23:00-1d| 02:00| 07:00| 08:00| 14:00| 15:00|
-|[https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html C]| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00|
+|[A](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0019.html)| 17:00-1d| 20:00-1d| 01:00| 02:00| 08:00| 09:00|
+|[B](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html)| 23:00-1d| 02:00| 07:00| 08:00| 14:00| 15:00|
+|[C](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html)| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00|
 
 Companies should note what slots they will be able to attend here:
 
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
 |:---|:---                 |:---                 |:---                 |:---                 |
-|A   |  | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> Smart Things |
-|B   | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> Panasonic <BR/>Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens |
-|C   | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens |
+|[A](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0019.html)   |  | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> (Panasonic) <BR/> Smart Things | Intel <BR/> Smart Things |
+|[B](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html)   | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> Panasonic <BR/>Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens |
+|[C](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html)   | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens |
 
 
 * Google Hangout (Matthias)
