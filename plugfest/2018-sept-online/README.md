@@ -98,10 +98,8 @@ https://129.150.200.242/ds
 * OpenVPN servers (McCool)
    - Running on DigitalOcean instances in Frankfurt
    - Addresses are 
-       - vlan1.mmccool.net (should be at 104.248.39.149) port 1194 (udp) 
-       - WIP: support for port 443 (tcp) on above server 
-       - WIP: vlan2.mmccool.net (should be at 104.248.39.147) port 1194 (udp)
-       - WIP: support for port 443 (tcp) on above server
+       - vlan1.mmccool.net (should be at 104.248.39.149) port 1194 (udp) and port 443 (tcp)
+       - WIP: vlan2.mmccool.net (should be at 104.248.39.147) port 1194 (udp) and port 443 (tcp)
        - CA is at ca.mmccool.net (should be 104.248.39.148)
    - If you want VPN access please send an email to michael.mccool@intel.com
        - Indicate how many machines you will connect
