@@ -132,7 +132,7 @@ https://129.150.200.242/ds
      vary).
      To check the status, issue
      ```
-     tail -f /var/log/openvpn/openvpn.log
+     sudo tail -f /var/log/openvpn/openvpn.log
      ```
    - Details:
        - Port 1194/UDP is preferred for performance, use 443/TCP if your firewall blocks it
