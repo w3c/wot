@@ -168,9 +168,9 @@ https://129.150.200.242/ds
 
 |Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan|
 |:---|:---|:---|:---|:---|:---|:---|
-|A| 17:00-1d| 20:00-1d| 01:00| 02:00| 08:00| 09:00|
-|B| 23:00-1d| 02:00| 07:00| 08:00| 14:00| 15:00|
-|C| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00|
+|[https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0019.html A]| 17:00-1d| 20:00-1d| 01:00| 02:00| 08:00| 09:00|
+|[https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html B]| 23:00-1d| 02:00| 07:00| 08:00| 14:00| 15:00|
+|[https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html C]| 06:00| 09:00| 14:00| 15:00| 21:00| 22:00|
 
 Companies should note what slots they will be able to attend here:
 
