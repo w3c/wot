@@ -168,7 +168,7 @@ https://129.150.200.242/ds
    - Thu 10:00pm (+24h)
    - Fri 6:00am (+32h) (tentative, Friday morning in Asia)
 -->
-   Click "A", "B" or "C" to get the concrete WebEx information.
+   Click "A", "B" or "C" within the tables below to get the concrete WebEx information for each time slot.
 
 |Time| US<br/>Pacific| US<br/>Eastern| UK| EU| China| Korea<br/>Japan|
 |:---|:---|:---|:---|:---|:---|:---|
