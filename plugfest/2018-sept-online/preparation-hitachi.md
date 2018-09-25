@@ -341,6 +341,8 @@ This section should cover documentation of own implementation including tools in
 
 ### 6.1 Usage instruction for node-red-nodegen
 
+Please let me know if you have questions or if you hit any issues.
+
 #### 6.1.0 Install Node-RED
 
 Follow the instruction in [Node-RED official document](https://nodered.org/docs/getting-started/installation).
@@ -372,4 +374,3 @@ Follow the instruction in [Node-RED official document](https://nodered.org/docs/
   - To write a property or invoke an action, send value to the node.
   - To observe a property or subscribe an event, there is no need for send messages to the node.  Just receive message from the node.
 - Deploy the flow
-
