@@ -310,9 +310,8 @@ The following checking points must be completed together with a partner in clien
 
 #### 3.3.7 Security
 
-The following in combination with HTTPS (HTTP + TLS) are supported by both Online Simulator and Smart Home
-* 
-
+* The following in combination with HTTPS (HTTP + TLS) are supported by both Online Simulator and Smart Home.
+* If a device does not have authentication capability, remote proxy provides basic authentication to the application and rewrites the security metadata in TD for adding a term "basic". Assumption: username and password are shared out of bounds.
 
 #### 3.3.8 Semantic integration
 
