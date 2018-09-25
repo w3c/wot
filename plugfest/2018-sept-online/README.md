@@ -100,7 +100,6 @@ https://129.150.200.242/ds
    - Addresses are 
        - vlan1.mmccool.net (should be at 104.248.39.149) port 1194 (udp) - TUN
        - vlan2.mmccool.net (should be at 104.248.39.147) port 1194 (udp) - TAP
-       - CA is at ca.mmccool.net (should be 104.248.39.148)
    - If you want VPN access please send an email to michael.mccool@intel.com
        - Indicate how many machines you will connect
        - I will send a `<config>.ovpn` file, where `<config>` will be a unique name for your device
