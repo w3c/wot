@@ -189,7 +189,7 @@ Companies should note what slots they will be able to attend here:
    - Used to video stream remote devices such as Festo Live or Panasonic Lab
    - https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI
    
-* Static IPs (for TAP VPN on vlan2 iff DHCP is not working); static 1-99, DHCP from 100-250
+* Static IPs (for TAP VPN on vlan2 if not using DHCP); static 1-99, DHCP from 100-250
    - Intel 10.8.2.(1-9)
    - Siemens 10.8.2.(10-19)
    - Fujitsu 10.8.2.(20-29)
