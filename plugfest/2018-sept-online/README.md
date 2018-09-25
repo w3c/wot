@@ -98,8 +98,8 @@ https://129.150.200.242/ds
 * OpenVPN servers (McCool)
    - Running on DigitalOcean instances in Frankfurt
    - Addresses are 
-       - vlan1.mmccool.net (should be at 104.248.39.149) port 1194 (udp) and port 443 (tcp)
-       - WIP: vlan2.mmccool.net (should be at 104.248.39.147) port 1194 (udp) and port 443 (tcp)
+       - vlan1.mmccool.net (should be at 104.248.39.149) port 1194 (udp) - TUN
+       - vlan2.mmccool.net (should be at 104.248.39.147) port 1194 (udp) - TAP
        - CA is at ca.mmccool.net (should be 104.248.39.148)
    - If you want VPN access please send an email to michael.mccool@intel.com
        - Indicate how many machines you will connect
@@ -134,21 +134,31 @@ https://129.150.200.242/ds
      ```
      sudo tail -f /var/log/openvpn/openvpn.log
      ```
+     You might have to create the directory first...
+      ```
+     sudo mkdir /var/log/openvpn
+     ```
    - Details:
-       - Port 1194/UDP is preferred for performance, use 443/TCP if your firewall blocks it
-       - WIP: bridging the UDP and TCP VPNs.  Right now they are separate subnetworks
-       - VLAN1 and VLAN2 are intentionally separate networks.
-       - They are also connected to the 
+       - Only port 1194/UDP is supported for now 
+       - If people have a firewall that blocks this, let me know and I can set up a 443/TCP server
+       - VLAN1 and VLAN2 are intentionally separate networks.  
+       - VLAN1 uses TUN, VLAN2 uses TAP
+       - Only TAP can be bridged to an external network
+       - They are both connected to the 
          internet via a one-way NAT (all outgoing traffic is permitted, no incoming traffic)
-   - Using this configuration from Digital Ocean:
+   - The TUN setup mostly follows this configuration from Digital Ocean:
        - https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04 
        - Note these are TUN (IP) networks and does not provide DCHP, mDNS, ARP discovery, etc
        - In practice this means you need to know the IP address of the device you wish to connect
        - Also, currently IP addresses may change each time you restart the VPN client on a device
        - You also have to run an OpenVPN client on each device you connect
+    - The TAP setup is a modification of the above
+       - And so not as well tested
+    - Tweaks
+       - Comments out the "user" and "group" lines in the config files to make teardown cleaner
 * VPN Bridge (WIP; McCool)
    - Physical bridge to connect local network to VPN using hardware with multiple physical interfaces
-   - Needs a TAP (IP VPN), not TUN... working on it, but decided to at least get the TUN networks above going
+   - Needs a TAP (ethernet VPN), not TUN... 
    - Should allow use of devices unable to run an OpenVPN client themselves; ideally, just need to run on a "router" 
    - Something like this, using hostapd: https://askubuntu.com/questions/926116/share-my-vpn-connection-with-other-lan-users
 * Oauth2 server (WIP; McCool)
@@ -194,6 +204,7 @@ Companies should note what slots they will be able to attend here:
    - https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI
    
 * Static IPs (for TAP VPN on vlan2 if not using DHCP); static 1-99, DHCP from 100-250
+  NOT YET SET UP ... MAY NOT BE NEEDED!
    - Intel 10.8.2.(1-9)
    - Siemens 10.8.2.(10-19)
    - Fujitsu 10.8.2.(20-29)
