@@ -184,6 +184,10 @@ Companies should note what slots they will be able to attend here:
 |[B](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html)   | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> Panasonic <BR/>Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens |
 |[C](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html)   | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens |
 
+* Spreadsheet for Test Pairings
+   - https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0029.html (W3C login required)
+   - Add topics you want to work on and mark your organization in topic rows where you want to join
+   - Add topics on the “heap” at the end of the document if not sure about the time slot yet
 
 * Google Hangout (Matthias)
    - Used to video stream remote devices such as Festo Live or Panasonic Lab
