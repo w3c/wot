@@ -20,7 +20,8 @@ N/A
 
 ### 1.3 Public Tools
 
-* <i>node-red-nodegen for generating WoT node (repository URL: TBD)</i>
+* <i>node-red-nodegen for generating WoT node (repository URL: https://github.com/k-toumura/node-red-nodegen/tree/webofthings)</i>
+  - **NOTICE: This branch (webofthings) is under heavy active development and not fully tested. Not suitable for production use.**
 
 ## 2 Participants and Servients
 
@@ -340,23 +341,36 @@ This section should cover documentation of own implementation including tools in
 
 ### 6.1 Usage instruction for node-red-nodegen
 
-#### 6.1.0 Node-RED installation
+Please let me know if you have questions or if you hit any issues.
+
+#### 6.1.0 Install Node-RED
 
 Follow the instruction in [Node-RED official document](https://nodered.org/docs/getting-started/installation).
 
 #### 6.1.1 Build node-red-nodegen 
 
-- git clone <i>(repository address: tbd.)</i>
-- cd node-red-nodegen
-- git checkout webofthings
-- npm install
+- clone the repository
+  - ``% git clone https://github.com/k-toumura/node-red-nodegen.git``
+- move to 'webofthings' branch
+  - ``% cd node-red-nodegen``
+  - ``% git checkout webofthings``
+- install dependent modules
+  - ``% npm install``
 
 #### 6.1.2 Create a node from Thing Description
 
-- node bin/node-red-nodegen.js <i>your</i>.jsonld
+- generate a node module
+  - ``% node bin/node-red-nodegen.js td.jsonld``
   - node is genereted at ./node-red-contrib-wot<i>yourthingname</i>
-- cd ~/.node-red
-- npm install /PATH/TO/node-red-contrib-wot<i>yourthingname</i>
-- node-red
-
-Then, you can see your Thing node on the pallet (left pane of Node-RED flow editor).
+- install the module
+  - ``% cd ~/.node-red``
+  - ``% npm install /PATH/TO/node-red-contrib-wotyourthingname``
+- run node-red
+  - ``% node-red``
+  - Then, you can see your Thing node on the pallet (left pane of Node-RED flow editor).
+- Create a flow
+  - Put any wot node on the editor, and configure by click it.
+  - To read a property, send any message to the node. Then received value will send from the node. 
+  - To write a property or invoke an action, send value to the node.
+  - To observe a property or subscribe an event, there is no need for send messages to the node.  Just receive message from the node.
+- Deploy the flow
