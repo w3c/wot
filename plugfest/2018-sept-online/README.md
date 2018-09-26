@@ -1,6 +1,12 @@
 # Online Plugfest
 ------------------------
 ## Services
+
+* WIP: OAuth2 authorization server (McCool)
+   - maybe also distribute VPN keys
+   - supported by Intel
+   - Plan A is everyone should have an internet-visible service with authentication
+   - VPN is just for emulating a local network for testing
 * Thing Directory (version 0.9.0) local to vlan2: http://10.8.2.3:8080
 
 ## Target Features
@@ -283,14 +289,7 @@ Companies should note what slots they will be able to attend here:
     - We will provide robotics-cleaner servient through cloud (both real/simulator)
     - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
-# Services
 
-* OAuth2 authorization server (McCool)
-   - maybe also distribute VPN keys
-   - supported by Intel
-   - Plan A is everyone should have an internet-visible service with authentication
-   - VPN is just for emulating a local network for testing
-* Thing directory service
 
 # Proxies
 
