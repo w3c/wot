@@ -2,6 +2,17 @@
 ------------------------
 ## Services
 
+* WIP: OAuth2 authorization server (mailto:Michael.McCool@intel.com)
+* WIP: ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
+* ThingWeb Thing Directory (version 0.9.0) "local" to vlan2: http://10.8.2.3:8080 (mailto:Michael.McCool@intel.com)
+* [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
+    - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
+* TD validation: http://plugfest.thingweb.io/playground/
+* Oracle IoT Cloud Service Instance: https://129.150.200.242/ui (mailto:Michael.Lagally@oracle.com)
+* Oracle Digital Twin Simulator: https://129.150.200.242/ds (mailto:Michael.Lagally@oracle.com)
+* OpenVPN TAP server: vlan2.mmccool.net:1194/udp (mailto:Michael.McCool@intel.com for access)
+* Google hangout: https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI (mailto:Matthias.Kovatsch@siemens.com)
+
 ## Target Features
 * Security
     - All devices should support secure access
@@ -282,14 +293,7 @@ Companies should note what slots they will be able to attend here:
     - We will provide robotics-cleaner servient through cloud (both real/simulator)
     - Basic standby time is from 10:00 to 17:00 JST on Tue, Wed and Thu. Please ask for support outside of these slots if necessary.
 
-# Services
 
-* OAuth2 authorization server (McCool)
-   - maybe also distribute VPN keys
-   - supported by Intel
-   - Plan A is everyone should have an internet-visible service with authentication
-   - VPN is just for emulating a local network for testing
-* Thing directory service
 
 # Proxies
 

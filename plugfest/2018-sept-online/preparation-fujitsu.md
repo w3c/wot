@@ -13,8 +13,9 @@ This section lists the infrastructure available for the PlugFest, which can be u
 ### 1.1 Public Thing Directories
 
 Cloud Thing Directories
-* [TD Directory]() running on Fujitsu's Remote Proxy Servient.
-* [Authentication credentials]() - to be distributed via W3C email and/or use OAuth2
+* [TD Directory]() running on Fujitsu's Remote Proxy Servient at http://wot.f-ncs.ad.jp/Things
+An application servient can lookup TDs registered the remote proxy servient with this URL,
+and can get TD with http://wot.f-ncs.ad.jp/Things/<id>.
 
 Local LAN Thing Directories (simulated local LANs using OpenVPN)
 * [TD Directory] running on Fujitsu's Local Proxy Servient.
@@ -22,9 +23,9 @@ Local LAN Thing Directories (simulated local LANs using OpenVPN)
 
 ### 1.2 Public Proxies
 
-[Remote Proxy Servient] running at https://xxx.fujitsu.com:xxxx
+[Remote Proxy Servient] running at http://wot.f-ncs.ad.jp
     
-[Local Proxy Servient] running at https://192.168.x.x:xxxx
+[Local Proxy Servient] running at http://192.168.x.x:xxxx
 
 ### 1.3 Public Tools
 
@@ -312,6 +313,8 @@ The following checking points must be completed together with a partner in clien
 
 * The following in combination with HTTPS (HTTP + TLS) are supported by both Online Simulator and Smart Home.
 * If a device does not have authentication capability, remote proxy provides basic authentication to the application and rewrites the security metadata in TD for adding a term "basic". Assumption: username and password are shared out of bounds.
+* [Authentication credentials]() - to be distributed via W3C email and/or use OAuth2
+
 
 #### 3.3.8 Semantic integration
 
