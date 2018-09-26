@@ -12,6 +12,7 @@
 
 ### Usage
 
+* Open the [Local simulator](http://10.8.2.5) (Access restricted to VLAN2 only).
 * GET TD from upper right JSON-LD icon.
 * Choose menu from upper left hamburger icon.
     * Select device to simulate.
