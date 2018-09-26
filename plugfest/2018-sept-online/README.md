@@ -11,6 +11,7 @@
 * Oracle IoT Cloud Service Instance: https://129.150.200.242/ui (mailto:Michael.Lagally@oracle.com)
 * Oracle Digital Twin Simulator: https://129.150.200.242/ds (mailto:Michael.Lagally@oracle.com)
 * OpenVPN TAP server: vlan2.mmccool.net:1194/udp (mailto:Michael.McCool@intel.com for access)
+* Google hangout: https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI (mailto:Matthias.Kovatsch@siemens.com)
 
 ## Target Features
 * Security
