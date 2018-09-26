@@ -17,7 +17,7 @@
 * Google hangout: https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI (mailto:Matthias.Kovatsch@siemens.com))
 * OCF Devices resource directory: http://10.8.2.7:8000 (mailto:Michael.McCool@intel.com)
     - This will in theory find ALL OCF devices on vlan2, no matter where they connect from in the world
-* WIP: OCF-WoT Metadata translator: http://10.8.2.7:8090 (mailto:Michael.McCool@intel.com)
+* OCF-WoT Metadata translator: http://10.8.2.7:8091 (mailto:Michael.McCool@intel.com)
     - Dynamically generates TDs for all OCF devices in the resource directory
 
 ## Target Features
