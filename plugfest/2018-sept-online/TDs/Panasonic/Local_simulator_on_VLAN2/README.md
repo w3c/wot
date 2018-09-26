@@ -2,7 +2,7 @@
 
 - You can use Local simulator on VLAN2 just like Online simulator.
 - Local simulator is [here](http://10.8.2.5) (Access restricted to VLAN2 only).
-- TDs that include ip address.
+- TDs include ip address.
 
 ### Important Notice
 
