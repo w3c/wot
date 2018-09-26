@@ -48,7 +48,7 @@ Connected_Car_Shared	| Shared Connected Car instance | [Connected_Car_Shared.jso
 HVAC_Shared | Shared HVAC instance | [HVAC_Shared.jsonld](TDs/Oracle/HVAC_Shared.jsonld)
 Truck_Shared | Shared Truck instance | [Truck_Shared.jsonld](TDs/Oracle/Truck_Shared.jsonld)
 Festo_Shared | Shared Festo instance | [Festo_Shared.jsonld](TDs/Oracle/Festo_Shared.jsonld)
-KETI_Shared | Shared KETI Simulator instance | [KETI_Sim_Environment_Sensor_Tokyo.jsonld](TDs/KETI/KETI_Sim_Environment_Sensor_Tokyo.jsonld)
+KETI_Shared | Shared KETI Simulator instance | [KETI_Sim_Environment_Sensor_Tokyo.jsonld](TDs/Oracle/KETI_Sim_Environment_Sensor_Tokyo.jsonld)
 
 ## 2 Participants and Servients
 
