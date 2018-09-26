@@ -6,7 +6,8 @@
 * WIP: ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
 * ThingWeb Thing Directory (version 0.9.0) local to vlan2: http://10.8.2.3:8080
 * [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
-* An application servient can get TD with http://wot.f-ncs.ad.jp/Things/<id>.
+    - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
+* TD validation: http://plugfest.thingweb.io/playground/
 
 ## Target Features
 * Security
