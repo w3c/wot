@@ -1,0 +1,13 @@
+{
+    "name": "Valve",
+    "id": "urn:dev:wot:com:siemens:calve",
+    "base": "coap://193.168.2.199:5683/",
+    "properties": {"status": {
+        "type": "boolean",
+        "forms": [{"href": "status"}]
+    }},
+    "actions": {
+        "OpenPneumaticValve": {"forms": [{"href": "open"}]},
+        "ClosePneumaticValve": {"forms": [{"href": "close"}]}
+    }
+}

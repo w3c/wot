@@ -1,0 +1,25 @@
+{
+    "name": "Node MCU MQTT Parking Sensor",
+    "id": "urn:dev:wot:com:siemens:parking",
+    "actions" : {
+        "switchParkingStatus" : {
+                "forms": [
+            {"href": "mqtt://192.168.1.187:1883/switchParkingStatus", "mqtt:qos":  0, "mqtt:retain" : false}
+        ]
+        }
+    },
+    "events": {
+        "lightSensor": {
+        "type": "integer",
+        "forms": [
+            {"href": "mqtt://192.168.1.187:1883/lightSensor", "mqtt:qos":  0, "mqtt:retain" : false}
+        ]
+    },
+    "parkingStatus": {
+        "type": "boolean",
+        "forms": [
+            {"href": "mqtt://192.168.1.187:1883/parkingStatus",  "mqtt:qos":  0, "mqtt:retain" : false}
+        ]
+    } 
+} 
+}

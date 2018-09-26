@@ -1,0 +1,87 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": "Thing",
+  "name": "PanaSimHueGroup1",
+  "id": "p-wot:PanaSimHueGroup1",
+  "base": "http://10.8.2.5/wot/things/PanaSimHueGroup1/",
+  "security": [
+    {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorizationUrl": "https://w3c.p-wot.com:8443/auth"
+    }
+  ],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "label": "power",
+      "type": "boolean",
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "power",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://10.8.2.5:8003/poll/PanaSimHueGroup1/power",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty"
+        },
+        {
+          "href": "ws://10.8.2.5:8003/wot/things/PanaSimHueGroup1/power",
+          "mediaType": "application/json",
+          "rel": "observeProperty"
+        }
+      ]
+    },
+    "rgbValue": {
+      "label": "rgbValue",
+      "type": "object",
+      "properties": {
+        "red": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "green": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "rgbValue",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://10.8.2.5:8003/poll/PanaSimHueGroup1/rgbValue",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll",
+          "rel": "observeProperty"
+        },
+        {
+          "href": "ws://10.8.2.5:8003/wot/things/PanaSimHueGroup1/rgbValue",
+          "mediaType": "application/json",
+          "rel": "observeProperty"
+        }
+      ]
+    }
+  }
+}

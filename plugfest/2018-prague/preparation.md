@@ -6,8 +6,8 @@ This document describes a general information related to the next plugfest in Pr
 
 ## 1.1 Backgroud
 
-In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers. 
-The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles. 
+In the past plugfest, we've already checked consistency of the interfaces of two Servients provided by different members. They were combinations of application and device, or device to device. These application and devices were compatible to rWoT and talked with it. To setup a larger scale system, the gateawy functions are required to connect multiple applications and devices located on the different places. We'd introduced proxy Servients in the Burlingame plugfest to archieve this purpose. As a result of this, a variety of devices settled in some cases could be connected from the application running both on the cloud and on the local controlers.
+The figure below shows the diagram of all the Serviente connected to the network of the plugfest. 8 companies brought applications, remote proxies, local proxies and devices as WoT Serivients or protocol converters with legacy devicee, such as home appliances, building facilities, factory facilities and vihcles.
 
 ![buriling plugfest](images/burlingame.png)
 
@@ -29,6 +29,22 @@ This is the smarthome application that the application on the smartphone can con
 ![Use case 3](images/connectedcar.png)
 
 # 2. Servients
+
+All servients should register their TDs to a central Thing Directory for discovery purposes.
+Thingweb's Directory should be used for this purpose. To register a TD, send:
+```
+POST http://plugfest.thingweb.io:8081/td
+Content-Type: application/ld+json
+Body: {... your TD ...}
+```
+
+to which the server should reply with the location of the created resource for your TD (`http://plugfest.thingweb.io:8081/td/{your-handle}`):
+```
+201 Created
+Location: /td/{your-handle}
+```
+
+A GUI is also available at http://plugfest.thingweb.io:8081/ to manually register TDs (_no error reporting yet_).
 
 ## 2.1 4-layered Servients
 
@@ -104,7 +120,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">(tunnel)</td>
     <td></td>
     <td colspan="2">HTTPS/CoAP(s)</td>
-    <td colspan="2">Multi</td>
+    <td colspan="2">HTTP + MQTT</td>
     <td></td>
   </tr>
   <tr>
@@ -129,7 +145,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">HTTP</td>
     <td>HTTP</td>
     <td colspan="2">CoAP</td>
-    <td colspan="2">Multi</td>
+    <td colspan="2">HTTP + MQTT</td>
     <td>HTTP</td>
   </tr>
   <tr>
@@ -142,7 +158,7 @@ Notes: The following contents has been just copied from Barlingame table. Please
     <td colspan="2">Remote Festo Plant (valve, pump, levelmeter), BACnet Demonstrator, Logo! Demonstrator, RGB LED Light</td>
     <td>Sensors(Luminance sensor, Humidity sensor, Temperature sensor), Binary actuator</td>
     <td colspan="2">OCF RGB light, OCF Light, OCF Buzzer, OCF temperture, OCF Button, OCF Proximity, OCF Slider, Still camera</td>
-    <td colspan="2">Dimmable Light(OCF), Motion Sensor(OCF), Dimmable Light(ST), Motion Sensor(ST), Gas Sensor(IPSO), PM2.5 Sensor(IPSO), Temperature Sensor(IPSO), Humidity Sensor(IPSO), Loudness Sensor(IPSO), Illuminance Sensor(IPSO), PIR Sensor(IPSO), Barometer Sensor(IPSO), OCF Bridge</td>
+    <td colspan="2">Dimmable Light(ST), Motion Sensor(IPSO), Loudness Sensor(IPSO), Illuminance Sensor(IPSO),
     <td>Sensors and Actuators in the car(BMW X5)</td>
   </tr>
 </table>
@@ -174,12 +190,12 @@ Fujitsu:
  - Registry and discovery opeartions
  - Read and Write properties operations
  - Event operation
- 
+
  See Appendix for the sequence diagrams and the interfaces between applications/devices and proxies.
 
 ### 2.4.4 Device Servients
 
-Panasonic:
+#### Panasonic
  - [LED light](TDs/PanasonicTDs/huegroup-p1.jsonld): on/off, RGB properties (Remote/Internet/HTTPS)
  - [Air conditioner home](TDs/PanasonicTDs/air-conditioner-p1.jsonld): on/off, mode, temperature, wind level properties and events (Remote/Internet/HTTPS(+WSS))
  - [Air conditioner car](TDs/PanasonicTDs/electric-bulletin-board-p2.jsonld): on/off, number properties (Remote/Internet/HTTPS)
@@ -189,6 +205,12 @@ Panasonic:
  - [Google Home mini](TDs/PanasonicTDs/google-home-p2.jsonld): speech action (Local/LAN/HTTP)
  - WoT Simulator: can simulate the WoT devices easily. (Local/LAN/HTTP)
 
+(Note: Panasonic Remote Servients requires JSON Web Token. Also actual URL is hidden. Please contact)
+
+#### Siemens
+ - [FestoLive](https://raw.githubusercontent.com/w3c/wot/master/plugfest/2018-prague/TDs/SiemensTDs/FestoLive.jsonld): PumpStatus, ValveStatus, Tank102LevelValue, Tank102OverflowStatus, Tank101MaximumLevelStatus, Tank101MinimumLevelStatus, Tank101OverflowStatus (Remote/Internet/HTTPS(+Webhook))
+ - [EventSource](https://raw.githubusercontent.com/w3c/wot/master/plugfest/2018-prague/TDs/SiemensTDs/EventSource.jsonld): reset, onchange (Local/WLAN/HTTP or [self-hosted](https://github.com/thingweb/node-wot/blob/master/examples/scripts/example-event.js))
+ - [Unicorn](https://raw.githubusercontent.com/w3c/wot/master/plugfest/2018-prague/TDs/SiemensTDs/Unicorn.jsonld): brightness, color, gradient, forceColor, cancel (Local/WLAN/HTTP+CoAP)
 
 # 3 Plugfest scenarios
 
@@ -197,7 +219,7 @@ Examples of scenario involving semantic querying:
 - Energy saving: turn heating off when a window opens in the same room
 - Meta-action: switch on a light either by changing its value or by invoking an action
 - Circle: all lamps in the same room sequentially switch off their nearest neighbor that is still on
-- An application which detects the motion in a room and controls the AC operation in  a room. 
+- An application which detects the motion in a room and controls the AC operation in  a room.
 Devices: air conditioner (Fujitsu and Panasonic), human detection sensor (Panasonic and SmartThings)
 - An application which controls the AC in  a room based on the room temperature.
 Devices: air conditioner (Fujitsu and Panasonic), temperature sensor (Lemonbeat, Intel, SmartThings)
@@ -218,22 +240,31 @@ Devices: light (Fujitsu, Intel, SmartThings), human detection sensor (Panasonic 
   - Application
     - Node-RED
   - Proxy
-    - Fujitsu Cloud, Local Gateway
+    - Remote and Local Gateway
   - Device
     - LED light, Air conditioner, Amazon Echo Dot, Google Home mini, Sensors, Rotating Light
 - Steps
-  1. TD of devices are registered to Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.1)
-  2. Application retrieves TDs from Fujitsu Remote Proxy. (Sequence A.2)
-  3. Application subscribes Amazon Echo's "ask" event / starts observing Air conditioner's "operationStatus" property. (Sequence A.5)
-  4. Application receives Amazon Echo's "ask" event / detects Air conditioner's "operationStatus" property is changed. (Sequence A.5)
-  5. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
-  6. TD of devices are unregistered from Fujitsu Local Proxy manually, or using POSTMAN. (Sequence A.7)
+  1. TD of devices are registered to Local Proxy manually, or using POSTMAN. (Sequence A.1)
+  2. Application retrieves TDs from Remote Proxy. (Sequence A.2)
+  3. Applicatoin reads TD, subscribe event / observe property and receive changes (see following diagram)
+  ![images](images/seq_http_longpoll.png)
+    - Pattern 1: Property observe
+      - Application reads air-conditioner-p1.jsonld TD, finds properties with "observable": true and its form with "rel": "observe" and "subProtocol": "LongPoll", then calls HTTP GET to corresponding "href" which will be pending until the property changes.
+      - Application receives GET response and detects that the property has changed.
+    - Pattern 2: Event
+      - Application reads amazon-echo-p1.jsonld TD, finds "ask" event and its form with "subProtocol":"LongPoll", then calls HTTP GET to corresponding "href" which will be pending until the event fires.
+      - Application receives GET response and detects that the event has fired.
+  4. Application writes Rotating Light's "OperationStatus" property and invokes Google Home mini's "speech" action. (Sequence A.4)
+  5. Repeats 3. to 4.
+  6. TD of devices are unregistered from Local Proxy manually, or using POSTMAN. (Sequence A.7)
 - Security Consideration
-  - JSON Web Token (JWT) should be added, when you access to Panasonic servient.
-- Note
-  - Air conditioners (PanasonicAirConditionerP1 and PanasonicAirConditionerP2) don't support a parallel access, so an application should access these things in series.
+  - JSON Web Token (JWT) is needed, when you access to Panasonic servient.
 
-# 4 Schedule
+# 4 Tools
+
+The [Thingweb project](https://github.com/thingweb/) provides various tools to view TDs (WebUI), test them (Thingweb playground) and register and discover them (Thingweb Directory). See [plugfest.thingweb.io](http://plugfest.thingweb.io/) for more details.
+
+# 5 Schedule
 
 Sat 24.3.18:  9:00-18:00  
 Sun 25.3.18:  9:00-18:00  
@@ -241,7 +272,7 @@ Sun 25.3.18:  9:00-18:00
 Venue: Oracle Czechia Office
 U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 
-# 5 Requirements for PlugFest Setting
+# 6 Requirements for PlugFest Setting
 
 | Participant | Number of Participants | Number of Power outlets | Network | Remarks |
 |-------------|------------------------|-------------------------|---------|---------|
@@ -250,25 +281,34 @@ U Trezorky 921/2, 158 00 Praha 5 - Jinonice-Praha 5
 | IRI         |                        |                         | Wi-Fi   |         |
 | Siemens     | 4+(1)                  | 2                       | Wi-Fi   |         |
 | Intel       | 1                      | 1                       | Wi-Fi and/or wired Ethernet | External ports: 22, 80, 443. Will bring own router and power bar.   |
-| SmartThings | 1                      | 1                       | Wi-Fi   | 4sq ft table space |
+| SmartThings | 1                      | 1                       | Wired   | 4sq ft table space |
 | EURECOM     | 2                      | 2                       | Wi-Fi   |         |
 | Oracle      | 1                      | 1                       | Wi-Fi   |         |
 | Hitachi     | 1                      | 1                       | Wi-Fi(Ports: 443/tcp,443/udp(optional))   | use for note PC to access corporate servers via VPN. |
 | Paciello    | 1                      | 1                       | Wi-Fi   |Will only need power outlet for laptop. Won't be bringing additional equipment.|
 | Others      |                        |                         | Wi-Fi   |         |
 
-Notes: 
+Notes:
  - Deadline is March 21st.
  - Power outlets Type-A will be provided by the venue.
  - Anyone who has requirements for ports outside of 80/443/22 should send an email to Oracle.
  - You have to bring displays, if need.
 
-  
+
 # 7 Implementation guidelines
 
 * "name" field of Thing Description shall be unique among the things which will be registered to Fujitsu Proxy.  
   Recommended convention is 'Company name'+'Thing name'  
   e.g.) "name": "PanasonicAirConditionerP1"
+  
+  
+# 8 Setup for the plugfest
+
+Fujitsu's local proxy serviernt address:
+
+Local proxy:  IP address=192.168.1.99,   port=18081
+
+Regarding to the information about our remote procy, please contact to Fujitsu members.
 
 # Appendix A: Sequence diagrams specified in Fujitsu's proxy servients
 
@@ -314,7 +354,7 @@ Body: TD
 ## A3 Read property
 The application servient sends a request to read the value of the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
 
-![images](images/seq_getproperty.png)
+![images](images/seq_readproperty.png)
 
 *Example: using HTTP*
 
@@ -345,7 +385,7 @@ Body: 25(value)<BR>
 ## A4 Write property
 The application servient sends a request to write the value to the property of the device servient to the remote proxy servient. The remote and local proxy servient relay to this request to the device servient.
 
-![images](images/seq_setproperty.png)
+![images](images/seq_writeproperty.png)
 
 *Example: using HTTP*
 
@@ -360,8 +400,9 @@ The remote proxy puts the URL for the property from TD of the device servient re
 (32) HTTP PUT http://glps.example.com/Things/deviceName/Property/status<BR>
 Body: ON<BR>
 
-## A5 Subscribe and Event
-The application servient sends a request to subscribe the property of the device servient to the remote proxy servient. The device servient keep to send the value of the specified property periodically.
+## A5 Subscribe and Event with Server Sent Event method
+The application servient can obtain the change or the current status of the device servient via proxy servient using subscription procedures. The application servient sends a request to subscribe the property of the device servient via the remote and local proxy servient. The device servient keep to send the value of the specified property periodically.
+Diagram A5 and A6 show the sequence diagarms for Subcribtion, Event handling, and Unsubscription for stopping event handling with using Server Sent Event method. 
 
 ![images](images/seq_subscribe.png)
 
@@ -393,7 +434,7 @@ If this subscription succeeded, the events keep to be notified to the applicatio
 (47)-(49) <BR>
 Body: data:25(value)<BR>
 
-## A6 Unsubscribe
+## A6 Unsubscribe with Server Sent Event method
 The application servient sends a request to unsubscribe to the remote proxy servient to stop to notify the event from the device servient.
 
 ![images](images/seq_unsubscribe.png)
@@ -420,7 +461,38 @@ The device servient stops sending event and returns the response with “200 OK�
 (54)-(56) 200 OK<BR>
 Body: none<BR>
 
-### A7 Unregister
+### A7 Subbscribe and Event with Long Polliing method
+Diagram A7 shows another implmentation for event handling with the Long Polling method.
+The application servient sends a request to subscribe the property of the device servient to the remote proxy servient. The device servient keep to send the value of the specified property periodically or when some events happen until the application unsubscribes.
+
+![images](images/seq_subscribe_longpolling.png)
+
+*Example: using HTTP*
+
+The application subscribes an event of the device servient to be notified. The application gets URI for this event and send a request to the remote proxy servient.
+
+(41) HTTP GET http://rps.example.com/lps1/Things/deviceName/Poll/eventName
+Body: none
+
+The remote proxy gets the URI for the event from TD of the device servient registered in the repository.
+
+(42) HTTP GET http://lps.example.com/Things/deviceName/Poll/eventName
+Body: none
+
+The local proxy gets the URI for this event from TD of the device servient registered in the repository.
+
+(43) HTTP GET http://device.example.com/poll/device/changed
+Body: none
+
+The device servient doesn’t send a response immediately and keep this connection until an event happens. When the value of the property is changed, the device servient sends an event notification to the application via the local and remote proxy servient with Long Polling method. The device responses “200 OK” with a value.
+
+(44)-(46) 200 OK
+Body: value
+
+This flow of step from (41) to (46) will be repeated during the application sending requests.
+In this case, “Unsubscribe” message dose not exist. If the application servient stop the subscription, it stop to send the request (47).
+
+### A8 Unregister
 The device servient unregister from the local proxy servient before shutdown. The local proxy servient unregister this device servient from the remote proxy not to access from the application.
 
 ![images](images/seq_unregister.png)
@@ -438,7 +510,7 @@ Body: none<BR>
 
 (64) 200 OK<BR>
 Body:none<BR>
-  
+
 # Appendix B: Changes from previous PlugFest in Burlingame
 ## B1 TD changes
 * new link term on the top level

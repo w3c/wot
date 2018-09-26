@@ -1,0 +1,198 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {"iot": "http://iotschema.org/",
+     "http": "http://www.w3.org/2011/http#"}
+  ],
+  "name": "st-lamp-01",
+  "description": "Philips Hue Lamp",
+  "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability", "iot:HScolorCapability", "iot:ColorTemperatureCapability"],
+  "id": "urn:uuid:9b1a5896-75bf-481d-b29f-4e35c68196d5",
+  "base": "http://10.0.0.23/api/b5q6DpQiIp6lAbc4TTv4PNd0w7pPJyrDfV0tBx9m/",
+  "properties": {
+    "state": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "object",
+          "properties": {
+            "on": {
+              "@type": ["iot:SwitchStatus", "iot:SwitchData"],
+              "type": "boolean"
+            },
+            "bri": {
+              "@type": ["iot:LevelData", "iot:CurrentLevel"],
+              "type": "number",
+              "minimum": 0,
+              "maximum": 254
+            },
+            "hue": {
+              "@type": ["iot:HueData", "iot:CurrentHue"],
+              "type": "number",
+              "minimum": 0,
+              "maximum": 65535,
+              "iot:ScaleUnits": "iot:ColorHueDegrees",
+              "iot:ScaleMinimum": 0,
+              "iot:ScaleMaximum": 360
+            },
+            "sat": {
+              "@type": ["iot:SaturationData", "iot:CurrentSaturation"],
+              "type": "number",
+              "minimum": 0,
+              "maximum": 254
+            },
+            "ct": {
+              "@type": ["iot:CurrentColorTemperature", "iot:ColorTemperatureData"],
+              "type": "number",
+              "iot:Units": "iot:Mired",
+              "minimum": 153,
+              "maximum": 500,
+              "iot:ScaleUnits": "iot:DegreesKelvin",
+              "iot:ScaleMinimum": 6500,
+              "iot:ScaleMaximum": 2000
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+        "href": "lights/24",
+        "mediaType": "application/json"
+        }
+      ]
+    },
+    "onoff": {
+      "label": "OnOff",
+      "@type": ["iot:SwitchStatus"],
+      "description": "On/off switch state",
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "object",
+          "properties": {
+            "on": {
+              "@type": "iot:SwitchData",
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "forms": [{
+        "href": "lights/24",
+        "mediaType": "application/json"
+      }]
+    },
+    "brightness": {
+      "label": "Brightness",
+      "@type": ["iot:CurrentLevel"],
+      "description": "Current Brightness Level",
+      "type": "object",
+      "properties": {
+        "bri": {
+          "@type": "iot:LevelData",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 254
+        }
+      },
+      "forms": [{
+        "href": "lights/24",
+        "mediaType": "application/json"
+      }]
+    }
+  },
+  "actions": {
+    "turnon": {
+      "label": "TurnOn",
+      "@type": ["iot:TurnOnAction"],
+      "description": "Action to turn the light on",
+      "input":{
+        "type": "object",
+        "properties": {
+          "on": { "type": "boolean", "const": true }
+        }
+      },
+      "forms": [{
+        "href": "lights/24/state",
+        "inputMediaType": "application/json",
+        "http:methodName": "PUT"
+        }]
+    },
+    "turnoff": {
+      "label": "TurnOff",
+      "@type": ["iot:TurnOffAction"],
+      "description": "Action to turn the light off",
+      "input":{
+        "type": "object",
+        "properties": {
+          "type": "boolean",
+          "on": { "type": "boolean", "const": false }
+        }
+      },
+      "forms": [{
+        "href": "lights/24/state",
+        "inputMediaType": "application/json",
+        "http:methodName": "PUT"
+        }]
+    },
+    "setlevel": {
+      "label": "SetLevel",
+      "@type": ["iot:SetLevelAction"],
+      "description": "Action to change the brightness of the light",
+      "input": {
+        "type": "object",
+        "properties": {
+          "bri": {
+            "@type": ["iot:LevelData"],
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 254
+          },
+          "transitiontime": {
+	          "@type": ["iot:TransitionTimeData"],
+	          "type": "number",
+            "minimum": 0,
+            "maximum": 65535,
+            "iot:units": "iot:Seconds",
+            "iot:UnitScaleFactor": 0.1
+	        }
+        }
+      },
+      "forms": [{
+        "href": "lights/state",
+        "inputMediaType": "application/json",
+        "http:methodName": "PUT"
+      }]
+    },
+    "steplevel": {
+      "label": "StepLevel",
+      "@type": ["iot:StepLevelAction"],
+      "description": "Action to change the brightness of the light by a positive or negative increment",
+      "input": {
+        "type": "object",
+        "properties": {
+          "bri_inc": {
+            "@type": ["iot:LevelData"],
+            "type": "integer",
+            "minimum": -254,
+            "maximum": 254
+          },
+          "transitiontime": {
+            "@type": ["iot:TransitionTimeData"],
+            "type": "number",
+            "minimum": 0,
+            "maximum": 65535,
+            "iot:units": "iot:Seconds",
+            "iot:UnitScaleFactor": 0.1
+          }
+        }
+      },
+      "forms": [{
+        "href": "lights/24/state",
+        "inputMediaType": "application/json",
+        "http:methodName": "PUT"
+      }]
+    }
+  }
+}

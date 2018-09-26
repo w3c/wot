@@ -1,0 +1,165 @@
+{
+  "@context": [
+    "http://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "http://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {"iot": "http://iotschema.org/context.jsonld",
+     "http": "http://www.w3.org/2011/http#"}
+  ],
+  "base": "http://0m2m.net:1880",
+  "@type": [ "Thing", "iot:Light", "iot:BinarySwitch", "iot:Level" ],
+  "name": "Lamp",
+  "interaction": [
+    {
+      "name": "Switch State",
+      "@type": ["Property", "iot:SwitchState"],
+      "schema":  {
+        "type": "object",
+        "field": [
+          {
+            "name": "on",
+            "@type": ["iot:StateData"],
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ]
+      },
+      "form": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "readProperty",
+          "http:methodName": "GET"
+        },
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "writeProperty",
+          "http:methodName": "POST"
+        }
+      ]
+    },
+    {
+      "name": "Current brightness",
+      "@type": ["Property", "iot:CurrentLevel"],
+      "schema": {
+        "type": "object",
+        "field": [
+          {
+            "name": "bri",
+            "@type": ["iot:LevelData" ],
+            "schema": {
+              "type": "integer",
+              "min": 0,
+              "max": 255
+            }
+          }
+        ]
+      },
+      "form": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "readProperty",
+          "http:methodName": "GET"
+        },
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "writeProperty",
+          "http:methodName": "GET"
+        }
+      ]
+    },
+    {
+      "name": "Switch On",
+      "@type": ["Action", "iot:TurnOn"],
+      "inputSchema":  {
+        "type": "object",
+        "field": [
+          {
+            "name": "on",
+            "schema": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        ]
+      },
+      "form": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "invokeAction",
+          "http:methodName": "POST"
+        }
+      ]
+    },
+    {
+      "name": "Switch Off",
+      "@type": ["Action", "iot:TurnOff"],
+      "inputSchema":  {
+        "type": "object",
+        "field": [
+          {
+            "name": "on",
+            "schema": {
+              "type": "boolean",
+              "const": false
+            }
+          }
+        ]
+      },
+      "form": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "invokeAction",
+          "http:methodName": "POST"
+        }
+      ]
+    },
+    {
+      "name": "Set brightness level",
+      "@type": ["Action", "iot:SetLevel"],
+      "inputSchema": {
+        "type": "object",
+        "field": [
+          {
+            "name": "bri",
+            "@type": ["iot:LevelData"],
+            "schema": {
+              "type": "integer",
+              "min": 0,
+              "max": 255
+            }
+          },
+          {
+            "name": "duration",
+            "@type": ["iot:TransitionTimeData"],
+            "schema": {
+              "type": "integer",
+              "min": 0,
+              "max": 65535
+            }
+          },
+          {
+            "name": "on",
+            "@type": ["iot:StateData"],
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ]
+      },
+      "form": [
+        {
+          "href": "/light",
+          "mediatype": "application/json",
+          "rel": "td:invokeAction",
+          "http:methodName": "POST"
+        }
+      ]
+    }
+  ]
+}
