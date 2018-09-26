@@ -18,4 +18,5 @@ See [simulator portal](https://w3c.p-wot.com:3011) (Access restricted to plugfes
 ## Local simulator on VLAN2
 
 - You can use Local simulator on VLAN2 just like Online simulator.
+- Local simulator is [here](http://10.8.2.5) (Access restricted to VLAN2 only).
 - TDs that include ip address are [here](Local_simulator_on_VLAN2).
