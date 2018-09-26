@@ -3,10 +3,6 @@
 ## Services
 
 * WIP: OAuth2 authorization server (McCool)
-   - maybe also distribute VPN keys
-   - supported by Intel
-   - Plan A is everyone should have an internet-visible service with authentication
-   - VPN is just for emulating a local network for testing
 * Thing Directory (version 0.9.0) local to vlan2: http://10.8.2.3:8080
 
 ## Target Features
