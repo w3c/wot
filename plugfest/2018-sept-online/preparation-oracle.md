@@ -20,7 +20,35 @@ N/A
 
 ### 1.3 Public Tools
 
-N/A
+### 1.3.1 Oracle IoT Cloud Service 
+
+Management console at https://129.150.200.242/ui
+
+Login credentials are available from Michael.Lagally@oracle.com.
+
+### 1.3.2 Oracle IoT Digital Twin Simulator 
+
+Simulator console at https://129.150.200.242/ds
+
+Login credentials are available from Michael.Lagally@oracle.com.
+
+### 1.3.3 Simulated Devices
+
+The following simulated devices are available:
+
+Device | Description | TD
+--------|------------|------
+Blue_Pump_Siemens	| Pump Instance for Siemens | [Blue_Pump_Siemens.jsonld](TDs/Oracle/Blue_Pump_Siemens.jsonld)
+Blue_Pump_Fujitsu	| Pump instance for Fujitsu | [Blue_Pump_Fujitsu.jsonld](TDs/Oracle/Blue_Pump_Fujitsu.jsonld)
+Blue_Pump_SmartThings	| Pump instance for SmartThings | [Blue_Pump_SmartThings.jsonld](TDs/Oracle/Blue_Pump_SmartThings.jsonld)
+Blue_Pump_Hitachi |Pump instance for Hitachi | [Blue_Pump_Hitachi.jsonld](TDs/Oracle/Blue_Pump_Hitachi.jsonld)
+Blue_Pump_Intel	| Pump instance for Intel |	[Blue_Pump_Intel.jsonld](TDs/Oracle/Blue_Pump_Intel.jsonld)
+Blue_Pump_Panasonic	| Pump instance for Panasonic | [Blue_Pump_Panasonic.jsonld](TDs/Oracle/Blue_Pump_Panasonic.jsonld)
+Connected_Car_Shared	| Shared Connected Car instance | [Connected_Car_Shared.jsonld](TDs/Oracle/Connected_Car_Shared.jsonld)
+HVAC_Shared | Shared HVAC instance | [HVAC_Shared.jsonld](TDs/Oracle/HVAC_Shared.jsonld)
+Truck_Shared | Shared Truck instance | [Truck_Shared.jsonld](TDs/Oracle/Truck_Shared.jsonld)
+Festo_Shared | Shared Festo instance | [Festo_Shared.jsonld](TDs/Oracle/Festo_Shared.jsonld)
+KETI_Shared | Shared KETI Simulator instance | [KETI_Sim_Environment_Sensor_Tokyo.jsonld](TDs/KETI/KETI_Sim_Environment_Sensor_Tokyo.jsonld)
 
 ## 2 Participants and Servients
 
