@@ -1,6 +1,7 @@
 # Online Plugfest
 ------------------------
 ## Services
+* Thing Directory (version 0.9.0) local to vlan2: http://10.8.2.3:8080
 
 ## Target Features
 * Security
