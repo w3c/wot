@@ -2,12 +2,15 @@
 ------------------------
 ## Services
 
-* WIP: OAuth2 authorization server (McCool)
+* WIP: OAuth2 authorization server (mailto:Michael.McCool@intel.com)
 * WIP: ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
-* ThingWeb Thing Directory (version 0.9.0) local to vlan2: http://10.8.2.3:8080
+* ThingWeb Thing Directory (version 0.9.0) "local" to vlan2: http://10.8.2.3:8080 (mailto:Michael.McCool@intel.com)
 * [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
     - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
 * TD validation: http://plugfest.thingweb.io/playground/
+* Oracle IoT Cloud Service Instance: https://129.150.200.242/ui (mailto:Michael.Lagally@oracle.com)
+* Oracle Digital Twin Simulator: https://129.150.200.242/ds (mailto:Michael.Lagally@oracle.com)
+* OpenVPN TAP server: vlan2.mmccool.net:1194/udp (mailto:Michael.McCool@intel.com for access)
 
 ## Target Features
 * Security
