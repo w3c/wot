@@ -15,7 +15,7 @@
 * Oracle Digital Twin Simulator: https://129.150.200.242/ds (mailto:Michael.Lagally@oracle.com)
 * OpenVPN TAP server: vlan2.mmccool.net:1194/udp (mailto:Michael.McCool@intel.com for access)a
 * Google hangout: https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI (mailto:Matthias.Kovatsch@siemens.com))
-* OCF Devices resource directory: http://10.8.2.3:8000 (mailto:Michael.McCool@intel.com)
+* OCF Devices resource directory: http://10.8.2.3:8000/api/oic/res (mailto:Michael.McCool@intel.com)
     - This will in theory find ALL OCF devices on vlan2, no matter where they connect from in the world
 * OCF-WoT Metadata translator: http://10.8.2.3:8091 (mailto:Michael.McCool@intel.com)
     - Dynamically generates TDs for all OCF devices in the resource directory
