@@ -179,7 +179,7 @@ The following checking points must be completed together with a partner in serve
 
 The following in combination with HTTPS (HTTP + TLS)
 * oauth2
-Get your token at https://18.197.47.31/oauth/token, you can ask for a user id and password privately (klotz@eurecom.fr)
+Get your token at https://18.197.31.47/oauth/token, you can ask for a user id and password privately (klotz@eurecom.fr)
 
 #### 3.2.8 Semantic integration
 
