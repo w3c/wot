@@ -354,5 +354,6 @@ Eurecom authentication server has following API:
 The value of the token is used to access Panasonic WoT interface in following request header:
 
 ```
-curl -k -H "Authorization: Bearer NYODXSR8KalTPnWUib47t5E8Pi8mo4" https://localhost:5000/endpoint
+curl -k -H "Authorization: Bearer NYODXSR8KalTPnWUib47t5E8Pi8mo4" https://18.197.31.47/1TDZK23C87S016070/consumetd
 ```
+(This token is just an example that will not work)
