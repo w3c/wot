@@ -4,6 +4,7 @@
 ## Services
 
 * WIP: OAuth2 authorization server (mailto:Michael.McCool@intel.com)
+* Eurecom OAuth/OAuth2 authorization server: https://18.197.31.47/oauth/token (Benjamin Klotz)
 * ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
 * Deprecated: ThingWeb Thing Directory (version 0.9.0) "local" to vlan2: http://10.8.2.3:8080 (mailto:Michael.McCool@intel.com)
 * [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
