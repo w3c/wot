@@ -7,10 +7,6 @@
       "iotcs": "http://example.com/OracleIoTCloudService#"
     }
   ],
-  "id": "urn:dev:wot:siemens:festolive",
-  "name": "FestoLive",
-  "iotcs:deviceModel": "urn:com:siemens:wot:festo",
-  "@context": "http://www.w3.org/ns/td",
   "@type": [
     "Thing",
     "iot:Pump",
@@ -19,6 +15,9 @@
     "iot:UltrasonicSensing",
     "iot:ProximitySensing"
   ],
+  "id": "urn:dev:wot:siemens:festolive",
+  "name": "FestoLive",
+  "iotcs:deviceModel": "urn:com:siemens:wot:festo",
   "security": [{ "scheme": "basic" }],
   "iot:isAssociatedWith" : { "@id": "festoPA:FestoPAWorkstation", "@type": "iot:LiquidMixingSystem" },
   "base": "https://129.150.200.242/iot/api/v2/apps/AA5D2D11-C12B-46C7-897F-62A3060F527C/devices/687E0F51-D32D-4D26-B0E5-250395B6A1A2/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/",
@@ -224,7 +223,5 @@
         }
       ]
     }
-  },
-  "events": {},
-  "links": []
+  }
 }
