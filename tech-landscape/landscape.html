@@ -10,7 +10,7 @@
           ,   editors:      [{name:"Volunteers needed"}]
           ,   authors:      [{name:"Volunteers needed"},
                              <!-- authors for discovery part (order according to # of Wiki activities : -->
-                             {name:"Arne Bröring"},{name:"Soumya Kanti Datta"},{name:"Ari Keränen"}, {name:"Jaime Jiménez"}, {name:"Louay Bassbous"}, {name:"Francois Daoust"}, {name:"Dave Raggett"}, {name: "Tibor Z Pardi"}, {name: "Kazuyuki Ashimura"}] 
+                             {name:"Arne Bröring"},{name:"Soumya Kanti Datta"},{name:"Ari Keränen"}, {name:"Jaime Jiménez"}, {name:"Louay Bassbous"}, {name:"Francois Daoust"}, {name:"Dave Raggett"}, {name: "Tibor Z Pardi"}, {name: "Kazuyuki Ashimura"}, {name: "Michael McCool"}] 
           ,   processVersion: 2016
           ,   shortName:    "wot-tech"
           , wg:           "Interest Group on the Web of Things"
@@ -105,7 +105,7 @@
 	</dL>
 	</section>
     <section>
-      <h2>Tech landscape for Thing description</h2>
+      <h2>Tech landscape for Thing Description</h2>
       <section>
         <h2> Data model &amp; Vocabulary &amp; TD Model</h2>
         <ul>
@@ -233,14 +233,22 @@
         <li><strong>Data Types:</strong> No explicit choice. SAREF is currently only an ontology to translate information from and between communication standards.</li>
         </ul>
         </li>
-        <li><p>oneM2M (Martin)</p>
+        <li><p>Smart Device Template (used by oneM2M)</p>
         <ul>
-        <li><strong>Background of the technology:</strong> The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.</li>
-        <li><strong>Consortium:</strong> SAREF consortium</li>
-        <li><strong>Tool/Development Support:</strong> ontology tools: SPARQL engine &amp; RDF Parser etc.</li>
-        <li><strong>Resource identification:</strong> URIs</li>
-        <li><strong>Query capabilities:</strong> SPARQL queries</li>
-        <li><strong>Data Types:</strong> XSD</li>
+        <li><strong>Background of the technology:</strong> The 
+		<a href="https://github.com/Homegateway/SmartDeviceTemplate/blob/master/SDT/schema3.0/docs/Introduction.md">SDT</a> 
+		is a modular XML/XSI-based data models with support for access control and delegation.
+		Developed initially by the (now-defunct) <a href="http://www.homegatewayinitiative.org/">Home Gateway Initiative (HGI)</a>, 
+		it has recently been adopted by oneM2M.  
+		However, oneM2M also has prior work on its 
+		<a href="http://www.onem2m.org/images/files/deliverables/Release2/TR-0017-Home_Domain_Abstract_Information_Model-V2_0_0.pdf">own abstract information models.</a>
+		</li>
+        <li><strong>Consortium:</strong><a href="http://www.onem2m.org/">oneM2M</a></li>
+        <li><strong>Tool/Development Support:</strong> XML/XSI tools are applicable (e.g. validation).  Support by OSGi in Eclipse.  
+		<a href="https://github.com/ankraft/SDTTool">SDTTool</a> to convert to various formats and generate documentation.</li>
+        <li><strong>Resource identification:</strong> unique identifiers (strings).</li>
+        <li><strong>Query capabilities:</strong> XML search tools.</li>
+        <li><strong>Data Types:</strong> XML tools and schemas.</li>
         </ul>
         </li>
         </ul>
@@ -419,7 +427,7 @@
         </ul>
       </section>
       <section>
-        <h2>Datatype description</h2>
+        <h2>Datatype Description</h2>
         <ul>
         <li><p><a href="https://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/datatypes.html">XML Schema (XSD) Datatypes</a> (Daniel)</p>
         <ul>
@@ -456,11 +464,11 @@
         resource, one can specify supported methods (GET, POST, etc), parameters if
         any and the structure of its content. It follows the principles of
         design first and model-driven engineering to allow for more automation in
-        the development of Web applications.</li>
-        <li><strong>Consortium:</strong> onw community, including Cisco, VMWare, Spotify.</li>
+        the development of Web applications. OIC and OCF use RAML for decribing their resources and interaction models, with the exception of observe/notify.</li>
+        <li><strong>Consortium:</strong> own community, including Cisco, VMWare, Spotify.</li>
         <li><strong>Tool Support:</strong> see <a href="http://raml.org/projects/projects">RAML projects</a>
         (50+ projects). Enables code generation (for both client and server sides),
-        API validation, automatic documentation and integrated development.  </li>
+        API validation, automatic documentation and integrated development. OCF supports <a href="https://openconnectivity.org/developer/oneiota-data-model-tool">oneIoTa</a>, a tool used to document, validate, and distribute data models for OCF. </li>
         <li><strong>Underlying Language/Model/Serialization Formats:</strong> YAML</li>
         </ul>
         </li>
@@ -468,7 +476,8 @@
         <ul>
         <li><strong>Background of the technology:</strong> RESTful API specification framework.
         Formerly known as <a href="http://swagger.io/">Swagger</a>. Its specification has almost
-        the same features as RAML, JSON-based.</li>
+        the same features as RAML, but is JSON-based. 
+        OCF 1.0 has specified use of OpenAPI v2 for introspection data.</li>
         <li><strong>Consortium:</strong> own community supported by the Linux Foundation. Members
         include Google, IBM, Microsoft, Paypal and others.</li>
         <li><strong>Tool Support:</strong> see <a href="http://swagger.io/tools/">Swagger tools</a>. Enables
@@ -509,13 +518,13 @@
       </section>
     </section>
     <section>
-      <h2>Tech landscape for Thing discovery</h2>
+      <h2>Tech Landscape for Thing Discovery</h2>
       The aim of this technology landscape for discovery mechanisms for the Web of Things is to collect candidate discovery technologies, evaluate them, and to derive generic discovery interaction patterns. The list of discovery categories can be found in this <a href='#discoveryCategories'>section</a>. The identified discovery interaction patterns are presented in this <a href='#discoveryPatterns'>section</a>. An evaluation of identified technologies can be found in this <a href='#discoveryEvaluation'>section</a>. Further, we analyzed which discovery technologies are supported by which IoT consortia. This analysis can be found in this <a href='#discoveryConsortia'>section</a>.
       
       <section id="discoveryCategories">
         <h2>Categories of Thing Discovery</h2>
         <section>
-          <h2> Finding Things <i>around me</i></h2>
+          <h2> Finding Things <i>"around me"</i></h2>
           This category of discovery includes technologies that allow to discover things around me (in a spatial sense).
 
           <p><b>Optical markers</b>
@@ -563,7 +572,7 @@
           </ul>
         </section>
         <section>
-          <h2> Finding Things on my network</h2>
+          <h2> Finding Things on My Network</h2>
           This category includes technologies that allow discovery of endpoints of things on the network.
 
           <p><b>mDNS (+ DNS-SD)</b>
@@ -625,7 +634,7 @@
 
         </section>
         <section>
-          <h2> Searching in directories</h2>
+          <h2> Searching in Directories</h2>
           In contrast to the above technologies, here, a central directory can be used for discovery of things and resources. Queries can be submitted to the directory to search for things and/or resources.
 
           <p><b>CoRE Resource Directory</b>
@@ -693,7 +702,7 @@
 
         </section>
         <section>
-          <h2> Searching across peers</h2>
+          <h2> Searching Across Peers</h2>
           In peer to peer discovery, the directory is essentially distributed across the peers. This is often based upon distributed hash tables which maps the search space into a numeric range and then allocates servers to parts of that range. The technique works well for scale free networks. It requires Peers in the P2P overlay to host parts of the RD and to have full connectivity and certain computing power in order to forward overlay messages, keep a consistent DHT and routing tables in the node. P2P Overlays tolerate certain amounts of churn but it would be impractical for constrained devices to participate as full peers on the DHT.
 
           <p><b>"RFC7650": CoAP usage for RELOAD</b>
@@ -718,7 +727,7 @@
 
         </section>
         <section>
-          <h2> Accessing Thing metadata</h2>
+          <h2> Accessing Thing Metadata</h2>
           Once a "service" has been discovered with the approaches above, next "resources" and/or general metadata access at thing level needs to be performed.
 
           <p><b>CoRE Link Format</b>
@@ -950,7 +959,7 @@
         </tr>
         </table>
         
-        <p><b>Category: 3) Searching in Directories</b>
+        <p><b>Category: 3) Searching in directories</b>
         <table border="1">
           <tr bgcolor="LightGray">
           <th> <b>Technology</b> </th>
@@ -1030,7 +1039,7 @@
           <td> Yes (with 'order by')
           </td></tr></table>
 
-        <p><b>Category: 4) Searching across Peers</b>
+        <p><b>Category: 4) Searching across peers</b>
         <table border="1">
           <tr bgcolor="LightGray">
           <th> <b>Technology</b> </th>
@@ -1214,7 +1223,7 @@
     </section>
     
     <section>
-      <h2>Tech landscape for APIs and protocol mappings</h2>
+      <h2>Tech Landscape for APIs and Protocol Mappings</h2>
       <section>
         <h2> Protocols</h2>
         <ul>
@@ -1227,7 +1236,17 @@
             </ul>
           </li>
           <li>HTTP/2 <b>(IRTF to provide input)</b></li>
-          <li>Websocket <b>(Dave Raggett)</b></li>
+          <li>Websocket <b>(Dave Raggett, Michael McCool)</b>
+            <ul>
+            <li>Provides a persistent connection-oriented transport, just like a TCP/IP socket</li> 
+            <li>Like HTTP, supports a secure TLS variant, Secure Websockets</li>
+            <li>An initial HTTP(S) connection can be "upgraded" to a (secure) websocket in a standard way, re-using the same port</li>
+            <li>Not exactly a protocol in itself, websockets can be used as a transport layer for other protocols that would normally go over TCP/IP sockets.
+		<ul><li>For example, MTTQ can run over a websocket, including over a secure websocket.</li></ul>
+            </li>
+            <li>Websockets are one way to implement the "notify" or "observe" interaction patterns in HTTP-based web services</li>
+            </ul>
+          </li>
           <li>WebRTC (<a href="https://www.w3.org/TR/webrtc/">W3C WebRTC 1.0</a>)
             <ul>
               <li>Enables direct, i.e. without passing a server, peer to peer connectivity</li>
@@ -1247,21 +1266,22 @@
               <li>Extensible throgh <a href="http://www.iana.org/assignments/core-parameters/core-parameters.xhtml#option-numbers">options</a></li>
             </ul>
           </li>
-          <li>MQTT <b>(Dave Raggett, Michael Koster)</b></li>
+          <li>MQTT <b>(Dave Raggett, Michael Koster, Michael McCool)</b></li>
           <ul>
-            <li>addressing scheme is topics</li>
+            <li>Uses an addressing scheme based on named topics that are organized in a hierarchy</li>
             <li>MQTT is TCP, MQTT SN is UDP</li>
-            <li>Pub/sub based, Broker mandatory</li>
+            <li>It is possible to send MQTT over other transports, such as websockets</li>
+            <li>Pub/sub based, with a mandatory broker</li>
           </ul>
           <li>XMPP <b>(Johannes Hund will outreach to XSF)</b></li>
           <li>STOMP <b>(relevant? outreach?)</b> </li>
           <li>AMQP <b>(Dave Raggett to reach out)</b></li>
           <li>Bluetooth GATT <a href="https://lists.w3.org/Archives/Public/public-wot-ig/2015Jul/att-0077/GATT.pdf">presentation</a>
             <ul>
-              <li>remote Key/Value store with CRUD operation</li>
-              <li>client/server-mimic</li>
-              <li>could be used to model REST with some work</li>
-              <li>legacy protocol from WoT perspective</li>
+              <li>Remote Key/Value store with CRUD operation</li>
+              <li>Client/server-mimic</li>
+              <li>Could be used to model REST with some work</li>
+              <li>Legacy protocol from WoT perspective</li>
             </ul>
           </li>
           <li><a href="https://www.w3.org/TR/2012/REC-mmi-arch-20121025/">MMI architecture</a> <b>(Kaz to outreach)</b>
@@ -1295,7 +1315,7 @@
         </ul>
       </section>
       <section>
-      	<h2>Rapidly changing sensor readings</h2>
+      	<h2>Rapidly Changing Sensor Readings</h2>
       	<p><em></em>REST or representational state transfer assumes that requests/responses transfer the state of the resource, but what does that mean when the state is constantly changing?</em></p>
       	<p>This has been addressed by creating extensions to the REST design style, both in CoAP Observe and HTTP EventSource, that allow for multiple serial state changes to be returned asynchronously in response to a request. The client/application simply responds to these using a handler and applies the resource state changes to the application state.</p>
       	<p>For example, if the application is a thermostat, the asynchronous temperature state updates invoke a handler that evaluates the thermostat mode and other controls and decides, on each response from the sensor, whether to turn the heating system on or off, heat or cool mode.</p>
@@ -1305,18 +1325,18 @@
       	<p>Additionally, in a REST based hypermedia system, resources may be assigned media types and content formats that are designed for media streams. This works like a websocket upgrade, where a separate socket connection is made from the media stream data source to the handler in the application.</p>
       </section>
       <section>
-        <h2> Resource Models &amp; Protocol mappings from Consortia</h2>
+        <h2> Resource Models &amp; Protocol Mappings from Consortia</h2>
         <dd>
           <ul>
             <li> ISO/IEC/IEEE P21451-1-4
               <ul>
-                <li> approach is driving XMPP as IoT solution
+                <li> Approach is driving XMPP as IoT solution
                 </li>
-                <li> emphasis on connecting of different (legacy) protocols to/over XMPP transport
+                <li> Emphasis on connecting different (legacy) protocols to/over XMPP transport
                 </li>
-                <li> strong security focus (domain federation and identity)
+                <li> Strong security focus (domain federation and identity)
                 </li>
-                <li> protocol-agnostic model
+                <li> Protocol-agnostic model
                 </li>
               </ul>
             </li>
@@ -1346,10 +1366,28 @@
               </ul>
             </li>
             <li> OMA <b>(Mohammed Dadas / Orange, bryant sullivan / AT &amp; T?)</b>
+              <ul>
 	            <li>LWM2M</li>
 	            <li>GotAPI</li>
+              </ul>
             </li>
-            <li>OIC <b>(Daniel Park, Michael Koster)</b></li>
+            <li>OIC <b>(Daniel Park, Michael Koster, Michael McCool)</b>
+              <ul>
+	            <li>Based on CoAP resource and interaction model: CRUD+N.</li>
+	            <li>Superceded by OCF.</li>
+              </ul>
+            </li>
+            <li>OCF <b>(Michael McCool)</b>
+              <ul>
+	            <li>OCF is a result of a merger between AllJoyn and OIC and supercedes both.</li>
+	            <li>AllJoyn and OIC will continue to be supported by standardized bridges</li>
+	            <li>Uses RAML for interaction modeling, JSON-Schema for data modeling of individual resources, 
+                        and OpenAPI for introspection</li>
+                    <li>A higher-level application-level protocol and resource framework, 
+                        OCF will typically be implemented on top of CoAP/CBOR although HTTP/JSON is also possible</li>
+                    <li>An open-source implementation is available: <a href="https://www.iotivity.org">IoTivity</a></li>
+              </ul>
+            </li>
             <li>IPSO Alliance <b>(Michael Koster)</b></li>
             <li>oneM2M <b>(Soumya to outreach: Martin Bauer,Omar.)</b></li>
             <li>Hyper/Cat <b>(TF-DI? -> Soumya, probably more related to TD)</b></li>
@@ -1409,14 +1447,14 @@
         </ul>
       </section>
       <section>
-        <h2> Potential scripting API patterns</h2>
+        <h2> Potential Scripting API Patterns</h2>
         <section>
           <h2> Server-Side</h2>
           <p>There are numerous exisiting web api frameworks that can or could serve as current practise,
             e.g. refer to <a href="http://www.todobackend.com/">todobackend.com</a></p>
         </section>
         <section>
-          <h2> Client-Side scripting APIs</h2>
+          <h2> Client-Side Scripting APIs</h2>
           <ul>
             <li> W3C fetch API </li>
             <li> <a href="http://w3c.github.io/presentation-api/">W3C Presentation API</a>: The <a href="https://www.w3.org/2014/secondscreen/">W3C Second Screen Working Group</a> works on a specification of an API that enables web content to access external presentation displays and use them for presenting web content. The specification aims to make presentation displays such as projectors or connected TVs, available to the Web and takes into account displays that are attached using wired (HDMI, DVI, or similar) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, or similar), but the Presentation API abstracts from these underlying protocols. It allows Browser vendors to implement the API on top of different protocols. The specification describes the conformance criteria for two classes of user agents:</b>
@@ -1429,7 +1467,34 @@
           </ul>
         </section>
         <section>
-          <h2> scripting APIs to physical things</h2>
+          <h2> Edge Computing</h2>
+          <p>Edge computing, also known as fog computing, applies cloud computing mechanisms to distributed computing, but 
+          extended to support computing devices "close" to the end user, such as in the networking infrastructure or on a local
+          compute-offload device.  Such edge computing devices can be used to provide various useful services for IoT (resource 
+          directories, bridging) or provide compute services for specific functions (for example, face recognition or speech
+          processing).
+          <ul>
+          <li><b>AWS Greengrass</b> (Michael McCool)
+            <ul>
+            <li>Made available by <a href="https://aws.amazon.com/greengrass"></a>Amazon Web Services</li>
+            <li>Supports a function-as-a-service model similar to that of AWS Lambda, but on customer-managed devices</li>
+            <li>Functions need to be stateless, but can manage state in remote services (eg databases)</li>
+            <li>Meant to execute only short transactions</li>
+            <li>Limited ability to support additional outgoing network connections</li>
+            <li>Multiple languages supported, as well as AWS APIs and security model</li>
+            </ul>
+          </li>
+          <li><b>OpenFog</b> (Michael McCool)
+            <ul>
+            <li>Consortium to promote and set standards for fog computing: <a href="https://www.openfogconsortium.org">OpenFog</a>
+            <li>Explicitly spans cloud to IoT, includes AI services</li>
+            <li>Working on standards for reference architectures and software stacks for OpenFog nodes</li>
+            </ul>
+          </li>
+          </ul>
+        </section>
+        <section>
+          <h2> Scripting APIs to Physical Things</h2>
           <ul>
             <li> DAP Generic Sensor API <b>(Johannes to outreach to tobie langel for basic design principles)</b></li>
             <li> Vehicle API <b>(Kaz to outreach chair)</b></li>
@@ -1446,7 +1511,7 @@
           </ul>
         </section>
         <section>
-          <h2> embedded runtimes</h2>
+          <h2> Embedded Runtimes</h2>
           <ul>
             <li> node.js <b>(Tibor)</b></li>
             <li> micropython</li>
@@ -1465,7 +1530,7 @@
       </section>
     </section>
     <section>
-      <h2>Tech landscape for Security&Privacy</h2>
+      <h2>Tech Landscape for Security &amp; Privacy</h2>
       <p>While things may be of low value (say <50$) they can control (parts of) high value assets such as smart locks controlling access to homes or offices/factories. WoT aims at exposing the functonality of such things at public-facing endpoints in the Internet/Web. This establishes <b>security</b> as a top concern for WoT.<br/><br/>
       Things can reveal/expose data related to user habits such as lightning/heating practices or the human body such as heartbeat rates. This establishes <b>privacy</b> as another top concern for WoT. In the first place this refers to things owned/used by individuals esp. consumer goods. Privacy can also concern things owned/used by legal entities e.g. capital/investment goods such as health care equipment. But not all things owned/used by legal entities are subject to privacy concerns. There also are WoT scenarios which do not process individual user data such as industrial control systems.<br/><br/>
       This chapter provides the security&privacy landscape for WoT.</p>
