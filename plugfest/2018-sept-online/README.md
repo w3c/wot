@@ -4,8 +4,8 @@
 ## Services
 
 * WIP: OAuth2 authorization server (mailto:Michael.McCool@intel.com)
-* WIP: ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
-* ThingWeb Thing Directory (version 0.9.0) "local" to vlan2: http://10.8.2.3:8080 (mailto:Michael.McCool@intel.com)
+* ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
+* Deprecated: ThingWeb Thing Directory (version 0.9.0) "local" to vlan2: http://10.8.2.3:8080 (mailto:Michael.McCool@intel.com)
 * [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
     - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
     - A device servient can register a TD to http://10.2.8.21/Things/register<id> (local to vlan2)
