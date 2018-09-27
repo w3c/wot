@@ -1,6 +1,6 @@
 // Author: Michael.Lagally@oracle.com
 // Created: 7.5.2018
-// Last modified: 10.9.2018
+// Last modified: 27.9.2018
 
 "use strict";
 
@@ -111,7 +111,10 @@ for(var exKey in dm.actions) {
     act.description=iac.description;
     if (iac.argType) {
       var inp={};
-      inp.type=iac.argType.toLowerCase();
+      inp.type="object";
+      inp.properties={};
+      inp.properties.value={};
+      inp.properties.value.type=iac.argType.toLowerCase();
       if (iac.range) {
         inp.minimum=iac.range.split(",")[0];
         inp.maximum=iac.range.split(",")[1];
