@@ -338,7 +338,7 @@ Eurecom authentication server has following API:
 - METHOD: POST
 
   ```
- curl -k -X POST -d "client_id=9qFbZD4udTzFVYo0u5UzkZX9iuzbdcJDRAquTfRk&grant_type=password&username=user&password=pwd" https://localhost:5000/oauth/token
+ curl -k -X POST -d "client_id=9qFbZD4udTzFVYo0u5UzkZX9iuzbdcJDRAquTfRk&grant_type=password&username=user&password=pwd" https://18.197.47.31/auth/token
   ```
 
   Note: id and password are distributed to plugest participants privately. The example above also works.
