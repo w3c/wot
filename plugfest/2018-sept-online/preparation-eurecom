@@ -328,3 +328,31 @@ This section should cover ideas such as Proxy-Directory integration and concrete
 
 * PARTICIPANT will ... / NA
 
+## 5 Implementation Guidelines
+
+### 5.1 Authentication server
+
+Eurecom authentication server has following API:
+
+- URL: https://18.197.47.31/auth/token
+- METHOD: POST
+
+  ```
+ curl -k -X POST -d "client_id=9qFbZD4udTzFVYo0u5UzkZX9iuzbdcJDRAquTfRk&grant_type=password&username=user&password=pwd" https://localhost:5000/oauth/token
+  ```
+
+  Note: id and password are distributed to plugest participants privately. The example above also works.
+
+- Response body: application/json
+
+  ```
+  {
+    "token": "eyJ...CJ9.eyJ3b3SIsImlhdCI6MTUyNDIwMjI0N...TG4ifQ.9n9...VT-k"
+  }
+  ```
+
+The value of the token is used to access Panasonic WoT interface in following request header:
+
+```
+curl -k -H "Authorization: Bearer NYODXSR8KalTPnWUib47t5E8Pi8mo4" https://localhost:5000/endpoint
+```
