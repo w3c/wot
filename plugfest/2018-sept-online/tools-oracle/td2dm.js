@@ -52,29 +52,51 @@ dm.actions=[];
 
 for (var p in td.properties) {
     if (verbose) console.log(p);
-    var prop={};
-    prop.name=p;
-    var iac=td.properties[p];
-    prop.description=iac.label;
-    if (iac.properties) {
-      if (iac.properties.type){
-        prop.type=iac.properties.type.toUpperCase();
-      } else {
-        prop.type=iac.type;
-      }
-      if (iac.properties.minimum != iac.properties.maximum) {
-        prop.range=iac.properties.minimum+","+iac.properties.maximum;
-      }
-    } else {
-       prop.type=iac.type.toUpperCase();;
+    if (td.properties[p].type == "object") {
+        for (var q in td.properties[p].properties) {
+            var prop={};
+            prop.name=p+"_"+q;
+            var iac=td.properties[p].properties[q];
+             prop.description=td.properties[p].label+" "+q;
+            prop.type=iac.type.toUpperCase();
+            if (iac.minimum != iac.maximum) {
+                prop.range=iac.minimum+","+iac.maximum;
+            }
+            prop.writable=td.properties[p].writable;
+            dm.attributes.push(prop);
+        }
+     } else {
+        var prop={};
+        prop.name=p;
+        var iac=td.properties[p];
+        prop.description=iac.label;
+        if (iac.properties) {
+            if (iac.properties.type){
+                prop.type=iac.properties.type.toUpperCase();
+            } else {
+                prop.type=iac.type;
+            }
+            if (iac.properties.minimum != iac.properties.maximum) {
+                prop.range=iac.properties.minimum+","+iac.properties.maximum;
+            }
+        } else {
+            if (iac.type == "array") {
+                // TODO: complete ARRAY implementation
+                prop.type="STRING";
+            } else {
+               prop.type=iac.type.toUpperCase();
+            }
+        }
+        prop.writable=iac.writable;
+        dm.attributes.push(prop);
     }
-    prop.writable=iac.writable;
-    dm.attributes.push(prop);
+
     if (verbose) console.log(prop);
 }
 
 if (verbose) console.log("-----");
 
+// TODO: Add parameter handling of actions
 for (var a in td.actions) {
     if (verbose) console.log(iac);
     var act={};
