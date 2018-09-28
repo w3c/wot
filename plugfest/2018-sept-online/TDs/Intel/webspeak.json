@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/td",
+    {
+      "iot": "http://iotschema.org/",
+      "http": "http://www.w3.org/2011/http#"
+    }
+  ],
+  "@type": [
+    "Thing"
+  ],
+  "name": "Intel-WebSpeak-upsq0.local",
+  "id": "urn:uuid:51a08f55-afa7-543f-a460-19c22b7ef2e4",
+  "security": [
+    {
+      "scheme": "nosec"
+    }
+  ],
+  "actions": {
+    "say": {
+      "input": {
+        "type": "string"
+      },
+      "forms": [
+        {
+          "href": "http://upsq0.local:8085/api/say",
+          "mediaType": "application/json",
+          "rel": "invokeaction",
+          "http:methodName": "POST"
+        }
+      ]
+    }
+  }
+}
