@@ -4,11 +4,12 @@
 ## Services
 
 * WIP: OAuth2 authorization server (mailto:Michael.McCool@intel.com)
+* Eurecom OAuth/OAuth2 authorization server: https://18.197.31.47/oauth/token (mailto:klotz@eurecom.fr)
 * ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
 * Deprecated: ThingWeb Thing Directory (version 0.9.0) "local" to vlan2: http://10.8.2.3:8080 (mailto:Michael.McCool@intel.com)
 * [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
     - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
-    - A device servient can register a TD to http://10.2.8.21/Things/register<id> (local to vlan2)
+    - A device servient can register a TD to http://10.8.2.21/Things/register<id> (local to vlan2)
     - If a device does not have authentication capability, remote proxy provides basic authentication to the application and rewrites the security metadata in TD for adding a term "basic". (mailto:sano.takeshi@jp.fujitsu.com)
 * TD validation: http://plugfest.thingweb.io/playground/
 * Oracle IoT Cloud Service Instance: https://129.150.200.242/ui (mailto:Michael.Lagally@oracle.com)
@@ -208,9 +209,9 @@ Companies should note what slots they will be able to attend here:
 
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
 |:---|:---                 |:---                 |:---                 |:---                 |
-|[A](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0019.html)   |  | Intel <BR/> (Panasonic) <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-a-minutes.html)| Intel <BR/> (Panasonic) <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-a-minutes.html)| Intel <BR/> Smart Things |
-|[B](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html)   | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-b-minutes.html)| Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-b-minutes.html) | Intel <BR> Panasonic <BR/>Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens | Intel <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens |
-|[C](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html)  | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-c-minutes.html) | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-c-minutes.html)| Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens | Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens |
+|[A](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0019.html)   |  | Intel <BR/> (Panasonic) <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-a-minutes.html)| Intel <BR/> (Panasonic) <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-a-minutes.html)| Intel <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/28-wot-pf-slot-a-minutes.html)|
+|[B](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html)   | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-b-minutes.html)| Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-b-minutes.html) | Intel <BR> Panasonic <BR/>Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-b-minutes.html)| Intel <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens |
+|[C](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html)  | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-c-minutes.html) | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-c-minutes.html)| Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-c-minutes.html)| Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens |
 
 * Spreadsheet for Test Pairings
    - https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0029.html (W3C login required)

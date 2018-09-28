@@ -179,7 +179,7 @@ The following checking points must be completed together with a partner in serve
 
 The following in combination with HTTPS (HTTP + TLS)
 * oauth2
-Get your token at https://18.197.47.31/oauth/token, you can ask for a user id and password privately (klotz@eurecom.fr)
+Get your token at https://18.197.31.47/oauth/token, you can ask for a user id and password privately (klotz@eurecom.fr)
 
 #### 3.2.8 Semantic integration
 
@@ -328,3 +328,32 @@ This section should cover ideas such as Proxy-Directory integration and concrete
 
 * PARTICIPANT will ... / NA
 
+## 5 Implementation Guidelines
+
+### 5.1 Authentication server
+
+Eurecom authentication server has following API:
+
+- URL: https://18.197.47.31/auth/token
+- METHOD: POST
+
+  ```
+ curl -k -X POST -d "client_id=o9ubpkXKBDAE9AuFnAU0zh6lSQ0pazo8Mglw0BWX&grant_type=password&username=user&password=pwd" https://18.197.31.47/oauth/token
+  ```
+
+  Note: id and password are distributed to plugest participants privately. The example above also works.
+
+- Response body: application/json
+
+  ```
+  {
+    "token": "eyJ...CJ9.eyJ3b3SIsImlhdCI6MTUyNDIwMjI0N...TG4ifQ.9n9...VT-k"
+  }
+  ```
+
+The value of the token is used to access Panasonic WoT interface in following request header:
+
+```
+curl -k -H "Authorization: Bearer NYODXSR8KalTPnWUib47t5E8Pi8mo4" https://18.197.31.47/1TDZK23C87S016070/consumetd
+```
+(This token is just an example that will not work)
