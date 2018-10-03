@@ -2,6 +2,13 @@
 
 This document summerizes the results of the Online September PlugFest held Sep 25-27.
 
+## Fujitsu Services
+
+* [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
+    - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
+    - A device servient can register a TD to http://10.8.2.21/Things/register<id> (local to vlan2)
+    - If a device does not have authentication capability, remote proxy provides basic authentication to the application and rewrites the security metadata in TD for adding a term "basic". (mailto:sano.takeshi@jp.fujitsu.com)
+
 ## 3 Checking points for Online September 2018 PlugFest
 
 Test results can have one of 4 states:
@@ -14,36 +21,40 @@ Test results can have one of 4 states:
 * NA: Test not applicable, e.g., because feature is not implemented
    * Comment if feature is planned to be implemented in the future
 
+Result of Fujitsu projects
+![images](images/fujitsu_seq_register1.png)
+
+
 ### 3.1 Testing Individually
 #### 3.1.1 Validate Simplified TDs
 
-* OK/NO/OT/NA
+* OK
    * Issue: 
    * Comment: 
 
 #### 3.1.2 Register with Thing Directory
 
-* OK/NO/OT/NA
+* NO
    * Issue: 
-   * Comment: 
+   * Comment: Internal server error 
 
 #### 3.1.3 Connect with Remote/Local Proxy
 
 ##### IMPLEMENTATION at URI
 
-* OK/NO/OT/NA
+* OK
    * Issue: 
-   * Comment: 
+   * Comment: we provide remote/local proxy
 
 #### 3.1.4 Connect with node-wot
 
-* OK/NO/OT/NA
+* OT
    * Issue: 
-   * Comment: 
+   * Comment: fujitsu remote proxy didn't set config file for td 
 
 #### 3.1.5 Scripting API
 
-* OK/NO/OT/NA
+* NA
    * Issue: 
    * Comment: 
 
@@ -488,15 +499,6 @@ Test results can have one of 4 states:
 * OK/NO/OT/NA
    * Issue: 
    * Comment: 
-
-## 4 Use cases
-
-### USE CASE
-
-* OK/NO/OT/NA
-   * Issue: 
-   * Comment: 
-
 
 # Appendix A: Sequence diagrams of TD directory and proxy Servients implemented in Fujitsu
 
