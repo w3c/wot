@@ -813,6 +813,7 @@ The application servient sends a request to subscribe the property of the device
 ![images](images/fujitsu_seq_subscribe_ws.png)
 
 *Example: using HTTP and WebSocket for NAT traversal*
+
 The remote proxy gets the URI for the event from TD of the device servient registered in the repository. Then the remote proxy sends a message include the URI to the local proxy using WebSocket connection.
 
 (112) send (HTTP POST http://lps.example.com/Things/deviceName/Event/change)<BR>
@@ -831,6 +832,7 @@ The application servient sends a request to unsubscribe to the remote proxy serv
 ![images](images/fujitsu_seq_unsubscribe_ws.png)
 
 *Example: using HTTP and WebSocket for NAT traversal*
+
 The remote proxy gets the URI for the event from TD of the device servient unregistered in the repository. Then the remote proxy sends a message include the URI to the local proxy using WebSocket connection.
 
 (122) send (HTTP DELETE http://lps.example.com/Things/deviceName/Event/change)<BR>
