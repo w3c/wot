@@ -2,6 +2,13 @@
 
 This document summerizes the results of the Online September PlugFest held Sep 25-27.
 
+## Fujitsu Services
+
+* [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
+    - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
+    - A device servient can register a TD to http://10.8.2.21/Things/register<id> (local to vlan2)
+    - If a device does not have authentication capability, remote proxy provides basic authentication to the application and rewrites the security metadata in TD for adding a term "basic". (mailto:sano.takeshi@jp.fujitsu.com)
+
 ## 3 Checking points for Online September 2018 PlugFest
 
 Test results can have one of 4 states:
@@ -13,6 +20,9 @@ Test results can have one of 4 states:
 * OT: Out-of-time to complete test
 * NA: Test not applicable, e.g., because feature is not implemented
    * Comment if feature is planned to be implemented in the future
+
+Result of Fujitsu projects
+![images](images/Fujitsu_PlugfestSummary181003.png)
 
 ### 3.1 Testing Individually
 #### 3.1.1 Validate Simplified TDs
