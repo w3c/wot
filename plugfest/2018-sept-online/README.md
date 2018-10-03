@@ -16,9 +16,9 @@
 * Oracle Digital Twin Simulator: https://129.150.200.242/ds (mailto:Michael.Lagally@oracle.com)
 * OpenVPN TAP server: vlan2.mmccool.net:1194/udp (mailto:Michael.McCool@intel.com for access)a
 * Google hangout: https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI (mailto:Matthias.Kovatsch@siemens.com))
-* OCF Devices resource directory: http://10.8.2.3:8000/api/oic/res (mailto:Michael.McCool@intel.com)
+* OCF Devices resource directory: http://upsq0.local:8000/api/oic/res (local to vlan2) (mailto:Michael.McCool@intel.com)
     - This will in theory find ALL OCF devices on vlan2, no matter where they connect from in the world
-* OCF-WoT Metadata translator: http://10.8.2.3:8091 (mailto:Michael.McCool@intel.com)
+* OCF-WoT Metadata translator: http://upsq0.local:8091 (local to vlan2) (mailto:Michael.McCool@intel.com)
     - Dynamically generates TDs for all OCF devices in the resource directory
 
 ## Target Features
@@ -210,8 +210,8 @@ Companies should note what slots they will be able to attend here:
 |Time| `Tue.`<br/>`Sep. 25`| `Wed.`<br/>`Sep. 26`| `Thu.`<br/>`Sep. 27`| `Fri.`<br/>`Sep. 28`|
 |:---|:---                 |:---                 |:---                 |:---                 |
 |[A](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0019.html)   |  | Intel <BR/> (Panasonic) <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-a-minutes.html)| Intel <BR/> (Panasonic) <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-a-minutes.html)| Intel <BR/> Smart Things <br/> => [Minutes](https://www.w3.org/2018/09/28-wot-pf-slot-a-minutes.html)|
-|[B](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html)   | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-b-minutes.html)| Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-b-minutes.html) | Intel <BR> Panasonic <BR/>Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-b-minutes.html)| Intel <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens |
-|[C](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html)  | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-c-minutes.html) | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-c-minutes.html)| Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-c-minutes.html)| Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens |
+|[B](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0020.html)   | Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-b-minutes.html)| Intel <BR/> Panasonic <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-b-minutes.html) | Intel <BR> Panasonic <BR/>Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-b-minutes.html)| Intel <BR/> Oracle <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/28-wot-pf-slot-b-minutes.html)|
+|[C](https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0021.html)  | Intel <BR> (Panasonic) <BR/> Oracle <BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/25-wot-pf-slot-c-minutes.html) | Intel <BR> Panasonic<BR/> Oracle <BR/> Smart Things <BR/> Fujitsu <BR/> Hitachi <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/26-wot-pf-slot-c-minutes.html)| Intel <BR> (Panasonic) <BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/27-wot-pf-slot-c-minutes.html)| Intel<BR/> Oracle<BR/> Smart Things <BR/> (Fujitsu) <BR/> (Hitachi) <BR/> Siemens <br/> => [Minutes](https://www.w3.org/2018/09/28-wot-pf-slot-c-minutes.html)|
 
 * Spreadsheet for Test Pairings
    - https://lists.w3.org/Archives/Member/member-wot-wg/2018Sep/0029.html (W3C login required)
