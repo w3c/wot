@@ -1,25 +1,6 @@
 # Lyon Plugfest
 [Oct 20 and 21 at Université de Lyon](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_20-26_October_2018,_Lyon,_France#PlugFest_.2820-21_Oct_2018.29)
 
-## Services
-
-* WIP: OAuth2 authorization server (mailto:Michael.McCool@intel.com)
-* Eurecom OAuth/OAuth2 authorization server: https://18.197.31.47/oauth/token (mailto:klotz@eurecom.fr)
-* ThingWeb Thing Directory (version 0.10.0): http://plugfest.thingweb.io:8081
-* Deprecated: ThingWeb Thing Directory (version 0.9.0) "local" to vlan2: http://10.8.2.3:8080 (mailto:Michael.McCool@intel.com)
-* [TD Directory](http://wot.f-ncs.ad.jp/Things) running on Fujitsu's Remote Proxy Servient 
-    - An application servient can retreive a TD with http://wot.f-ncs.ad.jp/Things/<id>
-    - A device servient can register a TD to http://10.8.2.21/Things/register<id> (local to vlan2)
-    - If a device does not have authentication capability, remote proxy provides basic authentication to the application and rewrites the security metadata in TD for adding a term "basic". (mailto:sano.takeshi@jp.fujitsu.com)
-* TD validation: http://plugfest.thingweb.io/playground/
-* Oracle IoT Cloud Service Instance: https://129.150.200.242/ui (mailto:Michael.Lagally@oracle.com)
-* Oracle Digital Twin Simulator: https://129.150.200.242/ds (mailto:Michael.Lagally@oracle.com)
-* OpenVPN TAP server: vlan2.mmccool.net:1194/udp (mailto:Michael.McCool@intel.com for access)a
-* Google hangout: https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI (mailto:Matthias.Kovatsch@siemens.com))
-* OCF Devices resource directory: http://upsq0.local:8000/api/oic/res (local to vlan2) (mailto:Michael.McCool@intel.com)
-    - This will in theory find ALL OCF devices on vlan2, no matter where they connect from in the world
-* OCF-WoT Metadata translator: http://upsq0.local:8091 (local to vlan2) (mailto:Michael.McCool@intel.com)
-    - Dynamically generates TDs for all OCF devices in the resource directory
 
 ## Target Features
 * Security
