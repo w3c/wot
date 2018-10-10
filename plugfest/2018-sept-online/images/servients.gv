@@ -1,0 +1,115 @@
+digraph "2018-Sept-Online-Plugfest" {
+    rankdir="LR";
+
+    layers="local:hit:pana:fuji";
+
+    node [layer=all,fontname="Helvetica"]
+
+    /* definition of Servients on each layer */
+    node [style=filled,fillcolor=orange];
+    {
+        rank = same;
+        apps [label="Application",shape=plaintext]
+        fujitsu_nr [label="NodeRED\n(Fujitsu)"];
+        hitachinr [label="NodeRED\n(Hitachi)"];
+        pana_nr [label="NodeRED\n(Panasonic)"];
+        pana_bwr [label="Browser\n(Panasonic)"];
+        pana_post [label="Postman/curl\n(Panasonic)"];
+    }
+
+    node [style=filled,fillcolor=green];
+    {
+        rank = same; 
+        rpx [label="Remote\nProxies",shape=plaintext]
+
+        fujitsuremotepx [label="Remote proxy\n(Fujitsu)"];
+        oracle_cloud [label="IoT Cloud Service\n(Oracle)"];
+    }
+
+    node [style=filled,fillcolor=green];
+    {
+        rank=same;
+        lpx [label="Local\nProxies",shape=plaintext]
+        fujitsulocalpx [label="Local proxy\n(Fujitsu)"];
+        siem_nwprx [label="Node-WoT proxy\n(Siemens)"];
+    }
+
+    node [style=filled,fillcolor=cyan]; 
+    {
+        rank = same;
+        devs [label="Devices",shape=plaintext]
+
+        fujitsusensor [label="Sensors\n(Fujitsu)"];
+        pana_devsim [label="Device sim.\n(Panasonic)"]; 
+        pana_home [label="Home Devices\n(Panasonic)"];
+        intel_light [label="Light\n(Intel)"]; 
+        oracle_pump [label="BluePump\n(Oracle)"];
+        oracle_keti [label="KETI Sensor\n(Oracle)"];
+        smart_illumi [label="Illumi-sensor\n(Oracle)"];
+        smart_lamp [label="Lamp\n(SmartThings)"];
+        siem_event [label="Event Source\n(Siemens)"];
+        siem_park [label="Parking Sensor\n(Siemens)"];
+        siem_festo [label="Festo Live\n(Siemens)"];
+        eure_car [label="MyCarThing\n(Eurecom)"];
+        keti_env [label="Env. IoT Sensor\n(KETI)"];
+    }
+
+    edge [layer=all,fontname="Helvetica"];
+    apps -> rpx -> lpx -> devs;
+
+    /* tested connection */
+    //edge [layer=hit];
+    {
+        hitachinr -> keti_env [label="http"];
+        hitachinr -> fujitsuremotepx [label="http+basic"];
+        fujitsuremotepx -> fujitsulocalpx;
+        fujitsulocalpx -> fujitsusensor;
+        hitachinr -> pana_devsim [label="https+bearer;\nlongpoll"];
+        hitachinr -> pana_home [label="https+bearer;\nlongpoll"];
+        hitachinr -> intel_light [label="https+basic"];
+        hitachinr -> oracle_cloud [label="https+basic"];
+        oracle_cloud -> oracle_pump;
+    }
+
+    //edge [layer=pana];
+    {
+        pana_nr -> pana_home [label="https+bearer"];
+        pana_nr -> smart_illumi [label="mqtt"];
+        pana_nr -> smart_lamp [label="http"];
+        pana_nr -> siem_park [label="mqtt"];
+        pana_bwr -> fujitsuremotepx [label="http+basic\n(bypassing CORS checking)"];
+        pana_bwr -> eure_car [label="https+oauth2",style=dotted];
+        pana_bwr -> oracle_cloud [label="https+basic"];
+        pana_post -> pana_devsim [label="http\n(on vlan2)"];
+        pana_post -> intel_light [label="http\n(on vlan2)",style=dotted];
+        pana_post -> eure_car [label="https+oauth2"];
+    }
+
+    //edge [layer=fuji];
+    {
+        fujitsu_nr -> fujitsuremotepx [label="http+basic"];
+        fujitsu_nr -> pana_devsim [label="https/\nLongPoll/\n+bearer\n(websocket)"];
+        fujitsu_nr -> pana_home [label="https/\nLongPoll/\n+bearer\n(websocket)"];
+        fujitsu_nr -> intel_light [label="http/https\n+basic\n+bearer"];
+        fujitsu_nr -> smart_lamp [label="http"];
+        fujitsu_nr -> oracle_pump [label="https\n+basic"];
+        fujitsu_nr -> siem_event [label="http/coap/LongPoll/(websocket)"];
+        fujitsu_nr -> siem_festo [style=dotted];
+        fujitsu_nr -> eure_car [label="https\n+oauth2"];
+        fujitsuremotepx -> fujitsulocalpx [label="websocket"];
+        fujitsuremotepx -> siem_nwprx [label="websocket (trying)", style=dotted];
+        fujitsulocalpx -> fujitsusensor [label="http"];
+        fujitsulocalpx -> pana_devsim [label="https/\nLongPoll/\n+bearer\n(websocket)"];
+        fujitsulocalpx -> pana_home [label="https/\nLongPoll/\n+bearer\n(websocket)"];
+        fujitsulocalpx -> intel_light [label="http"];
+        fujitsulocalpx -> smart_lamp [label="http"];
+        fujitsulocalpx -> oracle_pump [style=dotted];
+        fujitsulocalpx -> siem_event [label="http/coap/LongPoll/(websocket)"];
+        fujitsulocalpx -> siem_festo [style=dotted];
+        fujitsulocalpx -> eure_car [label="https\n+oauth2"];
+    }
+
+    /* select layer to be emitted */
+
+    layerselect="hit"; /* pana, fuji, hit */
+}
