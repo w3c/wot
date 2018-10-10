@@ -340,28 +340,14 @@ Result of Oracle projects
 
 ## Home Use Case
 
-![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png)   
-
 ![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
 	
 ![Oracle_HVAC_Intel](images/Oracle_HVAC_Intel.png)
-
-![Oracle](images/Oracle_HVAC_Festo.png)		
-
-![Oracle_AssetMon_2](images/Oracle_AssetMon_2.png)
-
-![Oracle_Interworking](images/Oracle_Interworking.png)
 
 ### Industrial Use Case
+
 ![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png)   
 
 ![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
 	
 ![Oracle_HVAC_Intel](images/Oracle_HVAC_Intel.png)
-
-![Oracle](images/Oracle_HVAC_Festo.png)		
-
-![Oracle_AssetMon_2](images/Oracle_AssetMon_2.png)
-
-![Oracle_Interworking](images/Oracle_Interworking.png)
-
