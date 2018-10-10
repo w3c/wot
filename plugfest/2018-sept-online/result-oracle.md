@@ -23,47 +23,31 @@ Result of Oracle projects
   
 ![Oracle_Connected_Car_Simulator](images/Panasonic_HueGroup.png)   
 
-## Monitoring and Control of Devices
-
-![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png)   
-
-![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
-	
-![Oracle_HVAC_Intel](images/Oracle_HVAC_Intel.png)
-
-![Oracle](images/Oracle_HVAC_Festo.png)		
-
-![Oracle_AssetMon_2](images/Oracle_AssetMon_2.png)
-
-![Oracle_Interworking](images/Oracle_Interworking.png)
-
 ### 3.1 Testing Individually
 
 #### 3.1.1 Validate TDs
 
-##### Panasonic tried to validate all TDs using [Thingweb Playground](https://github.com/thingweb/thingweb-playground)
+##### Oracle tried to validate some TDs using [Thingweb Playground](https://github.com/thingweb/thingweb-playground)
 
 * NO
-   * Issue: JSON Schema validation error occurred at @context of Panasonic TDs. It was caused by old URLs in the TDs ("https://w3c.github.io/wot/w3c-wot-td-context.jsonld", "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"). The error message was following: <br>`X JSON Schema validation... KO:`<br>`> data['@context'][0] should be equal to one of the allowed values, data['@context'][1] should be string, data['@context'][1] should be equal to one of the allowed values, data['@context'] should contain a valid item, data['@context'] should be string, data['@context'] should be equal to one of the allowed values, data['@context'] should match exactly one schema in oneOf`
-   * Comment: Panasonic will fix this issue by next PlugFest.
-
+   * Issue: JSON Schema validation error occurred at @context of  TDs. It was caused by old URLs in the TDs ("https://w3c.github.io/wot/w3c-wot-td-context.jsonld", "https://w3c.github.io/wot/w3c-wot-common-context.jsonld"). 
+   * Oracle updated the dm2td converter to generate proper TDs.
+ 
 #### 3.1.2 Register with Thing Directory
 
-##### Panasonic tried to register TDs of Local Simulator manually with Thing Directories provided by Fujitsu.
-
-* NO
-   * Issue: TDs were registered successfully, but no TD was provided from Thing Directory due to a lack of directory setting.
-   * Comment: All necessary settings are expected to be clarified by next PlugFest.
+* OT
 
 #### 3.1.3 Connect with Remote/Local Proxy
 
-##### Panasonic proxied Smart Home Things through Proprietery WebSocket connection.
-
-* OK
+* NA
 
 #### 3.1.4 Connect with node-wot
 
-* NA
+* OK
+  * Oracle connected to the node-wot instance hosted at Siemens to access and control the Festo plant.
+  * Oracle hosted a node-wot instance and a bridge-servient to interface with Panasonic's hue group.
+  * We ran out of time to connect with other devices from Intel, Panasonic and others.
+
 
 #### 3.1.5 Scripting API
 
@@ -71,17 +55,15 @@ Result of Oracle projects
 
 ### 3.2 Testing in Client Role
 
-#### 3.2.1 Metadata Handling
+##### Oracle used the hosted node-wot instance and the bridge-servient to interface between the Oracle IOT Cloud Service and devices that provide a TD with HTTP bindings.
 
-##### Panasonic used NodeRED and Browser based Generic WoT Client which could consume any Thing metadata with HTTP bindings.
+#### 3.2.1 Metadata Handling
 
 * OK
 
 #### 3.2.2 Read Property
 
 ##### HTTP
-
-###### Client: NodeRED, Generic WoT Client
 
 * OK
 
@@ -101,8 +83,6 @@ Result of Oracle projects
 
 ##### HTTP
 
-###### Client: NodeRED, Generic WoT Client
-
 * OK
 
 ##### CoAP
@@ -121,13 +101,13 @@ Result of Oracle projects
 
 ##### HTTP+Longpoll
 
-###### Client: Generic WoT Client
-
-* OK
+* NA
+* node-wot extension required.
 
 ##### HTTP+Webhooks
 
 * NA
+* node-wot extension required.
 
 ##### CoAP
 
@@ -141,15 +121,11 @@ Result of Oracle projects
 
 ##### Simple WebSocket
 
-###### Client: Generic WoT Client
-
-* OK
+* NA
 
 #### 3.2.5 Invoke Action
 
 ##### HTTP
-
-###### Client: NodeRED, Generic WoT Client
 
 * OK
 
@@ -159,9 +135,7 @@ Result of Oracle projects
 
 ##### MQTT
 
-###### Client: NodeRED
-
-* OK
+* NA
 
 ##### Other
 
@@ -171,13 +145,13 @@ Result of Oracle projects
 
 ##### HTTP+Longpoll
 
-###### Client: Generic WoT Client
-
-* OK
+* NA
+* node-wot extension required.
 
 ##### HTTP+Webhooks
 
 * NA
+* node-wot extension required.
 
 ##### CoAP
 
@@ -185,47 +159,30 @@ Result of Oracle projects
 
 ##### MQTT
 
-###### Client: NodeRED
-
-* OK
+* NA
 
 ##### Other
 
-##### Simple WebSocket
-
-###### Client: Generic WoT Client
-
-* OK
+* NA
 
 #### 3.2.7 Security
 
 ##### Basic authentication
 
-###### IoT Cloud Service (Oracle)
+###### Speech service (Intel)
 
-###### Client: Generic WoT Client
-
-* OK
+* OT
 
 ##### Bearer token
 
-###### Remote proxy (Fujitsu) proxied Home Devices (Panasonic)
+###### Home Devices (Panasonic)
 
-###### Client: Generic WoT Client (on Chrome Browser)
-
-* NO
-   * Issue: The browser **could** access Remote proxy (Fujitsu) **only after** bypassing CORS checking at the browser.
-   * Comment: Example of bypassing CORS (at Chrome Browser on Windows):<br> `> "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C://Chrome dev session"`
+* OK
 
 ##### OAuth2
 
-###### MyCarThing (Eurecom)
-
-###### Client: Generic WoT Client (on Chrome Browser)
-
-* NO
-   * Issue: The browser **could not** access MyCarThing (Eurecom) **even after** bypassing CORS checking at the browser. It was caused by "https + self-signed certificate".
-   * Comment: The browser (XMLHttpRequest) could not avoid the self-signed certificate error.
+* NA
+* planned for a future plug fest.
 
 #### 3.2.8 Semantic integration
 
@@ -239,7 +196,7 @@ Result of Oracle projects
 
 #### 3.3.1 Metadata
 
-##### Panasonic provided [TDs](https://github.org/w3c/wot/plugfest/2018-sept-online/TDs/Panasonic).
+##### Oracle provided [TDs](https://github.org/w3c/wot/plugfest/2018-sept-online/TDs/Oracle).
 
 * OK
 
@@ -283,11 +240,13 @@ Result of Oracle projects
 
 ##### HTTP+Longpoll
 
-* OK
+* NA
+* node-wot extension required.
 
 ##### HTTP+Webhooks
 
 * NA
+* node-wot extension required.
 
 ##### CoAP
 
@@ -301,7 +260,7 @@ Result of Oracle projects
 
 ###### Simple WebSocket
 
-* OK
+* NA
 
 #### 3.3.5 Invoke Action
 
@@ -325,11 +284,13 @@ Result of Oracle projects
 
 ##### HTTP+Longpoll
 
-* OK
+* NA
+* node-wot extension required.
 
 ##### HTTP+Webhooks
 
 * NA
+* node-wot extension required.
 
 ##### CoAP
 
@@ -343,11 +304,11 @@ Result of Oracle projects
 
 ###### Simple WebSocket
 
-* OK
+* NA
 
 #### 3.3.7 Security
 
-##### Bearer
+##### Basic Auth
 
 * OK
 
@@ -375,4 +336,32 @@ Result of Oracle projects
 
 ## 4 Use cases
 
-* NA
+## Monitoring and Control of Devices
+
+## Home Use Case
+
+![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png)   
+
+![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
+	
+![Oracle_HVAC_Intel](images/Oracle_HVAC_Intel.png)
+
+![Oracle](images/Oracle_HVAC_Festo.png)		
+
+![Oracle_AssetMon_2](images/Oracle_AssetMon_2.png)
+
+![Oracle_Interworking](images/Oracle_Interworking.png)
+
+### Industrial Use Case
+![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png)   
+
+![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
+	
+![Oracle_HVAC_Intel](images/Oracle_HVAC_Intel.png)
+
+![Oracle](images/Oracle_HVAC_Festo.png)		
+
+![Oracle_AssetMon_2](images/Oracle_AssetMon_2.png)
+
+![Oracle_Interworking](images/Oracle_Interworking.png)
+
