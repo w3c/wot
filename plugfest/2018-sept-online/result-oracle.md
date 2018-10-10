@@ -21,13 +21,7 @@ Result of Oracle projects
 
 ![Oracle_Digital_Twin_Simulators](Oracle_Digital_Twin_Simulators.png) 
   
-[Digital Twin Simulators](Oracle_Digital_Twin_Simulators.md)
-
-![Oracle_Digital_Twin_Simulator](Oracle_Digital_Twin_Simulator.png)   
-[Digital Twin Simulator](Oracle_Digital_Twin_Simulator.md)
-
-![Oracle_Connected_Car_Simulator](Oracle_Connected_Car_Simulator.png)   
-[Connected_Car_Simulator](Oracle_Connected_Car_Simulator.md)
+![Oracle_Connected_Car_Simulator](Panasonic_HueGroup.png)   
 
 ## Monitoring and Control of Devices
 
