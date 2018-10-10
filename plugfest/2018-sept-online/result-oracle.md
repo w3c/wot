@@ -19,9 +19,9 @@ Result of Oracle projects
 
 ## Device Simulators from Oracle
 
-![Oracle_Digital_Twin_Simulators](Oracle_Digital_Twin_Simulators.png) 
+![Oracle_Digital_Twin_Simulators](images/Oracle_Digital_Twin_Simulators.png) 
   
-![Oracle_Connected_Car_Simulator](Panasonic_HueGroup.png)   
+![Oracle_Connected_Car_Simulator](images/Panasonic_HueGroup.png)   
 
 ## Monitoring and Control of Devices
 
