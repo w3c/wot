@@ -38,7 +38,6 @@ Above image is generated from [this source code](images/servients.gv) by
 #### 3.2.1 Metadata Handling
 
 * OK
-   * Issue: NA
    * Comment: Node-generator has successfully incorporated property names etc. in TD to configuration interfaces.
 
 #### 3.2.2 Read Property
@@ -46,6 +45,7 @@ Above image is generated from [this source code](images/servients.gv) by
 ##### HTTP
 
 * OK
+  * Issue: Multiple form entries in single property.  How can I select suitable entry from them?  For example, if first form in the TD contains an URL which is accessible from localnet only, remote clients (access from the Internet) must skip the form and search another form to access the Thing.  I think it is useful to prepare some guidelines for implementing WoT stack.
 
 ##### CoAP
 
