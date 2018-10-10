@@ -1,4 +1,4 @@
-# PARTICIPANT PlugFest Result for Online September 2018
+# Oracle PlugFest Result for Online September 2018
 
 This document summerizes the results of the Online September PlugFest held Sep 25-27.
 
@@ -14,8 +14,34 @@ Test results can have one of 4 states:
 * NA: Test not applicable, e.g., because feature is not implemented
    * Comment if feature is planned to be implemented in the future
 
-Result of Panasonic projects
-![images](images/Panasonic_PlugfestSummary181003.png)
+Result of Oracle projects
+![images](images/Oracle_PlugfestSummary1810103.png)
+
+## Device Simulators from Oracle
+
+![Oracle_Digital_Twin_Simulators](Oracle_Digital_Twin_Simulators.png) 
+  
+[Digital Twin Simulators](Oracle_Digital_Twin_Simulators.md)
+
+![Oracle_Digital_Twin_Simulator](Oracle_Digital_Twin_Simulator.png)   
+[Digital Twin Simulator](Oracle_Digital_Twin_Simulator.md)
+
+![Oracle_Connected_Car_Simulator](Oracle_Connected_Car_Simulator.png)   
+[Connected_Car_Simulator](Oracle_Connected_Car_Simulator.md)
+
+## Monitoring and Control of Devices
+
+![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png)   
+
+![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
+	
+![Oracle_HVAC_Intel](images/Oracle_HVAC_Intel.png)
+
+![Oracle](images/Oracle_HVAC_Festo.png)		
+
+![Oracle_AssetMon_2](images/Oracle_AssetMon_2.png)
+
+![Oracle_Interworking](images/Oracle_Interworking.png)
 
 ### 3.1 Testing Individually
 
