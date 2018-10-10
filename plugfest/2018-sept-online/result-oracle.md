@@ -14,14 +14,8 @@ Test results can have one of 4 states:
 * NA: Test not applicable, e.g., because feature is not implemented
    * Comment if feature is planned to be implemented in the future
 
-Result of Oracle projects
+## Result of Oracle projects
 ![images](images/Oracle_PlugfestSummary1810103.png)
-
-## Device Simulators from Oracle
-
-![Oracle_Digital_Twin_Simulators](images/Oracle_Digital_Twin_Simulators.png) 
-  
-![Oracle_Connected_Car_Simulator](images/Panasonic_HueGroup.png)   
 
 ### 3.1 Testing Individually
 
@@ -194,9 +188,21 @@ Result of Oracle projects
 
 ### 3.3 Testing in Server Role
 
-#### 3.3.1 Metadata
+#### Device Simulators
 
-##### Oracle provided [TDs](https://github.org/w3c/wot/plugfest/2018-sept-online/TDs/Oracle).
+Oracle provided several [TDs] for simulated devices (https://github.org/w3c/wot/plugfest/2018-sept-online/TDs/Oracle)
+for each plug fest participant.
+
+![Oracle_Digital_Twin_Simulators](images/Oracle_Digital_Twin_Simulators.png) 
+ 
+Several simulators were built based on TDs from other participants during the plug fest.  
+
+Example:
+ 
+![Panasonic Hue Group_Simulator](images/Panasonic_HueGroup.png)   
+
+
+#### 3.3.1 Metadata
 
 * OK
 
@@ -338,15 +344,16 @@ Result of Oracle projects
 
 ## Monitoring and Control of Devices
 
-## Home Use Case
+### Home Use Cases
 
 ![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
 	
 ![Oracle_HVAC_Intel](images/Oracle_HVAC_Intel.png)
 
-### Industrial Use Case
+### Industrial Use Cases
 
-![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png)   
+![Oracle_Industrial_Scenario](images/Oracle_Industrial_Scenario.png) 
+
 
 ![Oracle_AssetMon_1](images/Oracle_AssetMon_1.png)
 	
