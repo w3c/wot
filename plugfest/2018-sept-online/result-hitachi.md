@@ -214,9 +214,9 @@ Above image is generated from [this source code](images/servients.gv) by
 
 - Monitoring HVAC
   - Reading periodicaly Temperature value of Oracle's HVAC simulator, and displaying the value at Panasonic's Bulletinboard.
-  - When temperature value exceeds threashold value (> 30 degree), alert signal is sent to remote site.
+  - When temperature value exceeds threashold value (> 30 degree), alert signals will be sent to remote sites.
     - Panasonic's Hue Groups turns red.
     - Intel's LED turns red.
-    - Fujitsu's Rotary Beacon Light flashes.
+    - Fujitsu's Rotary Beacon Light flashes.
 
 
