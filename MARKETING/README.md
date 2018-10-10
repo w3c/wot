@@ -31,3 +31,36 @@ For detailed descriptions and high-resolution images, please follow the links.
 ## Prototypes and Test Systems from Siemens
 ![Siemens_Industrial](Siemens_Industrial.jpg)   
 [WoT-enabled industrial devices](Siemens_Industrial.md)
+
+## Device Simulators from Oracle
+
+![Oracle_Digital_Twin_Simulators](Oracle_Digital_Twin_Simulators.png) 
+  
+[Digital Twin Simulators](Oracle_Digital_Twin_Simulators.md)
+
+![Oracle_Digital_Twin_Simulator](Oracle_Digital_Twin_Simulator.png)   
+[Digital Twin Simulator](Oracle_Digital_Twin_Simulator.md)
+
+![Oracle_Connected_Car_Simulator](Oracle_Connected_Car_Simulator.png)   
+[Connected_Car_Simulator](Oracle_Connected_Car_Simulator.md)
+
+## Monitoring and Control of Devices
+
+![Oracle_Industrial_Scenario](Oracle_Industrial_Scenario.png)   
+[Asset Monitoring and Control](Oracle_Industrial_Scenario.md)
+
+![Oracle_AssetMon_1](Oracle_AssetMon_1.png)
+[Asset Monitoring: Home Scenario](Home_Scenario_1.md)
+	
+![Oracle_HVAC_Intel](Oracle_HVAC_Intel.png)
+
+[Asset Monitoring: Home Scenario](Home_Senario_2.md)
+
+![Oracle](Oracle_HVAC_Festo.png)		
+[Asset Monitoring: Industrial Scenario](Industrial_Senario_1.md)
+
+![Oracle_AssetMon_2](Oracle_AssetMon_2.png)
+[Asset Monitoring: Industrial Scenario](Industrial_Senario_2.md)	
+![Oracle_Interworking](Oracle_Interworking.png)
+
+[Interoperability across manufacturers](Interoperability.md)
