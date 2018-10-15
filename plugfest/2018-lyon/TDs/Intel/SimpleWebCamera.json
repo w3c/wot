@@ -70,7 +70,7 @@
   },
   "actions": {
     "crop": {
-      "title": "Crop",
+      "title": "Crop (Deprecated; see /api/region)",
       "input": {
           "type": "object",
           "properties": {
@@ -103,6 +103,39 @@
           "mediaType": "image/jpeg",
           "op": ["invokeaction"],
           "http:methodName": "POST"
+        }
+      ]
+    }
+    "region": {
+      "title": "region",
+      "uriVariables": {
+          "xo": {
+              "title": "x origin (pixels)",
+              "type": "integer",
+              "minimum": 0
+          },
+          "yo": {
+              "title": "y origin (pixels)",
+              "type": "integer",
+              "minimum": 0
+          },
+          "x": {
+              "title": "x size (pixels)",
+              "type": "integer",
+              "minimum": 0
+          },
+          "y": {
+              "title": "y size (pixels)",
+              "type": "integer",
+              "minimum": 0
+          }
+      }, 
+      "forms": [
+        {
+          "href": "http://upsq1c.local:9191/api/frame/region{?xo,yo,x,y}",
+          "mediaType": "image/jpeg",
+          "op": ["invokeaction"],
+          "http:methodName": "GET"
         }
       ]
     }
