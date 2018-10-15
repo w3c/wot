@@ -1,0 +1,110 @@
+{
+  "@context": ["http://www.w3.org/ns/td",
+               {
+                   "iot": "http://iotschema.org/",
+                   "http": "http://www.w3.org/2011/http#"
+               }
+  ],
+  "@type": ["Thing"],
+  "name": "SimpleWebCamera-upsq1c.local",
+  "id": "urn:uuid:6f6d4d0b-3d8b-58a1-a90b-7d05680553d6",
+  "security": [{"scheme": "nosec"}],
+  "properties": {
+    "exposure": {
+      "@type": ["iot:CurrentLevel"],
+      "title": "Exposure",
+      "type": "object",
+      "properties": {
+          "exposure": {
+              "@type": ["iot:LevelData"],
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 600
+          },
+          "required": ["exposure"]
+      }, 
+      "writable": true,
+      "observable": true,
+      "forms": [
+        {
+          "href": "http://upsq1c.local:9191/api/exposure",
+          "mediaType": "application/json",
+          "op": ["readproperty"],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "http://upsq1c.local:9191/api/exposure",
+          "mediaType": "application/json",
+          "op": ["writeproperty"],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "http://upsq1c.local:9191/api/exposure/observe",
+          "mediaType": "application/json",
+          "op": ["observeproperty"],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        }
+      ]
+    },
+    "frame": {
+      "title": "frame",
+      "writable": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "http://upsq1c.local:9191/api/frame",
+          "mediaType": "image/jpeg",
+          "op": ["readproperty"],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "http://upsq1c.local:9191/api/frame/observe",
+          "mediaType": "image/jpeg",
+          "op": ["observeproperty"],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "crop": {
+      "title": "Crop",
+      "input": {
+          "type": "object",
+          "properties": {
+              "xo": {
+                  "title": "x origin (pixels)",
+                  "type": "integer",
+                  "minimum": 0
+              },
+              "yo": {
+                  "title": "y origin (pixels)",
+                  "type": "integer",
+                  "minimum": 0
+              },
+              "x": {
+                  "title": "x size (pixels)",
+                  "type": "integer",
+                  "minimum": 0
+              },
+              "y": {
+                  "title": "y size (pixels)",
+                  "type": "integer",
+                  "minimum": 0
+              }
+          },
+          "required": ["x","y"]
+      }, 
+      "forms": [
+        {
+          "href": "http://upsq1c.local:9191/api/frame/crop",
+          "mediaType": "image/jpeg",
+          "op": ["invokeaction"],
+          "http:methodName": "POST"
+        }
+      ]
+    }
+  }
+}
