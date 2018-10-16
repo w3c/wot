@@ -18,12 +18,12 @@ a survceillence camera is turned on.
 ### Device interactions
 - Monitor room occupancy (KETI Sensor)  
 - Detect when room is empty and trigger the following actions (Oracle)
-- Close window blinds (Fujitu)
+- Close window blinds (Fujitsu)
 - Clean the room (Panasonic)
-- Turn on a MQTT device (Siemens)
-- Turn off the lights (Smart Things)
-- Turn on a surveillance camera (Intel)
-- Control other devices (Hitachi)
+- Turn off the lights (Panasonic)
+
+![Home_Scenario](images/Home_Scenario.png)
+
 
 ## Industrial integration scenarios
 
@@ -41,10 +41,12 @@ pubish alert messages and make voice announcements.
 - Discover anomaly, critical condition and trigger the following actions (Oracle)
 - Drain the tank in a chemical factory (Siemens)
 - Flash a warning light (Fujitsu)
+- Change light color depending on tank level (Intel)
 - Turn off all air conditioners (Panasonic)
-- Flash the lights (Smart Things)
-- Make voice announcements (Intel)
-- Broadcast an alert message (Hitachi)
+- Make voice announcement (Intel)
+
+![Industrial_Scenario](images/Industrial_Scenario.png)
+
 
 ## Proxy integration scenarios (Fujitsu)
 
@@ -74,7 +76,7 @@ Scenario 2: Industrial sensors and facilities integrated with proxies
 
 ### Device interactions
 - Detect when the dust in the room increases (Fujitsu)
-- Turn on the lotating light (fujitsu)
+- Turn on the rotating light (Fujitsu)
 - Detect when some sensors change (???)
 - Turn on something (???)
 

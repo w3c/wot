@@ -41,7 +41,7 @@ if (verbose) console.log(dm);
 if (verbose) console.log("-----");
 
 var td={};
-td['@context']=["https://w3c.github.io/wot-thing-description/context/td-context.jsonld" ];
+td['@context']=["http://www.w3.org/ns/td" ];
 td['@type'] = "Thing";
 td.name=dm.name;
 td.description=dm.description;
