@@ -3,7 +3,8 @@
 
 ## Scenarios
 
-[Scenarios](scenarios.md)
+The scenarios that are planned for this plug fest are described here:
+[Scenario description](Scenarios.md)
 
 ## Target Features
 * Security
