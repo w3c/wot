@@ -1,5 +1,5 @@
 # Intel - Smart Home Demo including OCF Devices and NAT Traversal
-**NOTE: MAY BE OCCASIONALLY OFFLINE DURING PREPARATIONS FOR BUNDANG PLUGFEST.**
+**NOTE: MAY BE OCCASIONALLY OFFLINE DURING PREPARATIONS FOR LYON PLUGFEST.**
 
 This demonstration systems includes a combination of devices
 with both web-service and OCF network interfaces
@@ -71,35 +71,35 @@ Summary of network API (see TDs for details):
           
 #### HTTPS and Basic Auth
 * Camera 0 via California Digital Ocean Portal:
-    [TD](https://portal.mmccool.net:28443/api) -
-    [frame](https://portal.mmccool.net:28443/api/frame)
-          [(observe)](https://portal.mmccool.net:28443/api/frame/observe) -
-    [exposure](https://portal.mmccool.net:28443/api/exposure)
-          [(observe)](https://portal.mmccool.net:28443/api/exposure/observe) -
-    [crop](https://portal.mmccool.net:28443/api/crop)
+    [TD](https://portal.mmccool.net:29455/api) -
+    [frame](https://portal.mmccool.net:29455/api/frame)
+          [(observe)](https://portal.mmccool.net:29455/api/frame/observe) -
+    [exposure](https://portal.mmccool.net:29455/api/exposure)
+          [(observe)](https://portal.mmccool.net:29455/api/exposure/observe) -
+    [crop](https://portal.mmccool.net:29455/api/crop)
 * Camera 0 via Japan AWS Portal:
-    [TD](https://tiktok.mmccool.org:28443/api) -
-    [frame](https://tiktok.mmccool.org:28443/api/frame)
-          [(observe)](https://tiktok.mmccool.org:28443/api/frame/observe) -
-    [exposure](https://tiktok.mmccool.org:28443/api/exposure)
-          [(observe)](https://tiktok.mmccool.org:28443/api/exposure/observe) -
-    [crop](https://tiktok.mmccool.org:28443/api/crop)
+    [TD](https://tiktok.mmccool.org:29455/api) -
+    [frame](https://tiktok.mmccool.org:29455/api/frame)
+          [(observe)](https://tiktok.mmccool.org:29455/api/frame/observe) -
+    [exposure](https://tiktok.mmccool.org:29455/api/exposure)
+          [(observe)](https://tiktok.mmccool.org:29455/api/exposure/observe) -
+    [crop](https://tiktok.mmccool.org:29455/api/crop)
 
 #### HTTPS and Digest Auth
 * Camera 0 via California Digital Ocean Portal:
-    [TD](https://portal.mmccool.net:28444/api) -
-    [frame](https://portal.mmccool.net:28444/api/frame)
-           [(observe)](https://portal.mmccool.net:28444/api/frame/observe) -
-    [exposure](https://portal.mmccool.net:28444/api/exposure)
-           [(observe)](https://portal.mmccool.net:28444/api/exposure/observe) -
-    [crop](https://portal.mmccool.net:28444/api/crop)
+    [TD](https://portal.mmccool.net:29456/api) -
+    [frame](https://portal.mmccool.net:29456/api/frame)
+           [(observe)](https://portal.mmccool.net:29456/api/frame/observe) -
+    [exposure](https://portal.mmccool.net:294564/api/exposure)
+           [(observe)](https://portal.mmccool.net:29456/api/exposure/observe) -
+    [crop](https://portal.mmccool.net:29456/api/crop)
 * Camera 0 via Japan AWS Portal:
-    [TD](https://tiktok.mmccool.org:28444/api) -
-    [frame](https://tiktok.mmccool.org:28444/api/frame)
-           [(observe)](https://tiktok.mmccool.org:28444/api/frame/observe) -
-    [exposure](https://tiktok.mmccool.org:28444/api/exposure)
-           [(observe)](https://tiktok.mmccool.org:28444/api/exposure/observe) -
-    [crop](https://tiktok.mmccool.org:28444/api/crop)
+    [TD](https://tiktok.mmccool.org:29456/api) -
+    [frame](https://tiktok.mmccool.org:29456/api/frame)
+           [(observe)](https://tiktok.mmccool.org:29456/api/frame/observe) -
+    [exposure](https://tiktok.mmccool.org:29456/api/exposure)
+           [(observe)](https://tiktok.mmccool.org:29456/api/exposure/observe) -
+    [crop](https://tiktok.mmccool.org:29456/api/crop)
        
 ### Web Speak
 Speech synthesizer service.
