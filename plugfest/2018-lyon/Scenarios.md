@@ -84,20 +84,26 @@ To demonstrate how semantic annotation can benefit real world application, an ap
 - Say "I'm home"/"Bye" to Google Home (Panasonic)
 - Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
 - **Turn on/off LED Board (Panasonic)**
+
 <br>
+
 - Register TD of Rotary Light to directory (Fujitsu)
 - Say "I'm home"/"Bye" to Google Home (Panasonic)
 - Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
 - **Turn on/off LED Board (Panasonic)**
 - **Turn on/off Rotary Light (Fujitsu)**
+
 <br>
+
 - Register TD of Light to directory (Intel)
 - Say "I'm home"/"Bye" to Google Home (Panasonic)
 - Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
 - **Turn on/off LED Board (Panasonic)**
 - **Turn on/off Rotary Light (Fujitsu)**
 - **Turn on/off Light (Intel)**
+
 <br>
+
 - Register TD of Light to directory (SmartThings)
 - Say "I'm home"/"Bye" to Google Home (Panasonic)
 - Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
@@ -105,7 +111,9 @@ To demonstrate how semantic annotation can benefit real world application, an ap
 - **Turn on/off Rotary Light (Fujitsu)**
 - **Turn on/off Light (Intel)**
 - **Turn on/off Light (SmartThings)**
+
 <br>
+
 - ...
 
 ## Possible Future Scenarios:
