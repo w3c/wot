@@ -41,15 +41,15 @@ these devices using the remote proxy.
 - Turn on the room light (Fujitsu)
 - Detect when the room becomes bright (Fujitsu)
 - Turn on the light (Intel)
-- Detect when the room become bright (Intel)
+- Detect when the room becomes bright (Intel)
 - Turn on the light (SmartThings)
-- detect when the room become bright (SmartThings)
+- Detect when the room becomes bright (SmartThings)
 - Turn off the room light (Fujitsu)
-- detect when the room become dark (Fujitsu)
-- turn off the room light (Intel)
-- detect when the room becomes dark (Intel)
-- turn off the room light (SmartThings)
-- detect when the room becomes darks (SmartThings)
+- Detect when the room becomes dark (Fujitsu)
+- Turn off the room light (Intel)
+- Detect when the room becomes dark (Intel)
+- Turn off the room light (SmartThings)
+- Detect when the room becomes darks (SmartThings)
 
 ## Industrial integration scenarios
 
