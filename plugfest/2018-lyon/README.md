@@ -1,6 +1,10 @@
 # Lyon Plugfest
 [Oct 20 and 21 at Université de Lyon](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_20-26_October_2018,_Lyon,_France#PlugFest_.2820-21_Oct_2018.29)
 
+## Scenarios
+
+The scenarios that are planned for this plug fest are described here:
+[Scenario description](Scenarios.md)
 
 ## Target Features
 * Security
