@@ -25,6 +25,33 @@ a survceillence camera is turned on.
 ![Home_Scenario](images/Home_Scenario.png)
 
 
+
+Scenario 2: Detections and actuations in the home (inserted by Fujitsu)
+
+### Description:
+There are some sensors and actuators in the home. If a sensor detects changes in the home such as brightness, 
+the smart home application controls some home appliances such as room light. In this demonstration, when the application
+turns on the room light, the illumination sensor detects when the room becomes bright and another room light is turned on.
+As as a result, the illumination sensor in this room detects to become bright and the light in the third room is turned on.
+This application monitors some sensors in the same time and controls the light correspoinding to the sensor.<br>
+In this demonstration, all sensors and lights are connected to the local proxies the cloud application control 
+these devices using the remote proxy.
+
+### Device interactions
+- Turn on the room light (Fujitsu)
+- Detect when the room becomes bright (Fujitsu)
+- Turn on the light (Intel)
+- Detect when the room becomes bright (Intel)
+- Turn on the light (SmartThings)
+- Detect when the room becomes bright (SmartThings)
+- Turn off the room light (Fujitsu)
+- Detect when the room becomes dark (Fujitsu)
+- Turn off the room light (Intel)
+- Detect when the room becomes dark (Intel)
+- Turn off the room light (SmartThings)
+- Detect when the room becomes darks (SmartThings)
+- Turn off the room light (Fujitsu)
+
 ## Industrial integration scenarios
 
 Scenario 1: Automatically alert and protect citizens when a chemical plant has an accident
@@ -46,7 +73,6 @@ pubish alert messages and make voice announcements.
 - Make voice announcement (Intel)
 
 ![Industrial_Scenario](images/Industrial_Scenario.png)
-
 
 ## Proxy integration scenarios (Fujitsu)
 
@@ -79,7 +105,6 @@ Scenario 2: Industrial sensors and facilities integrated with proxies
 - Turn on the rotating light (Fujitsu)
 - Detect when some sensors change (???)
 - Turn on something (???)
-
 
 ## Possible Future Scenarios: 
 # Enterprise integration scenarios
