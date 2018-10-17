@@ -29,12 +29,12 @@ a survceillence camera is turned on.
 Scenario 2: Detections and actuations in the home (inserted by Fujitsu)
 
 ### Description:
-There are some sensors and actuators in the home. If a sensor detects changes in the home such as brightness, 
+There are some sensors and actuators in the home. If a sensor detects changes in the home such as brightness,
 the smart home application controls some home appliances such as room light. In this demonstration, when the application
 turns on the room light, the illumination sensor detects when the room becomes bright and another room light is turned on.
 As as a result, the illumination sensor in this room detects to become bright and the light in the third room is turned on.
 This application monitors some sensors in the same time and controls the light correspoinding to the sensor.<br>
-In this demonstration, all sensors and lights are connected to the local proxies the cloud application control 
+In this demonstration, all sensors and lights are connected to the local proxies the cloud application control
 these devices using the remote proxy.
 
 ### Device interactions
@@ -73,11 +73,45 @@ pubish alert messages and make voice announcements.
 - Make voice announcements (Intel)
 - Broadcast an alert message (Hitachi)
 
-## Possible Future Scenarios: 
+## Semantics integration scenarios
+Scenario 1: Search devices (ex. lights) which can be turned off/on by semantic annotation
+
+### Description
+To demonstrate how semantic annotation can benefit real world application, an application finds particular devices by semantic annotation after TDs are registered to the directory.
+
+### Device interactions
+- Register TD of LED Board to directory (Panasonic)
+- Say "I'm home"/"Bye" to Google Home (Panasonic)
+- Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
+- **Turn on/off LED Board (Panasonic)**
+<br>
+- Register TD of Rotary Light to directory (Fujitsu)
+- Say "I'm home"/"Bye" to Google Home (Panasonic)
+- Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
+- **Turn on/off LED Board (Panasonic)**
+- **Turn on/off Rotary Light (Fujitsu)**
+<br>
+- Register TD of Light to directory (Intel)
+- Say "I'm home"/"Bye" to Google Home (Panasonic)
+- Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
+- **Turn on/off LED Board (Panasonic)**
+- **Turn on/off Rotary Light (Fujitsu)**
+- **Turn on/off Light (Intel)**
+<br>
+- Register TD of Light to directory (SmartThings)
+- Say "I'm home"/"Bye" to Google Home (Panasonic)
+- Search devices which can be turned on/off by semantic annotation (Panasonic Node-RED)
+- **Turn on/off LED Board (Panasonic)**
+- **Turn on/off Rotary Light (Fujitsu)**
+- **Turn on/off Light (Intel)**
+- **Turn on/off Light (SmartThings)**
+<br>
+- ...
+
+## Possible Future Scenarios:
 # Enterprise integration scenarios
 Ex: Access control and security system
 Ex: Energy management in a smart building/smart city
 # Transportation scenarios
 Ex: Fleet management
 Ex: Shipping and inventory control (supply chain management)
-
