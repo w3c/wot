@@ -1,0 +1,98 @@
+{
+  "@context": ["https://w3c.github.io/wot-thing-description/context/td-context.jsonld", "http://www.w3.org/ns/td", {
+    "iot": "http://iotschema.org/"
+  }],
+  "@type": "Thing",
+  "name": "PanaSimAirConditioner1",
+  "id": "p-wot:PanaSimAirConditioner1",
+  "base": "https://w3c.p-wot.com:300X/wot/things/PanaSimAirConditioner1/",
+  "security": [{
+    "scheme": "bearer",
+    "format": "jwt",
+    "alg": "ES256",
+    "authorizationUrl": "https://w3c.p-wot.com:8443/auth"
+  }],
+  "properties": {
+    "power": {
+      "title": "power",
+      "type": "boolean",
+      "writable": true,
+      "observable": true,
+      "forms": [{
+        "href": "power",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimAirConditioner1/power",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll",
+        "op": "observeProperty"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimAirConditioner1/power",
+        "mediaType": "application/json",
+        "op": "observeProperty"
+      }]
+    },
+    "operationMode": {
+      "title": "operationMode",
+      "type": "string",
+      "enum": ["Auto", "Cooling", "Heating", "Dehumidifying", "Blast"],
+      "writable": true,
+      "observable": true,
+      "forms": [{
+        "href": "operationMode",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimAirConditioner1/operationMode",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll",
+        "op": "observeProperty"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimAirConditioner1/operationMode",
+        "mediaType": "application/json",
+        "op": "observeProperty"
+      }]
+    },
+    "desiredTemp": {
+      "title": "desiredTemp",
+      "type": "number",
+      "minimum": 16,
+      "maximum": 30,
+      "writable": true,
+      "observable": true,
+      "forms": [{
+        "href": "desiredTemp",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimAirConditioner1/desiredTemp",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll",
+        "op": "observeProperty"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimAirConditioner1/desiredTemp",
+        "mediaType": "application/json",
+        "op": "observeProperty"
+      }]
+    },
+    "windVolumeLevel": {
+      "title": "windVolumeLevel",
+      "type": "number",
+      "minimum": 1,
+      "maximum": 3,
+      "writable": true,
+      "observable": true,
+      "forms": [{
+        "href": "windVolumeLevel",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimAirConditioner1/windVolumeLevel",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll",
+        "op": "observeProperty"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimAirConditioner1/windVolumeLevel",
+        "mediaType": "application/json",
+        "op": "observeProperty"
+      }]
+    }
+  }
+}
