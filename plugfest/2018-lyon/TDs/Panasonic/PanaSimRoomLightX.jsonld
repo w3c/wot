@@ -1,0 +1,109 @@
+{
+  "@context": ["https://w3c.github.io/wot-thing-description/context/td-context.jsonld", "http://www.w3.org/ns/td", {
+    "iot": "http://iotschema.org/"
+  }],
+  "@type": "Thing",
+  "name": "PanaSimRoomLight1",
+  "id": "p-wot:PanaSimRoomLight1",
+  "base": "https://w3c.p-wot.com:300X/wot/things/PanaSimRoomLight1/",
+  "security": [{
+    "scheme": "bearer",
+    "format": "jwt",
+    "alg": "ES256",
+    "authorizationUrl": "https://w3c.p-wot.com:8443/auth"
+  }],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "title": "power",
+      "type": "boolean",
+      "writable": true,
+      "observable": true,
+      "forms": [{
+        "href": "power",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/power",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll",
+        "op": "observeProperty"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/power",
+        "mediaType": "application/json",
+        "op": "observeProperty"
+      }]
+    },
+    "color": {
+      "title": "color",
+      "type": "string",
+      "enum": ["red", "blue", "white"],
+      "writable": true,
+      "observable": true,
+      "forms": [{
+        "href": "color",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/color",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll",
+        "op": "observeProperty"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/color",
+        "mediaType": "application/json",
+        "op": "observeProperty"
+      }]
+    },
+    "luminance": {
+      "@type": "iot:CurrentLevel",
+      "title": "luminance",
+      "type": "number",
+      "writable": false,
+      "observable": false,
+      "forms": [{
+        "href": "luminance",
+        "mediaType": "application/json"
+      }]
+    }
+  },
+  "events": {
+    "alert": {
+      "title": "alert",
+      "data": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "forms": [{
+        "href": "event/alert",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/alert",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/alert",
+        "mediaType": "application/json"
+      }]
+    },
+    "detect": {
+      "title": "detect",
+      "data": {
+        "type": "null"
+      },
+      "forms": [{
+        "href": "event/detect",
+        "mediaType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/detect",
+        "mediaType": "application/json",
+        "subProtocol": "LongPoll"
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/detect",
+        "mediaType": "application/json"
+      }]
+    }
+  }
+}
