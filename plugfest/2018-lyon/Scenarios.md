@@ -50,6 +50,7 @@ these devices using the remote proxy.
 - Detect when the room becomes dark (Intel)
 - Turn off the room light (SmartThings)
 - Detect when the room becomes darks (SmartThings)
+- Turn off the room light (Fujitsu)
 
 ## Industrial integration scenarios
 
