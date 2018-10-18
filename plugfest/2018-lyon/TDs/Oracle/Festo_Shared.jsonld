@@ -23,7 +23,7 @@
 			"name": "PumpStatus",
 			"type": "object",
 			"writable": false,
-			"label": "PumpStatus",
+			"title": "PumpStatus",
 			"properties": {
 				"PumpStatus": {
 					"type": "boolean",
@@ -41,7 +41,7 @@
 			"name": "Tank101MaximumLevelStatus",
 			"type": "object",
 			"writable": false,
-			"label": "Tank101MaximumLevelStatus",
+			"title": "Tank101MaximumLevelStatus",
 			"properties": {
 				"Tank101MaximumLevelStatus": {
 					"type": "boolean",
@@ -59,7 +59,7 @@
 			"name": "Tank101MinimumLevelStatus",
 			"type": "object",
 			"writable": false,
-			"label": "Tank101MinimumLevelStatus",
+			"title": "Tank101MinimumLevelStatus",
 			"properties": {
 				"Tank101MinimumLevelStatus": {
 					"type": "boolean",
@@ -77,7 +77,7 @@
 			"name": "Tank101OverflowStatus",
 			"type": "object",
 			"writable": false,
-			"label": "Tank101OverflowStatus",
+			"title": "Tank101OverflowStatus",
 			"properties": {
 				"Tank101OverflowStatus": {
 					"type": "boolean",
@@ -95,7 +95,7 @@
 			"name": "Tank102LevelValue",
 			"type": "object",
 			"writable": false,
-			"label": "Tank102LevelValue",
+			"title": "Tank102LevelValue",
 			"properties": {
 				"Tank102LevelValue": {
 					"type": "number",
@@ -113,7 +113,7 @@
 			"name": "Tank102OverflowStatus",
 			"type": "object",
 			"writable": false,
-			"label": "Tank102OverflowStatus",
+			"title": "Tank102OverflowStatus",
 			"properties": {
 				"Tank102OverflowStatus": {
 					"type": "boolean",
@@ -131,7 +131,7 @@
 			"name": "ValveStatus",
 			"type": "object",
 			"writable": false,
-			"label": "ValveStatus",
+			"title": "ValveStatus",
 			"properties": {
 				"ValveStatus": {
 					"type": "boolean",
@@ -150,7 +150,7 @@
 		"OpenValve": {
 			"name": "OpenValve",
 			"description": "Opens the valve",
-			"label": "OpenValve",
+			"title": "OpenValve",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/OpenValve",
@@ -160,7 +160,7 @@
 		},
 		"CloseValve": {
 			"name": "CloseValve",
-			"label": "CloseValve",
+			"title": "CloseValve",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/CloseValve",
@@ -170,7 +170,7 @@
 		},
 		"StartPump": {
 			"name": "StartPump",
-			"label": "StartPump",
+			"title": "StartPump",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/StartPump",
@@ -180,7 +180,7 @@
 		},
 		"StopPump": {
 			"name": "StopPump",
-			"label": "StopPump",
+			"title": "StopPump",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/StopPump",
