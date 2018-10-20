@@ -1,0 +1,106 @@
+{
+    "name": "wot-test-bench",
+    "description": "WoT Test Bench tests a Thing by getting its TD and executing all of its interactions with data generated in runtime. For simple use, invoke the fastTest action with 
+the TD of your Thing as input data",
+    "@context": "http://www.w3.org/ns/td",
+    "@type": "Thing",
+    "security": [{
+        "scheme": "nosec"
+    }],
+    "properties": {
+        "testConfig": {
+            "type": "string",
+            "writable": true,
+            "description": "(Optional) Writing to this property configures the Test Bench. TDs with security schemesrequire this property to contain the security credentials",
+            "observable": false,
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/properties/testConfig",
+                "mediaType": "application/json"
+            }]
+        },
+        "testBenchStatus": {
+            "type": "string",
+            "writable": false,
+            "description": "(not finished) Shows the status of the test bench whether it is currently testing a device or not",
+            "observable": false,
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/properties/testBenchStatus",
+                "mediaType": "application/json"
+            }]
+        },
+        "thingUnderTestTD": {
+            "type": "string",
+            "writable": true,
+            "description": "Write to this property in order to give the TD of your Thing to test. Not necessary for fastTest",
+            "observable": false,
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/properties/thingUnderTestTD",
+                "mediaType": "application/json"
+            }]
+        },
+        "testData": {
+            "type": "string",
+            "writable": true,
+            "description": "(Optional) This property contains all the data that will be sent by the Test Bench to the Thing under Test. You can also write in custom data",
+            "observable": false,
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/properties/testData",
+                "mediaType": "application/json"
+            }]
+        },
+        "testReport": {
+            "type": "string",
+            "writable": false,
+            "description": "Contains all of the outputs of the testing. Not necessary for fastTest",
+            "observable": false,
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/properties/testReport",
+                "mediaType": "application/json"
+            }]
+        }
+    },
+    "actions": {
+        "fastTest": {
+            "input": {
+                "type": "string"
+            },
+            "output": {
+                "type": "string"
+            },
+            "description": "Send a TD as input data and it will return a test report once the test has finished",
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/actions/fastTest",
+                "mediaType": "application/json"
+            }]
+        },
+        "initiate": {
+            "input": {
+                "type": "boolean"
+            },
+            "output": {
+                "type": "string"
+            },
+            "description": "Byinvoking this action, the test bench consumes the thing under test, generates data to be sent. Not necessary for fastTest",
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/actions/initiate",
+                "mediaType": "application/json"
+            }]
+        },
+        "testThing": {
+            "input": {
+                "type": "boolean"
+            },
+            "output": {
+                "type": "boolean"
+            },
+            "description": "By invoking this action the testing starts and produces a test report that can be read. Not necessary for fastTest",
+            "forms": [{
+                "href": "http://10.10.0.12:8980/wot-test-bench/actions/testThing",
+                "mediaType": "application/json"
+            }]
+        }
+    },
+    "events": {},
+    "links": [],
+    "id": "urn:uuid:ec195785-edcb-420e-924d-6379a99902d6"
+}
