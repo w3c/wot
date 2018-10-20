@@ -9,7 +9,7 @@
   "@type": "Thing",
   "name": "PanaSimAirConditioner1",
   "id": "p-wot:PanaSimAirConditioner1",
-  "base": "http://192.168.100.20:3000/wot/things/PanaSimAirConditioner1/",
+  "base": "http://192.168.1.103:3000/wot/things/PanaSimAirConditioner1/",
   "security": [
     {
       "scheme": "bearer",
@@ -30,7 +30,7 @@
           "mediaType": "application/json"
         },
         {
-          "href": "http://192.168.100.20:8003/poll/PanaSimAirConditioner1/power",
+          "href": "http://192.168.1.103:8003/poll/PanaSimAirConditioner1/power",
           "mediaType": "application/json",
           "subProtocol": "LongPoll",
           "op": "observeProperty",
@@ -41,7 +41,7 @@
           ]
         },
         {
-          "href": "ws://192.168.100.20:8003/wot/things/PanaSimAirConditioner1/power",
+          "href": "ws://192.168.1.103:8003/wot/things/PanaSimAirConditioner1/power",
           "mediaType": "application/json",
           "op": "observeProperty",
           "security": [
@@ -70,7 +70,7 @@
           "mediaType": "application/json"
         },
         {
-          "href": "http://192.168.100.20:8003/poll/PanaSimAirConditioner1/operationMode",
+          "href": "http://192.168.1.103:8003/poll/PanaSimAirConditioner1/operationMode",
           "mediaType": "application/json",
           "subProtocol": "LongPoll",
           "op": "observeProperty",
@@ -81,7 +81,7 @@
           ]
         },
         {
-          "href": "ws://192.168.100.20:8003/wot/things/PanaSimAirConditioner1/operationMode",
+          "href": "ws://192.168.1.103:8003/wot/things/PanaSimAirConditioner1/operationMode",
           "mediaType": "application/json",
           "op": "observeProperty",
           "security": [
@@ -105,7 +105,7 @@
           "mediaType": "application/json"
         },
         {
-          "href": "http://192.168.100.20:8003/poll/PanaSimAirConditioner1/desiredTemp",
+          "href": "http://192.168.1.103:8003/poll/PanaSimAirConditioner1/desiredTemp",
           "mediaType": "application/json",
           "subProtocol": "LongPoll",
           "op": "observeProperty",
@@ -116,7 +116,7 @@
           ]
         },
         {
-          "href": "ws://192.168.100.20:8003/wot/things/PanaSimAirConditioner1/desiredTemp",
+          "href": "ws://192.168.1.103:8003/wot/things/PanaSimAirConditioner1/desiredTemp",
           "mediaType": "application/json",
           "op": "observeProperty",
           "security": [
@@ -140,7 +140,7 @@
           "mediaType": "application/json"
         },
         {
-          "href": "http://192.168.100.20:8003/poll/PanaSimAirConditioner1/windVolumeLevel",
+          "href": "http://192.168.1.103:8003/poll/PanaSimAirConditioner1/windVolumeLevel",
           "mediaType": "application/json",
           "subProtocol": "LongPoll",
           "op": "observeProperty",
@@ -151,7 +151,7 @@
           ]
         },
         {
-          "href": "ws://192.168.100.20:8003/wot/things/PanaSimAirConditioner1/windVolumeLevel",
+          "href": "ws://192.168.1.103:8003/wot/things/PanaSimAirConditioner1/windVolumeLevel",
           "mediaType": "application/json",
           "op": "observeProperty",
           "security": [

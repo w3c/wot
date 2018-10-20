@@ -1,7 +1,7 @@
 ## Local simulator
 
 - You can use Local simulator just like Online simulator.
-- Local simulator is [here](http://192.168.100.20:3000).
+- Local simulator is [here](http://192.168.1.103:3000).
 - TDs include ip address.
 
 ### Important Notice
@@ -12,7 +12,7 @@
 
 ### Usage
 
-* Open the [Local simulator](http://192.168.100.20:3000).
+* Open the [Local simulator](http://192.168.1.103:3000).
 * GET TD from upper right JSON-LD icon.
 * Choose menu from upper left hamburger icon.
     * Select device to simulate.

@@ -9,7 +9,7 @@
   "@type": "Thing",
   "name": "PanaSimHueGroup1",
   "id": "p-wot:PanaSimHueGroup1",
-  "base": "http://192.168.100.20:3000/wot/things/PanaSimHueGroup1/",
+  "base": "http://192.168.1.103:3000/wot/things/PanaSimHueGroup1/",
   "security": [
     {
       "scheme": "bearer",
@@ -31,7 +31,7 @@
           "mediaType": "application/json"
         },
         {
-          "href": "http://192.168.100.20:8003/poll/PanaSimHueGroup1/power",
+          "href": "http://192.168.1.103:8003/poll/PanaSimHueGroup1/power",
           "mediaType": "application/json",
           "subProtocol": "LongPoll",
           "op": "observeProperty",
@@ -42,7 +42,7 @@
           ]
         },
         {
-          "href": "ws://192.168.100.20:8003/wot/things/PanaSimHueGroup1/power",
+          "href": "ws://192.168.1.103:8003/wot/things/PanaSimHueGroup1/power",
           "mediaType": "application/json",
           "op": "observeProperty",
           "security": [
@@ -81,7 +81,7 @@
           "mediaType": "application/json"
         },
         {
-          "href": "http://192.168.100.20:8003/poll/PanaSimHueGroup1/rgbValue",
+          "href": "http://192.168.1.103:8003/poll/PanaSimHueGroup1/rgbValue",
           "mediaType": "application/json",
           "subProtocol": "LongPoll",
           "op": "observeProperty",
@@ -92,7 +92,7 @@
           ]
         },
         {
-          "href": "ws://192.168.100.20:8003/wot/things/PanaSimHueGroup1/rgbValue",
+          "href": "ws://192.168.1.103:8003/wot/things/PanaSimHueGroup1/rgbValue",
           "mediaType": "application/json",
           "op": "observeProperty",
           "security": [
