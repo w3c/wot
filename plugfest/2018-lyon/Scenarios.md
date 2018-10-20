@@ -7,15 +7,15 @@ purposes at TPAC.
 
 ## Home integration scenarios
 
-Scenario 1: Automatically turn off devices when user leaves the room  
+### Scenario 1: Automatically turn off devices when user leaves the room  
 
-### Description:
+#### Description
 The KETI environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
 When the "room empty" condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
 the room is cleaned by a vacuum cleaner, the lights are turned off, window blinds are closed and
 a survceillence camera is turned on.
 
-### Device interactions
+#### Device interactions
 - Monitor room occupancy (KETI Sensor)  
 - Detect when room is empty and trigger the following actions (Oracle)
 - Close window blinds (Fujitsu)
@@ -24,11 +24,12 @@ a survceillence camera is turned on.
 
 ![Home_Scenario](images/Home_Scenario.png)
 
+#### Environment
+KETI environment sensor connected to the Oracle IOT Cloud Service via client library, Oracle Asset Monitoring application running on the IOT Cloud Service, node-WoT + Oracle binding running bridge servients for devices.
 
+### Scenario 2: Detections and actuations in the home
 
-Scenario 2: Detections and actuations in the home
-
-### Description:
+#### Description
 There are some sensors and actuators in the home. If a sensor detects changes in the home such as brightness, 
 the smart home application controls some home appliances such as room light. In this demonstration, when the application
 turns on the room light, the illumination sensor detects when the room becomes bright and another room light is turned on.
@@ -37,7 +38,7 @@ This application monitors some sensors in the same time and controls the light c
 In this demonstration, all sensors and lights are connected to the local proxies the cloud application control 
 these devices using the remote proxy.
 
-### Device interactions
+#### Device interactions
 - Turn on the room light (Fujitsu)
 - Detect when the room becomes bright (Fujitsu)
 - Turn on the light (Intel)
@@ -54,16 +55,16 @@ these devices using the remote proxy.
 
 ## Industrial integration scenarios
 
-Scenario 1: Automatically alert and protect citizens when a chemical plant has an accident
+### Scenario 1: Automatically alert and protect citizens when a chemical plant has an accident
 
-### Description
+#### Description
 The KETI environment sensor is capable of measuring air quality by measuring the oxygen level.
 When a low oxygen condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
 connected devices take the appropriate action to protect and alert citizens,
 such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
 pubish alert messages and make voice announcements.
 
-### Device interactions
+#### Device interactions
 - Monitor environment condition in multiple locations (KETI-sensors)
 - Discover anomaly, critical condition and trigger the following actions (Oracle)
 - Drain the tank in a chemical factory (Siemens)
@@ -72,7 +73,11 @@ pubish alert messages and make voice announcements.
 - Turn off all air conditioners (Panasonic)
 - Make voice announcement (Intel)
 
+#### Environment
+KETI environment sensor connected to the Oracle IOT Cloud Service via client library, Oracle Asset Monitoring application running on the IOT Cloud Service, node-WoT + Oracle binding running bridge servients for devices.
+
 ![Industrial_Scenario](images/Industrial_Scenario.png)
+
 
 
 ## Possible Future Scenarios: 

@@ -23,7 +23,7 @@
 			"name": "ASCD",
 			"type": "object",
 			"writable": true,
-			"label": "ASCD",
+			"title": "ASCD",
 			"properties": {
 				"ASCD": {
 					"type": "string",
@@ -45,7 +45,7 @@
 			"name": "ActiveParkAssist",
 			"type": "object",
 			"writable": true,
-			"label": "ActiveParkAssist",
+			"title": "ActiveParkAssist",
 			"properties": {
 				"ActiveParkAssist": {
 					"type": "string",
@@ -67,7 +67,7 @@
 			"name": "AdaptiveCruiseControl",
 			"type": "object",
 			"writable": true,
-			"label": "AdaptiveCruiseControl",
+			"title": "AdaptiveCruiseControl",
 			"properties": {
 				"AdaptiveCruiseControl": {
 					"type": "string",
@@ -89,7 +89,7 @@
 			"name": "AutomaticBrakeActuator",
 			"type": "object",
 			"writable": true,
-			"label": "AutomaticBrakeActuator",
+			"title": "AutomaticBrakeActuator",
 			"properties": {
 				"AutomaticBrakeActuator": {
 					"type": "integer",
@@ -111,7 +111,7 @@
 			"name": "BlindSpotDetection",
 			"type": "object",
 			"writable": true,
-			"label": "BlindSpotDetection",
+			"title": "BlindSpotDetection",
 			"properties": {
 				"BlindSpotDetection": {
 					"type": "number",
@@ -133,7 +133,7 @@
 			"name": "CentralComputer",
 			"type": "object",
 			"writable": true,
-			"label": "CentralComputer",
+			"title": "CentralComputer",
 			"properties": {
 				"CentralComputer": {
 					"type": "string",
@@ -155,7 +155,7 @@
 			"name": "CollisionSensor",
 			"type": "object",
 			"writable": false,
-			"label": "CollisionSensor",
+			"title": "CollisionSensor",
 			"properties": {
 				"CollisionSensor": {
 					"type": "number",
@@ -173,7 +173,7 @@
 			"name": "CrossTrafficAlert",
 			"type": "object",
 			"writable": false,
-			"label": "CrossTrafficAlert",
+			"title": "CrossTrafficAlert",
 			"properties": {
 				"CrossTrafficAlert": {
 					"type": "number",
@@ -191,7 +191,7 @@
 			"name": "DrowsinessSensors",
 			"type": "object",
 			"writable": false,
-			"label": "DrowsinessSensors",
+			"title": "DrowsinessSensors",
 			"properties": {
 				"DrowsinessSensors": {
 					"type": "integer",
@@ -209,7 +209,7 @@
 			"name": "FrontAirbagSensors",
 			"type": "object",
 			"writable": false,
-			"label": "FrontAirbagSensors",
+			"title": "FrontAirbagSensors",
 			"properties": {
 				"FrontAirbagSensors": {
 					"type": "number",
@@ -227,7 +227,7 @@
 			"name": "FrontObjectCCDCameraURI",
 			"type": "object",
 			"writable": false,
-			"label": "FrontObjectCCDCameraURI",
+			"title": "FrontObjectCCDCameraURI",
 			"properties": {
 				"FrontObjectCCDCameraURI": {
 					"type": "string",
@@ -245,7 +245,7 @@
 			"name": "FrontObjectLaserRadar",
 			"type": "object",
 			"writable": true,
-			"label": "FrontObjectLaserRadar",
+			"title": "FrontObjectLaserRadar",
 			"properties": {
 				"FrontObjectLaserRadar": {
 					"type": "string",
@@ -267,7 +267,7 @@
 			"name": "LaneDepartureSystem",
 			"type": "object",
 			"writable": false,
-			"label": "LaneDepartureSystem",
+			"title": "LaneDepartureSystem",
 			"properties": {
 				"LaneDepartureSystem": {
 					"type": "number",
@@ -285,7 +285,7 @@
 			"name": "NightVision",
 			"type": "object",
 			"writable": false,
-			"label": "NightVision",
+			"title": "NightVision",
 			"properties": {
 				"NightVision": {
 					"type": "string",
@@ -303,7 +303,7 @@
 			"name": "NighttimePedestrianIRSensorURI",
 			"type": "object",
 			"writable": false,
-			"label": "NighttimePedestrianIRSensorURI",
+			"title": "NighttimePedestrianIRSensorURI",
 			"properties": {
 				"NighttimePedestrianIRSensorURI": {
 					"type": "string",
@@ -321,7 +321,7 @@
 			"name": "NighttimePedestrianWarning",
 			"type": "object",
 			"writable": false,
-			"label": "NighttimePedestrianWarning",
+			"title": "NighttimePedestrianWarning",
 			"properties": {
 				"NighttimePedestrianWarning": {
 					"type": "integer",
@@ -339,7 +339,7 @@
 			"name": "RearCamera",
 			"type": "object",
 			"writable": false,
-			"label": "RearCamera",
+			"title": "RearCamera",
 			"properties": {
 				"RearCamera": {
 					"type": "string",
@@ -357,7 +357,7 @@
 			"name": "RearObjectLaserRadar",
 			"type": "object",
 			"writable": false,
-			"label": "RearObjectLaserRadar",
+			"title": "RearObjectLaserRadar",
 			"properties": {
 				"RearObjectLaserRadar": {
 					"type": "string",
@@ -375,7 +375,7 @@
 			"name": "RearObjectMonitorCCDCamera",
 			"type": "object",
 			"writable": false,
-			"label": "RearObjectMonitorCCDCamera",
+			"title": "RearObjectMonitorCCDCamera",
 			"properties": {
 				"RearObjectMonitorCCDCamera": {
 					"type": "string",
@@ -393,7 +393,7 @@
 			"name": "SideCurtainSensor",
 			"type": "object",
 			"writable": false,
-			"label": "SideCurtainSensor",
+			"title": "SideCurtainSensor",
 			"properties": {
 				"SideCurtainSensor": {
 					"type": "number",
@@ -411,7 +411,7 @@
 			"name": "SteeringAngleSensor",
 			"type": "object",
 			"writable": false,
-			"label": "SteeringAngleSensor",
+			"title": "SteeringAngleSensor",
 			"properties": {
 				"SteeringAngleSensor": {
 					"type": "number",
@@ -429,7 +429,7 @@
 			"name": "TirePressureSensor",
 			"type": "object",
 			"writable": false,
-			"label": "TirePressureSensor",
+			"title": "TirePressureSensor",
 			"properties": {
 				"TirePressureSensor": {
 					"type": "number",
@@ -447,7 +447,7 @@
 			"name": "WheelSpeedSensor",
 			"type": "object",
 			"writable": false,
-			"label": "WheelSpeedSensor",
+			"title": "WheelSpeedSensor",
 			"properties": {
 				"WheelSpeedSensor": {
 					"type": "number",
@@ -465,7 +465,7 @@
 			"name": "ora_altitude",
 			"type": "object",
 			"writable": false,
-			"label": "ora_alt",
+			"title": "ora_alt",
 			"properties": {
 				"ora_altitude": {
 					"type": "number",
@@ -483,7 +483,7 @@
 			"name": "ora_latitude",
 			"type": "object",
 			"writable": false,
-			"label": "ora_lat",
+			"title": "ora_lat",
 			"properties": {
 				"ora_latitude": {
 					"type": "number",
@@ -501,7 +501,7 @@
 			"name": "ora_longitude",
 			"type": "object",
 			"writable": false,
-			"label": "ora_lon",
+			"title": "ora_lon",
 			"properties": {
 				"ora_longitude": {
 					"type": "number",
@@ -519,7 +519,7 @@
 			"name": "ora_uncertainty",
 			"type": "object",
 			"writable": false,
-			"label": "ora_accuracy",
+			"title": "ora_accuracy",
 			"properties": {
 				"ora_uncertainty": {
 					"type": "number",
@@ -546,7 +546,7 @@
 					}
 				}
 			},
-			"label": "brake",
+			"title": "brake",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/39F59B17-8E7D-41A1-89C0-D8C5B4FD97FF/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Aconnected-car/actions/brake",
@@ -565,7 +565,7 @@
 					}
 				}
 			},
-			"label": "firmwareUpdate",
+			"title": "firmwareUpdate",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/39F59B17-8E7D-41A1-89C0-D8C5B4FD97FF/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Aconnected-car/actions/firmwareUpdate",
@@ -576,7 +576,7 @@
 		"lockDoor": {
 			"name": "lockDoor",
 			"description": "lock door",
-			"label": "lockDoor",
+			"title": "lockDoor",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/39F59B17-8E7D-41A1-89C0-D8C5B4FD97FF/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Aconnected-car/actions/lockDoor",
@@ -587,7 +587,7 @@
 		"unlockDoor": {
 			"name": "unlockDoor",
 			"description": "unlock door",
-			"label": "unlockDoor",
+			"title": "unlockDoor",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/39F59B17-8E7D-41A1-89C0-D8C5B4FD97FF/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Aconnected-car/actions/unlockDoor",
