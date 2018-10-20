@@ -51,7 +51,7 @@ This section lists the infrastructure available for the PlugFest, which can be u
   </tr>
   <tr>
     <td>HTTP</td>
-    <td>Temperature sensor, Humidity sensor, Air pressure sensor, Dust sensor</td>
+    <td>Temperature sensor, Humidity sensor, Air pressure sensor, Particle (dust) sensor</td>
   </tr>
   <tr>
     <th rowspan="2"></th>
