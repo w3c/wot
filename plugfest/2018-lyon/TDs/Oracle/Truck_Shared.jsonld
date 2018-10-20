@@ -23,7 +23,7 @@
 			"name": "ora_altitude",
 			"type": "object",
 			"writable": false,
-			"label": "ora_alt",
+			"title": "ora_alt",
 			"properties": {
 				"ora_altitude": {
 					"type": "number",
@@ -41,7 +41,7 @@
 			"name": "ora_latitude",
 			"type": "object",
 			"writable": false,
-			"label": "ora_lat",
+			"title": "ora_lat",
 			"properties": {
 				"ora_latitude": {
 					"type": "number",
@@ -59,7 +59,7 @@
 			"name": "ora_longitude",
 			"type": "object",
 			"writable": false,
-			"label": "ora_lon",
+			"title": "ora_lon",
 			"properties": {
 				"ora_longitude": {
 					"type": "number",
@@ -78,7 +78,7 @@
 			"description": "Engine Coolant Temperature(in degree Celsius) Mode:01, PID: 05",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_engine_coolant_temperature",
+			"title": "ora_obd2_engine_coolant_temperature",
 			"properties": {
 				"ora_obd2_engine_coolant_temperature": {
 					"type": "integer",
@@ -97,7 +97,7 @@
 			"description": "Engine RPM. Mode:01,PID:0C",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_engine_rpm",
+			"title": "ora_obd2_engine_rpm",
 			"properties": {
 				"ora_obd2_engine_rpm": {
 					"type": "number",
@@ -116,7 +116,7 @@
 			"description": "The mass of Air in grams per second consumed.",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_mass_air_flow",
+			"title": "ora_obd2_mass_air_flow",
 			"properties": {
 				"ora_obd2_mass_air_flow": {
 					"type": "number",
@@ -135,7 +135,7 @@
 			"description": "Number of confirmed emissions-related Diagnostic Trouble Codes available for display. Mode:01,PID:01,Bits:A6-A0",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_number_of_dtcs",
+			"title": "ora_obd2_number_of_dtcs",
 			"properties": {
 				"ora_obd2_number_of_dtcs": {
 					"type": "integer",
@@ -154,7 +154,7 @@
 			"description": "The elapsed time (seconds) since the engine was started, Mode:01,PID:1F",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_runtime_since_engine_start",
+			"title": "ora_obd2_runtime_since_engine_start",
 			"properties": {
 				"ora_obd2_runtime_since_engine_start": {
 					"type": "integer",
@@ -173,7 +173,7 @@
 			"description": "The absolute pedal position (not the relative or learned) pedal position. Usually above 0% at idle and less than 100% at full throttle Mode:01 PID: 11",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_throttle_position",
+			"title": "ora_obd2_throttle_position",
 			"properties": {
 				"ora_obd2_throttle_position": {
 					"type": "number",
@@ -192,7 +192,7 @@
 			"description": "Total fuel used by a vehicle.",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_total_fuel_used",
+			"title": "ora_obd2_total_fuel_used",
 			"properties": {
 				"ora_obd2_total_fuel_used": {
 					"type": "number",
@@ -211,7 +211,7 @@
 			"description": "Distance travelled information.",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_true_odometer",
+			"title": "ora_obd2_true_odometer",
 			"properties": {
 				"ora_obd2_true_odometer": {
 					"type": "number",
@@ -230,7 +230,7 @@
 			"description": "The current speed of the vehicle measured in Km/hour. Mode:01,PID:0D",
 			"type": "object",
 			"writable": false,
-			"label": "ora_obd2_vehicle_speed",
+			"title": "ora_obd2_vehicle_speed",
 			"properties": {
 				"ora_obd2_vehicle_speed": {
 					"type": "integer",
