@@ -22,7 +22,7 @@
 			"name": "co2",
 			"type": "object",
 			"writable": true,
-			"label": "co2",
+			"title": "co2",
 			"properties": {
 				"co2": {
 					"type": "number",
@@ -44,7 +44,7 @@
 			"name": "humidity",
 			"type": "object",
 			"writable": true,
-			"label": "humidity",
+			"title": "humidity",
 			"properties": {
 				"humidity": {
 					"type": "number",
@@ -66,7 +66,7 @@
 			"name": "light",
 			"type": "object",
 			"writable": true,
-			"label": "light",
+			"title": "light",
 			"properties": {
 				"light": {
 					"type": "number",
@@ -88,7 +88,7 @@
 			"name": "microwave",
 			"type": "object",
 			"writable": true,
-			"label": "microwave",
+			"title": "microwave",
 			"properties": {
 				"microwave": {
 					"type": "number",
@@ -110,7 +110,7 @@
 			"name": "sound",
 			"type": "object",
 			"writable": true,
-			"label": "sound",
+			"title": "sound",
 			"properties": {
 				"sound": {
 					"type": "number",
@@ -132,7 +132,7 @@
 			"name": "temperature",
 			"type": "object",
 			"writable": true,
-			"label": "temperature",
+			"title": "temperature",
 			"properties": {
 				"temperature": {
 					"type": "number",
@@ -154,7 +154,7 @@
 			"name": "voc",
 			"type": "object",
 			"writable": true,
-			"label": "voc",
+			"title": "voc",
 			"properties": {
 				"voc": {
 					"type": "number",

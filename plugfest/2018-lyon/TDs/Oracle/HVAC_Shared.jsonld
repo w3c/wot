@@ -24,7 +24,7 @@
 			"description": "Motor Amperage (normal: 50A, +/- 2%)",
 			"type": "object",
 			"writable": false,
-			"label": "motorAmperage",
+			"title": "motorAmperage",
 			"properties": {
 				"motorAmperage": {
 					"type": "number",
@@ -43,7 +43,7 @@
 			"description": "The oil viscosity (%)",
 			"type": "object",
 			"writable": false,
-			"label": "oilViscosity",
+			"title": "oilViscosity",
 			"properties": {
 				"oilViscosity": {
 					"type": "number",
@@ -62,7 +62,7 @@
 			"description": "Output temperature ([0 .. +50] Celsius degrees)",
 			"type": "object",
 			"writable": false,
-			"label": "temperature",
+			"title": "temperature",
 			"properties": {
 				"outputTemp": {
 					"type": "number",
@@ -81,7 +81,7 @@
 			"description": "Target temperature ([0 .. +50] Celcius degrees)",
 			"type": "object",
 			"writable": true,
-			"label": "targetTemp",
+			"title": "targetTemp",
 			"properties": {
 				"targetTemp": {
 					"type": "integer",
@@ -104,7 +104,7 @@
 			"description": "Current time",
 			"type": "object",
 			"writable": false,
-			"label": "time",
+			"title": "time",
 			"properties": {
 				"time": {
 					"type": "datetime",
@@ -123,7 +123,7 @@
 			"description": "Vibration (KHz) - normal 1 kHz, +/- 2%",
 			"type": "object",
 			"writable": false,
-			"label": "vibration",
+			"title": "vibration",
 			"properties": {
 				"vibration": {
 					"type": "number",
@@ -150,7 +150,7 @@
 					}
 				}
 			},
-			"label": "power",
+			"title": "power",
 			"forms": [
 				{
 					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/actions/power",
