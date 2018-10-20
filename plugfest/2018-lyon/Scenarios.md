@@ -38,6 +38,8 @@ This application monitors some sensors in the same time and controls the light c
 In this demonstration, all sensors and lights are connected to the local proxies the cloud application control
 these devices using the remote proxy.
 
+![Fujitsu_Home_Scenario](images/Fujitsu_Scenario_diagram.png)
+
 #### Device interactions
 - Turn on the room light (Fujitsu)
 - Detect when the room becomes bright (Fujitsu)
