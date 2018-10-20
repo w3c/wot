@@ -1,4 +1,4 @@
-{
+
   "@context": [
     "http://www.w3.org/ns/td",
     {
@@ -29,7 +29,7 @@
           "http:methodName": "POST"
         },
         {
-          "href": "https://portal.mmccool.net:29453/api/say",
+          "href": "https://portal.mmccool.net:8096/api/say",
           "mediaType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
@@ -40,7 +40,7 @@
           ]
         },
         {
-          "href": "https://portal.mmccool.net:29454/api/say",
+          "href": "https://portal.mmccool.net:8097/api/say",
           "mediaType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
@@ -51,7 +51,7 @@
           ]
         },
         {
-          "href": "https://tiktok.mmccool.net:29453/api/say",
+          "href": "https://tiktok.mmccool.org:8096/api/say",
           "mediaType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
@@ -62,7 +62,7 @@
           ]
         },
         {
-          "href": "https://tiktok.mmccool.net:29454/api/say",
+          "href": "https://tiktok.mmccool.org:8097/api/say",
           "mediaType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
