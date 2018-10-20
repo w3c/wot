@@ -1,0 +1,92 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot-thing-description/context/td-context.jsonld",
+    "http://www.w3.org/ns/td",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": "Thing",
+  "name": "PanaSimDrone1",
+  "id": "p-wot:PanaSimDrone1",
+  "base": "http://192.168.100.20:3000/wot/things/PanaSimDrone1/",
+  "security": [
+    {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorizationUrl": "https://w3c.p-wot.com:8443/auth"
+    }
+  ],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "title": "power",
+      "type": "boolean",
+      "writable": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "power",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "up": {
+      "title": "up",
+      "forms": [
+        {
+          "href": "action/up",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "down": {
+      "title": "down",
+      "forms": [
+        {
+          "href": "action/down",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "left": {
+      "title": "left",
+      "forms": [
+        {
+          "href": "action/left",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "right": {
+      "title": "right",
+      "forms": [
+        {
+          "href": "action/right",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "release": {
+      "name": "release",
+      "forms": [
+        {
+          "href": "action/release",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "capture": {
+      "title": "capture",
+      "forms": [
+        {
+          "href": "action/capture",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  }
+}
