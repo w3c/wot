@@ -135,6 +135,86 @@
           ],
           "http:methodName": "GET",
           "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/brightness",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/brightness",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/brightness/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/brightness",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/brightness",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/brightness/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
         }
       ]
     },
@@ -244,6 +324,86 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/contrast/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/contrast",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/contrast",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/contrast/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/contrast",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/contrast",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/contrast/observe",
           "mediaType": "application/json",
           "op": [
             "observeproperty"
@@ -495,6 +655,86 @@
           ],
           "http:methodName": "GET",
           "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/saturation",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/saturation",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/saturation/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/saturation",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/saturation",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/saturation/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
         }
       ]
     },
@@ -735,6 +975,86 @@
           ],
           "http:methodName": "GET",
           "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/white_balance",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/white_balance",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/white_balance/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/white_balance",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/white_balance",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/white_balance/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
         }
       ]
     },
@@ -853,6 +1173,86 @@
           ],
           "http:methodName": "GET",
           "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/white_balance_auto",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/white_balance_auto",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/white_balance_auto/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/white_balance_auto",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/white_balance_auto",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/white_balance_auto/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
         }
       ]
     },
@@ -949,6 +1349,86 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8099/api/exposure/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure",
           "mediaType": "application/json",
           "op": [
             "writeproperty"
@@ -1091,6 +1571,86 @@
           ],
           "http:methodName": "GET",
           "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure_auto",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure_auto",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure_auto/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure_auto",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure_auto",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure_auto/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
         }
       ]
     },
@@ -1198,6 +1758,86 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure_auto_priority/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure_auto_priority",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure_auto_priority",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/exposure_auto_priority/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure_auto_priority",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure_auto_priority",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/exposure_auto_priority/observe",
           "mediaType": "application/json",
           "op": [
             "observeproperty"
@@ -1329,6 +1969,86 @@
           ],
           "http:methodName": "GET",
           "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/backlight_compensation",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/backlight_compensation",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/backlight_compensation/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/backlight_compensation",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/backlight_compensation",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/backlight_compensation/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
         }
       ]
     },
@@ -1445,6 +2165,86 @@
           ],
           "http:methodName": "GET",
           "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/sharpness",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/sharpness",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/sharpness/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/sharpness",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/sharpness",
+          "mediaType": "application/json",
+          "op": [
+            "writeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8099/api/sharpness/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
         }
       ]
     },
@@ -1512,6 +2312,60 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/frame",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/frame/observe",
+          "mediaType": "application/json",
+          "op": [
+            "observeproperty"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET",
+          "subProtocol": "longpoll"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/frame",
+          "mediaType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/frame/observe",
           "mediaType": "application/json",
           "op": [
             "observeproperty"
@@ -1591,6 +2445,30 @@
             }
           ],
           "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/frame/crop",
+          "inputMediaType": "application/json",
+          "outputMediaType": "image/jpeg",
+          "op": "invokeaction",
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/frame/crop",
+          "inputMediaType": "application/json",
+          "outputMediaType": "image/jpeg",
+          "op": "invokeaction",
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "POST"
         }
       ]
     },
@@ -1629,7 +2507,7 @@
           "http:methodName": "GET"
         },
         {
-          "href": "https://tiktok.org:8098/api/frame/region{?xo,yo,x,y}",
+          "href": "https://tiktok.mmccool.org:8098/api/frame/region{?xo,yo,x,y}",
           "mediaType": "image/jpeg",
           "op": [
             "invokeaction"
@@ -1642,7 +2520,33 @@
           "http:methodName": "GET"
         },
         {
-          "href": "https://tiktok.org:8099/api/frame/region{?xo,yo,x,y}",
+          "href": "https://tiktok.mmccool.org:8099/api/frame/region{?xo,yo,x,y}",
+          "mediaType": "image/jpeg",
+          "op": [
+            "invokeaction"
+          ],
+          "security": [
+            {
+              "scheme": "digest"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8098/api/frame/region{?xo,yo,x,y}",
+          "mediaType": "image/jpeg",
+          "op": [
+            "invokeaction"
+          ],
+          "security": [
+            {
+              "scheme": "basic"
+            }
+          ],
+          "http:methodName": "GET"
+        },
+        {
+          "href": "https://portal.mmccool.net:8099/api/frame/region{?xo,yo,x,y}",
           "mediaType": "image/jpeg",
           "op": [
             "invokeaction"
