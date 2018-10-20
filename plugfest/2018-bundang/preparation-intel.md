@@ -1,5 +1,5 @@
 # PlugFest Preparation for Bundang F2F 2018
-This document is for Intel's preparation and results.
+This document is for Intel's plugfest preparation.
 
 # 1. Introduction
  

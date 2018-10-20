@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+    "https://w3c.github.io/wot/w3c-wot-common-context.jsonld",
+    {"iot": "http://iotschema.org/",
+     "http": "http://www.w3.org/2011/http#"}
+  ],
+  "base": "http://159.203.213.90:1880",
+  "security": [{ "scheme": "nosec" }],
+  "id": "urn:uuid:9f7b75ae-7833-4eaf-8b3a-804288773121",
+  "@type": [ "Thing", "iot:Illuminance" ],
+  "name": "Motion Sensor",
+  "properties": {
+    "MotionState": {
+      "writable": false,
+      "observable": true,
+      "@type": ["Property", "iot:Illuminance"],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "string",
+            "const": "5700"
+          },
+          "vb": {
+            "@type": ["iot:IllumninanceData"],
+            "type": "number"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/3300/3",
+          "mediaType": "application/json",
+          "rel": "readProperty",
+          "http:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "events": {
+    "IlluminanceChangeEvent": {
+      "type": "array",
+      "@type": "iot:IlluminanceChangeEvent",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "string",
+            "const": "5700"
+          },
+          "vb": {
+            "@type": ["iot:IllumninanceData"],
+            "type": "number"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "mqtt://0m2m.net:1883/plugfest/subscriptions/Illuminance",
+          "mediaType": "application/json",
+          "rel": "subscribeEvent",
+          "mqtt:qos":  0,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 8
+        }
+      ]
+    }
+  }
+}

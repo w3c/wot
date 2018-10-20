@@ -50,7 +50,11 @@ for (var p in td.properties) {
     var iac=td.properties[p];
     prop.description=iac.label;
     if (iac.properties) {
-      prop.type=iac.properties.type.toUpperCase();
+      if (iac.properties.type){
+        prop.type=iac.properties.type.toUpperCase();
+      } else {
+        prop.type=iac.type;
+      }
       if (iac.properties.minimum != iac.properties.maximum) {
         prop.range=iac.properties.minimum+","+iac.properties.maximum;
       }
