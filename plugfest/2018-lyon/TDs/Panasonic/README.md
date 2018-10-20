@@ -28,4 +28,8 @@
 
 For access and other details, see [simulator portal](https://w3c.p-wot.com:3011) (Access restricted to plugfest participants only).
 
-## Local simulator (TBD)
+## Local simulator on VLAN2
+
+- You can use Local simulator just like Online simulator.
+- Local simulator is [here](http://192.168.100.20:3000).
+- TDs that include ip address are [here](Local_simulator).
