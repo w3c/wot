@@ -67,7 +67,22 @@
             ]
         }
     },
-    "actions": {},
+    "actions": {
+                "switchBACnetLamp": {
+            "description": "Switch BACnet lamp!",
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/actions/switchBACnetLamp",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ac/switchBACnetLamp",
+                    "contenttype": "application/json"
+                }
+            ]
+        }
+        
+    },
     "events": {},
     "links": [],
     "id": "urn:uuid:889bd668-23bb-42b2-b0e4-56614c14d943"
