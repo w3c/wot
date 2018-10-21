@@ -7,7 +7,7 @@
     ],
     "@type": "Thing",
     "security": [{"scheme": "nosec"}],
-    "version" : {"instance" : "0.9.2"},
+    "version": {"instance": "0.9.2"},
     "properties": {
         "fanspeed": {
             "type": "integer",
@@ -19,7 +19,6 @@
                     "href": "http://192.168.1.187:8080/SiemensIoTDemo/properties/fanspeed",
                     "contenttype": "application/json"
                 },
-
                 {
                     "href": "coap://192.168.1.187:5683/SiemensIoTDemo/pr/fanspeed",
                     "contenttype": "application/json"
@@ -68,7 +67,7 @@
         }
     },
     "actions": {
-                "switchBACnetLamp": {
+        "switchBACnetLamp": {
             "description": "Switch BACnet lamp!",
             "forms": [
                 {
@@ -81,7 +80,7 @@
                 }
             ]
         },
-         "setCoAPLampGreen": {
+        "setCoAPLampGreen": {
             "description": "Set CoAP lamp to green",
             "forms": [
                 {
@@ -94,7 +93,7 @@
                 }
             ]
         },
-         "setCoAPLampRed": {
+        "setCoAPLampRed": {
             "description": "Set CoAP lamp to green",
             "forms": [
                 {
@@ -107,27 +106,26 @@
                 }
             ]
         }
-        
     },
-    "events": {"slider1_event": {
-        "type": "integer",
+    "events": {
+"slider1_event": {
+        "data": {"type": "integer"},
         "forms": [
             {
                 "href": "http://192.168.1.187:8080/SiemensIoTDemo/events/slider1_event",
-                "mediaType": "application/json",
-                "subProtocol": "LongPoll"
+                "contenttype": "application/json",
+                "subprotocol": "longpoll"
             },
             {
                 "href": "ws://192.168.1.187:8080/SiemensIoTDemo/events/slider1_event",
-                "mediaType": "application/json"
+                "contenttype": "application/json"
             },
             {
                 "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ev/slider1_event",
-                "mediaType": "application/json"
+                "contenttype": "application/json"
             }
         ]
-    }
-    },
+    }},
     "links": [],
     "id": "urn:uuid:889bd668-23bb-42b2-b0e4-56614c14d943"
 }
