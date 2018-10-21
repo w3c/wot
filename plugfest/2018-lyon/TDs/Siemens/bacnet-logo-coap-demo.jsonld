@@ -80,6 +80,32 @@
                     "contenttype": "application/json"
                 }
             ]
+        },
+         "setCoAPLampGreen": {
+            "description": "Set CoAP lamp to green",
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/actions/setCoAPLampGreen",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ac/setCoAPLampGreen",
+                    "contenttype": "application/json"
+                }
+            ]
+        },
+         "setCoAPLampRed": {
+            "description": "Set CoAP lamp to green",
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/actions/setCoAPLampRed",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ac/setCoAPLampRed",
+                    "contenttype": "application/json"
+                }
+            ]
         }
         
     },
