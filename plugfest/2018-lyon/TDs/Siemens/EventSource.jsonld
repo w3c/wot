@@ -25,7 +25,9 @@
   },
   "events": {
     "onchange": {
-      "type": "integer",
+      "data": {
+        "type": "integer"
+      },
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8086/EventSource/events/onchange",
@@ -46,5 +48,5 @@
       ]
     }
   },
-  "id": "urn:uuid:722843a4-1323-4081-a82a-4c4d2d0fb6cd"
+  "id": "urn:uuid:1bcf3695-55f2-47cc-9af2-23518b015fae"
 }
