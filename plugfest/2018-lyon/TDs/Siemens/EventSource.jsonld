@@ -1,0 +1,50 @@
+{
+  "name": "EventSource",
+  "@context": "http://www.w3.org/ns/td",
+  "@type": "Thing",
+  "security": [
+    {
+      "scheme": "nosec"
+    }
+  ],
+  "actions": {
+    "reset": {
+      "forms": [
+        {
+          "href": "http://plugfest.thingweb.io:8086/EventSource/actions/reset",
+          "contenttype": "application/json",
+          "op": "invokeaction"
+        },
+        {
+          "href": "coap://plugfest.thingweb.io:5686/EventSource/ac/reset",
+          "contenttype": "application/json",
+          "op": "invokeaction"
+        }
+      ]
+    }
+  },
+  "events": {
+    "onchange": {
+      "type": "integer",
+      "forms": [
+        {
+          "href": "http://plugfest.thingweb.io:8086/EventSource/events/onchange",
+          "contenttype": "application/json",
+          "subprotocol": "longpoll",
+          "op": "subscribeevent"
+        },
+        {
+          "href": "ws://plugfest.thingweb.io:8086/EventSource/events/onchange",
+          "contenttype": "application/json",
+          "op": "subscribeevent"
+        },
+        {
+          "href": "coap://plugfest.thingweb.io:5686/EventSource/ev/onchange",
+          "contenttype": "application/json",
+          "op": "subscribeevent"
+        }
+      ]
+    }
+  },
+  "id": "urn:uuid:722843a4-1323-4081-a82a-4c4d2d0fb6cd"
+}
