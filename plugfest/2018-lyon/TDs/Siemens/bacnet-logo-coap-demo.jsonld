@@ -109,7 +109,25 @@
         }
         
     },
-    "events": {},
+    "events": {"slider1_event": {
+        "type": "integer",
+        "forms": [
+            {
+                "href": "http://192.168.1.187:8080/SiemensIoTDemo/events/slider1_event",
+                "mediaType": "application/json",
+                "subProtocol": "LongPoll"
+            },
+            {
+                "href": "ws://192.168.1.187:8080/SiemensIoTDemo/events/slider1_event",
+                "mediaType": "application/json"
+            },
+            {
+                "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ev/slider1_event",
+                "mediaType": "application/json"
+            }
+        ]
+    }
+    },
     "links": [],
     "id": "urn:uuid:889bd668-23bb-42b2-b0e4-56614c14d943"
 }
