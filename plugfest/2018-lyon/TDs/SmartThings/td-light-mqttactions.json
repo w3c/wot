@@ -4,7 +4,7 @@
     {"iot": "http://iotschema.org/",
      "http": "http://www.w3.org/2011/http#"}
   ],
-  "base": "http://192.168.1.139:1880",
+  "base": "http://159.203.213.90:1880",
   "security": [{ "scheme": "nosec" }],
   "id": "urn:uuid:2d5e84f6-85c9-4436-b53f-c0669dfd1603",
   "@type": [ "Thing", "iot:Light", "iot:BinarySwitch", "iot:Level" ],
@@ -82,6 +82,12 @@
           "mediaType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST"
+        },
+        {
+          "href": "mqtt://0m2m.net:8099/plugfest/light/state",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST"
         }
       ]
     },
@@ -99,6 +105,12 @@
       "forms": [
         {
           "href": "/light",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST"
+        },
+        {
+          "href": "mqtt://0m2m.net:8099/plugfest/light/state",
           "mediaType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST"
@@ -131,6 +143,12 @@
       "forms": [
         {
           "href": "/light",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST"
+        },
+        {
+          "href": "mqtt://0m2m.net:8099/plugfest/light/state",
           "mediaType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST"
