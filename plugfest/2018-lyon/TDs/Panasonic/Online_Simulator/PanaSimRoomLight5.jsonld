@@ -3,9 +3,9 @@
     "iot": "http://iotschema.org/"
   }],
   "@type": "Thing",
-  "name": "PanaSimRoomLight1",
-  "id": "p-wot:PanaSimRoomLight1",
-  "base": "https://w3c.p-wot.com:300X/wot/things/PanaSimRoomLight1/",
+  "name": "PanaSimRoomLight5",
+  "id": "p-wot:PanaSimRoomLight5",
+  "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimRoomLight5/",
   "security": [{
     "scheme": "bearer",
     "format": "jwt",
@@ -23,14 +23,14 @@
         "href": "power",
         "mediaType": "application/json"
       }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/power",
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/power",
         "mediaType": "application/json",
-        "subProtocol": "LongPoll",
-        "op": "observeProperty"
+        "subProtocol": "longpoll",
+        "op": "observeproperty"
       }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/power",
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/power",
         "mediaType": "application/json",
-        "op": "observeProperty"
+        "op": "observeproperty"
       }]
     },
     "color": {
@@ -43,14 +43,14 @@
         "href": "color",
         "mediaType": "application/json"
       }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/color",
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/color",
         "mediaType": "application/json",
-        "subProtocol": "LongPoll",
-        "op": "observeProperty"
+        "subProtocol": "longpoll",
+        "op": "observeproperty"
       }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/color",
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/color",
         "mediaType": "application/json",
-        "op": "observeProperty"
+        "op": "observeproperty"
       }]
     },
     "luminance": {
@@ -80,11 +80,11 @@
         "href": "event/alert",
         "mediaType": "application/json"
       }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/alert",
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/alert",
         "mediaType": "application/json",
-        "subProtocol": "LongPoll"
+        "subProtocol": "longpoll"
       }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/alert",
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/alert",
         "mediaType": "application/json"
       }]
     },
@@ -97,11 +97,11 @@
         "href": "event/detect",
         "mediaType": "application/json"
       }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight1/detect",
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/detect",
         "mediaType": "application/json",
-        "subProtocol": "LongPoll"
+        "subProtocol": "longpoll"
       }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight1/detect",
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/detect",
         "mediaType": "application/json"
       }]
     }

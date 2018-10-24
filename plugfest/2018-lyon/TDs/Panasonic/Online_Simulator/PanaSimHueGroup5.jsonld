@@ -3,9 +3,9 @@
     "iot": "http://iotschema.org/"
   }],
   "@type": "Thing",
-  "name": "PanaSimHueGroup1",
-  "id": "p-wot:PanaSimHueGroup1",
-  "base": "https://w3c.p-wot.com:300X/wot/things/PanaSimHueGroup1/",
+  "name": "PanaSimHueGroup5",
+  "id": "p-wot:PanaSimHueGroup5",
+  "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimHueGroup5/",
   "security": [{
     "scheme": "bearer",
     "format": "jwt",
@@ -23,14 +23,14 @@
         "href": "power",
         "mediaType": "application/json"
       }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup1/power",
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/power",
         "mediaType": "application/json",
-        "subProtocol": "LongPoll",
-        "op": "observeProperty"
+        "subProtocol": "longpoll",
+        "op": "observeproperty"
       }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup1/power",
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/power",
         "mediaType": "application/json",
-        "op": "observeProperty"
+        "op": "observeproperty"
       }]
     },
     "rgbValue": {
@@ -59,14 +59,14 @@
         "href": "rgbValue",
         "mediaType": "application/json"
       }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup1/rgbValue",
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/rgbValue",
         "mediaType": "application/json",
-        "subProtocol": "LongPoll",
-        "op": "observeProperty"
+        "subProtocol": "longpoll",
+        "op": "observeproperty"
       }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup1/rgbValue",
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/rgbValue",
         "mediaType": "application/json",
-        "op": "observeProperty"
+        "op": "observeproperty"
       }]
     }
   }

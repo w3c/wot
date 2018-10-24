@@ -1,0 +1,131 @@
+{
+    "name": "SiemensIoTDemo",
+    "description": "Offers southbound Modbus, BACnet, and CoAP communication.  To the northbound http to control soutbound devices.",
+    "@context": [
+        "http://www.w3.org/ns/td",
+        {"iot": "http://iotschema.org/"}
+    ],
+    "@type": "Thing",
+    "security": [{"scheme": "nosec"}],
+    "version": {"instance": "0.9.2"},
+    "properties": {
+        "fanspeed": {
+            "type": "integer",
+            "description": "BACnet fanspeed",
+            "observable": true,
+            "writable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/properties/fanspeed",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/pr/fanspeed",
+                    "contenttype": "application/json"
+                }
+            ]
+        },
+        "slider1": {
+            "type": "integer",
+            "description": "Logo! Slider 1 position",
+            "observable": true,
+            "writable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/properties/slider1",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "http://192.168.56.101:8080/SiemensIoTDemo/properties/slider1",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/pr/slider1",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.56.101:5683/SiemensIoTDemo/pr/slider1",
+                    "contenttype": "application/json"
+                }
+            ]
+        },
+        "slider2": {
+            "type": "integer",
+            "description": "Logo! Slider 2 position",
+            "observable": true,
+            "writable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/properties/slider2",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/pr/slider2",
+                    "contenttype": "application/json"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "switchBACnetLamp": {
+            "description": "Switch BACnet lamp!",
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/actions/switchBACnetLamp",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ac/switchBACnetLamp",
+                    "contenttype": "application/json"
+                }
+            ]
+        },
+        "setCoAPLampGreen": {
+            "description": "Set CoAP lamp to green",
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/actions/setCoAPLampGreen",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ac/setCoAPLampGreen",
+                    "contenttype": "application/json"
+                }
+            ]
+        },
+        "setCoAPLampRed": {
+            "description": "Set CoAP lamp to green",
+            "forms": [
+                {
+                    "href": "http://192.168.1.187:8080/SiemensIoTDemo/actions/setCoAPLampRed",
+                    "contenttype": "application/json"
+                },
+                {
+                    "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ac/setCoAPLampRed",
+                    "contenttype": "application/json"
+                }
+            ]
+        }
+    },
+    "events": {
+"slider1_event": {
+        "data": {"type": "integer"},
+        "forms": [
+            {
+                "href": "http://192.168.1.187:8080/SiemensIoTDemo/events/slider1_event",
+                "contenttype": "application/json",
+                "subprotocol": "longpoll"
+            },
+            {
+                "href": "ws://192.168.1.187:8080/SiemensIoTDemo/events/slider1_event",
+                "contenttype": "application/json"
+            },
+            {
+                "href": "coap://192.168.1.187:5683/SiemensIoTDemo/ev/slider1_event",
+                "contenttype": "application/json"
+            }
+        ]
+    }},
+    "links": [],
+    "id": "urn:uuid:889bd668-23bb-42b2-b0e4-56614c14d943"
+}

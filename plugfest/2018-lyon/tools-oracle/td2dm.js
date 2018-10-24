@@ -54,6 +54,7 @@ for (var p in td.properties) {
     if (verbose) console.log(p);
     if (td.properties[p].type == "object") {
         for (var q in td.properties[p].properties) {
+            if (verbose) console.log("***** object with #elements:"+td.properties[p].properties[q]);
             var prop={};
             prop.name=p+"_"+q;
             var iac=td.properties[p].properties[q];
@@ -65,7 +66,27 @@ for (var p in td.properties) {
             prop.writable=td.properties[p].writable;
             dm.attributes.push(prop);
         }
-     } else {
+    }
+    else if (td.properties[p].type == "array") {
+        if (verbose) console.log("***** array with #elements:"+td.properties[p].items.length);
+            for (var i=0; i<td.properties[p].items.length; i++) {
+            if (verbose) console.log(p);
+            var prop={};
+            prop.name=p+"_"+i;
+            var iac=td.properties[p].items[i];
+            if (td.properties[p].label) {
+                prop.description=td.properties[p].label+" "+i;
+            } else {
+                prop.description=td.properties[p].title+" "+i;
+            }
+            prop.type=iac.type.toUpperCase();
+            if (iac.minimum != iac.maximum) {
+                prop.range=iac.minimum+","+iac.maximum;
+            }
+            prop.writable=td.properties[p].writable;
+            dm.attributes.push(prop);
+        }
+    } else {
         var prop={};
         prop.name=p;
         var iac=td.properties[p];
