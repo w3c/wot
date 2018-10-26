@@ -6,5 +6,7 @@
 * [Web Platform Test](https://github.com/web-platform-tests/wpt)
 * [CTA WAVE's test work on TV browsers](https://webapitests2017.ctawave.org/)
 * [EMMA specification](https://www.w3.org/TR/emma/)
-  * [Implementatio report](https://www.w3.org/2002/mmi/2008/emma-ir/)
+  * [Implementation report](https://www.w3.org/2002/mmi/2008/emma-ir/)
+* [Device Orientatio Event specification](https://www.w3.org/TR/orientation-event/)
+  * [Implementation report](https://www.w3.org/2008/geolocation/wiki/DeviceOrientation_Event_Implementation_Report)
 * [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
