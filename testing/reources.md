@@ -5,5 +5,5 @@
 * [Web Platform Test](https://github.com/web-platform-tests/wpt)
 * [CTA WAVE's test work on TV browsers](https://webapitests2017.ctawave.org/)
 * [EMMA specification](https://www.w3.org/TR/emma/)
-** [Implementatio report](https://www.w3.org/2002/mmi/2008/emma-ir/)
+  * [Implementatio report](https://www.w3.org/2002/mmi/2008/emma-ir/)
 * [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
