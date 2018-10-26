@@ -1,6 +1,7 @@
 # Resources about testing at W3C
 
 * [W3C Process](https://www.w3.org/2018/Process-20180201/)
+  * [Transition request example (W3C Member-only)](https://lists.w3.org/Archives/Member/chairs/2018OctDec/0024.html)
 * [Charter dashborad](https://w3c.github.io/charters-dashboard/)
 * [Web Platform Test](https://github.com/web-platform-tests/wpt)
 * [CTA WAVE's test work on TV browsers](https://webapitests2017.ctawave.org/)
