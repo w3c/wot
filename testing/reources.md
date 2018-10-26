@@ -5,7 +5,7 @@
   * [Implementation experience](https://www.w3.org/2018/Process-20180201/#implementation-experience)
   * [Candidate Recommendation](https://www.w3.org/2018/Process-20180201/#candidate-rec)
 * [Transition request example (W3C Member-only)](https://lists.w3.org/Archives/Member/chairs/2018OctDec/0024.html)
-* [Charter dashborad](https://w3c.github.io/charters-dashboard/)
+* [Charter dashboard](https://w3c.github.io/charters-dashboard/)
 * Examples of implementation reports
   * [Implementation report](https://www.w3.org/2008/geolocation/wiki/DeviceOrientation_Event_Implementation_Report)
     * [EMMA specification](https://www.w3.org/TR/emma/)
