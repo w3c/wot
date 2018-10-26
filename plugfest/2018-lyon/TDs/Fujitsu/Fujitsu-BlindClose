@@ -1,0 +1,214 @@
+{
+	"name": "Switch-000e7bfe7b1005fd02",
+	"security": [
+		{
+			"schema": "basic"
+		}
+	],
+	"id": "000e7bfe7b1005fd02",
+	"properties": {
+		"FF": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/FF"
+				}
+			],
+			"writable": false
+		},
+		"SetList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/SetList"
+				}
+			],
+			"writable": false
+		},
+		"ProductCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/ProductCode"
+				}
+			],
+			"writable": false
+		},
+		"ManufactureDate": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/ManufactureDate"
+				}
+			],
+			"writable": false
+		},
+		"F1": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/F1"
+				}
+			],
+			"writable": false
+		},
+		"F2": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/F2"
+				}
+			],
+			"writable": false
+		},
+		"F3": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/F3"
+				}
+			],
+			"writable": false
+		},
+		"SpecVersionInfoCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/SpecVersionInfoCode"
+				}
+			],
+			"writable": false
+		},
+		"CheckIPStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/CheckIPStatus"
+				}
+			],
+			"writable": false
+		},
+		"GetList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/GetList"
+				}
+			],
+			"writable": false
+		},
+		"DeviceConnectStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/DeviceConnectStatus"
+				}
+			],
+			"writable": false
+		},
+		"MakerCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/MakerCode"
+				}
+			],
+			"writable": false
+		},
+		"FaultStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/FaultStatus"
+				}
+			],
+			"writable": false
+		},
+		"FaultContent": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/FaultContent"
+				}
+			],
+			"writable": false
+		},
+		"DeviceRunningStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/DeviceRunningStatus"
+				}
+			],
+			"writable": false
+		},
+		"OperationStatus": {
+			"observable": false,
+			"type": "string",
+			"forms": [
+				{
+					"href": "property/OperationStatus"
+				}
+			],
+			"enum": [
+				"ON"
+			],
+			"writable": true
+		},
+		"NotifyList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/NotifyList"
+				}
+			],
+			"writable": false
+		},
+		"ManufacturerErrorCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/ManufacturerErrorCode"
+				}
+			],
+			"writable": false
+		},
+		"PlaceOfBusinessCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/PlaceOfBusinessCode"
+				}
+			],
+			"writable": false
+		},
+		"ConnectionDevice": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/ConnectionDevice"
+				}
+			],
+			"writable": false
+		},
+		"FE": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/FE"
+				}
+			],
+			"writable": false
+		},
+		"PowerLimit": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "property/PowerLimit"
+				}
+			],
+			"writable": false
+		}
+	},
+	"base": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd02/"
+}

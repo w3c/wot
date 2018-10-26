@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/td",
+    {"iot": "http://iotschema.org/",
+     "http": "http://www.w3.org/2011/http#"}
+  ],
+  "base": "http://192.168.1.139:1880",
+  "security": [{ "scheme": "nosec" }],
+  "id": "urn:uuid:9f7b75ae-7833-4eaf-8b3a-804288773121",
+  "@type": [ "Thing", "iot:Illuminance" ],
+  "name": "Illuminance Sensor",
+  "properties": {
+    "Illuminance": {
+      "writable": false,
+      "observable": true,
+      "@type": ["Property", "iot:Illuminance"],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "string",
+            "const": "5700"
+          },
+          "v": {
+            "@type": ["iot:IllumninanceData"],
+            "type": "number"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/3300/3",
+          "mediaType": "application/json",
+          "op": "readproperty",
+          "http:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "events": {
+    "IlluminanceChangeEvent": {
+      "@type": "iot:IlluminanceChangeEvent",
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "n": {
+              "type": "string",
+              "const": "5700"
+            },
+            "vb": {
+              "@type": ["iot:IllumninanceData"],
+              "type": "number"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "mqtt:192.168.1.139:1883/plugfest/subscriptions/Illuminance",
+          "mediaType": "application/json",
+          "op": "subscribeevent",
+          "mqtt:qos":  0,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 8
+        }
+      ]
+    }
+  }
+}

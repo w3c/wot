@@ -10,47 +10,74 @@
   ],
   "properties": {
     "bool": {
+      "title": "true/false",
       "type": "boolean",
       "writable": true,
       "observable": false,
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/properties/bool",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/pr/bool",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         }
       ]
     },
     "int": {
+      "title": "Integer number",
       "type": "integer",
       "writable": true,
       "observable": false,
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/properties/int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/pr/int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         }
       ]
     },
     "num": {
+      "title": "Floating point",
       "type": "number",
       "writable": true,
       "observable": false,
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/properties/num",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/pr/num",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         }
       ]
     },
@@ -61,36 +88,60 @@
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/properties/string",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/pr/string",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         }
       ]
     },
     "array": {
+      "title": "Tuple",
       "type": "array",
+      "items": {},
       "writable": true,
       "observable": false,
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/properties/array",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/pr/array",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         }
       ]
     },
     "object": {
+      "title": "ID-name",
+      "description": "Object with ID and name",
       "type": "object",
       "properties": {
         "id": {
+          "title": "ID",
+          "description": "Internal identifier",
           "type": "integer"
         },
         "name": {
+          "title": "Name",
+          "description": "Public name",
           "type": "string"
         }
       },
@@ -99,59 +150,81 @@
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/properties/object",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/pr/object",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
         }
       ]
     }
   },
   "actions": {
     "void-void": {
+      "title": "void-void Action",
+      "description": "Action without input nor output",
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/actions/void-void",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/void-void",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         }
       ]
     },
     "void-int": {
+      "title": "void-int Action",
+      "description": "Action without input, but with integer output",
       "input": {
         "type": "integer"
       },
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/actions/void-int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/void-int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         }
       ]
     },
     "int-void": {
+      "title": "int-void Action",
+      "description": "Action with integer input, but without output",
       "input": {
         "type": "integer"
       },
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/actions/int-void",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/int-void",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         }
       ]
     },
     "int-int": {
+      "title": "int-int Action",
+      "description": "Action with integer input and output",
       "input": {
         "type": "integer"
       },
@@ -161,15 +234,19 @@
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/actions/int-int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/int-int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         }
       ]
     },
     "int-string": {
+      "title": "int-string Action",
+      "description": "Action with integer input and string output",
       "input": {
         "type": "integer"
       },
@@ -179,15 +256,19 @@
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/actions/int-string",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/int-string",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "invokeaction"
         }
       ]
     },
-    "void-complex": {
+    "void-obj": {
+      "title": "void-obj Action",
+      "description": "Action without input, but with object output",
       "output": {
         "type": "object",
         "properties": {
@@ -205,16 +286,20 @@
       },
       "forms": [
         {
-          "href": "http://plugfest.thingweb.io:8083/TestThing/actions/void-complex",
-          "mediaType": "application/json"
+          "href": "http://plugfest.thingweb.io:8083/TestThing/actions/void-obj",
+          "contenttype": "application/json",
+          "op": "invokeaction"
         },
         {
-          "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/void-complex",
-          "mediaType": "application/json"
+          "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/void-obj",
+          "contenttype": "application/json",
+          "op": "invokeaction"
         }
       ]
     },
-    "complex-void": {
+    "obj-void": {
+      "title": "obj-void Action",
+      "description": "Action with object input, but wihtout output",
       "input": {
         "type": "object",
         "properties": {
@@ -232,74 +317,91 @@
       },
       "forms": [
         {
-          "href": "http://plugfest.thingweb.io:8083/TestThing/actions/complex-void",
-          "mediaType": "application/json"
+          "href": "http://plugfest.thingweb.io:8083/TestThing/actions/obj-void",
+          "contenttype": "application/json",
+          "op": "invokeaction"
         },
         {
-          "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/complex-void",
-          "mediaType": "application/json"
+          "href": "coap://plugfest.thingweb.io:5683/TestThing/ac/obj-void",
+          "contenttype": "application/json",
+          "op": "invokeaction"
         }
       ]
     }
   },
   "events": {
     "on-bool": {
+      "title": "on-bool Event",
+      "description": "Event with boolean data",
       "data": {
         "type": "boolean"
       },
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/events/on-bool",
-          "mediaType": "application/json",
-          "subProtocol": "LongPoll"
+          "contenttype": "application/json",
+          "subprotocol": "longpoll",
+          "op": "subscribeevent"
         },
         {
           "href": "ws://plugfest.thingweb.io:8083/TestThing/events/on-bool",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "subscribeevent"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ev/on-bool",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "subscribeevent"
         }
       ]
     },
     "on-int": {
+      "title": "on-int Event",
+      "description": "Event with integer data",
       "data": {
         "type": "integer"
       },
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/events/on-int",
-          "mediaType": "application/json",
-          "subProtocol": "LongPoll"
+          "contenttype": "application/json",
+          "subprotocol": "longpoll",
+          "op": "subscribeevent"
         },
         {
           "href": "ws://plugfest.thingweb.io:8083/TestThing/events/on-int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "subscribeevent"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ev/on-int",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "subscribeevent"
         }
       ]
     },
     "on-num": {
+      "title": "on-num Event",
+      "description": "Event with number data",
       "data": {
         "type": "number"
       },
       "forms": [
         {
           "href": "http://plugfest.thingweb.io:8083/TestThing/events/on-num",
-          "mediaType": "application/json",
-          "subProtocol": "LongPoll"
+          "contenttype": "application/json",
+          "subprotocol": "longpoll",
+          "op": "subscribeevent"
         },
         {
           "href": "ws://plugfest.thingweb.io:8083/TestThing/events/on-num",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "subscribeevent"
         },
         {
           "href": "coap://plugfest.thingweb.io:5683/TestThing/ev/on-num",
-          "mediaType": "application/json"
+          "contenttype": "application/json",
+          "op": "subscribeevent"
         }
       ]
     }

@@ -26,14 +26,14 @@
         {
           "href": "https://w3c.p-wot.com:8003/poll/huegroup/1/operationStatus",
           "mediaType": "application/json",
-          "subProtocol": "LongPoll",
-          "op": "observeProperty",
+          "subProtocol": "longpoll",
+          "op": "observeproperty",
           "security": [{"scheme": "nosec"}]
         },
         {
           "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/huegroup/1/operationStatus",
           "mediaType": "application/json",
-          "op": "observeProperty",
+          "op": "observeproperty",
           "security": [{"scheme": "nosec"}]
         }
       ]
@@ -54,13 +54,13 @@
         {
           "href": "https://w3c.p-wot.com:8003/poll/huegroup/1/color",
           "mediaType": "application/json",
-          "subProtocol": "LongPoll",
-          "op": "observeProperty"
+          "subProtocol": "longpoll",
+          "op": "observeproperty"
         },
         {
           "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/huegroup/1/color",
           "mediaType": "application/json",
-          "op": "observeProperty"
+          "op": "observeproperty"
         }
       ]
     }
