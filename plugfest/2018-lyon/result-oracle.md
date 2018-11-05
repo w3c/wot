@@ -330,7 +330,7 @@ Test results can have one of 4 states:
 
 ### Demo setup:
 
-()[]
+()[images/DemoInfrastructure.png]
 
 ### Home Scenario
 
