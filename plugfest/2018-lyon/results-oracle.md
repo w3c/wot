@@ -256,7 +256,7 @@ Test results can have one of 4 states:
 
 ##### CoAP
 
-*NA
+* NA
 
 ##### MQTT
 
@@ -332,26 +332,26 @@ Test results can have one of 4 states:
 
 * OK/OT
 
-   * Comments: 
+   Comments: 
    
-   ** We successfully demonstrated the home scenario using devices in Panasonic's Osaka lab. The scenario illustrated
+   We successfully demonstrated the home scenario using devices in Panasonic's Osaka lab. The scenario illustrated
    to turn on/off home devives based on room occupancy. A sensor measures the CO2 level and determines, whether the
    room is empty or occupied based on the level. If the room is empty, the lamps and air conditioner are turned off.
    (A cleaning robot could clean the room, if required). When people come back to the room, the CO2 level rises, 
    and the lights and air conditioner are turned on again.
    
-   ** Unfortunately we ran out of time to integrate with Fujitsu's home device (window blind). 
+   Unfortunately we ran out of time to integrate with Fujitsu's home device (window blind). 
    This is planned for the next plug fest.
    
-   ** An on-screen recording of the demo is available here [Smart Home IoT Demo Scenario](https://youtu.be/2o7bWLJJhYM)
+   An on-screen recording of the demo is available here [Smart Home IoT Demo Scenario](https://youtu.be/2o7bWLJJhYM)
  
  ### Industrial Scenario
 
 * OK/OT
 
-   * Comments: 
+   Comments: 
    
-   ** We successfully demonstrated the industrial integration scenario using devices using devices from
+   We successfully demonstrated the industrial integration scenario using devices using devices from
    KETI, Siemens, Intel, Fujitsu and Panasonic. In this scenario an environment sensor at KETI in Korea
    indicates a critical condition (high VOC). The Oracle Asset Monitoring application detects this situation
    based on a set of rules and takes the following actions. A tank is drained in a chemical factory 
@@ -360,5 +360,5 @@ Test results can have one of 4 states:
    When the VOC measurement is back to normal and the tank was fully drained, it is refilled and the fill level
    is again indicated with the color of the RGB lamps.
    
-   ** An on-screen recording of the demo is available here [Industrial IoT Demo Scenario](https://youtu.be/6jZxfmiCrEk)
+   An on-screen recording of the demo is available here [Industrial IoT Demo Scenario](https://youtu.be/6jZxfmiCrEk)
 
