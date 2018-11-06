@@ -330,7 +330,7 @@ Test results can have one of 4 states:
 
 ### Demo setup:
 
-()[images/DemoInfrastructure.png]
+(images/DemoInfrastructure.png)[images/DemoInfrastructure.png]
 
 ### Home Scenario
 
@@ -363,5 +363,5 @@ Test results can have one of 4 states:
    When the VOC measurement is back to normal and the tank was fully drained, it is refilled and the fill level
    is again indicated with the color of the RGB lamps.
    
-   An on-screen recording of the demo is available here()[]
+   An on-screen recording of the demo is available here(https://youtu.be/6jZxfmiCrEk)[https://youtu.be/6jZxfmiCrEk]
 
