@@ -25,8 +25,6 @@ Test results can have one of 4 states:
 #### 3.1.2 Register with Thing Directory
 
 * OT
-   * Issue: 
-   * Comment: 
 
 #### 3.1.3 Connect with Remote/Local Proxy
 
@@ -75,9 +73,7 @@ Test results can have one of 4 states:
 ##### HTTP
 
 ###### PARTNER
-* OK/NO/OT/NA
-   * Issue: 
-   * Comment: 
+* OK
 
 ##### CoAP
 
@@ -347,13 +343,14 @@ Test results can have one of 4 states:
    ** Unfortunately we ran out of time to integrate with Fujitsu's home device (window blind). 
    This is planned for the next plug fest.
    
-   An on-screen recording of the demo is available here [Smart Home IoT Demo Scenario](https://youtu.be/2o7bWLJJhYM)
+   ** An on-screen recording of the demo is available here [Smart Home IoT Demo Scenario](https://youtu.be/2o7bWLJJhYM)
  
  ### Industrial Scenario
 
 * OK/OT
 
    * Comments: 
+   
    ** We successfully demonstrated the industrial integration scenario using devices using devices from
    KETI, Siemens, Intel, Fujitsu and Panasonic. In this scenario an environment sensor at KETI in Korea
    indicates a critical condition (high VOC). The Oracle Asset Monitoring application detects this situation
@@ -363,5 +360,5 @@ Test results can have one of 4 states:
    When the VOC measurement is back to normal and the tank was fully drained, it is refilled and the fill level
    is again indicated with the color of the RGB lamps.
    
-   An on-screen recording of the demo is available here [Industrial IoT Demo Scenario](https://youtu.be/6jZxfmiCrEk)
+   ** An on-screen recording of the demo is available here [Industrial IoT Demo Scenario](https://youtu.be/6jZxfmiCrEk)
 
