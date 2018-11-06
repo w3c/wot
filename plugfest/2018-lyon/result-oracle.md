@@ -347,7 +347,7 @@ Test results can have one of 4 states:
    ** Unfortunately we ran out of time to integrate with Fujitsu's home device (window blind). 
    This is planned for the next plug fest.
    
-   An on-screen recording of the demo is available here ![Smart Home IoT Demo Scenario](https://youtu.be/2o7bWLJJhYM)
+   An on-screen recording of the demo is available here [Smart Home IoT Demo Scenario](https://youtu.be/2o7bWLJJhYM)
  
  ### Industrial Scenario
 
@@ -363,5 +363,5 @@ Test results can have one of 4 states:
    When the VOC measurement is back to normal and the tank was fully drained, it is refilled and the fill level
    is again indicated with the color of the RGB lamps.
    
-   An on-screen recording of the demo is available here ![Industrial IoT Demo Scenario](https://youtu.be/6jZxfmiCrEk)
+   An on-screen recording of the demo is available here [Industrial IoT Demo Scenario](https://youtu.be/6jZxfmiCrEk)
 
