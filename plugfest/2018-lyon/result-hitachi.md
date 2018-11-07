@@ -55,11 +55,10 @@ Legends:
 - Auth: Client could be authorized to access the endpoint
 - interactions: Client could successfully make interactions
 
-
-| Company | Thing| Load | CORS | Auth | interactions | Note |
-| - | - | - | - | - | - | - | - |
+| Company | Thing | Load | CORS | Auth | interactions | Note |
+| --- | ------------------- | ---- | ---- | ---- | ------------ | --------------- |
 | Fujitsu | [RotaryBeaconLight](TDs/Fujitsu/Fujitsu-RotaryBeaconLight.jsonld)      |  NA  |  NA  | basic:OK | readP: OK    |                 |
-|||||| writeP: OK   |
+|||||| writeP:OK   |
 |         | [WiFiAgent](TDs/Fujitsu/Fujitsu-WiFiAgent240AC40783A0.jsonld)              |  NA  |  NA  | basic:OK | readP: OK |
 |         | [BlindOpen](TDs/Fujitsu/Fujitsu-BlindOpen) | NA | NA | basic:OK | writeP:OK |
 |         | [BlindClose](TDs/Fujitsu/Fujitsu-BlindClose)| NA | NA | basic:OK | writeP:OK |
