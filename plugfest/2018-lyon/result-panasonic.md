@@ -115,7 +115,7 @@ Legends:
 
 | Company     | Thing                  | Load | CORS | Auth | interactions | Note            |
 | ----------- | ---------------------- | ---- | ---- | ---- | ------------ | --------------- |
-| Panasonic   | Google Home 1          | OK   | N/A  | OK   | subE/ws: OK  | bearer token    |
+| Panasonic   | Google Home 1          | OK   | N/A  | N/A  | subE/ws: OK  | no auth         |
 |             | LED Board 1 + 2        | OK   | N/A  | OK   | writeP : OK  | bearer token    |
 |             | Hue Light              | OK   | N/A  | OK   | writeP : OK  | bearer token    |
 | Fujitsu     | Rotary Beacon Light    | OK   | N/A  | OK   | writeP : OK  | basic auth      |
