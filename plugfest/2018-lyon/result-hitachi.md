@@ -44,8 +44,8 @@ Test results can have one of 4 states:
 ##### Prerequisite
 ###### Limitation 
 
-- TDs are retrieved by `curl` command, not retrieved from generated nodes dynamically/automatically.
-- In order to access a correct endpoint, some forms in interactions are eliminated manually.
+- TDs are retrieved by `curl` command, not loaded by generated nodes dynamically/automatically.
+- In order to access a correct endpoint, some forms in interactions are eliminated manually (remove CoAP, MQTT endpoints).
 
 ##### Test results
 
@@ -58,8 +58,8 @@ Legends:
 
 | Company | Thing| Load | CORS | Auth | interactions | Note |
 | - | - | - | - | - | - | - | - |
-| Fujitsu | [RotaryBeaconLight](TDs/Fujitsu/Fujitsu-RotaryBeaconLight.jsonld)      |  NA  |  NA  | Basic:OK | readP: OK    |                 | 
-|||||| writeP: OK   |              
+| Fujitsu | [RotaryBeaconLight](TDs/Fujitsu/Fujitsu-RotaryBeaconLight.jsonld)      |  NA  |  NA  | basic:OK | readP: OK    |                 |
+|||||| writeP: OK   |
 |         | [WiFiAgent](TDs/Fujitsu/Fujitsu-WiFiAgent240AC40783A0.jsonld)              |  NA  |  NA  | basic:OK | readP: OK |
 |         | [BlindOpen](TDs/Fujitsu/Fujitsu-BlindOpen) | NA | NA | basic:OK | writeP:OK |
 |         | [BlindClose](TDs/Fujitsu/Fujitsu-BlindClose)| NA | NA | basic:OK | writeP:OK |
@@ -79,14 +79,14 @@ Legends:
 |       | [LED1red](TDs/Intel/OCF/led1red.jsonld) | NA | NA | nosec:OK | writeP:OK |
 |       | [Temperature1](TDs/Intel/OCF/temperature1.jsonld) | NA | NA | nosec:OK | readP:OK |
 | Oracle| [HVAC](TDs/Oracle/HVAC_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
-|       | [Connected Car](TDs/Oracle/Connected_Car_Shared.jsonld) | NA | NA | basic:OK | readP: OK |
-|       | [Festo](TDs/Oracle/Festo_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
+|       | [Connected Car](TDs/Oracle/Connected_Car_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
+|       | [Festo](TDs/Oracle/Festo_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
 |       | [Truck](TDs/Oracle/Truck_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
 |       | [Blue Pump](TDs/Oracle/Blue_Pump_Hitachi.jsonld) | NA | NA | basic:OK | readP:OK |
-|Siemems| [IoTDemo](TDs/Siemens/bacnet-logo-coap-demo.jsonld) | NA | NA | nosec:OK | readP:OK |
+|Siemens| [IoTDemo](TDs/Siemens/bacnet-logo-coap-demo.jsonld) | NA | NA | nosec:OK | readP:OK |
 ||||||subE/ws:OK|
 |SmartThings| [Lamp](TDs/SmartThings/td-light-local.json) | NA | NA | nosec:OK | writeP:OK |
-|           | [Illuminance Sensor](TDs/SmartThings/td-illuminance-local.json) | NA | NA | nosec:OK | readP:OK | 
+|           | [Illuminance Sensor](TDs/SmartThings/td-illuminance-local.json) | NA | NA | nosec:OK | readP:OK |
 |TUM| [SenseHAT](TDs/TUM/senseHat.json) | NA | NA | nosec:OK | writeP:OK |
 
 
@@ -228,7 +228,7 @@ Legends:
 
 ## 4 Use cases
 
-### Remote Monitoring and Multimodal Alerting
+### Scenario 1: Remote Monitoring and Multimodal Alerting
 
 ![Diagram1](images/Hitachi_usecase1_diagram.png)
 ![Flow1](images/Hitachi_usecase1.png)
@@ -241,13 +241,13 @@ Legends:
   * Lights (Panasonic's HueGroup, Intel's LED and SmartThing's Lamp)
   * Display (TUM's SenseHAT)
 
-### Realtime control
+### Scenario 2: Realtime control
 
 ![Flow2](images/Hitachi_usecase2.png)
 
 * Control numeric value of a LED display (Panasonic's) using a slider (Siemens').
 
-### (Demo)"Rube Goldberg" machine
+### Scenario 3: (Demo)"Rube Goldberg" machine
 
 ![Diagram3](images/Hitachi_usecase3_diagram.png)
 ![Flow3](images/Hitachi_usecase3.png)
@@ -257,13 +257,13 @@ Legends:
 * It sensed by an brightness sensor at Lyon, and
 application turns on a Rotary Beacon Light. (Fujitsu's)
 
-### Intrusion detector
+### Scenario 4: Intrusion detector
 
 ![Diagram4](images/Hitachi_usecase4_diagram.png)
 * Periodically watches a motion sensor (Intel's) 
 * When some motion is detected, turn on Rotary Beacon Light (Fujitsu's).
 
-### Realtime monitoring
+### Scenario 5: Realtime monitoring
 
 ![Flow5](images/Hitachi_usecase5.png)
 * Periodically watches a vibration value of HVAC (Oracle's).
