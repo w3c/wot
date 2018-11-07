@@ -25,8 +25,6 @@ Test results can have one of 4 states:
 
 #### 3.1.3 Connect with Remote/Local Proxy
 
-##### IMPLEMENTATION at URI
-
 * OK
    * Comment: Connected with Fujitsu's Remote Proxy
 
@@ -40,6 +38,58 @@ Test results can have one of 4 states:
 * NA
 
 ### 3.2 Testing in Client Role
+
+#### Node-red-nodegen Test Result against Servients
+
+##### Prerequisite
+###### Limitation 
+
+- TDs are retrieved by `curl` command, not retrieved from generated nodes dynamically/automatically.
+- In order to access a correct endpoint, some forms in interactions are eliminated manually.
+
+##### Test results
+
+Legends:
+- Load: Client could load TD file
+- CORS: Client could handle CORS operation (otherwise used non-sec Browser)
+- Auth: Client could be authorized to access the endpoint
+- interactions: Client could successfully make interactions
+
+
+| Company | Thing| Load | CORS | Auth | interactions | Note |
+| - | - | - | - | - | - | - | - |
+| Fujitsu | [RotaryBeaconLight](TDs/Fujitsu/Fujitsu-RotaryBeaconLight.jsonld)      |  NA  |  NA  | Basic:OK | readP: OK    |                 | 
+|||||| writeP: OK   |              
+|         | [WiFiAgent](TDs/Fujitsu/Fujitsu-WiFiAgent240AC40783A0.jsonld)              |  NA  |  NA  | basic:OK | readP: OK |
+|         | [BlindOpen](TDs/Fujitsu/Fujitsu-BlindOpen) | NA | NA | basic:OK | writeP:OK |
+|         | [BlindClose](TDs/Fujitsu/Fujitsu-BlindClose)| NA | NA | basic:OK | writeP:OK |
+|         | [LED](TDs/Fujitsu/Fujitsu-LEDLight.jsonld) | NA | NA | basic:OK | writeP:OK |
+|         | IlluminanceSensor | NA | NA | basic:OK | readP:OK |
+|Panasonic | [HueGroupP1](TDs/Panasonic/huegroup_p1.jsonld) | NA | NA | bearer:OK | writeP:OK|
+|          |||||obserP:OK|
+|         | [ElectricBulletinBoardP1](TDs/Panasonic/electricBulletinBoard_p1.jsonld) | NA | NA | bearer:OK | writeP:OK |
+|         | [ElectricBulletinBoardP2](TDs/Panasonic/electricBulletinBoard_p2.jsonld) | NA | NA | bearer:OK | writeP:OK |
+|         | [AirConditonerP1](TDs/Panasonic/airConditioner_p1.jsonld) | NA | NA | bearer:OK | writeP:OK |
+|         | [SimDrone1](TDs/Panasonic/Local_simulator/PanaSimDrone1.jsonld) | NA | NA | bearer:OK | invokeA:OK |
+| Intel | [WebSpeak](TDs/Intel/webspeak.jsonld) | NA | NA | basic:OK | invokeA:OK |
+|       | [SimpleWebCamera](TDs/Intel/SimpleWebCamera.json) | NA | NA | nosec:OK | readP:OK|
+|       | [Motion1](TDs/Intel/OCF/motion1.jsonld) | NA | NA | nosec:OK | readP:OK |
+|       | [Illuminamce0](TDs/Intel/OCF/illuminance0.jsonld) | NA | NA | nosec:OK | readP:OK|
+|       | [RGBLED1](TDs/Intel/OCF/rgbled1.jsonld) | NA | NA | nosec:OK | writeP:OK |
+|       | [LED1red](TDs/Intel/OCF/led1red.jsonld) | NA | NA | nosec:OK | writeP:OK |
+|       | [Temperature1](TDs/Intel/OCF/temperature1.jsonld) | NA | NA | nosec:OK | readP:OK |
+| Oracle| [HVAC](TDs/Oracle/HVAC_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
+|       | [Connected Car](TDs/Oracle/Connected_Car_Shared.jsonld) | NA | NA | basic:OK | readP: OK |
+|       | [Festo](TDs/Oracle/Festo_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
+|       | [Truck](TDs/Oracle/Truck_Shared.jsonld) | NA | NA | basic:OK | readP:OK |
+|       | [Blue Pump](TDs/Oracle/Blue_Pump_Hitachi.jsonld) | NA | NA | basic:OK | readP:OK |
+|Siemems| [IoTDemo](TDs/Siemens/bacnet-logo-coap-demo.jsonld) | NA | NA | nosec:OK | readP:OK |
+||||||subE/ws:OK|
+|SmartThings| [Lamp](TDs/SmartThings/td-light-local.json) | NA | NA | nosec:OK | writeP:OK |
+|           | [Illuminance Sensor](TDs/SmartThings/td-illuminance-local.json) | NA | NA | nosec:OK | readP:OK | 
+|TUM| [SenseHAT](TDs/TUM/senseHat.json) | NA | NA | nosec:OK | writeP:OK |
+
+
 #### 3.2.1 Metadata Handling
 
 ##### Oracle/Siemens/Fujitsu/Intel/Panasonic/SmartThing/TUM
@@ -53,8 +103,6 @@ Test results can have one of 4 states:
 ###### Oracle/Siemens/Fujitsu/Intel/Panasonic/SmartThing/TUM
 
 * OK
-   * Issue: 
-   * Comment: 
 
 ##### CoAP
 
@@ -71,8 +119,6 @@ Test results can have one of 4 states:
 ###### Oracle/Siemens/Fujitsu/Intel/Panasonic/SmartThing/TUM
 
 * OK
-   * Issue:
-   * Comment: 
 
 ##### CoAP
 
@@ -88,7 +134,6 @@ Test results can have one of 4 states:
 
 ###### Panasonic
 * OK
-   * Comment: 
 
 ##### HTTP+Webhooks
 
@@ -97,13 +142,12 @@ Test results can have one of 4 states:
 ##### CoAP
 
 * NA
-   * Comment: 
 
 ##### WebSockets
 
 ###### Siemens/Panasonic
 * OK
-   * Comment: 
+
 
 ##### MQTT
 
@@ -119,7 +163,7 @@ Test results can have one of 4 states:
 ###### Oracle/Siemens/Fujitsu/Intel/Panasonic/SmartThing/TUM
 
 * OK
-   * Comment: 
+ 
 
 ##### CoAP
 
@@ -140,7 +184,6 @@ Test results can have one of 4 states:
 ###### Oracle/Siemens/Fujitsu/Intel/Panasonic/SmartThing/TUM
 
 * OK
-   * Comment: 
 
 ##### HTTP+Webhooks
 
@@ -155,8 +198,6 @@ Test results can have one of 4 states:
 ###### Siemens/Panasonic
 
 * OK
-   * Issue: 
-   * Comment: 
 
 ##### MQTT
 
@@ -166,10 +207,8 @@ Test results can have one of 4 states:
 
 ##### HTTPS
 
-###### PARTNER
-* OK/NO/OT/NA
-   * Issue: 
-   * Comment: 
+###### Panasonic/Intel/Oracle
+* OK 
 
 #### 3.2.8 Semantic integration
 
@@ -191,21 +230,53 @@ Test results can have one of 4 states:
 
 ### Remote Monitoring and Multimodal Alerting
 
-![UseCase1](images/Hitachi_usecase1.png)
+![Diagram1](images/Hitachi_usecase1_diagram.png)
+![Flow1](images/Hitachi_usecase1.png)
+
+* Periodically reads a value of air pressure sensor (Fujitsu's), and display its value on LED display (Panasonic's)
+* If pressure is going high, send alert to:
+  * Rotary Beacon Light (Fujitsu's)
+  * Voice Synth. (Intel's WebSpeak)
+  * Drone (Panasonic's)
+  * Lights (Panasonic's HueGroup, Intel's LED and SmartThing's Lamp)
+  * Display (TUM's SenseHAT)
 
 ### Realtime control
 
-![UseCase2](images/Hitachi_usecase2.png)
+![Flow2](images/Hitachi_usecase2.png)
 
-### (Demo)"Rube Goldberg Machine"
+* Control numeric value of a LED display (Panasonic's) using a slider (Siemens').
 
-![UseCase3](images/Hitachi_usecase3.png)
+### (Demo)"Rube Goldberg" machine
 
-### 
+![Diagram3](images/Hitachi_usecase3_diagram.png)
+![Flow3](images/Hitachi_usecase3.png)
+
+* Turn on a light in Kanazawa (Fujitsu's)
+* It sensed by an brightness sensor, and application turns on a light in Lyon (SmartThings')
+* It sensed by an brightness sensor at Lyon, and
+application turns on a Rotary Beacon Light. (Fujitsu's)
+
+### Intrusion detector
+
+![Diagram4](images/Hitachi_usecase4_diagram.png)
+* Periodically watches a motion sensor (Intel's) 
+* When some motion is detected, turn on Rotary Beacon Light (Fujitsu's).
+
+### Realtime monitoring
+
+![Flow5](images/Hitachi_usecase5.png)
+* Periodically watches a vibration value of HVAC (Oracle's).
+* Display its value by color (green=normal, red=high) of LED (Intel's). 
 
 ## Appendix
 
 ### node-red-nodegen for Web of Things
 
-* You can download source file from [GitHub](https://github.com/k-toumura/node-red-nodegen/tree/webofthings).
+* You can download source file from [our repository](https://github.com/k-toumura/node-red-nodegen/tree/webofthings).
 
+* Updated features (from last plugfest)
+  * Support recent TD format (td4lyon)
+  * Support websocket
+  * Automatic icon selection
+  * Support URI template (but not tested)
