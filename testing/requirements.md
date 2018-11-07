@@ -1,4 +1,4 @@
-# Resources about testing at W3C
+# Resources about test requirements at W3C
 
 * [W3C Process](https://www.w3.org/2018/Process-20180201/)
   * [Recommendations and Notes](https://www.w3.org/2018/Process-20180201/#recs-and-notes)
