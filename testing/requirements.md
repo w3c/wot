@@ -9,6 +9,8 @@
 * Examples of implementation reports
   * [Implementation report for EMMA](https://www.w3.org/2002/mmi/2008/emma-ir/)
     * [EMMA specification](https://www.w3.org/TR/emma/)
+  * [Implementation report for MMI Architecture](https://www.w3.org/2002/mmi/2012/mmi-arch-ir/)
+    * [MMI Architecture specification](https://www.w3.org/TR/mmi-arch/)
   * [Implementation report for Device Orientation](https://www.w3.org/2008/geolocation/wiki/DeviceOrientation_Event_Implementation_Report)
     * [Device Orientation Event specification](https://www.w3.org/TR/orientation-event/)
 * Related resources
