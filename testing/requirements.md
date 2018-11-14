@@ -14,6 +14,7 @@
   * [Implementation report for Device Orientation](https://www.w3.org/2008/geolocation/wiki/DeviceOrientation_Event_Implementation_Report)
     * [Device Orientation Event specification](https://www.w3.org/TR/orientation-event/)
 * Related resources
+  * [Interoperability Testing document as a WG Note](http://www.w3.org/TR/mmi-interop/)
   * [Web Platform Test](https://github.com/web-platform-tests/wpt)
   * [CTA WAVE's test work on TV browsers](https://webapitests2017.ctawave.org/)
 * [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
