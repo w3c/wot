@@ -2,7 +2,8 @@
 This document is meant to clarify the interpretation of W3C requirements to reach REC status.
 
 ## W3C Exit Criteria
-The page at http://w3c.github.io/test-results/html52/exit-criteria.html has a good summary of the CR exit criteria:
+The page at http://w3c.github.io/test-results/html52/exit-criteria.html has a good summary of the CR exit criteria.
+See also https://www.w3.org/2018/Process-20180201/.   In summary:
 
 The Working Group must show:
 
