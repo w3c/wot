@@ -1,13 +1,12 @@
 # Validation Criteria
-This document is meant to clarify the interpretation of W3C requirements to reach REC status.
+This document is meant to clarify the interpretation of W3C implementation reporting requirements
+needed to reach REC status.
 
 ## W3C Exit Criteria
 The page at http://w3c.github.io/test-results/html52/exit-criteria.html has a good summary of the CR exit criteria.
-See also https://www.w3.org/2018/Process-20180201/.   In summary:
+The page https://www.w3.org/2018/Process-20180201/ is the official process reference.   In summary:
 
-The Working Group must show:
-
-Adequate implementation experience, described as:
+The Working Group must show "adequate implementation experience", described as:
 1. The specification is sufficiently clear, complete, and relevant to market needs, 
 to ensure that independent interoperable implementations of each feature of the specification will be realized 
 https://www.w3.org/2015/Process-20150901/#implementation-experience
@@ -36,16 +35,23 @@ includes the following requirements which have validation implications:
 
 ### Implementation
 An "implementation" will consist of either
+
 * A system producing a TD by programmatic means for a device or service with a network interface.
+
 OR
+
 * A system consuming a TD and using it to access a device or service with a network interface.
+
+Some implementations may do both.
+
 To be considered an "independent" implementation, a system should be independently developed
 from other implementations and have a distinct code base.  
 In some cases software modules or distributed service components may be shared among implementations.
-In this cases the features supported by such shared modules
-will only be counted as if they appeared in a single implementation.
+In this case the features supported by such shared modules
+will only be counted towards "implementation experience" as if they appeared in a single implementation.
+
 Note that it is not in general necessary for the server itself to generate or be aware of the
-TD, but the client generally will be.
+TD (i.e. it may or may not be the TD producer), but the client (TD consumer) generally will be.
 
 We will also accept as implementations services that accept, store, and process TDs, such as
 proxies and directories, even if they themselves do not have a network interface described by a TD.
@@ -54,6 +60,8 @@ based on the WoT architecture.
 
 #### Non-Implementations
 Non-implementations of the TD specification include:
+
 1. Example TDs, either hand-written or automatically generated, that do not describe the network interface of an actual device or service.
 2. Use of generic browsers or clients without any native capablity to use the information in a TD, such as a Web browser just rendering and displaying a TD as a JSON file for a human to interpret, or a tool like PostMan, Copper, or curl used to generate generic HTTP, CoAP, or MQTT requests under direct human control.
+
 These are useful for testing and validation but do not themselves constitute adequate evidence of "implementation experience".
