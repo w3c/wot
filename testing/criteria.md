@@ -45,7 +45,7 @@ OR
 Some implementations may do both.
 
 To be considered an "independent" implementation, a system should be independently developed
-from other implementations and have a distinct code base.  
+from other implementations and have a distinct code base.
 In some cases software modules or distributed service components may be shared among implementations.
 In this case the features supported by such shared modules
 will only be counted towards "implementation experience" as if they appeared in a single implementation.
@@ -61,7 +61,12 @@ based on the WoT architecture.
 #### Non-Implementations
 Non-implementations of the TD specification include:
 
-1. Example TDs, either hand-written or automatically generated, that do not describe the network interface of an actual device or service.
-2. Use of generic browsers or clients without any native capablity to use the information in a TD, such as a Web browser just rendering and displaying a TD as a JSON file for a human to interpret, or a tool like PostMan, Copper, or curl used to generate generic HTTP, CoAP, or MQTT requests under direct human control.
+1. Example TDs, either hand-written or automatically generated, that do not describe the network interface
+of an actual device or service.
+2. Use of generic browsers or clients without any native capablity to use the information in a TD,
+such as a Web browser just rendering and displaying a TD as a JSON file for a human to interpret,
+or a tool like PostMan, Copper, or curl
+used to generate generic HTTP, CoAP, or MQTT requests under direct human control.
 
-These are useful for testing and validation but do not themselves constitute adequate evidence of "implementation experience".
+These are useful for testing and validation but
+do not themselves constitute adequate evidence of "implementation experience".
