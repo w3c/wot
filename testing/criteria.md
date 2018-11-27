@@ -44,3 +44,16 @@ from other implementations and have a distinct code base.
 In some cases software modules or distributed service components may be shared among implementations.
 In this cases the features supported by such shared modules
 will only be counted as if they appeared in a single implementation.
+Note that it is not in general necessary for the server itself to generate or be aware of the
+TD, but the client generally will be.
+
+We will also accept as implementations services that accept, store, and process TDs, such as
+proxies and directories, even if they themselves do not have a network interface described by a TD.
+They are still useful to provide "implementation experience" in the context of an IoT system
+based on the WoT architecture.
+
+#### Non-Implementations
+Non-implementations of the TD specification include:
+1. Example TDs, either hand-written or automatically generated, that do not describe the network interface of an actual device or service.
+2. Use of generic browsers or clients without any native capablity to use the information in a TD, such as a Web browser just rendering and displaying a TD as a JSON file for a human to interpret, or a tool like PostMan, Copper, or curl used to generate generic HTTP, CoAP, or MQTT requests under direct human control.
+These are useful for testing and validation but do not themselves constitute adequate evidence of "implementation experience".
