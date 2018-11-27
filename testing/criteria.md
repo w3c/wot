@@ -64,9 +64,8 @@ Non-implementations of the TD specification include:
 1. Example TDs, either hand-written or automatically generated, that do not describe the network interface
 of an actual device or service.
 2. Use of generic browsers or clients without any native capablity to use the information in a TD,
-such as a Web browser just rendering and displaying a TD as a JSON file for a human to interpret,
-or a tool like PostMan, Copper, or curl
-used to generate generic HTTP, CoAP, or MQTT requests under direct human control.
+such as a Web browser just rendering and displaying a TD as a JSON file for a human to interpret.
+3. Use of a generic tool like PostMan, Copper, or curl used to generate generic HTTP, CoAP, or MQTT requests under separate control (not directly constrained by the information in a TD, except possibly via a human's interpretation of one).
 
 These are useful for testing and validation but
 do not themselves constitute adequate evidence of "implementation experience".
