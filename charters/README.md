@@ -21,9 +21,9 @@ Check [How to Get Involved](https://github.com/w3c/wot#how-to-get-involved) if y
 ### WoT IG Re-charter
 
 * [Working document](https://github.com/w3c/wot/blob/master/charters/wot-ig-2019.html)
- * [Rendered document](http://w3c.github.io/wot/charters/wot-ig-2019.html)
+  * [Rendered document](http://w3c.github.io/wot/charters/wot-ig-2019.html)
 * [Diff from the current Charter](https://github.com/w3c/wot/blob/master/charters/diff.html)
- * [Rendered document](http://w3c.github.io/wot/charters/diff.html)
+  * [Rendered document](http://w3c.github.io/wot/charters/diff.html)
 
 ### WoT WG Charter
 
