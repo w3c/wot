@@ -20,8 +20,8 @@ Check [How to Get Involved](https://github.com/w3c/wot#how-to-get-involved) if y
 
 ### WoT IG Re-charter
 
-* [Working document](https://github.com/w3c/wot/blob/master/charters/wot-ig-2016.html)
-* [Rendered document](http://w3c.github.io/wot/charters/wot-ig-2016.html)
+* [Working document](https://github.com/w3c/wot/blob/master/charters/wot-ig-2019.html)
+* [Rendered document](http://w3c.github.io/wot/charters/wot-ig-2019.html)
 
 ### WoT WG Charter
 
