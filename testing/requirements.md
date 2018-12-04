@@ -22,3 +22,5 @@
   * [Web Platform Test](https://github.com/web-platform-tests/wpt)
   * [CTA WAVE's test work on TV browsers](https://webapitests2017.ctawave.org/)
 * [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
+  * [Draft Implementation Report for the WoT Thing Description Specification](https://w3c.github.io/wot-thing-description/testing/report.html)
+  
