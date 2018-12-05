@@ -7,8 +7,10 @@
    * Friday: TD slot (30m - 1h) for wrapping up (out of 2h)
 
 ## TD Version
-* Will target snapshot of TD from Wed, Dec 6, as in 
+* Will target snapshot of TD from Wed, Dec 6, as in the following fork
     * https://github.com/mmccool/wot-thing-description/tree/updated-test-results/
+    * McCool will also tag this version in the main TD repo
+    * The above branch will be updated to and merged back into the TD repo after the Testfest
 * For diff from Working version:
     * https://w3c.github.io/wot-thing-description/diff.html
 * It is OK if TDs have not been updated from Lyon... this will cause some assertion failures
