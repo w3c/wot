@@ -21,6 +21,10 @@
   * [Interoperability Testing document as a WG Note](http://www.w3.org/TR/mmi-interop/)
   * [Web Platform Test](https://github.com/web-platform-tests/wpt)
   * [CTA WAVE's test work on TV browsers](https://webapitests2017.ctawave.org/)
+  * https://www.w3.org/TR/vocab-dcat/
+  * https://www.w3.org/TR/vocab-ssn/
+  * https://www.w3.org/2011/gld/wiki/DCAT_Implementations
+  * https://w3c.github.io/sdw/ssn-usage/
   ___
 * [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
   * [Draft Implementation Report for the WoT Thing Description Specification](https://w3c.github.io/wot-thing-description/testing/report.html)
