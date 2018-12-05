@@ -6,6 +6,14 @@
    * Wednesday: Editors/Main/Testing slots (3h)
    * Friday: TD slot (30m - 1h) for wrapping up (out of 2h)
 
+## TD Version
+* Will target snapshot of TD from Wed, Dec 6, as in 
+    * https://github.com/mmccool/wot-thing-description/tree/updated-test-results/
+* For diff from Working version:
+    * https://w3c.github.io/wot-thing-description/diff.html
+* It is OK if TDs have not been updated from Lyon... this will cause some assertion failures
+    * ...but this is OK since we are really testing the testing procedure
+    
 ## Web Exes
 Will use webex from first of each of the above calls
 * Monday: Script
