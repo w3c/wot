@@ -25,6 +25,8 @@
   * https://www.w3.org/TR/vocab-ssn/
   * https://www.w3.org/2011/gld/wiki/DCAT_Implementations
   * https://w3c.github.io/sdw/ssn-usage/
+  * https://json-ld.org/ tooling similar to TD playground tooling
+  * https://tools.kali.org/web-applications/burpsuite tooling - network testing tool
   ___
 * [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
   * [Draft Implementation Report for the WoT Thing Description Specification](https://w3c.github.io/wot-thing-description/testing/report.html)
