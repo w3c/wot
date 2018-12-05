@@ -151,7 +151,7 @@
               Team Contacts
             </th>
             <td>
-              <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a> (0.2 <abbr title="Full-Time Equivalent">FTE</abbr>), <a href="mailto:dsr@w3.org">Dave Raggett</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)
+              <span class="todo"><a href="mailto:">[team contact name]</a></span> <i class="todo">(0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)</i>
             </td>
           </tr>
           <tr>
@@ -185,7 +185,7 @@
         <p>
           To achieve this goal for cross-platform interoperability, the <a href="https://www.w3.org/WoT/WG/">W3C Web of Things Working Group</a> is finalizing a first set of standardized building blocks.
           They are based upon rich metadata that describes the data and interaction models exposed to applications, and the communications and security requirements for platforms to communicate effectively.
-          The central documents are the <a href="https://www.w3.org/TR/wot-architecture/">WoT Architecture</a> and <a href="https://www.w3.org/TR/wot-thing-description/">WoT Thing Description</a>.
+          The central documents are the <a href="https://www.w3.org/TR/wot-architecture/">WoT Architecture</a> and <a href="https://www.w3.org/TR/wot-thing-description/">WoT Thing Description</a> with its <i>Properties, Actions, Events<i> interaction model.
         </p>
 
         <p>
@@ -214,17 +214,6 @@
       Vice versa, the Interest Group will consider new topics that are submitted to it by the Working Group.
     </p>
 
-    <p>
-      The Interest Group will identify requirements for standardization in two ways: first, by exploring use cases and requirements for concrete consumer, industrial, and smart cities application scenarios, and second, through examining the requirements for integrating a broad range of IoT platforms into the Web of Things.
-      Three areas that have already been identified as critical by the WoT WG are simplified APIs for application developers, hypermedia concepts for complex Actions and Events that have a lifecycle on their own (e.g., Properties about the progress of a running Action or an Action to cancel a running or queued Action), and overall secure Thing lifecycle management including management interfaces for systems hosting Things.
-      The Interest Group will work on these in coordination with external groups to address their needs.
-    </p>
-
-    <p>
-      In the mid term, this is expected to include an evaluation of new semantic technologies such as <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">JSON-LD&nbsp;1.1</a> (in particular remote contexts and framing) and <a href="https://www.w3.org/Data/events/data-ws-2019/cfp.html">harmonized graph data</a>.
-      Furthermore,
-      This work would combine implementation experience with in-depth analysis. The Interest Group is seeking to broaden the range of participants to provide the necessary skills and resources to conduct this work.</p>
-
     <p>An important activity is the operation of PlugFests to collect interoperability implementation experience and to validate the current working assumptions of the technological building blocks discussed in the Web of Things Interest Group as well as proposed Working Group. These events enable developers to get together to test their implementations and facilitates networking between partners and experts. The Interest Group will seek to encourage work on open source projects and community evaluation of the Web of Things. In more detail, PlugFests allow participants to:</p>
 
     <ul>
@@ -234,7 +223,24 @@
       <li>reach out to other communities and new Members through an OpenDay for non-Members, which usually includes a demo track</li>
     </ul>
 
-    <p>In the long term, the Interest Group will use the practical experience gained from these experiments as a basis for identifying new work items. Further ideas for topic areas are expected from discussions and expert presentations of IoT projects, including for example, decentralised IoT systems and the role of blockchains. Another example is the exploration of ideas for a vendor neutral Web platform for apps that are installed on home gateways. The Interest Group will incubate work items for the Web of Things until they are ready for transfer to the W3C Recommendation Track, either in existing Working Groups, such as the Web of Things Working Group, or in new working groups.</p>
+    <p>
+      The Interest Group will identify requirements for standardization in two ways: first, by exploring use cases and requirements for concrete consumer, industrial, and smart cities application scenarios, and second, through examining the requirements for integrating a broad range of IoT platforms into the Web of Things.
+      Two areas that have already been identified as critical by the WoT WG are simplified APIs for application developers, hypermedia concepts for complex Actions and Events that have a lifecycle on their own (e.g., Properties about the progress of a running Action or an Action to cancel a running or queued Action).
+      The Interest Group will work on these in coordination with external groups to address their needs.
+    </p>
+
+    <p>
+      In the mid term, the Interest Group is expected to work on WoT infrastructure services such as directories and proxies as well as overall secure Thing lifecycle management including management interfaces for systems hosting Things.
+      This would include an evaluation of new semantic technologies such as <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">JSON-LD&nbsp;1.1</a> (in particular management of remote contexts and framing) and new work on <a href="https://www.w3.org/Data/events/data-ws-2019/cfp.html">Web Standardization for Graph Data</a>.
+      This work would combine implementation experience with in-depth analysis.
+      The Interest Group is seeking to broaden the range of participants to provide the necessary skills and resources to conduct this work.
+    </p>
+
+    <p>
+      In the long term, the Interest Group will use the practical experience gained from these experiments as a basis for identifying new work items.
+      One topic will be the creation of Thing Description Profiles, constraining the set of TD features and extensions, to enhance interoperability within a certain application domain, for instance, a vendor-neutral Web platform for apps that are installed on home gateways, or usage as technology-neutral asset administration shell for Industry 4.0.
+      Further ideas for topics are expected from discussions and expert presentations of IoT projects, including for example, edge computing and machine learning.
+      The Interest Group will incubate work items for the Web of Things until they are ready for transfer to the W3C Recommendation Track, either in existing Working Groups, such as the Web of Things Working Group, or in new working groups.</p>
 
         <div id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
@@ -245,21 +251,34 @@
         </div>
       </section>
 
+
+
       <section id="deliverables">
-        <h2>
-          Deliverables
-        </h2>
+        <h2>Deliverables</h2>
 
       	<p>More detailed milestones and updated publication schedules are available on the <a href="https://www.w3.org/WoT/IG/wiki/PubStatus">group publication status page</a>.</p>
 
       	<h3>Identified Deliverables</h3>
 
           <dl>
-            <dt id="web-foo" class="spec"><a href="#">WoT Use Cases and Requirements</a></dt>
+            <dt id="wot-ucr" class="spec"><a href="#">WoT Use Cases and Requirements</a></dt>
             <dd>
               <p>This specification defines updated use cases and requirements for the Web of Things based on concrete scenarios of consumer, industial, and smart cities applications.</p>
-
               <p class="draft-status"><b>Draft state:</b> <a href="#">Editor's Draft</a></p>
+              <p class="milestone"><b>Expected completion:</b> Q4 2020]</i></p>
+            </dd>
+
+            <dt id="wot-simple-api" class="spec">WoT Simple API</dt>
+            <dd>
+              <p>This specification outlines the requirements and a proposal for a simplified API for WoT application developers.</p>
+              <p class="draft-status"><b>Draft state:</b> No draft</p>
+              <p class="milestone"><b>Expected completion:</b> Q4 2020]</i></p>
+            </dd>
+
+            <dt id="wot-hypermedia" class="spec">WoT Hypermedia-driven Interactions</dt>
+            <dd>
+              <p>This specification outlines the requirements and a proposal for a hypermedia-based mechanism to drive machine clients through complex Thing Actions and Events.</p>
+              <p class="draft-status"><b>Draft state:</b> No draft</p>
               <p class="milestone"><b>Expected completion:</b> Q4 2020]</i></p>
             </dd>
           </dl>
@@ -270,20 +289,28 @@
             Other Deliverables
           </h3>
           <p>
-            Other non-normative documents may be created based on the exploration work of the Interest Group.
+            Other non-normative documents may be created based on the exploration work of the Interest Group. These may include:
+            <ul>
+              <li>WoT Infrastructure Services</li>
+              <li>WoT Lifecycle Management</li>
+              <li>WoT TD Profiles</li>
+            </ul>
           </p>
         </div>
 
         <div id="timeline">
           <h3>Timeline</h3>
-            <p class="todo">Put here a timeline view of all deliverables.</p>
-            <ul class="todo">
-              <li>Month YYYY: First teleconference</li>
-              <li>Month YYYY: First face-to-face meeting</li>
-              <li>Month YYYY: Requirements and Use Cases for FooML</li>
-              <li>Month YYYY: FPWD for FooML</li>
-              <li>Month YYYY: Requirements and Use Cases for BarML</li>
-              <li>Month YYYY: FPWD FooML Primer</li>
+            <p>Due to the explorative nature of the WoT Interest Group, the timeline needs to be updated during the charter period.</p>
+
+            <ul>
+              <li>Jan 2019: First joint teleconference and F2F meeting with WoT WG</li>
+              <li>Mar 2019: Online PlugFest</li>
+              <li>May 2019: 2nd W3C Workshop on the Web of Things</li>
+              <li>Jun 2019: Editors' Drafts for identified deliverables</li>
+              <li>Dec 2019: Editors' Drafts for other deliverables</li>
+              <li>Mar 2020: Requirements for long-term scope items</li>
+              <li>Dec 2020: Finalize IG Note Publications</li>
+              <li>March 2021: Re-charter draft</li>
             </ul>
         </div>
 
@@ -301,10 +328,13 @@
     <div>
     <h3 id="w3c-coordination">W3C Groups</h3>
     <dl>
-        <dt>Web of Things Working Group</dt>
-        <dd>The charter for this group is in preparation, and when it is operating, will be the most important W3C group for the Web of Things Interest Group to coordinate with.</dd>
+        <dt><a href="https://www.w3.org/WoT/WG/">Web of Things Working Group</a></dt>
+        <dd>For collaboration as outlined in <a href="#scope"></a>.</dd>
         <dt><a href="https://www.w3.org/2018/json-ld-wg/">JSON-LD Working Group</a></dt>
-        <dd>For coordination on JSON-LD features and WoT use cases.</dd>
+        <dd>For collaboration on JSON-LD features and WoT use cases.</dd>
+        <dt><a href="http://www.w3.org/2009/dap/">Device and Sensors Working Group</a></dt>
+        <dd>For coordination on APIs for sensors and actuators.</dd>
+
         <dt><a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a></dt>
         <dd>For coordination on impacts of Web of Things technologies on accessibility to users with disabilities.</dd>
         <dt><a href="http://www.w3.org/2001/sw/interest/">Semantic Web Interest Group</a></dt>
@@ -317,8 +347,6 @@
         <dd>For collaboration on privacy considerations for the Web of Things.</dd>
         <dt><a href="http://www.w3.org/Security/wiki/IG">Web Security Interest Group</a></dt>
         <dd>For collaboration on areas of mutual interest in respect to security for the Web of Things.</dd>
-        <dt><a href="http://www.w3.org/2009/dap/">Device and Sensors Working Group</a></dt>
-        <dd>For coordination on APIs for sensors and actuators.</dd>
         <dt><a href="http://www.w3.org/auto/">Web and Automotive Business &amp; Working Groups</a></dt>
         <dd>For collaboration on technologies and requirements relating to connected cars and the Web of Things.</dd>
         <dt><a href="http://www.w3.org/XML/EXI/">Efficient XML Interchange Working Group</a></dt>
@@ -330,26 +358,22 @@
     <p>To succeed in establishing inter-platform standards, W3C needs to coordinate with IoT alliances and standards development organizations. The following provides examples of organizations with which the Interest Group has already had significant coordination, during the period of the first charter. A <a href="https://www.w3.org/WoT/IG/wiki/How_does_W3C_compare_to_other_organizations">longer list</a> is available on the Interest Group wiki.</p>
 
     <dl>
-        <dt><a href="http://openconnectivity.org">Open Connectivity Foundation</a></dt>
-        <dd>For collaboration on integrating OCF based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
-        <dt><a href="http://www.onem2m.org">oneM2M</a></dt>
-        <dd>For collaboration on integrating M2M based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
-        <dt><a href="http://www.gsma.com">GSMA</a></dt>
-        <dd>For coordination in respect to the interests of Network Operators.</dd>
-        <dt><a href="https://datatracker.ietf.org/wg/ace/charter/">IETF Authentication and Authorization for Constrained Environments (ace) Working Group</a></dt>
-        <dd>In respect to security building blocks for the Web of Things.</dd>
-        <dt><a href="https://datatracker.ietf.org/doc/charter-ietf-core/">IETF Core Working Group</a></dt>
-        <dd>In respect to protocol bindings for the CoAP protocol.</dd>
         <dt><a href="https://datatracker.ietf.org/doc/charter-irtf-t2trg/">IRTF Thing to Thing Research Group</a></dt>
         <dd>For coordination of matters of mutual interest in relation to the Web of Things.</dd>
+        <dt><a href="http://openconnectivity.org">Open Connectivity Foundation</a></dt>
+        <dd>For collaboration on integrating OCF based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
+        <dt><a href="https://echonet.jp/english/">ECHONET Consortium</a></dt>
+        <dd>For collaboration on integrating ECHONET Consortium based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
         <dt><a href="http://www.iiconsortium.org">Industrial Internet Consortium</a></dt>
-        <dd>For collaboration on use cases, requirements and architecture for the Web of Things.</dd>
+        <dd>For collaboration on a testbed for the Web of Things.</dd>
         <dt><a href="https://opcfoundation.org">OPC Foundation</a></dt>
         <dd>For collaboration on semantic interoperability and end to end security across platforms.</dd>
         <dt><a href="http://www.plattform-i40.de/I40/Navigation/EN/Home/home.html">Plattform Industrie 4.0</a></dt>
         <dd>For collaboration on use cases and requirements for smart manufacturing, including semantic interoperability and end to end security across platforms.</dd>
-        <dt><a href="https://echonet.jp/english/">ECHONET Consortium</a></dt>
-        <dd>For collaboration on integrating ECHONET Consortium based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
+        <dt><a href="http://www.onem2m.org">oneM2M</a></dt>
+        <dd>For collaboration on integrating M2M based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
+        <dt><a href="http://www.gsma.com">GSMA</a></dt>
+        <dd>For coordination in respect to the interests of Network Operators.</dd>
     </dl>
     </div>
 <!--
@@ -477,10 +501,7 @@
         </p>
 
         <section id="history">
-          <h3>
-            Charter History
-          </h3>
-          <p class="issue"><b>Note:</b>Display this table and update it when appropriate. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/Charter#extension">Charter Guidebook (section 4)</a>.</p>
+          <h3>Charter History</h3>
 
           <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/Consortium/Process/#CharterReview">W3C Process Document (section 5.2.3)</a>:</p>
 
@@ -500,15 +521,16 @@
                   Changes
                 </th>
               </tr>
+              
               <tr>
                 <th>
-                  <a class="todo" href="https://www.w3.org/2016/07/wot-ig-charter.html">Initial Charter</a>
+                  <a href="https://www.w3.org/2014/12/wot-ig-charter.html">Initial Charter</a>
                 </th>
                 <td>
-                  1 August 2016
+                  21 January 2015
                 </td>
                 <td>
-		  31 December 2018
+		              31 March 2016
                 </td>
                 <td>
                   none
@@ -516,16 +538,39 @@
               </tr>
               <tr>
                 <th>
-                  <a class="todo" href="">Rechartered</a>
+                  <a href="https://www.w3.org/2016/07/wot-ig-charter.html">Rechartered</a>
                 </th>
                 <td>
-                  1 January 2019
+                  01 August 2016
                 </td>
                 <td>
-                  30 June 2020
+		              31 December 2018
                 </td>
                 <td>
-                  <p class="todo">[description of change to charter, with link to new deliverable item in charter] <b>Note:</b> use the class <code>new</code> for all new deliverables, for ease of recognition.</p>
+                  <ul>
+                    <li>Clarified relation to chartered WoT Working Group</li>
+                    <li>Changed scope to explore role of semantic technologies</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="">Rechartered</a>
+                </th>
+                <td>
+                  01 January 2019
+                </td>
+                <td>
+                  30 June 2021
+                </td>
+                <td>
+                  <ul>
+                    <li class="new">New deliverable: WoT Simple API</span></li>
+                    <li class="new">New deliverable: WoT Hypermedia-driven Interactions</li>
+                    <li>Changed scope to explore WoT infrastructure services</li>
+                    <li>Changed scope to explore WoT lifecycle management</li>
+                    <li>Changed scope to explore TD Profiles</li>
+                  </ul>
                 </td>
               </tr>
             </tbody>
