@@ -23,7 +23,7 @@ Will use webex from first of each of the above calls
 * Friday: TD (partial)
 
 ## Google Hangout
-(TBD - McCool will look into it)
+* McCool allocated this meet: https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE
 
 ## Tools
 * https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/README.md
