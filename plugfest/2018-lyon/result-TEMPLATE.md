@@ -2,6 +2,10 @@
 
 This document summerizes the results of the Lyon PlugFest held Oct 20 and 21.
 
+## 2 Summary
+
+*Summarize key findings from following results*
+
 ## 3 Checking Points 
 
 Test results can have one of 4 states:
@@ -48,6 +52,28 @@ Test results can have one of 4 states:
    * Comment: 
 
 ### 3.2 Testing in Client Role
+
+#### Client test result summary 
+##### Prerequisite
+
+*Describe any limitation or pre-condition which may affect test result*
+
+- (example) Only supports Content-Type: application/json as payload
+
+##### Test results summary
+
+Legends:
+- Load: Client could load TD file
+- CORS: Client could handle CORS operation (otherwise used non-sec mode). NA if the Client is not a browser.
+- Auth: Client could be authorized to access the endpoint
+- interactions: Client could successfully make interactions as described.
+
+
+| Company | Thing                  | Load | CORS | Auth | interactions | Note            |
+| ------- | ---------------------- | ---- | ---- | ---- | ------------ | --------------- |
+| (Example) | RotaryBeaconLight      | OK   | NO   | OK   | readP  : NO  | The client didn't support "Content-Type: text/plain" as payload. |
+
+
 #### 3.2.1 Metadata Handling
 
 ##### PARTNER
