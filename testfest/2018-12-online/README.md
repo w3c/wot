@@ -6,7 +6,7 @@ For the Test Fest,
     - https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/input/implementations
 * Make sure all implementations are online for the start of the testfest
 * If appropriate, make videos of implementations available via the Google Hangout
-* Capture TDs and place in [TDs](TDs) subdirectory
+* Capture TDs and place in [`TDs`](TDs/README.md) subdirectory
 * Generate result CSV files and store in `TDs/.../results` subdirectories according to test procedures.
 
 ## Schedule 
