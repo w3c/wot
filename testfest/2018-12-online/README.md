@@ -42,6 +42,53 @@ Will use webex from first of each of the above calls
 * https://github.com/egekorkan/thingweb-playground/tree/assertionTest/README.md
 * Penetration testing: Burp Suite
 
+### Validating Assertions Testable with JSON Schemas
+The following is only an example.
+
+0. Install Node.js version 8 or better.
+1. Check out `https://github.com/w3c/wot-thing-description`, `https://github.com/w3c/wot`, and `https://github.com/egekorkan/thingweb-playground` into adjacent directories.
+```sh
+git clone https://github.com/egekorkan/thingweb-playground.git
+git clone https://github.com/w3c/wot-thing-description.git
+git clone https://github.com/w3c/wot.git
+```
+2. Set up AssertionTester in Thingweb-Playground
+```sh
+cd thingweb-playground
+git checkout assertionTest
+cd AssertionTester
+npm run install
+cd ..
+```
+3. Run test on your TDs (replace Intel/SimpleWebCamera with your path)
+```sh
+node AssertionTester/assertionTester.js ../wot/testfest/2018-12-online/TDs/Intel/SimpleWebCamera.jsonld
+```
+4. Copy results to appropriate `results` directory
+```sh
+cd ../wot/testfest/2018-12-online/results/Intel
+cp ../../../../thingweb-playground/AssertionTester/Results/result.csv intel-camera.csv
+```
+5. Optional: Merge Multiple Results for One Implementation
+```sh
+cd ../wot-thing-description
+npm run install
+node mergeresults.js ../wot/testfest/2018-12-online/results/Intel/OCF/*.csv \
+                   > ../wot/testfest/2018-12-online/results/Intel/intel-ocf.csv
+```
+6. Copy all results to implementation report directory in `wot-thing-description`:
+```sh
+cd ../wot-thing-description
+cp ../wot/testfest/2018-12-online/results/*/*.csv testing/inputs/results
+npm run render
+npm run assertions
+```
+7. View report
+```sh
+google-chrome testing/report.html
+```
+
+
 ## Data Collection Procedure
 
 ### Assertion Testing
