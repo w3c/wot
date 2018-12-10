@@ -72,6 +72,7 @@ cp ../../../../thingweb-playground/AssertionTester/Results/result.csv intel-came
 5. Optional: Merge Multiple Results for One Implementation
 ```sh
 cd ../wot-thing-description
+git checkout updated-test-results
 npm run install
 node mergeresults.js ../wot/testfest/2018-12-online/results/Intel/OCF/*.csv \
                    > ../wot/testfest/2018-12-online/results/Intel/intel-ocf.csv
@@ -79,6 +80,7 @@ node mergeresults.js ../wot/testfest/2018-12-online/results/Intel/OCF/*.csv \
 6. Copy all results to implementation report directory in `wot-thing-description`:
 ```sh
 cd ../wot-thing-description
+git checkout updated-test-results
 cp ../wot/testfest/2018-12-online/results/*/*.csv testing/inputs/results
 npm run render
 npm run assertions
