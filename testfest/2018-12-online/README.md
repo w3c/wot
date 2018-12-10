@@ -57,7 +57,7 @@ git clone https://github.com/w3c/wot.git
 cd thingweb-playground
 git checkout assertionTest
 cd AssertionTester
-npm run install
+npm install
 cd ..
 ```
 3. Run test on your TDs (replace Intel/SimpleWebCamera with your path)
@@ -73,7 +73,7 @@ cp ../../../../thingweb-playground/AssertionTester/Results/result.csv intel-came
 ```sh
 cd ../wot-thing-description
 git checkout updated-test-results
-npm run install
+npm install
 node mergeresults.js ../wot/testfest/2018-12-online/results/Intel/OCF/*.csv \
                    > ../wot/testfest/2018-12-online/results/Intel/intel-ocf.csv
 ```
