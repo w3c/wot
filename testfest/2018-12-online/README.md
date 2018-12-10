@@ -7,8 +7,11 @@ For the Test Fest,
     - https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/input/implementations
 * Make sure all implementations are online for the start of the testfest
 * If appropriate, make videos of implementations available via the Google Hangout
-* Capture TDs and place in [`TDs`](TDs/README.md) subdirectory
+* Capture TDs and place in [`TDs`](TDs/README.md) subdirectories
 * Generate result CSV files and store in `results` subdirectory according to test procedures.
+    - Tools such as Ege's AssertionTester noted below may be used, but in general each organization is responsible for recording and reporting the compliance of their implementation with the specification.
+    - Sub-subdirectories should be used for "raw" results, such as multiple different TDs for one implementation
+    - If each implementation has multiple raw results, they should be merged using `wot-thing-directory/mergeresults.js`
 
 ## Schedule 
 * Will replace all the WoT calls week of Dec 10:
