@@ -2,6 +2,11 @@
 
 ![Lab Image](images/lab.jpg)
 
+## Authentication
+
+The following is linked to a post on a W3C email server and is therefore only available to W3C members.
+[Reverse proxy username/passwords](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
+
 ## OCF Devices
 
 - [All](OCF.json)
@@ -24,8 +29,6 @@
 - [Toggle Switch, Node 1](OCF/toggle1.jsonld)
 
 ## Web Service Things
-
-[Authentication Info (use proxy username/passwords)](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
 
 ### Simple Web Camera
 - [Simple Web Camera TD](SimpleWebCamera.jsonld)
