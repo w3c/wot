@@ -3,6 +3,7 @@ Place CSV assertion test results here, one subdirectory per organization, mirror
 Further subdirectories may be used for multiple CSV files per implementation but these should be merged into
 one result file at the top level using the `mergeresults.js` script in wot-thing-directory.
 
-* [Intel - OCF Devices](Intel/intel-ocf.csv)
-* [Intel - Simple Web Camera](Intel/intel-camera.csv)
-* [Intel - Web Speak](Intel/intel-speak.csv)
+## Intel
+* [OCF Devices](Intel/intel-ocf.csv)
+* [Simple Web Camera](Intel/intel-camera.csv)
+* [Web Speak](Intel/intel-speak.csv)
