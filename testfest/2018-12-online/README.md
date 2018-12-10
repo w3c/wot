@@ -8,7 +8,7 @@ For the Test Fest,
 * Make sure all implementations are online for the start of the testfest
 * If appropriate, make videos of implementations available via the Google Hangout
 * Capture TDs and place in [`TDs`](TDs/README.md) subdirectory
-* Generate result CSV files and store in `TDs/.../results` subdirectories according to test procedures.
+* Generate result CSV files and store in `results` subdirectory according to test procedures.
 
 ## Schedule 
 * Will replace all the WoT calls week of Dec 10:
