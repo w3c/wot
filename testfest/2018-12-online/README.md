@@ -30,8 +30,8 @@ For the Test Fest,
     
 ## Web Exes
 Will use webex from first of each of the above calls
-* Monday: Script
-* Wednesday: Editors
+* Monday: Script + wot-pf
+* Wednesday: Editors + wot-pf
 * Friday: TD (partial)
 
 ## Google Hangout
