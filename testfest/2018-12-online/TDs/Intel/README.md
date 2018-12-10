@@ -25,5 +25,14 @@
 
 ## Web Service Things
 
-- [Simple Web Camera](SimpleWebCamera.jsonld)
-- [Web Speak](WebSpeak.jsonld)
+[Authentication Info (use proxy username/passwords)](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
+
+### Simple Web Camera
+- [Simple Web Camera TD](SimpleWebCamera.jsonld)
+- [Simple Web Camera - Portal - Live TD - Basic Auth](https://portal.mmccool.net:8098/api)
+- [Simple Web Camera - Portal - Live TD - Digest Auth](https://portal.mmccool.net:8099/api)
+
+### Web Speak
+- [Web Speak TD](WebSpeak.jsonld)
+- [Web Speak - Portal - Live TD - Basic Auth](https://portal.mmccool.net:8096/api)
+- [Web Speak - Portal - Live TD - Digest Auth](https://portal.mmccool.net:8097/api)
