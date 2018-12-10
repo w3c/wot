@@ -1,0 +1,393 @@
+{
+  "name": "keti_iot_sensor",
+  "description": "KETI Environment IoT Sensor",
+  "@context": "https://w3c.github.io/wot/w3c-wot-td-context.jsonld",
+  "@type": "Thing",
+ 	"security": [
+		{
+			"scheme": "nosec"
+		}
+	],
+  "properties": {
+    "voc": {
+      "type": "number",
+      "description": "volatile organic compound",
+      "observable": true,
+      "writeable": false,
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/voc",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/voc",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "threshold_voc": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/threshold_voc",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/threshold_voc",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "light": {
+      "type": "number",
+      "description": "light lux",
+      "observable": true,
+      "writeable": false,
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/light",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/light",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "threshold_light": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/threshold_light",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/threshold_light",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "sound": {
+      "type": "number",
+      "description": "sound level",
+      "observable": true,
+      "writeable": false,
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/sound",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/sound",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "threshold_sound": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/threshold_sound",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/threshold_sound",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "detect": {
+      "type": "number",
+      "description": "microwave value",
+      "observable": true,
+      "writeable": false,
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/detect",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/detect",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "co2": {
+      "type": "number",
+      "description": "carbon_dioxide value",
+      "observable": true,
+      "writeable": false,
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/co2",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/co2",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "threshold_co2": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/threshold_co2",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/threshold_co2",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "humidity": {
+      "type": "number",
+      "description": "humidity value",
+      "observable": true,
+      "writeable": false,
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/humidity",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/humidity",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "threshold_humidity": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/threshold_humidity",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/threshold_humidity",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "temperature": {
+      "type": "number",
+      "description": "temperature value",
+      "observable": true,
+      "writeable": false,
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/temperature",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/temperature",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "threshold_temperature": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/properties/threshold_temperature",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/properties/threshold_temperature",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "setthreshold_voc": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/actions/setthreshold_voc",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/actions/setthreshold_voc",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "setthreshold_light": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/actions/setthreshold_light",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/actions/setthreshold_light",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "setthreshold_sound": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/actions/setthreshold_sound",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/actions/setthreshold_sound",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "setthreshold_co2": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/actions/setthreshold_co2",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/actions/setthreshold_co2",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "setthreshold_humidity": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/actions/setthreshold_humidity",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/actions/setthreshold_humidity",
+          "mediaType": "application/json"
+        }
+      ]
+    },
+    "setthreshold_temperature": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/actions/setthreshold_temperature",
+          "mediaType": "application/json"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/actions/setthreshold_temperature",
+          "mediaType": "application/json"
+        }
+      ]
+    }
+  },
+  "events": {
+    "onoverflow_voc": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/events/onoverflow_voc",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/events/onoverflow_voc",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    },
+    "onunderflow_light": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/events/onunderflow_light",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/events/onunderflow_light",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    },
+    "onoverflow_sound": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/events/onoverflow_sound",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/events/onoverflow_sound",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    },
+    "ondetect": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/events/ondetect",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/events/ondetect",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    },
+    "onoverflow_co2": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/events/onoverflow_co2",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/events/onoverflow_co2",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    },
+    "onoverflow_humidity": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/events/onoverflow_humidity",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/events/onoverflow_humidity",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    },
+    "onoverflow_temperature": {
+      "type": "number",
+      "forms": [
+        {
+          "href": "http://123.143.23.139:8080/keti_iot_sensor/events/onoverflow_temperature",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        },
+        {
+          "href": "http://192.168.101.47:8080/keti_iot_sensor/events/onoverflow_temperature",
+          "mediaType": "application/json",
+          "subProtocol": "LongPoll"
+        }
+      ]
+    }
+  },
+  "links": [
+    
+  ]
+}
