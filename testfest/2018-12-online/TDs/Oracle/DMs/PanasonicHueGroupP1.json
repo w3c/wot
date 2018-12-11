@@ -1,0 +1,90 @@
+{
+  "urn": "urn:com:oracle:PanasonicHueGroupP1",
+  "name": "PanasonicHueGroupP1",
+  "description": "https://w3c.p-wot.com/wot-ver2/things/huegroup/1/",
+  "system": false,
+  "draft": false,
+  "created": 1538059806636,
+  "createdAsString": "2018-09-27T14:50:06.636Z",
+  "lastModified": 1538063023242,
+  "lastModifiedAsString": "2018-09-27T15:43:43.242Z",
+  "userLastModified": "IoTAdmin",
+  "attributes": [
+    {
+      "description": "operationStatus",
+      "name": "operationStatus",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "description": "rgbValue red",
+      "name": "rgbValue_red",
+      "range": "0,255",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "description": "rgbValue green",
+      "name": "rgbValue_green",
+      "range": "0,255",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "description": "rgbValue blue",
+      "name": "rgbValue_blue",
+      "range": "0,255",
+      "type": "NUMBER",
+      "writable": true
+    }
+  ],
+  "actions": [
+    {
+      "alias": "",
+      "argType": "INTEGER",
+      "description": "",
+      "name": "colorRed",
+      "range": "0,255"
+    },
+    {
+      "alias": "",
+      "argType": "INTEGER",
+      "description": "",
+      "name": "colorGreen",
+      "range": "0,255"
+    },
+    {
+      "alias": "",
+      "argType": "INTEGER",
+      "description": "",
+      "name": "colorBlue",
+      "range": "0,255"
+    },
+    {
+      "alias": "",
+      "argType": "INTEGER",
+      "description": "",
+      "name": "colorWhite",
+      "range": "0,255"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253APanasonicHueGroupP1",
+      "rel": "self"
+    },
+    {
+      "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253APanasonicHueGroupP1",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253APanasonicHueGroupP1/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
