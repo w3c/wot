@@ -111,9 +111,10 @@ for(var exKey in dm.actions) {
     if (iac.argType) {
       var inp={};
       inp.type="object";
+      // these are now optional in the updated TD spec and don't make a lot of sense for action parameters
       inp.readOnly = false;
       inp.writeOnly = false;
-        inp.properties={};
+      inp.properties={};
       inp.properties.value={};
       inp.properties.value.type=iac.argType.toLowerCase();
       if (iac.range) {
