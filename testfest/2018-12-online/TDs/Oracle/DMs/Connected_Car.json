@@ -4,11 +4,11 @@
   "description": "Simplified Connected Car",
   "system": false,
   "draft": false,
-  "created": 1536928881958,
-  "createdAsString": "2018-09-14T12:41:21.958Z",
-  "lastModified": 1536928881958,
-  "lastModifiedAsString": "2018-09-14T12:41:21.958Z",
-  "userLastModified": "IoTAdmin",
+  "created": 1544189552859,
+  "createdAsString": "2018-12-07T13:32:32.859Z",
+  "lastModified": 1544189552859,
+  "lastModifiedAsString": "2018-12-07T13:32:32.859Z",
+  "userLastModified": "92F0E6FE81C6427A95DB06F0ADF11D72_IOT_ADMINISTRATOR_APPID",
   "attributes": [
     {
       "name": "ASCD",
@@ -114,7 +114,7 @@
     {
       "name": "SideCurtainSensor",
       "type": "NUMBER",
-      "writable": false
+      "writable": true
     },
     {
       "name": "SteeringAngleSensor",
@@ -185,6 +185,7 @@
     {
       "urn": "urn:com:oracle:iot:connected-car:flat-tire",
       "name": "flatTire",
+      "description": "flatTire",
       "type": "ALERT",
       "deviceModel": "urn:com:oracle:iot:connected-car",
       "value": {
@@ -196,6 +197,7 @@
     {
       "urn": "urn:com:oracle:iot:connected-car:tire-pressure",
       "name": "tirePressure",
+      "description": "tirePressure",
       "type": "DATA",
       "deviceModel": "urn:com:oracle:iot:connected-car",
       "value": {
@@ -213,6 +215,7 @@
     {
       "urn": "urn:com:oracle:iot:connected-car:drowsinessLevel",
       "name": "drowsinessLevel",
+      "description": "drowsinessLevel",
       "type": "DATA",
       "deviceModel": "urn:com:oracle:iot:connected-car",
       "value": {
@@ -230,6 +233,7 @@
     {
       "urn": "urn:com:oracle:iot:connected-car:front-airbag-fired",
       "name": "frontAirbagFired",
+      "description": "frontAirbagFired",
       "type": "ALERT",
       "deviceModel": "urn:com:oracle:iot:connected-car",
       "value": {
@@ -241,6 +245,7 @@
     {
       "urn": "urn:com:oracle:iot:connected-car:collision",
       "name": "collisionDetected",
+      "description": "collisionDetected",
       "type": "ALERT",
       "deviceModel": "urn:com:oracle:iot:connected-car",
       "value": {
@@ -263,6 +268,7 @@
     {
       "urn": "urn:com:oracle:iot:connected-car:side-airbag-fired",
       "name": "sideAirbagFired",
+      "description": "sideAirbagFired",
       "type": "ALERT",
       "deviceModel": "urn:com:oracle:iot:connected-car",
       "value": {
@@ -274,6 +280,7 @@
     {
       "urn": "urn:com:oracle:iot:connected-car:wheel-speed",
       "name": "wheelSpeed",
+      "description": "wheelSpeed",
       "type": "DATA",
       "deviceModel": "urn:com:oracle:iot:connected-car",
       "value": {
@@ -291,18 +298,18 @@
   ],
   "links": [
     {
-      "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car",
+      "href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car",
       "rel": "self"
     },
     {
-      "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car",
+      "href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car",
       "rel": "canonical"
     }
   ],
   "devicePolicies": {
     "links": [
       {
-        "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car/devicePolicies",
+        "href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car/devicePolicies",
         "rel": "devicePolicies"
       }
     ]
