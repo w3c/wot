@@ -4,11 +4,21 @@ To be held 10-14 December, 2018.
 ## Participant Tasks
 For the Test Fest,
 * Each organization with one or more implementations needs to submit an implementation description
-    - https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/input/implementations
 * Make sure all implementations are online for the start of the testfest
 * If appropriate, make videos of implementations available via the Google Hangout
 * Capture TDs and place in [`TDs`](TDs/README.md) subdirectories
 * Generate result CSV files and store in `results` subdirectory according to test procedures.
+    - Use template at https://github.com/mmccool/wot-thing-description/blob/updated-test-results/testing/inputs/results/template.csv
+    - Make second column either "pass", "fail", "not-impl"; "null" will be ignored
+    - Put result CSV files here: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/results
+
+1. Submit TDs at https://github.com/w3c/wot/tree/master/testfest/2018-12-online/TDs
+2. Submit CSV-based reports: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/results
+      - McCool will copy them here: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/results
+3. Implementation description: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
+
+## Automation
+Not yet working but eventually...
     - Tools such as Ege's AssertionTester noted below may be used, but in general each organization is responsible for recording and reporting the compliance of their implementation with the specification.
     - Sub-subdirectories should be used for "raw" results, such as multiple different TDs for one implementation
     - If each implementation has multiple raw results, they should be merged using `wot-thing-directory/mergeresults.js`
@@ -49,7 +59,7 @@ The following is only an example.
 1. Check out `https://github.com/w3c/wot-thing-description`, `https://github.com/w3c/wot`, and `https://github.com/egekorkan/thingweb-playground` into adjacent directories.
 ```sh
 git clone https://github.com/egekorkan/thingweb-playground.git
-git clone https://github.com/w3c/wot-thing-description.git
+git clone https://github.com/mmccool/wot-thing-description.git
 git clone https://github.com/w3c/wot.git
 ```
 2. Set up AssertionTester in Thingweb-Playground
