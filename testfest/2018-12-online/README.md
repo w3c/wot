@@ -50,7 +50,6 @@ Will use webex from first of each of the above calls
 ## Tools
 * https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/README.md
 * https://github.com/egekorkan/thingweb-playground/tree/assertionTest/README.md
-     - May be more up to date: https://github.com/mmccool/thingweb-playground/tree/dec-2018-testfest/WebContent
 * Penetration testing: Burp Suite
 
 ### Validating Assertions Testable with JSON Schemas
