@@ -11,10 +11,12 @@ For the Test Fest,
 * Generate result CSV files and store in `results` subdirectory according to test procedures.
     - Use template at https://github.com/mmccool/wot-thing-description/blob/updated-test-results/testing/inputs/results/template.csv
     - Make second column either "pass", "fail", "not-impl"; "null" will be ignored
+    - Put result CSV files here: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/results
 
-1. submit TDs at https://github.com/w3c/wot/tree/master/testfest/2018-12-online/TDs
-2. submit CSV-based reports: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/results
-3. implementation descriptin: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
+1. Submit TDs at https://github.com/w3c/wot/tree/master/testfest/2018-12-online/TDs
+2. Submit CSV-based reports: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/results
+      - McCool will copy them here: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/results
+3. Implementation descriptin: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
 
 ## Automation
 Not yet working but eventually...
