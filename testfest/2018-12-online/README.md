@@ -9,6 +9,15 @@ For the Test Fest,
 * If appropriate, make videos of implementations available via the Google Hangout
 * Capture TDs and place in [`TDs`](TDs/README.md) subdirectories
 * Generate result CSV files and store in `results` subdirectory according to test procedures.
+    - Use template at https://github.com/mmccool/wot-thing-description/blob/updated-test-results/testing/inputs/results/template.csv
+    - Make second column either "pass", "fail", "not-impl"; "null" will be ignored
+
+1. submit TDs at https://github.com/w3c/wot/tree/master/testfest/2018-12-online/TDs
+2. submit CSV-based reports: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/results
+3. implementation descriptin: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
+
+## Automation
+Not yet working but eventually...
     - Tools such as Ege's AssertionTester noted below may be used, but in general each organization is responsible for recording and reporting the compliance of their implementation with the specification.
     - Sub-subdirectories should be used for "raw" results, such as multiple different TDs for one implementation
     - If each implementation has multiple raw results, they should be merged using `wot-thing-directory/mergeresults.js`
