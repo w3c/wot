@@ -49,7 +49,7 @@ The following is only an example.
 1. Check out `https://github.com/w3c/wot-thing-description`, `https://github.com/w3c/wot`, and `https://github.com/egekorkan/thingweb-playground` into adjacent directories.
 ```sh
 git clone https://github.com/egekorkan/thingweb-playground.git
-git clone https://github.com/w3c/wot-thing-description.git
+git clone https://github.com/mmccool/wot-thing-description.git
 git clone https://github.com/w3c/wot.git
 ```
 2. Set up AssertionTester in Thingweb-Playground
