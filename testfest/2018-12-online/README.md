@@ -4,7 +4,6 @@ To be held 10-14 December, 2018.
 ## Participant Tasks
 For the Test Fest,
 * Each organization with one or more implementations needs to submit an implementation description
-    - https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/input/implementations
 * Make sure all implementations are online for the start of the testfest
 * If appropriate, make videos of implementations available via the Google Hangout
 * Capture TDs and place in [`TDs`](TDs/README.md) subdirectories
@@ -16,7 +15,7 @@ For the Test Fest,
 1. Submit TDs at https://github.com/w3c/wot/tree/master/testfest/2018-12-online/TDs
 2. Submit CSV-based reports: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/results
       - McCool will copy them here: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/results
-3. Implementation descriptin: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
+3. Implementation description: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
 
 ## Automation
 Not yet working but eventually...
