@@ -32,7 +32,9 @@
   * https://json-ld.org/ tooling similar to TD playground tooling
   * https://tools.kali.org/web-applications/burpsuite tooling - network testing tool
   ___
-* [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
-  * [Draft Implementation Report for the WoT Thing Description Specification](https://w3c.github.io/wot-thing-description/testing/report.html)
+* Testing effort for WoT Thing Description
+  * [Thing Description spec on GitHub](https://w3c.github.io/wot-thing-description/)
+  * [THing Description testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
+  * [Draft Implementation Report](https://w3c.github.io/wot-thing-description/testing/report.html)
   * [CR exit criteria](https://github.com/w3c/wot/blob/master/testing/criteria.md)
   
