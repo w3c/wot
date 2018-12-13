@@ -34,4 +34,5 @@
   ___
 * [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
   * [Draft Implementation Report for the WoT Thing Description Specification](https://w3c.github.io/wot-thing-description/testing/report.html)
+  * [CR exit criteria](https://github.com/w3c/wot/blob/master/testing/criteria.md)
   
