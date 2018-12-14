@@ -1,0 +1,94 @@
+{
+	"name": "WiFi LED 8x48 Matrix Display",
+	"description": "WiFi LED 8x48 Matrix Display",
+	"id": "urn:dev:wot:jp:iri:wifidisplay",
+	"@context": ["http://www.w3.org/ns/td"],
+	"@type": "Thing",
+	"security": [
+		{
+			"scheme": "basic"
+		}
+	],
+ 	"properties": {
+                "displaydata": {
+                        	"type": "string",
+				"description": "A-Z, a-z, 0-9, symbols can be displayed",
+				"writable": true,
+                        	"observable": false,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.50.113/display"
+				}]
+                },
+                "temperature": {
+                        	"type": "number",
+				"description": "Temperature Data",
+				"writable": false,
+                        	"observable": true,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.50.113/temperature"
+				}]
+                },
+                "pressure": {
+                        	"type": "number",
+				"description": "Pressure Data",
+				"writable": false,
+                        	"observable": true,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.50.113/pressure"
+				}]
+                },
+                "humidity": {
+                        	"type": "number",
+				"description": "Humidity Data",
+				"writable": false,
+                        	"observable": true,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.50.113/humidity"
+				}]
+                },
+                "timedate": {
+                        	"type": "object",
+				"description": "Time date",
+				"writable": false,
+                        	"observable": true,
+				"properties": {
+					"year": {
+						"type": "number"
+					},
+					"month": {
+						"type": "number"
+					},
+					"day": {
+						"type": "number"
+					},
+					"weekday": {
+						"type": "string"
+					},
+					"hour": {
+						"type": "number"
+					},
+					"min": {
+						"type": "number"
+					},
+					"sec": {
+						"type": "number"
+					},
+					"timezone": {
+						"type": "string"
+					}
+				},
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.50.113/timedate"
+				}]
+                }
+        },
+	"actions":{
+	},
+	"events":{
+	}
+}
