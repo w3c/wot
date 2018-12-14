@@ -15,7 +15,8 @@ For the Test Fest,
 1. Submit TDs at https://github.com/w3c/wot/tree/master/testfest/2018-12-online/TDs
 2. Submit CSV-based reports: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/results
       - McCool will copy them here: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/results
-3. Implementation description: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
+3. Implementation description: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/implementations
+      - McCool will copy them here: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
 
 ## Automation
 Not yet working but eventually...
