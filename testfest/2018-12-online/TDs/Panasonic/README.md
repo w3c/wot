@@ -1,5 +1,9 @@
 # Panasonic Thing Descriptions
 
+## Notice
+
+- All TDs are old (based on the Web of Things (WoT) Thing Description W3C Working Draft 21 October 2018).
+
 ## Things in Osaka lab (Video through Hangout)
 
 ![Lab Image](images/Panasonic_Osaka_Lab_Things_Arrangement.png)
