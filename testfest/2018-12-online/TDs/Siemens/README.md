@@ -1,3 +1,3 @@
 # Siemens Thing Descriptions
 
-![BACnet Demoboard](images/HVACCtrl.jpg)
+![BACnet Demoboard](images/HVACCtrl.png)
