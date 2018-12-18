@@ -13,7 +13,7 @@
     "iot:Actuator",
     "iot:BinarySwitch"
   ],
-  "id": "urn:uuid:8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+  "id": "urn:uuid:e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
   "securityDefinitions": {
     "nosec_sc": {
       "scheme": "nosec"
@@ -28,7 +28,7 @@
   "security": [
     "nosec_sc"
   ],
-  "name": "Intel-OCF-8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+  "name": "Intel-OCF-e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
   "properties": {
     "status": {
       "title": "On/Off Status",
@@ -55,37 +55,19 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "http://upsq1c.local:8000/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "op": "readproperty",
           "http:methodName": "GET"
         },
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "http://upsq1c.local:8000/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "op": "writeproperty",
           "http:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "readproperty",
-          "http:methodName": "GET"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "writeproperty",
-          "http:methodName": "POST"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "basic_sc"
           ],
@@ -94,7 +76,7 @@
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "basic_sc"
           ],
@@ -103,7 +85,25 @@
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty",
+          "http:methodName": "GET"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "http:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ],
@@ -112,7 +112,7 @@
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ],
@@ -121,7 +121,7 @@
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ],
@@ -130,7 +130,7 @@
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ],
@@ -167,32 +167,32 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa"
+          "href": "http://upsq1c.local:8000/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ]
@@ -225,32 +225,32 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa"
+          "href": "http://upsq1c.local:8000/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led1red?di=8c2c6907-ed4a-4527-8f23-57df6999b8aa",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2top?di=e6b060cf-dc10-4375-ae08-1f9e2de0aa2b",
           "security": [
             "digest_sc"
           ]
