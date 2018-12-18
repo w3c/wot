@@ -42,6 +42,28 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [Toggle Switch](OCF/toggle2.jsonld)
 
 ### Live via HTTPS Proxy
+#### Via San Franscisco
+##### Basic Auth
+- [OCF System](https://portal.mmccool.net:8090/api/oic/system)
+- [OCF Resources](https://portal.mmccool.net:8090/api/oic/res)
+- [OCF Devices](https://portal.mmccool.net:8090/api/oic/d)
+- [TDs](https://portal.mmccool.net:8091)
+##### Digest Auth
+- [OCF System](https://portal.mmccool.net:8094/api/oic/system)
+- [OCF Resources](https://portal.mmccool.net:8094/api/oic/res)
+- [OCF Devices](https://portal.mmccool.net:8094/api/oic/d)
+- [TDs](https://portal.mmccool.net:8095)
+#### Via Tokyo
+##### Basic Auth
+- [OCF System](https://tiktok.mmccool.org:8090/api/oic/system)
+- [OCF Resources](https://tiktok.mmccool.org:8090/api/oic/res)
+- [OCF Devices](https://tiktok.mmccool.org:8090/api/oic/d)
+- [TDs](https://tiktok.mmccool.org:8091)
+##### Digest Auth
+- [OCF System](https://tiktok.mmccool.org:8094/api/oic/system)
+- [OCF Resources](https://tiktok.mmccool.org:8094/api/oic/res)
+- [OCF Devices](https://tiktok.mmccool.org:8094/api/oic/d)
+- [TDs](https://tiktok.mmccool.org:8095)
 
 ## Simple Web Camera
 
