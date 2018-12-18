@@ -43,7 +43,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [Temperature Sensor](OCF/temperature2.jsonld)
 - [Toggle Switch](OCF/toggle2.jsonld)
 
-### Live via HTTPS Proxy
+### Live via Cloud Proxy
 #### Via San Franscisco / Digital Ocean
 ##### Basic Auth
 - [OCF Resources](https://portal.mmccool.net:8090/api/oic/res)
@@ -68,7 +68,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 ### Cached TD
 - [Simple Web Camera TD](SimpleWebCamera.jsonld)
 
-### Live via HTTPS Proxy
+### Live via Cloud Proxy
 #### Via San Franscisco / Digital Ocean
 ##### Basic Auth
 - [TD](https://portal.mmccool.net:8098/api)
@@ -97,7 +97,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 ### Cached TD
 - [Web Speak TD](WebSpeak.jsonld)
 
-### Live via HTTPS Proxy
+### Live via Cloud Proxy
 #### Via San Franscisco / Digital Ocean
 ##### Basic Auth
 - [TD](https://portal.mmccool.net:8096/api)
