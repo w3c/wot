@@ -1,5 +1,5 @@
 # Dec 2018 Online Testfest
-To be held 10-14 December, 2018.
+Held 10-14 December, 2018.
 
 ## Participant Tasks
 For the Test Fest,
