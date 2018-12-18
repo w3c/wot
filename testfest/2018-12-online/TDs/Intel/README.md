@@ -46,19 +46,19 @@ The following is linked to a post on a W3C email server and is therefore only av
 ##### Basic Auth
 - [OCF Resources](https://portal.mmccool.net:8090/api/oic/res)
 - [OCF Devices](https://portal.mmccool.net:8090/api/oic/d)
-- [TDs](https://portal.mmccool.net:8091)
+- [TDs](https://portal.mmccool.net:8094)
 ##### Digest Auth
-- [OCF Resources](https://portal.mmccool.net:8094/api/oic/res)
-- [OCF Devices](https://portal.mmccool.net:8094/api/oic/d)
+- [OCF Resources](https://portal.mmccool.net:8091/api/oic/res)
+- [OCF Devices](https://portal.mmccool.net:8091/api/oic/d)
 - [TDs](https://portal.mmccool.net:8095)
 #### Via Tokyo
 ##### Basic Auth
 - [OCF Resources](https://tiktok.mmccool.org:8090/api/oic/res)
 - [OCF Devices](https://tiktok.mmccool.org:8090/api/oic/d)
-- [TDs](https://tiktok.mmccool.org:8091)
+- [TDs](https://tiktok.mmccool.org:8094)
 ##### Digest Auth
-- [OCF Resources](https://tiktok.mmccool.org:8094/api/oic/res)
-- [OCF Devices](https://tiktok.mmccool.org:8094/api/oic/d)
+- [OCF Resources](https://tiktok.mmccool.org:8091/api/oic/res)
+- [OCF Devices](https://tiktok.mmccool.org:8091/api/oic/d)
 - [TDs](https://tiktok.mmccool.org:8095)
 
 ## Simple Web Camera
