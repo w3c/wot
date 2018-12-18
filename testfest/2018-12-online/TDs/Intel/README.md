@@ -11,25 +11,57 @@ The following is linked to a post on a W3C email server and is therefore only av
 
 ### Cached TDs
 - [All](OCF.json)
-- [Touch Button, Node 1](OCF/button1touch.jsonld)
-- [Buzzer, Node 0](OCF/buzzer0.jsonld)
-- [Illuminance Sensor, Node 0](OCF/illuminance0.jsonld)
-- [Blue LED, Node 0](OCF/led0blue.jsonld)
-- [Green LED, Node 0](OCF/led0green.jsonld)
-- [Red LED, Node 0](OCF/led0red.jsonld)
-- [Red LED, Node 1](OCF/led1red.jsonld)
-- [MOSFET LED, Node 0](OCF/led0mosfet.jsonld)
-- [MOSFET LED, Node 1](OCF/led1mosfet.jsonld)
-- [Relay LED, Node 1](OCF/led1relay.jsonld)
-- [Motion Sensor, Node 0](OCF/motion0.jsonld)
-- [Motion Sensor, Node 1](OCF/motion1.jsonld)
-- [RGB LED, Node 1](OCF/rgbled1.jsonld)
-- [Temperature Sensor, Node 0](OCF/temperature0.jsonld)
-- [Temperature Sensor, Node 1](OCF/temperature1.jsonld)
-- [Toggle Switch, Node 0](OCF/toggle0.jsonld)
-- [Toggle Switch, Node 1](OCF/toggle1.jsonld)
+
+#### Node 0
+- [Buzzer](OCF/buzzer0.jsonld)
+- [Illuminance Sensor](OCF/illuminance0.jsonld)
+- [Red LED](OCF/led0red.jsonld)
+- [Green LED](OCF/led0green.jsonld)
+- [Blue LED](OCF/led0blue.jsonld)
+- [MOSFET LED](OCF/led0mosfet.jsonld)
+- [Motion Sensor](OCF/motion0.jsonld)
+- [Temperature Sensor](OCF/temperature0.jsonld)
+- [Toggle Switch](OCF/toggle0.jsonld)
+
+#### Node 1
+- [Touch Button](OCF/button1touch.jsonld)
+- [Red LED](OCF/led1red.jsonld)
+- [MOSFET LED](OCF/led1mosfet.jsonld)
+- [Relay](OCF/led1relay.jsonld)
+- [Motion Sensor](OCF/motion1.jsonld)
+- [RGB LED](OCF/rgbled1.jsonld)
+- [Temperature Sensor](OCF/temperature1.jsonld)
+- [Toggle Switch](OCF/toggle1.jsonld)
+
+#### Node 2    
+- [Touch Button](OCF/button2touch.jsonld)  
+- [Illuminance Sensor](OCF/illuminance2.jsonld)
+- [MOSFET LED](OCF/led2mosfet.jsonld)
+- [Relay](OCF/led2relay.jsonld)
+- [Motion Sensor](OCF/motion2.jsonld)
+- [LED](OCF/led1top.jsonld)  
+- [Temperature Sensor](OCF/temperature2.jsonld)
+- [Toggle Switch](OCF/toggle2.jsonld)
 
 ### Live via HTTPS Proxy
+#### Via San Franscisco
+##### Basic Auth
+- [OCF Resources](https://portal.mmccool.net:8090/api/oic/res)
+- [OCF Devices](https://portal.mmccool.net:8090/api/oic/d)
+- [TDs](https://portal.mmccool.net:8094)
+##### Digest Auth
+- [OCF Resources](https://portal.mmccool.net:8091/api/oic/res)
+- [OCF Devices](https://portal.mmccool.net:8091/api/oic/d)
+- [TDs](https://portal.mmccool.net:8095)
+#### Via Tokyo
+##### Basic Auth
+- [OCF Resources](https://tiktok.mmccool.org:8090/api/oic/res)
+- [OCF Devices](https://tiktok.mmccool.org:8090/api/oic/d)
+- [TDs](https://tiktok.mmccool.org:8094)
+##### Digest Auth
+- [OCF Resources](https://tiktok.mmccool.org:8091/api/oic/res)
+- [OCF Devices](https://tiktok.mmccool.org:8091/api/oic/d)
+- [TDs](https://tiktok.mmccool.org:8095)
 
 ## Simple Web Camera
 
