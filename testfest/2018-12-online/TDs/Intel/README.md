@@ -4,7 +4,7 @@
 
 ## Authentication
 
-The following is linked to a post on a W3C email server and is therefore only available to W3C members.
+The following is linked to a post on a W3C email server and is therefore only available to W3C members:  
 [Reverse proxy username/passwords](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
 
 ## OCF Devices
