@@ -9,12 +9,21 @@
   "@type": [
     "Thing"
   ],
-  "name": "Intel-WebSpeak-upsq0",
-  "id": "urn:uuid:6a60533a-127c-509c-99ea-5fc9c75521f5",
-  "security": [
-    {
+  "name": "Intel-WebSpeak-sky",
+  "id": "urn:uuid:ac04e086-abca-565f-a083-d1059c6fa868",
+  "securityDefinitions": {
+    "nosec_sc": {
       "scheme": "nosec"
+    },
+    "basic_sc": {
+      "scheme": "basic"
+    },
+    "digest_sc": {
+      "scheme": "digest"
     }
+  },
+  "security": [
+    "nosec_sc"
   ],
   "actions": {
     "say": {
@@ -23,53 +32,45 @@
       },
       "forms": [
         {
-          "href": "http://upsq0.local:8085/api/say",
-          "mediaType": "application/json",
+          "href": "http://sky.local:8085/api/say",
+          "contentType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST"
         },
         {
           "href": "https://portal.mmccool.net:8096/api/say",
-          "mediaType": "application/json",
+          "contentType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
           "security": [
-            {
-              "scheme": "basic"
-            }
+            "basic_sc"
           ]
         },
         {
           "href": "https://portal.mmccool.net:8097/api/say",
-          "mediaType": "application/json",
+          "contentType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
           "security": [
-            {
-              "scheme": "digest"
-            }
+            "digest_sc"
           ]
         },
         {
           "href": "https://tiktok.mmccool.org:8096/api/say",
-          "mediaType": "application/json",
+          "contentType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
           "security": [
-            {
-              "scheme": "basic"
-            }
+            "basic_sc"
           ]
         },
         {
           "href": "https://tiktok.mmccool.org:8097/api/say",
-          "mediaType": "application/json",
+          "contentType": "application/json",
           "op": "invokeaction",
           "http:methodName": "POST",
           "security": [
-            {
-              "scheme": "digest"
-            }
+            "digest_sc"
           ]
         }
       ]
