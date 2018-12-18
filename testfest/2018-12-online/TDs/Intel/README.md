@@ -44,7 +44,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [Toggle Switch](OCF/toggle2.jsonld)
 
 ### Live via HTTPS Proxy
-#### Via San Franscisco
+#### Via San Franscisco / Digital Ocean
 ##### Basic Auth
 - [OCF Resources](https://portal.mmccool.net:8090/api/oic/res)
 - [OCF Devices](https://portal.mmccool.net:8090/api/oic/d)
@@ -53,7 +53,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [OCF Resources](https://portal.mmccool.net:8091/api/oic/res)
 - [OCF Devices](https://portal.mmccool.net:8091/api/oic/d)
 - [TDs](https://portal.mmccool.net:8095)
-#### Via Tokyo
+#### Via Tokyo / AWS
 ##### Basic Auth
 - [OCF Resources](https://tiktok.mmccool.org:8090/api/oic/res)
 - [OCF Devices](https://tiktok.mmccool.org:8090/api/oic/d)
@@ -69,7 +69,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [Simple Web Camera TD](SimpleWebCamera.jsonld)
 
 ### Live via HTTPS Proxy
-#### Via San Franscisco
+#### Via San Franscisco / Digital Ocean
 ##### Basic Auth
 - [TD](https://portal.mmccool.net:8098/api)
 - [Brightness](https://portal.mmccool.net:8098/api/brightness)
@@ -80,7 +80,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [Brightness](https://portal.mmccool.net:8099/api/brightness)
 - [Frame](https://portal.mmccool.net:8099/api/frame)
 - [Frame (Observe via longpoll)](https://portal.mmccool.net:8099/api/frame/observe)
-#### Via Tokyo
+#### Via Tokyo / AWS
 ##### Basic Auth
 - [TD](https://tiktok.mmccool.org:8098/api)
 - [Brightness](https://tiktok.mmccool.org:8098/api/brightness)
@@ -98,14 +98,14 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [Web Speak TD](WebSpeak.jsonld)
 
 ### Live via HTTPS Proxy
-#### Via San Franscisco
+#### Via San Franscisco / Digital Ocean
 ##### Basic Auth
 - [TD](https://portal.mmccool.net:8096/api)
 - [Say (post string)](https://portal.mmccool.net:8096/api/say)
 ##### Digest Auth
 - [TD](https://portal.mmccool.net:8097/api)
 - [Say (post string)](https://portal.mmccool.net:8097/api/say)
-#### Via Tokyo
+#### Via Tokyo / AWS
 ##### Basic Auth
 - [TD](https://tiktok.mmccool.org:8096/api)
 - [Say (post string)](https://tiktok.mmccool.org:8096/api/say)
