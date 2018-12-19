@@ -2,7 +2,7 @@
 
 ## Notice
 
-- All TDs are old (based on the Web of Things (WoT) Thing Description W3C Working Draft 21 October 2018).
+- All of the TDs are old (based on the 2018 Lyon TD specs).
 
 ## Things in Osaka lab (Video through Hangout)
 
