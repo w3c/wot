@@ -10,6 +10,18 @@
     "Thing"
   ],
   "name": "Intel-WebSpeak-sky",
+  "description": "A simple text to speech service",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {
+    "instance": "0.1.0"
+  },
+  "links": [
+    {
+      "href": "https://github.com/mmccool/web-speak",
+      "rel": "repository",
+      "type": "application/vnd.github.v3+json"
+    }
+  ],
   "id": "urn:uuid:ac04e086-abca-565f-a083-d1059c6fa868",
   "securityDefinitions": {
     "nosec_sc": {
