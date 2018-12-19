@@ -39,7 +39,8 @@ The following is linked to a post on a W3C email server and is therefore only av
 - [MOSFET LED](OCF/led2mosfet.jsonld)
 - [Relay](OCF/led2relay.jsonld)
 - [Motion Sensor](OCF/motion2.jsonld)
-- [LED](OCF/led1top.jsonld)  
+- [Top LED](OCF/led2top.jsonld)  
+- [Side LED](OCF/led2side.jsonld)  
 - [Temperature Sensor](OCF/temperature2.jsonld)
 - [Toggle Switch](OCF/toggle2.jsonld)
 
