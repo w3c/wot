@@ -15,6 +15,8 @@
   "version": {
     "instance": "0.1.0"
   },
+  "created": "2018-09-10T06:30+00:00",
+  "lastModified": "2018-12-19T03:29+00:00",
   "links": [
     {
       "href": "https://github.com/mmccool/simple-webcam",
@@ -2015,7 +2017,7 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/frame",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "readproperty"
           ],
@@ -2026,7 +2028,7 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/frame/observe",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "observeproperty"
           ],
@@ -2038,7 +2040,7 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "readproperty"
           ],
@@ -2049,7 +2051,7 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame/observe",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "observeproperty"
           ],
@@ -2061,7 +2063,7 @@
         },
         {
           "href": "https://portal.mmccool.net:8098/api/frame",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "readproperty"
           ],
@@ -2072,7 +2074,7 @@
         },
         {
           "href": "https://portal.mmccool.net:8098/api/frame/observe",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "observeproperty"
           ],
@@ -2084,7 +2086,7 @@
         },
         {
           "href": "https://portal.mmccool.net:8099/api/frame",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "readproperty"
           ],
@@ -2095,7 +2097,7 @@
         },
         {
           "href": "https://portal.mmccool.net:8099/api/frame/observe",
-          "contentType": "application/json",
+          "contentType": "image/jpeg",
           "op": [
             "observeproperty"
           ],
@@ -2111,7 +2113,7 @@
   "actions": {
     "crop": {
       "title": "Crop",
-      "description": "Extract and return a portion of the most recently grabbed image.  Showcases a problem with input and output contentTypes possibly being different for actions.  Deprecated in favor of /api/region.",
+      "description": "Extract and return a portion of the most recently grabbed image",
       "input": {
         "type": "object",
         "properties": {
@@ -2144,15 +2146,19 @@
       "forms": [
         {
           "href": "http://upsq1c.local:9191/api/frame/crop",
-          "inputMediaType": "application/json",
-          "outputMediaType": "image/jpeg",
+          "contentType": "application/json",
+          "response": {
+            "contentType": "image/jpeg"
+          },
           "op": "invokeaction",
           "http:methodName": "POST"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/frame/crop",
-          "inputMediaType": "application/json",
-          "outputMediaType": "image/jpeg",
+          "contentType": "application/json",
+          "response": {
+            "contentType": "image/jpeg"
+          },
           "op": "invokeaction",
           "security": [
             "basic_sc"
@@ -2161,8 +2167,10 @@
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame/crop",
-          "inputMediaType": "application/json",
-          "outputMediaType": "image/jpeg",
+          "contentType": "application/json",
+          "response": {
+            "contentType": "image/jpeg"
+          },
           "op": "invokeaction",
           "security": [
             "digest_sc"
@@ -2171,8 +2179,10 @@
         },
         {
           "href": "https://portal.mmccool.net:8098/api/frame/crop",
-          "inputMediaType": "application/json",
-          "outputMediaType": "image/jpeg",
+          "contentType": "application/json",
+          "response": {
+            "contentType": "image/jpeg"
+          },
           "op": "invokeaction",
           "security": [
             "basic_sc"
@@ -2181,8 +2191,10 @@
         },
         {
           "href": "https://portal.mmccool.net:8099/api/frame/crop",
-          "inputMediaType": "application/json",
-          "outputMediaType": "image/jpeg",
+          "contentType": "application/json",
+          "response": {
+            "contentType": "image/jpeg"
+          },
           "op": "invokeaction",
           "security": [
             "digest_sc"
