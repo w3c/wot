@@ -4,7 +4,8 @@ Held 10-14 December, 2018.
 ## Testing Criteria
 For a discussion of testing criteria, including a definition of "implementation", please see
 https://github.com/w3c/wot/blob/master/testing/criteria.md.
-In summary, an "implementation" is not a device, but a distinct codebase.
+
+To summarize, an "implementation" is not a device, but a distinct codebase.
 
 ## Participant Tasks
 For the Test Fest,
