@@ -17,8 +17,24 @@
     * [JSON-LD 1.0 Specficaiton](http://www.w3.org/TR/2014/REC-json-ld-20140116/)
   * [Implementation report for Device Orientation](https://www.w3.org/2008/geolocation/wiki/DeviceOrientation_Event_Implementation_Report)
     * [Device Orientation Event specification](https://www.w3.org/TR/orientation-event/)
+  * [Implementation report for DCAT](https://www.w3.org/2011/gld/wiki/DCAT_Implementations)
+    * [DCAT specification](https://www.w3.org/TR/vocab-dcat/)
+  * [Implementation report for SSN](https://w3c.github.io/sdw/ssn-usage/)
+    * [SSN specification](https://www.w3.org/TR/vocab-ssn/)
 * Related resources
   * [Interoperability Testing document as a WG Note](http://www.w3.org/TR/mmi-interop/)
   * [Web Platform Test](https://github.com/web-platform-tests/wpt)
   * [CTA WAVE's test work on TV browsers](https://webapitests2017.ctawave.org/)
-* [WoT testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
+  * https://www.w3.org/TR/vocab-dcat/
+  * https://www.w3.org/TR/vocab-ssn/
+  * https://www.w3.org/2011/gld/wiki/DCAT_Implementations
+  * https://w3c.github.io/sdw/ssn-usage/
+  * https://json-ld.org/ tooling similar to TD playground tooling
+  * https://tools.kali.org/web-applications/burpsuite tooling - network testing tool
+  ___
+* Testing effort for WoT Thing Description
+  * [Thing Description spec on GitHub](https://w3c.github.io/wot-thing-description/)
+  * [THing Description testing plan](https://github.com/w3c/wot/blob/master/testing/plan.md)
+  * [Draft Implementation Report](https://w3c.github.io/wot-thing-description/testing/report.html)
+  * [CR exit criteria](https://github.com/w3c/wot/blob/master/testing/criteria.md)
+  

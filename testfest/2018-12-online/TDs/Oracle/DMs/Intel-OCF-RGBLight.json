@@ -1,0 +1,69 @@
+{
+  "urn": "urn:com:oracle:Intel-OCF-RGBLight",
+  "name": "Intel-OCF-RGBLight",
+  "system": false,
+  "draft": false,
+  "created": 1544189590422,
+  "createdAsString": "2018-12-07T13:33:10.422Z",
+  "lastModified": 1544189590422,
+  "lastModifiedAsString": "2018-12-07T13:33:10.422Z",
+  "userLastModified": "92F0E6FE81C6427A95DB06F0ADF11D72_IOT_ADMINISTRATOR_APPID",
+  "attributes": [
+    {
+      "description": "undefined id",
+      "name": "colour_id",
+      "type": "STRING",
+      "writable": true
+    },
+    {
+      "description": "rgbValue",
+      "name": "colour_rgbValue",
+      "type": "STRING",
+      "writable": true
+    }
+  ],
+  "actions": [
+    {
+      "argType": "INTEGER",
+      "description": "Color blue",
+      "name": "colorBlue"
+    },
+    {
+      "argType": "INTEGER",
+      "description": "Color green",
+      "name": "colorGreen"
+    },
+    {
+      "argType": "INTEGER",
+      "description": "Color red",
+      "name": "colorRed"
+    },
+    {
+      "description": "Turn Off",
+      "name": "off"
+    },
+    {
+      "description": "Turn On",
+      "name": "on"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-OCF-RGBLight",
+      "rel": "self"
+    },
+    {
+      "href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-OCF-RGBLight",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-OCF-RGBLight/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

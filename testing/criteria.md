@@ -36,7 +36,7 @@ includes the following requirements which have validation implications:
 ### Implementation
 An "implementation" will consist of either
 
-* A system producing a TD by programmatic means for a device or service with a network interface.
+* A system producing a TD for a device or service with a network interface.
 
 OR
 
