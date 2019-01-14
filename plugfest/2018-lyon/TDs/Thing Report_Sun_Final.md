@@ -1,6 +1,6 @@
 ## Thing Report
 
-This report details the results of the test bench as of 18:00, 21.10.2018
+This report details the results of the test bench as of 18:00, Sunday 21.10.2018
 These results could have been obtained also during the day.
 
 ### Blue Pump.json
@@ -45,4 +45,4 @@ CoAP interactions do not work
 
 ### OCF 
 
-Unstable behavior. Repeated testing causes
+Unstable behavior. Repeated testing causes different results, mostly resulting in timeouts

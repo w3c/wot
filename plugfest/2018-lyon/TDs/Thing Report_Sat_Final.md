@@ -1,6 +1,6 @@
 ## Thing Report
 
-This report details the results of the test bench as of 18:00, 20.10.2018
+This report details the results of the test bench as of 18:00, Saturday 20.10.2018
 These results could have been obtained also during the day.
 
 * Keti sensors are not reachable. Michael Lagally has been notified about this
