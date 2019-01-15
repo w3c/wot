@@ -1,5 +1,9 @@
 # Panasonic Thing Descriptions
 
+## Notice
+
+- All of the TDs are old (based on the 2018 Lyon TD specs).
+
 ## Things in Osaka lab (Video through Hangout)
 
 ![Lab Image](images/Panasonic_Osaka_Lab_Things_Arrangement.png)

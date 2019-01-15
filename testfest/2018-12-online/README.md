@@ -1,5 +1,11 @@
 # Dec 2018 Online Testfest
-To be held 10-14 December, 2018.
+Held 10-14 December, 2018.
+
+## Testing Criteria
+For a discussion of testing criteria, including a definition of "implementation", please see
+https://github.com/w3c/wot/blob/master/testing/criteria.md.
+
+To summarize, an "implementation" is not a device, but a distinct codebase.
 
 ## Participant Tasks
 For the Test Fest,
@@ -15,7 +21,8 @@ For the Test Fest,
 1. Submit TDs at https://github.com/w3c/wot/tree/master/testfest/2018-12-online/TDs
 2. Submit CSV-based reports: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/results
       - McCool will copy them here: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/results
-3. Implementation description: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
+3. Implementation description: https://github.com/w3c/wot/tree/master/testfest/2018-12-online/implementations
+      - McCool will copy them here: https://github.com/mmccool/wot-thing-description/tree/updated-test-results/testing/inputs/implementations
 
 ## Automation
 Not yet working but eventually...
