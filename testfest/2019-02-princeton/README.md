@@ -22,7 +22,7 @@ The working flow will be as follows:
 
 (Needs more thinking. Logging the consumed TDs? or the software objects?)
 
-If you need a TD to consume and its Thing to interact with, use the TD as an input to the virtual-thing.
+If you need a TD to consume and its Thing to interact with, use the TD as an input to the [virtual-thing](#virtual-thing) tool.
 
 ### Producer Implementer
 
@@ -73,7 +73,10 @@ Use Playground at least.
 ## Tools
 
 ### Simulators
-* Simulated device based on TD: https://www.npmjs.com/package/virtual-thing
+
+#### Virtual Thing
+
+Simulated device based on TD: https://www.npmjs.com/package/virtual-thing
 
 # Questions
 
