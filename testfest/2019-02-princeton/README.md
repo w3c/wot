@@ -10,39 +10,51 @@ You can participate to the Testfest by choosing one (or more) of the following r
 * [Tester](#tester): You have tools that can be used for testing a consumer or a producer implementation.
 * [Observer](#observer): You do not have any specific tools but at least have a browser.
 
-The working flow will be as follows:
+The working flow can be summarized as follows:
 
 * An implementer boots up their device(s), checks the connections, commits the TD of the device(s) to a repository (TODO: to finalize)
 * A tester analyzes a submitted TD and documents which assertions are implemented. This can be manual or automatic.
-* (optional) A tester does the requests according to the TD and documents which implemented assertions are indeed supported by the Thing represented by the TD. If an assertion is shown to be implemented in TD but cannot be verified with a request, the tester overwrites it as fail.
+* A tester does the requests according to the TD and documents which implemented assertions are indeed supported by the Thing represented by the TD. If an assertion is shown to be implemented in TD but cannot be verified with a request, the tester overwrites it as fail. This can be manual or automatic.
 
 ## Implementation Owner
+
+An implementation owner is someone who brings an implementation to the Testfest. You have to make sure that it is updated to the latest TD standard.
+
+Any code base that has different code than anyone else's implementation counts as a different implementation. For example, if you build a Thing code using node-wot, this doesn't count as an implementation. However, if you build it using the native http library, it would count as a different implementation. If you are using a library that can produce different Thing implementations (node-wot, node-red nodes by Hitachi) to produce a single servient, this counts as an implementation instance. The TD of this instance has to be submitted with the TDs of other instances of the library.
+
+### Producer Implementer
+
+Your task is to produce TDs that can cover different features (i.e. assertions) of the TD specification.
+
+Once you produced these TDs, you should submit them a repository that has a folder with the name of the implementation that produced the TD. TDs produced by the same implementation must be in the same folder.
+
+If you want, you can test your TDs to find assertions it supports or leave this work to a tester.
+
+**Suggestion**: Start with one TD and see how the process goes. Your implementation needs to be testable in a standardized fashion. So make sure that the procedure is well understood before submitting multiple TDs. The process is as follows:
+
+1. Produce a TD with an implementation instance and keep the implementation instance that has this TD running.
+
+2. Save the TD as a file with a unique name in a folder with the name of the implementation that produced it. If your implementation instance is using an implementation library of someone else, make sure that you are using the correct folder name of the implementation.
+
+3. Submit this implementation folder to XXXXX (TODO: WHERE ARE THEY SUBMITTED)
+
+4. Verify your submission with someone. 
+
+5. Ask a tester (which can be you) to test this TD. Make sure to do this before submitting multiple TDs. If you are also the tester, read the [testing](#tester) part.
+
+6. Check the test results of the tester and assess their correctness. This is especially important in the beginning so that we can know whether the testing tools of the testers are working correctly.
+
+If you need a client that can automatically test your implementation instance, use [WoT Test-Bench](#wot-test-bench).
 
 ### Consumer Implementer
 
 (Needs more thinking. Logging the consumed TDs? or the software objects?)
 
-If you need a TD to consume and its Thing to interact with, use the TD as an input to the [virtual-thing](#virtual-thing) tool.
+The goal of this testfest is not to test consumers. However, you can stil do it and report the results. Testing a consumer would be checking whether it correctly interprets the TD and can build all the requests that the TD describes.
 
-### Producer Implementer
-
-Definitions: Implementation instance
-
-You should produce TDs that can cover the whole spec and submit to a repository that has a folder in your name.
-
-Start with one TD that you can produce easily, a version found in the examples. Then apply the following steps:
-
-Produce a TD
-Save it as a file with a unique name in a folder with the name of your implementation (which should also be unique)
-
-Keep the implementation instance that has this TD
-
-
-If you need a client that can test you, use wot test-bench.
+If you need a TD to consume and its Thing to interact with, you can use the [virtual-thing](#virtual-thing) tool or one of the devices hosted by Oracle Digital Twin Simulator.
 
 ## Tester
-
-Playground
 
 Assertion tester
 
@@ -76,7 +88,17 @@ Use Playground at least.
 
 #### Virtual Thing
 
-Simulated device based on TD: https://www.npmjs.com/package/virtual-thing
+Simulated device based on TD. Can be installed through npm [here](https://www.npmjs.com/package/virtual-thing).
+
+### Automatic Testing Tools
+
+#### Assertion Tester
+
+#### Thingweb Playground
+
+#### WoT Test Bench
+
+Can test a TD based on its TD. Can be installed through Github [here](https://github.com/tum-ei-esi/testbench).
 
 # Questions
 
