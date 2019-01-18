@@ -114,65 +114,105 @@ If you need a TD to consume and its Thing to interact with,
 you can use the [virtual-thing](#virtual-thing) tool or one of the devices hosted by Oracle Digital Twin Simulator.
 
 It is also possible to test pairwise consumer/producer interactions and record them in a CSV file under each
-organization.  [Here is an example.](Intel/interop.csv).
+organization.  
+A template for recording the results of interop tests is given [here.](templates/interop.csv).
 These will then me merged to produce an interoperability report.
 
 ## Tester
 
-**Note:** Tests can be done either automatically and manually.
+**Note:** Tests can be done either automatically or manually.
 Start with an automatic testing tool but if it does not work you may have to switch to testing manually.
-Also, manually confirm any automatically generated results.
+Also, manually confirm any automatically generated results.   Currently some assertions 
+must be checked manually.
 
 A tester needs to do two tasks: 
 1. Checking a TD to confirm which assertions (TD features) it uses ([assertion testing](#assertion-testing)), and 
 2. Checking whether the servient instance respects its TD ([behavior testing](#behavior-testing)).
 
-Currently the first task is more highly automated.  The second task may require manual tests.
+Currently the first task is more highly automated.
+The second task may require manual tests.
 
 ### Assertion testing
 
 This task is to check which assertions a WoT implementation implements
 The assertions that the implementation implements need to be documented in CSV files. 
 These CSV files can be automatically generated or manually filled out using the template found at 
-[`template.csv`](template.csv).
+[`templates/results.csv`](templates/results.csv).
 
 The workflow is as follows:
 
-1. Choose an implementation you want to test. **Attention:** Choose an implementation and not an implementation instance. 
+1. Choose an implementation you want to test. 
+   **Attention:** Choose an implementation and not an implementation instance. 
    An implementation is likely to contain multiple TDs that cover a wide range of assertions when combined. 
-   By testing multiple instances and merging the results, you can generate the assertions covered by the implementation with
+   By testing multiple instances and merging the results, 
+   you can generate the assertions covered by the implementation with
    better coverage than trying to use a single instance to test everything.
 
 2. Choose one TD of the implementation (a.k.a implementation instance).
   
 3. Test this TD with the [Assertion Tester](#assertion-tester).
-  This should generate a .csv file that lists which assertions are implemented, failed or not implemented.
-  If this automatic generation does not work, manually create the CSV file using the file [`template.csv`](template.csv).
+   This should generate a CSV file that lists which assertions are implemented correctly, 
+   implemented but with some problems (failed) or not implemented.
+   If this automatic generation does not work, 
+   manually create the CSV file by copying the file [`templates/results.csv`](templates/results.csv)
+   and fill it in using either a text editor or a spreadsheet editor.
 
 4. Check with the implementation owner to verify that your results are correct.
-  This can be omitted after doing the testing for multiple instances, i.e. when the workflow is validated.
+   This can be omitted after doing the testing for multiple instances, 
+   i.e. when the workflow is validated.
 
-5. Repeat step 2, 3 and 4 until all the TDs of the implementation are tested and their corresponding .csv files are completed.
+5. Repeat step 2, 3 and 4 until all the TDs of the implementation are tested and 
+   their corresponding CSV files are completed.
 
-6. Merge the .csv files of the implementation instances to create a .csv file that represents the implementation. This can be done using the tool at XXXX.
+6. Merge the CSV files of the implementation instances to create a CSV 
+   file that represents the implementation. 
+   This can be done using the `mergeresults.js` tool in the wot-thing-description repo.
 
-7. Submit all the .csv files to XXXX.
+7. Submit all the CSV files to the appropriate directory as described above.
 
 ### Behavior Testing
 
-This task is to check whether a servient is correctly represented by its TD. This means that all the interactions listed in the TD MUST be executable by a client the way they are described in the TD. This task can be done manually or automatically.
+The purpose of this task is to check whether a servient is correctly represented by its TD. 
+This means that all the interactions listed in the TD MUST be executable by a client the way 
+they are described in the TD. 
+This task can be done manually or automatically.
 
-Some interactions cannot be fully tested. For example, a writable property indicating that the value will be an integer between 1 and 1000, should not be tested by trying to write with 1000 different values. For such cases, pick some values that represent the range or the complexity, i.e. picking 1, 10, 500, 1000.
+Some interactions cannot be fully tested. 
+For example, for a writable property indicating that the value will be an integer between 1 and 1000000, 
+it may not be practical to test it by trying to write with all possible values. 
+For such cases, pick some values that represent the range or the complexity, 
+i.e. picking 1, 10, 500, 1000, 500000, some set of random numbers in the target range, etc.
+Tests should also include the smallest and largest values.
 
-Testing interaction executions that are not allowed has a lower priority. For example, in the previous example, one should not focus on testing whether the servient allows writing values outside the range, such as -10 and 1002.
+Testing interaction executions that are not allowed has a lower priority. 
+For example, in the previous example, 
+one should not focus on testing whether the servient allows writing values outside the range, 
+such as -10 and 1002.
+In general, the TD is supposed to indicate to the consumer how to correctly talk to the 
+target, and the target may or may not be doing validation checking.  But if the consumer
+does not follow the guidance of the TD and crashes the device, it's not really the fault of the 
+TD, which is what we are trying to check.  What we want to check is whether the device behaves
+correctly when the constraints of the TD ARE followed.
+
+The story is a little different if we want to look for security vulnerabilities.  In that
+case a "malicious" consumer may intentionally violate the constraints in the TD.
 
 #### Automatic Testing
 
 To test the behavior of a Thing represented by a TD, you can use the [WoT Test-Bench](#wot-test-bench).
 
-This tool is based on node-wot and can send requests to a servient and analyze its responses based solely on the TD of the servient.
+This tool is based on `node-wot` and can send requests to a servient and analyze 
+its responses based solely on the TD of the servient.
 
-It basically goes through every interaction and does a request and checks whether the response matches the data schema. For interactions that require a payload, such as property writes or actions with input data, it generates a payload based on the data schema. It can be configured to go through the TD multiple times, i.e. testing every interaction multiple times. It can also test an interaction with same payload to test whether it is idempotent.
+It basically goes through every interaction and does a request and checks whether the 
+response exists, has a correct response code, and (if there is one) the response payload
+matches the data schema. 
+For interactions that require an input payload, 
+such as property writes or actions with input data, 
+the tool generates a payload based on the data schema. 
+It can be configured to go through the TD multiple times, 
+i.e. testing every interaction multiple times. 
+It can also test an interaction with same payload to test whether it is idempotent.
 
 Example:
 
@@ -186,7 +226,9 @@ An interaction like the following:
         }
     },
 ```
-will generate a request to read this property as well as write with a value like `"lorem"`. A response that is not a string will be documented as an error in the testing report. More information can be found [here](#wot-test-bench).
+will generate a request to read this property as well as write with a value like `"lorem"`. 
+A response that is not a string will be documented as an error in the testing report. 
+More information can be found [here](#wot-test-bench).
 
 Limitations:
 
@@ -197,11 +239,15 @@ Limitations:
 
 #### Manual Testing
 
-Testing the behavior of a servient manually means sending requests to the servient by interpreting its TD. The responses should be analyzed and documented. As mentioned before, the input values should be chosen to cover the entire data schema combinations but not by sending every possible input.
+Testing the behavior of a servient manually means sending requests to the servient by interpreting its TD.
+The responses should be analyzed and documented.
+As mentioned before,
+the input values should be chosen to cover the entire data schema combinations but 
+it is not necessary to send every possible input, just a set of suitable "representative" values.
 
-Following tools can be used to generate such requests:
+The following tools can be used to generate such requests:
 
-- Postman for HTTP based servients.
+- Postman or curl for HTTP based servients.
 - Chromium for CoAP based servients.
 - Browsers to read properties
 
@@ -211,21 +257,26 @@ Anyone who has a browser on his/her smartphone or computer can participate in Te
 
 Thus, we invite you to check which assertions are implemented by each servient. To do so:
 
-1. Choose an implementation you want to test. **Attention:** Choose an implementation and not an implementation instance. An implementation is likely to contain multiple TDs that cover a wide range of assertions when combined. 
+1. Choose an implementation you want to test. 
+   **Attention:** Choose an implementation and not an implementation instance. 
+   An implementation is likely to contain multiple TDs that cover a wide range of assertions when combined. 
 
-2. Choose one TD of the implementation (a.k.a implementation instance).
+2. Choose one TD of the implementation (a.k.a an implementation instance).
   
-3. Manually fill the template found at XXXX. If you cannot assess whether an assertion is implemented or not, leave it empty.
+3. Manually fill the result template found at [`templates/results.csv`](templates/results.csv). 
+   If you cannot assess whether an assertion is implemented or not, leave it empty.
 
 4. Check with the implementation owner to verify that your results are correct. 
    
-5. Repeat step 2, 3 and 4 until all the TDs of the implementation are tested and their corresponding .csv files are generated.
+5. Repeat step 2, 3 and 4 until all the TDs of the implementation are tested and their corresponding 
+   CSV files are generated.
 
-6. Submit all the .csv files to XXXX.
+6. Submit all the CSV files via PRs.
 
-If you do not have access to Github, you can send the .csv files via email to ege.korkan@tum.de. In the email subject or body, do not forget to state which implementation instance you have tested.
-
-If you cannot fill in .csv files, request a printed sheet with assertions from the organizers.
+If you do not have access to Github, 
+you can send the CSV files via email to ege.korkan@tum.de.
+In the email subject or body, do not forget to state which implementation and
+instance you have tested.
 
 Thank you! Every contribution counts :)
 
@@ -235,13 +286,15 @@ Thank you! Every contribution counts :)
 
 #### Virtual Thing
 
-Simulated device based on TD. Can be installed through npm [here](https://www.npmjs.com/package/virtual-thing).
+Simulated device based on TD. 
+Can be installed through npm [here](https://www.npmjs.com/package/virtual-thing).
 
 ### Automatic Behavior Testing Tools
 
 #### WoT Test Bench
 
-Can test a TD based on its TD. Can be installed through Github [here](https://github.com/tum-ei-esi/testbench).
+Can test a TD based on its TD. i
+Can be installed through Github [here](https://github.com/tum-ei-esi/testbench).
 
 ### Automatic Assertion Testing/Generator Tools
 
