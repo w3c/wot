@@ -6,79 +6,151 @@ TODO: Put an example testing flow from start to finish -->
 
 Will be held 28.01-03.02, 2019 at Siemens Corporate Technology, 755 College Road East, Princeton, NJ, USA, 08540.
 
-The goal of the testfest is to generate the implementation report. This report will detail which assertions of the specs are implemented.
+The goal of the testfest is to generate the W3C Implementation Report to be used for the CR transition.
+This report will detail which assertions of the specs are implemented for each implementation.
+Results are to be recorded in CSV files using a specific directory structure (described below) to
+facilitate automated generation of the report.
 
 You can participate to the Testfest by choosing one (or more) of the following roles:
-
-* [Implementation Owner](#implementation-owner) : You have a WoT consumer or producer implementation. What counts as an implementation can be found [here](https://github.com/w3c/wot/blob/master/testing/criteria.md).
+* [Implementation Owner](#implementation-owner) : You have a WoT consumer or producer implementation.
+  What counts as an implementation can be found [here](https://github.com/w3c/wot/blob/master/testing/criteria.md).
 * [Tester](#tester): You want to test a consumer or a producer implementation and to extract the assertions.
 * [Observer](#observer): You do not have any specific tools but at least have a browser.
 
-The working flow can be summarized as follows:
+The workflow can be summarized as follows:
+* The implementer boots up their test systems(s) and confirms proper operation and network access.
+* Implementations should also all be described in HTML fragments.
+  - These HTML fragments also define IDs for implementations that should be used to name files
+    and directories related to that implementation
+* The implementer should then commit the TD(s) of their systems to this repository under a subdirectory for their organization,
+  assuming each TD represents a distinct implementation.  
+  - If instead there are multiple TDs that are "instances" of a single implementation using a common code-base,
+    the TDs should be placed in a subdirectory (these instance files do not have to follow any particular naming convention,
+    except that `.jsonld` should be used as the file extension for TDs.
+* A tester analyzes each submitted TD and documents which assertions are implemented. 
+  - This can be manual or automatic, or a combination.
+  - Results for each implementation are stored in a `.csv` file along side each TD, and should have the same name.
+  - If there are multiple instances of TDs for a single implementation, results should be recorded for each and then
+    merged using the `mergeresults.js` tool to create a single CSV file to be stored at the top level of the directory.
+  - In addition to validating the syntax, the actual functionality of each component should also be tested.
+* A tester records results according to the TD of each instance/implementation and documents which implemented assertions
+  are indeed supported by the Thing represented by the TD.
+  - If an assertion is used in a TD (and the syntax validates) but cannot be verified with a request,
+    the tester overwrites it as fail. This can be manual or automatic.
 
-* An implementer boots up their device(s), checks the connections, commits the TD of the device(s) to a repository (TODO: to finalize)
-* A tester analyzes a submitted TD and documents which assertions are implemented. This can be manual or automatic.
-* A tester does the requests according to the TD and documents which implemented assertions are indeed supported by the Thing represented by the TD. If an assertion is shown to be implemented in TD but cannot be verified with a request, the tester overwrites it as fail. This can be manual or automatic.
+See [the example results directory from Intel](results/Intel) to understand better how results should be recorded.
+Note: you may have to record your results under a different organization than your own.   For example, if you made a Thing
+with `node-wot`, you will want to add your results under a `Siemens/results/siemens-node-wot` subdirectory so they can
+be merged with other results for `node-wot`.
 
 ## Implementation Owner
 
-An implementation owner is someone who brings an implementation to the Testfest. You have to make sure that it is updated to the latest TD standard.
+An implementation owner is someone who brings an implementation to the Testfest.
+Implementers are responsible to update their implementations to the latest TD standard.
 
-Any code base that has different code than anyone else's implementation counts as a different implementation. For example, if you build a servient code using node-wot, this doesn't count as a different implementation but you can still submit the TD of the servient under node-wot. However, if you build it using the native http library of node.js, it would count as a different implementation. If you are using a library that can produce different Thing implementations (node-wot, node-red nodes by Hitachi) to produce a single servient, this counts as an implementation instance. The TD of this instance has to be submitted with the TDs of other instances of the library.
+Generally speaking, any code base that has different code than anyone else's implementation counts as a different implementation.
+For example, if you build a servient code using node-wot, this doesn't count as a different implementation but you can still submit
+the TD of the servient as an "instance" under the node-wot "implementation".  The results can then me merged.
+This is useful as a single TD instance may not be able to cover all possible features of an implementation.
+However, if you build a Thing from scratch using the native http library of Node.js, it would count as a different implementation.
+If you are using a library that can produce different Thing implementations (node-wot, node-red nodes by Hitachi) to
+produce a single servient, this counts as an implementation instance.
+The TD of this instance has to be submitted with the TDs of other instances of the library.
 
 ### Producer Implementer
 
 Your task is to produce TDs that can cover different features (i.e. assertions) of the TD specification.
 
-Once you produced these TDs, you should submit them a repository that has a folder with the name of the implementation that produced the TD. TDs produced by the same implementation must be in the same folder. If you want, you can test your TDs to find assertions it supports or leave this work to a tester.
+Once you produced these TDs, as described above
+you should submit them a repository that has a folder with the name of the organization that produced the implementation,
+or under a subdirectory if there are multiple instances for a single implementatoin.
+If you want, you can test your TDs to find assertions it supports or leave this work to a tester.
 
-**Suggestion**: Start with one TD and see how the process goes. Your implementation needs to be testable in a standardized fashion. So make sure that the procedure is well understood before submitting multiple TDs.
+**Suggestion**: Start with one TD and see how the process goes.
+Your implementation needs to be testable in a standardized fashion.
+So make sure that the procedure is well understood before submitting multiple TDs.
 
-The process is as follows:
+The process is as follows, assuming you are dealing with the case of multiple instances of a single implementation:
 
 1. Produce a TD with an implementation instance and keep the implementation instance that has this TD running.
 
-2. Save the TD as a file with a unique name in a folder with the name of the implementation that produced it. If your implementation instance is using an implementation library of someone else, make sure that you are using the correct folder name of the implementation.
+2. Save the TD as a file with a unique name in a folder with the name of the implementation that produced it, under
+   a subdirectory with the name of the organization that produced the implementation. 
+   If your implementation instance is using an implementation library of someone else,
+   make sure that you are using the correct folder name of the implementation... it may not be your own organization.
 
-3. Submit this implementation folder to XXXXX (TODO: WHERE ARE THEY SUBMITTED)
+3. Verify your submission with someone.
 
-4. Verify your submission with someone.
+4. Ask a tester (which can be you) to test this TD. 
+   Make sure to do this before submitting multiple TDs.
+   If you are also the tester, read the [testing](#tester) part.
 
-5. Ask a tester (which can be you) to test this TD. Make sure to do this before submitting multiple TDs. If you are also the tester, read the [testing](#tester) part.
+5. Check the test results of the tester and assess their correctness.
+   This is especially important in the beginning so that we can know whether the testing tools of the testers are working correctly.
 
-6. Check the test results of the tester and assess their correctness. This is especially important in the beginning so that we can know whether the testing tools of the testers are working correctly.
+6. If test results are incorrect or some assertions are missing, contact the tester.
 
-7. If test results are incorrect or some assertions are missing, contact the tester.
+7. Create a PR to merge your TDs and results.
 
-If you need a client that can automatically test your implementation instance, use [WoT Test-Bench](#wot-test-bench). This tool will send requests to your implementation instance, so if your has physical interactions with the surroundings, make sure that it is safe to operate the device with any possible input data.
+8. Ask an editor to confirm the structure of your submission and merge it into the repo.
+   The editors will also periodically update the Implementation Report draft as results come in.
+
+If you need a client that can automatically test your implementation instance,
+use [WoT Test-Bench](#wot-test-bench).
+This tool will send randomized requests to your implementation instance,
+so if your device has physical actuators that can interact with the surroundings,
+make sure that it is safe to operate the device with any possible input data
+before using this tool.
 
 ### Consumer Implementer
 
 (Needs more thinking. Logging the consumed TDs? or the software objects?)
 
-The goal of this testfest is not to test consumers. However, you can stil do it and report the results. Testing a consumer would be checking whether it correctly interprets the TD and can build all the requests that the TD describes.
+The goal of this testfest is not to test consumers.
+However, you can stil do it and report the results.
+Testing a consumer would be checking whether it correctly interprets the TD and can build all the requests that the TD describes.
 
-If you need a TD to consume and its Thing to interact with, you can use the [virtual-thing](#virtual-thing) tool or one of the devices hosted by Oracle Digital Twin Simulator.
+If you need a TD to consume and its Thing to interact with,
+you can use the [virtual-thing](#virtual-thing) tool or one of the devices hosted by Oracle Digital Twin Simulator.
+
+It is also possible to test pairwise consumer/producer interactions and record them in a CSV file under each
+organization.  [Here is an example.](Intel/interop.csv).
+These will then me merged to produce an interoperability report.
 
 ## Tester
 
-**Note:** All tests can be done automatically and manually. Always start with an automatic testing tool and if it does not work switch to testing manually.
+**Note:** Tests can be done either automatically and manually.
+Start with an automatic testing tool but if it does not work you may have to switch to testing manually.
+Also, manually confirm any automatically generated results.
 
-A tester needs to do two tasks: Checking a TD to generate which assertions it implements ([assertion testing](#assertion-testing)) and checking whether the servient instance respects its TD ([behavior testing](#behavior-testing)). First task has a higher priority since it has a higher impact on the implementation report.
+A tester needs to do two tasks: 
+1. Checking a TD to confirm which assertions (TD features) it uses ([assertion testing](#assertion-testing)), and 
+2. Checking whether the servient instance respects its TD ([behavior testing](#behavior-testing)).
+
+Currently the first task is more highly automated.  The second task may require manual tests.
 
 ### Assertion testing
 
-This task is to check which assertions a WoT implementation implements. The assertions that the implementation implements need to be documented in .csv format. This .csv file can be automatically generated or manually filled out using the template found at XXXX.
+This task is to check which assertions a WoT implementation implements
+The assertions that the implementation implements need to be documented in CSV files. 
+These CSV files can be automatically generated or manually filled out using the template found at 
+[`template.csv`](template.csv).
 
 The workflow is as follows:
 
-1. Choose an implementation you want to test. **Attention:** Choose an implementation and not an implementation instance. An implementation is likely to contain multiple TDs that cover a wide range of assertions when combined. By testing multiple instances, you can generate the assertions covered by the implementation.
+1. Choose an implementation you want to test. **Attention:** Choose an implementation and not an implementation instance. 
+   An implementation is likely to contain multiple TDs that cover a wide range of assertions when combined. 
+   By testing multiple instances and merging the results, you can generate the assertions covered by the implementation with
+   better coverage than trying to use a single instance to test everything.
 
 2. Choose one TD of the implementation (a.k.a implementation instance).
   
-3. Test this TD with the [Assertion Tester](#assertion-tester). This should generate a .csv file that lists which assertions are implemented, failed or not implemented. If this automatic generation does not work, manually fill the template found at XXXX.
+3. Test this TD with the [Assertion Tester](#assertion-tester).
+  This should generate a .csv file that lists which assertions are implemented, failed or not implemented.
+  If this automatic generation does not work, manually create the CSV file using the file [`template.csv`](template.csv).
 
-4. Check with the implementation owner to verify that your results are correct. This can be omitted after doing the testing for multiple instances, i.e. when the workflow is validated.
+4. Check with the implementation owner to verify that your results are correct.
+  This can be omitted after doing the testing for multiple instances, i.e. when the workflow is validated.
 
 5. Repeat step 2, 3 and 4 until all the TDs of the implementation are tested and their corresponding .csv files are completed.
 
