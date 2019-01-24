@@ -1,0 +1,572 @@
+/*************************************************
+Suppress all margins
+*************************************************/
+* {
+ padding: 0;
+ margin: 0;
+}
+
+
+/*************************************************
+Headings
+*************************************************/
+h1,
+h2,
+h3 {
+ font: bold 130%;
+}
+
+h1 {
+ font-size: 140%;
+}
+
+h2 {
+ font-size: 120%;
+}
+
+h3 {
+ font-size: 110%;
+}
+
+h4 {
+ font-size: 100%;
+}
+
+
+/*************************************************
+Regular tags
+*************************************************/
+p {
+ padding-bottom: 10px;
+}
+
+ol, ul {
+ margin-left: 3em;
+ margin-bottom: 1em;
+}
+
+ul li {
+ list-style-type: square;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+ color: #1C1C1C;
+/* font-family: Arial,Helvetica,Sans-Serif;*/
+ font-style: normal;
+ text-decoration:underline;
+}
+
+a img {
+ border: none;
+}
+
+hr {
+ margin-top: 2em;
+}
+
+
+/*************************************************
+Body color and font
+*************************************************/
+body {
+ font: 1.1em Verdana, Arial, Sans-Serif;
+ line-height: 1.3em;
+ background: #005A9C repeat-x fixed left top;
+}
+
+
+/*************************************************
+Content wrapper (centered on screen on white bg)
+*************************************************/
+#wrap {
+ margin: 0 auto;
+ width: 97%;
+ background-color: white;
+ color: #333; 
+ border-radius: 10px; 
+}
+
+/*************************************************
+Content wrapper (centered on screen on white bg)
+*************************************************/
+#car { overflow: hidden; width: 100% }
+
+
+/*************************************************
+Top section
+*************************************************/
+#top {
+ margin-top: 1em;
+ padding: 2em 2em 0 2em;
+ background-color: white;
+ color: black;
+}
+
+#top h1 {
+ padding-top: 10px;
+ color: #42413E;
+ font-size: 160%;
+ background: transparent;
+}
+
+#top h2 {
+ padding-top: 10px;
+ color:#42413E;
+ font-size: 120%;
+ background: transparent;
+}
+
+#top p {
+ padding-top: 10px;
+ font-size: 1.5em;
+ color: #666666;
+ background: transparent;
+ font-weight: bold;
+}
+
+.tagline a {
+ color: #42413E;
+ text-decoration: none;
+ /* border-bottom: 1px dashed; */
+}
+
+#top .padding {
+ padding-top: 5px;
+}
+
+
+/*************************************************
+Top menu section
+*************************************************/
+#topmenu {
+ margin-top: 1em; 
+ margin-bottom: 1em;
+ background-color: white;
+ color: black;
+ overflow: auto;
+ font-size: .65em;
+ list-style: none;
+}
+
+#topmenu li a {
+ color: #333;
+ font-weight: bold;
+ text-decoration:none;
+ padding:5px 0;
+ width:150px;
+ /* background:#485e49; */
+ background:#005A9C;
+ color:#eee;
+ float:left;
+ text-align:center;
+ border-left:1px solid #fff;
+}
+
+#topmenu li { 
+ float: left;
+ font-size: 100%;
+ white-space: nowrap;
+ list-style-type: none;
+}
+
+#topmenu li a:hover {
+ background:#a2b3a1;
+ color:#000
+}
+
+/*************************************************
+Main wrapper
+*************************************************/
+#main { 
+ padding: 0px 10px 10px 10px;
+}
+
+
+/*************************************************
+Important and Chairs and PC sections
+(news, important dates and links)
+*************************************************/
+#important {
+ color: #666;
+ font-size: 0.85em;
+}
+
+#chairs-pc {
+ color: black;
+ font-size: 0.80em;
+}
+
+#important a {
+padding-bottom: 10px;
+}
+
+#important h2,
+#chairs-pc h2 {
+ font: bold 1.2em;
+ padding-top: 0.5em;
+ padding-bottom: 0.5em;
+ color: #148080;
+}
+
+#chairs-pc ul {
+ margin-left: 0;
+}
+
+#chairs-pc li {
+ list-style-type: none;
+}
+
+#chairs-pc .box + div {
+ background: #f7a481 repeat-x fixed left top;
+}
+
+#chairs-pc .box {
+ background: #ffffff repeat-x fixed left top;
+}
+/*************************************************
+Content section
+*************************************************/
+
+#subcontent {
+    width: 80%;
+}
+
+
+#content h2,
+#subcontent h2,
+#contentlg h2 {
+ border-bottom: 1px dashed #555;
+ padding-top: 0.5em;
+ padding-bottom: 0.5em;
+ margin-top: 1em;
+ margin-bottom: 1em; 
+ color: #404040; 
+ text-indent: 17px;
+ background: white url(head.gif) no-repeat left;
+}
+
+#content h3,
+#subcontent h3,
+#contentlg h3 {
+ padding-top: 0.2em;
+ padding-bottom: 0.2em;
+ margin-top: 1em;
+ margin-bottom: 0.5em;
+ color: #F74900;
+ font-size: 150%;
+}
+
+#content p, #content > ul li, #subcontent p, #topic-list dt, #topic-list li, #subcontent > ul li {
+  font-size: 0.9em;
+}
+
+#content > ul li ul li, #subcontent > ul li ul li{
+  font-size: 1em;
+}
+
+/*************************************************
+Footer section
+*************************************************/
+#footer {
+ clear: both;
+ min-height: 55px;
+ margin: 1em;
+ padding: 0.5em;
+ font-size: 75%;
+ color: #555;
+}
+
+
+/*************************************************
+Box block
+*************************************************/
+.box {
+ border: 1px solid #CCC; border-radius: 10px; 
+ box-shadow: 7px 7px 5px #888; 
+ background: white;
+ margin-bottom: 10px;
+ margin-top: 10px;
+ margin-left: 10px;
+ margin-right: 15px; 
+ padding: 5px;
+ text-align: center; 
+ width: 230px; 
+}
+
+.box p {
+ font-size:0.9em;
+ line-height: 1.5em;
+}
+
+.box img {
+  width: 200px;
+}
+
+
+
+/*************************************************
+Centered
+*************************************************/
+.centered {
+ text-align: center;
+}
+
+/*************************************************
+HTML5 logo
+*************************************************/
+.html5logo {
+ float: right;
+}
+
+/*************************************************
+Tweetmeme
+*************************************************/
+#tweetmeme {
+ width: 3em;
+ padding-bottom: 5px;
+ float: right;
+}
+
+
+/*************************************************
+Agenda
+*************************************************/
+#day1 h3,
+#day2 h3,
+#minutes h2 {
+ font-size: 120%;
+ color: #42413E;
+ background-color: #A6C760;
+ text-align: center;
+ margin-top: 2em;
+ margin-bottom: 1.5em;
+}
+
+div.subcontent.agenda h4 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+div.agenda ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+div.agenda ul li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+dl p {
+ padding-bottom: 0;
+}
+
+dt {
+ font-weight: bold;
+ padding-right: 1em;
+ /* float: left; */
+}
+
+dd {
+ margin-bottom: 2em;
+}
+
+dl .topic {
+ font-size: 120%;
+ font-weight: bold;
+ font-style: italic;
+ border-bottom: 1px solid #A6C760;
+}
+
+dl .logistics {
+ font-style: italic;
+}
+
+dl ul {
+ margin-left: 2em;
+}
+
+.duration {
+ color: #999;
+}
+
+.moderator {
+ font-size: 90%;
+}
+
+.minutes {
+ font-size: 90%;
+ margin-left: 1em;
+ margin-top: -1em;
+}
+
+.topic {
+ font-style: italic;
+ border: 1px solid #A6C760;
+ background-color: #FFFFCC;
+ font-size: 90%;
+ margin-left: 1em;
+ margin-top: .5em;
+  margin-right: 3em;
+ margin-bottom: .5em;
+ padding-left: 10px;
+}
+
+/*************************************************
+Expressions of Interest
+*************************************************/
+dt {
+ font-weight: bold;
+ margin-top: 0.3em;
+ margin-bottom: 0.3em;
+}
+
+/*************************************************
+Papers
+*************************************************/
+span.selected {
+ display: none;
+}
+
+li.selected {
+ list-style-image: url("CheckMark.png");
+ list-style-type: none;
+}
+
+
+/*************************************************
+Minutes
+*************************************************/
+#minutes h2 {
+ padding: 0.3em;
+}
+
+#minutes dt {
+ float: none;
+}
+
+#minutes h3 {
+ font-size: 120%;
+ font-weight: bold;
+ font-style: italic;
+ border-bottom: 1px solid #A6C760;
+}
+
+#minutes .moderator {
+ margin-left: 2em;
+ margin-top: -1em;
+ font-size: 100%;
+ font-weight: bold;
+}
+
+.agendaref {
+ margin-left: 2em;
+ font-style: italic;
+}
+
+.break {
+ font-style: italic;
+ margin-bottom: 0.em;
+}
+
+.ednote {
+color: red;
+}
+
+div.agenda {
+
+  font-size: 80%;
+}
+
+
+/*************************************************
+Banner
+*************************************************/
+
+.banner {
+  font-style: italic;
+  font-size: inherit;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  line-height: 1.1em;
+  color: navy;
+  border-top: solid 1px #AAA;
+  border-bottom: solid 1px #AAA;
+}
+
+/*************************************************
+Figures
+*************************************************/
+
+#wot-domains { width: 80% }
+#figures img { width: 45%; vertical-align: middle }
+
+/*************************************************
+Topics
+*************************************************/
+
+#topic-list { padding-left: 1em; font-size: inherit; }
+#topic-list dt { margin-top: 0; }
+#topic-list dd { margin-bottom: 0 }
+
+/*************************************************
+Summary
+*************************************************/
+table {
+ border-spacing: 0;
+}
+
+th, td {
+ border: 1px solid #42413E;
+}
+
+th {
+ background-color: #A6C760;
+ color: black;
+}
+
+@media print {
+  body, #content, div.box { color: black;
+    font-size: smaller;
+  }
+  .box {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 8px; 
+    padding: 10px;
+    text-align: center; 
+    width: 180px; 
+  }
+  .box img {
+    width: 160px;
+  }
+
+  #important {
+   /* width: 230px; */
+   float: right;
+  }
+  #topmenu {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#top { border-radius: 10px; }
+
+/*************************************************
+Hotels
+*************************************************/
+
+.hotels strong { font-style: italic }
+
+/*************************************************
+For IE9
+*************************************************/
+.lt-ie10 #main {overflow: hidden;}
+.lt-ie10 #topmenu {margin-bottom: 3em;}
+.lt-ie10 #important {float: right;}
+.lt-ie10 #subcontent {float: left; width: auto;}

@@ -36,13 +36,17 @@ includes the following requirements which have validation implications:
 ### Implementation
 An "implementation" will consist of either
 
+* A manually written TD for a device or service with a network interface.
+
+OR
+
 * A system producing a TD for a device or service with a network interface.
 
 OR
 
 * A system consuming a TD and using it to access a device or service with a network interface.
 
-Some implementations may do both.
+Some implementations may be in multiple categories.
 
 To be considered an "independent" implementation, a system should be independently developed
 from other implementations and have a distinct code base.
