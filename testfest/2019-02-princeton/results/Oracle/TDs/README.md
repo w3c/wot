@@ -7,7 +7,7 @@ Please use the same credentials as with the previous instance.
 If you meed access, please send an email to [Michael.Lagally@oracle.com](mailto://Michael.Lagally@oracle.com)
 
 
-The following instances can be used by each company individually:
+The following instances can be used for testing by each company individually:
 
 ![](images/BluePump.png)
 
