@@ -1,11 +1,9 @@
 {
     "name": "Siemens-Properties-Tester",
     "description": "Tests the variation of properties.",
-    "@context": {"iot": "http://iotschema.org/"},
     "versioning": {"instance": "1.0.0"},
     "@type": "Thing",
-    "securityDefinitions": {"basic_sc": {"scheme": "nosec"}},
-    "security": [{"scheme": "nosec"}],
+    "security": ["nosec_sc"],
     "properties": {
         "status": {
             "type": "string",
@@ -117,6 +115,8 @@
             ]
         }
     },
-    "id": "urn:uuid:a9dff6a2-3fac-4f48-99f1-2cdc6ebd1380",
-    "support": "none"
+    "id": "urn:uuid:11aa7c71-292e-4789-ba81-e573135f1788",
+    "support": "mailto:sebastian.kaebisch",
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
 }
+
