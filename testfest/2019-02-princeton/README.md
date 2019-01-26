@@ -182,7 +182,7 @@ In general, the TD is supposed to indicate to the consumer how to correctly talk
 
 The story is a little different if we want to look for security vulnerabilities.  In that case a "malicious" consumer may intentionally violate the constraints in the TD.
 
-#### Automatic Testing
+#### Automatic Behavior Testing
 
 To test the behavior of a Thing represented by a TD, you can use the [WoT Test-Bench](#wot-test-bench).
 
@@ -195,7 +195,7 @@ It can be configured to go through the TD multiple times, i.e. testing every int
 
 Example:
 
-An interaction like the following:
+An interaction like:
 
 ```json
     "properties": {
@@ -205,7 +205,7 @@ An interaction like the following:
         }
     },
 ```
-will generate a request to read this property as well as write with a value like `"lorem"`. 
+will be used to generate a request to read this property as well as write with a value like `"lorem"`. 
 A response that is not a string will be documented as an error in the testing report. 
 More information can be found [here](#wot-test-bench).
 
@@ -216,7 +216,7 @@ Limitations:
 * Cannot subscribe to events (will be implemented)
 * Not tested with MQTT yet (will be implemented)
 
-#### Manual Testing
+#### Manual Behavior Testing
 
 Testing the behavior of a servient manually means sending requests to the servient by interpreting its TD.
 The responses should be analyzed and documented.
@@ -258,40 +258,80 @@ Thank you! Every contribution counts :)
 
 ## Tools
 
-### Automatic Assertion Testing/Generator Tools
-
-#### Assertion Tester
+### Assertion Tester
 
 The assertion tester is an extension of Thingweb Playground. For each assertion there is a JSON Schema that explicitely fails TD validation at where the assertion would be implemented.
 
 Using:
 
 1. Clone the Thingweb Playground GitHub repository by `git clone https://github.com/thingweb/thingweb-playground`
-2.  Run 'node ./AssertionTester/assertionTester.js an_example_TD_location'. E.g. 'node ./AssertionTester/assertionTester.js WebContent/Examples/Valid/JsonLdThing.json' 
-3. The results are found in the 'AssertionTester/Results'
+2.  With a TD, run 'node ./AssertionTester/assertionTester.js an_example_TD_location'. By using one of the example of Playground, 'node ./AssertionTester/assertionTester.js WebContent/Examples/Valid/JsonLdThing.json' 
+3. The results will be in the 'AssertionTester/Results'
   * There will be a .csv and a .json file. The .csv version has the format required by the implementation report and the .json version is provided for using the results in other tools, such as merging the results 
   * The result can be pass, fail or not-impl 
-  * Some assertions have an underscore, i.e. `_` before the last word. This means that this assertion is composed of sub assertions. For example, td-actions assertion required the existence of action interaction in the TD and also the uniqueness of the names of actions. Because of this, there will be two assertions generated in the results with following names: td-actions_existence and td-actions_uniqueness. 
-  * If there is a child, there is always a parent assertion. Look above to find the parent assertion. If one child assertion is not implemented, the parent will be also marked as not implemented.
+  * Some assertions have an underscore, i.e. `_` before the last word. This means that this assertion is a child. For example, td-actions assertion requires the existence of action interaction pattern in the TD and also the uniqueness of the names of actions. Because of this, there will be two assertions generated in the results with following names: td-actions_existence and td-actions_uniqueness.
+  * The tool will first generate the children assertion and then compose the parent assertion. This means that, if there is a child, there is always a parent assertion. In the .csv file, look above a child assertion to find its parent assertion. If one child assertion is not implemented, the parent will be also marked as not implemented.
 4. Merge the results if you have an implementation that produced multiple TDs. To do so, use the following command
   * `node AssertionTester/mergeResults.js ./AssertionTester/Results/result-urn:another.csv ./AssertionTester/Results/result-urn:dev:wot:com:example:servient:lamp.csv`
   * You can put as many TDs as you want after `AssertionTester/mergeResults.js`
 
-### Automatic Behavior Testing Tools
+### WoT Test Bench
 
-#### WoT Test Bench
+A first introduction of the tool was given [before.](#automatic-behavior-testing). This section details its working principles, which is a copy paste of the instructions of test bench.
 
-Can test a TD based on its TD. i
-Can be installed through Github [here](https://github.com/tum-ei-esi/testbench).
+#### Installation 
 
-### Simulators
+**Prerequisites:**
 
-#### Virtual Thing
+* git: `sudo apt install -y git`
+* node.js: `sudo apt-get install -y nodejs` (node --version v8.10.0)
+* npm: `sudo apt install -y npm` (npm --version 3.5.2)
+
+**Steps**
+
+1. Download testbench from [its repository](git@github.com:tum-ei-esi/testbench.git) by `git clone git@github.com:tum-ei-esi/testbench.git`
+2. Switch into `testbench` folder
+3. Execute the `npm install`. This will install every required library, including `node-wot`
+4. Execute `npm run-script build`
+
+*TestBench is a WoT Thing itself with a TD, so you can interact with it like you interact with other WoT servients. Examples:*
+
+**Postman**:
+
+| **PUT** | TestBench config update |
+| ------------- |:-------------:|
+| content-type      | application/json | 
+| body      |  config json data   | 
+| data-type | raw |
+| url | http://your-address:8980/wot-test-bench/properties/testConfig | 
+
+**cURL**:
+
+`curl -X POST -H "Content-Type: application/json" -d '{configuration-data}' http://your-address:8080/wot-test-bench/properties/testConfig`
+
+___
+
+#### Example Usage
+
+1. Start a servient that has a TD so that TestBench can interact with it.
+    1.  `testing-files/faultyThing.js` shows an example test servient with ONLY BAD implementations. Run `faultyThing.js` by executing `node testing-files/faultyThing.js` inside `testbench` directory.
+    2.  `testing-files/perfectThing.js` shows an example test servient with ONLY GOOD implementations. Run `perfectThing.js` by executing `node testing-files/perfectThing.js` inside `testbench` directory.
+
+2. Run with: `npm start`
+3. Interact with the testbench using REST clients such as `cURL`, `Postman` etc.
+    1. Test a servient by sending its TD
+   
+| **POST** | Test Thing with given TD |
+| ------------- |:-------------:|
+| content-type      | application/json | 
+| body      |  Thing Description   | 
+| data-type | raw |
+| url | ttp://your-address:8980/wot-test-bench/actions/fastTest |
+| return value | JSON Array with results |
+
+
+### Virtual Thing
 
 Simulates a servient based on TD.
-Can be installed through npm [here](https://www.npmjs.com/package/virtual-thing).
 
-
-### TD Validation
-
-#### Thingweb Playground
+Can be installed through npm [here](https://www.npmjs.com/package/virtual-thing) or by `npm install virtual-thing`
