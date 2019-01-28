@@ -16,5 +16,5 @@ virtual servients that address almost all assertions given in the Thing Descript
 - [ReadWriteAllProperties](../../TDs/Siemens/readWriteAllProperties.json): Tests the readAll and writeAll properties feature. (tbd)
 
 ## Results of the assertion  tests
-Please find [here](./siemens-results.html) the results of the assertation tests.
+Please find [here](./siemens-results.csv) the results of the assertation tests.
 
