@@ -3,7 +3,7 @@
 
 ![Thingweb Logo](images/thingweb-logo.png)
 
-##^Introduction
+## Introduction
 The [node-wot Thingweb project](https://github.com/eclipse/thingweb.node-wot/) is an open-source toolkit for the Web of Things with modular implementations of the technological building blocks standardized by the W3C. node-wot is the official reference implementation of the W3C WoT Working Group and Siemens is contributing to this project. For the TestFest, Siemens offers different types of
 virtual servients that address almost all assertions given in the Thing Description specification. 
 
