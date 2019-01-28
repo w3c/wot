@@ -6,6 +6,8 @@ TODO: Put an example testing flow from start to finish -->
 
 Will be held 28.01-03.02, 2019 at Siemens Corporate Technology, 755 College Road East, Princeton, NJ, USA, 08540.
 
+[Live Implementation Report](https://cdn.staticaly.com/gh/mmccool/wot-thing-description/updated-test-results/testing/report.html)
+
 The goal of the testfest is to generate the W3C Implementation Report to be used for the CR transition.
 This report will detail which assertions of the specs are implemented for each implementation.
 Results are to be recorded in CSV files using a specific directory structure (described below) to
