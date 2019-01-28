@@ -13,6 +13,6 @@ virtual servients that address almost all assertions given in the Thing Descript
 - [ResponseTest](../../TDs/Siemens/responseTest-siemens.json): Tests the response vocabulary with different usage of the contentType for requests and responses
 - [SecurityTest](../../TDs/Siemens/securityTest-siemens.json): Security Test based on the basic mechanism
 - [DataSchemaTest](../../TDs/Siemens/dataSchemaTest-siemens.json): Test all data schema aspects of the TD specification
-- [ReadAllProperties](): Tests the readAll and writeAll properties feature. (tbd)
+- [ReadWriteAllProperties](../../TDs/Siemens/readWriteAllProperties-siemens.json): Tests the readAll and writeAll properties feature. (tbd)
 
 
