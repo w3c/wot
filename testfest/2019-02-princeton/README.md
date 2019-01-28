@@ -6,7 +6,7 @@ TODO: Put an example testing flow from start to finish -->
 
 Will be held 28.01-03.02, 2019 at Siemens Corporate Technology, 755 College Road East, Princeton, NJ, USA, 08540.
 
-* [Implementation Report](https://github.com/mmccool/wot-thing-description/updated-test-results/testing/report.html): You need to save to a local directory and load it from a file to see it rendered, unfortunately.
+* [Implementation Report](https://raw.githubusercontent.com/mmccool/wot-thing-description/updated-test-results/testing/report.html): You need to save to a local directory and load it from a file to see it rendered, unfortunately.
 * [CDN.staticaly Implementation Report](https://cdn.staticaly.com/gh/mmccool/wot-thing-description/updated-test-results/testing/report.html): This might work, but may be stale.
 
 The goal of the testfest is to generate the W3C Implementation Report to be used for the CR transition.
