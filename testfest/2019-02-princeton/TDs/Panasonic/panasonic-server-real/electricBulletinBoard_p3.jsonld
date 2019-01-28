@@ -31,12 +31,12 @@
           "contentType": "application/json"
       }]
     },
-    "desiredTemp": {
-      "@type": "iot:TargetTemperature",
-      "title": "desiredTemp",
+    "displayNumber": {
+      "@type": "iot:DisplayNumber",
+      "title": "displayNumber",
       "type": "number",
-      "minimum": 16,
-      "maximum": 30,
+      "minimum": 0,
+      "maximum": 9999,
       "observable": false,
       "forms": [{
         "href": "desiredTemp",
