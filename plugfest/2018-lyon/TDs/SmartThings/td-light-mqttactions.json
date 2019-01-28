@@ -87,7 +87,9 @@
           "href": "mqtt://0m2m.net:8099/plugfest/light/state",
           "mediaType": "application/json",
           "op": "invokeaction",
-          "http:methodName": "POST"
+          "mqtt:qos":  1,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 6
         }
       ]
     },
@@ -113,7 +115,9 @@
           "href": "mqtt://0m2m.net:8099/plugfest/light/state",
           "mediaType": "application/json",
           "op": "invokeaction",
-          "http:methodName": "POST"
+          "mqtt:qos":  1,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 6
         }
       ]
     },
@@ -151,7 +155,9 @@
           "href": "mqtt://0m2m.net:8099/plugfest/light/state",
           "mediaType": "application/json",
           "op": "invokeaction",
-          "http:methodName": "POST"
+          "mqtt:qos":  1,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 6
         }
       ]
     }
