@@ -1,31 +1,33 @@
 "ID","Status","additionalInfo"
-"client-data-schema","not-impl",
-"client-uri-template","not-impl",
-"td-action-arrays","not-impl",
-"td-action-arrays_forms","pass",
-"td-action-arrays_scopes","not-impl",
-"td-action-arrays_security","not-impl",
-"td-action-names","pass",
-"td-action-objects","not-impl",
-"td-actions","pass",
-"td-actions_existence","pass",
+"client-data-schema","null","not testable with Assertion Tester"
+"client-uri-template","null","not testable with Assertion Tester"
+"td-action-arrays","not-impl","Error message can be seen in the children assertions"
+"td-action-arrays_forms","not-impl","data should have required property 'actions'"
+"td-action-arrays_scopes","not-impl","data should have required property 'actions'"
+"td-action-arrays_security","not-impl","data should have required property 'actions'"
+"td-action-names","not-impl","data should have required property 'actions'"
+"td-action-names","not-impl","data should have required property 'actions'"
+"td-action-objects","not-impl","data should have required property 'actions'"
+"td-actions","not-impl","Error message can be seen in the children assertions"
+"td-actions_existence","not-impl","data should have required property 'actions'"
 "td-actions_uniqueness","pass",
 "td-additional-contexts","pass",
-"td-arrays","not-impl",
+"td-arrays","not-impl","Error message can be seen in the children assertions"
 "td-arrays_scopes","not-impl",
 "td-arrays_security","pass",
 "td-at-type","pass",
-"td-content-type-default","not-impl",
+"td-content-type-default","null","not testable with Assertion Tester"
 "td-context","pass",
 "td-context-toplevel","pass",
-"td-data-schema","not-impl",
-"td-data-schema-arrays","not-impl",
+"td-data-schema","not-impl","Error message can be seen in the children assertions"
+"td-data-schema-arrays","not-impl","Error message can be seen in the children assertions"
 "td-data-schema-arrays_enum","not-impl",
 "td-data-schema-arrays_oneOf","not-impl",
 "td-data-schema-arrays_required","pass",
-"td-data-schema-objects","not-impl",
+"td-data-schema-objects","null","not testable with Assertion Tester"
 "td-data-schema_const","not-impl",
-"td-data-schema_description","pass",
+"td-data-schema_description","not-impl",
+"td-data-schema_description","not-impl",
 "td-data-schema_descriptions","not-impl",
 "td-data-schema_enum","not-impl",
 "td-data-schema_items","not-impl",
@@ -44,39 +46,39 @@
 "td-data-schema_type","pass",
 "td-data-schema_unit","not-impl",
 "td-data-schema_writeOnly","not-impl",
-"td-event-arrays","not-impl",
-"td-event-names","not-impl",
-"td-event-objects","not-impl",
-"td-event-response-arrays","not-impl",
-"td-events","not-impl",
-"td-events_existence","not-impl",
+"td-event-arrays","not-impl","data should have required property 'events'"
+"td-event-names","not-impl","data should have required property 'events'"
+"td-event-objects","not-impl","data should have required property 'events'"
+"td-event-response-arrays","null","not testable with Assertion Tester"
+"td-events","not-impl","Error message can be seen in the children assertions"
+"td-events_existence","not-impl","data should have required property 'events'"
 "td-events_uniqueness","pass",
-"td-form-protocolbindings","not-impl",
+"td-form-protocolbindings","null","not testable with Assertion Tester"
 "td-forms-response","not-impl",
 "td-integer-type","not-impl",
 "td-jsonld-keywords","pass",
 "td-jsonld-keywords_@context","pass",
 "td-jsonld-keywords_@type","pass",
 "td-links","pass",
-"td-media-type","not-impl",
-"td-multi-languages","not-impl",
+"td-media-type","null","not testable with Assertion Tester"
+"td-multi-languages","not-impl","Error message can be seen in the children assertions"
 "td-multi-languages_descriptions","not-impl",
 "td-multi-languages_titles","not-impl",
 "td-number-type","not-impl",
 "td-objects","pass",
 "td-objects_securityDefinitions","pass",
 "td-objects_version","pass",
-"td-op-for-action","pass",
+"td-op-for-action","not-impl",
 "td-op-for-event","not-impl",
 "td-op-for-property","pass",
-"td-op-for-thing","not-impl",
+"td-op-for-thing","not-impl","data should have required property 'forms'"
 "td-properties","pass",
 "td-properties_existence","pass",
 "td-properties_uniqueness","pass",
-"td-property-arrays","not-impl",
-"td-property-names","not-impl",
+"td-property-arrays","not-impl","data.properties['temperature'] should have required property 'scopes', data.properties['temperature'] should have required property 'security'"
+"td-property-names","not-impl","Error message can be seen in the children assertions"
 "td-property-names_const","not-impl",
-"td-property-names_description","pass",
+"td-property-names_description","not-impl",
 "td-property-names_descriptions","not-impl",
 "td-property-names_enum","not-impl",
 "td-property-names_forms","pass",
@@ -100,17 +102,17 @@
 "td-property-names_unit","not-impl",
 "td-property-names_uriVariables","not-impl",
 "td-property-names_writeOnly","not-impl",
-"td-readOnly-observable-default","not-impl",
-"td-readOnly-observable-writeOnly-default","not-impl",
-"td-security-binding","not-impl",
+"td-readOnly-observable-default","null","not testable with Assertion Tester"
+"td-readOnly-observable-writeOnly-default","null","not testable with Assertion Tester"
+"td-security-binding","null","not testable with Assertion Tester"
 "td-security-mandatory","pass",
-"td-security-no-extras","not-impl",
-"td-security-overrides","not-impl",
+"td-security-no-extras","null","not testable with Assertion Tester"
+"td-security-overrides","not-impl","Error message can be seen in the children assertions"
 "td-security-overrides_form","not-impl",
 "td-security-overrides_interaction","not-impl",
 "td-simple-form","pass",
 "td-string-type","not-impl",
-"td-title-description","not-impl",
+"td-title-description","not-impl","Error message can be seen in the children assertions"
 "td-title-description_descriptions","not-impl",
 "td-title-description_titles","not-impl",
 "td-unique-identifiers","pass",
@@ -118,31 +120,32 @@
 "td-uriVariables-names","not-impl",
 "td-version","pass",
 "td-version-container","pass",
-"td-vocab-actions","pass",
+"td-vocab-actions","not-impl","data should have required property 'actions'"
 "td-vocab-alg","not-impl",
-"td-vocab-anchor","not-impl",
+"td-vocab-anchor","not-impl","data.links[0] should have required property 'anchor'"
 "td-vocab-authorization","not-impl",
-"td-vocab-base","not-impl",
-"td-vocab-cancellation","not-impl",
+"td-vocab-base","not-impl","data should have required property 'base'"
+"td-vocab-cancellation","not-impl","data should have required property 'events'"
 "td-vocab-const","not-impl",
 "td-vocab-contentType-1","not-impl",
 "td-vocab-contentType-2","pass",
 "td-vocab-created","pass",
-"td-vocab-data","not-impl",
-"td-vocab-description","pass",
+"td-vocab-data","not-impl","data should have required property 'events'"
+"td-vocab-description","not-impl",
+"td-vocab-description","not-impl","Error message can be seen in the children assertions"
 "td-vocab-description_security","not-impl",
 "td-vocab-descriptions","not-impl",
 "td-vocab-enum","not-impl",
-"td-vocab-events","not-impl",
+"td-vocab-events","not-impl","data should have required property 'events'"
 "td-vocab-flow","not-impl",
 "td-vocab-format","not-impl",
-"td-vocab-forms-1","not-impl",
+"td-vocab-forms-1","not-impl","data should have required property 'forms'"
 "td-vocab-forms-2","pass",
 "td-vocab-href","pass",
-"td-vocab-idempotent","not-impl",
+"td-vocab-idempotent","not-impl","data should have required property 'actions'"
 "td-vocab-identity","not-impl",
 "td-vocab-in","not-impl",
-"td-vocab-input","not-impl",
+"td-vocab-input","not-impl","data should have required property 'actions'"
 "td-vocab-instance","pass",
 "td-vocab-items","not-impl",
 "td-vocab-lastModified","pass",
@@ -158,7 +161,7 @@
 "td-vocab-observable","pass",
 "td-vocab-oneOf","not-impl",
 "td-vocab-op","pass",
-"td-vocab-output","not-impl",
+"td-vocab-output","not-impl","data should have required property 'actions'"
 "td-vocab-properties-1","pass",
 "td-vocab-properties-2","pass",
 "td-vocab-proxy","not-impl",
@@ -168,15 +171,15 @@
 "td-vocab-rel","pass",
 "td-vocab-required","pass",
 "td-vocab-response","not-impl",
-"td-vocab-safe","not-impl",
+"td-vocab-safe","not-impl","data should have required property 'actions'"
 "td-vocab-scheme","pass",
 "td-vocab-scopes","not-impl",
 "td-vocab-security-1","pass",
 "td-vocab-security-2","not-impl",
-"td-vocab-security-3","not-impl",
+"td-vocab-security-3","not-impl","data should be equal to constant, data should match ""else"" schema, data should match ""else"" schema, data should match ""else"" schema, data should match ""else"" schema"
 "td-vocab-securityDefinitions","pass",
 "td-vocab-subprotocol","not-impl",
-"td-vocab-subscription","not-impl",
+"td-vocab-subscription","not-impl","data should have required property 'events'"
 "td-vocab-support","pass",
 "td-vocab-title","pass",
 "td-vocab-titles","not-impl",
