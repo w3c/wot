@@ -46,6 +46,7 @@ td['@type'] = "Thing";
 td.name=dm.name;
 td.description=dm.description;
 td.id=dm.urn;
+td.version = {"instance":"1.0.0"};
 let deviceUrn=dm.urn.replace(/:/g ,"%3A");
 let base = "https://"+iotCSServer+"/iot/api/v2/apps/"+appId+"/devices/"+deviceId+"/deviceModels/"+deviceUrn;
 td.base=base;
@@ -68,87 +69,101 @@ td.properties={};
 td.actions={};
 
 for(var exKey in dm.attributes) {
-    if (verbose) console.log("key:"+exKey+", value:"+dm.attributes[exKey]);
-    var iac=dm.attributes[exKey];
-    if (verbose) console.log(iac);
-    var prop={};
-    prop.name=iac.name;
-    prop.description=iac.description;
-    prop.type=iac.type.toLowerCase();
-    prop.readOnly = !iac.writable;
-    prop.writeOnly = false;
-    prop.observable = false;
-    if (!iac.alias) {
-      prop.title=iac.name;
-    } else {
-      prop.title=iac.alias;
-    };
+  if (verbose) console.log("key:"+exKey+", value:"+dm.attributes[exKey]);
+  var iac=dm.attributes[exKey];
+  if (verbose) console.log(iac);
+  var prop={};
+  prop.name=iac.name;
+  prop.description=iac.description;
+  prop.type=iac.type.toLowerCase();
+  prop.readOnly = !iac.writable;
+  prop.writeOnly = false;
+  prop.observable = false;
+  if (!iac.alias) {
+    prop.title=iac.name;
+  } else {
+    prop.title=iac.alias;
+  };
 
-    let name=prop.name;
-    // added object properties
-    prop.type="object";
-    prop.properties= {};
-    prop.properties[name]={
+  let name=prop.name;
+  // added object properties
+  prop.type="object";
+  prop.properties= {};
+  if (iac.writable) {
+    prop.properties.value={
         "type": iac.type.toLowerCase(),
-        "writable": false
+        "writable": true
     };
-    if (iac.writable) {
-      prop.properties.value={
-          "type": iac.type.toLowerCase(),
-          "writable": true
-      };
-    };
-
     prop.forms = [{
       "href" :  base+"/attributes/"+iac.name,
-      "contentType": "application/json"
+      "contentType": "application/json",
+      "op": ["readproperty", "writeproperty"]
     }];
+  } else {
+    prop.properties.value={
+      "type": iac.type.toLowerCase(),
+      "writable": false
+    };
+    prop.forms = [{
+      "href" :  base+"/attributes/"+iac.name,
+      "contentType": "application/json",
+      "op": ["readproperty"]
+    }];
+  }
 
+  if (verbose) console.log(prop);
 
-    if (verbose) console.log(prop);
-
-    td.properties[iac.name]=prop;
+  td.properties[iac.name]=prop;
 }
 
 for(var exKey in dm.actions) {
-    if (verbose) console.log("key:"+exKey+", value:"+dm.actions[exKey]);
-    var iac=dm.actions[exKey];
-    if (verbose) console.log(iac);
-    var act={};
+  if (verbose) console.log("key:"+exKey+", value:"+dm.actions[exKey]);
+  var iac=dm.actions[exKey];
+  if (verbose) console.log(iac);
+  var act={};
 
-    act.name=iac.name;
-    // we don't know more about the behavior of actions, 
-    // so we mark them as not safe and not idempotent
-    act.safe = false;
-    act.idempotent = false;
-    act.description=iac.description;
-    if (iac.argType) {
-      var inp={};
-      inp.type="object";
-      // these are now optional in the updated TD spec and don't make a lot of sense for action parameters
-      inp.readOnly = false;
-      inp.writeOnly = false;
-      inp.properties={};
-      inp.properties.value={};
-      inp.properties.value.type=iac.argType.toLowerCase();
-      if (iac.range) {
-        inp.minimum=iac.range.split(",")[0];
-        inp.maximum=iac.range.split(",")[1];
-      }
-      act.input=inp;
+  act.name=iac.name;
+  // we don't know more about the behavior of actions, 
+  // so we mark them as not safe and not idempotent
+  act.safe = false;
+  act.idempotent = false;
+  act.description=iac.description;
+  if (iac.argType) {
+    var inp={};
+    inp.type="object";
+    // these are now optional in the updated TD spec and don't make 
+    // a lot of sense for action parameters
+    inp.readOnly = false;
+    inp.writeOnly = false;
+    
+    inp.properties={};
+    inp.properties.value={};
+    inp.properties.value.type=iac.argType.toLowerCase();
+    if (iac.range) {
+      inp.minimum=iac.range.split(",")[0];
+      inp.maximum=iac.range.split(",")[1];
     }
-    if (!iac.alias) {
-      act.title=iac.name;
-    } else {
-      act.title=iac.alias;
-    };
+    act.input=inp;
+  }
+  var out={};
+  // these are now optional in the updated TD spec and don't make 
+  // a lot of sense for action parameters
+  out.readOnly = false;
+  out.writeOnly = false;
+  act.output=out;
 
-    act.forms = [{
-      "href" : base+"/actions/"+act.name,
-      "contentType": "application/json"
-    }];
+  if (!iac.alias) {
+    act.title=iac.name;
+  } else {
+    act.title=iac.alias;
+  };
 
-    td.actions[iac.name]=act;
+  act.forms = [{
+    "href" : base+"/actions/"+act.name,
+    "contentType": "application/json"
+  }];
+
+  td.actions[iac.name]=act;
 }
 
 if (verbose) console.log("-----");
