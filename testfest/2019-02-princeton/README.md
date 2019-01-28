@@ -267,15 +267,18 @@ The assertion tester is an extension of Thingweb Playground. For each assertion 
 Using:
 
 1. Clone the Thingweb Playground GitHub repository by `git clone https://github.com/thingweb/thingweb-playground`
-2.  With a TD, run 'node ./AssertionTester/assertionTester.js an_example_TD_location'. By using one of the example of Playground, 'node ./AssertionTester/assertionTester.js WebContent/Examples/Valid/JsonLdThing.json' 
-3. The results will be in the 'AssertionTester/Results'
-  * There will be a .csv and a .json file. The .csv version has the format required by the implementation report and the .json version is provided for using the results in other tools, such as merging the results 
-  * The result can be pass, fail or not-impl 
-  * Some assertions have an underscore, i.e. `_` before the last word. This means that this assertion is a child. For example, td-actions assertion requires the existence of action interaction pattern in the TD and also the uniqueness of the names of actions. Because of this, there will be two assertions generated in the results with following names: td-actions_existence and td-actions_uniqueness.
-  * The tool will first generate the children assertion and then compose the parent assertion. This means that, if there is a child, there is always a parent assertion. In the .csv file, look above a child assertion to find its parent assertion. If one child assertion is not implemented, the parent will be also marked as not implemented.
-4. Merge the results if you have an implementation that produced multiple TDs. To do so, use the following command
-  * `node AssertionTester/mergeResults.js ./AssertionTester/Results/result-urn:another.csv ./AssertionTester/Results/result-urn:dev:wot:com:example:servient:lamp.csv`
-  * You can put as many TDs as you want after `AssertionTester/mergeResults.js`
+2. Change to AssertionTester directory
+3. Run npm install
+4. For single TD: Run 'npm run-script testTD an_example_TD_location'. E.g. 'npm run-script testTD WebContent/Examples/Valid/JsonLdThing.json' 
+5. For a directory with **only** TDs: Run 'npm run-script testImplementation a_directory_location'. E.g. 'npm run-script testImplementation WebContent/Examples/Valid/' 
+6. The result(s) are found in the 'AssertionTester/Results' with a file per id of the tested TD(s)
+    1. There will be a .csv and a .json file. The .csv version has the format required by the implementation report and the .json version is provided for using the results in other tools, such as merging the results 
+    2. The result can be pass, fail or not-impl. If they are not tested with this tool, they will be marked with null
+    3. Some assertions have an underscore, i.e. `_` before the last word. This means that this assertion is composed of sub assertions. For example, td-actions assertion required the existence of action interaction in the TD and also the uniqueness of the names of actions. Because of this, there will be two assertions generated in the results with following names: td-actions_existence and td-actions_uniqueness. 
+    4. If there is a child, there is always a parent assertion. Look above to find the parent assertion. If one child assertion is not implemented, the parent will be also marked as not implemented.
+7. Merge the results if you have an implementation that produced multiple TDs. To do so, use the following command
+   1.  `node AssertionTester/mergeResults.js ./AssertionTester/Results/result-urn:another.csv ./AssertionTester/Results/result-urn:dev:wot:com:example:servient:lamp.csv`
+   2.  You can put as many TDs as you want after `AssertionTester/mergeResults.js`
 
 ### WoT Test Bench
 
