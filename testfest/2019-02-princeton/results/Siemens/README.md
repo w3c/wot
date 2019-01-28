@@ -12,6 +12,6 @@ virtual servients that address almost all assertions given in the Thing Descript
 - [PropertiesTest](../../TDs/Siemens/propertiesTest-siemens.json): Tests all kind of variations of properties (readOnly, observable, etc.) 
 - [ResponseTest](../../TDs/Siemens/responseTest-siemens.json): Tests the response vocabulary with different usage of the contentType for requests and responses
 - [SecurityTest](../../TDs/Siemens/securityTest-siemens.json): Security Test based on the basic mechanism
-- [ReadAllProperties](): Tests the readAll and writeAll properties feature.
+- [ReadAllProperties](): Tests the readAll and writeAll properties feature. (tbd)
 
 
