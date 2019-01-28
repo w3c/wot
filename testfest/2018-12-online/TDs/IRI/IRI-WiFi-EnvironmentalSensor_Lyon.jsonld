@@ -1,0 +1,66 @@
+{
+	"name": "iri_bme280_sensor",
+	"description": "IRIBME280Sensor",
+	"id": "urn:jp:iri:iot:bme280sensor",
+	"@context": "http://www.w3.org/ns/td",
+	"@type": "Thing",
+	"security": [
+		{
+			"scheme": "nosec"
+		}
+	],
+	"actions": {},
+	"properties": {
+		"Temperature": {
+			"@type": "iot:Temperature",
+			"observable": true,
+			"writable": false,
+			"type": "object",
+			"properties": {
+				"temperature": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"mediaType": "application/json",
+					"href": "http://192.168.1.113/iri_bme280_sensor/temperature"
+				}
+			]
+		},
+		"Humidity": {
+			"@type": "iot:Humidity",
+			"observable": true,
+			"writable": false,
+			"type": "object",
+			"properties": {
+				"humidity": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"mediaType": "application/json",
+					"href": "http://192.168.1.113/iri_bme280_sensor/humidity"
+				}
+			]
+		},
+		"Pressure": {
+			"@type": "iot:Pressure",
+			"observable": true,
+			"writable": false,
+			"type": "object",
+			"properties": {
+				"pressure": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"mediaType": "application/json",
+					"href": "http://192.168.1.113/iri_bme280_sensor/pressure"
+				}
+			]
+		}
+	}
+}
