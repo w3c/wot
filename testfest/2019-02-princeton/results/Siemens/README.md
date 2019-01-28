@@ -15,4 +15,6 @@ virtual servients that address almost all assertions given in the Thing Descript
 - [DataSchemaTest](../../TDs/Siemens/dataSchemaTest-siemens.json): Test all data schema aspects of the TD specification
 - [ReadWriteAllProperties](../../TDs/Siemens/readWriteAllProperties.json): Tests the readAll and writeAll properties feature. (tbd)
 
+## Results of the assertion  tests
+Please find [here](./siemens-results.html) the results of the assertation tests.
 
