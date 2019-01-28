@@ -1,0 +1,1 @@
+# Fujitsu's Thing Description
