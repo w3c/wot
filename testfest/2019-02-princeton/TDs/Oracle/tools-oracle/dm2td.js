@@ -92,7 +92,7 @@ for(var exKey in dm.attributes) {
 
   let name=prop.name;
  
-  // added object properties to handle read/write semantics
+  // added object properties to handle read/write
   prop.type="object";
   prop.properties= {};
   // handle uri type
@@ -113,13 +113,13 @@ for(var exKey in dm.attributes) {
     prop.forms = [{
         "href" :  base+"/attributes/"+iac.name,
         "contentType": "application/json",
-        "op": ["readproperty" ]
+        "op": ["readproperty", "writeproperty" ]
     }];
   } else {
     prop.forms = [{
       "href" :  base+"/attributes/"+iac.name,
       "contentType": "application/json",
-      "op": ["readproperty", "writeproperty" ]
+      "op": ["readproperty"]
     }];
   }
 
