@@ -1,0 +1,10 @@
+"Producer",             "Consumer",                     "Security",     "Status",   "Comment"
+"impl-intel-camera",    "impl-hitachi-nodegen",         "nosec",        "pass",
+"impl-intel-camera",    "impl-hitachi-nodegen",         "basic",        "pass",     "via portal.mmccool.net"
+"impl-intel-camera",    "impl-hitachi-nodegen",         "digest",       "pass",     "via portal.mmccool.net"
+"impl-intel-speak",     "impl-hitachi-nodegen",         "nosec",        "fail",     "ENOTFOUND sky.local sky.local:8085"
+"impl-intel-speak",     "impl-hitachi-nodegen",         "basic",        "pass",     "via portal.mmccool.net"
+"impl-intel-speak",     "impl-hitachi-nodegen",         "digest",       "pass",     "via portal.mmccool.net"
+"impl-panasonic-server-real",        "impl-hitachi-nodegen",     "bearer",     "pass", "Late-Binding is not supported"
+"impl-panasonic-server-simulator",   "impl-hitachi-nodegen",     "bearer",     "pass", 
+

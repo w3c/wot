@@ -1,0 +1,165 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/td",
+    {"iot": "http://iotschema.org/",
+     "http": "http://www.w3.org/2011/http#"}
+  ],
+  "base": "http://159.203.213.90:1880",
+  "security": [{ "scheme": "nosec" }],
+  "id": "urn:uuid:2d5e84f6-85c9-4436-b53f-c0669dfd1603",
+  "@type": [ "Thing", "iot:Light", "iot:BinarySwitch", "iot:Level" ],
+  "name": "Lamp",
+  "properties": {
+    "SwitchState": {
+      "@type": ["Property", "iot:SwitchState"],
+      "observable": false,
+      "writable": true,
+      "type": "object",
+      "properties": {
+        "on": {
+          "@type": ["iot:StateData"],
+          "type": "boolean"
+        }
+      },
+      "forms": [
+        {
+          "href": "/light",
+          "mediaType": "application/json",
+          "op": "readproperty",
+          "http:methodName": "GET"
+        },
+        {
+          "href": "/light",
+          "mediaType": "application/json",
+          "op": "writeproperty",
+          "http:methodName": "POST"
+        }
+      ]
+    },
+    "CurrentBrightness": {
+      "@type": ["Property", "iot:CurrentLevel"],
+      "observable": false,
+      "writable": true,
+      "type": "object",
+        "properties": {
+            "name": "bri",
+            "@type": ["iot:LevelData" ],
+            "type": "integer",
+            "min": 0,
+            "max": 254
+          },
+      "forms": [
+        {
+          "href": "/light",
+          "mediaType": "application/json",
+          "op": "readproperty",
+          "http:methodName": "GET"
+        },
+        {
+          "href": "/light",
+          "mediaType": "application/json",
+          "rel": "writeproperty",
+          "http:methodName": "POST"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "SwitchOn": {
+      "@type": ["Action", "iot:TurnOn"],
+      "input":  {
+        "type": "object",
+        "properties": {
+          "on": {
+            "type": "boolean",
+            "const": true
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/light",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST"
+        },
+        {
+          "href": "mqtt://0m2m.net:8099/plugfest/light/state",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "mqtt:qos":  1,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 6
+        }
+      ]
+    },
+    "SwitchOff": {
+      "@type": ["Action", "iot:TurnOff"],
+      "input":  {
+        "type": "object",
+        "properties": {
+          "on": {
+            "type": "boolean",
+            "const": false
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/light",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST"
+        },
+        {
+          "href": "mqtt://0m2m.net:8099/plugfest/light/state",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "mqtt:qos":  1,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 6
+        }
+      ]
+    },
+    "SetBrightnessLevel": {
+      "@type": ["Action", "iot:SetLevel"],
+      "input": {
+        "type": "object",
+        "properties": {
+          "bri": {
+            "@type": ["iot:LevelData"],
+            "type": "integer",
+            "min": 0,
+            "max": 254
+          },
+          "duration": {
+            "@type": ["iot:TransitionTimeData"],
+            "type": "integer",
+            "min": 0,
+            "max": 65535
+          },
+          "on": {
+            "@type": ["iot:StateData"],
+            "type": "boolean"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/light",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST"
+        },
+        {
+          "href": "mqtt://0m2m.net:8099/plugfest/light/state",
+          "mediaType": "application/json",
+          "op": "invokeaction",
+          "mqtt:qos":  1,
+          "mqtt:retain" : false,
+          "mqtt:commandCode": 6
+        }
+      ]
+    }
+  }
+}
