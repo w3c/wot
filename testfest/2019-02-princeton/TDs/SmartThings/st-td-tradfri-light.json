@@ -8,7 +8,10 @@
   "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability"],
   "id": "urn:uuid:fb60aafa-2e8a-4c51-a104-8639af043569",
   "securityDefinitions": {
-    "psk_sc": {"scheme": "psk"}
+    "psk_sc": {
+      "scheme": "psk", 
+      "identity": "wot-app"
+    }
   },
   "security": ["psk_sc"],
   "base": "coaps://192.168.1.13:5684",
