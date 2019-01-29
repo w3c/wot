@@ -11,22 +11,32 @@
         "security": ["basic_sc"],
 	"properties": {
                 "displaydata": {
-                        	"type": "string",
+                        	"type": "object",
 				"description": "A-Z, a-z, 0-9, symbols can be displayed",
 				"readOnly": false,
                                 "observable": false,
 				"writeOnly": true,
+				"properties": {
+					"displaydata": {
+						"type": "string"
+					}
+				},				
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/display"
 				}]
                 },
                 "temperature": {
-                        	"type": "number",
+                        	"type": "object",
 				"description": "Temperature Data",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
+				"properties": {
+					"temperature": {
+						"type": "number"
+					}
+				},							
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/temperature"
@@ -36,8 +46,13 @@
                         	"type": "number",
 				"description": "Pressure Data",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
+				"properties": {
+					"pressure": {
+						"type": "number"
+					}
+				},										
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/pressure"
@@ -47,8 +62,13 @@
                         	"type": "number",
 				"description": "Humidity Data",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
+				"properties": {
+					"humidity": {
+						"type": "number"
+					}
+				},							
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/humidity"
@@ -58,7 +78,7 @@
                         	"type": "object",
 				"description": "Time date",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
 				"properties": {
 					"year": {
