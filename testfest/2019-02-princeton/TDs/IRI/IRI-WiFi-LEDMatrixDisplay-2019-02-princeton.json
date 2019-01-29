@@ -1,0 +1,95 @@
+{
+	"name": "WiFi LED 8x48 Matrix Display",
+	"description": "WiFi LED 8x48 Matrix Display",
+	"id": "urn:dev:wot:jp:iri:wifidisplay",
+	"@context": "http://www.w3.org/ns/td",
+	"@type": "Thing",
+        "securityDefinitions": {"basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        }},
+        "security": ["basic_sc"],
+	"properties": {
+                "displaydata": {
+                        	"type": "string",
+				"description": "A-Z, a-z, 0-9, symbols can be displayed",
+				"readOnly": false,
+                                "observable": false,
+				"writeOnly": true,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.1.23/display"
+				}]
+                },
+                "temperature": {
+                        	"type": "number",
+				"description": "Temperature Data",
+				"readOnly": true,
+                                "observable": true,
+				"writeOnly": false,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.1.23/temperature"
+				}]
+                },
+                "pressure": {
+                        	"type": "number",
+				"description": "Pressure Data",
+				"readOnly": true,
+                                "observable": true,
+				"writeOnly": false,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.1.23/pressure"
+				}]
+                },
+                "humidity": {
+                        	"type": "number",
+				"description": "Humidity Data",
+				"readOnly": true,
+                                "observable": true,
+				"writeOnly": false,
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.1.23/humidity"
+				}]
+                },
+                "timedate": {
+                        	"type": "object",
+				"description": "Time date",
+				"readOnly": true,
+                                "observable": true,
+				"writeOnly": false,
+				"properties": {
+					"year": {
+						"type": "number"
+					},
+					"month": {
+						"type": "number"
+					},
+					"day": {
+						"type": "number"
+					},
+					"weekday": {
+						"type": "string"
+					},
+					"hour": {
+						"type": "number"
+					},
+					"min": {
+						"type": "number"
+					},
+					"sec": {
+						"type": "number"
+					},
+					"timezone": {
+						"type": "string"
+					}
+				},
+				"forms": [{
+					"contentType": "application/json",
+					"href": "http://192.168.1.23/timedate"
+				}]
+                }
+        }
+}

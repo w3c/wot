@@ -14,6 +14,11 @@ This report will detail which assertions of the specs are implemented for each i
 Results are to be recorded in CSV files using a specific directory structure (described below) to
 facilitate automated generation of the report.
 
+NOTE: Ignore most of the instructions below for updating results.  Instead, put TDs and CSV
+files in `inputs` and run `./update.sh` to put results in `outputs`.  See comments in `update.sh`
+for directory organization, etc.  You also have to set up the Thingweb/thingweb-playground submodule
+under wot/testing/tools.  
+
 You can participate to the Testfest by choosing one (or more) of the following roles:
 
 * [Implementation Owner](#implementation-owner) : You have a WoT consumer or producer implementation.

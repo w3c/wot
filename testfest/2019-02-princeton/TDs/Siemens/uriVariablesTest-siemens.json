@@ -1,0 +1,170 @@
+{
+    "name": "uriVariableTester",
+    "description": "TD that tests the uriVariables feature",
+    "@context": [
+        "http://www.w3.org/ns/td",
+        {"iot": "http://example.org/iot"}
+    ],
+    "@type": "Thing",
+    "security": ["nosec_sc"],
+    "properties": {"count": {
+        "type": "integer",
+        "description": "current counter value",
+        "iot:Custom": "example annotation",
+        "observable": true,
+        "writable": true,
+        "readOnly": false,
+        "writeOnly": false,
+        "forms": [
+            {
+                "href": "http://10.0.2.15:8080/counter/properties/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            },
+            {
+                "href": "http://10.0.2.15:8080/counter/properties/count/observable",
+                "contentType": "application/json",
+                "op": ["observeproperty"],
+                "subprotocol": "longpoll"
+            },
+            {
+                "href": "http://192.168.0.124:8080/counter/properties/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            },
+            {
+                "href": "http://192.168.0.124:8080/counter/properties/count/observable",
+                "contentType": "application/json",
+                "op": ["observeproperty"],
+                "subprotocol": "longpoll"
+            },
+            {
+                "href": "coap://10.0.2.15:5683/counter/pr/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            },
+            {
+                "href": "coap://192.168.0.124:5683/counter/pr/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            }
+        ]
+    }},
+    "actions": {
+        "increment": {
+            "description": "Incrementing counter value with optional step value as uriVariable",
+            "uriVariables": {"step": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 250
+            }},
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/counter/actions/increment{?step}",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/counter/actions/increment{?step}",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/counter/ac/increment{?step}",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/counter/ac/increment{?step}",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "decrement": {
+            "description": "Decrementing counter value with optional step value as uriVariable",
+            "uriVariables": {"step": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 250
+            }},
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/counter/actions/decrement",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/counter/actions/decrement",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/counter/ac/decrement",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/counter/ac/decrement",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "reset": {
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/counter/actions/reset",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/counter/actions/reset",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/counter/ac/reset",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/counter/ac/reset",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        }
+    },
+    "id": "urn:uuid:d2bca7fb-6af9-4dbc-878d-7d558b210465",
+    "support": "git://github.com/eclipse/thingweb.node-wot.git",
+    "forms": [
+        {
+            "href": "http://10.0.2.15:8080/counter/all/properties",
+            "contentType": "application/json"
+        },
+        {
+            "href": "http://192.168.0.124:8080/counter/all/properties",
+            "contentType": "application/json"
+        }
+    ],
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
+}
