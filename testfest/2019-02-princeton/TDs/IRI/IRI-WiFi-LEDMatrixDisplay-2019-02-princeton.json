@@ -11,11 +11,12 @@
         "security": ["basic_sc"],
 	"properties": {
                 "displaydata": {
-                        	"type": "string",
+                        	"type": "object",
 				"description": "A-Z, a-z, 0-9, symbols can be displayed",
 				"readOnly": false,
                                 "observable": false,
 				"writeOnly": true,
+				
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/display"
@@ -25,7 +26,7 @@
                         	"type": "number",
 				"description": "Temperature Data",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
 				"forms": [{
 					"contentType": "application/json",
@@ -36,7 +37,7 @@
                         	"type": "number",
 				"description": "Pressure Data",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
 				"forms": [{
 					"contentType": "application/json",
@@ -47,7 +48,7 @@
                         	"type": "number",
 				"description": "Humidity Data",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
 				"forms": [{
 					"contentType": "application/json",
@@ -58,7 +59,7 @@
                         	"type": "object",
 				"description": "Time date",
 				"readOnly": true,
-                                "observable": true,
+                                "observable": false,
 				"writeOnly": false,
 				"properties": {
 					"year": {
