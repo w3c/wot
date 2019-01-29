@@ -35,6 +35,6 @@
             }
         ]
     }},
-    "securityDefinitions": {"basic_sc": {"scheme": "basic"}}
+    "securityDefinitions": {"basic_sc": {"scheme": "basic","in":"header"}}
 }
 
