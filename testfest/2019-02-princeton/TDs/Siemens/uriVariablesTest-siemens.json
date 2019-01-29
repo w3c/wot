@@ -72,22 +72,22 @@
             }},
             "forms": [
                 {
-                    "href": "http://10.0.2.15:8080/counter/actions/increment",
+                    "href": "http://10.0.2.15:8080/counter/actions/increment{?query}",
                     "contentType": "application/json",
                     "op": ["invokeaction"]
                 },
                 {
-                    "href": "http://192.168.0.124:8080/counter/actions/increment",
+                    "href": "http://192.168.0.124:8080/counter/actions/increment{?query}",
                     "contentType": "application/json",
                     "op": ["invokeaction"]
                 },
                 {
-                    "href": "coap://10.0.2.15:5683/counter/ac/increment",
+                    "href": "coap://10.0.2.15:5683/counter/ac/increment{?query}",
                     "contentType": "application/json",
                     "op": "invokeaction"
                 },
                 {
-                    "href": "coap://192.168.0.124:5683/counter/ac/increment",
+                    "href": "coap://192.168.0.124:5683/counter/ac/increment{?query}",
                     "contentType": "application/json",
                     "op": "invokeaction"
                 }
