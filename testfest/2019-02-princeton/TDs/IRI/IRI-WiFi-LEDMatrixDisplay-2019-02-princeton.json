@@ -16,18 +16,27 @@
 				"readOnly": false,
                                 "observable": false,
 				"writeOnly": true,
-				
+				"properties": {
+					"displaydata": {
+						"type": "string"
+					}
+				},				
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/display"
 				}]
                 },
                 "temperature": {
-                        	"type": "number",
+                        	"type": "object",
 				"description": "Temperature Data",
 				"readOnly": true,
                                 "observable": false,
 				"writeOnly": false,
+				"properties": {
+					"temperature": {
+						"type": "number"
+					}
+				},							
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/temperature"
@@ -39,6 +48,11 @@
 				"readOnly": true,
                                 "observable": false,
 				"writeOnly": false,
+				"properties": {
+					"pressure": {
+						"type": "number"
+					}
+				},										
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/pressure"
@@ -50,6 +64,11 @@
 				"readOnly": true,
                                 "observable": false,
 				"writeOnly": false,
+				"properties": {
+					"humidity": {
+						"type": "number"
+					}
+				},							
 				"forms": [{
 					"contentType": "application/json",
 					"href": "http://192.168.1.23/humidity"
