@@ -70,7 +70,7 @@
     },
     "onoff": {
       "observable": false,
-      "readOnly": false,
+      "readOnly": true,
       "writeOnly": false,
       "label": "OnOff",
       "@type": ["iot:SwitchStatus"],
@@ -94,7 +94,7 @@
     },
     "brightness": {
       "observable": false,
-      "readOnly": false,
+      "readOnly": true,
       "writeOnly": false,
       "label": "Brightness",
       "@type": ["iot:CurrentLevel"],
