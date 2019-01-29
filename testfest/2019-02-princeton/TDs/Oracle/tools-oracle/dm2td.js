@@ -75,12 +75,12 @@ for(var exKey in dm.attributes) {
   var prop={};
   prop.name=iac.name;
   prop.description=iac.description;
-  if (iac.type.toLowerCase()!="uri") {
-    prop.type=iac.type.toLowerCase();
-  } else {
-    prop.type="string";
-    prop.format="uri";
-  }
+  // if (iac.type.toLowerCase()!="uri") {
+  //   prop.type=iac.type.toLowerCase();
+  // } else {
+  //   prop.type="string";
+  //   prop.format="uri";
+  // }
   prop.readOnly = !iac.writable;
   prop.writeOnly = false;
   prop.observable = false;
@@ -91,32 +91,35 @@ for(var exKey in dm.attributes) {
   };
 
   let name=prop.name;
-  // added object properties
+ 
+  // added object properties to handle read/write semantics
   prop.type="object";
   prop.properties= {};
-
-  // handle uri
-  if (iac.argType.toLowerCase()!="uri") {
+  // handle uri type
+  if (iac.type.toLowerCase()!="uri"){
     prop.properties.value={
-      "type": iac.type.toLowerCase(),
-      "writable": true
-  };
+        "type": iac.type.toLowerCase(),
+    };
   } else {
-    prop.properties.type="string";
-    prop.properties.format="uri";
-  }  
+    prop.properties.value={
+      "type": "uri",
+      "format": "string",
+    };
+  }
 
+  prop.properties.value.writable=iac.writable?"true":"false";
+ 
   if (iac.writable) {
     prop.forms = [{
-      "href" :  base+"/attributes/"+iac.name,
-      "contentType": "application/json",
-      "op": ["readproperty", "writeproperty"]
+        "href" :  base+"/attributes/"+iac.name,
+        "contentType": "application/json",
+        "op": ["readproperty" ]
     }];
   } else {
     prop.forms = [{
       "href" :  base+"/attributes/"+iac.name,
       "contentType": "application/json",
-      "op": ["readproperty"]
+      "op": ["readproperty", "writeproperty" ]
     }];
   }
 
