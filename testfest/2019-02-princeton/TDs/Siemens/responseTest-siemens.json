@@ -1,4 +1,6 @@
 {
+"@context": ["http://www.w3.org/ns/td",
+    {"http": "http://www.w3.org/2011/http#"}],
     "id": "urn:dev:wot:org:eclipse:thingweb:response-example",
     "name": "Siemens-ResponseTest",
     "description": "Test different contentType for requests and responses.",
@@ -9,6 +11,7 @@
         "description": "You want a smile? Provide the number of smiles :-)",
         "input": {"type": "integer"},
         "output": {"type": "string"},
+        "http:methodName": "POST",
         "forms": [{
             "href": "http://192.168.0.124:8089/smileGenerator",
             "contentType": "application/json",
