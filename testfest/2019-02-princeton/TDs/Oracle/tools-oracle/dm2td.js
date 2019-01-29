@@ -75,7 +75,12 @@ for(var exKey in dm.attributes) {
   var prop={};
   prop.name=iac.name;
   prop.description=iac.description;
-  prop.type=iac.type.toLowerCase();
+  // if (iac.type.toLowerCase()!="uri") {
+  //   prop.type=iac.type.toLowerCase();
+  // } else {
+  //   prop.type="string";
+  //   prop.format="uri";
+  // }
   prop.readOnly = !iac.writable;
   prop.writeOnly = false;
   prop.observable = false;
@@ -86,28 +91,35 @@ for(var exKey in dm.attributes) {
   };
 
   let name=prop.name;
-  // added object properties
+ 
+  // added object properties to handle read/write semantics
   prop.type="object";
   prop.properties= {};
-  if (iac.writable) {
+  // handle uri type
+  if (iac.type.toLowerCase()!="uri"){
     prop.properties.value={
         "type": iac.type.toLowerCase(),
-        "writable": true
     };
-    prop.forms = [{
-      "href" :  base+"/attributes/"+iac.name,
-      "contentType": "application/json",
-      "op": ["readproperty", "writeproperty"]
-    }];
   } else {
     prop.properties.value={
-      "type": iac.type.toLowerCase(),
-      "writable": false
+      "type": "uri",
+      "format": "string",
     };
+  }
+
+  prop.properties.value.writable=iac.writable?"true":"false";
+ 
+  if (iac.writable) {
+    prop.forms = [{
+        "href" :  base+"/attributes/"+iac.name,
+        "contentType": "application/json",
+        "op": ["readproperty" ]
+    }];
+  } else {
     prop.forms = [{
       "href" :  base+"/attributes/"+iac.name,
       "contentType": "application/json",
-      "op": ["readproperty"]
+      "op": ["readproperty", "writeproperty" ]
     }];
   }
 
@@ -138,7 +150,12 @@ for(var exKey in dm.actions) {
     
     inp.properties={};
     inp.properties.value={};
-    inp.properties.value.type=iac.argType.toLowerCase();
+    if (iac.argType.toLowerCase()!="uri") {
+      inp.properties.value.type=iac.argType.toLowerCase();
+    } else {
+      inp.properties.value.type="string";
+      inp.properties.value.format="uri";
+    }  
     if (iac.range) {
       inp.minimum=iac.range.split(",")[0];
       inp.maximum=iac.range.split(",")[1];
