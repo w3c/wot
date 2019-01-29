@@ -17,7 +17,15 @@ function process() {
   (
     cd ../../testing/tools/thingweb-playground/AssertionTester
     echo "npm run-script testTD $Input $Output"
-    # npm run-script testTD $Input $Output
+    npm run-script testTD $Input $Output
+    Extras="${Input%.*}.csv"
+    Temp="${Extras}.temp"
+    if [[ -f $Extras ]]; then
+      echo "node mergeResults.js $Output $Extras > $Temp"
+      node mergeResults.js $Output $Extras > $Temp
+      echo "mv $Temp $Output"
+      mv $Temp $Output
+    fi
   )
   echo "<<<<<<<<<<<< Output written to $Output"
   # touch $Output
@@ -28,8 +36,8 @@ function merge() {
   echo ">>>>>>>>>>>> Merge: ${Inputs[@]}"
   (
     cd ../../testing/tools/thingweb-playground/AssertionTester
-    echo "node mergeResults.js ${Inputs[@]} $Output"
-    node mergeResults.js ${Inputs[@]} $Output
+    echo "node mergeResults.js ${Inputs[@]} > $Output"
+    node mergeResults.js ${Inputs[@]} > $Output
   )
   echo "<<<<<<<<<<<< Output written to $Output"
   # touch $Output
@@ -69,6 +77,9 @@ for OrgDir in inputs/* ; do
              fi
           done
           Inputs=($AbsOutDir/*.csv)
+          if [[ -f $AbsOrgDir/$Impl.csv ]]; then
+            Inputs=($AbsOrgDir/$Impl.csv "${Inputs[@]}")
+          fi
           merge $Inputs $AbsOutOrgDir/$Impl.csv
        fi
     done
