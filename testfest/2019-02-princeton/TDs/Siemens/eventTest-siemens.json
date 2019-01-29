@@ -13,15 +13,15 @@
                 "subscription" : {
                     "type" : "object",
                     "properties" : {
-                        "targetURL" : {"type" : "string", "writeOnly": "true", "description": "Requester provides the target URL to which Thing the event should be provided"},
-                        "subscriptionID" : {"type": "integer", "readOnly": "true", "description": "Responses an unique subscription ID."}
+                        "targetURL" : {"type" : "string", "writeOnly": true, "description": "Requester provides the target URL to which Thing the event should be provided"},
+                        "subscriptionID" : {"type": "integer", "readOnly": true, "description": "Responses an unique subscription ID."}
                     }
                 },
                 "data" : {"type" : "number", "description" : "Actual temperature value. Please note that there are no forms to subscribe directly to the temperature value."},
                 "cancellation" : {
                     "type" : "object",
                     "properties" : {
-                        "subscriptionID" : {"type": "integer", "writeOnly": "true", "description": "Provide subscription ID that have to be cancelled."}
+                        "subscriptionID" : {"type": "integer", "writeOnly": true, "description": "Provide subscription ID that have to be cancelled."}
                     }
                 },
                 "forms": [
