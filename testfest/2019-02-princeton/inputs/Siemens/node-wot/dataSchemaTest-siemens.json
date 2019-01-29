@@ -122,6 +122,11 @@
         "fullData": {
             "type": "object",
             "properties": {
+                "waterLevel": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
                 "brightness": {
                     "type": "number",
                     "minimum": 0,
@@ -284,6 +289,16 @@
             ]
         }
     },
-    "id": "urn:uuid:f4166549-8ebd-4eef-bc61-620f2ad0fb39",
+    "id": "urn:uuid:a622e343-de01-43dc-a801-71808b8e4de7",
+    "forms": [
+        {
+            "href": "http://10.0.2.15:8080/Siemens-DataSchema-Tester/all/properties",
+            "contentType": "application/json"
+        },
+        {
+            "href": "http://192.168.0.124:8080/Siemens-DataSchema-Tester/all/properties",
+            "contentType": "application/json"
+        }
+    ],
     "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
 }
