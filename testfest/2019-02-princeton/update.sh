@@ -13,13 +13,25 @@
 function process() {
   Input=$1
   Output=$2
-  echo "**** Process: $Input -> $Output"
+  echo ">>>>>>>>>>>> Processing: $Input"
+  (
+    cd ../../testing/tools/thingweb-playground/AssertionTester
+    echo "npm run-script testTD $Input $Output"
+    # npm run-script testTD $Input $Output
+  )
+  echo "<<<<<<<<<<<< Output written to $Output"
   # touch $Output
 }
 function merge() {
   Inputs=$1
   Output=$2
-  echo "**** Merge: $Inputs -> $Output"
+  echo ">>>>>>>>>>>> Merge: ${Inputs[@]}"
+  (
+    cd ../../testing/tools/thingweb-playground/AssertionTester
+    echo "node mergeResults.js ${Inputs[@]} $Output"
+    node mergeResults.js ${Inputs[@]} $Output
+  )
+  echo "<<<<<<<<<<<< Output written to $Output"
   # touch $Output
 }
 for OrgDir in inputs/* ; do
@@ -44,19 +56,20 @@ for OrgDir in inputs/* ; do
           export Impl=$(basename $ImplPath)
           echo "  Processing implementation $Org/$Impl"
           echo "    under $ImplPath"
+          mkdir -p outputs/$Org/$Impl
+          export AbsOutOrgDir=$(cd outputs/$Org; pwd)
+          export AbsOutDir=$(cd outputs/$Org/$Impl; pwd)
           for InstancePath in $ImplPath/*.jsonld ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 export Instance="${InstanceFile%.*}"
                 echo "    Processing instance $Org/$Impl/$Instance"
                 echo "      in $InstancePath"
-                mkdir -p outputs/$Org/$Impl
-                export AbsOutDir=$(cd outputs/$Org/$Impl; pwd)
                 process $InstancePath $AbsOutDir/$Instance.csv
              fi
           done
-          mkdir -p outputs/$Org
-          touch outputs/$Org/$Impl.csv
+          Inputs=($AbsOutDir/*.csv)
+          merge $Inputs $AbsOutOrgDir/$Impl.csv
        fi
     done
   fi
