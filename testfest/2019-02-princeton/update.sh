@@ -10,3 +10,32 @@
 #      will be written to outputs/Org/S.csv
 # An implementation description may also be included in the inputs as Org/org.html;
 # these should include descriptions of all implementations.
+for OrgDir in inputs/*/ ; do
+  if [[ -d $OrgDir ]]; then
+    export AbsOrgDir=$(cd $OrgDir; pwd)
+    export Org=$(basename $AbsOrgDir)
+    # echo "Processing organization $Org in $AbsOrgDir"
+    echo "Processing organization $Org"
+    for ImplPath in $AbsOrgDir/*.jsonld ; do
+       if [[ -f $ImplPath ]]; then
+          export Impl=$(basename $ImplPath)
+          # echo "  Processing implementation $Org/$Impl in $ImplPath"
+          echo "  Processing implementation $Org/$Impl"
+       fi
+    done
+    for ImplPath in $AbsOrgDir/*/ ; do
+       if [[ -d $ImplPath ]]; then
+          export Impl=$(basename $ImplPath)
+          # echo "  Processing implementation $Org/$Impl under $ImplPath"
+          echo "  Processing implementation $Org/$Impl"
+          for InstancePath in $ImplPath/*.jsonld ; do
+             if [[ -f $InstancePath ]]; then
+                export Instance=$(basename $InstancePath)
+                # echo "    Processing instance $Org/$Impl/$Instance in $InstancePath"
+                echo "    Processing instance $Org/$Impl/$Instance"
+             fi
+          done
+       fi
+    done
+  fi
+done
