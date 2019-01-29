@@ -10,14 +10,29 @@
 "td-action-arrays_forms","not-impl","data should have required property 'actions'"
 "td-action-arrays_scopes","not-impl","data should have required property 'actions'"
 "td-action-arrays_security","not-impl","data should have required property 'actions'"
-"td-action-names","not-impl","data should have required property 'actions'"
-"td-action-names","not-impl","data should have required property 'actions'"
-"td-action-objects","not-impl","data should have required property 'actions'"
+"td-action-names","not-impl","Error message can be seen in the children assertions"
+"td-action-names_description","not-impl","data should have required property 'actions'"
+"td-action-names_descriptions","not-impl","data should have required property 'actions'"
+"td-action-names_forms","not-impl","data should have required property 'actions'"
+"td-action-names_idempotent","not-impl","data should have required property 'actions'"
+"td-action-names_output","not-impl","data should have required property 'actions'"
+"td-action-names_output","not-impl","data should have required property 'actions'"
+"td-action-names_safe","not-impl","data should have required property 'actions'"
+"td-action-names_scopes","not-impl","data should have required property 'actions'"
+"td-action-names_security","not-impl","data should have required property 'actions'"
+"td-action-names_title","not-impl","data should have required property 'actions'"
+"td-action-names_titles","not-impl","data should have required property 'actions'"
+"td-action-names_uriVariables","not-impl","data should have required property 'actions'"
+"td-action-objects","not-impl","Error message can be seen in the children assertions"
+"td-action-objects_input","not-impl","data should have required property 'actions'"
+"td-action-objects_output","not-impl","data should have required property 'actions'"
 "td-actions","not-impl","Error message can be seen in the children assertions"
 "td-actions_existence","not-impl","data should have required property 'actions'"
 "td-actions_uniqueness","pass",
 "td-additional-contexts","pass",
 "td-arrays","not-impl","Error message can be seen in the children assertions"
+"td-arrays_forms","pass",
+"td-arrays_links","not-impl","data should have required property 'links'"
 "td-arrays_scopes","not-impl",
 "td-arrays_security","pass",
 "td-at-type","pass",
@@ -51,9 +66,29 @@
 "td-data-schema_type","pass",
 "td-data-schema_unit","not-impl",
 "td-data-schema_writeOnly","not-impl",
+"td-event-arrays","not-impl","Error message can be seen in the children assertions"
 "td-event-arrays","not-impl","data should have required property 'events'"
+"td-event-arrays_forms","not-impl","data should have required property 'events'"
+"td-event-arrays_scopes","not-impl","data should have required property 'events'"
+"td-event-arrays_security","not-impl","data should have required property 'events'"
 "td-event-names","not-impl","data should have required property 'events'"
+"td-event-names","not-impl","Error message can be seen in the children assertions"
+"td-event-names_cancellation","not-impl","data should have required property 'events'"
+"td-event-names_data","not-impl","data should have required property 'events'"
+"td-event-names_description","not-impl","data should have required property 'events'"
+"td-event-names_descriptions","not-impl","data should have required property 'events'"
+"td-event-names_forms","not-impl","data should have required property 'events'"
+"td-event-names_scopes","not-impl","data should have required property 'events'"
+"td-event-names_security","not-impl","data should have required property 'events'"
+"td-event-names_subscription","not-impl","data should have required property 'events'"
+"td-event-names_title","not-impl","data should have required property 'events'"
+"td-event-names_titles","not-impl","data should have required property 'events'"
+"td-event-names_uriVariables","not-impl","data should have required property 'events'"
+"td-event-objects","not-impl","Error message can be seen in the children assertions"
 "td-event-objects","not-impl","data should have required property 'events'"
+"td-event-objects_cancellation","not-impl","data should have required property 'events'"
+"td-event-objects_data","not-impl","data should have required property 'events'"
+"td-event-objects_subscription","not-impl","data should have required property 'events'"
 "td-event-response-object","not-impl",
 "td-events","not-impl","Error message can be seen in the children assertions"
 "td-events_existence","not-impl","data should have required property 'events'"
@@ -80,33 +115,34 @@
 "td-properties","pass",
 "td-properties_existence","pass",
 "td-properties_uniqueness","pass",
-"td-property-arrays","not-impl","data.properties['power'] should have required property 'scopes', data.properties['power'] should have required property 'security', data.properties['rgbValue'] should have required property 'scopes', data.properties['rgbValue'] should have required property 'security'"
+"td-property-arrays","not-impl","Error message can be seen in the children assertions"
+"td-property-arrays_forms","pass",
+"td-property-arrays_scopes","not-impl",
+"td-property-arrays_security","not-impl",
 "td-property-names","not-impl","Error message can be seen in the children assertions"
-"td-property-names_const","not-impl",
-"td-property-names_description","not-impl",
-"td-property-names_descriptions","not-impl",
-"td-property-names_enum","not-impl",
+"td-property-names_const","not-impl","data.properties['power'] should have required property 'const', data.properties['rgbValue'] should have required property 'const'"
+"td-property-names_description","not-impl","data.properties['power'] should have required property 'description', data.properties['rgbValue'] should have required property 'description'"
+"td-property-names_descriptions","not-impl","data.properties['power'] should have required property 'descriptions', data.properties['rgbValue'] should have required property 'descriptions'"
+"td-property-names_enum","not-impl","data.properties['power'] should have required property 'enum', data.properties['rgbValue'] should have required property 'enum'"
 "td-property-names_forms","pass",
-"td-property-names_items","not-impl",
-"td-property-names_maxItems","not-impl",
-"td-property-names_maximum1","not-impl",
-"td-property-names_maximum2","not-impl",
-"td-property-names_minItems","not-impl",
-"td-property-names_minimum1","not-impl",
-"td-property-names_minimum2","not-impl",
+"td-property-names_items","not-impl","data.properties['power'] should have required property 'items', data.properties['rgbValue'] should have required property 'items'"
+"td-property-names_maxItems","not-impl","data.properties['power'] should have required property 'maxItems', data.properties['rgbValue'] should have required property 'maxItems'"
+"td-property-names_maximum","not-impl","data.properties['power'] should have required property 'maximum', data.properties['rgbValue'] should have required property 'maximum'"
+"td-property-names_minItems","not-impl","data.properties['power'] should have required property 'minItems', data.properties['rgbValue'] should have required property 'minItems'"
+"td-property-names_minimum","not-impl","data.properties['power'] should have required property 'minimum', data.properties['rgbValue'] should have required property 'minimum'"
 "td-property-names_observable","pass",
-"td-property-names_oneOf","not-impl",
-"td-property-names_properties","pass",
-"td-property-names_readOnly","not-impl",
-"td-property-names_required","not-impl",
+"td-property-names_oneOf","not-impl","data.properties['power'] should have required property 'oneOf', data.properties['rgbValue'] should have required property 'oneOf'"
+"td-property-names_properties","not-impl","data.properties['power'] should have required property 'properties'"
+"td-property-names_readOnly","not-impl","data.properties['power'] should have required property 'readOnly', data.properties['rgbValue'] should have required property 'readOnly'"
+"td-property-names_required","not-impl","data.properties['power'] should have required property 'required', data.properties['rgbValue'] should have required property 'required'"
 "td-property-names_scopes","not-impl",
 "td-property-names_security","not-impl",
 "td-property-names_title","pass",
-"td-property-names_titles","not-impl",
+"td-property-names_titles","not-impl","data.properties['power'] should have required property 'titles', data.properties['rgbValue'] should have required property 'titles'"
 "td-property-names_type","pass",
-"td-property-names_unit","not-impl",
-"td-property-names_uriVariables","not-impl",
-"td-property-names_writeOnly","not-impl",
+"td-property-names_unit","not-impl","data.properties['power'] should have required property 'unit', data.properties['rgbValue'] should have required property 'unit'"
+"td-property-names_uriVariables","not-impl","data.properties['power'] should have required property 'uriVariables', data.properties['rgbValue'] should have required property 'uriVariables'"
+"td-property-names_writeOnly","not-impl","data.properties['power'] should have required property 'writeOnly', data.properties['rgbValue'] should have required property 'writeOnly'"
 "td-readOnly-observable-default","null","not testable with Assertion Tester"
 "td-readOnly-observable-writeOnly-default","null","not testable with Assertion Tester"
 "td-security-binding","null","not testable with Assertion Tester"
