@@ -1,0 +1,131 @@
+{
+    "name": "Siemens-ReadWriteAllProperties-Tester",
+    "description": "Tests the read / write all of properties feature.",
+    "@context": [
+        "http://www.w3.org/ns/td",
+        {"http": "http://www.w3.org/2011/http#"}
+    ],
+    "versioning": {"instance": "1.0.0"},
+    "support": "none",
+    "forms": [
+        {
+            "href": "http://10.0.2.15:8080/Siemens-ReadWriteAllProperties-Tester/properties",
+            "contentType": "application/json",
+            "op": ["readallproperties", "writeallproperties"]
+            }
+    ],
+    "@type": "Thing",
+    "security": ["nosec_sc"],
+    "properties": {
+        "status": {
+            "type": "string",
+            "enum": [
+                "On",
+                "Off",
+                "Error"
+            ],
+            "title": "Status",
+            "titles": {
+                "en": "Status",
+                "de": "Zustand"
+            },
+            "description": "Status of the Thing",
+            "descriptions": {
+                "en": "Latest status of the Thing",
+                "de": "Aktuelle Thing-Zustand"
+            },
+            "observable": true,
+            "readOnly": false,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-ReadWriteAllProperties-Tester/properties/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-ReadWriteAllProperties-Tester/properties/status/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-ReadWriteAllProperties-Tester/properties/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-ReadWriteAllProperties-Tester/properties/status/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/Siemens-ReadWriteAllProperties-Tester/pr/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/Siemens-ReadWriteAllProperties-Tester/pr/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ]
+        },
+        "brightness": {
+            "type": "integer",
+            "description": "current brightness value",
+            "observable": true,
+            "readOnly": true,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-ReadWriteAllProperties-Tester/properties/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                },
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-ReadWriteAllProperties-Tester/properties/brightness/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-ReadWriteAllProperties-Tester/properties/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-ReadWriteAllProperties-Tester/properties/brightness/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/Siemens-ReadWriteAllProperties-Tester/pr/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/Siemens-ReadWriteAllProperties-Tester/pr/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:075a7d87-39d8-47a0-80de-e66cf2c87f8b",
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
+}
