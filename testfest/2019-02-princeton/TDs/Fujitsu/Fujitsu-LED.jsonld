@@ -1,0 +1,168 @@
+{
+	"name": "GeneralLighting-000e7b137c10029001",
+	"securityDefinitions": {
+		"nonec_sc": {
+			"scheme": "basic"
+		}
+	},
+	"security":["nonesec_sc"],
+	"id": "000e7b137c10029001",
+	"properties": {
+		"FF": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/FF"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"SetList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/SetList"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"ProductCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/ProductCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"ManufactureDate": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/ManufactureDate"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"IlluminancePercentage": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/IlluminancePercentage"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"CheckIPStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/CheckIPStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"SpecVersionInfoCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/SpecVersionInfoCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"GetList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/GetList"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"DeviceConnectStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/DeviceConnectStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"MakerCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/MakerCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"FaultStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/FaultStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"DeviceRunningStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/DeviceRunningStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"OperationStatus": {
+			"observable": false,
+			"type": "string",
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/OperationStatus"
+				}
+			],
+			"enum": [
+				"ON",
+				"OFF"
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"NotifyList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/NotifyList"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		},
+		"PlaceOfBusinessCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/property/PlaceOfBusinessCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly":true
+		}
+	},
+	"base": "http://wot.f-ncs.ad.jp/Things/000e7b137c10029001/"
+}
