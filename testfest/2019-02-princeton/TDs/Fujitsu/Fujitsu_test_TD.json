@@ -1,0 +1,175 @@
+{
+    "id": "urn:dev:wot:fujitsu:fullservient",
+    "created": "Mo, 28 Jan 2019 12:45:26 GMT",
+    "lastModified": "2019-01-28T18:47:55.282Z",
+    "links": [{
+        "href": "http://./parentThing",
+        "rel": "controlledBy",
+        "type": "application/td+json",
+        "anchor": "#td"
+    }],
+    "security": ["nosec_sc"],
+    "support": "mailto:christian.glomb@siemens.com",
+    "descriptions": {"en": "Full example Thing with different kind of interactions"},
+    "version": {"instance": "0.1"},
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}},
+    "name": "full",
+    "description": "Full example Thing with different kind of interactions",
+    "@context": [
+        "http://www.w3.org/ns/td",
+        {"iot": "http://example.org/iot"}
+    ],
+    "@type": "Thing",
+    "properties": {"count": {
+        "type": "integer",
+        "description": "current counter value",
+        "iot:Custom": "example annotation",
+        "observable": true,
+        "writable": true,
+        "readOnly": false,
+        "writeOnly": false,
+        "forms": [
+            {
+                "href": "http://10.0.2.15:8080/full/properties/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            },
+            {
+                "href": "http://10.0.2.15:8080/full/properties/count/observable",
+                "contentType": "application/json",
+                "op": ["observeproperty"],
+                "subprotocol": "longpoll"
+            },
+            {
+                "href": "http://192.168.0.124:8080/full/properties/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            },
+            {
+                "href": "http://192.168.0.124:8080/full/properties/count/observable",
+                "contentType": "application/json",
+                "op": ["observeproperty"],
+                "subprotocol": "longpoll"
+            },
+            {
+                "href": "coap://10.0.2.15:5683/full/pr/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            },
+            {
+                "href": "coap://192.168.0.124:5683/full/pr/count",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            }
+        ]
+    }},
+    "actions": {
+        "increment": {
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/full/actions/increment",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/full/actions/increment",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/full/ac/increment",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/full/ac/increment",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "decrement": {
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/full/actions/decrement",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/full/actions/decrement",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/full/ac/decrement",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/full/ac/decrement",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "reset": {
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/full/actions/reset",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/full/actions/reset",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/full/ac/reset",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/full/ac/reset",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        }
+    },
+    "events": {"onchange": {
+        "data": {"type": "integer"},
+        "forms": [
+            {
+                "href": "http://10.0.2.15:8080/full/events/onchange",
+                "contentType": "application/json",
+                "subprotocol": "longpoll",
+                "op": ["subscribeevent"]
+            },
+            {
+                "href": "http://192.168.0.124:8080/full/events/onchange",
+                "contentType": "application/json",
+                "subprotocol": "longpoll",
+                "op": ["subscribeevent"]
+            }
+        ]
+    }}
+}

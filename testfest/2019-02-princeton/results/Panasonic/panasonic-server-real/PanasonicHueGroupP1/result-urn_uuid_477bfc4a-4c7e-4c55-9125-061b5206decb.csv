@@ -52,10 +52,10 @@
 "td-data-schema_enum","not-impl",
 "td-data-schema_items","not-impl",
 "td-data-schema_maxItems","not-impl",
-"td-data-schema_maximum1","not-impl",
+"td-data-schema_maximum1","pass",
 "td-data-schema_maximum2","not-impl",
 "td-data-schema_minItems","not-impl",
-"td-data-schema_minimum1","not-impl",
+"td-data-schema_minimum1","pass",
 "td-data-schema_minimum2","not-impl",
 "td-data-schema_oneOf","not-impl",
 "td-data-schema_properties","pass",
@@ -97,8 +97,8 @@
 "td-forms-response","not-impl",
 "td-integer-type","not-impl",
 "td-jsonld-keywords","pass",
-"td-jsonld-keywords_@context","pass",
-"td-jsonld-keywords_@type","pass",
+"td-jsonld-keywords_at-context","pass",
+"td-jsonld-keywords_at-type","pass",
 "td-links","not-impl","data should have required property 'links'"
 "td-media-type","null","not testable with Assertion Tester"
 "td-multi-languages","not-impl","Error message can be seen in the children assertions"
@@ -192,10 +192,10 @@
 "td-vocab-lastModified","not-impl","data should have required property 'lastModified'"
 "td-vocab-links","not-impl","data should have required property 'links'"
 "td-vocab-maxItems","not-impl",
-"td-vocab-maximum-1","not-impl",
+"td-vocab-maximum-1","pass",
 "td-vocab-maximum-2","not-impl",
 "td-vocab-minItems","not-impl",
-"td-vocab-minimum-1","not-impl",
+"td-vocab-minimum-1","pass",
 "td-vocab-minimum-2","not-impl",
 "td-vocab-name-1","pass",
 "td-vocab-name-2","not-impl",
