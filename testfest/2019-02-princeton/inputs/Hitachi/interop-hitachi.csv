@@ -2,7 +2,7 @@
 "impl-intel-camera",    "impl-hitachi-nodegen",         "nosec",        "pass",
 "impl-intel-camera",    "impl-hitachi-nodegen",         "basic",        "pass",     "via portal.mmccool.net"
 "impl-intel-camera",    "impl-hitachi-nodegen",         "digest",       "pass",     "via portal.mmccool.net"
-"impl-intel-speak",     "impl-hitachi-nodegen",         "nosec",        "fail",     "ENOTFOUND sky.local sky.local:8085"
+"impl-intel-speak",     "impl-hitachi-nodegen",         "nosec",        "pass",     
 "impl-intel-speak",     "impl-hitachi-nodegen",         "basic",        "pass",     "via portal.mmccool.net"
 "impl-intel-speak",     "impl-hitachi-nodegen",         "digest",       "pass",     "via portal.mmccool.net"
 "impl-intel-ocf",       "impl-hitachi-nodegen",         "nosec",        "pass",
@@ -10,4 +10,5 @@
 "impl-intel-ocf",       "impl-hitachi-nodegen",         "digest",        "pass",    "via tiktok.mmccool.net"
 "impl-panasonic-server-real",        "impl-hitachi-nodegen",     "bearer",     "pass", "Late-Binding is not supported"
 "impl-panasonic-server-simulator",   "impl-hitachi-nodegen",     "bearer",     "pass", 
-"impl-SmartThings-1",   "impl-hitachi-nodegen",         "nosec",        "fail",     "can't write property 'brightness'"
+"impl-SmartThings-1",   "impl-hitachi-nodegen",         "nosec",        "pass",
+"impl-oracle-simulators","impl-hitachi-nodegen",        "basic",        "pass",
