@@ -52,10 +52,10 @@
 "td-data-schema_enum","not-impl",
 "td-data-schema_items","not-impl",
 "td-data-schema_maxItems","not-impl",
-"td-data-schema_maximum1","not-impl",
+"td-data-schema_maximum1","pass",
 "td-data-schema_maximum2","not-impl",
 "td-data-schema_minItems","not-impl",
-"td-data-schema_minimum1","not-impl",
+"td-data-schema_minimum1","pass",
 "td-data-schema_minimum2","not-impl",
 "td-data-schema_oneOf","not-impl",
 "td-data-schema_properties","pass",
@@ -66,12 +66,10 @@
 "td-data-schema_type","pass",
 "td-data-schema_unit","not-impl",
 "td-data-schema_writeOnly","not-impl",
-"td-event-arrays","not-impl","data should have required property 'events'"
 "td-event-arrays","not-impl","Error message can be seen in the children assertions"
 "td-event-arrays_forms","not-impl","data should have required property 'events'"
 "td-event-arrays_scopes","not-impl","data should have required property 'events'"
 "td-event-arrays_security","not-impl","data should have required property 'events'"
-"td-event-names","not-impl","data should have required property 'events'"
 "td-event-names","not-impl","Error message can be seen in the children assertions"
 "td-event-names_cancellation","not-impl","data should have required property 'events'"
 "td-event-names_data","not-impl","data should have required property 'events'"
@@ -192,10 +190,10 @@
 "td-vocab-lastModified","not-impl","data should have required property 'lastModified'"
 "td-vocab-links","not-impl","data should have required property 'links'"
 "td-vocab-maxItems","not-impl",
-"td-vocab-maximum-1","not-impl",
+"td-vocab-maximum-1","pass",
 "td-vocab-maximum-2","not-impl",
 "td-vocab-minItems","not-impl",
-"td-vocab-minimum-1","not-impl",
+"td-vocab-minimum-1","pass",
 "td-vocab-minimum-2","not-impl",
 "td-vocab-name-1","pass",
 "td-vocab-name-2","not-impl",
