@@ -66,12 +66,10 @@
 "td-data-schema_type","pass",
 "td-data-schema_unit","not-impl",
 "td-data-schema_writeOnly","not-impl",
-"td-event-arrays","not-impl","data.events['alert'] should have required property 'scopes', data.events['alert'] should have required property 'security', data.events['detect'] should have required property 'scopes', data.events['detect'] should have required property 'security'"
 "td-event-arrays","not-impl","Error message can be seen in the children assertions"
 "td-event-arrays_forms","pass",
 "td-event-arrays_scopes","not-impl","data.events['alert'] should have required property 'scopes', data.events['detect'] should have required property 'scopes'"
 "td-event-arrays_security","not-impl","data.events['alert'] should have required property 'security', data.events['detect'] should have required property 'security'"
-"td-event-names","not-impl","data.events['alert'] should have required property 'scopes', data.events['alert'] should have required property 'security', data.events['detect'] should have required property 'scopes', data.events['detect'] should have required property 'security'"
 "td-event-names","not-impl","Error message can be seen in the children assertions"
 "td-event-names_cancellation","not-impl","data.events['alert'] should have required property 'cancellation', data.events['detect'] should have required property 'cancellation'"
 "td-event-names_data","pass",
@@ -177,7 +175,7 @@
 "td-vocab-description_security","not-impl",
 "td-vocab-descriptions","not-impl",
 "td-vocab-enum","pass",
-"td-vocab-events","not-impl","data.events['alert'] should have required property 'scopes', data.events['alert'] should have required property 'security', data.events['detect'] should have required property 'scopes', data.events['detect'] should have required property 'security'"
+"td-vocab-events","pass",
 "td-vocab-flow","not-impl",
 "td-vocab-format","pass",
 "td-vocab-forms-1","not-impl","data should have required property 'forms'"
