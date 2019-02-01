@@ -25,6 +25,12 @@ function process() {
       node mergeResults.js $Output $Extras > $Temp
       echo "mv $Temp $Output"
       mv $Temp $Output
+    else
+      # merge even if no extras to sort and merge children
+      echo "node mergeResults.js $Output > $Temp"
+      node mergeResults.js $Output > $Temp
+      echo "mv $Temp $Output"
+      mv $Temp $Output
     fi
   )
   echo "<<<<<<<<<<<< Output written to $Output"

@@ -1,16 +1,16 @@
-"ID","Status","additionalInfo"
-"client-data-schema","null","not testable with Assertion Tester"
-"client-data-schema-accept-extras","null","not testable with Assertion Tester"
-"client-data-schema-no-extras","null","not testable with Assertion Tester"
-"client-uri-template","null","not testable with Assertion Tester"
-"server-data-schema","null","not testable with Assertion Tester"
-"server-data-schema-extras","null","not testable with Assertion Tester"
-"server-uri-template","null","not testable with Assertion Tester"
-"td-action-arrays","not-impl","Error message can be seen in the children assertions"
+"ID","Status","Comment"
+"client-data-schema","null",
+"client-data-schema-accept-extras","null",
+"client-data-schema-no-extras","null",
+"client-uri-template","null",
+"server-data-schema","null",
+"server-data-schema-extras","null",
+"server-uri-template","null",
+"td-action-arrays","not-impl",
 "td-action-arrays_forms","pass",
 "td-action-arrays_scopes","not-impl",
 "td-action-arrays_security","not-impl",
-"td-action-names","not-impl","Error message can be seen in the children assertions"
+"td-action-names","not-impl",
 "td-action-names_description","not-impl",
 "td-action-names_descriptions","not-impl",
 "td-action-names_forms","pass",
@@ -23,30 +23,29 @@
 "td-action-names_title","not-impl",
 "td-action-names_titles","not-impl",
 "td-action-names_uriVariables","not-impl",
-"td-action-objects","not-impl","Error message can be seen in the children assertions"
+"td-action-objects","not-impl",
 "td-action-objects_input","not-impl",
 "td-action-objects_output","not-impl",
 "td-actions","pass",
 "td-actions_existence","pass",
 "td-actions_uniqueness","pass",
-"td-additional-contexts","not-impl","data['@context'] should be equal to constant, data['@context'] should match ""then"" schema, data['@context'] should match ""else"" schema, data['@context'] should match ""else"" schema, data should match ""then"" schema"
-"td-arrays","not-impl","Error message can be seen in the children assertions"
+"td-additional-contexts","not-impl",
+"td-arrays","not-impl",
 "td-arrays_forms","pass",
-"td-arrays_links","not-impl","data should have required property 'links'"
+"td-arrays_links","not-impl",
 "td-arrays_scopes","not-impl",
 "td-arrays_security","pass",
 "td-at-type","pass",
-"td-content-type-default","null","not testable with Assertion Tester"
+"td-content-type-default","null",
 "td-context","pass",
 "td-context-toplevel","pass",
-"td-data-schema","not-impl","Error message can be seen in the children assertions"
-"td-data-schema-arrays","not-impl","Error message can be seen in the children assertions"
+"td-data-schema","not-impl",
+"td-data-schema-arrays","not-impl",
 "td-data-schema-arrays_enum","not-impl",
 "td-data-schema-arrays_oneOf","not-impl",
 "td-data-schema-arrays_required","not-impl",
-"td-data-schema-objects","null","not testable with Assertion Tester"
+"td-data-schema-objects","null",
 "td-data-schema_const","not-impl",
-"td-data-schema_description","pass",
 "td-data-schema_description","pass",
 "td-data-schema_descriptions","not-impl",
 "td-data-schema_enum","not-impl",
@@ -66,51 +65,51 @@
 "td-data-schema_type","pass",
 "td-data-schema_unit","not-impl",
 "td-data-schema_writeOnly","pass",
-"td-default-alg","null","not testable with Assertion Tester"
-"td-default-contentType","null","not testable with Assertion Tester"
-"td-default-flow","null","not testable with Assertion Tester"
-"td-default-format","null","not testable with Assertion Tester"
-"td-default-idempotent","null","not testable with Assertion Tester"
-"td-default-in-1","null","not testable with Assertion Tester"
-"td-default-in-2","null","not testable with Assertion Tester"
-"td-default-observable","null","not testable with Assertion Tester"
-"td-default-qop","null","not testable with Assertion Tester"
-"td-default-readOnly","null","not testable with Assertion Tester"
-"td-default-safe","null","not testable with Assertion Tester"
-"td-default-writeOnly","null","not testable with Assertion Tester"
-"td-event-arrays","not-impl","Error message can be seen in the children assertions"
-"td-event-arrays_forms","not-impl","data should have required property 'events'"
+"td-default-alg","null",
+"td-default-contentType","null",
+"td-default-flow","null",
+"td-default-format","null",
+"td-default-idempotent","null",
+"td-default-in-1","null",
+"td-default-in-2","null",
+"td-default-observable","null",
+"td-default-qop","null",
+"td-default-readOnly","null",
+"td-default-safe","null",
+"td-default-writeOnly","null",
+"td-event-arrays","not-impl",
+"td-event-arrays_forms","not-impl",
 "td-event-arrays_scopes","not-impl",
 "td-event-arrays_security","not-impl",
-"td-event-names","not-impl","Error message can be seen in the children assertions"
+"td-event-names","not-impl",
 "td-event-names_cancellation","not-impl",
 "td-event-names_data","not-impl",
 "td-event-names_description","not-impl",
 "td-event-names_descriptions","not-impl",
-"td-event-names_forms","not-impl","data should have required property 'events'"
+"td-event-names_forms","not-impl",
 "td-event-names_scopes","not-impl",
 "td-event-names_security","not-impl",
 "td-event-names_subscription","not-impl",
 "td-event-names_title","not-impl",
 "td-event-names_titles","not-impl",
 "td-event-names_uriVariables","not-impl",
-"td-event-objects","not-impl","Error message can be seen in the children assertions"
+"td-event-objects","not-impl",
 "td-event-objects_cancellation","not-impl",
 "td-event-objects_data","not-impl",
 "td-event-objects_subscription","not-impl",
 "td-event-response-object","not-impl",
-"td-events","not-impl","Error message can be seen in the children assertions"
-"td-events_existence","not-impl","data should have required property 'events'"
+"td-events","not-impl",
+"td-events_existence","not-impl",
 "td-events_uniqueness","pass",
-"td-form-protocolbindings","null","not testable with Assertion Tester"
+"td-form-protocolbindings","null",
 "td-forms-response","not-impl",
 "td-integer-type","not-impl",
 "td-jsonld-keywords","pass",
 "td-jsonld-keywords_at-context","pass",
 "td-jsonld-keywords_at-type","pass",
-"td-links","not-impl","data should have required property 'links'"
-"td-media-type","null","not testable with Assertion Tester"
-"td-multi-languages","not-impl","Error message can be seen in the children assertions"
+"td-links","not-impl",
+"td-media-type","null",
+"td-multi-languages","not-impl",
 "td-multi-languages_descriptions","not-impl",
 "td-multi-languages_titles","not-impl",
 "td-number-type","not-impl",
@@ -120,15 +119,15 @@
 "td-op-for-action","pass",
 "td-op-for-event","not-impl",
 "td-op-for-property","pass",
-"td-op-for-thing","not-impl","data should have required property 'forms'"
+"td-op-for-thing","not-impl",
 "td-properties","pass",
 "td-properties_existence","pass",
 "td-properties_uniqueness","pass",
-"td-property-arrays","not-impl","Error message can be seen in the children assertions"
+"td-property-arrays","not-impl",
 "td-property-arrays_forms","pass",
 "td-property-arrays_scopes","not-impl",
 "td-property-arrays_security","not-impl",
-"td-property-names","not-impl","Error message can be seen in the children assertions"
+"td-property-names","not-impl",
 "td-property-names_const","not-impl",
 "td-property-names_description","pass",
 "td-property-names_descriptions","not-impl",
@@ -152,17 +151,17 @@
 "td-property-names_unit","not-impl",
 "td-property-names_uriVariables","not-impl",
 "td-property-names_writeOnly","pass",
-"td-readOnly-observable-default","null","not testable with Assertion Tester"
-"td-readOnly-observable-writeOnly-default","null","not testable with Assertion Tester"
-"td-security-binding","null","not testable with Assertion Tester"
+"td-readOnly-observable-default","null",
+"td-readOnly-observable-writeOnly-default","null",
+"td-security-binding","null",
 "td-security-mandatory","pass",
-"td-security-no-extras","null","not testable with Assertion Tester"
-"td-security-overrides","not-impl","Error message can be seen in the children assertions"
+"td-security-no-extras","null",
+"td-security-overrides","not-impl",
 "td-security-overrides_form","not-impl",
 "td-security-overrides_interaction","not-impl",
 "td-simple-form","pass",
 "td-string-type","not-impl",
-"td-title-description","not-impl","Error message can be seen in the children assertions"
+"td-title-description","not-impl",
 "td-title-description_descriptions","not-impl",
 "td-title-description_titles","not-impl",
 "td-unique-identifiers","pass",
@@ -184,10 +183,10 @@
 "td-vocab-description","pass",
 "td-vocab-descriptions","not-impl",
 "td-vocab-enum","not-impl",
-"td-vocab-events","not-impl","data should have required property 'events'"
+"td-vocab-events","not-impl",
 "td-vocab-flow","not-impl",
 "td-vocab-format","not-impl",
-"td-vocab-forms-1","not-impl","data should have required property 'forms'"
+"td-vocab-forms-1","not-impl",
 "td-vocab-forms-2","pass",
 "td-vocab-href","pass",
 "td-vocab-idempotent","not-impl",
@@ -197,7 +196,7 @@
 "td-vocab-instance","pass",
 "td-vocab-items","not-impl",
 "td-vocab-lastModified","pass",
-"td-vocab-links","not-impl","data should have required property 'links'"
+"td-vocab-links","not-impl",
 "td-vocab-maxItems","not-impl",
 "td-vocab-maximum-1","not-impl",
 "td-vocab-maximum-2","not-impl",
