@@ -25,6 +25,12 @@ function process() {
       node mergeResults.js $Output $Extras > $Temp
       echo "mv $Temp $Output"
       mv $Temp $Output
+    else
+      # merge even if no extras to sort and merge children
+      echo "node mergeResults.js $Output > $Temp"
+      node mergeResults.js $Output > $Temp
+      echo "mv $Temp $Output"
+      mv $Temp $Output
     fi
   )
   echo "<<<<<<<<<<<< Output written to $Output"
@@ -48,7 +54,7 @@ for OrgDir in inputs/* ; do
     export Org=$(basename $AbsOrgDir)
     echo "Processing organization $Org"
     echo "  in $AbsOrgDir"
-    for ImplPath in $AbsOrgDir/*.jsonld ; do
+    for ImplPath in $AbsOrgDir/*.{jsonld,json,td} ; do
        if [[ -f $ImplPath ]]; then
           export ImplFile=$(basename $ImplPath)
           export Impl="${ImplFile%.*}"
@@ -67,7 +73,7 @@ for OrgDir in inputs/* ; do
           mkdir -p outputs/$Org/$Impl
           export AbsOutOrgDir=$(cd outputs/$Org; pwd)
           export AbsOutDir=$(cd outputs/$Org/$Impl; pwd)
-          for InstancePath in $ImplPath/*.jsonld ; do
+          for InstancePath in $ImplPath/*.{jsonld,json,td} ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 export Instance="${InstanceFile%.*}"
