@@ -65,7 +65,7 @@ Also, you have to document your implementation in `testfest/2018-12-online/imple
 
 Your task is to produce TDs that can cover different features (i.e. assertions) of the TD specification.
 
-Once you produced these TDs, as described above you should submit them a repository that has a folder with the name of the organization that produced the implementation, or under a subdirectory if there are multiple instances for a single implementatoin.
+Once you produced these TDs, as described above you should submit them a repository that has a folder with the name of the organization that produced the implementation, or under a subdirectory if there are multiple instances for a single implementation.
 
 If you want, you can test your TDs to find assertions it supports or leave this work to a tester.
 
