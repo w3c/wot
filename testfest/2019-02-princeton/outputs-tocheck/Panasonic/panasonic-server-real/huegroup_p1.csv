@@ -36,7 +36,7 @@
 "td-arrays_scopes","not-impl",
 "td-arrays_security","pass",
 "td-at-type","pass",
-"td-content-type-default","not-impl","[info: null -> not-impl: contentType is always present]"
+"td-content-type-default","not-impl","[info: null -> not-impl: this is a client test]"
 "td-context","pass",
 "td-context-toplevel","pass",
 "td-data-schema","pass","[warning: not-impl -> pass: this includes 'pass', 'not-impl' and no 'fail', it should be 'pass'?]"
@@ -66,18 +66,18 @@
 "td-data-schema_type","pass",
 "td-data-schema_unit","not-impl",
 "td-data-schema_writeOnly","not-impl",
-"td-default-alg","not-impl","[info: null -> not-impl: this is always present]"
-"td-default-contentType","not-impl","[info: null -> not-impl: this is always present]"
-"td-default-flow","not-impl","[info: null -> not-impl]"
-"td-default-format","not-impl","[info: null -> not-impl: this is always present]"
-"td-default-idempotent","not-impl","[info: null -> not-impl]"
-"td-default-in-1","pass","[info: null -> pass]"
-"td-default-in-2","not-impl","[info: null -> not-impl]"
-"td-default-observable","not-impl","[info: null -> not-impl: this is always present]"
-"td-default-qop","not-impl","[info: null -> not-impl]"
-"td-default-readOnly","pass","[info: null -> pass]"
-"td-default-safe","not-impl","[info: null -> not-impl]"
-"td-default-writeOnly","pass","[info: null -> pass]"
+"td-default-alg","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-contentType","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-flow","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-format","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-idempotent","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-in-1","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-in-2","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-observable","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-qop","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-readOnly","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-safe","not-impl","[info: null -> not-impl: this is a client test]"
+"td-default-writeOnly","not-impl","[info: null -> not-impl: this is a client test]"
 "td-event-arrays","not-impl","Error message can be seen in the children assertions"
 "td-event-arrays_forms","not-impl","data should have required property 'events'"
 "td-event-arrays_scopes","not-impl",
@@ -152,8 +152,8 @@
 "td-property-names_unit","not-impl",
 "td-property-names_uriVariables","not-impl",
 "td-property-names_writeOnly","not-impl",
-"td-readOnly-observable-default","not-impl","[warning: null -> not-impl: assertion ID does not match the assertion content]"
-"td-readOnly-observable-writeOnly-default","pass","[info: null -> pass]"
+"td-readOnly-observable-default","not-impl","[warning: null -> not-impl: this is a client test: assertion ID does not match the assertion content]"
+"td-readOnly-observable-writeOnly-default","not-impl","[info: null -> not-impl: this is a client test]"
 "td-security-binding","pass","[info: null -> pass: 'bearer' and 'nosec' are specified]"
 "td-security-mandatory","pass",
 "td-security-no-extras","pass","[info: null -> pass: only required mechanisms are specified]"
