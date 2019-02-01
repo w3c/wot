@@ -1,0 +1,237 @@
+{
+	"name": "Switch-000e7bfe7b1005fd01",
+	"securityDefinitions": {
+		"nosec_sc": {
+			"scheme": "basic"
+		}
+	},
+	"security":["nosec_sc"],
+	"id": "000e7bfe7b1005fd01",
+	"properties": {
+		"FF": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/FF"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"SetList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/SetList"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"ProductCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/ProductCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"ManufactureDate": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/ManufactureDate"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"F1": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/F1"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"F2": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/F2"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"F3": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/F3"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"SpecVersionInfoCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/SpecVersionInfoCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"CheckIPStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/CheckIPStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"GetList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/GetList"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"DeviceConnectStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/DeviceConnectStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"MakerCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/MakerCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"FaultStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/FaultStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"FaultContent": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/FaultContent"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"DeviceRunningStatus": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/DeviceRunningStatus"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"OperationStatus": {
+			"observable": false,
+			"type": "string",
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/OperationStatus"
+				}
+			],
+			"enum": [
+				"ON"
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"NotifyList": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/NotifyList"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"ManufacturerErrorCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/ManufacturerErrorCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"PlaceOfBusinessCode": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/PlaceOfBusinessCode"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"ConnectionDevice": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/ConnectionDevice"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"FE": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/FE"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"PowerLimit": {
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/property/PowerLimit"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		}
+	},
+	"base": "http://wot.f-ncs.ad.jp/Things/000e7bfe7b1005fd01/"
+}

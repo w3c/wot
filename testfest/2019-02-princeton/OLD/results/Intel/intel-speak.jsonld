@@ -1,0 +1,93 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/td",
+    {
+      "iot": "http://iotschema.org/",
+      "http": "http://www.w3.org/2011/http#"
+    }
+  ],
+  "@type": [
+    "Thing"
+  ],
+  "name": "Intel-WebSpeak-sky",
+  "description": "A simple text to speech service",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {
+    "instance": "0.1.0"
+  },
+  "created": "2018-09-10T06:30+00:00",
+  "lastModified": "2018-12-19T03:14+00:00",
+  "links": [
+    {
+      "href": "https://github.com/mmccool/web-speak",
+      "rel": "repository",
+      "type": "application/vnd.github.v3+json"
+    }
+  ],
+  "id": "urn:uuid:ac04e086-abca-565f-a083-d1059c6fa868",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    },
+    "basic_sc": {
+      "scheme": "basic"
+    },
+    "digest_sc": {
+      "scheme": "digest"
+    }
+  },
+  "security": [
+    "nosec_sc"
+  ],
+  "actions": {
+    "say": {
+      "input": {
+        "type": "string"
+      },
+      "forms": [
+        {
+          "href": "http://sky.local:8085/api/say",
+          "contentType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST"
+        },
+        {
+          "href": "https://portal.mmccool.net:8096/api/say",
+          "contentType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST",
+          "security": [
+            "basic_sc"
+          ]
+        },
+        {
+          "href": "https://portal.mmccool.net:8097/api/say",
+          "contentType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST",
+          "security": [
+            "digest_sc"
+          ]
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8096/api/say",
+          "contentType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST",
+          "security": [
+            "basic_sc"
+          ]
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8097/api/say",
+          "contentType": "application/json",
+          "op": "invokeaction",
+          "http:methodName": "POST",
+          "security": [
+            "digest_sc"
+          ]
+        }
+      ]
+    }
+  }
+}

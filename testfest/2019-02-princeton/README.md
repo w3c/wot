@@ -6,13 +6,18 @@ TODO: Put an example testing flow from start to finish -->
 
 Will be held 28.01-03.02, 2019 at Siemens Corporate Technology, 755 College Road East, Princeton, NJ, USA, 08540.
 
-* [Implementation Report](https://github.com/mmccool/wot-thing-description/updated-test-results/testing/report.html): You need to save to a local directory and load it from a file to see it rendered, unfortunately.
+* [Implementation Report](https://raw.githubusercontent.com/mmccool/wot-thing-description/updated-test-results/testing/report.html): You need to save to a local directory and load it from a file to see it rendered, unfortunately.
 * [CDN.staticaly Implementation Report](https://cdn.staticaly.com/gh/mmccool/wot-thing-description/updated-test-results/testing/report.html): This might work, but may be stale.
 
 The goal of the testfest is to generate the W3C Implementation Report to be used for the CR transition.
 This report will detail which assertions of the specs are implemented for each implementation.
 Results are to be recorded in CSV files using a specific directory structure (described below) to
 facilitate automated generation of the report.
+
+NOTE: Ignore most of the instructions below for updating results.  Instead, put TDs and CSV
+files in `inputs` and run `./update.sh` to put results in `outputs`.  See comments in `update.sh`
+for directory organization, etc.  You also have to set up the Thingweb/thingweb-playground submodule
+under wot/testing/tools.  
 
 You can participate to the Testfest by choosing one (or more) of the following roles:
 
@@ -60,7 +65,7 @@ Also, you have to document your implementation in `testfest/2018-12-online/imple
 
 Your task is to produce TDs that can cover different features (i.e. assertions) of the TD specification.
 
-Once you produced these TDs, as described above you should submit them a repository that has a folder with the name of the organization that produced the implementation, or under a subdirectory if there are multiple instances for a single implementatoin.
+Once you produced these TDs, as described above you should submit them a repository that has a folder with the name of the organization that produced the implementation, or under a subdirectory if there are multiple instances for a single implementation.
 
 If you want, you can test your TDs to find assertions it supports or leave this work to a tester.
 
