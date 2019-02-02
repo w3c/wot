@@ -243,8 +243,131 @@
 	},
 	"events": {
 		"alert" : { 
-			"description": "general event",
-			"title": "unspecific event"
+			"description": "general alert",
+			"title": "unspecific alert",
+			"forms": [
+				{
+					"href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/api/v2/apps/0-AB/integrations/",
+					"op": ["subscribeevent"],
+					"contentType": "application/json",
+					"http:methodName" : "POST"
+				},
+				{
+					"href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/api/v2/apps/0-AB/integrations/{subscriptionId}",
+					"op": ["unsubscribeevent"],
+					"contentType": "application/json",
+					"http:methodName" : "POST"
+				}
+			]		
+		},
+		"filterClogged": {
+			"description": "Filter clogged alert",
+			"title": "filterClogged",
+			"data" : {
+				"description" : "filter clogged",
+				"type" : "object",
+				"properties" : {
+					"filterClogged" : {
+						"type" : "boolean", 
+						"writeOnly": true, 
+						"description": "Filter clogged"}
+					}
+				},
+			"subscription" : {
+				"type" : "object",
+				"properties" : {
+					"targetURL" : {
+						"type" : "string", 
+						"format" : "uri-reference",
+						"writeOnly": true, 
+						"description": "server uri for subscribing and unsubscribing"
+					},
+					"subscriptionID" : {
+						"type": "integer", 
+						"readOnly": true, 
+						"description": "Responses an unique subscription ID."
+					},
+					"name" : {
+						"description":"Integration name. NOTE: When name is omitted or a supplied as a zero-length string the implementation generates a default name automatically.",
+						"type":"string"
+					},
+					"description":{
+						"description":"Integration description",
+						"type":"string"
+					},
+					"type":{
+						"description":"ENTERPRISE. This field is mandatory.",
+						"type":"string"
+					},
+					"sharedSecret":{
+						"description":"Shared secret. Is specified for inbound connections only and is used by external applications to authenticate in the IoT Cloud Service and to get authorization to access the IoT REST APIs. The value should be base64 encoded.",
+						"type":"string"
+					},
+					"authType":{
+						"description":"Type of authentication for outbound connections. IoT Cloud Service supports only <code>BASIC</code> authentication.",
+						"type":"string"
+					},
+					"authConfig":{
+						"description":"Authentication information for outbound connections. <code>username</code> and <code>password</code> are the only credentials supported for <code>BASIC</code> authentication. NOTE: all the authConfig values should be base64 encoded.",
+						"type":"object",
+						"properties":{
+							"username":{
+								"description":"Base64 encoded username.",
+								"type":"string"
+							},
+							"password":{
+								"description":"Base64 encoded password.",
+								"type":"string"
+							}
+						}
+					},
+					"storageEnabled":{
+						"description":"The flag specifying whether the Integration messages should be persisted",
+						"type":"boolean"
+					},
+					"config":{
+						"description":"Integration-level configuration. Two types of values are supported: String and Map. For ENTERPRISE Integration there is only one mandatory entry for config: <strong>url</strong>. <code>httpHeaders</code> is a reserved config entry for specifying an HTTP headers Map (key as a header name, value as the header value) for outbound connection requests. This field is mandatory.",
+						"type":"object",
+						"properties":{
+						}
+					},
+					"streams":{
+						"description":"The list of Integration Streams. This field is mandatory.",
+						"type":"array",
+						"items":{
+							"$ref":"#/definitions/Enterprise_Integration_Stream"
+						}
+					}
+				}
+			},
+			"cancellation" : {
+				"type" : "object",
+				"properties" : {
+					"subscriptionID" : {
+						"type": "integer", 
+						"writeOnly": true, 
+						"description": "Provide subscription ID that have to be cancelled."
+					},
+					"uriVariables": {
+						"subscriptionId" : { "type": "integer", "@type": "subscriptionId" }
+					}
+				}
+			},
+			"forms": [
+				{
+					"href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/api/v2/apps/0-AB/integrations/",
+					"op": ["subscribeevent"],
+					"contentType": "application/json",
+					"http:methodName" : "POST"
+				},
+				{
+					"href": "https://michaelw3cam7iotjls-michaelprod1.uscom-central-1.oraclecloud.com/iot/api/v2/apps/0-AB/integrations/{subscriptionId}",
+					"op": ["unsubscribeevent"],
+					"contentType": "application/json",
+					"http:methodName" : "POST"
+				}
+			]
 		}
+		
 	}
 }
