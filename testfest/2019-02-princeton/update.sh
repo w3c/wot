@@ -38,7 +38,7 @@ function process() {
     cd ../../testing/tools/thingweb-playground/AssertionTester
     echo "npm run-script testTD $Input $Output"
     npm run-script testTD $Input $Output
-    Extras="${Input%.*}.csv"
+    Extras="${Input%.*}.{csv,CSV}"
     Temp="${Extras}.temp"
     if [[ -f $Extras ]]; then
       echo "node mergeResults.js $Output $Extras > $Temp"
@@ -74,7 +74,7 @@ for OrgDir in inputs/* ; do
     export Org=$(basename $AbsOrgDir)
     echo "Processing organization $Org"
     echo "  in $AbsOrgDir"
-    for ImplPath in $AbsOrgDir/*.{jsonld,json,td} ; do
+    for ImplPath in $AbsOrgDir/*.{jsonld,JSONLD,json,JSON,td,TD} ; do
        if [[ -f $ImplPath ]]; then
           export ImplFile=$(basename $ImplPath)
           export Impl="${ImplFile%.*}"
@@ -93,7 +93,7 @@ for OrgDir in inputs/* ; do
           mkdir -p outputs/$Org/$Impl
           export AbsOutOrgDir=$(cd outputs/$Org; pwd)
           export AbsOutDir=$(cd outputs/$Org/$Impl; pwd)
-          for InstancePath in $ImplPath/*.{jsonld,json,td} ; do
+          for InstancePath in $ImplPath/*.{jsonld,JSONLD,json,JSON,td,TD} ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 export Instance="${InstanceFile%.*}"
