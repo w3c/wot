@@ -1,15 +1,35 @@
 #!/bin/bash
-# Update automated results: scan "inputs", put results in "outputs"
+# Update automated results: scan "inputs", put results in "outputs".
+# In the following, Org is an organization name, X is the name of an
+# implementation, and S is a subdirectory name.  TDs can have either 
+# .json, .jsontd, or .td suffixes.  CSV files should be for assertion
+# reports.  
+#
 # Expected input:
-#   Org/X.jsonld (+ optional Org/X.csv) at top level: implementation with a single TD.
-#      TD will be scanned with AssertionTester, merges results with CSV file if it 
-#      exists (used for manual assertions), and writes results to outputs/Org/X.csv
-#   Org/S/*.jsonld (+ optional matched .csv files):
+#   inputs/Org/X.csv at top level:
+#      CSV files with no corresponding TD file will simply by copied
+#      as-is to outputs/Org/X.csv. These should correspond to manual results
+#      for separate implementations without a corresponding TD, that is,
+#      "consumer" or "component" implementations.
+#   inputs/Org/X.{json,jsonld,td} (+ optional matched csv files) at top level: 
+#      Implementation with a single TD, which by definition will be a 
+#      "producer".  TDs will be scanned with AssertionTester, 
+#      results will be merged with CSV file of the same base name if it 
+#      exists (used for manual assertions), and results written to 
+#      outputs/Org/X.csv
+#   inputs/Org/S/*.{jsonld,json,td} (+ optional inputs/Org/S.csv files):
 #      TDs will be scanned with AssertionTester, results will be merged with
-#      matching CSV file if it exists, all results will then be merged, results
-#      will be written to outputs/Org/S.csv
+#      matching CSV file if it exists, all results will then be merged, then
+#      results will be written to outputs/Org/S.csv.  Note that subdirectory
+#      name should be the implementation name and will be used for manual 
+#      CSV input file name and output name.
+#
 # Implementation descriptions may also be included in descriptions/Org/org.html;
 # these should include descriptions of all implementations.
+#
+# If you want to report interop results, which have a different
+# CSV format, please put them in the "interops" directory.
+#
 function process() {
   Input=$1
   Output=$2
