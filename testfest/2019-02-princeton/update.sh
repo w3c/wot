@@ -68,12 +68,25 @@ function merge() {
   echo "<<<<<<<<<<<< Output written to $Output"
   # touch $Output
 }
+# Delete any previous outputs; this avoids stale results from persisting
+rm -r outputs/*
+
+# Copy any CSV files at the top level to output.  Note that any files
+# that have the same names as TD inputs will be overwritten later, but
+# those without matches will not.  This takes care of manually-reported
+# "consumer" or "component" inputs without corresponding TD files.
+for OrgDir in inputs/* ; do
+  cp inputs/$OrgDir/*.csv outputs/$OrgDir/
+done
+
+# For all reporting organizations...
 for OrgDir in inputs/* ; do
   if [[ -d $OrgDir ]]; then
     export AbsOrgDir=$(cd $OrgDir; pwd)
     export Org=$(basename $AbsOrgDir)
     echo "Processing organization $Org"
     echo "  in $AbsOrgDir"
+    # Process implementations found at the top level (singletons)
     for ImplPath in $AbsOrgDir/*.{jsonld,JSONLD,json,JSON,td,TD} ; do
        if [[ -f $ImplPath ]]; then
           export ImplFile=$(basename $ImplPath)
@@ -85,6 +98,7 @@ for OrgDir in inputs/* ; do
           process $ImplPath $AbsOutDir/$Impl.csv
        fi
     done
+    # Process (and merge) implementation instances found in subdirectories
     for ImplPath in $AbsOrgDir/* ; do
        if [[ -d $ImplPath ]]; then
           export Impl=$(basename $ImplPath)
