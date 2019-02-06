@@ -76,7 +76,9 @@ rm -r outputs/*
 # those without matches will not.  This takes care of manually-reported
 # "consumer" or "component" inputs without corresponding TD files.
 for OrgDir in inputs/* ; do
-  cp inputs/$OrgDir/*.csv outputs/$OrgDir/
+  export Org=$(basename $OrgDir)
+  mkdir -p outputs/$Org
+  cp inputs/$Org/*.csv outputs/$Org/
 done
 
 # For all reporting organizations...
