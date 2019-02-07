@@ -1,0 +1,22 @@
+{
+"@context": ["http://www.w3.org/ns/td",
+    {"http": "http://www.w3.org/2011/http#"}],
+    "id": "urn:dev:wot:org:eclipse:thingweb:response-example",
+    "name": "Siemens-ResponseTest",
+    "description": "Test different contentType for requests and responses.",
+    "created": "Fr, 25 Jan 2019 12:45:26 GMT",
+    "lastModified": "2019-01-28T13:30:07.428Z",
+    "security": ["nosec_sc"],
+    "actions": {"smileGenerator": {
+        "description": "You want a smile? Provide the number of smiles :-)",
+        "input": {"type": "integer"},
+        "output": {"type": "string"},
+        "http:methodName": "POST",
+        "forms": [{
+            "href": "http://192.168.0.124:8089/smileGenerator",
+            "contentType": "application/json",
+            "response": {"contentType": "text/plain"}
+        }]
+    }},
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
+}
