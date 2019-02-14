@@ -10,11 +10,9 @@ See the presentations "WoT_CommonView_KickOff.pdf" and "UC_dissamination.pdf" fo
 ## Structure and Building
 The data is collected in the xml file and rendered into a re:spec-page using xslt.
 
-The repo is connected to a continuous delivery chain using Travis CI
-That means that every commit will trigger a rebuild of the document.
-If the build was successful, the updated document is pushed to the ``gh-pages`` branch, which is accessible via:
+There is no TravisCI integration anymore and the xslt output has to be committed to the master as index.html to appear on github.io:
 
-http://w3c.github.io/wot/wot-ucr.html
+http://w3c.github.io/wot/ucr-doc/
 
 ## Contributing
 
@@ -33,7 +31,7 @@ To contribute, please follow the following steps:
 * add your changes to your fork of the repo (best use a feature-branch)
 * create a pull request using the button in  your repo
 
-###There is a shortcut:
+### There is a shortcut:
 
 if you click the file [wot-ucr.xml](https://github.com/w3c/wot/blob/master/ucr-doc/wot-ucr.xml)
 you have a pencil-icon in the upper right, enabling a direct edit. That will automagically create a fork, a feature-branch and a pull-request.

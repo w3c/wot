@@ -4,21 +4,40 @@ TODO: Fix repository structure for submissions of TDs and also of the .csv files
 TODO: Put the links of merge results and assertion tester
 TODO: Put an example testing flow from start to finish -->
 
-Will be held 28.01-03.02, 2019 at Siemens Corporate Technology, 755 College Road East, Princeton, NJ, USA, 08540.
+The 2019 Princeton WoT Testfest was held 28.01-03.02, 2019 
+at Siemens Corporate Technology, 755 College Road East, Princeton, NJ, USA, 08540.
 
+
+The goal of the testfest was to generate a draft the W3C Implementation Report to be used for the 
+CR transition and in particular to identify at-risk features in the specification.  The results can
+be seen at
 * [Implementation Report](https://raw.githubusercontent.com/mmccool/wot-thing-description/updated-test-results/testing/report.html): You need to save to a local directory and load it from a file to see it rendered, unfortunately.
 * [CDN.staticaly Implementation Report](https://cdn.staticaly.com/gh/mmccool/wot-thing-description/updated-test-results/testing/report.html): This might work, but may be stale.
 
-The goal of the testfest is to generate the W3C Implementation Report to be used for the CR transition.
-This report will detail which assertions of the specs are implemented for each implementation.
-Results are to be recorded in CSV files using a specific directory structure (described below) to
+This report details which assertions of the TD spec (the only one tested at this Testfest)
+implemented for each implementation.
+Results were recorded using a specific directory structure (described below) to
 facilitate automated generation of the report.
 
-NOTE: Ignore most of the instructions below for updating results.  Instead, put TDs and CSV
-files in `inputs` and run `./update.sh` to put results in `outputs`.  See comments in `update.sh`
-for directory organization, etc.  You also have to set up the Thingweb/thingweb-playground submodule
-under wot/testing/tools.  
+NOTE: Ignore most of the instructions below for updating results, since shortly after the
+Testfest the process was automated.  Instead, put TDs and CSV
+files in `inputs` and run the `./update.sh` script to run the automated tests which places
+the results in `outputs`.  To generate the actual implementation report the CSV files at the 
+top level (only) of the `outputs` directory then need to be copied to the 
+`testing/inputs/results` directory of a clone of the wot-thing-description repo,
+interop CSV files should likewise be copied to the `testing/inputs/interop` directory, 
+and finally `npm run render` and then `npm run assertions` 
+should be run in the root directory of that repo. 
 
+See comments in `update.sh`
+for directory organization, etc.  You also have to set up the Thingweb/thingweb-playground submodule
+under wot/testing/tools.  CSV files with interop results should NOT go in inputs, they should 
+go in "interop".  Note that while testing most of the assertions has been automated, the
+automated results should still be checked manually, and some results still need to be checked
+and recorded manually.  See templates/manual.csv for a list of assertions that need manual
+checks.
+
+# Original Instructions (Deprecated)
 You can participate to the Testfest by choosing one (or more) of the following roles:
 
 * [Implementation Owner](#implementation-owner) : You have a WoT consumer or producer implementation.

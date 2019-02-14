@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Use Cases and Requirements for the Web of Things</title>
+      <meta charset="utf-8"></meta>
+      <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
+      <script class="remove">
+         var respecConfig = {
+         specStatus: "unofficial",
+		 publishDate: "2018-03-06",
+         shortName:  "WoT-UCR",
+         editors: [
+         {   name:       "Johannes Hund",
+         company:    "Siemens AG",
+         companyURL: "http://www.siemens.com/" }
+         ],
+         otherLinks: [
+         {
+         key: "Repository",
+         data: [{
+         value: "We are on GitHub",
+         href: "https://github.com/w3c/wot/tree/master/ucr-doc"
+         },{
+         value: "File a bug",
+         href: "https://github.com/w3c/wot/issues"
+         }
+         ]
+         }
+         ],
+         };
+         
+      </script>
+   </head>
+   <body>
+      <section id="abstract">
+         <p>
+            The Web of Things (WoT) Interest Group (IG) is collecting concepts and technologies
+            to enable discovery and interoperability of Internet of Things (IoT) services on a
+            worldwide basis.
+            This document is used to collect IoT use cases from different domains for the Standardisation
+            work in the W3C WoT groups.
+            The domain use cases are dissaminated to identify so-called 
+            <b>building-blocks</b>
+            that are common across the different domains as well as 
+            <b>non-functional</b> requirements. 
+            <br></br>
+            The identified 
+            <b>building blocks</b> are inputs to the investigation and standardisation work.
+            <br></br>
+            The technology candidates for the respective 
+            <b>building blocks</b> were moved into the 
+            <a href="https://w3c.github.io/wot/landscape.html">tech landscape</a> document. 
+            
+         </p>
+      </section>
+      <section id="sotd">
+         <p>
+            			This section describes the status of this document at the time of its publication.
+            Other documents may supersede this document. A list of current W3C publications and
+            the latest revision of this technical report can be found in the W3C technical reports
+            index at 
+            <a href="http://www.w3.org/TR/" arget="_blank">http://www.w3.org/TR/.</a>
+         </p>
+         <p>
+            			This collection of exemplary use cases is the result of discussion in the 
+            <a href="https://www.w3.org/WoT/IG/" target="_blank">Web of Things Interest Group</a>.
+            
+            			The Web of Things Interest Group believes that Working Groups such as a potential
+            The Web of Things Working Group or others will provide recommendations 
+            			that simplify the application development and interoperabilty for the mentioned
+            use cases. 
+            
+            			The Web of Things Interest Group may continue to discuss other areas of IoT that
+            have not already been raised in this document, 
+            			as well as refine the stated use cases and requirements.
+            		
+         </p>
+         <p>
+            			This document was published by the Web of Things Interest Group as an Interest
+            Group Note. 
+            
+            			If you wish to make comments regarding this document, please send them to 
+            <a href="mailto:public-wot-ig@w3.org">public-wot-ig@w3.org</a> 
+            			(
+            <a class="sub" title="subscribe to public-wot-ig@w3.org" href="mailto:public-wot-ig-request@w3.org?subject=subscribe">subscribe</a>, 
+            <a href="https://lists.w3.org/Archives/Public/public-wot-ig/" target="_blank">archives</a>). All feedback is welcome.
+            			
+         </p>
+         <p>
+            			Publication as an Interest Group Note does not imply endorsement by the W3C Membership.
+            
+            			This is a draft document and may be updated, replaced or obsoleted by other documents
+            at any time. It is inappropriate to cite this document as other than work in progress.
+            <br></br>
+            
+            			The disclosure obligations of the Participants of this group are described in the
+            
+            <a href="https://www.w3.org/2016/07/wot-ig-charter.html" target="_blank">charter</a>.
+            		
+         </p>
+      </section>
+      <section id="use-cases">
+         <h2>Use Cases</h2>
+         <section id="domain-home_automation">
+            <h3>Domain: home automation</h3>
+            <section id="building-automation">
+               <h2 title="Authored by: dret">Building Automation</h2>
+               <p>Buildings often have a large variety of components such as Heating, Venting, and Air
+                  Conditioning (HVAC), lighting systems, and possibly more specialized systems such
+                  as support for reserving rooms electronically. Very often, these systems are not provided
+                  by a single supplier. Instead, landscapes of heterogeneous systems develop over time.
+                  Interoperability becomes a paramount challenge, as there should be a single way how
+                  interactions with the overall building automation infrastructure are possible. Furthermore,
+                  sensors, controllers, and actors of one system serving one specific use case can be
+                  useful for other use cases and can also enable new cross-domain applications and services
+                  to amplify comfort, security, and operational efficiency in smart buildings.
+               </p>
+               <p>Building automation scenarios can have layered services,for example when it comes
+                  to temperature sensing. While the basic functionality of the system might only include
+                  getting information about the current temperature in a variety of places, there might
+                  also be a "temperature history" service. This service might allow more advanced features
+                  such as accessing the complete history of temperature measurements, and possible even
+                  more advanced functionality such as queries in this dataset. By combining available
+                  data (e.g. weather forecast and occupancy of meeting rooms), room temperatures and
+                  future cooling/heating demand can be predicted to increase (e.g. an office building's)
+                  energy efficiency. Again, such an advanced service should be accessible in the same
+                  way as the more basic services, so that developers can access all these services in
+                  a uniform way.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="building-automation-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>Applications may want to get an understanding of what kind of sensors and other capabilities
+                           are exposed as part of the building automation system. In such a case, it is necessary
+                           that available resources can be described or are describing themselves, preferably
+                           using a framework that makes those descriptions uniform even if the underlying sensors
+                           or services are using different implementations and communication technologies.
+                        </li>
+                        <li id="building-automation-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>Applications may want to be notified of certain events in the building automation
+                           system, without having to listen to a continuous event stream from it. In such a case,
+                           it is advantageous for the system to support some kind of push mechanism, so that
+                           applications can subscribe to these events and will be notified when they happen.
+                           This increases the workload of the building automation system (it has to keep track
+                           of subscribers), but may make development of certain classes of applications much
+                           easier.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul></ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="adaptive-building">
+               <h2 title="Authored by: h0ru5">Adaptive Building</h2>
+               <p>Each employee in an office building specifies a preference profile (temperature, light
+                  setup, table height, ...). Using information from company IDs/badges or smartphones
+                  the building can automatically influence the building automation system around individuals
+                  based on their current location and preference profile.
+               </p>
+               <p>Besides an increase of comfort in general, personal profiles can also be used to assist
+                  people with special needs. For instance, in case of emergency, the acoustic alarm
+                  sirens are insufficient for deaf people. Other mechanisms like flashing lights or
+                  mobile device notifications that are available in the person's proximity need to be
+                  used.
+               </p>
+               <p>In case of several people in the same room (e.g. a meeting), mediation is needed.
+                  This is also the case in other cross-influenced situations and if overall goals are
+                  set to be achieved, such as energy saving.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="adaptive-building-ensemble-discovery">
+                           <b>
+                              <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                           </b>Dynamic selection of the surrounding/affecting resources to create the desired comfort
+                           level.
+                        </li>
+                        <li id="adaptive-building-multi-stakeholder-operation">
+                           <b>
+                              <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                           </b>Multiple people in the same room require automatic mediation of desired comfort levels.
+                        </li>
+                        <li id="adaptive-building-lifecycle-mgmt">
+                           <b>
+                              <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                           </b>The appearance and disappearance of users requires a means to orchestrate the lifecycle
+                           of users/stakeholders.
+                        </li>
+                        <li id="adaptive-building-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>The environment around a user must be conceivable by the system in a way that does
+                           not require manual engineering.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="adaptive-building-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>Since the system would rely on information on which person is in each room at any
+                           time, it can allow a very fine-grained movement profile, which is sensitive information
+                        </li>
+                        <li id="adaptive-building-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>The infrastructure has to secure personal profile information in order to prohibit
+                           unauthorized access or manipulation.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="washing-machine">
+               <h2 title="Authored by: Dave Raggett">Smart control of washing machine</h2>
+               <p>Joan has a heavy load of washing to do. She decides to run it over night to take advantage
+                  of the lower power prices. She loads the clothes into the washing machine and selects
+                  the economy operation mode. She has previously set her preferences with her home automation
+                  agent that is accessible on the Web from her phone, tablet, TV or laptop.
+               </p>
+               <p>see http://www.w3.org/WoT/IG/wiki/Use_cases_across_application_domains#Smart_control_of_washing_machine</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>The physical user controls on the washing machine are deliberately simple, and designed
+                     to work in conjunction with the web based home automation agent. This agent has access
+                     to Joan’s electricity supplier and as is able to track the price charged by her supplier
+                     on her electricity plan as it changes according to demand across the city. The agent
+                     runs in the cloud, but is able to communicate through the firewall with devices in
+                     Joan’s home via her home hub. This was set up automatically when she first plugged
+                     the machine in. The washing machine has a very limited embedded controller. It suffices
+                     to run the desired washing and drying cycle, and has sensors that monitor its operation
+                     and enable components that are wearing out to be detected before they fail. Joan has
+                     agreed to share this data with the manufacturer as part of the warranty agreement.
+                     In return, she gets proactive scheduling of service visits at her convenience. 
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>main: smart home / home automation / deferred operation </p>
+                  <p> related: smart cities / smart grid / signaling with smart power devices </p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or btw things can be observed</h4>
+                  <p>Thing registers: thing registers with service in the cloud </p>
+                  <p>Configure data subscription: specific data field (e.g. for maintenance) is forwarded
+                     (e.g. to manufacturer) 
+                  </p>
+                  <p>Thing integration in web based agent</p>
+               </div>
+               <div>
+                  <h4>Which aspects are not considered</h4>
+                  <p>Life cycle of devices, services and applications </p>
+                  <p>Discovery of devices</p>
+                  <p>Installation process </p>
+                  <p>Dealing with faults </p>
+                  <p>Replacing devices </p>
+                  <p>Replacing devices </p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="washing-machine-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>Notify user when washing is done.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="washing-machine-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>Home automation agent is accessible on the Web.
+                        </li>
+                        <li id="washing-machine-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>User has agreed to share data with the manufacturer as part of the warranty agreement.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="integrated-home-automation">
+               <h2 title="Authored by: Takuki Kamiya">Integrated Home Automation, Demand Response and security</h2>
+               <p>Many households nowadays use one or more Home Automation service,
+                  Demand-Response (DR) service or Security service. For DR subscription
+                  and operation, a home gateway device communicates with an aggregator to
+                  shed energy use when asked. Home automation, typically also with
+                  a home gateway, enables cloud-based monitoring and control of home
+                  devices based on pre-defined rules that perform actions based on
+                  conditions or triggers such as weather forecast or pushed doorbells.
+                  Security services also install sensors and provide cloud-based control
+                  of security features such as arming/disarming and monitoring.
+               </p>
+               <p>There is an increasing need to integrate those discrete services from
+                  different vendors harmoniously to increase the total benefit by
+                  orchestrating them.
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Mar/0048.html</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>Clear separation of roles between home gateway through which to manage devices
+                     and sensors at home, and management platform that enables mashed-up, coordinated
+                     cloud-based services. Each device and sensor connects to home gateway through
+                     various technologies (e.g. Wi-Fi, Bluetooth, ZigBee, etc.).
+                  </p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul></ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="integrated-home-automation-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>cloud-based monitoring and control of home devices based-on pre-defined rules
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="Smart_home">
+               <h2 title="Authored by: Kazuaki Nimura">Smart home</h2>
+               <p>Katherine prefers to control the comfort of her living environment. 
+                  She has an air conditioner at home and  has been using her 
+                  smartphone to control it since a controller application on the 
+                  smartphone can more precisely control based on her preference 
+                  instead of using a remote controller that it comes with.
+                  	   Recently she bought a home hub. Now she can use another 
+                  feature that can turn on the air conditioner from outside 
+                  using the smartphone and the application, just before 
+                  arriving at home to prepare a more comfortable room temperature.
+                  
+               </p>
+               <p>Requirements:</p>
+               <p>- An application on a smartphone can search devices which can be 
+                  controlled both on local network and remote network.
+               </p>
+               <p>- An application on a smartphone can understand the properties of 
+                  discovered devices.
+               </p>
+               <p>- An application on a smartphone can send commands without caring about
+                  the network connection underneath.
+               </p>
+               <p>Related Building Blocks:</p>
+               <p>- Abstracted discovery mechanism that applications can query 
+                  usable devices both locally and remotely.
+               </p>
+               <p>- Abstracted device representation that applications use to understand 
+                  capabilities of devices to articulate a command to send. 
+               </p>
+               <p>- Abstraction APIs so applications can access devices in a
+                  network agnostic manner.
+               </p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+               </div>
+            </section>
+            <section id="intelligent-hotel-room">
+               <h2 title="Authored by: Debbie Dahl">Intelligent Hotel Room </h2>
+               <p>Katherine is a frequent business traveler. She stays in a variety of
+                  different hotels in many cities and different countries. In each hotel room
+                  she is able to control the lighting, heating/air conditioning, locks, alarm
+                  clock, water temperature and entertainment in her room. If someone knocks
+                  on the door she can see who's there from the TV or from her phone (a
+                  security camera is outside her door). Control is available from her mobile
+                  device, or she may be able to interact with the hotel room's services
+                  through an ambient device located in the room. It is important for user
+                  satisfaction for Katherine to get immediate access to these services when
+                  she checks in (without installing hotel-specific software), but it's also
+                  important that she not have access after she checks out. She doesn't have
+                  time to learn a new user interface for every hotel, or even every hotel
+                  chain, that she stays in, because she stays in so many different places. 
+               </p>
+               <p>The user should also be able to control the room remotely through her mobile
+                  device; for example, she would like to be able to warm up the room when she
+                  is within a half hour or so of arriving back from dinner. This would support
+                  energy savings because the room could be colder when no one is there.
+                  Similarly, geofencing could also be used to turn on the lights when she's
+                  approaching the room. 
+               </p>
+               <p>The user would also like to have her preferences made known when she checks
+                  in. For example, the room should automatically know her preferred room
+                  temperature, preferred units (metric vs. imperial), and her preferred
+                  language. However, her preferences may have to be overridden by the hotel
+                  (for example, if she prefers a temperature that is too high or too low, or
+                  if her preferred language is not available). In that case, she needs to be
+                  informed that her preferences can't be met and she should be offered
+                  alternatives. 
+               </p>
+               <p>Privacy is also important in this use case. For example, the user doesn't
+                  want it to be generally known whether or not she's in the room. Security is
+                  important for preventing unauthorized access to the room or its services. 
+               </p>
+               <p>The user sometimes also shares a hotel room with a colleague, in which case
+                  both occupants need to have access to the same capabilities. 
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Apr/0027.html</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>This use case describes a dynamic configuration where different users are
+                     coming and going into the same space. It terms of control it is very similar
+                     to a smart home, but the difference is that the occupant of the room changes
+                     on a very frequent basis.
+                  </p>
+                  <p>Discovery is very important so that users' devices can be used to find the
+                     hotel room's services and their capabilities. It also points out the
+                     importance of:
+                  </p>
+                  <p>Interoperabiltiy across vendors</p>
+                  <p>Uniform user interface across hotels</p>
+                  <p>Communication of user preferences between users' device and hotel.</p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>Smart buildings</p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or between things can be observed </h4>
+                  <p>The hotel communicates with the room to allow/block access to control of a
+                     room as required when a guest checks in/checks out.
+                  </p>
+                  <p>The security camera communicates with the phone and/or the TV so that the
+                     camera image can be displayed.
+                  </p>
+                  <p>The user's mobile device communicates with the heating/AC to set preferred
+                     temperatures.
+                  </p>
+                  <p>The user's mobile device communicates with the TV to set preferred languages
+                     and channels.
+                  </p>
+                  <p>The user communicates to the alarm clock, TV, heating/AC and water to set
+                     alarm times, TV channels, and water temperature when she wants to change
+                     them.
+                  </p>
+               </div>
+               <div>
+                  <h4>Which Aspects are not considered </h4>
+                  <p>How access to the hotel services are authorized (e.g. passcode, biometrics,
+                     smart room key).
+                  </p>
+                  <p>How access is turned on/turned off for new and departing guests.</p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="intelligent-hotel-room-multi-stakeholder-operation">
+                           <b>
+                              <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                           </b>The user sometimes also shares a hotel room with a colleague, in which case
+                           both occupants need to have access to the same capabilities.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="intelligent-hotel-room-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>the user doesn't want it to be generally known whether or not she's in the room
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-logistics">
+            <h3>Domain: logistics</h3>
+            <section id="bakery">
+               <h2 title="Authored by: stefan">Order Management System</h2>
+               <p>In companies like a large industrial bakery there are storage facilities like silos
+                  to store raw materials. In order to keep track of the amount of material in the silos,
+                  level radar devices can be used. The measurement data is collected by an order management
+                  system.
+               </p>
+               <p>As soon as the production material falls below a certain threshold, the system sends
+                  an order to a delivery company.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="bakery-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>At some point in the system, the measurement value has to be enriched with some meta-information
+                           (e.g., timestamp, unit, id, ...).
+                        </li>
+                        <li id="bakery-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>The bakery's order management has to interact with the order management system of
+                           the delivery company.
+                        </li>
+                        <li id="bakery-object-memory">
+                           <b>
+                              <a href="#object-memory">Object Memory</a>: 
+                           </b>For perishable ingredients like milk or cheese, the due date can be estimated much
+                           more precisely if an object memory is kept for them. Also it can be a way to prove
+                           the origin and freshness of ingredients
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="bakery-layered-comm">
+                           <b>
+                              <a href="#layered-comm">Layered L7 Communication</a>: 
+                           </b>Given a commonality of interfacing protocols to heterogeneous ordering systems, layered
+                           communication enables a better reusability across several ordering systems. While
+                           the interaction primitives, transport protocol and representation might likely be
+                           the same for many systems, a difference in data structure demands a clear layering
+                           of the communication.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-manufacturing">
+            <h3>Domain: manufacturing</h3>
+            <section id="shift-of-function">
+               <h2 title="Authored by: h0ru5">Shift of Function in Automation Systems</h2>
+               <p>In a factory, the automation function does not run on a large central system, but
+                  decision-making is increasingly decentralized, i.e., shifted "downwards" towards the
+                  machine or control panels on the shop floor. With the advent of the digitization,
+                  the demand for a flexible production in small batch sizes or the production of multi-variant
+                  mass products arises in many manufactoring industries. The production process can
+                  be adaptive if product memories specify the machining; appropriate paths along the
+                  production line can be discovered dynamically.
+               </p>
+               <p>In order to introduce such a new automation function, the function can first be run
+                  supervised inside the central system and then shifted downwards, e.g. installed on
+                  a field device.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="shift-of-function-embedded-runtime">
+                           <b>
+                              <a href="#embedded-runtime">Embedded Runtime</a>: 
+                           </b>A seamless shift of functions requires an embedded runtime which allows the simple
+                           implementation, monitoring and debugging of applications.
+                        </li>
+                        <li id="shift-of-function-lifecycle-mgmt">
+                           <b>
+                              <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                           </b>The appearance and disappearance of devices as well as the software management on
+                           the devices itself requires a means to orchestrate the lifecycle of individual device's
+                           respective components.
+                        </li>
+                        <li id="shift-of-function-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>At some point in the system, the measurement value has to be enriched with some meta-information
+                           (e.g., timestamp, unit, id, ...).
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="shift-of-function-layered-comm">
+                           <b>
+                              <a href="#layered-comm">Layered L7 Communication</a>: 
+                           </b>In heterogeneous systems, the seamless shift of functionality requires a clear and
+                           consistent layering of application protocols since the functionality is focused on
+                           the data structure and should be agnostic of the underlying application layer protocol
+                           layers.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="automation-factories">
+               <h2 title="Authored by: stefan">Service Platform for Automation Factories</h2>
+               <p>Manufacturing plants and process automation plants not only have to be monitored on-site
+                  but also from remote locations. That is for example to compare KPI (key performance
+                  indicators) of different manufacturing sites and optimization of the production processes
+                  and outputs based on the collected data, for diagnosis, remote service support or
+                  predictive maintenance.
+               </p>
+               <p>For such a system you need a platform that collects the data from field level devices,
+                  from control level and also from applications on MES level. Applications can connect
+                  to the platform to retrieve the data for further processing (e.g., optimization algorithms).
+                  The open platform enables the connection between data points provided from devices/applications
+                  of different companies to applications from different parties (e.g. software that
+                  provides trouble-shooting information combined with online status information of devices
+                  in an optical head-mounted display).
+                  
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="automation-factories-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>At some point in the system, the data has to be enriched with some meta-information
+                           (e.g. timestamp, unit, id).
+                        </li>
+                        <li id="automation-factories-database">
+                           <b>
+                              <a href="#database">Database</a>: 
+                           </b>The platform needs a database to store the collected data.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="automation-factories-interaction-mechanism">
+                           <b>
+                              <a href="#interaction-mechanism">Interaction Mechanism</a>: 
+                           </b>The platform has to provide interaction mechanisms to provide data to the applications.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="smart-maintenance">
+               <h2 title="Authored by: mju">Optimal Maintenance in Connected Industries</h2>
+               <p>Continuous condition monitoring of machines and production systems allow an understanding
+                  of the current operational performance of a production system. Furthermore, by observing
+                  the deterioration of machines or analyzing the causes of defects, typical event patterns
+                  and causally determined correlations in more complex systems can be learned and used
+                  to predict future maintenance demand. Precise predictions require a large amount of
+                  high quality monitoring data in order to achieve the promised aims of reducing the
+                  percentage of unplanned maintenance and downtime. Many defects can be diagnosed, and
+                  sometimes fixed, remotely if the maintenance service provider accesses historical
+                  and live machine data. Furthermore, previous maintenance and repair reports provide
+                  useful knowledge to find a solution quickly.
+               </p>
+               <p>An efficient maintenance strategy dispatches technicians according to the current
+                  maintenance demand, downtime probabilities, available resources, preferences of the
+                  machine operator, in conjunction with economic trade-offs. In particular, the dispatching
+                  for an optimal maintenance strategy needs to integrate the predicted maintenance demand
+                  with various other information sources like skills and experiences of available service
+                  technicians, information of installed machines and systems, availability of potentially
+                  useful tools and spare parts, time limits of forthcoming production orders, etc.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="smart-maintenance-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>The collected data has to be enriched with meta-information. This allows for a flexible
+                           integration and interpretation of the data that is used to optimize the dispatching
+                           of service technicians. Not only machines, sensors and their data points, but also
+                           the data from and about installed systems in the factory, personal, control panels
+                           and systems, as well as interfaces to (MES, ERP) applications should be self-descriptive
+                           with a flexible schema open for future extensions.
+                        </li>
+                        <li id="smart-maintenance-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>The different stakeholders have to interact and therefore need a common data format.
+                        </li>
+                        <li id="smart-maintenance-database">
+                           <b>
+                              <a href="#database">Database</a>: 
+                           </b>The platform needs a scalable database to manage and process static as well as dynamic
+                           data.
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="smart-maintenance-interaction-mechanism">
+                           <b>
+                              <a href="#interaction-mechanism">Interaction Mechanism</a>: 
+                           </b>The platform has to provide interaction mechanisms to provide data to the applications.
+                        </li>
+                        <li id="smart-maintenance-layered-comm">
+                           <b>
+                              <a href="#layered-comm">Layered L7 Communication</a>: 
+                           </b>In heterogeneous manufacturing systems integrating machines and sensors of different
+                           vendors, a layering of application protocols is required to abstract from specific
+                           data schema, interfaces and interaction patterns.
+                        </li>
+                        <li id="smart-maintenance-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>A trust model is especially important in complex service networks and ecosystems.
+                           Production, machine, and operational data are extremely valuable, but must be shared
+                           among business partners.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="lifecycle-management">
+               <h2 title="Authored by: darko">Lifecycle Management for Industrial Automation Systems</h2>
+               <p>An industrial automation systems (IAS) needs to be managed throughout different phases
+                  of its lifecycle, e.g., development, engineering, operation, maintenance, optimization,
+                  and other phases. The lifecycle management is a challenging task due to various reasons.
+                  For instance, it is a task that involves various stakeholders (e.g., domain engineers,
+                  software engineers, system engineers, system installers etc.) and hence it is an error-prone
+                  task, it is often handled in a safety critical environment, it needs to be maintained
+                  over a longer timeframe (during which some of the stakeholders or parts of the system
+                  may not be available) and so forth.
+               </p>
+               <p>Let us consider a use case scenario which, throughout the lifecycle management of
+                  an IAS, considers following tasks: Development of a new automation function, service
+                  or an app based on available resources and domain knowledge; Support for resource
+                  discovery, optimal selection and choreography of resources; Parametrization of resources,
+                  functions, services and apps; Support for adaptive services running in a dynamic environment
+                  (i.e., physical resources appear and disappear); Monitoring and diagnosis of resources,
+                  functions, services and apps; Optimization of automation workflows involving different
+                  resources and different lifecycle phases.
+               </p>
+               <p>From these activities, as found in a typical lifecycle management of an IAS, one can
+                  derive the following requirements:
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="lifecycle-management-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>When a new application, service or a function needs to be developed, parametrized,
+                           maintained or optimized, it is required to get an understanding about the physical
+                           resources involved in such a task. In this case, resources (sensors, actuators, controllers
+                           etc.) can be described or self-described in a uniform way, i.e., they expose their
+                           properties, functionalities and roles in a uniform way although they may be implemented
+                           with different technologies. It would be desired that Resource Description relies
+                           on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).
+                        </li>
+                        <li id="lifecycle-management-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>Different stakeholders have to interact between themselves. Also, each of them needs
+                           to interact with different resources. To support exchange of data between different
+                           parties a common data exchange format is needed.
+                        </li>
+                        <li id="lifecycle-management-resource-choreography">
+                           <b>
+                              <a href="#resource-choreography">Resource Choreography</a>: 
+                           </b>A language that enables resources to be choreographed, parametrized, wired and invoked.
+                           The language also features a communication protocol which enables collaboration during
+                           these tasks (e.g., checks constraints when resources are combined).
+                        </li>
+                        <li id="lifecycle-management-ensemble-discovery">
+                           <b>
+                              <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                           </b>Resources need be discoverable based on their Resource Description (e.g., properties,
+                           functionalities and roles). The discovery also needs to be enabled in a dynamic environment
+                           where physical resources appear and disappear during lifecycle phases.
+                        </li>
+                        <li id="lifecycle-management-lifecycle-mgmt">
+                           <b>
+                              <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                           </b>Different stakeholders interact with different resources throughout different lifecycle
+                           phases, e.g., same resources may be used transparently in the development phase as
+                           well as in the operation phase.
+                        </li>
+                        <li id="lifecycle-management-multi-stakeholder-operation">
+                           <b>
+                              <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                           </b>Lifecycle management of Industrial Automation Systems involves multi-stakeholders
+                           (e.g., domain engineers, software engineers, system engineers, system installers etc.).
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="lifecycle-management-layered-comm">
+                           <b>
+                              <a href="#layered-comm">Layered L7 Communication</a>: 
+                           </b>In heterogeneous systems, where several vendors use different flavors of the same
+                           data exchange in terms of data representation or  transport protocols, integration
+                           requires a clear and consistent layering of application protocols.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-smart_grids">
+            <h3>Domain: smart grids</h3>
+            <section id="vpp">
+               <h2 title="Authored by: h0ru5">Virtual Power Plants</h2>
+               <p>A Virtual Power Plant (VPP) is an aggregation of Distributed Energy Resources (DERs),
+                  that can act as an entity on energy markets or as an ancillary service to grid operation.
+               </p>
+               <p>The individual DERs often have a primary use on their own, with electric generation/consumption
+                  being a side-effect resp. secondary use. This results in negotiations/collaborations
+                  between many different parties e.g. such as the DER owner, the VPP operator, the grid
+                  operator and others.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="vpp-multi-stakeholder-operation">
+                           <b>
+                              <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                           </b>Multiple involved parties have to find a common mode of operation
+                        </li>
+                        <li id="vpp-lifecycle-mgmt">
+                           <b>
+                              <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                           </b>Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance
+                           of DERs as well as the software management on the devices itself requires a means
+                           to orchestrate the lifecycle of individual device's respective components.
+                        </li>
+                        <li id="vpp-embedded-runtime">
+                           <b>
+                              <a href="#embedded-runtime">Embedded Runtime</a>: 
+                           </b>Especially for DERs in remote locations, maintaining a close couple control loop can
+                           be expensive if feasible at all. Therefore, it is desirable to be able to offload
+                           control logic to the DER itself.
+                        </li>
+                        <li id="vpp-ensemble-discovery">
+                           <b>
+                              <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                           </b>In order to dynamically find matching DERs needed for the operational goal of a VPP,
+                           a registry with different options of DER discovery is needed.
+                        </li>
+                        <li id="vpp-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>The different stakeholders have to interact and therefore need a common data format.
+                        </li>
+                        <li id="vpp-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>The DER has to describe itself to enable discovery of single DERs and ensembles, also
+                           the operational data needs to be understood by the different stakeholders without
+                           engineering effort.
+                        </li>
+                        <li id="vpp-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>As there is a fan-out with many devices that probably have a rate-limited connection
+                           connecting to one single command centre, a bidirectional communication mechanism is
+                           needed rather than polling for the reverse direction
+                        </li>
+                        <li id="vpp-object-memory">
+                           <b>
+                              <a href="#object-memory">Object Memory</a>: 
+                           </b>As multiple and interchangable stakeholders are involved in the application, a backlog
+                           of the object is beneficial for scrollkeeping
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="vpp-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>As fine-grained metering informtion provides sensitive data about a household, the
+                           system should show a high digree of privacy
+                        </li>
+                        <li id="vpp-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>Since the data exchange between the virtual power plant and the distributed energy
+                           resource leads to a physical action that invokes high currents and monetary flows,
+                           the integrity of both parties and the exchange's data is crucial
+                        </li>
+                        <li id="vpp-layered-comm">
+                           <b>
+                              <a href="#layered-comm">Layered L7 Communication</a>: 
+                           </b>Since multiple different links are used for monitoring and control, integration requires
+                           a clear and consistent seperation of information from the used serialization and application
+                           protocols to enable the exchange of homogenous information over heterogenous application
+                           layer protocols
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-transportation">
+            <h3>Domain: transportation</h3>
+            <section id="emobility">
+               <h2 title="Authored by: h0ru5">E-Mobility</h2>
+               <p>The process of charging an e-car differs greatly from simply pumping fuel. It involves
+                  several players apart from the obvious car, chargespot and car owner, such as electricity
+                  providers and clearing houses
+               </p>
+               <p>An e-car and the chargespot negotiate different parameters affecting the charging
+                  process, such as voltages, currents, time it takes to charge etc., but also information
+                  like how the electricity will be payed for, how much was already transferred etc.
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="emobility-lifecycle-mgmt">
+                           <b>
+                              <a href="#lifecycle-mgmt">Device Lifecycle Management</a>: 
+                           </b>Managing EVs and Fleets such as buses, cars etc. requires the ability to handle dynamic
+                           systems.
+                        </li>
+                        <li id="emobility-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>A standardized data format is needed when different transport/electricity providers
+                           and different devices are involved.
+                        </li>
+                        <li id="emobility-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>Both components may want to be notified of certain events in the charging system,
+                           without having to listen to a continuous event stream from it. This allows a more
+                           lightweight implementation.
+                        </li>
+                        <li id="emobility-object-memory">
+                           <b>
+                              <a href="#object-memory">Object Memory</a>: 
+                           </b>...
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="emobility-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>Since a financial transaction is directly involved, it is important that both sides
+                           can enter a trust relationship.
+                        </li>
+                        <li id="emobility-integrity">
+                           <b>
+                              <a href="#integrity">Integrity</a>: 
+                           </b>To avoid man-in-the middle attacks and fraud by alteration, the integrity of all message
+                           exchanges must be confirmable
+                        </li>
+                        <li id="emobility-layered-comm">
+                           <b>
+                              <a href="#layered-comm">Layered L7 Communication</a>: 
+                           </b>Since the same data contents are transferred over several communication links (such
+                           as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle
+                           to fleet operation, etc.), it is neccessary that the communication of the information/contexts
+                           can be transferred independent of the different transports or serialization formats
+                           used
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-other">
+            <h3>Domain: other</h3>
+            <section id="device-management">
+               <h2 title="Authored by: cabo">Device, Network, and Application Management</h2>
+               <p>
+                  A device, its network environment and the applications
+                  installed on the device, need to be managed.  The relevant
+                  resources are typically represented in a hierarchical fashion
+                  (as modelled in the YANG schema language) and exchanged as
+                  collections or as subsets of a larger collection.
+                  Some of the resources can be so large that they seriously
+                  stress the runtime environment of the device (e.g., for
+                  firmware updates).
+                  Some of the subresources may appear and disappear dynamically
+                  (e.g., network prefixes).  Retrieval and update of the
+                  resources may refer to non-contiguous subsets of a hierarchy
+                  (PATCH, non-contiguous GET).  Traditional URI-paths may be too
+                  expensive for repeated transfer in requests.
+                  
+               </p>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="device-management-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>
+                           The management information may need to be reflected in the
+                           self-description of the resource.
+                           
+                        </li>
+                        <li id="device-management-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>
+                           Updates may need to be pushed, as well as special event-type
+                           information (YANG notifications).
+                           
+                        </li>
+                        <li id="device-management-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>
+                           The exchange format needs to be both compact and easy to
+                           handle in various sub-collections.
+                           
+                        </li>
+                        <li id="device-management-ensemble-discovery">
+                           <b>
+                              <a href="#ensemble-discovery">Ensemble Discovery</a>: 
+                           </b>
+                           Management applications may need to find all devices that
+                           have a certain set of properties.
+                           
+                        </li>
+                        <li id="device-management-multi-stakeholder-operation">
+                           <b>
+                              <a href="#multi-stakeholder-operation">Multi-Stakeholder Operation</a>: 
+                           </b>
+                           Management of devices, the network, and applications may all
+                           be performed by different entities and the applicationes
+                           these set up.
+                           
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="device-management-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>
+                           Management information is sometimes relevant to privacy
+                           considerations.
+                           As importantly, management information needs to be
+                           confidentiality protected.
+                           
+                        </li>
+                        <li id="device-management-integrity">
+                           <b>
+                              <a href="#integrity">Integrity</a>: 
+                           </b>
+                           (This requirement, as phrased, should be called non-repudiation.)
+                           Management information usually needs integrity protection,
+                           in particular for software updates.
+                           
+                        </li>
+                        <li id="device-management-trust">
+                           <b>
+                              <a href="#trust">Trust</a>: 
+                           </b>
+                           To enable a management application to manage specific
+                           device, a security association needs to be set up as part of
+                           the provisioning process.
+                           
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-smart_cities">
+            <h3>Domain: smart cities</h3>
+            <section id="flood-monitoring">
+               <h2 title="Authored by: Edoardo Pignotti">Community-based Flood Monitoring</h2>
+               <p>Flood warning systems are often based on blanket reports from local authorities and
+                  environment agencies, which are based on, limited resources and a small number of
+                  expensive, professional sensors.
+               </p>
+               <p>If John wants to determine if his property will be affected by water, it needs access
+                  to flooding information at a street level and to understand how connected water streams
+                  might affect the water level near his property. Such a process requires higher resolution
+                  data on the streams, groundwater and complex basins riddling cities and villages.
+               </p>
+               <p>John is part of a community-based initiative where members provide access to water
+                  level data by radio connected low cost sensors in their properties. It is very important
+                  for John to understand the quality of the information it has access to in order to
+                  make better decisions about what flood defences to use.
+               </p>
+               <p>Privacy is also am important factor as sensors could be deployed in areas of low-density
+                  population and John does not want other people to infer what kind of flood damage
+                  his property might have suffered.
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Apr/0031.html</p>
+               <div>
+                  <h4>How does this translate to a technical description?</h4>
+                  <p>Device installation: Members of the community need to install water-level monitoring
+                     sensors on their property;
+                  </p>
+                  <p>Data transmission: Data from the sensors need to be reliably transmitted to cloud
+                     services;
+                  </p>
+                  <p>Data transformation: Data streams need to be manipulated and transformed in real time;</p>
+                  <p>Decision Making: Resulting data streams should be used for decision making (e.g. through
+                     visualisation tools or other applications);
+                  </p>
+                  <p>Network Monitoring: Data quality indicators should be used for monitoring the sensor
+                     network.
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)?</h4>
+                  <p>main: smart cities / other utilities / monitoring water levels for flood warnings</p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or between things can be observed?</h4>
+                  <p>Resource Description: In the system, the data has to be enriched with some meta-information
+                     (e.g. timestamp, location, data quality indicators, provenance, etc.).
+                  </p>
+                  <p>Thing registration: sensors and gateways are registered with services in the cloud.</p>
+                  <p>Data subscription: agents subscribe to data streams generated by devices in the sensor
+                     network or other external data sources.
+                  </p>
+                  <p>Data transformation: agents transform incoming data streams and generate outgoing
+                     data streams.
+                  </p>
+                  <p>Quality Assessment: Information quality indicators associated with things are used
+                     by the technical team to monitor the operation of the sensor network
+                  </p>
+                  <p>Automated Decision Making: Automated decisions can be made based on the current status
+                     of things e.g. activate flood defences.
+                  </p>
+               </div>
+               <div>
+                  <h4>Which aspects are not considered?</h4>
+                  <p>Lifecycle of devices, services and applications</p>
+                  <p>Discovery of devices and related data sources</p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="flood-monitoring-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>Data from the sensors need to be reliably transmitted to cloud services
+                        </li>
+                        <li id="flood-monitoring-resource-description">
+                           <b>
+                              <a href="#resource-description">Resource Description</a>: 
+                           </b>In the system, the data has to be enriched with some meta-information (e.g. timestamp,
+                           location, data quality indicators, provenance, etc.)
+                        </li>
+                        <li id="flood-monitoring-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>Warn user if property will be affected by water
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="flood-monitoring-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>Privacy is also am important factor as sensors could be deployed in areas of low-density
+                           population and John does not want that other people to infer what kind of flood damages
+                           his property might have suffered.
+                        </li>
+                        <li id="flood-monitoring-synchronous">
+                           <b>
+                              <a href="#synchronous">Synchronicity, soft real-time</a>: 
+                           </b>Data streams need to be manipulated and transformed in real time
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+         </section>
+         <section id="domain-healthcare_and_medical">
+            <h3>Domain: healthcare and medical</h3>
+            <section id="health-monitoring">
+               <h2 title="Authored by: claesnilsson">Remote health monitoring system</h2>
+               <p>John is retired and lives alone in his own apartment. He has bad legs and there is
+                  a constant risk that he falls. If that happens he is not able to rise from the floor
+                  without help. In addition, John suffers from heart arrhythmias and diabetes.
+               </p>
+               <p>Due to John's condition he needs remote monitoring by his healthcare provider. He
+                  therefore wears a wristband capable of continuously monitoring his heart rate and
+                  detect irregular heart rhythms as well as detecting a fall situation. A future version
+                  of the wristband will also be capable of non-invasive monitoring of his blood glucose
+                  level. The wristband communicates wirelessly with John's healthcare provider. This
+                  remote monitoring system could be seen as a complement to a normal home alarm system
+                  for elderly people with which old people can manually call an emergency service. The
+                  differences are that the wristband system detects severe conditions automatically,
+                  which is needed if the person is confused or is unconscious, and also has the possibility
+                  to measure medical parameters such as heart rate and heart rhythm.
+               </p>
+               <p>see https://lists.w3.org/Archives/Public/public-wot-ig/2015Mar/0057.html</p>
+               <div>
+                  <h4>How does this translate to a technical Description</h4>
+                  <p>When the system is in operation everything works automatically without any user interface.
+                     The remote monitoring application runs in a cloud server and can communicate with
+                     the wristband. A local router, situated for example in a Smartphone, may be needed
+                     to translate between a local communication method such as Bluetooth Low Energy and
+                     the mobile network or wifi, but at application level end-to-end security and communication
+                     through firewalls are achieved. The communication must be reliable and the power consumption
+                     in the wristband low to achieve long battery life.
+                  </p>
+                  <p>User interaction is only required at system installation. The user, or another trusted
+                     person, e.g. a relative, health care personnel or personal assistant, has to use a
+                     web browser to log in to the remote monitoring application and the user has to approve
+                     that the application has access to his/her wristband using an existing authorization
+                     system, e.g. OAuth.
+                  </p>
+                  <p>To provide service discovery for applications the wristband, during the system installation,
+                     is registered in a discovery service that contains a service description for the wristband.
+                     This service description states for example manufacturer, owner and the APIs to access
+                     the resources of the wristband.
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>main: Smart lifecare / Healthcare and medical / Remote patient monitoring and care</p>
+               </div>
+               <div>
+                  <h4>What interaction pattern with or between things can be observed</h4>
+                  <p>Registration and authorization:  Registration of IoT device to make it discoverable
+                     and accessible by applications. Registration and authorization of applications to
+                     access resources on IoT devices.
+                  </p>
+                  <p>User interface: User interface only for registration and authorization. Operation
+                     is "user interface less".
+                  </p>
+                  <p>Security: End-to-end security cloud service - IoT device</p>
+               </div>
+               <div>
+                  <h4>Accessibiliy considerations</h4>
+                  <p>Low vision, blindness, deafness and hearing loss does not provide any limitation for
+                     users during operation of the system as the system is UI-less. However, the system
+                     installation process requires operation of a normal web browser, which may require
+                     assistance for people with physical or mental limitations.
+                  </p>
+               </div>
+               <div>
+                  <h4>Which aspects are not considered</h4>
+                  <p>Life cycle of devices, services and applications</p>
+                  <p>Dealing with faults</p>
+                  <p>Replacing devices</p>
+                  <p>Taking devices out of operation</p>
+               </div>
+               <dl>
+                  <dt>
+                     <b>Related Building Blocks</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="health-monitoring-data-exchange-format">
+                           <b>
+                              <a href="#data-exchange-format">Content-Negotiation</a>: 
+                           </b>communication must be reliable
+                        </li>
+                        <li id="health-monitoring-push">
+                           <b>
+                              <a href="#push">Push Services</a>: 
+                           </b>alarm system: wristband system detects severe conditions 
+                        </li>
+                     </ul>
+                  </dd>
+                  <dt>
+                     <b>Related Non-Functionals</b>
+                  </dt>
+                  <dd>
+                     <ul>
+                        <li id="health-monitoring-privacy">
+                           <b>
+                              <a href="#privacy">Privacy</a>: 
+                           </b>The user, or another trusted person, e.g. a relative, health care personnel or personal
+                           assistant, has to use a web browser to log in to the remote monitoring application
+                           and the user has to approve that the application has access to his/her wristband using
+                           an existing authorization system, e.g. OAuth.
+                        </li>
+                     </ul>
+                  </dd>
+               </dl>
+            </section>
+            <section id="ecg">
+               <h2 title="Authored by: draggett">Remote Electrocardiogram (ECG)</h2>
+               <p>Ebele is a nurse in a large medical district covering many villages.  Today she is
+                  visiting Imani who has been complaining of weakness and chest pains.  Ebele uses her
+                  mobile phone to consult the doctor who is a clinic in a town eighty kilometers away.
+                  The doctor asks her to perform an ECG on Imani. She attaches the electrodes to Imani's
+                  chest and plugs them into the remote ECG monitor. This streams the data in real time
+                  over the mobile network to the clinic where the doctor is based. The doctor examines
+                  the ECG and spots signs of arrythmia, and directs Ebele to put Imani on a course of
+                  medication.
+               </p>
+               <div>
+                  <h4>How does this translate to a technical Description?</h4>
+                  <p>The remote ECG monitor has a multichannel signal processing board that combines the
+                     readings from the electrodes to generate a clean analog output.  This is fed to the
+                     ADC in a microcontroller, which streams the digitised samples over the mobile network
+                     to a server in the clinic. The data is then forwarded to the doctor's terminal for
+                     analysis.
+                  </p>
+               </div>
+               <div>
+                  <h4>What application domains are related (e.g. referring to the taxonomy)</h4>
+                  <p>main: Smart lifecare / Healthcare and medical / Remote patient monitoring and care</p>
+               </div>
+               <div>
+                  <h4>What is technically significant about this use case?</h4>
+                  <p>This use case involves a means to model streams as a complex data type for the description
+                     language for "things". In this particular use case, the stream consists of 24 bit
+                     values at a sampling rate of 300 per second.
+                  </p>
+               </div>
+            </section>
+         </section>
+      </section>
+      <section id="building-blocks">
+         <h2>Building blocks</h2>
+         <section id="resource-description">
+            <h2>Resource Description</h2>
+            <p>In loosely coupled systems, applications may encounter resources they have no prior
+               knowledge about. Resource Description is a facility that allows resources to be described
+               or describe themselves, so that applications can use those descriptions to learn about
+               certain properties and/or capabilities of a resource. Resource descriptions on the
+               highest abstraction level needs to provide two main facilities: identification of
+               resources through some referencing mechanism, and description of resources through
+               some data model.
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 10 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#building-automation" title="Go to complete Use Case">Building Automation: </a>
+                        </em>
+                        <a href="#building-automation-resource-description" title="Go to Atomic Use Case">Applications may want to get an understanding of what kind of sensors and other capabilities
+                           are exposed as part of the building automation system. In such a case, it is necessary
+                           that available resources can be described or are describing themselves, preferably
+                           using a framework that makes those descriptions uniform even if the underlying sensors
+                           or services are using different implementations and communication technologies.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#bakery" title="Go to complete Use Case">Order Management System: </a>
+                        </em>
+                        <a href="#bakery-resource-description" title="Go to Atomic Use Case">At some point in the system, the measurement value has to be enriched with some meta-information
+                           (e.g., timestamp, unit, id, ...).
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
+                        </em>
+                        <a href="#adaptive-building-resource-description" title="Go to Atomic Use Case">The environment around a user must be conceivable by the system in a way that does
+                           not require manual engineering.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#shift-of-function" title="Go to complete Use Case">Shift of Function in Automation Systems: </a>
+                        </em>
+                        <a href="#shift-of-function-resource-description" title="Go to Atomic Use Case">At some point in the system, the measurement value has to be enriched with some meta-information
+                           (e.g., timestamp, unit, id, ...).
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-resource-description" title="Go to Atomic Use Case">The DER has to describe itself to enable discovery of single DERs and ensembles, also
+                           the operational data needs to be understood by the different stakeholders without
+                           engineering effort.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#automation-factories" title="Go to complete Use Case">Service Platform for Automation Factories: </a>
+                        </em>
+                        <a href="#automation-factories-resource-description" title="Go to Atomic Use Case">At some point in the system, the data has to be enriched with some meta-information
+                           (e.g. timestamp, unit, id).
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-resource-description" title="Go to Atomic Use Case">The collected data has to be enriched with meta-information. This allows for a flexible
+                           integration and interpretation of the data that is used to optimize the dispatching
+                           of service technicians. Not only machines, sensors and their data points, but also
+                           the data from and about installed systems in the factory, personal, control panels
+                           and systems, as well as interfaces to (MES, ERP) applications should be self-descriptive
+                           with a flexible schema open for future extensions.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-resource-description" title="Go to Atomic Use Case">
+                           The management information may need to be reflected in the
+                           self-description of the resource.
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
+                        </em>
+                        <a href="#lifecycle-management-resource-description" title="Go to Atomic Use Case">When a new application, service or a function needs to be developed, parametrized,
+                           maintained or optimized, it is required to get an understanding about the physical
+                           resources involved in such a task. In this case, resources (sensors, actuators, controllers
+                           etc.) can be described or self-described in a uniform way, i.e., they expose their
+                           properties, functionalities and roles in a uniform way although they may be implemented
+                           with different technologies. It would be desired that Resource Description relies
+                           on common vocabularies (e.g., tagging conventions, taxonomies, ontologies).
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-resource-description" title="Go to Atomic Use Case">In the system, the data has to be enriched with some meta-information (e.g. timestamp,
+                           location, data quality indicators, provenance, etc.)
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 1 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#rdf" title="Go to Technology Description">Resource Description Framework (RDF): </a>
+                        </em>
+                        <a href="#rdf-resource-description" title="Go to Technology Feature Description">RDF's origins (as highlighted by its name) are in the field of providing metadata
+                           (i.e., descriptions) of Web resources. This is facilitated by using URIs as identifiers,
+                           and by using attribute/value pairs that make statements about those URI-identified
+                           resources. RDF descriptions can be of arbitrary complexity by joining triples to form
+                           a graph, and they can use and combine various vocabularies so that the graph contains
+                           information according to the concepts defined in those vocabularies.
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="push">
+            <h2>Push Services</h2>
+            <p>The default interaction in most Web-based scenarios are pull interactions, where applications
+               request information form servers. This pattern supports scalability very well, because
+               servers do not need to keep track of clients. However, in some scenarios it may be
+               advantageous for this interaction pattern to be reversed, with servers (i.e., the
+               managing entities of resources) initiating an interaction for certain resource-based
+               events. These push interactions require servers to keep track of clients (often referred
+               to as "subscribers"), but on the other hand minimizes interactions when resource events
+               are infrequent but should be noticed by clients as soon as possible.
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 7 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#building-automation" title="Go to complete Use Case">Building Automation: </a>
+                        </em>
+                        <a href="#building-automation-push" title="Go to Atomic Use Case">Applications may want to be notified of certain events in the building automation
+                           system, without having to listen to a continuous event stream from it. In such a case,
+                           it is advantageous for the system to support some kind of push mechanism, so that
+                           applications can subscribe to these events and will be notified when they happen.
+                           This increases the workload of the building automation system (it has to keep track
+                           of subscribers), but may make development of certain classes of applications much
+                           easier.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-push" title="Go to Atomic Use Case">As there is a fan-out with many devices that probably have a rate-limited connection
+                           connecting to one single command centre, a bidirectional communication mechanism is
+                           needed rather than polling for the reverse direction
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-push" title="Go to Atomic Use Case">Both components may want to be notified of certain events in the charging system,
+                           without having to listen to a continuous event stream from it. This allows a more
+                           lightweight implementation.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-push" title="Go to Atomic Use Case">
+                           Updates may need to be pushed, as well as special event-type
+                           information (YANG notifications).
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#washing-machine" title="Go to complete Use Case">Smart control of washing machine: </a>
+                        </em>
+                        <a href="#washing-machine-push" title="Go to Atomic Use Case">Notify user when washing is done.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-push" title="Go to Atomic Use Case">Warn user if property will be affected by water</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#health-monitoring" title="Go to complete Use Case">Remote health monitoring system: </a>
+                        </em>
+                        <a href="#health-monitoring-push" title="Go to Atomic Use Case">alarm system: wristband system detects severe conditions </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 2 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#pubsubhubbub" title="Go to Technology Description">PubSubHubbub (PuSH): </a>
+                        </em>
+                        <a href="#pubsubhubbub-push" title="Go to Technology Feature Description">...</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#xmpp" title="Go to Technology Description">Extensible Messaging and Presence Protocol (XMPP): </a>
+                        </em>
+                        <a href="#xmpp-push" title="Go to Technology Feature Description">being based on a bidirectional link, XMPP offers a standardized publish/subscribe
+                           scheme
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="data-exchange-format">
+            <h2>Content-Negotiation</h2>
+            <p>For many interactions, it is necessary that peers agree on a shared data exchange
+               format. There are various ways in which such a format can be defined, and in which
+               agreement can be reached, but the general goal for all of these cases is that peers
+               can reach agreement on which data exchange to use, and what it means to use this format.
+               Depending on the type of data to be exchanged, different data exchange formats have
+               different advantages and disadvantages, but generally speaking, the most important
+               factor is that there is agreement on the representation of the data to be exchanged,
+               and how to parse that into a model that is usable and useful for the application's
+               goals.
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 8 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#bakery" title="Go to complete Use Case">Order Management System: </a>
+                        </em>
+                        <a href="#bakery-data-exchange-format" title="Go to Atomic Use Case">The bakery's order management has to interact with the order management system of
+                           the delivery company.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-data-exchange-format" title="Go to Atomic Use Case">The different stakeholders have to interact and therefore need a common data format.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-data-exchange-format" title="Go to Atomic Use Case">The different stakeholders have to interact and therefore need a common data format.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-data-exchange-format" title="Go to Atomic Use Case">A standardized data format is needed when different transport/electricity providers
+                           and different devices are involved.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-data-exchange-format" title="Go to Atomic Use Case">
+                           The exchange format needs to be both compact and easy to
+                           handle in various sub-collections.
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
+                        </em>
+                        <a href="#lifecycle-management-data-exchange-format" title="Go to Atomic Use Case">Different stakeholders have to interact between themselves. Also, each of them needs
+                           to interact with different resources. To support exchange of data between different
+                           parties a common data exchange format is needed.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-data-exchange-format" title="Go to Atomic Use Case">Data from the sensors need to be reliably transmitted to cloud services</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#health-monitoring" title="Go to complete Use Case">Remote health monitoring system: </a>
+                        </em>
+                        <a href="#health-monitoring-data-exchange-format" title="Go to Atomic Use Case">communication must be reliable</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 2 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#xmpp" title="Go to Technology Description">Extensible Messaging and Presence Protocol (XMPP): </a>
+                        </em>
+                        <a href="#xmpp-data-exchange-format" title="Go to Technology Feature Description">The protocol and payloads are described as XML Schemas, enabling other serializations
+                           (such as xmpp-ftw in JSON)
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#exi" title="Go to Technology Description">Efficient XML Interchange (EXI): </a>
+                        </em>
+                        <a href="#exi-data-exchange-format" title="Go to Technology Feature Description"></a>
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="lifecycle-mgmt">
+            <h2>Device Lifecycle Management</h2>
+            <p>For some systems, its of crucial importance to be able to manage a dynamic, amorphous
+               collective (ensemble) of components/devices that dynamically appear and disappear,
+               resp. are on- and offline.
+            </p>
+            <p>This implies also a form of adding new components that does not involve high engineering
+               effort.
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 5 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
+                        </em>
+                        <a href="#adaptive-building-lifecycle-mgmt" title="Go to Atomic Use Case">The appearance and disappearance of users requires a means to orchestrate the lifecycle
+                           of users/stakeholders.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#shift-of-function" title="Go to complete Use Case">Shift of Function in Automation Systems: </a>
+                        </em>
+                        <a href="#shift-of-function-lifecycle-mgmt" title="Go to Atomic Use Case">The appearance and disappearance of devices as well as the software management on
+                           the devices itself requires a means to orchestrate the lifecycle of individual device's
+                           respective components.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-lifecycle-mgmt" title="Go to Atomic Use Case">Since the VPP is a dynamic system of loosely coupled DERs, the appearance and disappearance
+                           of DERs as well as the software management on the devices itself requires a means
+                           to orchestrate the lifecycle of individual device's respective components.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-lifecycle-mgmt" title="Go to Atomic Use Case">Managing EVs and Fleets such as buses, cars etc. requires the ability to handle dynamic
+                           systems.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
+                        </em>
+                        <a href="#lifecycle-management-lifecycle-mgmt" title="Go to Atomic Use Case">Different stakeholders interact with different resources throughout different lifecycle
+                           phases, e.g., same resources may be used transparently in the development phase as
+                           well as in the operation phase.
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="ensemble-discovery">
+            <h2>Ensemble Discovery</h2>
+            <p>The ability to discover single devices resp. components with certain capabilities
+               or attributes or an ensemble of these is a pivotal point for applications that target
+               an group that bis dynamically gathered.
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 4 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
+                        </em>
+                        <a href="#adaptive-building-ensemble-discovery" title="Go to Atomic Use Case">Dynamic selection of the surrounding/affecting resources to create the desired comfort
+                           level.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-ensemble-discovery" title="Go to Atomic Use Case">In order to dynamically find matching DERs needed for the operational goal of a VPP,
+                           a registry with different options of DER discovery is needed.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-ensemble-discovery" title="Go to Atomic Use Case">
+                           Management applications may need to find all devices that
+                           have a certain set of properties.
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
+                        </em>
+                        <a href="#lifecycle-management-ensemble-discovery" title="Go to Atomic Use Case">Resources need be discoverable based on their Resource Description (e.g., properties,
+                           functionalities and roles). The discovery also needs to be enabled in a dynamic environment
+                           where physical resources appear and disappear during lifecycle phases.
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="multi-stakeholder-operation">
+            <h2>Multi-Stakeholder Operation</h2>
+            <p>In the WoT, there are cases of operation resp. automation that involve more than one
+               single system owner, but rather are based on a collaboration between different stakeholder
+               that influence or are influenced by the system/application.
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 5 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
+                        </em>
+                        <a href="#adaptive-building-multi-stakeholder-operation" title="Go to Atomic Use Case">Multiple people in the same room require automatic mediation of desired comfort levels.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-multi-stakeholder-operation" title="Go to Atomic Use Case">Multiple involved parties have to find a common mode of operation</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-multi-stakeholder-operation" title="Go to Atomic Use Case">
+                           Management of devices, the network, and applications may all
+                           be performed by different entities and the applicationes
+                           these set up.
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
+                        </em>
+                        <a href="#lifecycle-management-multi-stakeholder-operation" title="Go to Atomic Use Case">Lifecycle management of Industrial Automation Systems involves multi-stakeholders
+                           (e.g., domain engineers, software engineers, system engineers, system installers etc.).
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#intelligent-hotel-room" title="Go to complete Use Case">Intelligent Hotel Room : </a>
+                        </em>
+                        <a href="#intelligent-hotel-room-multi-stakeholder-operation" title="Go to Atomic Use Case">The user sometimes also shares a hotel room with a colleague, in which case
+                           both occupants need to have access to the same capabilities.
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="embedded-runtime">
+            <h2>Embedded Runtime</h2>
+            <p>A sandboxed runtime with a standardized API/service based abstraction layer to enable
+               the execution of applications on things. Architecturally comparable to nowadays browsers,
+               app runtimes and containers like J2EE, but specifically targeted at constrained devices.
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 2 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#shift-of-function" title="Go to complete Use Case">Shift of Function in Automation Systems: </a>
+                        </em>
+                        <a href="#shift-of-function-embedded-runtime" title="Go to Atomic Use Case">A seamless shift of functions requires an embedded runtime which allows the simple
+                           implementation, monitoring and debugging of applications.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-embedded-runtime" title="Go to Atomic Use Case">Especially for DERs in remote locations, maintaining a close couple control loop can
+                           be expensive if feasible at all. Therefore, it is desirable to be able to offload
+                           control logic to the DER itself.
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="resource-choreography">
+            <h2>Resource Choreography</h2>
+            <p>A language that enables resources to be choreographed, parametrized, wired and invoked.
+               The language also features a communication protocol which enables collaboration during
+               these tasks (e.g., checks constraints when resources are combined).
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 1 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
+                        </em>
+                        <a href="#lifecycle-management-resource-choreography" title="Go to Atomic Use Case">A language that enables resources to be choreographed, parametrized, wired and invoked.
+                           The language also features a communication protocol which enables collaboration during
+                           these tasks (e.g., checks constraints when resources are combined).
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="object-memory">
+            <h2>Object Memory</h2>
+            <p>keeping a history / digital twin of a physical object that serves as a proxy or avatar</p>
+            <dl>
+               <dt>
+                  <b>Motivated by 3 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#bakery" title="Go to complete Use Case">Order Management System: </a>
+                        </em>
+                        <a href="#bakery-object-memory" title="Go to Atomic Use Case">For perishable ingredients like milk or cheese, the due date can be estimated much
+                           more precisely if an object memory is kept for them. Also it can be a way to prove
+                           the origin and freshness of ingredients
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-object-memory" title="Go to Atomic Use Case">As multiple and interchangable stakeholders are involved in the application, a backlog
+                           of the object is beneficial for scrollkeeping
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-object-memory" title="Go to Atomic Use Case">...</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="database">
+            <h2>Database</h2>
+            <p>...</p>
+            <dl>
+               <dt>
+                  <b>Motivated by 2 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#automation-factories" title="Go to complete Use Case">Service Platform for Automation Factories: </a>
+                        </em>
+                        <a href="#automation-factories-database" title="Go to Atomic Use Case">The platform needs a database to store the collected data.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-database" title="Go to Atomic Use Case">The platform needs a scalable database to manage and process static as well as dynamic
+                           data.
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+      </section>
+      <section id="non-functionals">
+         <h2>Non-Functional Requirements</h2>
+         <section id="synchronous">
+            <h2>Synchronicity, soft real-time</h2>
+            <p>Whenever a user interacts with a WoT system or also in many M2M cases a crucial acceptance
+               factor is the time between the input and the reaction
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 1 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-synchronous" title="Go to Atomic Use Case">Data streams need to be manipulated and transformed in real time</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="privacy">
+            <h2>Privacy</h2>
+            <p>A data surce resp. the owner of this data needs to be able to decide who is allowed
+               to see what data and methods are needed to define and enforce this in a secure yet
+               pragmatic way
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 8 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
+                        </em>
+                        <a href="#adaptive-building-privacy" title="Go to Atomic Use Case">Since the system would rely on information on which person is in each room at any
+                           time, it can allow a very fine-grained movement profile, which is sensitive information
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-privacy" title="Go to Atomic Use Case">As fine-grained metering informtion provides sensitive data about a household, the
+                           system should show a high digree of privacy
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-privacy" title="Go to Atomic Use Case">
+                           Management information is sometimes relevant to privacy
+                           considerations.
+                           As importantly, management information needs to be
+                           confidentiality protected.
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#washing-machine" title="Go to complete Use Case">Smart control of washing machine: </a>
+                        </em>
+                        <a href="#washing-machine-privacy" title="Go to Atomic Use Case">Home automation agent is accessible on the Web.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#flood-monitoring" title="Go to complete Use Case">Community-based Flood Monitoring: </a>
+                        </em>
+                        <a href="#flood-monitoring-privacy" title="Go to Atomic Use Case">Privacy is also am important factor as sensors could be deployed in areas of low-density
+                           population and John does not want that other people to infer what kind of flood damages
+                           his property might have suffered.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#health-monitoring" title="Go to complete Use Case">Remote health monitoring system: </a>
+                        </em>
+                        <a href="#health-monitoring-privacy" title="Go to Atomic Use Case">The user, or another trusted person, e.g. a relative, health care personnel or personal
+                           assistant, has to use a web browser to log in to the remote monitoring application
+                           and the user has to approve that the application has access to his/her wristband using
+                           an existing authorization system, e.g. OAuth.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#integrated-home-automation" title="Go to complete Use Case">Integrated Home Automation, Demand Response and security: </a>
+                        </em>
+                        <a href="#integrated-home-automation-privacy" title="Go to Atomic Use Case">cloud-based monitoring and control of home devices based-on pre-defined rules</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#intelligent-hotel-room" title="Go to complete Use Case">Intelligent Hotel Room : </a>
+                        </em>
+                        <a href="#intelligent-hotel-room-privacy" title="Go to Atomic Use Case">the user doesn't want it to be generally known whether or not she's in the room</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="integrity">
+            <h2>Integrity</h2>
+            <p>In some Wot appications,  the integrity and dependability of data needs to be provable.
+               Ensuring that the data was not altered and is genuine is a common requirement of all
+               systems operating in public networks
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 2 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-integrity" title="Go to Atomic Use Case">To avoid man-in-the middle attacks and fraud by alteration, the integrity of all message
+                           exchanges must be confirmable
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-integrity" title="Go to Atomic Use Case">
+                           (This requirement, as phrased, should be called non-repudiation.)
+                           Management information usually needs integrity protection,
+                           in particular for software updates.
+                           
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="trust">
+            <h2>Trust</h2>
+            <p>The mutual trust into the respective peer's identity  is of high importance especially
+               in systems and applications interacting with physical entites
+            </p>
+            <dl>
+               <dt>
+                  <b>Motivated by 6 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#adaptive-building" title="Go to complete Use Case">Adaptive Building: </a>
+                        </em>
+                        <a href="#adaptive-building-trust" title="Go to Atomic Use Case">The infrastructure has to secure personal profile information in order to prohibit
+                           unauthorized access or manipulation.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-trust" title="Go to Atomic Use Case">Since the data exchange between the virtual power plant and the distributed energy
+                           resource leads to a physical action that invokes high currents and monetary flows,
+                           the integrity of both parties and the exchange's data is crucial
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-trust" title="Go to Atomic Use Case">A trust model is especially important in complex service networks and ecosystems.
+                           Production, machine, and operational data are extremely valuable, but must be shared
+                           among business partners.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-trust" title="Go to Atomic Use Case">Since a financial transaction is directly involved, it is important that both sides
+                           can enter a trust relationship.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#device-management" title="Go to complete Use Case">Device, Network, and Application Management: </a>
+                        </em>
+                        <a href="#device-management-trust" title="Go to Atomic Use Case">
+                           To enable a management application to manage specific
+                           device, a security association needs to be set up as part of
+                           the provisioning process.
+                           
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#washing-machine" title="Go to complete Use Case">Smart control of washing machine: </a>
+                        </em>
+                        <a href="#washing-machine-trust" title="Go to Atomic Use Case">User has agreed to share data with the manufacturer as part of the warranty agreement.</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="interaction-mechanism">
+            <h2>Interaction Mechanism</h2>
+            <p>...</p>
+            <dl>
+               <dt>
+                  <b>Motivated by 2 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#automation-factories" title="Go to complete Use Case">Service Platform for Automation Factories: </a>
+                        </em>
+                        <a href="#automation-factories-interaction-mechanism" title="Go to Atomic Use Case">The platform has to provide interaction mechanisms to provide data to the applications.</a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-interaction-mechanism" title="Go to Atomic Use Case">The platform has to provide interaction mechanisms to provide data to the applications.</a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 0 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="layered-comm">
+            <h2>Layered L7 Communication</h2>
+            <p>when services interact with a plethora of clients, a distinction of diffenrent layers
+               of information exchange is a well-known way to ensure interoperability. 
+            </p>
+            <p>this means a layering of the OSI application layer 7:</p>
+            <p>a transport (HTTP, CoAP, XMPP, MQTT...) will enable basic exchange and negiotin of
+               formatted data
+            </p>
+            <p>independent of a tranport, several interaction primitives (Request-response,Pub-sub,
+               Message...) are possible
+            </p>
+            <p> the transferred data is to be seperated into the representation (JSON, XML, EXI...)
+               that is used to serialize a data structure (Schema, DTD ...) 
+            </p>
+            <p> This enables the communication of a resource to be implementation-independent</p>
+            <dl>
+               <dt>
+                  <b>Motivated by 6 Use Cases: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#bakery" title="Go to complete Use Case">Order Management System: </a>
+                        </em>
+                        <a href="#bakery-layered-comm" title="Go to Atomic Use Case">Given a commonality of interfacing protocols to heterogeneous ordering systems, layered
+                           communication enables a better reusability across several ordering systems. While
+                           the interaction primitives, transport protocol and representation might likely be
+                           the same for many systems, a difference in data structure demands a clear layering
+                           of the communication.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#shift-of-function" title="Go to complete Use Case">Shift of Function in Automation Systems: </a>
+                        </em>
+                        <a href="#shift-of-function-layered-comm" title="Go to Atomic Use Case">In heterogeneous systems, the seamless shift of functionality requires a clear and
+                           consistent layering of application protocols since the functionality is focused on
+                           the data structure and should be agnostic of the underlying application layer protocol
+                           layers.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#vpp" title="Go to complete Use Case">Virtual Power Plants: </a>
+                        </em>
+                        <a href="#vpp-layered-comm" title="Go to Atomic Use Case">Since multiple different links are used for monitoring and control, integration requires
+                           a clear and consistent seperation of information from the used serialization and application
+                           protocols to enable the exchange of homogenous information over heterogenous application
+                           layer protocols
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#smart-maintenance" title="Go to complete Use Case">Optimal Maintenance in Connected Industries: </a>
+                        </em>
+                        <a href="#smart-maintenance-layered-comm" title="Go to Atomic Use Case">In heterogeneous manufacturing systems integrating machines and sensors of different
+                           vendors, a layering of application protocols is required to abstract from specific
+                           data schema, interfaces and interaction patterns.
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#emobility" title="Go to complete Use Case">E-Mobility: </a>
+                        </em>
+                        <a href="#emobility-layered-comm" title="Go to Atomic Use Case">Since the same data contents are transferred over several communication links (such
+                           as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle
+                           to fleet operation, etc.), it is neccessary that the communication of the information/contexts
+                           can be transferred independent of the different transports or serialization formats
+                           used
+                        </a>
+                     </li>
+                     <li>
+                        <em>
+                           <a href="#lifecycle-management" title="Go to complete Use Case">Lifecycle Management for Industrial Automation Systems: </a>
+                        </em>
+                        <a href="#lifecycle-management-layered-comm" title="Go to Atomic Use Case">In heterogeneous systems, where several vendors use different flavors of the same
+                           data exchange in terms of data representation or  transport protocols, integration
+                           requires a clear and consistent layering of application protocols.
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Covered by 1 Technologies: </b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li>
+                        <em>
+                           <a href="#xmpp" title="Go to Technology Description">Extensible Messaging and Presence Protocol (XMPP): </a>
+                        </em>
+                        <a href="#xmpp-layered-comm" title="Go to Technology Feature Description">The protocol consists of a link layer that can be TCP/TLS, BOSH or WebSocket, and
+                           an XML-based protocol on top of it
+                        </a>
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
+         </section>
+      </section>
+      <section id="technologies">
+         <h2>Technologies</h2>
+         <section id="rdf">
+            <h2>Resource Description Framework (RDF) 
+               <a href="http://www.w3.org/RDF/" title="External Link">(Link)</a>
+            </h2>
+            <p>RDF is a standard model for data interchange on the Web. RDF has features that facilitate
+               data merging even if the underlying schemas differ, and it specifically supports the
+               evolution of schemas over time without requiring all the data consumers to be changed.
+               RDF extends the linking structure of the Web to use URIs to name the relationship
+               between things as well as the two ends of the link (this is usually referred to as
+               a “triple”). Using this simple model, it allows structured and semi-structured data
+               to be mixed, exposed, and shared across different applications. This linking structure
+               forms a directed, labeled graph, where the edges represent the named link between
+               two resources, represented by the graph nodes. This graph view is the easiest possible
+               mental model for RDF and is often used in easy-to-understand visual explanations.
+            </p>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="rdf-resource-description">
+                        <b>
+                           <a href="#resource-description">Resource Description</a>: 
+                        </b>RDF's origins (as highlighted by its name) are in the field of providing metadata
+                        (i.e., descriptions) of Web resources. This is facilitated by using URIs as identifiers,
+                        and by using attribute/value pairs that make statements about those URI-identified
+                        resources. RDF descriptions can be of arbitrary complexity by joining triples to form
+                        a graph, and they can use and combine various vocabularies so that the graph contains
+                        information according to the concepts defined in those vocabularies.
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="pubsubhubbub">
+            <h2>PubSubHubbub (PuSH) 
+               <a href="https://code.google.com/p/pubsubhubbub/" title="External Link">(Link)</a>
+            </h2>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="pubsubhubbub-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>...
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="xmpp">
+            <h2>Extensible Messaging and Presence Protocol (XMPP) 
+               <a href="http://xmpp.org/" title="External Link">(Link)</a>
+            </h2>
+            <p>The Extensible Messaging and Presence Protocol (XMPP) is an application profile of
+               the Extensible Markup Language (XML) that enables the near-real-time exchange of structured
+               yet extensible data between any two or more network entities. This document defines
+               XMPP's core protocol methods: setup and teardown of XML streams, channel encryption,
+               authentication, error handling, and communication primitives for messaging, network
+               availability ("presence"), and request-response interactions.
+            </p>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="xmpp-push">
+                        <b>
+                           <a href="#push">Push Services</a>: 
+                        </b>being based on a bidirectional link, XMPP offers a standardized publish/subscribe
+                        scheme
+                     </li>
+                     <li id="xmpp-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>The protocol and payloads are described as XML Schemas, enabling other serializations
+                        (such as xmpp-ftw in JSON)
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="xmpp-layered-comm">
+                        <b>
+                           <a href="#layered-comm">Layered L7 Communication</a>: 
+                        </b>The protocol consists of a link layer that can be TCP/TLS, BOSH or WebSocket, and
+                        an XML-based protocol on top of it
+                     </li>
+                  </ul>
+               </dd>
+            </dl>
+         </section>
+         <section id="exi">
+            <h2>Efficient XML Interchange (EXI) 
+               <a href="http://www.w3.org/TR/exi/" title="External Link">(Link)</a>
+            </h2>
+            <p>EXI is a very compact representation for the Extensible Markup Language (XML) Information
+               Set that is intended to simultaneously optimize performance and the utilization of
+               computational resources. The EXI format uses a hybrid approach drawn from the information
+               and formal language theories, plus practical techniques verified by measurements,
+               for entropy encoding XML information. Using a relatively simple algorithm, which is
+               amenable to fast and compact implementation, and a small set of datatype representations,
+               it reliably produces efficient encodings of XML event streams.
+            </p>
+            <dl>
+               <dt>
+                  <b>Related Building Blocks</b>
+               </dt>
+               <dd>
+                  <ul>
+                     <li id="exi-data-exchange-format">
+                        <b>
+                           <a href="#data-exchange-format">Content-Negotiation</a>: 
+                        </b>
+                     </li>
+                  </ul>
+               </dd>
+               <dt>
+                  <b>Related Non-Functionals</b>
+               </dt>
+               <dd>
+                  <ul></ul>
+               </dd>
+            </dl>
+         </section>
+      </section>
+   </body>
+</html>

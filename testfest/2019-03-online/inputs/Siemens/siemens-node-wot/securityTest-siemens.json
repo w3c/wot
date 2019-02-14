@@ -1,0 +1,40 @@
+{
+    "id": "urn:dev:wot:org:eclipse:thingweb:security-example",
+    "name": "Siemens-SecureThing",
+    "description": "Tests the basic authorisation via https",
+    "@context": [
+        "http://www.w3.org/ns/td",
+        {"iot": "http://iotschema.org/"}
+    ],
+    "created": "Fr, 25 Jan 2019 12:45:26 GMT",
+    "lastModified": "2019-01-25T13:30:07.428Z",
+    "@type": "Thing",
+    "security": ["basic_sc"],
+    "properties": {"secret": {
+        "type": "string",
+        "description": "Secret Property",
+        "readOnly": false,
+        "writeOnly": false,
+        "observable": false,
+        "forms": [
+            {
+                "href": "https://10.0.2.15:8080/Siemens-SecureThing/properties/secret",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            },
+            {
+                "href": "https://192.168.0.124:8080/Siemens-SecureThing/properties/secret",
+                "contentType": "application/json",
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
+            }
+        ]
+    }},
+    "securityDefinitions": {"basic_sc": {"scheme": "basic","in":"header"}}
+}
+

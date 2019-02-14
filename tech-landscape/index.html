@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang="en">
+  <head>
+    <meta charset='utf-8'/>
+    <title>Web of Things - Technology Landscape</title>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+            specStatus:   "unofficial"
+		  , publishDate: "2017-07-29"
+          , editors:      [{name:"Soumya Kanti Datta"}]
+          , authors:      [
+                             <!-- authors for discovery part (order according to # of Wiki activities : -->
+                             {name:"Arne Bröring"},{name:"Ari Keränen"}, {name:"Jaime Jiménez"}, {name:"Louay Bassbous"}, {name:"Francois Daoust"}, {name:"Dave Raggett"}, {name: "Tibor Z Pardi"}, {name: "Kazuyuki Ashimura"}, {name: "Michael McCool"}] 
+          , processVersion: 2016
+          , shortName:    "wot-tech"
+          , wg:           "Interest Group on the Web of Things"
+          , wgURI:        "http://www.w3.org/WoT/IG/"
+          , wgPublicList: "public-wot-ig"
+          , otherLinks: [
+            {
+			  key: "Repository",
+			  data: [
+			    {
+				  value: "We are on GitHub"
+				, href: "https://github.com/w3c/wot/tree/master/tech-landscape"
+				}
+			  , {
+				  value: "File a bug"
+				, href: "https://github.com/w3c/wot/issues"
+				}
+				]
+            }
+           ]
+        };
+    </script>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>
+      This document provides an overview of the current technology landscape as seen by the W3C WoT interest group.
+      </p>
+    </section>
+    <section id='sotd'>
+      <p>
+        This is a template to capture the inputs from the wiki into a deliverable format.
+        <p class="note" title="Contributing">
+        Please contribute using <a href="https://github.com/w3c/wot/blob/master/tech-landscape/index.html">Pull Requests</a> or the <a href="https://github.com/w3c/wot/edit/master/tech-landscape/index.html">direct edit</a>.
+      	</p>
+      </p>
+    </section>
+    <section>
+	<h2>Terminology</h2>
+      <p>
+       This document uses the following terms defined elsewhere:
+      </p>
+	<dl>
+	<dt><dfn id="CoAP">CoAP</dfn></dt><dd>
+	Acronym for Constrained Application Protocol [[!rfc7252]]
+	</dd>
+        <dt><dfn id="HTTPServer">HTTP Server</dfn></dt><dd>
+            An application program that accepts connections in order to service HTTP requests by sending back HTTP responses [[!di-gloss]]
+         </dd>
+	 <dt><dfn id="dfn-iot">Internet of things (IoT)</dfn></dt><dd>
+		A global infrastructure for the information society, enabling advanced services by interconnecting (physical and virtual) things based on existing and evolving interoperable information and communication technologies.  [ITU-T Y.2060]
+	 </dd>
+	 <dt><dfn id="dfn-iri">IRI</dfn></dt><dd>
+	 Acronym for Internationalized Resource Identifier. An IRI is a sequence of characters from the Universal Character Set (Unicode/ISO 10646) [[rfc3987]]
+	 </dd>
+	 <dt><dfn id="json">JSON</dfn></dt><dd>
+	 Acronym for JavaScript Object Notation [[!RFC4627]] [[ECMA-404]]
+	 </dd>
+	<dt><dfn id="dfn-P2P">P2P</dfn></dt>
+	<dd>
+		Peer-to-peer
+	</dd>
+	 <dt><dfn id="dfn-resource">Resource</dfn></dt><dd>
+	 Anything that might be identified by a URI or IRI [[!webarch]]
+ 	</dd>
+	 <dt><dfn id="dfn-thing">Thing</dfn></dt><dd>
+	With regard to the Internet of things, this is an object of the physical world (physical things) or the information world (virtual things), which is capable of being identified and integrated into communication networks.  [ITU-T Y.2060]
+	 </dd>
+	 <dt><dfn id="thing-description">Thing Description</dfn></dt><dd>
+	 Description about a thing - interfaces, data and aspects of a Thing
+	 </dd>
+	 <dt><dfn id="dfn-URI">URI</dfn></dt><dd>
+	Acronym for Uniform Resource Identifier. A simple and extensible means for identifying a resource. [[!rfc3986]]
+	</dd>
+	 <dt><dfn id="dfn-UA">User Agent</dfn></dt><dd>
+	 One type of Web agent; a piece of software acting on behalf of a person. Browsers are examples of user agents, as are web robots that automatically traverse the web collecting information. [[di-gloss]] [[webarch]]
+	</dd>
+	<dt><dfn id="dfn-WA">Web agent</dfn></dt><dd>
+	A person or a piece of software acting on the information space on behalf of a person, entity, or process. [[!webarch]]
+	</dd>
+	 <dt><dfn id="dfn-wot">Web of Things (WoT)</dfn></dt><dd>
+	A way to realize the IoT where (physical and virtual) things are connected and controlled through the World Wide Web.  [ITU-T Y.2063]
+	</dd>
+	<dt><dfn id="dfn-wot-client">WoT Client</dfn></dt><dd>
+	a logical entity that accesses an WoT Resource on an WoT Server
+	</dd>
+	 <dt><dfn id="dfn-WWW">World Wide Web</dfn></dt><dd>
+	An information space in which the items of interest, referred to as resources, are identified by global identifiers called Uniform Resource Identifiers (URI). [[!webarch]]
+	</dd>
+	</dL>
+	</section>
+    <section>
+      <h2>Tech landscape for Thing Description</h2>
+      <section>
+        <h2> Data model &amp; Vocabulary &amp; TD Model</h2>
+        <ul>
+        <li><p>The OMA DM Management Objects (Matthias and Mohammed)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Device management specification for mobile phone terminals targeting mobile network operators. WAP Binary XML serialization over HTTP(S), binary SMS for wakeup and bootstraping.</li>
+        <li><strong>Consortium:</strong> Open Mobile Alliance</li>
+        <li><strong>Tool/Development Support:</strong> ?</li>
+        <li><strong>Resource identification:</strong> DM Objects</li>
+        <li><strong>Query capabilities:</strong> </li>
+        <li><strong>Data Types:</strong> </li>
+        </ul>
+        </li>
+        <li><p>Lemonbeat Device Language (Frank)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RWE is first mover of SmartHome solutions and market leader in Germany. Lemonbeat is a follow-up-technology based on SmartHome but address a wide spread of different industries. CoAP-Implementation is in the design phase. XML/XSD, EXI, CoAP, DTLS, UDP, IPv6</li>
+        <li><strong>Consortium:</strong> RWE</li>
+        <li><strong>Tool/Development Support:</strong> Management Software</li>
+        <li><strong>Resource identification:</strong> A new device sends it device description and the inclusion into the network is fully automatically, without manual activities. Content of device description: IPv6-adress, SGTIN, name of device, manufacturer, communication protocol, radio and wake-up information, etc.</li>
+        <li><strong>Query capabilities:</strong> The Value Description of each device can be queried and configured.</li>
+        <li><strong>Data Types:</strong> XML/XSD, EXI compression</li>
+        </ul>
+        </li>
+        </ul>
+        <ul>
+        <li><p>ECHONET device objects (Naka)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> ECHONET device object is a logical model of the information held by more than 100 types of equipment devices or home electrical appliances such as sensors, air conditioners and LED Lights, or of control items that can be remotely controlled.</li>
+        <li><strong>Consortium:</strong> ECHONET Consortium</li>
+        <li><strong>Tool/Development Support:</strong> The Consortium does NOT provide the official tool/development support, however, some member companies and a university provide SDK / test tool / maintenance tool, e.g. <a href="https://smarthouse-center.org/sdk/">https://smarthouse-center.org/sdk/</a></li>
+        <li><strong>Resource identification:</strong> “Identification number” property whose data type is unsigned character is included in common part of ECHONET device object definition.</li>
+        <li><strong>Query capabilities:</strong> Thing descovery and registration method is described as a guideline in ECHONET Lite specifications. The guideline includes implementation of UPnP search mechanism.</li>
+        <li><strong>Data Types:</strong> Data types are dependent on property type specified in ECHONET device objects, e.g. binary unsigened character.</li>
+        </ul>
+        </li>
+        <li><p>OMA Lightweight M2M (LWM2M) Objects</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Update OMA DM for M2M and unify DM and application stack using CoAP. LWM2M specifies interfaces (bootstrap, registration, device management &amp; service enablement, information reporting) and operations (read, write, execute, notify) on top of CoAP. Functionality is structured in so-called Objects. LWM2M comes with device management objects (e.g., Access Control, Device, Firmware Update). OMA provides an open registry for application-specific Object definitions (<a href="http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry">http://technical.openmobilealliance.org/Technical/technical-information/omna/lightweight-m2m-lwm2m-object-registry</a>)</li>
+        <li><strong>Consortium:</strong> Open Mobile Alliance</li>
+        <li><strong>Tool/Development Support:</strong> online Object editor, emulator for virtual devices and protocol/message inspection (<a href="https://github.com/OpenMobileAlliance/">https://github.com/OpenMobileAlliance/</a>)</li>
+        <li><strong>Resource identification:</strong> URIs with numeric identifiers (e.g., /3/0/2 is the Device Object (3), Instance 0, serial number (2))</li>
+        <li><strong>Query capabilities:</strong> CoRE resource directory filtering or custom API, CoRE Link Format</li>
+        <li><strong>Data Types:</strong> text/plain, application/vnd.oma.lwm2m+opaque, application/vnd.oma.lwm2m+tlv, application/vnd.oma.lwm2m+json</li>
+        </ul>
+        </li>
+        <li><p>IPSO Smart Object</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Provides application-specific Object models following OMA LWM2M and publishes to OMA Object registry. Also aims for HTTP support in addition to CoAP</li>
+        <li><strong>Consortium:</strong> IPSO Alliance</li>
+        <li><strong>Tool/Development Support:</strong> <a href="http://challenge.ipso-alliance.org/so-starter-pack">http://challenge.ipso-alliance.org/so-starter-pack</a>, <a href="http://challenge.ipso-alliance.org/so-expansion-pack">http://challenge.ipso-alliance.org/so-expansion-pack</a></li>
+        <li><strong>Resource identification:</strong> See OMA LWM2M</li>
+        <li><strong>Query capabilities:</strong> See OMA LWM2M</li>
+        <li><strong>Data Types:</strong> See OMA LWM2M</li>
+        </ul>
+        </li>
+        <li><p>IOTDB.org (David Janes)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong></li>
+        <li><strong>Consortium:</strong></li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong></li>
+        <li><strong>Query capabilities:</strong></li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>Vorto (Matthias)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> (Meta) information model to generate framework-specific data models and code. Open source project in the Eclipse Foundation started by Bosch.</li>
+        <li><strong>Consortium:</strong> Open source project (Eclipse IoT working group)</li>
+        <li><strong>Tool/Development Support:</strong> information model DSL, model repository, code genereators</li>
+        <li><strong>Resource identification:</strong> any (depends on target framework)</li>
+        <li><strong>Query capabilities:</strong> (depends on target framework)</li>
+        <li><strong>Data Types:</strong> (depends on target framework)</li>
+        </ul>
+        </li>
+        <li><p>Semantic Sensor Network (SSN) Ontology (Danh)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> SSN was developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG) to describe sensors and observations, and related concepts. SSN is now being extended and standardised by W3C Spatial Data on The Web Working Group(SDWWG)</li>
+        <li><strong>Consortium:</strong> SSN-XG, SDWWG</li>
+        <li><p><strong>Tool/Development Support:</strong> ontology tools: SPARQL engine &amp; RDF Parser etc.</p>
+        </li>
+        <li><p><strong>Resource identification:</strong> URIs/URN</p>
+        </li>
+        <li><strong>Query capabilities:</strong> SPARQL queries + spatial extensions</li>
+        <li><strong>Data Types:</strong> XSD</li>
+        </ul>
+        </li>
+        <li><p>SensorML (check from OGC, Simon and Arne)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The primary focus of the Sensor Model Language (SensorML) is to provide a robust and semantically-tied means of defining processes and processing components associated with the measurement and post-measurement transformation of observations. This includes sensors and actuators as well as computational processes applied pre- and post measurement.</li>
+        <li><strong>Consortium:</strong> OGC</li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong></li>
+        <li><strong>Query capabilities:</strong></li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>Device Registry and Thing Shadows for AWS IoT (Michael Koster?)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The Thing Registry enables registration of so called units (both for real devices and virtual applications). Units are properties that describe a device or virtual application. A user may define custom attributes associated with each unit. AWS IoT has a notion of a Thing Shadow. A thing shadow (sometimes referred to as a device shadow) is a JSON document that is used to store and retrieve current state information for a thing (device, app, and so on). The Thing Shadows service maintains a thing shadow for each thing you connect to AWS IoT.</li>
+        <li><strong>Consortium:</strong> Amazon</li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong> A device in the Device Registry can be uniquely identified.</li>
+        <li><strong>Query capabilities:</strong></li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>HyperCat catalogue (John from BT)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs (uniform resource identifiers). Using HTTPS, REST and JSON, each HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.</li>
+        <li><strong>Consortium:</strong> HyperCat</li>
+        <li><strong>Tool/Development Support:</strong></li>
+        <li><strong>Resource identification:</strong> URIs</li>
+        <li><strong>Query capabilities:</strong> Catalogues are accumulated into a knowledge graph that can be queried.</li>
+        <li><strong>Data Types:</strong></li>
+        </ul>
+        </li>
+        <li><p>The Smart Appliances REFerence (SAREF) ontology (Jasper Roes)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The Smart Appliances REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets (standards/protocols/datamodels/etc.) in the smart appliances domain. The starting point of SAREF is the concept of device (e.g., a switch). The device performs one or more functions. SAREF ontology enables description of devices and their functions.</li>
+        <li><strong>Consortium:</strong> Created for the EC by TNO with input from many different stakeholders, now standardized and maintained by ETSI (TS 103 264 - V1.1.1).</li>
+        <li><strong>Tool/Development Support:</strong> ontology tools: SPARQL engine &amp; RDF Parser etc.</li>
+        <li><strong>Resource identification:</strong> URIs</li>
+        <li><strong>Query capabilities:</strong> SPARQL queries</li>
+        <li><strong>Data Types:</strong> No explicit choice. SAREF is currently only an ontology to translate information from and between communication standards.</li>
+        </ul>
+        </li>
+        <li><p>Smart Device Template (used by oneM2M)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The 
+		<a href="https://github.com/Homegateway/SmartDeviceTemplate/blob/master/SDT/schema3.0/docs/Introduction.md">SDT</a> 
+		is a modular XML/XSI-based data models with support for access control and delegation.
+		Developed initially by the (now-defunct) <a href="http://www.homegatewayinitiative.org/">Home Gateway Initiative (HGI)</a>, 
+		it has recently been adopted by oneM2M.  
+		However, oneM2M also has prior work on its 
+		<a href="http://www.onem2m.org/images/files/deliverables/Release2/TR-0017-Home_Domain_Abstract_Information_Model-V2_0_0.pdf">own abstract information models.</a>
+		</li>
+        <li><strong>Consortium:</strong><a href="http://www.onem2m.org/">oneM2M</a></li>
+        <li><strong>Tool/Development Support:</strong> XML/XSI tools are applicable (e.g. validation).  Support by OSGi in Eclipse.  
+		<a href="https://github.com/ankraft/SDTTool">SDTTool</a> to convert to various formats and generate documentation.</li>
+        <li><strong>Resource identification:</strong> unique identifiers (strings).</li>
+        <li><strong>Query capabilities:</strong> XML search tools.</li>
+        <li><strong>Data Types:</strong> XML tools and schemas.</li>
+        </ul>
+        </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Metadata &amp; Metamodel</h2>
+        <ul>
+        <li><p>RDF Schema (<a href="https://www.w3.org/TR/rdf-schema/">RDFS</a>) (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RDFS defines simple semantics for RDF
+        data. It includes e.g. the concepts of class and subsumption relation between classes or
+        properties. It is intended to provide a baseline for other meta-vocabularies,
+        such as <a href="https://www.w3.org/TR/2009/REC-skos-reference-20090818/">SKOS</a>
+        (thesauri, taxonomies) or <a href="http://dublincore.org/">Dublin Core</a>
+        (document metadata).</li>
+        </ul>
+        <p><a href="http://schema.org/">Schema.org</a>, based on RDFS, is a popular vocabulary for
+        general information on the Web: persons, events, places, products... Its
+        development has been driven by today&#39;s major search engines to help them
+        structure search results using annotations on Web pages (e.g. in the RDFa or
+        microdata formats).</p>
+        <p>An overview of Web vocabularies can be found on the
+        <a href="http://lov.okfn.org/">Linked Open Vocabulary</a> platform.</p>
+        <ul>
+        <li><strong>Consortium:</strong> W3C, schema.org community (including Google, Microsoft, Yahoo, Yandex)</li>
+        <li><strong>Tool/Development Support:</strong> e.g. schema.org&#39;s <a href="http://schema.org/docs/extension.html">extension mechanism</a>,
+        <a href="http://www.topquadrant.com/products/">TopBraid</a>.</li>
+        <li><strong>Resource identification:</strong> IRI (Internationalized Resource Identifier)</li>
+        <li><strong>Data Types:</strong> Built-in XSD datatypes for literals. RDFS classes for resources.</li>
+        </ul>
+        </li>
+        <li><p>Web Ontology Language (<a href="https://www.w3.org/TR/owl-ref/">OWL</a>) (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Defined in extension to <a href="RDF Schema">RDFS</a>
+        to allow more complex modeling and non-trivial automated reasoning. OWL
+        mostly relies on Description Logic (DL). It can have different levels of
+        complexity (called <a href="https://www.w3.org/TR/owl-ref/#Sublanguages">profiles</a>).
+        A second version of OWL
+        (<a href="https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/">OWL 2</a>) was published
+        and new profiles were added, mostly to trade &quot;some expressive power for the
+        efficiency of reasoning&quot;.</li>
+        </ul>
+        <p>OWL proved successful (especially in specific domains like biology) and many
+        Web vocabularies use it (see the LOV platoform for an overview). However, only
+        few of them take full advantage of its expressiveness.</p>
+        <ul>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> <a href="http://www.topquadrant.com/products/">TopBraid</a>
+        (TopQuadrant), <a href="http://protege.stanford.edu/">Protégé</a> (Stanford University).</li>
+        <li><strong>Resource identification:</strong> same as RDFS.</li>
+        <li><strong>Data Types:</strong> same as RDFS.</li>
+        </ul>
+        </li>
+        <li><p>DTD/XML Schema (Sebastian)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Data modeling tool to structure data content and data value types (such as simple and complex type)</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> rich support of tools and libs such as validators to check instances for correctness and editors to model data</li>
+        <li><strong>Resource identification:</strong> Is done via namespace declerations</li>
+        <li><strong>Data Types:</strong> rich set of data type support (boolean, byte, unsignedByte, etc.). See full list here [<a href="https://www.w3.org/TR/xmlschema-2/#built-in-datatypes">https://www.w3.org/TR/xmlschema-2/#built-in-datatypes</a>]</li>
+        </ul>
+        </li>
+        <li><p><a href="http://json-schema.org/">JSON Schema</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> JSON Schema is an open-source initiative
+        aiming at formalizing the structure of JSON data used in current systems.
+        It enables automatic validation of data, among others.</li>
+        <li><strong>Consortium:</strong>  Used de facto in some Web standards (e.g.
+        <a href="https://openapis.org/specification">Open API Initiative</a>,
+        <a href="http://openinterconnect.org/developer-resources/specs/">Open Interconnect Consortium</a>)
+        and submitted <a href="http://tools.ietf.org/html/draft-zyp-json-schema-04">to IETF</a>.</li>
+        <li><strong>Tool/Development Support:</strong> See its <a href="https://github.com/json-schema/json-schema">Github page</a>.</li>
+        <li><strong>Resource identification:</strong> see <a href="http://json-schema.org/latest/json-schema-hypermedia.html">JSON Hyper Schema</a>
+        for hyper-media control.</li>
+        <li><strong>Data Types:</strong> Uses JSON base types.</li>
+        </ul>
+        </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Serialization</h2>
+        <p>Serialization formats suitable for representing Thing Descriptions are surveyed here.</p>
+        <ul>
+        <li><p><a href="http://www.w3.org/TR/exi/">Efficient XML Interchange (EXI)</a> (Taki)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Binary serialization format of the XML Infoset</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> yes (see <a href="https://www.w3.org/XML/EXI/#implementations">https://www.w3.org/XML/EXI/#implementations</a>)</li>
+        <li><strong>Data Types-aware encoding:</strong> yes, based on XSD</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> Very High. EXI compaction works more effective than ASN.1 PER in cases of smaller files for which ASN.1 is known to work pretty well. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.</li>
+        <li><strong>Small memory footprint:</strong> EXI uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. When a schema is available, EXI derives grammar from the schema. Simple schemas result in small set of EXI grammars.</li>
+        <li><strong>Context-aware encoding:</strong> yes</li>
+        </ul>
+        </li>
+        <li><p><a href="https://www.w3.org/TR/exi-for-json/">EXI for JSON</a> (Taki)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Binary serialization format for JSON data model based on EXI</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> yes (e.g., <a href="http://exificient.github.io/javascript/demo/processJSON.html?SharedStrings=true">JavaScript playground</a> with context knowledge, Java <a href="https://github.com/EXIficient/exificient-for-json">library</a> and <a href="https://github.com/EXIficient/exificient-gui">GUI</a>, <a href="https://github.com/EXIficient/exificient-for-json.c">C implementation</a>)</li>
+        <li><strong>Data Types-aware encoding:</strong> yes (string, float, boolean, array, null, integer, decimal, binary, date, dateTime, time)</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> Very high. EXI for JSON compaction works more effective than comparative formats such as CBOR and BSON. EXI compression works much more effective than GZip in cases of larger files for which GZip is known to work very well.</li>
+        <li><strong>Small memory footprint:</strong> EXI for JSON uses a relatively simple algorithm and a small set of datatype representations, which is amenable to compact implementation. EXI grammars used in EXI for JSON derives from a simple schema, resulting in small set of EXI grammars.</li>
+        <li><strong>Context-aware encoding:</strong> No</li>
+        </ul>
+        </li>
+        <li><p><a href="http://www.json.org/">JSON</a> (Taki)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> Lightweight language independent data format originally based on JavaScript programming language</li>
+        <li><strong>Consortium:</strong>      RFC 7159 and ECMA-404</li>
+        <li><strong>Tool/Development Support:</strong> yes (see <a href="http://json.org/">http://json.org/</a>)</li>
+        <li><strong>Data Types-aware encoding:</strong> supports limited type assignment (number, string, boolean, array, null), however, each value is presented in plain-text in JSON document</li>
+        <li><strong>Binary Format:</strong> No</li>
+        <li><strong>Compression:</strong> Some limited compaction is often possible by removing redundant whitespaces. For repetitive data, a technique based on refactoring also may help making JSON data a little more compact. (e.g. <a href="https://www.npmjs.com/package/jsonpack">jsonpack</a>).</li>
+        <li><strong>Small memory footprint:</strong> Not feasible for highly constrained devices</li>
+        <li><strong>Context-aware encoding:</strong> No</li>
+        </ul>
+        </li>
+        <li><p><a href="http://json-ld.org/">JSON-LD</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> JSON-based serialization format for Linked
+        Data. Transformation from JSON-LD to RDF has been standardized. The
+        opposite transformation is not fully supported.</li>
+        <li><strong>Consortium:</strong> W3C</li>
+        <li><strong>Tool/Development Support:</strong> <a href="http://json-ld.org/test-suite/reports/">implementations</a>
+        available, tested and open-source. JSON-LD <a href="http://json-ld.org/playground/">playground</a>.</li>
+        <li><strong>Data Types-aware encoding:</strong> Type coercion for basic data types
+        (from JSON types to XSD data types)</li>
+        <li><strong>Binary Format:</strong> no</li>
+        <li><strong>Compression:</strong> to some extent: plain-text representation but compaction
+        algorithm specified to reduce the size of JSON keys and values.</li>
+        <li><strong>Small memory footprint:</strong> not designed for constrained devices.</li>
+        <li><strong>Context-aware encoding:</strong> Any JSON-LD document shall include a context.</li>
+        </ul>
+        </li>
+        <li><p><a href="http://cbor.io/">CBOR</a> (Carsten)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The &quot;Concise Binary Object Representation (CBOR)&quot; is based on the JSON data model</li>
+        <li><strong>Consortium:</strong>   IETF</li>
+        <li><strong>Tool/Development Support:</strong> yes</li>
+        <li><strong>Data Types-aware encoding:</strong> yes</li>
+        <li><strong>Binary Format:</strong>   yes</li>
+        <li><strong>Compression:</strong> high</li>
+        <li><strong>Small memory footprint:</strong> yes</li>
+        <li><strong>Context-aware encoding:</strong></li>
+        </ul>
+        </li>
+        </ul>
+        <!-- Matthias: CoRE Link Format is not a (generic) serialization format, but a specific format for Web links. There are also JSON and CBOR serializations of the Link Format. -->
+        <ul>
+        <li>RDF/EXI (Daniel)<ul>
+        <li><strong>Background of the technology:</strong> Serialize RDF in EXI format</li>
+        <li><strong>Consortium:</strong> W3C (EXI/XML)</li>
+        <li><strong>Tool/Development Support:</strong> yes</li>
+        <li><strong>Data Types-aware encoding:</strong> yes</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> very high (type-aware coder + removes redundancy)</li>
+        <li><strong>Small memory footprint:</strong> yes, feasible for constrained devices</li>
+        <li><strong>Context-aware encoding:</strong> yes, is able to take into account context knowledge </li>
+        </ul>
+        </li>
+        </ul>
+        <ul>
+        <li><a href="https://developers.google.com/protocol-buffers/">Google Protocol Buffers</a> (Daniel)<ul>
+        <li><strong>Background of the technology:</strong> Method of serializing structured data by involving an interface description language that describes the structure</li>
+        <li><strong>Consortium:</strong> Google</li>
+        <li><strong>Tool/Development Support:</strong> yes</li>
+        <li><strong>Data Types-aware encoding:</strong> yes</li>
+        <li><strong>Binary Format:</strong> yes</li>
+        <li><strong>Compression:</strong> high</li>
+        <li><strong>Small memory footprint:</strong> yes</li>
+        <li><strong>Context-aware encoding:</strong> yes</li>
+        </ul>
+        </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Datatype Description</h2>
+        <ul>
+        <li><p><a href="https://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/datatypes.html">XML Schema (XSD) Datatypes</a> (Daniel)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> XML Schema: Datatypes is part 2 of the specification of the XML Schema language. It defines facilities for defining datatypes to be used in XML Schemas as well as other XML specifications. It provides a rich set of of primitive data types and enables to define new or restrict data types.</li>
+        <li><strong>Primitive data types:</strong> boolean, (unsigned-)Byte, (unsigned-)Short, (unsigned-)Int, (unsigned-)Long, float, double, hexBinary, base64Binary, date, time, ...</li>
+        <li><strong>Composite data types:</strong> Any simple-typed data can be composed to a structered complex typed data</li>
+        </ul>
+        </li>
+        <li><p><a href="https://tools.ietf.org/html/draft-jennings-core-senml">SenML</a> (Ari)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> SenML is a media type for representing simple sensor measurements and device parameters. SenML has JSON, CBOR, XML, and EXI representations which all share the common SenML data model.  </li>
+        <li><strong>Primitive data types:</strong> string, boolean, floating point, time (and plans for adding binary)</li>
+        <li><strong>Composite data types:</strong> all measurements can include, in addition to value, &quot;name&quot;, &quot;time&quot;, and &quot;measurement unit&quot;</li>
+        </ul>
+        </li>
+        </ul>
+      </section>
+      <section>
+        <h2> Functional Description</h2>
+        <p>Functional descriptions for RESTful APIs, hypermedia controls are surveyed here.</p>
+        <ul>
+        <li><p><a href="http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven">HATEOAS</a> (Matthias)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> HATEOAS (Hypermedia as the Engine of Application State) is part of the REST architectural style (uniform interface constraint). REST clients may not rely on typed resources or predefined (out-of-band) request definitions, but must receive the list of possible requests from the server. Hypermedia formats are providing these functional descriptions in-band through links and forms, which tell the client how to construct requests. Semantic information about the state transition when following a link or submitting a form is attached through the link relation type and respectively form relation type attribute. The types are managed in an IANA <a href="http://www.iana.org/assignments/link-relations/link-relations.xhtml">registry</a>. However, proper types for WoT applications are still missing.</li>
+        <li><strong>Consortium:</strong> IETF/IANA</li>
+        <li><strong>Tool Support:</strong></li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> any hypermedia format (e.g., HTML, HAL, Hydra, Siren)</li>
+        </ul>
+        </li>
+        <li><p><a href="http://raml.org/">RAML</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> The RESTful API Definition Language (RAML)
+        is a format to specify an API in the form of a resource tree. For each
+        resource, one can specify supported methods (GET, POST, etc), parameters if
+        any and the structure of its content. It follows the principles of
+        design first and model-driven engineering to allow for more automation in
+        the development of Web applications. OIC and OCF use RAML for decribing their resources and interaction models, with the exception of observe/notify.</li>
+        <li><strong>Consortium:</strong> own community, including Cisco, VMWare, Spotify.</li>
+        <li><strong>Tool Support:</strong> see <a href="http://raml.org/projects/projects">RAML projects</a>
+        (50+ projects). Enables code generation (for both client and server sides),
+        API validation, automatic documentation and integrated development. OCF supports <a href="https://openconnectivity.org/developer/oneiota-data-model-tool">oneIoTa</a>, a tool used to document, validate, and distribute data models for OCF. </li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> YAML</li>
+        </ul>
+        </li>
+        <li><p><a href="https://openapis.org/">Open API Initiative (OAI)</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RESTful API specification framework.
+        Formerly known as <a href="http://swagger.io/">Swagger</a>. Its specification has almost
+        the same features as RAML, but is JSON-based. 
+        OCF 1.0 has specified use of OpenAPI v2 for introspection data.</li>
+        <li><strong>Consortium:</strong> own community supported by the Linux Foundation. Members
+        include Google, IBM, Microsoft, Paypal and others.</li>
+        <li><strong>Tool Support:</strong> see <a href="http://swagger.io/tools/">Swagger tools</a>. Enables
+        code generation (for both client and server sides), API validation and
+        automatic documentation.</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> JSON-based. Resource
+        types are defined using JSON Schema (not mandatory).</li>
+        </ul>
+        </li>
+        <li><p><a href="http://www.hydra-cg.com/">Hydra</a> (Victor)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RDFS vocabulary for RESTful API
+        specification. It includes most of the features of the frameworks mentioned
+        above (some details are still being discussed).</li>
+        <li><strong>Consortium:</strong> W3C Community Group</li>
+        <li><strong>Tool Support:</strong> see Hydra&#39;s <a href="http://www.hydra-cg.com/">website</a>. Limited
+        support.</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> JSON-LD, RDF</li>
+        </ul>
+        </li>
+        <li><p><a href="http://htmlpreview.github.io/?https://github.com/smnmyr/iot-semantics-w3c/blob/master/iot-semantics-membersubmission.html">RESTdesc</a> (Matthias)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> RESTdesc is based on the Notation3 (N3) syntax. It attaches REST request definitions to the conclusion of first-order logic inference rules. Given a goal definition (also in N3), a semantic reasoner can calculate a proof that also carries an execution plan (an ordered list of requests) to achieve the goal. RESTdesc is a community effort by  Universiteit Gent and Universitat Politecnica de Catalunya.</li>
+        <li><strong>Consortium:</strong> n/a</li>
+        <li><strong>Tool Support:</strong> EYE semantic reasoner, ClickScript goal editor, few other open source projects</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong> Notation3/RDF</li>
+        </ul>
+        </li>
+        <li><p><a href="http://json-schema.org/latest/json-schema-hypermedia.html">JSON HyperSchema</a> (Michael)</p>
+        <ul>
+        <li><strong>Background of the technology:</strong> JSON Hyper-Schema is an extension to JSON Schema which adds a Link Description Object to enable JSON Schema to express hyperlink constructions. A links property is defined to indicate the Link Description, and a number of common link terms like &quot;href&quot; and &quot;rel&quot; are defined, and methods to enable URI template syntax to be used to schematically construct hyperlinks. JSON Pointer is supported to construct references to document fragments or elements.</li>
+        <li><strong>Consortium:</strong> IETF Draft </li>
+        <li><strong>Tool Support:</strong> A number of tools support JSON Schema and JSON Hyper Schema <a href="http://json-schema.org/implementations.html">JSON Schema Tools</a> Also note that RAML uses JSON Schema and could easily be extended to support JSON Hyper Schema</li>
+        <li><strong>Underlying Language/Model/Serialization Formats:</strong>  JSON, JSON Schema, JSON Pointer</li>
+        </ul>
+        </li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <h2>Tech Landscape for Thing Discovery</h2>
+      The aim of this technology landscape for discovery mechanisms for the Web of Things is to collect candidate discovery technologies, evaluate them, and to derive generic discovery interaction patterns. The list of discovery categories can be found in this <a href='#discoveryCategories'>section</a>. The identified discovery interaction patterns are presented in this <a href='#discoveryPatterns'>section</a>. An evaluation of identified technologies can be found in this <a href='#discoveryEvaluation'>section</a>. Further, we analyzed which discovery technologies are supported by which IoT consortia. This analysis can be found in this <a href='#discoveryConsortia'>section</a>.
+      
+      <section id="discoveryCategories">
+        <h2>Categories of Thing Discovery</h2>
+        <section>
+          <h2> Finding Things <i>"around me"</i></h2>
+          This category of discovery includes technologies that allow to discover things around me (in a spatial sense).
+
+          <p><b>Optical markers</b>
+          <ul>
+              <li>this includes e.g. barcodes and QR codes which can be visually read and decoded by a program (e.g. by an app)</li>
+              <li>max range: vicinity of client</li>
+              <li>Interaction style: pull (client initiates interaction)</li>
+          </ul>
+          
+          <p><b>NFC</b>
+          <ul>
+              <li>Near field communication (NFC) employs electromagnetic induction between two loop antennae when NFC devices (e.g. 'smart phone' and 'smart object') interact. NFC operates on globally unlicensed radio frequency ISM band of 13.56 MHz.</li>
+              <li>builds up on RFID by allowing two-way communication between endpoints</li>
+              <li>e.g. NFC can be utilized to bootstrap more powerful communication connections (e.g. Bluetooth or WiFi) between two devices</li>
+              <li>max range: ~10 cm</li>
+          </ul>
+
+          <p><b>Markerless recognition</b>
+          <ul>
+              <li>augmented reality technique using sensors such as accelerometer, camera, compass, GPS to determine client's location and field of view. Based on derived position, surrounding things are discovered.</li>
+              <li> implemented e.g. by AR browser LAYAR or AURASMA</li>
+              <li>max range: vicinity of client</li>
+              <li>Interaction style: pull (client initiates interaction)</li>
+          </ul>
+
+          <p><b>UriBeacon (Google's Physical Web)</b>
+          <ul>
+              <li>Base technology: Bluetooth Low Energy</li>
+              <li>BLE-enabled device periodically transmits an advertising packet containing a URI.</li>
+              <li>UriBeacon approach does not require an app. Since URI is identifying a beacon, standard Web mechanisms (DNS) can be used for resolving</li>
+              <li>UriBeacon is now part of the Eddystone open source project which allows to send other beacon formats in addition to URLs. Eddystone supports broadcasting URLs via its Eddystone-URL frame type.</li>
+              <li>max range: 100 meters (see: http://www.bluetooth.com/Pages/low-energy-tech-info.aspx)</li>
+              <li>Interaction style: push (beacons broadcast information)</li>
+              <li>https://github.com/google/uribeacon/tree/master/specification</li>
+          </ul>
+
+          <p><b>iBeacon (Apple)</b>
+          <ul>
+              <li>Base technology: Bluetooth Low Energy</li>
+              <li>BLE-enabled device periodically transmits an advertising packet containing a UUID.</li>
+              <li>iBeacon requires an app that is enabled to read whitelisted objects. UUID resolution requires an additional server.</li>
+              <li>max range: 100 meters (see: http://www.bluetooth.com/Pages/low-energy-tech-info.aspx)</li>
+              <li>Interaction style: push (beacons broadcast information)</li>
+              <li>https://developer.apple.com/ibeacon</li>
+          </ul>
+        </section>
+        <section>
+          <h2> Finding Things on My Network</h2>
+          This category includes technologies that allow discovery of endpoints of things on the network.
+
+          <p><b>mDNS (+ DNS-SD)</b>
+          <ul>
+              <li>Base technology: IP + UDP</li>
+              <li>multicast DNS (mDNS) resolves host names to IP addresses within small networks. When an mDNS client needs to resolve a host name, it sends an IP multicast query message that asks the host having that name to identify itself. That target machine then multicasts a message that includes its IP address. All machines in that subnet can then use that information to update their mDNS caches.</li>
+              <li>often used in conjunction with DNS-SD that allows clients to conduct simple service discovery using standard DNS queries.</li>
+              <li>part of 'zeroconf' technology suite</li>
+              <li>implemented e.g. by Apple Bonjour</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>https://tools.ietf.org/html/rfc6762 (+ https://tools.ietf.org/html/rfc6763)</li>
+          </ul>
+
+          <p><b>Multicast CoAP</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP</li>
+              <li>CoAP supports making requests to an IP multicast group.</li>
+              <li>Clients can use multicast CoAP and the "All CoAP Nodes" multicast address to find CoAP servers. CoAP servers listen on the "All CoAP Nodes" address and the default CoAP port to reply to clients.</li>
+              <li>in combination with CoRE Link Format: a GET request to the appropriate multicast address is made for '/.well-known/core' (https://tools.ietf.org/html/rfc6690)</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>https://tools.ietf.org/html/rfc7252</li>
+          </ul>
+
+          <p><b>SSDP</b>
+          <ul>
+              <li>Base technology: IP + UDP + HTTPU + SOAP</li>
+              <li>used by UPnP for discovery</li>
+              <li>'Simple Service Discovery Protocol' (SSDP)</li>
+              <li>In order to discover SSDP services, an SSDP client multicasts a HTTP UDP discovery request to the SSDP multicast channel/Port. SSDP services listen to the SSDP multicast channel/Port. If a SSDP service hears a HTTP UDP discovery request that matches the service it offers then it will respond using a unicast HTTP UDP response.</li>
+              <li>Interaction style: pull (client initiates communication); however, some UPnP devices also push info periodically</li>
+              <li>https://tools.ietf.org/html/draft-cai-ssdp-v1-03</li>
+          </ul>
+
+          <p><b>WS-Discovery</b>
+          <ul>
+              <li>Base technology: IP + TCP/UDP + SOAP et al.</li>
+              <li>specifies multicast discovery via web service based communication; avoids the need for centralized registries in smaller networks.</li>
+              <li>used by OASIS' Device Profile for Web Services (DPWS)</li>
+              <li>implemented e.g. by Microsoft Web Services on Devices API</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>http://docs.oasis-open.org/ws-dd/discovery/1.1/os/wsdd-discovery-1.1-spec-os.html</li>
+          </ul>
+
+          <p><b>XMPP Service Discovery</b>
+          <ul>
+              <li>Base technology: IP + TCP + XMPP</li>
+              <li>discovering information about other XMPP entities (e.g. user). Two kinds of information can be discovered: (1) the identity and capabilities of an entity and (2) the items associated with an entity, such as the list of rooms hosted at a multi-user chat service.</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>http://xmpp.org/extensions/xep-0030.html</li>
+              <li>update: http://xmpp.org/extensions/xep-0115.html#discover</li>
+          </ul>
+
+          <p><b>µPnP</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP + IPSO</li>
+              <li>CoAP support makes use of CoAP's Resource Directory. Modified 802.15.4 link layer for support of uPnP. Resources formatted using IPSO Objects.</li>
+              <li>http://www.micropnp.com/ipso/index.html</li>
+          </ul>
+
+        </section>
+        <section>
+          <h2> Searching in Directories</h2>
+          In contrast to the above technologies, here, a central directory can be used for discovery of things and resources. Queries can be submitted to the directory to search for things and/or resources.
+
+          <p><b>CoRE Resource Directory</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP</li>
+              <li>Resource Directory (RD) hosts descriptions of resources held on other servers, allowing lookups to be performed for those resources</li>
+              <li>Also defines lookup interface that allows simple queries (e.g.: GET /rd-lookup/res?rt=temperature )</li>
+              <li>https://tools.ietf.org/html/draft-ietf-core-resource-directory-04</li>
+          </ul>
+
+          <p><b>XMPP IoT Discovery</b>
+          <ul>
+              <li>Base technology: IP + TCP</li>
+              <li>Thing Registry can be searched for public Things and their metadata (various tags, e.g., location or serial number). A search is performed by providing one or more comparison operators in a search request to the registry.</li>
+              <li>http://xmpp.org/extensions/xep-0347.html#search</li>
+          </ul>
+
+          <p><b>HyperCat</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP</li>
+              <li>HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs. HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.</li>
+              <li>http://www.hypercat.io/standard.html</li>
+          </ul>
+
+          <p><b>Push API</b>
+          <ul>
+              <li>Base technology: HTTP + web push protocol</li>
+              <li>The Push API enables sending of a push message to a previously registered Service Worker of a web application via a push service, e.g. allowing the web application to resume on this device. The Push API makes it possible to discover, awaken and connect user devices.</li>
+              <li>https://w3c.github.io/push-api/</li>
+              <li>https://tools.ietf.org/html/draft-ietf-webpush-protocol-02</li>
+          </ul>
+
+          <p><b>SIR</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP + XML</li>
+              <li>Discussion paper at the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.</li>
+              <li>Sensor Instance Registry (SIR) is a web service interface for managing the metadata and status information of sensors. Furthermore it is capable of automatically harvesting sensor metadata, and transforming the collected metadata sets into a homogeneous data model.</li>
+              <li>https://portal.opengeospatial.org/files/?artifact_id=40609</li>
+          </ul>
+
+          <p><b>SPARQL Endpoints</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP + RDF</li>
+              <li>a SPARQL endpoint of a central triplestore accepts advanced queries (generally consisting of SELECT/WHERE statements) for RDF data.</li>
+              <li>http://www.w3.org/TR/2013/REC-sparql11-overview-20130321/</li>
+          </ul>
+
+          <p><b>Research article: "Mobile digcovery: A global service discovery for the IoT"</b>
+          <ul>
+              <li>A centralized infrastructure that allows registration of sensors. Employs 'digrectory' to handle different resources. Each directory is attached to a particular communication technology, such as NFC, IPv6 etc. A mobile app enables users to discover and access sensors. Discovery mechanism takes advantage of geolocation and context awareness.</li>
+              <li>http://dx.doi.org/10.1109/WAINA.2013.261</li>
+          </ul>
+
+          <p><b>Research article: "A discovery service for smart objects over an agent-based middleware"</b>
+          <ul>
+              <li>Indexes all smart objects connected to the registry. Indexing is done based on domains. Discovery process is based on searching the indices.</li>
+              <li>http://dx.doi.org/10.1007/978-3-642-41428-2_23</li>
+          </ul>
+
+          <p><b>Research article: "A Semantic Enhanced Service Proxy Framework for Internet of Things"</b>
+          <ul>
+              <li>A semantic based framework which uses the concept of service advertisement of a smart object. Authors argue that such a mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.</li>
+              <li>http://dx.doi.org/10.1109/GreenCom-CPSCom.2010.116</li>
+          </ul>
+
+        </section>
+        <section>
+          <h2> Searching Across Peers</h2>
+          In peer to peer discovery, the directory is essentially distributed across the peers. This is often based upon distributed hash tables which maps the search space into a numeric range and then allocates servers to parts of that range. The technique works well for scale free networks. It requires Peers in the P2P overlay to host parts of the RD and to have full connectivity and certain computing power in order to forward overlay messages, keep a consistent DHT and routing tables in the node. P2P Overlays tolerate certain amounts of churn but it would be impractical for constrained devices to participate as full peers on the DHT.
+
+          <p><b>"RFC7650": CoAP usage for RELOAD</b>
+          <ul>
+              <li>Base technology: IP + UDP/TCP + CoAP</li>
+              <li>CoAP Usage for RELOAD allows CoAP nodes to store resources in a RELOAD peer-to-peer overlay, provides a lookup service, and enables the use of RELOAD overlay as a cache for sensor data. RELOAD is a DHT-based (Chord) P2P protocol of IETF.</li>
+              <li>https://datatracker.ietf.org/doc/rfc7650/</li>
+          </ul>
+
+          <p><b>"IETF Draft": Distributed RD</b>
+          <ul>
+              <li>Base technology: IP + UDP/TCP + CoAP</li>
+              <li>This document defines a Distributed Resource Directory (DRD) for Constrained Application Protocol (CoAP). This case uses raw DHT with no RELOAD dependencies.</li>
+              <li>http://tools.ietf.org/html/draft-jimenez-distributed-resource-directory-00.html</li>
+          </ul>
+
+          <p><b>Research article: "A Scalable and self-configurable architecture for service discovery in the IoT"</b>
+          <ul>
+              <li>IoT gateways are backbones of the architecture. Gateways enable registration and un-registration of smart objects. A list of registered objects are maintained in a CoAP server. Service discovery is based on sending a GET request to ./well-known/core. In the distributed architecture several gateways are interlinked through two P2P overlays namely distributed local service (DLS) and distributed geographic table (DGT) to facilitate global service discovery.</li>
+              <li>http://dx.doi.org/10.1109/JIOT.2014.2358296</li>
+          </ul>
+
+        </section>
+        <section>
+          <h2> Accessing Thing Metadata</h2>
+          Once a "service" has been discovered with the approaches above, next "resources" and/or general metadata access at thing level needs to be performed.
+
+          <p><b>CoRE Link Format</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP</li>
+              <li>lists URIs (links) for the resources hosted by the server, complemented by attributes about those resources and possible further link relations. A well-known relative URI "/.well-known/core" is defined as a default entry point for requesting the list of links about resources hosted by a server.</li>
+              <li>https://tools.ietf.org/html/rfc6690</li>
+          </ul>
+
+          <p><b>HATEOAS</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP (typically)</li>
+              <li>abbrv. for 'Hypermedia as the Engine of Application State'</li>
+              <li>principle of REST architectures (not a standard)</li>
+              <li>hypertext should be used to find your way through the API => client interacts with an application through hypermedia provided dynamically by application servers - no prior knowledge on how to interact, since links to resources are provided</li>
+              <li>http://restcookbook.com/Basics/hateoas/</li>
+          </ul>
+
+          <p><b>SOS</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP + SOAP etc.</li>
+              <li>Standard by the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.</li>
+              <li>Sensor Observation Service (SOS) is a Web service interface which allows querying sensor measurements as well as sensor metadata. Advanced spatial, temporal and thematic filtering is possible to query measurements.</li>
+              <li>http://www.opengeospatial.org/standards/sos</li>
+          </ul>
+
+        </section>
+        <section>
+          <h2>Semantic Based Discovery</h2>
+          Several research articles using semantics for discovery can be found below.
+
+          <p><b>A web service discovery computational method for IOT system</b>
+          <ul>
+              <li>Zhou and Ma presents an ontology concept for vehicular sensors. The algorithm calculates semantic similarity, relativity and combines them to work out the maximum value of the required concepts of the web services. Then a matching degree is computed to find out the relevant web services. @[1]</li>
+          </ul>
+
+          <p><b>Semantic Enhanced Service Proxy Framework for Internet of Things</b>
+          <ul>
+              <li>The authors of @[2] have introduced a semantic based framework which uses the concept of service advertisement of a smart object. They mention that such mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.</li>
+          </ul>
+
+          <p><b>An evaluation of semantic service discovery of a U-city middleware</b>
+          <ul>
+              <li>Another semantic based service discovery is presented in @[3]. It proposes a middleware which performs SD using semantic web technologies on the contextual </li>information inferred from sensor data.</li>
+          </ul>
+
+        </section>
+      </section>
+      
+      <section id="discoveryPatterns">
+        <h2>Discovery Interaction Patterns</h2>
+      </section>
+      
+      <section id="discoveryEvaluation">
+        <h2>Evaluation of Discovery Technologies</h2>
+        In the following, we analyze the identified discovery technologies according to a set of evaluation criteria. Those criteria are listed below.
+        
+        <p><b>Evaluation Criteria</b>
+        <ol>
+        <li>Interaction Pattern</li>
+
+            This criterion specifies whether a discovery technology complies with the identified interaction pattern in that discovery category. 
+
+        <li>Support of higher layer discovery</li>
+
+            This criterion specifies whether a discovery technology provides means to submit search queries based on terms used in the underlying data model, so the thing description. This includes searches such as e.g.: 'search all things with name X' or 'search all things with property XYZ'. 
+
+        <li>Bootstrapping</li>
+
+            This criterion specifies whether means are provided to start/interact with things after discovery. 
+
+        <li>Lifetime / sleepy nodes</li>
+
+            This criterion specifies whether sleeping times of constrained devices are directly considered by the discovery technology. 
+
+        <li>Range</li>
+
+            This criterion specifies the spatial extent within which a discovery technology is functioning. This is important for the category “finding things around me”. 
+
+        <li>Support for (physically) local/remote discovery of things</li>
+
+        <li>Richness of query</li>
+
+            This criterion specifies to what extent contextual query parameters can be passed in a search query to discover things. E.g., this may include spatial parameters ('search all things in NYC') and temporal parameters ('search all things active yesterday'). In comparison to the criterion 'Support of higher layer discovery', this criterion looks at richer search query mechanisms that go beyond a basic search for terms of the thing description model. 
+
+        <li>Ranking of results</li>
+
+            This criterion specifies how/if the discovery mechanism is capable of ranking search results. 
+        </ol>
+        
+        <p><b>Category: 1) Finding things around me</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" href="#discoveryPattern">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <b>Optical Markers</b></td>
+          <td> No (marker cannot send messages)</td>
+          <td> No </td>
+          <td> Pointing to thing endpoint </td>
+          <td> n/a </td>
+          <td> vicinity of client </td>
+          <td> Local (vicinity of client) </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>NFC</b> </td>
+          <td> No (NFC initiator [client]starts interaction with target [thing]) </td>
+          <td> No </td>
+          <td> Pointing to thing endpoint </td>
+          <td> n/a </td>
+          <td> &lt; 10 cm </td>
+          <td> Local </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>Markerless Recognition</b> </td>
+          <td> No (things are not part of interactions)</td>
+          <td> Yes (could be supported by filtering out things on an AR layer) </td>
+          <td> Pointing to thing endpoint </td>
+          <td> n/a </td>
+          <td> vicinity of client </td>
+          <td> Local </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>UriBeacon</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Advertise message points to thing endpoint </td>
+          <td> There is support for sleep state in BLE and depends on which power mode is being used in the thing. For lowest power mode, the radio is switched off completely and the thing will not periodically announce its URI. There are power mode configurations where the thing powers on once every so many seconds, broadcasts, listens, then goes back to sleep. </td>
+          <td> &lt; 100 m (<a rel="nofollow" href="http://www.bluetooth.com/Pages/low-energy-tech-info.aspx">link</a>) </td>
+          <td> Local (around the client) </td>
+          <td> n/a (since this discovery is not initiated by manual search) </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>iBeacon</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Advertise message points to thing endpoint</td>
+          <td> Same as above (need to confirm) </td>
+          <td> &lt; 100 m (<a rel="nofollow" href="http://www.bluetooth.com/Pages/low-energy-tech-info.aspx">link</a>) </td>
+          <td> Local (around the client) </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+        </table>
+        
+        <p><b>Category: 2) Finding things on my network</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" href="#discoveryPattern">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <b>mDNS</b> </td>
+          <td> Yes </td>
+          <td> No (but can be implemented on application layer) </td>
+          <td> Client receives an IP address of the thing for direct interaction </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> N/A since there is no manual entry of keywords </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc6690#section-1.2.1"><b>Multicast CoAP</b></a> </td>
+          <td> yes </td>
+          <td> yes, if resource directory is used </td>
+          <td> address, port, and resource descriptions </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> N/A since there is no manual entry of keywords </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>SSDP</b> </td>
+          <td> Yes </td>
+          <td> No (only basic filtering for devices or services with a specific type) </td>
+          <td> Client receives the endpoint of the UPnP device description  </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> N/A querying using keywords is not possible </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>WS-Discovery</b> </td>
+          <td> Yes </td>
+          <td> Only basic filtering is possible. They use the term 'scope' for this. </td>
+          <td> Discovery happens in two steps: (1) find services and (2) locate a target service, i.e., to retrieve its transport address(es) </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> basic querying using service types and scopes </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>XMPP Service Discovery</b> </td>
+          <td> No </td>
+          <td> Yes (Two kinds of information can be discovered: (1) the identity and capabilities of an entity, including the protocols and features it supports; and (2) the items associated with an entity, such as the list of rooms hosted at a multi-user chat service) </td>
+          <td> Provides information on identity and capabilities of an entity. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local discovery </td>
+          <td> basic querying which discovers entity, features etc </td>
+          <td> No
+          </td>
+        </tr>
+        </table>
+        
+        <p><b>Category: 3) Searching in directories</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" class="external text" href="https://github.com/w3c/wot/blob/master/TF-DI/Interactions.md">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> (DOES THIS MAKE SENSE HERE??) </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-ietf-core-resource-directory-04#section-5"><b>CoRE Resource Directory</b></a> </td>
+          <td> Yes </td>
+          <td> Yes, key-value-pair search based on tagged resources (e.g., "resource type", "interface type" etc.) is supported </td>
+          <td> IP address &amp; port of thing and list of resources matching the query </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> No. Not beyond tag concatenation. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>XMPP IoT Discovery</b> </td>
+          <td> Yes </td>
+          <td> Yes </td>
+          <td> Provides various metadata for discovered thing. </td>
+          <td> Yes </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Basic (the spec is not finalized) </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>HyperCat</b> </td>
+          <td> Yes </td>
+          <td> Yes, flexible key-value-pair search based on tagged resources is supported </td>
+          <td> Provides reference to thing. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> No. Not beyond key-value-pairs. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://w3c.github.io/push-api/"><b>Push API</b></a> </td>
+          <td> Yes </td>
+          <td> (<i>???</i>) </td>
+          <td> Yes, through notifications </td>
+          <td> Yes, Service Worker runs in the background </td>
+          <td> n/a </td>
+          <td> Yes </td>
+          <td> (<i>???</i>) </td>
+          <td> (<i>???</i>)
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://portal.opengeospatial.org/modules/admin/license_agreement.php?suppressHeaders=0&amp;access_license_id=3&amp;target=http://portal.opengeospatial.org/files/?artifact_id=40609"><b>Sensor Instance Registry</b></a> </td>
+          <td> Yes </td>
+          <td> Yes (bound to SensorML as thing description) </td>
+          <td> Provides rich metadata description (SensorML) of discovered device </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Yes. Spatial and Temporal queries. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>SPARQL Endpoint</b> </td>
+          <td> Yes </td>
+          <td> Yes (flexible search interface - independent of underlying thing description) </td>
+          <td> Provides description of discovered thing. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Yes, high flexibility in query formulation. </td>
+          <td> Yes (with 'order by')
+          </td></tr></table>
+
+        <p><b>Category: 4) Searching across peers</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" class="external text" href="https://github.com/w3c/wot/blob/master/TF-DI/Interactions.md">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc7650"><b>CoAP RELOAD</b></a> </td>
+          <td> No pattern has been investigated </td>
+          <td> See CoAP RD  </td>
+          <td> See CoAP RD </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> See CoAP RD </td>
+          <td> No
+          </td></tr></table>
+
+        <p><b>Category: 5) Accessing thing metadata</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" class="external text" href="https://github.com/w3c/wot/blob/master/TF-DI/Interactions.md">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <b>CoRE Link Format</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Yes, this format can be used for bootstrapping. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Low. Just direct access to metadata. </td>
+          <td> Can be used by application layer to rank results
+          </td></tr>
+          <tr>
+          <td> <b>HATEOAS</b> </td>
+          <td> No (typically, not one metadata document, but information distributed and advertised via links) </td>
+          <td> No </td>
+          <td> Bootstrapping information can be gathered by following links. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Low. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>Sensor Observation Service</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Yes, it returns SensorML when metadata is queried. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Medium. Temporal queries are supported. </td>
+          <td> No
+          </td></tr></table>
+      </section>
+      
+      <section id="discoveryConsortia">
+        <h2>Discovery Technologies used by IoT Consortia</h2>
+        Below we analyze which discovery technologies are used by related IoT consortia, initiatives, and working groups.
+
+        "--" equals NO (not supported). 
+
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> Consortium </th>
+          <th> Focus Domain </th>
+          <th> 1. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#1._Finding_things_around_me" title="Discovery Categories and Tech Landscape">Finding things around me</a> </th>
+          <th> 2. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#2._Finding_things_on_my_network" title="Discovery Categories and Tech Landscape">Finding things on my network</a> </th>
+          <th> 3. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#3._Searching_in_Directories" title="Discovery Categories and Tech Landscape">Searching in Directories</a> </th>
+          <th> 4. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#4._Searching_across_Peers" title="Discovery Categories and Tech Landscape">Searching across Peers</a> </th>
+          <th> 5. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#5._Accessing_thing_metadata" title="Discovery Categories and Tech Landscape">Accessing thing metadata</a>
+          </th></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://www.ietf.org/">IETF</a> </td>
+          <td> all </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc6762">mDNS</a>; <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc7252">Multicast CoAP</a>; <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-cai-ssdp-v1-03">SSDP</a> </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-ietf-core-resource-directory-04">CoRE Resource Directory</a> </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-jimenez-p2psip-coap-reload-10">CoAP RELOAD</a> </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc6690">CoRE Link Format</a>
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://openmobilealliance.org/">OMA</a> </td>
+          <td> all </td>
+          <td> -- </td>
+          <td> -- </td>
+          <td> OMA LwM2M uses CoAP </td>
+          <td> -- </td>
+          <td> OMA LwM2M can be extended to work with CoRE Link Format
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://openinterconnect.org">OIC</a> </td>
+          <td> all </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;?
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://allseenalliance.org">Allseen Alliance</a> </td>
+          <td> smart home </td>
+          <td> <a rel="nofollow" class="external text" href="https://allseenalliance.org/framework/documentation/learn/core/about-announcement"><b>About Announcement</b></a> </td>
+          <td> mDNS </td>
+          <td>&#160;? </td>
+          <td> -- </td>
+          <td> --
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.ipso-alliance.org">IPSO Alliance</a> </td>
+          <td> all </td>
+          <td> -- </td>
+          <td> Not explicitely supports this but CoAP can be extended </td>
+          <td> CoAP </td>
+          <td> -- </td>
+          <td> CoRE Link Format
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.onem2m.org">oneM2M</a> </td>
+          <td> telecomunication (Note from Soumya - oneM2M proposes to be independent of the underlying network and does not propose any specific protocols to work with. But they have worked on binding to HTTP and MQTT) </td>
+          <td> Possible through UriBeacon </td>
+          <td> Possible through mDNS </td>
+          <td> Possible through CoAP </td>
+          <td> -- </td>
+          <td> CoRE Link Format
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://threadgroup.org/">ThreadGroup</a> </td>
+          <td> smart home </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;?
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.hypercat.io">Hyper/Cat</a> </td>
+          <td> smart cities </td>
+          <td> -- </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="http://www.hypercat.io/standard.html">HyperCat Catalogue</a> </td>
+          <td> -- </td>
+          <td> --
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.opengroup.org/getinvolved/workgroups/iot">Open Group</a> </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;?
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.opengeospatial.org/projects/groups/sensorwebdwg">OGC SWE</a> </td>
+          <td> smart cities, environmental monitoring </td>
+          <td> -- </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="https://portal.opengeospatial.org/modules/admin/license_agreement.php?suppressHeaders=0&amp;access_license_id=3&amp;target=http://portal.opengeospatial.org/files/?artifact_id=40609">Sensor Instance Registry</a> </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="https://portal.opengeospatial.org/files/?artifact_id=47599">Sensor Observation Service</a>
+          </td></tr></table>
+      </section>
+      
+    </section>
+    
+    <section>
+      <h2>Tech Landscape for APIs and Protocol Mappings</h2>
+      <section>
+        <h2> Protocols</h2>
+        <ul>
+          <li>HTTP (<a href="https://tools.ietf.org/html/rfc7230">RFC&nbsp;7230</a>)
+            <ul>
+              <li>REST implementation (client/server, stateless, uniform interfaces, caching, layered/intermediaries)</li>
+              <li>URIs with <pre>http</pre> scheme</li>
+              <li><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">Internet Media Types</a> describe representations</li>
+              <li>Extensible throgh <a href="http://www.iana.org/assignments/message-headers/message-headers.xhtml">header fields</a></li>
+            </ul>
+          </li>
+          <li>HTTP/2 <b>(IRTF to provide input)</b></li>
+          <li>Websocket <b>(Dave Raggett, Michael McCool)</b>
+            <ul>
+            <li>Provides a persistent connection-oriented transport, just like a TCP/IP socket</li> 
+            <li>Like HTTP, supports a secure TLS variant, Secure Websockets</li>
+            <li>An initial HTTP(S) connection can be "upgraded" to a (secure) websocket in a standard way, re-using the same port</li>
+            <li>Not exactly a protocol in itself, websockets can be used as a transport layer for other protocols that would normally go over TCP/IP sockets.
+		<ul><li>For example, MTTQ can run over a websocket, including over a secure websocket.</li></ul>
+            </li>
+            <li>Websockets are one way to implement the "notify" or "observe" interaction patterns in HTTP-based web services</li>
+            </ul>
+          </li>
+          <li>WebRTC (<a href="https://www.w3.org/TR/webrtc/">W3C WebRTC 1.0</a>)
+            <ul>
+              <li>Enables direct, i.e. without passing a server, peer to peer connectivity</li>
+              <li>However, servers are needed to set up the peer-to-peer connection and to cope with NATs and firewalls</li>
+              <li>Supports media streaming and data communication</li>
+              <li>WebRTC is exposed to web apps through the W3C WebRTC APIs in web browsers (Chrome, Firefox, Opera) and to native apps in Android and IoS. This enables direct media streaming and data communication between web apps and mobile apps located in distant devices</li>
+              <li>No plugins are needed to support WebRTC</li>
+            </ul>
+          </li>
+          <li>CoAP (<a href="https://tools.ietf.org/html/rfc7252">RFC&nbsp;7252</a>)
+            <ul>
+              <li>REST implementation (client/server, stateless, uniform interfaces, caching, layered/intermediaries)</li>
+              <li>URIs with <pre>coap</pre> scheme</li>
+              <li>Supports server push (<a href="https://tools.ietf.org/html/rfc7641">Observing Resources</a>)</li>
+              <li>Supports group communication (IP multicast)</li>
+              <li><a href="http://www.iana.org/assignments/core-parameters/core-parameters.xhtml#content-formats">Content format IDs</a> (Internet Media Types combined with encoding) describe representations</li>
+              <li>Extensible throgh <a href="http://www.iana.org/assignments/core-parameters/core-parameters.xhtml#option-numbers">options</a></li>
+            </ul>
+          </li>
+          <li>MQTT <b>(Dave Raggett, Michael Koster, Michael McCool)</b></li>
+          <ul>
+            <li>Uses an addressing scheme based on named topics that are organized in a hierarchy</li>
+            <li>MQTT is TCP, MQTT SN is UDP</li>
+            <li>It is possible to send MQTT over other transports, such as websockets</li>
+            <li>Pub/sub based, with a mandatory broker</li>
+          </ul>
+          <li>XMPP <b>(Johannes Hund will outreach to XSF)</b></li>
+          <li>STOMP <b>(relevant? outreach?)</b> </li>
+          <li>AMQP <b>(Dave Raggett to reach out)</b></li>
+          <li>Bluetooth GATT <a href="https://lists.w3.org/Archives/Public/public-wot-ig/2015Jul/att-0077/GATT.pdf">presentation</a>
+            <ul>
+              <li>Remote Key/Value store with CRUD operation</li>
+              <li>Client/server-mimic</li>
+              <li>Could be used to model REST with some work</li>
+              <li>Legacy protocol from WoT perspective</li>
+            </ul>
+          </li>
+          <li><a href="https://www.w3.org/TR/2012/REC-mmi-arch-20121025/">MMI architecture</a> <b>(Kaz to outreach)</b>
+          <ul>
+            <li>High-level Life Cycle events between components</li>
+            <li>Programming language and transport agnostic</li>
+            <li>Encapsulated component functionality only accessed through the Life Cycle events</li>
+            <li>No direct communication between Modality Components. Communication just goes through the Interaction Manager.</li>
+            <li>EMMA (<a href="https://www.w3.org/TR/2009/REC-emma-20090210/">Ver. 1.0</a>, <a href="http://w3c.github.io/emma/emma2_0/emma_2_0_editor_draft.html">Ver. 2.0</a>) is expected as the standard data format for concrete data exchange.</li>
+            <li><a href="https://www.w3.org/TR/2015/REC-scxml-20150901/">SCXML</a> can be used as the Interaction Manager to manage interaction states.</li>
+            <li>Can be used with various transport mechanism, e.g., REST, WebSockets, ...</li>
+          </ul>
+          </li>
+          <li>Thread</li>
+             <ul>
+              <li>Network and transport level stack for connected things in the home. </li>
+              <li>Application-layer agnostic</li>
+              <li>Stack consists of: UDP + DTLS/Distance Vector Routing/IPv6/6LoWPAN/IEEE 802.15.4 MAC</li>
+              <li>Improved coverage due to mesh support </li>
+              <li>Very low power, sleepy endpoints </li>
+              <li>Self extending, self healing &amp; robust</li>
+            </ul>
+          <li>Discovery protocols <b>(move to DI? -> Soumya)</b>
+            <ul>
+              <li>BLE based protocols: iBeacon, URIBeacon</li>
+              <li>UPnP: Universal Plug and Play Protocol (especially UPnP 2.0 with more focus on IoT)</li>
+              <li>SSDP: Simple Service Discovery Protocol. SSDP is the discovery layer of UPnP but also used as standalone discovery protocol e.g. in DIAL. </li>
+              <li>mDNS/DNS-SD: multicast DNS based network discovery protocol. Supported on Android and iOS</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+      	<h2>Rapidly Changing Sensor Readings</h2>
+      	<p><em></em>REST or representational state transfer assumes that requests/responses transfer the state of the resource, but what does that mean when the state is constantly changing?</em></p>
+      	<p>This has been addressed by creating extensions to the REST design style, both in CoAP Observe and HTTP EventSource, that allow for multiple serial state changes to be returned asynchronously in response to a request. The client/application simply responds to these using a handler and applies the resource state changes to the application state.</p>
+      	<p>For example, if the application is a thermostat, the asynchronous temperature state updates invoke a handler that evaluates the thermostat mode and other controls and decides, on each response from the sensor, whether to turn the heating system on or off, heat or cool mode.</p>
+      	<p>Additionally, a request can provide the URI for asynchronous call backs. This provides the notion of a subscription, or binding, where you may CREATE (POST) a control to a location that starts "web callbacks" which are POST or PUT operations sent to the destination address configured by the CREATE operation.</p>
+      	<p>These patterns are becoming more well known and are described in the <a href="https://github.com/connectIOT/iotivity-servient/blob/master/docs/abstract-transfer.pdf">abstract transfer layer proposal</a>.</p>
+      	<p>In the <a href="https://datatracker.ietf.org/doc/draft-ietf-core-interfaces/">CoRE Interfaces draft</a>, there is a description of Observe Attributes, which are additional controls on the Observation. For example, the pmin attribute specifies the minimum interval between responses. By using pmin in conjunction with a content format that allows batch sample reporting (e.g. <a href="https://datatracker.ietf.org/doc/draft-jennings-core-senml/">SenML</a>) rapidly changing samples may be buffered at the source and sent as a batch in each periodic notification. Additional conditional observe attributes are defined and being defined to provide additional controls and filtering. These are appropriate for including in the payload when creating a subscription or binding.</p>
+      	<p>Additionally, in a REST based hypermedia system, resources may be assigned media types and content formats that are designed for media streams. This works like a websocket upgrade, where a separate socket connection is made from the media stream data source to the handler in the application.</p>
+      </section>
+      <section>
+        <h2> Resource Models &amp; Protocol Mappings from Consortia</h2>
+        <dd>
+          <ul>
+            <li> ISO/IEC/IEEE P21451-1-4
+              <ul>
+                <li> Approach is driving XMPP as IoT solution
+                </li>
+                <li> Emphasis on connecting different (legacy) protocols to/over XMPP transport
+                </li>
+                <li> Strong security focus (domain federation and identity)
+                </li>
+                <li> Protocol-agnostic model
+                </li>
+              </ul>
+            </li>
+            <li>IETF Constrained RESTful Environments (CoRE)
+              <ul>
+              	<li>Adjunct specifications and recommendations around CoAP</li>
+              	<li>Provide an ecosystem for mainly RESTful IoT applications (but also <a href="https://tools.ietf.org/html/draft-koster-core-coap-pubsub">pub-sub</a> for instance)</li>
+              	<li>Usually also applicable to HTTP (except for CoAP-specific features, e.g., involving observe)</li>
+              	<li>Building blocks:
+              	  <ul>
+                    <li>CoRE Link Format (<a href="https://tools.ietf.org/html/rfc6690">RFC 6690</a>): Format for collection of <a href="https://tools.ietf.org/html/rfc5988">Web links</a> with additional attributes, e.g., resource type (<pre>rt</pre>) as semantic tag and interface (<pre>if</pre>) for interaction type labels</li>
+                    <li>CoRE Resource Directory (<a href="https://tools.ietf.org/html/draft-ietf-core-resource-directory">I-D</a>): Registry for devices (and services) that supports updates, de-registration, and various look-ups as well as availability management (registration lifetime, heart beats)</li>
+                    <li>CoAP over TCP/TLS (<a href="https://tools.ietf.org/html/draft-ietf-core-coap-tcp-tls">I-D</a>): CoAP transport binding for legacy networks (IPv4, NATs, middleboxes) and point-to-point use cases</li>
+                    <li>CoRE Interfaces (<a href="https://tools.ietf.org/html/draft-ietf-core-interfaces">I-D</a>): Collection of reusable interface definitions and patterns</li>
+                    <li>CoAP PubSub (<a href="https://tools.ietf.org/html/draft-koster-core-coap-pubsub">individual I-D</a>): Publish-Subscribe mechanism modelled with CoAP methods</li>
+                    <li>CoMI (<a
+                    href="https://tools.ietf.org/html/draft-vanderstok-core-comi">individual
+                    I-D</a>): CoAP Management Interface, enables the
+                    use and manipulation of datastores described by
+                    YANG modules over CoAP (HTTP version is called
+                    RESTCONF).  YANG (<a
+                    href="https://tools.ietf.org/html/rfc6020">RFC 6020</a>)
+                    is IETF's data
+                    modeling language used for all recent device/network management work.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li> OMA <b>(Mohammed Dadas / Orange, bryant sullivan / AT &amp; T?)</b>
+              <ul>
+	            <li>LWM2M</li>
+	            <li>GotAPI</li>
+              </ul>
+            </li>
+            <li>OIC <b>(Daniel Park, Michael Koster, Michael McCool)</b>
+              <ul>
+	            <li>Based on CoAP resource and interaction model: CRUD+N.</li>
+	            <li>Superceded by OCF.</li>
+              </ul>
+            </li>
+            <li>OCF <b>(Michael McCool)</b>
+              <ul>
+	            <li>OCF is a result of a merger between AllJoyn and OIC and supercedes both.</li>
+	            <li>AllJoyn and OIC will continue to be supported by standardized bridges</li>
+	            <li>Uses RAML for interaction modeling, JSON-Schema for data modeling of individual resources, 
+                        and OpenAPI for introspection</li>
+                    <li>A higher-level application-level protocol and resource framework, 
+                        OCF will typically be implemented on top of CoAP/CBOR although HTTP/JSON is also possible</li>
+                    <li>An open-source implementation is available: <a href="https://www.iotivity.org">IoTivity</a></li>
+              </ul>
+            </li>
+            <li>IPSO Alliance <b>(Michael Koster)</b></li>
+            <li>oneM2M <b>(Soumya to outreach: Martin Bauer,Omar.)</b></li>
+            <li>Hyper/Cat <b>(TF-DI? -> Soumya, probably more related to TD)</b></li>
+            <li>Open Group <b>(Dave to outreach)</b></li>
+            <li>OGC SWE <b>(sensor things API - outreach to steve liang)</b>
+            <dl>
+                <dt>Model for "Things"</dt>
+                <dd></dd>
+                <dt>Protocol mapping</dt>
+                <dd></dd>
+                <dt>Resource structure / web API</dt>
+                <dd></dd>
+                <dt>Client-side scripting API to acces remote things</dt>
+                <dd></dd>
+                <dt>Server-side API to create/expose things</dt>
+                <dd></dd>
+                <dt>Additional, platform specific findings of interest for this landscape</dt>
+                <dd></dd>
+              </dl>
+            </li>
+            <li>ECHONET Consortium <b>(Naka-san, Kazuo Kajimoto -> Johannes will copy from wiki)</b>
+             <dl>
+                <dt>Model for "Things"</dt>
+                <dd></dd>
+                <dt>Protocol mapping</dt>
+                <dd></dd>
+                <dt>Resource structure / web API</dt>
+                <dd></dd>
+                <dt>Client-side scripting API to acces remote things</dt>
+                <dd></dd>
+                <dt>Server-side API to create/expose things</dt>
+                <dd></dd>
+                <dt>Additional, platform specific findings of interest for this landscape</dt>
+                <dd></dd>
+              </dl>
+            </li>
+
+            </li>
+            <li>Allseen Alliance
+              <dl>
+                <dt>Model for "Things"</dt>
+                <dd>Yes. See <a href="https://allseenalliance.org/framework/documentation/learn/core">https://allseenalliance.org/framework/documentation/learn/core</a>. Application exposes its services through a "BusObject" defining a set of interfaces, where each interface defines a set of Methods, Properties, and Signals (Events). Interface descriptions are XML-documents: <a href="https://allseenalliance.org/framework/documentation/learn/core/about-announcement/interface">https://allseenalliance.org/framework/documentation/learn/core/about-announcement/interface</a></dd>
+                <dt>Protocol mapping</dt>
+                <dd>AllSeen is an application layer concept that is tranport layer agnostic. Today mapping to TCP/IP and UDP/IP over WiFi, WiFi-Direct, Ethernet and PLC. Mapping to non-IP transports, e.g. Bluetooth LE, ZigBee or Z–Wave can be added. See <a href="https://allseenalliance.org/framework/documentation/learn/core/system-description/alljoyn-transport">https://allseenalliance.org/framework/documentation/learn/core/system-description/alljoyn-transport</a></dd>
+                <dt>Resource structure / web API</dt>
+                <dd>AllSeen is not web focused. Applications are written in C, C++, Obj-C, Java etc but it is probably possible to give access for web apps to an AllJoyn network through an AllSeen Gateway Agent.</dd>
+                <dt>Client-side scripting API to acces remote things</dt>
+                <dd>APIs are exposed in different native languages. See <a href="https://allseenalliance.org/framework/documentation/develop/api-reference">API refereence</a></dd>
+                <dt>Server-side API to create/expose things</dt>
+                <dd>APIs are exposed in different native languages. See <a href="https://allseenalliance.org/framework/documentation/develop/api-reference">API refereence</a></dd>
+                <dt>Additional, platform specific findings of interest for this landscape</dt>
+                <dd>For basics see <a href="https://allseenalliance.org/framework/documentation/learn/architecture">architecture</a>,
+<a href="https://allseenalliance.org/framework/documentation/learn/core/system-description">system-description</a>, <a href="https://allseenalliance.org/framework/documentation/learn">learn</a>
+              </dd>
+              </dl>
+            </li>
+        </ul>
+      </section>
+      <section>
+        <h2> Potential Scripting API Patterns</h2>
+        <section>
+          <h2> Server-Side</h2>
+          <p>There are numerous exisiting web api frameworks that can or could serve as current practise,
+            e.g. refer to <a href="http://www.todobackend.com/">todobackend.com</a></p>
+        </section>
+        <section>
+          <h2> Client-Side Scripting APIs</h2>
+          <ul>
+            <li> W3C fetch API </li>
+            <li> <a href="http://w3c.github.io/presentation-api/">W3C Presentation API</a>: The <a href="https://www.w3.org/2014/secondscreen/">W3C Second Screen Working Group</a> works on a specification of an API that enables web content to access external presentation displays and use them for presenting web content. The specification aims to make presentation displays such as projectors or connected TVs, available to the Web and takes into account displays that are attached using wired (HDMI, DVI, or similar) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, or similar), but the Presentation API abstracts from these underlying protocols. It allows Browser vendors to implement the API on top of different protocols. The specification describes the conformance criteria for two classes of user agents:</b>
+            Controlling user agent: Web browsers that conform to the specifications of a controlling user agent must be able to monitor the availability of presentation displays, start new presentations, join or reconnect to running presentations and to exchange messages and binary data with presentations.</b>
+            Receiving user agent: Web browsers that conform to the specifications of a receiving user agent must be able to render presentations by providing the necessary inferfaces to accept launch or join requests from controlling user agents and to exchange messages and binary data with controlling pages.</b>
+            The concept of the Presentation API is relevant to the work of the this group since the WoT Thing API is intended to offer an API that abstracts from the underlying IoT protocols. The Presentation API can be seen as a concrete case of the generic Thing API if we consider presentation displays as kind of things that provide Thing Description with the necessary set of actions, properties and events to start and control presentations.
+            </li>
+            <li> Geolocation API <b>(Kaz to outreach chair)</b></li>
+            <li> NFC &amp; Bluetooth API <b>(Kaz to outreach)</b></li>
+          </ul>
+        </section>
+        <section>
+          <h2> Edge Computing</h2>
+          <p>Edge computing, also known as fog computing, applies cloud computing mechanisms to distributed computing, but 
+          extended to support computing devices "close" to the end user, such as in the networking infrastructure or on a local
+          compute-offload device.  Such edge computing devices can be used to provide various useful services for IoT (resource 
+          directories, bridging) or provide compute services for specific functions (for example, face recognition or speech
+          processing).
+          <ul>
+          <li><b>AWS Greengrass</b> (Michael McCool)
+            <ul>
+            <li>Made available by <a href="https://aws.amazon.com/greengrass"></a>Amazon Web Services</li>
+            <li>Supports a function-as-a-service model similar to that of AWS Lambda, but on customer-managed devices</li>
+            <li>Functions need to be stateless, but can manage state in remote services (eg databases)</li>
+            <li>Meant to execute only short transactions</li>
+            <li>Limited ability to support additional outgoing network connections</li>
+            <li>Multiple languages supported, as well as AWS APIs and security model</li>
+            </ul>
+          </li>
+          <li><b>OpenFog</b> (Michael McCool)
+            <ul>
+            <li>Consortium to promote and set standards for fog computing: <a href="https://www.openfogconsortium.org">OpenFog</a>
+            <li>Explicitly spans cloud to IoT, includes AI services</li>
+            <li>Working on standards for reference architectures and software stacks for OpenFog nodes</li>
+            </ul>
+          </li>
+          </ul>
+        </section>
+        <section>
+          <h2> Scripting APIs to Physical Things</h2>
+          <ul>
+            <li> DAP Generic Sensor API <b>(Johannes to outreach to tobie langel for basic design principles)</b></li>
+            <li> Vehicle API <b>(Kaz to outreach chair)</b></li>
+            <li> Physical API such as <a href="https://rawgit.com/browserobo/WebGPIO/master/index.html">WebGPIO API</a>, <a href="https://rawgit.com/browserobo/WebI2C/master/index.html">WebI2C API</a>:
+            <a href="https://www.w3.org/community/browserobo/">Browsers and Robotics CG</a> is developing APIs for direct physical device (sensor, actuator) control 
+            via a general-purpose I/O (such as GPIO/I2C) from Webapps. Since those are very generic APIs that do not depend on devices, it is required to operate under the conditions of device safety (without destroying the devices). The concept of the API may be related to WoT IG work. Furthermore, in the future, there may be a variety of things and their APIs, so the concept may become a basis to discuss how to operate things safely.
+            However, we have to consider that there might be several perspective and implementation method of GPIO/I2C operation, for example,
+            <ul>
+            	<li> An improvement to current browser functionality for direct control devices from browsers. </li>
+            	<li> An improvement to server side JavaScript (such as node.js) in order to control devices from the server side JavaScript (<a href="https://github.com/fivdi/onoff">example</a>). </li>
+            </ul>
+            </li>
+            <li> johnnyfive <b>(Johannes to outreach github-&gt; maintainer )</b></li>
+          </ul>
+        </section>
+        <section>
+          <h2> Embedded Runtimes</h2>
+          <ul>
+            <li> node.js <b>(Tibor)</b></li>
+            <li> micropython</li>
+            <li> Arduino <b>(Dave Raggett)</b></li>
+            <li><a href="http://chirimen.org">CHIRIMEN</a>:
+            “CHIRIMEN” is a development environment that allows to control the physical devices (such as sensors and actuators) by Web browser technology. 
+            Their implementation includes hardware as a board computer, Web browser software (currently using B2G), and low-level device APIs 
+            (<a href="https://rawgit.com/browserobo/WebGPIO/master/index.html">WebGPIO API</a> and <a href="https://rawgit.com/browserobo/WebI2C/master/index.html">WebI2C API</a> etc.) 
+            to control physical devices by web apps or JavaScript. It is developed by CHIRIMEN Open Hardware community and code-named “CHIRIMEN”. Their hardware and software have
+            been released as <a href="https://github.com/chirimen-oh/release">open source</a>.</li>
+            <li> ARM mbed</li>
+            <li> NodeMCU <b>(Johannes to outreach)</b></li>
+            <li> Jerryscript </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+    <section>
+      <h2>Tech Landscape for Security &amp; Privacy</h2>
+      <p>While things may be of low value (say <50$) they can control (parts of) high value assets such as smart locks controlling access to homes or offices/factories. WoT aims at exposing the functonality of such things at public-facing endpoints in the Internet/Web. This establishes <b>security</b> as a top concern for WoT.<br/><br/>
+      Things can reveal/expose data related to user habits such as lightning/heating practices or the human body such as heartbeat rates. This establishes <b>privacy</b> as another top concern for WoT. In the first place this refers to things owned/used by individuals esp. consumer goods. Privacy can also concern things owned/used by legal entities e.g. capital/investment goods such as health care equipment. But not all things owned/used by legal entities are subject to privacy concerns. There also are WoT scenarios which do not process individual user data such as industrial control systems.<br/><br/>
+      This chapter provides the security&privacy landscape for WoT.</p>
+      <section>
+      	<h2>Takeaway</h2>
+        <p>The WoT provides distributed IT-systems. The study of protecting distributed IT-systems started soon after their invention i.e. in the 60/70ies. So there is lots of prior art for security&privacy - collectively providing the current toolbox. But WoT needs security&privacy tools that are not yet present in the current toolbox. New security&privacy tools for WoT will come in 2 forms:
+        <ul><li>New tools that change form-factors of existing tools (smaller, lighter...) i.e. tools doing known tricks in new forms</li>
+        <li>New tools doing new tricks</li></ul>
+        These new security&privacy tools need to come as (broadly resp. industry/domain-wide accepted) standards. These standards do not yet exist, they do emerge right now.
+        This chapter elaborates on this hypothesis.</p>
+      </section>
+      <section>
+      	<h2>Inclusion of Physical Goods and Processes</h2>
+        <p>The inclusion of physical goods and processes is the key differentiator between the Web-of-Things on the on hand and the Web-of-Services resp. the traditional Web (<i>Web-of-Pages</i>) on the other hand.<br/><br/>
+        There are Web-of-Services and Web-of-Pages security&privacy requirements which translate to Web-of-Things in a straight-forward manner such as <i>user authentication->thing authentication</i>. For such requirements security&privacy mechanisms were established by other domains such as office/enterprise IT or Cloud computing. Corresponding standards and best practices do exist and may apply or may be translated to WoT. Note that constraints (number of instances, computing power, memory, IO and networking capabilities etc.) do change when considering the WoT image of a traditional requirement such as the authentication of a caller.<br/><br/>
+        The inclusion of physical goods and processes also leads to security&privacy requirements or constraints with no real/good analogies in the digital World. These requirements resp. constraints are not yet covered by security&privacy technologies developed for existing domains. This includes security&privacy requirements as well as constraints such as:
+        <ul><li>Things discovery authorization</li>
+        <li>Managing the authorization to authorize</li>
+        <li>Software esp. firmware update/patching</li></ul></p>
+      </section>
+      <section>
+      	<h2>Standardization</h2>
+        <p>The W3C IG WoT is considering same as well as cross-domain interactions among resp. with things:
+        <ul><li>For interactions in the same-domain standards for security facilitate reuse - they are nice-to-have</li>
+        <li>For interactions that cross domains (i.e. there is no single vendor/provider that designs/produces/supplies all components that interact in a WoT scenario) standards for security (authentication and authorization, secure communications provide interoperability AND reuse - they are must-haves</li></ul>
+        Thus, standards for security&privacy are mandatory for WoT. This refers to conventions for implementing security&privacy that are broadly resp. industry or application domain-wide accepted.<br/><br/>
+        The state-of-the-art survey provided in this landscape document does consider existing and emerging standards for WoT security&privacy.</p>
+      </section>
+      <section>
+      	<h2>Technology Origin/Heritage</h2>
+        <p>Numerous security&privacy-enabling tools do already exist. Prominent examples are Kerberos, SSL/TLS and OAuth. They were created to serve the needs encountered in office/enterprise IT (e.g. Kerberos), the classical Web (e.g. SSL/TLS) as well as new Web application styles esp. service-oriented applications, apps/REST APIs (e.g. OAuth). The corresponding mechanisms often are very mature i.e. they represent broadly accepted standards that are in large-scale production use.<br/><br/>
+        This prior-art can help to address security&privacy for (parts of) WoT scenarios. But there is no guarantee that a (mature) security or privacy means with non-WoT origin/heritage does present a good match for WoT. For security/privacy mechanisms with non-WoT origin, fitness checks are needed.<br/><br/>
+        Security&privacy mechanism with WoT or IoT origin are work-in-progress nowadays. They do not yet present the same maturity level (not yet broadly accepted standards, not yet in large-scale protection use). Hence (and for the time being) maturity checks are needed for security/privacy mechanisms with WoT origin.</a></p>
+      </section>
+      <section>
+      	<h2>Architectural Impact</h2>
+        <p>Different security&privacy tools do have different impact on the architecture and implementation of WoT systems:
+        <ul><li>Some affect the core from solution design and realization perspective e.g. the authorization of actions and the authentication of actors. For instance this includes cross-cutting concerns such as the representation and handling of authenticated callers throughout a codebase.</li>
+        <li>Other security mechanisms are more peripheral i.e. can be added or replaced easily. This especially holds for transport-oriented security mechanisms such as SSL/TLS and DTLS.</li></ul>
+        The former mechanisms require more attention during the architecture and design process than the latter.</p>
+      </section>
+      <section>
+      	<h2>Distribution of Complexity</h2>
+        <p>Mechanisms invented <2010 for distributed IT-System security e.g. Kerberos, SSL/TLS, SAML happen to distribute logical and computational complexity quite evenly over client and server components.<br/><br/>
+        This was a major issue for the Web app/API economy where 3rd pary developers create components (e.g. mobile apps) that interact with services provided by other parties. To overcome this obstacle the new generation security resp. security-enabling technologies invented >2010 (e.g. OAuth) distribute complexity unevenly:
+        <ul><li>The server or responder-side (e.g. OAuth authorization server) usually is as complex as in classical approaches (e.g. SAML IdP)</li>
+        <li>The client or requestor-side (e.g. OAuth client) complexity is orders of magnitude smaller than in classical approaches (e.g. SAML RP) This simplifies the security resp. security-enabling stack that has to be provided on client-side.</li></ul>The new approach tends to be a better fit for WoT than technologies with an even distribution of complexity.</p>
+      </section>
+      <section>
+      	<h2>Mechanisms' State-of-the-Art</h2>
+        <p>The table below surveys potential building blocks for WoT security and privacy and identifies their current evolution stage (as of 2016-02-29):</p>
+<table><thead>
+<tr>
+<th>-</th>
+<th>Informational Self-Determination</th>
+<th>Anonymization, Pseudonymization</th>
+<th>Authorization Management</th>
+<th>Authorization Enforcement</th>
+<th>Initial Authentication</th>
+<th>Single-Sign-On</th>
+<th>Confidentiality</th>
+<th>Data Origin Authentication, Integrity</th>
+<th>Credentialing</th>
+<th>Provisioning</th>
+<th>Status</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>UMA</strong></td>
+<td><strong>Core objective</strong> (through user-managed authorizations)</td>
+<td>-</td>
+<td>Addressed (users as primary policy management authorities)</td>
+<td>Addressed (push model, HTTP)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>IETF draft (individual submission to IETF oauth WG)</td>
+</tr>
+<tr>
+<td><strong>OATH</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (time, event or challenge-based OTP schemes)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Addressed (symmetric key containers and provisioning of symmetric keys)</td>
+<td>-</td>
+<td>IETF standards</td>
+</tr>
+<tr>
+<td><strong>OpenID Connect</strong></td>
+<td>Side concern (users decide if their identity information is supplied to relying parties</td>
+<td>Implementation-specific</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (requests reports about [initial] authentication events)</td>
+<td><strong>Core objective</strong> (SSO across organizations/domains and in the same domain)</td>
+<td>-</td>
+<td>-</td>
+<td>See OAuth</td>
+<td>See OAuth</td>
+<td>OpenID Forum standards</td>
+</tr>
+<tr>
+<td><strong>JWT</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (reports about [initial] authentication events)</td>
+<td>Side concern (allows to transfer and sustain information about authentication events)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>IETF standard</td>
+</tr>
+<tr>
+<td><strong>CWT</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (reports about [initial] authentication events)</td>
+<td>Side concern (allows to transfer and sustain information about authentication events)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>IETF draft (individual submission to IETF ace WG)</td>
+</tr>
+<tr>
+<td><strong>FIDO</strong></td>
+<td>-</td>
+<td><strong>Core objective</strong> (uses long-lived public key associations instead user names/identifiers)</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (framework for initial user authentication in the Web)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Side concern (defines the creation/supply of public/private keys to FIDO clients)</td>
+<td>-</td>
+<td>Submitted to W3C</td>
+</tr>
+<tr>
+<td><strong>OAuth</strong></td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (users or legal entities as policy management authorities)</td>
+<td><strong>Core objective</strong> (push model, HTTP)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Side concern (registration/management of OAuth clients)</td>
+<td>Side concern (registration/management of OAuth clients)</td>
+<td>IETF standards</td>
+</tr>
+<tr>
+<td><strong>OAuth-for-CoAP</strong></td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (legal entities as policy management authorities)</td>
+<td><strong>Core objective</strong> (push model, CoAP)</td>
+<td>- (DTLS-based client authentication)</td>
+<td>- (no user actor)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>IETF working group draft (IETF ace WG)</td>
+</tr>
+<tr>
+<td><strong>DCAF</strong></td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (legal entities as policy management authorities)</td>
+<td><strong>Core objective</strong> (push model, CoAP)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>IETF draft (individual submission to IETF ace WG)</td>
+</tr>
+<tr>
+<td><strong>DTLS</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (transport-level client/server authentication)</td>
+<td>- (does not define the transfer of authentication state across network servers)</td>
+<td><strong>Core objective</strong> (transport-level message encryption)</td>
+<td><strong>Core objective</strong> (transport-level signature)</td>
+<td>-</td>
+<td>-</td>
+<td>IETF standard</td>
+</tr>
+<tr>
+<td><strong>DICE</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>As for DTLS</td>
+<td>-</td>
+<td>As for DTLS</td>
+<td>As for DTLS</td>
+<td>-</td>
+<td>-</td>
+<td>IETF working group draft (IETF dice WG)</td>
+</tr>
+<tr>
+<td><strong>JOSE</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (application-level encryption, JSON)</td>
+<td><strong>Core objective</strong> (application-level signature, JSON)</td>
+<td>-</td>
+<td>-</td>
+<td>IETF standards</td>
+</tr>
+<tr>
+<td><strong>COSE</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (application-level encryption, CBOR)</td>
+<td><strong>Core objective</strong> (application-level signature, CBOR)</td>
+<td>-</td>
+<td>-</td>
+<td>IETF working group draft (IETF dice WG)</td>
+</tr>
+<tr>
+<td><strong>OSCOAP</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (application-level encryption, CBOR or JSON)</td>
+<td><strong>Core objective</strong> (application-level signature, CBOR or JSON)</td>
+<td>-</td>
+<td>-</td>
+<td>IETF working group draft (IETF ace WG)</td>
+</tr>
+<tr>
+<td><strong>SCIM</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Core objective</strong> (manage metadata about system actors-not limited to users)</td>
+<td>IETF standards</td>
+</tr>
+</tbody></table>
+
+      </section>
+      <section>
+      	<h2>Wrap-Up</h2>
+        <p>As of today there are no broadly accepted protocol standards for authenticating and authorizing things. Current projects do either not address these challenges or create silos.<br/>
+        The IETF ACE working group happens to be the leading initiative in order to overcome this limitation:
+        <ul><li>ACE has a sound problem statement and high-level approach</li>
+        <li>But ACE does not yet provide a solution - for the time being a plethora of not-yet-integrated approaches for expressing access tokens as well as acquiring them in request/response protocols are being discussed. The current stage of elaboration should be regarded "brainstorming". Moreover, questions around system dynamics (on and offboarding of components) and bootstrapping are not yet fully illuminated. This includes aspects such as creation/management of token issuance policies (in a possibly automated fashion), protecting component (self-)registration, managing the authorization to authorize, things discovery authorization
+        </li></ul>
+        From the perspective of the W3C IG WoT the (to-be-established) protocol standards for the authorization of actions and the authentication of actors in WoT should address/enable:
+        <ul><li>A variety of security token types for different application domains/use cases (consumer/industry), security models (enc/sign, bearer/PoP), encodings (JSON, CBOR...), topologies (3/4/n-party), delivery models (by-value, by-ref). The corresponding ecosystem needs to be extensible and allow to create-your-own security token type in case the already defined ones do not solve your issue.</li>
+        <li>A (single) request/response framework for acquiring and handling such tokens with different protocol bindings (HTTP/CoAP...). Request/response messages and security token (type) specifications should be decoupled i.e. the same request/response framework should allow the handling of various security token types. The corresponding framework needs to be extensible and allows to create-your-own exchange in case the already defined ones do not solve your issue.</li></ul>
+        For secure communications on transport-level, DTLS as well as TLS present commonly accepted standards. Their profiling/optimization for constrained devices and networks is a task that is currently ongoing. Note that securing communications on transport-level comes with limitations in the end-to-end security span which is achievable. For secure communications on application-level and secure storage, standards do exist for representing encrypted and signed data in JSON (a form-factor not suitable for very constrained components). Corresponding work is ongoing for CBOR (a form-factor suitable for very constrained components).<br/><br/>
+        Moreover there are no commonly accepted standards for registering things resp. devices and supplying identity (meta-)data and credentials about things resp. devices as of now.</p>
+      </section>
+    </section>
+	<section>
+        <h2>Tech landscape for decentralised P2P IoT</h2>
+
+        <p>A decentralised, peer-to-peer (P2P) system is a collection of applications run on several local computers, which connect remotely to each other to complete a function or a task. A decentralised peer to peer overlay network manages connections between human and Internet of Things peers. The participants in the network are the peer nodes. The peer to peer network is scalable and an unlimited number of nodes can participate in the network.</p>
+        <p>Centralized corporate owned cloud is certainly an easier way to build out IoT platforms; however, the owners, application service providers, cloud service providers and authorities of these topologies have an influence upon the network and can exploit it. They can ban devices, spy on devices, and compromise the data integrity of the devices. In fact, the government can order the cloud service operators and centralised application providers to do all of these things.</p>
+        <p>In the near future, the doors, air condition units, and security system of homes will be fully internet connected. The users will be able to control their home automation system from a mobile phone device. It is essential that only the end user has full control over the IoT devices. Decentralised P2P Internet of Things aims to provide users with such exclusive and full control.</p>
+
+        <p>The following areas are in scope for decentralised P2P IoT</p>
+        <ul>
+            <li>Security, including authentication, access control and data integrity</li>
+            <li>Existing and new standards</li>
+            <li>Protocols</li>
+            <li>Device discovery</li>
+            <li>Interoperability with client/server systems</li>
+        </ul>
+
+        <section>
+            <h3>Security, including authentication, access control and data integrity</h3>
+        </section>
+
+        <section>
+            <h3>Existing and new standards</h3>
+        </section>
+
+        <section>
+            <h3>Protocols</h3>
+        </section>
+
+        <section>
+            <h3>Device discovery</h3>
+        </section>
+
+        <section>
+            <h3>Interoperability with client/server systems</h3>
+        </section>
+	</section>
+  </body>
+</html>

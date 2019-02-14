@@ -1,0 +1,28 @@
+"ID","Status","Comment"
+"client-data-schema","not-impl","this is a client test"
+"client-data-schema-accept-extras","not-impl","this is a client test"
+"client-data-schema-no-extras","not-impl","this is a client test"
+"client-uri-template","not-impl","this is a client test"
+"server-data-schema","pass",
+"server-data-schema-extras","not-impl","server returns no additional data"
+"server-uri-template","not-impl,"uri templates is not used"
+"td-content-type-default","pass",
+"td-data-schema-objects","pass",
+"td-form-protocolbindings","not-impl",
+"td-media-type","not-impl","TD has no 'application/td+json'"
+"td-readOnly-observable-default","not-impl","this is a client test"
+"td-readOnly-observable-writeOnly-default","not-impl","this is a client test"
+"td-security-binding","pass","'bearer' is specified"
+"td-security-no-extras","pass","only required mechanism is specified"
+"td-default-readOnly","not-impl","this is a client test"
+"td-default-writeOnly","not-impl","this is a client test"
+"td-default-observable","not-impl","this is a client test"
+"td-default-contentType","not-impl","this is a client test"
+"td-default-safe","not-impl","this is a client test"
+"td-default-idempotent","not-impl","this is a client test"
+"td-default-in-1","not-impl","this is a client test"
+"td-default-in-2","not-impl","this is a client test"
+"td-default-qop","not-impl","this is a client test"
+"td-default-alg","not-impl","this is a client test"
+"td-default-format","not-impl","this is a client test"
+"td-default-flow","not-impl","this is a client test"
