@@ -1,8 +1,11 @@
 {
   "@context": [
-    "https://w3c.github.io/wot-thing-description/context/td-context.jsonld",
     "http://www.w3.org/ns/td",
-    {"iot": "http://iotschema.org/"}
+    {
+      "iot": "http://iotschema.org/",
+      "http": "http://www.w3.org/2011/http#",
+      "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
+    }
   ],
   "@type": "Thing",
   "name": "PanasonicAirConditionerP1",
@@ -23,7 +26,16 @@
   "properties": {
     "operationStatus": {
       "@type": "iot:OperationStatus",
-      "title": "operationStatus",
+      "title": "Operation status",
+      "titles": {
+         "en": "Operation status",
+         "ja": "動作状態"
+      },
+      "description": "Operation status of air conditioner",
+      "descriptions": {
+         "en": "Operation status of air conditioner",
+         "ja": "エアコンの動作状態"
+      },
       "type":"boolean",
       "observable": true,
       "forms": [
@@ -45,7 +57,16 @@
     },
     "operationMode": {
       "@type": "iot:RunMode",
-      "title": "operationMode",
+      "title": "Operation mode",
+      "titles": {
+         "en": "Operation mode",
+         "ja": "運転モード"
+      },
+      "description": "Operation mode of air conditioner",
+      "descriptions": {
+         "en": "Operation mode of air conditioner",
+         "ja": "エアコンの運転モード"
+      },
       "type":"string",
       "enum": ["Auto", "Cooling", "Heating", "Dehumidifying", "Blast"],
       "observable": true,
@@ -68,11 +89,21 @@
     },
     "desiredTemp": {
       "@type": "iot:TargetTemperature",
-      "title": "desiredTemp",
+      "title": "Desired temp",
+      "titles": {
+         "en": "Desired temp",
+         "ja": "温度設定"
+      },
+      "description": "Desired temperature of air conditioner",
+      "descriptions": {
+         "en": "Desired temperature of air conditioner",
+         "ja": "エアコンの温度設定"
+      },
       "type":"number",
       "minimum": 16,
       "maximum": 30,
       "observable": true,
+      "unit": "om:degree_Celsius",
       "forms": [
         {"href": "desiredTemp", "contentType": "application/json"},
         {
@@ -92,7 +123,16 @@
     },
     "windVolumeLevel": {
       "@type": "iot:WindStrength",
-      "title": "windVolumeLevel",
+      "title": "Wind volume level",
+      "titles": {
+         "en": "Wind volume level",
+         "ja": "風量設定"
+      },
+      "description": "Wind volume level of air conditioner",
+      "descriptions": {
+         "en": "Wind volume level of air conditioner",
+         "ja": "エアコンの風量設定"
+      },
       "type":"number",
       "minimum": 0,
       "maximum": 8,
@@ -119,6 +159,15 @@
     "change": {
       "@type": "iot:PropertyChangedEvent",
       "title": "change",
+      "titles": {
+         "en": "change",
+         "ja": "変化通知"
+      },
+      "description": "Push the air conditioner status when they change",
+      "descriptions": {
+         "en": "Push the air conditioner status when they change",
+         "ja": "エアコンの状態が変化したとき、状態を通知します"
+      },
       "data": {
         "type":"object",
         "properties": {

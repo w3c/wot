@@ -3,10 +3,19 @@
 "client-data-schema-accept-extras","pass",
 "client-data-schema-no-extras","pass",
 "client-uri-template","not-impl","URI template is not supported."
+"server-data-schema","not-impl","this is a server test"
+"server-data-schema-extras","not-impl","this is a server test"
+"server-uri-template","not-impl","this is a server test"
+"td-content-type-default","pass",
+"td-data-schema-objects","not-impl","this is a server test"
+"td-form-protocolbindings","not-impl","this is a server test"
+"td-media-type","not-impl","this is a server test"
 "td-readOnly-observable-default","not-impl",
 "td-readOnly-observable-writeOnly-default","pass",
+"td-security-binding","not-impl","this is a server test"
+"td-security-no-extras","not-impl","this is a server test"
 "td-default-readOnly","pass",
-"td-default-writeOnly","not-impl",
+"td-default-writeOnly","pass",
 "td-default-observable","pass",
 "td-default-contentType","pass",
 "td-default-safe","not-impl",
@@ -14,6 +23,6 @@
 "td-default-in-1","pass",
 "td-default-in-2","not-impl",
 "td-default-qop","not-impl",
-"td-default-alg","not-impl",
-"td-default-format","not-impl",
+"td-default-alg","pass",
+"td-default-format","pass",
 "td-default-flow","not-impl",
