@@ -8,9 +8,9 @@
     }
   ],
   "@type": "Thing",
-  "name": "PanasonicElectricBulletinBoardP2",
-  "id": "urn:uuid:9be7d1a0-75f4-4f69-89f9-8bedf9f382bf",
-  "base": "https://w3c.p-wot.com/wot-ver2/things/electricBulletinBoard/2/",
+  "name": "PanasonicElectricBulletinBoards",
+  "id": "urn:uuid:5b0b4740-cb4e-4249-bbe7-ff8f9f52a255",
+  "base": "https://w3c.p-wot.com/wot-ver2/things/electricBulletinBoard/",
   "securityDefinitions": {
     "bearer_sc": {
       "scheme": "bearer",
@@ -29,8 +29,13 @@
       "title": "operationStatus",
       "type":"boolean",
       "observable": false,
+      "uriVariables": {
+        "number": {
+          "type": "integer", "minimum": 1, "maximum": 2
+        }
+      },
       "forms": [{
-          "href": "operationStatus",
+          "href": "{number}/operationStatus",
           "contentType": "application/json"
       }]
     },
@@ -41,8 +46,13 @@
       "minimum": 16,
       "maximum": 30,
       "observable": false,
+      "uriVariables": {
+        "number": {
+          "type": "integer", "minimum": 1, "maximum": 2
+        }
+      },
       "forms": [{
-        "href": "desiredTemp",
+        "href": "{number}/desiredTemp",
         "contentType": "application/json"
       }]
     }

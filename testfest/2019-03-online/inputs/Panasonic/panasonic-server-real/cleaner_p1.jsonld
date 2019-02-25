@@ -1,8 +1,11 @@
 {
   "@context": [
-    "https://w3c.github.io/wot-thing-description/context/td-context.jsonld",
     "http://www.w3.org/ns/td",
-    {"iot": "http://iotschema.org/"}
+    {
+      "iot": "http://iotschema.org/",
+      "http": "http://www.w3.org/2011/http#",
+      "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
+    }
   ],
   "@type": "Thing",
   "name": "PanasonicCleanerP1",
@@ -11,9 +14,9 @@
   "securityDefinitions": {
     "bearer_sc": {
       "scheme": "bearer",
-      "format": "jwt",
-      "alg": "ES256",
-      "authorization": "https://w3c.p-wot.com:8443/auth"
+      "authorization": "https://w3c.p-wot.com:8443/auth",
+      "name": "Authorization",
+      "description": "Bearer token authentication"
     },
     "nosec_sc": {
       "scheme": "nosec"
@@ -23,43 +26,102 @@
   "actions": {
     "operationPower": {
       "@type": "iot:TurnOn",
-      "title": "operationPower",
+      "title": "Operation power",
+      "titles": {
+        "en": "Operation power",
+        "ja": "電源ON"
+      },
+      "description": "Turn the cleaner on",
+      "descriptions": {
+        "en": "Turn the cleaner on",
+        "ja": "掃除機の電源を入れます"
+      },
       "forms": [{
         "href": "operationPower",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "http:methodName": "POST"
       }]
     },
     "turnRight": {
-      "title": "turnRight",
+      "title": "Turn right",
+      "titles": {
+        "en": "Turn right",
+        "ja": "右旋回"
+      },
+      "description": "Turn the cleaner right",
+      "descriptions": {
+        "en": "Turn the cleaner right",
+        "ja": "掃除機を右旋回させます"
+      },
       "forms": [{
         "href": "turnRight",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "http:methodName": "POST"
       }]
     },
     "turnLeft": {
-      "title": "turnLeft",
+      "title": "Turn left",
+      "titles": {
+        "en": "Turn left",
+        "ja": "左旋回"
+      },
+      "description": "Turn the cleaner left",
+      "descriptions": {
+        "en": "Turn the cleaner left",
+        "ja": "掃除機を左旋回させます"
+      },
       "forms": [{
         "href": "turnLeft",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "http:methodName": "POST"
       }]
     },
     "goStraight": {
-      "title": "goStraight",
+      "title": "Go straight",
+      "titles": {
+        "en": "Go straight",
+        "ja": "直進"
+      },
+      "description": "Make the cleaner go straight",
+      "descriptions": {
+        "en": "Make the cleaner go straight",
+        "ja": "掃除機を直進させます"
+      },
       "forms": [{
         "href": "goStraight",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "http:methodName": "POST"
       }]
     },
     "goHome": {
-      "title": "goHome",
+      "title": "Go home",
+      "titles": {
+        "en": "Go home",
+        "ja": "ホーム移動"
+      },
+      "description": "Make the cleaner go home",
+      "descriptions": {
+        "en": "Make the cleaner go home",
+        "ja": "掃除機をホームに移動させます"
+      },
       "idempotent": true,
       "forms": [{
         "href": "goHome",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "http:methodName": "POST"
       }]
     },
     "specifyArea": {
-      "title": "specifyArea",
+      "title": "Specify area",
+      "titles": {
+        "en": "Specify area",
+        "ja": "エリア指定"
+      },
+      "description": "Specify the area to be cleaned",
+      "descriptions": {
+        "en": "Specify the area to be cleaned ",
+        "ja": "掃除するエリアを指定します"
+      },
       "idempotent": true,
       "input": {
         "type": "number",
@@ -68,7 +130,8 @@
       },
       "forms": [{
         "href": "specifyArea",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "http:methodName": "POST"
       }]
     }
   }
