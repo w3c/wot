@@ -25,10 +25,10 @@
 (Sample TDs of [special instance](https://w3c.p-wot.com:3009) which can be shared among participants simultaneously)
 
 - [Air Conditioner](../../inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.jsonld)
-    - Note: "windVolumeLevel" is accessible through WoT interface, but inaccessible directly from the upper right grid icon on the simulator window now.
+    - Note: "auto" of "windVolumeLevel" is unavailable for now.
 - [Robotics Cleaner](../../inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.jsonld)
 - [Philips Hue lighting](../../inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.jsonld)
-    - Note: "blink" is accessible through WoT interface, but inaccessible directly from the upper right grid icon on the simulator window now.
+    - Note: "blink" is unavailable for now.
 - [Room lighting](../../inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.jsonld)
 
 For other instances which can be accessed exclusively at a time, see [simulator portal](https://w3c.p-wot.com:3011) (Access restricted to testfest participants only).

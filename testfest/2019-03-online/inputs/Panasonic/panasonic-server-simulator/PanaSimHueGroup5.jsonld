@@ -120,14 +120,14 @@
           "contentType": "application/json"
         },
         {
-          "href": "$longpollhost/poll/PanaSimHueGroup1/blink",
+          "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/blink",
           "contentType": "application/json",
           "subprotocol": "longpoll",
           "op": "observeproperty",
           "security": ["nosec_sc"]
         },
         {
-          "href": "ws://$host:8003/wot/things/PanaSimHueGroup1/blink",
+          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/blink",
           "contentType": "application/json",
           "op": "observeproperty",
           "security": ["nosec_sc"]
