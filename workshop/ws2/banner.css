@@ -5,11 +5,11 @@ Top section image
  margin-top: 1em;
  padding: 2em 2em 0 2em;
  background-color: white;
- background-image: url("https://www.w3.org/comm/assets/stock/shutterstock_789598969_night-cityscape-connected-pictograms-1024px.jpg");
+ background-image: url("https://www.w3.org/comm/assets/stock/cityscape.jpg");
  background-repeat: no-repeat;
  background-size: cover;
  min-height: 370px;
- color: black;
+ color: white;
  position: relative;
 }
 
@@ -17,6 +17,5 @@ Top section image
 #top h2,
 #top p{
   padding: 1rem;
-  color: black;
-  text-shadow: 4px 4px 4px white;
+  color: white;
 }
