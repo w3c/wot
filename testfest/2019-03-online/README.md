@@ -1,7 +1,9 @@
 # 2019-03 Online Test Results
 This location is for test results (test TDs and manual assertion declarations
 given in CSV files) that will be used to generate 
-the draft Implementation Report just prior to CR transition.  
+the draft Implementation Report just prior to CR transition. 
+
+Current version of Implementation Report: https://github.com/w3c/wot-thing-description/blob/master/testing/report.html
 
 See the comments at the start of `update.sh` for instructions on how the
 input files should be organized.  Generally speaking, inputs (both TDs and 
