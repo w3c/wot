@@ -3,12 +3,21 @@
     "http://www.w3.org/ns/td",
     {
       "iot": "http://iotschema.org/",
-      "http": "http://www.w3.org/2011/http#",
+      "htv": "http://www.w3.org/2011/http#",
       "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
     }
   ],
   "@type": "Thing",
   "name": "PanasonicCleanerP1",
+  "names": {
+     "en": "PanasonicCleanerP1",
+     "ja": "パナソニック掃除機P1"
+  },
+  "description": "Panasonic's cleaner",
+  "descriptions": {
+    "en": "Panasonic's cleaner",
+    "ja": "パナソニックの掃除機"
+  },
   "id": "urn:uuid:4a94e5ab-1f58-4ef5-b770-6dcb48e5595c",
   "base": "https://w3c.p-wot.com/wot-ver2/things/cleaner/1/",
   "securityDefinitions": {
@@ -39,7 +48,7 @@
       "forms": [{
         "href": "operationPower",
         "contentType": "application/json",
-        "http:methodName": "POST"
+        "htv:methodName": "POST"
       }]
     },
     "turnRight": {
@@ -56,7 +65,7 @@
       "forms": [{
         "href": "turnRight",
         "contentType": "application/json",
-        "http:methodName": "POST"
+        "htv:methodName": "POST"
       }]
     },
     "turnLeft": {
@@ -73,7 +82,7 @@
       "forms": [{
         "href": "turnLeft",
         "contentType": "application/json",
-        "http:methodName": "POST"
+        "htv:methodName": "POST"
       }]
     },
     "goStraight": {
@@ -90,7 +99,7 @@
       "forms": [{
         "href": "goStraight",
         "contentType": "application/json",
-        "http:methodName": "POST"
+        "htv:methodName": "POST"
       }]
     },
     "goHome": {
@@ -108,7 +117,7 @@
       "forms": [{
         "href": "goHome",
         "contentType": "application/json",
-        "http:methodName": "POST"
+        "htv:methodName": "POST"
       }]
     },
     "specifyArea": {
@@ -131,7 +140,7 @@
       "forms": [{
         "href": "specifyArea",
         "contentType": "application/json",
-        "http:methodName": "POST"
+        "htv:methodName": "POST"
       }]
     }
   }

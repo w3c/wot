@@ -1,1 +1,138 @@
-{"@context":["http://www.w3.org/ns/td",{"iot":"http://iotschema.org/","http":"http://www.w3.org/2011/http#","om":"http://www.wurvoc.org/vocabularies/om-1.8/"}],"@type":"Thing","name":"PanaSimHueGroup5","id":"p-wot:PanaSimHueGroup5","base":"https://w3c.p-wot.com:3009/wot/things/PanaSimHueGroup5/","securityDefinitions":{"bearer_sc":{"scheme":"bearer","format":"jwt","alg":"ES256","authorization":"https://w3c.p-wot.com:8443/auth"},"nosec_sc":{"scheme":"nosec"}},"security":["bearer_sc"],"properties":{"power":{"@type":"iot:SwitchToggle","title":"power","type":"boolean","observable":true,"forms":[{"href":"power","contentType":"application/json"},{"href":"https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/power","contentType":"application/json","subprotocol":"longpoll","op":"observeproperty","security":["nosec_sc"]},{"href":"wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/power","contentType":"application/json","op":"observeproperty","security":["nosec_sc"]}]},"rgbValue":{"title":"rgbValue","type":"object","properties":{"red":{"type":"number","minimum":0,"maximum":1},"green":{"type":"number","minimum":0,"maximum":1},"blue":{"type":"number","minimum":0,"maximum":1}},"observable":true,"forms":[{"href":"rgbValue","contentType":"application/json"},{"href":"https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/rgbValue","contentType":"application/json","subprotocol":"longpoll","op":"observeproperty","security":["nosec_sc"]},{"href":"wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/rgbValue","contentType":"application/json","op":"observeproperty","security":["nosec_sc"]}]}}}
+{
+  "@context": [
+    "http://www.w3.org/ns/td",
+    {
+      "iot": "http://iotschema.org/",
+      "htv": "http://www.w3.org/2011/http#",
+      "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
+    }
+  ],
+  "@type": "Thing",
+  "name": "PanaSimHueGroup5",
+  "id": "p-wot:PanaSimHueGroup5",
+  "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimHueGroup5/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": [
+    "bearer_sc"
+  ],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "title": "power",
+      "type": "boolean",
+      "observable": true,
+      "forms": [
+        {
+          "href": "power",
+          "contentType": "application/json"
+        },
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/power",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": [
+            "nosec_sc"
+          ]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/power",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": [
+            "nosec_sc"
+          ]
+        }
+      ]
+    },
+    "rgbValue": {
+      "title": "rgbValue",
+      "type": "object",
+      "properties": {
+        "red": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "green": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": ["red", "green", "blue"],
+      "observable": true,
+      "forms": [
+        {
+          "href": "rgbValue",
+          "contentType": "application/json"
+        },
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/rgbValue",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": [
+            "nosec_sc"
+          ]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/rgbValue",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": [
+            "nosec_sc"
+          ]
+        }
+      ]
+    },
+    "blink": {
+      "title": "blink",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 2,
+        "description": "On-time and Off-time",
+        "unit": "om:second-time"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "observable": true,
+      "forms": [
+        {
+          "href": "blink",
+          "contentType": "application/json"
+        },
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/blink",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/blink",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
+    }
+  }
+}

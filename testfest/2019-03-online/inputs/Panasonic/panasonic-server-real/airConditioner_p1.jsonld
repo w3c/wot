@@ -3,12 +3,21 @@
     "http://www.w3.org/ns/td",
     {
       "iot": "http://iotschema.org/",
-      "http": "http://www.w3.org/2011/http#",
+      "htv": "http://www.w3.org/2011/http#",
       "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
     }
   ],
   "@type": "Thing",
   "name": "PanasonicAirConditionerP1",
+  "names": {
+     "en": "PanasonicAirConditionerP1",
+     "ja": "パナソニックエアコンP1"
+  },
+  "description": "Panasonic's air conditioner",
+  "descriptions": {
+    "en": "Panasonic's air conditioner",
+    "ja": "パナソニックのエアコン"
+  },
   "id": "urn:uuid:ed0392cc-3109-48d0-bfd2-3818e2528c78",
   "base": "https://w3c.p-wot.com/wot-ver2/things/airconditioner/1/",
   "securityDefinitions": {
