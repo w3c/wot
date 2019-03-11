@@ -1,0 +1,35 @@
+{
+	"@context": [
+		"http://www.w3.org/ns/td",
+		{
+			"iot": "http://iotschema.org/"
+		}
+	],
+	"@type": "Thing",
+	"name": "Fujitsu-RotaryBeaconLight",
+	"id": "urn:com:fujitsu:iot:rotarybeaconlight",
+	"securityDefinitions" : {
+		"nosec_sc": {"scheme":"nosec"}
+	},
+	"security":["nosec_sc"],
+	"properties": {
+		"OperationStatus": {
+			"@type": "iot:OperationStatus",
+			"observable": false,
+			"type": "string",
+			"enum": [
+				"ON",
+				"OFF"
+			],
+			"forms": [
+				{
+					"contentType": "text/plain",
+					"href": "http://wot.f-ncs.ad.jp/Things/urn%3Acom%3Afujitsu%3Aiot%3Arotarybeaconlight/Property/OperationStatus"
+				}
+			],
+			"readOnly": false,
+			"writeOnly": false
+		}
+	},
+	"base": "http://wot.f-ncs.ad.jp/Things/urn%3Acom%3Afujitsu%3Aiot%3Arotarybeaconlight/"
+}
