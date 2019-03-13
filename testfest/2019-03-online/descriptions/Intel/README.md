@@ -10,36 +10,36 @@ The following is linked to a post on a W3C email server and is therefore only av
 ## OCF Devices
 
 #### Node 0
-- [Buzzer](OCF/buzzer0.jsonld)
-- [Illuminance Sensor](OCF/illuminance0.jsonld)
-- [Red LED](OCF/led0red.jsonld)
-- [Green LED](OCF/led0green.jsonld)
-- [Blue LED](OCF/led0blue.jsonld)
-- [MOSFET LED](OCF/led0mosfet.jsonld)
-- [Motion Sensor](OCF/motion0.jsonld)
-- [Temperature Sensor](OCF/temperature0.jsonld)
-- [Toggle Switch](OCF/toggle0.jsonld)
+- [Buzzer](../../inputs/Intel/intel-ocf/buzzer0.jsonld)
+- [Illuminance Sensor](../../inputs/Intel/intel-ocf/illuminance0.jsonld)
+- [Red LED](../../inputs/Intel/intel-ocf/led0red.jsonld)
+- [Green LED](../../inputs/Intel/intel-ocf/led0green.jsonld)
+- [Blue LED](../../inputs/Intel/intel-ocf/led0blue.jsonld)
+- [MOSFET LED](../../inputs/Intel/intel-ocf/led0mosfet.jsonld)
+- [Motion Sensor](../../inputs/Intel/intel-ocf/motion0.jsonld)
+- [Temperature Sensor](../../inputs/Intel/intel-ocf/temperature0.jsonld)
+- [Toggle Switch](../../inputs/Intel/intel-ocf/toggle0.jsonld)
 
 #### Node 1
-- [Touch Button](OCF/button1touch.jsonld)
-- [Red LED](OCF/led1red.jsonld)
-- [MOSFET LED](OCF/led1mosfet.jsonld)
-- [Relay](OCF/led1relay.jsonld)
-- [Motion Sensor](OCF/motion1.jsonld)
-- [RGB LED](OCF/rgbled1.jsonld)
-- [Temperature Sensor](OCF/temperature1.jsonld)
-- [Toggle Switch](OCF/toggle1.jsonld)
+- [Touch Button](../../inputs/Intel/intel-ocf/button1touch.jsonld)
+- [Red LED](../../inputs/Intel/intel-ocf/led1red.jsonld)
+- [MOSFET LED](../../inputs/Intel/intel-ocf/led1mosfet.jsonld)
+- [Relay](../../inputs/Intel/intel-ocf/led1relay.jsonld)
+- [Motion Sensor](../../inputs/Intel/intel-ocf/motion1.jsonld)
+- [RGB LED](../../inputs/Intel/intel-ocf/rgbled1.jsonld)
+- [Temperature Sensor](../../inputs/Intel/intel-ocf/temperature1.jsonld)
+- [Toggle Switch](../../inputs/Intel/intel-ocf/toggle1.jsonld)
 
 #### Node 2    
-- [Touch Button](OCF/button2touch.jsonld)  
-- [Illuminance Sensor](OCF/illuminance2.jsonld)
-- [MOSFET LED](OCF/led2mosfet.jsonld)
-- [Relay](OCF/led2relay.jsonld)
-- [Motion Sensor](OCF/motion2.jsonld)
-- [Top LED](OCF/led2top.jsonld)  
-- [Side LED](OCF/led2side.jsonld)  
-- [Temperature Sensor](OCF/temperature2.jsonld)
-- [Toggle Switch](OCF/toggle2.jsonld)
+- [Touch Button](../../inputs/Intel/intel-ocf/button2touch.jsonld)  
+- [Illuminance Sensor](../../inputs/Intel/intel-ocf/illuminance2.jsonld)
+- [MOSFET LED](../../inputs/Intel/intel-ocf/led2mosfet.jsonld)
+- [Relay](../../inputs/Intel/intel-ocf/led2relay.jsonld)
+- [Motion Sensor](../../inputs/Intel/intel-ocf/motion2.jsonld)
+- [Top LED](../../inputs/Intel/intel-ocf/led2top.jsonld)  
+- [Side LED](../../inputs/Intel/intel-ocf/led2side.jsonld)  
+- [Temperature Sensor](../../inputs/Intel/intel-ocf/temperature2.jsonld)
+- [Toggle Switch](../../inputs/Intel/intel-ocf/toggle2.jsonld)
 
 ### Live via Cloud Proxy
 #### Via San Franscisco / Digital Ocean
@@ -64,7 +64,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 ## Simple Web Camera
 
 ### Cached TD
-- [Simple Web Camera TD](SimpleWebCamera.jsonld)
+- [Simple Web Camera TD](../../inputs/Intel/intel-camera.jsonld)
 
 ### Live via Cloud Proxy
 #### Via San Franscisco / Digital Ocean
@@ -93,7 +93,7 @@ The following is linked to a post on a W3C email server and is therefore only av
 ## Web Speak
 
 ### Cached TD
-- [Web Speak TD](WebSpeak.jsonld)
+- [Web Speak TD](../../inputs/Intel/intel-speak.jsonld)
 
 ### Live via Cloud Proxy
 #### Via San Franscisco / Digital Ocean
