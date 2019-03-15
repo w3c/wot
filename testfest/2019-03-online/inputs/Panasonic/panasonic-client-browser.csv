@@ -7,24 +7,7 @@
 "server-data-schema","not-impl","this is a server test"
 "server-data-schema-extras","not-impl","this is a server test"
 "server-uri-template","not-impl","this is a server test"
-"td-context-ns-dataschema-dereferenceable-url","not-impl","this is a server test"
-"td-context-ns-dataschema-mandatory","not-impl","this is a server test"
-"td-context-ns-dataschema-map-of-namespaces","not-impl","this is a server test"
-"td-context-ns-dataschema-optional","not-impl","this is a server test"
-"td-context-ns-dataschema-prefix","not-impl","this is a server test"
-"td-context-ns-multilanguage-content-negotiation","not-impl","this is a server test"
-"td-context-ns-securityscheme-dereferenceable-url","not-impl","this is a server test"
-"td-context-ns-securityscheme-mandatory","not-impl","this is a server test"
-"td-context-ns-securityscheme-map-of-namespaces","not-impl","this is a server test"
-"td-context-ns-securityscheme-optional","not-impl","this is a server test"
-"td-context-ns-securityscheme-prefix","not-impl","this is a server test"
-"td-context-ns-thing-dereferenceable-url","not-impl","this is a server test"
-"td-context-ns-thing-mandatory","not-impl","this is a server test"
-"td-context-ns-thing-map-of-namespaces","not-impl","this is a server test"
-"td-context-ns-thing-optional","not-impl","this is a server test"
-"td-context-ns-thing-prefix","not-impl","this is a server test"
 "td-content-type-default","pass",
-"td-data-schema-objects","not-impl","this is a server test"
 "td-form-protocolbindings","not-impl","this is a server test"
 "td-media-type","not-impl","this is a server test"
 "td-idempotent-safe-default","not-impl",
@@ -37,9 +20,14 @@
 "td-default-contentType","pass",
 "td-default-safe","not-impl",
 "td-default-idempotent","not-impl",
-"td-default-in-1","pass",
-"td-default-in-2","not-impl",
-"td-default-qop","not-impl",
-"td-default-alg","pass",
-"td-default-format","pass",
-"td-default-flow","not-impl",
+"td-default-in--BasicSecurityScheme","not-impl",
+"td-default-in--DigestSecurityScheme","not-impl",
+"td-default-in--BearerSecurityScheme","pass",
+"td-default-in--PoPSecurityScheme","not-impl",
+"td-default-in--APIKeySecurityScheme","not-impl",
+"td-default-qop--DigestSecurityScheme","not-impl",
+"td-default-alg--PoPSecurityScheme","not-impl",
+"td-default-alg--BearerSecurityScheme","pass",
+"td-default-format--BearerSecurityScheme","pass",
+"td-default-format--PoPSecurityScheme","not-impl",
+"td-default-flow--OAuth2SecurityScheme","not-impl",
