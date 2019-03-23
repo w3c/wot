@@ -1,215 +1,135 @@
 {
-    "id": "urn:dev:wot:siemens:fullservient",
-    "created": "Mo, 28 Jan 2019 12:45:26 GMT",
-    "lastModified": "2019-03-23T14:38:28.205Z",
-    "links": [{
-        "href": "http://./parentThing",
-        "rel": "controlledBy",
-        "type": "application/td+json",
-        "anchor": "#td"
-    }],
-    "security": ["nosec_sc"],
-    "support": "mailto:christian.glomb@siemens.com",
-    "descriptions": {"en": "Full example Thing with different kind of interactions"},
-    "version": {"instance": "0.1"},
-    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}},
-    "name": "full",
-    "description": "Full example Thing with different kind of interactions",
+    "name": "Siemens-Properties-Tester",
+    "description": "Tests the variation of properties.",
     "@context": [
         "http://www.w3.org/ns/td",
-        {"iot": "http://example.org/iot"}
+        {"iot": "http://iotschema.org/"}
     ],
+    "versioning": {"instance": "1.0.0"},
+    "support": "none",
     "@type": "Thing",
-    "properties": {"count": {
-        "type": "integer",
-        "description": "current counter value",
-        "iot:Custom": "example annotation",
-        "observable": true,
-        "writable": true,
-        "readOnly": false,
-        "writeOnly": false,
-        "forms": [
-            {
-                "href": "http://10.0.2.15:8080/full/properties/count",
-                "contentType": "application/json",
-                "op": [
-                    "readproperty",
-                    "writeproperty"
-                ]
+    "security": ["nosec_sc"],
+    "properties": {
+        "status": {
+            "type": "string",
+            "enum": [
+                "On",
+                "Off",
+                "Error"
+            ],
+            "title": "Status",
+            "titles": {
+                "en": "Status",
+                "de": "Zustand"
             },
-            {
-                "href": "http://10.0.2.15:8080/full/properties/count/observable",
-                "contentType": "application/json",
-                "op": ["observeproperty"],
-                "subprotocol": "longpoll"
-            },
-            {
-                "href": "http://192.168.0.124:8080/full/properties/count",
-                "contentType": "application/json",
-                "op": [
-                    "readproperty",
-                    "writeproperty"
-                ]
-            },
-            {
-                "href": "http://192.168.0.124:8080/full/properties/count/observable",
-                "contentType": "application/json",
-                "op": ["observeproperty"],
-                "subprotocol": "longpoll"
-            },
-            {
-                "href": "coap://10.0.2.15:5683/full/pr/count",
-                "contentType": "application/json",
-                "op": [
-                    "readproperty",
-                    "writeproperty"
-                ]
-            },
-            {
-                "href": "coap://192.168.0.124:5683/full/pr/count",
-                "contentType": "application/json",
-                "op": [
-                    "readproperty",
-                    "writeproperty"
-                ]
-            }
-        ]
-    }},
-    "actions": {
-        "increment": {
-            "description": "Increment action",
+            "description": "Status of the Thing",
             "descriptions": {
-                "en": "increment",
-                "de": "Inkrement"
+                "en": "Latest status of the Thing",
+                "de": "Aktuelle Thing-Zustand"
             },
+            "observable": true,
+            "readOnly": false,
+            "writeOnly": false,
             "forms": [
                 {
-                    "href": "http://10.0.2.15:8080/full/actions/increment",
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/status",
                     "contentType": "application/json",
-                    "op": ["invokeaction"]
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
                 },
                 {
-                    "href": "http://192.168.0.124:8080/full/actions/increment",
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/status/observable",
                     "contentType": "application/json",
-                    "op": ["invokeaction"]
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
                 },
                 {
-                    "href": "coap://10.0.2.15:5683/full/ac/increment",
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/status",
                     "contentType": "application/json",
-                    "op": "invokeaction"
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
                 },
                 {
-                    "href": "coap://192.168.0.124:5683/full/ac/increment",
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/status/observable",
                     "contentType": "application/json",
-                    "op": "invokeaction"
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/Siemens-Properties-Tester/pr/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/Siemens-Properties-Tester/pr/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
                 }
-            ],
-            "idempotent": false,
-            "safe": false
+            ]
         },
-        "decrement": {
+        "brightness": {
+            "type": "integer",
+            "description": "current brightness value",
+            "iot:Custom": "example annotation",
+            "observable": true,
+            "readOnly": true,
+            "writeOnly": false,
             "forms": [
                 {
-                    "href": "http://10.0.2.15:8080/full/actions/decrement",
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/brightness",
                     "contentType": "application/json",
-                    "op": ["invokeaction"]
+                    "op": ["readproperty"]
                 },
                 {
-                    "href": "http://192.168.0.124:8080/full/actions/decrement",
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/brightness/observable",
                     "contentType": "application/json",
-                    "op": ["invokeaction"]
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
                 },
                 {
-                    "href": "coap://10.0.2.15:5683/full/ac/decrement",
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/brightness",
                     "contentType": "application/json",
-                    "op": "invokeaction"
+                    "op": ["readproperty"]
                 },
                 {
-                    "href": "coap://192.168.0.124:5683/full/ac/decrement",
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/brightness/observable",
                     "contentType": "application/json",
-                    "op": "invokeaction"
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/Siemens-Properties-Tester/pr/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/Siemens-Properties-Tester/pr/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
                 }
-            ],
-            "idempotent": false,
-            "safe": false
-        },
-        "reset": {
-            "forms": [
-                {
-                    "href": "http://10.0.2.15:8080/full/actions/reset",
-                    "contentType": "application/json",
-                    "op": ["invokeaction"]
-                },
-                {
-                    "href": "http://192.168.0.124:8080/full/actions/reset",
-                    "contentType": "application/json",
-                    "op": ["invokeaction"]
-                },
-                {
-                    "href": "coap://10.0.2.15:5683/full/ac/reset",
-                    "contentType": "application/json",
-                    "op": "invokeaction"
-                },
-                {
-                    "href": "coap://192.168.0.124:5683/full/ac/reset",
-                    "contentType": "application/json",
-                    "op": "invokeaction"
-                }
-            ],
-            "idempotent": false,
-            "safe": false
+            ]
         }
     },
-    "events": {"onchange": {
-        "data": {"type": "integer"},
-        "description": "Onchange event",
-        "descriptions": {
-            "en": "Event",
-            "de": "Ereignis"
-        },
-        "forms": [
-            {
-                "href": "http://10.0.2.15:8080/full/events/onchange",
-                "contentType": "application/json",
-                "subprotocol": "longpoll",
-                "op": ["subscribeevent"]
-            },
-            {
-                "href": "http://192.168.0.124:8080/full/events/onchange",
-                "contentType": "application/json",
-                "subprotocol": "longpoll",
-                "op": ["subscribeevent"]
-            },
-            {
-                "href": "ws://10.0.2.15:8080/full/events/onchange",
-                "contentType": "application/json",
-                "op": "subscribeevent"
-            },
-            {
-                "href": "ws://192.168.0.124:8080/full/events/onchange",
-                "contentType": "application/json",
-                "op": "subscribeevent"
-            },
-            {
-                "href": "coap://10.0.2.15:5683/full/ev/onchange",
-                "contentType": "application/json",
-                "op": "subscribeevent"
-            },
-            {
-                "href": "coap://192.168.0.124:5683/full/ev/onchange",
-                "contentType": "application/json",
-                "op": "subscribeevent"
-            }
-        ]
-    }},
+    "id": "urn:uuid:229efd64-be0e-443c-977f-ceb81dbf70c4",
     "forms": [
         {
-            "href": "http://10.0.2.15:8080/full/all/properties",
+            "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/all/properties",
             "contentType": "application/json"
         },
         {
-            "href": "http://192.168.0.124:8080/full/all/properties",
+            "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/all/properties",
             "contentType": "application/json"
         }
-    ]
+    ],
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
 }
