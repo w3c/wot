@@ -1,7 +1,7 @@
 {
     "id": "urn:dev:wot:siemens:fullservient",
     "created": "Mo, 28 Jan 2019 12:45:26 GMT",
-    "lastModified": "2019-01-28T18:47:55.282Z",
+    "lastModified": "2019-03-23T14:47:24.909Z",
     "links": [{
         "href": "http://./parentThing",
         "rel": "controlledBy",
@@ -77,6 +77,11 @@
     }},
     "actions": {
         "increment": {
+            "description": "Increment action",
+            "descriptions": {
+                "en": "increment",
+                "de": "Inkrement"
+            },
             "forms": [
                 {
                     "href": "http://10.0.2.15:8080/full/actions/increment",
@@ -129,6 +134,11 @@
             "safe": false
         },
         "reset": {
+            "title": "Reset",
+            "titles": {
+                "en": "Reset",
+                "de": "Reset"
+            },
             "forms": [
                 {
                     "href": "http://10.0.2.15:8080/full/actions/reset",
@@ -157,6 +167,16 @@
     },
     "events": {"onchange": {
         "data": {"type": "integer"},
+        "description": "Onchange event",
+        "descriptions": {
+            "en": "Event",
+            "de": "Ereignis"
+        },
+        "title": "Onchange",
+        "titles": {
+            "en": "Onchange",
+            "de": "Onchange"
+        },
         "forms": [
             {
                 "href": "http://10.0.2.15:8080/full/events/onchange",
@@ -191,5 +211,15 @@
                 "op": "subscribeevent"
             }
         ]
-    }}
+    }},
+    "forms": [
+        {
+            "href": "http://10.0.2.15:8080/full/all/properties",
+            "contentType": "application/json"
+        },
+        {
+            "href": "http://192.168.0.124:8080/full/all/properties",
+            "contentType": "application/json"
+        }
+    ]
 }
