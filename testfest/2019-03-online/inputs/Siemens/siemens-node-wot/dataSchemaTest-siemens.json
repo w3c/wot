@@ -125,7 +125,17 @@
                 "waterLevel": {
                     "type": "integer",
                     "minimum": 0,
-                    "maximum": 100
+                    "maximum": 100,
+                    "description": "test1",
+                    "descriptions": {
+                        "en": "test1",
+                        "de": "Test1"
+                    },
+                    "title": "Test1",
+                    "titles": {
+                        "en": "Test1",
+                        "de": "Test1"
+                    }
                 },
                 "brightness": {
                     "type": "number",
@@ -239,6 +249,16 @@
                 },
                 {
                     "type": "array",
+                    "description": "test1",
+                    "descriptions": {
+                        "en": "test1",
+                        "de": "Test1"
+                    },
+                    "title": "Test1",
+                    "titles": {
+                        "en": "Test1",
+                        "de": "Test1"
+                    },
                     "items": {
                         "type": "string",
                         "enum": [
@@ -289,7 +309,7 @@
             ]
         }
     },
-    "id": "urn:uuid:a622e343-de01-43dc-a801-71808b8e4de7",
+    "id": "urn:uuid:5249a642-40e0-404e-81b9-e423f4b759af",
     "forms": [
         {
             "href": "http://10.0.2.15:8080/Siemens-DataSchema-Tester/all/properties",
