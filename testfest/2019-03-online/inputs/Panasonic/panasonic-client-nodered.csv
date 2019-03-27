@@ -3,11 +3,11 @@
 "client-data-schema-accept-extras","pass",
 "client-data-schema-no-extras","pass",
 "client-uri-template","pass",
+"rdf-transformation","not-impl","this is a server test"
 "server-data-schema","not-impl","this is a server test"
 "server-data-schema-extras","not-impl","this is a server test"
 "server-uri-template","not-impl","this is a server test"
 "td-content-type-default","pass",
-"td-data-schema-objects","not-impl","this is a server test"
 "td-form-protocolbindings","not-impl","this is a server test"
 "td-media-type","not-impl","this is a server test"
 "td-idempotent-safe-default","pass",
@@ -20,9 +20,14 @@
 "td-default-contentType","pass",
 "td-default-safe","pass",
 "td-default-idempotent","pass",
-"td-default-in-1","not-impl",
-"td-default-in-2","not-impl",
-"td-default-qop","not-impl",
-"td-default-alg","not-impl",
-"td-default-format","not-impl",
-"td-default-flow","not-impl",
+"td-default-in--BasicSecurityScheme","not-impl",
+"td-default-in--DigestSecurityScheme","not-impl",
+"td-default-in--BearerSecurityScheme","not-impl",
+"td-default-in--PoPSecurityScheme","not-impl",
+"td-default-in--APIKeySecurityScheme","not-impl",
+"td-default-qop--DigestSecurityScheme","not-impl",
+"td-default-alg--PoPSecurityScheme","not-impl",
+"td-default-alg--BearerSecurityScheme","not-impl",
+"td-default-format--BearerSecurityScheme","not-impl",
+"td-default-format--PoPSecurityScheme","not-impl",
+"td-default-flow--OAuth2SecurityScheme","not-impl",

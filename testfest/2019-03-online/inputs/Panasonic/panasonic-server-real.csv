@@ -3,11 +3,11 @@
 "client-data-schema-accept-extras","not-impl","this is a client test"
 "client-data-schema-no-extras","not-impl","this is a client test"
 "client-uri-template","not-impl","this is a client test"
+"rdf-transformation","not-impl",
 "server-data-schema","pass",
 "server-data-schema-extras","not-impl","server returns no additional data"
 "server-uri-template","pass",
 "td-content-type-default","not-impl","this is a client test"
-"td-data-schema-objects","not-impl","items is not used"
 "td-form-protocolbindings","pass",
 "td-media-type","not-impl","TD has no 'application/td+json'"
 "td-idempotent-safe-default","not-impl","this is a client test"
@@ -20,9 +20,14 @@
 "td-default-contentType","not-impl","this is a client test"
 "td-default-safe","not-impl","this is a client test"
 "td-default-idempotent","not-impl","this is a client test"
-"td-default-in-1","not-impl","this is a client test"
-"td-default-in-2","not-impl","this is a client test"
-"td-default-qop","not-impl","this is a client test"
-"td-default-alg","not-impl","this is a client test"
-"td-default-format","not-impl","this is a client test"
-"td-default-flow","not-impl","this is a client test"
+"td-default-in--BasicSecurityScheme","not-impl","this is a client test"
+"td-default-in--DigestSecurityScheme","not-impl","this is a client test"
+"td-default-in--BearerSecurityScheme","not-impl","this is a client test"
+"td-default-in--PoPSecurityScheme","not-impl","this is a client test"
+"td-default-in--APIKeySecurityScheme","not-impl","this is a client test"
+"td-default-qop--DigestSecurityScheme","not-impl","this is a client test"
+"td-default-alg--PoPSecurityScheme","not-impl","this is a client test"
+"td-default-alg--BearerSecurityScheme","not-impl","this is a client test"
+"td-default-format--BearerSecurityScheme","not-impl","this is a client test"
+"td-default-format--PoPSecurityScheme","not-impl","this is a client test"
+"td-default-flow--OAuth2SecurityScheme","not-impl","this is a client test"
