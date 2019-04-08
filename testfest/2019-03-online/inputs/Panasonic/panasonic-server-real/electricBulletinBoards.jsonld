@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/td",
+    {
+      "iot": "http://iotschema.org/",
+      "htv": "http://www.w3.org/2011/http#",
+      "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
+    }
+  ],
+  "@type": "Thing",
+  "name": "PanasonicElectricBulletinBoards",
+  "id": "urn:uuid:5b0b4740-cb4e-4249-bbe7-ff8f9f52a255",
+  "base": "https://w3c.p-wot.com/wot-ver2/things/electricBulletinBoard/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["bearer_sc"],
+  "properties": {
+    "operationStatus": {
+      "@type": "iot:OperationStatus",
+      "title": "operationStatus",
+      "type":"boolean",
+      "observable": false,
+      "uriVariables": {
+        "number": {
+          "type": "integer", "minimum": 1, "maximum": 2
+        }
+      },
+      "forms": [{
+          "href": "{number}/operationStatus",
+          "contentType": "application/json"
+      }]
+    },
+    "desiredTemp": {
+      "@type": "iot:TargetTemperature",
+      "title": "desiredTemp",
+      "type": "number",
+      "minimum": 16,
+      "maximum": 30,
+      "observable": false,
+      "uriVariables": {
+        "number": {
+          "type": "integer", "minimum": 1, "maximum": 2
+        }
+      },
+      "forms": [{
+        "href": "{number}/desiredTemp",
+        "contentType": "application/json"
+      }]
+    }
+  }
+}

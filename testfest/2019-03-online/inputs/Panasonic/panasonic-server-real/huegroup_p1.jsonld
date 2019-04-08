@@ -1,8 +1,11 @@
 {
   "@context": [
-    "https://w3c.github.io/wot-thing-description/context/td-context.jsonld",
     "http://www.w3.org/ns/td",
-      {"iot": "http://iotschema.org/"}
+    {
+      "iot": "http://iotschema.org/",
+      "htv": "http://www.w3.org/2011/http#",
+      "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
+    }
   ],
   "@type": "Thing",
   "name": "PanasonicHueGroupP1",
