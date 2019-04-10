@@ -5,11 +5,11 @@
 
 # Participating companies
 
-| Company | Device | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments |
+| Company | Things/Devices/System/Tools | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments |
 |---------|--------|-------|-------|
 | Oracle  | IoT Cloud Service | Wifi | Application t.b.d. |
-
-
+| Siemens  | Industry Automation | Wifi / Lan | Application t.b.d. |
+|  Siemens | Building Automation | Wifi / Lan | Application t.b.d. |
 
 # Scenarios
 
