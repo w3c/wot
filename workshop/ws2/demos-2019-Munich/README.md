@@ -10,6 +10,11 @@
 | Oracle  | IoT Cloud Service | Wifi | Application t.b.d. |
 | Siemens  | Industry Automation | Wifi / Lan | Application t.b.d. |
 |  Siemens | Building Automation | Wifi / Lan | Application t.b.d. |
+| TU Munich | ... | ... | ...| 
+| Intel | ... | ... | ... |
+| Hitachi | Node red, semantic interoperability | ... | ...|
+| Fujitsu | Cloud and endpoint devices | ... | ... |
+| Panasonic | Smart home lab in Osaka | ... | ... |
 
 # Scenarios
 
@@ -45,11 +50,14 @@ pubish alert messages and make voice announcements.
 environment sensor - cloud service  
 ...
 
+## Energy management in a smart building/smart city
+
+
 ## Additional Scenarios: 
 
 ### Enterprise integration scenarios
 Ex: Access control and security system
-Ex: Energy management in a smart building/smart city
+
 ### Transportation scenarios
 Ex: Fleet management
 Ex: Shipping and inventory control (supply chain management)
