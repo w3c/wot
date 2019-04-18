@@ -12,8 +12,9 @@
 |  Siemens | Building Automation | Wifi / Lan | Application t.b.d. |
 | TU Munich | ... | ... | ...| 
 | Intel | ... | ... | ... |
-| Fujitsu | ... | ... | ... |
-| Panasonic | ... | ... | ... |
+| Hitachi | Node red, semantic interoperability | ... | ...|
+| Fujitsu | Cloud and endpoint devices | ... | ... |
+| Panasonic | Smart home lab in Osaka | ... | ... |
 
 # Scenarios
 
