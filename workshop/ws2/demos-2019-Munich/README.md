@@ -12,13 +12,13 @@
 |  Siemens | Building Automation | Wifi / Lan | Application t.b.d. |
 | TU Munich | ... | ... | ...| 
 | Intel | ... | ... | ... |
-| Hitachi | Node red, semantic interoperability | ... | ...|
+| Hitachi | Cross-domain application development tool using Node-RED | Wi-Fi | Application t.b.d. |
 | Fujitsu | Cloud and endpoint devices | ... | ... |
 | Panasonic | Smart home lab in Osaka | ... | ... |
 
 # Scenarios
 
-The following scenarios demonstrate the interoperability of devices across different manufactuers.
+The following scenarios demonstrate the interoperability of devices across different manufacturers.
 
 ## Home integration scenarios
 
@@ -27,7 +27,7 @@ Scenario: Automatically turn off devices when user leaves the room
 ### Description:
 An environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
 When the "room empty" condition is detected.
-the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds are closed and a surveillence camera is turned on.
+the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds are closed and a surveillance camera is turned on.
 
 ### Device interactions
 
@@ -43,7 +43,7 @@ An environment sensor is capable of measuring air quality by measuring the oxyge
 When a low oxygen condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
 connected devices take the appropriate action to protect and alert citizens,
 such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
-pubish alert messages and make voice announcements.
+publish alert messages and make voice announcements.
 
 ### Device interactions
 
@@ -69,7 +69,7 @@ Ex: Shipping and inventory control (supply chain management)
 Please place all TDs into the TDs directory. 
 
 ### Tools:
-Please place all tools into the tools directory. 
+Please place all tools into the [tools](./tools) directory. 
 
 
 ### Cloud:
