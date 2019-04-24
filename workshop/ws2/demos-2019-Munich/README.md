@@ -5,6 +5,8 @@
 
 # Participating companies
 
+NOTE: We should explicitly invite Mozilla.
+
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------|
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. |
