@@ -5,16 +5,30 @@
 
 # Participating companies
 
-| Company | Things/Devices/System/Tools | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments |
-|---------|--------|-------|-------|
-| Oracle  | IoT Cloud Service | Wifi | Application t.b.d. |
-| Siemens  | Industry Automation | Wifi / Lan | Application t.b.d. |
-|  Siemens | Building Automation | Wifi / Lan | Application t.b.d. |
-| TU Munich | ... | ... | ...| 
-| Intel | ... | ... | ... |
-| Hitachi | Node red, semantic interoperability | ... | ...|
-| Fujitsu | Cloud and endpoint devices | ... | ... |
-| Panasonic | Smart home lab in Osaka | ... | ... |
+| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |
+|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------|
+| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. |
+| Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. |
+| Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. |
+| TU Munich | ...                                 | ...                                                               | ...                | 
+| Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |
+| Intel     | Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |
+| Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |
+| Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |
+| Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
+| Hitachi   | Node red, semantic interoperability | ...                                                               | ...                |
+| Fujitsu   | Cloud and endpoint devices (5)      | ...                                                               | ...                |
+| Panasonic | Smart home lab in Osaka (6)         | ...                                                               | ...                |
+
+## Notes
+1. Services running on a single gateway
+2. WIP: OpenVino service that can track multiple people, give bounding box.  Needs JPEG input image. 
+3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
+4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
+5. Devices: ...
+6. Devices: ...
+
+
 
 # Scenarios
 
