@@ -1,0 +1,144 @@
+{
+    "name": "Hue Bridge",
+    "id": "urn:dev:wot:com:example:servient:huelamp",
+    "@context": [
+        "http://www.w3.org/ns/td",
+        {
+            "http": "http://www.w3.org/2011/http#"
+        },
+        {
+            "htv": "http://www.w3.org/2011/http#"
+        }
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "properties": {
+        "all_lights": {
+            "title": "Lights",
+            "description": "Gets a detailed list of all lights that have been discovered by the bridge.",
+            "type": "object",
+            "properties": {},
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "state": {
+                        "description": "Details the state of the light, see the state table below for more details.",
+                        "type": "object",
+                        "properties": {
+                            "on": {
+                                "description": "On/Off state of the light. On=true, Off=false",
+                                "type": "boolean",
+                                "readOnly": false,
+                                "writeOnly": false
+                            },
+                            "alert": {
+                                "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop.",
+                                "type": "string",
+                                "enum": [
+                                    "none",
+                                    "select",
+                                    "lselect"
+                                ],
+                                "readOnly": false,
+                                "writeOnly": false
+                            },
+                            "bri": {
+                                "description": "brightness level",
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 254,
+                                "readOnly": false,
+                                "writeOnly": false
+                            },
+                            "reachable": {
+                                "description": "Indicates if a light can be reached by the bridge",
+                                "type": "boolean",
+                                "readOnly": true,
+                                "writeOnly": false
+                            }
+                        }
+                    },
+                    "type": {
+                        "description": "A fixed name describing the type of light",
+                        "type": "string",
+                        "readOnly": true,
+                        "writeOnly": false
+                    },
+                    "name": {
+                        "description": "A unique, editable name given to the light",
+                        "type": "string",
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "modelid": {
+                        "description": "The hardware model of the light.",
+                        "type": "string",
+                        "readOnly": true,
+                        "writeOnly": false
+                    },
+                    "swversion": {
+                        "description": "An identifier for the software version running on the light",
+                        "type": "string",
+                        "readOnly": true,
+                        "writeOnly": false
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "readOnly": true
+        }
+    },
+    "actions": {
+        "search_lights": {
+            "title": "Search for New Lights",
+            "description": "Starts searching for new lights.",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "deviceid": {
+                        "type": "array",
+                        "maxItems": 10,
+                        "writeOnly": true
+                    }
+                }
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "type": "object",
+                        "writeOnly": false,
+                        "readOnly": true
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights",
+                    "contentType": "application/json",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe":false
+        }
+    }
+}
