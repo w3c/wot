@@ -19,7 +19,7 @@ NOTE: We should explicitly invite Mozilla.
 | Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
-| Hitachi   | Node red, semantic interoperability | ...                                                               | ...                |
+| Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
 | Fujitsu   | Cloud and endpoint devices (6)      | ...                                                               | ...                |
 | Panasonic | Smart home lab in Osaka (7)         | ...                                                               | ...                |
 
