@@ -1,0 +1,417 @@
+{
+    "name": "Hue white lamp 3",
+    "id": "urn:dev:wot:com:example:servient:huelamp",
+    "@context": [
+        "http://www.w3.org/ns/td",
+        {
+            "http": "http://www.w3.org/2011/http#"
+        },
+        {
+            "htv": "http://www.w3.org/2011/http#"
+        }
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "properties": {
+        "light_attr_state": {
+            "title": "State and Attributes Of The Choosen Light",
+            "description": "Gets the attributes and state of a given light",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Details the state of the light, see the state table below for more details.",
+                    "type": "object",
+                    "properties": {
+                        "on": {
+                            "description": "On/Off state of the light. On=true, Off=false",
+                            "type": "boolean",
+                            "readOnly": false,
+                            "writeOnly": false
+                        },
+                        "alert": {
+                            "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop.",
+                            "type": "string",
+                            "enum": [
+                                "none",
+                                "select",
+                                "lselect"
+                            ],
+                            "readOnly": false,
+                            "writeOnly": false
+                        },
+                        "bri": {
+                            "description": "brightness level",
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 254,
+                            "readOnly": false,
+                            "writeOnly": false
+                        },
+                        "reachable": {
+                            "description": "Indicates if a light can be reached by the bridge",
+                            "type": "boolean",
+                            "readOnly": true,
+                            "writeOnly": false
+                        }
+                    }
+                },
+                "type": {
+                    "description": "A fixed name describing the type of light",
+                    "type": "string",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "name": {
+                    "description": "A unique, editable name given to the light",
+                    "type": "string",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "modelid": {
+                    "description": "The hardware model of the light.",
+                    "type": "string",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "swversion": {
+                    "description": "An identifier for the software version running on the light",
+                    "type": "string",
+                    "readOnly": true,
+                    "writeOnly": false
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/3",
+                    "htv:methodName": "GET",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {
+        "rename": {
+            "title": "Rename Light",
+            "description": "A light can have its name changed when in any state, including when it is unreachable or off.",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "minLength": 0,
+                        "maxLength": 32,
+                        "readOnly": false,
+                        "writeOnly": false
+                    }
+                }
+            },
+            "output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "success": {
+                            "type": "object",
+                            "properties": {},
+                            "additionalProperties": {
+                                "type": "string"
+                            },
+                            "readOnly": true
+                        }
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/3",
+                    "contentType": "application/json",
+                    "htv:methodName": "PUT",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": true,
+            "safe":false
+        },
+        "set_state": {
+            "title": "Change State Of A Given Light",
+            "description": "Allows the user to turn the light on and off, modify the hue and effects",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "on": {
+                        "description": "On/Off state of the light. On=true, Off=false",
+                        "type": "boolean",
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "bri": {
+                        "description": "brightness level",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 254,
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "alert": {
+                        "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop.",
+                        "type": "string",
+                        "enum": [
+                            "lselect",
+                            "none",
+                            "select"
+                        ],
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "transisiontime": {
+                        "description": "The duration of the transition from the light’s current state to the new state.",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 65535,
+                        "readOnly": false,
+                        "writeOnly": true
+                    },
+                    "bri_inc": {
+                        "description": "Increments or decrements the value of the brightness.  bri_inc is ignored if the bri attribute is provided.",
+                        "type": "integer",
+                        "minimum": -254,
+                        "maximum": 254,
+                        "readOnly": false,
+                        "writeOnly": false
+                    }
+                }
+            },
+            "output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "success": {
+                            "oneOf": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/bri_inc": {
+                                            "description": "Increments or decrements the value of the brightness.  bri_inc is ignored if the bri attribute is provided.",
+                                            "type": "integer",
+                                            "minimum": -254,
+                                            "maximum": 254,
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/on": {
+                                            "description": "On/Off state of the light. On=true, Off=false",
+                                            "type": "boolean",
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/bri": {
+                                            "description": "brightness level",
+                                            "type": "integer",
+                                            "minimum": 0,
+                                            "maximum": 254,
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/alert": {
+                                            "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop.",
+                                            "type": "string",
+                                            "enum": [
+                                                "lselect",
+                                                "none",
+                                                "select"
+                                            ],
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/transisiontime": {
+                                            "description": "The duration of the transition from the light’s current state to the new state.",
+                                            "type": "integer",
+                                            "minimum": 0,
+                                            "maximum": 65535,
+                                            "readOnly": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/3/state",
+                    "contentType": "application/json",
+                    "http:methodName": "PUT",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": true,
+            "safe":false
+        },
+        "set_state2": {
+            "title": "Change State Of A Given Light",
+            "description": "Allows the user to turn the light on and off, modify the hue and effects",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "on": {
+                        "description": "On/Off state of the light. On=true, Off=false",
+                        "type": "boolean",
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "bri": {
+                        "description": "brightness level",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 254,
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "alert": {
+                        "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop.",
+                        "type": "string",
+                        "enum": [
+                            "lselect",
+                            "none",
+                            "select"
+                        ],
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "transisiontime": {
+                        "description": "The duration of the transition from the light’s current state to the new state.",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 65535,
+                        "readOnly": false,
+                        "writeOnly": true
+                    },
+                    "bri_inc": {
+                        "description": "Increments or decrements the value of the brightness.  bri_inc is ignored if the bri attribute is provided.",
+                        "type": "integer",
+                        "minimum": -254,
+                        "maximum": 254,
+                        "readOnly": false,
+                        "writeOnly": false
+                    }
+                }
+            },
+            "output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "success": {
+                            "oneOf": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/bri_inc": {
+                                            "description": "Increments or decrements the value of the brightness.  bri_inc is ignored if the bri attribute is provided.",
+                                            "type": "integer",
+                                            "minimum": -254,
+                                            "maximum": 254,
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/on": {
+                                            "description": "On/Off state of the light. On=true, Off=false",
+                                            "type": "boolean",
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/bri": {
+                                            "description": "brightness level",
+                                            "type": "integer",
+                                            "minimum": 0,
+                                            "maximum": 254,
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/alert": {
+                                            "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop.",
+                                            "type": "string",
+                                            "enum": [
+                                                "lselect",
+                                                "none",
+                                                "select"
+                                            ],
+                                            "readOnly": true
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "/lights/4/state/transisiontime": {
+                                            "description": "The duration of the transition from the light’s current state to the new state.",
+                                            "type": "integer",
+                                            "minimum": 0,
+                                            "maximum": 65535,
+                                            "readOnly": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/3/state",
+                    "contentType": "application/json",
+                    "htv:methodName": "PUT",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": true,
+            "safe":false
+        }
+    }
+}

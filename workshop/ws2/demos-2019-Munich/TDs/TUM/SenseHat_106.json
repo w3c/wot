@@ -1,0 +1,410 @@
+{
+    "@context": "http://www.w3.org/ns/td",
+    "@type": "Thing",
+    "name": "SenseHat",
+    "description": "Raspberry Pi SenseHat",
+    "security": [{
+        "scheme": "nosec"
+    }],
+    "properties": {
+        "displayRotation": {
+            "type": "integer",
+            "readOnly": false,
+            "writeOnly": false,
+            "description": "The roation of the display. 0 is whith the HDMI port facing down.",
+            "enum": [0, 90, 180, 270],
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/displayRotation",
+                "contentType": "application/json",
+                "op": ["readproperty", "writeproperty"]
+            }]
+        },
+        "pixels": {
+            "type": "array",
+            "minItems": 64,
+            "maxItems": 64,
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255
+                },
+                "minItems": 3,
+                "maxItems": 3
+            },
+            "readOnly": false,
+            "writeOnly": false,
+            "description": "An array containing the current colours of all LEDs.",
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/pixels",
+                "contentType": "application/json",
+                "op": ["readproperty", "writeproperty"]
+            }]
+        },
+        "lowLight": {
+            "type": "boolean",
+            "readOnly": false,
+            "writeOnly": false,
+            "description": "The LED Matrix low light mode.",
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/lowLight",
+                "contentType": "application/json",
+                "op": ["readproperty", "writeproperty"]
+            }]
+        },
+        "humidity": {
+            "type": "number",
+            "description": "The percentage of relative humidity.",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/humidity",
+                "contentType": "application/json",
+                "op": ["readproperty"]
+            }]
+        },
+        "temperature": {
+            "type": "number",
+            "description": "The current temperature in degrees Celsius.",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/temperature",
+                "contentType": "application/json",
+                "op": ["readproperty"]
+            }]
+        },
+        "pressure": {
+            "type": "number",
+            "description": "The current pressure in Millibars.",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/pressure",
+                "contentType": "application/json",
+                "op": ["readproperty"]
+            }]
+        },
+        "gyro": {
+            "type": "object",
+            "description": "Get 3 Floats representing the rotational intensity of each axis in rads/second.",
+            "readOnly": true,
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "z": {
+                    "type": "number"
+                }
+            },
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/gyro",
+                "contentType": "application/json",
+                "op": ["readproperty"]
+            }]
+        },
+        "accel": {
+            "type": "object",
+            "description": "Get 3 Floats representing the acceleration intensity of each axis in Gs",
+            "readOnly": true,
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "z": {
+                    "type": "number"
+                }
+            },
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/accel",
+                "contentType": "application/json",
+                "op": ["readproperty"]
+            }]
+        },
+        "compass": {
+            "type": "object",
+            "description": "Get 3 Floats representing the magnetic intensity of the axis in microteslas.",
+            "readOnly": true,
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "z": {
+                    "type": "number"
+                }
+            },
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/compass",
+                "contentType": "application/json",
+                "op": ["readproperty"]
+            }]
+        },
+        "eventHistory": {
+            "type": "array",
+            "description": "An array containing the complete event history.",
+            "readOnly": true,
+            "items": {
+                "type": "string"
+            },
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/properties/eventHistory",
+                "contentType": "application/json",
+                "op": ["readproperty"]
+            }]
+        }
+    },
+    "actions": {
+        "flipH": {
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/actions/flipH",
+                "contentType": "application/json",
+                "op": ["invokeaction"]
+            }],
+            "idempotent": false,
+            "safe": false
+        },
+        "flipV": {
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/actions/flipV",
+                "contentType": "application/json",
+                "op": ["invokeaction"]
+            }],
+            "idempotent": false,
+            "safe": false
+        },
+        "showMessage": {
+            "input": {
+                "type": "object",
+                "description": "The message to show. May include the scrolling speed and text/background colours.",
+                "properties": {
+                    "textString": {
+                        "type": "string"
+                    },
+                    "scrollSpeed": {
+                        "type": "number"
+                    },
+                    "textColour": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        },
+                        "minItems": 3,
+                        "maxItems": 3
+                    },
+                    "backColour": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        },
+                        "minItems": 3,
+                        "maxItems": 3
+                    }
+                },
+                "required": ["textString"]
+            },
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/actions/showMessage",
+                "contentType": "application/json",
+                "op": ["invokeaction"]
+            }],
+            "idempotent": false,
+            "safe": false
+        },
+        "showLetter": {
+            "input": {
+                "type": "object",
+                "description": "The letter to show. May include text/background colours.",
+                "properties": {
+                    "s": {
+                        "type": "string"
+                    },
+                    "textColour": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        },
+                        "minItems": 3,
+                        "maxItems": 3
+                    },
+                    "backColour": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        },
+                        "minItems": 3,
+                        "maxItems": 3
+                    }
+                },
+                "required": ["s"]
+            },
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/actions/showLetter",
+                "contentType": "application/json",
+                "op": ["invokeaction"]
+            }],
+            "idempotent": false,
+            "safe": false
+        },
+        "flashMessage": {
+            "input": {
+                "type": "object",
+                "description": "The message to show. May include the flashing speed and text/background colours.",
+                "properties": {
+                    "textString": {
+                        "type": "string"
+                    },
+                    "speed": {
+                        "type": "number"
+                    },
+                    "textColour": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        },
+                        "minItems": 3,
+                        "maxItems": 3
+                    },
+                    "backColour": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 255
+                        },
+                        "minItems": 3,
+                        "maxItems": 3
+                    }
+                },
+                "required": ["textString"]
+            },
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/actions/flashMessage",
+                "contentType": "application/json",
+                "op": ["invokeaction"]
+            }],
+            "idempotent": false,
+            "safe": false
+        },
+        "setPixel": {
+            "input": {
+                "type": "object",
+                "description": "Set the pixel in the given (x,y) coordinates to a given RGB color.",
+                "properties": {
+                    "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 7
+                    },
+                    "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 7
+                    },
+                    "r": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "g": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "b": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    }
+                },
+                "required": ["textString"]
+            },
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/actions/setPixel",
+                "contentType": "application/json",
+                "op": ["invokeaction"]
+            }],
+            "idempotent": false,
+            "safe": false
+        },
+        "clear": {
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/actions/clear",
+                "contentType": "application/json",
+                "op": ["invokeaction"]
+            }],
+            "idempotent": false,
+            "safe": false
+        }
+    },
+    "events": {
+        "joystickPress": {
+            "type": "string",
+            "enum": ["left", "right", "up", "down", "click"],
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/events/joystickPress",
+                "contentType": "application/json",
+                "subprotocol": "longpoll",
+                "op": ["subscribeevent"]
+            }]
+        },
+        "joystickRelease": {
+            "type": "string",
+            "enum": ["left", "right", "up", "down", "click"],
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/events/joystickRelease",
+                "contentType": "application/json",
+                "subprotocol": "longpoll",
+                "op": ["subscribeevent"]
+            }]
+        },
+        "joystickHold": {
+            "type": "string",
+            "enum": ["left", "right", "up", "down", "click"],
+            "forms": [{
+                "href": "http://192.168.0.106:8080/SenseHat/events/joystickHold",
+                "contentType": "application/json",
+                "subprotocol": "longpoll",
+                "op": ["subscribeevent"]
+            }]
+        }
+    },
+    "id": "de:tum:ei:esi:sensehat:192.168.0.106",
+    "forms": [{
+        "href": "http://192.168.0.106:8080/SenseHat/all/properties",
+        "contentType": "application/json"
+    }]
+}

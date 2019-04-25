@@ -1,0 +1,234 @@
+{
+    "actions": {
+        "shutdown": {
+            "forms": [{
+                "href": "http://192.168.0.103:8080/actions/shutdown",
+                "contentType": "application/json"
+            }],
+            "description": "Turn off all the LEDs."
+        },
+        "fill": {
+            "forms": [{
+                "href": "http://192.168.0.103:8080/actions/fill",
+                "contentType": "application/json"
+            }],
+            "input": {
+                "type": "object",
+                "required": ["red", "green", "blue"],
+                "properties": {
+                    "red": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "green": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "blue": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    }
+                }
+            },
+            "description": "Light all the LEDs with same color."
+        },
+        "fill_middle": {
+            "forms": [{
+                "href": "http://192.168.0.103:8080/actions/fill_middle",
+                "contentType": "application/json"
+            }],
+            "input": {
+                "type": "object",
+                "required": ["red", "green", "blue"],
+                "properties": {
+                    "red": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "green": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "blue": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    }
+                }
+            },
+            "description": "Light all the LEDs in the middle band with the same color."
+        },
+        "dot": {
+            "forms": [{
+                "href": "http://192.168.0.103:8080/actions/dot",
+                "contentType": "application/json"
+            }],
+            "input": {
+                "type": "object",
+                "required": ["led", "color"],
+                "properties": {
+                    "color": {
+                        "type": "object",
+                        "required": ["red", "green", "blue"],
+                        "properties": {
+                            "red": {
+                                "minimum": 0,
+                                "type": "integer",
+                                "maximum": 255
+                            },
+                            "green": {
+                                "minimum": 0,
+                                "type": "integer",
+                                "maximum": 255
+                            },
+                            "blue": {
+                                "minimum": 0,
+                                "type": "integer",
+                                "maximum": 255
+                            }
+                        }
+                    },
+                    "led": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 118
+                    }
+                }
+            },
+            "description": "Light a specific LED with the given RGB color."
+        },
+        "fill_upper": {
+            "forms": [{
+                "href": "http://192.168.0.103:8080/actions/fill_upper",
+                "contentType": "application/json"
+            }],
+            "input": {
+                "type": "object",
+                "required": ["red", "green", "blue"],
+                "properties": {
+                    "red": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "green": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "blue": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    }
+                }
+            },
+            "description": "Light all the LEDs in the upper band with the same color."
+        },
+        "random": {
+            "forms": [{
+                "href": "http://192.168.0.103:8080/actions/random",
+                "contentType": "application/json"
+            }],
+            "description": "Light up all LEDs with random colors."
+        },
+        "fill_lower": {
+            "forms": [{
+                "href": "http://192.168.0.103:8080/actions/fill_lower",
+                "contentType": "application/json"
+            }],
+            "input": {
+                "type": "object",
+                "required": ["red", "green", "blue"],
+                "properties": {
+                    "red": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "green": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    },
+                    "blue": {
+                        "minimum": 0,
+                        "type": "integer",
+                        "maximum": 255
+                    }
+                }
+            },
+            "description": "Light all the LEDs in the lower band with the same color."
+        }
+    },
+    "properties": {
+        "stats": {
+            "writeOnly": false,
+            "forms": [{
+                "href": "http://192.168.0.103:8080/properties/stats",
+                "contentType": "application/json"
+            }],
+            "properties": {
+                "nr_of_leds_on": {
+                    "minimum": 0,
+                    "type": "integer",
+                    "maximum": 118
+                },
+                "led_colors": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": [{
+                            "minimum": 0,
+                            "type": "integer",
+                            "maximum": 255
+                        }, {
+                            "minimum": 0,
+                            "type": "integer",
+                            "maximum": 255
+                        }, {
+                            "minimum": 0,
+                            "type": "integer",
+                            "maximum": 255
+                        }]
+                    }
+                },
+                "beightness": {
+                    "minimum": 0,
+                    "type": "integer",
+                    "unit": "%",
+                    "maximum": 100
+                },
+                "nr_of_leds": {
+                    "type": "integer"
+                }
+            },
+            "type": "object",
+            "title": "LED Stats",
+            "readOnly": true,
+            "description": "Get detailed information about the current state of the LED strip."
+        },
+        "brightness": {
+            "writeOnly": false,
+            "unit": "%",
+            "forms": [{
+                "href": "http://192.168.0.103:8080/properties/brightness",
+                "contentType": "application/json"
+            }],
+            "minimum": 0,
+            "type": "integer",
+            "description": "Set all LEDs to the same brightness between 0 and 100%.",
+            "readOnly": false,
+            "maximum": 100,
+            "title": "LED Brightness"
+        }
+    },
+    "name": "DotStar RGB LED strip",
+    "id": "de:tum:ei:esi:dotstar:192.168.0.103:8080",
+    "description": "A strip of 118 RGB LEDs that can be controlled remotely."
+}
