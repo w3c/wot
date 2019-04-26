@@ -21,7 +21,6 @@ NOTE: We should explicitly invite Mozilla.
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
 | Fujitsu   | Cloud and endpoint devices (6)      | ...                                                               | ...                |
-| Panasonic | Smart home lab in Osaka (7)         | ...                                                               | ...                |
 | Panasonic | Smart home lab in Osaka (7)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
 | Panasonic | Bulletin Board in local (8)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
 | Panasonic | Online simulator (9)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
