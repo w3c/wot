@@ -22,6 +22,10 @@ NOTE: We should explicitly invite Mozilla.
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
 | Fujitsu   | Cloud and endpoint devices (6)      | ...                                                               | ...                |
 | Panasonic | Smart home lab in Osaka (7)         | ...                                                               | ...                |
+| Panasonic | Smart home lab in Osaka (7)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
+| Panasonic | Bulletin Board in local (8)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
+| Panasonic | Online simulator (9)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
+| Panasonic | Local simulator (10)                | Wifi / Lan; ext ports 80, 3000-3011, 8003, 8443; 1 power          | ...                |
 
 ## Notes
 1. Services running on a single gateway
@@ -30,7 +34,10 @@ NOTE: We should explicitly invite Mozilla.
 4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
 5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
 6. Devices: ...
-7. Devices: ...
+7. Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
+8. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
+9. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
+10. Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
 
 
 
