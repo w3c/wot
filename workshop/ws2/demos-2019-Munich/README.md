@@ -24,7 +24,7 @@ NOTE: We should explicitly invite Mozilla.
 | Panasonic | Smart home lab in Osaka (7)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
 | Panasonic | Bulletin Board in local (8)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
 | Panasonic | Online simulator (9)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
-| Panasonic | Local simulator (10)                | Wifi / Lan; ext ports 80, 3000-3011, 8003, 8443; 1 power          | ...                |
+| Panasonic | Local simulator (10)                | Wifi / Lan; 1 power                                               | ...                |
 
 ## Notes
 1. Services running on a single gateway
