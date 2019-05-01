@@ -20,7 +20,8 @@ NOTE: We should explicitly invite Mozilla.
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
-| Fujitsu   | Cloud and endpoint devices (6)      | ...                                                               | ...                |
+| Fujitsu   | Remote and Local proxies (8)        | Wifi / Lan; 1 power                                               | Application t.b.d. |
+| Fujitsu   | Cloud and endpoint devices (6)      | Wifi / Lan; 1 power                                               | Application t.b.d. |
 | Panasonic | Smart home lab in Osaka (7)         | ...                                                               | ...                |
 
 ## Notes
@@ -29,8 +30,9 @@ NOTE: We should explicitly invite Mozilla.
 3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
 4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
 5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
-6. Devices: ...
+6. Devices: 1 rotating light, 1 sensor in local, 1 LED, 1 air conditioner, 1 blind in Smart home in Japan
 7. Devices: ...
+8. Local proxy can connect members' devices and expose them as virtual devices.
 
 
 
