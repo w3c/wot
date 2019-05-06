@@ -20,7 +20,8 @@ NOTE: We should explicitly invite Mozilla.
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
-| Fujitsu   | Cloud and endpoint devices (6)      | ...                                                               | ...                |
+| Fujitsu   | Remote and Local proxies (8)        | Wifi / Lan; 1 power                                               | Application t.b.d. |
+| Fujitsu   | Cloud and endpoint devices (6)      | Wifi / Lan; 1 power                                               | Application t.b.d. |
 | Panasonic | Smart home lab in Osaka (7)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
 | Panasonic | Bulletin Board in local (8)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
 | Panasonic | Online simulator (9)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
@@ -32,7 +33,7 @@ NOTE: We should explicitly invite Mozilla.
 3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
 4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
 5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
-6. Devices: ...
+6. Devices: 1 rotating light, 1 sensor in local, 1 LED, 1 air conditioner, 1 blind in Smart home in Japan
 7. Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
 8. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
 9. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
