@@ -1,0 +1,122 @@
+{
+    "name": "Siemens-Properties-Tester",
+    "description": "Tests the variation of properties.",
+    "versioning": {"instance": "1.0.0"},
+    "@type": "Thing",
+    "security": ["nosec_sc"],
+    "properties": {
+        "status": {
+            "type": "string",
+            "enum": [
+                "On",
+                "Off",
+                "Error"
+            ],
+            "title": "Status",
+            "titles": {
+                "en": "Status",
+                "de": "Zustand"
+            },
+            "description": "Status of the Thing",
+            "descriptions": {
+                "en": "Latest status of the Thing",
+                "de": "Aktuelle Thing-Zustand"
+            },
+            "observable": true,
+            "readOnly": false,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/status/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/status/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/Siemens-Properties-Tester/pr/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/Siemens-Properties-Tester/pr/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ]
+        },
+        "brightness": {
+            "type": "integer",
+            "description": "current brightness value",
+            "iot:Custom": "example annotation",
+            "observable": true,
+            "readOnly": true,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                },
+                {
+                    "href": "http://10.0.2.15:8080/Siemens-Properties-Tester/properties/brightness/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                },
+                {
+                    "href": "http://192.168.0.124:8080/Siemens-Properties-Tester/properties/brightness/observable",
+                    "contentType": "application/json",
+                    "op": ["observeproperty"],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "coap://10.0.2.15:5683/Siemens-Properties-Tester/pr/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                },
+                {
+                    "href": "coap://192.168.0.124:5683/Siemens-Properties-Tester/pr/brightness",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:11aa7c71-292e-4789-ba81-e573135f1788",
+    "support": "mailto:sebastian.kaebisch",
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
+}
+
