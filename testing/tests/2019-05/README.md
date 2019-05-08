@@ -1,7 +1,7 @@
-# 2019-03 Online Test Results
+# 2019-05 Online Test Results
 This location is for test results (test TDs and manual assertion declarations
 given in CSV files) that will be used to generate 
-the draft Implementation Report just prior to CR transition. 
+the draft Implementation Report after CR transition and prior to PR transition. 
 
 Current version of Implementation Report: https://github.com/w3c/wot-thing-description/blob/master/testing/report.html
 
