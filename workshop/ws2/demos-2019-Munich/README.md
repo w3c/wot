@@ -26,6 +26,7 @@ NOTE: We should explicitly invite Mozilla.
 | Panasonic | Bulletin Board in local (9)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
 | Panasonic | Online simulator (10)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
 | Panasonic | Local simulator (11)                | Wifi / Lan; 1 power                                               | ...                |
+| FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
 
 ## Notes
 1. Services running on a single gateway
