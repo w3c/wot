@@ -12,7 +12,13 @@ NOTE: We should explicitly invite Mozilla.
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. |
 | Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. |
 | Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. |
-| TU Munich | ...                                 | ...                                                               | ...                | 
+| TU Munich | MeArm Robotic Arms                  | Wifi / Lan                                                               | Mechanically not reliable                | 
+| TU Munich | Texas Instruments Bluetooth Sensors | Wifi / Lan                                                               | Bridged via HTTP and CoAP                | 
+| TU Munich | Philips HUE Lights and Buttons | Wifi / Lan                                                               | ... |
+| TU Munich | LED Strip | Wifi / Lan                                                               | ... |
+| TU Munich | Sense HAT (LED Matrix and sensors) | Wifi / Lan                                                               | ... |
+| TU Munich | Cameras | Wifi / Lan                                                               | Can only take pictures |
+| TU Munich | ESP 32 Light Sensors | Wifi / Lan                                                               | Representing more constrained devices |
 | Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |
 | Intel     | Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |
 | Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |
