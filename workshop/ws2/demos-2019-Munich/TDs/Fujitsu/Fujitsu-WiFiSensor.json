@@ -1,0 +1,112 @@
+{
+	"security": [
+		"__auto_added_sc__"
+	],
+	"id": "urn:dev:wot:com:fujitsu:wifisensor448D07C40A24",
+	"title": "Fujitsu-WiFiSensor240AC4114764",
+	"@context": [
+		"https://www.w3.org/2019/wot/td/v1"
+	],
+	"securityDefinitions": {
+		"__auto_added_sc__": {
+			"scheme": "basic"
+		},
+		"nosec_sc": {
+			"scheme": "nosec"
+		}
+	},
+	"actions": {},
+	"forms": {
+		"forms": [
+			{
+				"op": "readallproperties",
+				"mediaType": "application/json",
+				"href": "allSensorData"
+			}
+		]
+	},
+	"properties": {
+		"Temperature": {
+			"@type": "iot:Temperature",
+			"observable": false,
+			"readOnly": true,
+			"type": "object",
+			"properties": {
+				"temperature": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"mediaType": "application/json",
+					"href": "temperature"
+				}
+			]
+		},
+		"Dust": {
+			"@type": "iot:Dust",
+			"observable": false,
+			"readOnly": true,
+			"type": "object",
+			"properties": {
+				"dust": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"mediaType": "application/json",
+					"href": "dust"
+				}
+			]
+		},
+		"Humidity": {
+			"@type": "iot:Humidity",
+			"observable": false,
+			"readOnly": true,
+			"type": "object",
+			"properties": {
+				"humidity": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"mediaType": "application/json",
+					"href": "humidity"
+				}
+			]
+		},
+		"AirPressure": {
+			"@type": "iot:AirPressure",
+			"observable": false,
+			"readOnly": true,
+			"type": "object",
+			"properties": {
+				"airPressure": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"mediaType": "application/json",
+					"href": "airPressure"
+				}
+			]
+		}
+	},
+	"events": {},
+	"base": "http://192.168.11.10:8080/Things/urn%3Adev%3Awot%3Acom%3Afujitsu%3Aagent448D07C40A24/"
+}

@@ -5,8 +5,6 @@
 
 # Participating companies
 
-NOTE: We should explicitly invite Mozilla.
-
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------|
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. |
@@ -27,8 +25,16 @@ NOTE: We should explicitly invite Mozilla.
 | Panasonic | Online simulator (10)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
 | Panasonic | Local simulator (11)                | Wifi / Lan; 1 power                                               | ...                |
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
+| EcoG | Vehicle charging demo  (12)                | tbd                                         | ...                
+| BMW | Connected Vehicle  demo  (13)                | tbd                                         | ...                
 
 ## Notes
+* Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>
+* TUM has an open network for local demos, however internet access is not guaranteed, especially if using non-standard ports
+* Credentials for Router need to be communicated via email to the members list, <todo: add a link here>
+
+The following notes relate to the numbers in the table above.
+
 1. Services running on a single gateway
 2. WIP. OpenVino service that can track multiple people, give bounding box.  Needs JPEG input image. 
 3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
@@ -134,8 +140,13 @@ Ex: Shipping and inventory control (supply chain management)
 
 # Logistics
 
+* A dry-run in an online-plugfest is planned for Tuesday 28th, 1pm CEST-4pm, 8pm JST-11pm JST with Webex / Google Hangouts etc.
+
 ### TDs:
-Please place all TDs into the TDs directory. 
+Please place all TDs into the TDs directory.
+TDs should implement the CR spec version.
+Please put all TD drafts already into the TD directory, please validate your TD using the playground at:
+http://plugfest.thingweb.io/playground/.
 
 ### Tools:
 Please place all tools into the tools directory. 
@@ -162,4 +173,12 @@ Please place all tools into the tools directory.
 
 # Documentation
 
-* 
+*
+# Room setup and logistics:
+
+1 Table per scenario (?),  , ... are possible
+
+Siemens offers to print posters, if they are provided by the online-plugfest (May 28th).
+Sebastian will provide a template, format + size will be communicated later. 
+
+Siemens facilities are accessible from <tbd. - Sebastian checks>
