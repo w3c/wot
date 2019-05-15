@@ -5,8 +5,6 @@
 
 # Participating companies
 
-NOTE: We should explicitly invite Mozilla.
-
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------|
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. |
@@ -27,6 +25,7 @@ NOTE: We should explicitly invite Mozilla.
 | Panasonic | Online simulator (10)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
 | Panasonic | Local simulator (11)                | Wifi / Lan; 1 power                                               | ...                |
 | EcoG | Vehicle charging demo  (12)                | tbd                                         | ...                
+| BMW | Connected Vehicle  demo  (13)                | tbd                                         | ...                
 
 ## Notes
 1. Services running on a single gateway
