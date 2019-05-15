@@ -1,0 +1,851 @@
+{
+	"securityDefinitions": {
+		"nosec_sc": {
+			"scheme": "basic"
+		}
+	},
+	"security":["nosec_sc"],
+    "title": "ElectricMetering-000e7b997110028701",
+    "id": "000e7b997110028701",
+    "properties": {
+        "DD": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DD"
+                }
+            ],
+            "readOnly": true
+        },
+        "DE": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DE"
+                }
+            ],
+            "readOnly": true
+        },
+        "DF": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DF"
+                }
+            ],
+            "readOnly": true
+        },
+        "SetList": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/SetList"
+                }
+            ],
+            "readOnly": true
+        },
+        "ManufactureDate": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/ManufactureDate"
+                }
+            ],
+            "readOnly": true
+        },
+        "PresentDate": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/PresentDate"
+                }
+            ],
+            "readOnly": true
+        },
+        "E0": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E0"
+                }
+            ],
+            "readOnly": true
+        },
+        "E1": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E1"
+                }
+            ],
+            "readOnly": true
+        },
+        "E2": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E2"
+                }
+            ],
+            "readOnly": true
+        },
+        "SpecVersionInfoCode": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/SpecVersionInfoCode"
+                }
+            ],
+            "readOnly": true
+        },
+        "E3": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E3"
+                }
+            ],
+            "readOnly": true
+        },
+        "E4": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E4"
+                }
+            ],
+            "readOnly": true
+        },
+        "E5": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E5"
+                }
+            ],
+            "readOnly": true
+        },
+        "E6": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E6"
+                }
+            ],
+            "readOnly": true
+        },
+        "E7": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E7"
+                }
+            ],
+            "readOnly": true
+        },
+        "E8": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E8"
+                }
+            ],
+            "readOnly": true
+        },
+        "E9": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/E9"
+                }
+            ],
+            "readOnly": true
+        },
+        "SerialNumberCode": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/SerialNumberCode"
+                }
+            ],
+            "readOnly": true
+        },
+        "EA": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/EA"
+                }
+            ],
+            "readOnly": true
+        },
+        "EB": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/EB"
+                }
+            ],
+            "readOnly": true
+        },
+        "EC": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/EC"
+                }
+            ],
+            "readOnly": true
+        },
+        "ED": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/ED"
+                }
+            ],
+            "readOnly": true
+        },
+        "ProductCode": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/ProductCode"
+                }
+            ],
+            "readOnly": true
+        },
+        "EnergySavingStatus": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/EnergySavingStatus"
+                }
+            ],
+            "enum": [
+                "ON",
+                "OFF",
+                "ON",
+                "OFF"
+            ],
+            "readOnly": true
+        },
+        "F0": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F0"
+                }
+            ],
+            "readOnly": true
+        },
+        "F1": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F1"
+                }
+            ],
+            "readOnly": true
+        },
+        "F2": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F2"
+                }
+            ],
+            "readOnly": true
+        },
+        "F3": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F3"
+                }
+            ],
+            "readOnly": true
+        },
+        "F4": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F4"
+                }
+            ],
+            "readOnly": true
+        },
+        "F5": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F5"
+                }
+            ],
+            "readOnly": true
+        },
+        "DeviceConnectStatus": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DeviceConnectStatus"
+                }
+            ],
+            "readOnly": true
+        },
+        "F6": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F6"
+                }
+            ],
+            "readOnly": true
+        },
+        "F7": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F7"
+                }
+            ],
+            "readOnly": true
+        },
+        "F8": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F8"
+                }
+            ],
+            "readOnly": true
+        },
+        "F9": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/F9"
+                }
+            ],
+            "readOnly": true
+        },
+        "FaultStatus": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/FaultStatus"
+                }
+            ],
+            "enum": [
+                "Fault",
+                "Normal"
+            ],
+            "readOnly": true
+        },
+        "FaultContent": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/FaultContent"
+                }
+            ],
+            "readOnly": true
+        },
+        "FA": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/FA"
+                }
+            ],
+            "readOnly": true
+        },
+        "FD": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/FD"
+                }
+            ],
+            "readOnly": true
+        },
+        "FE": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/FE"
+                }
+            ],
+            "readOnly": true
+        },
+        "FF": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/FF"
+                }
+            ],
+            "readOnly": true
+        },
+        "C0": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C0"
+                }
+            ],
+            "readOnly": true
+        },
+        "C1": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C1"
+                }
+            ],
+            "readOnly": true
+        },
+        "GetList": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/GetList"
+                }
+            ],
+            "readOnly": true
+        },
+        "C2": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C2"
+                }
+            ],
+            "readOnly": true
+        },
+        "C3": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C3"
+                }
+            ],
+            "readOnly": true
+        },
+        "C4": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C4"
+                }
+            ],
+            "readOnly": true
+        },
+        "C5": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C5"
+                }
+            ],
+            "readOnly": true
+        },
+        "MakerCode": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/MakerCode"
+                }
+            ],
+            "readOnly": true
+        },
+        "C6": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C6"
+                }
+            ],
+            "readOnly": true
+        },
+        "C7": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C7"
+                }
+            ],
+            "readOnly": true
+        },
+        "C8": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/C8"
+                }
+            ],
+            "readOnly": true
+        },
+        "DeviceRunningStatus": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DeviceRunningStatus"
+                }
+            ],
+            "readOnly": true
+        },
+        "OperationStatus": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/OperationStatus"
+                }
+            ],
+            "enum": [
+                "ON",
+                "OFF"
+            ],
+            "readOnly": true
+        },
+        "ManufacturerErrorCode": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/ManufacturerErrorCode"
+                }
+            ],
+            "readOnly": true
+        },
+        "PowerLimit": {
+            "observable": false,
+            "type": "number",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/PowerLimit"
+                }
+            ],
+            "readOnly": true
+        },
+        "PresentTime": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/PresentTime"
+                }
+            ],
+            "readOnly": true
+        },
+        "NodeIdCode": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/NodeIdCode"
+                }
+            ],
+            "readOnly": true
+        },
+        "CumulatedRunTime": {
+            "observable": false,
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/CumulatedRunTime"
+                }
+            ],
+            "readOnly": true
+        },
+        "D0": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D0"
+                }
+            ],
+            "readOnly": true
+        },
+        "D1": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D1"
+                }
+            ],
+            "readOnly": true
+        },
+        "CheckIPStatus": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/CheckIPStatus"
+                }
+            ],
+            "readOnly": true
+        },
+        "D2": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D2"
+                }
+            ],
+            "readOnly": true
+        },
+        "D3": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D3"
+                }
+            ],
+            "readOnly": true
+        },
+        "D4": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D4"
+                }
+            ],
+            "readOnly": true
+        },
+        "D5": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D5"
+                }
+            ],
+            "readOnly": true
+        },
+        "D6": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D6"
+                }
+            ],
+            "readOnly": true
+        },
+        "D7": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D7"
+                }
+            ],
+            "readOnly": true
+        },
+        "D8": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D8"
+                }
+            ],
+            "readOnly": true
+        },
+        "D9": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/D9"
+                }
+            ],
+            "readOnly": true
+        },
+        "NotifyList": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/NotifyList"
+                }
+            ],
+            "readOnly": true
+        },
+        "PlaceOfBusinessCode": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/PlaceOfBusinessCode"
+                }
+            ],
+            "readOnly": true
+        },
+        "DA": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DA"
+                }
+            ],
+            "readOnly": true
+        },
+        "DB": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DB"
+                }
+            ],
+            "readOnly": true
+        },
+        "DC": {
+            "observable": false,
+            "type": "string",
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "property/DC"
+                }
+            ],
+            "readOnly": true
+        }
+    },
+    "base": "http://wot.f-ncs.ad.jp/Things/000e7b997110028701/"
+}

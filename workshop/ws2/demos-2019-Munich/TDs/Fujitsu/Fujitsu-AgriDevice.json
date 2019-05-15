@@ -1,0 +1,147 @@
+{
+    "security": [
+        "__auto_added_sc__"
+    ],
+    "title": "AgriDevice-c4a7dfcf3e90",
+    "id": "AgriDevice-c4:a7:df:cf:3e:90",
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "securityDefinitions": {
+        "__auto_added_sc__": {
+            "scheme": "basic"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "actions": {},
+    "forms": {
+        "forms": [
+            {
+                "op": "readallproperties",
+                "mediaType": "application/json",
+                "href": "beacon/allData"
+            }
+        ]
+    },
+    "properties": {
+        "UV": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "application/json",
+                    "href": "beacon/UV"
+                }
+            ]
+        },
+        "Temperature": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "application/json",
+                    "href": "beacon/Temperature"
+                }
+            ]
+        },
+        "rssi": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "application/json",
+                    "href": "beacon/rssi"
+                }
+            ]
+        },
+        "BatteryIllumination": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "beacon/BatteryIllumination"
+                }
+            ]
+        },
+        "Category": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "beacon/Category"
+                }
+            ]
+        },
+        "Humidity": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "application/json",
+                    "href": "beacon/Humidity"
+                }
+            ]
+        },
+        "Battery": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "beacon/Battery"
+                }
+            ]
+        },
+        "CO2": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "application/json",
+                    "href": "beacon/CO2"
+                }
+            ]
+        },
+        "Model": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "beacon/Model"
+                }
+            ]
+        },
+        "Illumination": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "application/json",
+                    "href": "beacon/Illumination"
+                }
+            ]
+        },
+        "BatteryState": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "beacon/BatteryState"
+                }
+            ]
+        },
+        "Pressure": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "application/json",
+                    "href": "beacon/Pressure"
+                }
+            ]
+        },
+        "OUICode": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "mediaType": "text/plain",
+                    "href": "beacon/OUICode"
+                }
+            ]
+        }
+    },
+    "events": {},
+    "base": "http://192.168.11.10:8080/Things/AgriDevice-c4%3Aa7%3Adf%3Acf%3A3e%3A90/"
+}
