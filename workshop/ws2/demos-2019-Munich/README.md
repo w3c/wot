@@ -24,7 +24,7 @@
 | Panasonic | Bulletin Board in local (9)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
 | Panasonic | Online simulator (10)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
 | Panasonic | Local simulator (11)                | Wifi / Lan; 1 power                                               | ...                |
-| EcoG | Vehicle charging demo  (12)                | tbd                                         | ...                
+| EcoG | Vehicle charging demo  (12)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | BMW | Connected Vehicle  demo  (13)                | tbd                                         | ...                
 
 ## Notes
