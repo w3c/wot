@@ -30,7 +30,7 @@
 | Panasonic | Bulletin Board in local (9)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
 | Panasonic | Online simulator (10)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
 | Panasonic | Local simulator (11)                | Wifi / Lan; 1 power                                               | ...                |
-| EcoG | Vehicle charging demo  (12)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
+| EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (12)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
 | BMW | Connected Vehicle  demo  (13)                | tbd                                         | ...                
 
@@ -52,6 +52,7 @@ The following notes relate to the numbers in the table above.
 9. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
 10. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
 11. Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
+12. Devices: EV charger controller, microgrid controller, northbound interface for others to connect
 
 
 
