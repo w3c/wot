@@ -1,10 +1,10 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/"}
   ],
   "@type": "Thing",
-  "name": "PanasonicAirConditionerP1",
+  "title": "PanasonicAirConditionerP1",
   "id": "urn:uuid:ed0392cc-3109-48d0-bfd2-3818e2528c78",
   "base": "https://w3c.p-wot.com/wot-ver2/things/airconditioner/1/",
   "securityDefinitions": {

@@ -1,10 +1,10 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/"}
   ],
   "@type": "Thing",
-  "name": "PanasonicCleanerP1",
+  "title": "PanasonicCleanerP1",
   "id": "urn:uuid:4a94e5ab-1f58-4ef5-b770-6dcb48e5595c",
   "base": "https://w3c.p-wot.com/wot-ver2/things/cleaner/1/",
   "securityDefinitions": {

@@ -1,10 +1,10 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/"}
   ],
   "@type": "Thing",
-  "name": "PanaSimRoomLight5",
+  "title": "PanaSimRoomLight5",
   "id": "p-wot:PanaSimRoomLight5",
   "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimRoomLight5/",
   "securityDefinitions": {

@@ -1,10 +1,10 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/"}
   ],
   "@type": "Thing",
-  "name": "PanaSimHueGroup5",
+  "title": "PanaSimHueGroup5",
   "id": "p-wot:PanaSimHueGroup5",
   "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimHueGroup5/",
   "securityDefinitions": {

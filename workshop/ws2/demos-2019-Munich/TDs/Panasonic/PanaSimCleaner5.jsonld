@@ -1,10 +1,10 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/"}
   ],
   "@type": "Thing",
-  "name": "PanaSimCleaner5",
+  "title": "PanaSimCleaner5",
   "id": "p-wot:PanaSimCleaner5",
   "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimCleaner5/",
   "securityDefinitions": {

@@ -1,10 +1,10 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/"}
   ],
   "@type": "Thing",
-  "name": "PanasonicElectricBulletinBoardP3",
+  "title": "PanasonicElectricBulletinBoardP3",
   "id": "urn:uuid:78002262-fdb1-4396-9b0b-b2f71003846c",
   "base": "https://w3c.p-wot.com/wot-ver2/things/electricBulletinBoard/3/",
   "securityDefinitions": {
