@@ -150,13 +150,13 @@ Ex: Shipping and inventory control (supply chain management)
 * A dry-run in an online-plugfest is planned for Tuesday 28th, 1pm CEST-4pm, 8pm JST-11pm JST with Webex / Google Hangouts etc.
 
 ### TDs:
-Please place all TDs into the TDs directory.
+Please place all TDs into the [TDs](TDs) directory.
 TDs should implement the CR spec version.
 Please put all TD drafts already into the TD directory, please validate your TD using the playground at:
 http://plugfest.thingweb.io/playground/.
 
 ### Tools:
-Please place all tools into the tools directory. 
+Please place all tools into the [tools](tools) directory. 
 
 
 ### Cloud:
