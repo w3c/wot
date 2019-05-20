@@ -1,6 +1,6 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {
       "iot": "http://iotschema.org/",
       "http": "http://www.w3.org/2011/http#"
@@ -27,13 +27,13 @@
   "security": [
     "nosec_sc"
   ],
-  "name": "Intel-OCF-0800f07a-178d-48ec-9ddf-d8a941071298",
+  "title": "Intel-OCF-0800f07a-178d-48ec-9ddf-d8a941071298",
   "support": "mailto:michael.mccool@intel.com",
   "version": {
     "instance": "0.1.0"
   },
-  "created": "2018-09-10T06:30+00:00",
-  "lastModified": "2018-12-19T04:06:02.096Z",
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2018-12-19T04:06:02Z",
   "links": [
     {
       "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
