@@ -10,5 +10,5 @@
 | Fujitsu-Airconditioner.json | Air conditioner | Smart home in Japan |
 | Fujitsu-BlindClose.json | Switch to close Blind | Smart home in Japan |
 | Fujitsu-BlindOpen.json | Switch to open Blind | Smart home in Japan |
-| Fujitsu-LED.json | LED light | Smart home in Japan |
+| Fujitsu-LEDLight.json | LED light | Smart home in Japan |
 | Fujitsu-PowerMeter.json | Smart meter | Smart home in Japan |
