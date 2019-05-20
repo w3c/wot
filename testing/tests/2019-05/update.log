@@ -1,0 +1,1377 @@
+Processing organization Fujitsu
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu
+  Processing implementation Fujitsu/fujitsu-rotary-beacon-light
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp1
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp1"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp1
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp1
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp1 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp2
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp2 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv
+rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv.temp1
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-rotary-beacon-light.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-rotary-beacon-light.csv
+  Processing implementation Fujitsu/fujitsu-wifi-agent
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp1
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp1"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp1
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp1
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp1 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp2
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp2 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv
+rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv.temp1
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-wifi-agent.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-wifi-agent.csv
+  Processing implementation Fujitsu/fujitsu-ECHONET-Lite-devices
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices
+    Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.jsonld  for validation
+VALIDATION ERROR!!! :  data.id should match format "uri"
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv
+    Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.jsonld  for validation
+VALIDATION ERROR!!! :  data.id should match format "uri"
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv
+    Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.jsonld  for validation
+VALIDATION ERROR!!! :  data.id should match format "uri"
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LED.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv
+  Processing implementation Fujitsu/fujitsu-proxy
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy
+    Processing instance Fujitsu/fujitsu-proxy/ProxyTest
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy/ProxyTest.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-proxy.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy/ProxyTest.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy.csv.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy.csv.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-proxy.csv
+Processing organization Hitachi
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Hitachi
+Processing organization Intel
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel
+  Processing implementation Intel/intel-camera
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp2
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp2 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv
+rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv
+  Processing implementation Intel/intel-speak
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp2
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp2 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv
+rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv
+  Processing implementation Intel/intel-ocf
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf
+    Processing instance Intel/intel-ocf/button1touch
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button1touch.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv
+    Processing instance Intel/intel-ocf/button2touch
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/button2touch.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv
+    Processing instance Intel/intel-ocf/buzzer0
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/buzzer0.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv
+    Processing instance Intel/intel-ocf/illuminance0
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance0.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv
+    Processing instance Intel/intel-ocf/illuminance2
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/illuminance2.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv
+    Processing instance Intel/intel-ocf/led0blue
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0blue.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv
+    Processing instance Intel/intel-ocf/led0green
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0green.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv
+    Processing instance Intel/intel-ocf/led0mosfet
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0mosfet.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv
+    Processing instance Intel/intel-ocf/led0red
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led0red.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv
+    Processing instance Intel/intel-ocf/led1mosfet
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1mosfet.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv
+    Processing instance Intel/intel-ocf/led1red
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1red.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv
+    Processing instance Intel/intel-ocf/led1relay
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led1relay.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv
+    Processing instance Intel/intel-ocf/led2mosfet
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2mosfet.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv
+    Processing instance Intel/intel-ocf/led2relay
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2relay.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv
+    Processing instance Intel/intel-ocf/led2side
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2side.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv
+    Processing instance Intel/intel-ocf/led2top
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/led2top.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv
+    Processing instance Intel/intel-ocf/motion0
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion0.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv
+    Processing instance Intel/intel-ocf/motion1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv
+    Processing instance Intel/intel-ocf/motion2
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/motion2.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv
+    Processing instance Intel/intel-ocf/rgbled1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/rgbled1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv
+    Processing instance Intel/intel-ocf/temperature0
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature0.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv
+    Processing instance Intel/intel-ocf/temperature1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv
+    Processing instance Intel/intel-ocf/temperature2
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/temperature2.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv
+    Processing instance Intel/intel-ocf/toggle0
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle0.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv
+    Processing instance Intel/intel-ocf/toggle1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv
+    Processing instance Intel/intel-ocf/toggle2
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf/toggle2.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button1touch.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/button2touch.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/buzzer0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/illuminance2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0blue.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0green.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0mosfet.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led0red.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1mosfet.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1red.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led1relay.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2mosfet.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2relay.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2side.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/led2top.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/motion2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/rgbled1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/temperature2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle0.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf/toggle2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf.csv.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf.csv.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-ocf.csv
+Processing organization Oracle
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle
+  Processing implementation Oracle/oracle-simulators
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators
+    Processing instance Oracle/oracle-simulators/Blue_Pump_Events
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv
+    Processing instance Oracle/oracle-simulators/Blue_Pump_Shared
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv
+    Processing instance Oracle/oracle-simulators/Connected_Car_Shared
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv
+    Processing instance Oracle/oracle-simulators/Festo_Shared
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv
+    Processing instance Oracle/oracle-simulators/HVAC_Shared
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv
+    Processing instance Oracle/oracle-simulators/KETI_IoT_Sensor
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv
+    Processing instance Oracle/oracle-simulators/Truck_Shared
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Events.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Blue_Pump_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Connected_Car_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Festo_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/HVAC_Shared.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/KETI_IoT_Sensor.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators/Truck_Shared.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Oracle/oracle-simulators.csv
+Processing organization Panasonic
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic
+  Processing implementation Panasonic/panasonic-server-real
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real
+    Processing instance Panasonic/panasonic-server-real/airConditioner_p1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/airConditioner_p1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv
+    Processing instance Panasonic/panasonic-server-real/cleaner_p1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/cleaner_p1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv
+    Processing instance Panasonic/panasonic-server-real/electricBulletinBoard_p1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv
+    Processing instance Panasonic/panasonic-server-real/electricBulletinBoard_p2
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv
+    Processing instance Panasonic/panasonic-server-real/electricBulletinBoard_p3
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv
+    Processing instance Panasonic/panasonic-server-real/electricBulletinBoards
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/electricBulletinBoards.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv
+    Processing instance Panasonic/panasonic-server-real/huegroup_p1
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real/huegroup_p1.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-real.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/airConditioner_p1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/cleaner_p1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p2.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoard_p3.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/electricBulletinBoards.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real/huegroup_p1.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real.csv.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real.csv.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-real.csv
+  Processing implementation Panasonic/panasonic-server-simulator
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator
+    Processing instance Panasonic/panasonic-server-simulator/PanaSimAirConditioner5
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv
+    Processing instance Panasonic/panasonic-server-simulator/PanaSimCleaner5
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv
+    Processing instance Panasonic/panasonic-server-simulator/PanaSimHueGroup5
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv
+    Processing instance Panasonic/panasonic-server-simulator/PanaSimRoomLight5
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.jsonld
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.jsonld
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.jsonld
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.jsonld  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Panasonic/panasonic-server-simulator.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimAirConditioner5.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimCleaner5.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimHueGroup5.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator/PanaSimRoomLight5.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator.csv.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator.csv.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Panasonic/panasonic-server-simulator.csv
+Processing organization Siemens
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens
+  Processing implementation Siemens/siemens-customEvent
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent
+    Processing instance Siemens/siemens-customEvent/eventTest-siemens
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-customEvent/eventTest-siemens.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent/eventTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-customEvent.csv
+  Processing implementation Siemens/siemens-node-wot
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot
+    Processing instance Siemens/siemens-node-wot/dataSchemaTest-siemens
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv
+    Processing instance Siemens/siemens-node-wot/fullInteractionsTest-siemens
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv
+    Processing instance Siemens/siemens-node-wot/minItems_maxItems_oneOf
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv
+    Processing instance Siemens/siemens-node-wot/propertiesTest-siemens
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/propertiesTest-siemens.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv
+    Processing instance Siemens/siemens-node-wot/readWriteAllProperties
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/readWriteAllProperties.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv
+    Processing instance Siemens/siemens-node-wot/responseTest-siemens
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/responseTest-siemens.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv
+    Processing instance Siemens/siemens-node-wot/securityTest-siemens
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/securityTest-siemens.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv
+    Processing instance Siemens/siemens-node-wot/uriVariablesTest-siemens
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Siemens/siemens-node-wot.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/dataSchemaTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/fullInteractionsTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/minItems_maxItems_oneOf.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/propertiesTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/readWriteAllProperties.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/responseTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/securityTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot/uriVariablesTest-siemens.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot.csv.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot.csv.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Siemens/siemens-node-wot.csv
+Processing organization SmartThings
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings
+  Processing implementation SmartThings/st-td-huelight
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-huelight.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-huelight.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-huelight.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-huelight.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-huelight.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-huelight.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-huelight.csv
+  Processing implementation SmartThings/st-td-tradfri-light
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-tradfri-light.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-tradfri-light.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-tradfri-light.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-tradfri-light.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-tradfri-light.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-tradfri-light.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-tradfri-light.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-td-tradfri-light.csv
+  Processing implementation SmartThings/st-impl-node-red
+    under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red
+    Processing instance SmartThings/st-impl-node-red/td-illuminance
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-illuminance.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv
+    Processing instance SmartThings/st-impl-node-red/td-motion-event
+      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.json  for validation
+VALIDATION ERROR!!! :  data should have required property 'title'
+test result is  false
+INVALID TD, SKIPPING TO NEXT TD
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-impl-node-red/td-motion-event.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-illuminance.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red/td-motion-event.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/SmartThings/st-impl-node-red.csv
