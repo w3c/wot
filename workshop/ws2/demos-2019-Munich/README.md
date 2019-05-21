@@ -73,9 +73,16 @@ An environment sensor is capable of identifying when a room is empty by measurin
 When the "room empty" condition is detected.
 the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds are closed and a surveillence camera is turned on.
 
-### Device interactions
+### Device interactions (Proposal)
 
-environment sensor - cloud service  
+Environment sensor (Simulation?)
+Detect when room is empty and trigger the following actions (Oracle)
+Close window blinds (Fujitsu)
+Clean the room (Panasonic)
+Turn on a MQTT device (Siemens)
+Turn off the lights (Smart Things)
+Turn on a surveillance camera (Intel)
+Control other devices (TU Munich)
 ...
 
 ## Industrial integration scenarios
@@ -89,9 +96,16 @@ connected devices take the appropriate action to protect and alert citizens,
 such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
 pubish alert messages and make voice announcements.
 
-### Device interactions
+### Device interactions (Proposal)
 
-environment sensor - cloud service  
+Environment sensor monitors air quality. 
+Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
+Drain the tank in a chemical factory (Siemens)
+Flash a warning light (Fujitsu)
+Turn off all air conditioners (Panasonic)
+Flash the lights (Smart Things)
+Make voice announcements (Intel)
+Control other devices (TU Munich)
 ...
 
 ## Energy management in a smart building/smart city/smart home
