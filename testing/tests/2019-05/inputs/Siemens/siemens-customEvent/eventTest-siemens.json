@@ -1,11 +1,11 @@
 {
-    "@context": ["http://www.w3.org/ns/td",
+    "@context": ["https://www.w3.org/2019/wot/td/v1",
         {"http": "http://www.w3.org/2011/http#"}],
         "id": "urn:dev:wot:org:eclipse:thingweb:event-example",
-        "name": "Siemens-EventTest",
+        "title": "Siemens-EventTest",
         "description": "Test event with the subscription and cancellation usage (T2T use case).",
-        "created": "Fr, 25 Jan 2019 12:45:26 GMT",
-        "lastModified": "2019-01-29T13:30:07.428Z",
+        "created": "2019-01-29T13:30:07.428Z",
+        "modified": "2019-01-29T13:30:07.428Z",
         "security": ["nosec_sc"],
         "events": {
             "temperatureValueForT2T" : {

@@ -1,7 +1,7 @@
 {
     "id": "urn:dev:wot:siemens:fullservient",
-    "created": "Mo, 28 Jan 2019 12:45:26 GMT",
-    "lastModified": "2019-01-28T18:47:55.282Z",
+    "created": "2019-01-28T18:47:55.282Z",
+    "modified": "2019-01-28T18:47:55.282Z",
     "links": [{
         "href": "http://./parentThing",
         "rel": "controlledBy",
@@ -13,10 +13,10 @@
     "descriptions": {"en": "Full example Thing with different kind of interactions"},
     "version": {"instance": "0.1"},
     "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}},
-    "name": "full",
+    "title": "full",
     "description": "Full example Thing with different kind of interactions",
     "@context": [
-        "http://www.w3.org/ns/td",
+        "https://www.w3.org/2019/wot/td/v1",
         {"iot": "http://example.org/iot"}
     ],
     "@type": "Thing",
@@ -188,6 +188,12 @@
             {
                 "href": "coap://192.168.0.124:5683/full/ev/onchange",
                 "contentType": "application/json",
+                "op": "subscribeevent"
+            },
+            {
+                "href": "coap://192.168.0.124:5683/full/ev/onchange",
+                "contentType": "application/octet-stream",
+                "contentCoding": "gzip",
                 "op": "subscribeevent"
             }
         ]

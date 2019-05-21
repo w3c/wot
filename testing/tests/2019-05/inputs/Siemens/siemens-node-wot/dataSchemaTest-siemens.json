@@ -1,8 +1,8 @@
 {
-    "name": "Siemens-DataSchema-Tester",
+    "title": "Siemens-DataSchema-Tester",
     "description": "Tests the variation of data schema.",
     "@context": [
-        "http://www.w3.org/ns/td",
+        "https://www.w3.org/2019/wot/td/v1",
         {"om": "http://www.wurvoc.org/vocabularies/om-1.8/"}
     ],
     "versioning": {"instance": "1.0.0"},
