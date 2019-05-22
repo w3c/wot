@@ -1,6 +1,6 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {
       "iot": "http://iotschema.org/",
       "htv": "http://www.w3.org/2011/http#",
@@ -8,7 +8,7 @@
     }
   ],
   "@type": "Thing",
-  "name": "PanaSimCleaner5",
+  "title": "PanaSimCleaner5",
   "id": "p-wot:PanaSimCleaner5",
   "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimCleaner5/",
   "securityDefinitions": {
@@ -19,9 +19,7 @@
       "authorization": "https://w3c.p-wot.com:8443/auth"
     }
   },
-  "security": [
-    "bearer_sc"
-  ],
+  "security": ["bearer_sc"],
   "properties": {
     "power": {
       "@type": "iot:SwitchToggle",
@@ -29,61 +27,49 @@
       "type": "boolean",
       "readOnly": true,
       "observable": false,
-      "forms": [
-        {
-          "href": "power",
-          "contentType": "application/json"
-        }
-      ]
+      "forms": [{
+        "href": "power",
+        "contentType": "application/json"
+      }]
     }
   },
   "actions": {
     "operationPower": {
       "title": "operationPower",
       "idempotent": true,
-      "forms": [
-        {
-          "href": "action/operationPower",
-          "contentType": "application/json"
-        }
-      ]
+      "forms": [{
+        "href": "action/operationPower",
+        "contentType": "application/json"
+      }]
     },
     "turnRight": {
       "title": "turnRight",
-      "forms": [
-        {
-          "href": "action/turnRight",
-          "contentType": "application/json"
-        }
-      ]
+      "forms": [{
+        "href": "action/turnRight",
+        "contentType": "application/json"
+      }]
     },
     "turnLeft": {
       "title": "turnLeft",
-      "forms": [
-        {
-          "href": "action/turnLeft",
-          "contentType": "application/json"
-        }
-      ]
+      "forms": [{
+        "href": "action/turnLeft",
+        "contentType": "application/json"
+      }]
     },
     "goStraight": {
       "title": "goStraight",
-      "forms": [
-        {
-          "href": "action/goStraight",
-          "contentType": "application/json"
-        }
-      ]
+      "forms": [{
+        "href": "action/goStraight",
+        "contentType": "application/json"
+      }]
     },
     "goHome": {
       "name": "goHome",
       "idempotent": true,
-      "forms": [
-        {
-          "href": "action/goHome",
-          "contentType": "application/json"
-        }
-      ]
+      "forms": [{
+        "href": "action/goHome",
+        "contentType": "application/json"
+      }]
     }
   }
 }

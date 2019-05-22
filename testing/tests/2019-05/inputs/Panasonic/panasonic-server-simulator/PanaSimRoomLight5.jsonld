@@ -1,6 +1,6 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {
       "iot": "http://iotschema.org/",
       "htv": "http://www.w3.org/2011/http#",
@@ -8,7 +8,7 @@
     }
   ],
   "@type": "Thing",
-  "name": "PanaSimRoomLight5",
+  "title": "PanaSimRoomLight5",
   "id": "p-wot:PanaSimRoomLight5",
   "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimRoomLight5/",
   "securityDefinitions": {
@@ -22,71 +22,61 @@
       "scheme": "nosec"
     }
   },
-  "security": [
-    "bearer_sc"
-  ],
+  "security": ["bearer_sc"],
   "properties": {
     "power": {
       "@type": "iot:SwitchToggle",
       "title": "power",
       "type": "boolean",
       "observable": true,
-      "forms": [
-        {
-          "href": "power",
-          "contentType": "application/json"
-        },
-        {
-          "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/power",
-          "contentType": "application/json",
-          "subprotocol": "longpoll",
-          "op": "observeproperty",
-          "security": [
-            "nosec_sc"
-          ]
-        },
-        {
-          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/power",
-          "contentType": "application/json",
-          "op": "observeproperty",
-          "security": [
-            "nosec_sc"
-          ]
-        }
-      ]
+      "forms": [{
+        "href": "power",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/api/enhancedLightingSystem/v1/devices/343a8136-97ee-43ed-950b-260cc3409e2f/properties/power",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/elapi/v1/devices/005040000005/properties/power",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/power",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/power",
+        "contentType": "application/json",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }]
     },
     "color": {
       "title": "color",
       "type": "string",
-      "enum": [
-        "red",
-        "blue",
-        "white"
-      ],
+      "enum": ["red", "blue", "white"],
       "observable": true,
-      "forms": [
-        {
-          "href": "color",
-          "contentType": "application/json"
-        },
-        {
-          "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/color",
-          "contentType": "application/json",
-          "subprotocol": "longpoll",
-          "op": "observeproperty",
-          "security": [
-            "nosec_sc"
-          ]
-        },
-        {
-          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/color",
-          "contentType": "application/json",
-          "op": "observeproperty",
-          "security": [
-            "nosec_sc"
-          ]
-        }
-      ]
+      "forms": [{
+        "href": "color",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/api/enhancedLightingSystem/v1/devices/343a8136-97ee-43ed-950b-260cc3409e2f/properties/color",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/elapi/v1/devices/005040000005/properties/color",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/color",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/color",
+        "contentType": "application/json",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }]
     },
     "luminance": {
       "@type": "iot:CurrentLevel",
@@ -94,12 +84,16 @@
       "type": "number",
       "readOnly": true,
       "observable": false,
-      "forms": [
-        {
-          "href": "luminance",
-          "contentType": "application/json"
-        }
-      ]
+      "forms": [{
+        "href": "luminance",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/api/enhancedLightingSystem/v1/devices/343a8136-97ee-43ed-950b-260cc3409e2f/properties/luminance",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/elapi/v1/devices/005040000005/properties/luminance",
+        "contentType": "application/json"
+      }]
     }
   },
   "events": {
@@ -113,28 +107,28 @@
           }
         }
       },
-      "forms": [
-        {
-          "href": "event/alert",
-          "contentType": "application/json",
-          "subprotocol": "X-Panasonic-LateBinding"
-        },
-        {
-          "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/alert",
-          "contentType": "application/json",
-          "subprotocol": "longpoll",
-          "security": [
-            "nosec_sc"
-          ]
-        },
-        {
-          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/alert",
-          "contentType": "application/json",
-          "security": [
-            "nosec_sc"
-          ]
-        }
-      ]
+      "forms": [{
+        "href": "event/alert",
+        "contentType": "application/json",
+        "subprotocol": "X-Panasonic-LateBinding"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/api/enhancedLightingSystem/v1/devices/343a8136-97ee-43ed-950b-260cc3409e2f/events/alert",
+        "contentType": "application/json",
+        "subprotocol": "X-Panasonic-LateBinding"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/elapi/v1/devices/005040000005/events/alert",
+        "contentType": "application/json",
+        "subprotocol": "X-Panasonic-LateBinding"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight5/alert",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight5/alert",
+        "contentType": "application/json",
+        "security": ["nosec_sc"]
+      }]
     },
     "detect": {
       "title": "detect",
@@ -143,31 +137,33 @@
       },
       "uriVariables": {
         "number": {
-          "type": "integer", "minimum": 5, "maximum": 5
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 5
         }
       },
-      "forms": [
-        {
-          "href": "event/detect",
-          "contentType": "application/json",
-          "subprotocol": "X-Panasonic-LateBinding"
-        },
-        {
-          "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight{number}/detect",
-          "contentType": "application/json",
-          "subprotocol": "longpoll",
-          "security": [
-            "nosec_sc"
-          ]
-        },
-        {
-          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight{number}/detect",
-          "contentType": "application/json",
-          "security": [
-            "nosec_sc"
-          ]
-        }
-      ]
+      "forms": [{
+        "href": "event/detect",
+        "contentType": "application/json",
+        "subprotocol": "X-Panasonic-LateBinding"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/api/enhancedLightingSystem/v1/devices/343a8136-97ee-43ed-950b-260cc3409e2f/events/detect",
+        "contentType": "application/json",
+        "subprotocol": "X-Panasonic-LateBinding"
+      }, {
+        "href": "https://w3c.p-wot.com:3009/elapi/v1/devices/005040000005/events/detect",
+        "contentType": "application/json",
+        "subprotocol": "X-Panasonic-LateBinding"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimRoomLight{number}/detect",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimRoomLight{number}/detect",
+        "contentType": "application/json",
+        "security": ["nosec_sc"]
+      }]
     }
   }
 }

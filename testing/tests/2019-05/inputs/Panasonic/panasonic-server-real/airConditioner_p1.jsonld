@@ -1,6 +1,6 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {
       "iot": "http://iotschema.org/",
       "htv": "http://www.w3.org/2011/http#",
@@ -8,8 +8,8 @@
     }
   ],
   "@type": "Thing",
-  "name": "PanasonicAirConditionerP1",
-  "names": {
+  "title": "PanasonicAirConditionerP1",
+  "titles": {
      "en": "PanasonicAirConditionerP1",
      "ja": "パナソニックエアコンP1"
   },
@@ -35,9 +35,9 @@
   "properties": {
     "operationStatus": {
       "@type": "iot:OperationStatus",
-      "title": "Operation status",
+      "title": "operationStatus",
       "titles": {
-         "en": "Operation status",
+         "en": "operationStatus",
          "ja": "動作状態"
       },
       "description": "Operation status of air conditioner",
@@ -66,9 +66,9 @@
     },
     "operationMode": {
       "@type": "iot:RunMode",
-      "title": "Operation mode",
+      "title": "operationMode",
       "titles": {
-         "en": "Operation mode",
+         "en": "operationMode",
          "ja": "運転モード"
       },
       "description": "Operation mode of air conditioner",
@@ -98,9 +98,9 @@
     },
     "desiredTemp": {
       "@type": "iot:TargetTemperature",
-      "title": "Desired temp",
+      "title": "desiredTemp",
       "titles": {
-         "en": "Desired temp",
+         "en": "desiredTemp",
          "ja": "温度設定"
       },
       "description": "Desired temperature of air conditioner",
@@ -132,9 +132,9 @@
     },
     "windVolumeLevel": {
       "@type": "iot:WindStrength",
-      "title": "Wind volume level",
+      "title": "windVolumeLevel",
       "titles": {
-         "en": "Wind volume level",
+         "en": "windVolumeLevel",
          "ja": "風量設定"
       },
       "description": "Wind volume level of air conditioner",
