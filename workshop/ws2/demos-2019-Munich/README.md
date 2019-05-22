@@ -48,17 +48,17 @@ They will be put up on flexible walls.
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
-| Fujitsu   | Local proxy (6a)                    |  Wifi / Lan; 1 power                                              | ...                |
-| Fujitsu   | Remote proxy (6b)                   |                                                                   | ...  |
-| Fujitsu   | Local devices (7a)                  |                                                                   | ...  |
-| Fujitsu   | Smart home devices in Japan (7b)                  |                                                                   | ...  |
-| Panasonic | Smart home lab in Osaka (8)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
-| Panasonic | Bulletin Board in local (9)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
-| Panasonic | Online simulator (10)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
-| Panasonic | Local simulator (11)                | Wifi / Lan; 1 power                                               | ...                |
-| EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (12)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
+| Fujitsu   | Local proxy (6)                    |  Wifi / Lan; 1 power                                              | ...                |
+| Fujitsu   | Remote proxy (7)                   |                                                                   | ...  |
+| Fujitsu   | Local devices (8)                  |                                                                   | ...  |
+| Fujitsu   | Smart home devices in Japan (9)                  |                                                                   | ...  |
+| Panasonic | Smart home lab in Osaka (10)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
+| Panasonic | Bulletin Board in local (11)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
+| Panasonic | Online simulator (12)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
+| Panasonic | Local simulator (13)                | Wifi / Lan; 1 power                                               | ...                |
+| EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
-| BMW | Connected Vehicle  demo  (13)                | tbd                                         | ...                
+| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
 
 ## Notes
 * Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>
@@ -72,15 +72,15 @@ The following notes relate to the numbers in the table above.
 3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
 4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
 5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
-6a. Local proxy can connect members' devices and expose them as virtual devices.
-6b. Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
-7a. Devices: a rotating light, a buzzer, and Sensors.
-7b. Smart home devices: a LED light, an air conditioner, a blind and a smart meter.
-8. Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
-9. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
-10. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
-11. Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
-12. Devices: EV charger controller, microgrid controller, northbound interface for others to connect
+6. Local proxy can connect members' devices and expose them as virtual devices.
+7. Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
+8. Devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, and particle sensors), [Agricuture sensors](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2 concentration), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json).
+9. Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blinds [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).
+10. Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
+11. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
+12. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
+13. Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
+14. Devices: EV charger controller, microgrid controller, northbound interface for others to connect
 
 
 
