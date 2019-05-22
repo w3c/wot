@@ -1,9 +1,9 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/"}
   ],
-  "name": "st-lamp-02",
+  "title": "st-lamp-02",
   "description": "IKEA Tradfri Light",
   "@type": ["Thing", "iot:Light", "iot:BinarySwitchCapability", "iot:LevelCapability"],
   "id": "urn:uuid:fb60aafa-2e8a-4c51-a104-8639af043569",
