@@ -94,14 +94,14 @@ the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds a
 
 ### Device interactions (Proposal)
 
-Environment sensor (Simulation?)
-Detect when room is empty and trigger the following actions (Oracle)
-Close window blinds (Fujitsu)
-Clean the room (Panasonic)
-Turn on a MQTT device (Siemens)
-Turn off the lights (Smart Things)
-Turn on a surveillance camera (Intel)
-Control other devices (TU Munich)
+* Environment sensor (Simulation?)
+* Detect when room is empty and trigger the following actions (Oracle)
+* Close window blinds (Fujitsu)
+* Clean the room (Panasonic)
+* Turn on a MQTT device (Siemens)
+* Turn off the lights (Smart Things)
+* Turn on a surveillance camera (Intel)
+* Control other devices (TU Munich)
 ...
 
 ## Industrial integration scenarios
@@ -117,14 +117,14 @@ pubish alert messages and make voice announcements.
 
 ### Device interactions (Proposal)
 
-Environment sensor monitors air quality. 
-Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
-Drain the tank in a chemical factory (Siemens)
-Flash a warning light (Fujitsu)
-Turn off all air conditioners (Panasonic)
-Flash the lights (Smart Things)
-Make voice announcements (Intel)
-Control other devices (TU Munich)
+* Environment sensor monitors air quality. 
+* Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
+* Drain the tank in a chemical factory (Siemens)
+* Flash a warning light (Fujitsu)
+* Turn off all air conditioners (Panasonic)
+* Flash the lights (Smart Things)
+* Make voice announcements (Intel)
+* Control other devices (TU Munich)
 ...
 
 ## Energy management in a smart building/smart city/smart home
@@ -171,6 +171,19 @@ an alert is raised (both a network event and some immediate indication
 is given, such as a flashing light).
 The person identification service is used to avoid false positives due to other
 motion in the view of the camera.
+
+## Charging demo 
+EcoG + Siemens + Panasonic
+
+### Description: 
+Charging of a vehicle dependent on the energy consumption.
+
+## Private smart home demo
+Mozilla
+
+### Description:
+
+
 
 ## Additional Scenarios: 
 
