@@ -1,6 +1,6 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+   "https://www.w3.org/2019/wot/td/v1",
    {"iot": "http://iotschema.org/",
      "http": "http://www.w3.org/2011/http#"}
   ],
@@ -11,7 +11,7 @@
   "base": "http://159.203.213.90:1880",
   "id": "urn:uuid:c3068abb-7781-4ab4-9c0b-012408e9e758",
   "@type": [ "Thing", "iot:MotionControl" ],
-  "name": "Motion Sensor",
+  "title": "Motion Sensor",
   "properties": {
     "MotionState": {
       "observable": false,
