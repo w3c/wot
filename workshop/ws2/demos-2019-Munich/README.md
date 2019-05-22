@@ -238,8 +238,8 @@ Please place all tools into the [tools](tools) directory.
    - \<t.b.d.\>
 
 # Documentation
+For information about previous test fests see: https://github.com/w3c/wot/tree/master/testfest/2018-12-online 
 
-*
 # Room setup and logistics:
 
 1 Table per scenario (?),  , ... are possible
