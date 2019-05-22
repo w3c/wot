@@ -59,6 +59,7 @@ They will be put up on flexible walls.
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
 | BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
+| Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN ext ports 443, 8443 need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 
 ## Notes
 * Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>
@@ -187,8 +188,11 @@ Charging of a vehicle dependent on the energy consumption.
 Mozilla
 
 ### Description:
-
-
+[Mozilla WebThings Gateway](https://iot.mozilla.org/gateway) will run on the local WoT Wi-Fi network. 
+Example commercial smart home devices will be adapted into a single web UI (by the gateway) that can be 
+accessed and interacted with over the network via OAuth.
+Example Maker boards programmed as [web things](https://iot.mozilla.org/framework) that match Mozilla's WebThings API will
+also operate on the local Wi-Fi network, and be managed by the gateway.
 
 ## Additional Scenarios: 
 
@@ -198,7 +202,6 @@ Ex: Asset management
 ### Transportation scenarios
 Ex: Fleet management
 Ex: Shipping and inventory control (supply chain management)
-
 
 # Logistics
 
