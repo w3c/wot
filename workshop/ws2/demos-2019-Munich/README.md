@@ -3,7 +3,7 @@
 
 # Locations:
 
-## Friday: Siemens (9am - 6pm)
+## Friday: Siemens (8am - 2pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 Point of contact: Sebastian is available via mobile phone
@@ -14,7 +14,7 @@ https://www.w3.org/WoT/IG/wiki/F2F_meeting,_6-7_June_2019,_Munich,_Germany#Venue
 Point of contact: Ege.Korkan@tum.de
 Phone# is available at Wiki. 
 
-## Monday: Siemens
+## Monday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 ## Tuesday-Wednesday: Siemens
@@ -32,8 +32,8 @@ They will be put up on flexible walls.
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|Fri|Sat|Sun|Mon|Tues|Wed|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|---|---|---|---|----|---|
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | ? | + | + | + |
-| Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. |
-| Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. |
+| Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
+| Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | TU Munich | MeArm Robotic Arms                  | Wifi / Lan                                                               | Mechanically not reliable                | 
 | TU Munich | Texas Instruments Bluetooth Sensors | Wifi / Lan                                                               | Bridged via HTTP and CoAP                | 
 | TU Munich | Philips HUE Lights and Buttons | Wifi / Lan                                                               | ... |
