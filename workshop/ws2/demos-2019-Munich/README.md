@@ -190,9 +190,9 @@ Mozilla
 ### Description:
 [Mozilla WebThings Gateway](https://iot.mozilla.org/gateway) will run on the local WoT Wi-Fi network. 
 Example commercial smart home devices will be adapted into a single web UI (by the gateway) that can be 
-accessed and interacted with over the network via OAuth.
-Example Maker boards programmed as [web things](https://iot.mozilla.org/framework) that match Mozilla's WebThings API will
-also operate on the local Wi-Fi network, and be managed by the gateway.
+accessed and interacted with via a browser or over the network via OAuth.
+Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) that match 
+Mozilla's WebThings API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
 ## Additional Scenarios: 
 
