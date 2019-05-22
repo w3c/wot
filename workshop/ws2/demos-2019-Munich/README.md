@@ -20,7 +20,12 @@ https://www.w3.org/WoT/ws-2019/cfp.html#location
 ## Tuesday-Wednesday: Siemens
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
+## Posters
 
+A template example is available at: https://github.com/w3c/wot/blob/master/workshop/ws2/demos-2019-Munich/Poster/Session_3_Demo_Template.pptx 
+
+The print out format will be DIN A0. (841×1189mm)
+They will be put up on flexible walls.
 
 # Participating companies
 
