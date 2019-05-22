@@ -59,7 +59,7 @@ They will be put up on flexible walls.
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
 | BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
-| Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN ext ports 443, 8443 need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
+| Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 
 ## Notes
 * Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>
