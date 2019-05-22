@@ -47,7 +47,7 @@ They will be put up on flexible walls.
 | Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
-| Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
+| Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |kunihiko.toumura.yv@hitachi.com| - | + | + | + | + | + |
 | Fujitsu   | Local proxy (6a)                    |  Wifi / Lan; 1 power                                              | ...                |
 | Fujitsu   | Remote proxy (6b)                   |                                                                   | ...  |
 | Fujitsu   | Local devices (7a)                  |                                                                   | ...  |
