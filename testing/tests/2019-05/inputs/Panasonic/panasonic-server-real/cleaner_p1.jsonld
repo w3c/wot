@@ -1,6 +1,6 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {
       "iot": "http://iotschema.org/",
       "htv": "http://www.w3.org/2011/http#",
@@ -8,8 +8,8 @@
     }
   ],
   "@type": "Thing",
-  "name": "PanasonicCleanerP1",
-  "names": {
+  "title": "PanasonicCleanerP1",
+  "titles": {
      "en": "PanasonicCleanerP1",
      "ja": "パナソニック掃除機P1"
   },
@@ -25,7 +25,11 @@
       "scheme": "bearer",
       "authorization": "https://w3c.p-wot.com:8443/auth",
       "name": "Authorization",
-      "description": "Bearer token authentication"
+      "description": "Bearer token authentication",
+      "descriptions": {
+        "en": "Bearer token authentication",
+        "ja": "ベアラートークン認証"
+      }
     },
     "nosec_sc": {
       "scheme": "nosec"
@@ -35,9 +39,9 @@
   "actions": {
     "operationPower": {
       "@type": "iot:TurnOn",
-      "title": "Operation power",
+      "title": "operationPower",
       "titles": {
-        "en": "Operation power",
+        "en": "operationPower",
         "ja": "電源ON"
       },
       "description": "Turn the cleaner on",
@@ -52,9 +56,9 @@
       }]
     },
     "turnRight": {
-      "title": "Turn right",
+      "title": "turnRight",
       "titles": {
-        "en": "Turn right",
+        "en": "turnRight",
         "ja": "右旋回"
       },
       "description": "Turn the cleaner right",
@@ -69,9 +73,9 @@
       }]
     },
     "turnLeft": {
-      "title": "Turn left",
+      "title": "turnLeft",
       "titles": {
-        "en": "Turn left",
+        "en": "turnLeft",
         "ja": "左旋回"
       },
       "description": "Turn the cleaner left",
@@ -86,9 +90,9 @@
       }]
     },
     "goStraight": {
-      "title": "Go straight",
+      "title": "goStraight",
       "titles": {
-        "en": "Go straight",
+        "en": "goStraight",
         "ja": "直進"
       },
       "description": "Make the cleaner go straight",
@@ -103,9 +107,9 @@
       }]
     },
     "goHome": {
-      "title": "Go home",
+      "title": "goHome",
       "titles": {
-        "en": "Go home",
+        "en": "goHome",
         "ja": "ホーム移動"
       },
       "description": "Make the cleaner go home",
@@ -121,9 +125,9 @@
       }]
     },
     "specifyArea": {
-      "title": "Specify area",
+      "title": "specifyArea",
       "titles": {
-        "en": "Specify area",
+        "en": "specifyArea",
         "ja": "エリア指定"
       },
       "description": "Specify the area to be cleaned",
