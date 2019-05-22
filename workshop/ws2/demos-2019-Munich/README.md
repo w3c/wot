@@ -5,9 +5,9 @@
 
 # Participating companies
 
-| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |
-|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------|
-| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. |
+| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|Fri|Sat|Sun|Mon|Tues|Wed|
+|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|---|---|---|---|----|---|
+| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | ? | + | + | + |
 | Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. |
 | Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. |
 | TU Munich | MeArm Robotic Arms                  | Wifi / Lan                                                               | Mechanically not reliable                | 
