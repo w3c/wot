@@ -1,6 +1,25 @@
 # WoT Workshop, June 3-5th, Siemens Munich
 ## W3C Web of Things Interoperability Demos
 
+# Locations:
+
+## Friday: Siemens (9am - 6pm)
+https://www.w3.org/WoT/ws-2019/cfp.html#location
+
+Point of contact: Sebastian is available via mobile phone
+
+##  Sat-Sunday: TU Munich (9am - 11pm)
+https://www.w3.org/WoT/IG/wiki/F2F_meeting,_6-7_June_2019,_Munich,_Germany#Venue
+
+Point of contact: Ege.Korkan@tum.de
+Phone# is available at Wiki. 
+
+## Monday: Siemens
+https://www.w3.org/WoT/ws-2019/cfp.html#location
+
+## Tuesday-Wednesday: Siemens
+https://www.w3.org/WoT/ws-2019/cfp.html#location
+
 
 
 # Participating companies
