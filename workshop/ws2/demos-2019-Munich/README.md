@@ -186,6 +186,10 @@ Ex: Shipping and inventory control (supply chain management)
 
 * A dry-run in an online-plugfest is planned for Tuesday 28th, 1pm CEST-4pm, 8pm JST-11pm JST with Webex / Google Hangouts etc.
 
+## Wifi access:
+Siemens provides a router for the entire event, i.e. from Friday, May 31 to Wednesday, June 5th.
+tbd: Sebastian: add credentials and SSID here
+
 ### TDs:
 Please place all TDs into the [TDs](TDs) directory.
 TDs should implement the CR spec version.
