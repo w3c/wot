@@ -1,23 +1,11 @@
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Events.jsonld  for validation
-VALIDATION ERROR!!! :  data should have required property 'title'
---
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Blue_Pump_Shared.jsonld  for validation
-VALIDATION ERROR!!! :  data should have required property 'title'
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Panasonic.jsonld  for validation
+VALIDATION ERROR!!! :  data.actions['firmwareUpdate'].input.properties['value'].type should be equal to one of the allowed values
 --
 Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Connected_Car_Shared.jsonld  for validation
-VALIDATION ERROR!!! :  data should have required property 'title'
---
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Festo_Shared.jsonld  for validation
-VALIDATION ERROR!!! :  data should have required property 'title'
+VALIDATION ERROR!!! :  data.actions['firmwareUpdate'].input.properties['value'].type should be equal to one of the allowed values
 --
 Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/HVAC_Shared.jsonld  for validation
-VALIDATION ERROR!!! :  data should have required property 'title'
---
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/KETI_IoT_Sensor.jsonld  for validation
-VALIDATION ERROR!!! :  data should have required property 'title'
---
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Oracle/oracle-simulators/Truck_Shared.jsonld  for validation
-VALIDATION ERROR!!! :  data should have required property 'title'
+VALIDATION ERROR!!! :  data.properties['time'].properties['time'].type should be equal to one of the allowed values
 --
 Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/SmartThings/st-td-huelight.json  for validation
 VALIDATION ERROR!!! :  data should have required property 'title'
