@@ -1,33 +1,64 @@
 "ID","Status","Comment"
+"bindings-requirements-scheme","not-impl","server test"
+"bindings-server-accept","not-impl","server test"
 "client-data-schema","pass",
 "client-data-schema-accept-extras","pass",
 "client-data-schema-no-extras","pass",
-"client-uri-template","not-impl","URI template is not supported."
-"rdf-transformation","not-impl","this is a server test"
-"server-data-schema","not-impl","this is a server test"
-"server-data-schema-extras","not-impl","this is a server test"
-"server-uri-template","not-impl","this is a server test"
-"td-content-type-default","pass",
-"td-form-protocolbindings","not-impl","this is a server test"
-"td-media-type","not-impl","this is a server test"
-"td-idempotent-safe-default","not-impl",
-"td-readOnly-observable-writeOnly-default","pass",
-"td-security-binding","not-impl","this is a server test"
-"td-security-no-extras","not-impl","this is a server test"
-"td-default-readOnly","pass",
-"td-default-writeOnly","pass",
-"td-default-observable","pass",
+"client-uri-template","not-impl","uri template is not supported"
+"iana-security-alter","not-impl","remote context is not supported"
+"iana-security-execution","pass",
+"iana-security-expansion","not-impl","skepticism is not supported"
+"iana-security-remote","not-impl","remote context is not supported"
+"server-data-schema","not-impl","server test"
+"server-data-schema-extras","not-impl","server test"
+"server-uri-template","not-impl","server test"
+"td-array-type","null","Test will be added later"
+"td-boolean-type","null","Test will be added later"
+"td-class-type","null","Test will be added later"
+"td-context-default-language-direction-heuristic","not-impl","inference is not supported"
+"td-context-default-language-direction-independence","pass",
+"td-context-default-language-direction-inference","not-impl","inference is not supported"
+"td-context-default-language-direction-script","not-impl","inference is not supported"
+"td-context-ns-multilanguage-text-direction-infer","not-impl","inference is not supported"
+"td-default-alg","pass",
+"td-default-alg-pop","not-impl","not supported"
 "td-default-contentType","pass",
-"td-default-safe","not-impl",
-"td-default-idempotent","not-impl",
-"td-default-in--BasicSecurityScheme","not-impl",
-"td-default-in--DigestSecurityScheme","not-impl",
-"td-default-in--BearerSecurityScheme","pass",
-"td-default-in--PoPSecurityScheme","not-impl",
-"td-default-in--APIKeySecurityScheme","not-impl",
-"td-default-qop--DigestSecurityScheme","not-impl",
-"td-default-alg--PoPSecurityScheme","not-impl",
-"td-default-alg--BearerSecurityScheme","pass",
-"td-default-format--BearerSecurityScheme","pass",
-"td-default-format--PoPSecurityScheme","not-impl",
-"td-default-flow--OAuth2SecurityScheme","not-impl",
+"td-default-flow","not-impl","not supported"
+"td-default-format","pass",
+"td-default-format-pop","not-impl","not supported"
+"td-default-idempotent","not-impl","not supported"
+"td-default-in-apikey","not-impl","not supported"
+"td-default-in-basic","not-impl","not supported"
+"td-default-in-bearer","pass",
+"td-default-in-digest","not-impl","not supported"
+"td-default-in-pop","not-impl","not supported"
+"td-default-op-actions","not-impl","not supported"
+"td-default-op-events","not-impl","not supported"
+"td-default-op-properties","not-impl","not supported"
+"td-default-qop","not-impl","not supported"
+"td-default-readOnly","pass",
+"td-default-safe","not-impl","not supported"
+"td-default-writeOnly","pass",
+"td-expectedResponse-contentType","not-impl","server test"
+"td-expectedResponse-default-contentType","pass",
+"td-form-protocolbindings","not-impl","server test"
+"td-format-validation-other-values","pass",
+"td-json-open_accept-byte-order","not-impl","server test"
+"td-json-open_no-byte-order","not-impl","server test"
+"td-map-type","null","Test will be added later"
+"td-multi-languages-consistent","null","Test will be added later"
+"td-multilanguage-language-tag","null","Test will be added later"
+"td-ns-multilanguage-content-negotiation","not-impl","server test"
+"td-ns-multilanguage-content-negotiation-no-multi","not-impl","server test"
+"td-ns-multilanguage-content-negotiation-optional","not-impl","server test"
+"td-processor-serialization","not-impl","server test"
+"td-security-bearer-format-extensions","not-impl","server test"
+"td-security-binding","not-impl","server test"
+"td-security-no-extras","not-impl","server test"
+"td-security-oauth2-code-flow","not-impl","server test"
+"td-security-oauth2-implicit-flow","not-impl","server test"
+"td-security-oauth2-password-client-flow","not-impl","server test"
+"td-security-schemes","not-impl","server test"
+"td-titles-descriptions","null","Test will be added later"
+"td-vocabulary-defaults","not-impl","server test"
+"well-known-operation-types-only","not-impl","server test"
