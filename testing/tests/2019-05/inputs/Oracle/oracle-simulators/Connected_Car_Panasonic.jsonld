@@ -560,7 +560,8 @@
 				"type": "object",
 				"properties": {
 					"value": {
-						"type": "uri"
+						"type": "string",
+						"format": "uri"
 					}
 				}
 			},
