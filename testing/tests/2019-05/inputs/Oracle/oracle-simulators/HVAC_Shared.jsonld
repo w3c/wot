@@ -106,7 +106,8 @@
 			"label": "time",
 			"properties": {
 				"time": {
-					"type": "datetime",
+					"type": "string",
+					"format": "date-time",
 					"writable": false
 				}
 			},
