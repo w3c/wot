@@ -25,7 +25,7 @@ https://www.w3.org/WoT/ws-2019/cfp.html#location
 A template example is available at: https://github.com/w3c/wot/blob/master/workshop/ws2/demos-2019-Munich/Poster/Session_3_Demo_Template.pptx 
 
 The print out format will be DIN A0. (841×1189mm)
-They will be put up on flexible walls.
+Posters will be put up on flexible walls.
 
 # Participating companies
 
@@ -238,7 +238,7 @@ Please place all tools into the [tools](tools) directory.
 
 ### Google Hangout:
    - Used to video stream remote devices such as Festo Live or Panasonic Lab
-   - \<t.b.d.\>
+   - https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE
 
 # Documentation
 For information about previous test fests see: https://github.com/w3c/wot/tree/master/testfest/2018-12-online 
@@ -247,7 +247,3 @@ For information about previous test fests see: https://github.com/w3c/wot/tree/m
 
 1 Table per scenario (?),  , ... are possible
 
-Siemens offers to print posters, if they are provided by the online-plugfest (May 28th).
-Sebastian will provide a template, format + size will be communicated later. 
-
-Siemens facilities are accessible from <tbd. - Sebastian checks>
