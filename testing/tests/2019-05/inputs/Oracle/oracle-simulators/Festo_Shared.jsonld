@@ -6,7 +6,7 @@
 	"title": "Festo",
 	"description": "Common Device Model for Festo live plant and simulator",
 	"id": "urn:com:siemens:wot:festo",
-	"base": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto",
+	"base": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto",
         "securityDefinitions": {
             "basic_sc": {
                         "scheme": "basic"
@@ -31,7 +31,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/PumpStatus",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/PumpStatus",
 					"mediaType": "application/json"
 				}
 			]
@@ -49,7 +49,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank101MaximumLevelStatus",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank101MaximumLevelStatus",
 					"mediaType": "application/json"
 				}
 			]
@@ -67,7 +67,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank101MinimumLevelStatus",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank101MinimumLevelStatus",
 					"mediaType": "application/json"
 				}
 			]
@@ -85,7 +85,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank101OverflowStatus",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank101OverflowStatus",
 					"mediaType": "application/json"
 				}
 			]
@@ -103,7 +103,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank102LevelValue",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank102LevelValue",
 					"mediaType": "application/json"
 				}
 			]
@@ -121,7 +121,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank102OverflowStatus",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/Tank102OverflowStatus",
 					"mediaType": "application/json"
 				}
 			]
@@ -139,7 +139,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/ValveStatus",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/attributes/ValveStatus",
 					"mediaType": "application/json"
 				}
 			]
@@ -152,7 +152,7 @@
 			"label": "OpenValve",
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/OpenValve",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/OpenValve",
 					"mediaType": "application/json"
 				}
 			]
@@ -162,7 +162,7 @@
 			"label": "CloseValve",
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/CloseValve",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/CloseValve",
 					"mediaType": "application/json"
 				}
 			]
@@ -172,7 +172,7 @@
 			"label": "StartPump",
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/StartPump",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/StartPump",
 					"mediaType": "application/json"
 				}
 			]
@@ -182,7 +182,7 @@
 			"label": "StopPump",
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/StopPump",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/BDF07819-9E73-451B-B58C-FB830E99CD24/deviceModels/urn%3Acom%3Asiemens%3Awot%3Afesto/actions/StopPump",
 					"mediaType": "application/json"
 				}
 			]

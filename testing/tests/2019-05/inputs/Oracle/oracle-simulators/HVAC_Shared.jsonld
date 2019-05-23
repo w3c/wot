@@ -6,7 +6,7 @@
 	"title": "HVAC device model",
 	"description": "HVAC device model",
 	"id": "urn:com:oracle:iot:device:hvac",
-	"base": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac",
+	"base": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac",
         "securityDefinitions": {
             "basic_sc": {
                         "scheme": "basic"
@@ -32,7 +32,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/motorAmperage",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/motorAmperage",
 					"mediaType": "application/json"
 				}
 			]
@@ -51,7 +51,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/oilViscosity",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/oilViscosity",
 					"mediaType": "application/json"
 				}
 			]
@@ -70,7 +70,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/outputTemp",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/outputTemp",
 					"mediaType": "application/json"
 				}
 			]
@@ -93,7 +93,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/targetTemp",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/targetTemp",
 					"mediaType": "application/json"
 				}
 			]
@@ -113,7 +113,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/time",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/time",
 					"mediaType": "application/json"
 				}
 			]
@@ -132,7 +132,7 @@
 			},
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/vibration",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/attributes/vibration",
 					"mediaType": "application/json"
 				}
 			]
@@ -153,7 +153,7 @@
 			"label": "power",
 			"forms": [
 				{
-					"href": "https://129.150.200.242/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/actions/power",
+					"href": "https://w3c-wot/iot/api/v2/apps/0-AB/devices/6B47619E-C4B8-4702-8EFE-DB4F89A7DE75/deviceModels/urn%3Acom%3Aoracle%3Aiot%3Adevice%3Ahvac/actions/power",
 					"mediaType": "application/json"
 				}
 			]
