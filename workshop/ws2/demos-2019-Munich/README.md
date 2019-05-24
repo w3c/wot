@@ -77,10 +77,10 @@ The following notes relate to the numbers in the table above.
 7. Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
 8. Devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, and particle sensors), [Agricuture sensors](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2 concentration), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json).
 9. Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blinds [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).
-10. -
-11. -
-12. -
-13. -
+10. (removed)
+11. (removed)
+12. (removed)
+13. (removed)
 14. Devices: EV charger controller, microgrid controller, northbound interface for others to connect
 
 
