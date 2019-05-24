@@ -41,24 +41,24 @@ Posters will be put up on flexible walls.
 | TU Munich | Sense HAT (LED Matrix and sensors) | Wifi / Lan                                                               | ... |
 | TU Munich | Cameras | Wifi / Lan                                                               | Can only take pictures |
 | TU Munich | ESP 32 Light Sensors | Wifi / Lan                                                               | Representing more constrained devices |
-| Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |
-| Intel     | Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |
-| Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |
-| Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |
-| Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
-| Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
+| Intel     | OCF Bridge ([1](#Notes-Intel-Services),[4](#Notes-Intel-Ports))                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |
+| Intel     | Person Recognition ([1](#Notes-Intel-Services),[2](#Notes-Intel-OpenVino),[4](#Notes-Intel-Ports))          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |
+| Intel     | OCF Smart Home Devices ([3](#Notes-Intel-Devices))          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |
+| Intel     | Web Camera ([4](#Notes-Intel-Ports))                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |
+| Intel     | Voice Output (Web Speak) ([4](#Notes-Intel-Ports))        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
+| Intel     | Solar Power System ([5](#Notes-Intel-Solar))              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
-| Fujitsu   | Local proxy (6)                    |  Wifi / Lan; 1 power                                              | ...                |
-| Fujitsu   | Remote proxy (7)                   |                                                                   | ...  |
-| Fujitsu   | Local devices (8)                  |                                                                   | ...  |
-| Fujitsu   | Smart home devices in Japan (9)                  |                                                                   | ...  |
-| Panasonic | Smart home lab in Osaka (10)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
-| Panasonic | Bulletin Board in local (11)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
-| Panasonic | Online simulator (12)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
-| Panasonic | Local simulator (13)                | Wifi / Lan; 1 power                                               | ...                |
-| EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
+| Fujitsu   | Local proxy ([6](#Notes-Fujitsu-Local-proxy))                    |  Wifi / Lan; 1 power                                              | ...                |
+| Fujitsu   | Remote proxy ([7](#Notes-Fujitsu-Remote-proxy))                   |                                                                   | ...  |
+| Fujitsu   | Local devices ([8](#Notes-Fujitsu-Local-devices))                  |                                                                   | ...  |
+| Fujitsu   | Smart home devices in Japan ([9](#Notes-Fujitsu-Smart-home))                  |                                                                   | ...  |
+| Panasonic | Smart home lab in Osaka ([10](#Notes-Panasonic-Smart-home))         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Bulletin Board in local ([11](#Notes-Panasonic-Board-local))         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Online simulator ([12](#Notes-Panasonic-Online-simulator))                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Local simulator ([13](#Notes-Panasonic-Local-simulator))                | Wifi / Lan; 1 power                                               | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  ([14](#Notes-EcoG-Siemens))                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
-| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
+| BMW | Connected Vehicle  demo  ([15](#Notes-BMW))                | tbd                                         | ...                
 | Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 
 ## Notes
@@ -68,20 +68,21 @@ Posters will be put up on flexible walls.
 
 The following notes relate to the numbers in the table above.
 
-1. Services running on a single gateway
-2. WIP. OpenVino service that can track multiple people, give bounding box.  Needs JPEG input image. 
-3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
-4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
-5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
-6. Local proxy can connect members' devices and expose them as virtual devices.
-7. Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
-8. Devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, and particle sensors), [Agricuture sensors](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2 concentration), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json).
-9. Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blinds [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).
-10. Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
-11. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
-12. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
-13. Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
-14. Devices: EV charger controller, microgrid controller, northbound interface for others to connect
+1. <a name="Notes-Intel-Services"></a>Services running on a single gateway
+2. <a name="Notes-Intel-OpenVino"></a>WIP. OpenVino service that can track multiple people, give bounding box.  Needs JPEG input image.
+3. <a name="Notes-Intel-Devices"></a>Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
+4. <a name="Notes-Intel-Ports"></a>Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
+5. <a name="Notes-Intel-Solar"></a>WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
+6. <a name="Notes-Fujitsu-Local-proxy"></a>Local proxy can connect members' devices and expose them as virtual devices.
+7. <a name="Notes-Fujitsu-Remote-proxy"></a>Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
+8. <a name="Notes-Fujitsu-Local-devices"></a>Devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, and particle sensors), [Agricuture sensors](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2 concentration), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json).
+9. <a name="Notes-Fujitsu-Smart-home"></a>Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blinds [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).
+10. <a name="Notes-Panasonic-Smart-home"></a>Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
+11. <a name="Notes-Panasonic-Board-local"></a>Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
+12. <a name="Notes-Panasonic-Online-simulator"></a>Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
+13. <a name="Notes-Panasonic-Local-simulator"></a>Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
+14. <a name="Notes-EcoG-Siemens"></a>Devices: EV charger controller, microgrid controller, northbound interface for others to connect
+15. <a name="Notes-BMW"></a>tbd
 
 
 
