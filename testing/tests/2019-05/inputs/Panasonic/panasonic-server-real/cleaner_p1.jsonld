@@ -1,0 +1,151 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "iot": "http://iotschema.org/",
+      "htv": "http://www.w3.org/2011/http#",
+      "om": "http://www.wurvoc.org/vocabularies/om-1.8/"
+    }
+  ],
+  "@type": "Thing",
+  "title": "PanasonicCleanerP1",
+  "titles": {
+     "en": "PanasonicCleanerP1",
+     "ja": "パナソニック掃除機P1"
+  },
+  "description": "Panasonic's cleaner",
+  "descriptions": {
+    "en": "Panasonic's cleaner",
+    "ja": "パナソニックの掃除機"
+  },
+  "id": "urn:uuid:4a94e5ab-1f58-4ef5-b770-6dcb48e5595c",
+  "base": "https://w3c.p-wot.com/wot-ver2/things/cleaner/1/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "authorization": "https://w3c.p-wot.com:8443/auth",
+      "name": "Authorization",
+      "description": "Bearer token authentication",
+      "descriptions": {
+        "en": "Bearer token authentication",
+        "ja": "ベアラートークン認証"
+      }
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["bearer_sc"],
+  "actions": {
+    "operationPower": {
+      "@type": "iot:TurnOn",
+      "title": "operationPower",
+      "titles": {
+        "en": "operationPower",
+        "ja": "電源ON"
+      },
+      "description": "Turn the cleaner on",
+      "descriptions": {
+        "en": "Turn the cleaner on",
+        "ja": "掃除機の電源を入れます"
+      },
+      "forms": [{
+        "href": "operationPower",
+        "contentType": "application/json",
+        "htv:methodName": "POST"
+      }]
+    },
+    "turnRight": {
+      "title": "turnRight",
+      "titles": {
+        "en": "turnRight",
+        "ja": "右旋回"
+      },
+      "description": "Turn the cleaner right",
+      "descriptions": {
+        "en": "Turn the cleaner right",
+        "ja": "掃除機を右旋回させます"
+      },
+      "forms": [{
+        "href": "turnRight",
+        "contentType": "application/json",
+        "htv:methodName": "POST"
+      }]
+    },
+    "turnLeft": {
+      "title": "turnLeft",
+      "titles": {
+        "en": "turnLeft",
+        "ja": "左旋回"
+      },
+      "description": "Turn the cleaner left",
+      "descriptions": {
+        "en": "Turn the cleaner left",
+        "ja": "掃除機を左旋回させます"
+      },
+      "forms": [{
+        "href": "turnLeft",
+        "contentType": "application/json",
+        "htv:methodName": "POST"
+      }]
+    },
+    "goStraight": {
+      "title": "goStraight",
+      "titles": {
+        "en": "goStraight",
+        "ja": "直進"
+      },
+      "description": "Make the cleaner go straight",
+      "descriptions": {
+        "en": "Make the cleaner go straight",
+        "ja": "掃除機を直進させます"
+      },
+      "forms": [{
+        "href": "goStraight",
+        "contentType": "application/json",
+        "htv:methodName": "POST"
+      }]
+    },
+    "goHome": {
+      "title": "goHome",
+      "titles": {
+        "en": "goHome",
+        "ja": "ホーム移動"
+      },
+      "description": "Make the cleaner go home",
+      "descriptions": {
+        "en": "Make the cleaner go home",
+        "ja": "掃除機をホームに移動させます"
+      },
+      "idempotent": true,
+      "forms": [{
+        "href": "goHome",
+        "contentType": "application/json",
+        "htv:methodName": "POST"
+      }]
+    },
+    "specifyArea": {
+      "title": "specifyArea",
+      "titles": {
+        "en": "specifyArea",
+        "ja": "エリア指定"
+      },
+      "description": "Specify the area to be cleaned",
+      "descriptions": {
+        "en": "Specify the area to be cleaned ",
+        "ja": "掃除するエリアを指定します"
+      },
+      "idempotent": true,
+      "input": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 3
+      },
+      "forms": [{
+        "href": "specifyArea",
+        "contentType": "application/json",
+        "htv:methodName": "POST"
+      }]
+    }
+  }
+}

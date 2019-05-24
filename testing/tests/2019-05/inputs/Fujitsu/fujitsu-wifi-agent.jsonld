@@ -1,0 +1,129 @@
+{
+	"@type": "Thing",
+	"name": "Fujitsu-WiFiAgent240AC40783A0",
+	"id": "urn:dev:wot:com:fujitsu:wifiagent",
+	"@context": [
+		"http://www.w3.org/ns/td"
+	],
+        "securityDefinitions": {"nosec_sc": {
+            "scheme": "nosec"
+        }},
+        "security": ["nosec_sc"],
+	"properties": {
+		"Temperature": {
+			"@type": "iot:Temperature",
+			"observable": false,
+			"type": "object",
+			"properties": {
+				"temperature": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"contentType": "application/json",
+					"href": "http://wot.f-ncs.ad.jp/Things/urn%3Adev%3Awot%3Acom%3Afujitsu%3Awifiagent/temperature"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true 
+		},
+		"Dust": {
+			"@type": "iot:Dust",
+			"observable": false,
+			"type": "object",
+			"properties": {
+				"dust": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"contentType": "application/json",
+					"href": "http://wot.f-ncs.ad.jp/Things/urn%3Adev%3Awot%3Acom%3Afujitsu%3Awifiagent/dust"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true 
+		},
+		"AllSensorData": {
+			"@type": "iot:AllSensor",
+			"observable": false,
+			"type": "object",
+			"properties": {
+				"temperature": {
+					"type": "number"
+				},
+				"humidity": {
+					"type": "number"
+				},
+				"airPressure": {
+					"type": "number"
+				},
+				"dust": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"contentType": "application/json",
+					"href": "http://wot.f-ncs.ad.jp/Things/urn%3Adev%3Awot%3Acom%3Afujitsu%3Awifiagent/allSensorData"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"AirPressure": {
+			"@type": "iot:AirPressure",
+			"observable": false,
+			"type": "object",
+			"properties": {
+				"airPressure": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"contentType": "application/json",
+					"href": "http://wot.f-ncs.ad.jp/Things/urn%3Adev%3Awot%3Acom%3Afujitsu%3Awifiagent/airPressure"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		},
+		"Humidity": {
+			"@type": "iot:Humidity",
+			"observable": false,
+			"type": "object",
+			"properties": {
+				"humidity": {
+					"type": "number"
+				},
+				"rssi": {
+					"type": "number"
+				}
+			},
+			"forms": [
+				{
+					"contentType": "application/json",
+					"href": "http://wot.f-ncs.ad.jp/Things/urn%3Adev%3Awot%3Acom%3Afujitsu%3Awifiagent/humidity"
+				}
+			],
+			"writeOnly" : false,
+			"readOnly": true
+		}
+	},
+	"base": "http://wot.f-ncs.ad.jp/Things/urn%3Adev%3Awot%3Acom%3Afujitsu%3Awifiagent/"
+}

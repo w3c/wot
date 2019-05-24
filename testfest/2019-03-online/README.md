@@ -1,3 +1,9 @@
+# CLOSED
+
+This testfest is now closed and the files have been retained only for historical interest.
+Please put new test results post-CR-transition, to be used for the WoT Thing Description
+Implementation Report, into https://github.com/w3c/wot/tree/master/testing/tests/2019-05.
+
 # 2019-03 Online Test Results
 This location is for test results (test TDs and manual assertion declarations
 given in CSV files) that will be used to generate 

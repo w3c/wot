@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "title": "PanasonicElectricBulletinBoardP3",
+  "id": "urn:uuid:78002262-fdb1-4396-9b0b-b2f71003846c",
+  "base": "https://w3c.p-wot.com/wot-ver2/things/electricBulletinBoard/3/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["bearer_sc"],
+  "properties": {
+    "operationStatus": {
+      "@type": "iot:OperationStatus",
+      "title": "operationStatus",
+      "type":"boolean",
+      "observable": false,
+      "forms": [{
+          "href": "operationStatus",
+          "contentType": "application/json"
+      }]
+    },
+    "desiredTemp": {
+      "@type": "iot:TargetTemperature",
+      "title": "desiredTemp",
+      "type": "number",
+      "minimum": 16,
+      "maximum": 30,
+      "observable": false,
+      "forms": [{
+        "href": "desiredTemp",
+        "contentType": "application/json"
+      }]
+    }
+  }
+}

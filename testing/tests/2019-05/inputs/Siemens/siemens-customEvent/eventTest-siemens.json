@@ -1,0 +1,43 @@
+{
+    "@context": ["https://www.w3.org/2019/wot/td/v1",
+        {"http": "http://www.w3.org/2011/http#"}],
+        "id": "urn:dev:wot:org:eclipse:thingweb:event-example",
+        "title": "Siemens-EventTest",
+        "description": "Test event with the subscription and cancellation usage (T2T use case).",
+        "created": "2019-01-29T13:30:07.428Z",
+        "modified": "2019-01-29T13:30:07.428Z",
+        "security": ["nosec_sc"],
+        "events": {
+            "temperatureValueForT2T" : {
+                "description" : "This event can be used to setup a Thing-2-Thing (T2T) communication for sending periodic temperature values.",
+                "subscription" : {
+                    "type" : "object",
+                    "properties" : {
+                        "targetURL" : {"type" : "string", "writeOnly": true, "description": "Requester provides the target URL to which Thing the event should be provided"},
+                        "subscriptionID" : {"type": "integer", "readOnly": true, "description": "Responses an unique subscription ID."}
+                    }
+                },
+                "data" : {"type" : "number", "description" : "Actual temperature value. Please note that there are no forms to subscribe directly to the temperature value."},
+                "cancellation" : {
+                    "type" : "object",
+                    "properties" : {
+                        "subscriptionID" : {"type": "integer", "writeOnly": true, "description": "Provide subscription ID that have to be cancelled."}
+                    }
+                },
+                "forms": [
+                    {
+                        "href": "http://192.168.0.124:8080/Siemens-EventTest/events/subscribe",
+                        "op": ["subscribeevent"],
+                        "http:methodName" : "POST"
+                    },
+                    {
+                        "href": "http://192.168.0.124:8080/Siemens-EventTest/events/unsubscribeevent",
+                        "op": ["unsubscribeevent"],
+                        "http:methodName" : "PUT"
+                    }
+                ]
+            }
+
+        },
+        "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}}
+    } 
