@@ -95,16 +95,16 @@ Scenario: Automatically turn off devices when user leaves the room
 
 ### Description:
 An environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
-When the "room empty" condition is detected, the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds are closed and a surveillance camera is turned on.
+When the "room empty" condition is detected, the room is cleaned by a vacuum cleaner, lights are turned off, window blinds are closed and a surveillance camera is turned on.
 
 ### Device interactions (Proposal)
 
-* Environment sensor (Simulation?)
+* Environment sensor (Simulation?) (TUM has humidity, temperature, pressure sensors)
 * Detect when room is empty and trigger the following actions (Oracle)
 * Close window blinds (Fujitsu)
 * Clean the room (Panasonic)
-* Turn on a MQTT device (Siemens)
-* Turn off the lights (Smart Things)
+* Turn on an MQTT device (Siemens)
+* Turn off the lights (Smart Things) (TUM)
 * Turn on a surveillance camera (Intel)
 ...
 
@@ -114,18 +114,17 @@ Scenario: Automatically alert and protect citizens when a chemical plant has an 
 
 ### Description
 An environment sensor is capable of measuring air quality by measuring the oxygen level.
-When a low oxygen condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
-connected devices take the appropriate action to protect and alert citizens,
-such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
-pubish alert messages and make voice announcements.
+During an industrial process, when a low oxygen condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application, connected devices take the appropriate action to protect and alert citizens, such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights, publish alert messages and make voice announcements.
 
 ### Device interactions (Proposal)
 
+* (Initially) A robot arm is doing an operation continuously
 * Environment sensor monitors air quality. 
 * Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
 * Drain the tank in a chemical factory (Siemens)
 * Flash a warning light (Fujitsu)
 * Turn off all air conditioners (Panasonic)
+* Bring the robot arm to a safe position (TUM)
 * Flash the lights (Smart Things)
 * Make voice announcements (Intel)
 ...
