@@ -117,8 +117,8 @@ the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds a
 Scenario: Automatically alert and protect citizens when a chemical plant has an accident
 
 ### Description
-An environment sensor is capable of measuring air quality by measuring the oxygen level.
-When a low oxygen condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
+An environment sensor is measuring air quality of a chemical plant.
+When a critical condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
 connected devices take the appropriate action to protect and alert citizens,
 such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
 pubish alert messages and make voice announcements.
