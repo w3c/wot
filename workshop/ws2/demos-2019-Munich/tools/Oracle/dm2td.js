@@ -151,11 +151,11 @@ for(var exKey in dm.actions) {
     };
 
     act.forms = [{
-      "href" : base+"/actions/"+act.name,
+      "href" : base+"/actions/"+act.title,
       "contentType": "application/json"
     }];
 
-    td.actions[iac.name]=act;
+    td.actions[act.title]=act;
 }
 
 if (verbose) console.log("-----");
