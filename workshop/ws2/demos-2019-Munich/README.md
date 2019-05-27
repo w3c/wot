@@ -27,6 +27,8 @@ A template example is available at: https://github.com/w3c/wot/blob/master/works
 The print out format will be DIN A0. (841×1189mm)
 Posters will be put up on flexible walls.
 
+Please provide your demo poster until May 28th.
+
 # Participating companies
 
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|Fri|Sat|Sun|Mon|Tues|Wed|
