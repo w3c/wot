@@ -50,7 +50,7 @@ Please provide your demo poster until May 28th.
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |kunihiko.toumura.yv@hitachi.com| - | + | + | + | + | + |
-| Fujitsu   | Local proxy (6)                    |  Wifi / Lan; 1 power                                              | ...                |
+| Fujitsu   | Local proxy (6)                    |  Wifi / Lan; 1 power                                              | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
 | Fujitsu   | Remote proxy (7)                   |                                                                   | ...  |
 | Fujitsu   | Local devices (8)                  |                                                                   | ...  |
 | Fujitsu   | Smart home devices in Japan (9)                  |                                                                   | ...  |
