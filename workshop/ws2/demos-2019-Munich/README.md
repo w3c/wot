@@ -166,6 +166,18 @@ An additional interesting issue this scenario raises is how "eco" mode is determ
 Ideally each device would provide a simple boolean control to turn this on and off
 and would then determine internally how to save power.
 
+## Energy management for commercial buildings
+
+Reduce load charge power to stay under the peak power you get from the grid.
+AC condition is monitored, charge power is reduced, if AC is on.
+
+### Devices:
+* Grid Simulation (Siemens)
+* monitoring ECoG Charger, indicating power consumption, start charging (EcoG)
+* Simulated Building management system (Siemens)
+* Air conditioner (t.b.d.)
+
+
 ## Security Alert using person detection (industrial)
 
 Scenario: Alert is raised when a person is detected entering a forbidden
