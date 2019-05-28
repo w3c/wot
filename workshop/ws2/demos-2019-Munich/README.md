@@ -3,7 +3,7 @@
 
 # Locations:
 
-## Friday: Siemens (8am - 2pm)
+## Friday: Siemens (8am - 5pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 Point of contact: Sebastian is available via mobile phone
