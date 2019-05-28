@@ -1,9 +1,8 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {
-      "iot": "http://iotschema.org/",
-      "http": "http://www.w3.org/2011/http#"
+      "iot": "http://iotschema.org/"
     }
   ],
   "@type": [
@@ -12,7 +11,7 @@
     "iot:Sensor",
     "iot:BinarySwitch"
   ],
-  "id": "urn:uuid:e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+  "id": "urn:uuid:f057c263-58db-4cb1-9470-bba9344e1ba8",
   "securityDefinitions": {
     "nosec_sc": {
       "scheme": "nosec"
@@ -27,13 +26,13 @@
   "security": [
     "nosec_sc"
   ],
-  "name": "Intel-OCF-e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+  "title": "Intel-OCF-toggle1",
   "support": "mailto:michael.mccool@intel.com",
   "version": {
     "instance": "0.1.0"
   },
-  "created": "2018-09-10T06:30+00:00",
-  "lastModified": "2018-12-19T04:06:02.096Z",
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2019-05-28T05:43:02.355Z",
   "links": [
     {
       "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
@@ -68,87 +67,82 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "href": "http://upsq1c.local:8000/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+          "href": "http://upsq1c.local:8000/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
           "security": [
             "basic_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "writeproperty",
-          "http:methodName": "POST"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "readproperty",
-          "http:methodName": "GET"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
           "security": [
             "basic_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle2?di=e7678d50-6a14-426b-a1f0-fb1b8ade4cd5",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle1?di=f057c263-58db-4cb1-9470-bba9344e1ba8",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         }
       ]
     }
