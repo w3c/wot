@@ -25,7 +25,9 @@ https://www.w3.org/WoT/ws-2019/cfp.html#location
 A template example is available at: https://github.com/w3c/wot/blob/master/workshop/ws2/demos-2019-Munich/Poster/Session_3_Demo_Template.pptx 
 
 The print out format will be DIN A0. (841×1189mm)
-They will be put up on flexible walls.
+Posters will be put up on flexible walls.
+
+Please provide your demo poster until May 28th.
 
 # Participating companies
 
@@ -47,18 +49,19 @@ They will be put up on flexible walls.
 | Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
-| Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
+| Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |kunihiko.toumura.yv@hitachi.com| - | + | + | + | + | + |
 | Fujitsu   | Local proxy (6)                    |  Wifi / Lan; 1 power                                              | ...                |
 | Fujitsu   | Remote proxy (7)                   |                                                                   | ...  |
 | Fujitsu   | Local devices (8)                  |                                                                   | ...  |
 | Fujitsu   | Smart home devices in Japan (9)                  |                                                                   | ...  |
-| Panasonic | Smart home lab in Osaka (10)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
-| Panasonic | Bulletin Board in local (11)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
-| Panasonic | Online simulator (12)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
-| Panasonic | Local simulator (13)                | Wifi / Lan; 1 power                                               | ...                |
+| Panasonic | Smart home lab in Osaka ([Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld))         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Bulletin Board in local ([Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld))         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Online simulator ([Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld))                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Local simulator (Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting)                | Wifi / Lan; 1 power                                               | More devices could be added to discuss about cross domain business models, use cases and scenarios. |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
 | BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
+| Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 
 ## Notes
 * Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>
@@ -76,10 +79,10 @@ The following notes relate to the numbers in the table above.
 7. Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
 8. Devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, and particle sensors), [Agricuture sensors](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2 concentration), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json).
 9. Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blinds [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).
-10. Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
-11. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
-12. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
-13. Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
+10. (removed)
+11. (removed)
+12. (removed)
+13. (removed)
 14. Devices: EV charger controller, microgrid controller, northbound interface for others to connect
 
 
@@ -114,8 +117,8 @@ the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds a
 Scenario: Automatically alert and protect citizens when a chemical plant has an accident
 
 ### Description
-An environment sensor is capable of measuring air quality by measuring the oxygen level.
-When a low oxygen condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
+An environment sensor is measuring air quality of a chemical plant.
+When a critical condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
 connected devices take the appropriate action to protect and alert citizens,
 such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
 pubish alert messages and make voice announcements.
@@ -187,8 +190,11 @@ Charging of a vehicle dependent on the energy consumption.
 Mozilla
 
 ### Description:
-
-
+[Mozilla WebThings Gateway](https://iot.mozilla.org/gateway) will run on the local WoT Wi-Fi network. 
+Example commercial smart home devices will be adapted into a single web UI (by the gateway) that can be 
+accessed and interacted with via a browser or over the network via OAuth.
+Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) that match 
+Mozilla's WebThings API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
 ## Additional Scenarios: 
 
@@ -198,7 +204,6 @@ Ex: Asset management
 ### Transportation scenarios
 Ex: Fleet management
 Ex: Shipping and inventory control (supply chain management)
-
 
 # Logistics
 
@@ -235,7 +240,7 @@ Please place all tools into the [tools](tools) directory.
 
 ### Google Hangout:
    - Used to video stream remote devices such as Festo Live or Panasonic Lab
-   - \<t.b.d.\>
+   - https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE
 
 # Documentation
 For information about previous test fests see: https://github.com/w3c/wot/tree/master/testfest/2018-12-online 
@@ -244,7 +249,3 @@ For information about previous test fests see: https://github.com/w3c/wot/tree/m
 
 1 Table per scenario (?),  , ... are possible
 
-Siemens offers to print posters, if they are provided by the online-plugfest (May 28th).
-Sebastian will provide a template, format + size will be communicated later. 
-
-Siemens facilities are accessible from <tbd. - Sebastian checks>
