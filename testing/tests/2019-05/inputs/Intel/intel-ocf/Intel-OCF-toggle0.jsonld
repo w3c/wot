@@ -2,17 +2,16 @@
   "@context": [
     "https://www.w3.org/2019/wot/td/v1",
     {
-      "iot": "http://iotschema.org/",
-      "http": "http://www.w3.org/2011/http#"
+      "iot": "http://iotschema.org/"
     }
   ],
   "@type": [
     "Thing",
-    "Temperature",
-    "iot:TemperatureSensing",
-    "iot:Sensor"
+    "Switch",
+    "iot:Sensor",
+    "iot:BinarySwitch"
   ],
-  "id": "urn:uuid:e855ad80-c435-4614-a4b7-01d63afc712e",
+  "id": "urn:uuid:4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
   "securityDefinitions": {
     "nosec_sc": {
       "scheme": "nosec"
@@ -27,13 +26,13 @@
   "security": [
     "nosec_sc"
   ],
-  "title": "Intel-OCF-e855ad80-c435-4614-a4b7-01d63afc712e",
+  "title": "Intel-OCF-toggle0",
   "support": "mailto:michael.mccool@intel.com",
   "version": {
     "instance": "0.1.0"
   },
   "created": "2018-09-10T06:30:00Z",
-  "modified": "2018-12-19T04:06:02Z",
+  "modified": "2019-05-28T05:43:02.348Z",
   "links": [
     {
       "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
@@ -42,13 +41,13 @@
     }
   ],
   "properties": {
-    "temperature": {
-      "title": "Room Temperature",
+    "status": {
+      "title": "On/Off Status",
       "readOnly": true,
       "observable": true,
       "@type": [
-        "MultiLevelState",
-        "iot:Temperature"
+        "OnOffState",
+        "iot:SwitchStatus"
       ],
       "type": "object",
       "properties": {
@@ -57,9 +56,9 @@
         },
         "value": {
           "@type": [
-            "iot:TemperatureData"
+            "iot:Toggle"
           ],
-          "type": "number"
+          "type": "boolean"
         }
       },
       "required": [
@@ -68,87 +67,82 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "href": "http://upsq1c.local:8000/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "href": "http://upsq1c.local:8000/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
           "security": [
             "basic_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "writeproperty",
-          "http:methodName": "POST"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "readproperty",
-          "http:methodName": "GET"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
           "security": [
             "basic_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/toggle0?di=4b74842c-8bfe-4f14-8bc5-31b4c79658a4",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         }
       ]
     }

@@ -2,8 +2,7 @@
   "@context": [
     "https://www.w3.org/2019/wot/td/v1",
     {
-      "iot": "http://iotschema.org/",
-      "http": "http://www.w3.org/2011/http#"
+      "iot": "http://iotschema.org/"
     }
   ],
   "@type": [
@@ -13,7 +12,7 @@
     "iot:Actuator",
     "iot:BinarySwitch"
   ],
-  "id": "urn:uuid:594ee957-fd3e-4547-9430-5267bcdb3ed7",
+  "id": "urn:uuid:3ee85e44-7a56-4f0e-a8b8-b250c868e513",
   "securityDefinitions": {
     "nosec_sc": {
       "scheme": "nosec"
@@ -28,13 +27,13 @@
   "security": [
     "nosec_sc"
   ],
-  "title": "Intel-OCF-594ee957-fd3e-4547-9430-5267bcdb3ed7",
+  "title": "Intel-OCF-led2mosfet",
   "support": "mailto:michael.mccool@intel.com",
   "version": {
     "instance": "0.1.0"
   },
   "created": "2018-09-10T06:30:00Z",
-  "modified": "2018-12-19T04:06:02Z",
+  "modified": "2019-05-28T05:43:02.337Z",
   "links": [
     {
       "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
@@ -68,87 +67,82 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "href": "http://upsq1c.local:8000/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "http://upsq1c.local:8000/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "basic_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "writeproperty",
-          "http:methodName": "POST"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "readproperty",
-          "http:methodName": "GET"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "basic_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         }
       ]
     }
@@ -180,32 +174,32 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7"
+          "href": "http://upsq1c.local:8000/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ]
@@ -238,32 +232,32 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7"
+          "href": "http://upsq1c.local:8000/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "basic_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ]
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2side?di=594ee957-fd3e-4547-9430-5267bcdb3ed7",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/led2mosfet?di=3ee85e44-7a56-4f0e-a8b8-b250c868e513",
           "security": [
             "digest_sc"
           ]

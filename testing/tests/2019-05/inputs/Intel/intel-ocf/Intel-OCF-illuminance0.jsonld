@@ -2,16 +2,16 @@
   "@context": [
     "https://www.w3.org/2019/wot/td/v1",
     {
-      "iot": "http://iotschema.org/",
-      "http": "http://www.w3.org/2011/http#"
+      "iot": "http://iotschema.org/"
     }
   ],
   "@type": [
     "Thing",
-    "iot:Actuator",
-    "iot:BinarySwitch"
+    "Meter",
+    "iot:IlluminanceSensing",
+    "iot:Sensor"
   ],
-  "id": "urn:uuid:893e9dbb-a298-4123-a041-80f386115958",
+  "id": "urn:uuid:3255959d-741c-4b2b-81c2-42a4caa2223e",
   "securityDefinitions": {
     "nosec_sc": {
       "scheme": "nosec"
@@ -26,13 +26,13 @@
   "security": [
     "nosec_sc"
   ],
-  "title": "Intel-OCF-893e9dbb-a298-4123-a041-80f386115958",
+  "title": "Intel-OCF-illuminance0",
   "support": "mailto:michael.mccool@intel.com",
   "version": {
     "instance": "0.1.0"
   },
   "created": "2018-09-10T06:30:00Z",
-  "modified": "2018-12-19T04:06:02Z",
+  "modified": "2019-05-28T05:43:02.346Z",
   "links": [
     {
       "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
@@ -41,12 +41,13 @@
     }
   ],
   "properties": {
-    "status": {
-      "title": "On/Off Status",
+    "illuminance": {
+      "title": "Illuminance",
+      "readOnly": true,
       "observable": true,
       "@type": [
-        "OnOffState",
-        "iot:SwitchStatus"
+        "MultiLevelState",
+        "iot:Illuminance"
       ],
       "type": "object",
       "properties": {
@@ -55,9 +56,9 @@
         },
         "value": {
           "@type": [
-            "iot:Toggle"
+            "iot:IlluminanceData"
           ],
-          "type": "boolean"
+          "type": "number"
         }
       },
       "required": [
@@ -66,87 +67,82 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "href": "http://upsq1c.local:8000/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "http://upsq1c.local:8000/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+          "href": "http://upsq1c.local:8000/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
           "security": [
             "basic_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "writeproperty",
-          "http:methodName": "POST"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
-          "security": [
-            "basic_sc"
-          ],
-          "op": "readproperty",
-          "http:methodName": "GET"
-        },
-        {
-          "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
           "security": [
             "basic_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://portal.mmccool.net:8090/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
-          "href": "https://tiktok.mmccool.org:8091/api/oic/a/buzzer0?di=893e9dbb-a298-4123-a041-80f386115958",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/illuminance0?di=3255959d-741c-4b2b-81c2-42a4caa2223e",
           "security": [
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         }
       ]
     }
