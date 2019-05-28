@@ -50,10 +50,10 @@ Please provide your demo poster until May 28th.
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |kunihiko.toumura.yv@hitachi.com| - | + | + | + | + | + |
-| Fujitsu   | Local proxy (6)                    |  Wifi / Lan; 1 power                                              | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
-| Fujitsu   | Remote proxy (7)                   |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
-| Fujitsu   | Local devices (8)                  |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
-| Fujitsu   | Smart home devices in Japan (9)                  |                                                     | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Fujitsu   | 2 Local proxies. One is in smart home in Japan, another in Munich (6) |  Wifi / Lan; 1 power                                              | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Fujitsu   | Remote proxy. Connect 2 Local proxies above. (7) |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Fujitsu   | Local devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, Human detection, 3-axis acceleration, Brightness sensors), [Agricuture sensor](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json) (Temperature, 3-axis acceleration, Brightness sensor).   |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Fujitsu   | Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blind [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).                 |                                                     | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
 | Panasonic | Smart home lab in Osaka ([Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld))         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
 | Panasonic | Bulletin Board in local ([Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld))         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
 | Panasonic | Online simulator ([Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld))                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
@@ -76,10 +76,10 @@ The following notes relate to the numbers in the table above.
 3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
 4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
 5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
-6. Local proxy can connect members' devices and expose them as virtual devices.
+6. Local proxy can connect participants' devices and expose them as virtual devices.
 7. Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
-8. Devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, and particle sensors), [Agricuture sensors](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2 concentration), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json).
-9. Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blinds [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).
+8. (removed)
+9. (removed)
 10. (removed)
 11. (removed)
 12. (removed)
