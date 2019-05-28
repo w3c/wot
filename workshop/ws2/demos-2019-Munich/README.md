@@ -36,13 +36,13 @@ Please provide your demo poster until May 28th.
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | ? | + | + | + |
 | Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
-| TU Munich | MeArm Robotic Arms                  | Wifi / Lan                                                               | Mechanically not reliable                | 
-| TU Munich | Texas Instruments Bluetooth Sensors | Wifi / Lan                                                               | Bridged via HTTP and CoAP                | 
-| TU Munich | Philips HUE Lights and Buttons | Wifi / Lan                                                               | ... |
-| TU Munich | LED Strip | Wifi / Lan                                                               | ... |
-| TU Munich | Sense HAT (LED Matrix and sensors) | Wifi / Lan                                                               | ... |
-| TU Munich | Cameras | Wifi / Lan                                                               | Can only take pictures |
-| TU Munich | ESP 32 Light Sensors | Wifi / Lan                                                               | Representing more constrained devices |
+| TU Munich | 2x MeArm Robotic Arms                  | Wifi / Lan                                                     | Mechanically not reliable                | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 3x Texas Instruments Bluetooth Sensors | Wifi / Lan                                                        | Bridged via HTTP and CoAP via 1x Raspberry                | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 3x Philips HUE Lights and Controller   | Wifi / Lan                                                        | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 1x LED Strip with individually controlloble LEDs | Wifi / Lan                                              | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x Sense HAT (LED Matrix and sensors)  | Wifi / Lan                                                        | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x Cameras                             | Wifi / Lan                                                        | Can only take pictures but adjustable exposure | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x ESP 32 Light Sensors                | Wifi / Lan                                                        | Representing more constrained devices | ege.korkan@tum.de | ? | + | + | + | + | + |
 | Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
@@ -90,7 +90,7 @@ The following notes relate to the numbers in the table above.
 
 # Scenarios
 
-The following scenarios demonstrate the interoperability of devices across different manufactuers.
+The following scenarios demonstrate the interoperability of devices across different manufacturers.
 
 ## Home integration scenarios
 
@@ -98,19 +98,17 @@ Scenario: Automatically turn off devices when user leaves the room
 
 ### Description:
 An environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
-When the "room empty" condition is detected.
-the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds are closed and a surveillence camera is turned on.
+When the "room empty" condition is detected, the room is cleaned by a vacuum cleaner, lights are turned off, window blinds are closed and a surveillance camera is turned on.
 
 ### Device interactions (Proposal)
 
-* Environment sensor (Simulation?)
+* Environment sensor (Simulation?) (TUM has humidity, temperature, pressure sensors)
 * Detect when room is empty and trigger the following actions (Oracle)
 * Close window blinds (Fujitsu)
 * Clean the room (Panasonic)
-* Turn on a MQTT device (Siemens)
-* Turn off the lights (Smart Things)
+* Turn on an MQTT device (Siemens)
+* Turn off the lights (Smart Things) (TUM)
 * Turn on a surveillance camera (Intel)
-* Control other devices (TU Munich)
 ...
 
 ## Industrial integration scenarios
@@ -118,22 +116,24 @@ the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds a
 Scenario: Automatically alert and protect citizens when a chemical plant has an accident
 
 ### Description
-An environment sensor is measuring air quality of a chemical plant.
-When a critical condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
-connected devices take the appropriate action to protect and alert citizens,
-such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
-pubish alert messages and make voice announcements.
+An environment sensor is capable of measuring air quality by measuring the oxygen level.
+During an industrial process, when a low oxygen condition is detected by the 
+Oracle IoT-Cloud Service Asset Monitoring application, connected devices take 
+the appropriate action to protect and alert citizens, such as draining a tank 
+in the factory, turning off all air-conditioners, flash alert and warning lights, 
+publish alert messages and make voice announcements.
 
 ### Device interactions (Proposal)
 
+* (Initially) A robot arm is doing an operation continuously
 * Environment sensor monitors air quality. 
 * Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
 * Drain the tank in a chemical factory (Siemens)
 * Flash a warning light (Fujitsu)
 * Turn off all air conditioners (Panasonic)
+* Bring the robot arm to a safe position (TUM)
 * Flash the lights (Smart Things)
 * Make voice announcements (Intel)
-* Control other devices (TU Munich)
 ...
 
 ## Energy management in a smart building/smart city/smart home
