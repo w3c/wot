@@ -1,0 +1,306 @@
+{
+  "name": "EcoG-outlet-1",
+  "title": "EcoG-outlet-1",
+  "description": "Outlet of EV charger with EcoG API",
+  "@context": ["https://www.w3.org/2019/wot/td/v1"],
+  "@type": "Thing",
+  "security": ["nosec_sc"],
+  "properties": {
+    "state": {
+      "type": "object",
+      "description": "current charger state of this outlet",
+      "observable": true,
+      "writeOnly": false,
+      "readOnly": true,
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "charger identifier",
+          "type": "string"
+        },
+        "phs": {
+          "title": "phs",
+          "description": "charge phase",
+          "type": "number"
+        },
+        "pp": {
+          "title": "pp",
+          "description": "present power",
+          "type": "number"
+        },
+        "pilot": {
+          "title": "pilot",
+          "description": "pilot signal state",
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/pr/state",
+          "contentType": "application/json",
+          "op": ["readproperty"]
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/properties/state",
+          "contentType": "application/json",
+          "op": ["readproperty"]
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/properties/state/observable",
+          "contentType": "application/json",
+          "op": ["observeproperty"],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "powercap": {
+      "title": "power limitation, -1 for none",
+      "type": "number",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/pr/powercap",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/properties/powercap",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        }
+      ]
+    },
+    "out_of_order": {
+      "title": "if this charger is out of order",
+      "type": "boolean",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/pr/out_of_order",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/properties/out_of_order",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        }
+      ]
+    },
+    "pilot": {
+      "title": "pilot signal state",
+      "type": "number",
+      "readOnly": true,
+      "observable": true,
+      "writable": false,
+      "writeable": false,
+      "readonly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/pr/pilot",
+          "contentType": "application/json",
+          "op": ["readproperty"]
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/properties/pilot",
+          "contentType": "application/json",
+          "op": ["readproperty"]
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/properties/pilot/observable",
+          "contentType": "application/json",
+          "op": ["observeproperty"],
+          "subprotocol": "longpoll"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "auth": {
+      "title": "auth",
+      "description": "Authorize a user",
+      "input": {
+        "type": "object",
+        "properties": {
+          "auth": { "type": "boolean" },
+          "adminCommand": { "type": "boolean" },
+          "user": { "type": "string" }
+        }
+      },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/ac/auth",
+          "contentType": "application/json",
+          "op": "invokeaction"
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/actions/auth",
+          "contentType": "application/json",
+          "op": ["invokeaction"]
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    },
+    "stop": {
+      "title": "stop",
+      "description": "stop ongoing charge",
+      "input": {
+        "type": "object",
+        "properties": {
+          "adminCommand": { "type": "boolean" },
+          "user": { "type": "string" }
+        }
+      },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/ac/stop",
+          "contentType": "application/json",
+          "op": "invokeaction"
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/actions/stop",
+          "contentType": "application/json",
+          "op": ["invokeaction"]
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    },
+    "plugin": {
+      "title": "plugin",
+      "description": "plug in simulated EV",
+      "input": { "type": "object", "properties": {} },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/ac/plugin",
+          "contentType": "application/json",
+          "op": "invokeaction"
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/actions/plugin",
+          "contentType": "application/json",
+          "op": ["invokeaction"]
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    },
+    "testRun": {
+      "title": "testRun",
+      "description": "plug in and authorize simulated EV",
+      "input": { "type": "object", "properties": {} },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/ac/testRun",
+          "contentType": "application/json",
+          "op": "invokeaction"
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/actions/testRun",
+          "contentType": "application/json",
+          "op": ["invokeaction"]
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    },
+    "limit_power": {
+      "title": "limit_power",
+      "description": "enforce a power limitation",
+      "input": {
+        "type": "object",
+        "properties": { "PowerCapW": { "type": "number" } }
+      },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/ac/limit_power",
+          "contentType": "application/json",
+          "op": "invokeaction"
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/actions/limit_power",
+          "contentType": "application/json",
+          "op": ["invokeaction"]
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    },
+    "set_out_of_order": {
+      "title": "out_of_order",
+      "description": "enforce out of order state for charger",
+      "input": {
+        "type": "object",
+        "properties": { "out_of_order": { "type": "boolean" } }
+      },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/ac/set_out_of_order",
+          "contentType": "application/json",
+          "op": "invokeaction"
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/actions/set_out_of_order",
+          "contentType": "application/json",
+          "op": ["invokeaction"]
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    }
+  },
+  "events": {
+    "stateUpdate": {
+      "type": "object",
+      "description": "current charger state",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "charger identifier",
+          "type": "string"
+        },
+        "phs": {
+          "title": "phs",
+          "description": "charge phase",
+          "type": "number"
+        },
+        "pp": {
+          "title": "pp",
+          "description": "present power",
+          "type": "number"
+        },
+        "pilot": {
+          "title": "pilot",
+          "description": "pilot signal state",
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "href": "coap://wot.ecog.io:5688/EcoG-outlet-1/ev/stateUpdate",
+          "contentType": "application/json",
+          "op": "subscribeevent"
+        },
+        {
+          "href": "http://wot.ecog.io:8080/EcoG-outlet-1/events/stateUpdate",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": ["subscribeevent"]
+        },
+        {
+          "href": "ws://wot.ecog.io:8080/EcoG-outlet-1/events/stateUpdate",
+          "contentType": "application/json",
+          "op": "subscribeevent"
+        }
+      ]
+    }
+  },
+  "id": "urn:uuid:8b286b43-9399-4a80-b2f9-43314d075e6e",
+  "securityDefinitions": { "nosec_sc": { "scheme": "nosec" } }
+}

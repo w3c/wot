@@ -1,0 +1,170 @@
+{
+  "urn": "urn:com:blue:pump:data",
+  "name": "Blue Pump",
+  "description": "Blue Pump Data",
+  "system": false,
+  "draft": false,
+  "created": 1558617205479,
+  "createdAsString": "2019-05-23T13:13:25.479Z",
+  "lastModified": 1558617205479,
+  "lastModifiedAsString": "2019-05-23T13:13:25.479Z",
+  "userLastModified": "iot",
+  "attributes": [
+    {
+      "description": "Cycle Maximum Inlet Pressure on single cycle in BAR",
+      "name": "Cycle_Maximum_Inlet_Pressure",
+      "range": "0,1000",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Cycle Return Pressure Min on single cycle in BAR",
+      "name": "Cycle_Return_Pressure_Min",
+      "range": "0,100",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Cycle Return Pressure Max on single cycle in BAR",
+      "name": "Cycle_Return_Pressure_Max",
+      "range": "0,100",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Cycle Case Pressure Min on single cycle in BAR",
+      "name": "Cycle_Cases_Pressure_Min",
+      "range": "0,100",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Cycle Case Pressure Max on single cycle in BAR",
+      "name": "Cycle_Cases_Pressure_Max",
+      "range": "0,100",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Cycle Peak Operation Percent of Minute",
+      "name": "Cycle_Peak_Operation_Percent_Of_Minute",
+      "range": "0.0,100.0",
+      "type": "NUMBER",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "argType": "BOOLEAN",
+      "description": "Turns system ON or OFF",
+      "name": "power"
+    },
+    {
+      "description": "Runs diagnostics, which results in a Diagnostics message being sent",
+      "name": "diagnose"
+    },
+    {
+      "description": "Used to notify the pump that the filter has been replaced.",
+      "name": "resetFilter"
+    }
+  ],
+  "formats": [
+    {
+      "urn": "urn:com:blue:pump:data:filter:clogged",
+      "name": "filterClogged",
+      "description": "Filter clogged alert",
+      "type": "ALERT",
+      "deviceModel": "urn:com:blue:pump:data",
+      "value": {
+        "fields": [
+          {
+            "name": "filterClogged",
+            "optional": false,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:blue:pump:data",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:blue:pump:data:diagnostics:report",
+      "name": "DiagnosticsReport",
+      "description": "The report of how the diagnostics run went.",
+      "type": "ALERT",
+      "deviceModel": "urn:com:blue:pump:data",
+      "value": {
+        "fields": [
+          {
+            "name": "passed",
+            "optional": false,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:blue:pump:data",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:blue:pump:data:diagnostics:data_message",
+      "name": "DiagnosticsDataMessage",
+      "description": "The report data message.",
+      "type": "DATA",
+      "deviceModel": "urn:com:blue:pump:data",
+      "value": {
+        "fields": [
+          {
+            "name": "Cycle_Maximum_Inlet_Pressure",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "Cycle_Return_Pressure_Min",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "Cycle_Return_Pressure_Max",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "Cycle_Cases_Pressure_Min",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "Cycle_Cases_Pressure_Max",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "Cycle_Peak_Operation_Percent_Of_Minute",
+            "optional": false,
+            "type": "NUMBER"
+          }
+        ]
+      },
+      "sourceId": "urn:com:blue:pump:data",
+      "sourceType": "DEVICE_MODEL"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Ablue%253Apump%253Adata",
+      "rel": "self"
+    },
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Ablue%253Apump%253Adata",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Ablue%253Apump%253Adata/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": [
+    "Thing",
+    "Motion",
+    "iot:MotionControl",
+    "iot:Sensor"
+  ],
+  "id": "urn:uuid:0800f07a-178d-48ec-9ddf-d8a941071298",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    },
+    "basic_sc": {
+      "scheme": "basic"
+    },
+    "digest_sc": {
+      "scheme": "digest"
+    }
+  },
+  "security": [
+    "nosec_sc"
+  ],
+  "title": "Intel-OCF-motion0",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {
+    "instance": "0.1.0"
+  },
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2019-05-28T05:43:02.332Z",
+  "links": [
+    {
+      "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
+      "rel": "repository",
+      "type": "application/vnd.github.v3+json"
+    }
+  ],
+  "properties": {
+    "motion": {
+      "title": "Motion Sense Status",
+      "readOnly": true,
+      "observable": true,
+      "@type": [
+        "Occupancy",
+        "iot:MotionDetected"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "@type": [
+            "iot:StateData"
+          ],
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/motion0?di=0800f07a-178d-48ec-9ddf-d8a941071298",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        }
+      ]
+    }
+  }
+}

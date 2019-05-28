@@ -1,4 +1,4 @@
 # README.md
 
-These TDs are currently placeholders for illustration only.
-They will be replaced in due course with TDs for the simulated device instances.
+These TDs were automatically generated from device models for the simulated device instances
+using the dm2td.js converter.

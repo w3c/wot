@@ -1,0 +1,150 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": [
+    "Thing",
+    "Temperature",
+    "iot:TemperatureSensing",
+    "iot:Sensor"
+  ],
+  "id": "urn:uuid:e855ad80-c435-4614-a4b7-01d63afc712e",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    },
+    "basic_sc": {
+      "scheme": "basic"
+    },
+    "digest_sc": {
+      "scheme": "digest"
+    }
+  },
+  "security": [
+    "nosec_sc"
+  ],
+  "title": "Intel-OCF-temperature2",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {
+    "instance": "0.1.0"
+  },
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2019-05-28T05:43:02.342Z",
+  "links": [
+    {
+      "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
+      "rel": "repository",
+      "type": "application/vnd.github.v3+json"
+    }
+  ],
+  "properties": {
+    "temperature": {
+      "title": "Room Temperature",
+      "readOnly": true,
+      "observable": true,
+      "@type": [
+        "MultiLevelState",
+        "iot:Temperature"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "@type": [
+            "iot:TemperatureData"
+          ],
+          "type": "number"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/temperature2?di=e855ad80-c435-4614-a4b7-01d63afc712e",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        }
+      ]
+    }
+  }
+}

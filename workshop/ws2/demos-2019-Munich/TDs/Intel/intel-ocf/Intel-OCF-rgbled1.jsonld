@@ -1,0 +1,336 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "iot": "http://iotschema.org/"
+    }
+  ],
+  "@type": [
+    "Thing",
+    "Light",
+    "iot:Light",
+    "iot:Actuator"
+  ],
+  "id": "urn:uuid:ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    },
+    "basic_sc": {
+      "scheme": "basic"
+    },
+    "digest_sc": {
+      "scheme": "digest"
+    }
+  },
+  "security": [
+    "nosec_sc"
+  ],
+  "title": "Intel-OCF-rgbled1",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {
+    "instance": "0.1.0"
+  },
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2019-05-28T05:43:02.358Z",
+  "links": [
+    {
+      "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
+      "rel": "repository",
+      "type": "application/vnd.github.v3+json"
+    }
+  ],
+  "properties": {
+    "colour": {
+      "title": "RGB Colour",
+      "observable": true,
+      "@type": [
+        "iot:CurrentColour"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "rgbValue": {
+          "@type": [
+            "iot:ColourData"
+          ],
+          "type": "array",
+          "items": [
+            {
+              "@type": [
+                "iot:RColourData"
+              ],
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            },
+            {
+              "@type": [
+                "iot:GColourData"
+              ],
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            },
+            {
+              "@type": [
+                "iot:BColourData"
+              ],
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            }
+          ]
+        }
+      },
+      "required": [
+        "rgbValue"
+      ],
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "readproperty"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ],
+          "op": "writeproperty",
+          "htv:methodName": "POST"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "on": {
+      "title": "Turn On",
+      "description": "Set light status to on (maximum brightness in all colour channels)",
+      "@type": [
+        "TurnOn",
+        "iot:TurnOn"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "rgbValue": {
+          "@type": [
+            "iot:ColourData"
+          ],
+          "type": "array",
+          "items": [
+            {
+              "@type": [
+                "iot:RColourData"
+              ],
+              "type": "number",
+              "const": 255
+            },
+            {
+              "@type": [
+                "iot:GColourData"
+              ],
+              "type": "number",
+              "const": 255
+            },
+            {
+              "@type": [
+                "iot:BColourData"
+              ],
+              "type": "number",
+              "const": 255
+            }
+          ]
+        }
+      },
+      "required": [
+        "rgbValue"
+      ],
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ]
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ]
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ]
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ]
+        }
+      ]
+    },
+    "off": {
+      "title": "Turn Off",
+      "description": "Set light status to off (minimum brightness in all colour channels)",
+      "@type": [
+        "TurnOff",
+        "iot:TurnOff"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "rgbValue": {
+          "@type": [
+            "iot:ColourData"
+          ],
+          "type": "array",
+          "items": [
+            {
+              "@type": [
+                "iot:RColourData"
+              ],
+              "type": "number",
+              "const": 0
+            },
+            {
+              "@type": [
+                "iot:GColourData"
+              ],
+              "type": "number",
+              "const": 0
+            },
+            {
+              "@type": [
+                "iot:BColourData"
+              ],
+              "type": "number",
+              "const": 0
+            }
+          ]
+        }
+      },
+      "required": [
+        "rgbValue"
+      ],
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "http://upsq1c.local:8000/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d"
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ]
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "basic_sc"
+          ]
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://portal.mmccool.net:8090/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ]
+        },
+        {
+          "contentType": "application/json",
+          "href": "https://tiktok.mmccool.org:8091/api/oic/a/rgbled1?di=ae9b3aa5-1476-4fcb-9908-dd96a293572d",
+          "security": [
+            "digest_sc"
+          ]
+        }
+      ]
+    }
+  }
+}
