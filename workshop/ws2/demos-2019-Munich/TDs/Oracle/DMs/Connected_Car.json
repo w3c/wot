@@ -1,0 +1,317 @@
+{
+  "urn": "urn:com:oracle:iot:connected-car",
+  "name": "Connected_Car",
+  "description": "Simplified Connected Car",
+  "system": false,
+  "draft": false,
+  "created": 1558710282664,
+  "createdAsString": "2019-05-24T15:04:42.664Z",
+  "lastModified": 1558710282664,
+  "lastModifiedAsString": "2019-05-24T15:04:42.664Z",
+  "userLastModified": "iot",
+  "attributes": [
+    {
+      "name": "ASCD",
+      "type": "STRING",
+      "writable": true
+    },
+    {
+      "name": "ActiveParkAssist",
+      "type": "STRING",
+      "writable": true
+    },
+    {
+      "name": "AdaptiveCruiseControl",
+      "type": "STRING",
+      "writable": true
+    },
+    {
+      "name": "AutomaticBrakeActuator",
+      "range": "0,100",
+      "type": "INTEGER",
+      "writable": true
+    },
+    {
+      "name": "BlindSpotDetection",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "CentralComputer",
+      "type": "STRING",
+      "writable": true
+    },
+    {
+      "name": "CollisionSensor",
+      "range": "0.0,100.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "name": "CrossTrafficAlert",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "name": "DrowsinessSensors",
+      "range": "0,10",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "name": "FrontAirbagSensors",
+      "range": "0.0,80.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "name": "FrontObjectCCDCameraURI",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "name": "FrontObjectLaserRadar",
+      "type": "STRING",
+      "writable": true
+    },
+    {
+      "name": "LaneDepartureSystem",
+      "range": "-10.0,10.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "name": "NightVision",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "name": "NighttimePedestrianIRSensorURI",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "name": "NighttimePedestrianWarning",
+      "range": "0,20",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "name": "RearCamera",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "name": "RearObjectLaserRadar",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "name": "RearObjectMonitorCCDCamera",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "name": "SideCurtainSensor",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "SteeringAngleSensor",
+      "range": "-90.0,90.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "name": "TirePressureSensor",
+      "range": "0.0,10.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "name": "WheelSpeedSensor",
+      "range": "-50.0,300.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_alt",
+      "name": "ora_altitude",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_lat",
+      "name": "ora_latitude",
+      "range": "-90.0,90.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_lon",
+      "name": "ora_longitude",
+      "range": "-180.0,180.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_accuracy",
+      "name": "ora_uncertainty",
+      "type": "NUMBER",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "argType": "NUMBER",
+      "description": "brake",
+      "name": "brake"
+    },
+    {
+      "argType": "URI",
+      "description": "firmware update",
+      "name": "firmwareUpdate"
+    },
+    {
+      "description": "lock door",
+      "name": "lockDoor"
+    },
+    {
+      "description": "unlock door",
+      "name": "unlockDoor"
+    }
+  ],
+  "formats": [
+    {
+      "urn": "urn:com:oracle:iot:connected-car:flat-tire",
+      "name": "flatTire",
+      "description": "flatTire",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:connected-car",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:oracle:iot:connected-car",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:connected-car:tire-pressure",
+      "name": "tirePressure",
+      "description": "tirePressure",
+      "type": "DATA",
+      "deviceModel": "urn:com:oracle:iot:connected-car",
+      "value": {
+        "fields": [
+          {
+            "name": "pressure",
+            "optional": false,
+            "type": "NUMBER"
+          }
+        ]
+      },
+      "sourceId": "urn:com:oracle:iot:connected-car",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:connected-car:drowsinessLevel",
+      "name": "drowsinessLevel",
+      "description": "drowsinessLevel",
+      "type": "DATA",
+      "deviceModel": "urn:com:oracle:iot:connected-car",
+      "value": {
+        "fields": [
+          {
+            "name": "drowsiness",
+            "optional": false,
+            "type": "INTEGER"
+          }
+        ]
+      },
+      "sourceId": "urn:com:oracle:iot:connected-car",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:connected-car:front-airbag-fired",
+      "name": "frontAirbagFired",
+      "description": "frontAirbagFired",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:connected-car",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:oracle:iot:connected-car",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:connected-car:collision",
+      "name": "collisionDetected",
+      "description": "collisionDetected",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:connected-car",
+      "value": {
+        "fields": [
+          {
+            "name": "impactSpeed",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "nrPassengers",
+            "optional": false,
+            "type": "INTEGER"
+          }
+        ]
+      },
+      "sourceId": "urn:com:oracle:iot:connected-car",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:connected-car:side-airbag-fired",
+      "name": "sideAirbagFired",
+      "description": "sideAirbagFired",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:connected-car",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:oracle:iot:connected-car",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:connected-car:wheel-speed",
+      "name": "wheelSpeed",
+      "description": "wheelSpeed",
+      "type": "DATA",
+      "deviceModel": "urn:com:oracle:iot:connected-car",
+      "value": {
+        "fields": [
+          {
+            "name": "speed",
+            "optional": false,
+            "type": "NUMBER"
+          }
+        ]
+      },
+      "sourceId": "urn:com:oracle:iot:connected-car",
+      "sourceType": "DEVICE_MODEL"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car",
+      "rel": "self"
+    },
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Aconnected-car/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
