@@ -2,8 +2,7 @@
   "@context": [
     "https://www.w3.org/2019/wot/td/v1",
     {
-      "iot": "http://iotschema.org/",
-      "http": "http://www.w3.org/2011/http#"
+      "iot": "http://iotschema.org/"
     }
   ],
   "@type": [
@@ -28,13 +27,13 @@
   "security": [
     "nosec_sc"
   ],
-  "title": "Intel-OCF-ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
+  "title": "Intel-OCF-led0mosfet",
   "support": "mailto:michael.mccool@intel.com",
   "version": {
     "instance": "0.1.0"
   },
   "created": "2018-09-10T06:30:00Z",
-  "modified": "2018-12-19T04:06:02Z",
+  "modified": "2019-05-28T05:24:31.743Z",
   "links": [
     {
       "href": "https://github.com/mmccool/ocf-wot-metadata-bridge",
@@ -69,14 +68,13 @@
         {
           "contentType": "application/json",
           "href": "http://upsq1c.local:8000/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
           "href": "http://upsq1c.local:8000/api/oic/a/led0mosfet?di=ea16d184-95ad-4af7-bfc9-53e86f55f3a4",
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
@@ -84,8 +82,7 @@
           "security": [
             "basic_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
@@ -94,7 +91,7 @@
             "basic_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
@@ -102,8 +99,7 @@
           "security": [
             "basic_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
@@ -112,7 +108,7 @@
             "basic_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
@@ -120,8 +116,7 @@
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
@@ -130,7 +125,7 @@
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         },
         {
           "contentType": "application/json",
@@ -138,8 +133,7 @@
           "security": [
             "digest_sc"
           ],
-          "op": "readproperty",
-          "http:methodName": "GET"
+          "op": "readproperty"
         },
         {
           "contentType": "application/json",
@@ -148,7 +142,7 @@
             "digest_sc"
           ],
           "op": "writeproperty",
-          "http:methodName": "POST"
+          "htv:methodName": "POST"
         }
       ]
     }
