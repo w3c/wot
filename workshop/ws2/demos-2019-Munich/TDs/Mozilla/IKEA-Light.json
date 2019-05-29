@@ -1,0 +1,64 @@
+{
+   "name":"IKEA TRÅDFRI LED Bulb",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "Light",
+      "ColorControl",
+      "OnOffSwitch"
+   ],
+   "description":"",
+   "href":"/things/zb-d0cf5efffe1cb0bb",
+   "properties":{
+      "color":{
+         "title":"Color",
+         "type":"string",
+         "@type":"ColorProperty",
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/zb-d0cf5efffe1cb0bb/properties/color"
+            }
+         ]
+      },
+      "on":{
+         "title":"On/Off",
+         "type":"boolean",
+         "@type":"OnOffProperty",
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/zb-d0cf5efffe1cb0bb/properties/on"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/zb-d0cf5efffe1cb0bb/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/zb-d0cf5efffe1cb0bb/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/zb-d0cf5efffe1cb0bb/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/zb-d0cf5efffe1cb0bb"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-workshop.mozilla-iot.org/things/zb-d0cf5efffe1cb0bb"
+      }
+   ]
+}

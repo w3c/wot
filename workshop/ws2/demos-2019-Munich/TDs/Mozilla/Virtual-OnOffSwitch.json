@@ -1,0 +1,51 @@
+{
+   "name":"Virtual On/Off Switch",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "OnOffSwitch"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-3",
+   "properties":{
+      "on":{
+         "title":"On/Off",
+         "type":"boolean",
+         "@type":"OnOffProperty",
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-3/properties/on"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-3/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-3/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-3/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-3"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-3"
+      }
+   ]
+}
