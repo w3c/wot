@@ -44,11 +44,11 @@ Please provide your demo poster until May 28th.
 | TU Munich | 2x Cameras                             | Wifi / Lan                                                        | Can only take pictures but adjustable exposure | ege.korkan@tum.de | ? | + | + | + | + | + |
 | TU Munich | 2x ESP 32 Light Sensors                | Wifi / Lan                                                        | Representing more constrained devices | ege.korkan@tum.de | ? | + | + | + | + | + |
 | Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
-| Intel     | Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | WIP: Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
-| Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | WIP: Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |kunihiko.toumura.yv@hitachi.com| - | + | + | + | + | + |
 | Fujitsu   | 2 Local proxies. One is in smart home in Japan, another in Munich (6) |  Wifi / Lan; 1 power                                              | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
 | Fujitsu   | Remote proxy. Connect 2 Local proxies above. (7) |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
