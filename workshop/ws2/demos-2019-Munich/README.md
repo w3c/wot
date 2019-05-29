@@ -208,7 +208,18 @@ Example commercial smart home devices from different vendors using different sma
 interacted with via a browser, or by third party apps and services using the [Web Thing API](https://iot.mozilla.org/wot/) and OAuth.
 Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) which directly expose the Web Thing API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
-## Additional Scenarios:
+## Enhancing power efficiency for smart home
+Monitors power consumption and detects exceed the limit, stops some appliances to reduce the consumption.
+
+### Device interactions (Proposal)
+* Smart meter monitors power consumption (Fujitsu)
+* Turn on an air conditioner (Fujitsu)
+* Turn on another air conditioner (Panasonic)
+* EcoG stops charging (EcoG)
+* Storage battery start discharging (Fujitsu)
+* Smart home application monitors and controls these devices.
+
+## Additional Scenarios: 
 
 ### Enterprise integration scenarios
 Ex: Asset management
