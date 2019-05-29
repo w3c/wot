@@ -209,6 +209,17 @@ accessed and interacted with via a browser or over the network via OAuth.
 Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) that match 
 Mozilla's WebThings API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
+## Enhancing power efficiency for smart home
+Monitors power consumption and detects exceed the limit, stops some appliances to reduce the consumption.
+
+### Device interactions (Proposal)
+* Smart meter monitors power consumption (Fujitsu)
+* Turn on an air conditioner (Fujitsu)
+* Turn on another air conditioner (Panasonic)
+* EcoG stops charging (EcoG)
+* Storage battery start discharging (Fujitsu)
+* Smart home application monitors and controls these devices.
+
 ## Additional Scenarios: 
 
 ### Enterprise integration scenarios
