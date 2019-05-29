@@ -1,0 +1,231 @@
+{
+  "name": "Sonos Dave's Office",
+  "type": "",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [],
+  "description": "",
+  "href": "/things/00-0E-58-FB-B3-EA:4",
+  "properties": {
+    "volume": {
+      "title": "Volume",
+      "type": "integer",
+      "@type": "LevelProperty",
+      "unit": "percent",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/volume"
+        }
+      ]
+    },
+    "playing": {
+      "title": "Playing",
+      "type": "boolean",
+      "@type": "BooleanProperty",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/playing"
+        }
+      ]
+    },
+    "shuffle": {
+      "title": "Shuffle",
+      "type": "boolean",
+      "@type": "BooleanProperty",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/shuffle"
+        }
+      ]
+    },
+    "repeat": {
+      "title": "Repeat",
+      "type": "string",
+      "@type": "EnumProperty",
+      "enum": [
+        "None",
+        "One",
+        "All"
+      ],
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/repeat"
+        }
+      ]
+    },
+    "crossfade": {
+      "title": "Crossfade",
+      "type": "boolean",
+      "@type": "BooleanProperty",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/crossfade"
+        }
+      ]
+    },
+    "track": {
+      "title": "Track",
+      "type": "string",
+      "@type": "StringProperty",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/track"
+        }
+      ]
+    },
+    "album": {
+      "title": "Album",
+      "type": "string",
+      "@type": "StringProperty",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/album"
+        }
+      ]
+    },
+    "artist": {
+      "title": "Artist",
+      "type": "string",
+      "@type": "StringProperty",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/artist"
+        }
+      ]
+    },
+    "progress": {
+      "title": "Progress",
+      "type": "number",
+      "@type": "LevelProperty",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/progress"
+        }
+      ]
+    },
+    "albumArt": {
+      "title": "Album art",
+      "@type": "ImageProperty",
+      "readOnly": true,
+      "links": [
+        {
+          "mediaType": "image/png",
+          "href": "/media/sonos/00-0E-58-FB-B3-EA:4/album.png",
+          "rel": "alternate"
+        },
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/albumArt"
+        }
+      ]
+    },
+    "muted": {
+      "title": "Muted",
+      "type": "boolean",
+      "@type": "BooleanProperty",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/00-0E-58-FB-B3-EA:4/properties/muted"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "next": {
+      "title": "Next",
+      "description": "Skip current track and start playing next track in the queue",
+      "links": [
+        {
+          "rel": "action",
+          "href": "/things/00-0E-58-FB-B3-EA:4/actions/next"
+        }
+      ]
+    },
+    "prev": {
+      "title": "Previous",
+      "description": "Play previous track in the queue",
+      "links": [
+        {
+          "rel": "action",
+          "href": "/things/00-0E-58-FB-B3-EA:4/actions/prev"
+        }
+      ]
+    },
+    "stop": {
+      "title": "Stop",
+      "description": "Stop current playback",
+      "links": [
+        {
+          "rel": "action",
+          "href": "/things/00-0E-58-FB-B3-EA:4/actions/stop"
+        }
+      ]
+    },
+    "group": {
+      "title": "Group/Ungroup",
+      "description": "Group Sonos players",
+      "input": {
+        "type": "object",
+        "required": [
+          "Kitchen",
+          "Living Room"
+        ],
+        "properties": {
+          "Kitchen": {
+            "type": "boolean",
+            "default": false
+          },
+          "Living Room": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "links": [
+        {
+          "rel": "action",
+          "href": "/things/00-0E-58-FB-B3-EA:4/actions/group"
+        }
+      ]
+    }
+  },
+  "events": {},
+  "links": [
+    {
+      "rel": "properties",
+      "href": "/things/00-0E-58-FB-B3-EA:4/properties"
+    },
+    {
+      "rel": "actions",
+      "href": "/things/00-0E-58-FB-B3-EA:4/actions"
+    },
+    {
+      "rel": "events",
+      "href": "/things/00-0E-58-FB-B3-EA:4/events"
+    },
+    {
+      "rel": "alternate",
+      "mediaType": "text/html",
+      "href": "/things/00-0E-58-FB-B3-EA:4"
+    },
+    {
+      "rel": "alternate",
+      "href": "wss://dave:4443/things/00-0E-58-FB-B3-EA:4"
+    }
+  ],
+  "layoutIndex": 6,
+  "selectedCapability": "",
+  "iconHref": null
+}

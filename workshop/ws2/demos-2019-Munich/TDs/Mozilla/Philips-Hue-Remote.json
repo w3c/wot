@@ -1,0 +1,123 @@
+{
+  "name": "Hue Remote 150e",
+  "type": "multiLevelSwitch",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+    "OnOffSwitch",
+    "MultiLevelSwitch",
+    "PushButton"
+  ],
+  "description": "",
+  "href": "/things/zb-0017880102d6150e",
+  "properties": {
+    "on": {
+      "title": "On/Off",
+      "type": "boolean",
+      "@type": "BooleanProperty",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-0017880102d6150e/properties/on"
+        }
+      ]
+    },
+    "level": {
+      "title": "Level",
+      "type": "number",
+      "@type": "LevelProperty",
+      "unit": "percent",
+      "minimum": 0,
+      "maximum": 100,
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-0017880102d6150e/properties/level"
+        }
+      ]
+    },
+    "voltage": {
+      "title": "Voltage",
+      "type": "number",
+      "@type": "VoltageProperty",
+      "unit": "volt",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-0017880102d6150e/properties/voltage"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {
+    "1-pressed": {
+      "@type": "PressedEvent",
+      "description": "On button pressed and released",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-0017880102d6150e/events/1-pressed"
+        }
+      ]
+    },
+    "2-pressed": {
+      "@type": "PressedEvent",
+      "description": "Off button pressed and released",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-0017880102d6150e/events/2-pressed"
+        }
+      ]
+    },
+    "3-pressed": {
+      "@type": "PressedEvent",
+      "description": "Increase button pressed and released",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-0017880102d6150e/events/3-pressed"
+        }
+      ]
+    },
+    "4-pressed": {
+      "@type": "PressedEvent",
+      "description": "Decrease button pressed and released",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-0017880102d6150e/events/4-pressed"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "properties",
+      "href": "/things/zb-0017880102d6150e/properties"
+    },
+    {
+      "rel": "actions",
+      "href": "/things/zb-0017880102d6150e/actions"
+    },
+    {
+      "rel": "events",
+      "href": "/things/zb-0017880102d6150e/events"
+    },
+    {
+      "rel": "alternate",
+      "mediaType": "text/html",
+      "href": "/things/zb-0017880102d6150e"
+    },
+    {
+      "rel": "alternate",
+      "href": "wss://dave:4443/things/zb-0017880102d6150e"
+    }
+  ],
+  "layoutIndex": 4,
+  "selectedCapability": "MultiLevelSwitch",
+  "iconHref": null
+}

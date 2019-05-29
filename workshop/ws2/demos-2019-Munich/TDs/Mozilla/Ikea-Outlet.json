@@ -1,0 +1,51 @@
+{
+  "name": "Ikea Outlet b9d",
+  "type": "onOffSwitch",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+    "OnOffSwitch"
+  ],
+  "description": "",
+  "href": "/things/zb-d0cf5efffe7d4b9d",
+  "properties": {
+    "on": {
+      "title": "On/Off",
+      "type": "boolean",
+      "@type": "OnOffProperty",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-d0cf5efffe7d4b9d/properties/on"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+    {
+      "rel": "properties",
+      "href": "/things/zb-d0cf5efffe7d4b9d/properties"
+    },
+    {
+      "rel": "actions",
+      "href": "/things/zb-d0cf5efffe7d4b9d/actions"
+    },
+    {
+      "rel": "events",
+      "href": "/things/zb-d0cf5efffe7d4b9d/events"
+    },
+    {
+      "rel": "alternate",
+      "mediaType": "text/html",
+      "href": "/things/zb-d0cf5efffe7d4b9d"
+    },
+    {
+      "rel": "alternate",
+      "href": "wss://dave:4443/things/zb-d0cf5efffe7d4b9d"
+    }
+  ],
+  "layoutIndex": 7,
+  "selectedCapability": "OnOffSwitch",
+  "iconHref": null
+}

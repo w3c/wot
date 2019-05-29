@@ -1,0 +1,159 @@
+{
+  "name": "Desk Switch 328",
+  "type": "multiLevelSwitch",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+    "OnOffSwitch",
+    "MultiLevelSwitch",
+    "PushButton",
+    "TemperatureSensor"
+  ],
+  "description": "",
+  "href": "/things/zb-8418260000e8f328",
+  "properties": {
+    "on": {
+      "title": "On/Off",
+      "type": "boolean",
+      "@type": "BooleanProperty",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-8418260000e8f328/properties/on"
+        }
+      ]
+    },
+    "level": {
+      "title": "Level",
+      "type": "number",
+      "@type": "LevelProperty",
+      "unit": "percent",
+      "minimum": 0,
+      "maximum": 100,
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-8418260000e8f328/properties/level"
+        }
+      ]
+    },
+    "temperature": {
+      "title": "Temperature",
+      "type": "number",
+      "@type": "TemperatureProperty",
+      "unit": "degree celsius",
+      "minimum": -40,
+      "maximum": 125,
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-8418260000e8f328/properties/temperature"
+        }
+      ]
+    },
+    "voltage": {
+      "title": "Voltage",
+      "type": "number",
+      "@type": "VoltageProperty",
+      "unit": "volt",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-8418260000e8f328/properties/voltage"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {
+    "1-pressed": {
+      "@type": "PressedEvent",
+      "description": "On button pressed and released",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-8418260000e8f328/events/1-pressed"
+        }
+      ]
+    },
+    "2-pressed": {
+      "@type": "PressedEvent",
+      "description": "Off button pressed and released",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-8418260000e8f328/events/2-pressed"
+        }
+      ]
+    },
+    "1-longPressed": {
+      "@type": "LongPressedEvent",
+      "description": "On button pressed and held",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-8418260000e8f328/events/1-longPressed"
+        }
+      ]
+    },
+    "2-longPressed": {
+      "@type": "LongPressedEvent",
+      "description": "Off button pressed and held",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-8418260000e8f328/events/2-longPressed"
+        }
+      ]
+    },
+    "1-released": {
+      "@type": "ReleasedEvent",
+      "description": "On button released (after being held)",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-8418260000e8f328/events/1-released"
+        }
+      ]
+    },
+    "2-released": {
+      "@type": "ReleasedEvent",
+      "description": "Off button released (after being held)",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-8418260000e8f328/events/2-released"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "properties",
+      "href": "/things/zb-8418260000e8f328/properties"
+    },
+    {
+      "rel": "actions",
+      "href": "/things/zb-8418260000e8f328/actions"
+    },
+    {
+      "rel": "events",
+      "href": "/things/zb-8418260000e8f328/events"
+    },
+    {
+      "rel": "alternate",
+      "mediaType": "text/html",
+      "href": "/things/zb-8418260000e8f328"
+    },
+    {
+      "rel": "alternate",
+      "href": "wss://dave:4443/things/zb-8418260000e8f328"
+    }
+  ],
+  "layoutIndex": 3,
+  "selectedCapability": "MultiLevelSwitch",
+  "iconHref": null
+}

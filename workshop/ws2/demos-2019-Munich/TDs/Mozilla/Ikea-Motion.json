@@ -1,0 +1,87 @@
+{
+  "name": "zb-000b57fffe8edd5f-motion",
+  "type": "thing",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+    "MotionSensor"
+  ],
+  "description": "",
+  "href": "/things/zb-000b57fffe8edd5f",
+  "properties": {
+    "motion": {
+      "title": "Motion",
+      "type": "boolean",
+      "@type": "MotionProperty",
+      "description": "Motion Sensor",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-000b57fffe8edd5f/properties/motion"
+        }
+      ]
+    },
+    "voltage": {
+      "title": "Voltage",
+      "type": "number",
+      "@type": "VoltageProperty",
+      "unit": "volt",
+      "readOnly": true,
+      "links": [
+        {
+          "rel": "property",
+          "href": "/things/zb-000b57fffe8edd5f/properties/voltage"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {
+    "motion": {
+      "@type": "MotionEvent",
+      "description": "Motion detected",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-000b57fffe8edd5f/events/motion"
+        }
+      ]
+    },
+    "no-motion": {
+      "@type": "MotionEvent",
+      "description": "Motion timeout",
+      "links": [
+        {
+          "rel": "event",
+          "href": "/things/zb-000b57fffe8edd5f/events/no-motion"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "properties",
+      "href": "/things/zb-000b57fffe8edd5f/properties"
+    },
+    {
+      "rel": "actions",
+      "href": "/things/zb-000b57fffe8edd5f/actions"
+    },
+    {
+      "rel": "events",
+      "href": "/things/zb-000b57fffe8edd5f/events"
+    },
+    {
+      "rel": "alternate",
+      "mediaType": "text/html",
+      "href": "/things/zb-000b57fffe8edd5f"
+    },
+    {
+      "rel": "alternate",
+      "href": "wss://dave:4443/things/zb-000b57fffe8edd5f"
+    }
+  ],
+  "layoutIndex": 9,
+  "selectedCapability": "MotionSensor",
+  "iconHref": null
+}
