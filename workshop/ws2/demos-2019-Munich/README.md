@@ -17,7 +17,7 @@ Phone# is available at Wiki.
 ## Monday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
-## Tuesday-Wednesday: Siemens
+## Tuesday-Wednesday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 ## Posters
