@@ -61,7 +61,7 @@ Please provide your demo poster until May 28th.
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
 | University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 | 
-| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
+| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...    | ? | + | + | + | + | + |            
 | Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 
 ## Notes
