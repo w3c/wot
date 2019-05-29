@@ -1,1 +1,1 @@
-Video recording of home and industrail scenario
+Video recording of home and industrial scenario
