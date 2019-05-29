@@ -3,7 +3,7 @@
 
 # Locations:
 
-## Friday: Siemens (8am - 2pm)
+## Friday: Siemens (8am - 5pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 Point of contact: Sebastian is available via mobile phone
@@ -12,12 +12,12 @@ Point of contact: Sebastian is available via mobile phone
 https://www.w3.org/WoT/IG/wiki/F2F_meeting,_6-7_June_2019,_Munich,_Germany#Venue
 
 Point of contact: Ege.Korkan@tum.de
-Phone# is available at Wiki. 
+Phone# +49 176 3012 69 42
 
 ## Monday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
-## Tuesday-Wednesday: Siemens
+## Tuesday-Wednesday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 ## Posters
@@ -25,7 +25,9 @@ https://www.w3.org/WoT/ws-2019/cfp.html#location
 A template example is available at: https://github.com/w3c/wot/blob/master/workshop/ws2/demos-2019-Munich/Poster/Session_3_Demo_Template.pptx 
 
 The print out format will be DIN A0. (841×1189mm)
-They will be put up on flexible walls.
+Posters will be put up on flexible walls.
+
+Please provide your demo poster until May 28th.
 
 # Participating companies
 
@@ -34,31 +36,34 @@ They will be put up on flexible walls.
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | ? | + | + | + |
 | Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
-| TU Munich | MeArm Robotic Arms                  | Wifi / Lan                                                               | Mechanically not reliable                | 
-| TU Munich | Texas Instruments Bluetooth Sensors | Wifi / Lan                                                               | Bridged via HTTP and CoAP                | 
-| TU Munich | Philips HUE Lights and Buttons | Wifi / Lan                                                               | ... |
-| TU Munich | LED Strip | Wifi / Lan                                                               | ... |
-| TU Munich | Sense HAT (LED Matrix and sensors) | Wifi / Lan                                                               | ... |
-| TU Munich | Cameras | Wifi / Lan                                                               | Can only take pictures |
-| TU Munich | ESP 32 Light Sensors | Wifi / Lan                                                               | Representing more constrained devices |
-| Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |
-| Intel     | Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |
-| Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |
-| Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |
-| Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |
-| Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |
-| Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |
-| Fujitsu   | Local proxy (6)                    |  Wifi / Lan; 1 power                                              | ...                |
-| Fujitsu   | Remote proxy (7)                   |                                                                   | ...  |
-| Fujitsu   | Local devices (8)                  |                                                                   | ...  |
-| Fujitsu   | Smart home devices in Japan (9)                  |                                                                   | ...  |
-| Panasonic | Smart home lab in Osaka (10)         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |
-| Panasonic | Bulletin Board in local (11)         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |
-| Panasonic | Online simulator (12)                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |
-| Panasonic | Local simulator (13)                | Wifi / Lan; 1 power                                               | ...                |
+| TU Munich | 2x MeArm Robotic Arms                  | Wifi / Lan                                                     | Mechanically not reliable                | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 3x Texas Instruments Bluetooth Sensors | Wifi / Lan                                                        | Bridged via HTTP and CoAP via 1x Raspberry                | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 3x Philips HUE Lights and Controller   | Wifi / Lan                                                        | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 1x LED Strip with individually controlloble LEDs | Wifi / Lan                                              | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x Sense HAT (LED Matrix and sensors)  | Wifi / Lan                                                        | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x Cameras                             | Wifi / Lan                                                        | Can only take pictures but adjustable exposure | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x ESP 32 Light Sensors                | Wifi / Lan                                                        | Representing more constrained devices | ege.korkan@tum.de | ? | + | + | + | + | + |
+| Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | WIP: Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | WIP: Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |kunihiko.toumura.yv@hitachi.com| - | + | + | + | + | + |
+| Fujitsu   | 2 Local proxies. One is in smart home in Japan, another in Munich (6) |  Wifi / Lan; 1 power                                              | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Fujitsu   | Remote proxy. Connect 2 Local proxies above. (7) |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Fujitsu   | Local devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, Human detection, 3-axis acceleration, Brightness sensors), [Agricuture sensor](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json) (Temperature, 3-axis acceleration, Brightness sensor).   |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Fujitsu   | Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blind [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).                 |                                                     | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
+| Panasonic | Smart home lab in Osaka ([Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld))         | Wifi / Lan; ext ports 443, 8003, 8443                             | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Bulletin Board in local ([Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld))         | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power              | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Online simulator ([Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld))                | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443                  | ...                |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
+| Panasonic | Local simulator (Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting)                | Wifi / Lan; 1 power                                               | More devices could be added to discuss about cross domain business models, use cases and scenarios. |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
-| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
+| University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 | 
+| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...    | ? | + | + | + | + | + |            
+| Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
+| W3C/ERCIM    | Healthcare demo |
 
 ## Notes
 * Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>
@@ -72,21 +77,21 @@ The following notes relate to the numbers in the table above.
 3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
 4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
 5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
-6. Local proxy can connect members' devices and expose them as virtual devices.
+6. Local proxy can connect participants' devices and expose them as virtual devices.
 7. Remote proxy (cloud) can expose devcies that are connected to our local proxies (both of in Munich and Japan).
-8. Devices: [Rotary beacom light](TDs/Fujitsu/Fujitsu-Rotarybeaconlight.json), [Buzzer](TDs/Fujitsu/Fujitsu-Buzzerjson), [Environment sensors](TDs/Fujitsu/Fujitsu-WiFiSensor.json) (Temperature, Humidity, Air pressure, and particle sensors), [Agricuture sensors](TDs/Fujitsu/Fujitsu-AgriDevice.json) (Temperature, Humidity, Brightness, UV index, CO2 concentration), and [Wearable sensor](TDs/Fujitsu/Fujitsu-CHLOG.json).
-9. Smart home devices: [Smart meter](TDs/Fujitsu/Fujitsu-PowerMeter.json), [LED light](TDs/Fujitsu/Fujitsu-LEDLight.json), [Air conditioner](TDs/Fujitsu/Fujitsu-Airconditioner.json), and Window blinds [Open](TDs/Fujitsu/Fujitsu-BlindOpen.json), [Close](TDs/Fujitsu/Fujitsu-BlindClose.json).
-10. Devices: [Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)
-11. Devices: [Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)
-12. Devices: [Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)
-13. Devices: Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting, ... (more devices could be added to discuss about cross domain business models, use cases and scenarios.)
+8. (removed)
+9. (removed)
+10. (removed)
+11. (removed)
+12. (removed)
+13. (removed)
 14. Devices: EV charger controller, microgrid controller, northbound interface for others to connect
 
 
 
 # Scenarios
 
-The following scenarios demonstrate the interoperability of devices across different manufactuers.
+The following scenarios demonstrate the interoperability of devices across different manufacturers.
 
 ## Home integration scenarios
 
@@ -94,19 +99,17 @@ Scenario: Automatically turn off devices when user leaves the room
 
 ### Description:
 An environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
-When the "room empty" condition is detected.
-the room is cleaned by a vacuum cleaner,  lights are turned off, window blinds are closed and a surveillence camera is turned on.
+When the "room empty" condition is detected, the room is cleaned by a vacuum cleaner, lights are turned off, window blinds are closed and a surveillance camera is turned on.
 
 ### Device interactions (Proposal)
 
-* Environment sensor (Simulation?)
+* Environment sensor (Simulation?) (TUM has humidity, temperature, pressure sensors)
 * Detect when room is empty and trigger the following actions (Oracle)
 * Close window blinds (Fujitsu)
 * Clean the room (Panasonic)
-* Turn on a MQTT device (Siemens)
-* Turn off the lights (Smart Things)
+* Turn on an MQTT device (Siemens)
+* Turn off the lights (Smart Things) (TUM)
 * Turn on a surveillance camera (Intel)
-* Control other devices (TU Munich)
 ...
 
 ## Industrial integration scenarios
@@ -115,21 +118,23 @@ Scenario: Automatically alert and protect citizens when a chemical plant has an 
 
 ### Description
 An environment sensor is capable of measuring air quality by measuring the oxygen level.
-When a low oxygen condition is detected by the Oracle IoT-Cloud Service Asset Monitoring application,
-connected devices take the appropriate action to protect and alert citizens,
-such as draining a tank in the factory, turning off all air-conditioners, flash alert and warning lights,
-pubish alert messages and make voice announcements.
+During an industrial process, when a low oxygen condition is detected by the 
+Oracle IoT-Cloud Service Asset Monitoring application, connected devices take 
+the appropriate action to protect and alert citizens, such as draining a tank 
+in the factory, turning off all air-conditioners, flash alert and warning lights, 
+publish alert messages and make voice announcements.
 
 ### Device interactions (Proposal)
 
+* (Initially) A robot arm is doing an operation continuously
 * Environment sensor monitors air quality. 
 * Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
 * Drain the tank in a chemical factory (Siemens)
 * Flash a warning light (Fujitsu)
 * Turn off all air conditioners (Panasonic)
+* Bring the robot arm to a safe position (TUM)
 * Flash the lights (Smart Things)
 * Make voice announcements (Intel)
-* Control other devices (TU Munich)
 ...
 
 ## Energy management in a smart building/smart city/smart home
@@ -162,6 +167,18 @@ An additional interesting issue this scenario raises is how "eco" mode is determ
 Ideally each device would provide a simple boolean control to turn this on and off
 and would then determine internally how to save power.
 
+## Energy management for commercial buildings
+
+Reduce load charge power to stay under the peak power you get from the grid.
+AC condition is monitored, charge power is reduced, if AC is on.
+
+### Devices:
+* Grid Simulation (Siemens)
+* monitoring ECoG Charger, indicating power consumption, start charging (EcoG)
+* Simulated Building management system (Siemens)
+* Air conditioner (t.b.d.)
+
+
 ## Security Alert using person detection (industrial)
 
 Scenario: Alert is raised when a person is detected entering a forbidden
@@ -187,8 +204,22 @@ Charging of a vehicle dependent on the energy consumption.
 Mozilla
 
 ### Description:
+[Mozilla WebThings Gateway](https://iot.mozilla.org/gateway) will run on the local WoT Wi-Fi network. 
+Example commercial smart home devices will be adapted into a single web UI (by the gateway) that can be 
+accessed and interacted with via a browser or over the network via OAuth.
+Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) that match 
+Mozilla's WebThings API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
+## Enhancing power efficiency for smart home
+Monitors power consumption and detects exceed the limit, stops some appliances to reduce the consumption.
 
+### Device interactions (Proposal)
+* Smart meter monitors power consumption (Fujitsu)
+* Turn on an air conditioner (Fujitsu)
+* Turn on another air conditioner (Panasonic)
+* EcoG stops charging (EcoG)
+* Storage battery start discharging (Fujitsu)
+* Smart home application monitors and controls these devices.
 
 ## Additional Scenarios: 
 
@@ -198,7 +229,6 @@ Ex: Asset management
 ### Transportation scenarios
 Ex: Fleet management
 Ex: Shipping and inventory control (supply chain management)
-
 
 # Logistics
 
@@ -223,19 +253,19 @@ Please place all tools into the [tools](tools) directory.
   Like in the previous plug fests there is an instance of the Oracle IoT Cloud Service available for interoperability tests.  
   It is shared among all plug fest participants, so please coordinate with Michael.Lagally@oracle.com if you have questions.  
   The management console is available at:
-  \<t.b.d.\>  
+  https://iotpoc8.oracleiotcloud.com/ui  
 
   The instance is using the same password, as previously communicated to individual companies. Please let Michael.Lagally@oracle.com know if you require access.
   
 * Oracle Digital Twin Simulator  
   There is an instance of the Oracle Digital Twin Simulator for plug fest participants. It hosts several simulations, such as a HVAC, Pump, Truck, Connected Car. Instances of simulated devices can be provided for plug fest participants on request.  
   Please let Michael.Lagally@oracle.com know if you require a simulated device instance.  
-  The login page is at: \<t.b.d.\>
+  The login page is at: https://iotpoc8.oracleiotcloud.com/ds
   
 
 ### Google Hangout:
    - Used to video stream remote devices such as Festo Live or Panasonic Lab
-   - \<t.b.d.\>
+   - https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE
 
 # Documentation
 For information about previous test fests see: https://github.com/w3c/wot/tree/master/testfest/2018-12-online 
@@ -244,7 +274,3 @@ For information about previous test fests see: https://github.com/w3c/wot/tree/m
 
 1 Table per scenario (?),  , ... are possible
 
-Siemens offers to print posters, if they are provided by the online-plugfest (May 28th).
-Sebastian will provide a template, format + size will be communicated later. 
-
-Siemens facilities are accessible from <tbd. - Sebastian checks>

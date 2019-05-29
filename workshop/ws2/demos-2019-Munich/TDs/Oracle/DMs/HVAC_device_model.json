@@ -1,0 +1,119 @@
+{
+  "urn": "urn:com:oracle:iot:device:hvac",
+  "name": "HVAC device model",
+  "description": "HVAC device model",
+  "system": false,
+  "draft": false,
+  "created": 1558617216134,
+  "createdAsString": "2019-05-23T13:13:36.134Z",
+  "lastModified": 1558617216134,
+  "lastModifiedAsString": "2019-05-23T13:13:36.134Z",
+  "userLastModified": "iot",
+  "attributes": [
+    {
+      "alias": "temperature",
+      "description": "Output temperature ([0 .. +50] Celsius degrees)",
+      "name": "outputTemp",
+      "range": "0.0,50.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Vibration (KHz) - normal 1 kHz, +/- 2%",
+      "name": "vibration",
+      "range": "0.5,1.5",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "The oil viscosity (%)",
+      "name": "oilViscosity",
+      "range": "0.0,1.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Motor Amperage (normal: 50A, +/- 2%)",
+      "name": "motorAmperage",
+      "range": "0.0,100.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Target temperature ([0 .. +50] Celcius degrees)",
+      "name": "targetTemp",
+      "range": "0,50",
+      "type": "INTEGER",
+      "writable": true
+    },
+    {
+      "description": "Current time",
+      "name": "time",
+      "type": "DATETIME",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "argType": "BOOLEAN",
+      "description": "Turns system ON or OFF",
+      "name": "power"
+    }
+  ],
+  "formats": [
+    {
+      "urn": "urn:com:oracle:iot:device:hvac:alert:unabletoconnect",
+      "name": "unabletoconnect",
+      "description": "Unable to connect alert",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:device:hvac",
+      "value": {
+        "fields": [
+          {
+            "name": "unable_to_connect",
+            "optional": false,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:oracle:iot:device:hvac",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:device:hvac:alert:dooropened",
+      "name": "dooropened",
+      "description": "Security breach: door opened",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:device:hvac",
+      "value": {
+        "fields": [
+          {
+            "name": "breach_door_opened",
+            "optional": false,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:oracle:iot:device:hvac",
+      "sourceType": "DEVICE_MODEL"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Adevice%253Ahvac",
+      "rel": "self"
+    },
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Adevice%253Ahvac",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Adevice%253Ahvac/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
