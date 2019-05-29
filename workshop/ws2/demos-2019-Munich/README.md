@@ -12,7 +12,7 @@ Point of contact: Sebastian is available via mobile phone
 https://www.w3.org/WoT/IG/wiki/F2F_meeting,_6-7_June_2019,_Munich,_Germany#Venue
 
 Point of contact: Ege.Korkan@tum.de
-Phone# is available at Wiki. 
+Phone# is available at Wiki.
 
 ## Monday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
@@ -22,7 +22,7 @@ https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 ## Posters
 
-A template example is available at: https://github.com/w3c/wot/blob/master/workshop/ws2/demos-2019-Munich/Poster/Session_3_Demo_Template.pptx 
+A template example is available at: https://github.com/w3c/wot/blob/master/workshop/ws2/demos-2019-Munich/Poster/Session_3_Demo_Template.pptx
 
 The print out format will be DIN A0. (841×1189mm)
 Posters will be put up on flexible walls.
@@ -60,7 +60,7 @@ Please provide your demo poster until May 28th.
 | Panasonic | Local simulator (Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting)                | Wifi / Lan; 1 power                                               | More devices could be added to discuss about cross domain business models, use cases and scenarios. |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
-| University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 | 
+| University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 |
 | BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
 | Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 
@@ -72,7 +72,7 @@ Please provide your demo poster until May 28th.
 The following notes relate to the numbers in the table above.
 
 1. Services running on a single gateway
-2. WIP. OpenVino service that can track multiple people, give bounding box.  Needs JPEG input image. 
+2. WIP. OpenVino service that can track multiple people, give bounding box.  Needs JPEG input image.
 3. Devices: 2 lights; 4 LEDs; 1 RGB Led; 2 push buttons; 2 PIR sensors; 2 temp sensors; 1 buzzer
 4. Ports are negotiable... go through a proxy, so will try to converge these onto a single standard 443 (https) port
 5. WIP. Solar charger, battery, and solar panel.  Needs to be near a window...
@@ -117,16 +117,16 @@ Scenario: Automatically alert and protect citizens when a chemical plant has an 
 
 ### Description
 An environment sensor is capable of measuring air quality by measuring the oxygen level.
-During an industrial process, when a low oxygen condition is detected by the 
-Oracle IoT-Cloud Service Asset Monitoring application, connected devices take 
-the appropriate action to protect and alert citizens, such as draining a tank 
-in the factory, turning off all air-conditioners, flash alert and warning lights, 
+During an industrial process, when a low oxygen condition is detected by the
+Oracle IoT-Cloud Service Asset Monitoring application, connected devices take
+the appropriate action to protect and alert citizens, such as draining a tank
+in the factory, turning off all air-conditioners, flash alert and warning lights,
 publish alert messages and make voice announcements.
 
 ### Device interactions (Proposal)
 
 * (Initially) A robot arm is doing an operation continuously
-* Environment sensor monitors air quality. 
+* Environment sensor monitors air quality.
 * Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
 * Drain the tank in a chemical factory (Siemens)
 * Flash a warning light (Fujitsu)
@@ -147,16 +147,16 @@ If the battery charge state is below a threshold (say, 50%), then load shedding 
 by putting registered devices into an "eco" mode; for example, lights can be run at 60% brightness,
 air conditioner or heating setpoints can be modified by a few degrees,
 and other optional scheduled services, such as robot vacuuming, can be deferred.
-In addition, in order to prolong battery life predictive charging is used: if the 
-weather report for the location of the solar panel indicates that for the rest of the day 
+In addition, in order to prolong battery life predictive charging is used: if the
+weather report for the location of the solar panel indicates that for the rest of the day
 and tomorrow will be sunny, then charging is halted at the 85% charging state.
 Various status information about the system can also be displayed via monitoring devices,
-such as an RGB LED indicating battery charge state, and other LEDs indicating 
+such as an RGB LED indicating battery charge state, and other LEDs indicating
 charging status and load-shedding modes.
 
 Note: This could be elaborated further for a system that feeds into or can draw from the grid.  
-For example, the system could wait to feed energy into the grid until the selling price is 
-optimal (based on machine learning...), 
+For example, the system could wait to feed energy into the grid until the selling price is
+optimal (based on machine learning...),
 or could charge the battery from the grid based on another set of rules, e.g. to keep
 the battery above 40% discharge state.
 
@@ -187,29 +187,28 @@ region.  Other motion not due to a person (eg automation) is ignored.
 A detection event from a PIR sensor triggers an application servient which
 grabs an image from a camera and sends it to a person recognition service.
 If the bounding box for any detected person returned from the person recognition
-service is inside the forbidden zone, 
+service is inside the forbidden zone,
 an alert is raised (both a network event and some immediate indication
 is given, such as a flashing light).
 The person identification service is used to avoid false positives due to other
 motion in the view of the camera.
 
-## Charging demo 
+## Charging demo
 EcoG + Siemens + Panasonic
 
-### Description: 
+### Description:
 Charging of a vehicle dependent on the energy consumption.
 
 ## Private smart home demo
 Mozilla
 
 ### Description:
-[Mozilla WebThings Gateway](https://iot.mozilla.org/gateway) will run on the local WoT Wi-Fi network. 
-Example commercial smart home devices will be adapted into a single web UI (by the gateway) that can be 
-accessed and interacted with via a browser or over the network via OAuth.
-Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) that match 
-Mozilla's WebThings API will also operate on the local Wi-Fi network, and be managed by the gateway.
+Mozilla's [WebThings Gateway](https://iot.mozilla.org/gateway) will run on the local Wi-Fi network and also be exposed to the Internet via a secure tunelling service.
+Example commercial smart home devices from different vendors using different smart home protocols will be monitored, controlled and automated via a single web UI (hosted by the gateway) that can be
+interacted with via a browser, or by third party apps and services using the [Web Thing API](https://iot.mozilla.org/wot/) and OAuth.
+Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) which directly expose the Web Thing API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
-## Additional Scenarios: 
+## Additional Scenarios:
 
 ### Enterprise integration scenarios
 Ex: Asset management
@@ -233,7 +232,7 @@ Please put all TD drafts already into the TD directory, please validate your TD 
 http://plugfest.thingweb.io/playground/.
 
 ### Tools:
-Please place all tools into the [tools](tools) directory. 
+Please place all tools into the [tools](tools) directory.
 
 
 ### Cloud:
@@ -244,21 +243,20 @@ Please place all tools into the [tools](tools) directory.
   https://iotpoc8.oracleiotcloud.com/ui  
 
   The instance is using the same password, as previously communicated to individual companies. Please let Michael.Lagally@oracle.com know if you require access.
-  
+
 * Oracle Digital Twin Simulator  
   There is an instance of the Oracle Digital Twin Simulator for plug fest participants. It hosts several simulations, such as a HVAC, Pump, Truck, Connected Car. Instances of simulated devices can be provided for plug fest participants on request.  
   Please let Michael.Lagally@oracle.com know if you require a simulated device instance.  
   The login page is at: https://iotpoc8.oracleiotcloud.com/ds
-  
+
 
 ### Google Hangout:
    - Used to video stream remote devices such as Festo Live or Panasonic Lab
    - https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE
 
 # Documentation
-For information about previous test fests see: https://github.com/w3c/wot/tree/master/testfest/2018-12-online 
+For information about previous test fests see: https://github.com/w3c/wot/tree/master/testfest/2018-12-online
 
 # Room setup and logistics:
 
 1 Table per scenario (?),  , ... are possible
-
