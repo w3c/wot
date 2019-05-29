@@ -117,7 +117,7 @@
         We aim to reduce costs through the global reach of Web standards, to enable open markets of services, and to unleash the power of the network effect.
         As a W3C Interest Group, we are seeking to build a deeper understanding of the Web of Things by investigating consumer, industrial, environmental, 
         energy management, and smart city scenarios.
-        This is intended to identify opportunities for further standards track work within W3C working groups and to better align with the established W3C liaisons.
+        This is intended to identify demand for further standards track work within W3C working groups and to better align with the established W3C liaisons.
       </p>
 
       <div class="noprint">
@@ -202,9 +202,9 @@
         </p>
         <p>
           The <a href="https://www.w3.org/WoT/WG/">Web of Things Interest Group</a> continues its work to support the WoT Working Group and to explore opportunities for new standards track work within W3C.
-          The priority of this third charter period is gaining experience with the standardized building blocks in the field
+          The priority of this third charter period is gaining additional practical experience with the standardized building blocks in the field
           to enable open markets of services on the scale of the Web.
-          For this, the Interest Group is seeking to broaden the range of participants to provide the necessary skills and resources to conduct this within real-world application scenarios.
+          To achieve this goal, the Interest Group is seeking to broaden the range of participants to provide the necessary skills and resources for real-world application scenarios in different verticals.
         </p>
       </section>
 
@@ -227,7 +227,7 @@
           and is intended to complement the role of the Web of Things Working Group (WoT WG).
           In particular, the WoT IG will propose new work items based upon new requirements, use cases,
           and discussions with IoT developer communities, industry alliances, and standards development organizations.
-          Vice versa, the WoT IG will consider new topics that are submitted to it by the WoT WG.
+          Conversely, the WoT IG will consider new topics that are submitted to it by the WoT WG.
         </p>
 
         <p>
@@ -247,12 +247,14 @@
         <p>
           The Interest Group will identify requirements for standardization in two ways: first, by exploring use cases and requirements for concrete consumer, industrial, 
           environmental, energy management, and smart cities application scenarios, and second, through examining the requirements for integrating a broad range of IoT platforms into the Web of Things.
-          The exploration tasks that the Interest Group will undertake include:
+          The exploration tasks that the Interest Group will undertake may include:
         </p>
         <ul>
-          <li>use Cases and Requirements of different application scenarios</li>
-          <li>lifecycle management and Thing Templates</li>
-          <li>profiles for zero-conf device onboarding to cloud services</li>
+          <li>use cases and requirements of different application scenarios</li>
+          <li>lifecycle management of Things</li>
+          <li>Thing Template format and mechanisms</li>
+          <li>clarify relationship with the concept of Digital Twins</li>
+          <li>out-of-the-box device onboarding to cloud services</li>
           <li>WoT Scripting API and possible simplifications</li>
           <li>hypermedia-driven interactions for complex/multi-step Actions and Events</li>
           <li>community-driven, bottom-up vocabulary to enable semantic interoperability</li>
@@ -261,8 +263,8 @@
         <p>
           Further ideas for topics are expected from discussions and expert presentations of IoT projects,
           including for example,
-          the <a href="https://www.w3.org/Data/events/data-ws-2019/cfp.html">Web Standardization for Graph Data</a>,
-          Edge Computing, and
+          Graph Data,
+          Edge Computing,
           Machine Learning.
           The Interest Group will incubate work items for the Web of Things until they are ready for transfer to the W3C Recommendation Track, 
           either in existing Working Groups, such as the WoT WG, or in new Working Groups.
@@ -281,7 +283,7 @@
         <h2>Deliverables</h2>
 
         <p>
-          The primary deliverables of the WoT Interest Group are IG Notes that identify requirements for existing and/or new WoT building blocks (i.e., technical specifications).
+          The primary deliverables of the WoT Interest Group are IG Notes that identify use cases and requirements for existing and/or new WoT building blocks (i.e., technical specifications).
           The IG Notes may contain the consensus of first implementation experiences gained by the group (e.g., during PlugFests).
           The group will also maintain a public list of identified WoT building blocks that it is tracking and investigating.
         </p>
@@ -301,7 +303,7 @@
           <ul>
             <li>use case and requirement documents;</li>
             <li>experience and/or implementation reports for identified building blocks;</li>
-            <li>primer, best practice, or test case documents to support WoT developers when designing applications and/or Things.</li>
+            <li>primer, best practice, or test case documents (including security) to support WoT developers when designing applications and/or Things.</li>
           </ul>
         </section>
 
@@ -320,9 +322,9 @@
       <section id="coordination">
         <h2>Coordination</h2>
 
-        <p>For all specifications, this Interest Group will seek <a href="https://www.w3.org/Guide/Charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a href="https://www.w3.org/2015/Process-20150901/#RecsWD" title="First Public Working Draft">FPWD</a> and <a href="https://www.w3.org/2015/Process-20150901/#RecsCR" title="Candidate Recommendation">CR</a>, and should be issued when major changes occur in a specification.</p>
+        <p>For all deliverables, this Interest Group will seek <a href="https://www.w3.org/Guide/Charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a href="https://www.w3.org/2019/Process-20190301/#RecsWD" title="First Public Working Draft">FPWD</a> and <a href="https://www.w3.org/2019/Process-20190301/#RecsCR" title="Candidate Recommendation">CR</a>, and should be issued when major changes occur in a specification.</p>
 
-        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/2015/Process-20150901/#WGCharter">W3C Process Document</a>:</p>
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/2019/Process-20190301/#WGCharter">W3C Process Document</a>:</p>
 
         <section>
           <h3 id="w3c-coordination">W3C Groups</h3>
@@ -332,16 +334,14 @@
             <dd>For collaboration as outlined in <a href="#scope"></a>.</dd>
             <dt><a href="https://www.w3.org/2018/json-ld-wg/">JSON-LD Working Group</a></dt>
             <dd>For collaboration on JSON-LD features and WoT use cases.</dd>
+            <dt><a href="http://www.w3.org/auto/">Web and Automotive Business &amp; Working Groups</a></dt>
+            <dd>For collaboration on technologies and requirements relating to connected cars and the Web of Things.</dd>
             <dt><a href="http://www.w3.org/2009/dap/">Device and Sensors Working Group</a></dt>
             <dd>For coordination on APIs for sensors and actuators.</dd>
             <dt><a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a></dt>
             <dd>For coordination on impacts of Web of Things technologies on accessibility to users with disabilities.</dd>
-            <dt><a href="http://www.w3.org/2014/data-shapes/wiki/Main_Page">RDF Data Shapes Working Group</a></dt>
-            <dd>For expertise on expressing structural constraints on RDF graphs in relation to domain models.</dd>
             <dt><a href="http://www.w3.org/Privacy/">Privacy Interest Group</a></dt>
             <dd>For collaboration on privacy considerations for the Web of Things.</dd>
-            <dt><a href="http://www.w3.org/auto/">Web and Automotive Business &amp; Working Groups</a></dt>
-            <dd>For collaboration on technologies and requirements relating to connected cars and the Web of Things.</dd>
           </dl>
         
         </section>
@@ -349,7 +349,11 @@
 
           <h3 id="external-coordination">External Organizations</h3>
 
-          <p>To succeed in establishing inter-platform standards, W3C needs to coordinate with IoT alliances and standards development organizations. The following provides examples of organizations with which the Interest Group has already had significant coordination, during the period of the first charter. A <a href="https://www.w3.org/WoT/IG/wiki/How_does_W3C_compare_to_other_organizations">longer list</a> is available on the Interest Group wiki.</p>
+          <p>
+            To succeed in establishing inter-platform standards,
+            W3C needs to coordinate with IoT alliances and standards development organizations.
+            The following list provides examples of organizations with which the Interest Group has already had significant coordination during the period of the first charter. A <a href="https://www.w3.org/WoT/IG/wiki/How_does_W3C_compare_to_other_organizations">longer list</a> is available on the Interest Group wiki.
+          </p>
 
           <dl>
             <dt><a href="https://datatracker.ietf.org/doc/charter-irtf-t2trg/">IRTF Thing to Thing Research Group</a></dt>
@@ -359,7 +363,7 @@
             <dt><a href="https://echonet.jp/english/">ECHONET Consortium</a></dt>
             <dd>For collaboration on integrating ECHONET Consortium based platforms within the Web of Things, including platform metadata and approaches for enabling semantic interoperability, and end to end security across platforms.</dd>
             <dt><a href="http://www.iiconsortium.org">Industrial Internet Consortium</a></dt>
-            <dd>For collaboration on a testbed for the Web of Things.</dd>
+            <dd>For collaboration on a testbed and gathering user requirements for the Web of Things.</dd>
             <dt><a href="https://opcfoundation.org">OPC Foundation</a></dt>
             <dd>For collaboration on semantic interoperability and end to end security across platforms.</dd>
             <dt><a href="http://www.plattform-i40.de/I40/Navigation/EN/Home/home.html">Plattform Industrie 4.0</a></dt>
@@ -371,7 +375,7 @@
             <dt><a href="https://www.omaspecworks.org">OMA SpecWorks</a></dt>
             <dd>For collaboration on integrating LWM2M based platforms with the Web of Things.</dd>
             <dt><a href="http://www.opengeospatial.org/">Open Geospatial Consortium</a></dt>
-            <dd>For coordination on the OGC SensorThings API.</dd>
+            <dd>For coordination on the OGC SensorThings API and location metadata.</dd>
             <dt><a href="http://www.gsma.com">GSMA</a></dt>
             <dd>For coordination in respect to the interests of Network Operators.</dd>
           </dl>
@@ -398,9 +402,9 @@
       <section id="communication">
         <h2>Communication</h2>
 
-        <p id="public">Technical discussions for this Interest Group are conducted in <a href="https://www.w3.org/2015/Process-20150901/#confidentiality-levels">public</a>. Meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository and may permit direct public contribution requests.</p>
+        <p id="public">Technical discussions for this Interest Group are conducted in <a href="https://www.w3.org/2019/Process-20190301/#confidentiality-levels">public</a>. Meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository and may permit direct public contribution requests.</p>
 
-        <p>Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="http://www.w3.org/WoT/WG/">Web of Things Interest Group home page.</a></p>
+        <p>Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="http://www.w3.org/WoT/IG/">Web of Things Interest Group home page.</a></p>
 
         <p>Most Web of Things Interest Group teleconferences will focus on discussion of particular specifications and will be conducted on an as-needed basis.</p>
 
