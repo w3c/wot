@@ -33,7 +33,7 @@ Please provide your demo poster until May 28th.
 
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|Fri|Sat|Sun|Mon|Tues|Wed|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|---|---|---|---|----|---|
-| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | ? | + | + | + |
+| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | + | + | + | + |
 | Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | TU Munich | 2x MeArm Robotic Arms                  | Wifi / Lan                                                     | Mechanically not reliable                | ege.korkan@tum.de | ? | + | + | + | + | + |
