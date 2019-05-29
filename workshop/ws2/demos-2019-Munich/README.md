@@ -12,7 +12,7 @@ Point of contact: Sebastian is available via mobile phone
 https://www.w3.org/WoT/IG/wiki/F2F_meeting,_6-7_June_2019,_Munich,_Germany#Venue
 
 Point of contact: Ege.Korkan@tum.de
-Phone# is available at Wiki. 
+Phone# +49 176 3012 69 42
 
 ## Monday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
