@@ -33,7 +33,7 @@ Please provide your demo poster until May 28th.
 
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|Fri|Sat|Sun|Mon|Tues|Wed|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|---|---|---|---|----|---|
-| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | ? | + | + | + |
+| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | + | + | + | + |
 | Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | TU Munich | 2x MeArm Robotic Arms                  | Wifi / Lan                                                     | Mechanically not reliable                | ege.korkan@tum.de | ? | + | + | + | + | + |
@@ -61,7 +61,7 @@ Please provide your demo poster until May 28th.
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
 | University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 | 
-| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...    | ? | + | + | + | + | + |            
+| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...   |  | ? | + | + | +  | + |            
 | Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 | W3C/ERCIM    | Healthcare demo |
 
