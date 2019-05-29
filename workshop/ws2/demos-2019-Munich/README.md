@@ -62,7 +62,7 @@ Please provide your demo poster until May 28th.
 | Panasonic | Local simulator (Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting)                | Wifi / Lan; 1 power                                               | More devices could be added to discuss about cross domain business models, use cases and scenarios. |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
-| University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 | 
+| University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 |
 | BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...   |  | ? | + | + | +  | + |            
 | Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
 | W3C/ERCIM    | Healthcare demo | | | Dave Raggett
@@ -222,7 +222,7 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 * Storage battery start discharging (Fujitsu)
 * Smart home application monitors and controls these devices.
 
-## Additional Scenarios: 
+## Additional Scenarios:
 
 ### Enterprise integration scenarios
 Ex: Asset management
@@ -262,6 +262,12 @@ Please place all tools into the [tools](tools) directory.
   There is an instance of the Oracle Digital Twin Simulator for plug fest participants. It hosts several simulations, such as a HVAC, Pump, Truck, Connected Car. Instances of simulated devices can be provided for plug fest participants on request.  
   Please let Michael.Lagally@oracle.com know if you require a simulated device instance.  
   The login page is at: https://iotpoc8.oracleiotcloud.com/ds
+
+* Mozilla WebThings Test Instance
+
+  Mozilla hosts an instance of the WebThings Gateway software in the cloud at https://w3c-interop.mozilla-iot.org/things (**Email:** iot@mozilla.com **Password:** AreWeInter-opYet?).
+
+  Further instructions on how to use this test instance can be found [here](https://github.com/mozilla-iot/wiki/wiki/Test-Gateway-Instance).
 
 
 ### Google Hangout:
