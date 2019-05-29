@@ -12,12 +12,12 @@ Point of contact: Sebastian is available via mobile phone
 https://www.w3.org/WoT/IG/wiki/F2F_meeting,_6-7_June_2019,_Munich,_Germany#Venue
 
 Point of contact: Ege.Korkan@tum.de
-Phone# is available at Wiki.
+Phone# +49 176 3012 69 42
 
 ## Monday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
-## Tuesday-Wednesday: Siemens
+## Tuesday-Wednesday: Siemens (8am - 6pm)
 https://www.w3.org/WoT/ws-2019/cfp.html#location
 
 ## Posters
@@ -33,7 +33,7 @@ Please provide your demo poster until May 28th.
 
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|Fri|Sat|Sun|Mon|Tues|Wed|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|---|---|---|---|----|---|
-| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | ? | + | + | + |
+| Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | + | + | + | + |
 | Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
 | TU Munich | 2x MeArm Robotic Arms                  | Wifi / Lan                                                     | Mechanically not reliable                | ege.korkan@tum.de | ? | + | + | + | + | + |
@@ -44,11 +44,11 @@ Please provide your demo poster until May 28th.
 | TU Munich | 2x Cameras                             | Wifi / Lan                                                        | Can only take pictures but adjustable exposure | ege.korkan@tum.de | ? | + | + | + | + | + |
 | TU Munich | 2x ESP 32 Light Sensors                | Wifi / Lan                                                        | Representing more constrained devices | ege.korkan@tum.de | ? | + | + | + | + | + |
 | Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
-| Intel     | Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | WIP: Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | Web Camera (4)                      | Wifi / Lan; ext ports 22, 8098, 8099; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | Voice Output (Web Speak) (4)        | Wifi / Lan; ext ports 22, 8096, 8097; 1 power                     | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
-| Intel     | Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
+| Intel     | WIP: Solar Power System (5)              | Wifi / Lan; ext ports 22, 8102, 8103; window                      | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Hitachi   | Cross-domain application development tool using Node-RED | Wifi                                                               | ...                |kunihiko.toumura.yv@hitachi.com| - | + | + | + | + | + |
 | Fujitsu   | 2 Local proxies. One is in smart home in Japan, another in Munich (6) |  Wifi / Lan; 1 power                                              | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
 | Fujitsu   | Remote proxy. Connect 2 Local proxies above. (7) |                                                                   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com | - | - | + | + | + | + |
@@ -60,9 +60,10 @@ Please provide your demo poster until May 28th.
 | Panasonic | Local simulator (Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting)                | Wifi / Lan; 1 power                                               | More devices could be added to discuss about cross domain business models, use cases and scenarios. |Takeshi Yamada (@yamagile)|-|-|+|+|+|+|
 | EcoG, Siemens | Demo integrating vehicle charging, energy automation, building management  (14)                | Wifi / Lan; ext. 80, 8080, 443                                         | based on node-wot               
 | FAU Erlangen-Nürnberg | BLE beacons, receiver   | Wifi; 1 power                                                     | indoor positioning
-| University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 |
-| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...                
+| University of Southampton | integrates Ikea and tp-link devices   | Wifi; 1 power  | Servient and Client  | email@danmharris.com                                                 | 
+| BMW | Connected Vehicle  demo  (15)                | tbd                                         | ...   |  | ? | + | + | +  | + |            
 | Mozilla    | Mozilla WebThings Gateway with smart home devices  | Wi-Fi / LAN, outgoing port 8443, need power                                                              | iot.mozilla.org | kgiori@mozilla.com, bfrancis@mozilla.com | - | - | - | + | + | + |
+| W3C/ERCIM    | Healthcare demo | | | Dave Raggett
 
 ## Notes
 * Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>

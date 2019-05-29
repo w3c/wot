@@ -1,6 +1,6 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     {"iot": "http://iotschema.org/",
      "http": "http://www.w3.org/2011/http#"}
   ],
@@ -11,7 +11,7 @@
   "security": ["nosec_sc"],
   "id": "urn:uuid:9f7b75ae-7833-4eaf-8b3a-804288773121",
   "@type": [ "Thing", "iot:Illuminance" ],
-  "name": "Illuminance Sensor",
+  "title": "Illuminance Sensor",
   "properties": {
     "Illuminance": {
       "observable": false,
