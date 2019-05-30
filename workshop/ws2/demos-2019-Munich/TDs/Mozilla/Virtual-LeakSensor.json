@@ -1,0 +1,52 @@
+{
+   "name":"Virtual Leak Sensor",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "LeakSensor"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-16",
+   "properties":{
+      "leak":{
+         "title":"Leak",
+         "type":"boolean",
+         "@type":"LeakProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-16/properties/leak"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-16/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-16/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-16/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-16"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-16"
+      }
+   ]
+}

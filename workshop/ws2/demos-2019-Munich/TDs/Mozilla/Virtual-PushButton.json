@@ -1,0 +1,52 @@
+{
+   "name":"Virtual Push Button",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "PushButton"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-15",
+   "properties":{
+      "pushed":{
+         "title":"Pushed",
+         "type":"boolean",
+         "@type":"PushedProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-15/properties/pushed"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-15/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-15/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-15/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-15"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-15"
+      }
+   ]
+}

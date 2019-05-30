@@ -1,0 +1,67 @@
+{
+   "name":"Virtual Multi-level Switch",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "OnOffSwitch",
+      "MultiLevelSwitch"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-1",
+   "properties":{
+      "level":{
+         "title":"Level",
+         "type":"number",
+         "@type":"LevelProperty",
+         "unit":"percent",
+         "minimum":0,
+         "maximum":100,
+         "readOnly":false,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-1/properties/level"
+            }
+         ]
+      },
+      "on":{
+         "title":"On/Off",
+         "type":"boolean",
+         "@type":"OnOffProperty",
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-1/properties/on"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-1/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-1/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-1/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-1"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-1"
+      }
+   ]
+}
