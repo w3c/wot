@@ -222,6 +222,19 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 * Storage battery start discharging (Fujitsu)
 * Smart home application monitors and controls these devices.
 
+## Smart Home Demo
+Home appliances communicate with the gateway using existing home protocol such as ECHONET Lite, OCF, etc. and provide functions through the WoT API.
+
+### Device interactions (Proposal)
+* Say "I'm home"/"Bye" to Google Home (Panasonic)
+then
+* Turn on/off home appliances in the smart home lab at Osaka Japan (Panasonic)
+* Turn on/off bulletin board in Munich (Panasonic)
+* Turn on/off buzzer (Fujitsu)
+* Turn on/off Intel-OCF-LED (Intel)
+* Turn on/off Blue Pump (Oracle)
+* Turn on/off DotStar and HUE Lights (TUM)
+
 ## Additional Scenarios: 
 
 ### Enterprise integration scenarios
