@@ -1,0 +1,67 @@
+{
+   "name":"Virtual Multi-level Sensor",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "MultiLevelSensor"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-5",
+   "properties":{
+      "on":{
+         "title":"On/Off",
+         "type":"boolean",
+         "@type":"BooleanProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-5/properties/on"
+            }
+         ]
+      },
+      "level":{
+         "title":"Level",
+         "type":"number",
+         "@type":"LevelProperty",
+         "unit":"percent",
+         "minimum":0,
+         "maximum":100,
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-5/properties/level"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-5/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-5/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-5/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-5"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-5"
+      }
+   ]
+}

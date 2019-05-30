@@ -1,0 +1,52 @@
+{
+   "name":"Virtual Motion Sensor",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "MotionSensor"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-14",
+   "properties":{
+      "motion":{
+         "title":"Motion",
+         "type":"boolean",
+         "@type":"MotionProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-14/properties/motion"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-14/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-14/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-14/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-14"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-14"
+      }
+   ]
+}
