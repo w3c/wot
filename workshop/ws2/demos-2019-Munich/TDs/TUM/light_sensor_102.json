@@ -1,1 +1,31 @@
-{"id": "light:sensor:192.168.0.102", "properties": {"intensity": {"forms": [{"href": "http://192.168.0.102/properties/intensity", "mediaType": "application/json"}], "type": "number", "maximum": 1000, "minimum": 0}}, "name": "light_sensor", "description": "Sensor that measures the intensity of light"}
+{
+    "id": "light:sensor:192.168.0.102",
+    "descriptions": {
+        "en": "Sensor that measures the intensity of light"
+    },
+    "@context": ["https://www.w3.org/2019/wot/td/v1", {
+        "@language": "en"
+    }],
+    "description": "Sensor that measures the intensity of light",
+    "security": "nosec_sc",
+    "title": "light_sensor",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "properties": {
+        "intensity": {
+            "minimum": 0,
+            "readOnly": true,
+            "forms": [{
+                "contentType": "application/json",
+                "op": "readproperty",
+                "href": "http://192.168.0.102/properties/intensity"
+            }],
+            "maximum": 1000,
+            "writeOnly": false,
+            "type": "number"
+        }
+    }
+}

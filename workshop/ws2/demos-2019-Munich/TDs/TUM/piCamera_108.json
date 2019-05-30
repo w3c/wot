@@ -1,18 +1,23 @@
 {
+    "@context": ["https://www.w3.org/2019/wot/td/v1", {
+        "@language": "en"
+    }],
     "actions": {},
-    "description": "a camera mounted on Raspberry Pi",
-    "id": "esi:picamera:192.168.0.108",
-    "name": "piCamera",
+    "description": "A camera mounted on Raspberry Pi with IR Blasters",
+    "descriptions": {
+        "en": "A camera mounted on Raspberry Pi"
+    },
+    "id": "esi:picamera:TUMEIESI-Rpi-Camera-IR.local",
     "properties": {
         "configuration": {
-            "description": "configuration of the camera",
+            "description": "Configuration of the camera",
             "forms": [{
-                "contenttype": "application/json",
-                "href": "http://192.168.0.108:8080/properties/configuration"
+                "contentType": "application/json",
+                "href": "http://TUMEIESI-Rpi-Camera-IR.local:8080/properties/configuration"
             }],
             "properties": {
                 "brightness": {
-                    "description": "brightness of the camera",
+                    "description": "Brightness of the camera",
                     "maximum": 100,
                     "minimum": 0,
                     "readOnly": false,
@@ -20,17 +25,17 @@
                     "writeOnly": false
                 },
                 "size": {
-                    "description": "size (width, height) of the frame",
+                    "description": "Size (width, height) of the frame",
                     "properties": {
                         "height": {
-                            "description": "height of the camera",
+                            "description": "Height of the camera",
                             "minimum": 0,
                             "readOnly": false,
                             "type": "number",
                             "writeOnly": false
                         },
                         "width": {
-                            "description": "width of the camera",
+                            "description": "Width of the camera",
                             "minimum": 0,
                             "readOnly": false,
                             "type": "number",
@@ -50,14 +55,18 @@
         "frame": {
             "description": "frame of the current camera",
             "forms": [{
-                "contenttype": "image/jpeg",
-                "href": "http://192.168.0.108:8080/properties/frame"
+                "contentType": "image/jpeg",
+                "href": "http://TUMEIESI-Rpi-Camera-IR.local:8080/properties/frame"
             }],
-            "readOnly": false,
+            "readOnly": true,
             "writeOnly": false
         }
     },
-    "security": [{
-        "scheme": "nosec"
-    }]
+    "security": "nosec_sc",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "title": "piCamera"
 }

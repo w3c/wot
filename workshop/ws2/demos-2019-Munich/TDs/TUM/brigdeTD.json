@@ -1,14 +1,10 @@
 {
-    "name": "Hue Bridge",
-    "id": "urn:dev:wot:com:example:servient:huelamp",
+    "title": "Hue Bridge",
+    "id": "urn:dev:ops:32473-HueBridge-1234",
+    "description":"HTTP to Zigbee bridge that can be used to control Hue lights and read the switch state. The different devices have their own TDs",
     "@context": [
-        "http://www.w3.org/ns/td",
-        {
-            "http": "http://www.w3.org/2011/http#"
-        },
-        {
-            "htv": "http://www.w3.org/2011/http#"
-        }
+        "https://www.w3.org/2019/wot/td/v1",
+        { "@language" : "en" }
     ],
     "securityDefinitions": {
         "nosec_sc": {
@@ -18,7 +14,93 @@
     "security": [
         "nosec_sc"
     ],
+    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
     "properties": {
+        "configuration": {
+            "title": "Configuration Settings",
+            "description": "Returns list of all configuration elements in the bridge. Note all times are stored in UTC.",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of the bridge. This is also its uPnP name, so will reflect the actual uPnP name after any conflicts have been resolved.",
+                    "type": "string",
+                    "minLength": 4,
+                    "maxLength": 16,
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "whitelist": {
+                    "type": "object",
+                    "description": "A list of whitelisted user IDs.",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "apiversion": {
+                    "type": "object",
+                    "description": "The version of the hue API in the format <major>.<minor>.<patch>, for example 1.2.1",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "ipadress": {
+                    "type": "string",
+                    "description": "IP address of the bridge.",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "macadress": {
+                    "type": "string",
+                    "description": "MAC address of the bridge.",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "netmask": {
+                    "type": "string",
+                    "description": "Netmask of the bridge.",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "dhcp": {
+                    "type": "boolean",
+                    "description": "Whether the IP address of the bridge is obtained with DHCP.",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "UTC": {
+                    "type": "string",
+                    "description": "Current time stored on the bridge.",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "modelid": {
+                    "description": "This parameter uniquely identifies the hardware model of the bridge (BSB001, BSB002).",
+                    "type": "string",
+                    "minLength": 6,
+                    "maxLength": 32,
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "brigdeid": {
+                    "description": "The unique bridge id. This is currently generated from the bridge Ethernet mac address.",
+                    "type": "string",
+                    "minLength": 6,
+                    "maxLength": 32,
+                    "readOnly": true,
+                    "writeOnly": false
+                }
+            },
+            "forms": [
+                {
+                    "href": "/config",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "readOnly": true,
+            "writeOnly": false
+        },
         "all_lights": {
             "title": "Lights",
             "description": "Gets a detailed list of all lights that have been discovered by the bridge.",
@@ -92,7 +174,7 @@
             },
             "forms": [
                 {
-                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights",
+                    "href": "/lights",
                     "contentType": "application/json",
                     "htv:methodName": "GET",
                     "op": [
@@ -100,11 +182,140 @@
                     ]
                 }
             ],
-            "readOnly": true
+            "readOnly": true,
+            "writeOnly": false
+        },
+        "all_sensors": {
+            "title": "All Sensors",
+            "description": "Gets a list of all sensors that have been added to the bridge.",
+            "type": "object",
+            "readOnly": true,
+            "writeOnly": false,
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "state": {
+                        "type": "object",
+                        "properties": {
+                            "lastupdated": {
+                                "type": "string",
+                                "writeOnly": true
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "config": {
+                        "type": "object",
+                        "properties": {
+                            "on": {
+                                "type": "boolean",
+                                "writeOnly": false,
+                                "readOnly": false
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "writeOnly": false,
+                        "readOnly": false
+                    },
+                    "type": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "modelid": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "manufacturername": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "swversion": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "uniqueid": {
+                        "type": "string",
+                        "readOnly": true
+                    }
+                }
+            },
+            "forms": [{
+                "href": "/sensors",
+                "contentType": "application/json",
+                "htv:methodName": "GET",
+                "op": [
+                    "readproperty"
+                ]
+            }]
+        },
+        "get_new_sensors": {
+            "title": "Get New Sensors",
+            "description": "Gets all new sensors since the last scan.",
+            "output": {
+                "type": "object",
+                "properties": {
+                    "lastscan": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "forms": [{
+                "href": "/sensors/new",
+                "contentType": "application/json",
+                "htv:methodName": "GET",
+                "op": [
+                    "readproperty"
+                ]
+            }],
+            "safe": false,
+            "idempotent": false
         }
     },
     "actions": {
-        "search_lights": {
+        "search_new_sensors": {
+            "title": "Search New Sensor",
+            "description": "Starts a search for new sensors.",
+            "output": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "success": {
+                            "type": "object",
+                            "properties": {
+                                "/sensors": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "/sensors",
+                    "contentType": "application/json",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "search_new_lights": {
             "title": "Search for New Lights",
             "description": "Starts searching for new lights.",
             "input": {
@@ -129,7 +340,7 @@
             },
             "forms": [
                 {
-                    "href": "http://192.168.0.111/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights",
+                    "href": "/lights",
                     "contentType": "application/json",
                     "htv:methodName": "POST",
                     "op": [
@@ -138,7 +349,8 @@
                 }
             ],
             "idempotent": false,
-            "safe":false
+            "safe": true
+
         }
     }
 }
