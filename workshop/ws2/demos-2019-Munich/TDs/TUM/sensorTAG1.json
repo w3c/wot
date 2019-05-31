@@ -1,0 +1,153 @@
+{
+  "title": "TI_Sensortag1",
+  "id": "urn:dev:wot:com:example:servient:sensortag1",
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "properties": {
+    "ambientTemperature": {
+      "title": "Ambient Temperature Value",
+      "description": "Ambient temperature value read from temperature sensor",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "http://192.168.0.110:8080/TI_Sensortag1/properties/ambientTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "coap://192.168.0.110:5683/TI_Sensortag1/pr/ambientTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    },
+    "objectTemperature": {
+      "title": "Object Temperature Value",
+      "description": "Object temperature value read from IR-temperature sensor",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "http://192.168.0.110:8080/TI_Sensortag1/properties/objectTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "coap://192.168.0.110:5683/TI_Sensortag1/pr/objectTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    },
+    "humidity": {
+      "title": "Humidity Value",
+      "description": "humidity value read from humidity sensor",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "http://192.168.0.110:8080/TI_Sensortag1/properties/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "coap://192.168.0.110:5683/TI_Sensortag1/pr/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    },
+    "pressure": {
+      "title": "Pressure Value",
+      "description": "Pressure value read from barometer sensor",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "http://192.168.0.110:8080/TI_Sensortag1/properties/pressure",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "coap://192.168.0.110:5683/TI_Sensortag1/pr/pressure",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    },
+    "luminosity": {
+      "title": "Luminosity",
+      "description": "Luminosity value measured by luxometer",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "http://192.168.0.110:8080/TI_Sensortag1/properties/luminosity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "coap://192.168.0.110:5683/TI_Sensortag1/pr/luminosity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    }
+  },
+  "forms": [
+    {
+      "href": "http://192.168.0.110:8080/TI_Sensortag1/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}
