@@ -1,0 +1,134 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1"
+  ],
+  "@type": [
+    "Thing"
+  ],
+  "title": "BACnetDemoboard",
+  "id": "urn:dev:wot:org:bacnet:demo",
+  "version": {
+    "instance": "1.1.0"
+  },
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": [
+    "nosec_sc"
+  ],
+  "properties": {
+    "HVACTemperatureSetpoint": {
+      "@type": [
+        "BA:Setpoint",
+        "BACnet:AnalogValueObject:presentValue"
+      ],
+      "type": "number",
+      "readOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "bacnet://192.168.0.41/OBJECT_ANALOG_VALUE/41/PROP_PRESENT_VALUE",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        }
+      ]
+    },
+    "HVACFanSpeed": {
+      "@type": [
+        "BA:Output",
+        "BACnet:AnalogOutputObject:presentValue"
+      ],
+      "type": "number",
+      "readOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "bacnet://192.168.0.41/OBJECT_ANALOG_OUTPUT/57/PROP_PRESENT_VALUE",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        }
+      ]
+    },
+    "HMIFanSpeed": {
+      "@type": [
+        "BA:Output",
+        "BACnet:AnalogOutputObject:presentValue"
+      ],
+      "type": "number",
+      "readOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "bacnet://192.168.0.41/OBJECT_ANALOG_VALUE/301/PROP_PRESENT_VALUE",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        }
+      ]
+    },
+    "roomAirQuality": {
+      "@type": [
+        "BACnet:AnalogValueObject:presentValue"
+      ],
+      "type": "number",
+      "readOnly": true,
+      "observable": false,
+      "forms": [
+        {
+          "href": "bacnet://192.168.0.41/OBJECT_ANALOG_INPUT/93/PROP_PRESENT_VALUE",
+          "contentType": "application/json",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "roomAirTemperature": {
+      "@type": [
+        "BACnet:AnalogValueObject:presentValue"
+      ],
+      "description": "The actual room temperarture in celcius, needs to be corrected by y=0.5x+12.2",
+      "type": "number",
+      "readOnly": true,
+      "observable": false,
+      "forms": [
+        {
+          "href": "bacnet://192.168.0.41/OBJECT_ANALOG_INPUT/74/PROP_PRESENT_VALUE",
+          "contentType": "application/json",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "light1Brightness": {
+      "@type": [
+        "Property",
+        "BA:Output"
+      ],
+      "type": "number",
+      "readOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "bacnet://192.168.0.41/OBJECT_ANALOG_VALUE/223/PROP_PRESENT_VALUE",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        }
+      ]
+    },
+    "light2Brightness": {
+      "@type": [
+        "Property",
+        "BA:Output"
+      ],
+      "type": "number",
+      "readOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "bacnet://192.168.0.41/OBJECT_ANALOG_VALUE/225/PROP_PRESENT_VALUE",
+          "contentType": "application/json",
+          "op": ["readproperty", "writeproperty"]
+        }
+      ]
+    }
+  }
+}

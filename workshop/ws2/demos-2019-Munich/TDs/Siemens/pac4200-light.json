@@ -1,0 +1,266 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1"
+  ],
+  "@type": [
+    "Thing"
+  ],
+  "title": "PAC4200",
+  "id": "urn:dev:wot:com:siemens:sentron:pac4200",
+  "base": "modbus+tcp://192.168.0.210:502/126/",
+  "version": {
+    "instance": "0.1.0"
+  },
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": [
+    "nosec_sc"
+  ],
+  "properties": {
+    "Voltage_L1N": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/1/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Voltage_L2N": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/3/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Voltage_L3N": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/5/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Voltage_L1L2": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/7/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Voltage_L2L3": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/9/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Voltage_L3L1": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/11/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Current_L1": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/13/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Current_L2": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/15/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Current_L3": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/17/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ApparentPower_L1": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/19/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ApparentPower_L2": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/21/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ApparentPower_L3": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/23/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ActivePower_L1": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/25/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ActivePower_L2": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/27/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ActivePower_L3": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/29/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ReactivePower_L1": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/31/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ReactivePower_L2": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/33/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "ReactivePower_L3": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/35/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "PowerFactor_L1": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/37/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "PowerFactor_L2": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/39/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "PowerFactor_L3": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/41/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "Frequency": {
+      "type": "number",
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "in/55/2",
+          "contentType": "application/octet-stream",
+          "op": "readproperty"
+        }
+      ]
+    }
+  }
+}
