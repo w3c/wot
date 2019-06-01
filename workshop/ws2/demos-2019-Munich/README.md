@@ -36,15 +36,15 @@ Please provide your demo poster until May 28th.
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Home Scenario, Industrial Scenario | Michael.Lagally@oracle.com | ? | ? | + | + | + | + |
 | Oracle    | Digital Twins / Simulators: [Blue_Pump_Shared](TDs/Oracle/Blue_Pump_Shared.jsonld), [Connected_Car_Shared](TDs/Oracle/Connected_Car_Shared.jsonld), [Festo_Shared](TDs/Oracle/Festo_Shared.jsonld), [HVAC_Shared](TDs/Oracle/HVAC_Shared.jsonld), [Truck_Shared](TDs/Oracle/Truck_Shared.jsonld) | Wifi                                                              | Shared devices for other WG Application scenarios  | Michael.Lagally@oracle.com | ? | ? | + | + | + | + |
 | Oracle    | IoT Cloud Service                   | Wifi                                                              | Application t.b.d. | Michael.Lagally@oracle.com | ? | ? | + | + | + | + |
-| Siemens   | Industry Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
-| Siemens   | Building Automation                 | Wifi / Lan                                                        | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
-| TU Munich | 2x MeArm Robotic Arms                  | Wifi / Lan                                                     | Mechanically not reliable                | ege.korkan@tum.de | ? | + | + | + | + | + |
-| TU Munich | 3x Texas Instruments Bluetooth Sensors | Wifi / Lan                                                        | Bridged via HTTP and CoAP via 1x Raspberry                | ege.korkan@tum.de | ? | + | + | + | + | + |
-| TU Munich | 3x Philips HUE Lights and Controller   | Wifi / Lan                                                        | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
-| TU Munich | 1x LED Strip with individually controlloble LEDs | Wifi / Lan                                              | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
-| TU Munich | 2x Sense HAT (LED Matrix and sensors)  | Wifi / Lan                                                        | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
-| TU Munich | 2x Cameras                             | Wifi / Lan                                                        | Can only take pictures but adjustable exposure | ege.korkan@tum.de | ? | + | + | + | + | + |
-| TU Munich | 2x ESP 32 Light Sensors                | Wifi / Lan                                                        | Representing more constrained devices | ege.korkan@tum.de | ? | + | + | + | + | + |
+| Siemens   | Industry Automation                 | Wifi / Lan    | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
+| Siemens   | Building Automation                 | Wifi / Lan    | Application t.b.d. | @sebastiankb | + | ? | ? | + | + | + |
+| TU Munich | 2x [MeArm Robotic Arms](TDs/TUM/MeArmPi_104.json)  | Wifi / Lan  | Mechanically not reliable                | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 3x [Texas Instruments Bluetooth Sensors](TDs/TUM/sensorTAG0.json) | Wifi / Lan  | Bridged via HTTP and CoAP via 1x Raspberry Pi | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 3x Philips HUE [Lights](TDs/TUM/lightTD1.json) and 1 [Controller](TDs/TUM/dimmerSwitchTD.json)  | Wifi / Lan    | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 1x [LED Strip with individually controlloble LEDs](TDs/TUM/DotStar_103.json) | Wifi / Lan  | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x [Sense HAT](TDs/TUM/SenseHat_106.json) (LED Matrix and sensors)  | Wifi / Lan   | ... | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x [Cameras](TDs/TUM/piCamera_108.json)    | Wifi / Lan  | Can only take pictures but adjustable exposure | ege.korkan@tum.de | ? | + | + | + | + | + |
+| TU Munich | 2x [ESP 8266 Light Sensors](TDs/TUM/light_sensor_101.json)   | Wifi / Lan  | Cannot have hostname | ege.korkan@tum.de | ? | + | + | + | + | + |
 | Intel     | OCF Bridge (1,4)                    | Wifi / Lan; ext ports 22, 8090, 8091, 8094, 8095; 1 power         | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | WIP: Person Recognition (1,2,4)          | Wifi / Lan; ext ports 22, 8100, 8101                              | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
 | Intel     | OCF Smart Home Devices (3)          | Wifi / Lan; local network only (CoAP/UDP); 2 power                | ...                |michael.mccool@intel.com| - | - | - | + | + | + |
@@ -72,7 +72,8 @@ Please provide your demo poster until May 28th.
 
 ## Notes
 * Wifi Router from Smartthings / Matthias should be available <Set up at Siemens on Friday, Bring to TUM on Saturday/Sunday, back to Siemens on Monday - Owner: Sebastian>
-* TUM has an open network for local demos, however internet access is not guaranteed, especially if using non-standard ports
+* TUM has an open network for local demos with same name as the usual router. Also a wireless AP with support for 200+ clients is available in case of WiFi saturation when visitors want to connect via their phones etc.
+* For TUM devices, there is a Postman collection under [Collateral](Collateral/TUM/WoT-sys.postman_collection.json). You can simply import it in Postman to avoid typing requests.
 * Credentials for Router need to be communicated via email to the members list, <todo: add a link here>
 
 The following notes relate to the numbers in the table above.
