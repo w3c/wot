@@ -65,12 +65,12 @@
       "titles": {
         "jp": "輝度",
         "az-Latn": "Parlaqlıq",
-        "az-Arab": ""
+        "az-Arab": "پارلاق‌لیق"
       },
       "descriptions": {
         "jp": "現在の明るさ設定",
         "az-Latn": "Cari parlaqlıq qəbulu",
-        "az-Arab": ""
+        "az-Arab": "جاری پارلاق‌لیق قبولو"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -187,12 +187,12 @@
       "titles": {
         "jp": "コントラスト",
         "az-Latn": "Kontrast",
-        "az-Arab": ""
+        "az-Arab": "کونتراست"
       },
       "descriptions": {
         "jp": "現在のコントラスト設定",
         "az-Latn": "Mövcud kontrast ayarı",
-        "az-Arab": ""
+        "az-Arab": "مؤوجود کونتراست آیاری"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -310,12 +310,12 @@
       "titles": {
         "jp": "ガンマ",
         "az-Latn": "Gamma",
-        "az-Arab": ""
+        "az-Arab": "گامما"
       },
       "descriptions": {
         "jp": "現在のガンマ設定、x 100",
         "az-Latn": "Mövcud gamma qəbulu, x100",
-        "az-Arab": ""
+        "az-Arab": "مؤوجود گامما قبولو، خ۱۰۰"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -391,12 +391,12 @@
       "titles": {
         "jp": "彩度",
         "az-Latn": "Doyma",
-        "az-Arab": ""
+        "az-Arab": "دویما"
       },
       "descriptions": {
         "jp": "現在の彩度設定",
         "az-Latn": "Mövcud doyma qəbulu",
-        "az-Arab": ""
+        "az-Arab": "مؤوجود دویما قبولو"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -514,12 +514,12 @@
       "titles": {
         "jp": "色相",
         "az-Latn": "Hündürlük",
-        "az-Arab": ""
+        "az-Arab": "هوندورلوک"
       },
       "descriptions": {
         "jp": "現在の色相設定",
         "az-Latn": "Cari hündürlük qəbulu",
-        "az-Arab": ""
+        "az-Arab": "جاری هوندورلوک قبولو"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -595,12 +595,12 @@
       "titles": {
         "jp": "ホワイトバランス温度",
         "az-Latn": "Ağ balansın temperaturu",
-        "az-Arab": ""
+        "az-Arab": "آغ بالان‌سین تئمپئراتورو"
       },
       "descriptions": {
         "jp": "現在のホワイトバランス温度設定",
         "az-Latn": "Cari ağ balansı temperaturu qəbulu",
-        "az-Arab": ""
+        "az-Arab": "جاری آغ بالان‌سی تئمپئراتورو قبولو"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -718,12 +718,12 @@
       "titles": {
         "jp": "オートホワイトバランス温度モード",
         "az-Latn": "Avtomatik ağ balansı temperatur rejiminin",
-        "az-Arab": ""
+        "az-Arab": "آوتوماتیک آغ بالان‌سی تئمپئراتور رئژیمینین"
       },
       "descriptions": {
         "jp": "オートホワイトバランス温度モードの状態",
         "az-Latn": "Avtomatik ağ balansı temperatur rejiminin vəziyyəti",
-        "az-Arab": ""
+        "az-Arab": "آوتوماتیک آغ بالان‌سی تئمپئراتور رئژیمینین وضعیتی"
       },
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
@@ -839,12 +839,12 @@
       "titles": {
         "jp": "露出",
         "az-Latn": "Pozlama",
-        "az-Arab": ""
+        "az-Arab": "پوزلاما"
       },
       "descriptions": {
         "jp": "現在の絶対露出設定",
         "az-Latn": "Mövcud olan mütləq pozlama qəbulu",
-        "az-Arab": ""
+        "az-Arab": "مؤوجود اولان موطلق پوزلاما قبولو"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -962,12 +962,12 @@
       "titles": {
         "jp": "自動露出モード",
         "az-Latn": "Avtomatik pozlama rejiminin",
-        "az-Arab": ""
+        "az-Arab": "آوتوماتیک پوزلاما رئژیمینین"
       },
       "descriptions": {
         "jp": "自動露出モードの状態",
         "az-Latn": "Avtomatik pozlama rejiminin vəziyyəti",
-        "az-Arab": ""
+        "az-Arab": "آوتوماتیک پوزلاما رئژیمینین وضعیتی"
       },
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
@@ -1083,12 +1083,12 @@
       "titles": {
         "jp": "自動露出優先",
         "az-Latn": "Avtomatik maruz qalma prioriteti",
-        "az-Arab": ""
+        "az-Arab": "آوتوماتیک ماروز قالما پریوریتئتی"
       },
       "descriptions": {
         "jp": "自動露出優先の状態",
         "az-Latn": "Avtomatik maruz qalma prioritetinin vəziyyəti",
-        "az-Arab": ""
+        "az-Arab": "آوتوماتیک ماروز قالما پریوریتئتینین وضعیتی"
       },
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
@@ -1204,12 +1204,12 @@
       "titles": {
         "jp": "逆光補正",
         "az-Latn": "Arka ışığın təzminatı",
-        "az-Arab": ""
+        "az-Arab": "آرکا ایشیغین تزمیناتی"
       },
       "descriptions": {
         "jp": "現在の逆光補正設定",
         "az-Latn": "Mövcud arka işıq kompensasiya qəbulu",
-        "az-Arab": ""
+        "az-Arab": "مؤوجود آرکا ایشیق کومپئن‌ساسییا قبولو"
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
@@ -1327,12 +1327,12 @@
       "titles": {
         "jp": "シャープネス",
         "az-Latn": "Keskinlik",
-        "az-Arab": ""
+        "az-Arab": "کئسکین‌لیک"
       },
       "descriptions": {
         "jp": "現在のシャープネス設定",
         "az-Latn": "Hazırkı dəqiqlik qəbulu",
-        "az-Arab": ""
+        "az-Arab": "هازیرکی دقیق‌لیک قبولو"
       },
       "type": "integer",
       "minimum": 0,
@@ -1449,12 +1449,12 @@
       "titles": {
         "jp": "フレーム",
         "az-Latn": "Şəkil çərçivəsi",
-        "az-Arab": ""
+        "az-Arab": "شکیل چرچیوه‌سی"
       },
       "descriptions": {
         "jp": "最後に取得した画像フレームを返す",
         "az-Latn": "Ən qapalı şəkil çərçivəsini qaytarın",
-        "az-Arab": ""
+        "az-Arab": "ان قاپالی شکیل چرچیوه‌سینی قایتارین"
       },
       "observable": true,
       "forms": [
@@ -1536,12 +1536,12 @@
       "titles": {
         "jp": "クロップ",
         "az-Latn": "Şəkil çərçivəsini kəsin",
-        "az-Arab": ""
+        "az-Arab": "شکیل چرچیوه‌سینی کسین"
       },
       "descriptions": {
         "jp": "最後に取得した画像フレームの一部を抽出して返す",
         "az-Latn": "Çıxarıla və ən yaxın zamanda tutulan bir şəkil çərçivəsinin bir hissəsini geri qaytarın",
-        "az-Arab": ""
+        "az-Arab": "چیخاریلا و ان یاخین زامان‌دا توتولان بیر شکیل چرچیوه‌سینین بیر حیسه‌سینی گئری قایتارین"
       },
       "input": {
           "type": "object",
@@ -1551,13 +1551,13 @@
               "description": "Horizontal origin of region in pixels measured from the left",
               "titles": {
                 "jp": "x原点（ピクセル）",
-                "az-Latn": "x mənşəyi (piksel)",
-                "az-Arab": ""
+                "az-Latn": "x mənşəli piksel",
+                "az-Arab": "x منشأ‌لی پیکسئل"
               },
               "descriptions": {
                 "jp": "左から測った領域の水平方向の原点（ピクセル単位）",
                 "az-Latn": "Bölgənin üfüqi mənşəli soldan ölçülmüş piksellər",
-                "az-Arab": ""
+                "az-Arab": "بؤلگه‌نین اوفوقی منشأ‌لی سول‌دان اؤلچولموش پیکسئللر"
               },
               "type": "integer",
               "minimum": 0
@@ -1567,13 +1567,13 @@
               "description": "Vertical origin of region in pixels measured from the top",
               "titles": {
                 "jp": "y原点（ピクセル）",
-                "az-Latn": "y mənşəyi (piksel)",
-                "az-Arab": ""
+                "az-Latn": "y mənşəli piksel",
+                "az-Arab": "y منشأ‌لی پیکسئل"
               },
               "descriptions": {
                 "jp": "上から測ったピクセル単位での領域の垂直方向の原点",
                 "az-Latn": "Bölgənin vertikal mənşəli pikseldən yuxarıdan ölçülür",
-                "az-Arab": ""
+                "az-Arab": "بؤلگه‌نین وئرتیکال منشأ‌لی پیکسئل‌دن یوخاری‌دان اؤلچولور"
               },
               "type": "integer",
               "minimum": 0
@@ -1584,12 +1584,12 @@
               "titles": {
                 "jp": "ピクセル単位の幅",
                 "az-Latn": "piksel olaraq eni",
-                "az-Arab": ""
+                "az-Arab": "پیکسئل اولاراق ائنی"
               },
               "descriptions": {
                 "jp": "ピクセル単位での領域の水平方向のサイズ",
                 "az-Latn": "Regionun üfüqi ölçüsü pikseldən",
-                "az-Arab": ""
+                "az-Arab": "رئگیونون اوفوقی اؤلچوسو پیکسئل‌دن"
               },
               "type": "integer",
               "minimum": 0
@@ -1600,12 +1600,12 @@
               "titles": {
                 "jp": "ピクセル単位の高さ",
                 "az-Latn": "piksel boyu",
-                "az-Arab": ""
+                "az-Arab": "پیکسئل بویو"
               },
               "descriptions": {
                 "jp": "ピクセル単位での領域の垂直方向のサイズ",
                 "az-Latn": "Bölgənin şaquli ölçüsü pikseldən",
-                "az-Arab": ""
+                "az-Arab": "بؤلگه‌نین شاقولی اؤلچوسو پیکسئل‌دن"
               },
               "type": "integer",
               "minimum": 0
@@ -1666,12 +1666,12 @@
       "titles": {
         "jp": "領域",
         "az-Latn": "Şəkil çərçivəsində sahəsi",
-        "az-Arab": ""
+        "az-Arab": "شکیل چرچیوه‌سین‌ده ساحه‌سی"
       },
       "descriptions": {
         "jp": "最後に取得した画像フレームの一部を抽出して返す",
         "az-Latn": "Çıxarıla və ən yaxın zamanda tutulan bir şəkil çərçivəsinin bir hissəsini geri qaytarın",
-        "az-Arab": ""
+        "az-Arab": "چیخاریلا و ان یاخین زامان‌دا توتولان بیر شکیل چرچیوه‌سینین بیر حیسه‌سینی گئری قایتارین"
       },
       "uriVariables": {
           "xo": {
@@ -1679,13 +1679,13 @@
               "description": "Horizontal origin of region in pixels measured from the left",
               "titles": {
                 "jp": "x原点（ピクセル）",
-                "az-Latn": "x mənşəyi (piksel)",
-                "az-Arab": ""
+                "az-Latn": "x mənşəli piksel",
+                "az-Arab": "x منشأ‌لی پیکسئل"
               },
               "descriptions": {
                 "jp": "左から測った領域の水平方向の原点（ピクセル単位）",
                 "az-Latn": "Bölgənin üfüqi mənşəli soldan ölçülmüş piksellər",
-                "az-Arab": ""
+                "az-Arab": "بؤلگه‌نین اوفوقی منشأ‌لی سول‌دان اؤلچولموش پیکسئللر"
               },
               "type": "integer",
               "minimum": 0
@@ -1695,13 +1695,13 @@
               "description": "Vertical origin of region in pixels measured from the top",
               "titles": {
                 "jp": "y原点（ピクセル）",
-                "az-Latn": "y mənşəyi (piksel)",
-                "az-Arab": ""
+                "az-Latn": "y mənşəli piksel",
+                "az-Arab": "y منشأ‌لی پیکسئل"
               },
               "descriptions": {
                 "jp": "上から測ったピクセル単位での領域の垂直方向の原点",
                 "az-Latn": "Bölgənin vertikal mənşəli pikseldən yuxarıdan ölçülür",
-                "az-Arab": ""
+                "az-Arab": "بؤلگه‌نین وئرتیکال منشأ‌لی پیکسئل‌دن یوخاری‌دان اؤلچولور"
               },
               "type": "integer",
               "minimum": 0
@@ -1712,12 +1712,12 @@
               "titles": {
                 "jp": "ピクセル単位の幅",
                 "az-Latn": "piksel olaraq eni",
-                "az-Arab": ""
+                "az-Arab": "پیکسئل اولاراق ائنی"
               },
               "descriptions": {
                 "jp": "ピクセル単位での領域の水平方向のサイズ",
                 "az-Latn": "Regionun üfüqi ölçüsü pikseldən",
-                "az-Arab": ""
+                "az-Arab": "رئگیونون اوفوقی اؤلچوسو پیکسئل‌دن"
               },
               "type": "integer",
               "minimum": 0
@@ -1728,12 +1728,12 @@
               "titles": {
                 "jp": "ピクセル単位の高さ",
                 "az-Latn": "piksel boyu",
-                "az-Arab": ""
+                "az-Arab": "پیکسئل بویو"
               },
               "descriptions": {
                 "jp": "ピクセル単位での領域の垂直方向のサイズ",
                 "az-Latn": "Bölgənin şaquli ölçüsü pikseldən",
-                "az-Arab": ""
+                "az-Arab": "بؤلگه‌نین شاقولی اؤلچوسو پیکسئل‌دن"
               },
               "type": "integer",
               "minimum": 0
