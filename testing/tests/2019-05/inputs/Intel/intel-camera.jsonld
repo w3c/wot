@@ -64,12 +64,12 @@
       "description": "The current brightness setting",
       "titles": {
         "jp": "輝度",
-        "az-Latn": "",
+        "az-Latn": "Parlaqlıq",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在の明るさ設定",
-        "az-Latn": "",
+        "az-Latn": "Cari parlaqlıq qəbulu",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -186,12 +186,12 @@
       "description": "The current contrast setting",
       "titles": {
         "jp": "コントラスト",
-        "az-Latn": "",
+        "az-Latn": "Kontrast",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在のコントラスト設定",
-        "az-Latn": "",
+        "az-Latn": "Mövcud kontrast ayarı",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -309,12 +309,12 @@
       "description": "The current gamma setting, x100",
       "titles": {
         "jp": "ガンマ",
-        "az-Latn": "",
+        "az-Latn": "Gamma",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在のガンマ設定、x 100",
-        "az-Latn": "",
+        "az-Latn": "Mövcud gamma qəbulu, x100",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -390,12 +390,12 @@
       "description": "The current saturation setting",
       "titles": {
         "jp": "彩度",
-        "az-Latn": "",
+        "az-Latn": "Doyma",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在の彩度設定",
-        "az-Latn": "",
+        "az-Latn": "Mövcud doyma qəbulu",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -513,12 +513,12 @@
       "description": "The current hue setting",
       "titles": {
         "jp": "色相",
-        "az-Latn": "",
+        "az-Latn": "Hündürlük",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在の色相設定",
-        "az-Latn": "",
+        "az-Latn": "Cari hündürlük qəbulu",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -594,12 +594,12 @@
       "description": "The current white balance temperature setting",
       "titles": {
         "jp": "ホワイトバランス温度",
-        "az-Latn": "",
+        "az-Latn": "Ağ balansın temperaturu",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在のホワイトバランス温度設定",
-        "az-Latn": "",
+        "az-Latn": "Cari ağ balansı temperaturu qəbulu",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -717,12 +717,12 @@
       "description": "Status of automatic white balance temperature mode",
       "titles": {
         "jp": "オートホワイトバランス温度モード",
-        "az-Latn": "",
+        "az-Latn": "Avtomatik ağ balansı temperatur rejiminin",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "オートホワイトバランス温度モードの状態",
-        "az-Latn": "",
+        "az-Latn": "Avtomatik ağ balansı temperatur rejiminin vəziyyəti",
         "az-Arab": ""
       },
       "@type": ["iot:BinarySwitch","iot:StateData"],
@@ -838,12 +838,12 @@
       "description": "The current absolute exposure setting",
       "titles": {
         "jp": "露出",
-        "az-Latn": "",
+        "az-Latn": "Pozlama",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在の絶対露出設定",
-        "az-Latn": "",
+        "az-Latn": "Mövcud olan mütləq pozlama qəbulu",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -961,12 +961,12 @@
       "description": "Status of automatic exposure mode",
       "titles": {
         "jp": "自動露出モード",
-        "az-Latn": "",
+        "az-Latn": "Avtomatik pozlama rejiminin",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "自動露出モードの状態",
-        "az-Latn": "",
+        "az-Latn": "Avtomatik pozlama rejiminin vəziyyəti",
         "az-Arab": ""
       },
       "@type": ["iot:BinarySwitch","iot:StateData"],
@@ -1082,12 +1082,12 @@
       "description": "Status of automatic exposure priority",
       "titles": {
         "jp": "自動露出優先",
-        "az-Latn": "",
+        "az-Latn": "Avtomatik maruz qalma prioriteti",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "自動露出優先の状態",
-        "az-Latn": "",
+        "az-Latn": "Avtomatik maruz qalma prioritetinin vəziyyəti",
         "az-Arab": ""
       },
       "@type": ["iot:BinarySwitch","iot:StateData"],
@@ -1203,12 +1203,12 @@
       "description": "The current backlight compensation setting",
       "titles": {
         "jp": "逆光補正",
-        "az-Latn": "",
+        "az-Latn": "Arka ışığın təzminatı",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在の逆光補正設定",
-        "az-Latn": "",
+        "az-Latn": "Mövcud arka işıq kompensasiya qəbulu",
         "az-Arab": ""
       },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
@@ -1326,12 +1326,12 @@
       "description": "The current sharpness setting",
       "titles": {
         "jp": "シャープネス",
-        "az-Latn": "",
+        "az-Latn": "Keskinlik",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "現在のシャープネス設定",
-        "az-Latn": "",
+        "az-Latn": "Hazırkı dəqiqlik qəbulu",
         "az-Arab": ""
       },
       "type": "integer",
@@ -1448,12 +1448,12 @@
       "description": "Return the most recently grabbed image frame",
       "titles": {
         "jp": "フレーム",
-        "az-Latn": "",
+        "az-Latn": "Şəkil çərçivəsi",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "最後に取得した画像フレームを返す",
-        "az-Latn": "",
+        "az-Latn": "Ən qapalı şəkil çərçivəsini qaytarın",
         "az-Arab": ""
       },
       "observable": true,
@@ -1535,37 +1535,81 @@
       "description": "Extract and return a portion of the most recently grabbed image frame",
       "titles": {
         "jp": "クロップ",
-        "az-Latn": "",
+        "az-Latn": "Şəkil çərçivəsini kəsin",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "最後に取得した画像フレームの一部を抽出して返す",
-        "az-Latn": "",
+        "az-Latn": "Çıxarıla və ən yaxın zamanda tutulan bir şəkil çərçivəsinin bir hissəsini geri qaytarın",
         "az-Arab": ""
       },
       "input": {
           "type": "object",
           "properties": {
-              "xo": {
-                  "title": "x origin (pixels)",
-                  "type": "integer",
-                  "minimum": 0
+            "xo": {
+              "title": "x origin (pixels)",
+              "description": "Horizontal origin of region in pixels measured from the left",
+              "titles": {
+                "jp": "x原点（ピクセル）",
+                "az-Latn": "x mənşəyi (piksel)",
+                "az-Arab": ""
               },
-              "yo": {
-                  "title": "y origin (pixels)",
-                  "type": "integer",
-                  "minimum": 0
+              "descriptions": {
+                "jp": "左から測った領域の水平方向の原点（ピクセル単位）",
+                "az-Latn": "Bölgənin üfüqi mənşəli soldan ölçülmüş piksellər",
+                "az-Arab": ""
               },
-              "x": {
-                  "title": "x size (pixels)",
-                  "type": "integer",
-                  "minimum": 0
+              "type": "integer",
+              "minimum": 0
+            },
+            "yo": {
+              "title": "y origin (pixels)",
+              "description": "Vertical origin of region in pixels measured from the top",
+              "titles": {
+                "jp": "y原点（ピクセル）",
+                "az-Latn": "y mənşəyi (piksel)",
+                "az-Arab": ""
               },
-              "y": {
-                  "title": "y size (pixels)",
-                  "type": "integer",
-                  "minimum": 0
-              }
+              "descriptions": {
+                "jp": "上から測ったピクセル単位での領域の垂直方向の原点",
+                "az-Latn": "Bölgənin vertikal mənşəli pikseldən yuxarıdan ölçülür",
+                "az-Arab": ""
+              },
+              "type": "integer",
+              "minimum": 0
+            },
+            "x": {
+              "title": "width in pixels",
+              "description": "Horizontal size of region in pixels",
+              "titles": {
+                "jp": "ピクセル単位の幅",
+                "az-Latn": "piksel olaraq eni",
+                "az-Arab": ""
+              },
+              "descriptions": {
+                "jp": "ピクセル単位での領域の水平方向のサイズ",
+                "az-Latn": "Regionun üfüqi ölçüsü pikseldən",
+                "az-Arab": ""
+              },
+              "type": "integer",
+              "minimum": 0
+            },
+            "y": {
+              "title": "height in pixels",
+              "description": "Vertical size of region in pixels",
+              "titles": {
+                "jp": "ピクセル単位の高さ",
+                "az-Latn": "piksel boyu",
+                "az-Arab": ""
+              },
+              "descriptions": {
+                "jp": "ピクセル単位での領域の垂直方向のサイズ",
+                "az-Latn": "Bölgənin şaquli ölçüsü pikseldən",
+                "az-Arab": ""
+              },
+              "type": "integer",
+              "minimum": 0
+            }
           },
           "required": ["x","y"]
       }, 
@@ -1621,26 +1665,26 @@
       "description": "Extract and return a portion of the most recently grabbed image frame",
       "titles": {
         "jp": "領域",
-        "az-Latn": "",
+        "az-Latn": "Şəkil çərçivəsində sahəsi",
         "az-Arab": ""
       },
       "descriptions": {
         "jp": "最後に取得した画像フレームの一部を抽出して返す",
-        "az-Latn": "",
+        "az-Latn": "Çıxarıla və ən yaxın zamanda tutulan bir şəkil çərçivəsinin bir hissəsini geri qaytarın",
         "az-Arab": ""
       },
       "uriVariables": {
           "xo": {
               "title": "x origin (pixels)",
-              "description": "horizontal origin of region in pixels, measured from the left",
+              "description": "Horizontal origin of region in pixels measured from the left",
               "titles": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "x原点（ピクセル）",
+                "az-Latn": "x mənşəyi (piksel)",
                 "az-Arab": ""
               },
               "descriptions": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "左から測った領域の水平方向の原点（ピクセル単位）",
+                "az-Latn": "Bölgənin üfüqi mənşəli soldan ölçülmüş piksellər",
                 "az-Arab": ""
               },
               "type": "integer",
@@ -1648,47 +1692,47 @@
           },
           "yo": {
               "title": "y origin (pixels)",
-              "description": "vertical origin of region in pixels, measured from the top",
+              "description": "Vertical origin of region in pixels measured from the top",
               "titles": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "y原点（ピクセル）",
+                "az-Latn": "y mənşəyi (piksel)",
                 "az-Arab": ""
               },
               "descriptions": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "上から測ったピクセル単位での領域の垂直方向の原点",
+                "az-Latn": "Bölgənin vertikal mənşəli pikseldən yuxarıdan ölçülür",
                 "az-Arab": ""
               },
               "type": "integer",
               "minimum": 0
           },
           "x": {
-              "title": "x size (pixels)",
-              "description": "horizontal size of region in pixels",
+              "title": "width in pixels",
+              "description": "Horizontal size of region in pixels",
               "titles": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "ピクセル単位の幅",
+                "az-Latn": "piksel olaraq eni",
                 "az-Arab": ""
               },
               "descriptions": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "ピクセル単位での領域の水平方向のサイズ",
+                "az-Latn": "Regionun üfüqi ölçüsü pikseldən",
                 "az-Arab": ""
               },
               "type": "integer",
               "minimum": 0
           },
           "y": {
-              "title": "y size (pixels)",
-              "description": "vertical size of region in pixels",
+              "title": "height in pixels",
+              "description": "Vertical size of region in pixels",
               "titles": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "ピクセル単位の高さ",
+                "az-Latn": "piksel boyu",
                 "az-Arab": ""
               },
               "descriptions": {
-                "jp": "",
-                "az-Latn": "",
+                "jp": "ピクセル単位での領域の垂直方向のサイズ",
+                "az-Latn": "Bölgənin şaquli ölçüsü pikseldən",
                 "az-Arab": ""
               },
               "type": "integer",
