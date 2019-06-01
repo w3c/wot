@@ -29,9 +29,33 @@
   }],
   "id": "urn:uuid:6f6d4d0b-3d8b-58a1-a90b-7d05680553d6",
   "securityDefinitions": {
-    "nosec_sc": {"scheme": "nosec"},
-    "basic_sc": {"scheme": "basic"},
-    "digest_sc": {"scheme": "digest"}
+    "nosec_sc": {
+      "description": "No security",
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "scheme": "nosec"
+    },
+    "basic_sc": {
+      "description": "Basic authentication",
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "scheme": "basic"
+    },
+    "digest_sc": {
+      "description": "Digest authentication",
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "scheme": "digest"
+    }
   },
   "security": ["nosec_sc"],
   "properties": {
@@ -39,12 +63,12 @@
       "title": "Brightness",
       "description": "The current brightness setting",
       "titles": {
-        "jp": "",
+        "jp": "輝度",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在の明るさ設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -161,12 +185,12 @@
       "title": "Contrast",
       "description": "The current contrast setting",
       "titles": {
-        "jp": "",
+        "jp": "コントラスト",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在のコントラスト設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -284,12 +308,12 @@
       "title": "Gamma",
       "description": "The current gamma setting, x100",
       "titles": {
-        "jp": "",
+        "jp": "ガンマ",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在のガンマ設定、x 100",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -365,12 +389,12 @@
       "title": "Saturation",
       "description": "The current saturation setting",
       "titles": {
-        "jp": "",
+        "jp": "彩度",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在の彩度設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -488,12 +512,12 @@
       "title": "Hue",
       "description": "The current hue setting",
       "titles": {
-        "jp": "",
+        "jp": "色相",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在の色相設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -567,14 +591,14 @@
     },
     "white_balance": {
       "title": "White Balance Temperature",
-      "description": "The current white balance setting",
+      "description": "The current white balance temperature setting",
       "titles": {
-        "jp": "",
+        "jp": "ホワイトバランス温度",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在のホワイトバランス温度設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -690,14 +714,14 @@
     },
     "white_balance_auto": {
       "title": "White Balance Temperature Auto Mode",
-      "description": "Status of automatic white balance mode",
+      "description": "Status of automatic white balance temperature mode",
       "titles": {
-        "jp": "",
+        "jp": "オートホワイトバランス温度モード",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "オートホワイトバランス温度モードの状態",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -813,12 +837,12 @@
       "title": "Exposure",
       "description": "The current absolute exposure setting",
       "titles": {
-        "jp": "",
+        "jp": "露出",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在の絶対露出設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -936,12 +960,12 @@
       "title": "Exposure Auto Mode",
       "description": "Status of automatic exposure mode",
       "titles": {
-        "jp": "",
+        "jp": "自動露出モード",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "自動露出モードの状態",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -1055,14 +1079,14 @@
     },
     "exposure_auto_priority": {
       "title": "Exposure Auto Priority",
-      "description": "Statue of automatic exposure priority",
+      "description": "Status of automatic exposure priority",
       "titles": {
-        "jp": "",
+        "jp": "自動露出優先",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "自動露出優先の状態",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -1178,12 +1202,12 @@
       "title": "Backlight Compensation",
       "description": "The current backlight compensation setting",
       "titles": {
-        "jp": "",
+        "jp": "逆光補正",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在の逆光補正設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -1301,12 +1325,12 @@
       "title": "Sharpness",
       "description": "The current sharpness setting",
       "titles": {
-        "jp": "",
+        "jp": "シャープネス",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "現在のシャープネス設定",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -1420,15 +1444,15 @@
       ]
     },
     "frame": {
-      "title": "frame",
-      "description": "Return the most recently grabbed image",
+      "title": "Frame",
+      "description": "Return the most recently grabbed image frame",
       "titles": {
-        "jp": "",
+        "jp": "フレーム",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "最後に取得した画像フレームを返す",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -1508,14 +1532,14 @@
   "actions": {
     "crop": {
       "title": "Crop",
-      "description": "Extract and return a portion of the most recently grabbed image",
+      "description": "Extract and return a portion of the most recently grabbed image frame",
       "titles": {
-        "jp": "",
+        "jp": "クロップ",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "最後に取得した画像フレームの一部を抽出して返す",
         "az-Latn": "",
         "az-Arab": ""
       },
@@ -1594,35 +1618,79 @@
     },
     "region": {
       "title": "Region",
-      "description": "Extract and return a portion of the most recently grabbed image.",
+      "description": "Extract and return a portion of the most recently grabbed image frame",
       "titles": {
-        "jp": "",
+        "jp": "領域",
         "az-Latn": "",
         "az-Arab": ""
       },
       "descriptions": {
-        "jp": "",
+        "jp": "最後に取得した画像フレームの一部を抽出して返す",
         "az-Latn": "",
         "az-Arab": ""
       },
       "uriVariables": {
           "xo": {
               "title": "x origin (pixels)",
+              "description": "horizontal origin of region in pixels, measured from the left",
+              "titles": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
+              "descriptions": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
               "type": "integer",
               "minimum": 0
           },
           "yo": {
               "title": "y origin (pixels)",
+              "description": "vertical origin of region in pixels, measured from the top",
+              "titles": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
+              "descriptions": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
               "type": "integer",
               "minimum": 0
           },
           "x": {
               "title": "x size (pixels)",
+              "description": "horizontal size of region in pixels",
+              "titles": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
+              "descriptions": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
               "type": "integer",
               "minimum": 0
           },
           "y": {
               "title": "y size (pixels)",
+              "description": "vertical size of region in pixels",
+              "titles": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
+              "descriptions": {
+                "jp": "",
+                "az-Latn": "",
+                "az-Arab": ""
+              },
               "type": "integer",
               "minimum": 0
           }
