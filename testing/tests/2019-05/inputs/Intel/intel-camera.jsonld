@@ -2,11 +2,22 @@
   "@context": ["https://www.w3.org/2019/wot/td/v1",
                {
                  "iot": "http://iotschema.org/"
-               }
+               },
+               "@language": "en"
   ],
   "@type": ["Thing"],
-  "title": "SimpleWebCamera-upsq1c.local-0",
-  "description": "A simple interface to V4L2 cameras",
+  "title": "SimpleWebCamera upsq1c.local-0",
+  "description": "A simple interface to web cameras",
+  "titles": {
+    "jp": "簡易Webカメラ upsq1c.local-0",
+    "az-Latn": "SadəVebKamera upsq1c.local-0",
+    "az-Arab": "upsq1c.local-0 ساده وئب کامئرا"
+  },
+  "descriptions": {
+    "jp": "Webカメラへのシンプルなインターフェース",
+    "az-Latn": "Veb kameralar üçün sadə bir interfeys",
+    "az-Arab": "وئب کامئرالار اوچون ساده بیر اینتئرفئیس"
+  },
   "support": "mailto:michael.mccool@intel.com",
   "version": {"instance":"0.1.0"},
   "created": "2018-09-10T06:30:00Z",
@@ -27,6 +38,16 @@
     "brightness": {
       "title": "Brightness",
       "description": "The current brightness setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": -64,
@@ -139,6 +160,16 @@
     "contrast": {
       "title": "Contrast",
       "description": "The current contrast setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": 0,
@@ -252,6 +283,16 @@
     "gamma": {
       "title": "Gamma",
       "description": "The current gamma setting, x100",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": 16,
@@ -323,6 +364,16 @@
     "saturation": {
       "title": "Saturation",
       "description": "The current saturation setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": 0,
@@ -436,6 +487,16 @@
     "hue": {
       "title": "Hue",
       "description": "The current hue setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": -40,
@@ -507,6 +568,16 @@
     "white_balance": {
       "title": "White Balance Temperature",
       "description": "The current white balance setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": 2800,
@@ -620,6 +691,16 @@
     "white_balance_auto": {
       "title": "White Balance Temperature Auto Mode",
       "description": "Status of automatic white balance mode",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
       "observable": true,
@@ -731,6 +812,16 @@
     "exposure": {
       "title": "Exposure",
       "description": "The current absolute exposure setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": 1,
@@ -844,6 +935,16 @@
     "exposure_auto": {
       "title": "Exposure Auto Mode",
       "description": "Status of automatic exposure mode",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
       "observable": true,
@@ -955,6 +1056,16 @@
     "exposure_auto_priority": {
       "title": "Exposure Auto Priority",
       "description": "Statue of automatic exposure priority",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
       "observable": true,
@@ -1066,6 +1177,16 @@
     "backlight_compensation": {
       "title": "Backlight Compensation",
       "description": "The current backlight compensation setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "@type": ["iot:CurrentLevel","iot:LevelData"],
       "type": "integer",
       "minimum": 0,
@@ -1179,6 +1300,16 @@
     "sharpness": {
       "title": "Sharpness",
       "description": "The current sharpness setting",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "type": "integer",
       "minimum": 0,
       "maximum": 600,
@@ -1290,6 +1421,17 @@
     },
     "frame": {
       "title": "frame",
+      "description": "Return the most recently grabbed image",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "observable": true,
       "forms": [
         {
@@ -1367,6 +1509,16 @@
     "crop": {
       "title": "Crop",
       "description": "Extract and return a portion of the most recently grabbed image",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "input": {
           "type": "object",
           "properties": {
@@ -1443,6 +1595,16 @@
     "region": {
       "title": "Region",
       "description": "Extract and return a portion of the most recently grabbed image.",
+      "titles": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
+      "descriptions": {
+        "jp": "",
+        "az-Latn": "",
+        "az-Arab": ""
+      },
       "uriVariables": {
           "xo": {
               "title": "x origin (pixels)",
