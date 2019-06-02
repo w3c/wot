@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "title": "PanaSimHueGroup1",
+  "id": "p-wot:PanaSimHueGroup1",
+  "base": "http://192.168.188.27:3000/wot/things/PanaSimHueGroup1/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["bearer_sc"],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "title": "power",
+      "type": "boolean",
+      "observable": true,
+      "forms": [{
+        "href": "power",
+        "contentType": "application/json"
+      }, {
+        "href": "http://192.168.188.27:8003/poll/PanaSimHueGroup1/power",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "ws://192.168.188.27:8003/wot/things/PanaSimHueGroup1/power",
+        "contentType": "application/json",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }]
+    },
+    "rgbValue": {
+      "title": "rgbValue",
+      "type": "object",
+      "properties": {
+        "red": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "green": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "observable": true,
+      "forms": [{
+        "href": "rgbValue",
+        "contentType": "application/json"
+      }, {
+        "href": "http://192.168.188.27:8003/poll/PanaSimHueGroup1/rgbValue",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "ws://192.168.188.27:8003/wot/things/PanaSimHueGroup1/rgbValue",
+        "contentType": "application/json",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }]
+    }
+  }
+}

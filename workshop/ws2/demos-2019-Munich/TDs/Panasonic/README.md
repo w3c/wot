@@ -31,5 +31,6 @@ For other instances which can be accessed exclusively at a time, see [simulator 
 
 ## Local simulator
 
-- You can use Local simulator just like Online simulator.
-- Available at Workshop Demo and Workshop Demo Preparation
+- You can use [Local simulator](http://192.168.188.27:3000/) just like Online simulator.
+- Available at Workshop Demo and Workshop Demo Preparation.
+- TDs are [here](local-simulator).
