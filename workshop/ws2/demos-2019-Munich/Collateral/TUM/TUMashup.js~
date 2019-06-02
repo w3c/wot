@@ -10,7 +10,7 @@ If you press the joystick, the Dotstar LEDs will light up with random colors.
 */
 
 const Robot_TD_ADDRESS = "http://TUMEIESI-MeArmPi-Orange.local:8080/MeArmPi";
-const LightSensor_TD_ADDRESS = "http://192.168.188.9/";
+const LightSensor_TD_ADDRESS = "http://192.168.0.102/";
 const senseHAT_TD_ADDRESS = "http://TUMEIESI-SenseHat-106.local:8080/SenseHat";
 const strip_TD_ADDRESS = "http://TUMEIESI-DotStar.local:8080/";
 
