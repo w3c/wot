@@ -14,7 +14,7 @@
     "security": [
         "nosec_sc"
     ],
-    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/",
     "properties": {
         "configuration": {
             "title": "Configuration Settings",
@@ -90,7 +90,7 @@
             },
             "forms": [
                 {
-                    "href": "/config",
+                    "href": "config",
                     "contentType": "application/json",
                     "htv:methodName": "GET",
                     "op": [
@@ -174,7 +174,7 @@
             },
             "forms": [
                 {
-                    "href": "/lights",
+                    "href": "lights",
                     "contentType": "application/json",
                     "htv:methodName": "GET",
                     "op": [
@@ -243,7 +243,7 @@
                 }
             },
             "forms": [{
-                "href": "/sensors",
+                "href": "sensors",
                 "contentType": "application/json",
                 "htv:methodName": "GET",
                 "op": [
@@ -304,7 +304,7 @@
             },
             "forms": [
                 {
-                    "href": "/sensors",
+                    "href": "sensors",
                     "contentType": "application/json",
                     "htv:methodName": "POST",
                     "op": [
@@ -340,7 +340,7 @@
             },
             "forms": [
                 {
-                    "href": "/lights",
+                    "href": "lights",
                     "contentType": "application/json",
                     "htv:methodName": "POST",
                     "op": [
