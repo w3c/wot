@@ -25,7 +25,7 @@
 							"raw": "{\"on\":false\n}"
 						},
 						"url": {
-							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/1/state",
+							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/4/state",
 							"protocol": "http",
 							"host": [
 								"Philips-hue",
@@ -35,7 +35,7 @@
 								"api",
 								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
 								"lights",
-								"1",
+								"4",
 								"state"
 							]
 						}
@@ -298,13 +298,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.0.101",
+							"raw": "http://192.168.188.9",
 							"protocol": "http",
 							"host": [
 								"192",
 								"168",
-								"0",
-								"101"
+								"188",
+								"9"
 							]
 						}
 					},
@@ -316,13 +316,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.0.102",
+							"raw": "http://192.168.188.8",
 							"protocol": "http",
 							"host": [
 								"192",
 								"168",
-								"0",
-								"102"
+								"188",
+								"8"
 							]
 						}
 					},
@@ -334,13 +334,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.0.101/properties/intensity",
+							"raw": "http://192.168.188.9/properties/intensity",
 							"protocol": "http",
 							"host": [
 								"192",
 								"168",
-								"0",
-								"101"
+								"188",
+								"9"
 							],
 							"path": [
 								"properties",
@@ -356,13 +356,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.0.102/properties/intensity",
+							"raw": "http://192.168.188.8/properties/intensity",
 							"protocol": "http",
 							"host": [
 								"192",
 								"168",
-								"0",
-								"102"
+								"188",
+								"8"
 							],
 							"path": [
 								"properties",

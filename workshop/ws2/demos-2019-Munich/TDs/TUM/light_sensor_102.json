@@ -1,5 +1,5 @@
 {
-    "id": "light:sensor:192.168.0.102",
+    "id": "light:sensor:192.168.188.9",
     "descriptions": {
         "en": "Sensor that measures the intensity of light"
     },
@@ -21,7 +21,7 @@
             "forms": [{
                 "contentType": "application/json",
                 "op": "readproperty",
-                "href": "http://192.168.0.102/properties/intensity"
+                "href": "http://192.168.188.9/properties/intensity"
             }],
             "maximum": 1000,
             "writeOnly": false,
