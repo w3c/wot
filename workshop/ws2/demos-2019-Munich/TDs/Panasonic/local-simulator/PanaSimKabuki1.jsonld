@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "title": "PanaSimKabuki1",
+  "id": "p-wot:PanaSimKabuki1",
+  "base": "http://192.168.188.27:3000/wot/things/PanaSimKabuki1/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    }
+  },
+  "security": ["bearer_sc"],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "title": "power",
+      "type": "boolean",
+      "readOnly": true,
+      "observable": false,
+      "forms": [{
+        "href": "power",
+        "contentType": "application/json"
+      }]
+    }
+  },
+  "actions": {
+    "seeYou": {
+      "label": "seeYou",
+      "idempotent": true,
+      "forms": [{
+        "href": "action/seeYou",
+        "contentType": "application/json"
+      }]
+    },
+    "welcomeBack": {
+      "title": "welcomeBack",
+      "forms": [{
+        "href": "action/welcomeBack",
+        "contentType": "application/json"
+      }]
+    },
+    "stop": {
+      "title": "stop",
+      "forms": [{
+        "href": "action/stop",
+        "contentType": "application/json"
+      }]
+    }
+  }
+}
