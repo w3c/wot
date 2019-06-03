@@ -35,9 +35,9 @@ if (verbose) console.log(td);
 if (verbose) console.log("-----");
 
 var dm={};
-dm.name=td.name;
+dm.name=td.title;
 dm.description=td.base;
-dm.urn="urn:com:"+pkg+":"+td.name;
+dm.urn="urn:com:"+pkg+":"+td.title;
 
 var now=new Date(Date.now());
 dm.createdAsString=now.toISOString();
@@ -106,11 +106,13 @@ for (var p in td.properties) {
                 prop.range=iac.properties.minimum+","+iac.properties.maximum;
             }
         } else {
-            if (iac.type == "array") {
-                // TODO: complete ARRAY implementation
-                prop.type="STRING";
-            } else {
-               prop.type=iac.type.toUpperCase();
+            if (iac.type) {
+                if (iac.type == "array") {
+                    // TODO: complete ARRAY implementation
+                    prop.type="STRING";
+                } else {
+                    prop.type=iac.type.toUpperCase();
+                }
             }
         }
         prop.writable=iac.writable;
