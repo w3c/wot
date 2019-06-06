@@ -45,7 +45,9 @@
         "az-Latn": "Əsas identifikasiyası",
         "az-Arab": "اساس ایدئنتیفیکاسییاسی"
       },
-      "scheme": "basic"
+      "scheme": "basic",
+      "in": "header",
+      "name": "Basic"
     },
     "digest_sc": {
       "description": "Digest authentication",
@@ -54,7 +56,10 @@
         "az-Latn": "Digest identifikasiyası",
         "az-Arab": "دیگئست ایدئنتیفیکاسییاسی"
       },
-      "scheme": "digest"
+      "scheme": "digest",
+      "in": "header",
+      "qop": "auth-int",
+      "name": "Digest"
     }
   },
   "security": ["nosec_sc"],

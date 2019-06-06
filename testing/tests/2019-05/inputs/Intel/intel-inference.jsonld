@@ -38,7 +38,8 @@
         "jp": "基本認証"
       },
       "scheme": "basic",
-      "in": "header"
+      "in": "header",
+      "name": "Basic"
     },
     "digest_sc": {
       "description": "Digest authentication",
@@ -47,7 +48,9 @@
       },
       "scheme": "digest",
       "in": "header",
-      "qop": "auth-int"
+      "qop": "auth-int",
+      "in": "header",
+      "name": "Digest"
     }
   },
   "security": ["nosec_sc"],
