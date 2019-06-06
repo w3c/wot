@@ -13,7 +13,7 @@
                 "subscription" : {
                     "type" : "object",
                     "properties" : {
-                        "targetURL" : {"type" : "string", "writeOnly": true, "description": "Requester provides the target URL to which Thing the event should be provided"},
+                        "targetURL" : {"type" : "string", "format": "uri","writeOnly": true, "description": "Requester provides the target URL to which Thing the event should be provided"},
                         "subscriptionID" : {"type": "integer", "readOnly": true, "description": "Responses an unique subscription ID."}
                     }
                 },
