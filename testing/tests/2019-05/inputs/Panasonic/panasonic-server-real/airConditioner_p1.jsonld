@@ -25,7 +25,8 @@
       "scheme": "bearer",
       "format": "jwt",
       "alg": "ES256",
-      "authorization": "https://w3c.p-wot.com:8443/auth"
+      "authorization": "https://w3c.p-wot.com:8443/auth",
+      "in": "header"
     },
     "nosec_sc": {
       "scheme": "nosec"
