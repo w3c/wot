@@ -1,0 +1,19 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:dev:ops:32473-californium-5684",
+    "title": "Cf-Secure",
+    "description": "Californium CoAPS example server (https://github.com/eclipse/californium/tree/master/demo-apps/cf-secure)",
+    "securityDefinitions": {"coaps": {"scheme": "psk" }},
+    "security": "coaps",
+    "properties": {
+        "secure": {
+            "description": "PSK secured resource",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "coaps://localhost:5684/secure"
+                }
+            ]
+        }
+    }
+}
