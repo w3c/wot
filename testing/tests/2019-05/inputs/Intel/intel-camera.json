@@ -2,6 +2,7 @@
   "@context": ["https://www.w3.org/2019/wot/td/v1",
                {
                  "iot": "http://iotschema.org/",
+                 "mmccool": "http://mmccool.org/testvocab",
                  "@language": "en"
                }
   ],
@@ -30,6 +31,7 @@
   "id": "urn:uuid:6f6d4d0b-3d8b-58a1-a90b-7d05680553d6",
   "securityDefinitions": {
     "nosec_sc": {
+      "@type": ["mccool:nosec"],
       "description": "No security",
       "descriptions": {
         "jp": "セキュリティなし",
@@ -39,6 +41,7 @@
       "scheme": "nosec"
     },
     "basic_sc": {
+      "@type": ["mccool:basic"],
       "description": "Basic authentication",
       "descriptions": {
         "jp": "基本認証",
@@ -50,6 +53,7 @@
       "name": "Basic"
     },
     "digest_sc": {
+      "@type": ["mccool:digest"],
       "description": "Digest authentication",
       "descriptions": {
         "jp": "ダイジェスト認証",
