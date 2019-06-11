@@ -212,30 +212,6 @@ rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.te
 node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.{csv,CSV}.temp
 mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv
-  Processing implementation Intel/intel-inference
-    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld
->>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld
-npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
-
-> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1"
-
-Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld
-Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
-Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
-=================================================================
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld  for validation
-
-!!!! COMMENT Until iri-reference is supported by ajv, it will stay as uri-reference in playground
-
-!!!! COMMENT Until iri-reference is supported by ajv, it will stay as uri-reference in playground
-The csv was saved!
-node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp2
-mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp2 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
-rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
-node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.{csv,CSV}.temp
-mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
   Processing implementation Intel/intel-speak
     in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
@@ -260,6 +236,30 @@ rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.tem
 node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.{csv,CSV}.temp
 mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv
+  Processing implementation Intel/intel-inference
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
+
+> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1"
+
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json
+Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
+Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
+=================================================================
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json  for validation
+
+!!!! COMMENT Until iri-reference is supported by ajv, it will stay as uri-reference in playground
+
+!!!! COMMENT Until iri-reference is supported by ajv, it will stay as uri-reference in playground
+The csv was saved!
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp2
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp2 /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
+rm /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.{csv,CSV}.temp
+mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
+<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
   Processing implementation Intel/intel-ocf
     under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-ocf
     Processing instance Intel/intel-ocf/Intel-OCF-button1touch
