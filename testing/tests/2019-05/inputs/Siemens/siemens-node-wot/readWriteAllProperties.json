@@ -31,7 +31,7 @@
             },
             "description": "Status of the Thing",
             "descriptions": {
-                "en": "Latest status of the Thing",
+                "en": "Status of the Thing",
                 "de": "Aktuelle Thing-Zustand"
             },
             "observable": true,
@@ -87,6 +87,10 @@
         "brightness": {
             "type": "integer",
             "description": "current brightness value",
+            "descriptions": {
+                "en": "current brightness value",
+                "de": "Aktuelle Thing-Zustand"
+            },
             "observable": true,
             "readOnly": true,
             "writeOnly": false,

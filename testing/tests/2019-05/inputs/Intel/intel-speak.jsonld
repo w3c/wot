@@ -19,8 +19,17 @@
   "id": "urn:uuid:6f3775aa-9790-5b5d-99bb-fb354a63dc0f",
   "securityDefinitions": {
     "nosec_sc": {"scheme":"nosec"},
-    "basic_sc": {"scheme":"basic"},
-    "digest_sc": {"scheme":"digest"}
+    "basic_sc": {
+      "scheme":"basic",
+      "in": "header",
+      "name": "Basic" 
+    },
+    "digest_sc": {
+      "scheme":"digest",
+      "in": "header",
+      "qop": "auth-int",
+      "name": "Digest" 
+    }
   },
   "security": ["nosec_sc"],
   "actions": {

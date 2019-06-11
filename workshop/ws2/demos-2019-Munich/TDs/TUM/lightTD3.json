@@ -14,7 +14,7 @@
     "security": [
         "nosec_sc"
     ],
-    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/3",
+    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/3/",
     "properties": {
         "lightInformation": {
             "title": "State and Attributes Of Light",
@@ -85,7 +85,7 @@
             },
             "forms": [
                 {
-                    "href": "/",
+                    "href": "",
                     "htv:methodName": "GET",
                     "http:methodName": "GET",
                     "contentType": "application/json",
@@ -94,7 +94,7 @@
                     ]
                 },
                 {
-                    "href": "/",
+                    "href": "",
                     "htv:methodName": "PUT",
                     "contentType": "application/json",
                     "op": [
@@ -135,7 +135,7 @@
             },
             "forms": [
                 {
-                    "href": "/",
+                    "href": "",
                     "contentType": "application/json",
                     "htv:methodName": "PUT",
                     "op": [
@@ -256,7 +256,7 @@
             },
             "forms": [
                 {
-                    "href": "/state",
+                    "href": "state",
                     "contentType": "application/json",
                     "htv:methodName": "PUT",
                     "op": [

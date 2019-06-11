@@ -16,7 +16,7 @@
     "security": [
         "nosec_sc"
     ],
-    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/",
     "properties": {
         "switchInformation": {
             "description": "Switch information from the bridge with the given id.",
@@ -96,7 +96,7 @@
             },
             "forms": [
                 {
-                    "href": "/sensors/2",
+                    "href": "sensors/2",
                     "contentType": "application/json",
                     "htv:methodName": "GET",
                     "op": [
