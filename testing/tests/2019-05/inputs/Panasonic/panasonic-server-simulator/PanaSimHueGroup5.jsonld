@@ -16,72 +16,84 @@
       "scheme": "bearer",
       "format": "jwt",
       "alg": "ES256",
-      "authorization": "https://w3c.p-wot.com:8443/auth"
+      "authorization": "https://w3c.p-wot.com:8443/auth",
+      "in": "header"
+    },
+    "oauth2_code_sc": {
+      "scheme": "oauth2",
+      "authorization": "https://w3c.p-wot.com:8443/oauth",
+      "token": "https://w3c.p-wot.com:8443/oauth/token",
+      "refresh": "",
+      "scopes": ["full_access"],
+      "flow": "code"
+    },
+    "api_key_sc": {
+      "scheme": "apikey",
+      "in": "header",
+      "name": "X-API-KEY"
     },
     "nosec_sc": {
       "scheme": "nosec"
     }
   },
-  "security": ["bearer_sc"],
+  "security": ["bearer_sc", "oauth2_code_sc", "api_key_sc"],
   "properties": {
     "power": {
       "@type": "iot:SwitchToggle",
       "title": "power",
       "type": "boolean",
       "observable": true,
-      "forms": [{
-        "href": "power",
-        "contentType": "application/json"
-      }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/power",
-        "contentType": "application/json",
-        "subprotocol": "longpoll",
-        "op": "observeproperty",
-        "security": ["nosec_sc"]
-      }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/power",
-        "contentType": "application/json",
-        "op": "observeproperty",
-        "security": ["nosec_sc"]
-      }]
+      "forms": [
+        {
+          "href": "power",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        },
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/power",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/power",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
     },
     "rgbValue": {
       "title": "rgbValue",
       "type": "object",
       "properties": {
-        "red": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        },
-        "green": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        },
-        "blue": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        }
+        "red":   { "type": "number", "minimum": 0, "maximum": 1 },
+        "green": { "type": "number", "minimum": 0, "maximum": 1 },
+        "blue":  { "type": "number", "minimum": 0, "maximum": 1 }
       },
       "required": ["red", "green", "blue"],
       "observable": true,
-      "forms": [{
-        "href": "rgbValue",
-        "contentType": "application/json"
-      }, {
-        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/rgbValue",
-        "contentType": "application/json",
-        "subprotocol": "longpoll",
-        "op": "observeproperty",
-        "security": ["nosec_sc"]
-      }, {
-        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/rgbValue",
-        "contentType": "application/json",
-        "op": "observeproperty",
-        "security": ["nosec_sc"]
-      }]
+      "forms": [
+        {
+          "href": "rgbValue",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        },
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/rgbValue",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/rgbValue",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
     }
   }
 }

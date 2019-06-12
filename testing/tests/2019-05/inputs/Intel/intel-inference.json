@@ -2,6 +2,7 @@
   "@context": ["https://www.w3.org/2019/wot/td/v1",
                {
                  "iot": "http://iotschema.org/",
+                 "mmccool": "http://mmccool.org/testvocab",
                  "@language": "en"
                }
   ],
@@ -26,6 +27,7 @@
   "id": "urn:uuid:6f6d4d0b-3d8b-58a1-a90b-7d05680553d7",
   "securityDefinitions": {
     "nosec_sc": {
+      "@type": ["mccool:nosec"],
       "description": "No security",
       "descriptions": {
         "jp": "セキュリティなし"
@@ -33,6 +35,7 @@
       "scheme": "nosec"
     },
     "basic_sc": {
+      "@type": ["mccool:basic"],
       "description": "Basic authentication",
       "descriptions": {
         "jp": "基本認証"
@@ -42,6 +45,7 @@
       "name": "Basic"
     },
     "digest_sc": {
+      "@type": ["mccool:digest"],
       "description": "Digest authentication",
       "descriptions": {
         "jp": "ダイジェスト認証"
@@ -66,6 +70,12 @@
       },
       "safe": true,
       "idempotent": true,
+      "uriVariables": {
+        "region": {
+          "type": "string",
+          "enum": ["rect","circ","none"]
+        }
+      },
       "output": {
         "type": "array",
         "items": {
@@ -78,6 +88,7 @@
              "jp": "識別されたオブジェクト名、スコア、および場所の配列"
           },
           "minItems": 0,
+          "maxItems": 32,
           "type": "object",
           "properties": {
             "class": {
@@ -104,56 +115,131 @@
               "minimum": 0.0,
               "maximum": 1.0
             },
-            "xo": {
-              "title": "x origin (pixels)",
-              "description": "Horizontal origin of ROI in pixels measured from the left",
+            "region": {
+             "oneOf": [{
+              "type": "object",
+              "title": "rectangular region",
+              "description": "Region described by upper-left corner and size",
               "titles": {
-                "jp": "x原点（ピクセル）"
+                "jp": ""
               },
               "descriptions": {
-                "jp": "左から測った領域の水平方向の原点（ピクセル単位）"
+                "jp": ""
               },
-              "type": "integer",
-              "minimum": 0
+              "properties": {
+                "xo": {
+                  "title": "x origin (pixels)",
+                  "description": "Horizontal origin of ROI in pixels measured from the left",
+                  "titles": {
+                    "jp": "x原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "左から測った領域の水平方向の原点（ピクセル単位）"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "yo": {
+                  "title": "y origin (pixels)",
+                  "description": "Vertical origin of region in pixels measured from the top",
+                  "titles": {
+                    "jp": "y原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "上から測ったピクセル単位での領域の垂直方向の原点"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                  },
+                  "x": {
+                  "title": "width in pixels",
+                  "description": "Horizontal size of region in pixels",
+                  "titles": {
+                    "jp": "ピクセル単位の幅"
+                  },
+                  "descriptions": {
+                    "jp": "ピクセル単位での領域の水平方向のサイズ"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "y": {
+                  "title": "height in pixels",
+                  "description": "Vertical size of region in pixels",
+                  "titles": {
+                    "jp": "ピクセル単位の高さ"
+                  },
+                  "descriptions": {
+                    "jp": "ピクセル単位での領域の垂直方向のサイズ"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                } 
+              },
+              "required": ["xo","yo","x","y"]
             },
-            "yo": {
-              "title": "y origin (pixels)",
-              "description": "Vertical origin of region in pixels measured from the top",
+            {
+              "type": "object",
+              "title": "circular region",
+              "description": "Region described by upper-left corner and size",
               "titles": {
-                "jp": "y原点（ピクセル）"
+                "jp": ""
               },
               "descriptions": {
-                "jp": "上から測ったピクセル単位での領域の垂直方向の原点"
+                "jp": ""
               },
-              "type": "integer",
-              "minimum": 0
-            },
-            "x": {
-              "title": "width in pixels",
-              "description": "Horizontal size of region in pixels",
+              "properties": {
+                "xo": {
+                  "title": "x origin (pixels)",
+                  "description": "Horizontal origin of ROI in pixels measured from the left",
+                  "titles": {
+                    "jp": "x原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "左から測った領域の水平方向の原点（ピクセル単位）"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "yo": {
+                  "title": "y origin (pixels)",
+                  "description": "Vertical origin of region in pixels measured from the top",
+                  "titles": {
+                    "jp": "y原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "上から測ったピクセル単位での領域の垂直方向の原点"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                  },
+                "r": {
+                  "title": "radius in pixels",
+                  "description": "Radial size of circular region in pixels",
+                  "titles": {
+                    "jp": "ピクセル単位の半径"
+                  },
+                  "descriptions": {
+                    "jp": "円形領域の半径サイズ（ピクセル単位）"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                } 
+              },
+              "required": ["xo","yo","radius"]
+            },{
+              "type" : "null",
+              "title": "no region",
+              "description": "Classification result only, no localization",
               "titles": {
-                "jp": "ピクセル単位の幅"
+                "jp": "地域なし"
               },
               "descriptions": {
-                "jp": "ピクセル単位での領域の水平方向のサイズ"
-              },
-              "type": "integer",
-              "minimum": 0
-            },
-            "y": {
-              "title": "height in pixels",
-              "description": "Vertical size of region in pixels",
-              "titles": {
-                "jp": "ピクセル単位の高さ"
-              },
-              "descriptions": {
-                "jp": "ピクセル単位での領域の垂直方向のサイズ"
-              },
-              "type": "integer",
-              "minimum": 0
-            }
+                "jp": "分類結果のみ、ローカリゼーションなし"
+              }
+            }]}
           },
-          "required": ["class","x","y"]
+          "required": ["class"]
         }
       }, 
       "forms": [

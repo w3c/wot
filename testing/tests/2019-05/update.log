@@ -93,23 +93,6 @@ mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/Fujitsu-WiFiSensor
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/Fujitsu-WiFiSensor.csv
   Processing implementation Fujitsu/fujitsu-ECHONET-Lite-devices
     under /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices
-    Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice
-      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.json
->>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.json
-npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv
-
-> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv"
-
-Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.json
-Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv
-Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv
-=================================================================
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.json  for validation
-The csv was saved!
-node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.{csv,CSV}.temp
-mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv
     Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Airconditioner
       in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Airconditioner.json
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Airconditioner.json
@@ -161,40 +144,6 @@ The csv was saved!
 node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.{csv,CSV}.temp
 mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv
-    Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer
-      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.json
->>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.json
-npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv
-
-> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv"
-
-Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.json
-Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv
-Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv
-=================================================================
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.json  for validation
-The csv was saved!
-node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.{csv,CSV}.temp
-mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv
-    Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG
-      in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.json
->>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.json
-npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv
-
-> tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv"
-
-Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.json
-Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv
-Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv
-=================================================================
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.json  for validation
-The csv was saved!
-node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.{csv,CSV}.temp
-mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv
     Processing instance Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LEDLight
       in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LEDLight.json
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LEDLight.json
@@ -229,27 +178,29 @@ The csv was saved!
 node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.{csv,CSV}.temp
 mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.csv
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.csv
->>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Airconditioner.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LEDLight.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.csv
-node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-AgriDevice.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Airconditioner.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Buzzer.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-CHLOG.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LEDLight.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv.temp
+>>>>>>>>>>>> Merge: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Airconditioner.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LEDLight.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.csv
+node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-Airconditioner.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindClose.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-BlindOpen.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-LEDLight.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices/Fujitsu-PowerMeter.csv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv > /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv.temp
 mv /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Fujitsu/fujitsu-ECHONET-Lite-devices.csv
 Processing organization Hitachi
   in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Hitachi
+Processing organization Huawei
+  in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Huawei
 Processing organization Intel
   in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel
   Processing implementation Intel/intel-camera
-    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld
->>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld
-npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1"
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1"
 
-Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.json
 Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
 Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv.temp1
 =================================================================
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.jsonld  for validation
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.json  for validation
 
 !!!! COMMENT Until iri-reference is supported by ajv, it will stay as uri-reference in playground
 
@@ -262,18 +213,18 @@ node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/i
 mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-camera.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-camera.csv
   Processing implementation Intel/intel-inference
-    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld
->>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld
-npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1"
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1"
 
-Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json
 Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
 Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv.temp1
 =================================================================
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.jsonld  for validation
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.json  for validation
 
 !!!! COMMENT Until iri-reference is supported by ajv, it will stay as uri-reference in playground
 
@@ -286,18 +237,18 @@ node mergeResults.js /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/i
 mv /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-inference.{csv,CSV}.temp /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-inference.csv
   Processing implementation Intel/intel-speak
-    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
->>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
-npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
+    in /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.json
+>>>>>>>>>>>> Processing: /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.json
+npm run-script testTD /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.json /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot/testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1"
+> node assertionTester.js "/home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.json" "/home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1"
 
-Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld
+Taking input  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.json
 Taking output  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
 Validating a single TD and outputting result to  /home/mmccool/Dev/wot/testing/tests/2019-05/outputs/Intel/intel-speak.csv.temp1
 =================================================================
-Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.jsonld  for validation
+Taking TD found at  /home/mmccool/Dev/wot/testing/tests/2019-05/inputs/Intel/intel-speak.json  for validation
 
 !!!! COMMENT Until iri-reference is supported by ajv, it will stay as uri-reference in playground
 

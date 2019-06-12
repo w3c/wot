@@ -1,7 +1,8 @@
 {
   "@context": ["https://www.w3.org/2019/wot/td/v1",
                {
-                   "iot": "http://iotschema.org/"
+                   "iot": "http://iotschema.org/",
+                   "mmccool": "http://mmccool.org/testvocab"
                }
   ],
   "@type": ["Thing"],
@@ -18,13 +19,18 @@
   }],
   "id": "urn:uuid:6f3775aa-9790-5b5d-99bb-fb354a63dc0f",
   "securityDefinitions": {
-    "nosec_sc": {"scheme":"nosec"},
+    "nosec_sc": {
+      "@type": ["mccool:nosec"],
+      "scheme":"nosec"
+    },
     "basic_sc": {
+      "@type": ["mccool:basic"],
       "scheme":"basic",
       "in": "header",
       "name": "Basic" 
     },
     "digest_sc": {
+      "@type": ["mccool:digest"],
       "scheme":"digest",
       "in": "header",
       "qop": "auth-int",
