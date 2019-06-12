@@ -15,18 +15,13 @@
 "td-context-default-language-direction-heuristic","not-impl","language-direction is not supported"
 "td-context-default-language-direction-independence","not-impl","language-direction is not supported"
 "td-context-default-language-direction-inference","not-impl","language-direction is not supported"
-"td-context-default-language-direction-script","not-impl","language-direction is not supported"
 "td-context-ns-multilanguage-text-direction-infer","not-impl","text-direction is not supported"
 "td-default-alg","not-impl","not supported"
 "td-default-alg-pop","not-impl","not supported"
 "td-default-contentType","pass",
-"td-default-flow","not-impl","not supported"
+"td-default-flow","pass",
 "td-default-format","not-impl","not supported"
 "td-default-format-pop","not-impl","not supported"
-"td-default-http-method","pass",
-"td-default-http-method_get","pass",
-"td-default-http-method_post","pass",
-"td-default-http-method_put","pass",
 "td-default-idempotent","pass",
 "td-default-in-apikey","not-impl","not supported"
 "td-default-in-basic","not-impl","not supported"
@@ -54,3 +49,7 @@
 "td-security-no-extras","not-impl","server test"
 "td-vocabulary-defaults","not-impl","server test"
 "well-known-operation-types-only","not-impl","server test"
+"td-default-http-method","pass",
+"td-default-http-method_get","pass",
+"td-default-http-method_put","pass",
+"td-default-http-method_post","pass",
