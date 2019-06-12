@@ -18,11 +18,24 @@
       "alg": "ES256",
       "authorization": "https://w3c.p-wot.com:8443/auth"
     },
+    "oauth2_code_sc": {
+      "scheme": "oauth2",
+      "authorization": "https://w3c.p-wot.com:8443/oauth",
+      "token": "https://w3c.p-wot.com:8443/oauth/token",
+      "refresh": "",
+      "scopes": ["full_access"],
+      "flow": "code"
+    },
+    "api_key_sc": {
+      "scheme": "apikey",
+      "in": "header",
+      "name": "X-API-KEY"
+    },
     "nosec_sc": {
       "scheme": "nosec"
     }
   },
-  "security": ["bearer_sc"],
+  "security": ["bearer_sc", "oauth2_code_sc", "api_key_sc"],
   "properties": {
     "operationStatus": {
       "@type": "iot:OperationStatus",
@@ -36,7 +49,8 @@
       },
       "forms": [{
           "href": "{number}/operationStatus",
-          "contentType": "application/json"
+          "contentType": "application/json",
+          "scopes": ["full_access"]
       }]
     },
     "desiredTemp": {
@@ -53,7 +67,8 @@
       },
       "forms": [{
         "href": "{number}/desiredTemp",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "scopes": ["full_access"]
       }]
     }
   }

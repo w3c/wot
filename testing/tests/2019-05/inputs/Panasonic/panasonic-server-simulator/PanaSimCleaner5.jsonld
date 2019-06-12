@@ -16,10 +16,24 @@
       "scheme": "bearer",
       "format": "jwt",
       "alg": "ES256",
-      "authorization": "https://w3c.p-wot.com:8443/auth"
+      "authorization": "https://w3c.p-wot.com:8443/auth",
+      "in": "header"
+    },
+    "oauth2_code_sc": {
+      "scheme": "oauth2",
+      "authorization": "https://w3c.p-wot.com:8443/oauth",
+      "token": "https://w3c.p-wot.com:8443/oauth/token",
+      "refresh": "",
+      "scopes": ["full_access"],
+      "flow": "code"
+    },
+    "api_key_sc": {
+      "scheme": "apikey",
+      "in": "header",
+      "name": "X-API-KEY"
     }
   },
-  "security": ["bearer_sc"],
+  "security": ["bearer_sc", "oauth2_code_sc", "api_key_sc"],
   "properties": {
     "power": {
       "@type": "iot:SwitchToggle",
@@ -27,49 +41,67 @@
       "type": "boolean",
       "readOnly": true,
       "observable": false,
-      "forms": [{
-        "href": "power",
-        "contentType": "application/json"
-      }]
+      "forms": [
+        {
+          "href": "power",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        }
+      ]
     }
   },
   "actions": {
     "operationPower": {
       "title": "operationPower",
       "idempotent": true,
-      "forms": [{
-        "href": "action/operationPower",
-        "contentType": "application/json"
-      }]
+      "forms": [
+        {
+          "href": "action/operationPower",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        }
+      ]
     },
     "turnRight": {
       "title": "turnRight",
-      "forms": [{
-        "href": "action/turnRight",
-        "contentType": "application/json"
-      }]
+      "forms": [
+        {
+          "href": "action/turnRight",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        }
+      ]
     },
     "turnLeft": {
       "title": "turnLeft",
-      "forms": [{
-        "href": "action/turnLeft",
-        "contentType": "application/json"
-      }]
+      "forms": [
+        {
+          "href": "action/turnLeft",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        }
+      ]
     },
     "goStraight": {
       "title": "goStraight",
-      "forms": [{
-        "href": "action/goStraight",
-        "contentType": "application/json"
-      }]
+      "forms": [
+        {
+          "href": "action/goStraight",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        }
+      ]
     },
     "goHome": {
       "name": "goHome",
       "idempotent": true,
-      "forms": [{
-        "href": "action/goHome",
-        "contentType": "application/json"
-      }]
+      "forms": [
+        {
+          "href": "action/goHome",
+          "contentType": "application/json",
+          "scopes": ["full_access"]
+        }
+      ]
     }
   }
 }
