@@ -37,8 +37,8 @@
 "td-title-description_titles","pass",
 "td-vocabulary-defaults","pass",
 "td-json-open_accept-byte-order","pass",
-"td-ns-multilanguage-content-negotiation","pass","Consumer-side.  Because Nodegen supports a Accept-Language request header."
-"td-ns-multilanguage-content-negotiation-no-multi","not-impl",
+"td-ns-multilanguage-content-negotiation","null","Nodegen can add Accept-Language header on request, but it is server-side assertion."
+"td-ns-multilanguage-content-negotiation-no-multi","null","Nodegen can add Accept-Language header on request, but it is server-side assertion."
 "td-context-default-language-direction-heuristic","pass","If a direction is not inferred by cldr module, Nodegen uses dir=auto"
 "td-context-default-language-direction-independence","pass","Added a dir attribute for each element"
 "td-context-default-language-direction-inference","pass","Use cldr module for inference"
