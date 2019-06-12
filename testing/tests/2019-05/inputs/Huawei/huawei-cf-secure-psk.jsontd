@@ -3,7 +3,12 @@
     "id": "urn:dev:ops:32473-californium-5684",
     "title": "Cf-Secure",
     "description": "Californium CoAPS example server (https://github.com/eclipse/californium/tree/master/demo-apps/cf-secure)",
-    "securityDefinitions": {"coaps": {"scheme": "psk" }},
+    "securityDefinitions": {
+        "coaps": {
+            "scheme": "psk",
+            "identity": "password"
+        }
+    },
     "security": "coaps",
     "properties": {
         "secure": {
@@ -11,6 +16,7 @@
             "type": "string",
             "forms": [
                 {
+                    "op": "readproperty",
                     "href": "coaps://localhost:5684/secure"
                 }
             ]
