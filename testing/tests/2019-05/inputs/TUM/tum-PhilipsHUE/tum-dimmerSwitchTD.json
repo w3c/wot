@@ -1,0 +1,109 @@
+{
+    "title": "Hue Dimmer Switch",
+    "description": "A controller to switch off and on all the lights or to dim them",
+    "id": "urn:dev:ops:32473-HueSwitch-1234",
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "@language": "en"
+        }
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/",
+    "properties": {
+        "switchInformation": {
+            "description": "Switch information from the bridge with the given id.",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "type": "object",
+                    "description":"When the switch last pressed and what button was pressed and how it was pressed",
+                    "readOnly": true,
+                    "writeOnly": false,
+                    "properties": {
+                        "buttonevent": {
+                            "description": "*2 means short release, * means long release. 1* is the turn on button, 2* is the brighten button, 3* is the dim button, 4* is the turn off button",
+                            "type": "integer",
+                            "enum": [1002, 1003, 2002, 2003, 3002, 3003, 4002, 4003]
+                        },
+                        "lastupdated": {
+                            "type": "string",
+                            "format":"date-time"
+                        }
+                    }
+                },
+                "config": {
+                    "type": "object",
+                    "properties": {
+                        "on": {
+                            "type": "boolean",
+                            "readOnly": false,
+                            "writeOnly": false
+                        },
+                        "battery": {
+                            "type": "integer",
+                            "maximum":100,
+                            "readOnly": false,
+                            "writeOnly": false
+                        },
+                        "reachable": {
+                            "type": "boolean",
+                            "readOnly": false,
+                            "writeOnly": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "type": {
+                    "type": "string",
+                    "const": "ZLLSwitch",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "modelid": {
+                    "type": "string",
+                    "const": "RWL021",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "manufacturername": {
+                    "type": "string",
+                    "const": "Philips",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "swversion": {
+                    "type": "string",
+                    "readOnly": true
+                },
+                "uniqueid": {
+                    "type": "string",
+                    "const": "00:17:88:01:04:ec:52:d2-02-fc00",
+                    "readOnly": true,
+                    "writeOnly": false
+                }
+            },
+            "forms": [
+                {
+                    "href": "sensors/2",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    }
+}
