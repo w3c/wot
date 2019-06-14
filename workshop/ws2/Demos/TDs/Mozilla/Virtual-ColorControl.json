@@ -1,0 +1,51 @@
+{
+   "name":"Virtual Color Control",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "ColorControl"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-21",
+   "properties":{
+      "color":{
+         "title":"Color",
+         "type":"string",
+         "@type":"ColorProperty",
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-21/properties/color"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-21/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-21/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-21/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-21"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-21"
+      }
+   ]
+}

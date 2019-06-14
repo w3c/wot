@@ -1,0 +1,81 @@
+/*************************************************
+Content wrapper (centered on screen on white bg)
+*************************************************/
+#wrap {
+ margin: 0 auto;
+ max-width: 1200px;
+ background-color: white;
+ color: #333; 
+}
+
+#main {
+ margin-top: 0.5em;
+}
+
+/*************************************************
+Important section
+(news, important dates and links)
+*************************************************/
+#important {
+ /* width: 230px; */
+ float: right;
+}
+
+#chairs-pc {
+ width: 230px;
+ float: right;
+ clear: right;
+}
+
+
+
+/*************************************************
+Content section
+*************************************************/
+#content,
+#contentlg,
+#minutes,
+#subcontent {
+ padding-left: 2em;
+ margin-right: 240px;
+ min-height: 50em;
+}
+
+/*************************************************
+Workshop chairs and PC (when screen is large enough)
+*************************************************/
+@media only all and (min-width: 1000px) {
+ #chairs-pc {
+  width: 230px;
+  float: left;
+  clear: none;
+ }
+
+ #content {
+  margin-left: 240px;
+ }
+}
+
+
+/*************************************************
+Pics
+*************************************************/
+#pics {
+ background-image: url("lunamtra-med.jpg");
+ background-repeat: no-repeat;
+ height: 153px;
+}
+
+#pics img {
+ display: none;
+}
+
+/*************************************************
+Draft
+*************************************************/
+span.draft {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 300%;
+  color: #FAA;
+}

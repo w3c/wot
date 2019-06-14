@@ -1,0 +1,55 @@
+{
+  "urn": "urn:com:oracle:solarpanel",
+  "name": "SolarPanel",
+  "description": "Simple Solar Panel simulation",
+  "system": false,
+  "draft": false,
+  "created": 1559464499912,
+  "createdAsString": "2019-06-02T08:34:59.912Z",
+  "lastModified": 1559464922337,
+  "lastModifiedAsString": "2019-06-02T08:42:02.337Z",
+  "userLastModified": "iotuser2",
+  "attributes": [
+    {
+      "description": "Current",
+      "name": "Current",
+      "range": "0.0,30.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Generated Power",
+      "name": "Power",
+      "range": "0.0,3000.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Light intensity in Lux",
+      "name": "LightIntensity",
+      "range": "0.0,100000.0",
+      "type": "NUMBER",
+      "writable": false
+    }
+  ],
+  "actions": [],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Asolarpanel",
+      "rel": "self"
+    },
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Asolarpanel",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Asolarpanel/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1",
+               {
+                   "iot": "http://iotschema.org/"
+               }
+  ],
+  "@type": ["Thing"],
+  "title": "Intel-WebSpeak-upsq1c",
+  "description": "A simple text to speech service",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {"instance":"0.1.0"},
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2019-05-28T03:14:00Z",
+  "links": [{
+        "href": "https://github.com/mmccool/web-speak",
+        "rel": "repository",
+        "type": "application/vnd.github.v3+json"
+  }],
+  "id": "urn:uuid:6f3775aa-9790-5b5d-99bb-fb354a63dc0f",
+  "securityDefinitions": {
+    "nosec_sc": {"scheme":"nosec"},
+    "basic_sc": {"scheme":"basic"},
+    "digest_sc": {"scheme":"digest"}
+  },
+  "security": ["nosec_sc"],
+  "actions": {
+    "say": {
+      "input": {
+          "type": "string"
+      }, 
+      "forms": [
+        {
+          "href": "http://upsq1c.local:8085/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction"
+        },
+        {
+          "href": "https://portal.mmccool.net:8096/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["basic_sc"]
+        },
+        {
+          "href": "https://portal.mmccool.net:8097/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["digest_sc"]
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8096/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["basic_sc"]
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8097/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["digest_sc"]
+        }
+      ]
+    }
+  }
+}

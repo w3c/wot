@@ -1,0 +1,99 @@
+{
+    "title": "Hue Daylight Sensor",
+    "description": "A virtual sensor that provides daylight information based on location information",
+    "id": "urn:dev:ops:32473-HueDaylight-1234",
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "@language": "en"
+        }
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "base": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/sensors/1",
+    "properties": {
+        "sensorInformation": {
+            "description": "Daylight Sensor information from the bridge",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "type": "object",
+                    "readOnly": true,
+                    "writeOnly": false,
+                    "properties": {
+                        "daylight": {
+                            "description": "Whether there is daylight or not",
+                            "type": "boolean"
+                        },
+                        "lastupdated": {
+                            "type": "string",
+                            "format": "date-time"
+                        }
+                    }
+                },
+                "config": {
+                    "readOnly": false,
+                    "writeOnly": false,
+                    "type": "object",
+                    "properties": {
+                        "on": {
+                            "type": "boolean"
+                        },
+                        "configured": {
+                            "type": "boolean"
+                        },
+                        "sunriseoffset": {
+                            "type": "integer"
+                        },
+                        "sunsetoffset": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "type": {
+                    "type": "string",
+                    "const": "Daylight",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "modelid": {
+                    "type": "string",
+                    "const": "PHDL00",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "manufacturername": {
+                    "type": "string",
+                    "const": "Philips",
+                    "readOnly": true,
+                    "writeOnly": false
+                },
+                "swversion": {
+                    "type": "string",
+                    "readOnly": true
+                }
+            },
+            "forms": [
+                {
+                    "href": "",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    }
+}

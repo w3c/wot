@@ -1,0 +1,52 @@
+{
+   "name":"Virtual Binary Sensor",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "BinarySensor"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-4",
+   "properties":{
+      "on":{
+         "title":"On/Off",
+         "type":"boolean",
+         "@type":"BooleanProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-4/properties/on"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-4/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-4/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-4/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-4"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-4"
+      }
+   ]
+}

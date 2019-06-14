@@ -1,0 +1,75 @@
+{
+   "name":"Foscam R2",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "VideoCamera",
+      "Camera"
+   ],
+   "description":"FOSCAM R2 V5",
+   "href":"/things/onvif-00626E925C7F",
+   "properties":{
+      "stream":{
+         "title":"Stream",
+         "type":"null",
+         "@type":"VideoProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"alternate",
+               "href":"/media/onvif/onvif-00626E925C7F/index.mpd",
+               "mediaType":"application/dash+xml"
+            },
+            {
+               "rel":"property",
+               "href":"/things/onvif-00626E925C7F/properties/stream"
+            }
+         ]
+      },
+      "snapshot":{
+         "title":"Snapshot",
+         "type":"null",
+         "@type":"ImageProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"alternate",
+               "href":"/media/onvif/onvif-00626E925C7F/snapshot.jpg",
+               "mediaType":"image/jpeg"
+            },
+            {
+               "rel":"property",
+               "href":"/things/onvif-00626E925C7F/properties/snapshot"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/onvif-00626E925C7F/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/onvif-00626E925C7F/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/onvif-00626E925C7F/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/onvif-00626E925C7F"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/onvif-00626E925C7F"
+      }
+   ]
+}

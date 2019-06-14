@@ -1,0 +1,55 @@
+{
+   "name":"Virtual Temperature Sensor",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "TemperatureSensor"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-17",
+   "properties":{
+      "temperature":{
+         "title":"Temperature",
+         "type":"number",
+         "@type":"TemperatureProperty",
+         "unit":"degree celsius",
+         "minimum":-20,
+         "maximum":50,
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-17/properties/temperature"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-17/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-17/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-17/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-17"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-17"
+      }
+   ]
+}

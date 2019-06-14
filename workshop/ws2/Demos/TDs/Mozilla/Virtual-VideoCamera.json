@@ -1,0 +1,57 @@
+{
+   "name":"Virtual Video Camera",
+   "@context":"https://iot.mozilla.org/schemas",
+   "@type":[
+      "VideoCamera"
+   ],
+   "description":"",
+   "href":"/things/virtual-things-20",
+   "properties":{
+      "video":{
+         "title":"Video",
+         "type":"null",
+         "@type":"VideoProperty",
+         "readOnly":true,
+         "links":[
+            {
+               "rel":"alternate",
+               "href":"/media/virtual-things/index.mpd",
+               "mediaType":"application/dash+xml"
+            },
+            {
+               "rel":"property",
+               "href":"/things/virtual-things-20/properties/video"
+            }
+         ]
+      }
+   },
+   "actions":{
+
+   },
+   "events":{
+
+   },
+   "links":[
+      {
+         "rel":"properties",
+         "href":"/things/virtual-things-20/properties"
+      },
+      {
+         "rel":"actions",
+         "href":"/things/virtual-things-20/actions"
+      },
+      {
+         "rel":"events",
+         "href":"/things/virtual-things-20/events"
+      },
+      {
+         "rel":"alternate",
+         "mediaType":"text/html",
+         "href":"/things/virtual-things-20"
+      },
+      {
+         "rel":"alternate",
+         "href":"wss://w3c-interop.mozilla-iot.org/things/virtual-things-20"
+      }
+   ]
+}

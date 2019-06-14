@@ -1,0 +1,143 @@
+{
+  "urn": "urn:com:oracle:iot:device:obd2",
+  "name": "ora_obd2_device_model",
+  "description": "Device Model for OBD2 standard devices",
+  "system": false,
+  "draft": false,
+  "created": 1558617223686,
+  "createdAsString": "2019-05-23T13:13:43.686Z",
+  "lastModified": 1558617223686,
+  "lastModifiedAsString": "2019-05-23T13:13:43.686Z",
+  "userLastModified": "iot",
+  "attributes": [
+    {
+      "alias": "ora_alt",
+      "name": "ora_altitude",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_lat",
+      "name": "ora_latitude",
+      "range": "-90.0,90.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "alias": "ora_lon",
+      "name": "ora_longitude",
+      "range": "-180.0,180.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Engine Coolant Temperature(in degree Celsius) Mode:01, PID: 05",
+      "name": "ora_obd2_engine_coolant_temperature",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "description": "Engine RPM. Mode:01,PID:0C",
+      "name": "ora_obd2_engine_rpm",
+      "range": "0,16378.75",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "The mass of Air in grams per second consumed.",
+      "name": "ora_obd2_mass_air_flow",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Number of confirmed emissions-related Diagnostic Trouble Codes available for display. Mode:01,PID:01,Bits:A6-A0",
+      "name": "ora_obd2_number_of_dtcs",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "description": "The elapsed time (seconds) since the engine was started, Mode:01,PID:1F",
+      "name": "ora_obd2_runtime_since_engine_start",
+      "range": "0,65535",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "description": "The absolute pedal position (not the relative or learned) pedal position. Usually above 0% at idle and less than 100% at full throttle Mode:01 PID: 11",
+      "name": "ora_obd2_throttle_position",
+      "range": "0,100",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Total fuel used by a vehicle.",
+      "name": "ora_obd2_total_fuel_used",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Distance travelled information.",
+      "name": "ora_obd2_true_odometer",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "The current speed of the vehicle measured in Km/hour. Mode:01,PID:0D",
+      "name": "ora_obd2_vehicle_speed",
+      "range": "0,255",
+      "type": "INTEGER",
+      "writable": false
+    }
+  ],
+  "actions": [],
+  "formats": [
+    {
+      "urn": "urn:com:oracle:iot:device:obd2:vehicle_started",
+      "name": "ora_obd2_vehicle_started_alert",
+      "description": "A General Vehicle Started Alert whenever vehicle starts to move (speed > 5 MPH)",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:device:obd2",
+      "value": {
+        "fields": [
+          {
+            "name": "ora_obd2_vehicle_speed",
+            "optional": false,
+            "type": "NUMBER"
+          }
+        ]
+      },
+      "sourceId": "urn:com:oracle:iot:device:obd2",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:oracle:iot:device:obd2:vehicle_stopped",
+      "name": "ora_obd2_vehicle_stopped_alert",
+      "description": "A General Vehicle Stopped Alert whenever vehicle comes to a halt (speed == 0 MPH)",
+      "type": "ALERT",
+      "deviceModel": "urn:com:oracle:iot:device:obd2",
+      "value": {
+        "fields": []
+      },
+      "sourceId": "urn:com:oracle:iot:device:obd2",
+      "sourceType": "DEVICE_MODEL"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Adevice%253Aobd2",
+      "rel": "self"
+    },
+    {
+      "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Adevice%253Aobd2",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://iotpoc8.oracleiotcloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Aiot%253Adevice%253Aobd2/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
