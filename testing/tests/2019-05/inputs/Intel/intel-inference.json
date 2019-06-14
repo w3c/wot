@@ -1,0 +1,293 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1",
+               {
+                 "iot": "http://iotschema.org/",
+                 "mmccool": "http://mmccool.org/testvocab",
+                 "@language": "en"
+               }
+  ],
+  "@type": ["Thing"],
+  "title": "Inference upsq3.local-0",
+  "description": "A neural network inference service",
+  "titles": {
+    "jp": "推論 upsq3.local-0"
+  },
+  "descriptions": {
+    "jp": "ニューラルネットワーク推論サービス"
+  },
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {"instance":"0.1.0"},
+  "created": "2019-06-01T15:30:00Z",
+  "modified": "2019-06-01T23:29:00Z",
+  "links": [{
+        "href": "https://github.com/mmccool/inference-service",
+        "rel": "repository",
+        "type": "application/vnd.github.v3+json"
+  }],
+  "id": "urn:uuid:6f6d4d0b-3d8b-58a1-a90b-7d05680553d7",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "@type": ["mccool:nosec"],
+      "description": "No security",
+      "descriptions": {
+        "jp": "セキュリティなし"
+      },
+      "scheme": "nosec"
+    },
+    "basic_sc": {
+      "@type": ["mccool:basic"],
+      "description": "Basic authentication",
+      "descriptions": {
+        "jp": "基本認証"
+      },
+      "scheme": "basic",
+      "in": "header",
+      "name": "Basic"
+    },
+    "digest_sc": {
+      "@type": ["mccool:digest"],
+      "description": "Digest authentication",
+      "descriptions": {
+        "jp": "ダイジェスト認証"
+      },
+      "scheme": "digest",
+      "in": "header",
+      "qop": "auth-int",
+      "in": "header",
+      "name": "Digest"
+    }
+  },
+  "security": ["nosec_sc"],
+  "actions": {
+    "objid": {
+      "title": "Object identification",
+      "description": "Detect, identify, and localize objects in an image",
+      "titles": {
+        "jp": "オブジェクト識別"
+      },
+      "descriptions": {
+        "jp": "画像内のオブジェクトを検出、識別、および位置特定する"
+      },
+      "safe": true,
+      "idempotent": true,
+      "uriVariables": {
+        "region": {
+          "type": "string",
+          "enum": ["rect","circ","none"]
+        }
+      },
+      "output": {
+        "type": "array",
+        "items": {
+          "title": "Objects",
+          "description": "Array of identified object names, scores, and location",
+          "titles": {
+             "jp": "オブジェクト配列"
+          },
+          "descriptions": {
+             "jp": "識別されたオブジェクト名、スコア、および場所の配列"
+          },
+          "minItems": 0,
+          "maxItems": 32,
+          "type": "object",
+          "properties": {
+            "class": {
+              "title": "Class",
+              "description": "Class name of object identified",
+              "titles": {
+                "jp": "クラス"
+              },
+              "descriptions": {
+                "jp": "識別されたオブジェクトのクラス名"
+              },
+              "type": "string"
+            },
+            "score": {
+              "title": "Score",
+              "description": "Classification score from 0 to 1",
+              "titles": {
+                "jp": "分類スコア"
+              },
+              "descriptions": {
+                "jp": "分類スコア0から1"
+              },
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0
+            },
+            "region": {
+             "oneOf": [{
+              "type": "object",
+              "title": "rectangular region",
+              "description": "Region described by upper-left corner and size",
+              "titles": {
+                "jp": ""
+              },
+              "descriptions": {
+                "jp": ""
+              },
+              "properties": {
+                "xo": {
+                  "title": "x origin (pixels)",
+                  "description": "Horizontal origin of ROI in pixels measured from the left",
+                  "titles": {
+                    "jp": "x原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "左から測った領域の水平方向の原点（ピクセル単位）"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "yo": {
+                  "title": "y origin (pixels)",
+                  "description": "Vertical origin of region in pixels measured from the top",
+                  "titles": {
+                    "jp": "y原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "上から測ったピクセル単位での領域の垂直方向の原点"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                  },
+                  "x": {
+                  "title": "width in pixels",
+                  "description": "Horizontal size of region in pixels",
+                  "titles": {
+                    "jp": "ピクセル単位の幅"
+                  },
+                  "descriptions": {
+                    "jp": "ピクセル単位での領域の水平方向のサイズ"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "y": {
+                  "title": "height in pixels",
+                  "description": "Vertical size of region in pixels",
+                  "titles": {
+                    "jp": "ピクセル単位の高さ"
+                  },
+                  "descriptions": {
+                    "jp": "ピクセル単位での領域の垂直方向のサイズ"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                } 
+              },
+              "required": ["xo","yo","x","y"]
+            },
+            {
+              "type": "object",
+              "title": "circular region",
+              "description": "Region described by upper-left corner and size",
+              "titles": {
+                "jp": ""
+              },
+              "descriptions": {
+                "jp": ""
+              },
+              "properties": {
+                "xo": {
+                  "title": "x origin (pixels)",
+                  "description": "Horizontal origin of ROI in pixels measured from the left",
+                  "titles": {
+                    "jp": "x原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "左から測った領域の水平方向の原点（ピクセル単位）"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "yo": {
+                  "title": "y origin (pixels)",
+                  "description": "Vertical origin of region in pixels measured from the top",
+                  "titles": {
+                    "jp": "y原点（ピクセル）"
+                  },
+                  "descriptions": {
+                    "jp": "上から測ったピクセル単位での領域の垂直方向の原点"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                  },
+                "r": {
+                  "title": "radius in pixels",
+                  "description": "Radial size of circular region in pixels",
+                  "titles": {
+                    "jp": "ピクセル単位の半径"
+                  },
+                  "descriptions": {
+                    "jp": "円形領域の半径サイズ（ピクセル単位）"
+                  },
+                  "type": "integer",
+                  "minimum": 0
+                } 
+              },
+              "required": ["xo","yo","radius"]
+            },{
+              "type" : "null",
+              "title": "no region",
+              "description": "Classification result only, no localization",
+              "titles": {
+                "jp": "地域なし"
+              },
+              "descriptions": {
+                "jp": "分類結果のみ、ローカリゼーションなし"
+              }
+            }]}
+          },
+          "required": ["class"]
+        }
+      }, 
+      "forms": [
+        {
+          "href": "http://upsq3.local:9199/api/detect",
+          "contentType": "image/jpeg",
+          "response": {
+              "contentType": "application/json"
+          },
+          "op": "invokeaction"
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8100/api/detect",
+          "contentType": "image/jpeg",
+          "response": {
+              "contentType": "application/json"
+          },
+          "op": "invokeaction",
+          "security": ["basic_sc"]
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8101/api/detect",
+          "contentType": "image/jpeg",
+          "response": {
+              "contentType": "application/json"
+          },
+          "op": "invokeaction",
+          "security": ["digest_sc"]
+        },
+        {
+          "href": "https://portal.mmccool.net:8100/api/detect",
+          "contentType": "image/jpeg",
+          "response": {
+              "contentType": "application/json"
+          },
+          "op": "invokeaction",
+          "security": ["basic_sc"]
+        },
+        {
+          "href": "https://portal.mmccool.net:8101/api/detect",
+          "contentType": "image/jpeg",
+          "response": {
+              "contentType": "application/json"
+          },
+          "op": "invokeaction",
+          "security": ["digest_sc"]
+        }
+      ]
+    }
+  }
+}

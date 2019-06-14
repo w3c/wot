@@ -171,7 +171,7 @@
 	          "type": "number",
             "minimum": 0,
             "maximum": 65535,
-            "iot:units": "iot:Seconds",
+            "unit": "iot:Seconds",
             "iot:UnitScaleFactor": 0.1
 	        }
         }
@@ -202,7 +202,7 @@
             "type": "number",
             "minimum": 0,
             "maximum": 65535,
-            "iot:units": "iot:Seconds",
+            "unit": "iot:Seconds",
             "iot:UnitScaleFactor": 0.1
           }
         }

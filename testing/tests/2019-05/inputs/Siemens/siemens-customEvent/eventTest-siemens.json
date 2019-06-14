@@ -9,19 +9,47 @@
         "security": ["nosec_sc"],
         "events": {
             "temperatureValueForT2T" : {
+                "title": "Temperature value for T2T interaction.",
+                "titles": {
+                    "en": "Temperature value for T2T interaction.",
+                    "de": "Temperature Wert für T2T Interaktion."
+                },
                 "description" : "This event can be used to setup a Thing-2-Thing (T2T) communication for sending periodic temperature values.",
+                "descriptions": {
+                    "en": "This event can be used to setup a Thing-2-Thing (T2T) communication for sending periodic temperature values.",
+                    "de": "Dieses Event kann eine Thing-2-Thing (T2T) Interaktion initiieren, um Temperaturdaten periodisch auszutauschen."
+                },
                 "subscription" : {
                     "type" : "object",
                     "properties" : {
-                        "targetURL" : {"type" : "string", "writeOnly": true, "description": "Requester provides the target URL to which Thing the event should be provided"},
-                        "subscriptionID" : {"type": "integer", "readOnly": true, "description": "Responses an unique subscription ID."}
+                        "targetURL" : {"type" : "string", "format": "uri","writeOnly": true,                 
+                            "descriptions": {
+                            "en": "Requester provides the target URL to which Thing the event should be provided",
+                            "de": "Ein Initiator überreicht eine Ziel-URL an wohin die Daten geschickt werden sollen."
+                        }, "description": "Requester provides the target URL to which Thing the event should be provided"},
+                        "subscriptionID" : {"type": "integer", "readOnly": true, 
+                            "descriptions": {
+                                "en": "Responses an unique subscription ID.",
+                                "de": "Gibt eine unique ID zurück."
+                            },
+                            "description": "Responses an unique subscription ID."}
                     }
                 },
-                "data" : {"type" : "number", "description" : "Actual temperature value. Please note that there are no forms to subscribe directly to the temperature value."},
+                "data" : {"type" : "number", 
+                    "descriptions": {
+                        "en": "Actual temperature value. Please note that there are no forms to subscribe directly to the temperature value.",
+                        "de": "Der eigentliche Temperaturwert. Bitte beachten Sie das keine direkte Forms-Definition dafür existiert."
+                    },
+                    "description" : "Actual temperature value. Please note that there are no forms to subscribe directly to the temperature value."},
                 "cancellation" : {
                     "type" : "object",
                     "properties" : {
-                        "subscriptionID" : {"type": "integer", "writeOnly": true, "description": "Provide subscription ID that have to be cancelled."}
+                        "subscriptionID" : {"type": "integer", "writeOnly": true, 
+                            "descriptions": {
+                                "en": "Provide subscription ID that have to be cancelled.",
+                                "de": "Subscription ID wird benötigt um die Subscription zu beenden."
+                            },
+                        "description": "Provide subscription ID that have to be cancelled."}
                     }
                 },
                 "forms": [

@@ -25,20 +25,34 @@
       "scheme": "bearer",
       "format": "jwt",
       "alg": "ES256",
-      "authorization": "https://w3c.p-wot.com:8443/auth"
+      "authorization": "https://w3c.p-wot.com:8443/auth",
+      "in": "header"
+    },
+    "oauth2_code_sc": {
+      "scheme": "oauth2",
+      "authorization": "https://w3c.p-wot.com:8443/oauth",
+      "token": "https://w3c.p-wot.com:8443/oauth/token",
+      "refresh": "",
+      "scopes": ["full_access"],
+      "flow": "code"
+    },
+    "api_key_sc": {
+      "scheme": "apikey",
+      "in": "header",
+      "name": "X-API-KEY"
     },
     "nosec_sc": {
       "scheme": "nosec"
     }
   },
-  "security": ["bearer_sc"],
+  "security": ["bearer_sc", "oauth2_code_sc", "api_key_sc"],
   "properties": {
     "operationStatus": {
       "@type": "iot:OperationStatus",
-      "title": "operationStatus",
+      "title": "Operation status",
       "titles": {
-         "en": "operationStatus",
-         "ja": "動作状態"
+        "en": "Operation status",
+        "ja": "動作状態"
       },
       "description": "Operation status of air conditioner",
       "descriptions": {
@@ -48,7 +62,7 @@
       "type":"boolean",
       "observable": true,
       "forms": [
-        {"href": "operationStatus", "contentType": "application/json"},
+        {"href": "operationStatus", "contentType": "application/json", "scopes": ["full_access"]},
         {
           "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/operationStatus",
           "contentType": "application/json",
@@ -66,9 +80,9 @@
     },
     "operationMode": {
       "@type": "iot:RunMode",
-      "title": "operationMode",
+      "title": "Operation mode",
       "titles": {
-         "en": "operationMode",
+         "en": "Operation mode",
          "ja": "運転モード"
       },
       "description": "Operation mode of air conditioner",
@@ -80,7 +94,7 @@
       "enum": ["Auto", "Cooling", "Heating", "Dehumidifying", "Blast"],
       "observable": true,
       "forms": [
-        {"href": "operationMode", "contentType": "application/json"},
+        {"href": "operationMode", "contentType": "application/json", "scopes": ["full_access"]},
         {
           "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/operationMode",
           "contentType": "application/json",
@@ -98,9 +112,9 @@
     },
     "desiredTemp": {
       "@type": "iot:TargetTemperature",
-      "title": "desiredTemp",
+      "title": "Desired temp",
       "titles": {
-         "en": "desiredTemp",
+         "en": "Desired temp",
          "ja": "温度設定"
       },
       "description": "Desired temperature of air conditioner",
@@ -114,7 +128,7 @@
       "observable": true,
       "unit": "om:degree_Celsius",
       "forms": [
-        {"href": "desiredTemp", "contentType": "application/json"},
+        {"href": "desiredTemp", "contentType": "application/json", "scopes": ["full_access"]},
         {
           "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/desiredTemp",
           "contentType": "application/json",
@@ -132,9 +146,9 @@
     },
     "windVolumeLevel": {
       "@type": "iot:WindStrength",
-      "title": "windVolumeLevel",
+      "title": "Wind volume level",
       "titles": {
-         "en": "windVolumeLevel",
+         "en": "Wind volume level",
          "ja": "風量設定"
       },
       "description": "Wind volume level of air conditioner",
@@ -147,7 +161,7 @@
       "maximum": 8,
       "observable": true,
       "forms": [
-        {"href": "windVolumeLevel", "contentType": "application/json"},
+        {"href": "windVolumeLevel", "contentType": "application/json", "scopes": ["full_access"]},
         {
           "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/windVolumeLevel",
           "contentType": "application/json",
@@ -205,7 +219,8 @@
       },
       "forms": [{
         "href": "change",
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "scopes": ["full_access"]
       }]
     }
   }

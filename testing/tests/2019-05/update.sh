@@ -3,7 +3,7 @@
 # In the following, Org is an organization name, X is the name of an
 # implementation, and S is a subdirectory name (also an implementation
 # name, but one with multiple "instances" whose results should be merged).
-# TDs can have either .json, .jsontd, or .td suffixes.  CSV files 
+# TDs can have either .jsontd .jsonls, or .json suffixes.  CSV files 
 # can also be given and should be for manual assertion reports; these
 # will be merged with the results of automated testing using the processing
 # described below. Manual assertion reports should use templates/manual.csv
@@ -16,13 +16,13 @@
 #      for separate implementations without a corresponding TD, that is,
 #      "consumer" or "component" implementations.  Here X should be the
 #      implementation name.
-#   inputs/Org/X.{json,jsonld,td} (+ optional matched csv files) at top level: 
+#   inputs/Org/X.{jsontd,jsonld,json} (+ optional matched csv files) at top level: 
 #      Implementation with a single TD, which by definition will be a 
 #      "producer".  TDs will be scanned with AssertionTester, 
 #      results will be MERGED with any CSV file of the same base name (if it 
 #      exists used for manual assertions), and results written to 
 #      outputs/Org/X.csv.  Here X should be the implementation name.
-#   inputs/Org/S/*.{jsonld,json,td} (+ optional inputs/Org/S.csv files 
+#   inputs/Org/S/*.{jsontd,jsonld,json} (+ optional inputs/Org/S.csv files 
 #   and/or optional inputs/S.csv file):
 #      TDs will be scanned with AssertionTester, results will be merged with
 #      matching CSV files for each TD if it exists (for manual results specific
@@ -131,7 +131,7 @@ for OrgDir in inputs/* ; do
     echo "Processing organization $Org"
     echo "  in $AbsOrgDir"
     # Process implementations found at the top level (singletons)
-    for ImplPath in $AbsOrgDir/*.{jsonld,JSONLD,json,JSON,td,TD} ; do
+    for ImplPath in $AbsOrgDir/*.{jsontd,JSONTD,jsonld,JSONLD,json,JSON} ; do
        if [[ -f $ImplPath ]]; then
           export ImplFile=$(basename $ImplPath)
           export Impl="${ImplFile%.*}"
@@ -151,7 +151,7 @@ for OrgDir in inputs/* ; do
           mkdir -p outputs/$Org/$Impl
           export AbsOutOrgDir=$(cd outputs/$Org; pwd)
           export AbsOutDir=$(cd outputs/$Org/$Impl; pwd)
-          for InstancePath in $ImplPath/*.{jsonld,JSONLD,json,JSON,td,TD} ; do
+          for InstancePath in $ImplPath/*.{jsontd,JSONTD,jsonld,JSONLD,json,JSON} ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 export Instance="${InstanceFile%.*}"

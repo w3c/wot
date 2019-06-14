@@ -23,6 +23,8 @@
   "securityDefinitions": {
     "bearer_sc": {
       "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
       "authorization": "https://w3c.p-wot.com:8443/auth",
       "name": "Authorization",
       "description": "Bearer token authentication",
@@ -31,17 +33,30 @@
         "ja": "ベアラートークン認証"
       }
     },
+    "oauth2_code_sc": {
+      "scheme": "oauth2",
+      "authorization": "https://w3c.p-wot.com:8443/oauth",
+      "token": "https://w3c.p-wot.com:8443/oauth/token",
+      "refresh": "",
+      "scopes": ["full_access"],
+      "flow": "code"
+    },
+    "api_key_sc": {
+      "scheme": "apikey",
+      "in": "header",
+      "name": "X-API-KEY"
+    },
     "nosec_sc": {
       "scheme": "nosec"
     }
   },
-  "security": ["bearer_sc"],
+  "security": ["bearer_sc", "oauth2_code_sc", "api_key_sc"],
   "actions": {
     "operationPower": {
       "@type": "iot:TurnOn",
-      "title": "operationPower",
+      "title": "Operation power",
       "titles": {
-        "en": "operationPower",
+        "en": "Operation power",
         "ja": "電源ON"
       },
       "description": "Turn the cleaner on",
@@ -52,13 +67,14 @@
       "forms": [{
         "href": "operationPower",
         "contentType": "application/json",
-        "htv:methodName": "POST"
+        "htv:methodName": "POST",
+        "scopes": ["full_access"]
       }]
     },
     "turnRight": {
-      "title": "turnRight",
+      "title": "Turn right",
       "titles": {
-        "en": "turnRight",
+        "en": "Turn right",
         "ja": "右旋回"
       },
       "description": "Turn the cleaner right",
@@ -69,13 +85,14 @@
       "forms": [{
         "href": "turnRight",
         "contentType": "application/json",
-        "htv:methodName": "POST"
+        "htv:methodName": "POST",
+        "scopes": ["full_access"]
       }]
     },
     "turnLeft": {
-      "title": "turnLeft",
+      "title": "Turn left",
       "titles": {
-        "en": "turnLeft",
+        "en": "Turn left",
         "ja": "左旋回"
       },
       "description": "Turn the cleaner left",
@@ -86,13 +103,14 @@
       "forms": [{
         "href": "turnLeft",
         "contentType": "application/json",
-        "htv:methodName": "POST"
+        "htv:methodName": "POST",
+        "scopes": ["full_access"]
       }]
     },
     "goStraight": {
-      "title": "goStraight",
+      "title": "Go straight",
       "titles": {
-        "en": "goStraight",
+        "en": "Go straight",
         "ja": "直進"
       },
       "description": "Make the cleaner go straight",
@@ -103,13 +121,14 @@
       "forms": [{
         "href": "goStraight",
         "contentType": "application/json",
-        "htv:methodName": "POST"
+        "htv:methodName": "POST",
+        "scopes": ["full_access"]
       }]
     },
     "goHome": {
-      "title": "goHome",
+      "title": "Go home",
       "titles": {
-        "en": "goHome",
+        "en": "Go home",
         "ja": "ホーム移動"
       },
       "description": "Make the cleaner go home",
@@ -121,18 +140,19 @@
       "forms": [{
         "href": "goHome",
         "contentType": "application/json",
-        "htv:methodName": "POST"
+        "htv:methodName": "POST",
+        "scopes": ["full_access"]
       }]
     },
     "specifyArea": {
-      "title": "specifyArea",
+      "title": "Specify area",
       "titles": {
-        "en": "specifyArea",
+        "en": "Specify area",
         "ja": "エリア指定"
       },
       "description": "Specify the area to be cleaned",
       "descriptions": {
-        "en": "Specify the area to be cleaned ",
+        "en": "Specify the area to be cleaned",
         "ja": "掃除するエリアを指定します"
       },
       "idempotent": true,
@@ -144,7 +164,8 @@
       "forms": [{
         "href": "specifyArea",
         "contentType": "application/json",
-        "htv:methodName": "POST"
+        "htv:methodName": "POST",
+        "scopes": ["full_access"]
       }]
     }
   }

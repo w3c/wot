@@ -24,7 +24,7 @@
             },
             "description": "Status of the Thing",
             "descriptions": {
-                "en": "Latest status of the Thing",
+                "en": "Status of the Thing",
                 "de": "Aktuelle Thing-Zustand"
             },
             "observable": true,
@@ -81,6 +81,10 @@
             "type": "integer",
             "unit": "om:degree_Celsius",
             "description": "current temperature value",
+            "descriptions": {
+                "en": "current temperature value",
+                "de": "Aktuelle Temperature"
+            },
             "observable": true,
             "readOnly": true,
             "writeOnly": false,
@@ -148,6 +152,10 @@
                 "rgb"
             ],
             "description": "current brightness  and rgb value",
+            "descriptions": {
+                "en": "current brightness  and rgb value",
+                "de": "Aktuelle Helligkeitswert"
+            },
             "observable": true,
             "readOnly": true,
             "writeOnly": false,
@@ -189,6 +197,10 @@
         "constValue": {
             "const": "This is a const value",
             "description": "const value sample",
+            "descriptions": {
+                "en": "const value sample",
+                "de": "Aktuelle Helligkeitswert"
+            },
             "observable": true,
             "readOnly": true,
             "writeOnly": false,
@@ -250,6 +262,10 @@
                 }
             ],
             "description": "oneOf sample: Property can be a string or a array of a string",
+            "descriptions": {
+                "en": "oneOf sample: Property can be a string or a array of a string",
+                "de": "Aktuelle Helligkeitswert"
+            },
             "observable": true,
             "readOnly": true,
             "writeOnly": false,
