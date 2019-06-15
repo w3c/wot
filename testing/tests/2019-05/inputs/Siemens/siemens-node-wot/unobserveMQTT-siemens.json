@@ -1,0 +1,31 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "@type": "Thing",
+    "created": "2019-06-15T12:00:00.000Z",
+    "title": "Siemens-ObservableThing",
+    "id": "urn:dev:siemens-unobserve-example",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "properties": {
+        "observaleProperty": {
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "mqtt://mqttdev.local/observaleProperty",
+                    "contentType": "text/plain",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ]
+        }
+    }
+}

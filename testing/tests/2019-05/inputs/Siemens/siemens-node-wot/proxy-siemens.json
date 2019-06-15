@@ -1,0 +1,28 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "@type": "Thing",
+    "title": "Siemens-Proxy-Sec",
+    "id": "urn:dev:siemens-unobserve-example",
+    "security": ["basic_sc"],
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header",
+            "proxy": "http://192.168.1.1:4000/"
+        }
+    },
+    "properties": {
+        "prop": {
+            "type": "string",
+            "description": "Secret Property",
+            "readOnly": true,
+            "observable": false,
+            "forms": [
+                {
+                    "href": "http://192.168.1.1:8080/Siemens-Proxy-Sec/properties/prop",
+                    "contentType": "application/json",
+                    "op": "readproperty"
+                }
+            ]
+    }   }
+}
