@@ -1,28 +1,31 @@
 {
     "@context": [
         "https://www.w3.org/2019/wot/td/v1",
-        { "ul": "http://18.197.93.117/useless-web-token#" }
+        {
+            "ul": "http://18.197.93.117/useless-web-token#"
+        }
     ],
     "id": "urn:dev:ops:32473-meta-1",
     "title": "Meta-Interaction Thing",
+    "description": "Offers meta interactions through Forms at the Thing level",
+    "titles": {"en":"Meta-Interaction Thing","de":"Metainteraktionsding"},
+    "descriptions": {"en":"Offers meta interactions through Forms at the Thing level","de":"Bietet Metainteraktionen durch Forms auf Thing-Ebene"}, 
     "securityDefinitions": {
         "none": {
             "scheme": "nosec"
         },
         "useless": {
             "scheme": "bearer",
-            "format": "uwt"
+            "format": "ul:uwt"
         }
     },
-    "security": [
-        "none"
-    ],
+    "security": "none",
     "base": "http://18.197.93.117/",
     "properties": {
         "one": {
             "type": "string",
             "forms": [{
-                "href": "properties/one",
+                "href": "/properties/one",
                 "contentType": "text/plain; charset=utf-8"
             }]
         },
@@ -33,7 +36,7 @@
                     "readproperty",
                     "writeproperty"
                 ],
-                "href": "properties/other",
+                "href": "/properties/other",
                 "contentType": "text/plain; charset=utf-8"
             }]
         },
@@ -43,26 +46,26 @@
             "readOnly": true,
             "forms": [{
                 "op": "readproperty",
-                "href": "properties/unsecure",
+                "href": "/properties/unsecure",
                 "contentType": "text/plain; charset=utf-8"
             }]
         }
     },
     "forms": [{
         "op": "readallproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "GET"
     }, {
         "op": "writeallproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "PUT"
     }, {
         "op": "readmultipleproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "POST"
     }, {
         "op": "writemultipleproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "PATCH"
     }]
 }
