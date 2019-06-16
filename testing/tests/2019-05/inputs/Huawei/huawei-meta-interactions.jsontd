@@ -2,20 +2,22 @@
     "@context": [
         "https://www.w3.org/2019/wot/td/v1",
         {
-            "@language": "de",
             "ul": "http://18.197.93.117/useless-web-token#"
         }
     ],
     "id": "urn:dev:ops:32473-meta-1",
-    "title": "Metainteraktionsding",
-    "description": "Bietet Metainteraktionen durch Forms auf Thing-Ebene",
+    "title": "Meta-Interaction Thing",
+    "description": "Offers meta interactions through Forms at the Thing level",
+    "titles": {"en":"Meta-Interaction Thing","de":"Metainteraktionsding"},
+    "descriptions": {"en":"Offers meta interactions through Forms at the Thing level","de":"Bietet Metainteraktionen durch Forms auf Thing-Ebene"}, 
     "securityDefinitions": {
         "none": {
             "scheme": "nosec"
         },
         "useless": {
             "scheme": "bearer",
-            "format": "ul:uwt"
+            "format": "ul:UWT",
+            "alg": "ul:AnyAlg"
         },
         "useful": {
             "scheme": "digest"
@@ -27,7 +29,7 @@
         "one": {
             "type": "string",
             "forms": [{
-                "href": "properties/one",
+                "href": "/properties/one",
                 "contentType": "text/plain; charset=UTF-8"
             }]
         },
@@ -38,7 +40,7 @@
                     "readproperty",
                     "writeproperty"
                 ],
-                "href": "properties/other",
+                "href": "/properties/other",
                 "contentType": "text/plain; charset=UTF-8"
             }]
         },
@@ -48,36 +50,38 @@
             "readOnly": true,
             "forms": [{
                 "op": "readproperty",
-                "href": "properties/unsecure",
+                "href": "/properties/unsecure",
                 "contentType": "text/plain; charset=UTF-8"
             }]
         },
         "secure": {
+            "description": "Try username 'wot' and password 'sesame'",
+            "descriptions": {"en":"Try username 'wot' and password 'sesame'","de":"Probiere Benutzername 'wot' und Passwort 'sesame'"},
             "security": "useful",
             "type": "string",
             "readOnly": true,
             "forms": [{
                 "op": "readproperty",
-                "href": "properties/secure",
+                "href": "/properties/secure",
                 "contentType": "text/plain; charset=UTF-8"
             }]
         }
     },
     "forms": [{
         "op": "readallproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "GET"
     }, {
         "op": "writeallproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "PUT"
     }, {
         "op": "readmultipleproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "POST"
     }, {
         "op": "writemultipleproperties",
-        "href": "properties/",
+        "href": "/properties/",
         "htv:method": "PATCH"
     }]
 }
