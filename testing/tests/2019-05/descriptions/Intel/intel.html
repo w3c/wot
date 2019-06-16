@@ -75,4 +75,21 @@ The TDs for this service were generated using a template mechanism,
 and the service also had the capability to automatically register these
 TDs with a directory service.
 </p>
+<h4 id="impl-intel-inference">Object Identifier: TD Producer</h4>
+<p>This implementation provided a service to detect, recognize, and localize
+objects in an image using a hardware-accelerated neural network.
+This was implemented using a service running on a gateway.
+This was used to test various aspects of actions, 
+including support for inputs and outputs with different content types,
+but in an opposite way to the camera. The camera accepted JSON to localize a
+region of interest and output an image; the object identification
+service took a JPEG image and output JSON listing the objects recognized and
+their location.
+This implementation only supported an HTTP network interface, without security.
+Secure interfaces (eg HTTPS combined with an authentication scheme) were provided
+via a reverse proxy attached to the HTTP interface.
+The TDs for this service were generated using a template mechanism,
+and the service also had the capability to automatically register these
+TDs with a directory service.
+</p>
 </div>
