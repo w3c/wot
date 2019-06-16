@@ -5,6 +5,24 @@ the draft Implementation Report after CR transition and prior to PR transition.
 
 Current version of Implementation Report: https://github.com/w3c/wot-thing-description/blob/master/testing/report.html
 
+## TL;DR
+
+* `testing/tests/2019-05/`
+  * `descriptions/`
+    * `<Member>/` (e.g., `Intel/`)
+    * `<member>.html` ([template](https://github.com/w3c/wot-thing-description/blob/master/testing/inputs/implementations/template.html.t), e.g., `intel.html`)
+  * `inputs/`
+    * `<Member>/` (e.g., `Intel/`)
+      * `<impl-name1>.jsontd` (TD produced by your independent implementation no.1, e.g., `intel-camera.jsontd`)
+      * `<impl-name1>.csv` ([CSV template](https://github.com/w3c/wot-thing-description/blob/master/testing/manual.csv), e.g., `intel-camera.csv`)
+      * `<impl-name2>.jsontd` (TD produced by your independent implementation no.2)
+      * `<impl-name2>.csv`
+      * `<impl-name3>/` (TDs produced by your same implementation no.3, e.g., `intel-ocf/`)
+        * `<impl-name3-thing1>.jsontd` (e.g., intel-ocf-buzzer0.jsontd)
+        * `<impl-name3-thing2>.jsontd`
+        * `<impl-name3-thing3>.jsontd`
+        * `<impl-name3>.csv`
+
 ## Implementation Descriptions
 
 Descriptions of the implementations are grouped by Member
