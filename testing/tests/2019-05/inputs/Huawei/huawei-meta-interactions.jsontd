@@ -2,14 +2,13 @@
     "@context": [
         "https://www.w3.org/2019/wot/td/v1",
         {
+            "@language": "de",
             "ul": "http://18.197.93.117/useless-web-token#"
         }
     ],
     "id": "urn:dev:ops:32473-meta-1",
-    "title": "Meta-Interaction Thing",
-    "description": "Offers meta interactions through Forms at the Thing level",
-    "titles": {"en":"Meta-Interaction Thing","de":"Metainteraktionsding"},
-    "descriptions": {"en":"Offers meta interactions through Forms at the Thing level","de":"Bietet Metainteraktionen durch Forms auf Thing-Ebene"}, 
+    "title": "Metainteraktionsding",
+    "description": "Bietet Metainteraktionen durch Forms auf Thing-Ebene",
     "securityDefinitions": {
         "none": {
             "scheme": "nosec"
@@ -17,6 +16,9 @@
         "useless": {
             "scheme": "bearer",
             "format": "ul:uwt"
+        },
+        "useful": {
+            "scheme": "digest"
         }
     },
     "security": "none",
@@ -25,8 +27,8 @@
         "one": {
             "type": "string",
             "forms": [{
-                "href": "/properties/one",
-                "contentType": "text/plain; charset=utf-8"
+                "href": "properties/one",
+                "contentType": "text/plain; charset=UTF-8"
             }]
         },
         "other": {
@@ -36,8 +38,8 @@
                     "readproperty",
                     "writeproperty"
                 ],
-                "href": "/properties/other",
-                "contentType": "text/plain; charset=utf-8"
+                "href": "properties/other",
+                "contentType": "text/plain; charset=UTF-8"
             }]
         },
         "unsecure": {
@@ -46,26 +48,36 @@
             "readOnly": true,
             "forms": [{
                 "op": "readproperty",
-                "href": "/properties/unsecure",
-                "contentType": "text/plain; charset=utf-8"
+                "href": "properties/unsecure",
+                "contentType": "text/plain; charset=UTF-8"
+            }]
+        },
+        "secure": {
+            "security": "useful",
+            "type": "string",
+            "readOnly": true,
+            "forms": [{
+                "op": "readproperty",
+                "href": "properties/secure",
+                "contentType": "text/plain; charset=UTF-8"
             }]
         }
     },
     "forms": [{
         "op": "readallproperties",
-        "href": "/properties/",
+        "href": "properties/",
         "htv:method": "GET"
     }, {
         "op": "writeallproperties",
-        "href": "/properties/",
+        "href": "properties/",
         "htv:method": "PUT"
     }, {
         "op": "readmultipleproperties",
-        "href": "/properties/",
+        "href": "properties/",
         "htv:method": "POST"
     }, {
         "op": "writemultipleproperties",
-        "href": "/properties/",
+        "href": "properties/",
         "htv:method": "PATCH"
     }]
 }
