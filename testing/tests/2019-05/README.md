@@ -30,7 +30,7 @@ and are provided through an HTML snippet file stored under the `descriptions` di
 Each organization has a subdirectory here, for example `descriptions/Intel`.
 
 A template is provided [here](https://github.com/w3c/wot-thing-description/blob/master/testing/inputs/implementations/template.html.t) in
-the Thing Description repo under `testing`.
+the Thing Description repo under [testing/inputs/implementations](https://github.com/w3c/wot-thing-description/tree/master/testing/inputs/implementations).
 
 ## TDs for Automated Test Results
 
@@ -55,4 +55,4 @@ A file with the same name as an implementation, but with a `.csv` suffix
 should also be given to provide manual assertions, i.e., those that cannot be tested automatically.
 
 A template for manual assertions can be found in [here](https://github.com/w3c/wot-thing-description/blob/master/testing/manual.csv) in
-the Thing Description repo under `testing`.
+the Thing Description repo under [testing](https://github.com/w3c/wot-thing-description/tree/master/testing).
