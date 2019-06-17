@@ -1,0 +1,88 @@
+{
+  "name": "light",
+  "description": "a dimmable light with smooth transitions",
+  "properties": {
+    "brightness": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "value": 100,
+      "description": "brightness in range 0 to 100",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "properties/brightness",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        },
+        {
+          "op": "writeproperty",
+          "href": "properties/brightness",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "transition": {
+      "input": {
+        "target": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "target brightness in range 0 to 100"
+        },
+        "duration": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "transition time in milliseconds"
+        }
+      },
+      "description": "smooth transition from current brightness level to target brightness level",
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "actions/transition",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    }
+  },
+  "id": "urn:example.org/light",
+  "title": "light",
+  "base": "https://localhost:8888/",
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1"
+  ],
+  "securityDefinitions": {
+    "bearer_sc": {
+      "in": "header",
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://localhost:8888/authorize"
+    }
+  },
+  "security": [
+    "bearer_sc"
+  ],
+  "forms": [
+    {
+      "op": "readallproperties",
+      "href": "properties",
+      "contentType": "application/json",
+      "htv:methodName": "GET"
+    },
+    {
+      "op": "writeallproperties",
+      "href": "properties",
+      "contentType": "application/json",
+      "htv:methodName": "PUT"
+    }
+  ],
+  "platform": "https://github.com/draggett/arena-webhub"
+}
