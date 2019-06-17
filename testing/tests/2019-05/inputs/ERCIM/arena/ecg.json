@@ -1,0 +1,116 @@
+{
+  "name": "ecg",
+  "description": "Combined measurement of ECG, breathing and seismocardiogram",
+  "rate": 100,
+  "properties": {
+    "chan1": {
+      "type": "number",
+      "value": 0,
+      "description": "electrocardiogram lead 1",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "properties/chan1",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        },
+        {
+          "op": "writeproperty",
+          "href": "properties/chan1",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "chan2": {
+      "type": "number",
+      "value": 0,
+      "description": "electrocardiogram lead 2",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "properties/chan2",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        },
+        {
+          "op": "writeproperty",
+          "href": "properties/chan2",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "chan3": {
+      "type": "number",
+      "value": 0,
+      "description": "breathing via a respiratory band",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "properties/chan3",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        },
+        {
+          "op": "writeproperty",
+          "href": "properties/chan3",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "chan4": {
+      "type": "number",
+      "value": 0,
+      "description": "seismocardiogram data",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "properties/chan4",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        },
+        {
+          "op": "writeproperty",
+          "href": "properties/chan4",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "id": "urn:example.org/ecg",
+  "title": "ecg",
+  "base": "https://localhost:8888/",
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1"
+  ],
+  "securityDefinitions": {
+    "bearer_sc": {
+      "in": "header",
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://localhost:8888/authorize"
+    }
+  },
+  "security": [
+    "bearer_sc"
+  ],
+  "forms": [
+    {
+      "op": "readallproperties",
+      "href": "properties",
+      "contentType": "application/json",
+      "htv:methodName": "GET"
+    },
+    {
+      "op": "writeallproperties",
+      "href": "properties",
+      "contentType": "application/json",
+      "htv:methodName": "PUT"
+    }
+  ],
+  "platform": "https://github.com/draggett/arena-webhub"
+}
