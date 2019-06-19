@@ -11,13 +11,12 @@
     "security": [
         "nosec_sc"
     ],
-    "support": "https://github.com/egekorkan/wot-implementations",
+    "support": "https://github.com/egekorkan/wot-implementations/tree/master/mqtt-online",
     "properties": {
         "oneOfTest": {
             "readOnly": true,
             "writeOnly": false,
-            "oneOf": [
-                {
+            "oneOf": [{
                     "type": "string"
                 },
                 {
@@ -27,8 +26,7 @@
                     "type": "null"
                 }
             ],
-            "forms": [
-                {
+            "forms": [{
                     "href": "mqtt://test.mosquitto.org/oneOfTest",
                     "contentType": "application/json",
                     "op": "observeproperty",
@@ -51,8 +49,7 @@
             },
             "maxItems": 5,
             "minItems": 2,
-            "forms": [
-                {
+            "forms": [{
                     "href": "mqtt://iot.eclipse.org/maxItemsTest",
                     "contentType": "application/json",
                     "op": "observeproperty",
