@@ -19,8 +19,20 @@ This platform is complemented with cloud applications for asset monitoring, prod
 fleet management, connected workers and others.
 The IoT Cloud Service interoperates with WoT servients as described in the sections below.
 </p>
+<p>
+Oracle's Asset Monitoring application is used to define scenarios that combine devices from
+different manufacturers. Flexible rules trigger actions and issue alerts based on sensor data from
+other devices.<br>
+In several scenarios (home, industrial, smart energy) devices from various manufacturers,
+including Fujitsu, Intel, Panasonic, KETI and others were integrated into a combined use case.
+Devices include home devices (e.g. smart lamps, air conditioners, window blinds, cleaners, robots) and industrial devices
+(e.g. alert lights, pumps, valves, liquid sensors, environment monitors, solar chargers, speech output).
+These devices were controlled by rules that were triggered by events on various sensors, 
+e.g. draining a tank when a critical environment condition happens, indicating the water level in a tank with RGB lamps
+and a numeric display panel, and more.
+</p>
 
-<h4 id="impl-oracle-converters">Thing Description to Device Model Converters: TD Consumer and Producer</h4>
+<h4 id="impl-oracle-converters">Thing Description to Device Model Converters: Shared Component</h4>
 <p>Oracle's IoT cloud platform defines a device model abstraction that is used to describe the common
 behaviour of a class of devices via properties (attributes), actions, messages and alerts.
 This format is similar to the WoT thing description and thing descriptions can be converted
@@ -32,7 +44,7 @@ and vice versa (dm2td).
 </p>
 
 <h4 id="impl-oracle-simulators">Oracle Digital Twin Simulator: TD Producer</h4>
-<p> 
+<p>
 Oracle's IoT Cloud Service includes a simulator for devices which allows to model 
 and test asset monitoring scenarios without having the physical device already available.
 This allows experimenting with different device models and finding the right abstraction
@@ -48,9 +60,9 @@ Various device simulations were provided by Oracle:
 </ul>
 
 <p>
-These simulations were exposed via TDs that were generated from device models using 
+These simulations were exposed via TDs that were generated from device models using
 the converters above.
-The simulator uses HTTP/REST with JSON to interact with the devices. 
+The simulator uses HTTP/REST with JSON to interact with the devices.
 To facilitate easy integration and interworking during the plug fests we used basic.
 In real world scenarios typically OAuth2 is used.
 </p>
@@ -69,25 +81,12 @@ simulators were defined for the following devices:
 
 <h4 id="impl-oracle-node-wot">Node-WoT with Oracle Binding: TD Consumer</h4>
 <p> 
-Node-WoT contains a binding to Oracle's IoT Cloud Service that was kindly developed by Matthias Kovatsch.
-The binding uses Oracle's JavaScript client library that encapsulates Oracle's proprietary 
+node-wot contains a binding to Oracle's IoT Cloud Service that was kindly developed by Matthias Kovatsch.
+The binding uses Oracle's JavaScript client library that encapsulates Oracle's proprietary
 device to cloud communication protocol.
-The integration allows node-wot to consume TDs for devices from other manufacturers and to read properties
-and trigger actions on these devices.
-</p>
-
-<h4 id="impl-oracle-asset-monitoring">Oracle Asset Monitoring: Interoperability across Manufacturers</h4>
-<p>
-Oracle's Asset Monitoring application is used to define scenarios that combine devices from 
-different manufacturers. Flexible rules trigger actions and issue alerts based on sensor data from 
-other devices.<br>
-In several scenarios (home, industrial, smart energy) devices from various manufacturers, 
-including Fujitsu, Intel, Panasonic, KETI and others were integrated into a combined use case.
-Devices include home devices (e.g. smart lamps, air conditioners, window blinds, cleaners, robots) and industrial devices
-(e.g. alert lights, pumps, valves, liquid sensors, environment monitors, solar chargers, speech output).
-These devices were controlled by rules that were triggered by events on various sensors, 
-e.g. draining a tank when a critical environment condition happens, indicating the water level in a tank with RGB lamps
-and a numeric display panel, and more.
+The integration allows node-wot to expose Things to Oracle's IoT Cloud Service.
+Users of the Oracle Cloud API can then read Properties and invoke Actions on the node-wot based Things.
+The converters above consume the TDs and instantiate devices with the corresponding Oracle device model in the IoT Cloud Service.
 </p>
 
 </div>
