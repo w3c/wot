@@ -22,7 +22,7 @@ Current version of Implementation Report: https://github.com/w3c/wot-thing-descr
         * `<impl-name3-thing1>.jsontd` (e.g., intel-ocf-buzzer0.jsontd)
         * `<impl-name3-thing2>.jsontd`
         * `<impl-name3-thing3>.jsontd`
-        * `<impl-name3>.csv`
+      * `<impl-name3>.csv` (not in subdirectory)
 
 ## Implementation Descriptions
 
@@ -51,7 +51,7 @@ The test results for multiple TDs in a subdirectory will be automatically merged
 
 ## CSVs for Manual Test Results
 
-A file with the same name as an implementation, but with a `.csv` suffix
+A file with the same name as an implementation (TD file or subdirectory), but with a `.csv` suffix
 should also be given to provide manual assertions, i.e., those that cannot be tested automatically.
 
 A template for manual assertions can be found in [here](templates/manual.csv)
