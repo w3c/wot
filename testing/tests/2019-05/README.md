@@ -10,11 +10,11 @@ Current version of Implementation Report: https://github.com/w3c/wot-thing-descr
 * `testing/tests/2019-05/`
   * `descriptions/`
     * `<Member>/` (e.g., `Intel/`)
-    * `<member>.html` ([template](https://github.com/w3c/wot-thing-description/blob/master/testing/inputs/implementations/template.html.t), e.g., `intel.html`)
+    * `<member>.html` ([template](templates/impl.html), e.g., `intel.html`)
   * `inputs/`
     * `<Member>/` (e.g., `Intel/`)
       * `<impl-name1>.jsontd` (TD produced by your independent implementation no.1, e.g., `intel-camera.jsontd`)
-      * `<impl-name1>.csv` ([CSV template](https://github.com/w3c/wot-thing-description/blob/master/testing/manual.csv), e.g., `intel-camera.csv`)
+      * `<impl-name1>.csv` ([CSV template](templates/manual.csv), e.g., `intel-camera.csv`)
       * `<impl-name2>.jsontd` (TD produced by your independent implementation no.2)
       * `<impl-name2>.csv`
       * `<impl-name3>/` (TDs produced by your same implementation no.3, e.g., `intel-ocf/`)
@@ -29,8 +29,7 @@ Descriptions of the implementations are grouped by Member
 and are provided through an HTML snippet file stored under the `descriptions` directory.
 Each organization has a subdirectory here, for example `descriptions/Intel`.
 
-A template is provided [here](https://github.com/w3c/wot-thing-description/blob/master/testing/inputs/implementations/template.html.t) in
-the Thing Description repo under [testing/inputs/implementations](https://github.com/w3c/wot-thing-description/tree/master/testing/inputs/implementations).
+A template is provided [here](templates/impl.html) under [./templates/](templates).
 
 ## TDs for Automated Test Results
 
@@ -54,5 +53,5 @@ The test results for multiple TDs in a subdirectory will be automatically merged
 A file with the same name as an implementation, but with a `.csv` suffix
 should also be given to provide manual assertions, i.e., those that cannot be tested automatically.
 
-A template for manual assertions can be found in [here](https://github.com/w3c/wot-thing-description/blob/master/testing/manual.csv) in
-the Thing Description repo under [testing](https://github.com/w3c/wot-thing-description/tree/master/testing).
+A template for manual assertions can be found in [here](templates/manual.csv)
+under [./templates/](templates).
