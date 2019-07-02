@@ -1,17 +1,23 @@
 <div class="impl" id="impl-intel">
 <h3>Intel Corporation</h3>   
-<p>Intel supports this specification as it enables interoperation between devices
+<div class="testimonial">
+<p>
+Intel supports this specification as it enables interoperation between devices
 from different manufacturers, supporting the growth of an ecosystem of interoperating
 IoT services and easing barriers to adoption.
 </p>
-<p>Three separate implementations were developed, all based on Node.js.
+<p>
+Three separate implementations were developed, all based on Node.js.
 The core implementations focused on basic local network access without built-in security.
 A separate project, used by all three implementations, provided security (encryption and
 authentication) by means of a reverse proxy. 
 For the purposes of validation this reverse proxy was considered a shared component of all three implementations, 
 and the features it implemented were only counted once in the results.
 </p>
+</div>
+
 <h4 id="impl-intel-security">Security Proxy: Shared Component</h4>
+<p>
 This component, shared across all implementations provided by Intel, was a reverse proxy service that provided
 authentication (via various mechanisms indicated by the schemes indicated in the Thing
 Description) and encrypted transport termination.
@@ -21,8 +27,10 @@ As this component implemented the security features in all other implementations
 from Intel, for the purposes of validation
 these features are only recorded as being supported in a single implementation.
 </p>
+
 <h4 id="impl-intel-ocf">OCF Metadata Translator: TD Producer</h4>
-<p>This implementation translated metadata made available by devices implemented using
+<p>
+This implementation translated metadata made available by devices implemented using
 the OCF standard and re-expressed that metadata in the form of WoT Thing Descriptions.
 The actual network interfaces were however provided either by the OCF devices themselves
 directly via CoAP, or via a CoAP/HTTP bridge developed by OCF. 
@@ -33,7 +41,8 @@ It also had the capability to register generated TDs with directory services.
 Secure interfaces (e.g. HTTPS combined with an authentication scheme) were provided
 via a reverse proxy attached to the HTTP interface provided by the OCF CoAP/HTTP bridge.
 </p>
-<p>The OCF devices were based on the OCF Smart Home Demo and included both
+<p>
+The OCF devices were based on the OCF Smart Home Demo and included both
 real and simulated devices. Real devices used for testing included
 <ol>
 <li>ON\OFF Lights (various: MOSFET, Relay, LEDs),</li>
@@ -48,9 +57,10 @@ real and simulated devices. Real devices used for testing included
 There were also multiple instances of many of these devices, each given 
 unique identifiers.
 </p>
-</p>
+
 <h4 id="impl-intel-speak">WebSpeak: TD Producer</h4>
-<p>This implementation provided a service to convert text to speech.  English
+<p>
+This implementation provided a service to convert text to speech.  English
 text set to its network interface was spoken audibily.  This service was used to
 test several accessibility scenarios, including automatic conversion of visible status
 and event information to spoken announcements in order to support blind users.
@@ -61,13 +71,34 @@ The TDs for this service were generated using a template mechanism,
 and the service also had the capability to automatically register these
 TDs with a directory service.
 </p>
+
 <h4 id="impl-intel-camera">Simple Web Camera: TD Producer</h4>
-<p>This implementation provided a service to capture still images from a camera
+<p>
+This implementation provided a service to capture still images from a camera
 and provide them over its network interface.  This was used to test various aspects
 of actions, including support for inputs and outputs with different content types.
 The service was also capaple of introspecting the parameters made available via any
 particular attached video4linux camera
 and made those parameters available as WoT Thing Description properties.
+This implementation only supported an HTTP network interface, without security.
+Secure interfaces (eg HTTPS combined with an authentication scheme) were provided
+via a reverse proxy attached to the HTTP interface.
+The TDs for this service were generated using a template mechanism,
+and the service also had the capability to automatically register these
+TDs with a directory service.
+</p>
+
+<h4 id="impl-intel-inference">Object Identifier: TD Producer</h4>
+<p>
+This implementation provided a service to detect, recognize, and localize
+objects in an image using a hardware-accelerated neural network.
+This was implemented using a service running on a gateway.
+This was used to test various aspects of actions, 
+including support for inputs and outputs with different content types,
+but in an opposite way to the camera. The camera accepted JSON to localize a
+region of interest and output an image; the object identification
+service took a JPEG image and output JSON listing the objects recognized and
+their location.
 This implementation only supported an HTTP network interface, without security.
 Secure interfaces (eg HTTPS combined with an authentication scheme) were provided
 via a reverse proxy attached to the HTTP interface.

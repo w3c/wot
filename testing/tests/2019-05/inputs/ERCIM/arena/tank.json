@@ -1,0 +1,147 @@
+{
+    "name": "tank",
+    "events": {
+        "high": {
+            "type": null,
+            "forms": [
+                {
+                    "op": "subscribeevent",
+                    "href": "events/high",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll"
+                }
+            ]
+        },
+        "low": {
+            "type": null,
+            "forms": [
+                {
+                    "op": "subscribeevent",
+                    "href": "events/low",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll"
+                }
+            ]
+        }
+    },
+    "properties": {
+        "upper": {
+            "type": "number",
+            "forms": [
+                {
+                    "op": "readproperty",
+                    "href": "properties/upper",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                },
+                {
+                    "op": "writeproperty",
+                    "href": "properties/upper",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "lower": {
+            "type": "number",
+            "forms": [
+                {
+                    "op": "readproperty",
+                    "href": "properties/lower",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                },
+                {
+                    "op": "writeproperty",
+                    "href": "properties/lower",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "inlet": {
+            "type": "boolean",
+            "forms": [
+                {
+                    "op": "readproperty",
+                    "href": "properties/inlet",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                },
+                {
+                    "op": "writeproperty",
+                    "href": "properties/inlet",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "outlet": {
+            "type": "boolean",
+            "forms": [
+                {
+                    "op": "readproperty",
+                    "href": "properties/outlet",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                },
+                {
+                    "op": "writeproperty",
+                    "href": "properties/outlet",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "level": {
+            "type": "number",
+            "forms": [
+                {
+                    "op": "readproperty",
+                    "href": "properties/level",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                },
+                {
+                    "op": "writeproperty",
+                    "href": "properties/level",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET"
+                }
+            ]
+        }
+    },
+    "id": "urn:example.org/tank",
+    "title": "tank",
+    "base": "https://localhost:8888/",
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1"
+    ],
+    "securityDefinitions": {
+        "bearer_sc": {
+            "in": "header",
+            "scheme": "bearer",
+            "format": "jwt",
+            "alg": "ES256",
+            "authorization": "https://localhost:8888/authorize"
+        }
+    },
+    "security": [
+        "bearer_sc"
+    ],
+    "forms": [
+        {
+            "op": "readallproperties",
+            "href": "properties",
+            "contentType": "application/json",
+            "htv:methodName": "GET"
+        },
+        {
+            "op": "writeallproperties",
+            "href": "properties",
+            "contentType": "application/json",
+            "htv:methodName": "PUT"
+        }
+    ],
+    "platform": "https://github.com/draggett/arena-webhub"
+}

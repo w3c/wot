@@ -1,0 +1,54 @@
+<div class="impl" id="impl-siemens">   
+<h3>Siemens AG</h3>   
+<div class="testimonial">
+<p>
+Siemens supports this specification as it allows manufacturers
+to attach metadata to heterogeneous IoT devices and services in a uniform way.
+The extensible model with a standardized serialization format in particular remedies interoperability challenges 
+with an installed base of long-lived industrial devices.
+Furthermore, 
+this specification is a central building block for several digitalization topics such as 
+device onboarding, 
+device management, 
+digital twins, 
+and 
+data analytics.
+</p>
+<p>
+Siemens commits to several open-source implementations of W3C Web of Things, 
+which are managed in the public Eclipse Thingweb project.
+Siemens also implemented concepts of this specification in products and 
+aims at aligning the implementations and opening the features to customers 
+once this specification reaches REC status.
+</p>
+</div>
+
+<h4 id="impl-siemens-node-wot">node-wot: TD Consumer and Producer</h4>
+<p>
+The node-wot implementation is a Node.js-based framework for WoT Servients.
+It features an implementation of the WoT Scripting API to both consume TDs to instantiate Consumed Things 
+and produce Exposed Things that provide a TD.
+The node-wot implementation supports several Protocol Bindings including 
+HTTP, CoAP, WebSockets, and MQTT,
+with corresponding security mechanisms such as 
+DTLS (CoAP); 
+TLS (HTTP, MQTT),
+Basic, Digest, and Bearer Token authentication (HTTP), 
+PSK (CoAP), and 
+username/password authentication (MQTT). 
+</p>
+<h4 id="impl-siemens-thingweb-directory">Thingweb Directory: TD Consumer and Producer</h4>
+<p>
+The Thingweb Directory provides a directory service written in Java to register TDs 
+and look them up through queries (primarily SPARQL).
+The implementation consumes TDs registered with it through a web API,
+represent their metadata in a KnowledgeGraph, and (re-)produces TDs to return the results of queries.
+Currently it supports HTTP and CoAP bindings.
+</p>
+<h4 id="impl-siemens-wot-fxui">WoT-fxUI: TD Consumer</h4>
+<p>
+WoT-fxUI is a generic user interface (UI) for Things based on Java with JavaFX.
+It consumes TDs to render UI elements that allow human users to interact with Things.
+The implementation currently supports HTTP and CoAP bindings.
+</p>
+</div>
