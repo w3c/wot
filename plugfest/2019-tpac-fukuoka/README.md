@@ -1,7 +1,7 @@
 # W3C TPAC - Sept 2019
 ## W3C Web of Things Interoperability Demos
 
-# Preparation Wiki:
+## Preparation Wiki:
 https://www.w3.org/WoT/IG/wiki/F2F_meeting,_16-20_September_2019,_Fukuoka,_Japan#Demo_preparation_.2814-15_or_16-17_Sep_2019.29
 
 # Expected demo participants
