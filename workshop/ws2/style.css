@@ -731,3 +731,86 @@ table.zebra tr:nth-child(even) {
 
 table.zebra th{border-bottom:1px solid #bbb;padding:.2em 1em;}
 table.zebra td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+
+/* include minutes-style.css */
+div.individual
+{
+	clear: left;
+	margin: 1em;
+	padding: 5px;
+/*	border-left: #003;
+	border-width: 0 0 0 1px;
+	border-style: none none none solid;*/
+	background-color: #FFF;
+}
+
+div.individual h3
+{
+	background-color: #9CF;
+	padding: 3px;
+	margin: 0 3px 0 0;
+}
+
+div.individual img
+{
+	padding: 3px;
+	border-color: #000;
+	border-width: 1px;
+	border-style: solid;
+}
+
+strong.resolution
+{ 
+  color: red;
+}
+
+.phone
+{
+	clear: left;
+	margin: 0.2em 1em 0 1em;
+	padding: 5px;
+/*	border-left: #003;
+	border-width: 0 0 0 1px;
+	border-style: none none none solid;*/
+	background-color: #FFF;
+}
+
+.phone cite
+{
+	/*display: block;*/
+	/*float: left;*/
+	width: 5em;
+	/*	background-color: #9CF;*/
+	padding: 3px;
+	margin: 0 3px 0 0;
+        font-weight:bold;
+}
+
+.irc
+{
+	clear: left;
+	margin: 0 1em 0 3em;
+	padding: 5px;
+	background-color: #eee;
+}
+.irc cite
+{
+	width: 5em;
+	padding: 3px;
+	font-weight: bold;
+}
+
+/* p.irc cite:before
+{
+	content: "<";
+}
+p.irc cite:after
+{
+	content: ">";
+} */
+
+.meeting { background-color: #FFF;
+	padding: 0.5em; }
+
+.meeting h3 { 
+	margin: 2em 0 1em 0.2em;}
