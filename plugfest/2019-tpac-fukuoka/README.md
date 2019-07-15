@@ -15,6 +15,9 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Oracle    | IoT Cloud Service                   | Wifi                                                              |  | Michael.Lagally@oracle.com |
 | Oracle    | Digital Twins / Simulators | Wifi                                                              |   | Michael.Lagally@oracle.com |
 
+# Demo Scenarios
+t.b.d.
+
 # TPAC session plan
 
 Not yet available - 
