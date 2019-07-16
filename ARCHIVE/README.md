@@ -1,1 +1,1 @@
-Older material this is of historical interest but which are no longer current.
+This material is of historical interest but is no longer current.
