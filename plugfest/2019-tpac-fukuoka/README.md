@@ -13,7 +13,10 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
 | Oracle    | IoT Cloud Service                   | Wifi                                                              |  | Michael.Lagally@oracle.com |
-| Oracle    | Digital Twins / Simulators | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | HVAC Digital Twin Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | Blue-Pump Digital Twins Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | Festo Plant Digital Twin Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | Solar Panel Digital Twin Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
 | Siemens    | Charging-Integration Demo | Wifi                                                              |   | Christian.Glomb@siemens.com |
 
 # Demo Scenarios
