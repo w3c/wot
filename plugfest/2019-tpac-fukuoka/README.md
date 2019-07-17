@@ -27,6 +27,8 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Fujitsu   | Remote proxy. Connect 2 Local proxies above. |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | Fujitsu   | Local devices: Rotary beacom light, Buzzer, Environment sensors (Temperature, Humidity, Air pressure, Human detection, 3-axis acceleration, Brightness sensors), Agricuture sensor (Temperature, Humidity, Brightness, UV index, CO2), and Wearable sensor (Temperature, 3-axis acceleration, Brightness sensor).   |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | Fujitsu   | Smart home devices (remote): Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
+| TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
 
 # Demo Scenarios
 t.b.d.
