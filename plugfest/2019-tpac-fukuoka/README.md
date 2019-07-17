@@ -16,6 +16,10 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Oracle    | Digital Twins / Simulators | Wifi                                                              |   | Michael.Lagally@oracle.com |
 | Siemens    | Charging-Integration Demo | Wifi                                                              |   | Christian.Glomb@siemens.com |
 | NHK    | Hybridcast-Application Demo | Wifi / LAN                                                          |   | endou.h-hc@nhk.or.jp |
+| Fujitsu   | 2 Local proxies. One is in smart home in Japan, another is in Fukuoka. | Wifi / Lan; 1 power | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Remote proxy. Connect 2 Local proxies above. |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Local devices: Rotary beacom light, Buzzer, Environment sensors (Temperature, Humidity, Air pressure, Human detection, 3-axis acceleration, Brightness sensors), Agricuture sensor (Temperature, Humidity, Brightness, UV index, CO2), and Wearable sensor (Temperature, 3-axis acceleration, Brightness sensor).   |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Smart home devices: Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 
 # Demo Scenarios
 t.b.d.
@@ -27,6 +31,17 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 # Logistics + Constraints:
 
+## Demo opportunities:
+
+### Developer meetup
+This time it requires sponsoring: 
+https://www.w3.org/2019/09/Meetup/
+
+
+### breakout session
+
+### "after lunch" slot
+
 ## Two different configurations:
 
 ### Demo room
@@ -34,6 +49,8 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 ### Focused demo for breakout-session
 2nd hour there's only one table for WoT - need a poster 
+
+#### Goal: Demonstrate Interoperability among WoT WG members
 
 Wifi should be available, open ports ?
 
