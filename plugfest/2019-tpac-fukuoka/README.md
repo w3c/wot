@@ -15,6 +15,7 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Oracle    | IoT Cloud Service                   | Wifi                                                              |  | Michael.Lagally@oracle.com |
 | Oracle    | Digital Twins / Simulators | Wifi                                                              |   | Michael.Lagally@oracle.com |
 | Siemens    | Charging-Integration Demo | Wifi                                                              |   | Christian.Glomb@siemens.com |
+| NHK    | Hybridcast-Application Demo | Wifi / LAN                                                          |   | endou.h-hc@nhk.or.jp |
 
 # Demo Scenarios
 t.b.d.
