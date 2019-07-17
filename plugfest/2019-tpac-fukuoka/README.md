@@ -19,6 +19,11 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Panasonic | Bulletin Board in local ([Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)) | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power | | yamada.takesi@jp.panasonic.com |
 | Panasonic | Online simulator ([Air Conditioner](TDs/Panasonic/PanaSimAirConditioner5.jsonld), [Robotics Cleaner](TDs/Panasonic/PanaSimCleaner5.jsonld), [Philips Hue lighting](TDs/Panasonic/PanaSimHueGroup5.jsonld), [Room lighting](TDs/Panasonic/PanaSimRoomLight5.jsonld)) | Wifi / Lan; ext ports 443, 3000-3011, 8003, 8443 | | yamada.takesi@jp.panasonic.com |
 | Panasonic | Local simulator (Air Conditioner, Robotics Cleaner, Philips Hue lighting, Room lighting) | Wifi / Lan; 1 power | More devices could be added to discuss about cross domain business models, use cases and scenarios. | yamada.takesi@jp.panasonic.com |
+| NHK    | Hybridcast-Application Demo | Wifi / LAN                                                          |   | endou.h-hc@nhk.or.jp |
+| Fujitsu   | 2 Local proxies. One is in smart home in Japan, another is in Fukuoka. | Wifi / Lan; 1 power | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Remote proxy. Connect 2 Local proxies above. |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Local devices: Rotary beacom light, Buzzer, Environment sensors (Temperature, Humidity, Air pressure, Human detection, 3-axis acceleration, Brightness sensors), Agricuture sensor (Temperature, Humidity, Brightness, UV index, CO2), and Wearable sensor (Temperature, 3-axis acceleration, Brightness sensor).   |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Smart home devices: Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 
 # Demo Scenarios
 t.b.d.
@@ -30,6 +35,17 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 # Logistics + Constraints:
 
+## Demo opportunities:
+
+### Developer meetup
+This time it requires sponsoring: 
+https://www.w3.org/2019/09/Meetup/
+
+
+### breakout session
+
+### "after lunch" slot
+
 ## Two different configurations:
 
 ### Demo room
@@ -37,6 +53,8 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 ### Focused demo for breakout-session
 2nd hour there's only one table for WoT - need a poster
+
+#### Goal: Demonstrate Interoperability among WoT WG members
 
 Wifi should be available, open ports ?
 
