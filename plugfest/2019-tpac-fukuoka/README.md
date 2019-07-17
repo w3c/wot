@@ -32,21 +32,17 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 
 # Demo Scenarios
 
-
-
-# Scenarios
-
 The following scenarios demonstrate the interoperability of devices across different manufacturers.
 
 ## Smart Home demos
 
-## Smart Home Demo Automatically turn off devices when user leaves the room (Contact: Oracle)
+### Smart Home Demo Automatically turn off devices when user leaves the room (Contact: Oracle)
 
-### Description:
+#### Description:
 An environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
 When the "room empty" condition is detected, the room is cleaned by a vacuum cleaner, lights are turned off, window blinds are closed and a surveillance camera is turned on.
 
-### Device interactions (Proposal)
+#### Device interactions (Proposal)
 
 * Environment sensor (Simulation?) (TUM has humidity, temperature, pressure sensors)
 * Detect when room is empty and trigger the following actions (Oracle)
@@ -57,10 +53,10 @@ When the "room empty" condition is detected, the room is cleaned by a vacuum cle
 * Turn on a surveillance camera (Intel)
 ...
 
-## Smart Home Demo (Contact: Panasonic)
+### Smart Home Demo (Contact: Panasonic)
 Home appliances communicate with the gateway using existing home protocol such as ECHONET Lite, OCF, etc. and provide functions through the WoT API.
 
-### Device interactions (Proposal)
+#### Device interactions (Proposal)
 * Say "I'm home"/"Bye" to Google Home (Panasonic)
 then
 * Turn on/off home appliances in the smart home lab at Osaka Japan (Panasonic)
@@ -70,9 +66,9 @@ then
 * Turn on/off Blue Pump (Oracle)
 * Turn on/off DotStar and HUE Lights (TUM)
 
-## Private smart home demo (Contact: Mozilla)
+### Private smart home demo (Contact: Mozilla)
 
-### Description:
+#### Description:
 Mozilla's [WebThings Gateway](https://iot.mozilla.org/gateway) will run on the local Wi-Fi network and also be exposed to the Internet via a secure tunelling service.
 Example commercial smart home devices from different vendors using different smart home protocols will be monitored, controlled and automated via a single web UI (hosted by the gateway) that can be
 interacted with via a browser, or by third party apps and services using the [Web Thing API](https://iot.mozilla.org/wot/) and OAuth.
@@ -81,9 +77,9 @@ Example Maker/developer boards programmed as [web things](https://iot.mozilla.or
 
 ## Industrial integration scenarios
 
-## Scenario Automatically alert and protect citizens when a chemical plant has an accident (Contact: Oracle)
+### Scenario Automatically alert and protect citizens when a chemical plant has an accident (Contact: Oracle)
 
-### Description
+#### Description
 An environment sensor is capable of measuring air quality by measuring the oxygen level.
 During an industrial process, when a low oxygen condition is detected by the
 Oracle IoT-Cloud Service Asset Monitoring application, connected devices take
@@ -91,7 +87,7 @@ the appropriate action to protect and alert citizens, such as draining a tank
 in the factory, turning off all air-conditioners, flash alert and warning lights,
 publish alert messages and make voice announcements.
 
-### Device interactions (Proposal)
+#### Device interactions (Proposal)
 
 * (Initially) A robot arm is doing an operation continuously
 * Environment sensor monitors air quality.
@@ -105,14 +101,14 @@ publish alert messages and make voice announcements.
 ...
 
 
-## Security Alert using person detection (industrial) (Contact: Intel)
+### Security Alert using person detection (industrial) (Contact: Intel)
 
 TODO: Discuss with Intel, if scenario is still relevant 
 
 Scenario: Alert is raised when a person is detected entering a forbidden
 region.  Other motion not due to a person (eg automation) is ignored.
 
-### Description
+#### Description
 A detection event from a PIR sensor triggers an application servient which
 grabs an image from a camera and sends it to a person recognition service.
 If the bounding box for any detected person returned from the person recognition
@@ -127,16 +123,17 @@ motion in the view of the camera.
 
 ### Energy management for commercial buildings (Contact: Siemens)
 
+#### Description
 Reduce load charge power to stay under the peak power you get from the grid.
 AC condition is monitored, charge power is reduced, if AC is on.
 
-### Devices:
+#### Devices:
 * Grid Simulation (Siemens)
 * monitoring ECoG Charger, indicating power consumption, start charging (EcoG)
 * Simulated Building management system (Siemens)
 * Air conditioner (t.b.d.)
 
-### Charging demo
+### Charging demo (Contact: Siemens)
 EcoG + Siemens + Panasonic
 
 #### Description:
@@ -153,11 +150,6 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 * EcoG stops charging (EcoG)
 * Storage battery start discharging (Fujitsu)
 * Smart home application monitors and controls these devices.
-
-
-
-
-
 
 
 # TPAC session plan
