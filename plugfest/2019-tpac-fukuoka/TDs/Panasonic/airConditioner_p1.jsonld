@@ -1,0 +1,153 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "title": "PanasonicAirConditionerP1",
+  "id": "urn:uuid:ed0392cc-3109-48d0-bfd2-3818e2528c78",
+  "base": "https://w3c.p-wot.com/wot-ver2/things/airconditioner/1/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["bearer_sc"],
+  "properties": {
+    "operationStatus": {
+      "@type": "iot:OperationStatus",
+      "title": "operationStatus",
+      "type":"boolean",
+      "observable": true,
+      "forms": [
+        {"href": "operationStatus", "contentType": "application/json"},
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/operationStatus",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/airconditioner/1/operationStatus",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
+    },
+    "operationMode": {
+      "@type": "iot:RunMode",
+      "title": "operationMode",
+      "type":"string",
+      "enum": ["Auto", "Cooling", "Heating", "Dehumidifying", "Blast"],
+      "observable": true,
+      "forms": [
+        {"href": "operationMode", "contentType": "application/json"},
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/operationMode",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/airconditioner/1/operationMode",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
+    },
+    "desiredTemp": {
+      "@type": "iot:TargetTemperature",
+      "title": "desiredTemp",
+      "type":"number",
+      "minimum": 16,
+      "maximum": 30,
+      "observable": true,
+      "forms": [
+        {"href": "desiredTemp", "contentType": "application/json"},
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/desiredTemp",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/airconditioner/1/desiredTemp",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
+    },
+    "windVolumeLevel": {
+      "@type": "iot:WindStrength",
+      "title": "windVolumeLevel",
+      "type":"number",
+      "minimum": 0,
+      "maximum": 8,
+      "observable": true,
+      "forms": [
+        {"href": "windVolumeLevel", "contentType": "application/json"},
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/airconditioner/1/windVolumeLevel",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/airconditioner/1/windVolumeLevel",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
+    }
+  },
+  "events": {
+    "change": {
+      "@type": "iot:PropertyChangedEvent",
+      "title": "change",
+      "data": {
+        "type":"object",
+        "properties": {
+          "operationStatus": {
+            "@type": "iot:OperationStatusChanged",
+            "type": "boolean"
+          },
+          "operationMode": {
+            "@type": "iot:RunModeChanged",
+            "type": "string",
+            "enum": ["Auto", "Cooling", "Heating", "Dehumidifying", "Blast"]
+          },
+          "desiredTemp": {
+            "@type": "iot:TargetHumidityChanged",
+            "type": "number",
+            "minimum": 16,
+            "maximum": 30
+          },
+          "windVolumeLevel": {
+            "@type": "iot:WindStrengthChanged",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 8
+          }
+        }
+      },
+      "forms": [{
+        "href": "change",
+        "contentType": "application/json"
+      }]
+    }
+  }
+}
