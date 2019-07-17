@@ -26,6 +26,17 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 # Logistics + Constraints:
 
+## Demo opportunities:
+
+### Developer meetup
+This time it requires sponsoring: 
+https://www.w3.org/2019/09/Meetup/
+
+
+### breakout session
+
+### "after lunch" slot
+
 ## Two different configurations:
 
 ### Demo room
@@ -33,6 +44,8 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 ### Focused demo for breakout-session
 2nd hour there's only one table for WoT - need a poster 
+
+#### Goal: Demonstrate Interoperability among WoT WG members
 
 Wifi should be available, open ports ?
 
