@@ -13,7 +13,10 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
 | Oracle    | IoT Cloud Service                   | Wifi                                                              |  | Michael.Lagally@oracle.com |
-| Oracle    | Digital Twins / Simulators | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | HVAC Digital Twin Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | Blue-Pump Digital Twins Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | Festo Plant Digital Twin Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
+| Oracle    | Solar Panel Digital Twin Simulator | Wifi                                                              |   | Michael.Lagally@oracle.com |
 | Siemens    | Charging-Integration Demo | Wifi                                                              |   | Christian.Glomb@siemens.com |
 | Panasonic | Smart home lab in Osaka ([Air Conditioner](TDs/Panasonic/airConditioner_p1.jsonld), [Robotics Cleaner](TDs/Panasonic/cleaner_p1.jsonld), [Bulletin Board 1](TDs/Panasonic/electricBulletinBoard_p1.jsonld), [Bulletin Board 2](TDs/Panasonic/electricBulletinBoard_p2.jsonld), [Philips Hue lighting](TDs/Panasonic/huegroup_p1.jsonld)) | Wifi / Lan; ext ports 443, 8003, 8443 | | yamada.takesi@jp.panasonic.com |
 | Panasonic | Bulletin Board in local ([Bulletin Board 3](TDs/Panasonic/electricBulletinBoard_p3.jsonld)) | Wifi / Lan; ext ports 443, 8002, 8003, 8443; 2 power | | yamada.takesi@jp.panasonic.com |
