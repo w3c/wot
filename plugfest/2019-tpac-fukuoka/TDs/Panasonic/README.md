@@ -42,7 +42,7 @@ For other instances which can be accessed exclusively at a time, see [simulator 
 POST {authentication server URL}
 {
   "id": "{ID}",
-  "password": "{password}"
+  "password": "{Password}"
 }
 Content-Type: application/json
 ```
