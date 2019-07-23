@@ -46,3 +46,4 @@ POST {authentication server URL}
 }
 Content-Type: application/json
 ```
+* ID and Password are issued only to the Plugfest Participants.
