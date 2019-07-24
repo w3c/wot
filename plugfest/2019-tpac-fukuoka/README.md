@@ -36,7 +36,7 @@ The following scenarios demonstrate the interoperability of devices across diffe
 
 ## Smart Home demos
 
-### Smart Home Demo Automatically turn off devices when user leaves the room (Contact: Oracle)
+### Scenario: Automatically turn off devices when user leaves the room (Contact: Oracle)
 
 #### Description:
 An environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
@@ -100,23 +100,6 @@ publish alert messages and make voice announcements.
 * Make voice announcements (Intel)
 ...
 
-
-### Security Alert using person detection (industrial) (Contact: Intel)
-
-TODO: Discuss with Intel, if scenario is still relevant 
-
-Scenario: Alert is raised when a person is detected entering a forbidden
-region.  Other motion not due to a person (eg automation) is ignored.
-
-#### Description
-A detection event from a PIR sensor triggers an application servient which
-grabs an image from a camera and sends it to a person recognition service.
-If the bounding box for any detected person returned from the person recognition
-service is inside the forbidden zone,
-an alert is raised (both a network event and some immediate indication
-is given, such as a flashing light).
-The person identification service is used to avoid false positives due to other
-motion in the view of the camera.
 
 
 ## Smart Building, Smart City
