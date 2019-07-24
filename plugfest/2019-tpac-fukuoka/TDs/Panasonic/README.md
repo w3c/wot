@@ -32,3 +32,18 @@ For other instances which can be accessed exclusively at a time, see [simulator 
 ## Local simulator
 
 - Available only in TPAC 2019.
+
+---
+
+### Note
+
+* ID and Password are required to get Bearer Token to access both simulator and real device API as described in our TDs, by accessing authentication server as follows (You need to do it only once since the token doesn't expire):
+```
+POST {authentication server URL}
+{
+  "id": "{ID}",
+  "password": "{Password}"
+}
+Content-Type: application/json
+```
+* ID and Password are issued only to the Plugfest Participants.
