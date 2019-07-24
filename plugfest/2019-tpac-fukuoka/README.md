@@ -36,6 +36,9 @@ The following scenarios demonstrate the interoperability of devices across diffe
 
 ## Smart Home demos
 
+### Scenario Overview Diagram
+t.b.d.
+
 ### Scenario: Automatically turn off devices when user leaves the room (Contact: Oracle)
 
 #### Description:
@@ -48,12 +51,15 @@ When the "room empty" condition is detected, the room is cleaned by a vacuum cle
 * Detect when room is empty and trigger the following actions (Oracle)
 * Close window blinds (Fujitsu)
 * Clean the room (Panasonic)
-* Turn on an MQTT device (Siemens)
-* Turn off the lights (Smart Things) (TUM)
+* HVAC system simulation in a building (Siemens)
+* Turn off the lights (Smart Things?) (TUM)
 * Turn on a surveillance camera (Intel)
+* NHK ?
 ...
 
 ### Smart Home Demo (Contact: Panasonic)
+
+#### Scenario: 
 Home appliances communicate with the gateway using existing home protocol such as ECHONET Lite, OCF, etc. and provide functions through the WoT API.
 
 #### Device interactions (Proposal)
@@ -65,6 +71,7 @@ then
 * Turn on/off Intel-OCF-LED (Intel)
 * Turn on/off Blue Pump (Oracle)
 * Turn on/off DotStar and HUE Lights (TUM)
+* NHK ?
 
 ### Private smart home demo (Contact: Mozilla)
 
@@ -89,14 +96,13 @@ publish alert messages and make voice announcements.
 
 #### Device interactions (Proposal)
 
-* (Initially) A robot arm is doing an operation continuously
-* Environment sensor monitors air quality.
+* (Initially) A robot arm is doing an operation continuously (TUM)
+* Environment sensor monitors air quality. TUM)
 * Cloud service discovers anomaly, critical condition and triggers the following actions (Oracle)
-* Drain the tank in a chemical factory (Siemens)
+* Drain the tank in a chemical factory (Siemens ?)
 * Flash a warning light (Fujitsu)
 * Turn off all air conditioners (Panasonic)
 * Bring the robot arm to a safe position (TUM)
-* Flash the lights (Smart Things)
 * Make voice announcements (Intel)
 ...
 
@@ -112,15 +118,9 @@ AC condition is monitored, charge power is reduced, if AC is on.
 
 #### Devices:
 * Grid Simulation (Siemens)
-* monitoring ECoG Charger, indicating power consumption, start charging (EcoG)
+* monitoring simulated ECoG Charger, indicating power consumption, start charging (EcoG)
 * Simulated Building management system (Siemens)
-* Air conditioner (t.b.d.)
-
-### Charging demo (Contact: Siemens)
-EcoG + Siemens + Panasonic
-
-#### Description:
-Charging of a vehicle dependent on the energy consumption.
+* Air conditioner (Panasonic)
 
 
 ### Enhancing power efficiency for smart home (Contact: Fujitsu)
