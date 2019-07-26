@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "title": "PanaSimHueGroup5",
+  "id": "p-wot:PanaSimHueGroup5",
+  "base": "https://w3c.p-wot.com:3009/wot/things/PanaSimHueGroup5/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["bearer_sc"],
+  "properties": {
+    "power": {
+      "@type": "iot:SwitchToggle",
+      "title": "power",
+      "type": "boolean",
+      "observable": true,
+      "forms": [{
+        "href": "power",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/power",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/power",
+        "contentType": "application/json",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }]
+    },
+    "rgbValue": {
+      "title": "rgbValue",
+      "type": "object",
+      "properties": {
+        "red": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "green": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "observable": true,
+      "forms": [{
+        "href": "rgbValue",
+        "contentType": "application/json"
+      }, {
+        "href": "https://w3c.p-wot.com:8003/poll/PanaSimHueGroup5/rgbValue",
+        "contentType": "application/json",
+        "subprotocol": "longpoll",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }, {
+        "href": "wss://w3c.p-wot.com:8003/wot/things/PanaSimHueGroup5/rgbValue",
+        "contentType": "application/json",
+        "op": "observeproperty",
+        "security": ["nosec_sc"]
+      }]
+    }
+  }
+}
