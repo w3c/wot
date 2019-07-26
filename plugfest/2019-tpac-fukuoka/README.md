@@ -29,8 +29,8 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Fujitsu   | Smart home devices (remote): Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
 | TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
-| Intel   | Simple Web Camera | WiFi or wired network, local http, external https access available | Camera frame grabber and cropping service | michael.mccool@intel.com |
-| Intel   | Web Speak         | WiFi or wired network, local http, external https access available | Speech synthesizer/speaker | michael.mccool@intel.com |
+| Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi or wired network, local http, external https access available | Camera frame grabber and cropping service | michael.mccool@intel.com |
+| Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi or wired network, local http, external https access available | Speech synthesizer/speaker | michael.mccool@intel.com |
 
 # Demo Scenarios
 
