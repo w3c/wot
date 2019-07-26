@@ -29,8 +29,8 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Fujitsu   | Smart home devices (remote): Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
 | TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
-| Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi or wired network, local http (port 9191), external https access available with basic (port 8098) and digest (port 8099), long poll observe support. | Camera frame grabber and cropping service | michael.mccool@intel.com |
-| Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi or wired network, local http (port 8085), external https access available with basic (port 8096) and digest (port 8097). | Speech synthesizer/speaker | michael.mccool@intel.com |
+| Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi / LAN, 1 Power. Local http:9191. Ext https basic:8098, digest:8099. Long poll observe. | Camera frame grabber and cropping service | michael.mccool@intel.com |
+| Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi / LAN, 1 Power. Local http:8085. Ext https basic:8096, digest:8097. | Speech synthesizer/speaker | michael.mccool@intel.com |
 
 # Demo Scenarios
 
