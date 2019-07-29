@@ -146,24 +146,19 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 ## Demo opportunities:
 
-### Developer meetup
-This time it requires sponsoring: 
-https://www.w3.org/2019/09/Meetup/
+There are three possible opportunities for the WoT demo.
 
+1. Monday evening: Developer meetup
+   This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
 
-### breakout session
+2. Wednesday: Breakout session
+   We prefer the "after lunch" slot.
+   1st hour after lunch we have a dedicated demo room
 
-### "after lunch" slot
+3. Wednesday: Dedicated demo session
+   2nd hour there's only one table for WoT - need a poster
 
-## Two different configurations:
-
-### Demo room
-1st hour after lunch we have a dedicated demo room
-
-### Focused demo for breakout-session
-2nd hour there's only one table for WoT - need a poster
-
-#### Goal: Demonstrate Interoperability among WoT WG members
+## Goal: Demonstrate Interoperability among WoT WG members
 
 Wifi should be available, open ports ?
 
