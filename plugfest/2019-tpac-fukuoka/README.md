@@ -30,8 +30,10 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
 | TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
 | Hitachi     | (Tool) Node Generator | Wifi | Node-RED node generator and application | kunihiko.toumura.yv@hitachi.com | 
-
 ![Demo devices](./images/demodevices.png "Demo Devices")
+| Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi / LAN, 1 Power. Local http:9191. Ext https basic:8098, digest:8099. Long poll observe. | Camera frame grabber and cropping service | michael.mccool@intel.com |
+| Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi / LAN, 1 Power. Local http:8085. Ext https basic:8096, digest:8097. | Speech synthesizer/speaker | michael.mccool@intel.com |
+
 
 # Demo Scenarios
 
@@ -146,24 +148,19 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 ## Demo opportunities:
 
-### Developer meetup
-This time it requires sponsoring: 
-https://www.w3.org/2019/09/Meetup/
+There are three possible opportunities for the WoT demo.
 
+1. Monday evening: Developer meetup
+    * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
 
-### breakout session
+2. Wednesday: Breakout session
+    * We prefer ttranquilityhe "after lunch" slot.
+    * 1st hour after lunch we have a dedicated demo room
 
-### "after lunch" slot
+3. Wednesday: Dedicated demo session
+    * 2nd hour there's only one table for WoT - need a poster
 
-## Two different configurations:
-
-### Demo room
-1st hour after lunch we have a dedicated demo room
-
-### Focused demo for breakout-session
-2nd hour there's only one table for WoT - need a poster
-
-#### Goal: Demonstrate Interoperability among WoT WG members
+## Goal: Demonstrate Interoperability among WoT WG members
 
 Wifi should be available, open ports ?
 
