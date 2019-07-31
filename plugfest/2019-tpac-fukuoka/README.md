@@ -30,10 +30,13 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
 | TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
 | Hitachi     | (Tool) Node Generator | Wifi | Node-RED node generator and application | kunihiko.toumura.yv@hitachi.com | 
-![Demo devices](./images/demodevices.png "Demo Devices")
 | Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi / LAN, 1 Power. Local http:9191. Ext https basic:8098, digest:8099. Long poll observe. | Camera frame grabber and cropping service | michael.mccool@intel.com |
 | Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi / LAN, 1 Power. Local http:8085. Ext https basic:8096, digest:8097. | Speech synthesizer/speaker | michael.mccool@intel.com |
 
+## Diagram of the Demo Devices described in the above table
+![Demo devices](./images/demodevices.png "Demo Devices")
+
+**Kaz's Note:** The diagram above doesn't include Intel's devices. I thought we had once removed Intel's devices from the table and there was a conflict about that, so once reverted Intel's devices within the table above.
 
 # Demo Scenarios
 
