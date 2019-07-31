@@ -29,8 +29,11 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Fujitsu   | Smart home devices (remote): Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
 | TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
+| Hitachi     | (Tool) Node Generator | Wifi | Node-RED node generator and application | kunihiko.toumura.yv@hitachi.com | 
+![Demo devices](./images/demodevices.png "Demo Devices")
 | Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi / LAN, 1 Power. Local http:9191. Ext https basic:8098, digest:8099. Long poll observe. | Camera frame grabber and cropping service | michael.mccool@intel.com |
 | Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi / LAN, 1 Power. Local http:8085. Ext https basic:8096, digest:8097. | Speech synthesizer/speaker | michael.mccool@intel.com |
+
 
 # Demo Scenarios
 
@@ -38,10 +41,9 @@ The following scenarios demonstrate the interoperability of devices across diffe
 
 ## Smart Home demos
 
-### Scenario Overview Diagram
-t.b.d.
-
 ### Scenario: Automatically turn off devices when user leaves the room (Contact: Oracle)
+
+![Scenario 1-1](./images/scenario1-1.png "Automatically turn off devices when user leaves the room")
 
 #### Description:
 An environment sensor is capable of identifying when a room is empty by measuring the oxygen level.
