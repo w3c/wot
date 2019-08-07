@@ -88,6 +88,23 @@ Example commercial smart home devices from different vendors using different sma
 interacted with via a browser, or by third party apps and services using the [Web Thing API](https://iot.mozilla.org/wot/) and OAuth.
 Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) which directly expose the Web Thing API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
+### Hybridcast Application Demo (Contact: NHK)
+
+#### Scenario: 
+Home smart devices behave according to TV programs.
+
+Hybridcast applications emit information about tv programs for smart home devices. 
+(Hybridcast is a Japanese Integrated Broadcast-Broadband system. Hybridcast applications are HTML5 applications that work on Hybridcast TV.)
+
+User application receives the information and controlls smart home devices.
+
+#### Device interactions (Proposal)
+* Hybridcast TV play programs and sends out information about the programs.
+* User application which receives information about TV programs
+    * get TDs from Fujitsu proxy
+    * stops Robotics Cleaner (Panasonic) 
+    * changes the color of Panasonic Hue (Panasonic)
+    * shows web applications on a smart mirror or a refrigerator display
 
 ## Industrial integration scenarios
 
