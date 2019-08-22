@@ -174,14 +174,47 @@
 	    
       <section id="scope" class="scope">
         <h2>Scope</h2>
-        <p><i class="todo">Brief background of landscape, technology, and relationship to the Web, users, developers, implementers, and industry.</i></p>
+	<!--
+        <p><i class="todo">Brief background of landscape, technology, and relationship to the Web, users, 
+        developers, implementers, and industry.</i></p>
+        -->
+        <p>The Working Group has X items in scope:</p>
+        
+        <div class="summary">
+          <p style="text-align:left;font-style:italic">Scope Summary</p>
+          
+          <dl>
+            <dt><strong>Item 1:</strong></dt>
+            <dd>summary of item 1.</dd>
+            <dt><strong>Item 2:</strong></dt>
+            <dd>summary of item 2.</dd>
+          </dl>
+        </div>
+	    
+        <p>Details for each of these are given below.</p>
 
+        <h3>Item 1</h3>
+	<p>Details for item 1.</p>
+	      
+	<h3>Item 2</h3>
+	<p>Details for item 2.</p>
+	      
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
-            <p>The following features are out of scope, and will not be addressed by this <i class="todo">(Working|Interest)</i> group.</p>
+            <p>The following features are out of scope,
+		    and will not be addressed by this <i class="todo">(Working|Interest)</i> group.</p>
 
-            <ul class="out-of-scope">
-            </ul>
+            <dl class="out-of-scope">
+            <dt>Application- and domain-specific metadata vocabularies</dt>
+            <dd>The Working Group is restricted to work on cross-domain vocabularies.</dd>
+            <dt>APIs and security frameworks specific to particular platforms external to the W3C</dt>
+            <dd>The scope of the Working Group is restricted to APIs and security frameworks that are applicable across platforms.
+            We will not define new security mechanisms but will use existing mechanisms and best practices.</dd>
+            <dt>Modification of protocols</dt>
+            <dd>If during work on protocol bindings, it becomes apparent that changes are needed to protocols, 
+            the Web of Things Working Group will rely on the organization responsible for the protocol to make the changes. 
+	    It is out of scope for the Working Group to standardize such changes itself.</dd>
+            </dl>
         </section>
 
       </section>
@@ -190,18 +223,25 @@
         <h2>
           Deliverables
         </h2>
-        <p class="issue"><b>Issue:</b> I've removed the milestones table, which is always wildly inaccurate, and included the milestones as projected completion dates in the description template for each deliverable. Up-to-date milestones tables should be maintained on the group page and linked to from this charter.</p>
+	      <!--
+        <p class="issue"><b>Issue:</b> I've removed the milestones table, which is always wildly inaccurate, 
+      and included the milestones as projected completion dates in the description template for each deliverable. 
+      Up-to-date milestones tables should be maintained on the group page and linked to from this charter.</p>
+      -->
 
-        <p>More detailed milestones and updated publication schedules are available on the <a href="https://www.w3.org/wiki/[groupname]/PubStatus">group publication status page</a>.</p>
+        <p>More detailed milestones and updated publication schedules are available on the 
+        <a href="https://www.w3.org/WoT/WG/#pubstatus">group publication status page</a>.</p>
 
-        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, or otherwise reach a stable state.</p>
+        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. 
+        <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, 
+		or otherwise reach a stable state.</p>
 
         <section id="normative">
           <h3>
             Normative Specifications
           </h3>
           <p>
-            The <i class="todo">(Working|Interest)</i> Group will deliver the following W3C normative specifications:
+            The Working Group will deliver the following W3C normative specifications:
           </p>
           <dl>
             <dt id="web-foo" class="spec"><a href="#">Web <i class="todo">[spec name]</i></a></dt>
@@ -211,7 +251,10 @@
               <p class="draft-status"><b>Draft state:</b> <i class="todo">[No draft | <a href="#">Use Cases and Requirements</a> | <a href="#">Editor's Draft</a> | <a href="#">Member Submission</a> | <a href="#">Adopted from WG/CG Foo</a> | <a href="#">Working Draft</a>]</i></p>
               <p class="milestone"><b>Expected completion:</b> <i class="todo">[Q1–4 yyyy]</i></p>
    <dl><dt>
-    <p class="todo">Per <a href="https://www.w3.org/Consortium/Process/#WGCharter">5.2.6</a>, for every Recommendation Track deliverable that continues work on a Working Draft (WD) published under any other Charter (including a predecessor group of the same name), for which there is an existing Reference Draft or Candidate Recommendation: </p>
+    <p class="todo">Per <a href="https://www.w3.org/Consortium/Process/#WGCharter">5.2.6</a>, 
+	    for every Recommendation Track deliverable that continues work on a Working Draft (WD) 
+	    published under any other Charter (including a predecessor group of the same name), 
+	    for which there is an existing Reference Draft or Candidate Recommendation: </p>
       <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
       <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
         <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
@@ -252,20 +295,32 @@
 
 	<section id="success-criteria">
 	  <h2>Success Criteria</h2>
-	  <p>In order to advance to <a href="https://www.w3.org/Consortium/Process/#RecsPR" title="Proposed Recommendation">Proposed Recommendation</a>, each specification is expected to have <a href="https://www.w3.org/Consortium/Process/#implementation-experience">at least two independent implementations</a> of each of feature defined in the specification.</p>
-	  <p>Each specification should contain a section detailing all known security and privacy implications for implementers, Web authors, and end users.</p>
+	  <p>In order to advance to 
+          <a href="https://www.w3.org/Consortium/Process/#RecsPR" title="Proposed Recommendation">Proposed Recommendation</a>, 
+          each specification is expected to have 
+	  <a href="https://www.w3.org/Consortium/Process/#implementation-experience">at least two independent implementations</a> 
+          of each of feature defined in the specification.</p>
+	  <p>Each specification should contain a section detailing all known security and privacy implications for implementers,
+	  Web authors, and end users.</p>
 	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
-	  <p><i class="todo">For specifications of technologies that directly impact user experience, such as content technologies, as well as protocols and APIs which impact content: </i>
-		Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and
-		recommendations for maximising accessibility in implementations.</p>
-	  <p><span class='todo'>Consider adopting a healthy testing policy, such as:</span> To promote interoperability, all changes made to specifications should have <a href='https://www.w3.org/2019/02/testing-policy.html'>tests</a>.</p>
+	  <p>Each specification should contain a section on accessibility that describes the benefits and impacts,
+	  including ways specification features can be used to address them, and
+	   recommendations for maximising accessibility in implementations.</p>
+	  <p><span class='todo'>Consider adopting a healthy testing policy, such as:</span> 
+	  To promote interoperability, 
+          all changes made to specifications should have <a href='https://www.w3.org/2019/02/testing-policy.html'>tests</a>.</p>
 	</section>
 
       <section id="coordination">
         <h2>Coordination</h2>
-        <p>For all specifications, this <i class="todo">(Working|Interest)</i> Group will seek <a href="https://www.w3.org/Guide/process/charter.html#horizontal-review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a href="https://www.w3.org/Consortium/Process/#RecsWD" title="First Public Working Draft">FPWD</a> and at least 3 months before <a href="https://www.w3.org/Consortium/Process/#RecsCR" title="Candidate Recommendation">CR</a>, and should be issued when major changes occur in a specification.</p>
-        <p class="issue"><b>Issue:</b> The paragraph above replaces line-item liaisons and dependencies with individual horizontal groups. There's been a suggestion to name and individually link the specific horizontal groups inline, instead of pointing to a page that lists them.</p>
-        <p class="issue"><b>Issue:</b> The requirement for an invitation to review after FPWD and before CR may seem a bit overly restrictive, but it only requires an invitation, not a review, a commitment to review, or even a response from the horizontal group. This compromise offers early notification without introducing a bottleneck.</p>
+        <p>For all specifications, this Working Group will seek 
+	<a href="https://www.w3.org/Guide/process/charter.html#horizontal-review">horizontal review</a> 
+	for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups,
+	and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. 
+	Invitation for review must be issued during each major standards-track document transition,
+	including <a href="https://www.w3.org/Consortium/Process/#RecsWD" title="First Public Working Draft">FPWD</a> 
+	and at least 3 months before <a href="https://www.w3.org/Consortium/Process/#RecsCR" title="Candidate Recommendation">CR</a>,
+		and should be issued when major changes occur in a specification.</p>
 
         <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/Consortium/Process/#WGCharter">W3C Process Document</a>:</p>
 
