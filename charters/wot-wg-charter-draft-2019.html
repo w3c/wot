@@ -149,7 +149,7 @@
               <strong>Face-to-face:</strong> 
 		    We will meet during the W3C's annual Technical Plenary week; 
 		    additional face-to-face meetings may be scheduled by consent of the participants, 
-		    with no more than 4 face to face meetings in total per year.
+		    with no more than four (4) face-to-face meetings in total per year.
             </td>
           </tr>
         </table>
@@ -157,19 +157,20 @@
 	    
       <section id="introduction" class="introduction">
         <h2>Introduction</h2>
-        <p>This working group is tasked with the standardization of <s>four technological building blocks 
+        <p>This working group is tasked with the standardization or extension of several technological building blocks 
            identified by the <a href="https://www.w3.org/WoT/IG/">Web of Things Interest Group</a> (IG) 
-           as being key to realizing the Web of Things. 
-           These building blocks will complement existing 
-           and emerging standards by focusing on enabling cross-platform and cross-domain interoperability, 
-           as opposed to creating yet another IoT standard. 
-           The initial concepts are detailed in the 
-           <a href="http://w3c.github.io/wot/current-practices/wot-practices.html">WoT Current Practices document</a> 
-           of the IG and summarized in the <a href="#scope">Scope</a> section. 
-           There has already been successful incubation of these building blocks in 
-           multiple IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>, 
-           where several companies and research institutes have presented and tested their WoT prototypes. 
-           Initial open-source implementations are also already available.</s></p>
+           as being important to advancing the Web of Things. 
+           The WoT building blocks are intended to complement existing 
+           and emerging IoT standards by focusing on enabling cross-platform and cross-domain interoperability. 
+           The proposed work items are summarized in the <a href="#scope">Scope</a> section, and
+           include profiles for particular usage contexts;
+           vocabulary support for new protocols, security schemes, and links;
+           standardized discovery mechanisms;
+           and improvements to Thing Description Templates.
+           These work items will be prototyped and tested by multiple implementors in
+           WoT IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a> 
+           during development.
+           Open-source implementations will be prioritized.</s></p>
       </section>
 	    
       <section id="scope" class="scope">
@@ -178,39 +179,101 @@
         <p><i class="todo">Brief background of landscape, technology, and relationship to the Web, users, 
         developers, implementers, and industry.</i></p>
         -->
-        <p>The Working Group has X items in scope:</p>
+        <p>The Working Group has the following items in scope:</p>
         
         <div class="summary">
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           
           <dl>
-            <dt><strong>Item 1:</strong></dt>
-            <dd>summary of item 1.</dd>
-            <dt><strong>Item 2:</strong></dt>
-            <dd>summary of item 2.</dd>
+            <dt><strong>TD Security Schemes:</strong></dt>
+            <dd>Vocabulary for new security schemes supporting targetted protocols and use cases.</dd>
+            <dt><strong>TD Link Relation Types:</strong></dt>
+            <dd>Definition of specific link relation types for specific relationships.</dd>
+            <dt><strong>TD Vocabulary:</strong></dt>
+            <dd>Extensions to WoT Architectural and TD vocabulary definitions.</dd> 
+            <dt><strong>Protocol Vocabulary:</strong></dt>
+            <dd>Extensions to protocol vocabulary definitions and protocol bindings.</dd> 
+            <dt><strong>Smart Home Profile:</strong></dt>
+            <dd>Support plug-and-play interoperabilty via a profile mechanism and define a profile for the Smart Home use case.</dd>
+            <dt><strong>Implementation View Spec:</strong></dt>
+            <dd>More fully define details of implementations.</dd>
+            <dt><strong>Complex Interactions:</strong></dt>
+            <dd>Document how complex interactions can be supported via hypermedia controls.</dd>
+            <dt><strong>Observe Defaults:</strong></dt>
+            <dd>For protocols such as HTTP where multiple ways to implement "observe" is possible, define a default.</dd>
+            <dt><strong>Identity Management:</strong></dt>
+            <dd>Mitigate privacy risks by defining how identity is managed and updated.</dd>
+            <dt><strong>Discovery:</strong></dt>
+            <dd>Define how Things are discovered and Thing Descriptions are distributed.</dd>
+            <dt><strong>TD Templates:</strong></dt>
+            <dd>Define how Thing Descriptions can defined in a modular way.</dd>
           </dl>
         </div>
 	    
         <p>Details for each of these are given below.</p>
 
-        <h3>Item 1</h3>
-	<p>Details for item 1.</p>
+
+        <h3>TD Security Schemes</h3>
+	<p>Top candidates for inclusion include schemes for all flows in OAuth2, PoP Tokens, and ACE.</p>
 	      
-	<h3>Item 2</h3>
-	<p>Details for item 2.</p>
+	<h3>TD Link Relation Types</h3>
+	<p>Candidates for link relation type definitions include part-of and subtype-of relationships.</p>
+	      
+	<h3>TD Vocabulary</h3>
+	<p>Extensions to WoT Architectural and TD vocabulary definitions.
+        Candidates for extension include a Producer concept,
+        support for full JSON Schema, and better support for default values.
+        </p>
+
+        <h3>Protocol Vocabulary</h3>
+        <p>CoAP(S) including CoAPS+WS.</p>
+
+        <h3>Smart Home Profile</h3>
+        <p>Support for Plug-and-Play interoperability in the Smart Home context.
+        TD default values without override, and 
+        finite limits on allowable URI schemes, media types, etc.
+        </p>
+
+        <h3>Implementation View Spec</h3>
+        <p>“Web Thing API”-like.
+        Fully specify details such as error responses, common features, etc.
+        Could be represented relative to specific profiles.
+        </p>
+
+        <h3>Complex Interactions</h3>
+        <p>Document the ability to monitor and cancel ongoing actions.
+        Support action/event queues and error recovery via hypermedia responses.
+        </p>
+
+        <h3>Observe Defaults</h3>
+        <p>Specify exact defaults for observe, including methods and subprotocols,
+        for important protocols including HTTP.
+        </p>
+
+        <h3>Identity Managementy</h3>
+        <p>Privacy-preserving architecture.  
+        Identity management lifecycle.
+        Commissioning, onboarding, identifier updates and notifications, offboarding, and decommissioning.</p>
+
+        <h3>Discovery</h3>
+        <p>Privacy-preserving architecture.
+        Introductions, directory services, and peer-to-peer discovery.</p>
+
+        <h3>TD Templates</h3>
+        <p>Instances vs. classes. Subtype and component relationships.</p>
 	      
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
             <p>The following features are out of scope,
-		    and will not be addressed by this <i class="todo">(Working|Interest)</i> group.</p>
+		    and will not be addressed by this Working group.</p>
 
             <dl class="out-of-scope">
-            <dt>Application- and domain-specific metadata vocabularies</dt>
+            <dt><strong>Application- and domain-specific metadata vocabularies:</strong></dt>
             <dd>The Working Group is restricted to work on cross-domain vocabularies.</dd>
-            <dt>APIs and security frameworks specific to particular platforms external to the W3C</dt>
+            <dt><strong>APIs and security frameworks specific to particular platforms external to the W3C:</strong></dt>
             <dd>The scope of the Working Group is restricted to APIs and security frameworks that are applicable across platforms.
             We will not define new security mechanisms but will use existing mechanisms and best practices.</dd>
-            <dt>Modification of protocols</dt>
+            <dt><strong>Modification of protocols:</strong></dt>
             <dd>If during work on protocol bindings, it becomes apparent that changes are needed to protocols, 
             the Web of Things Working Group will rely on the organization responsible for the protocol to make the changes. 
 	    It is out of scope for the Working Group to standardize such changes itself.</dd>
@@ -354,7 +417,7 @@
           Participation
         </h2>
         <p>
-          To be successful, this <i class="todo">(Working|Interest)</i> Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the (Working|Interest) Group. There is no minimum requirement for other Participants.
+          To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
         </p>
         <p>
           The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>.
@@ -373,18 +436,20 @@
           Communication
         </h2>
         <p id="public">
-          Technical discussions for this <i class="todo">(Working|Interest)</i> Group are conducted in <a href="https://www.w3.org/Consortium/Process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository and may permit direct public contribution requests.
+          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/Consortium/Process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed on a public repository and may permit direct public contribution requests.
         The meetings themselves are not open to public participation, however.
         </p>
         <p>
-          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href=""><i class="todo">[name]</i> (Working|Interest) Group home page.</a>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="">Working Group home page.</a>
         </p>
         <p>
-          Most <i class="todo">[name]</i> (Working|Interest) Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+          Most Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
         </p>
         <p>
-          This group primarily conducts its technical work  <i class="todo">pick one, or both, as appropriate:</i> on the public mailing list <a class="todo" id="public-name" href="mailto:public-[email-list]@w3.org">public-<i class="todo">[email-list]</i>@w3.org</a> (<a class="todo" href="https://lists.w3.org/Archives/Public/public-[email-list]/">archive</a>)
-          <i class="todo">or</i> on <a class="todo" id="public-github" href="[link to Github repo]">GitHub issues</a>.
+          This group primarily conducts its technical work 
+          on GitHub issues using both
+          a <a class="todo" id="public-github" href="https://github.com/wot">master repo</a> and
+          repos specific to each deliverable.
           The public is invited to review, discuss and contribute to this work.
         </p>
         <p>
@@ -408,7 +473,7 @@
 
           A call for consensus (CfC) will be issued for all resolutions (for example, via email and/or web-based survey), with a response period from one week to 10 working days, depending on the chair's evaluation of the group consensus on the issue.
 
-          If no objections are raised on the mailing list by the end of the response period, the resolution will be considered to have consensus as a resolution of the <i class="todo">(Working|Interest)</i> Group.
+          If no objections are raised on the mailing list by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
         </p>
         <p>
           All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs or the Director.
@@ -418,11 +483,7 @@
         </p>
       </section>
 
-
-
       <section id="patentpolicy">
-      <p><i class="todo">[Keep 'Patent Policy' for a Working Group, 'Patent Disclosures' for an Interest Group]</i></p>
-
         <h2>
           Patent Policy
         </h2>
@@ -432,26 +493,13 @@
           For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>.
         </p>
 
-        <h2>Patent Disclosures </h2>
-        <p>The Interest Group provides an opportunity to
-          share perspectives on the topic addressed by this charter. W3C reminds
-          Interest Group participants of their obligation to comply with patent
-          disclosure obligations as set out in <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">Section
-            6</a> of the W3C Patent Policy. While the Interest Group does not
-          produce Recommendation-track documents, when Interest Group
-          participants review Recommendation-track specifications from Working
-          Groups, the patent disclosure obligations do apply. For more information about disclosure obligations for this group,
-          please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C
-            Patent Policy Implementation</a>.</p>
       </section>
-
 
 
       <section id="licensing">
         <h2>Licensing</h2>
-        <p>This <i class="todo">(Working|Interest)</i> Group will use the <i class="todo">[pick a license, one of:]</i>  <a href="https://www.w3.org/Consortium/Legal/copyright-documents">W3C Document license</a> | <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
+        <p>This Working Group will use the <i class="todo">[pick a license, one of:]</i>  <a href="https://www.w3.org/Consortium/Legal/copyright-documents">W3C Document license</a> | <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
       </section>
-
 
 
       <section id="about">
@@ -542,8 +590,7 @@
       </address>
 
       <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
-        <i class="todo">[yyyy]</i>
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©2019
         <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
         (
         <a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
