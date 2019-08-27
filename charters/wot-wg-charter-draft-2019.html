@@ -397,27 +397,146 @@
         </p>
 
         <h3>Complex Interactions</h3>
-        <p>Document the ability to monitor and cancel ongoing actions.
-        Support action/event queues and error recovery via hypermedia responses.
+        <p>
+          Many use cases require the implementation of complex
+          interactions that span multiple protocol transactions.
+          An example would be the instigation, monitoring, 
+          and optional cancellation of ongoing actions.
+          Another would be managing filtered subscriptions for events.
+        </p>
+        <p>
+          In fact such complex interactions can be implemented 
+          with the more basic features already included in the 
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
+          and in particular can be supported in a self-describing
+          way with hypermedia controls.
+        </p>
+        <p>
+          However, there are many possible ways to support such 
+          complex interactions.  To better support the goals of
+          interoperability, it would be useful to document
+          how to implement the most common complex interactions. 
+        </p>
+        <p>
+          This work item will document the implementation of complex
+          interactions, including:
+          <ol>
+          <li>The ability to monitor and cancel ongoing actions.</li>
+          <li>Support for action/event queues.</li>
+          <li>Error recovery via hypermedia responses.</li>
+          </ol>
         </p>
 
         <h3>Observe Defaults</h3>
-        <p>Specify exact defaults for observe, including methods and subprotocols,
-        for important protocols including HTTP.
+        <p>The WoT interaction model includes abstractions for 
+          Properties, Events, and Actions.  
+          The Properties abstraction includes an "observe" operation,
+          which allows a Thing to asynchronously notify a Consumer
+          of a change in a property.
+          However, in some protocols of interest, most notably HTTP,
+          there is more than one way to implement the observe operation.
+          The WoT TD allows the specification of a subprotocol to
+          indicate the mechanism used, but unfortunately no default
+          is specified.
+          Because of this Things using HTTP and observe must currently
+          explicitly state the mechanism used, every time.
+        </p>
+        <p>
+          This work item would specify exact defaults for implementing observe, 
+          including methods and subprotocols, for all important protocols 
+          but most especially HTTP.
         </p>
 
         <h3>Identity Management</h3>
-        <p>Privacy-preserving architecture.  
-        Identity management lifecycle.
-        Commissioning, onboarding, identifier updates and notifications, offboarding, and decommissioning.</p>
+        <p>
+          A <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
+          contains an identifier meant to be
+          unique to every Thing. This identifier is essential for database
+          management (for example, for device inventory) but also 
+          constitutes a privacy risk.  In particular, an immutable
+          unique identifier might be used to track a device and from 
+          that infer the location or activities of the owner of that device.
+          If identifiers persist across transfer of ownership of 
+          devices, they might also be used to trace commercial transactions.
+        </p>
+        <p>
+          In order to preserve privacy, such identifiers may need to
+          be considered mutable so that such tracking can be disrupted.
+          More generally, the lifecycle of such identifiers needs to 
+          be defined: when they are assigned, when and how they are
+          updated, how notifications of such updates can be issued to
+          authorized parties, and how the identities must be deleted
+          when an object is decommissioned or replaced when a device
+          changes ownership.
+        </p>
+        <p>
+          This work item would define an identity management lifecycle
+          that would seek, as much as possible, to mitigate the privacy
+          risks posed by explicit device identifiers while retaining
+          their functionality in database management and indexing.
+        </p>
 
         <h3>Discovery</h3>
-        <p>Privacy-preserving architecture.
-        Introductions, directory services, and peer-to-peer discovery.</p>
+        <p>During the previous charter a format for the storage of
+          the metadata required to access a Thing was defined: the
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>.
+          However, no mechanism was defined for the distribution of TDs.
+          This is important since to preserve privacy, TDs should only
+          be distributed to parties with a permission to access the data.
+          However, we also wish to support flexible discovery of the services
+          and devices described by WoT TDs.
+        </p>
+        <p>
+          In this work item we will specify a privacy-preserving architecture
+          for Thing discovery.  
+          One possible way to do this is to distinguish
+          between an "introduction", which is a first-contact protocol, and 
+          "exploration", which retrieves detailed information about services.
+          Introductions can be public but should only provide the address
+          of an "exploration" service, which can be (for example) a web service
+          providing a searchable directory of TDs.  By making the 
+          addresses returned by introductions opaque and requiring authentication
+          for access to exploration services we can control who has access
+          to detailed information about specific devices.
+        </p>
+        <p>
+          This work item will require a coordinated effort with other standards
+          bodies such as IETF also working on discovery so that a common architecture
+          can be defined.  In addition, the architecture proposed by the Working Group
+          needs to support both peer-to-peer discovery and directory-based discovery.
+        </p>
 
         <h3>TD Templates</h3>
-        <p>Instances vs. classes. Subtype and component relationships.</p>
-	      
+        <p>Current
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Descriptions</a>
+          apply to specific Things, for example, particular devices.
+          However, there are often many devices manufactured with the same
+          interface and capabilities.  These devices differ from each other 
+          only in certain specific aspects, 
+          such as being installed in different locations
+          and having different identifiers.
+        </p>
+        <p>
+          The current TD specification includes the definition of a "TD Template"
+          which is a partial TD that omits information that is specific to an instance.
+          However, the current definition of TD Templates 
+          only allows definition of the interaction model without a protocol binding.  
+          During software development however, if we wish to
+          design code to talk to a class of devices, 
+          we may need to have some knowledge of the protocol binding as well.  
+          A closely related problem is that of components: 
+          we may wish to assemble a Thing Description from a set
+          of reusable, modular capabilities.  
+          How is a TD Component to be defined and how are they to be combined
+          into a complete Thing?  How is a Consumer able to determine that a
+          particular Thing supports a specific sub-interface common to a set
+          of Things?
+        </p>
+        <p>
+          This work item will elaborate and refine the TD Template concept so
+          it can satisfy such extended use cases.
+        </p>
+          
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
             <p>The following features are out of scope,
