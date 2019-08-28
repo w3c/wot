@@ -1,0 +1,132 @@
+// DataInstance library examples
+
+// Wrapper functions to enable serialization-neutral semantic interactions
+// with an Exposed Thing using the underlying WoT Scripting API
+
+// A JSON Schema validator is modified to record a JSON pointer for each
+// variable encountered in the instance  being validated
+
+// The JSON pointers are stored in a table, each with the sub-schema corresponding to
+// the instance variable, and used as a meta-data index to the instance variables
+
+// Example Data Instance
+[
+  {
+    "n": "5700",
+    "vb": true
+  },
+  {
+	"n": "5750",
+	"vs": "tester"
+  }
+]
+
+// DataSchema for the above examlpe
+{
+  "type": "array",
+  "allOf": [
+    {
+	    "contains": {
+  		  "type": "object",
+  		  "properties": {
+  		    "n": {
+  		      "type": "string",
+  		      "const": "5700"
+  		    },
+  		    "vb": {
+  		      "type": "boolean",
+  		      "@type": "iot:SwitchData"
+  		    }
+  		  },
+  		  "required": ["n", "vb"]
+		  }
+    },
+      {
+  		"contains": {
+  		  "type": "object",
+  		  "properties": {
+  		    "n": {
+  		      "type": "string",
+  		      "const": "5750"
+  		    },
+  		    "vs": {
+  		      "type": "string",
+  		      "@type": "iot:ApplicationTypeData"
+  		    }
+  		  },
+  		  "required": ["n", "vs"]
+  		}
+    }
+  ]
+}
+
+// new validation function -
+// output the JSON pointer and subschema for each variable encountered during validation
+// use this table internallly to look up instance variables by their meta-data
+[
+  {
+    "path": "/0/vb",
+    "@type": "iot:BinarySwitchData",
+    "type": "boolean"
+  },
+  {
+    "path": "/1/vs",
+    "@type": "iot:ApplicationTypeData",
+    "type": "string"
+  }
+]
+
+// using this table, and other TD metadata, some convenience functions can be bound to instances
+
+thing = local-directory.lookup-by-simple-template;
+light = thing( {"@type": ["iot:Light", "BinarySwitchCapability"] } )
+switch = light.property( {"@type": "iot:BinarySwitch"} )
+rgbcolor = light.property( {"@type": "iot:RGBColor"} )
+turnon = light.action( {"@type": "iot:TurnOnAction"} )
+setlevel = light.action( {"@type": "iot:SetLevelAction"} )
+
+// read() function with and without DataItem filter
+>>> console.log( switch.read( {"@type": "iot:BinarySwitchData"} ))
+true
+
+>>> console.log( switch.read() )
+[{ "@type": "iot:BinarySwitchData", "value": true },
+  { "@type": "iot:ApplicationTypeData", "value": "tester" }]
+
+
+// write() function
+switch.write( {"@type": "iot:ApplicationTypeData", "value": "Light"} )
+
+rgbcolor.write( [
+  {"@type": "iot:RedColorData", "value": 255},
+  {"@type": "iot:RGreenColorData", "value": 255},
+  {"@type": "iot:BlueColorData", "value": 255} ] )
+
+// invoke() function
+turnon.invoke()
+
+setlevel.invoke( [
+  { "@type": "iot:LevelData", "value": 170 },
+  { "@type": "iot:TransitionTimeData", "value": 100 } ] )
+
+
+// chained semantic references
+>>> console.log(
+  thing( {"@type": ["iot:Light", "BinarySwitchCapability"] } )
+  .property( {"@type": "iot:BinarySwitch"} )
+  .read( {"@type": "iot:BinarySwitchData"} ) )
+true
+
+
+// if there is only one Data Item in the Interaction Property, there could be getter/setter decorators
+>>> console.log( thing( {"@type": ["iot:Light", "BinarySwitchCapability"] } )
+  .property( {"@type": "iot:BinarySwitch"} ).get() )
+true
+
+>>> thing( {
+  "@type": ["iot:Light", "BinarySwitchCapability"],
+  "iot:RoomLocation": "iot:StorageRoom" } )
+  .property( {"@type": "iot:BinarySwitch"} ).set(false)
+
+
+//

@@ -1,0 +1,34 @@
+// Sent when battery is low
+
+/*
+
+{
+	"id":"batteryLow",
+	"name":"Low Battery",  
+	"description":"Triggered once when battery drops below 2.8v.",
+	"values":{
+		"state":{
+			"type":"String",
+			"enum":{
+				"REPLACE":"It's time to replace the battery.",
+				"CRITICAL":"This device will die anytime soon"
+			}	
+		}
+	},
+	"customFields":{
+		"status":"active"
+	}	
+}
+
+*/
+
+{
+	"id":56,
+	"type":"batteryLow",
+	"name":"Low Battery",
+    "timestamp":"2015-06-14T18:33:25.938Z",
+	"value":{
+		"state":"CRITICAL"
+	},
+	"tags":["alert"]
+}

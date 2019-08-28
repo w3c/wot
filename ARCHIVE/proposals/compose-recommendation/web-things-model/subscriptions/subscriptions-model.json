@@ -1,0 +1,21 @@
+// POST {wt}/subscriptions
+
+{
+	"subscriberId":"<STRING>",
+	"type":"httpCallback",
+	"customFields":{
+		"<STRING>":"<STRING>"	
+	}
+}
+
+// 201 CREATED
+// Location
+{
+	"subscriberId":"<STRING>",  // a unique Id of the subscriber, given by him when the subs is created, ideally globally unique
+	"type":"httpCallback", // usually an enum, with the various sub type supported by the WT
+	"createdAt":"<TIMESTAMP>", // Server timestamp when the subs was created (milliseconds)
+	"resource":"<STRING>", // This can be which "resource" this subscription has been made to "e.g. {WT}/actions/"
+	"customFields":{
+		"<STRING>":"<STRING>"	
+	}
+}

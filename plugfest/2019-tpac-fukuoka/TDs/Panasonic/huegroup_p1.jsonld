@@ -1,0 +1,73 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+      {"iot": "http://iotschema.org/"}
+  ],
+  "@type": "Thing",
+  "title": "PanasonicHueGroupP1",
+  "id": "urn:uuid:477bfc4a-4c7e-4c55-9125-061b5206decb",
+  "base": "https://w3c.p-wot.com/wot-ver2/things/huegroup/1/",
+  "securityDefinitions": {
+    "bearer_sc": {
+      "scheme": "bearer",
+      "format": "jwt",
+      "alg": "ES256",
+      "authorization": "https://w3c.p-wot.com:8443/auth"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["bearer_sc"],
+  "properties": {
+    "operationStatus": {
+      "@type": "iot:OperationStatus",
+      "title": "operationStatus",
+      "type":"boolean",
+      "observable": true,
+      "forms": [
+        {"href": "operationStatus", "contentType": "application/json"},
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/huegroup/1/operationStatus",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/huegroup/1/operationStatus",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
+    },
+    "rgbValue": {
+      "@type": "iot:CurrentColour",
+      "title": "rgbValue",
+      "type": "object",
+      "properties": {
+        "red":   {"type": "number", "minimum": 0, "maximum": 255},
+        "green": {"type": "number", "minimum": 0, "maximum": 255},
+        "blue":  {"type": "number", "minimum": 0, "maximum": 255}
+      },
+      "observable": true,
+      "forms": [
+        {"href": "color", "contentType": "application/json"},
+        {
+          "href": "https://w3c.p-wot.com:8003/poll/huegroup/1/color",
+          "contentType": "application/json",
+          "subprotocol": "longpoll",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        },
+        {
+          "href": "wss://w3c.p-wot.com:8003/wot-ver2/things/huegroup/1/color",
+          "contentType": "application/json",
+          "op": "observeproperty",
+          "security": ["nosec_sc"]
+        }
+      ]
+    }
+  }
+}

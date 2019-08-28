@@ -1,0 +1,43 @@
+// GET {wt}/properties/
+// 200 OK
+// ?? Link: <temperature/>; rel="property"; <status/>; rel="property"; <acceleration/>; rel="property";
+// Link: <subscriptions/>; rel="subscriptions"
+// Link: <http://webofthings.io/properties>; rel="meta"
+
+[
+	{
+		"id":"temperature",
+		"name":"Kitchen Temperature Sensor",
+		"value":{
+			"temp":22,
+		    "timestamp":"2015-06-14T14:30:00.000Z"
+		}  
+	},
+	{
+		"id":"status",
+		"name":"Device Status",
+		"value":{
+			"status":"OK",
+		    "timestamp":"2015-06-14T14:30:00.000Z"
+		}  
+	},
+	{
+		"id":"acceleration",
+		"name":"Acceleration",
+	    "value":{
+	        "x":22,
+	        "y":22.56,
+	        "z":1.4,
+		    "timestamp":"2015-06-14T14:30:00.000Z"
+	    }
+	},
+	{
+		"id":"engineAngle",
+		"name":"Engine Angle",
+		"value":{
+			"theta":2,
+			"rho":-0.1,
+		    "timestamp":"2015-06-14T14:30:00.000Z"
+		}  
+	}
+]

@@ -1,0 +1,15 @@
+// GET {wt}/actions/
+
+
+// 200 OK
+// Link: <http://webofthings.org/actions/upgradefirmware>; rel="meta"
+[
+	{
+		"id":"upgradeFirmware",
+		"name":"Upgrade Device Firmware"  
+	},
+	{
+		"id":"reboot",
+		"name":"Reboot"  
+	}
+]

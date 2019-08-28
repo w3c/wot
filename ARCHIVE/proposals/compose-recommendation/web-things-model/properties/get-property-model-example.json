@@ -1,0 +1,27 @@
+// GET {wt}/properties/acceleration/model
+// 200 OK
+// Link: <http://webofthings.org/properties/acceleration>; rel="meta"
+
+{
+    "id":"acceleration",
+    "name": "Acceleration",
+    "description": "A 3D acceleration sensor.",
+    "values":{
+        "x":{
+            "name":"Y-axis",
+            "description":"The X dimension of the sensor",
+            "unit":"meter per second squared"
+        },
+        "y":{
+            "name":"Y-axis",
+            "description":"The Y dimension of the sensor",
+            "unit":"meter per second squared"
+        },
+        "z":{
+            "name":"Z-axis",
+            "description":"The Z dimension of the sensor",
+            "unit":"meter per second squared"
+        }
+    },
+    "tags":["sensor","public"]
+}

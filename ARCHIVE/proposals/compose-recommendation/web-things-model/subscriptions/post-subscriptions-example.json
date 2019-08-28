@@ -1,0 +1,24 @@
+// POST {wt}/subscriptions
+
+{
+	"subscriberId":"<STRING>",
+	"type":"httpCallback",
+	"customFields":{
+		"<STRING>":"<STRING>"	
+	}
+}
+
+// 201 CREATED
+// Location
+{
+	"subscriberId":"<STRING>", 
+	"type":"httpCallback", 
+	"createdAt":"<TIMESTAMP>", 
+	"resource":"<STRING>",
+	"customFields":{
+		"<STRING>":"<STRING>"	
+	}
+}
+
+
+

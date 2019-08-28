@@ -1,0 +1,51 @@
+// POST {wt}/actions/{actionType}
+{
+	"value":{
+		"a":"<Value>",
+		"b":"<Value>",
+	},
+	"timestamp":"<Timestamp>",
+	"customFields":"<customFields>"
+}
+
+// 201 Created
+// Location: {wt}/actions/{actionType}/{actionId}
+
+
+
+// POST {wt}/actions/reboot
+{
+	"value":{
+		"delay":50,
+		"mode":"debug"
+	}
+}
+
+// 201 Created
+// Location: {wt}/actions/reboot/233
+{
+	"id":233,
+	"type":"reboot",
+	"status" : "executing",
+    "timestamp":"2015-06-14T14:30:00.000Z",
+	"value":{
+		"delay":50,
+		"mode":"debug"
+	}
+}
+
+
+
+// GET {wt}/actions/reboot/233
+
+// 200 OK
+// Link: <http://webofthings.org/actions/reboot>; rel="meta"
+{
+	"id":233,
+	"status" : "buffered|executing|succeeded|failed",
+    "timestamp":"2015-06-14T14:30:00.000Z",
+	"value":{
+		"delay":50,
+		"mode":"debug"
+	}
+}

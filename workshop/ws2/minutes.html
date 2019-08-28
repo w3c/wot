@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Second W3C Workshop on the Web of Things
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="banner.css">
+<meta content="2nd WoT Workshop - Day 1" name="Title" />
+<style type="text/css">
+ol.toclist li {
+margin-left: 25px;
+margin-top: 0px;
+margin-bottom: 8px;
+}
+
+figure.gazo-box {
+float: none;
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+}
+</style>
+</head>
+
+<body>
+    <header class="header h-event">
+    <p>
+        <a href="https://www.w3.org/"><img alt="W3C" src="https://www.w3.org/Icons/w3c_home" height="48" width="72"></a>
+    </p>
+    <div id="top">
+    <h1>Second W3C Workshop on the Web of Things<br>
+	The Open Web to Challenge IoT Fragmentation</h1>
+    <h2>3-5 June 2019, Munich, Germany</h2>
+    </div>
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="cfp.html">Home Page</a></li>
+            <li><a href="participation.html">How to Participate</a></li>
+            <li><a href="committee.html">Program Committee</a></li>
+            <li><a href="schedule.html">Workshop Agenda</a></li>
+            <li><a href="minutes.html">Minutes</a></li>
+            <li><a href="submissions.html">Position Statements</a></li>
+            <li><a href="" class="disabled">Report</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- group photo here -->
+<figure class="gazo-box">
+<a href="https://www.w3.org/2019/06/wot-ws/day2/photos/Group-photo.png">
+<img src="https://www.w3.org/2019/06/wot-ws/day2/photos/Group-photo_480x360.png" alt="group photo from the Second Web of Things Workshop on 3-5 June 2019" />
+</a>
+<p>Group photo from the Second Web of Things Workshop on 3-5 June 2019<br/>
+(Some more photos from
+  <a href="https://www.w3.org/2019/06/wot-ws/openday/photos/">OpenDay</a>,
+  <a href="https://www.w3.org/2019/06/wot-ws/day1/photos/">Day 1</a>
+  and <a href="https://www.w3.org/2019/06/wot-ws/day2/photos/">Day 2</a>
+  are also available online :)</p>
+</figure>
+
+<h2><a name="attendees" id="attendees">Attendees</a></h2>
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd>
+Alan_Bird_(W3C), 
+Alexander_Kotsev_(European_Commission/DG_JRC), 
+Andrea_Cimmino_(Universidad_Politécnica_de_Madrid), 
+Andrei_Ciortea_(University_of_St._Gallen/Inria), 
+Anicic_Darko_(Siemens), 
+Aparna_Thuluva_(Siemens), 
+Ari_Keränen_(Ericsson), 
+Ben_Francis_(Mozilla), 
+Benjamin_Klotz_(BMW/EURECOM), 
+Chinn_Lim_(Government_Technology_Agency, Singapore), 
+Christian_Glomb_(Siemens), 
+Cristiano_Aguzzi_(University_of_Bologna), 
+Daniel_Harris_(University_of_Southampton), 
+Daniel_Peintner_(Siemens), 
+Dave_Raggett_(W3C), 
+David_Ezell_(Conexxus), 
+Dominique_Guinard_(EVRYTHNG), 
+Ege_Korkan_(Technical), 
+Eric_Siow_(Intel), 
+Gerald_Haesendonck_(Ghent_University/imec), 
+Gilles_Privat_(Orange), 
+Hassib_Belhaj_(Technical), 
+Hund_Johannes_(EcoG), 
+Jeff_Jaffe_(W3C), 
+Jens_Schimmelpfennig_(Software_AG), 
+Jose_Manuel_Cantera_Fonseca_(FIWARE), 
+Joshue_O_Connor_(W3C), 
+Jay_Zhou_(Xiaomi), 
+Katharina_Schleidt_(DataCove), 
+Kathy_Giori_(Mozilla), 
+Kazuyuki_Ashimura_(W3C), 
+Kunihiko_Toumura_(Hitachi), 
+Luca_Sciullo_(University_of_Bologna), 
+mahda_noura_(Technische), 
+Mahda_Noura_(Technische), 
+Marta_Sabou_(Siemens), 
+Matthias_Kovatsch_(Huawei), 
+Matthias_Lieske_(Hitachi), 
+Michael_Jacoby_(Fraunhofer), 
+Michael_Koster_(SmartThings/Samsung), 
+Michael_Lagally_(Oracle), 
+Michael_McCool_(Intel), 
+Milan_Milenkovic_(IoTsense), 
+Nonoka_Jinushi_(Keio_University), 
+Oliver_Pfaff_(Siemens), 
+Phil_Coval_(Samsung/OSG), 
+Rainer_Schiekofer_(Siemens/OPC_UA), 
+Ryuichi_Matsukura_(Fujitsu), 
+Sascha_Meckler_(Fraunhofer), 
+Simon_Mayer_(University), 
+Soumya_Kanti_Datta_(EURECOM,), 
+Takahisa_SUZUKI_(Fujitsu), 
+Takeshi_Yamada_(Panasonic), 
+Takuki_Kamiya_(Fujitsu), 
+Thomas_Bergwinkl_(Zazuko), 
+Tomoaki_Mizushima_(Internet), 
+Toru_Kawaguchi_(Panasonic), 
+Verena_Schlott_(Ludwig_Maximilian_University_of_Munich), 
+Victor_Charpenay_(FAU), 
+Xiaowei_Jiang_(Xiaomi), 
+Zoltan_Kis_(Intel)
+</dd>
+<dt>Remote</dt>
+<dd>Michael_Koster_(SmartThings)</dd>
+<dt>Chair</dt>
+<dd>Lagally, Sebastian</dd>
+<dt>Scribe</dt>
+<dd>Day 1: Taki, Zoltan, Soumya, Ege</dd>
+<dd>Day 2: Toru, Taki, McCool, Matthias</dd>
+</dl>
+</div>
+
+
+<h2 id="toc">Contents</h2>
+<ol class="toclist">
+<li><a href="#day1">Day 1: Tuesday, June 4</a>
+  <ol class="toclist">
+  <li><a href="#day1-item01">Welcome and Scene Setting</a></li>
+  <li><a href="#day1-item02">Dominique Guinard's presentation.</a></li>
+  <li><a href="#day1-item03">Johannes Hund's presentation on EV charging</a></li>
+  <li><a href="#day1-item04">Realizing "Lifestyle Update" through WoT</a></li>
+  <li><a href="#day1-item05">Abstracting and Interacting with Vehicles in the Web of Things (BMW)</a></li>
+  <li><a href="#day1-item06">a WoT Gateway with device virtualization (Fujitsu)</a></li>
+  <li><a href="#day1-item07">Describing Legacy Data in Thing Descriptions (Fujitsu)</a></li>
+  <li><a href="#day1-item08">Research and survey of use case for wot</a></li>
+  <li><a href="#day1-item09">MIoT Platform</a></li>
+  <li><a href="#day1-item10">Virtual-Thing: TD based Virtualization</a></li>
+  <li><a href="#day1-item11">WoT Store</a></li>
+  <li><a href="#day1-item12">Rapid IoT App Development</a></li>
+  <li><a href="#day1-item13">Siemens: Security from Oliver Pfaff</a></li>
+  <li><a href="#day1-item14">Web of Twins from Philippe Coval</a></li>
+  </ol>
+</li>
+<li><a href="#day2">Day 2: Wednesday, June 5</a>
+  <ol class="toclist">
+  <li><a href="#day2-item01">Agenda Overview of Day 2</a></li>
+  <li><a href="#day2-item02">Keynote: Standardization Needs for the Smart City</a></li>
+  <li><a href="#day2-item03">Scripting API for the Web of Things</a></li>
+  <li><a href="#day2-item04">Schema.org extensions for IoT</a></li>
+  <li><a href="#day2-item05">Standard Behavior Descriptions for the Web of Things</a></li>
+  <li><a href="#day2-item06">Towards Semantic Interoperability in WoT Ecosystems - Andrea Cimmino, María Poveda-Villalón and Raúl García-Castro (Universidad Politécnica de Madrid)</a></li>
+  <li><a href="#day2-item07">Linked Data in the Web of Things - Gerald Haesendonck, Anastasia Dimou, Ruben Verborgh and Ben De Meester (Ghent University)</a></li>
+  <li><a href="#day2-item08">Increase WoT impact using transferable validation - Ben De Meester, Gerald Haesendonck, Ruben Verborgh and Anastasia Dimou (Ghent University)</a></li>
+  <li><a href="#day2-item09">Making IoT useful for Fueling and Convenience Retail - David Ezell (Conexxus)</a></li>
+  <li><a href="#day2-item10">WoT Graph as Multiscale Digital-Twin for Cyber-Physical Systems-of-Systems - Gilles Privat, Thierry Coupaye, Sebastien Bolle and Philippe Raipin (Orange)</a></li>
+  <li><a href="#day2-item11">WoT and IoT - What's the difference? (Oracle)</a></li>
+  <li><a href="#day2-item12">Next Steps for the Web of Things (Intel)</a></li>
+  <li><a href="#day2-item13">WoT Simplifies Industry Applications (Siemens)</a></li>
+  <li><a href="#day2-item14">Towards interworking between NGSI-LD and WoT (ETSI/FIWARE)</a></li>
+  <li><a href="#day2-item15">Exploiting Interaction Affordances</a></li>
+  <li><a href="#day2-item16">Wrap-Up</a></li>
+  </ol>
+</li>
+</ol>
+
+<hr />
+<div class="meeting">
+<h2 id="day1">Day 1: Tuesday, June 4</h2>
+  
+<p class='irc'>&lt;<cite>inserted</cite>&gt; scribenick: taki1</p>
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item01">Welcome and Scene Setting</h3>
+<p class='phone'><cite>Sebastian:</cite> I also say to hello to
+everyone.<br />
+... I would like to intriduce Michael Lagally.<br />
+... we have two chairs.</p>
+<p class='phone'><cite>Lagally:</cite> I am very pleased to be
+here.<br />
+... I worked on Architecture, TD, etc. Joined over a year
+ago.<br />
+... we want to discuss next step, gather new ideas.<br />
+... Kaz wored really hard.</p>
+<p class='phone'><cite>Kaz:</cite> I am the team contact for WoT
+WG.<br />
+... Thank you very much for coming.</p>
+<p class='phone'><cite>Lagally:</cite> welcome Matthias
+Kovasch.<br />
+... Welcome Michael McCool.<br />
+... Welcome Zontan.<br />
+... Welcome Michael Koster.</p>
+<p class='phone'><cite>Sebastian:</cite> you are aware that they
+are main players.<br />
+... I give you some thoughts.<br />
+... who joined the first workshop?<br />
+... it appears half of the audience joined<br />
+... it was 4-5 years ago.<br />
+... it was a great event.<br />
+... we reached the first milestone.<br />
+... this workshop should create new roadmaps.</p>
+<p class='phone'>lagally explains the timeline slide...</p>
+<p class='phone'><cite>Lagally:</cite> there are two groups.<br />
+... IG and WG.<br />
+... we had a demo session. there is demo next room today too.<br />
+... working group is working on specifications.<br />
+... now we are here in 2nd workshop.<br />
+... to get things compiled, how TD can be useful in new
+scenarios.<br />
+... and define charter for the next 2 years.<br />
+... we are planning new task forces depending on new ideas.</p>
+<p class='phone'>Kaz explains workshop statistics.</p>
+<p class='phone'><cite>Kaz:</cite> Participants, open day 140,
+workshop 61<br />
+... organizations 60 adn 46.<br />
+... new comers 25 and 14.<br />
+... new comers are very important.</p>
+<p class='phone'>Sebastian talk about logistics...</p>
+<p class='irc'>&lt;<cite>rzr</cite>&gt; <a href=
+"http://irc.w3.org/?channels=#wotws">http://irc.w3.org/?channels=#wotws</a>
+is the right link</p>
+<p class='irc'>&lt;<cite>rzr</cite>&gt; not w3c.org</p>
+<p class='phone'>Lagally is talking about agenda...</p>
+<p class='phone'><cite>Lagally:</cite> morning, welcome session.
+briefing from Jeff.<br />
+... then usecases deployments.<br />
+... and tooling and implementations.<br />
+... afternoon contines, coffee break. then security and
+provacy.<br />
+... wrapup at the end of the day.<br />
+... seond day. keynote speech from Mr. Chinn Hwa Lim<br />
+... Future work, collaboration with SDO in afternoon.<br />
+... next step and wrap up at the end of 2nd day again.</p>
+<p class='phone'><cite>Sebastian:</cite> social event
+tonight.<br />
+... we can go to beer garden.<br />
+... it is *not* sponsored.<br />
+... Where we go, I will let you know later.<br />
+... thank you again. yesterday was great, and let's continue.</p>
+<p class='phone'><cite>Jeff:</cite> Good morning.<br />
+... thank you Sebastian.<br />
+... WoT made progress.<br />
+... yesterday was a celebration.<br />
+... congratulations.<br />
+... today is about doing some hard work.<br />
+... to figure out what to do next.<br />
+... please take agenda seriously.<br />
+... learn from each other.<br />
+... what are most important for us to work next.<br />
+... and learn what people are doing.<br />
+... including liaisons with IoT-oriented organzations.<br />
+... thank you.</p>
+<p class='phone'><cite>Matthias:</cite> thank you</p>
+<p class='phone'>Matthias explains what WoT has achieved...</p>
+<p class='phone'><cite>Matthias:</cite> there were many IoT
+eco-systems.<br />
+... unfortunately there were IoT silos.<br />
+... could not interoperate even when they used the same
+protocols.<br />
+... WoT enables applications.<br />
+... by simplifying integration.<br />
+... there was internet, and applications on top. This is analogy.
+WWW did good job to interconnect applications.<br />
+... IoT is in similar situation.<br />
+... IP is common, but on top IP, IoT eco-systems are
+different.<br />
+... We wanted to use Web technology.<br />
+... we defined building blocks.<br />
+... to interconnect silos.<br />
+... Web Thing has interaction model with narrow waist model.<br />
+... Thing description is the centerpiece.<br />
+... scripting api is working note.<br />
+... we should gather more experiences.<br />
+... security concerns. security and privacy guidance for secure
+WoT.<br />
+... This is high overview.</p>
+<p class='phone'>Lagally talks about WoT architecture...</p>
+<p class='phone'><cite>Lagally:</cite> cloud service can be a
+Thing.<br />
+... edge can be a Thing. mobile devices can be a Thing.<br />
+... Things can be used/exposed,<br />
+... Zigbee, etc. many protocols can be used.<br />
+... appliances, fridges, lamps. industry devices.<br />
+... virtual device can be a Thing.<br />
+... as long as it can be described by TD.<br />
+... There is Interaction affordances. properties, actions and
+events.<br />
+... event notifies events.<br />
+... Hypermedia control. Can relate things by links.<br />
+... forms can describe how to submit requests to Things.<br />
+... architecture consists of several building blocks.<br />
+... TD contains information model, vocabulary, JSON-LD
+representation.<br />
+... Binding Templates is for integrating various protocols.<br />
+... Scripting API. ECMAScript-based API<br />
+... security and privacy guidelines. cross-cutting security
+guidelines.</p>
+<p class='phone'>Lagally explains what is TD...</p>
+<p class='phone'>Lagally explains what is protocol bindings
+are...</p>
+<p class='phone'>Lagally talks on communcations model between Thing
+and Consumer...</p>
+<p class='phone'><cite>Lagally:</cite> TD is the lingua franca.</p>
+<p class='phone'>Lagally talks on indirect communications through
+intermediary...</p>
+<p class='phone'><cite>Lagally:</cite> typically it is a proxy.
+home network has firewall.<br />
+... servient in the middle can also aggregate many things.<br />
+... architecture itself is flexible.</p>
+<p class='phone'>Sebastian introduces Thing Description...</p>
+<p class='phone'>Sebastian talk on motivation behind TD...</p>
+<p class='phone'><cite>Sebastian:</cite> automation devices are
+often accompanied with paper documentation.<br />
+... you have webpage manual.<br />
+... and also code-snippets.<br />
+... what is the name, URI? Functionality, what kind of data?
+Engineers need to know.<br />
+... protocols, serialization, security requirements... Engineers
+need to know.<br />
+... TD should provide those information.<br />
+... People start with landing HTML page and can interact with Web
+application.<br />
+... TD is the same for WoT.<br />
+... TD can describe many kinds of devices.<br />
+... TD is based on JSON, consistent with JSON-LD.<br />
+... TD spec defines very small set of terms.<br />
+... title, id, created time, and other metadata.<br />
+... TD contains security schemes.<br />
+... TD has property, action and events.<br />
+... TD has datatype system borrowed from JSON-LD.<br />
+... TD provides context extension.<br />
+... If you want, you can add additional term definitons such as
+iot.schema.org.<br />
+... This is a powerful constructs, and allows to use existing
+knowledge.<br />
+... TD allows use of links.<br />
+... This was TD internal.</p>
+<p class='phone'>Question: addition of context, isn't it
+metadata?</p>
+<p class='phone'><cite>Matthias:</cite> whole TD is metadata.</p>
+<p class='phone'>Question: you can plugin additioal semantics.</p>
+<p class='phone'><cite>Sebastian:</cite> Yes, exactly.<br />
+... e.g. industry-specific terms.</p>
+<p class='phone'><cite>McCool:</cite> we use extension for protocol
+binding as well.</p>
+<p class='phone'>Question: agreement is necessary for
+semantics.</p>
+<p class='phone'><cite>Sebastian:</cite> Yes.</p>
+<p class='phone'>Joshue modular accessibility semantics, for
+example.</p>
+<p class='phone'><cite>McCool:</cite> we should incubate semantic
+modules.<br />
+... for now core vocabulary is very slim.</p>
+<p class='phone'><cite>Matthias:</cite> bottom-up semantics and
+top-level semantics.</p>
+<p class='phone'>Sebastian continues on explaining protocol
+binding...</p>
+<p class='phone'><cite>Sebastian:</cite> we are open to using other
+protocols.<br />
+... context extention can play a role here as well for changing
+parameters of protocols.<br />
+... It was a brief introduction to TD.</p>
+<p class='phone'>Zoltan starts introducing Scripting API...</p>
+<p class='phone'><cite>Zoltan:</cite> the work started in IG.<br />
+... in Working group, used GitHub to develop working group
+Note.<br />
+... it is API for node.js. Not really for browser. This is an
+issue.<br />
+... Web has scripting API. It is easy to use for everyone.<br />
+... half of all web develpers develops JavaScript programs.<br />
+... webpage, URL, HTML. Thing, URI, WoT Scripts. there are
+analogies.</p>
+<p class='phone'>Zoltan explains Scripting API's role in
+architecture.</p>
+<p class='phone'><cite>Zoltan:</cite> Scripting API is for
+describing behaviours.<br />
+... scripts can run on cloud, gateway or on devices.</p>
+<p class='phone'>Zoltan explains three approaches....</p>
+<p class='phone'><cite>Zoltan:</cite> no exposed API, simple API
+(e.g. Dave Ragget's proposal) and current API.<br />
+... current API follows TD specification closely.<br />
+... we will discuss more tomorrow.<br />
+... I also like simple API as well.<br />
+... Ege tried other languages.<br />
+... we documented everything.</p>
+<p class='phone'><cite>Jeff:</cite> is it a matter of fashion? plus
+and minuses. what is the fasion? how do you decide what is
+best?</p>
+<p class='phone'><cite>Zoltan:</cite> we listen to people.</p>
+<p class='phone'><cite>Matthias:</cite> people prefer different
+approaches depending on who you ask.</p>
+<p class='phone'><cite>Jeff:</cite> we can describe which community
+should use which styles.</p>
+<p class='phone'><cite>Matthias:</cite> some people also say they
+do not need scripting API, some others suggest simplification.</p>
+<p class='phone'><cite>Zoltan:</cite> you need to be aware of other
+languages.<br />
+... time will tell.</p>
+<p class='phone'><cite>Kaz:</cite> possible impact on e.g. NHK
+broadcasting company. They used updated scripting.<br />
+... we also need to talk with those industry guys.</p>
+<p class='phone'>McCool talk on security and provacy
+guidelines...</p>
+<p class='phone'><cite>McCool:</cite> WoT is descriptive. we are
+not defining new security mechanism.<br />
+... each document has security and privacy section.<br />
+... TD spec has one section as well.<br />
+... we created security and provacy guideline document.<br />
+... there is also security testing plan document.<br />
+... best guideline is evolving.<br />
+... we need to constantly update this separate guideline
+document.<br />
+... TD can describe insecure devices as well.</p>
+<p class='phone'><cite>Kathy:</cite> security is out of band of
+TD.<br />
+... secure-wiress connection, for example.<br />
+... therefore, very confusing.</p>
+<p class='phone'><cite>McCool:</cite> We call it security schemes.
+TD is about describing how to access a Thing.<br />
+... to help developers.</p>
+<p class='phone'><cite>Kathy:</cite> why we need it?</p>
+<p class='phone'><cite>McCool:</cite> We had discussion.</p>
+<p class='phone'><cite>Kathy:</cite> security is somewhere
+else.</p>
+<p class='phone'><cite>McCool:</cite> TD should describe some
+information.</p>
+<p class='phone'><cite>Lagally:</cite> we have dedicated security
+discussion. FYI.</p>
+<p class='phone'><cite>Matthias:</cite> we aee also following IETF
+work.</p>
+<p class='phone'>Lagally explains subsequent agendas.</p>
+<p class='phone'><cite>Lagally:</cite> Please observe time.<br />
+... we are 37 minutes late.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item02">Dominique Guinard's presentation.</h3>
+<p class='phone'><cite>Dom:</cite> web of all other things. CPG,
+apparel, etc.<br />
+... I write "building the web of things".<br />
+... IoT came from researcher presentation at P&amp;G .<br />
+... company connects billion things.<br />
+... majority is everyday thing. CPG goods, bluetooth devices,
+etc.<br />
+... every thing can have digital identity.<br />
+... the other end there is enterprise.<br />
+... in apparel, counterfits are problems.<br />
+... samsung worked on washing machine that understands what it is
+washing.<br />
+... there are now smart closet, etc.<br />
+... transportation. what tracks are carrying.<br />
+... Amazon Go need to understand everything in store.<br />
+... it requires standardization.<br />
+... our company undersands needs for standardizing CPG, Apparel,
+Pharma.<br />
+... GS1 well known for barcodes.<br />
+... Digital Link and EPCIS. Web identity and tracking. those two
+standards are important.<br />
+... GS1 Digital Link standard. I chair this group.<br />
+... fastest standard in GS1 ever.<br />
+... it gives identity to everything.<br />
+... can fetch information from URI.<br />
+... Coca Cola produces billions of items a year. it was not
+possible a couple of years.<br />
+... Now technologies changed to make it possible.<br />
+... transform dumb number into URL.<br />
+... NFC tag, for example. can carry URI.<br />
+... user resolver delivers web content for digital links.</p>
+<p class='phone'>Dom shows WOMI as GS1 DIgital link.</p>
+<p class='phone'><cite>Dom:</cite> is it for salmon.<br />
+... QRCode structure. base url, product category, GTON, batch
+number...<br />
+... If you click, it shows salmon information. where it was born,
+it was put into sea, how it was harvested.<br />
+... nice story about salmon.<br />
+... this was just an example.<br />
+... There are open source tools.<br />
+... next one is EPCIS 2.0 for making track and trace first class
+citizen of the Web.<br />
+... EPCIS 1.0 exists already.<br />
+... 2.0 is moving information system into the Web.<br />
+... movement of goods cab be described.<br />
+... 1.1 was based on SoAP.<br />
+... 2.0 is REST and JSON-LD.</p>
+<p class='phone'>Dom shows an example of EPCIS...</p>
+<p class='phone'><cite>Dom:</cite> Back to W3C WoT building
+bridges.<br />
+... Building bridges for all the things!<br />
+... use cases to merge the two world.<br />
+... we can print sensors. it is happening.<br />
+... questions?</p>
+<p class='phone'><cite>McCool:</cite> privacy concerns?</p>
+<p class='phone'><cite>Dom:</cite> One million dollar
+question.<br />
+... same as smart things.<br />
+... we need framework in place.</p>
+<p class='phone'><cite>McCool:</cite> QRCode and smart things are
+different in nature.</p>
+<p class='phone'><cite>Dom:</cite> QRCode does not cause problem
+unless it becomes active.<br />
+... we are working on it.</p>
+<p class='phone'><cite>Victor:</cite> content negotiation. is it
+machine-readable from the URI?</p>
+<p class='phone'><cite>Dom:</cite> Yes. JSON-LD.<br />
+... You can also use link-type. two formats are mandatory. JSON and
+JSON-LD.</p>
+<p class='phone'><cite>Victor:</cite> Bottle interact with other
+smart thing. How is it so?</p>
+<p class='phone'><cite>Dom:</cite> pack of straeberry and the
+track. the temperature need to be set accordingly.</p>
+<p class='phone'><cite>Zoltan:</cite> trucks have energy
+source.</p>
+<p class='phone'><cite>Dom:</cite> exactly.<br />
+... Tag can be destroyed at checkout.</p>
+<p class='phone'>Question: bluetooth can do what extra?</p>
+<p class='phone'><cite>Dom:</cite> not really.</p>
+<p class='phone'><cite>Jeff:</cite> Did you use TD?</p>
+<p class='phone'><cite>Dom:</cite> I have not. But it is the
+intention.</p>
+<p class='phone'>Question: How can we pilot?</p>
+<p class='irc'>&lt;<cite>inserted</cite>&gt; scribenick: taki</p>
+<p class='phone'><cite>Kathy:</cite> SmartThing already does
+that.</p>
+<p class='phone'><cite>Dom:</cite> we are waiting for WoT
+Recommendation ratification.</p>
+<p class='irc'>&lt;<cite>inserted</cite>&gt; scribenick: taki2</p>
+<p class='phone'><cite>Dom:</cite> tag printing pricing is
+shrinking.<br />
+... NFC 5 cents tag. UHF tag 1 cent. bluetooth tag is a bit
+expensive.</p>
+<p class='phone'><cite>Zoltan:</cite> NFC readers are
+expensive.</p>
+<p class='phone'><cite>Dom:</cite> Every phone has one.</p>
+<p class='phone'><cite>Lagally:</cite> Thank you.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item03">Johannes Hund's presentation on EV charging</h3>
+<p class='phone'><cite>Johannes:</cite> I was active in this
+group.<br />
+... Now working in EcoG<br />
+... FTP, NNTP... survival of fittest.<br />
+... Java Applets are extinct.<br />
+... mail is now read and write in web mailer.<br />
+... Occam's razor of green field IT<br />
+... web front end, API is REST api. This is how people do
+now.<br />
+... IIoT space. Web is pushed by people in this room.<br />
+... domain of silos. OPC-UA. Bacnet, ...<br />
+... vendor platform silos. gRPC, AWS IoT...<br />
+... EV charging domain: OCPP<br />
+... current version 1.6 switched to JSON over websocket.<br />
+... monitor and controls charging station.<br />
+... extension can be used.<br />
+... there are many parties involved.<br />
+... multi-stake holders<br />
+... field charging HW manufacturer automotive, site owner,
+utility...<br />
+... Highly complex game. Charing car use more electricity than a
+home.<br />
+... there are fleets of buses for example.<br />
+... web enables multi-stake holder system.<br />
+... promises of web.<br />
+... seamless IT integration. single signon.<br />
+... integration of payment, calendar, maps ...<br />
+... field-level integration into web is necessary.<br />
+... parking sensors. cashier, the vehicle's IVI requires
+that.<br />
+... web-ecosystem. 75% of all developers are web developers.<br />
+... you want to tap into those developers.<br />
+... long-tail market. Web was about niches that everyone can come
+up with.<br />
+... that makes break-through happen.<br />
+... WoT and IIoT. cross-domain integration crossing
+boundaries.<br />
+... aonyone use React.js. we have react-wot implementation.<br />
+... including scripting API.<br />
+... Thank you.</p>
+<p class='phone'><cite>Zoltan:</cite> TD. WHo writes it?</p>
+<p class='phone'><cite>Johannes:</cite> REST API, WoT runtime.
+Mobilephone uses bluetooth LE. Binding should be simple.<br />
+... It should be an effort of an hour.</p>
+<p class='phone'><cite>Zoltan:</cite> do you plan to publish
+TD?</p>
+<p class='phone'><cite>Johannes:</cite> sometimes we use internal
+API. other time we use public API.</p>
+<p class='phone'><cite>Alan_B:</cite> transportation workshop.
+transportation and WoT. I encourage to submit position pater.</p>
+<p class='phone'><cite>Alan:</cite> will be in September.</p>
+<p class='phone'><cite>McCool:</cite> different of WoT vs
+openapi.</p>
+<p class='phone'><cite>Johannes:</cite> we do not have TD
+yet.<br />
+... I currently use swagger. WoT is similar.<br />
+... establising pattern is special in WoT.</p>
+<p class='phone'><cite>Milan:</cite> why you need new OS?</p>
+<p class='phone'><cite>Johannes:</cite> it is more about software
+for charging.<br />
+... powerline communcation, charging station safety-oriented
+protocols, every vehicles are different.<br />
+... our model is software as service.</p>
+<p class='phone'><cite>Lagally:</cite> thank you.</p>
+<p class='phone'><cite>Kathy:</cite> I will make demo after Ben's
+presentation.</p>
+<p class='phone'><cite>Ben:</cite> I and Kathy are from
+Mozilla.<br />
+... we are NPO.<br />
+... we are working on emerging technologies including IoT.<br />
+... and WoT implementation.</p>
+<p class='phone'>Ben shows mizilla IoT team...</p>
+<p class='phone'><cite>Ben:</cite> WebThings is an open
+source.<br />
+... there are gateway and framework.<br />
+... there are smart home use cases...<br />
+... different vendors, different proticols.</p>
+<p class='phone'>Ben shows gateway architecture...</p>
+<p class='phone'><cite>Ben:</cite> front-end, back-end and
+adapters.<br />
+... TLS tunneling service.<br />
+... We have pre-built images for gateways.</p>
+<p class='phone'>Ben shows gateway UI...</p>
+<p class='phone'><cite>Ben:</cite> there us a rule engine.<br />
+... it can show logs.<br />
+... experimental voice feature.<br />
+... there is add-on for browsers.<br />
+... 30K downloads so far.<br />
+... goal is to put directly into routers.</p>
+<p class='phone'>Ben shows framework example...</p>
+<p class='phone'><cite>Ben:</cite> challenges.<br />
+... HTTPs in local networks.<br />
+... self-signed certificate is not secure.<br />
+... there are workarounds but not ideal solution.<br />
+... W3C group HTTP on local network is working on this.<br />
+... Chalkenge 2 is HTTP on resource constrained devices.<br />
+... use of gateway. websocket is still heavyweight. CoAP is not
+native supported by browsers.<br />
+... challenge 3. autentication.<br />
+... it relies on gateway.<br />
+... challenge 4. Scripting API.<br />
+... client side mimned mainly at Java Script.<br />
+... framework implement different APIs fpr each languages.<br />
+... challenge 5. declarative protocol bindings.<br />
+... in practice, WoT protocol binding is not felxible enough.<br />
+... but making TD more complex is not good.<br />
+... we recommend to use gateway.<br />
+... we provide Web Thing Description, REST API, Websocket API.
+Those three documents.<br />
+... We propose to simplify TD spec, and create Thing protocol spec
+for each binding.</p>
+<p class='phone'>Ben suggests charter proposal...</p>
+<p class='phone'><cite>Ben:</cite> TD spec should be usable without
+need for binding template.<br />
+... add protocol binding as another deliverable.</p>
+<p class='phone'><cite>McCool:</cite> What should be included?</p>
+<p class='phone'><cite>Ben:</cite> REST API should be separate.</p>
+<p class='phone'><cite>Sebastian:</cite> TD supports the use of RDF
+definition of HTTP.<br />
+... you are expecting the same for other protocols.<br />
+... they should be done in same way as HTTP.</p>
+<p class='phone'><cite>Ben:</cite> REST support was not flexible
+enough in our experiment.</p>
+<p class='phone'><cite>Sebastian:</cite> multiple resouce. what is
+it?</p>
+<p class='phone'><cite>Ben:</cite> action queue. action resource,
+and delete or cancel it.<br />
+... there is no way defined right now.</p>
+<p class='phone'><cite>Kathy:</cite> desk in mountain view.<br />
+... turn on kitchen.<br />
+... you can see them turned on.</p>
+<p class='phone'>Kathy is demonstrating Mozilla WebOfThing.</p>
+<p class='phone'><cite>Kathy:</cite> there are add-ons.<br />
+... I have a light, door-sensor, open weather map.</p>
+<p class='phone'>Kathy shows log information...</p>
+<p class='phone'><cite>Kathy:</cite> that was my demo.</p>
+<p class='phone'><cite>Johannes:</cite> collections are not
+expressable right now. we can publish a note. We can dicuss what
+are missing.</p>
+<p class='phone'><cite>Ben:</cite> need for describing existing
+protocols. TD gets more complex.<br />
+... we should come up with compromise.</p>
+<p class='phone'><cite>Jeff:</cite> we cannot reach a conclusion
+today. we need to dicuss charter with chairs.</p>
+<p class='phone'><cite>Matthias:</cite> we skipped some features to
+see convergence.<br />
+... HATEOAS for example.<br />
+... we needed to publish core standard first.<br />
+... I hope we can settle the differences.</p>
+<p class='phone'><cite>Ben:</cite> We tried to bridge real devices
+but it did not work. what is why we are making this proposal.</p>
+<p class='phone'><cite>Lagally:</cite> ready for coffee
+break?<br />
+... if you have requirements, please put them together and
+submit.</p>
+<p class='phone'><cite>McCool:</cite> we can incubate in IG.<br />
+... compromise can be the use of defaults to bridge the gap in two
+approaches.</p>
+<p class='irc'>&lt;<cite>kaz</cite>&gt; [break till 12:25]</p>
+<p class='irc'>&lt;<cite>zkis</cite>&gt; scribenick: zkis</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item04">Realizing "Lifestyle Update" through WoT</h3>
+<p class='phone'>Panasonic home IoT: connected, SW defined,
+upgradeable.</p>
+<p class='phone'>Intend to support already connected devices in WoT
+abstract architecture.</p>
+<p class='phone'>Using a local/home gateway to support existing
+devices.</p>
+<p class='phone'>Panasonic presented a demo with a Smart home room,
+virtual things (simulator), a WoT client in a browser and a WoT
+client on Node-RED.</p>
+<p class='phone'>Panasonic exposed APIs based on WoT interaction
+model</p>
+<p class='phone'>One such application is HomeX which leverage
+Panasonic "touchpoints" in the home (all things controllable).</p>
+<p class='phone'>Showing a concept video, presenting use cases,
+e.g. assisted laundry program, notifying about favorite TV programs
++ switching on TV, multi-room music playback with user presence
+sensing, tips about food preparation.</p>
+<p class='phone'>Expectations on standardization: align with
+existing standards as much as possible, using WoT interaction
+model. For APIs we need domain specific vocabularies.</p>
+<p class='phone'>Some of them are covered (home appliances), others
+are not (audio-visual, outside home, etc).</p>
+<p class='phone'>Questions.</p>
+<p class='phone'>Question about the own API vs TD + bindings.
+Answer: open API and TD are complementing each other.</p>
+<p class='phone'>Question: the Panasonic API was presented, in
+previous presentation a REST API was mentioned; what is the
+similarity? Answer: yes, it's a RESTful API.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item05">Abstracting and Interacting with Vehicles in the
+Web of Things (BMW)</h3>
+<p class='phone'>The demo yesterday was a BMW i3 connected to the
+cloud with a WoT connector.</p>
+<p class='phone'><cite>Goals:</cite> abstracting vehicles, semantic
+annotaions on parts, interact with the many automotive domains,
+etc.</p>
+<p class='phone'>Today there are a lot of solutions, fragmentation
+is a problem.</p>
+<p class='phone'><cite>Requirements:</cite> be able to deal with
+safety, complexity, legacy.</p>
+<p class='phone'>Presenting the WoT ontology used.</p>
+<p class='phone'>Data model to represent Vehicle Signal
+Specification (VSS) by Genivi consortium working together with W3C
+Automotive WG.</p>
+<p class='phone'>Semantic Sensor Network ontology, SOSA pattern /
+to model what is a car signal. For instance SOSA Sensor,
+ObservableSignal, ObservableProperty etc.</p>
+<p class='phone'>SOSA provides the classes, VSS ontology provides
+the signals.</p>
+<p class='phone'>A vehicle is a Thing. Signals are Properties.
+Actuable signals are Actions. DataSchema uses the domain Units.</p>
+<p class='phone'>SOSA does not support events, so WoT Events are
+not supported ATM.</p>
+<p class='phone'>Event modeling pattern is mapped to Event
+Ontology.</p>
+<p class='phone'>Presenting demos about TD.</p>
+<p class='phone'>Demo architecture: using the vehicle web API
+backend, created a TD, exposed as Thing, made simple demo Node-RED
+flows.</p>
+<p class='phone'><cite>Example:</cite> when the user moved far
+enough from the unlocked vehicle, the lock is activated.</p>
+<p class='phone'>Lessons learned: safety-security-privacy adapted
+to the vehicle. Complexity needs breaking down into subdomains
+(each with separate TDs instead of one huge TD) with separate
+security aspects.</p>
+<p class='phone'>For instance infotainment, engine, HVAC, etc.</p>
+<p class='phone'>Different experts can work on each part.</p>
+<p class='phone'>All parts might have their own security
+scheme.</p>
+<p class='phone'>Questions.</p>
+<p class='phone'>Question: are there open issues with the security
+schemes described in WoT?</p>
+<p class='phone'><cite>Answer:</cite> yes, found that out late, so
+you can define different schemes and then use it. But in this case
+splitting up the TDs makes more sense.</p>
+<p class='phone'>Question: TD for each car manufacturer; how do car
+manufacturers benefit from doing that?</p>
+<p class='phone'><cite>Answer:</cite> there is no common data model
+or API. VSS is one solution. In the end, open specifications would
+help. They should agree in a core set of interactions in all
+APIs.</p>
+<p class='phone'>Question: what the level of maturity there is
+about the vehicle description (which is proprietary ATM)</p>
+<p class='phone'><cite>Answer:</cite> it's quite early now, VSS is
+about 2 years now, divinding into domains is an old idea, but using
+the WoT TD is a relatively new thing.</p>
+<p class='phone'>Question: BMW, JLR, VW are in the same room here -
+encouraging there. Answer: the need is seen in the industry,
+pushing for WoT.</p>
+<p class='phone'>Question: on the main alignment pattern slide,
+what was the "mental state". Answer: stress level, mental load
+while driving.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item06">a WoT Gateway with device virtualization
+(Fujitsu)</h3>
+<p class='phone'>Usually applications integrate devices one by one,
+each with separate interface. A gateway provides one integrated
+interface to applications.</p>
+<p class='phone'>A gateway encapsulates complexity and provides
+adaptors for each device type.</p>
+<p class='phone'>The integrated interface can be done using WoT
+interactions.</p>
+<p class='phone'>Protocol bindings can be used for the
+adaptors.</p>
+<p class='phone'>Also, a special adapter can be used by the
+protocol bindings.</p>
+<p class='phone'>Based on adapters, virtual devices can be created
+out of physical devices.</p>
+<p class='phone'>It might employ TD conversion, protocol
+convertion, device management.</p>
+<p class='phone'>All this is part of an Adapter runtime.</p>
+<p class='phone'>A tree of gateways could be deployed, where the
+root works as directory for devices and adapters</p>
+<p class='phone'>A large scal system requires multiple
+multi-layered gateways deployment</p>
+<p class='phone'><cite>Experiment:</cite> 1400 devices connected in
+3 fields, a) smart home, b) smart factory, c) smart
+agriculture.</p>
+<p class='phone'>Application handles all fields, based on cloud
+gateway.</p>
+<p class='phone'>Toward zero configuration: this integration
+enables building the system with zero configuration.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item07">Describing Legacy Data in Thing Descriptions
+(Fujitsu)</h3>
+<p class='phone'>WoT allows a common glue between IoT platforms,
+instead of bridging each platform to each other platform.</p>
+<p class='phone'>Will concentrate on the data format. JSON and CBOR
+are accepted, but what about others?</p>
+<p class='phone'>When a Thing is WoT compliant, the client can get
+the TD and interact right away.</p>
+<p class='phone'>However, with legacy devices, this is not
+possible.</p>
+<p class='phone'>This is similar experience to web browsers being
+the entry point to access served content of various types.</p>
+<p class='phone'>Most of available data is in CSV format. TD
+supports CSV natively.</p>
+<p class='phone'>Proposes native type annotation for CSV</p>
+<p class='phone'>The second example is TLV (type-length-value) data
+format.</p>
+<p class='phone'>TLV, notably ASN.1 is used everywhere. TD should
+natively support ASN.1</p>
+<p class='phone'>Call for TD being more versatile.</p>
+<p class='phone'>Questions.</p>
+<p class='phone'><cite>Thomas:</cite> there is already work on
+CSV-JSON conversion. Answer: that is one way to do it.</p>
+<p class='phone'>Question: now we use JSON Schema, which is not a
+full standard now, we could extend it, so what is the minimal delta
+that is needed</p>
+<p class='phone'><cite>Kathy:</cite> we came across the same
+problems and solved with adapters as well.</p>
+<p class='phone'><cite>Ari:</cite> this is a broad problem that is
+looked upon elsewhere too, so we should work on this together.</p>
+<p class='phone'>Lunch break.</p>
+<p class='irc'>&lt;<cite>kaz</cite>&gt; [till 14:40]</p>
+
+<p class='irc'>&lt;<cite>soumya</cite>&gt; scribenick: soumya</p>
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item08">Research and survey of use case for wot</h3>
+<p class='phone'><cite>Tomoaki:</cite> presenting customers use cases</p>
+<p class='phone'><cite>Tomoaki:</cite> showing the motivation behind the talk.
+it is important to note how customers use such technologies</p>
+<p class='phone'><cite>Tomoaki:</cite> there is a need for research on use
+cases, need to consider both manufacturer and customer
+perspectives</p>
+<p class='phone'><cite>Tomoaki:</cite> showing some details of the attitude
+survey of IoT from Japan</p>
+<p class='phone'><cite>Tomoaki:</cite> result is interesting, about 66% has
+heard of IoT but only 60% of the respondants can explain IoT.</p>
+<p class='phone'><cite>Tomoaki:</cite> JP Govt. has plans to use IoT from
+2020</p>
+<p class='phone'><cite>Tomoaki:</cite> shows a more detailed survey for IoT
+appliances in bedroom, living room, entrance etc.</p>
+<p class='phone'><cite>Tomoaki:</cite> shows some conclusions for results of
+survey</p>
+<p class='phone'><cite>Tomoaki:</cite> concludes his lightening talk.</p>
+<p class='phone'><cite>Tomoaki:</cite> it is necessary to help the customer to
+bridge the gap between understanding and use of IoT</p>
+<p class='phone'>sebastian opens floor to question.</p>
+<p class='phone'><cite>Sebastian:</cite> ponders on the importance for users to
+know about IoT</p>
+<p class='phone'><cite>Tomoaki:</cite> customers should know what is IoT and
+that might have influence on buying IoT products, services.</p>
+<p class='phone'>moving to next speaker</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item09">MIoT Platform</h3>
+<p class='phone'>[MIoT Platform] targeted for connecting people and
+home</p>
+<p class='phone'>[MIoT Platform] statistics about their
+platform</p>
+<p class='phone'>[MIoT Platform] smarphone &amp; smart speaker
+centric functions</p>
+<p class='phone'>[MIoT Platform] timeline with different
+connectivity modules</p>
+<p class='phone'>[MIoT Platform] provides rich sdks - RTOS,
+Android, Linux and many coonective solutions</p>
+<p class='phone'>[MIoT Platform] provides multiple access or
+control of iot devices</p>
+<p class='phone'>[MIoT Platform] shows the smart voice control -
+device status, device control, continuos update etc</p>
+<p class='phone'>[MIoT Platform] provides rich trigger conditions
+like human body sensor, light sensor, water sensor etc</p>
+<p class='phone'>[MIoT Platform] 1.98 Million users have over 5 iot
+devices</p>
+<p class='phone'>[MIoT Platform] works with traditional BlueTooth
+solution</p>
+<p class='phone'>[MIoT Platform] creating a BlueTooth Mesh as
+well</p>
+<p class='phone'>[MIoT Platform] shows an example of BLE-Wi-Fi
+mesh</p>
+<p class='phone'>[MIoT Platform] mentions that whole platform
+capability is open to share</p>
+<p class='phone'>[MIoT Platform] shows an architecture of the
+platform</p>
+<p class='phone'>[MIoT Platform] is built using layered model</p>
+<p class='phone'>[MIoT Platform] shows its functional model for
+smart home application profile</p>
+<p class='phone'>[MIoT Platform] is operational with gateway and
+cloud-only scenarios</p>
+<p class='phone'>[MIoT Platform] works with other vendors (CLoud to
+CLoud, module level integration..)</p>
+<p class='phone'>[MIoT Platform] concludes the talk</p>
+<p class='phone'>[MIoT Platform] resembles WoT deployment scenario
+6</p>
+<p class='phone'>[MIoT Platform] using own standards, yet to be
+there</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item10">Virtual-Thing: TD based Virtualization</h3>
+<p class='phone'>Jeff - asks about interoperability</p>
+<p class='phone'><cite>Hassib:</cite> introducing their work</p>
+<p class='phone'><cite>Hassib:</cite> lists problems - no easy way to simulate
+a thing based on its TD, hard to test a mashup with physical access
+to the devices, rynning tests might overwhelm iot devices</p>
+<p class='phone'><cite>Hassib:</cite> solution is to simulate a thing based
+only on its TD</p>
+<p class='phone'><cite>Hassib:</cite> it uses original TD and node-wot
+servient</p>
+<p class='phone'><cite>Hassib:</cite> virtual thing is available in npm
+repository and is easy to start</p>
+<p class='phone'><cite>Hassib:</cite> as a future work, create a digital
+twin</p>
+<p class='phone'><cite>Hassib:</cite> digital twin acts as a reverse proxy</p>
+<p class='phone'><cite>Hassib:</cite> showing some limitations (some are
+inherited from node-wot)</p>
+<p class='phone'><cite>Hassib:</cite> concludes his talk</p>
+<p class='phone'>question - is it a standalone module?</p>
+<p class='phone'><cite>Hassib:</cite> it is an npm package and open source</p>
+<p class='phone'><cite>Matthias:</cite> nice tooling, will be valuable in
+future. what is the meaning behind digital twin here.</p>
+<p class='phone'><cite>Hassib:</cite> not defining what is a digital twin, in
+this context, the digital twin is like a reverse proxy not just a
+digital representation.</p>
+<p class='phone'><cite>Klotz:</cite> are you working with other partners?</p>
+<p class='phone'><cite>Hassib:</cite> outlines his motivation and describes his
+intention to look into partnerships</p>
+<p class='phone'><cite>Taki:</cite> usage of virtual thing in test purpose
+(comment)</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item11">WoT Store</h3>
+<p class='phone'><cite>Luca:</cite> wot store is a generic software platform
+for the management of W3C-compliant things and applications of the
+WoT SECO</p>
+<p class='phone'><cite>Luca:</cite> wot store has a modular architecture with
+things manager, applications manager, data manager</p>
+<p class='phone'><cite>Luca:</cite> things manager performs things discovery,
+TD etc</p>
+<p class='phone'><cite>Luca:</cite> there is a web &amp; CLI for this</p>
+<p class='phone'><cite>Luca:</cite> provided in github</p>
+<p class='phone'><cite>Luca:</cite> application manager allows sharing, update,
+visualization etc</p>
+<p class='phone'><cite>Luca:</cite> application manager performs semantic
+discovery of applications as well.</p>
+<p class='phone'><cite>Luca:</cite> data manager is doing data filtering, flow
+aggregation, plotting</p>
+<p class='phone'><cite>Luca:</cite> market service - it is a rest api</p>
+<p class='phone'><cite>Luca:</cite> implementation benefits from node.js
+ecosystem</p>
+<p class='phone'><cite>Luca:</cite> use cases - industry 4.0 (update all, data
+analysis), home automation (new thing integration, UI, mashup
+application), smart agriculture (update all, data analytsis)</p>
+<p class='phone'><cite>Luca:</cite> future works on control access mechanism,
+digital twin.</p>
+<p class='phone'>lucus - dependencies like if some applications
+depends on properties of other thing applications?</p>
+<p class='phone'><cite>Luca:</cite> code and libraries can be used and system
+will download and install them</p>
+<p class='phone'>zoltan - what is an application in the talk?</p>
+<p class='phone'><cite>Luca:</cite> Thing application is same as Thing behavior
+(properties, events, actions).</p>
+<p class='phone'><cite>Zoltan:</cite> it might lead to confusion</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item12">Rapid IoT App Development</h3>
+<p class='phone'><cite>Kunihiko:</cite> talking about node red based
+development</p>
+<p class='phone'><cite>Kunihiko:</cite> current issues include many barriers
+like ambigious documentation, limited capability of some SDKs</p>
+<p class='phone'><cite>Kunihiko:</cite> wot TD can be used as open
+specification in this context</p>
+<p class='phone'><cite>Kunihiko:</cite> node red is widely used for its
+intuitive aspect</p>
+<p class='phone'><cite>Kunihiko:</cite> combined node red with wot which
+results into a tool called node generator</p>
+
+<p class='irc'>&lt;<cite>kaz</cite>&gt; scribenick: ege</p>
+<p class='irc'>&lt;<cite>kaz</cite>&gt; (ege takes notes locally for a while)</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item13">Siemens: Security from Oliver Pfaff</h3>
+
+<p class='phone'>lifecycle of a thing, bootstrapping of security</a>
+
+<p class='phone'># Common Practices<br/>
+... Security should be easy and secure<br/>
+... Not done:<br/>
+... Site -&gt; Trust the device,<br/>
+... Device -&gt; Know the site = not done yet and difficult<br/>
+... Relevant initiatives:<br/>
+... * Anima: have manufacturer install a service on site that does the authentication for the device when the device is installed<br/>
+... # Questions</p>
+
+<p class='phone'><cite>Ari:</cite> Recommending IETF group on this</p>
+<p class="phone"><cite>Lagally:</cite> Companies working on this?</p>
+<p class="phone"><cite>McCool:</cite> How to trust the service as the site owner?</p>
+<p class="phone"><cite>Matthias:</cite> The service can change owner, doesn't have to be the manufacturer.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day1-item14">Web of Twins from Philippe Coval</h3>
+
+<p class="phone"><cite>Philippe:</cite><br/>
+... # What is Digital Twins (DTs)?<br/>
+... Connectivity between real device and digital representation<br/>
+... DTs are model driven<br/>
+... Privacy by design<br/>
+... IoT.js is a language for the emb. devices<br/>
+... # Robot arm<br/>
+... We can think what a robot can be and program a DT<br/>
+... Video on Youtube: Using the DT on a VR glass in order to control a real device in the end<br/>
+... Architecture overview for the Robot arm but any other thing in general<br/>
+... # Color Sensor<br/>
+... Reading the color of an object and changing the DT color on webthing<br/>
+... # Summary<br/>
+... We can create DTs using js and displaying them on browser for different devices
+</p>
+
+
+<p class='irc'>&lt;<cite>kaz</cite>&gt; (ege starts taking notes online)</p>
+<p class='irc'>&lt;<cite>rzr</cite>&gt; <a href="https://www.youtube.com/watch?v=sUayRsjV1Ys">https://www.youtube.com/watch?v=sUayRsjV1Ys</a></p>
+<p class='irc'>&lt;<cite>rzr</cite>&gt; <a href="https://github.com/rzr/twins">https://github.com/rzr/twins</a> source code of robot twins if anyone want to test them</p>
+<p class='irc'>&lt;<cite>akeranen</cite>&gt; Securing TD delivery
+was out of charter but something that could be worked on next.
+Standardization on security and provisioning would be helpful to
+users. DNS-SD, CoRE Resource Directory, etc relevant here. In IIC
+whole group on trustworthiness of IoT.</p>
+<p class='phone'><cite>Discovery:</cite> mozilla: mdns where you
+publish the URI of the TD to the network</p>
+<p class='phone'><cite>Accesibility:</cite> How devices can
+accomodate the needs of the users, depending on the user</p>
+<p class='phone'>a lot of people seem to be motivated about
+accesibility, lots of hands raised</p>
+<p class='phone'><cite>Matthias:</cite> verifiable claims can be a
+building block<br />
+... thing directory is an item in the working group<br />
+... should we start it now or get fb and do it a bit later</p>
+<p class='phone'><cite>Hassib:</cite> what about a google search for
+  wot?<br/>
+... global search</p>
+<p class='phone'><cite>Matthias:</cite> before there was also directories
+for web, no search<br />
+... ietf is doing that, through core link format<br />
+... local search doesn't make too much sense</p>
+<p class='phone'><cite>Hassib:</cite> but what about IP cameras or
+weather data providing sensors</p>
+<p class='phone'><cite>McCool:</cite> mdns is sort of
+obsolete<br />
+... how to discover a directory, bootstrapping a system</p>
+<p class='phone'><cite>Sebastian:</cite> there was already discussions
+on that</p>
+<p class='phone'><cite>Matthias:</cite> I had called it a rat hole</p>
+<p class='phone'>(audience giggles)</p>
+<p class='phone'><cite>Sebastian:</cite> one topic is then certainly
+discovery then</p>
+<p class='phone'><cite>Matthias:</cite> gs1 standard have new patterns
+that we should explore<br />
+... eventing is still not (clear)<br />
+... multiplexing multiple interactions into a single connection</p>
+<p class='phone'><cite>Sebastian:</cite> considering passive things</p>
+<p class='phone'><cite>McCool:</cite> new metadata?</p>
+<p class='phone'>ben francis: schema.org?</p>
+<p class='phone'><cite>McCool:</cite> what schema then?<br />
+... who is interested in scripting<br />
+... standardizing it</p>
+<p class='phone'><cite>Matthias:</cite> what about more complex
+interactions<br />
+... I believe that web has solutions for it</p>
+<p class='phone'><cite>Jeff:</cite> not to add these directly<br />
+... what is in the edge of what we are doing but not in the spec
+yet<br />
+... the collection of things we are putting together, can they be
+done in a timeframe that fits the market needs</p>
+<p class='phone'><cite>Kaz:</cite> I put a long list of possible
+topics</p>
+<p class='phone'><cite>Johannes:</cite> how to do onboarding,
+helping on how to choose solutions/technologies</p>
+<p class='phone'><cite>Ari:</cite> join forces (ietf and w3c) since
+this is a common problem</p>
+<p class='phone'><cite>Dom:</cite> all the pieces are here
+but "how do you put them together"</p>
+<p class='phone'><cite>McCool:</cite> it is not just putting up a
+website</p>
+<p class='phone'><cite>Dom:</cite> it has to come from the
+community<br />
+... we needed collections, we had to add it ourselves</p>
+<p class='phone'><cite>Ben:</cite> onboarding new members -&gt;
+making the group more approachable</p>
+<p class='phone'><cite>Sebastian:</cite> how to trust the td</p>
+</div>
+
+<hr />
+<div class="meeting">
+<h2 id="day2">Day 2: Wednesday, June 5</h2>
+
+<p class='irc'>&lt;<cite>kawaguch</cite>&gt; scribenick: kawaguch</p>
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item01">Agenda Overview of Day 2</h3>
+<p class='phone'><cite>Lagally:</cite> We have keynote from singapore
+government<br />
+... in the morning we have Extension for WoT Standardization<br />
+... in the afternoon we have Future Work / Collaboration with other
+SDOs</p>
+<p class='phone'><cite>Kaz:</cite> In the last we have another wrap
+up session.<br />
+... gather input to possible work items<br />
+... and incorporating to new charter</p>
+<p class='phone'><cite>Sebastian:</cite> Please send your presentation to
+organizers if note yet sent</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item02">Keynote: Standardization Needs for the Smart City</h3>
+<p class='phone'><cite>Chinn:</cite> Introduce Singapore smart
+city<br />
+... Have many awareness from worldwide.<br />
+... Started Smart Nation in May 1st, 2017<br />
+... 5 ministery oversees the project<br />
+... Singapore digitalisation started in 1980<br />
+... GovTech evolution such as Citizen centric, common platform,
+etc.<br />
+... We have 3 plans to drive smart nation forward.<br />
+... Smart Nation covers areas such as Digital identity, E-Payments,
+Sensor Platform, Smart Urban Mobility, Moments of Life and so
+on<br />
+... Elevator changed real estate business. Likewise, autonomous
+vehicle changes what city looks like.<br />
+... Singapore is tiny, 740 km2<br />
+... Sensor Characteristics<br />
+... Smart lancos<br />
+... You have passive and active sensors.<br />
+... SNSP layers<br />
+... Sensors &amp; IOT --&gt; Decada (device management and data
+acquisition) -&gt; SDX (Sensor data exchange)<br />
+... SDX -&gt; Sensor-surround<br />
+... We have whole govenment connectivity.<br/>
+... Potential Threats to Platform<br />
+... Backdoor, malware comes from open source.<br />
+... We need to put in place robust opensource environment.<br />
+... Then run devops.<br />
+... IoT Data<br />
+... We need standards.<br />
+... We can deploy from country perspective.<br />
+... We can ask very specific questions.<br />
+... WoT brings what can we do with data.<br />
+... Platform approach.<br />
+... We believe in API economy.<br />
+... Privacy is one of concern.<br />
+... If you have a passport government has information.<br />
+... If you travel the data is collected.<br />
+... (video: Robot testing at Takenaka Corp. construction
+site)<br />
+... How do you keep the data fresh?<br />
+... The robot can move to construction site, take photos of
+there.<br />
+... We also deploy autonomous underwater vehicles.<br />
+... ERP2<br />
+... Congestion is biggest problem in the city.<br />
+... Give car owners smartphone equivalent devices.<br />
+... If you are contributing to traffic needs to pay.<br />
+... Information is pushed to drivers.<br />
+... We also have BUS on demand.<br />
+... It's autonomous bus without driver.<br />
+... I'll explain Pungol digital district.<br />
+... University in a residential area.<br />
+... It's already started construction.<br />
+... train station connected to the area.<br />
+... traffic goes under ground.<br />
+... delivery is done by robotics.<br />
+... We already have national digital identity.<br />
+... We have security based on biometrics.<br />
+... Intended to be showcase of smart nation vision.<br />
+... Use cases include identify and access management, autonomous,
+footfall<br />
+... Architecture includes Open Digital Platform.<br />
+... We intend to connect every physical things to digital.<br />
+... Thing Description can describe such things.<br />
+... Certainly standards need to exists.<br />
+... Can WoT standards and implementation make iot data more secure
+and interoperable?<br />
+...</p>
+<p class='phone'><cite>Lagally:</cite> question: are you working for
+simulation model such as digital twin?</p>
+<p class='phone'><cite>Chinn:</cite> yes, building information
+model, infrastructure model, using BIM, Geospacial info<br />
+... We have smart glass for AR, for representation.<br />
+... idea is to model bunch of environment.</p>
+<p class='phone'><cite>Lagally:</cite> is there any plan to apply the
+experience other than singapore?</p>
+<p class='phone'><cite>Chinn:</cite> Yes, we are part of ASEAN
+Smart city network.<br />
+... Encouraging to share use cases.<br />
+... Also with Japan, Australia and Thailand.</p>
+<p class='phone'><cite>McCool:</cite> How did you wrap all the
+requirements?</p>
+<p class='phone'><cite>Chinn:</cite> We are open to anyone for
+ideas.<br />
+... We prepare multi billion dollar budget.<br />
+... We want innovators talk to us what is the idea and how can we
+fund them.<br />
+... Sandbox is prepared for them.<br />
+... Plan is before 2023.</p>
+<p class='phone'><cite>Jose:</cite> What is related to open source
+and open api?</p>
+<p class='phone'><cite>Chinn:</cite> We use lot of open sources and
+contribute back.<br />
+... Because lot of ideas can be shared.<br />
+... We believe API economy drives lot of business.<br />
+... Quality of life of citizens changes.</p>
+<p class='phone'><cite>Alan:</cite> Interoperability of data
+issue?</p>
+<p class='phone'><cite>Chinn:</cite> yes, it's issue.<br />
+... Data is extremely critical and interoperability is
+important.</p>
+<p class='phone'><cite>Cathy:</cite> Privacy invocation?</p>
+<p class='phone'><cite>Chinn:</cite> There is a dedicated team who
+work for privacy of citizens.<br />
+... We give the connectivity between government and citizens.<br />
+... There is already connection between government and
+citizens.<br />
+... Bus on demand rather than bus on schedule.</p>
+<p class='phone'><cite>Zoltan:</cite> Metadata get out of sync.</p>
+<p class='phone'><cite>Chinn:</cite> Disaster recovery
+question.<br />
+... We have robustness with back ups.<br />
+... For the data we have thousands of people working on this.<br />
+... If WoT becomes global how would you want make
+contribution?<br />
+... Also you can bring user requirement systems.</p>
+<p class='phone'>Session 4: Extension for WoT Standardization /
+Semantics / Linked Data</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item03">Scripting API for the Web of Things</h3>
+<p class='phone'><cite>Zoltan:</cite> Diving into small
+segments.<br />
+... Scripting is a routing to Web.<br />
+... It describes behavior of a thing and controls thing
+interaction.<br />
+... If you have a scripting runtime there is security
+consideration.<br />
+... How do you run those scripts?<br />
+... Can there be one of more scripts?<br />
+... Can there be more stakeholders in one place?<br />
+... I took some of notions regarding security from there and still
+applies.<br />
+... Alternative to scripting is native implementation.<br />
+... You can also have visual rules like Mozilla or flows like
+node-red.<br />
+... Benefits of scripting APIs.<br />
+... It makes Web of Things modular.<br />
+... It simplifies application developments.<br />
+... Reuse business logic again.<br />
+... Opportunity for scripting is in the cloud.<br />
+... It can be run in the Web browser client.<br />
+... Or sensor or sensor hub in the gateway.\<br />
+... One deployment has 60 kilo bytes of codes.<br />
+... Security talks.<br />
+... The point is when you have a isolated context you can represent
+multiple things.<br />
+... WoT runtime provides OS functionality through the APIs and it
+has security configuration.<br />
+... It can be a virtual machine, docker container or javascript
+runtime.<br />
+... It has functionality load as cript, reload a script and so
+on.<br />
+... Script execution context.<br />
+... There is also Special things in WoT Stack, such as Script
+Manager Thing, System Access Things.<br />
+... About standardization process<br />
+... latest working draft released on 2018/11/29<br />
+... Current API uses promises as a callback.<br />
+... We have reference implementation Node-WoT.<br />
+... Approaches to the Scripting API<br />
+... Choice: No externally exposed API, Simple API, Current API
+based on TD spec.<br />
+... difference between simple and current is interaction name is
+explicit.<br />
+... one thing simple API cannot do is readmultiple
+properties.<br />
+... The spec has discovery, expose thing and consume thing.<br />
+... Overview of API specification.<br />
+... You can introspec things based on thing description<br />
+... You have two kinds of observing.<br />
+... Obverve property and subscribe event.<br />
+... We have an example of ConsumedThing.<br />
+... We also have an example of ExposedThing.<br />
+... (showing examples)<br />
+... We also have discovery API.<br />
+... Node-WoT is an implementation.</p>
+<p class='phone'><cite>Ben:</cite> Standalone module for client and
+server, client side can be reference parser.</p>
+<p class='phone'><cite>Zoltan:</cite> You can find two packages in
+Node-WoT.</p>
+<p class='phone'><cite>McCool:</cite> (sorry couldn't capture)</p>
+<p class='phone'><cite>Josh:</cite> How things state can be
+captured and fed in the interfaces on the fly?</p>
+<p class='phone'><cite>Zoltan:</cite> You can have instance object
+and can be live object.<br />
+... include event in the thing, subscribe to event.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item04">Schema.org extensions for IoT</h3>
+<p class='phone'><cite>Aparna:</cite> IoT schema is an extension of
+schema.org<br />
+... To enable description of physical things.<br />
+... It is a community process for domain experts.<br />
+... Normalize device definitions from OCF, oneM2M<br />
+... Reuse property and relation types from SSN, SOSA, SAREF,
+QUDT.<br />
+... Annotate Thing Description for domain specific
+vocabulary.<br />
+... It is for different IoT Actors.<br />
+... Device vendors can use iotschema to describe platforms.<br />
+... iotschema Semantic Definitions.<br />
+... Capability, Interaction, Data Item<br />
+... Feature Of Interest Pattern.<br />
+... Conceptual integration with other ontologies.<br />
+... Example.<br />
+... Capability Door Lock is associated with Thing Door<br />
+... How to use?<br />
+... Main focus is to annotate Thing Description.<br />
+... Thing can be described as capability.<br />
+... Interactions are annotated with interaction pattern.<br />
+... Data Schema can be annotated.<br />
+... At the iotschema.org page you can find example.<br />
+... Capability example: TemperatureSensing<br />
+... Corresponding interaction pattern is Temperature<br />
+... Corresponding Data Schema is TemperatureData<br />
+... Thing Description Example.<br />
+... This is a TD of Temperature Sensor</p>
+<p class='phone'><cite>McCool:</cite> for clarity "unit" is not a TD
+built in vocabrary.</p>
+<p class='phone'><cite>Aparna:</cite> iotschema.org is a domain
+  specific for Thing Description.<br/>
+... iotschema Node-RED<br />
+... you can use multiple semantic configuration nodes.<br />
+... Status<br />
+... Please provide feedback through GitHub</p>
+<p class='phone'><cite>Milan:</cite> Question: You should separate
+event/action/property from semantics.<br />
+... example temperature has minimum and maximum values.<br />
+... My suggestion is to separate those two.<br />
+... What makes the feature of interest?</p>
+<p class='phone'><cite>Aparna:</cite> It is important to know what
+is the feature measured by the sensor.<br />
+... capability is temperature itself and FOI is outside
+temperature.</p>
+<p class='phone'><cite>Victor:</cite> Now there is overlap b/w TD
+ontology and iotschema.<br />
+... I see the another term in TD ontology.</p>
+<p class='phone'><cite>McCool:</cite> We cannot change terms.</p>
+<p class='phone'><cite>Victor:</cite> We should sit together
+again.</p>
+<p class='phone'><cite>??:</cite> What is the process submitting domain specific
+schema?</p>
+<p class='phone'><cite>Aparna:</cite> We have an intermediate
+schema</p>
+<p class='phone'><cite>Sebastian:</cite> We need some clear guideline.</p>
+<p class='phone'><cite>??:</cite> How to process really done how to select from
+different ontologies?</p>
+<p class='phone'><cite>Aparna:</cite> We try to normalize it.<br />
+... It is done by manually.</p>
+<p class='phone'><cite>Jose:</cite> Challenge is using existing
+ontology how to properly annotate TDs.</p>
+<p class='phone'><cite>Aparna:</cite> Sometime it is difficult. It
+is exactly iotschema want to address.<br />
+... We want to provide tools like Node-RED.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item05">Standard Behavior Descriptions for the Web of
+Things</h3>
+<p class='irc'>&lt;<cite>kaz</cite>&gt; scribenick: taki</p>
+<p class='phone'><cite>Victor:</cite> presentation is about
+"behaviour" building block of WoT<br />
+... objective is scale up WoT applications.<br />
+... challenge is scaling up to more than 1000 devices in a building
+for example.<br />
+... describing behavioural agents is important<br />
+... three ways to implement thermostat<br />
+... monitor and control sensor and furnice<br />
+... there are two more implementation cases<br />
+... differences are where scripts are run.<br />
+... use case is IIoT. want to reuse software module as much as
+possible.<br />
+... scalability is for deployment. deployment automation requires
+software modularization.<br />
+... kuberneti and dockers, for example.<br />
+... or redeploy applications.<br />
+... deployment-specific part should be parameterized.<br />
+... input requirements can be TD templates or shapes or
+frames<br />
+... contextualization. semantic relation between Things. this
+should be specified.<br />
+... Input ca be TD frame with no forms.<br />
+... contexextualization. furnace and sensor must be in the same
+rooom.<br />
+... relationship can be speficied using JSON-LD frame</p>
+<p class='irc'>&lt;<cite>taki1</cite>&gt; scribenick: taki2</p>
+<p class='irc'>&lt;<cite>taki1</cite>&gt; Victor: there are
+existing tools. Node-Red and Eclipse 4diac (IEC 61499)</p>
+<p class='phone'><cite>Victor:</cite> behaviour description
+languages. should be process-oriented.<br />
+... it can also be numeric.<br />
+... or rule-based &amp; knowledgement-based<br />
+... lastly it can use statistic approach.<br />
+... all approaches can be subsumed turing machine.<br />
+... exchanging scripts have not relly been tried.<br />
+... we need to focus on usability of ECMAscript<br />
+... We should not compete with Node-RED<br />
+... instead we should complement it.<br />
+... node-red's capability to exchange flow is not perfect.<br />
+... I would like to propose WoT WG to work on exchanging and
+packaging WoT scripts.<br />
+... we need to integrate JSON-LD framews into WoT Scripting API</p>
+<p class='phone'>Victor cites Jeff Atword's saying "Any application
+that can be written in JavaScript..."</p>
+<p class='phone'><cite>Victor:</cite> Thank you</p>
+<p class='phone'><cite>Zoltan:</cite> I have some idea about this
+already.<br />
+... This is one way forward I can work on.<br />
+... Hhat would be your approach.</p>
+<p class='phone'><cite>Victor:</cite> We just need ECMAScript.</p>
+<p class='phone'><cite>Zoltan:</cite> should be part of
+runtime?</p>
+<p class='phone'><cite>Victor:</cite> yes.<br />
+... management system using a Thing Directory.</p>
+<p class='phone'><cite>Ben:</cite> a bit skeptical about
+standardizing this.<br />
+... packaging format in another WG did not succeed.<br />
+... what is the need for standard?</p>
+<p class='phone'><cite>Victor:</cite> standard about addons. there
+is a de-facto standard in browsers.<br />
+... what I propose is similar<br />
+... docker container is another de-facto standard.<br />
+... There should be a specification.<br />
+... I am not very ambitious.<br />
+... we need a way to describe semantics for scripts.</p>
+<p class='phone'><cite>Ege:</cite> example slide shows message
+flow, can be used to create JavaScript?</p>
+<p class='phone'><cite>Victor:</cite> sequence diagram still s
+missing conditions.</p>
+<p class='phone'><cite>Ege:</cite> scripts should not do what is
+not expected.</p>
+<p class='phone'><cite>Victor:</cite> diagrams can be generated
+from scripting API.</p>
+<p class='phone'><cite>Zoltan:</cite> are you looking for execution
+environments such as container?</p>
+<p class='phone'><cite>Victor:</cite> yes</p>
+<p class='phone'><cite>Sebastian:</cite> should not we relate this
+work with iotschema capability?</p>
+<p class='phone'><cite>Victor:</cite> I am more interested in
+client side.</p>
+<p class='phone'><cite>Kaz:</cite> we should first discuss use
+cases.</p>
+<p class='phone'><cite>Sebastian:</cite> it is now photo
+session.<br />
+... please come back in 15 minutes.</p>
+<p class='irc'>&lt;<cite>taki</cite>&gt; Sebastian: lunch is
+1pm</p>
+<p class='irc'>&lt;<cite>kaz</cite>&gt; scribenick: McCool</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item06">Towards Semantic Interoperability in WoT Ecosystems
+- Andrea Cimmino, María Poveda-Villalón and Raúl García-Castro
+(Universidad Politécnica de Madrid)</h3>
+<p class='phone'>ontology overview</p>
+<p class='phone'>developed ontology for WoT</p>
+<p class='phone'>vicinity core, vicinity adapters</p>
+<p class='phone'>adapters used to access and translate data</p>
+<p class='phone'>store tds in a description repository</p>
+<p class='phone'>along with additional metadata and mappings</p>
+<p class='phone'>then implemented discovery services</p>
+<p class='phone'>discovery uses sparql queries to filter
+results</p>
+<p class='phone'>some queries don't need to access the data, just
+TDs</p>
+<p class='phone'>but queries can also access actual data from
+payloads</p>
+<p class='phone'>if endpoints don't have RDF, can use mappings to
+translate into RDF and enter into database</p>
+<p class='phone'>vicinity is an EU project, also now working a
+project called Delta which is about energy</p>
+<p class='phone'>summary, provides discovery and distributed
+access</p>
+<p class='phone'>also can specify various privacy policies</p>
+<p class='phone'>use WoT and WoT-mappings</p>
+<p class='phone'>also core and saref</p>
+<p class='phone'>interop is not only about describing, also
+discovery and access</p>
+<p class='phone'>question: approach is that all use same
+information and data model?</p>
+<p class='phone'><cite>answer:</cite> yes, but if need to use
+several ontologies can use query rewriting</p>
+<p class='phone'>question: what about privacy wrt what data can be
+seen?</p>
+<p class='phone'><cite>answer:</cite> use access controls to limit
+what can be discovered<br />
+... run policy at client level<br />
+... clients says what things are available to who</p>
+<p class='phone'><cite>Zoltan:</cite> but clients are not good
+enforcement points</p>
+<p class='phone'><cite>answer:</cite> can also use a centralized
+approach</p>
+<p class='phone'><cite>Zoltan:</cite> so have to distribute
+policies as well as data?</p>
+<p class='phone'>mccool (comment, not asked): equivalent to
+multiple databases, not sure it would scale to many different kinds
+of users or complex access</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item07">Linked Data in the Web of Things - Gerald
+Haesendonck, Anastasia Dimou, Ruben Verborgh and Ben De Meester
+(Ghent University)</h3>
+<p class='phone'><cite>gerald:</cite> speaker</p>
+<p class='phone'>in order for a switch to control a lamp, needs to
+read a TD, so it knows how to act on a lamp</p>
+<p class='phone'>but... state and semantic description are two
+things</p>
+<p class='phone'>need concise data represenation</p>
+<p class='phone'>have limited processing power on the things</p>
+<p class='phone'>what if the data model changes? how do we process
+offline data? how do we combine states?</p>
+<p class='phone'>may need to keep TDs, many need to describe
+relationships between things</p>
+<p class='phone'>so can consider a linked data version of the
+state</p>
+<p class='phone'>so if data model changes, then reflected in the
+state</p>
+<p class='phone'>historical data would still refer to the old data
+schema</p>
+<p class='phone'>and the data contains links to things or other
+linked data sets</p>
+<p class='phone'>how to do this?</p>
+<p class='phone'>we have some software, RML streamer, that reads
+state and converts it to RDF</p>
+<p class='phone'>by combining it with information from the TD, i.e.
+semantic annotation and data schema</p>
+<p class='phone'>could also add additional semantics using manual
+rules</p>
+<p class='phone'>RML is the "RDF Mapping Language"</p>
+<p class='phone'>then the resulting linked data can be used by
+applications able to process linked data</p>
+<p class='phone'>can add a form to the original TD as well to
+define how linked data can be accessed</p>
+<p class='phone'>see <a href=
+"https://github.com/RMLio/RMLStreamer">https://github.com/RMLio/RMLStreamer</a></p>
+<p class='phone'>question (matthias): how much complexity is there
+in RML?</p>
+<p class='phone'><cite>scribe:</cite> may want to store only those
+parts that are relevant?<br />
+... in many settings there is a datalake, and the metadata is
+out-of-band<br />
+... what is the benefit of doing things this way?</p>
+<p class='phone'><cite>answer:</cite> benefits are that it is
+rule-based</p>
+<p class='phone'><cite>Matthias:</cite> it seems to need a
+rule-based system; but TD is already modular, do you really need
+the rules?</p>
+<p class='phone'><cite>answer:</cite> but if you store this data,
+and need to pick the parts you need<br />
+... preconverting the data to RDF before storing ensure that the
+semantics valid when the data was stored is captured<br />
+... this makes it easier to process historical data<br />
+... if the TDs or data schema changes</p>
+<p class='phone'>question (victor): reusability. Do you have a
+collection of rules for well-known schemas?</p>
+<p class='phone'><cite>answer:</cite> do we have rules available;
+yes, for a few cases<br />
+... for data formats that is the main applications of RML to do
+this conversion<br />
+... and we have a lot of examples available</p>
+<p class='phone'><cite>Victor:</cite> how do I find the right
+examples?<br />
+... is it based on the context type, etc?</p>
+<p class='phone'><cite>answer:</cite> not indexed, but would be
+interesting to integrate with a discovery service</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item08">Increase WoT impact using transferable validation -
+Ben De Meester, Gerald Haesendonck, Ruben Verborgh and Anastasia
+Dimou (Ghent University)</h3>
+<p class='phone'><cite>speaker:</cite> same</p>
+<p class='phone'>validation for WoT; consider a TD data schema</p>
+<p class='phone'>can validate the payload or the state</p>
+<p class='phone'>but can also include semantic annotations and
+linked data sets</p>
+<p class='phone'>for the latter there are additional tools, eg
+SHACL</p>
+<p class='phone'>at first sight there seems to be a mismatch
+between validating TDs and validating other linked data sources</p>
+<p class='phone'>but there is a large overlap</p>
+<p class='phone'>both TDs and SHACL are mechanisms to describe
+similar things</p>
+<p class='phone'>so if we want to validate linked data sets, may
+want to map between TD data schemas and SHACL</p>
+<p class='phone'>there is definitely an overlap for at least some
+features</p>
+<p class='phone'>then can validate both</p>
+<p class='phone'>is a tool:
+https:/idlabresearch.github.io/validatrr/</p>
+<p class='phone'>this gives complementary validation</p>
+<p class='phone'>provides translations between one mechanism and
+another</p>
+<p class='phone'>question (victor): in which context are you using
+the mapping?</p>
+<p class='phone'><cite>answer:</cite> at this moment, not using it
+is WoT, but for data schema validation, similar problem<br />
+... and also existing linked data sets</p>
+<p class='phone'><cite>Victor:</cite> why would you need a mapping?
+We do actually use SHACL... they are however not exactly
+right<br />
+... how would you prove they are equivalent?</p>
+<p class='phone'><cite>answer:</cite> there probably is not a 1:1
+mapping<br />
+... this is more about mapping parts of the constraints</p>
+<p class='phone'>question (sebastian): nice to combine two
+validations in one step</p>
+<p class='phone'><cite>scribe:</cite> both structural and semantic
+validation</p>
+<p class='phone'><cite>answer:</cite> yes and no<br />
+... if have JSON data schema, can use to validate non-JSON
+data<br />
+... as long as the other data can also be converted to linked
+data<br />
+... can check if two datasets are compatible, for example</p>
+<p class='phone'>question (coval): you said there is no 1:1
+mapping, but is there a reversible mapping?</p>
+<p class='phone'><cite>answer:</cite> the things you CAN map, can
+be mapped in both directions</p>
+<p class='phone'><cite>session:</cite> future work and
+collaboration with other SDOs</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item09">Making IoT useful for Fueling and Convenience
+Retail - David Ezell (Conexxus)</h3>
+<p class='phone'>industry perspective on why this work is
+important</p>
+<p class='phone'>think WoT has some very far-reaching impact</p>
+<p class='phone'>brief description of industry, who Conexxus are,
+past W3C standards, IoT-sized hole in our strategy</p>
+<p class='phone'>industry is in US, "Fuel-Convenience-Retail"</p>
+<p class='phone'>165M customers/day, $654/year in 2018, 154,000
+store locations</p>
+<p class='phone'>effective product control is crucial</p>
+<p class='phone'>ownership tend to be in groups of 1 and 2... eg
+NOT big companies, but individuals</p>
+<p class='phone'>Conexxus is a trade consortium, do write
+standards, but at a different level</p>
+<p class='phone'>do advocate for semantics</p>
+<p class='phone'>aim to improve profitability</p>
+<p class='phone'><cite>example:</cite> have POS and back
+office<br />
+... had a standard</p>
+<p class='phone'>but then found wanted to do direct store
+delivery</p>
+<p class='phone'>used EDI... recommend avoiding</p>
+<p class='phone'>but W3C fixed, since could use XML instead</p>
+<p class='phone'>the shift was transformative</p>
+<p class='phone'>gave a list of semantic areas</p>
+<p class='phone'>most important relate to POS and payments</p>
+<p class='phone'>but did not have cloud APIs</p>
+<p class='phone'>rather than back office, replace with cloud</p>
+<p class='phone'>but need to integrate IoT data</p>
+<p class='phone'>where to put it?</p>
+<p class='phone'>felt that WoT allows us to integrate IoT data</p>
+<p class='phone'><cite>example:</cite> gas pump, doors on pumps</p>
+<p class='phone'>doors are sensored</p>
+<p class='phone'>if they open when they do not, may indicate a
+security hazard</p>
+<p class='phone'><cite>cooler:</cite> recognize humans, doors open
+and close, can figure out dwell time<br />
+... can then understand better how to place products</p>
+<p class='phone'>another example: company grew by acquisition</p>
+<p class='phone'>have 44 different product lines using different
+IoT standards!</p>
+<p class='phone'>5 year outlook</p>
+<p class='phone'><cite>baseline:</cite> POS -&gt; cloud</p>
+<p class='phone'>but soon, control of the plant (cooling, security,
+etc) will be important</p>
+<p class='phone'><cite>scribe:</cite> then AI checkout, but also
+barcode scanning</p>
+<p class='phone'>aka AmazonGo; just recognize product</p>
+<p class='phone'>robotic process automation</p>
+<p class='phone'>logistics and delivery</p>
+<p class='phone'>augmented employees</p>
+<p class='phone'>food safety</p>
+<p class='phone'>iot tracking</p>
+<p class='phone'>many many use cases</p>
+<p class='phone'>question (kathy): at iot fuze, target stores,
+talking about iot</p>
+<p class='phone'>have interally implemented Web Thing</p>
+<p class='phone'>but... small stores, don't have an IT
+infrastructure</p>
+<p class='phone'>so can this be provided as a service?</p>
+<p class='phone'>but also want some things to be local</p>
+<p class='phone'><cite>Dom:</cite> have you considered "all
+the other things": tracking products, etc</p>
+<p class='phone'><cite>answer:</cite> tracking is in fact
+important, but might be overtaken by camera identification<br />
+... tracking individual paths through the stores<br />
+... keeping up with paths through the store will become more and
+more difficult<br />
+... many issues with keeping up with standards<br />
+... have to also deal with legal compliance, e.g. taking food
+stamps for things that are not eligible</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item10">WoT Graph as Multiscale Digital-Twin for
+Cyber-Physical Systems-of-Systems - Gilles Privat, Thierry Coupaye,
+Sebastien Bolle and Philippe Raipin (Orange)</h3>
+<p class='phone'><cite>speaker:</cite> Dr. Privat</p>
+<p class='phone'>view WoT as a a graph to capture complex
+systems</p>
+<p class='phone'>rather than looking at single devices</p>
+<p class='phone'>similar to what happened with the web: pages -&gt;
+system</p>
+<p class='phone'>known as web science; web graph as an object of
+research; scale-free graphs, etc.</p>
+<p class='phone'>WoT graph is interesting since it is a description
+of physical systems, not just information</p>
+<p class='phone'>3 foundations...</p>
+<p class='phone'>first, hyperlinks</p>
+<p class='phone'>second, nodes as digital twins of both connected
+and non-connected entities</p>
+<p class='phone'><cite>third:</cite> structural CPS description as
+a graph and as a digital twin of the entire system</p>
+<p class='phone'><cite>note:</cite> CPS = cyber-physical system</p>
+<p class='phone'>simple example... streets and crossings, related
+to cameras</p>
+<p class='phone'>using property graphs rather than RDF graph</p>
+<p class='phone'>arcs stand for actual physical connections</p>
+<p class='phone'>is a model of a physical environment</p>
+<p class='phone'>there are both smart things and non-smart
+entities, eg roads</p>
+<p class='phone'>then have a system composition as an overlay
+graph</p>
+<p class='phone'>show decomposition into subsystems</p>
+<p class='phone'>also, devices often part of a larger system, eg
+traffic lights are not stand-alone, but are parts of a larger
+system</p>
+<p class='phone'>can have nested systems and subsystems and the way
+they depend on each other</p>
+<p class='phone'>dependencies are NOT just a knowledge graph, but
+represent actual physical dependencies</p>
+<p class='phone'>but... will have knowledge and semantics
+annotations as an overlay on a CPS graph</p>
+<p class='phone'>in general, have physical entities, have things
+twins, have systems, and then have ontology graph</p>
+<p class='phone'>question: which applications are enabled by this
+graph?</p>
+<p class='phone'><cite>answer:</cite> can break technical
+silos<br />
+... want to address JOINT technical system in a single graph</p>
+<p class='phone'>that can bridge how they are represented now in
+each silo</p>
+<p class='phone'>not one particular use case, but all potential
+applications</p>
+<p class='phone'>question: in theory, a graph for a BMS should
+allow adaptation to any particular building</p>
+<p class='phone'><cite>answer:</cite> more than that, can bridge
+systems that currently are in silos</p>
+<p class='phone'>question (victor): who would actually define the
+relations in the graph?</p>
+<p class='phone'><cite>scribe:</cite> and who would be paying for
+it?</p>
+<p class='phone'><cite>answer:</cite> key issue, economics<br />
+... so far, actors do not have an incentive to have an overaching
+system<br />
+... can "make do" with silos<br />
+... but we are working on a system, but need to surface
+incentives</p>
+<p class='phone'>for example, governments can require it</p>
+<p class='phone'>would also have to prove that can improve working
+of entire system</p>
+<p class='phone'><cite>scribe:</cite> for example, can have use
+cases that share information between multiple systems</p>
+<p class='phone'>e.g. traffic management and parking</p>
+<p class='phone'>occupancy could be used for security or energy
+management</p>
+<p class='irc'>&lt;<cite>kaz</cite>&gt; [lunch till 13:45]</p>
+<p class='irc'>&lt;<cite>kaz</cite>&gt; scribenick: mkovatsc</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item11">WoT and IoT - What's the difference? (Oracle)</h3>
+<p class='phone'><cite>Lagally:</cite> WoT Architecture and new
+application scenarios and use cases<br />
+... is there an overlap of domains?<br />
+... need to talk about other, real products<br />
+... WoT Plugfest scenario at TPAC<br />
+... what when scaling up to 100k Things<br />
+... cost of natural disaster events<br />
+... disaster control a use case?<br />
+... airplanes a use case?<br />
+... questions if WoT can model complex use cases<br />
+... help with better interface descriptions (unit mistake disasters
+etc.)<br />
+... 4 most important TD terms (for the author): title, description,
+version, support<br />
+... should all be mandatory</p>
+<p class='phone'><cite>Sebastian:</cite> Highest interest in WoT
+for critical systems?</p>
+<p class='phone'><cite>Lagally:</cite> Mainly to check if we
+covered everything</p>
+<p class='phone'><cite>Kathy:</cite> Complex descriptions sometimes
+have their value, but sometimes simple is valuable<br />
+... optional is good<br />
+... version is maybe not well-defined</p>
+<p class='phone'><cite>Lagally:</cite> I propose mandatory, but
+one could put dummy data to fulfill<br />
+... WoT is for humans and machines, IoT only machines</p>
+<p class='phone'><cite>Benjamin:</cite> airplaines actually consist
+of 100k Things</p>
+<p class='phone'><cite>Lagally:</cite> Examples were mainly given
+to broaden our minds</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item12">Next Steps for the Web of Things (Intel)</h3>
+<p class='phone'><cite>McCool:</cite> crossing the chasm - how to
+scale from early adopters to early majority<br />
+... IoT abou 10 years old, a lot of hype<br />
+... we are now before the chasm<br />
+... key challenges in smart cities<br />
+... what can W3C WoT do to cross the chasm?<br />
+... focus on one application (vertical) and a platform
+(horizontal)<br />
+... WoT charter needs to focus on impact<br />
+... identified gap of data interoperability<br />
+... 4 types of "interoperability"<br />
+... data srouce to cloud and cloud-to-cloud good for ROI<br />
+... other two farther down the road<br />
+... also now fulfill the requirements for the first two
+(description, data model)<br />
+... IoT data / metadata standards map<br />
+... target: one data model (semantic)<br />
+... ultimately "W3C Resource Descriptions"<br />
+... short-term "W3C Data Schema" unifying JSON Schema and XSD, OPC
+UA, ...<br />
+... needs to cover more formats other than JSON<br />
+... other long-term: management framework, abstract APIs,
+discovery<br />
+... conclusion: focus on data interoperability next</p>
+<p class='irc'>&lt;<cite>mkovatsc_</cite>&gt; mccool: ?</p>
+<p class='irc'>&lt;<cite>inserted</cite>&gt; scribenick:
+mkovatsc_</p>
+<p class='phone'><cite>Jose:</cite> ? (short vs long?)</p>
+<p class='phone'><cite>McCool:</cite> we need this timeline plan to
+improve success</p>
+<p class='phone'><cite>Ari:</cite> Like the timeline</p>
+<p class='phone'><cite>McCool:</cite> one data model as a first
+step can keep individual models but describe with RDF, converge in
+another step</p>
+<p class='phone'><cite>Ben:</cite> in smart homes interoperability
+exists around concrete protocols etc. (ZigBee, Alexa, Google Home,
+...)<br />
+... concerend, since this is not concrete</p>
+<p class='phone'><cite>McCool:</cite> smart home companies are in
+One Data Model initiative and are asking for semantic support<br />
+... smart home covered in short-term timeline</p>
+<p class='phone'><cite>Kathy:</cite> ZigBee smart home hubs could
+expose TDs?</p>
+<p class='phone'><cite>McCool:</cite> hard to convince existing
+ecosystems to switch to something new, but possible to slowly
+transform their models to converge</p>
+<p class='phone'><cite>Gilles:</cite> some merge paths in the
+timeline are strange</p>
+<p class='phone'><cite>McCool:</cite> ? (focused on some specific
+aspects?)</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item13">WoT Simplifies Industry Applications (Siemens)</h3>
+<p class='phone'><cite>Christian:</cite> this is about our research
+group's strategy, not company like on Monday<br />
+... need to spread the word (got press coverage on Monday)<br />
+... internal communication<br/>
+... new interfaces not fragmented as usual, but following W3C WoT with a TD etc.<br/>
+... open source at the Eclipse Foundation: Eclipse Thingweb<br />
+... need to join the community<br />
+... great tools from universities (see TUM talks)<br />
+... unfortunately no WoT standard for scripting<br />
+... need to remind everyone about "existing ecosystem PLUS W3C
+WoT", not "versus W3C WoT"<br />
+... need complex/other Events (alarms, timeseries)<br />
+... need TDs in products<br />
+... W3C WoT helps industrial cross-domain scenarios<br />
+... thingweb.io also has tutorials</p>
+<p class='phone'><cite>Ari:</cite> what have been your biggest
+challenges within the company?</p>
+<p class='phone'><cite>Christian:</cite> getting business units on
+board</p>
+<p class='phone'><cite>Matthias:</cite> act like a startup, do
+marketing, gain trust through quality collaborations, recommend the
+new technology where it solves current challenges the business unit
+is facing</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item14">Towards interworking between NGSI-LD and WoT (ETSI/FIWARE)</h3>
+<p class='phone'><cite>Jose:</cite> recently published API spec and
+have been collaborating with W3C WoT<br />
+... mission is to ease information exchange<br />
+... context information management<br />
+... using property graphs<br />
+... relationships can also have properties<br />
+... graphs represented in JSON-LD<br />
+... additional blank nodes to represent relation properties<br />
+... geoJSON for location information<br />
+... RESTful API to create, update, delete entities, multiple query
+features, subscriptions<br />
+... information about assets come from IoT devices, hence use W3C
+WoT<br />
+... Intermediaries map Things to our entities<br />
+... TDs need to be annotated, but should use standard
+ontologies<br />
+... Intermediary combines TD metadata and transferred data into
+NGSI-LD information<br />
+... W3C WoT is very promising and flexible for our use cases<br />
+... need more work on consolidation, more standards around Thing
+Templates and Protocol Binding vocabulary</p>
+<p class='phone'><cite>Victor:</cite> in the TD example, why is the
+Event annotated with Observation?</p>
+<p class='phone'><cite>Jose:</cite> need to combine feature of
+interest and property, but feedback is welcome to improve</p>
+<p class='phone'><cite>Victor:</cite> we added annotation
+example(s) to the TD spec</p>
+<p class='phone'><cite>Jose:</cite> maybe some annotations could be
+standardized, because Intermediaries will always have to do the
+same</p>
+<p class='phone'><cite>Ben:</cite> there are lines to say no
+security</p>
+<p class='phone'><cite>McCool:</cite> we are working to reduce
+verbosity</p>
+<p class='phone'><cite>Matthias:</cite> it is in there to bother
+people who do not put security into their Things</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item15">Exploiting Interaction Affordances</h3>
+<p class='irc'>&lt;<cite>taki1</cite>&gt; scribenick: taki</p>
+<p class='phone'><cite>Andrei:</cite> WWW - Hypermedia environment
+for people<br />
+... which provides local guidance.<br />
+... goal is to provide global guidance<br />
+... WoT is an internet scale hypermedia environment<br />
+... How to privide global guidance?<br />
+... want to created automated consumer<br />
+... MAOP - multi-agent oriented programming<br />
+... is a world of humans<br />
+... agents have desires, etc.<br />
+... how can we program such systems?<br />
+... agent perceives and act on environment<br />
+... different from object which is passive<br />
+... different from actor, which is reactive<br />
+... how to balabce active and reactive is a challenge<br />
+... reactive - e.g. node-red<br />
+... static mashup cannot adapt to dynamic environment<br />
+... for automatic planning, need to balance proactive and
+reactive.<br />
+... BDI model has interpreter and events, done in late 80s<br />
+... less computing power that time.</p>
+<p class='phone'>Andrei showing agent programming language BDI</p>
+<p class='phone'><cite>Andrei:</cite> similar to prolog<br />
+... is a script of behaviour.<br />
+... starts with belief, goal<br />
+... MAOP is more recent work.<br />
+... early 2000s, many multi-agent research was done.<br />
+... new class of multi agent system using hypermedia<br />
+... heterogenious data foemat, identification, autehtications are
+problems<br />
+... interaction protocols, wot can help.<br />
+... what about policies? regulations?<br />
+... discovery, searching<br />
+... has prototype search engine<br />
+... consumer needs to be autonomous<br />
+... we discussed this before<br />
+... world-wide manufacturing. autonomous marketplace. we can
+levegrage web architecture for those.<br />
+... about prototypes now.<br />
+... manufacturing lines are expensive.<br />
+... autonomy. 0% production engeeers define configuration.<br />
+... WoT, semantic descriptions. abstractions on top of that for
+agents.<br />
+... we can deploy multi agent system on top of WoT<br />
+... "belief" comes from sensor. and so forth<br />
+... benefit - reusability of components, automated planning +
+high-level programming<br />
+... BDI agents amd planning for Web-based artifacts</p>
+<p class='irc'>&lt;<cite>taki1</cite>&gt; scribenick: taki2</p>
+<p class='phone'><cite>Andrei:</cite> agent achieves goal by
+selecting a plan.</p>
+<p class='phone'>Andrei shows demo video...</p>
+<p class='phone'><cite>Andrei:</cite> graphics are not very
+important</p>
+<p class='irc'>&lt;<cite>rzr</cite>&gt; <a href=
+"https://youtu.be/tfAVDpYn_ow">https://youtu.be/tfAVDpYn_ow</a></p>
+<p class='phone'><cite>Andrei:</cite> I get notification when my
+goal was achieved.<br />
+... first hypermedia multi agent systems was held May 13.<br />
+... please check web site.</p>
+<p class='irc'>&lt;<cite>rzr</cite>&gt; <a href=
+"http://www.hyperagents.org/">http://www.hyperagents.org/</a></p>
+<p class='phone'><cite>Andrei:</cite> interaction as a first class
+abstraction. TD provides this.<br />
+... declarative specification and enactment were Studied to large
+extent in MAS research.<br />
+... regulation as a first class abstraction. licensing policies,
+etc. this is an issue.<br />
+... conclusion. interaction afforances are important/ it will
+motivate hypermedia multi agent systems.<br />
+... Thank you/</p>
+<p class='phone'><cite>Matthias:</cite> policies are challenges. is
+it funcamental problem?</p>
+<p class='phone'><cite>Andrei:</cite> depends on level of
+autonomy.<br />
+... access card for door. is too restrictive. there are other ways.
+Those are polcies.<br />
+... how can an agent reason policies? This is another level.</p>
+<p class='phone'><cite>Matthias:</cite> policy. both lawer
+understanable and machine underestandable.</p>
+<p class='phone'><cite>McCool:</cite> There are contracts and
+outgoing contracts.</p>
+<p class='phone'><cite>Andrei:</cite> restriction and sactioning of
+clients are supported.</p>
+<p class='phone'><cite>Lagally:</cite> Thank you.<br />
+... last talk is from OGC.</p>
+<p class='phone'><cite>Michael:</cite> WoT and OGC SensotThings
+API<br />
+... free, open web-based API. sensors amd observations.<br />
+... previous work. SWE, SOS, O&amp;M.<br />
+... many open source implementations.<br />
+... visibility in sensing and smart city communities.</p>
+<p class='phone'>Michael shows STA Data Model.</p>
+<p class='phone'>Michael talks about STA basics...</p>
+<p class='phone'><cite>Michael:</cite> accessing entities using
+STA<br />
+... Thing has location and datastream</p>
+<p class='phone'>Michael shows how to use links...</p>
+<p class='phone'>Michael shows how to use filtering ...</p>
+<p class='phone'>Michael shows pagenated results...</p>
+<p class='phone'><cite>Michael:</cite> how WoT and STA
+relate?<br />
+... WoT is meta-level description, protocol-agnostic. state-based
+paradigm.<br />
+... STA is more concrete for sensing and actuation. state-based and
+observation-based.<br />
+... two are complementary, not in competition.<br />
+... STA as use case for TD.<br />
+... there are new requirements for TD. such as linking between
+collection of things, and recursive datatypes.</p>
+<p class='phone'><cite>Victor:</cite> we may already have supported
+those.</p>
+<p class='phone'><cite>Michael:</cite> WoT can benefit from
+geospatial nature of data.<br />
+... is it part of WoT? need to consider pattern for historic
+values.<br />
+... WoT can benefit from resource discovery and resource
+access<br />
+... sensorthings's query API is very powerful.<br />
+... STA's $expand keyword is powerful.</p>
+<p class='phone'>Michael shows an example of STA entity as WoT
+TD...</p>
+<p class='phone'><cite>Michael:</cite> In TD form, URL is for
+getting the latest value.<br />
+... STA can benefit from TD.<br />
+... Semantic web technologies.<br />
+... can benefit from domain-specific data models.<br />
+... interoperability is a benefit.</p>
+<p class='phone'><cite>Sebastian:</cite> ontology is existing. TD
+is based on JSON-LD.</p>
+<p class='phone'><cite>Michael:</cite> proposal is about
+directory.<br />
+... without geolocation information, searching in directory is not
+easy.</p>
+<p class='phone'><cite>Matthias:</cite> it is a good
+checklist.<br />
+... we have lots of extension points.<br />
+... we can experiment more in WoT IG.<br />
+... there are lots of choices for geolocation.</p>
+<p class='phone'><cite>McCool:</cite> location, we do not have to
+pick one.<br />
+... General wrap-up.<br />
+... We discussed W3C and Mozilla alignment. we discuss this
+first.<br />
+... Web Thing alignment.<br />
+... Mozilla Web Thing not fully compatible with W3C WoT.<br />
+... key gap is misalignment of use cases.<br />
+... W3C use cases are broader.<br />
+... TD can describe services and devices.<br />
+... brownfield device use case.<br />
+... Gateway vs ability to describe interfaces to constrained
+devices directly.<br />
+... prescriptive and finite vs. descriptive and open. This is
+difference.<br />
+... How can we resolve those?</p>
+<p class='phone'>McCool shows possible solutions...</p>
+<p class='phone'><cite>Ben:</cite> devices should use its
+interface.</p>
+<p class='phone'>McCool shows candidate solutions...</p>
+<p class='phone'><cite>McCool:</cite> 1. prescriptive, 2 defaults,
+3 fork, 4. profile, 5. other</p>
+<p class='phone'><cite>Zoltan:</cite> Web-RPC specification had
+similar issue.<br />
+... it defaults to Web.</p>
+<p class='phone'><cite>Lagally:</cite> no customization is
+desirable.</p>
+<p class='phone'><cite>Ben:</cite> how do you achieve out-of-the
+box interoperability?</p>
+<p class='phone'><cite>Lagally:</cite> through profiles.</p>
+<p class='phone'><cite>Ege:</cite> protocol, application level? or
+HTTP level?</p>
+<p class='phone'><cite>Ben:</cite> We can use WebSocket, too.<br />
+... we can consider extension to HTTP.</p>
+<p class='phone'><cite>McCool:</cite> trickiest is the handling of
+WebSocket.</p>
+<p class='phone'><cite>Sebastian:</cite> we have protocol
+templates.<br />
+... Protocol binding to Mozilla is another approach.</p>
+<p class='phone'><cite>Ben:</cite> TD's hypermedia is not powerful
+enough.<br />
+... How many protocols should client support?</p>
+<p class='phone'>Question: How is it different from JavaScript
+version?</p>
+<p class='phone'><cite>Ben:</cite> If we do not specify default, it
+is as if we are not recommending anything.</p>
+<p class='phone'><cite>McCool:</cite> Things evolve. IoT devices
+surivivies for 10-20 years.</p>
+<p class='phone'><cite>Ben:</cite> For the time being, We support
+HTML and CoaP.<br />
+... future HTTP versions should be friendly to contsrained
+devices.</p>
+<p class='phone'><cite>Matthias:</cite> HTTP methods, WebSocket,
+etc. everything is in place.</p>
+<p class='phone'><cite>Ben:</cite> Get for read properties, etc.
+are the only thing currently described.<br />
+... HTTP is the default.</p>
+<p class='phone'><cite>Matthias:</cite> defaults are there. give
+users incentive to converge.</p>
+<p class='phone'><cite>Ben:</cite> you do not want to create
+separate WebSocketfor all events.</p>
+<p class='phone'><cite>Matthias:</cite> there is a RFC that
+provides solution.</p>
+<p class='phone'><cite>Ben:</cite> we suggest to make TD spec
+simpler and smaller.</p>
+<p class='phone'><cite>Lagally:</cite> TD 1.0 is powerful
+enough?</p>
+<p class='phone'><cite>Ben:</cite> no</p>
+<p class='phone'><cite>Matthias:</cite> please open issues.<br />
+... let's discuss together.</p>
+<p class='phone'><cite>Kathy:</cite> profiles. is it use case?</p>
+<p class='phone'><cite>McCool:</cite> limiting features.</p>
+
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+<h3 id="day2-item16">Wrap-Up</h3>
+<p class='phone'><cite>McCool:</cite> we start discuss new WG
+charter soon.<br />
+... IG is for incubation.<br />
+... for gaps in TD, please create issues.<br />
+... does anybody has particular theme?</p>
+<p class='phone'><cite>Zoltan:</cite> For scripting, WG or CG are
+good.<br />
+... Discovery may be for WG.</p>
+<p class='phone'><cite>Matthias:</cite> first we experiment in
+IG.<br />
+... WG needs to maintain documents. We can enter maintenance
+mode.</p>
+<p class='phone'><cite>McCool:</cite> maintenance and
+incubaton.</p>
+<p class='phone'><cite>Zoltan:</cite> scripting is not browser
+API</p>
+<p class='phone'><cite>Jeff:</cite> re-charter for maintenace was
+discussed at TPAC.<br />
+... there are lots pf ideas. good thing<br />
+... need to boil down on priority.<br />
+... how to triage?<br />
+... tangible and concrete items first.<br />
+... how big is each gap?</p>
+<p class='phone'>Jeff explains how CG and IG work together in
+W3C...</p>
+<p class='phone'><cite>Jeff:</cite> IG does not have IP policy.</p>
+<p class='phone'><cite>Lagally:</cite> we can consolidate calls
+into smaller number of calls.</p>
+<p class='phone'><cite>Matthias:</cite> we cannot achieve anything
+if it is too broad.</p>
+<p class='phone'><cite>Kaz:</cite> We had about 200 suggestions
+during Workshop.<br />
+... We can discuss those in WG F2F.</p>
+
+<p class='irc'><a href="https://www.w3.org/2019/06/wot-ws/day2/topics-all.xlsx">Spreadsheet including 200 suggestions and meta-categories</a></p>
+
+<p class='phone'><cite>Lagally:</cite> can we clean and send this
+list to WG mailing list?</p>
+<p class='phone'><cite>Jeff:</cite> what would the summer look
+like? TPAC is coming soon.<br />
+... July and August.<br />
+... we need to think about clear strategy.</p>
+<p class='phone'><cite>Sebastian:</cite> what other silent people
+think about?</p>
+<p class='phone'><cite>Andrei:</cite> offline things can have
+TD.</p>
+<p class='phone'><cite>Ben:</cite> we needed more discussion time.
+Time keeping was challenging.</p>
+<p class='phone'><cite>Kaz:</cite> was everyone happy?<br />
+... we can invite people to WG F2F if chairs agree.</p>
+<p class='phone'><cite>Matthias:</cite> PR transition part of
+discussion may be boring for people.</p>
+<p class='phone'><cite>McCool:</cite> people fly back, and Friday
+they can call in.<br />
+... Kaz to arrange WebEx.</p>
+<p class='phone'><cite>Sebastian:</cite> we have done it!</p>
+<p class='phone'>everyone clapping hands...</p>
+<p class='phone'><cite>Sebastian:</cite> It was great three
+days.<br />
+... we could setup mashup scenarios quickly.<br />
+... good job.</p>
+<p class='phone'><cite>Kathy:</cite> thank you to all you guys.</p>
+<p class='phone'><cite>Kaz:</cite> thank you very much for all your
+contributions!</p>
+<p class='phone'><cite>Lagally:</cite> so many great ideas and
+brains.<br />
+... I enjoyed the whole thing so much!</p>
+<p class='phone'><cite>Kaz:</cite> Minutes talkers, thank you.</p>
+<p class='phone'><cite>Lagally:</cite> thank you for people for all
+the logistics</p>
+<p class='phone'><cite>Sebastian:</cite> Enjoy the night, close the
+workshopp.<br />
+... F2F is at TUM. It is not hosted by Siemens.</p>
+<p class='phone'><cite>Ege:</cite> location information is WoT IG
+wikipage.<br />
+... if any questions, please contact me.</p>
+<p class='phone'><cite>Lagally:</cite> Presentation will be
+posted.</p>
+<p class='irc'>&lt;<cite>mjkoster</cite>&gt; A potential solution
+for profiles is to define them as a mediatypes</p>
+<p class='irc'>&lt;<cite>mjkoster</cite>&gt; it could address the
+websocket subprotocol issue also</p>
+</div>
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+[End of minutes]<br />
+
+<footer class="footer" id="footer">
+<p>
+Questions? Contact Sebastian Käbisch &lt;<a href="mailto:Sebastian.Kaebisch@siemens.com">Sebastian.Kaebisch@siemens.com</a>&gt; and Michael Lagally &lt;<a href="mailto:Michael.Lagally@oracle.com">Michael.Lagally@oracle.com</a>&gt.
+</p>
+<p>
+Suggestions for improving this workshop page, such as adding specific topics or fixing typos are welcomed and should be emailed to &lt;<a href="mailto:Sebastian.Kaebisch@siemens.com">Sebastian.Kaebisch@siemens.com</a>&gt; or Michael Lagally &lt;<a href="mailto:Michael.Lagally@oracle.com">Michael.Lagally@oracle.com</a>&gt.
+</p>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
