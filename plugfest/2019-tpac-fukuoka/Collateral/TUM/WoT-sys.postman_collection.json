@@ -1,0 +1,1558 @@
+{
+	"info": {
+		"_postman_id": "421234d2-7cd4-424c-bb09-7c14d3935f7d",
+		"name": "TUM_WoT-sys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hue",
+			"item": [
+				{
+					"name": "Light1-TurnOnOff",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"on\":false\n}"
+						},
+						"url": {
+							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/4/state",
+							"protocol": "http",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"lights",
+								"4",
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Light1-state",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"on\":true\n}"
+						},
+						"url": {
+							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/1/state",
+							"protocol": "http",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"lights",
+								"1",
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Light1-Brightness-Complex",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"on\":true,\n\t\"bri\":20,\n\t\"transitiontime\":300\n}"
+						},
+						"url": {
+							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/1/state",
+							"protocol": "http",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"lights",
+								"1",
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Light1-Brightness-Increment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"on\":true,\n\t\"bri\":20,\n\t\"transitiontime\":300\n}"
+						},
+						"url": {
+							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/1/state",
+							"protocol": "http",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"lights",
+								"1",
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Light1-Brightness-Simple",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"on\":true,\n\t\"bri\":25\n}"
+						},
+						"url": {
+							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/1/state",
+							"protocol": "http",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"lights",
+								"1",
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Light1-Brightness-Alert",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"on\":true,\n\t\"bri\":250,\n\t\"alert\":\"lselect\"\n}"
+						},
+						"url": {
+							"raw": "http://Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/lights/1/state",
+							"protocol": "http",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"lights",
+								"1",
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dimmer Switch Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/sensors/2",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"sensors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Daylight Sensor Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/sensors/1",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"sensors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dimmer Switch Change Name",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Hue dimmer switch 1 for WoT\"\n}"
+						},
+						"url": {
+							"raw": "Philips-hue.local/api/R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws/sensors/2",
+							"host": [
+								"Philips-hue",
+								"local"
+							],
+							"path": [
+								"api",
+								"R6D7CYQFzXckikMPLEL8WbSZWg9XKkEyx-NrgKws",
+								"sensors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "ALl Philips Hue Devices"
+		},
+		{
+			"name": "LightSensor",
+			"item": [
+				{
+					"name": "LightSensor1-TD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.188.9",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"188",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LightSensor2-TD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.188.8",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"188",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Light Sensor 1 properties/intensity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.188.9/properties/intensity",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"188",
+								"9"
+							],
+							"path": [
+								"properties",
+								"intensity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Light Sensor 2 properties/intensity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.188.8/properties/intensity",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"188",
+								"8"
+							],
+							"path": [
+								"properties",
+								"intensity"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "ESP Light Sensor"
+		},
+		{
+			"name": "Dotstar",
+			"item": [
+				{
+					"name": "LED DotStar properties/brightness",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "100"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/properties/brightness",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"properties",
+								"brightness"
+							]
+						},
+						"description": "Set/get brightness"
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar properties/stats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/properties/stats",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"properties",
+								"stats"
+							]
+						},
+						"description": "Set/get brightness"
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar actions/fill",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"red\": 255,\"green\": 0,\"blue\": 0}"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/actions/fill",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"actions",
+								"fill"
+							]
+						},
+						"description": "light all LEDs"
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar actions/fill_upper",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"red\": 255,\"green\": 255,\"blue\": 0}"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/actions/fill_upper",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"actions",
+								"fill_upper"
+							]
+						},
+						"description": "light all LEDs"
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar actions/fill_middle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"red\": 255,\"green\": 0,\"blue\": 255}"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/actions/fill_middle",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"actions",
+								"fill_middle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar actions/fill_lower",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"red\": 0,\"green\": 255,\"blue\": 255}"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/actions/fill_lower",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"actions",
+								"fill_lower"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar - actions/random",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/actions/random",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"actions",
+								"random"
+							]
+						},
+						"description": "Light one LED"
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar - actions/dot",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"led\": 24, \"color\": {\"red\": 255,\"green\": 255,\"blue\": 255}}"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/actions/dot",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"actions",
+								"dot"
+							]
+						},
+						"description": "Light one LED"
+					},
+					"response": []
+				},
+				{
+					"name": "LED DotStar - actions/shutdown",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/actions/shutdown",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"actions",
+								"shutdown"
+							]
+						},
+						"description": "Light one LED"
+					},
+					"response": []
+				},
+				{
+					"name": "DotStar TD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-DotStar.local:8080/",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-DotStar",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "LED Strip going around the cart"
+		},
+		{
+			"name": "MeArm",
+			"item": [
+				{
+					"name": "MeArmPi properties/gripState",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/properties/gripState",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								"properties",
+								"gripState"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MeArmPi properties/motorPositions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/properties/motorPositions",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								"properties",
+								"motorPositions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MeArmPi actions/openGrip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/actions/openGrip",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								"actions",
+								"openGrip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MeArmPi actions/moveUpperTo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "50"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/actions/moveUpperTo",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								"actions",
+								"moveUpperTo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MeArmPi actions/moveBaseTo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "50"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/actions/moveBaseTo",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								"actions",
+								"moveBaseTo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MeArmPi actions/moveLowerTo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "50"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/actions/moveLowerTo",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								"actions",
+								"moveLowerTo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MeArmPi actions/dance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/actions/dance",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								"actions",
+								"dance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-MeArmPi-Blue.local:8080/MeArmPi/",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-MeArmPi-Blue",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"MeArmPi",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SenseHAT",
+			"item": [
+				{
+					"name": "SenseHat all/properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/all/properties",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"all",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat actions/flipH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/flipH",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"actions",
+								"flipH"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat actions/showLetter",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"s\": \"A\"}"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/showLetter",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"actions",
+								"showLetter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat properties/eventHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/eventHistory",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"eventHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat properties/rotation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/rotation",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"rotation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat properties/rotation",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "0"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/rotation",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"rotation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat actions/showMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"textString\": \"Hello World!\", \"scrollSpeed\": 0.1}"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/showMessage",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"actions",
+								"showMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat actions/clear",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/clear",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"actions",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat events/joystickPress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/events/joystickPress",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"events",
+								"joystickPress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat TD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat LowLight",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/lowLight",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"lowLight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat LowLight Write",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "true"
+						},
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/lowLight",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"lowLight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHAT humidity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/humidity",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"humidity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHAT temperature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/temperature",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"temperature"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat pressure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/pressure",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"pressure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat Acceleration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/accel",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"accel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SenseHat Compass",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/compass",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-SenseHat-106",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"SenseHat",
+								"properties",
+								"compass"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Camera",
+			"item": [
+				{
+					"name": "PiCamera properties/frame",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-Rpi-Camera-IR.local:8080/properties/frame",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-Rpi-Camera-IR",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"properties",
+								"frame"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PiCamera properties/configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-Rpi-Camera-IR.local:8080/properties/configuration",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-Rpi-Camera-IR",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"properties",
+								"configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PiCamera TD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://TUMEIESI-Rpi-Camera-IR.local:8080/",
+							"protocol": "http",
+							"host": [
+								"TUMEIESI-Rpi-Camera-IR",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "The cameras attached to RPi Zeros"
+		},
+		{
+			"name": "SensorTAG",
+			"item": [
+				{
+					"name": "TD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "TUMEIESI-TI-SensorTAG.local:8080/TI_Sensortag1",
+							"host": [
+								"TUMEIESI-TI-SensorTAG",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"TI_Sensortag1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "TUMEIESI-TI-SensorTAG.local:8080/TI_Sensortag1/all/properties",
+							"host": [
+								"TUMEIESI-TI-SensorTAG",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"TI_Sensortag1",
+								"all",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Object Temperature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "TUMEIESI-TI-SensorTAG.local:8080/TI_Sensortag1/properties/objectTemperature",
+							"host": [
+								"TUMEIESI-TI-SensorTAG",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"TI_Sensortag1",
+								"properties",
+								"objectTemperature"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ambient Temperature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "TUMEIESI-TI-SensorTAG.local:8080/TI_Sensortag1/properties/ambientTemperature",
+							"host": [
+								"TUMEIESI-TI-SensorTAG",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"TI_Sensortag1",
+								"properties",
+								"ambientTemperature"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Humidity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "TUMEIESI-TI-SensorTAG.local:8080/TI_Sensortag1/properties/humidity",
+							"host": [
+								"TUMEIESI-TI-SensorTAG",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"TI_Sensortag1",
+								"properties",
+								"humidity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pressure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "TUMEIESI-TI-SensorTAG.local:8080/TI_Sensortag1/properties/pressure",
+							"host": [
+								"TUMEIESI-TI-SensorTAG",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"TI_Sensortag1",
+								"properties",
+								"pressure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Luminosity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "TUMEIESI-TI-SensorTAG.local:8080/TI_Sensortag1/properties/luminosity",
+							"host": [
+								"TUMEIESI-TI-SensorTAG",
+								"local"
+							],
+							"port": "8080",
+							"path": [
+								"TI_Sensortag1",
+								"properties",
+								"luminosity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
