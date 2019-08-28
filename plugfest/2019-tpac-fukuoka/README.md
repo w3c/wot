@@ -193,9 +193,10 @@ There are three possible opportunities for the WoT demo.
 1. ~~Monday evening: Developer meetup~~
     * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
 
-2. Wednesday: Breakout session - 14:30-15:30
-    * We prefer ttranquilityhe "after lunch" slot.
+2. Wednesday: Breakout session - 13:30-14:30  
+    * We prefer tranquility of the "after lunch" slot.
     * 1st hour after lunch we have a dedicated demo room
+    * consider to include a slide demo for companies not present, e.g. BMW, EcoG, ...
     * to be added to the [Session Idea Wiki](https://www.w3.org/wiki/TPAC/2019/SessionIdeas)
 
 3. Wednesday: Dedicated demo session - 15:30-16:30
