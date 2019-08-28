@@ -158,6 +158,24 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 * Storage battery start discharging (Fujitsu)
 * Smart home application monitors and controls these devices.
 
+# Demo infrastructure
+
+## Displays
+NHK screen (43") with dedicated stand - visualize hybridcast connected application
+TBC.: - Can we use the screen for visualizing other content? (cloud service, gateway dashboard, Hangouts)?
+TBC.: - TV remote, cursor, keyboard?
+
+## Intel 15" monitor (hdmi) + 15" laptop
+
+## Panasonic: Google home, LED number display, Small display (~13")
+
+## Fujitsu: 13" PC, checking on display
+
+## Siemens: Simulation, Laptop t.b.d.
+
+
+
+
 
 # TPAC session plan
 
@@ -165,6 +183,8 @@ Not yet available -
 https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 # Logistics + Constraints:
+
+
 
 ## Demo opportunities:
 
