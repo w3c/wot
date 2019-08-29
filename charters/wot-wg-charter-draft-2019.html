@@ -203,8 +203,8 @@
             <dd>Extensions to TD vocabulary definitions.</dd> 
             <dt><strong>Protocol Vocabulary:</strong></dt>
             <dd>Extensions to protocol vocabulary definitions and protocol bindings.</dd> 
-            <dt><strong>Smart Home Profile:</strong></dt>
-            <dd>Support plug-and-play interoperabilty via a profile mechanism and define a profile for the Smart Home use case.</dd>
+            <dt><strong>Interoperability Profiles:</strong></dt>
+            <dd>Support plug-and-play interoperabilty via a profile mechanism and define profiles for specific application domains and use cases.</dd>
             <dt><strong>Implementation View Spec:</strong></dt>
             <dd>More fully define details of implementations.</dd>
             <dt><strong>Complex Interactions:</strong></dt>
@@ -336,7 +336,7 @@
           for CoAP(S), CoAP(S)+WS(S), MQTT, and OPC-UA.
         </p>
 
-        <h3>Smart Home Profile</h3>
+        <h3>Interoperability Profile</h3>
         <p>The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
           provides a general framework for describing the interface to a Thing
@@ -345,14 +345,16 @@
           are constantly evolving.
           However, this openness works against interoperability since it is 
           not clear in advance what technologies must be supported by a given
-          implementation of a TD Consumer, and a consumer can only work with
+          implementation of a TD Consumer, and a TD Consumer can only work with
           Things supporting the technologies it includes an implementation for.
         </p>
         <p>
-          Especially in a consumer context, "plug and play" interoperability is
-          desirable: the consumer needs to know in advance of purchase whether
+          In many contexts, "plug and play" interoperability is
+          desirable. 
+          For example, in the Smart Home context,
+          the consumer needs to know in advance of purchase whether
           a set of devices will work with each other. 
-          Such predictability is also an asset in other contexts, 
+          Such predictability is also an asset in many other contexts, 
           including industrial use cases.
           Unfortunately the set of technologies that must be supported depend on 
           context: protocols, data types, and security mechanisms 
@@ -364,22 +366,19 @@
           To resolve this problem this work item will define "profiles" which
           define subsets of TDs that support only the features
           suitable for a given context.  
-          Profiles may also modify the interpretation
-          of a TD, e.g. by defining default values suitable for that context.
           This work item will include the following:
           <ol>
-          <li>Definition of a mechanism to identify the profile that a given TD
-            is conformant to, given that there may be more than one profile available.</li>
-          <li>Definition of what features in a TD may be limited or modified by a profile.
-            Limits may include support only for specific protocols and security schemes; 
-            limits on allowable media types (data encodings), link relations, or URI schemes;
-            and subsetting of enumerated types identifying subprotocols or data types.
-            Modifications may include specification of default values (potentially without overrides) 
-            or new required fields (vocabulary).
-          </li>
-          <li>Definition of at least one profile, including a profile for the 
-            Smart Home context.  If appropriate, additional profiles for other
-            contexts may also be defined.</li>
+            <li>
+               Definition of a mechanism to identify the profile 
+               or profiles that a given TD is conformant to.
+            </li>
+            <li>
+               Definition of what features in a TD may be limited by a profile.
+            </li>
+            <li>
+               Definition of profiles for specific application domains
+               and use cases.
+            </li>
           </ol>
         </p>
 
@@ -615,9 +614,9 @@
     </dd>
               </dl>
 
-            <dt id="wot-smart-home-profile-1-0" class="spec"><a href="#">Web of Things (WoT) Smart Home Profile 1.0</a></dt>
+            <dt id="wot-smart-home-profile-1-0" class="spec"><a href="#">Web of Things (WoT) Interoperability Profiles 1.0</a></dt>
             <dd>
-              <p>This specification defines a profile for using the Web of Things in the Smart Home context.
+              <p>This specification defines profiles for using the Web of Things in specific application domains and use cases.
               </p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="#">Use Cases</a></p>
