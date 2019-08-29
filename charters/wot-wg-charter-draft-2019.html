@@ -331,6 +331,8 @@
           During software development however, if we wish to
           design code to talk to a class of devices, 
           we may need to have some knowledge of the protocol binding as well.  
+        </p>
+        <p>
           A closely related problem is that of components: 
           we may wish to assemble a Thing Description from a set
           of reusable, modular capabilities.  
@@ -403,7 +405,7 @@
           and a variety of other mechanisms could be used.  In the global
           context a search engine could be used.  However, in all cases
           introductions would result in the address of an exploration service. 
-          Exploration could be implemented as a web services
+          Exploration could be implemented as a web service
           providing a searchable directory of TDs.  
           However, by making the 
           addresses returned by introductions opaque and requiring authentication
@@ -422,7 +424,7 @@
           directory-based discovery, both local and global discovery,
           and be privacy-preserving.
         </p>
-`
+
         <h3>Identity Management</h3>
         <p>
           A <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
@@ -604,10 +606,12 @@
             The Working Group will deliver the following W3C normative specifications:
           </p>
           <dl>
-            <dt id="wot-arch-1-1" class="spec"><a href="#">Web of Things (WoT) Architecture 1.1</a></dt>
+            <dt id="wot-arch-next" class="spec"><a href="#">Web of Things (WoT) Architecture (Next)</a></dt>
             <dd>
               <p>This specification defines the Web of Things architecture, including 
                  its use cases and terminology.
+                 This deliverable extends the current Web of Things Architecture document to
+                 address new requirements and use cases.
               </p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="#">Adopted from Web of Things Working Group</a></p>
@@ -620,14 +624,16 @@
     </dd>
               </dl>
 
-            <dt id="wot-td-1-1" class="spec"><a href="#">Web of Things (WoT) Thing Description 1.1</a></dt>
+            <dt id="wot-td-next" class="spec"><a href="#">Web of Things (WoT) Thing Description (Update)</a></dt>
             <dd>
               <p>This specification defines the Web of Things Thing Description information model
                 and JSON-LD serialization.
+                This deliverable addresses high-priority issues
+                in the current Web of Things Thing Description document.
               </p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="#">Adopted from Web of Things Working Group</a></p>
-              <p class="milestone"><b>Expected completion:</b> Q1 2021</p>
+              <p class="milestone"><b>Expected completion:</b> Q3 2020</p>
               <dl><dt>
       <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
       <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
@@ -636,12 +642,15 @@
     </dd>
               </dl>
 
-            <dt id="wot-smart-home-profile-1-0" class="spec"><a href="#">Web of Things (WoT) Interoperability Profiles 1.0</a></dt>
+            <dt id="wot-td-next" class="spec"><a href="#">Web of Things (WoT) Thing Description (Next)</a></dt>
             <dd>
-              <p>This specification defines profiles for using the Web of Things in specific application domains and use cases.
+              <p>This specification defines the Web of Things Thing Description information model
+                and JSON-LD serialization.
+                This deliverable extends the current Web of Things Thing Description document to
+                address all the work items defined.
               </p>
 
-              <p class="draft-status"><b>Draft state:</b> <a href="#">Use Cases</a></p>
+              <p class="draft-status"><b>Draft state:</b> <a href="#">Adopted from Web of Things Working Group</a></p>
               <p class="milestone"><b>Expected completion:</b> Q2 2021</p>
               <dl><dt>
       <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
@@ -651,7 +660,22 @@
     </dd>
               </dl>
 
-            <dt id="wot-discovery-1-0" class="spec"><a href="#">Web of Things (WoT) Discovery 1.0</a></dt>
+            <dt id="wot-smart-home-profile" class="spec"><a href="#">Web of Things (WoT) Interoperability Profiles</a></dt>
+            <dd>
+              <p>This specification defines profiles for using the Web of Things in specific application domains and use cases.
+              </p>
+
+              <p class="draft-status"><b>Draft state:</b> <a href="#">Use Cases</a></p>
+              <p class="milestone"><b>Expected completion:</b> Q2 2020</p>
+              <dl><dt>
+      <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
+      <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
+        <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
+      <p>Produced under <b>Working Group Charter:</b> The  <span class="todo">stable URL of the Working Group charter</span> under which the most recent Reference Draft or Candidate Recommendation was published.
+    </dd>
+              </dl>
+
+            <dt id="wot-discovery" class="spec"><a href="#">Web of Things (WoT) Discovery</a></dt>
             <dd>
               <p>This specification defines how WoT Things are to be discovered using
                  a privacy-preserving architecture.
@@ -684,6 +708,7 @@
             <li>Security and Privacy Best Practices (W3C Note);</li>
             <li>Protocol Bindings (W3C Note);</li>
             <li>Scripting API (W3C Note);</li>
+            <li>Developer's Guide (W3C Note);</li>
             <li>Other Primer or Best Practice documents to support developers and users.</li>
           </ul>
         </section>
@@ -757,10 +782,13 @@
             <dd>For collaboration on technologies and requirements relating to connected cars and the Web of Things.</dd>
             <dt><a href="http://www.w3.org/2009/dap/">Device and Sensors Working Group</a></dt>
             <dd>For coordination on APIs for sensors and actuators.</dd>
+            <dt><a href="">Decentralized Identifier Working Group</a></dt>
+            <dd>For coordination on identity management and information lifecycle.</dd>
             <dt><a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a></dt>
             <dd>For coordination on impacts of Web of Things technologies on accessibility to users with disabilities.</dd>
             <dt><a href="http://www.w3.org/Privacy/">Privacy Interest Group</a></dt>
-            <dd>In addition to horizontal review, during development of deliverables that
+            <dd>In addition to horizontal review, during development of deliverables such
+                as discovery and information lifecycle that
                 require the development of a privacy-preserving architecture,
                 close technical collaboration with the Privacy Interest Group will be needed.</dd>
           </dl>
