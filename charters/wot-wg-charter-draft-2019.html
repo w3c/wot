@@ -204,7 +204,7 @@
             <dt><strong>Complex Interactions:</strong></dt>
             <dd>Document how complex interactions can be supported via hypermedia controls.</dd>
             <dt><strong>Discovery:</strong></dt>
-            <dd>Define how Things are discovered and Thing Descriptions are distributed.</dd>
+            <dd>Define how Things are discovered in both local and global contexts and Thing Descriptions are distributed.</dd>
             <dt><strong>Identity Management:</strong></dt>
             <dd>Mitigate privacy risks by defining how identity is managed and updated.</dd>
             <dt><strong>Security Schemes:</strong></dt>
@@ -382,25 +382,43 @@
           be distributed to parties with a permission to access the data.
           However, we also wish to support flexible discovery of the services
           and devices described by WoT TDs.
+          Discovery should be available at both local and global scales.
         </p>
         <p>
           In this work item we will specify a privacy-preserving architecture
           for Thing discovery.  
-          One possible way to do this is to distinguish
+          To approach this problem we can distinguish 
           between an "introduction", which is a first-contact protocol, and 
           "exploration", which retrieves detailed information about services.
-          Introductions can be public but should only provide the address
-          of an "exploration" service, which can be (for example) a web service
-          providing a searchable directory of TDs.  By making the 
+          Introductions should only provide the address
+          of an "exploration" service.
+          An exploration service, in turn, would provide detailed metadata
+          about services but only after authentication.
+          Introduction and exploration could take several forms.
+          Introductions can be any mechanism that returns an address
+          of an exploration service.  In the local context broadcast
+          protocols, DHCP, DNS-SD, Bluetooth beacons, QR codes, 
+          and a variety of other mechanisms could be used.  In the global
+          context a search engine could be used.  However, in all cases
+          introductions would result in the address of an exploration service. 
+          Exploration could be implemented as a web services
+          providing a searchable directory of TDs.  
+          However, by making the 
           addresses returned by introductions opaque and requiring authentication
           for access to exploration services we can control who has access
           to detailed information about specific devices.
+          Peer-to-peer discovery could be supported as a special
+          case of this where Things self-host their own introductions
+          and exploration services.
         </p>
         <p>
           This work item will require a coordinated effort with other standards
           bodies such as IETF also working on discovery so that a common architecture
-          can be defined.  In addition, the architecture proposed by the Working Group
-          needs to support both peer-to-peer discovery and directory-based discovery.
+          can be defined.  
+          The architecture proposed by the Working Group
+          needs to support both peer-to-peer discovery and 
+          directory-based discovery, both local and global discovery,
+          and be privacy-preserving.
         </p>
 `
         <h3>Identity Management</h3>
