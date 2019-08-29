@@ -193,69 +193,54 @@
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           
           <dl>
-            <dt><strong>TD Security Schemes:</strong></dt>
-            <dd>Vocabulary for new security schemes supporting targetted protocols and use cases.</dd>
-            <dt><strong>TD Link Relation Types:</strong></dt>
-            <dd>Definition of specific link relation types for specific relationships.</dd>
-	    <dt><strong>Architecture Use Cases and Vocabulary</strong></dt>
+	    <dt><strong>Architectural Requirements, Use Cases, and Vocabulary</strong></dt>
             <dd>Definition of new use cases, architectural patterns, and concepts.</dd>
+            <dt><strong>Link Relation Types:</strong></dt>
+            <dd>Definition of specific link relation types for specific relationships.</dd>
+            <dt><strong>Interoperability Profiles:</strong></dt>
+            <dd>Support plug-and-play interoperabilty via a profile mechanism and define profiles for specific application domains and use cases.</dd>
+            <dt><strong>Templates:</strong></dt>
+            <dd>Define how Thing Descriptions can defined in a modular way.</dd>
+            <dt><strong>Complex Interactions:</strong></dt>
+            <dd>Document how complex interactions can be supported via hypermedia controls.</dd>
+            <dt><strong>Discovery:</strong></dt>
+            <dd>Define how Things are discovered and Thing Descriptions are distributed.</dd>
+            <dt><strong>Identity Management:</strong></dt>
+            <dd>Mitigate privacy risks by defining how identity is managed and updated.</dd>
+            <dt><strong>Security Schemes:</strong></dt>
+            <dd>Vocabulary for new security schemes supporting targetted protocols and use cases.</dd>
             <dt><strong>TD Vocabulary:</strong></dt>
             <dd>Extensions to TD vocabulary definitions.</dd> 
             <dt><strong>Protocol Vocabulary:</strong></dt>
             <dd>Extensions to protocol vocabulary definitions and protocol bindings.</dd> 
-            <dt><strong>Interoperability Profiles:</strong></dt>
-            <dd>Support plug-and-play interoperabilty via a profile mechanism and define profiles for specific application domains and use cases.</dd>
-            <dt><strong>Implementation View Spec:</strong></dt>
-            <dd>More fully define details of implementations.</dd>
-            <dt><strong>Complex Interactions:</strong></dt>
-            <dd>Document how complex interactions can be supported via hypermedia controls.</dd>
             <dt><strong>Observe Defaults:</strong></dt>
             <dd>For protocols such as HTTP where multiple ways to implement "observe" is possible, define a default.</dd>
-            <dt><strong>Identity Management:</strong></dt>
-            <dd>Mitigate privacy risks by defining how identity is managed and updated.</dd>
-            <dt><strong>Discovery:</strong></dt>
-            <dd>Define how Things are discovered and Thing Descriptions are distributed.</dd>
-            <dt><strong>TD Templates:</strong></dt>
-            <dd>Define how Thing Descriptions can defined in a modular way.</dd>
+            <dt><strong>Implementation View Spec:</strong></dt>
+            <dd>More fully define details of implementations.</dd>
           </dl>
         </div>
 	    
         <p>Details for each of these are given below.</p>
 
-        <h3>TD Security Schemes</h3>
+	<h3>Architectural Requirements, Use Cases, and Vocabulary</h3>
+        <p>
+          The <a href="https://www.w3.org/TR/wot-architecture">WoT Architecture</a>
+          specification includes the definitions of several terms and concepts used to
+          define WoT specifications.  These are often related closely to use cases
+          and architectural patterns.  As WoT implementations mature, it will be 
+          necessary to define new use case, architectural patterns, and associated 
+          concepts and vocabulary.  In addition, descriptions of existing use cases
+          architectural patterns may need to be clarified or refactored to include
+          these new concepts.
+        </p>
 	<p>
-          In the context of a 
-          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>, 
-          a security scheme defines vocabulary for 
-          describing public security metadata indicating the 
-          security mechanisms and requirements for accessing a Thing.
-          Currently the TD specification includes standard vocabulary 
-          for several security schemes in common use by IoT devices.
-          However, security mechanisms are constantly evolving and to stay relevant
-          WoT TDs need to support new security schemes on an ongoing basis.
-          The TD specification does include a vocabulary extension mechanism which can
-          be used to support new security schemes.  
-          However, to maximize interoperability,
-          these extension vocabularies should be standardized and where appropriate,
-          included by default by the core TD context.
+          Candidates for architectural vocabulary extension include a Producer concept 
+          and definition of information lifecycle and code deployment models.
+          The information lifecycle is especially relevant to the protection
+          of privacy.
         </p>
-        <p>
-          Based on a list of target security mechanisms identified by
-          the WoT Interest Group, this work item will include the following tasks:
-          <ol>
-          <li>For each target security mechanism, define a standard extension
-              vocabulary for a security scheme supporting that mechanism
-              that can be used with the current TD specification.</li>
-          <li>For a core set of security schemes, propose extensions to the 
-              core TD vocabulary to include them by default.</li>
-          </ol>
-        </p>
-        <p>
-          Candidates for target security schemes include support 
-          for all flows in OAuth2, support for PoP Tokens, and support for ACE.
-        </p>
-	      
-	<h3>TD Link Relation Types</h3>
+
+	<h3>Link Relation Types</h3>
 	<p>
           The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
@@ -278,65 +263,8 @@
           Other link types may be used to identify location or controller-controlled 
           relationships.
         </p>
-	      
-	<h3>Architecture Use Cases and Vocabulary</h3>
-        <p>
-          The <a href="https://www.w3.org/TR/wot-architecture">WoT Architecture</a>
-          specification includes the definitions of several terms and concepts used to
-          define WoT specifications.  These are often related closely to use cases
-          and architectural patterns.  As WoT implementations mature, it will be 
-          necessary to define new use case, architectural patterns, and associated 
-          concepts and vocabulary.  In addition, descriptions of existing use cases
-          architectural patterns may need to be clarified or refactored to include
-          these new concepts.
-        </p>
-	<p>
-          Candidates for architectural vocabulary extension include a Producer concept 
-          and definition of information lifecycle and code deployment models.
-          The information lifecycle is especially relevant to the protection
-          of privacy.
-        </p>
 
-	<h3>TD Vocabulary</h3>
-	<p>
-          The
-          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
-          context includes a core set of vocabulary.
-          This vocabulary can be extended by including additional context files.
-          However, to support new use cases and protocols in a consistent (interoperable) way,
-          especially in cases where JSON-LD processing is not possible,
-          extensions to this core vocabulary may be necessary.
-	</p>
-	<p>
-          Candidates for TD vocabulary extension include 
-          support for Data Schemas consistent with current versions of JSON Schema, 
-          extensions to Data Schemas to support XML and CBOR 
-          (and possibly other structured payload data formats), 
-          support for additional standard metadata such as location or device manufacturer,
-          and better support for default values.
-        </p>
-
-        <h3>Protocol Vocabulary</h3>
-	<p>
-          The
-          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
-          specification is augmented by a 
-          <a href="http://www.w3.org/TR/wot-protocol-binding">WoT Protocol Binding</a>
-          document which defines templates for how to use a TD to describe Things
-          using specific concrete protocols.
-          However, individual concrete protocols may require additional vocabulary
-          to define header options and other metadata.
-          These are defined using vocabulary extensions specific to each protocol.
-          Currently only a limited set of protocols are supported in a standard way.  
-          This work item will add support for an additional set of target protocols, 
-          where appropriate in collaboration with the defining standards body.
-        </p>
-        <p>
-          Candidates for extended protocol vocabulary include support 
-          for CoAP(S), CoAP(S)+WS(S), MQTT, and OPC-UA.
-        </p>
-
-        <h3>Interoperability Profile</h3>
+        <h3>Interoperability Profiles</h3>
         <p>The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
           provides a general framework for describing the interface to a Thing
@@ -382,18 +310,35 @@
           </ol>
         </p>
 
-        <h3>Implementation View Specification</h3>
-        <p>The
-          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
-          specification describes a data format but is currently silent on several aspects of
-          implementations that produce or consume TDs.
-          In order to better support interoperability,
-          more guidances on particular details of implementation is needed.
+        <h3>Templates</h3>
+        <p>Current
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Descriptions</a>
+          apply to specific Things, for example, particular devices.
+          However, there are often many devices manufactured with the same
+          interface and capabilities.  These devices differ from each other 
+          only in certain specific aspects, 
+          such as being installed in different locations
+          and having different identifiers.
         </p>
         <p>
-          This work item would more fully specify implementation details 
-          such as error responses, common features, etc.
-          These implementation details might be relative to specific profiles.
+          The current TD specification includes the definition of a "TD Template"
+          which is a partial TD that omits information that is specific to an instance.
+          However, the current definition of TD Templates 
+          only allows definition of the interaction model without a protocol binding.  
+          During software development however, if we wish to
+          design code to talk to a class of devices, 
+          we may need to have some knowledge of the protocol binding as well.  
+          A closely related problem is that of components: 
+          we may wish to assemble a Thing Description from a set
+          of reusable, modular capabilities.  
+          How is a TD Component to be defined and how are they to be combined
+          into a complete Thing?  How is a Consumer able to determine that a
+          particular Thing supports a specific sub-interface common to a set
+          of Things?
+        </p>
+        <p>
+          This work item will elaborate and refine the TD Template concept so
+          it can satisfy such extended use cases.
         </p>
 
         <h3>Complex Interactions</h3>
@@ -427,55 +372,6 @@
           </ol>
         </p>
 
-        <h3>Observe Defaults</h3>
-        <p>The WoT interaction model includes abstractions for 
-          Properties, Events, and Actions.  
-          The Properties abstraction includes an "observe" operation,
-          which allows a Thing to asynchronously notify a Consumer
-          of a change in a property.
-          However, in some protocols of interest, most notably HTTP,
-          there is more than one way to implement the observe operation.
-          The WoT TD allows the specification of a subprotocol to
-          indicate the mechanism used, but unfortunately no default
-          is specified.
-          Because of this Things using HTTP and observe must currently
-          explicitly state the mechanism used, every time.
-        </p>
-        <p>
-          This work item would specify exact defaults for implementing observe, 
-          including methods and subprotocols, for all important protocols 
-          but most especially HTTP.
-        </p>
-
-        <h3>Identity Management</h3>
-        <p>
-          A <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
-          contains an identifier meant to be
-          unique to every Thing. This identifier is essential for database
-          management (for example, for device inventory) but also 
-          constitutes a privacy risk.  In particular, an immutable
-          unique identifier might be used to track a device and from 
-          that infer the location or activities of the owner of that device.
-          If identifiers persist across transfer of ownership of 
-          devices, they might also be used to trace commercial transactions.
-        </p>
-        <p>
-          In order to preserve privacy, such identifiers may need to
-          be considered mutable so that such tracking can be disrupted.
-          More generally, the lifecycle of such identifiers needs to 
-          be defined: when they are assigned, when and how they are
-          updated, how notifications of such updates can be issued to
-          authorized parties, and how the identities must be deleted
-          when an object is decommissioned or replaced when a device
-          changes ownership.
-        </p>
-        <p>
-          This work item would define an identity management lifecycle
-          that would seek, as much as possible, to mitigate the privacy
-          risks posed by explicit device identifiers while retaining
-          their functionality in database management and indexing.
-        </p>
-
         <h3>Discovery</h3>
         <p>During the previous charter a format for the storage of
           the metadata required to access a Thing was defined: the
@@ -505,37 +401,142 @@
           can be defined.  In addition, the architecture proposed by the Working Group
           needs to support both peer-to-peer discovery and directory-based discovery.
         </p>
+`
+        <h3>Identity Management</h3>
+        <p>
+          A <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
+          contains an identifier meant to be
+          unique to every Thing. This identifier is essential for database
+          management (for example, for device inventory) but also 
+          constitutes a privacy risk.  In particular, an immutable
+          unique identifier might be used to track a device and from 
+          that infer the location or activities of the owner of that device.
+          If identifiers persist across transfer of ownership of 
+          devices, they might also be used to trace commercial transactions.
+        </p>
+        <p>
+          In order to preserve privacy, such identifiers may need to
+          be considered mutable so that such tracking can be disrupted.
+          More generally, the lifecycle of such identifiers needs to 
+          be defined: when they are assigned, when and how they are
+          updated, how notifications of such updates can be issued to
+          authorized parties, and how the identities must be deleted
+          when an object is decommissioned or replaced when a device
+          changes ownership.
+        </p>
+        <p>
+          This work item would define an identity management lifecycle
+          that would seek, as much as possible, to mitigate the privacy
+          risks posed by explicit device identifiers while retaining
+          their functionality in database management and indexing.
+        </p>
 
-        <h3>TD Templates</h3>
-        <p>Current
-          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Descriptions</a>
-          apply to specific Things, for example, particular devices.
-          However, there are often many devices manufactured with the same
-          interface and capabilities.  These devices differ from each other 
-          only in certain specific aspects, 
-          such as being installed in different locations
-          and having different identifiers.
+        <h3>Security Schemes</h3>
+	<p>
+          In the context of a 
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>, 
+          a security scheme defines vocabulary for 
+          describing public security metadata indicating the 
+          security mechanisms and requirements for accessing a Thing.
+          Currently the TD specification includes standard vocabulary 
+          for several security schemes in common use by IoT devices.
+          However, security mechanisms are constantly evolving and to stay relevant
+          WoT TDs need to support new security schemes on an ongoing basis.
+          The TD specification does include a vocabulary extension mechanism which can
+          be used to support new security schemes.  
+          However, to maximize interoperability,
+          these extension vocabularies should be standardized and where appropriate,
+          included by default by the core TD context.
         </p>
         <p>
-          The current TD specification includes the definition of a "TD Template"
-          which is a partial TD that omits information that is specific to an instance.
-          However, the current definition of TD Templates 
-          only allows definition of the interaction model without a protocol binding.  
-          During software development however, if we wish to
-          design code to talk to a class of devices, 
-          we may need to have some knowledge of the protocol binding as well.  
-          A closely related problem is that of components: 
-          we may wish to assemble a Thing Description from a set
-          of reusable, modular capabilities.  
-          How is a TD Component to be defined and how are they to be combined
-          into a complete Thing?  How is a Consumer able to determine that a
-          particular Thing supports a specific sub-interface common to a set
-          of Things?
+          Based on a list of target security mechanisms identified by
+          the WoT Interest Group, this work item will include the following tasks:
+          <ol>
+          <li>For each target security mechanism, define a standard extension
+              vocabulary for a security scheme supporting that mechanism
+              that can be used with the current TD specification.</li>
+          <li>For a core set of security schemes, propose extensions to the 
+              core TD vocabulary to include them by default.</li>
+          </ol>
         </p>
         <p>
-          This work item will elaborate and refine the TD Template concept so
-          it can satisfy such extended use cases.
+          Candidates for target security schemes include support 
+          for all flows in OAuth2, support for PoP Tokens, and support for ACE.
         </p>
+	      
+	<h3>TD Vocabulary</h3>
+	<p>
+          The
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
+          context includes a core set of vocabulary.
+          This vocabulary can be extended by including additional context files.
+          However, to support new use cases and protocols in a consistent (interoperable) way,
+          especially in cases where JSON-LD processing is not possible,
+          extensions to this core vocabulary may be necessary.
+	</p>
+	<p>
+          Candidates for TD vocabulary extension include 
+          support for Data Schemas consistent with current versions of JSON Schema, 
+          extensions to Data Schemas to support XML and CBOR 
+          (and possibly other structured payload data formats), 
+          support for additional standard metadata such as location or device manufacturer,
+          and better support for default values.
+        </p>
+
+        <h3>Protocol Vocabulary</h3>
+	<p>
+          The
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
+          specification is augmented by a 
+          <a href="http://www.w3.org/TR/wot-protocol-binding">WoT Protocol Binding</a>
+          document which defines templates for how to use a TD to describe Things
+          using specific concrete protocols.
+          However, individual concrete protocols may require additional vocabulary
+          to define header options and other metadata.
+          These are defined using vocabulary extensions specific to each protocol.
+          Currently only a limited set of protocols are supported in a standard way.  
+          This work item will add support for an additional set of target protocols, 
+          where appropriate in collaboration with the defining standards body.
+        </p>
+        <p>
+          Candidates for extended protocol vocabulary include support 
+          for CoAP(S), CoAP(S)+WS(S), MQTT, and OPC-UA.
+        </p>
+
+        <h3>Observe Defaults</h3>
+        <p>The WoT interaction model includes abstractions for 
+          Properties, Events, and Actions.  
+          The Properties abstraction includes an "observe" operation,
+          which allows a Thing to asynchronously notify a Consumer
+          of a change in a property.
+          However, in some protocols of interest, most notably HTTP,
+          there is more than one way to implement the observe operation.
+          The WoT TD allows the specification of a subprotocol to
+          indicate the mechanism used, but unfortunately no default
+          is specified.
+          Because of this Things using HTTP and observe must currently
+          explicitly state the mechanism used, every time.
+        </p>
+        <p>
+          This work item would specify exact defaults for implementing observe, 
+          including methods and subprotocols, for all important protocols 
+          but most especially HTTP.
+        </p>
+
+        <h3>Implementation View Specification</h3>
+        <p>The
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
+          specification describes a data format but is currently silent on several aspects of
+          implementations that produce or consume TDs.
+          In order to better support interoperability,
+          more guidances on particular details of implementation is needed.
+        </p>
+        <p>
+          This work item would more fully specify implementation details 
+          such as error responses, common features, etc.
+          These implementation details might be relative to specific profiles.
+        </p>
+
           
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
