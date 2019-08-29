@@ -158,6 +158,24 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 * Storage battery start discharging (Fujitsu)
 * Smart home application monitors and controls these devices.
 
+# Demo infrastructure
+
+## Displays
+NHK screen (43") with dedicated stand - visualize hybridcast connected application
+TBC.: - Can we use the screen for visualizing other content? (cloud service, gateway dashboard, Hangouts)?
+TBC.: - TV remote, cursor, keyboard?
+
+## Intel 15" monitor (hdmi) + 15" laptop
+
+## Panasonic: Google home, LED number display, Small display (~13")
+
+## Fujitsu: 13" PC, checking on display
+
+## Siemens: Simulation, Laptop t.b.d.
+
+
+
+
 
 # TPAC session plan
 
@@ -166,19 +184,28 @@ https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
 
 # Logistics + Constraints:
 
+
+
 ## Demo opportunities:
 
 There are three possible opportunities for the WoT demo.
 
-1. Monday evening: Developer meetup
+1. ~~Monday evening: Developer meetup~~
     * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
 
-2. Wednesday: Breakout session
-    * We prefer ttranquilityhe "after lunch" slot.
+2. Wednesday: Breakout session - 13:30-14:30  
+    * We prefer tranquility of the "after lunch" slot.
     * 1st hour after lunch we have a dedicated demo room
+    * consider to include a slide demo for companies not present, e.g. BMW, EcoG, ...
+    * to be added to the [Session Idea Wiki](https://www.w3.org/wiki/TPAC/2019/SessionIdeas)
 
-3. Wednesday: Dedicated demo session
+3. Wednesday: Dedicated demo session - 15:30-16:30
     * 2nd hour there's only one table for WoT - need a poster
+    * already added to the [Demo Session Wiki](https://www.w3.org/wiki/TPAC2019/Demos)
+
+4. Whole week: Panasonic's demo table at the lunch place
+    * a table of 60cm x 180cm is available
+    * title plate for the demo table is needed
 
 ## Goal: Demonstrate Interoperability among WoT WG members
 
