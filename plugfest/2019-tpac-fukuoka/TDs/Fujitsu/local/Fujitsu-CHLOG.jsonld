@@ -1,0 +1,138 @@
+{
+    "security": [
+        "__auto_added_sc__"
+    ],
+    "id": "urn:com:fujitsu:iot:CHLOG-e0:d4:2b:33:82:10",
+    "title": "CHLOG-e0d42b338210",
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "securityDefinitions": {
+        "__auto_added_sc__": {
+            "scheme": "basic"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "actions": {},
+    "forms": [
+        {
+            "op": "readallproperties",
+            "href": "beacon/allData",
+            "contentType": "application/json"
+        }
+    ],
+    "properties": {
+        "AccelerationX": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/AccelerationX"
+                }
+            ]
+        },
+        "AccelerationY": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/AccelerationY"
+                }
+            ]
+        },
+        "Temperature": {
+            "observable": false,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Temperature"
+                }
+            ],
+            "writable": false
+        },
+        "AccelerationZ": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/AccelerationZ"
+                }
+            ]
+        },
+        "rssi": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/rssi"
+                }
+            ]
+        },
+        "MagneticZ": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/MagneticZ"
+                }
+            ]
+        },
+        "MagneticY": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/MagneticY"
+                }
+            ]
+        },
+        "Humidity": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Humidity"
+                }
+            ]
+        },
+        "MagneticX": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/MagneticX"
+                }
+            ]
+        },
+        "Battery": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Battery"
+                }
+            ]
+        },
+        "Illumination": {
+            "observable": false,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Illumination"
+                }
+            ],
+            "writable": false
+        },
+        "Pressure": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Pressure"
+                }
+            ]
+        }
+    },
+    "events": {},
+    "base": "http://192.168.11.10:8080/Things/urn%3Acom%3Afujitsu%3Aiot%3ACHLOG-e0%3Ad4%3A2b%3A33%3A82%3A10/"
+}
