@@ -36,7 +36,7 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 ## Diagram of the Demo Devices described in the above table
 ![Demo devices](./images/demodevices.png "Demo Devices")
 
-**Kaz's Note:** The diagram above doesn't include Intel's devices. I thought we had once removed Intel's devices from the table and there was a conflict about that, so once reverted Intel's devices within the table above.
+**Kaz's Note:** The diagram above doesn't include Intくel's devices. I thought we had once removed Intel's devices from the table and there was a conflict about that, so once reverted Intel's devices within the table above.
 
 # Demo Scenarios
 
@@ -174,25 +174,16 @@ TBC.: - TV remote, cursor, keyboard?
 ## Siemens: Simulation, Laptop t.b.d.
 
 
-
-
-
-# TPAC session plan
-
-Not yet available -
-https://www.w3.org/wiki/TPAC/2019/SessionIdeas contains old info
-
 # Logistics + Constraints:
-
-
 
 ## Demo opportunities:
 
-There are three possible opportunities for the WoT demo.
+There are the following four possible opportunities for the WoT demo but we won't use the Devloper meetup option on Monday this time.
 
-1. ~~Monday evening: Developer meetup~~
-    * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
-
+1. Whole week: Panasonic's demo table at the lunch place
+    * a table of 60cm x 180cm is available
+    * title plate for the demo table is needed
+    
 2. Wednesday: Breakout session - 13:30-14:30  
     * We prefer tranquility of the "after lunch" slot.
     * 1st hour after lunch we have a dedicated demo room
@@ -203,9 +194,63 @@ There are three possible opportunities for the WoT demo.
     * 2nd hour there's only one table for WoT - need a poster
     * already added to the [Demo Session Wiki](https://www.w3.org/wiki/TPAC2019/Demos)
 
-4. Whole week: Panasonic's demo table at the lunch place
-    * a table of 60cm x 180cm is available
-    * title plate for the demo table is needed
+4. ~~Monday evening: Developer meetup~~
+    * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
+    
+### Session schedule
+
+| Date/time             | 1. Panasonic Table   | 2. Breakout Session | 3. Demo Session | Comment |
+|----------------------:|:--------------------:|:----------------:|:------------:|------------|
+| Monday:    9:00-10:00 | ?                    |       --         |     --       |            |
+|           10:00-11:00 | ?                    |       --         |     --       |            |
+|           11:00-12:00 | ?                    |       --         |     --       |            |
+|           12:00-13:00 | ?                    |       --         |     --       |            |
+|           13:00-14:00 | ?                    |       --         |     --       |            |
+|           14:00-15:00 | ?                    |       --         |     --       |            |
+|           15:00-16:00 | ?                    |       --         |     --       |            |
+|           16:00-17:00 | ?                    |       --         |     --       |            |
+|           17:00-18:00 | ?                    |       --         |     --       |            |
+||||||
+| Tuesday:   9:00-10:00 | ?                    |       --         |     --       |            |
+|           10:00-11:00 | ?                    |       --         |     --       |            |
+|           11:00-12:00 | ?                    |       --         |     --       |            |
+|           12:00-13:00 | ?                    |       --         |     --       |            |
+|           13:00-14:00 | ?                    |       --         |     --       |            |
+|           14:00-15:00 | ?                    |       --         |     --       |            |
+|           15:00-16:00 | ?                    |       --         |     --       |            |
+|           16:00-17:00 | ?                    |       --         |     --       |            |
+|           17:00-18:00 | ?                    |       --         |     --       |            |
+||||||
+| Wednesday: 9:00-10:00 | ?                    |       --         |     --       |            |
+|           10:00-11:00 | ?                    |       --         |     --       |            |
+|           11:00-12:00 | ?                    |       --         |     --       | Breakout 1 |
+|           12:00-13:30 | ?                    |       --         |     --       | Lunch      |
+|           13:30-14:30 | ?                    | WoT demo         |     --       | Breakout 2 |
+|           14:30-15:30 | ?                    |       --         |     --       | Breakout 3 |
+|           15:30-16:30 | ?                    |       --         | WoT demo     | Break+Demo |
+|           16:30-17:30 | ?                    |       --         |     --       | Breakout 4 |
+|           17:30-18:30 | ?                    |       --         |     --       | Repor      |
+||||||
+| Thursday:  9:00-10:00 | ?                    |       --         |     --       |            |
+|           10:00-11:00 | ?                    |       --         |     --       |            |
+|           11:00-12:00 | ?                    |       --         |     --       |            |
+|           12:00-13:00 | ?                    |       --         |     --       |            |
+|           13:00-14:00 | ?                    |       --         |     --       |            |
+|           14:00-15:00 | ?                    |       --         |     --       |            |
+|           15:00-16:00 | ?                    |       --         |     --       |            |
+|           16:00-17:00 | ?                    |       --         |     --       |            |
+|           17:00-18:00 | ?                    |       --         |     --       |            |
+||||||
+| Friday:    9:00-10:00 | ?                    |       --         |     --       |            |
+|           10:00-11:00 | ?                    |       --         |     --       |            |
+|           11:00-12:00 | ?                    |       --         |     --       |            |
+|           12:00-13:00 | ?                    |       --         |     --       |            |
+|           13:00-14:00 | ?                    |       --         |     --       |            |
+|           14:00-15:00 | ?                    |       --         |     --       |            |
+|           15:00-16:00 | ?                    |       --         |     --       |            |
+|           16:00-17:00 | ?                    |       --         |     --       |            |
+|           17:00-18:00 | ?                    |       --         |     --       |            |
+
 
 ## Goal: Demonstrate Interoperability among WoT WG members
 
