@@ -229,7 +229,7 @@ There are the following four possible opportunities for the WoT demo but we won'
 |           14:30-15:30 | ?                    |       --         |     --       | Breakout 3 |
 |           15:30-16:30 | ?                    |       --         | WoT demo     | Break+Demo |
 |           16:30-17:30 | ?                    |       --         |     --       | Breakout 4 |
-|           17:30-18:30 | ?                    |       --         |     --       | Repor      |
+|           17:30-18:30 | ?                    |       --         |     --       | Report     |
 ||||||
 | Thursday:  9:00-10:00 | ?                    |       --         |     --       |            |
 |           10:00-11:00 | ?                    |       --         |     --       |            |
