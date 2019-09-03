@@ -29,7 +29,7 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | Fujitsu   | Smart home devices (remote): Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
 | TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
-| Hitachi     | (Tool) Node Generator | Wifi | Node-RED node generator and application | kunihiko.toumura.yv@hitachi.com | 
+| Hitachi     | (Tool) Node Generator | Wifi | Node-RED node generator and application | kunihiko.toumura.yv@hitachi.com |
 | Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi / LAN, 1 Power. Local http:9191. Ext https basic:8098, digest:8099. Long poll observe. | Camera frame grabber and cropping service | michael.mccool@intel.com |
 | Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi / LAN, 1 Power. Local http:8085. Ext https basic:8096, digest:8097. | Speech synthesizer/speaker | michael.mccool@intel.com |
 
@@ -66,7 +66,7 @@ When the "room empty" condition is detected, the room is cleaned by a vacuum cle
 
 ### Smart Home Demo (Contact: Panasonic)
 
-#### Scenario: 
+#### Scenario:
 Home appliances communicate with the gateway using existing home protocol such as ECHONET Lite, OCF, etc. and provide functions through the WoT API.
 
 #### Device interactions (Proposal)
@@ -88,21 +88,23 @@ Example commercial smart home devices from different vendors using different sma
 interacted with via a browser, or by third party apps and services using the [Web Thing API](https://iot.mozilla.org/wot/) and OAuth.
 Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) which directly expose the Web Thing API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
-### Hybridcast Application Demo (Contact: NHK)
+### Hybridcast Connect Application Demo (Contact: NHK)
 
-#### Scenario: 
+#### Scenario:
 Home smart devices behave according to TV programs.
 
-Hybridcast applications emit information about tv programs for smart home devices. 
+Hybridcast applications in TV emit information about TV programs for smart home devices.
 (Hybridcast is a Japanese Integrated Broadcast-Broadband system. Hybridcast applications are HTML5 applications that work on Hybridcast TV.)
 
-User application receives the information and controlls smart home devices.
+Hybridcast Contact application receives the information and controlls smart home devices.
+
+![Scenario nhk](./images/scenario_nhk.png "Hybridcast Connect Application Demo")
 
 #### Device interactions (Proposal)
-* Hybridcast TV play programs and sends out information about the programs.
-* User application which receives information about TV programs
+* Hybridcast TV play programs and sends out information about the programs via Hybridcast protocol.
+* Hybridcast Connect application which receives information about TV programs
     * get TDs from Fujitsu proxy
-    * stops Robotics Cleaner (Panasonic) 
+    * stops Robotics Cleaner (Panasonic)
     * changes the color of Panasonic Hue (Panasonic)
     * shows web applications on a smart mirror or a refrigerator display
 
@@ -183,7 +185,7 @@ There are the following four possible opportunities for the WoT demo but we won'
 1. Whole week: Panasonic's demo table at the lunch place
     * a table of 60cm x 180cm is available
     * title plate for the demo table is needed
-    
+
 2. Wednesday: Breakout session - 13:30-14:30  
     * We prefer tranquility of the "after lunch" slot.
     * 1st hour after lunch we have a dedicated demo room
@@ -196,7 +198,7 @@ There are the following four possible opportunities for the WoT demo but we won'
 
 4. ~~Monday evening: Developer meetup~~
     * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
-    
+
 ### Session schedule
 
 | Date/time             | 1. Panasonic Table   | 2. Breakout Session | 3. Demo Session | Comment |
