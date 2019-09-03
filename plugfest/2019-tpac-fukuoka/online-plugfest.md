@@ -5,10 +5,17 @@
 - which one?
 - need Mozilla's and Intel's and Fujitsu's input
 
-- Test scenario 1: Smart house / Smart building  
-  [Scenario 1](images/test_scenario_1.png)
-- Test scenario 2: Industrial integration  
-  [Scenario 2](images/test_scenario_2.png)
+- Test scenario 1: Smart house / Smart building
+  - Phase 1: Simple communication test
+  - Phase 2: Run applications (If prepared)
+![scenario1][]
+- Test scenario 2: Industrial integration
+  - Phase 1: Simple communication test
+  - Phase 2: Run applications (If prepared)
+![scenario2][]
+
+[scenario1]:images/test_scenario_1.png
+[scenario2]:images/test_scenario_2.png
 
 #### Participants
 t.b.c. - candidates: Mozilla, Intel and Fujitsu, others?
