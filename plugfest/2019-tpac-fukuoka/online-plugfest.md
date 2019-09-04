@@ -70,4 +70,15 @@ t.b.c. - candidates: Mozilla, Intel and Fujitsu, others?
 - half day?
 - 2-3 hours?
 
+#### Logistics
+
+* WebEx and IRC
+
+We will use the https://www.w3.org/WoT/IG/wiki/PlugFest_WebConf WebEx and IRC.
+
+* Google Hangout (Matthias)
+   - Used to video stream remote devices such as Festo Live or Panasonic Lab
+   - https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI
+
+
 
