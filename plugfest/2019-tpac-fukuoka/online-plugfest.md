@@ -21,7 +21,7 @@
        - (Turn off other appliances?)
     1. Check status
        - Check power consumption (Fujitsu smart meter)
-       - Check illumination (TUM light sensor)
+       - Check illuminance near the light (TUM light sensor)
   - Test phases
     - Phase 1: Simple communication test  
       Check deivces one by one from application layer.
@@ -39,8 +39,9 @@
       - Change light color to red (Mozilla LED light)
       - Announce alert message (Intel web speak)
     1. Control plant facilities
-      - Turn off air conditioners (Panasonic ait conditioner, Oracle HVAC simulator)
+      - Turn off air conditioners (Panasonic air conditioner, Oracle HVAC simulator)
       - Turn off devices (Oracle blue pump simulator, Oracle fest plant simulator)
+    1. (Other actions?)
   - Test phases
     - Phase 1: Simple communication test  
       Check deivces one by one from application layer.
