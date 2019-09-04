@@ -5,7 +5,7 @@
 - Test scenario 1: Smart house / Smart building
   - Scenario (draft)
     1. Passive IR sensor detect human (Fujitsu environment sensor)
-    1. Turn on appliances
+      1. Turn on appliances
        - Turn on air conditioner (Panasonic air conditioner)
        - Turn on light (Philips hue light)
        - Take photo of the detected human (Intel web camera)
