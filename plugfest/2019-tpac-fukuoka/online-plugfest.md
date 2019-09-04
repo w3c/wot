@@ -1,9 +1,6 @@
 ### Preparation for online-plugfest
 
-#### Scenario
-- one or more of the TPAC scenarios
-- which one?
-- need Mozilla's and Intel's and Fujitsu's input
+#### Scenarios
 
 - Test scenario 1: Smart house / Smart building
   - Scenario (draft)
@@ -57,18 +54,10 @@
   - Can mDNS work over VPN?
 
 #### Participants
-t.b.c. - candidates: Mozilla, Intel and Fujitsu, others?
+Intel, Fujitsu, TUM, Siemens, Oracle, Hitachi
 
-#### possible Dates
-
-- 3 weeks before TPAC (~ August 29)
-- 2 weeks before TPAC
-- week before TPAC
-
-#### Duration
-- full day?
-- half day?
-- 2-3 hours?
+#### Date
+Spet 10th, 9am-11am CDT, 4pm-6pm JST (+1 hour?)
 
 #### Logistics
 
