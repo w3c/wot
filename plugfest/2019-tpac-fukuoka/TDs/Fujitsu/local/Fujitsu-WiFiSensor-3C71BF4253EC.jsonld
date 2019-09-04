@@ -1,0 +1,136 @@
+{
+    "security": [
+        "__auto_added_sc__"
+    ],
+    "id": "urn:com:fujitsu:iot:WiFi-Sensor:3C71BF4253EC",
+    "title": "Fujitsu-WiFiSensor",
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1"
+    ],
+    "securityDefinitions": {
+        "__auto_added_sc__": {
+            "scheme": "basic"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "actions": {},
+    "forms": [
+        {
+            "op": "readallproperties",
+            "href": "allSensorData",
+            "contentType": "application/json"
+        }
+    ],
+    "properties": {
+        "Temperature": {
+            "@type": "iot:Temperature",
+            "observable": false,
+            "readOnly": true,
+            "type": "object",
+            "properties": {
+                "temperature": {
+                    "type": "number"
+                },
+                "rssi": {
+                    "type": "number"
+                }
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "temperature"
+                }
+            ]
+        },
+        "Humidity": {
+            "@type": "iot:Humidity",
+            "observable": false,
+            "readOnly": true,
+            "type": "object",
+            "properties": {
+                "humidity": {
+                    "type": "number"
+                },
+                "rssi": {
+                    "type": "number"
+                }
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "humidity"
+                }
+            ]
+        },
+        "Pir": {
+            "@type": "iot:Pir",
+            "observable": false,
+            "readOnly": true,
+            "type": "object",
+            "properties": {
+                "pir": {
+                    "type": "number"
+                },
+                "rssi": {
+                    "type": "number"
+                }
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "pir"
+                }
+            ]
+        },
+        "Accel": {
+            "@type": "iot:Accel",
+            "observable": false,
+            "readOnly": true,
+            "type": "object",
+            "properties": {
+                "accelX": {
+                    "type": "number"
+                },
+                "accelY": {
+                    "type": "number"
+                },
+                "accelZ": {
+                    "type": "number"
+                },
+                "rssi": {
+                    "type": "number"
+                }
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "accel"
+                }
+            ]
+        },
+        "AirPressure": {
+            "@type": "iot:AirPressure",
+            "observable": false,
+            "readOnly": true,
+            "type": "object",
+            "properties": {
+                "airPressure": {
+                    "type": "number"
+                },
+                "rssi": {
+                    "type": "number"
+                }
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "airPressure"
+                }
+            ]
+        }
+    },
+    "events": {},
+    "base": "http://192.168.11.10:8080/Things/urn%3Acom%3Afujitsu%3Aiot%3AWiFi-Sensor%3A3C71BF4253EC/"
+}
