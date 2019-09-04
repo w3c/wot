@@ -36,7 +36,7 @@
     1. Cloud service discovers anomaly, critical condition (Oracle IoT cloud service?)
     1. Turn on warning devices
        - Turn on beacon light and buzzer (Fujitsu beacon light, Fujitsu buzzer)
-       - Change light color to red (Mozilla LED light)
+       - Change light color to red (Mozilla LED light, TUM sense HAT?)
        - Announce alert message (Intel web speak)
     1. Control plant facilities
        - Turn off air conditioners (Panasonic air conditioner, Oracle HVAC simulator)
@@ -50,6 +50,11 @@
 
 [scenario1]:images/test_scenario_1.png
 [scenario2]:images/test_scenario_2.png
+
+#### Logistics
+- vpn server
+  - DHCP? / Fixed IP?
+  - Can mDNS work over VPN?
 
 #### Participants
 t.b.c. - candidates: Mozilla, Intel and Fujitsu, others?
