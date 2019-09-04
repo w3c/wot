@@ -37,8 +37,6 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 ## Diagram of the Demo Devices described in the above table
 ![Demo devices](./images/demodevices.png "Demo Devices")
 
-**Kaz's Note:** The diagram above doesn't include Intくel's devices. I thought we had once removed Intel's devices from the table and there was a conflict about that, so once reverted Intel's devices within the table above.
-
 # Demo Scenarios
 
 The following scenarios demonstrate the interoperability of devices across different manufacturers.
