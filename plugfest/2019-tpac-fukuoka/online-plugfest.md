@@ -30,17 +30,17 @@
 - Test scenario 2: Industrial integration
   - Scenario (draft)
     1. Monitor environment
-      - Monitor temperature, humidity, etc. (Fujitsu environment sensor, Fujitsu wearable sensor)
-      - Monitor illuminance (TUM light sensor)
-      - Display current temperature (Panasonic bulletin board)
+       - Monitor temperature, humidity, etc. (Fujitsu environment sensor, Fujitsu wearable sensor)
+       - Monitor illuminance (TUM light sensor)
+       - Display current temperature (Panasonic bulletin board)
     1. Cloud service discovers anomaly, critical condition (Oracle IoT cloud service?)
     1. Turn on warning devices
-      - Turn on beacon light and buzzer (Fujitsu beacon light, Fujitsu buzzer)
-      - Change light color to red (Mozilla LED light)
-      - Announce alert message (Intel web speak)
+       - Turn on beacon light and buzzer (Fujitsu beacon light, Fujitsu buzzer)
+       - Change light color to red (Mozilla LED light)
+       - Announce alert message (Intel web speak)
     1. Control plant facilities
-      - Turn off air conditioners (Panasonic air conditioner, Oracle HVAC simulator)
-      - Turn off devices (Oracle blue pump simulator, Oracle fest plant simulator)
+       - Turn off air conditioners (Panasonic air conditioner, Oracle HVAC simulator)
+       - Turn off devices (Oracle blue pump simulator, Oracle fest plant simulator)
     1. (Other actions?)
   - Test phases
     - Phase 1: Simple communication test  
