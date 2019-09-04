@@ -224,7 +224,7 @@ There are the following four possible opportunities for the WoT demo but we won'
 | Wednesday: 9:00-10:00 | ?                    |       --         |     --       |            |
 |           10:00-11:00 | ?                    |       --         |     --       |            |
 |           11:00-12:00 | ?                    |       --         |     --       | Breakout 1 |
-|           12:00-13:30 | ?                    |       --         |     --       | Lunch      |
+|           12:00-13:30 | ?                    |      N/A         |     N/A      | Lunch      |
 |           13:30-14:30 | ?                    | WoT demo         |     --       | Breakout 2 |
 |           14:30-15:30 | ?                    |       --         |     --       | Breakout 3 |
 |           15:30-16:30 | ?                    |       --         | WoT demo     | Break+Demo |
