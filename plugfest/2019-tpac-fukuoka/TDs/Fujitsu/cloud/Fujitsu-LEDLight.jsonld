@@ -1,0 +1,279 @@
+{
+    "security": [
+        "__auto_added_sc__"
+    ],
+    "id": "urn:com:fujitsu:echonet-lite:000e7b137c10029001",
+    "title": "GeneralLighting-000e7b137c10029001",
+    "securityDefinitions": {
+        "__auto_added_sc__": {
+            "scheme": "basic"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "actions": {},
+    "properties": {
+        "FF": {
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/FF"
+                }
+            ]
+        },
+        "SetList": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/SetList"
+                }
+            ]
+        },
+        "ProductCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/ProductCode"
+                }
+            ]
+        },
+        "ManufactureDate": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/ManufactureDate"
+                }
+            ]
+        },
+        "IlluminancePercentage": {
+            "enums": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25",
+                "26",
+                "27",
+                "28",
+                "29",
+                "30",
+                "31",
+                "32",
+                "33",
+                "34",
+                "35",
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43",
+                "44",
+                "45",
+                "46",
+                "47",
+                "48",
+                "49",
+                "50",
+                "51",
+                "52",
+                "53",
+                "54",
+                "55",
+                "56",
+                "57",
+                "58",
+                "59",
+                "60",
+                "61",
+                "62",
+                "63",
+                "64",
+                "65",
+                "66",
+                "67",
+                "68",
+                "69",
+                "70",
+                "71",
+                "72",
+                "73",
+                "74",
+                "75",
+                "76",
+                "77",
+                "78",
+                "79",
+                "80",
+                "81",
+                "82",
+                "83",
+                "84",
+                "85",
+                "86",
+                "87",
+                "88",
+                "89",
+                "90",
+                "91",
+                "92",
+                "93",
+                "94",
+                "95",
+                "96",
+                "97",
+                "98",
+                "99",
+                "100",
+                "unalterable"
+            ],
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/IlluminancePercentage"
+                }
+            ]
+        },
+        "CheckIPStatus": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/CheckIPStatus"
+                }
+            ]
+        },
+        "SpecVersionInfoCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/SpecVersionInfoCode"
+                }
+            ]
+        },
+        "GetList": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/GetList"
+                }
+            ]
+        },
+        "DeviceConnectStatus": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/DeviceConnectStatus"
+                }
+            ]
+        },
+        "MakerCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/MakerCode"
+                }
+            ]
+        },
+        "FaultStatus": {
+            "enums": [
+                "Fault",
+                "Normal"
+            ],
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/FaultStatus"
+                }
+            ]
+        },
+        "DeviceRunningStatus": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/DeviceRunningStatus"
+                }
+            ]
+        },
+        "OperationStatus": {
+            "enums": [
+                "ON",
+                "OFF"
+            ],
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/OperationStatus"
+                }
+            ]
+        },
+        "NotifyList": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/NotifyList"
+                }
+            ]
+        },
+        "PlaceOfBusinessCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PlaceOfBusinessCode"
+                }
+            ]
+        }
+    },
+    "events": {},
+    "base": "https://wot.f-ncs.ad.jp/Things/urn%3Acom%3Afujitsu%3Aechonet-lite%3A000e7b137c10029001/"
+}

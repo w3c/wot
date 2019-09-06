@@ -1,0 +1,422 @@
+{
+    "security": [
+        "__auto_added_sc__"
+    ],
+    "id": "urn:com:fujitsu:echonet-lite:000e7be87b10027d01",
+    "title": "RechargeableBattery-000e7be87b10027d01",
+    "securityDefinitions": {
+        "__auto_added_sc__": {
+            "scheme": "basic"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "actions": {},
+    "properties": {
+        "PowerConEffectivePower": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PowerConEffectivePower"
+                }
+            ]
+        },
+        "AmountOfPowerCharge": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/AmountOfPowerCharge"
+                }
+            ]
+        },
+        "InstantaneousOfPower": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/InstantaneousOfPower"
+                }
+            ]
+        },
+        "PowerConOpeModeStatus": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PowerConOpeModeStatus"
+                }
+            ]
+        },
+        "PowerConInitOpeStatus": {
+            "enums": [
+                "Charge",
+                "Discharge",
+                "Standby"
+            ],
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PowerConInitOpeStatus"
+                }
+            ]
+        },
+        "SetList": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/SetList"
+                }
+            ]
+        },
+        "ModeSetting": {
+            "enums": [
+                "SpeedCharge",
+                "Charge",
+                "Discharge",
+                "Standby",
+                "Test",
+                "Other"
+            ],
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/ModeSetting"
+                }
+            ]
+        },
+        "AmountOfPowerGeneration": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/AmountOfPowerGeneration"
+                }
+            ]
+        },
+        "ManufactureDate": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/ManufactureDate"
+                }
+            ]
+        },
+        "PowerConChargeDischargePowerValue": {
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PowerConChargeDischargePowerValue"
+                }
+            ]
+        },
+        "HealthCheck": {
+            "enums": [
+                "ON",
+                "OFF"
+            ],
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/HealthCheck"
+                }
+            ]
+        },
+        "CapacityRating": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/CapacityRating"
+                }
+            ]
+        },
+        "InstantaneousOfCurrent": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/InstantaneousOfCurrent"
+                }
+            ]
+        },
+        "SettingOfResetCharge": {
+            "enums": [
+                "RESET"
+            ],
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/SettingOfResetCharge"
+                }
+            ]
+        },
+        "SpecVersionInfoCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/SpecVersionInfoCode"
+                }
+            ]
+        },
+        "GetList": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/GetList"
+                }
+            ]
+        },
+        "MakerCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/MakerCode"
+                }
+            ]
+        },
+        "DeviceRunningStatus": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/DeviceRunningStatus"
+                }
+            ]
+        },
+        "PowerConOpeStatus": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PowerConOpeStatus"
+                }
+            ]
+        },
+        "SettingOfResetDischarge": {
+            "enums": [
+                "RESET"
+            ],
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/SettingOfResetDischarge"
+                }
+            ]
+        },
+        "OperationStatus": {
+            "enums": [
+                "ON",
+                "OFF"
+            ],
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/OperationStatus"
+                }
+            ]
+        },
+        "VoltageRating": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/VoltageRating"
+                }
+            ]
+        },
+        "PowerConAlternatingVoltage": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PowerConAlternatingVoltage"
+                }
+            ]
+        },
+        "ProductCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/ProductCode"
+                }
+            ]
+        },
+        "ChargeMeasurements": {
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/ChargeMeasurements"
+                }
+            ]
+        },
+        "AmountOfPowerDischarge": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/AmountOfPowerDischarge"
+                }
+            ]
+        },
+        "DischargeMeasurements": {
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/DischargeMeasurements"
+                }
+            ]
+        },
+        "CheckIPStatus": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/CheckIPStatus"
+                }
+            ]
+        },
+        "F4": {
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/F4"
+                }
+            ]
+        },
+        "DeviceConnectStatus": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/DeviceConnectStatus"
+                }
+            ]
+        },
+        "TypeOfBattery": {
+            "enums": [
+                "Unknown",
+                "Lead",
+                "NickelHydride",
+                "NickelCadmium",
+                "LithiumIon",
+                "Zinc",
+                "Alkali",
+                "For future reserved"
+            ],
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/TypeOfBattery"
+                }
+            ]
+        },
+        "FaultStatus": {
+            "enums": [
+                "Fault",
+                "Normal"
+            ],
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/FaultStatus"
+                }
+            ]
+        },
+        "NotifyList": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/NotifyList"
+                }
+            ]
+        },
+        "InstantaneousOfVoltage": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/InstantaneousOfVoltage"
+                }
+            ]
+        },
+        "PlaceOfBusinessCode": {
+            "readOnly": true,
+            "type": "string",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PlaceOfBusinessCode"
+                }
+            ]
+        },
+        "RemainderOfBattery3": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/RemainderOfBattery3"
+                }
+            ]
+        },
+        "PowerConAlternatingCurrent": {
+            "readOnly": true,
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "property/PowerConAlternatingCurrent"
+                }
+            ]
+        }
+    },
+    "events": {},
+    "base": "https://wot.f-ncs.ad.jp/Things/urn%3Acom%3Afujitsu%3Aechonet-lite%3A000e7be87b10027d01/"
+}

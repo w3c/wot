@@ -25,18 +25,17 @@ Oracle, Intel, Siemens, Hitachi, Panasonic, Fujitsu, TU Munich, Smart Things, NH
 | NHK    | Hybridcast-Application Demo | Wifi / LAN                                                          |   | endou.h-hc@nhk.or.jp |
 | Fujitsu   | 2 Local proxies. One is in smart home in Japan, another is in Fukuoka. | Wifi / Lan; 1 power | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | Fujitsu   | Remote proxy. Connect 2 Local proxies above. |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
-| Fujitsu   | Local devices: Rotary beacom light, Buzzer, Environment sensors (Temperature, Humidity, Air pressure, Human detection, 3-axis acceleration, Brightness sensors), Agricuture sensor (Temperature, Humidity, Brightness, UV index, CO2), and Wearable sensor (Temperature, 3-axis acceleration, Brightness sensor).   |  | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
-| Fujitsu   | Smart home devices (remote): Smart meter, LED light, Air conditioner, and Window blind Open, Close. |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Local devices: [Rotary beacom light](TDs/Fujitsu/cloud/Fujitsu-RotarybeaconLight.jsonld), [Buzzer](TDs/Fujitsu/cloud/Fujitsu-Buzzer.jsonld), 2 Environment sensors ([A](TDs/Fujitsu/cloud/Fujitsu-WiFiSensor-3C71BF4253EC.jsonld) and [B](TDs/Fujitsu/cloud/Fujitsu-WiFiSensor-3C71BF428EF8.jsonld)), [Agricuture sensor](TDs/Fujitsu/cloud/Fujitsu-AgriDevice.jsonld) , and [Wearable sensor](TDs/Fujitsu/cloud/Fujitsu-CHLOG.jsonld).   |  | Environment sensor: Temperature/Humidity/Air pressure/Human detection/3-axis acceleration/Brightness, Agricuture sensor: Temperature/Humidity/Brightness/UV index/CO2, Wearable sensor:  Temperature/3-axis acceleration/Brightness  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Smart home devices (remote): [Smart meter](TDs/Fujitsu/cloud/Fujitsu-PowerMeter.jsonld), [LED light](TDs/Fujitsu/cloud/Fujitsu-LEDLight.jsonld), [Air conditioner](TDs/Fujitsu/cloud/Fujitsu-Airconditioner.jsonld), [StorageBattery](TDs/Fujitsu/cloud/Fujitsu-StorageBattery.jsonld), and Window blind [Open](TDs/Fujitsu/cloud/Fujitsu-BlindOpen.jsonld), [Close](TDs/Fujitsu/cloud/Fujitsu-BlindClose.jsonld). |   | ...  | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
+| Fujitsu   | Mozilla WebThings gateway and device ([LED Light](TDs/Fujitsu/cloud/Mozilla-LEDLight.jsonld)) |    | Gateway is connecting to Fujitsu's local proxy in Fukuoka | suzuki.takahisa@fujitsu.com, r.matsukura@fujitsu.com |
 | TU Munich   | Sense HAT |   | Environments sensors, LED matrix and joystick  | ege.korkan@tum.de |
 | TU Munich   | Light Sensor |   | Light sensor  | ege.korkan@tum.de |
-| Hitachi     | (Tool) Node Generator | Wifi | Node-RED node generator and application | kunihiko.toumura.yv@hitachi.com | 
+| Hitachi     | (Tool) Node Generator | Wifi | Node-RED node generator and application | kunihiko.toumura.yv@hitachi.com |
 | Intel   | [Simple Web Camera](TDs/Intel/intel-camera.jsonld) | WiFi / LAN, 1 Power. Local http:9191. Ext https basic:8098, digest:8099. Long poll observe. | Camera frame grabber and cropping service | michael.mccool@intel.com |
 | Intel   | [Web Speak](TDs/Intel/intel-speak.jsonld)         | WiFi / LAN, 1 Power. Local http:8085. Ext https basic:8096, digest:8097. | Speech synthesizer/speaker | michael.mccool@intel.com |
 
 ## Diagram of the Demo Devices described in the above table
 ![Demo devices](./images/demodevices.png "Demo Devices")
-
-**Kaz's Note:** The diagram above doesn't include Intくel's devices. I thought we had once removed Intel's devices from the table and there was a conflict about that, so once reverted Intel's devices within the table above.
 
 # Demo Scenarios
 
@@ -66,7 +65,7 @@ When the "room empty" condition is detected, the room is cleaned by a vacuum cle
 
 ### Smart Home Demo (Contact: Panasonic)
 
-#### Scenario: 
+#### Scenario:
 Home appliances communicate with the gateway using existing home protocol such as ECHONET Lite, OCF, etc. and provide functions through the WoT API.
 
 #### Device interactions (Proposal)
@@ -88,22 +87,24 @@ Example commercial smart home devices from different vendors using different sma
 interacted with via a browser, or by third party apps and services using the [Web Thing API](https://iot.mozilla.org/wot/) and OAuth.
 Example Maker/developer boards programmed as [web things](https://iot.mozilla.org/framework) which directly expose the Web Thing API will also operate on the local Wi-Fi network, and be managed by the gateway.
 
-### Hybridcast Application Demo (Contact: NHK)
+### Hybridcast Connect Application Demo (Contact: NHK)
 
-#### Scenario: 
+#### Scenario:
 Home smart devices behave according to TV programs.
 
-Hybridcast applications emit information about tv programs for smart home devices. 
+Hybridcast applications in TV emit information about TV programs for smart home devices.
 (Hybridcast is a Japanese Integrated Broadcast-Broadband system. Hybridcast applications are HTML5 applications that work on Hybridcast TV.)
 
-User application receives the information and controlls smart home devices.
+Hybridcast Contact application receives the information and controlls smart home devices.
+
+![Scenario nhk](./images/scenario_nhk.png "Hybridcast Connect Application Demo")
 
 #### Device interactions (Proposal)
-* Hybridcast TV play programs and sends out information about the programs.
-* User application which receives information about TV programs
+* Hybridcast TV play programs and sends out information about the programs via Hybridcast protocol.
+* Hybridcast Connect application which receives information about TV programs
     * get TDs from Fujitsu proxy
-    * stops Robotics Cleaner (Panasonic) 
-    * changes the color of Panasonic Hue (Panasonic)
+    * stops Robotics Cleaner (Panasonic)
+    * changes the color of Philips Hue (Panasonic)
     * shows web applications on a smart mirror or a refrigerator display
 
 ## Industrial integration scenarios
@@ -183,7 +184,7 @@ There are the following four possible opportunities for the WoT demo but we won'
 1. Whole week: Panasonic's demo table at the lunch place
     * a table of 60cm x 180cm is available
     * title plate for the demo table is needed
-    
+
 2. Wednesday: Breakout session - 13:30-14:30  
     * We prefer tranquility of the "after lunch" slot.
     * 1st hour after lunch we have a dedicated demo room
@@ -196,7 +197,7 @@ There are the following four possible opportunities for the WoT demo but we won'
 
 4. ~~Monday evening: Developer meetup~~
     * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
-    
+
 ### Session schedule
 
 | Date/time             | 1. Panasonic Table   | 2. Breakout Session | 3. Demo Session | Comment |
@@ -224,7 +225,7 @@ There are the following four possible opportunities for the WoT demo but we won'
 | Wednesday: 9:00-10:00 | ?                    |       --         |     --       |            |
 |           10:00-11:00 | ?                    |       --         |     --       |            |
 |           11:00-12:00 | ?                    |       --         |     --       | Breakout 1 |
-|           12:00-13:30 | ?                    |       --         |     --       | Lunch      |
+|           12:00-13:30 | ?                    |      N/A         |     N/A      | Lunch      |
 |           13:30-14:30 | ?                    | WoT demo         |     --       | Breakout 2 |
 |           14:30-15:30 | ?                    |       --         |     --       | Breakout 3 |
 |           15:30-16:30 | ?                    |       --         | WoT demo     | Break+Demo |
