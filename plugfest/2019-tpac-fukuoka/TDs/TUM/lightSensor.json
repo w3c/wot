@@ -1,0 +1,30 @@
+{
+    "id": "tum:ei:esi:light:sensor:101",
+    "title": "Light Sensor",
+    "description": "Sensor that measures the intensity of light",
+    "descriptions": {
+        "en": "Sensor that measures the intensity of light"
+    },
+    "@context": ["https://www.w3.org/2019/wot/td/v1", {
+        "@language": "en"
+    }],
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic"
+        }
+    },
+    "security": "basic_sc",
+    "properties": {
+        "intensity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1000,
+            "readOnly": true,
+            "forms": [{
+                "contentType": "application/json",
+                "op": "readproperty",
+                "href": "http://192.168.0.101/properties/intensity"
+            }]
+        }
+    }
+}
