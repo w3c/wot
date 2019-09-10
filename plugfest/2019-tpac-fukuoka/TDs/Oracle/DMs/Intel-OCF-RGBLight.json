@@ -1,0 +1,69 @@
+{
+  "urn": "urn:com:oracle:Intel-OCF-RGBLight",
+  "name": "Intel-OCF-RGBLight",
+  "system": false,
+  "draft": false,
+  "created": 1566896223739,
+  "createdAsString": "2019-08-27T08:57:03.739Z",
+  "lastModified": 1566896223739,
+  "lastModifiedAsString": "2019-08-27T08:57:03.739Z",
+  "userLastModified": "IoTAppsTest_w3ctest_INTERNAL_APPID",
+  "attributes": [
+    {
+      "description": "undefined id",
+      "name": "colour_id",
+      "type": "STRING",
+      "writable": true
+    },
+    {
+      "description": "rgbValue",
+      "name": "colour_rgbValue",
+      "type": "STRING",
+      "writable": true
+    }
+  ],
+  "actions": [
+    {
+      "argType": "INTEGER",
+      "description": "Color blue",
+      "name": "colorBlue"
+    },
+    {
+      "argType": "INTEGER",
+      "description": "Color green",
+      "name": "colorGreen"
+    },
+    {
+      "argType": "INTEGER",
+      "description": "Color red",
+      "name": "colorRed"
+    },
+    {
+      "description": "Turn Off",
+      "name": "off"
+    },
+    {
+      "description": "Turn On",
+      "name": "on"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-OCF-RGBLight",
+      "rel": "self"
+    },
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-OCF-RGBLight",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-OCF-RGBLight/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

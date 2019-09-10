@@ -1,0 +1,55 @@
+{
+  "urn": "urn:com:oracle:solarpanel",
+  "name": "SolarPanel",
+  "description": "Simple Solar Panel simulation",
+  "system": false,
+  "draft": false,
+  "created": 1566896175327,
+  "createdAsString": "2019-08-27T08:56:15.327Z",
+  "lastModified": 1566896175327,
+  "lastModifiedAsString": "2019-08-27T08:56:15.327Z",
+  "userLastModified": "IoTAppsTest_w3ctest_INTERNAL_APPID",
+  "attributes": [
+    {
+      "description": "Current",
+      "name": "Current",
+      "range": "0.0,30.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Generated Power",
+      "name": "Power",
+      "range": "0.0,3000.0",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "Light intensity in Lux",
+      "name": "LightIntensity",
+      "range": "0.0,100000.0",
+      "type": "NUMBER",
+      "writable": false
+    }
+  ],
+  "actions": [],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Asolarpanel",
+      "rel": "self"
+    },
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Asolarpanel",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253Asolarpanel/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

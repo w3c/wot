@@ -1,0 +1,89 @@
+{
+  "urn": "urn:com:oracle:MeArmPi",
+  "name": "MeArmPi",
+  "description": "TUM Robot Arm",
+  "system": false,
+  "draft": false,
+  "created": 1566895071726,
+  "createdAsString": "2019-08-27T08:37:51.726Z",
+  "lastModified": 1566895071726,
+  "lastModifiedAsString": "2019-08-27T08:37:51.726Z",
+  "userLastModified": "IoTAppsTest_w3ctest_INTERNAL_APPID",
+  "attributes": [
+    {
+      "name": "gripState",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "current position - base",
+      "name": "motorPositions_base",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "description": "current position - upper",
+      "name": "motorPositions_upper",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "description": "current position - lower",
+      "name": "motorPositions_lower",
+      "type": "INTEGER",
+      "writable": false
+    },
+    {
+      "description": "current position - grip",
+      "name": "motorPositions_grip",
+      "type": "INTEGER",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "name": "openGrip"
+    },
+    {
+      "name": "closeGrip"
+    },
+    {
+      "description": "Move the grip's to a given angle",
+      "name": "moveGripTo"
+    },
+    {
+      "description": "Move the upper part of the arm to a given angle",
+      "name": "moveUpperTo"
+    },
+    {
+      "description": "Move the lower part of the arm to a given angle",
+      "name": "moveLowerTo"
+    },
+    {
+      "description": "Move the base of the arm to a given angle",
+      "name": "moveBaseTo"
+    },
+    {
+      "name": "dance"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AMeArmPi",
+      "rel": "self"
+    },
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AMeArmPi",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AMeArmPi/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
