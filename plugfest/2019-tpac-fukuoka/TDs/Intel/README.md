@@ -41,7 +41,7 @@ Summary of network API (see TDs for details):
     * `/crop` - get cropped version of last frame captured (an action using POST)
     
 Note: in theory writing to properties like "brightness" is supported and
-should update the corresponding V4L parameters in the camera.  
+should update the corresponding V4L parameters in the camera.
 In practice it tends to crash the camera driver, so...
 it's better to treat these as read-only.  Sorry.
 
