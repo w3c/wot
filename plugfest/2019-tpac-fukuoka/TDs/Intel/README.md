@@ -24,11 +24,12 @@ check that you have the latest version.
 
 ### Simple Web Camera
 Example image is given below.
-Note that this does not auto-update;
-that is in progress,
-but it needs client-side script support
-(eg to follow the frame "observe" interaction)
-so will have to be implemented in HTML.
+Note that "observe" does not auto-update,
+it needs client-side support
+(eg to follow the frame "observe" interaction).
+However, to demonstrate observe a extension like "Auto Refresh Plus" can be used to 
+automatically resubmit a GET request after each response.
+Since long polling is used the GET will "wait" until the server responds.
 
 ![Example image from camera 0](intel_light_observe.jpeg)
 
