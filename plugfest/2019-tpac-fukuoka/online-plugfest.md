@@ -5,43 +5,61 @@
 - Test scenario 1: Smart house / Smart building
   - Scenario (draft)
     1. Passive IR sensor detect human (Fujitsu environment sensor)
-      1. Turn on appliances
+    1. Turn on appliances
        - Turn on air conditioner (Panasonic air conditioner)
        - Turn on light (Philips hue light)
-       - Take photo of the detected human (Intel web camera)
-       - (Turn on other appliances?)
     1. Monitor power generation from solar panel (Oracle solar panel simulator)
+       - Monitor power generation (Oracle solar panel simulator)
     1. When power generation below the lower limit, turn off unused appliances
        - Turn off other air conditioners (Fujitsu air conditioner, Oracle HVAC simulator)
-       - Turn off other lights (Mozilla LED light, TUM sense HAT)
-       - Announce alert message (Intel web speak)
-       - (Turn off other appliances?)
+       - Turn off other lights (Mozilla LED light)
     1. Check status
-       - Check power consumption (Fujitsu smart meter)
-       - Check illuminance near the light (TUM light sensor)
+       - Monitor power consumption (Fujitsu smart meter)
   - Test phases
     - Phase 1: Simple communication test  
-      Check deivces one by one from application layer.
+        - Fujitsu
+          - Turn on/off air conditioner ... passed
+          - Turn on/off led light ... passed
+          - Read power cnsumption value from smart meter ... passed
+          - Read PIR data from environment sensor ... passed
+        - Panasonic
+          - Turn on/off air conditioner ... passed
+          - Turn on/off led light ... passed
+        - Oracle
+          - Read power power generation value from solar panel simulator ... not tested
+          - Turn on/off HVAC simulator ... not tested
     - Phase 2: Run application (If prepared)
 ![scenario1][]
 - Test scenario 2: Industrial integration
   - Scenario (draft)
     1. Monitor environment
-       - Monitor temperature, humidity, etc. (Fujitsu environment sensor, Fujitsu wearable sensor)
-       - Monitor illuminance (TUM light sensor)
+       - Monitor temperature, humidity, etc. (Fujitsu environment sensor)
        - Display current temperature (Panasonic bulletin board)
-    1. Cloud service discovers anomaly, critical condition (Oracle IoT cloud service?)
+    1. Detect turnover
+       - Monitor Z axis acceralation (Fujitsu environment sensor)
     1. Turn on warning devices
        - Turn on beacon light and buzzer (Fujitsu beacon light, Fujitsu buzzer)
-       - Change light color to red (Mozilla LED light, TUM sense HAT?)
-       - Announce alert message (Intel web speak)
+       - Change light color to red (Mozilla LED light)
     1. Control plant facilities
        - Turn off air conditioners (Panasonic air conditioner, Oracle HVAC simulator)
        - Turn off devices (Oracle blue pump simulator, Oracle fest plant simulator)
-    1. (Other actions?)
   - Test phases
     - Phase 1: Simple communication test  
-      Check deivces one by one from application layer.
+        - Fujitsu
+          - Turn on/off beacon light ... passed
+          - Turn on/off buzzer ... passed
+          - Turn on/off LED light ... passed
+          - Change light color ... passed
+          - Read sensor data from environment sensor ... passed
+        - Panasonic
+          - Turn on/off air conditioner ... passed
+          - Turn on/off bulletin board ... passed
+          - Set numer to bulletion board ... passed
+        - Oracle
+          - Turn on/off HVAC ... not tested
+          - Turn on/off blue pump ... not tested
+          - Open/Close valve on fest plant simulator ... not tested
+          - Start/Stop pump on fest plant simulator ... not tested
     - Phase 2: Run application (If prepared)
 ![scenario2][]
 
