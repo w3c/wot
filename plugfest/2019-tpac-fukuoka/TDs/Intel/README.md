@@ -60,7 +60,12 @@ Summary of network API (see TDs for details):
 Speech synthesizer service.
 
 Summary of network API: POST a quoted string to /api/say and it will speak it.
+For example (replace "password" with the actual password):
 
+```
+curl -X POST -H "Content-Type: application/json" -d '"this is a test"' -u "wotbasicproxy:password" https://tiktok.mmccool.org:8096/api/say
+
+```
 #### HTTP and Nosec 
 * Local Access:
     [TD](http://plus2.local:8085/api) 
