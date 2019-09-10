@@ -6,10 +6,11 @@ Two services are provided:
 
 ### Authentication
 These services support end-to-end security
-via a proxy.  Use the following credentials based on whether you are using
+via a proxy.  Use the credentials, linked below, for "wotbasicproxy" or "wodigestproxy" based on whether you are using
 basic or digest authentication.   Both services use the same credentials.
 
-* [Direct Authentication Credentials](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0000.html)
+WARNING: Digest auth is broken at the moment.  I hope to fix it soon.  Basic should work.
+
 * [Proxy Authentication Credentials](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
 
 W3C WoT membership required to access these credentials.
