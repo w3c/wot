@@ -30,7 +30,7 @@ but it needs client-side script support
 (eg to follow the frame "observe" interaction)
 so will have to be implemented in HTML.
 
-![Example image from camera 0](IMAGES/intel_light_observe.jpeg)
+![Example image from camera 0](intel_light_observe.jpeg)
 
 Summary of network API (see TDs for details):
 * `/api` - get Thing Description
