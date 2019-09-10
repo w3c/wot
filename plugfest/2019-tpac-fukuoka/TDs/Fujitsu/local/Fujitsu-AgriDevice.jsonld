@@ -1,0 +1,145 @@
+{
+    "security": [
+        "__auto_added_sc__"
+    ],
+    "id": "urn:com:fujitsu:iot:AgriDevice-c4:a7:df:cf:3e:90",
+    "title": "AgriDevice-c4a7dfcf3e90",
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "securityDefinitions": {
+        "__auto_added_sc__": {
+            "scheme": "basic"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "actions": {},
+    "forms": [
+        {
+            "op": "readallproperties",
+            "href": "beacon/allData",
+            "contentType": "application/json"
+        }
+    ],
+    "properties": {
+        "UV": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/UV"
+                }
+            ]
+        },
+        "Temperature": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Temperature"
+                }
+            ]
+        },
+        "rssi": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/rssi"
+                }
+            ]
+        },
+        "BatteryIllumination": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "beacon/BatteryIllumination"
+                }
+            ]
+        },
+        "Category": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "beacon/Category"
+                }
+            ]
+        },
+        "Humidity": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Humidity"
+                }
+            ]
+        },
+        "Battery": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "beacon/Battery"
+                }
+            ]
+        },
+        "CO2": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/CO2"
+                }
+            ]
+        },
+        "Model": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "beacon/Model"
+                }
+            ]
+        },
+        "Illumination": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Illumination"
+                }
+            ]
+        },
+        "BatteryState": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "beacon/BatteryState"
+                }
+            ]
+        },
+        "Pressure": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "beacon/Pressure"
+                }
+            ]
+        },
+        "OUICode": {
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "text/plain",
+                    "href": "beacon/OUICode"
+                }
+            ]
+        }
+    },
+    "events": {},
+    "base": "http://192.168.11.10:8080/Things/urn%3Acom%3Afujitsu%3Aiot%3AAgriDevice-c4%3Aa7%3Adf%3Acf%3A3e%3A90/"
+}

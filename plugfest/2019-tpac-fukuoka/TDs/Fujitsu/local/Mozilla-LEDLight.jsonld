@@ -1,0 +1,67 @@
+{
+    "selectedCapability": "Light",
+    "layoutIndex": 0,
+    "@type": [
+        "OnOffSwitch",
+        "Light",
+        "ColorControl",
+        "EnergyMonitor"
+    ],
+    "description": "KL130(JP)",
+    "title": "LB130-1",
+    "type": "onOffColorLight",
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "security": [
+        "bearer_sc"
+    ],
+    "links": [],
+    "iconHref": null,
+    "id": "http://gateway.local/things/tplink-80125A7FD5649EC2C626773DC59CEA621A69EF2D",
+    "actions": {},
+    "securityDefinitions": {
+        "bearer_sc": {
+            "scheme": "bearer"
+        }
+    },
+    "forms": [
+        {
+            "op": "readallproperties",
+            "href": "things/tplink-80125A7FD5649EC2C626773DC59CEA621A69EF2D/properties"
+        }
+    ],
+    "properties": {
+        "color": {
+            "title": "Color",
+            "@type": "ColorProperty",
+            "forms": [
+                {
+                    "rel": "property",
+                    "href": "things/tplink-80125A7FD5649EC2C626773DC59CEA621A69EF2D/properties/color"
+                }
+            ]
+        },
+        "instantaneousPower": {
+            "unit": "watt",
+            "title": "Power",
+            "@type": "InstantaneousPowerProperty",
+            "forms": [
+                {
+                    "rel": "property",
+                    "href": "things/tplink-80125A7FD5649EC2C626773DC59CEA621A69EF2D/properties/instantaneousPower"
+                }
+            ]
+        },
+        "on": {
+            "title": "On/Off",
+            "@type": "OnOffProperty",
+            "forms": [
+                {
+                    "rel": "property",
+                    "href": "things/tplink-80125A7FD5649EC2C626773DC59CEA621A69EF2D/properties/on"
+                }
+            ]
+        }
+    },
+    "events": {},
+    "base": "http://192.168.11.10:8080/Things/http%3A%2F%2Fgateway.local%2Fthings%2Ftplink-80125A7FD5649EC2C626773DC59CEA621A69EF2D/"
+}
