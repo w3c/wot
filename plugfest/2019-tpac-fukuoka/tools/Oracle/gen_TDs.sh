@@ -9,6 +9,7 @@ node dm2td.js ../../TDs/Oracle/DMs/Blue_Pump.json w3ctest.iadstg.iot.ocs.oraclec
 node dm2td.js ../../TDs/Oracle/DMs/Blue_Pump.json w3ctest.iadstg.iot.ocs.oraclecloud.com 0-AB EDE4CED7-11FC-4B4B-97D7-47F35F243FAF > ../../TDs/Oracle/Blue_Pump_SmartThings.jsonld
 node dm2td.js ../../TDs/Oracle/DMs/Blue_Pump.json w3ctest.iadstg.iot.ocs.oraclecloud.com 0-AB BEA30827-9904-4B9E-8FD6-9EEDB3EF9798 > ../../TDs/Oracle/Blue_Pump_TUM.jsonld
 node dm2td.js ../../TDs/Oracle/DMs/Blue_Pump.json w3ctest.iadstg.iot.ocs.oraclecloud.com 0-AB 5441468D-32E5-480F-8C57-0400E89E1ACA > ../../TDs/Oracle/Blue_Pump_NHK.jsonld
+node dm2td.js ../../TDs/Oracle/DMs/Blue_Pump.json w3ctest.iadstg.iot.ocs.oraclecloud.com 0-AB 066995D9-B766-4341-B5F2-149CA541873A > ../../TDs/Oracle/Blue_Pump_Fujitsu.jsonld
 
 # HVAC
 node dm2td.js ../../TDs/Oracle/DMs/HVAC_device_model.json w3ctest.iadstg.iot.ocs.oraclecloud.com 0-AB 58F17EE5-5C40-4C6A-B4AF-9AAB5F06912D > ../../TDs/Oracle/HVAC_Shared.jsonld
