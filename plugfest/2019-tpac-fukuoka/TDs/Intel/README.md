@@ -18,7 +18,7 @@ Please do not repost them in a public forum
 do not check the keys into a public github repo as part of a test suite,
 post on a forum,
 share in a public messaging system, etc).
-These will be updated peroidically so if an access does not work,
+These will be updated periodically so if an access does not work,
 check that you have the latest version.
 
 ### Simple Web Camera
