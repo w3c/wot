@@ -262,20 +262,20 @@ Wifi should be available, open ports ?
 
 ## Joint demo at Panasonic table
 
-NHK screen with application interface to Panasonic device
-Panasonic will bring 13" screen connected to Raspi, will show hangout video (Panasonic Lab, ...)
-Intel small laptop connected to local speaker and camera
+NHK screen with application interface to Panasonic device  
+Panasonic will bring 13" screen connected to Raspi, will show hangout video (Panasonic Lab, ...)  
+Intel small laptop connected to local speaker and camera  
 Fujitsu brings some local devices, 27" display to display slides / simulators (e.g. Siemens Festo Plant Simulator), IR sensor
-Hitachi small Laptop with application (orchestration scenarios)
-Siemens browser demo + ECOG?
-TUM Button and proximity sensor + LED light
-Oracle HVAC, BluePump, FestoPlant
+Hitachi small Laptop with application (orchestration scenarios)  
+Siemens browser demo + ECOG?  
+TUM Button and proximity sensor + LED light  
+Oracle HVAC, BluePump, FestoPlant  
 
 ### Smart Building Scenario
-Oracle HVAC
-Panasonic Aircon, Lights
-Intel Speech
-TUM 
+Oracle HVAC  
+Panasonic Aircon, Lights  
+Intel Speech  
+TUM   
 
 Intel Laptop / Screen could show Panasonic lab, remote Speech 
 
