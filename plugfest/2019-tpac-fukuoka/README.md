@@ -271,11 +271,42 @@ Siemens browser demo + ECOG?
 TUM Button and proximity sensor + LED light  
 Oracle HVAC, BluePump, FestoPlant  
 
-### Smart Building Scenario
-Oracle HVAC  
-Panasonic Aircon, Lights  
-Intel Speech  
-TUM   
+### Panasonic demo table shifts
 
-Intel Laptop / Screen could show Panasonic lab, remote Speech 
+#### Monday      
+ 8:00-10:00
+ 10:00-12:00
+ 12:00-14:00
+ 14:00-16:00
+ 16:00-18:00
+#### Tuesday
+ 8:00-10:00
+ 10:00-12:00
+ 12:00-14:00
+ 14:00-16:00
+ 16:00-18:00
+#### Wednesday
+ 8:00-10:00     McCool
+ 10:00-12:00    
+ 12:00-14:00
+ 14:00-16:00
+ 16:00-18:00
+
+---
+
+#### Thursday
+ 8:00-10:00
+ 10:00-12:00
+ 12:00-14:00
+ 14:00-16:00
+ 16:00-18:00
+
+#### Friday
+ 8:00-10:00
+ 10:00-12:00
+ 12:00-14:00
+ 14:00-16:00
+ 16:00-18:00
+
+
 
