@@ -191,14 +191,8 @@ There are the following four possible opportunities for the WoT demo but we won'
     * consider to include a slide demo for companies not present, e.g. BMW, EcoG, ...
     * to be added to the [Session Idea Wiki](https://www.w3.org/wiki/TPAC/2019/SessionIdeas)
 
-3. Wednesday: Dedicated demo session - 15:30-16:30
-    * 2nd hour there's only one table for WoT - need a poster
-    * already added to the [Demo Session Wiki](https://www.w3.org/wiki/TPAC2019/Demos)
 
-4. ~~Monday evening: Developer meetup~~
-    * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
-
-### Session schedule
+### Panasonic demo table shifts
 
 | Date/time             | 1. Panasonic Table   | 2. Breakout Session | 3. Demo Session | Comment |
 |----------------------:|:--------------------:|:----------------:|:------------:|------------|
@@ -262,51 +256,15 @@ Wifi should be available, open ports ?
 
 ## Joint demo at Panasonic table
 
-NHK screen with application interface to Panasonic device  
-Panasonic will bring 13" screen connected to Raspi, will show hangout video (Panasonic Lab, ...)  
-Intel small laptop connected to local speaker and camera  
-Fujitsu brings some local devices, 27" display to display slides / simulators (e.g. Siemens Festo Plant Simulator), IR sensor
-Hitachi small Laptop with application (orchestration scenarios)  
+NHK screen with application interface to Panasonic device    
+Panasonic will bring 13" screen connected to Raspi, will show hangout video (Panasonic Lab, ...)   
+Intel small laptop connected to local speaker and camera   
+Fujitsu brings some local devices, 27" display to display slides / simulators (e.g. Siemens Festo Plant Simulator), IR sensor  
+Hitachi small Laptop with application (orchestration scenarios)    
 Siemens browser demo + ECOG?  
 TUM Button and proximity sensor + LED light  
 Oracle HVAC, BluePump, FestoPlant  
 
-### Panasonic demo table shifts
-
-#### Monday      
- 8:00-10:00
- 10:00-12:00
- 12:00-14:00
- 14:00-16:00
- 16:00-18:00
-#### Tuesday
- 8:00-10:00
- 10:00-12:00
- 12:00-14:00
- 14:00-16:00
- 16:00-18:00
-#### Wednesday
- 8:00-10:00     McCool
- 10:00-12:00    
- 12:00-14:00
- 14:00-16:00
- 16:00-18:00
-
----
-
-#### Thursday
- 8:00-10:00
- 10:00-12:00
- 12:00-14:00
- 14:00-16:00
- 16:00-18:00
-
-#### Friday
- 8:00-10:00
- 10:00-12:00
- 12:00-14:00
- 14:00-16:00
- 16:00-18:00
 
 
 
