@@ -46,10 +46,11 @@ Summary of network API (see TDs for details):
         - an action using POST
         - query parameters are embedded in request URL
     
-**WARNING: in theory writing to properties like "brightness" is supported and
+**WARNING: ideally writing to properties like "brightness"
 should update the corresponding V4L parameters in the camera.
 In practice it tends to crash the camera driver, so...
-These properties are only supported in read-only mode and the TD reflects this.
+These properties are only supported in read-only mode currently
+and the TD reflects this.
 Sorry.**
 
 #### HTTP and Nosec 
