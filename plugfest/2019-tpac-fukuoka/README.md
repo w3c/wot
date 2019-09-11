@@ -162,17 +162,17 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 # Demo infrastructure
 
 ## Displays
-NHK screen (43") with dedicated stand - visualize hybridcast connected application
-TBC.: - Can we use the screen for visualizing other content? (cloud service, gateway dashboard, Hangouts)?
-TBC.: - TV remote, cursor, keyboard?
+### NHK screen (43") with dedicated stand - visualize hybridcast connected application  
+TBC.: - Can we use the screen for visualizing other content? (cloud service, gateway dashboard, Hangouts)?  
+TBC.: - TV remote, cursor, keyboard?  
 
-## Intel 15" monitor (hdmi) + 15" laptop
+### Intel 15" monitor (hdmi) + 15" laptop  
 
-## Panasonic: Google home, LED number display, Small display (~13")
+### Panasonic: Google home, LED number display, Small display (~13")
 
-## Fujitsu: 13" PC, checking on display
+### Fujitsu: 13" PC, checking on display
 
-## Siemens: Simulation, Laptop t.b.d.
+### Siemens: Simulation, Laptop t.b.d.
 
 
 # Logistics + Constraints:
