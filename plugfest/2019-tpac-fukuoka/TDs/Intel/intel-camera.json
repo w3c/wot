@@ -1,17 +1,16 @@
 {
-  "@context": ["http://www.w3.org/ns/td",
+  "@context": ["https://www.w3.org/2019/wot/td/v1",
                {
-                   "iot": "http://iotschema.org/",
-                   "http": "http://www.w3.org/2011/http#"
+                 "iot": "http://iotschema.org/"
                }
   ],
   "@type": ["Thing"],
-  "name": "SimpleWebCamera-plus2.local-0",
+  "title": "SimpleWebCamera-plus2.local-0",
   "description": "A simple interface to V4L2 cameras",
   "support": "mailto:michael.mccool@intel.com",
   "version": {"instance":"0.1.0"},
-  "created": "2018-09-10T06:30+00:00",
-  "lastModified": "2018-12-19T03:29+00:00",
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2019-05-28T03:29:00Z",
   "links": [{
         "href": "https://github.com/mmccool/simple-webcam",
         "rel": "repository",
@@ -33,112 +32,74 @@
       "minimum": -64,
       "maximum": 64,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/brightness",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/brightness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/brightness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/brightness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/brightness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/brightness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/brightness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/brightness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/brightness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/brightness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/brightness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/brightness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/brightness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/brightness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/brightness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -151,112 +112,74 @@
       "minimum": 0,
       "maximum": 64,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/contrast",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/contrast",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/contrast/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/contrast",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/contrast",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/contrast/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/contrast",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/contrast",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/contrast/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/contrast",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/contrast",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/contrast/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/contrast",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/contrast",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/contrast/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -269,68 +192,46 @@
       "minimum": 16,
       "maximum": 500,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/gamma",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/gamma",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/gamma/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/gamma",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/gamma",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/gamma/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/gamma",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/gamma",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/gamma/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -343,112 +244,74 @@
       "minimum": 0,
       "maximum": 100,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/saturation",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/saturation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/saturation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/saturation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/saturation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/saturation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/saturation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/saturation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/saturation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/saturation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/saturation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/saturation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/saturation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/saturation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/saturation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -461,68 +324,46 @@
       "minimum": -40,
       "maximum": 40,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/hue",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/hue",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/hue/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/hue",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/hue",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/hue/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/hue",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/hue",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/hue/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -535,112 +376,74 @@
       "minimum": 2800,
       "maximum": 6500,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/white_balance",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/white_balance",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/white_balance/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/white_balance",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/white_balance",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/white_balance/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/white_balance",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/white_balance",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/white_balance/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/white_balance",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/white_balance",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/white_balance/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/white_balance",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/white_balance",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/white_balance/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -651,112 +454,74 @@
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/white_balance_auto",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/white_balance_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/white_balance_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/white_balance_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/white_balance_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/white_balance_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/white_balance_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/white_balance_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/white_balance_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/white_balance_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/white_balance_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/white_balance_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/white_balance_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/white_balance_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/white_balance_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -769,112 +534,74 @@
       "minimum": 1,
       "maximum": 5000,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/exposure",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/exposure",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/exposure/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/exposure",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/exposure",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/exposure/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/exposure",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/exposure",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/exposure",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/exposure/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/exposure",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/exposure",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -885,112 +612,74 @@
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/exposure_auto",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/exposure_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/exposure_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/exposure_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/exposure_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/exposure_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/exposure_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/exposure_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/exposure_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/exposure_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/exposure_auto",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/exposure_auto",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/exposure_auto/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -1001,112 +690,74 @@
       "@type": ["iot:BinarySwitch","iot:StateData"],
       "type": "boolean",
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/exposure_auto_priority",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/exposure_auto_priority",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/exposure_auto_priority/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/exposure_auto_priority",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/exposure_auto_priority",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/exposure_auto_priority/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure_auto_priority",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/exposure_auto_priority",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/exposure_auto_priority/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/exposure_auto_priority",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/exposure_auto_priority",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/exposure_auto_priority/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/exposure_auto_priority",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/exposure_auto_priority",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/exposure_auto_priority/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -1119,112 +770,74 @@
       "minimum": 0,
       "maximum": 2,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/backlight_compensation",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/backlight_compensation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/backlight_compensation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/backlight_compensation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/backlight_compensation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/backlight_compensation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/backlight_compensation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/backlight_compensation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/backlight_compensation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/backlight_compensation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/backlight_compensation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/backlight_compensation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/backlight_compensation",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/backlight_compensation",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/backlight_compensation/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -1236,112 +849,74 @@
       "minimum": 0,
       "maximum": 600,
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/sharpness",
           "contentType": "application/json",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "http://plus2.local:9190/api/sharpness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "http:methodName": "POST"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/sharpness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/sharpness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8098/api/sharpness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/sharpness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/sharpness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8099/api/sharpness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/sharpness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/sharpness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8098/api/sharpness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/sharpness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/sharpness",
           "contentType": "application/json",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
-        },
-        {
-          "href": "https://portal.mmccool.net:8099/api/sharpness",
-          "contentType": "application/json",
-          "op": ["writeproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/sharpness/observe",
           "contentType": "application/json",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -1349,78 +924,74 @@
     "frame": {
       "title": "frame",
       "observable": true,
+      "readOnly": true,
       "forms": [
         {
           "href": "http://plus2.local:9190/api/frame",
           "contentType": "image/jpeg",
-          "op": ["readproperty"],
-          "http:methodName": "GET"
+          "op": ["readproperty"]
         },
         {
           "href": "http://plus2.local:9190/api/frame/observe",
           "contentType": "image/jpeg",
           "op": ["observeproperty"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/frame",
           "contentType": "image/jpeg",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/frame/observe",
           "contentType": "image/jpeg",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame",
           "contentType": "image/jpeg",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame/observe",
           "contentType": "image/jpeg",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8098/api/frame",
           "contentType": "image/jpeg",
           "op": ["readproperty"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/frame/observe",
           "contentType": "image/jpeg",
           "op": ["observeproperty"],
           "security": ["basic_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         },
         {
           "href": "https://portal.mmccool.net:8099/api/frame",
           "contentType": "image/jpeg",
           "op": ["readproperty"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/frame/observe",
           "contentType": "image/jpeg",
           "op": ["observeproperty"],
           "security": ["digest_sc"],
-          "http:methodName": "GET",
+          "htv:methodName": "GET",
           "subProtocol": "longpoll"
         }
       ]
@@ -1430,6 +1001,8 @@
     "crop": {
       "title": "Crop",
       "description": "Extract and return a portion of the most recently grabbed image",
+      "safe": true,
+      "idempotent": false,
       "input": {
           "type": "object",
           "properties": {
@@ -1463,8 +1036,7 @@
           "response": {
               "contentType": "image/jpeg"
           },
-          "op": "invokeaction",
-          "http:methodName": "POST"
+          "op": "invokeaction"
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/frame/crop",
@@ -1473,8 +1045,7 @@
               "contentType": "image/jpeg"
           },
           "op": "invokeaction",
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame/crop",
@@ -1483,8 +1054,7 @@
               "contentType": "image/jpeg"
           },
           "op": "invokeaction",
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/frame/crop",
@@ -1493,8 +1063,7 @@
               "contentType": "image/jpeg"
           },
           "op": "invokeaction",
-          "security": ["basic_sc"],
-          "http:methodName": "POST"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/frame/crop",
@@ -1503,14 +1072,15 @@
               "contentType": "image/jpeg"
           },
           "op": "invokeaction",
-          "security": ["digest_sc"],
-          "http:methodName": "POST"
+          "security": ["digest_sc"]
         }
       ]
     },
     "region": {
       "title": "Region",
       "description": "Extract and return a portion of the most recently grabbed image.",
+      "safe": true,
+      "idempotent": false,
       "uriVariables": {
           "xo": {
               "title": "x origin (pixels)",
@@ -1537,36 +1107,31 @@
         {
           "href": "http://plus2.local:9190/api/frame/region{?xo,yo,x,y}",
           "contentType": "image/jpeg",
-          "op": ["invokeaction"],
-          "http:methodName": "GET"
+          "op": ["invokeaction"]
         },
         {
           "href": "https://tiktok.mmccool.org:8098/api/frame/region{?xo,yo,x,y}",
           "contentType": "image/jpeg",
           "op": ["invokeaction"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8099/api/frame/region{?xo,yo,x,y}",
           "contentType": "image/jpeg",
           "op": ["invokeaction"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
+          "security": ["digest_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8098/api/frame/region{?xo,yo,x,y}",
           "contentType": "image/jpeg",
           "op": ["invokeaction"],
-          "security": ["basic_sc"],
-          "http:methodName": "GET"
+          "security": ["basic_sc"]
         },
         {
           "href": "https://portal.mmccool.net:8099/api/frame/region{?xo,yo,x,y}",
           "contentType": "image/jpeg",
           "op": ["invokeaction"],
-          "security": ["digest_sc"],
-          "http:methodName": "GET"
+          "security": ["digest_sc"]
         }
       ]
     }
