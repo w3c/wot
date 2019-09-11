@@ -10,8 +10,6 @@ Use the credentials, linked below, for "wotbasicproxy" or "wodigestproxy" based 
 basic or digest authentication.
 Both services use the same credentials.
 
-**WARNING: Digest auth is broken at the moment.  Basic should work.**
-
 * [Proxy Authentication Credentials](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
 
 W3C WoT membership is required to access these credentials.
