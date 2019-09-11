@@ -49,8 +49,7 @@ Summary of network API (see TDs for details):
 **WARNING: in theory writing to properties like "brightness" is supported and
 should update the corresponding V4L parameters in the camera.
 In practice it tends to crash the camera driver, so...
-it's better to treat these as read-only.
-I will update the TDs correspondingly soon.
+These properties are only supported in read-only mode and the TD reflects this.
 Sorry.**
 
 #### HTTP and Nosec 
