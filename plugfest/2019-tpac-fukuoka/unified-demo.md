@@ -1,16 +1,16 @@
-### Preparation for unified demo scenario
+# Preparation for unified demo scenario
 
-#### Applications and Devices available as of Sep. 15
+## Applications and Devices available as of Sep. 15
 
 Please add your applications and devices if it's available for the demo on Wednesday, Sep. 18.
 
-##### Applicaitons
+### Applicaitons
 * NodeRED by Fujitsu
 * NodeRED by Panasonic
 * NodeRED by Panasonic
 * node-wot by NHK
 
-##### Devices
+### Devices
 * Local devices in Fukuoka
   * Panasonic Cleaner
   * Panasonic LED
@@ -30,7 +30,7 @@ Please add your applications and devices if it's available for the demo on Wedne
   * Oracle HVAC Simulator
   * ...
 
-#### Scenarios
+## Scenarios
 
 - Test scenario 1: Smart house / Smart building
   - Scenario (draft)
@@ -95,28 +95,3 @@ Please add your applications and devices if it's available for the demo on Wedne
 
 [scenario1]:images/test_scenario_1.png
 [scenario2]:images/test_scenario_2.png
-
-#### Logistics
-- vpn server
-  - DHCP? / Fixed IP?
-  - Can mDNS work over VPN?
-
-#### Participants
-Intel, Fujitsu, TUM, Siemens, Oracle, Hitachi
-
-#### Date
-Spet 10th, 9am-11am CDT, 4pm-6pm JST (+1 hour?)
-
-#### Logistics
-
-* WebEx and IRC
-
-We will use the https://www.w3.org/WoT/IG/wiki/PlugFest_WebConf WebEx and IRC.
-
-* Google Hangout (Matthias)
-   - Used to video stream remote devices such as Festo Live or Panasonic Lab
-   - https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE (the one we used for the Online PlugFest on Sep 10)
-   - https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI
-
-
-
