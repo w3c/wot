@@ -30,7 +30,7 @@ Please add your applications and devices if it's available for the demo on Wedne
   * Oracle HVAC Simulator
   * ...
 
-## Scenarios
+## Demo Scenarios
 
 - Test scenario 1: Smart house / Smart building
   - Scenario (draft)
