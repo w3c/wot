@@ -1,0 +1,243 @@
+{
+  "urn": "urn:com:siemens:wot:festolive:alerttest",
+  "name": "Festo Plant",
+  "description": "Shared Device Model for Festo plant",
+  "system": false,
+  "draft": false,
+  "created": 1536914409132,
+  "createdAsString": "2018-09-14T08:40:09.132Z",
+  "lastModified": 1536919811012,
+  "lastModifiedAsString": "2018-09-14T10:10:11.012Z",
+  "userLastModified": "IoTAdmin",
+  "attributes": [
+    {
+      "description": "",
+      "name": "PumpStatus",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "",
+      "name": "ValveStatus",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "",
+      "name": "Tank102LevelValue",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "",
+      "name": "Tank102OverflowStatus",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "",
+      "name": "Tank101MaximumLevelStatus",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "",
+      "name": "Tank101MinimumLevelStatus",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "",
+      "name": "Tank101OverflowStatus",
+      "type": "BOOLEAN",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "alias": "OpenValve",
+      "description": "Opens the valve",
+      "name": "OpenValve"
+    },
+    {
+      "alias": "",
+      "description": "",
+      "name": "CloseValve"
+    },
+    {
+      "alias": "",
+      "description": "",
+      "name": "StartPump"
+    },
+    {
+      "alias": "",
+      "description": "",
+      "name": "StopPump"
+    }
+  ],
+  "formats": [
+    {
+      "urn": "urn:com:siemens:wot:festo:tank101overflow",
+      "name": "Tank101Overflow",
+      "description": "Tank101 Overflow",
+      "type": "ALERT",
+      "deviceModel": "urn:com:siemens:wot:festolive:alerttest",
+      "value": {
+        "fields": [
+          {
+            "name": "Tank102Level",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "PumpStatus",
+            "optional": false,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "ValveStatus",
+            "optional": false,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:siemens:wot:festolive:alerttest",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:siemens:wot:festo:tank102overflow",
+      "name": "Tank102Overflow",
+      "description": "Tank102 Overflow",
+      "type": "ALERT",
+      "deviceModel": "urn:com:siemens:wot:festolive:alerttest",
+      "value": {
+        "fields": [
+          {
+            "name": "Tank102Level",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "PumpStatus",
+            "optional": false,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "ValveStatus",
+            "optional": false,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:siemens:wot:festolive:alerttest",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:siemens:wot:festo:tanklevel",
+      "name": "TankLevel",
+      "description": "",
+      "type": "DATA",
+      "deviceModel": "urn:com:siemens:wot:festolive:alerttest",
+      "value": {
+        "fields": [
+          {
+            "name": "Tank102Level",
+            "optional": false,
+            "type": "NUMBER"
+          }
+        ]
+      },
+      "sourceId": "urn:com:siemens:wot:festolive:alerttest",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:siemens:wot:festo:plantstatus",
+      "name": "PlantStatus",
+      "description": "full status of the plant",
+      "type": "DATA",
+      "deviceModel": "urn:com:siemens:wot:festolive:alerttest",
+      "value": {
+        "fields": [
+          {
+            "name": "Tank102Level",
+            "optional": false,
+            "type": "NUMBER"
+          },
+          {
+            "name": "PumpStatus",
+            "optional": false,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "ValveStatus",
+            "optional": false,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "Tank101Overflow",
+            "optional": false,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "Tank102Overflow",
+            "optional": false,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "Tank101MinimumLevel",
+            "optional": false,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "Tank101MaximumLevel",
+            "optional": false,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:siemens:wot:festolive:alerttest",
+      "sourceType": "DEVICE_MODEL"
+    },
+    {
+      "urn": "urn:com:siemens:wot:festo:tank101criticallevel",
+      "name": "Tank101CriticalLevel",
+      "description": "Tank101Level<Tank101MinimumValue or  Tank101Level>Tank101MaximumValue",
+      "type": "ALERT",
+      "deviceModel": "urn:com:siemens:wot:festolive:alerttest",
+      "value": {
+        "fields": [
+          {
+            "name": "Tank101MinimumLevel",
+            "optional": true,
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "Tank101MaximumLevel",
+            "optional": true,
+            "type": "BOOLEAN"
+          }
+        ]
+      },
+      "sourceId": "urn:com:siemens:wot:festolive:alerttest",
+      "sourceType": "DEVICE_MODEL"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Asiemens%253Awot%253Afestolive%253Aalerttest",
+      "rel": "self"
+    },
+    {
+      "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Asiemens%253Awot%253Afestolive%253Aalerttest",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://129.150.200.242:443/iot/webapi/v2/deviceModels/urn%253Acom%253Asiemens%253Awot%253Afestolive%253Aalerttest/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
