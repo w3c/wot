@@ -162,17 +162,17 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 # Demo infrastructure
 
 ## Displays
-NHK screen (43") with dedicated stand - visualize hybridcast connected application
-TBC.: - Can we use the screen for visualizing other content? (cloud service, gateway dashboard, Hangouts)?
-TBC.: - TV remote, cursor, keyboard?
+### NHK screen (43") with dedicated stand - visualize hybridcast connected application  
+TBC.: - Can we use the screen for visualizing other content? (cloud service, gateway dashboard, Hangouts)?  
+TBC.: - TV remote, cursor, keyboard?  
 
-## Intel 15" monitor (hdmi) + 15" laptop
+### Intel 15" monitor (hdmi) + 15" laptop  
 
-## Panasonic: Google home, LED number display, Small display (~13")
+### Panasonic: Google home, LED number display, Small display (~13")
 
-## Fujitsu: 13" PC, checking on display
+### Fujitsu: 13" PC, checking on display
 
-## Siemens: Simulation, Laptop t.b.d.
+### Siemens: Simulation, Laptop t.b.d.
 
 
 # Logistics + Constraints:
@@ -191,66 +191,61 @@ There are the following four possible opportunities for the WoT demo but we won'
     * consider to include a slide demo for companies not present, e.g. BMW, EcoG, ...
     * to be added to the [Session Idea Wiki](https://www.w3.org/wiki/TPAC/2019/SessionIdeas)
 
-3. Wednesday: Dedicated demo session - 15:30-16:30
-    * 2nd hour there's only one table for WoT - need a poster
-    * already added to the [Demo Session Wiki](https://www.w3.org/wiki/TPAC2019/Demos)
 
-4. ~~Monday evening: Developer meetup~~
-    * This time it requires sponsoring: https://www.w3.org/2019/09/Meetup/
+### Panasonic demo table shifts
 
-### Session schedule
+| Date/time             | Panasonic Demo Table Shifts | Comment |
+|----------------------:|:--------------------:|------------|
+| Monday:    9:00-10:00 | ?                    |            |
+|           10:00-11:00 | ?                    |            |
+|           11:00-12:00 | ?                    |            |
+|           12:00-13:00 | ?                    |            |
+|           13:00-14:00 | ?                    |            |
+|           14:00-15:00 | ?                    |            |
+|           15:00-16:00 | ?                    |            |
+|           16:00-17:00 | ?                    |            |
+|           17:00-18:00 | ?                    |            |
+||||
+| Tuesday:   9:00-10:00 | ?                    |            |
+|           10:00-11:00 | ?                    |            |
+|           11:00-12:00 | ?                    |            |
+|           12:00-13:00 | ?                    |            |
+|           13:00-14:00 | ?                    |            |
+|           14:00-15:00 | ?                    |            |
+|           15:00-16:00 | ?                    |            |
+|           16:00-17:00 | ?                    |            |
+|           17:00-18:00 | ?                    |            |
+||||
+| Wednesday: 9:00-10:00 | ?                    |            |
+|           10:00-11:00 | ?                    |            |
+|           11:00-12:00 | ?                    | Breakout 1 |
+|           12:00-13:30 | ?                    | Lunch      |
+|           13:30-14:30 | ?                    | Breakout 2 |
+|           14:30-15:30 | ?                    | Breakout 3 |
+|           15:30-16:30 | ?                    | Break+Demo |
+|           16:30-17:30 | ?                    | Breakout 4 |
+|           17:30-18:30 | ?                    | Report     |
+||||
+| Thursday:  9:00-10:00 | ?                    |            |
+|           10:00-11:00 | ?                    |            |
+|           11:00-12:00 | ?                    |            |
+|           12:00-13:00 | ?                    |            |
+|           13:00-14:00 | ?                    |            |
+|           14:00-15:00 | ?                    |            |
+|           15:00-16:00 | ?                    |            |
+|           16:00-17:00 | ?                    |            |
+|           17:00-18:00 | ?                    |            |
+||||
+| Friday:    9:00-10:00 | ?                    |            |
+|           10:00-11:00 | ?                    |            |
+|           11:00-12:00 | ?                    |            |
+|           12:00-13:00 | ?                    |            |
+|           13:00-14:00 | ?                    |            |
+|           14:00-15:00 | ?                    |            |
+|           15:00-16:00 | ?                    |            |
+|           16:00-17:00 | ?                    |            |
+|           17:00-18:00 | ?                    |            |
 
-| Date/time             | 1. Panasonic Table   | 2. Breakout Session | 3. Demo Session | Comment |
-|----------------------:|:--------------------:|:----------------:|:------------:|------------|
-| Monday:    9:00-10:00 | ?                    |       --         |     --       |            |
-|           10:00-11:00 | ?                    |       --         |     --       |            |
-|           11:00-12:00 | ?                    |       --         |     --       |            |
-|           12:00-13:00 | ?                    |       --         |     --       |            |
-|           13:00-14:00 | ?                    |       --         |     --       |            |
-|           14:00-15:00 | ?                    |       --         |     --       |            |
-|           15:00-16:00 | ?                    |       --         |     --       |            |
-|           16:00-17:00 | ?                    |       --         |     --       |            |
-|           17:00-18:00 | ?                    |       --         |     --       |            |
-||||||
-| Tuesday:   9:00-10:00 | ?                    |       --         |     --       |            |
-|           10:00-11:00 | ?                    |       --         |     --       |            |
-|           11:00-12:00 | ?                    |       --         |     --       |            |
-|           12:00-13:00 | ?                    |       --         |     --       |            |
-|           13:00-14:00 | ?                    |       --         |     --       |            |
-|           14:00-15:00 | ?                    |       --         |     --       |            |
-|           15:00-16:00 | ?                    |       --         |     --       |            |
-|           16:00-17:00 | ?                    |       --         |     --       |            |
-|           17:00-18:00 | ?                    |       --         |     --       |            |
-||||||
-| Wednesday: 9:00-10:00 | ?                    |       --         |     --       |            |
-|           10:00-11:00 | ?                    |       --         |     --       |            |
-|           11:00-12:00 | ?                    |       --         |     --       | Breakout 1 |
-|           12:00-13:30 | ?                    |      N/A         |     N/A      | Lunch      |
-|           13:30-14:30 | ?                    | WoT demo         |     --       | Breakout 2 |
-|           14:30-15:30 | ?                    |       --         |     --       | Breakout 3 |
-|           15:30-16:30 | ?                    |       --         | WoT demo     | Break+Demo |
-|           16:30-17:30 | ?                    |       --         |     --       | Breakout 4 |
-|           17:30-18:30 | ?                    |       --         |     --       | Report     |
-||||||
-| Thursday:  9:00-10:00 | ?                    |       --         |     --       |            |
-|           10:00-11:00 | ?                    |       --         |     --       |            |
-|           11:00-12:00 | ?                    |       --         |     --       |            |
-|           12:00-13:00 | ?                    |       --         |     --       |            |
-|           13:00-14:00 | ?                    |       --         |     --       |            |
-|           14:00-15:00 | ?                    |       --         |     --       |            |
-|           15:00-16:00 | ?                    |       --         |     --       |            |
-|           16:00-17:00 | ?                    |       --         |     --       |            |
-|           17:00-18:00 | ?                    |       --         |     --       |            |
-||||||
-| Friday:    9:00-10:00 | ?                    |       --         |     --       |            |
-|           10:00-11:00 | ?                    |       --         |     --       |            |
-|           11:00-12:00 | ?                    |       --         |     --       |            |
-|           12:00-13:00 | ?                    |       --         |     --       |            |
-|           13:00-14:00 | ?                    |       --         |     --       |            |
-|           14:00-15:00 | ?                    |       --         |     --       |            |
-|           15:00-16:00 | ?                    |       --         |     --       |            |
-|           16:00-17:00 | ?                    |       --         |     --       |            |
-|           17:00-18:00 | ?                    |       --         |     --       |            |
 
 
 ## Goal: Demonstrate Interoperability among WoT WG members
@@ -258,3 +253,19 @@ There are the following four possible opportunities for the WoT demo but we won'
 Wifi should be available, open ports ?
 
 ## Posters
+
+
+## Joint demo at Panasonic table
+
+NHK screen with application interface to Panasonic device    
+Panasonic will bring 13" screen connected to Raspi, will show hangout video (Panasonic Lab, ...)   
+Intel small laptop connected to local speaker and camera   
+Fujitsu brings some local devices, 27" display to display slides / simulators (e.g. Siemens Festo Plant Simulator), IR sensor  
+Hitachi small Laptop with application (orchestration scenarios)    
+Siemens browser demo + ECOG?  
+TUM Button and proximity sensor + LED light  
+Oracle HVAC, BluePump, FestoPlant  
+
+
+
+

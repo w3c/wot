@@ -85,6 +85,7 @@ We will use the https://www.w3.org/WoT/IG/wiki/PlugFest_WebConf WebEx and IRC.
 
 * Google Hangout (Matthias)
    - Used to video stream remote devices such as Festo Live or Panasonic Lab
+   - https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE (the one we used for the Online PlugFest on Sep 10)
    - https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI
 
 
