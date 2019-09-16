@@ -60,7 +60,6 @@ When the "room empty" condition is detected, the room is cleaned by a vacuum cle
 * HVAC system simulation in a building (Siemens)
 * Turn off the lights (Smart Things?) (TUM)
 * Turn on a surveillance camera (Intel)
-* NHK ?
 ...
 
 ### Smart Home Demo (Contact: Panasonic)
@@ -77,7 +76,6 @@ then
 * Turn on/off Intel-OCF-LED (Intel)
 * Turn on/off Blue Pump (Oracle)
 * Turn on/off DotStar and HUE Lights (TUM)
-* NHK ?
 
 ### Private smart home demo (Contact: Mozilla)
 
@@ -162,9 +160,7 @@ Monitors power consumption and detects exceed the limit, stops some appliances t
 # Demo infrastructure
 
 ## Displays
-### NHK screen (43") with dedicated stand - visualize hybridcast connected application  
-TBC.: - Can we use the screen for visualizing other content? (cloud service, gateway dashboard, Hangouts)?  
-TBC.: - TV remote, cursor, keyboard?  
+### NHK TV (43") with dedicated stand - emitting trigers for node-wot applications
 
 ### Intel 15" monitor (hdmi) + 15" laptop  
 
