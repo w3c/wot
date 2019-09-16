@@ -23,7 +23,7 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/properties/temperature",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/temperature",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -31,7 +31,7 @@
                     "htv:methodName": "GET"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/properties/temperature",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/temperature",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -47,7 +47,7 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/properties/pressure",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/pressure",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -55,7 +55,7 @@
                     "htv:methodName": "GET"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/properties/pressure",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/pressure",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -70,7 +70,7 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/properties/motion",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/motion",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -78,7 +78,7 @@
                     "htv:methodName": "GET"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/properties/motion",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/motion",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -93,7 +93,7 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/properties/heading",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/heading",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -101,7 +101,7 @@
                     "htv:methodName": "GET"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/properties/heading",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/heading",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -116,7 +116,7 @@
             "description": "Use for user to calibrate direction",
             "observable": false,
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/properties/north",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/north",
                     "contentType": "application/json",
                     "op": [
                         "readproperty",
@@ -124,7 +124,7 @@
                     ]
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/properties/north",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/north",
                     "contentType": "application/json",
                     "op": [
                         "readproperty",
@@ -141,7 +141,7 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/properties/lightLevel",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/lightLevel",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -149,7 +149,7 @@
                     "htv:methodName": "GET"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/properties/lightLevel",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/lightLevel",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -164,7 +164,7 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/properties/rgbValues",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/rgbValues",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -172,7 +172,7 @@
                     "htv:methodName": "GET"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/properties/rgbValues",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/rgbValues",
                     "contentType": "application/json",
                     "op": [
                         "readproperty"
@@ -187,7 +187,7 @@
                 "type": "string"
             },
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/actions/ledOn",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/actions/ledOn",
                     "contentType": "application/json",
                     "op": [
                         "invokeaction"
@@ -195,7 +195,7 @@
                     "htv:methodName": "POST"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/actions/ledOn",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/actions/ledOn",
                     "contentType": "application/json",
                     "op": "invokeaction"
                 }
@@ -208,7 +208,7 @@
                 "type": "string"
             },
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/actions/ledOff",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/actions/ledOff",
                     "contentType": "application/json",
                     "op": [
                         "invokeaction"
@@ -216,7 +216,7 @@
                     "htv:methodName": "POST"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/actions/ledOff",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/actions/ledOff",
                     "contentType": "application/json",
                     "op": "invokeaction"
                 }
@@ -229,7 +229,7 @@
                 "type": "string"
             },
             "forms": [{
-                    "href": "http://192.168.0.114:8080/EnviroPHat/actions/calibrate",
+                    "href": "http://192.168.11.29:8080/EnviroPHat/actions/calibrate",
                     "contentType": "application/json",
                     "op": [
                         "invokeaction"
@@ -237,7 +237,7 @@
                     "htv:methodName": "POST"
                 },
                 {
-                    "href": "coap://192.168.0.114:5683/EnviroPHat/actions/calibrate",
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/actions/calibrate",
                     "contentType": "application/json",
                     "op": "invokeaction"
                 }
@@ -246,9 +246,9 @@
             "safe": false
         }
     },
-    "id": "de:tum:ei:esi:envirophatpi:192.168.0.114",
+    "id": "de:tum:ei:esi:envirophatpi:192.168.11.29",
     "forms": [{
-        "href": "http://192.168.0.114:8080/EnviroPHat/all/properties",
+        "href": "http://192.168.11.29:8080/EnviroPHat/all/properties",
         "contentType": "application/json",
         "op": [
             "readallproperties",
