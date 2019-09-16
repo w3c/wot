@@ -18,32 +18,35 @@ Please add your applications and devices if it's available for the demo on Wedne
   * Fujitsu Rotary Beacon
   * Fujitsu Buzzer
   * Mozilla LED (provided by Fujitsu)
-  * ...
+  * [TUM SenseHAT](TDs/TUM/SenseHAT.json) - Sensors and LED matrix and button for events
+  * [TUM Light sensor](TDs/TUM/lightSensor.json)
+  * [TUM EnviroHAT](TDs/TUM/enviroPHAT.json) - Similar to SenseHAT but smaller
+  * [TUM Camera](TDs/TUM/camera.json) - Small camera that can only take pictures
 * Remote devices
-  * Pansonic cleaner in Osaka
-  * Pansonic LED in Osaka
-  * Pansonic air conditioner in Osaka
+  * Panasonic cleaner in Osaka
+  * Panasonic LED in Osaka
+  * Panasonic air conditioner in Osaka
   * ...
 * Simulators
   * Oracle Fest Plant Simulator
   * Oracle Blue Pump Simulator
   * Oracle HVAC Simulator
-  * ...
+  * [Virtual-Thing](https://www.npmjs.com/package/virtual-thing): Can be used to simulate any device based on a TD. Example included simulates a coffee machine.
 
 ## Demo Scenarios
 
 - Test scenario 1: Smart house / Smart building
   - Scenario (draft)
     1. Passive IR sensor detect human (Fujitsu environment sensor)
-    1. Turn on appliances
+    2. Turn on appliances
        - Turn on air conditioner (Panasonic air conditioner)
        - Turn on light (Philips hue light)
-    1. Monitor power generation from solar panel (Oracle solar panel simulator)
+    3. Monitor power generation from solar panel (Oracle solar panel simulator)
        - Monitor power generation (Oracle solar panel simulator)
-    1. When power generation below the lower limit, turn off unused appliances
+    4. When power generation below the lower limit, turn off unused appliances
        - Turn off other air conditioners (Fujitsu air conditioner, Oracle HVAC simulator)
        - Turn off other lights (Mozilla LED light)
-    1. Check status
+    5. Check status
        - Monitor power consumption (Fujitsu smart meter)
   - Test phases
     - Phase 1: Simple communication test  
