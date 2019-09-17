@@ -1,7 +1,10 @@
 {
-    "@context": ["https://www.w3.org/2019/wot/td/v1", {
-        "@language": "en"
-    }],
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "@language": "en"
+        }
+    ],
     "@type": "Thing",
     "title": "SenseHat",
     "description": "Raspberry Pi SenseHat",
@@ -17,12 +20,20 @@
             "readOnly": false,
             "writeOnly": false,
             "description": "The roation of the display. 0 is whith the HDMI port facing down.",
-            "enum": [0, 90, 180, 270],
+            "enum": [
+                0,
+                90,
+                180,
+                270
+            ],
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/displayRotation",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/displayRotation",
                 "contentType": "application/json",
-                "op": ["readproperty", "writeproperty"]
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
             }]
         },
         "pixels": {
@@ -44,9 +55,12 @@
             "description": "An array containing the current colours of all LEDs.",
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/pixels",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/pixels",
                 "contentType": "application/json",
-                "op": ["readproperty", "writeproperty"]
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
             }]
         },
         "lowLight": {
@@ -56,9 +70,12 @@
             "description": "The LED Matrix low light mode.",
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/lowLight",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/lowLight",
                 "contentType": "application/json",
-                "op": ["readproperty", "writeproperty"]
+                "op": [
+                    "readproperty",
+                    "writeproperty"
+                ]
             }]
         },
         "humidity": {
@@ -68,9 +85,11 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/humidity",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/humidity",
                 "contentType": "application/json",
-                "op": ["readproperty"],
+                "op": [
+                    "readproperty"
+                ],
                 "htv:methodName": "GET"
             }]
         },
@@ -81,9 +100,11 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/temperature",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/temperature",
                 "contentType": "application/json",
-                "op": ["readproperty"],
+                "op": [
+                    "readproperty"
+                ],
                 "htv:methodName": "GET"
             }]
         },
@@ -94,9 +115,11 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/pressure",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/pressure",
                 "contentType": "application/json",
-                "op": ["readproperty"],
+                "op": [
+                    "readproperty"
+                ],
                 "htv:methodName": "GET"
             }]
         },
@@ -118,9 +141,11 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/gyro",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/gyro",
                 "contentType": "application/json",
-                "op": ["readproperty"],
+                "op": [
+                    "readproperty"
+                ],
                 "htv:methodName": "GET"
             }]
         },
@@ -142,9 +167,11 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/accel",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/accel",
                 "contentType": "application/json",
-                "op": ["readproperty"],
+                "op": [
+                    "readproperty"
+                ],
                 "htv:methodName": "GET"
             }]
         },
@@ -166,9 +193,11 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/compass",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/compass",
                 "contentType": "application/json",
-                "op": ["readproperty"],
+                "op": [
+                    "readproperty"
+                ],
                 "htv:methodName": "GET"
             }]
         },
@@ -182,9 +211,11 @@
             "writeOnly": false,
             "observable": false,
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/properties/eventHistory",
+                "href": "http://192.168.11.26:8080/SenseHat/properties/eventHistory",
                 "contentType": "application/json",
-                "op": ["readproperty"],
+                "op": [
+                    "readproperty"
+                ],
                 "htv:methodName": "GET"
             }]
         }
@@ -192,9 +223,11 @@
     "actions": {
         "flipH": {
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/flipH",
+                "href": "http://192.168.11.26:8080/SenseHat/actions/flipH",
                 "contentType": "application/json",
-                "op": ["invokeaction"],
+                "op": [
+                    "invokeaction"
+                ],
                 "htv:methodName": "POST"
             }],
             "idempotent": false,
@@ -202,9 +235,11 @@
         },
         "flipV": {
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/flipV",
+                "href": "http://192.168.11.26:8080/SenseHat/actions/flipV",
                 "contentType": "application/json",
-                "op": ["invokeaction"],
+                "op": [
+                    "invokeaction"
+                ],
                 "htv:methodName": "POST"
             }],
             "idempotent": false,
@@ -242,12 +277,16 @@
                         "maxItems": 3
                     }
                 },
-                "required": ["textString"]
+                "required": [
+                    "textString"
+                ]
             },
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/showMessage",
+                "href": "http://192.168.11.26:8080/SenseHat/actions/showMessage",
                 "contentType": "application/json",
-                "op": ["invokeaction"],
+                "op": [
+                    "invokeaction"
+                ],
                 "htv:methodName": "POST"
             }],
             "idempotent": false,
@@ -282,12 +321,16 @@
                         "maxItems": 3
                     }
                 },
-                "required": ["s"]
+                "required": [
+                    "s"
+                ]
             },
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/showLetter",
+                "href": "http://192.168.11.26:8080/SenseHat/actions/showLetter",
                 "contentType": "application/json",
-                "op": ["invokeaction"],
+                "op": [
+                    "invokeaction"
+                ],
                 "htv:methodName": "POST"
             }],
             "idempotent": false,
@@ -325,12 +368,16 @@
                         "maxItems": 3
                     }
                 },
-                "required": ["textString"]
+                "required": [
+                    "textString"
+                ]
             },
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/flashMessage",
+                "href": "http://192.168.11.26:8080/SenseHat/actions/flashMessage",
                 "contentType": "application/json",
-                "op": ["invokeaction"],
+                "op": [
+                    "invokeaction"
+                ],
                 "htv:methodName": "POST"
             }],
             "idempotent": false,
@@ -367,12 +414,16 @@
                         "maximum": 255
                     }
                 },
-                "required": ["textString"]
+                "required": [
+                    "textString"
+                ]
             },
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/setPixel",
+                "href": "http://192.168.11.26:8080/SenseHat/actions/setPixel",
                 "contentType": "application/json",
-                "op": ["invokeaction"],
+                "op": [
+                    "invokeaction"
+                ],
                 "htv:methodName": "POST"
             }],
             "idempotent": false,
@@ -380,9 +431,11 @@
         },
         "clear": {
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/actions/clear",
+                "href": "http://192.168.11.26:8080/SenseHat/actions/clear",
                 "contentType": "application/json",
-                "op": ["invokeaction"],
+                "op": [
+                    "invokeaction"
+                ],
                 "htv:methodName": "POST"
             }],
             "idempotent": false,
@@ -392,39 +445,68 @@
     "events": {
         "joystickPress": {
             "type": "string",
-            "enum": ["left", "right", "up", "down", "click"],
+            "enum": [
+                "left",
+                "right",
+                "up",
+                "down",
+                "click"
+            ],
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/events/joystickPress",
+                "href": "http://192.168.11.26:8080/SenseHat/events/joystickPress",
                 "contentType": "application/json",
                 "subprotocol": "longpoll",
-                "op": ["subscribeevent"]
+                "op": [
+                    "subscribeevent"
+                ]
             }]
         },
         "joystickRelease": {
             "type": "string",
-            "enum": ["left", "right", "up", "down", "click"],
+            "enum": [
+                "left",
+                "right",
+                "up",
+                "down",
+                "click"
+            ],
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/events/joystickRelease",
+                "href": "http://192.168.11.26:8080/SenseHat/events/joystickRelease",
                 "contentType": "application/json",
                 "subprotocol": "longpoll",
-                "op": ["subscribeevent"]
+                "op": [
+                    "subscribeevent"
+                ]
             }]
         },
         "joystickHold": {
             "type": "string",
-            "enum": ["left", "right", "up", "down", "click"],
+            "enum": [
+                "left",
+                "right",
+                "up",
+                "down",
+                "click"
+            ],
             "forms": [{
-                "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/events/joystickHold",
+                "href": "http://192.168.11.26:8080/SenseHat/events/joystickHold",
                 "contentType": "application/json",
                 "subprotocol": "longpoll",
-                "op": ["subscribeevent"]
+                "op": [
+                    "subscribeevent"
+                ]
             }]
         }
     },
-    "id": "de:tum:ei:esi:sensehat:TUMEIESI-SenseHat-106.local",
+    "id": "de:tum:ei:esi:sensehat:192.168.11.26",
     "forms": [{
-        "href": "http://TUMEIESI-SenseHat-106.local:8080/SenseHat/all/properties",
+        "href": "http://192.168.11.26:8080/SenseHat/all/properties",
         "contentType": "application/json",
-        "op": ["readallproperties", "readmultipleproperties", "writeallproperties", "writemultipleproperties"]
+        "op": [
+            "readallproperties",
+            "readmultipleproperties",
+            "writeallproperties",
+            "writemultipleproperties"
+        ]
     }]
 }

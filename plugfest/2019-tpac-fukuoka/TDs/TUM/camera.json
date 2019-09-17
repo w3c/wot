@@ -1,19 +1,22 @@
 {
-    "@context": ["https://www.w3.org/2019/wot/td/v1", {
-        "@language": "en"
-    }],
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "@language": "en"
+        }
+    ],
     "actions": {},
     "description": "A camera mounted on Raspberry Pi",
     "descriptions": {
         "en": "A camera mounted on Raspberry Pi"
     },
-    "id": "esi:picamera:192.168.0.109",
+    "id": "esi:picamera:192.168.11.27",
     "properties": {
         "configuration": {
             "description": "Configuration of the camera",
             "forms": [{
                 "contentType": "application/json",
-                "href": "http://192.168.0.109:8080/properties/configuration"
+                "href": "http://192.168.11.27:8080/properties/configuration"
             }],
             "properties": {
                 "brightness": {
@@ -43,7 +46,10 @@
                         }
                     },
                     "readOnly": false,
-                    "required": ["width", "height"],
+                    "required": [
+                        "width",
+                        "height"
+                    ],
                     "type": "object",
                     "writeOnly": false
                 }
@@ -56,7 +62,7 @@
             "description": "frame of the current camera",
             "forms": [{
                 "contentType": "image/jpeg",
-                "href": "http://192.168.0.109:8080/properties/frame"
+                "href": "http://192.168.11.27:8080/properties/frame"
             }],
             "readOnly": true,
             "writeOnly": false
