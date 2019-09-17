@@ -1,0 +1,100 @@
+{
+  "urn": "urn:com:oracle:EcoG-outlet-1",
+  "name": "EcoG-outlet-1",
+  "system": false,
+  "draft": false,
+  "created": 1566896289121,
+  "createdAsString": "2019-08-27T08:58:09.121Z",
+  "lastModified": 1566896289121,
+  "lastModifiedAsString": "2019-08-27T08:58:09.121Z",
+  "userLastModified": "IoTAppsTest_w3ctest_INTERNAL_APPID",
+  "attributes": [
+    {
+      "description": "undefined id",
+      "name": "state_id",
+      "type": "STRING",
+      "writable": false
+    },
+    {
+      "description": "undefined phs",
+      "name": "state_phs",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "undefined pp",
+      "name": "state_pp",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "undefined pilot",
+      "name": "state_pilot",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "power limitation, -1 for none",
+      "name": "powercap",
+      "type": "NUMBER",
+      "writable": false
+    },
+    {
+      "description": "if this charger is out of order",
+      "name": "out_of_order",
+      "type": "BOOLEAN",
+      "writable": false
+    },
+    {
+      "description": "pilot signal state",
+      "name": "pilot",
+      "type": "NUMBER",
+      "writable": false
+    }
+  ],
+  "actions": [
+    {
+      "description": "auth",
+      "name": "auth"
+    },
+    {
+      "description": "stop",
+      "name": "stop"
+    },
+    {
+      "description": "plugin",
+      "name": "plugin"
+    },
+    {
+      "description": "testRun",
+      "name": "testRun"
+    },
+    {
+      "description": "limit_power",
+      "name": "limit_power"
+    },
+    {
+      "description": "out_of_order",
+      "name": "set_out_of_order"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AEcoG-outlet-1",
+      "rel": "self"
+    },
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AEcoG-outlet-1",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AEcoG-outlet-1/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

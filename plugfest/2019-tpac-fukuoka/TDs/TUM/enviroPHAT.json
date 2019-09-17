@@ -1,0 +1,260 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "EnviroPHat",
+    "description": "Enviro Sensorhat For Pi Zero",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": "nosec_sc",
+    "properties": {
+        "temperature": {
+            "type": "number",
+            "unit": "Celsius",
+            "readOnly": true,
+            "description": "Read the current temperature value",
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        },
+        "pressure": {
+            "type": "number",
+            "unit": "hPa",
+            "readOnly": true,
+            "description": "Read the current pressure value",
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/pressure",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/pressure",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        },
+        "motion": {
+            "type": "string",
+            "readOnly": true,
+            "description": "Read the current position values",
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/motion",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/motion",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        },
+        "heading": {
+            "type": "number",
+            "readOnly": true,
+            "description": "Read the current heading position",
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/heading",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/heading",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        },
+        "north": {
+            "type": "number",
+            "readOnly": false,
+            "writeOnly": false,
+            "description": "Use for user to calibrate direction",
+            "observable": false,
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/north",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/north",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ]
+        },
+        "lightLevel": {
+            "type": "number",
+            "unit": "lux",
+            "readOnly": true,
+            "description": "Read the current heading position",
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/lightLevel",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/lightLevel",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        },
+        "rgbValues": {
+            "type": "string",
+            "readOnly": true,
+            "description": "Read the current heading position",
+            "writeOnly": false,
+            "observable": false,
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/properties/rgbValues",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/properties/rgbValues",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {
+        "ledOn": {
+            "output": {
+                "type": "string"
+            },
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/actions/ledOn",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/actions/ledOn",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "ledOff": {
+            "output": {
+                "type": "string"
+            },
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/actions/ledOff",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/actions/ledOff",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "calibrate": {
+            "output": {
+                "type": "string"
+            },
+            "forms": [{
+                    "href": "http://192.168.11.29:8080/EnviroPHat/actions/calibrate",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "coap://192.168.11.29:5683/EnviroPHat/actions/calibrate",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        }
+    },
+    "id": "de:tum:ei:esi:envirophatpi:192.168.11.29",
+    "forms": [{
+        "href": "http://192.168.11.29:8080/EnviroPHat/all/properties",
+        "contentType": "application/json",
+        "op": [
+            "readallproperties",
+            "readmultipleproperties",
+            "writeallproperties",
+            "writemultipleproperties"
+        ]
+    }]
+}

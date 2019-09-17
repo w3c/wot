@@ -1,0 +1,68 @@
+{
+  "urn": "urn:com:energyiotlab:iot:keti",
+  "name": "KETI IoT Sensor Model",
+  "system": false,
+  "draft": false,
+  "created": 1566896213108,
+  "createdAsString": "2019-08-27T08:56:53.108Z",
+  "lastModified": 1566896213108,
+  "lastModifiedAsString": "2019-08-27T08:56:53.108Z",
+  "userLastModified": "IoTAppsTest_w3ctest_INTERNAL_APPID",
+  "attributes": [
+    {
+      "name": "co2",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "humidity",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "light",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "microwave",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "sound",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "temperature",
+      "type": "NUMBER",
+      "writable": true
+    },
+    {
+      "name": "voc",
+      "type": "NUMBER",
+      "writable": true
+    }
+  ],
+  "actions": [],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aenergyiotlab%253Aiot%253Aketi",
+      "rel": "self"
+    },
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aenergyiotlab%253Aiot%253Aketi",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aenergyiotlab%253Aiot%253Aketi/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "urn": "urn:com:oracle:Intel-WebSpeak-upsq0",
+  "name": "Intel-WebSpeak-upsq0",
+  "system": false,
+  "draft": false,
+  "created": 1566896234832,
+  "createdAsString": "2019-08-27T08:57:14.832Z",
+  "lastModified": 1566896234832,
+  "lastModifiedAsString": "2019-08-27T08:57:14.832Z",
+  "userLastModified": "IoTAppsTest_w3ctest_INTERNAL_APPID",
+  "attributes": [
+    {
+      "name": "message",
+      "type": "STRING",
+      "writable": true
+    }
+  ],
+  "actions": [
+    {
+      "argType": "STRING",
+      "name": "say"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-WebSpeak-upsq0",
+      "rel": "self"
+    },
+    {
+      "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-WebSpeak-upsq0",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://w3ctest.iadstg.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Aoracle%253AIntel-WebSpeak-upsq0/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}

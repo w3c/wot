@@ -1,19 +1,52 @@
-### Preparation for online-plugfest
+# Preparation for unified demo scenario
 
-#### Scenarios
+## Applications and Devices available as of Sep. 15
+
+Please add your applications and devices if it's available for the demo on Wednesday, Sep. 18.
+
+### Applicaitons
+* NodeRED by Fujitsu
+* NodeRED by Panasonic
+* NodeRED by Panasonic
+* node-wot by NHK
+
+### Devices
+* Local devices in Fukuoka
+  * Panasonic Cleaner
+  * Panasonic LED
+  * Panasonic Bulletin Board
+  * Fujitsu Rotary Beacon
+  * Fujitsu Buzzer
+  * Mozilla LED (provided by Fujitsu)
+  * [TUM SenseHAT](TDs/TUM/SenseHAT.json) - Sensors and LED matrix and button for events
+  * [TUM Light sensor](TDs/TUM/lightSensor.json)
+  * [TUM EnviroHAT](TDs/TUM/enviroPHAT.json) - Similar to SenseHAT but smaller
+  * [TUM Camera](TDs/TUM/camera.json) - Small camera that can only take pictures
+* Remote devices
+  * Panasonic cleaner in Osaka
+  * Panasonic LED in Osaka
+  * Panasonic air conditioner in Osaka
+  * ...
+* Simulators
+  * Oracle Fest Plant Simulator
+  * Oracle Blue Pump Simulator
+  * Oracle HVAC Simulator
+  * [Virtual-Thing](https://www.npmjs.com/package/virtual-thing): Can be used to simulate any device based on a TD. Example included simulates a coffee machine.
+
+## Demo Scenarios
 
 - Test scenario 1: Smart house / Smart building
   - Scenario (draft)
     1. Passive IR sensor detect human (Fujitsu environment sensor)
-    1. Turn on appliances
+    2. Turn on appliances
        - Turn on air conditioner (Panasonic air conditioner)
        - Turn on light (Philips hue light)
-    1. Monitor power generation from solar panel (Oracle solar panel simulator)
+    3. Monitor power generation from solar panel (Oracle solar panel simulator)
        - Monitor power generation (Oracle solar panel simulator)
-    1. When power generation below the lower limit, turn off unused appliances
+    4. When power generation below the lower limit, turn off unused appliances
        - Turn off other air conditioners (Fujitsu air conditioner, Oracle HVAC simulator)
        - Turn off other lights (Mozilla LED light)
-    1. Check status
+    5. Check status
        - Monitor power consumption (Fujitsu smart meter)
   - Test phases
     - Phase 1: Simple communication test  
@@ -62,31 +95,21 @@
           - Start/Stop pump on fest plant simulator ... not tested
     - Phase 2: Run application (If prepared)
 ![scenario2][]
+- Test scenario 3: Home smart devices behave according to TV programs
+  - Scenario (draft)
+    1. Broadcaster sends Event Messages as triggers via broadcast wave
+       - Laptop PC outputs broadcast wave using modulators
+       - Event Messages describes triggers for smart devices behaviors such as TV programs information and requests for performances
+    1. Hybridcast connect application receives Event Messages
+       - This app receives triggers via Hybridcast proprietary protocol
+       - Event Message ({})
+    1. Turn on/off a robot cleaner
+       - Turn off with Event Message ({room:quiet})
+       - Turn on again with Event Message ({room:default})
+    1. Control lights 
+       - Turn lights on with Event Message ({room:bright})
+       - Make lights blue with Event Message ({room:cool})
+       - Make lights white color with Event Message ({room:cool})
 
 [scenario1]:images/test_scenario_1.png
 [scenario2]:images/test_scenario_2.png
-
-#### Logistics
-- vpn server
-  - DHCP? / Fixed IP?
-  - Can mDNS work over VPN?
-
-#### Participants
-Intel, Fujitsu, TUM, Siemens, Oracle, Hitachi
-
-#### Date
-Spet 10th, 9am-11am CDT, 4pm-6pm JST (+1 hour?)
-
-#### Logistics
-
-* WebEx and IRC
-
-We will use the https://www.w3.org/WoT/IG/wiki/PlugFest_WebConf WebEx and IRC.
-
-* Google Hangout (Matthias)
-   - Used to video stream remote devices such as Festo Live or Panasonic Lab
-   - https://hangouts.google.com/call/Gbgym9gd5j4OUEppg5VJAEEE (the one we used for the Online PlugFest on Sep 10)
-   - https://hangouts.google.com/call/zMIBFnSSTxd4KpiLcP5DAAEI
-
-
-
