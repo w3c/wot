@@ -95,6 +95,21 @@ Please add your applications and devices if it's available for the demo on Wedne
           - Start/Stop pump on fest plant simulator ... not tested
     - Phase 2: Run application (If prepared)
 ![scenario2][]
+- Test scenario 3: Home smart devices behave according to TV programs
+  - Scenario (draft)
+    1. Broadcaster sends Event Messages as triggers via broadcast wave
+       - Laptop PC outputs broadcast wave using modulators
+       - Event Messages describes triggers for smart devices behaviors such as TV programs information and requests for performances
+    1. Hybridcast connect application receives Event Messages
+       - This app receives triggers via Hybridcast proprietary protocol
+       - Event Message ({})
+    1. Turn on/off a robot cleaner
+       - Turn off with Event Message ({room:quiet})
+       - Turn on again with Event Message ({room:default})
+    1. Control lights 
+       - Turn lights on with Event Message ({room:bright})
+       - Make lights blue with Event Message ({room:cool})
+       - Make lights white color with Event Message ({room:cool})
 
 [scenario1]:images/test_scenario_1.png
 [scenario2]:images/test_scenario_2.png
