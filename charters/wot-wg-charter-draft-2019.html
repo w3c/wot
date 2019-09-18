@@ -106,7 +106,7 @@
               Start date
             </th>
             <td>
-              <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+              1 November 2019 
             </td>
           </tr>
           <tr id="CharterEnd">
@@ -114,11 +114,11 @@
               End date
             </th>
             <td>
-              <i class="todo">[dd monthname yyyy+2]</i> 
+              1 November 2021 (2 year duration) 
             </td>
           </tr>
 
-          <tr class="todo">
+          <tr>
             <th>Charter extension</th>
             <td>See <a href="#history">Change History</a>.
             </td>
@@ -128,11 +128,9 @@
             <th>
               Chairs
             </th>
-            <td>
-              Candidates: 
-	      Michael McCool (Intel),
-	      Sebastian Kaebisch (Siemens),
-	      Matthias Kovatsch (Huawei)
+            <td> 
+	      Michael McCool (Intel) and
+	      Sebastian Kaebisch (Siemens)
             </td>
           </tr>
           <tr>
@@ -171,7 +169,7 @@
            The WoT building blocks are intended to complement existing 
            and emerging IoT standards by focusing on enabling cross-platform and cross-domain interoperability. 
            The proposed work items are summarized in the <a href="#scope">Scope</a> section, and
-           include profiles for particular usage contexts;
+           include interoperability profiles for particular usage contexts;
            vocabulary support for new protocols, security schemes, and links;
            standardized discovery mechanisms;
            and improvements to Thing Description Templates.
@@ -187,31 +185,33 @@
         <p><i class="todo">Brief background of landscape, technology, and relationship to the Web, users, 
         developers, implementers, and industry.</i></p>
         -->
-        <p>The Working Group has the following items in scope:</p>
+        <p>The Working Group has the following work items in scope:</p>
         
         <div class="summary">
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           
           <dl>
 	    <dt><strong>Architectural Requirements, Use Cases, and Vocabulary</strong></dt>
-            <dd>Understand and state requirements for new use cases, architectural patterns, and concepts.</dd>
+            <dd>Understand and describe requirements of new use cases, architectural patterns, and concepts.</dd>
             <dt><strong>Link Relation Types:</strong></dt>
-            <dd>Definition of specific link relation types for specific relationships.</dd>
+            <dd>Define link relation types for specific relationships.</dd>
             <dt><strong>Interoperability Profiles:</strong></dt>
             <dd>Support plug-and-play interoperabilty via a profile mechanism and define profiles for specific application domains and use cases.</dd>
-            <dt><strong>Templates:</strong></dt>
-            <dd>Define how Thing Descriptions can defined in a modular way.</dd>
+            <dt><strong>Thing Description Templates:</strong></dt>
+            <dd>Define a mechanism to describe classes of things and an inheritance mechanism.</dd>
             <dt><strong>Complex Interactions:</strong></dt>
-            <dd>Document how complex interactions can be supported via hypermedia controls.</dd>
+            <dd>Document how hypermedia controls can be used to describe complex interactions and thing behaviour.</dd>
             <dt><strong>Discovery:</strong></dt>
             <dd>Define how Things are discovered in both local and global contexts and Thing Descriptions are distributed.</dd>
-            <dt><strong>Identity Management:</strong></dt>
-            <dd>Mitigate privacy risks by defining how identity is managed and updated.</dd>
+            <dt><strong>Automatic Onboarding:</strong></dt>
+            <dd>Define how Things can be onboarded to gateways and servers automatically without additional configuration tasks.</dd>
+            <dt><strong>Identifier Management:</strong></dt>
+            <dd>Mitigate privacy risks by defining how identifiers are managed and updated.</dd>
             <dt><strong>Security Schemes:</strong></dt>
-            <dd>Vocabulary for new security schemes supporting targetted protocols and use cases.</dd>
-            <dt><strong>TD Vocabulary:</strong></dt>
-            <dd>Extensions to TD vocabulary definitions.</dd> 
-            <dt><strong>Protocol Vocabulary:</strong></dt>
+            <dd>Vocabulary for new security schemes supporting targetted protocols, use cases and new requirements.</dd>
+            <dt><strong>Thing Description Vocabulary:</strong></dt>
+            <dd>Extensions to Thing Description vocabulary definitions.</dd> 
+            <dt><strong>Protocol Vocabulary and Bindings:</strong></dt>
             <dd>Extensions to protocol vocabulary definitions and protocol bindings.</dd> 
             <dt><strong>Observe Defaults:</strong></dt>
             <dd>For protocols such as HTTP where multiple ways to implement "observe" is possible, define a default.</dd>
@@ -228,17 +228,16 @@
           specification includes the definitions of several terms and concepts used to
           define WoT specifications.  These are often related closely to use cases
           and architectural patterns.  As WoT implementations mature, it will be 
-          necessary to understand and state the requirements for new use cases, 
-          architectural patterns, and associated 
-          concepts and vocabulary.  
-          In addition, descriptions of existing use cases
-          architectural patterns may need to be clarified or refactored to include
+          necessary to understand and describe the requirements for new use cases, 
+          architectural patterns, and associated concepts and vocabulary.  
+          In addition, descriptions of existing use cases and
+          architectural patterns may need to be revisited to include
           these new concepts.
         </p>
 	<p>
           Candidates for architectural vocabulary extension include a 
-          TD Producer concept 
-          and definition of device and information lifecycles.
+          TD Producer concept and definition and description of states and transitions 
+          for device and information lifecycles.
           The information lifecycle is especially relevant to the protection
           of privacy.
         </p>
@@ -248,7 +247,8 @@
           The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
           includes a link mechanism to declare (potentially bidirectional) relationships between
-          the TD and other entities identified by URIs, including but not limited to other TDs.
+          a TD and other entities identified by URIs, including but not limited to Thing Templates
+          and other TDs.
           Each link includes a relation type which specifies the purpose of the link.
           Link relation types must use an IANA name.
           However, to maximize interoperability, 
@@ -260,11 +260,11 @@
           use case the Working Group may seek to establish a new link type,
           but this will be done only if absolutely necessary.
         </p>
-	<p>
-          Candidates for link relation type specification include part-of and subtype-of 
+	    <p>
+          Candidates for link relation type specification may include type-of and part-of
           relationships to support Templates and Components, respectively.
           Other link types may be used to identify location or controller-controlled 
-          relationships.
+          relationships, or implementation of specific network APIs.
         </p>
 
         <h3>Interoperability Profiles</h3>
@@ -272,12 +272,12 @@
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
           provides a general framework for describing the interface to a Thing
           independent of the network protocol, data encoding, or security mechanism used.  
-          TDs are defined to be extensible since IoT protocols, data encodings, and security mechanisms 
+          TDs are defined to be extensible, since IoT protocols, data encodings, and security mechanisms 
           are constantly evolving.
           However, this openness works against interoperability since it is 
           not clear in advance what technologies must be supported by a given
           implementation of a TD Consumer, and a TD Consumer can only work with
-          Things supporting the technologies it includes an implementation for.
+          Things using the technologies it includes an implementation for.
         </p>
         <p>
           In many contexts, "plug and play" interoperability is
@@ -285,7 +285,7 @@
           For example, in the Smart Home context,
           the consumer needs to know in advance of purchase whether
           a set of devices will work with each other. 
-          Such predictability is also an asset in many other contexts, 
+          Such predictability is also essential in many other contexts, 
           including industrial use cases.
           Unfortunately the set of technologies that must be supported depend on 
           context: protocols, data types, and security mechanisms 
@@ -295,7 +295,7 @@
         </p>
         <p>
           To resolve this problem this work item will define "profiles" which
-          define subsets of TDs that support only the features
+          define subsets of TDs supporting only the features
           suitable for a given context.  
           This work item will include the following:
           <ol>
@@ -304,55 +304,61 @@
                or profiles that a given TD is conformant to.
             </li>
             <li>
-               Definition of what features in a TD may be limited by a profile.
-            </li>
-            <li>
                Definition of profiles for specific application domains
                and use cases.
             </li>
           </ol>
         </p>
 
-        <h3>Templates</h3>
+        <h3>Thing Description Templates</h3>
         <p>Current
-          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Descriptions</a>
+          <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Descriptions (TDs)</a>
           apply to specific Things, for example, particular devices.
           However, there are often many devices manufactured with the same
-          interface and capabilities.  These devices differ from each other 
+          interface and capabilities.  
+          These devices differ from each other 
           only in certain specific aspects, 
           such as being installed in different locations
           and having different identifiers.
+          In addition, devices may share common interactions for specific
+          purposes (for example, management or power management)
+          even if from different manufacturers and with different functions.
         </p>
         <p>
           The current TD specification includes the definition of a "TD Template"
           which is a partial TD that omits information that is specific to an instance.
-          However, the current definition of TD Templates 
-          only allows definition of the interaction model without a protocol binding.  
-          During software development however, if we wish to
-          design code to talk to a class of devices, 
-          we may need to have some knowledge of the protocol binding as well.  
+          However, the current definition of TD Templates does not define the inheritance
+          mechanism and the applicable TD vocabulary.
+          It only allows the definition of the interaction model without 
+          security schemes or protocol bindings. Thing templates have various
+          application areas: They may be used for managing a class of devices,
+          or to define digital twins and corresponding simulations.
+          There are other use cases, where some knowledge of the protocol and security requirements
+          may be required.
         </p>
         <p>
-          A closely related problem is that of components: 
+          A closely related problem is that of components and standardized common APIs:
           we may wish to assemble a Thing Description from a set
-          of reusable, modular capabilities.  
+          of reusable, modular capabilities, or declare that it supports some API,
+          that is common to a class of Things.
           How is a TD Component to be defined and how are they to be combined
-          into a complete Thing?  How is a Consumer able to determine that a
+          into a complete Thing?  How is a TD Consumer able to determine that a
           particular Thing supports a specific sub-interface common to a set
           of Things?
         </p>
         <p>
           This work item will elaborate and refine the TD Template concept so
-          it can satisfy such extended use cases.
+          it can satisfy these use cases.
         </p>
 
         <h3>Complex Interactions</h3>
         <p>
           Many use cases require the implementation of complex
           interactions that span multiple protocol transactions.
-          An example would be the instigation, monitoring, 
-          and optional cancellation of ongoing actions.
-          Another would be managing filtered subscriptions for events.
+          An example would be the initiation, monitoring, 
+          and possible cancellation of ongoing actions.
+          Another would be managing and accessing
+          historical queues for events and actions.
         </p>
         <p>
           In fact such complex interactions can be implemented 
@@ -360,19 +366,21 @@
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
           and in particular can be supported in a self-describing
           way with hypermedia controls.
+          Hypermedia controls can also be used to clarify what 
+          remediary actions can be taken when an error occurs.
         </p>
         <p>
-          However, there are many possible ways to support such 
+          However, there are many possible ways to implement and use such 
           complex interactions.  To better support the goals of
-          interoperability, it would be useful to document
-          how to implement the most common complex interactions. 
+          interoperability, it would be useful to precisely define
+          the most common complex interactions. 
         </p>
         <p>
-          This work item will document the implementation of complex
+          This work item will document the behavior of complex
           interactions, including:
           <ol>
-          <li>The ability to monitor and cancel ongoing actions.</li>
-          <li>Support for action/event queues.</li>
+          <li>The ability to initiate, monitor, and cancel ongoing actions.</li>
+          <li>Support for action and event queues.</li>
           <li>Error recovery via hypermedia responses.</li>
           </ol>
         </p>
@@ -383,21 +391,26 @@
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>.
           However, no mechanism was defined for the distribution of TDs.
           This is important since to preserve privacy, TDs should only
-          be distributed to parties with a permission to access the data.
+          be distributed to parties with permission to access the data.
           However, we also wish to support flexible discovery of the services
           and devices described by WoT TDs.
           Discovery should be available at both local and global scales.
+          It should also be possible for devices to self-describe themselves
+          directly rather than depending on a centralized infrastructure.
         </p>
         <p>
           In this work item we will specify a privacy-preserving architecture
           for Thing discovery.  
           To approach this problem we can distinguish 
-          between an "introduction", which is a first-contact protocol, and 
-          "exploration", which retrieves detailed information about services.
-          Introductions should only provide the address
-          of an "exploration" service.
-          An exploration service, in turn, would provide detailed metadata
-          about services but only after authentication.
+          "introductions", which are first-contact mechanisms, from
+          "explorations", which are mechanisms for retrieving detailed metadata about devices and services.
+          To preserve privacy,
+          introductions should only provide the address
+          of an "exploration" service, and this address should be anonymized and opaque.
+          An exploration service should only provide detailed metadata
+          about devices and services after authentication and verification
+          of the authorization level of the requester.
+          The level of detail could also be adjusted to the authorization level of the requester.
           Introduction and exploration could take several forms.
           Introductions can be any mechanism that returns an address
           of an exploration service.  In the local context broadcast
@@ -406,26 +419,47 @@
           context a search engine could be used.  However, in all cases
           introductions would result in the address of an exploration service. 
           Exploration could be implemented as a web service
-          providing a searchable directory of TDs.  
-          However, by making the 
+          providing a searchable directory of TDs protected by existing authentication
+          and authorization mechanisms such as OAuth2.
+          By making the 
           addresses returned by introductions opaque and requiring authentication
           for access to exploration services we can control who has access
           to detailed information about specific devices.
           Peer-to-peer discovery could be supported as a special
-          case of this where Things self-host their own introductions
+          case of this where Things self-host their own introduction mechanisms
           and exploration services.
         </p>
         <p>
           This work item will require a coordinated effort with other standards
-          bodies such as IETF also working on discovery so that a common architecture
-          can be defined.  
-          The architecture proposed by the Working Group
+          bodies such as IETF also working on discovery and directory mechanisms
+          so that a common architecture can be defined.  
+          Working closely with other WG within the W3C, such as the Privacy WG and
+          the Distributed ID WG will also be important.
+        </p>
+        <p>
+          To summarize, the discovery architecture proposed by this Working Group
           needs to support both peer-to-peer discovery and 
           directory-based discovery, both local and global discovery,
-          and be privacy-preserving.
+          be privacy-preserving, and be coordinated with other standards bodies 
+          and W3C working groups.
         </p>
 
-        <h3>Identity Management</h3>
+        <h3>Automatic Onboarding</h3>
+        <p>
+          Onbording of Things frequently requires complex human tasks 
+          to ensure safeguarding against unauthorized access and usage of devices and data.
+          If many devices are to be onboarded at the same time, this may cause significant
+          effort.
+          In this work item we will define mechanisms to perform automatic onboarding of 
+          Things in a secure way that conforms to the security and privacy requirements
+          of specific deployment scenarios and use cases. 
+        </p>
+        <p>
+          This work item complements the work that is done for device discovery,
+          however is also applicable for use cases without an exploration service.
+        </p>
+
+        <h3>Identifier Management</h3>
         <p>
           A <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
           contains an identifier meant to be
@@ -435,7 +469,8 @@
           unique identifier might be used to track a device and from 
           that infer the location or activities of the owner of that device.
           If identifiers persist across transfer of ownership of 
-          devices, they might also be used to trace commercial transactions.
+          devices, they might also be used to trace commercial transactions
+          or pose an even greater tracking risk.
         </p>
         <p>
           In order to preserve privacy, such identifiers may need to
@@ -443,15 +478,18 @@
           More generally, the lifecycle of such identifiers needs to 
           be defined: when they are assigned, when and how they are
           updated, how notifications of such updates can be issued to
-          authorized parties, and how the identities must be deleted
+          authorized users, and how the identifiers must be deleted
           when an object is decommissioned or replaced when a device
           changes ownership.
         </p>
         <p>
-          This work item would define an identity management lifecycle
+          This work item would define an identifier management lifecycle
           that would seek, as much as possible, to mitigate the privacy
           risks posed by explicit device identifiers while retaining
           their functionality in database management and indexing.
+          Implementation of functionality to support updates to 
+          identifiers could also be included in the definition of
+          directory services supporting discovery.
         </p>
 
         <h3>Security Schemes</h3>
@@ -485,9 +523,10 @@
         <p>
           Candidates for target security schemes include support 
           for all flows in OAuth2, support for PoP Tokens, and support for ACE.
+          This list is not inclusive and additional security schemes may be considered.
         </p>
 	      
-	<h3>TD Vocabulary</h3>
+	<h3>Thing Description Vocabulary</h3>
 	<p>
           The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
@@ -499,14 +538,14 @@
 	</p>
 	<p>
           Candidates for TD vocabulary extension include 
-          support for Data Schemas consistent with current versions of JSON Schema, 
+          support for Data Schemas consistent with updated versions of JSON Schema, 
           extensions to Data Schemas to support XML and CBOR 
           (and possibly other structured payload data formats), 
           support for additional standard metadata such as location or device manufacturer,
           and better support for default values.
         </p>
 
-        <h3>Protocol Vocabulary</h3>
+        <h3>Protocol Vocabulary and Bindings</h3>
 	<p>
           The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
@@ -515,11 +554,13 @@
           document which defines templates for how to use a TD to describe Things
           using specific concrete protocols.
           However, individual concrete protocols may require additional vocabulary
-          to define header options and other metadata.
+          to define protocol parameters, such as header options and other metadata.
           These are defined using vocabulary extensions specific to each protocol.
           Currently only a limited set of protocols are supported in a standard way.  
           This work item will add support for an additional set of target protocols, 
           where appropriate in collaboration with the defining standards body.
+          This support will include new vocabulary and documentation of how
+          to use that vocabulary in a protocol binding.
         </p>
         <p>
           Candidates for extended protocol vocabulary include support 
@@ -529,11 +570,11 @@
         <h3>Observe Defaults</h3>
         <p>The WoT interaction model includes abstractions for 
           Properties, Events, and Actions.  
-          The Properties abstraction includes an "observe" operation,
+          The Properties abstraction in particular includes an "observe" operation,
           which allows a Thing to asynchronously notify a Consumer
           of a change in a property.
           However, in some protocols of interest, most notably HTTP,
-          there is more than one way to implement the observe operation.
+          there are several different ways to implement the observe operation.
           The WoT TD allows the specification of a subprotocol to
           indicate the mechanism used, but unfortunately no default
           is specified.
@@ -541,7 +582,7 @@
           explicitly state the mechanism used, every time.
         </p>
         <p>
-          This work item would specify exact defaults for implementing observe, 
+          This work item would specify defaults for implementing observe, 
           including methods and subprotocols, for all important protocols 
           but most especially HTTP.
         </p>
@@ -552,12 +593,13 @@
           specification describes a data format but is currently silent on several aspects of
           implementations that produce or consume TDs.
           In order to better support interoperability,
-          more guidances on particular details of implementation is needed.
+          more guidance on particular details of implementation is needed.
         </p>
         <p>
           This work item would more fully specify implementation details 
-          such as error responses, common features, etc.
-          These implementation details might be relative to specific profiles.
+          such as error responses, common features, and
+          consistency between JSON and JSON-LD implementations.
+          These implementation details might be relative to specific profiles or protocols.
         </p>
 
           
@@ -585,18 +627,21 @@
         <h2>
           Deliverables
         </h2>
-	      <!--
-        <p class="issue"><b>Issue:</b> I've removed the milestones table, which is always wildly inaccurate, 
-      and included the milestones as projected completion dates in the description template for each deliverable. 
-      Up-to-date milestones tables should be maintained on the group page and linked to from this charter.</p>
-      -->
 
-        <p>More detailed milestones and updated publication schedules are available on the 
+        <p>The following includes projected completion dates for each deliverable.
+          Milestones and updated publication schedules will be made available on the 
         <a href="https://www.w3.org/WoT/WG/#pubstatus">group publication status page</a>.</p>
 
         <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. 
         <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, 
-		or otherwise reach a stable state.</p>
+		or otherwise reach a stable state.
+        </p>
+        <p>
+          In the following, "(Next)" and "(Update)" are used as placeholders in a title 
+          for a version number.  
+          The form of these version numbers will be decided by the Working Group before
+          publication.
+        </p>
 
         <section id="normative">
           <h3>
@@ -606,25 +651,31 @@
             The Working Group will deliver the following W3C normative specifications:
           </p>
           <dl>
-            <dt id="wot-arch-next" class="spec"><a href="#">Web of Things (WoT) Architecture (Next)</a></dt>
+            <dt id="wot-arch-next" class="spec"><a href="#">Web of Things (WoT) Architecture (Update)</a></dt>
             <dd>
               <p>This specification defines the Web of Things architecture, including 
                  its use cases and terminology.
                  This deliverable extends the current Web of Things Architecture document to
-                 address new requirements and use cases.
+                 address new requirements and use cases,
+                 and to clarify existing definitions.
               </p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="#">Adopted from Web of Things Working Group</a></p>
-              <p class="milestone"><b>Expected completion:</b> Q1 2021</p>
+              <p class="milestone"><b>Expected completion:</b> Q4 2020</p>
               <dl><dt>
-      <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
-      <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
-        <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
-      <p>Produced under <b>Working Group Charter:</b> The  <span class="todo">stable URL of the Working Group charter</span> under which the most recent Reference Draft or Candidate Recommendation was published.
+                <p><b>Reference Draft:</b><br/> 
+                        Web of Things (WoT) Architecture,<br/>
+                        Latest publication: 16 May 2019,<br/>
+                        <a href="https://www.w3.org/TR/2019/CR-wot-architecture-20190516/">https://www.w3.org/TR/2019/CR-wot-architecture-20190516/</a>,</br> 
+                <!-- The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
+        <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=95969">charter assistant</a> helps in producing the list.)</span>
+-->
+associated Call for Exclusion on 14 December 2017 ended on 11 February 2018.<br/>
+      <p>Produced under <b>Working Group Charter:</b> <a href="https://www.w3.org/2016/12/wot-wg-2016.html">https://www.w3.org/2016/12/wot-wg-2016.html</a>
     </dd>
               </dl>
 
-            <dt id="wot-td-next" class="spec"><a href="#">Web of Things (WoT) Thing Description (Update)</a></dt>
+            <dt id="wot-td-update" class="spec"><a href="#">Web of Things (WoT) Thing Description (Update)</a></dt>
             <dd>
               <p>This specification defines the Web of Things Thing Description information model
                 and JSON-LD serialization.
@@ -633,12 +684,14 @@
               </p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="#">Adopted from Web of Things Working Group</a></p>
-              <p class="milestone"><b>Expected completion:</b> Q3 2020</p>
+              <p class="milestone"><b>Expected completion:</b> Q4 2020</p>
               <dl><dt>
-      <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
-      <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
-        <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
-      <p>Produced under <b>Working Group Charter:</b> The  <span class="todo">stable URL of the Working Group charter</span> under which the most recent Reference Draft or Candidate Recommendation was published.
+                <p><b>Reference Draft:</b><br/> 
+                        Web of Things (WoT) Thing Description,<br/>
+                        Latest publication: 16 May 2019,<br/>
+                        <a href="https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/">https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/</a>,</br> 
+associated Call for Exclusion on 14 December 2017 ended on 11 February 2018.<br/>
+      <p>Produced under <b>Working Group Charter:</b> <a href="https://www.w3.org/2016/12/wot-wg-2016.html">https://www.w3.org/2016/12/wot-wg-2016.html</a>
     </dd>
               </dl>
 
@@ -651,45 +704,34 @@
               </p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="#">Adopted from Web of Things Working Group</a></p>
-              <p class="milestone"><b>Expected completion:</b> Q2 2021</p>
+              <p class="milestone"><b>Expected completion:</b> Q4 2021</p>
               <dl><dt>
-      <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
-      <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
-        <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
-      <p>Produced under <b>Working Group Charter:</b> The  <span class="todo">stable URL of the Working Group charter</span> under which the most recent Reference Draft or Candidate Recommendation was published.
+                <p><b>Reference Draft:</b><br/> 
+                        Web of Things (WoT) Thing Description,<br/>
+                        Latest publication: 16 May 2019,<br/>
+                        <a href="https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/">https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/</a>,</br> 
+associated Call for Exclusion on 14 December 2017 ended on 11 February 2018.<br/>
+      <p>Produced under <b>Working Group Charter:</b> <a href="https://www.w3.org/2016/12/wot-wg-2016.html">https://www.w3.org/2016/12/wot-wg-2016.html</a>
     </dd>
               </dl>
 
-            <dt id="wot-smart-home-profile" class="spec"><a href="#">Web of Things (WoT) Interoperability Profiles</a></dt>
+            <dt id="wot-profiles" class="spec"><a href="#">Web of Things (WoT) Interoperability Profiles</a></dt>
             <dd>
               <p>This specification defines profiles for using the Web of Things in specific application domains and use cases.
               </p>
 
-              <p class="draft-status"><b>Draft state:</b> <a href="#">Use Cases</a></p>
+              <p class="draft-status"><b>Draft state:</b> <a href="#">Editor's Draft</a></p>
               <p class="milestone"><b>Expected completion:</b> Q2 2020</p>
-              <dl><dt>
-      <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
-      <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
-        <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
-      <p>Produced under <b>Working Group Charter:</b> The  <span class="todo">stable URL of the Working Group charter</span> under which the most recent Reference Draft or Candidate Recommendation was published.
-    </dd>
-              </dl>
+              <p><b>Editor's Draft:</b> 
+                 <a href="https://w3c.github.io/wot-profile/">https://w3c.github.io/wot-profile/</a> 
 
-            <dt id="wot-discovery" class="spec"><a href="#">Web of Things (WoT) Discovery</a></dt>
+            <dt id="wot-discovery" class="spec"><a href="#">Web of Things (WoT) Discovery and Onboarding</a></dt>
             <dd>
-              <p>This specification defines how WoT Things are to be discovered using
+              <p>This specification defines how WoT Things are to be discovered and onboarded using
                  a privacy-preserving architecture.
               </p>
-
-              <p class="draft-status"><b>Draft state:</b> <a href="#">Use Cases</a></p>
-              <p class="milestone"><b>Expected completion:</b> Q4 2022</p>
-              <dl><dt>
-      <p><b>Adopted Working Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#adopted-draft">Adopted Working Draft</a></span> which will serve as the basis for work on the deliverable.
-      <p><b>Reference Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href='https://github.com/w3c/charter-drafts/blob/gh-pages/draft-states.md#reference-draft'>Reference Draft</a> or Candidate Recommendation</span> which triggered an Exclusion Opportunity per the Patent Process.
-        <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class='todo'>(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href='https://www.w3.org/2004/01/pp-impl/'>wgid</a>)</span>
-      <p>Produced under <b>Working Group Charter:</b> The  <span class="todo">stable URL of the Working Group charter</span> under which the most recent Reference Draft or Candidate Recommendation was published.
-    </dd>
-              </dl>
+              <p class="draft-status"><b>Draft state:</b> <a href="#">None</a></p>
+              <p class="milestone"><b>Expected completion:</b> Q1 2021</p>
 </dl>
 
         </section>
@@ -704,26 +746,96 @@
           <ul>
             <li>Use case and requirement documents;</li>
             <li>Test suites and implementation reports for the specifications;</li>
-            <li>Security and Privacy Guidelines (W3C Note);</li>
-            <li>Security and Privacy Best Practices (W3C Note);</li>
-            <li>Protocol Bindings (W3C Note);</li>
-            <li>Scripting API (W3C Note);</li>
-            <li>Developer's Guide (W3C Note);</li>
+            <li>WoT Security and Privacy Guidelines (W3C Note);</li>
+            <li>WoT Security and Privacy Best Practices (W3C Note);</li>
+            <li>WoT Protocol Bindings (W3C Note);</li>
+            <li>WoT Scripting API (W3C Note);</li>
+            <li>WoT Management API Template (W3C Note);</li>
+            <li>WoT Script Packaging (W3C Note);</li>
+            <li>WoT Developer's Guide (W3C Note);</li>
             <li>Other Primer or Best Practice documents to support developers and users.</li>
           </ul>
         </section>
 
         <section id="timeline">
           <h3>Timeline</h3>
-            <p class="todo">Put here a timeline view of all deliverables.</p>
-            <ul class="todo">
-              <li>Month YYYY: First teleconference</li>
-              <li>Month YYYY: First face-to-face meeting</li>
-              <li>Month YYYY: Requirements and Use Cases for FooML</li>
-              <li>Month YYYY: FPWD for FooML</li>
-              <li>Month YYYY: Requirements and Use Cases for BarML</li>
-              <li>Month YYYY: FPWD FooML Primer</li>
+            <p>Timeline view of all deliverables.
+            This has been aligned with publication process requirements and deliverable targets, above.
+            </p>
+            <dl>
+            <dt><b>Q4 2019</b></dt>
+            <dd>
+            <ul>
+              <li>November 2019: Requirements and Use Cases for <a href="#wot-profiles">WoT Interoperability Profiles</a></li>
+              <li>November 2019: Requirements and Use Cases for <a href="#wot-discovery">WoT Discovery</a></li>
+              <li>November 2019: Requirements and Use Cases for <a href="#wot-architecture-update">WoT Architecture (Update)</a></li>
+              <li>November 2019: Requirements and Use Cases for <a href="#wot-thing-description-update">WoT Thing Description (Update)</a></li>
+              <li>November 2019: Face-to-face meeting and plugfest (Singapore)</li>
             </ul>
+            </dd>
+            <dt><b>Q1 2020</b></dt>
+            <dd>
+            <ul>
+              <li>January 2020: FPWD for <a href="#wot-profiles">WoT Interoperability Profiles</a></li>
+              <li>February 2020: FPWD for <a href="#wot-discovery">WoT Discovery</a></li>
+              <li>March 2020: Face-to-face meeting and plugfest</li>
+              <li>March 2020: CR for <a href="#wot-profiles">WoT Interoperability Profiles</a></li>
+            </ul>
+            </dd>
+            <dt><b>Q2 2020</b></dt>
+            <dd>
+            <ul>
+              <li>April 2020: FPWD for <a href="#wot-architecture-update">WoT Architecture (Update)</a></li>
+              <li>April 2020: FPWD for <a href="#wot-thing-description-update">WoT Thing Description (Update)</a></li>
+              <li><b>May 2020:</b> PR for <a href="#wot-profiles">WoT Interoperability Profiles</a></li>
+            </ul>
+            </dd>
+            <dt><b>Q3 2020</b></dt>
+            <dd>
+            <ul>
+              <li>July 2020: Face-to-face meeting and plugfest</li>
+              <li>July 2020: CR for <a href="#wot-architecture-update">WoT Architecture (Update)</a></li>
+              <li>July 2020: CR for <a href="#wot-thing-description-update">WoT Thing Description (Update)</a></li>
+              <li>September 2020: Face-to-face meeting and plugfest (TPAC)</li>
+              <li>September 2020: Requirements and Use Cases for <a href="#wot-thing-description-next">WoT Thing Description (Next)</a></li>
+            </ul>
+            </dd>
+            <dt><b>Q4 2020</b></dt>
+            <dd>
+            <ul>
+              <li>October 2020: CR for <a href="#wot-discovery">WoT Discovery</a></li>
+              <li><b>October 2020:</b> PR for <a href="#wot-architecture-update">WoT Architecture (Update)</a></li>
+              <li><b>October 2020:</b> PR for <a href="#wot-thing-description-update">WoT Thing Description (Update)</a></li>
+            </ul>
+            </dd>
+            <dt><b>Q1 2021</b></dt>
+            <dd>
+            <ul>
+              <li>February 2021: Face-to-face meeting and plugfest</li>
+              <li><b>March 2021:</b> PR for <a href="#wot-discovery">WoT Discovery</a></li>
+              <li>March 2021: FPWD for <a href="#wot-thing-description-next">WoT Thing Description (Next)</a></li>
+            </ul>
+            </dd>
+            <dt><b>Q2 2021</b></dt>
+            <dd>
+            <ul>
+              <li>June 2021: Face-to-face meeting and plugfest</li>
+            </ul>
+            </dd>
+            <dt><b>Q3 2021</b></dt>
+            <dd>
+            <ul>
+              <li>July 2021: CR for <a href="#wot-thing-description-next">WoT Thing Description (Next)</a></li>
+              <li>September 2021: Face-to-face meeting and plugfest (TPAC)</li>
+            </ul>
+            </dd>
+            <dt><b>Q4 2021</b></dt>
+            <dd>
+            <ul>
+              <li><b>October 2021:</b> PR for <a href="#wot-thing-description-next">WoT Thing Description (Next)</a></li>
+            </ul>
+            </dd>
+           </dl>
         </section>
       </section>
 
@@ -999,10 +1111,12 @@
           <h3>
             Charter History
           </h3>
+<!--
           <p class="issue"><b>Note:</b>Display this table and update it when appropriate. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/process/charter.html#extension">Charter Guidebook (section 4)</a>.</p>
+-->
 
           <p>
-            The following table lists details of all changes from the initial charter, 
+            The following table lists details of all changes from the initial WoT WG charter, 
             per the 
             <a href="https://www.w3.org/Consortium/Process/#CharterReview">W3C Process Document (section 5.2.3)</a>:
           </p>
@@ -1025,44 +1139,94 @@
               </tr>
               <tr>
                 <th>
-                  <a class="todo" href="">Initial Charter</a>
+                  <a href="https://www.w3.org/2016/12/wot-wg-2016.html">Initial Charter</a>
                 </th>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  <i>27 December 2016</i>
                 </td>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  <i>31 December 2018</i>
                 </td>
                 <td>
-                  <i class="todo">none</i>
+                  <i></i>
                 </td>
               </tr>
               <tr>
                 <th>
-                  <a class="todo" href="">Charter Extension</a>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2018OctDec/0066.html">Charter Extension</a>
                 </th>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  <i>1 January 2019</i>
                 </td>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  <i>30 June 2019</i>
                 </td>
                 <td>
-                  <i class="todo">none</i>
+                  <i>Removed staff contact Yingyong Chen</i>
                 </td>
               </tr>
               <tr>
                 <th>
-                  <a class="todo" href="">Rechartered</a>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2019JanMar/0018.html">Chair update</a>
                 </th>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  <i></i>
                 </td>
                 <td>
-                  <i class="todo">[dd monthname yyyy]</i>
+                  <i></i>
                 </td>
                 <td>
-                  <p class="todo">[description of change to charter, with link to new deliverable item in charter] <b>Note:</b> use the class <code>new</code> for all new deliverables, for ease of recognition.</p>
+                  <i>Matthias Kovatsch changed his affiliation and re-appointed as co-Chair on 13 February 2019.</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2019AprJun/0002.html">Chair update</a>
+                </th>
+                <td>
+                  <i></i>
+                </td>
+                <td>
+                  <i></i>
+                </td>
+                <td>
+                  <i>Kazuo Kajimoto stepped down as co-Chair on 4 April 2019.</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2019JulSep/0006.html">Charter Extension</a>
+                </th>
+                <td>
+                  <i>1 July 2019</i>
+                </td>
+                <td>
+                  <i>31 December 2019</i>
+                </td>
+                <td>
+                  <i>Charter period extended till 31 December 2019</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="">Rechartered</a>
+                  <!-- <a href="https://www.w3.org/2019/11/wot-wg-2019.html">Rechartered</a> -->
+                </th>
+                <td>
+                  1 November 2019
+                </td>
+                <td>
+                  1 November 2021
+                </td>
+                <td>
+                  <p>New charter.  Deliverables include updates to existing documents 
+                  (<a href="#wot-thing-description-updates">Thing Description (Update)</a> 
+                   and 
+                   <a href="#wot-architecture-updates">Architecture (Update)</a>),
+                   extensions to existing documents 
+                  (<a href="#wot-thing-description-next">Thing Description (Next)</a>) and new deliverables 
+                  (<a href="#wot-profiles">Interoperability Profiles</a> and 
+                   <a href="#wot-discovery">Discovery</a>)</p>
                 </td>
               </tr>
             </tbody>
