@@ -1,0 +1,347 @@
+{
+  "title": "Virtual Actions & Events Thing",
+  "type": "thing",
+  "cannotDoYet": "cancel actions, update actions",
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "description": "",
+  "properties": {
+    "eventQueue": {
+      "description": "log of past events",
+      "type": "array",
+      "items": {
+        "comment": "could be also oneOf or additional properties to remove the individual event names",
+        "type": "object",
+        "properties": {
+          "virtualEvent": {
+            "description": "past events of virtualEvent event",
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "number"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "someOtherEvent": {
+            "description": "past events of someOther event",
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "op": "readproperty",
+          "htv:methodName": "GET",
+          "href": "/things/virtual-things-10/events/"
+        }
+      ]
+    },
+    "actionQueue": {
+      "description": "log of requested actions",
+      "type": "array",
+      "items": {
+        "comment": "could be also oneOf or additional properties to remove the individual event names",
+        "type": "object",
+        "properties": {
+          "basic": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "object"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri-reference",
+                "description": "unique id of the action to look at its status"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "created",
+                  "pending",
+                  "completed"
+                ]
+              },
+              "timeRequested": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "single": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "object"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri-reference",
+                "description": "unique id of the action to look at its status"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "created",
+                  "pending",
+                  "completed"
+                ]
+              },
+              "timeRequested": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "op": "readproperty",
+          "htv:methodName": "GET",
+          "href": "/things/virtual-things-10/actions/"
+        }
+      ]
+    },
+    "basicActionQueue": {
+      "description": "log of requested basic actions",
+      "comment": "same for simple",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "basic": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "object"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri-reference",
+                "description": "unique id of the action to look at its status"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "created",
+                  "pending",
+                  "completed"
+                ]
+              },
+              "timeRequested": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "op": "readproperty",
+          "htv:methodName": "GET",
+          "href": "/things/virtual-things-10/actions/basic"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "basic": {
+      "title": "No Input",
+      "description": "An action with no inputs, fires an event",
+      "input": {
+        "type": "object",
+        "properties": {
+          "basic": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "basic": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "object"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri-reference",
+                "description": "unique id of the action to look at its status"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "created",
+                  "pending",
+                  "completed"
+                ]
+              },
+              "timeRequested": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "op": "invokeaction",
+          "htv:methodName": "POST",
+          "href": "/things/virtual-things-10/actions/basic"
+        }
+      ]
+    },
+    "single": {
+      "title": "Single Input",
+      "description": "An action with a single, non-object input",
+      "input": {
+        "type": "object",
+        "properties": {
+          "single": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "single": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "object"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri-reference",
+                "description": "unique id of the action to look at its status"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "created",
+                  "pending",
+                  "completed"
+                ]
+              },
+              "timeRequested": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "op": "invokeaction",
+          "htv:methodName": "POST",
+          "href": "/things/virtual-things-10/actions/single"
+        }
+      ]
+    }
+  },
+  "events": {
+    "virtualEvent": {
+      "description": "An event from a virtual thing",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "virtualEvent": {
+            "description": "past events of virtualEvent event",
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "number"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "rel": "event",
+          "htv:methodName": "GET",
+          "href": "/things/virtual-things-10/events/virtualEvent"
+        }
+      ]
+    },
+    "someOtherEvent": {
+      "description": "not really emitted",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "virtualEvent": {
+            "description": "past events of virtualEvent event",
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "htv:methodName": "GET",
+          "href": "/things/virtual-things-10/events/someOtherEvent"
+        }
+      ]
+    }
+  },
+  "id": "http://localhost:8080/things/virtual-things-10",
+  "base": "http://localhost:8080/",
+  "securityDefinitions": {
+    "oauth2_sc": {
+      "scheme": "oauth2",
+      "flow": "code",
+      "authorization": "http://localhost:8080/oauth/authorize",
+      "token": "http://localhost:8080/oauth/token",
+      "scopes": [
+        "/things/virtual-things-10:readwrite",
+        "/things/virtual-things-10",
+        "/things:readwrite",
+        "/things"
+      ]
+    }
+  },
+  "security": "oauth2_sc"
+}
