@@ -192,21 +192,24 @@
           
           <dl>
 	    <dt><strong>Architectural Requirements, Use Cases, and Vocabulary</strong></dt>
-            <dd>Understand and state requirements for new use cases, architectural patterns, and concepts.</dd>
+            <dd>Understand and describe requirements of new use cases, architectural patterns, and concepts.</dd>
             <dt><strong>Link Relation Types:</strong></dt>
-            <dd>Definition of specific link relation types for specific relationships.</dd>
+            <dd>Define link relation types for specific relationships.</dd>
             <dt><strong>Interoperability Profiles:</strong></dt>
             <dd>Support plug-and-play interoperabilty via a profile mechanism and define profiles for specific application domains and use cases.</dd>
             <dt><strong>Thing Description Templates:</strong></dt>
-            <dd>Define how Thing Descriptions can defined in a modular way.</dd>
+            <dd>Define a mechanism to describe classes of things and an inheritance mechanism.
+            and define how Thing Descriptions can defined in a modular way.</dd>
             <dt><strong>Complex Interactions:</strong></dt>
-            <dd>Document how complex interactions can be supported via hypermedia controls.</dd>
+            <dd>Document how hypermedia controls can be used to describe complex interactions and thing behaviour.</dd>
             <dt><strong>Discovery:</strong></dt>
             <dd>Define how Things are discovered in both local and global contexts and Thing Descriptions are distributed.</dd>
+            <dt><strong>Automatic Onboarding:</strong></dt>
+            <dd>Define how Things can be onboarded to gateways and servers automatically without additional configuration tasks.</dd>
             <dt><strong>Identifier Management:</strong></dt>
             <dd>Mitigate privacy risks by defining how identifiers are managed and updated.</dd>
             <dt><strong>Security Schemes:</strong></dt>
-            <dd>Vocabulary for new security schemes supporting targetted protocols and use cases.</dd>
+            <dd>Vocabulary for new security schemes supporting targetted protocols, use cases and new requirements.</dd>
             <dt><strong>Thing Description Vocabulary:</strong></dt>
             <dd>Extensions to Thing Description vocabulary definitions.</dd> 
             <dt><strong>Protocol Vocabulary and Bindings:</strong></dt>
@@ -226,17 +229,16 @@
           specification includes the definitions of several terms and concepts used to
           define WoT specifications.  These are often related closely to use cases
           and architectural patterns.  As WoT implementations mature, it will be 
-          necessary to understand and state the requirements for new use cases, 
-          architectural patterns, and associated 
-          concepts and vocabulary.  
-          In addition, descriptions of existing use cases
-          architectural patterns may need to be clarified or refactored to include
+          necessary to understand and describe the requirements for new use cases, 
+          architectural patterns, and associated concepts and vocabulary.  
+          In addition, descriptions of existing use cases and
+          architectural patterns may need to be revisited to include
           these new concepts.
         </p>
 	<p>
           Candidates for architectural vocabulary extension include a 
-          TD Producer concept 
-          and definition of states and transitions for device and information lifecycles.
+          TD Producer concept and definition and description of states and transitions 
+          for device and information lifecycles.
           The information lifecycle is especially relevant to the protection
           of privacy.
         </p>
@@ -246,7 +248,8 @@
           The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
           includes a link mechanism to declare (potentially bidirectional) relationships between
-          a TD and other entities identified by URIs, including but not limited to other TDs.
+          a TD and other entities identified by URIs, including but not limited to Thing Templates
+          and other TDs.
           Each link includes a relation type which specifies the purpose of the link.
           Link relation types must use an IANA name.
           However, to maximize interoperability, 
@@ -258,7 +261,7 @@
           use case the Working Group may seek to establish a new link type,
           but this will be done only if absolutely necessary.
         </p>
-	<p>
+	    <p>
           Candidates for link relation type specification may include type-of and part-of
           relationships to support Templates and Components, respectively.
           Other link types may be used to identify location or controller-controlled 
@@ -270,7 +273,7 @@
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
           provides a general framework for describing the interface to a Thing
           independent of the network protocol, data encoding, or security mechanism used.  
-          TDs are defined to be extensible since IoT protocols, data encodings, and security mechanisms 
+          TDs are defined to be extensible, since IoT protocols, data encodings, and security mechanisms 
           are constantly evolving.
           However, this openness works against interoperability since it is 
           not clear in advance what technologies must be supported by a given
@@ -302,9 +305,6 @@
                or profiles that a given TD is conformant to.
             </li>
             <li>
-               Definition of what features in a TD may be limited by a profile.
-            </li>
-            <li>
                Definition of profiles for specific application domains
                and use cases.
             </li>
@@ -328,18 +328,20 @@
         <p>
           The current TD specification includes the definition of a "TD Template"
           which is a partial TD that omits information that is specific to an instance.
-          However, the current definition of TD Templates 
-          only allows definition of the interaction model without 
-          security schemes or protocol bindings.  
-          During software development however, if we wish to
-          design code to talk to a class of devices, 
-          we may need to have some knowledge of the protocol and security requirements.
+          However, the current definition of TD Templates does not define the inheritance
+          mechanism and the applicable TD vocabulary.
+          It only allows the definition of the interaction model without 
+          security schemes or protocol bindings. Thing templates have various
+          application areas: They may be used for managing a class of devices,
+          or to define digital twins and corresponding simulations.
+          There are other use cases, where some knowledge of the protocol and security requirements
+          may be required.
         </p>
         <p>
-          A closely related problem is that of components and standardized sub-APIs:
+          A closely related problem is that of components and standardized common APIs:
           we may wish to assemble a Thing Description from a set
-          of reusable, modular capabilities, or declare that it supports some sub-API
-          common to a class of Things.
+          of reusable, modular capabilities, or declare that it supports some API,
+          that is common to a class of Things.
           How is a TD Component to be defined and how are they to be combined
           into a complete Thing?  How is a TD Consumer able to determine that a
           particular Thing supports a specific sub-interface common to a set
@@ -369,13 +371,13 @@
           remediary actions can be taken when an error occurs.
         </p>
         <p>
-          However, there are many possible ways to support such 
+          However, there are many possible ways to implement and use such 
           complex interactions.  To better support the goals of
-          interoperability, it would be useful to document
-          how to implement the most common complex interactions. 
+          interoperability, it would be useful to precisely define
+          the most common complex interactions. 
         </p>
         <p>
-          This work item will document the implementation of complex
+          This work item will document the behavior of complex
           interactions, including:
           <ol>
           <li>The ability to initiate, monitor, and cancel ongoing actions.</li>
@@ -441,6 +443,21 @@
           directory-based discovery, both local and global discovery,
           be privacy-preserving, and be coordinated with other standards bodies 
           and W3C working groups.
+        </p>
+
+        <h3>Automatic Onboarding</h3>
+        <p>
+          Onbording of Things frequently requires complex human tasks 
+          to ensure safeguarding against unauthorized access and usage of devices and data.
+          If many devices are to be onboarded at the same time, this may cause significant
+          effort.
+          In this work item we will define mechanisms to perform automatic onboarding of 
+          Things in a secure way that conforms to the security and privacy requirements
+          of specific deployment scenarios and use cases. 
+        </p>
+        <p>
+          This work item complements the work that is done for device discovery,
+          however is also applicable for use cases without an exploration service.
         </p>
 
         <h3>Identifier Management</h3>
@@ -538,7 +555,7 @@
           document which defines templates for how to use a TD to describe Things
           using specific concrete protocols.
           However, individual concrete protocols may require additional vocabulary
-          to define header options and other metadata.
+          to define protocol parameters, such as header options and other metadata.
           These are defined using vocabulary extensions specific to each protocol.
           Currently only a limited set of protocols are supported in a standard way.  
           This work item will add support for an additional set of target protocols, 
@@ -709,9 +726,9 @@ associated Call for Exclusion on 14 December 2017 ended on 11 February 2018.<br/
               <p><b>Editor's Draft:</b> 
                  <a href="https://w3c.github.io/wot-profile/">https://w3c.github.io/wot-profile/</a> 
 
-            <dt id="wot-discovery" class="spec"><a href="#">Web of Things (WoT) Discovery</a></dt>
+            <dt id="wot-discovery" class="spec"><a href="#">Web of Things (WoT) Discovery and Onboarding</a></dt>
             <dd>
-              <p>This specification defines how WoT Things are to be discovered using
+              <p>This specification defines how WoT Things are to be discovered and onboarded using
                  a privacy-preserving architecture.
               </p>
               <p class="draft-status"><b>Draft state:</b> <a href="#">None</a></p>
