@@ -109,6 +109,9 @@ in a description or title field.
 Services providing TDs must require authentication (for example, using OAuth or PKI) of the requester to ensure they
 are who they say they are.  In addition, the system needs to ensure that the requester is authorized to receive TDs.
 
+### Consumers MUST accept TDs only from Authenticated producers
+In other words, communication of TDs between producers and consumers must be over mutually authenticated channels.
+
 ### TDs provided to a Consumer MUST be filtered to remove any optional information not required by that Consumer.
 For example, if a Consumer does not need human-readable titles or descriptions in a TD, these should be removed.
 If a Consumer does not need to maintain state related to the consumed device, then an ID is not necessary and should be omitted.
@@ -161,3 +164,22 @@ can be intercepted.
 Note that use of "nosec" and "http" may be acceptable in a TD in such cases
 if the data is protected by another layer of authentication and encryption, for example if data traffic is
 carried on a private network (for example, an encrypted VLAN).
+
+### Context files MUST NOT be dereferenced if these dereferences can be associated with specific Things
+Context file dereferences can cause a privacy issue similar to a DNS leak.
+Therefore Consumers should use the URLs given in the context field of a TD only to 
+identify vocabularies already "known" (built-in) to the Consumer.
+
+NOTE: an exception needs to be made for inventory systems doing semantic processing on a set of Things in a database.
+This is why we limit this restriction to "specific Things".
+
+### Consent MUST be obtained before a TD is provided to a Consumer
+Consent does not need to be obtained every time that a TD is provided to a particular Consumer as long as the 
+person associated with a device is aware of the set of Consumers that can access a Thing.  For example, when 
+a person onboards a new Thing to a home gateway, as part of the onboarding process they can be asked for their
+consent to allow other devices also onboarded the to same gateway to access the TD of the new device.
+
+## Other Points of Discussion
+There are cases when instead of omitting identifiers we need to use context-dependent or temporary identifiers.
+What assertions should be associated with these usages?
+
