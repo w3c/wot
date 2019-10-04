@@ -78,9 +78,24 @@ omit the title.
 
 ### Data Schemas to be made optional
 Currently, according to the information model they are in fact already technically optional, but this should
-be clarified, particularly in the case of properties.  If Data Schemas are omitted, then the Consumer needs to
+be clarified, particularly in the case of properties.  Also to allow this, we may have to relax or modify some
+existing assertions that require Consumers to produce data according to the data schema and for Consumers to
+accept it (one resolution would be to add the phrase "if present" to these assertions).
+
+If Data Schemas are omitted, then the Consumer needs to
 somehow already know how to process the data or needs to treat it as opaque.
 The reason for omitting Data Schemas in these cases is to minimize fingerprinting risk.
+
+Note however that if we want to support ad-hoc interoperability, there are relatively few circumstances in
+which Data Schemas can be omitted.
+
+### URI Templates to be made optional
+We may want to omit these for the same reason as the Data Schemas.  However, we should ensure that even
+if URI templates defining query parameters are not present that a Consumer can still use them if it has
+apriori knowledge.
+
+Note however that if we want to support ad-hoc interoperability, there are relatively few circumstances in
+which URI Templates can be omitted.
 
 ## Mandatory Privacy Mitigations
 These assertions will apply to any context where a device described by a TD may be associated with
