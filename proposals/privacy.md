@@ -106,7 +106,7 @@ links (identified by relation type);
 and metadata (creation time, modification time, support, and version information).
 
 ### TDs MUST be protected by encryption when at rest.
-TDs must be stored in an encrypted data store.
+TDs must be stored in an encrypted data store, and access to this store should be limited to authorized users.
 
 ### TDs MUST be protected by encryption when transmitted.
 TDs must not be transmitted in plaintext.
