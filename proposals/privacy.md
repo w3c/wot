@@ -93,6 +93,7 @@ For example, if a Consumer does not need human-readable titles or descriptions i
 If a Consumer does not need to maintain state related to the consumed device, then an ID is not necessary and should be omitted.
 If a Consumer does not do semantic processing, then all semantic annotations can be omitted.
 If a Consumer does not do link processing then links should be omitted.
+Metadata (such as TD creation time) should be omitted if the Consumer does not need it.
 
 ### Mechanisms to request TDs MUST include query parameters to specify the information provided.
 The mechanism to request a TD should include query parameters to state the kinds of information necessary and the delivered
@@ -100,8 +101,9 @@ TD should be filtered to only include that information.
 Query parameters should allow indication of at least the following classes of information:
 human-readable information (titles and descriptions); 
 semantic annotations;
-specific affordances or types of affordances (for example, only properties, or only one specific property by name);
-and specific links (identified by relation type).
+affordances or types of affordances (for example, only properties, or only one specific property by name);
+links (identified by relation type);
+and metadata (creation time, modification time, support information).
 
 ### TDs MUST be protected by encryption when at rest.
 TDs must be stored in an encrypted data store.
