@@ -213,4 +213,5 @@ have such protections.
   What assertions should be associated with these usages?
 * Note that the W3C cannot make compliance mandatory; these are still recommendations.  However, systems not in
   compliance can be identified and public notice given, just like other aspects of non-compliance.
+* A better definition of a "privacy sensitive context" is needed.
 
