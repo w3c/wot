@@ -81,7 +81,7 @@ These assertions will apply to any context where a device described by a TD may 
 a particular person.  We will call these "privacy sensitive contexts".
 
 ### TDs MUST not contain PII.
-For example, a TD must not contain an owner's email or embed their name, address, or other PII 
+For example, a TD must not contain the email of a person with which it is associated or embed their name, address, or other PII 
 in a description or title field.
 
 ### TDs MUST be transmitted only to Authenticated and Authorized consumers.
@@ -92,6 +92,7 @@ are who they say they are.  In addition, the system needs to ensure that the req
 For example, if a Consumer does not need human-readable titles or descriptions in a TD, these should be removed.
 If a Consumer does not need to maintain state related to the consumed device, then an ID is not necessary and should be omitted.
 If a Consumer does not do semantic processing, then all semantic annotations can be omitted.
+If a Consumer does not do link processing then links should be omitted.
 
 ### Mechanisms to request TDs MUST include query parameters to specify the information provided.
 The mechanism to request a TD should include query parameters to state the kinds of information necessary and the delivered
@@ -99,7 +100,8 @@ TD should be filtered to only include that information.
 Query parameters should allow indication of at least the following classes of information:
 human-readable information (titles and descriptions); 
 semantic annotations;
-and specific affordances or types of affordances (for example, only properties, or only one specific property by name).
+specific affordances or types of affordances (for example, only properties, or only one specific property by name);
+and specific links (identified by relation type).
 
 ### TDs MUST be protected by encryption when at rest.
 TDs must be stored in an encrypted data store.
@@ -117,3 +119,18 @@ authenticate as appropriate.
 However there are situations, such as local networks behind a NAT,
 where TDs will need to be forwarded, i.e. by a proxy service.
 In this case they can also be filtered to remove unnecessary information.
+
+### Things MUST delete IDs and other data specific to use by a particular person when decommissioned
+Here "decommissioning" should occur when a device is offboarded from a security domain, when all authorizations are revoked,
+or the device is reset to factory settings.
+"Other data" includes all sensor logs, e.g. any historical data should be deleted.
+
+### Newly developed Things MUST use Authentication, Authorization, and Encryption for data
+The WoT cannot control the use of TDs to *describe* existing brownfield devices with poor or no security.
+However, "new" greenfield Things developed to work with the WoT MUST be designed to protect data related to specific individuals
+using appropriate security mechanisms.
+In particular, "nosec" and non-encrypted protocols (http, coap) MUST not be used if there is any chance the data
+can be intercepted.
+Note that use of "nosec" and "http" may be acceptable in a TD in such cases
+if the data is protected by another layer of authentication and encryption, for example if data traffic is
+carried on a private network (for example, an encrypted VLAN).
