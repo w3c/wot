@@ -204,7 +204,13 @@ inferencing is much harder.  This assertion does have legal implications: for ex
 legal jurisdictions, consent must be obtained to acquire and store TDs, limits are placed on how long they
 can be retained, and so forth.  This is the intent of this assertion.
 
+Some of the above assertions may be redundant in locations that have strong legal protections for 
+privacy.  But it is worthwhile still including the "redundant" assertions for locations that do not
+have such protections.
+
 ## Other Points of Discussion
-There are cases when instead of omitting identifiers we need to use context-dependent or temporary identifiers.
-What assertions should be associated with these usages?
+* There are cases when instead of omitting identifiers we need to use context-dependent or temporary identifiers.
+  What assertions should be associated with these usages?
+* Note that the W3C cannot make compliance mandatory; these are still recommendations.  However, systems not in
+  compliance can be identified and public notice given, just like other aspects of non-compliance.
 
