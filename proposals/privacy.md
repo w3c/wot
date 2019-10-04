@@ -65,12 +65,24 @@ An option here is to make the ID mandatory but use a workaround such as a tempor
 However, if the intent is really to make the Thing anonymous simply omitting the ID is more straightforward.
 Temporary IDs may still be necessary in some use cases, however.
 
+### Title at the Thing level to be made optional
+Currently the title (name) of a Thing at the top level is mandatory.  However, there are 
+circumstances where we may want to filter out all human-readable information, and the title has
+similar risks as the ID, in that it is often designed to distinguish a particular instance 
+of a device.
+
+#### Design Alternatives
+As with IDs, a "fake" temporary title could also be used.
+However in the contexts where such a temporary title would be used it is clearer and simpler to simply
+omit the title.
+
 ## Mandatory Privacy Mitigations
 These assertions will apply to any context where a device described by a TD may be associated with
 a particular person.  We will call these "privacy sensitive contexts".
 
 ### TDs MUST not contain PII.
-For example, a TD must not contain an owner's email or embed their name in a description or title field.
+For example, a TD must not contain an owner's email or embed their name, address, or other PII 
+in a description or title field.
 
 ### TDs MUST be transmitted only to Authenticated and Authorized consumers.
 Services providing TDs must require authentication (for example, using OAuth or PKI) of the requester to ensure they
@@ -79,11 +91,15 @@ are who they say they are.  In addition, the system needs to ensure that the req
 ### TDs provided to a Consumer MUST be filtered to remove any optional information not required by that Consumer.
 For example, if a Consumer does not need human-readable titles or descriptions in a TD, these should be removed.
 If a Consumer does not need to maintain state related to the consumed device, then an ID is not necessary and should be omitted.
-If the Consumer does not do semantic processing, then semantic annotations can be omitted.
+If a Consumer does not do semantic processing, then all semantic annotations can be omitted.
 
 ### Mechanisms to request TDs MUST include query parameters to specify the information provided.
 The mechanism to request a TD should include query parameters to state the kinds of information necessary and the delivered
 TD should be filtered to only include that information.
+Query parameters should allow indication of at least the following classes of information:
+human-readable information (titles and descriptions); 
+semantic annotations;
+and specific affordances or types of affordances (for example, only properties, or only one specific property by name).
 
 ### TDs MUST be protected by encryption when at rest.
 TDs must be stored in an encrypted data store.
@@ -91,10 +107,13 @@ TDs must be stored in an encrypted data store.
 ### TDs MUST be protected by encryption when transmitted.
 TDs must not be transmitted in plaintext.
 
-### TDs MUST be stored for only a limited time appropriate to the application.
+### TDs MUST be stored in Consumers for only a limited time appropriate to the application.
+Note that this rule does not apply to Producers or system inventory managers, which may need to store
+TDs for the lifetime of the device.
 
-### TDs MUST NOT be forwarded to other parties without explicit approval of the owner.
+### TDs MUST NOT be forwarded to other parties without explicit approval of any person the Thing is associated with.
 Ideally TDs would not be forwarded at all and each Consumer would go directly to the source and
-authenticate as appropriate.  However there are situations, such as local networks behind a NAT,
+authenticate as appropriate.
+However there are situations, such as local networks behind a NAT,
 where TDs will need to be forwarded, i.e. by a proxy service.
 In this case they can also be filtered to remove unnecessary information.
