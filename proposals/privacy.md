@@ -76,6 +76,12 @@ As with IDs, a "fake" temporary title could also be used.
 However in the contexts where such a temporary title would be used it is clearer and simpler to simply
 omit the title.
 
+### Data Schemas to be made optional
+Currently, according to the information model they are in fact already technically optional, but this should
+be clarified, particularly in the case of properties.  If Data Schemas are omitted, then the Consumer needs to
+somehow already know how to process the data or needs to treat it as opaque.
+The reason for omitting Data Schemas in these cases is to minimize fingerprinting risk.
+
 ## Mandatory Privacy Mitigations
 These assertions will apply to any context where a device described by a TD may be associated with
 a particular person.  We will call these "privacy sensitive contexts".
