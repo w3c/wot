@@ -7,8 +7,7 @@ optional so that they can be filtered out in privacy-sensitive contexts.
 
 This document summarizes the proposed changes so that they can be reviewed in joint meetings between the WoT WG and the Privacy IG.
 
-We will focus on the TD specification, as we are currently discussing making the Architecture document informative.
-Therefore we propose consolidating the privacy and security considerations (and new normative statements) into
+We propose consolidating the privacy and security considerations (and new normative statements) into
 a single normative specification, the *Web of Things (WoT) Thing Description*.
 Changes to the TD specification will include changes to existing assertions and normative content
 and new assertions in a new normative "Privacy Mitigations" section.
