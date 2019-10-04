@@ -102,23 +102,28 @@ a particular person.  We will call these "privacy sensitive contexts".
 
 ### TDs MUST not contain PII.
 For example, a TD must not contain the email of a person with which it is associated or embed their name, address, or other PII 
-in a description or title field.
+in a description or title field, unless specifically required by the use cases. 
+ML: It must be under the descretion of the owner of the thing to chose to whom to expose which PII.
+There are cases where a TD without PII is useless.
 
 ### TDs MUST be transmitted only to Authenticated and Authorized consumers.
 Services providing TDs must require authentication (for example, using OAuth or PKI) of the requester to ensure they
 are who they say they are.  In addition, the system needs to ensure that the requester is authorized to receive TDs.
 
 ### Consumers MUST accept TDs only from Authenticated producers
-In other words, communication of TDs between producers and consumers must be over mutually authenticated channels.
+In other words, communication of TDs between producers and consumers must be over mutually authenticated channels,
+or the authenticity of a producer is validated by some other means (e.g. cryptographic signatures).
 
 ### TDs provided to a Consumer MUST be filtered to remove any optional information not required by that Consumer.
 For example, if a Consumer does not need human-readable titles or descriptions in a TD, these should be removed.
+ML: How does a producer know about the capabilities / requirements of a consumer? We don't have a mechanism to convey this information. In many scenarios a TD producer does not know about the potential consumers. This comment applies also o the points below.
 If a Consumer does not need to maintain state related to the consumed device, then an ID is not necessary and should be omitted.
 If a Consumer does not do semantic processing, then all semantic annotations can be omitted.
+ML: It still is useful for documentation purposes and should be preserved.
 If a Consumer does not do link processing then links should be omitted.
 Metadata (such as TD creation time) should be omitted if the Consumer does not need it.
 If the Consumer already "knows" the Data Schema or does not process the data (for example, if it only caches it) then data schemas can
-be omitted; likewise for URI templates.
+be omitted; likewise for URI templates. ML: How is this "knowledge" conveyed to the consumer?
 
 ### Mechanisms to request TDs MUST include query parameters to specify the information provided.
 The mechanism to request a TD should include query parameters to state the kinds of information necessary and the delivered
@@ -131,14 +136,18 @@ links (identified by relation type);
 metadata (creation time, modification time, support, and version information);
 data schemas;
 and URI templates.
+ML: This mechanism is not part of the current specs.
 
 ### TDs MUST be protected by encryption when at rest.
 TDs must be stored in an encrypted data store, and access to this store should be limited to authorized users.
+ML: This goes a bit far - We should constrain it to "TDs containing PII"
 
 ### TDs MUST be protected by encryption when transmitted.
+ML: again constrain to "TDs with PII"
 TDs must not be transmitted in plaintext.
 
 ### TDs MUST be stored in Consumers for only a limited time appropriate to the application.
+ML: again constrain to "TDs with PII"
 Note that this rule does not apply to Producers or system inventory managers, which may need to store
 TDs for the lifetime of the device.
 
@@ -165,6 +174,7 @@ if the data is protected by another layer of authentication and encryption, for 
 carried on a private network (for example, an encrypted VLAN).
 
 ### Context files MUST NOT be dereferenced if these dereferences can be associated with specific Things
+ML: This is a requirement for a consumer that cannot be enforced.
 Context file dereferences can cause a privacy issue similar to a DNS leak.
 Therefore Consumers should use the URLs given in the context field of a TD only to 
 identify vocabularies already "known" (built-in) to the Consumer.
