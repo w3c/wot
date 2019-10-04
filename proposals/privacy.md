@@ -103,7 +103,7 @@ human-readable information (titles and descriptions);
 semantic annotations;
 affordances or types of affordances (for example, only properties, or only one specific property by name);
 links (identified by relation type);
-and metadata (creation time, modification time, support information).
+and metadata (creation time, modification time, support, and version information).
 
 ### TDs MUST be protected by encryption when at rest.
 TDs must be stored in an encrypted data store.
