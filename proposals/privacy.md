@@ -19,7 +19,7 @@ Privacy risks in the WoT fall into three broad categories:
 2. Personally identifiable information included in a Thing Description.
 3. Information that can be inferred about a person from the information contained in a Thing description.
 
-The WoT architecture is indended to reduce privacy risks due to Category 1 by encouraging an
+The WoT architecture is intended to reduce privacy risks due to Category 1 by encouraging an
 open ecosystem (rather than a set of opaque proprietary systems) and making more visible the kinds of data that
 a device is producing and sending to other devices.
 Such visibility will allow devices to be better managed and the flows of such data controlled.
@@ -94,6 +94,8 @@ If a Consumer does not need to maintain state related to the consumed device, th
 If a Consumer does not do semantic processing, then all semantic annotations can be omitted.
 If a Consumer does not do link processing then links should be omitted.
 Metadata (such as TD creation time) should be omitted if the Consumer does not need it.
+If the Consumer already "knows" the Data Schema or does not process the data (for example, if it only caches it) then data schemas can
+be omitted.
 
 ### Mechanisms to request TDs MUST include query parameters to specify the information provided.
 The mechanism to request a TD should include query parameters to state the kinds of information necessary and the delivered
@@ -103,7 +105,8 @@ human-readable information (titles and descriptions);
 semantic annotations;
 affordances or types of affordances (for example, only properties, or only one specific property by name);
 links (identified by relation type);
-and metadata (creation time, modification time, support, and version information).
+metadata (creation time, modification time, support, and version information),
+and data schemas.
 
 ### TDs MUST be protected by encryption when at rest.
 TDs must be stored in an encrypted data store, and access to this store should be limited to authorized users.
