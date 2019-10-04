@@ -26,10 +26,10 @@ For example, a gateway could use rules to control whether certain types of infor
 The tradeoff is the necessary *description* of the data produced by a device leads to increased risks in Categories 2 and 3.
 
 TDs currently only have a few possible risks in Category 2 such as optional support emails, which we need to 
-clarify should not be used for the email of the owner of the device.
+clarify should not be used for the email of an identifiable person associated with the device.
 It is also possible for TDs to be misused
 and for developers to embed PII in free-form description fields (such as names of people, such as naming a device
-"John's Insulin Monitor").  This should be explicitly forbidden.
+"John's Insulin Monitor").  This should be explicitly forbidden in privacy-sensitive contexts.
 
 In Category 3, PII can be inferred from the type of the device, which can be determined either directly
 (through a link with a type-of relationship to a Thing Template), through semantic metadata explicitly giving the 
@@ -98,32 +98,41 @@ which URI Templates can be omitted.
 
 ## Mandatory Privacy Mitigations
 These assertions will apply to any context where a device described by a TD may be associated with
-a particular person.  We will call these "privacy sensitive contexts".
+a particular person.  We will call these "privacy sensitive contexts".  Note that a device or TD does not
+need to generate or contain explicit PII to be privacy sensitive.  If PII can be inferred from the 
+information contained in a TD, and that Thing is associated with an identifiable person, then it is
+potentially privacy sensitive.
+
+All the following assertions should be read as if they begin with the phrase "In a privacy sensitive context
+associated with an identifable person ..."
 
 ### TDs MUST not contain PII.
 For example, a TD must not contain the email of a person with which it is associated or embed their name, address, or other PII 
 in a description or title field, unless specifically required by the use cases. 
-ML: It must be under the descretion of the owner of the thing to chose to whom to expose which PII.
-There are cases where a TD without PII is useless.
+
+**ML: It must be under the descretion of the owner of the thing to chose to whom to expose which PII.
+There are cases where a TD without PII is useless.**
 
 ### TDs MUST be transmitted only to Authenticated and Authorized consumers.
 Services providing TDs must require authentication (for example, using OAuth or PKI) of the requester to ensure they
 are who they say they are.  In addition, the system needs to ensure that the requester is authorized to receive TDs.
 
 ### Consumers MUST accept TDs only from Authenticated producers
-In other words, communication of TDs between producers and consumers must be over mutually authenticated channels,
-or the authenticity of a producer is validated by some other means (e.g. cryptographic signatures).
+In other words, communication of TDs between producers and consumers must be over mutually authenticated channels.
+
+**ML: ...or the authenticity of a producer is validated by some other means (e.g. cryptographic signatures).**
 
 ### TDs provided to a Consumer MUST be filtered to remove any optional information not required by that Consumer.
-For example, if a Consumer does not need human-readable titles or descriptions in a TD, these should be removed.
-ML: How does a producer know about the capabilities / requirements of a consumer? We don't have a mechanism to convey this information. In many scenarios a TD producer does not know about the potential consumers. This comment applies also o the points below.
-If a Consumer does not need to maintain state related to the consumed device, then an ID is not necessary and should be omitted.
-If a Consumer does not do semantic processing, then all semantic annotations can be omitted.
-ML: It still is useful for documentation purposes and should be preserved.
-If a Consumer does not do link processing then links should be omitted.
-Metadata (such as TD creation time) should be omitted if the Consumer does not need it.
-If the Consumer already "knows" the Data Schema or does not process the data (for example, if it only caches it) then data schemas can
-be omitted; likewise for URI templates. ML: How is this "knowledge" conveyed to the consumer?
+For example, 
+* If a Consumer does not need human-readable titles or descriptions in a TD, these should be removed.
+  ** ML: How does a producer know about the capabilities / requirements of a consumer? We don't have a mechanism to convey this information. In many scenarios a TD producer does not know about the potential consumers. This comment applies also to the points below.**
+* If a Consumer does not need to maintain state related to the consumed device, then an ID is not necessary and should be omitted.
+* If a Consumer does not do semantic processing, then all semantic annotations can be omitted.
+  **ML: It still is useful for documentation purposes and should be preserved.**
+* If a Consumer does not do link processing then links should be omitted.
+* Metadata (such as TD creation time) should be omitted if the Consumer does not need it.
+* If the Consumer already "knows" the Data Schema or does not process the data (for example, if it only caches it) then data schemas can
+be omitted; likewise for URI templates. **ML: How is this "knowledge" conveyed to the consumer?**
 
 ### Mechanisms to request TDs MUST include query parameters to specify the information provided.
 The mechanism to request a TD should include query parameters to state the kinds of information necessary and the delivered
@@ -136,18 +145,18 @@ links (identified by relation type);
 metadata (creation time, modification time, support, and version information);
 data schemas;
 and URI templates.
-ML: This mechanism is not part of the current specs.
+**ML: This mechanism is not part of the current specs.**
 
 ### TDs MUST be protected by encryption when at rest.
 TDs must be stored in an encrypted data store, and access to this store should be limited to authorized users.
-ML: This goes a bit far - We should constrain it to "TDs containing PII"
+**ML: This goes a bit far - We should constrain it to "TDs containing PII"**
 
 ### TDs MUST be protected by encryption when transmitted.
-ML: again constrain to "TDs with PII"
+**ML: again constrain to "TDs with PII"**
 TDs must not be transmitted in plaintext.
 
 ### TDs MUST be stored in Consumers for only a limited time appropriate to the application.
-ML: again constrain to "TDs with PII"
+**ML: again constrain to "TDs with PII"**
 Note that this rule does not apply to Producers or system inventory managers, which may need to store
 TDs for the lifetime of the device.
 
@@ -174,7 +183,7 @@ if the data is protected by another layer of authentication and encryption, for 
 carried on a private network (for example, an encrypted VLAN).
 
 ### Context files MUST NOT be dereferenced if these dereferences can be associated with specific Things
-ML: This is a requirement for a consumer that cannot be enforced.
+**ML: This is a requirement for a consumer that cannot be enforced.**
 Context file dereferences can cause a privacy issue similar to a DNS leak.
 Therefore Consumers should use the URLs given in the context field of a TD only to 
 identify vocabularies already "known" (built-in) to the Consumer.
