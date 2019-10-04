@@ -197,6 +197,13 @@ person associated with a device is aware of the set of Consumers that can access
 a person onboards a new Thing to a home gateway, as part of the onboarding process they can be asked for their
 consent to allow other devices also onboarded the to same gateway to access the TD of the new device.
 
+### TDs from which PII can be inferred should be managed as if they contained explicit PII
+This assertion is to make it clear that inference is as much of a risk as explicit personal information.
+The latter will generally not be in a TD and is relatively easy to avoid.  Managing the risk of
+inferencing is much harder.  This assertion does have legal implications: for example, it means that in some
+legal jurisdictions, consent must be obtained to acquire and store TDs, limits are placed on how long they
+can be retained, and so forth.  This is the intent of this assertion.
+
 ## Other Points of Discussion
 There are cases when instead of omitting identifiers we need to use context-dependent or temporary identifiers.
 What assertions should be associated with these usages?
