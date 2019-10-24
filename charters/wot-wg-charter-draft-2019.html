@@ -189,7 +189,7 @@
         
         <div class="summary">
           <p style="text-align:left;font-style:italic">Scope Summary</p>
-          After each work item we identify the deliverables it may be included in.
+          After each work item, in parenthesis, we identify the deliverables it may be included in.
           <dl>
 	    <dt><strong>Architectural Requirements, Use Cases, and Vocabulary</strong> (Architecture)</dt>
             <dd>Understand and describe requirements of new use cases, architectural patterns, and concepts.</dd>
@@ -197,7 +197,7 @@
             <dd>Define link relation types for specific relationships.</dd>
             <dt><strong>Interoperability Profiles:</strong> (Profile)</dt>
             <dd>Support plug-and-play interoperabilty via a profile mechanism that defines specific subsets of TDs.</dd>
-            <dt><strong>Thing Description Templates:</strong> (Profile)</dt>
+            <dt><strong>Thing Description Templates:</strong> (Architecture, Profile, Thing Description)</dt>
             <dd>Define a mechanism to describe classes of things and an inheritance mechanism.
             and define how Thing Descriptions can defined in a modular way.</dd>
             <dt><strong>Complex Interactions:</strong> (Architecture, Thing Description, Profile)</dt>
@@ -205,7 +205,7 @@
             <dt><strong>Discovery:</strong> (Discovery)</dt>
             <dd>Define how Things are discovered in both local and global contexts and Thing Descriptions are distributed.</dd>
 	    <dt><strong>Lifecycle:</strong> (Architecture)</dt>
-            <dd>Terminology for states and transitions for Things/devices and information.</dd>
+            <dd>Terminology for states and transitions for products, devices, and information.</dd>
             <dt><strong>Automatic Onboarding:</strong> (Architecture, Discovery)</dt>
             <dd>Define how Things can be onboarded to gateways and servers automatically without additional configuration tasks.</dd>
             <dt><strong>Identifier Management:</strong> (Architecture, Discovery)</dt>
@@ -438,10 +438,14 @@
 
         <h3>Lifecycle</h3>
 	<p>
-          Candidates for architectural vocabulary extension include a 
-          TD Producer concept and definition and description of states and transitions 
-          for device and information lifecycles, for example onboarding and offboarding of devices.
-          The information lifecycle is especially relevant to the protection
+          Definition and description of states and transitions 
+          for products, devices and information.
+          The product lifecycle definition will include the consideration that TDs can be 
+	  used during planning, design, manufacturing, operational and maintenance.
+	  The device lifecycle will deal with the process by which trust is established
+          and updated and the security configuration of a device is managed.
+          The information lifecycle relates to the evolution of sensitive information such as 
+          IDs in TDs and is especially relevant to the protection
           of privacy.
         </p>
 
