@@ -387,37 +387,6 @@
           directly rather than depending on a centralized infrastructure.
         </p>
         <p>
-          In this work item we will specify a privacy-preserving architecture
-          for Thing discovery.  
-          To approach this problem we can distinguish 
-          "introductions", which are first-contact mechanisms, from
-          "explorations", which are mechanisms for retrieving detailed metadata about devices and services.
-          To preserve privacy,
-          introductions should only provide the address
-          of an "exploration" service, and this address should be anonymized and opaque.
-          An exploration service should only provide detailed metadata
-          about devices and services after authentication and verification
-          of the authorization level of the requester.
-          The level of detail could also be adjusted to the authorization level of the requester.
-          Introduction and exploration could take several forms.
-          Introductions can be any mechanism that returns an address
-          of an exploration service.  In the local context broadcast
-          protocols, DHCP, DNS-SD, Bluetooth beacons, QR codes, 
-          and a variety of other mechanisms could be used.  In the global
-          context a search engine could be used.  However, in all cases
-          introductions would result in the address of an exploration service. 
-          Exploration could be implemented as a web service
-          providing a searchable directory of TDs protected by existing authentication
-          and authorization mechanisms such as OAuth2.
-          By making the 
-          addresses returned by introductions opaque and requiring authentication
-          for access to exploration services we can control who has access
-          to detailed information about specific devices.
-          Peer-to-peer discovery could be supported as a special
-          case of this where Things self-host their own introduction mechanisms
-          and exploration services.
-        </p>
-        <p>
           This work item will require a coordinated effort with other standards
           bodies such as IETF also working on discovery and directory mechanisms
           so that a common architecture can be defined.  
