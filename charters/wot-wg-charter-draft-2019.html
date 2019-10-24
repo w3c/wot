@@ -206,8 +206,9 @@
             <dd>Define a non-mandatory mechanisms to search for and retrieve Thing Descriptions in both local and global contexts.</dd>
 	    <dt><strong>Lifecycle:</strong> (Architecture)</dt>
             <dd>Terminology for states and transitions for products, devices, and information.</dd>
-            <dt><strong>Automatic Onboarding:</strong> (Architecture, Discovery)</dt>
-            <dd>Define how Things can be onboarded to gateways and servers automatically without additional configuration tasks.</dd>
+            <dt><strong>Onboarding:</strong> (Architecture, Discovery)</dt>
+            <dd>Define how trust can be established between Things, gateways, and servers 
+            and how security configurations and provisioning can be established.</dd>
             <dt><strong>Identifier Management:</strong> (Architecture, Discovery)</dt>
             <dd>Mitigate privacy risks by defining how identifiers are managed and updated.</dd>
             <dt><strong>Security Schemes:</strong> (Thing Description)</dt>
@@ -415,19 +416,16 @@
           of privacy.
         </p>
 
-        <h3>Automatic Onboarding</h3>
+        <h3>Onboarding</h3>
         <p>
-          Onboarding of Things frequently requires complex human tasks 
-          to ensure safeguarding against unauthorized access and usage of devices and data.
-          If many devices are to be onboarded at the same time, this may cause significant
-          effort.
-          In this work item we will define mechanisms to perform automatic onboarding of 
+          In this work item we will define mechanisms to perform minimum-effort
+          onboarding of 
           Things in a secure way that conforms to the security and privacy requirements
           of specific deployment scenarios and use cases. 
         </p>
         <p>
           This work item complements the work that is done for device discovery,
-          however is also applicable for use cases without an exploration service.
+          however is also applicable for other use cases.
         </p>
 
         <h3>Identifier Management</h3>
@@ -680,9 +678,9 @@ associated Call for Exclusion on 14 December 2017 ended on 11 February 2018.<br/
               <p><b>Editor's Draft:</b> 
                  <a href="https://w3c.github.io/wot-profile/">https://w3c.github.io/wot-profile/</a> 
 
-            <dt id="wot-discovery" class="spec">Web of Things (WoT) Discovery and Onboarding</dt>
+            <dt id="wot-discovery" class="spec">Web of Things (WoT) Discovery</dt>
             <dd>
-              <p>This specification defines how WoT Things are to be discovered and onboarded using
+              <p>This specification defines how WoT Thing Descriptions are to be discovered and distributed using
                  a privacy-preserving architecture.
               </p>
               <p class="draft-status"><b>Draft state:</b> <a href="#">None</a></p>
