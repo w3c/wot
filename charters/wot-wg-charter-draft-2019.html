@@ -189,32 +189,34 @@
         
         <div class="summary">
           <p style="text-align:left;font-style:italic">Scope Summary</p>
-          
+          After each work item we identify the deliverables it may be included in.
           <dl>
-	    <dt><strong>Architectural Requirements, Use Cases, and Vocabulary</strong></dt>
+	    <dt><strong>Architectural Requirements, Use Cases, and Vocabulary</strong> (Architecture)</dt>
             <dd>Understand and describe requirements of new use cases, architectural patterns, and concepts.</dd>
-            <dt><strong>Link Relation Types:</strong></dt>
+            <dt><strong>Link Relation Types:</strong> (Architecture, Thing Description)</dt>
             <dd>Define link relation types for specific relationships.</dd>
-            <dt><strong>Interoperability Profiles:</strong></dt>
+            <dt><strong>Interoperability Profiles:</strong> (Profile)</dt>
             <dd>Support plug-and-play interoperabilty via a profile mechanism that defines specific subsets of TDs.</dd>
-            <dt><strong>Thing Description Templates:</strong></dt>
+            <dt><strong>Thing Description Templates:</strong> (Profile)</dt>
             <dd>Define a mechanism to describe classes of things and an inheritance mechanism.
             and define how Thing Descriptions can defined in a modular way.</dd>
-            <dt><strong>Complex Interactions:</strong></dt>
+            <dt><strong>Complex Interactions:</strong> (Architecture, Thing Description, Profile)</dt>
             <dd>Document how hypermedia controls can be used to describe complex interactions and thing behaviour.</dd>
-            <dt><strong>Discovery:</strong></dt>
+            <dt><strong>Discovery:</strong> (Discovery)</dt>
             <dd>Define how Things are discovered in both local and global contexts and Thing Descriptions are distributed.</dd>
-            <dt><strong>Automatic Onboarding:</strong></dt>
+	    <dt><strong>Lifecycle:</strong> (Architecture)</dt>
+            <dd>Terminology for states and transitions for Things/devices and information.</dd>
+            <dt><strong>Automatic Onboarding:</strong> (Architecture, Discovery)</dt>
             <dd>Define how Things can be onboarded to gateways and servers automatically without additional configuration tasks.</dd>
-            <dt><strong>Identifier Management:</strong></dt>
+            <dt><strong>Identifier Management:</strong> (Architecture, Discovery)</dt>
             <dd>Mitigate privacy risks by defining how identifiers are managed and updated.</dd>
-            <dt><strong>Security Schemes:</strong></dt>
+            <dt><strong>Security Schemes:</strong> (Thing Description)</dt>
             <dd>Vocabulary for new security schemes supporting targetted protocols, use cases and new requirements.</dd>
-            <dt><strong>Thing Description Vocabulary:</strong></dt>
+            <dt><strong>Thing Description Vocabulary:</strong> (Thing Description)</dt>
             <dd>Extensions to Thing Description vocabulary definitions.</dd> 
-            <dt><strong>Protocol Vocabulary and Bindings:</strong></dt>
+            <dt><strong>Protocol Vocabulary and Bindings:</strong> (Thing Description)</dt>
             <dd>Extensions to protocol vocabulary definitions and protocol bindings.</dd> 
-            <dt><strong>Observe Defaults:</strong></dt>
+            <dt><strong>Observe Defaults:</strong> (Thing Description)</dt>
             <dd>For protocols such as HTTP where multiple ways to implement "observe" is possible, define a default.</dd>
           </dl>
         </div>
@@ -233,14 +235,7 @@
           architectural patterns may need to be revisited to include
           these new concepts.
         </p>
-	<p>
-          Candidates for architectural vocabulary extension include a 
-          TD Producer concept and definition and description of states and transitions 
-          for device and information lifecycles.
-          The information lifecycle is especially relevant to the protection
-          of privacy.
-        </p>
-
+              
 	<h3>Link Relation Types</h3>
 	<p>
           The
@@ -439,6 +434,15 @@
           directory-based discovery, both local and global discovery,
           be privacy-preserving, and be coordinated with other standards bodies 
           and W3C working groups.
+        </p>
+
+        <h3>Lifecycle</h3>
+	<p>
+          Candidates for architectural vocabulary extension include a 
+          TD Producer concept and definition and description of states and transitions 
+          for device and information lifecycles, for example onboarding and offboarding of devices.
+          The information lifecycle is especially relevant to the protection
+          of privacy.
         </p>
 
         <h3>Automatic Onboarding</h3>
