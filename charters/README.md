@@ -18,14 +18,27 @@ Check [How to Get Involved](https://github.com/w3c/wot#how-to-get-involved) if y
 
 ## Status
 
-### WoT IG Re-charter
+### WoT IG Charter
 
+#### 2016
+* [Working document](https://github.com/w3c/wot/blob/master/charters/wot-ig-2016.html)
+  * [Rendered document](http://w3c.github.io/wot/charters/wot-ig-2016.html)
+
+#### 2019
 * [Working document](https://github.com/w3c/wot/blob/master/charters/wot-ig-2019.html)
   * [Rendered document](http://w3c.github.io/wot/charters/wot-ig-2019.html)
-* [Diff from the current Charter](https://github.com/w3c/wot/blob/master/charters/diff.html)
+* [Diff from the 2016 Charter](https://github.com/w3c/wot/blob/master/charters/diff.html)
   * [Rendered document](http://w3c.github.io/wot/charters/diff.html)
 
 ### WoT WG Charter
 
+#### 2016
+
 * [Working document](https://github.com/w3c/wot/blob/master/charters/wot-wg-2016.html)
-* [Rendered document](http://w3c.github.io/wot/charters/wot-wg-2016.html)
+  * [Rendered document](http://w3c.github.io/wot/charters/wot-wg-2016.html)
+
+#### 2019
+Note: Submitted, not yet approved.
+
+* [Working document](https://github.com/w3c/wot/blob/master/charters/wot-wg-charter-draft-2019.html)
+  * [Rendered document](https://cdn.statically.io/gh/w3c/wot/master/charters/wot-wg-charter-draft-2019.html?env=dev)
