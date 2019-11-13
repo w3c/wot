@@ -432,9 +432,9 @@
         <p>
           A <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
           contains an identifier meant to be
-          unique to every Thing. This identifier is essential for database
-          management (for example, for device inventory) but also 
-          constitutes a privacy risk.  In particular, an immutable
+          unique to every Thing. This identifier is useful for database
+          management (for example, for device inventory) but can also 
+          pose a privacy risk.  In particular, an immutable
           unique identifier might be used to track a device and from 
           that infer the location or activities of the owner of that device.
           If identifiers persist across transfer of ownership of 
@@ -442,7 +442,7 @@
           or pose an even greater tracking risk.
         </p>
         <p>
-          In order to preserve privacy, such identifiers may need to
+          In order to preserve privacy or confidentiality, such identifiers may need to
           be considered mutable so that such tracking can be disrupted.
           More generally, the lifecycle of such identifiers needs to 
           be defined: when they are assigned, when and how they are
@@ -455,7 +455,7 @@
           This work item would define an identifier management lifecycle
           that would seek, as much as possible, to mitigate the privacy
           risks posed by explicit device identifiers while retaining
-          their functionality in database management and indexing.
+          their functionality, for example in database management and indexing.
           Implementation of functionality to support updates to 
           identifiers could also be included in the definition of
           directory services supporting discovery.
