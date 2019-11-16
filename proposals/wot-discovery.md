@@ -16,7 +16,7 @@ multiple "first contact" mechanisms, supports advanced querying
 capabilities, and supports both local and global discovery use cases.
 This discovery process is based on CoRE Resource Directory {{CoRE-RD}}
 with authentication following ACE {{ACE}} and can be accessed over either
-CoAP {{CoAP}} or HTTP {{HTTP}}.  To preserve privacy, the system
+CoAP {{CoAP}} or HTTP {{HTTP1.1}}.  To preserve privacy, the system
 separates the discovery process into two stages, open
 introduction protocols for first contact and a directory service that
 provides querying capabilities and access to metadata, but only after
@@ -31,12 +31,13 @@ This MAY {{?RFC2119}} be useful.
 ## References
 
 ### Normative
-* ACE: RFC0793
-* CoAP: RFC0793
-* CoRE-Link: RFC0793
-* CoRE-RD: RFC0793
-* HTTP: RFC0793
-* WoT-TD: RFC0793
-* RFC2119: 
+* [ACE-OAuth2](https://datatracker.ietf.org/doc/draft-ietf-ace-oauth-authz/)
+* [CoAP (RFC7252)](https://datatracker.ietf.org/doc/rfc7252/)
+* [CoRE-Link (RFC6690)](https://datatracker.ietf.org/doc/rfc6690/)
+* [CoRE-RD](https://datatracker.ietf.org/doc/draft-ietf-core-resource-directory/)
+* [HTTP1.1 (RFC2616)](https://datatracker.ietf.org/doc/rfc2616/)
+* [WoT-TD](https://www.w3.org/TR/wot-thing-description/)
+* [RFC2119](https://datatracker.ietf.org/doc/rfc2119/)
+
 ### Informative
-* WoTArch: RFC0793
+* [WoT-Arch](https://www.w3.org/TR/wot-architecture/)
