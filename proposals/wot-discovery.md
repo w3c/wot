@@ -25,11 +25,11 @@ authentication and authorization.  Any introduction mechanism may be
 used that can provide the address of a directory service but we will
 specify several useful ones.  
 
-# Introduction
+## Introduction
 
 This MAY {{?RFC2119}} be useful.
 
-# Requirements
+## Requirements
 
 The WoT discovery process should have the following capabilities:
 * Support peer-to-peer (self-identifying), local (network segment), and global (internet-wide) discovery
@@ -42,15 +42,48 @@ The WoT discovery process should have the following capabilities:
 * Align with existing standards as much as possible
 * Support WoT Scripting Discovery API
 
-## Privacy-Preserving Architecture
+### Privacy-Preserving Architecture
 * Support device and information lifecycle, trust management, access controls
 * Distribute TDs only to authenticated and authorized users
 * Don’t leak metadata or queries to unauthorized entities
 
-## Alignment with existing standards
+### Alignment with existing standards
 * Align with IETF CoRE Resource Directories, CoRE Link Format, and DID.
 * Be accessible via a variety of existing discovery mechanisms,
   including DNS-SD, DNS-SRV, DHCP, QR codes, and Bluetooth beacons.
+
+### Architecture
+Two-phase architecture: open and lightweight "first contact" introduction 
+mechanism, following by an authenticated and authorization step that gates
+access to an "exploration" directory mechanism that provides detailed metadata.
+The first contact mechanism should be designed to preserve privacy, and will
+essentially be designed just to provide links to directory services without
+revealing what devices are indexed by those directories.
+
+#### Introduction: First Contact Mechanism
+* Obtain address of directory service - only
+* Address should not leak any other metadata, eg type of devices
+* Can have multiple mechanisms for introduction
+  - Local: QR code. mDNS, DNS-SD, DHCP, QR code, Bluetooth beacon, etc.
+  - Global: search engine
+  - Self: Well-known addresses, eg “.well-known/core?rt=wot.directory”
+
+#### Exploration: Directory 
+* Mutual authentication and secure connection required, and then...
+* Queryable Directory service
+* Multiple query type supported
+  - Location (may be necessary to use for introduction)
+  - Keywords
+  - Templates
+  - SPARQL semantic query
+  - GraphQL
+  - By-Example (templates)
+* External service: 
+  - Need registration sub-API
+  - Timeouts
+  - Access control
+  - Self (peer-to-peer): same query API, but no public registration API
+  - Mutable IDs need way to notify registered users of changes
 
 ## References
 
