@@ -1,47 +1,11 @@
----
-coding: utf-8
+# WoT Thing Description Discovery
+abbreviation: wot-discovery
 
-title: WoT Thing Description Discovery
-abbrev: wot-td-discovery
-docname: draft-wot-td-discovery
-category: info
+## Authors
+* Michael McCool, Intel Corporation, michael.mccool@intel.com
+* Carsten Bormann, Universität Bremen TZI, cabo@tzi.org
 
-stand_alone: yes
-pi: [toc, sortrefs, symrefs, comments]
-
-author:
-  -
-    ins: M. McCool
-    name: Michael McCool
-    org: Intel Corporation
-    street: 33 av Chouinard
-    city: Edmundston
-    code: E3V 3J3
-    country: Canada
-    phone: +1-506-739-6753
-    email: michael.mccool@intel.com
-  -
-    ins: C. Bormann
-    name: Carsten Bormann
-    org: Universität Bremen TZI
-    street: Postfach 330440
-    city: Bremen
-    code: D-28359
-    country: Germany
-    phone: +49-421-218-63921
-    email: cabo@tzi.org
-
-normative:
-  ACE: RFC0793
-  CoAP: RFC0793
-  CoRE-Link: RFC0793
-  CoRE-RD: RFC0793
-  HTTP: RFC0793
-  WoT-TD: RFC0793
-informative:
-  WoTArch: RFC0793
-
---- abstract
+## Abstract
 
 W3C Web of Things (WoT) Thing Descriptions (TD) provide metadata that
 describe the affordances and semantics of IoT devices and services.
@@ -60,8 +24,19 @@ authentication and authorization.  Any introduction mechanism may be
 used that can provide the address of a directory service but we will
 specify several useful ones.  
 
---- middle
-
 # Introduction
 
 This MAY {{?RFC2119}} be useful.
+
+## References
+
+### Normative
+* ACE: RFC0793
+* CoAP: RFC0793
+* CoRE-Link: RFC0793
+* CoRE-RD: RFC0793
+* HTTP: RFC0793
+* WoT-TD: RFC0793
+* RFC2119: 
+### Informative
+* WoTArch: RFC0793
