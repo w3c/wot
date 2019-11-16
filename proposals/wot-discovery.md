@@ -1,4 +1,4 @@
-# WoT Thing Description Discovery
+# WoT Discovery
 abbreviation: wot-discovery
 
 ## Authors
