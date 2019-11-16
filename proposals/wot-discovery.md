@@ -92,6 +92,33 @@ CoRE proposes several discovery and directory mechanisms.
 These, however, only support discovery in local network segments via a (non-scalable) broadcast mechanism.
 This gives a rough localization as well, but delimited by the topology of the network segmentation.
 
+## Registration of TDs to CoRE Resource Directories
+```
+POST coap://rd.example.com/rd?ep=(Thing-ID)
+Content-Format: application/td+json
+```
+* Content-format ID is t.b.d., but needs to be in the 256-9999 range.
+* Registration with a directory will also support a time-to-live.
+  The Thing will have to periodically refresh the TD and/or send a keep-alive.
+* Updates to existing TDs should be supported to allow changes to TDs, 
+  including mutable IDs.
+
+## Retrieve TD from CoRE Resource Directory
+```
+GET coap://rd.example.com/rd-lookup?rt=MyLampThing
+Accept: application/td+json
+```
+Note: Technically CoRE-RD only stores links to resources, not the resources
+themselves.   So this may technically require a "CoRE Data Hub" to actually
+allow storage and retreival of TDs themselves.
+
+## Authentication
+* Authentication should be through either OAuth2 (for HTTP) or ACE-OAuth2 for CoAP.
+* Mutual authentication and confidentialityt should be supported via either TLS or DTLS.
+* The secure connection should be established before query parameters are set to avoid
+  inferencing of PII from query parameters.
+* OAuth2 scopes should be pre-defined for a suitable set of roles and tasks associated with those roles
+
 ## Other Introduction Mechanisms
 The IPv6 Authoritative Border Router Option, DHCP, DNS-SRV, QR codes, Bluetooth beacons
 can also be used for discovery of Things and Directory Services.  
