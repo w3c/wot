@@ -102,15 +102,17 @@ Content-Format: application/td+json
   The Thing will have to periodically refresh the TD and/or send a keep-alive.
 * Updates to existing TDs should be supported to allow changes to TDs, 
   including mutable IDs.
+* HTTP should also be supported.
 
 ## Retrieve TD from CoRE Resource Directory
 ```
 GET coap://rd.example.com/rd-lookup?rt=MyLampThing
 Accept: application/td+json
 ```
-Note: Technically CoRE-RD only stores links to resources, not the resources
-themselves.   So this may technically require a "CoRE Data Hub" to actually
-allow storage and retreival of TDs themselves.
+* Technically CoRE-RD only stores links to resources, not the resources
+  themselves.  A "CoRE Data Hub" combined with the RD may be required to actually
+  allow storage and retreival of TDs themselves.
+* HTTP should also be supported
 
 ## Authentication
 * Authentication should be through either OAuth2 (for HTTP) or ACE-OAuth2 for CoAP.
