@@ -85,6 +85,29 @@ revealing what devices are indexed by those directories.
   - Self (peer-to-peer): same query API, but no public registration API
   - Mutable IDs need way to notify registered users of changes
 
+## CoRE Discovery and Directories
+CoRE proposes several discovery and directory mechanisms.
+* Things by CoAP multicast on well-known URI, for example, `/.well-known/core?rt=w3c.wot.thing-description`
+* Discovery of Resource Directories use a similar approach: `/.well-known/core/?rt=core.rd*`
+These, however, only support discovery in local network segments via a (non-scalable) broadcast mechanism.
+This gives a rough localization as well, but delimited by the topology of the network segmentation.
+
+## Other Introduction Mechanisms
+The IPv6 Authoritative Border Router Option, DHCP, DNS-SRV, QR codes, Bluetooth beacons
+can also be used for discovery of Things and Directory Services.  
+All such mechanisms are acceptable as long at they satisfy the following properties:
+* No metadata about the Things are distributed; only an address of a directory service should be returned.
+* If a link directly to a Thing is returned, the address should not have any implied metadata.
+   - For example, a URL should not be used with a human-readable name.
+* Generally, access to full directory services should only be provided after mutual authentication and authorization
+   - Privacy: both TDs and query parameters for searches can be used to infer PII information
+     even if the TDs do not explicitly include such information
+   - Security: directory queries can be expensive and so should only be invoked for authorized users to mitigate
+     denial-of-service attacks.  Mutual authentication also mitigates man-in-the-middle attacks based on manipulation
+     of TD metadata.
+Introduction services that are global in nature (eg DNS) may allow additional query parameters to identify
+the location of interest.  Other forms of metadata should however be avoided and the granularity of location accuracy
+should be limited to avoid the inference of PII.
 ## References
 
 ### Normative
