@@ -4,6 +4,7 @@ abbreviation: wot-discovery
 ## Authors
 * Michael McCool, Intel Corporation, michael.mccool@intel.com
 * Carsten Bormann, Universität Bremen TZI, cabo@tzi.org
+* Kunihiko Toumura (東村邦彦), Hitachi Ltd., kunihiko.toumura.yv@hitachi.com
 
 ## Abstract
 
