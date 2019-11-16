@@ -29,6 +29,29 @@ specify several useful ones.
 
 This MAY {{?RFC2119}} be useful.
 
+# Requirements
+
+The WoT discovery process should have the following capabilities:
+* Support peer-to-peer (self-identifying), local (network segment), and global (internet-wide) discovery
+* Support various forms of query, including keyword, template, and semantic queries
+* Be able to discover sleeping devices
+* Support directory services (discovery via third-party services)
+* Automatically clean up TDs for devices that are no longer accessible
+* Support both static and dynamic TDs
+* Support appropriate security and privacy goals
+* Align with existing standards as much as possible
+* Support WoT Scripting Discovery API
+
+## Privacy-Preserving Architecture
+* Support device and information lifecycle, trust management, access controls
+* Distribute TDs only to authenticated and authorized users
+* Don’t leak metadata or queries to unauthorized entities
+
+## Alignment with existing standards
+* Align with IETF CoRE Resource Directories, CoRE Link Format, and DID.
+* Be accessible via a variety of existing discovery mechanisms,
+  including DNS-SD, DNS-SRV, DHCP, QR codes, and Bluetooth beacons.
+
 ## References
 
 ### Normative
