@@ -31,13 +31,13 @@ This MAY {{?RFC2119}} be useful.
 ## References
 
 ### Normative
-* [ACE-OAuth2](https://datatracker.ietf.org/doc/draft-ietf-ace-oauth-authz/)
-* [CoAP (RFC7252)](https://datatracker.ietf.org/doc/rfc7252/)
-* [CoRE-Link (RFC6690)](https://datatracker.ietf.org/doc/rfc6690/)
-* [CoRE-RD](https://datatracker.ietf.org/doc/draft-ietf-core-resource-directory/)
-* [HTTP1.1 (RFC2616)](https://datatracker.ietf.org/doc/rfc2616/)
-* [WoT-TD](https://www.w3.org/TR/wot-thing-description/)
-* [RFC2119](https://datatracker.ietf.org/doc/rfc2119/)
+* [ACE-OAuth2: Authentication and Authorization for Constrained Environments (ACE) using the OAuth 2.0 Framework](https://datatracker.ietf.org/doc/draft-ietf-ace-oauth-authz/)
+* [CoAP (RFC7252): The Constrained Application Protocol](https://datatracker.ietf.org/doc/rfc7252/)
+* [CoRE-Link (RFC6690): Constrained RESTful Environments (CoRE) Link Format](https://datatracker.ietf.org/doc/rfc6690/)
+* [CoRE-RD: CoRE Resource Directory](https://datatracker.ietf.org/doc/draft-ietf-core-resource-directory/)
+* [HTTP1.1 (RFC2616): Hypertext Transfer Protocol -- HTTP/1.1](https://datatracker.ietf.org/doc/rfc2616/)
+* [WoT-TD: W3C Web of Things (WoT) Thing Description](https://www.w3.org/TR/wot-thing-description/)
+* [RFC2119: Key words for use in RFCs to Indicate Requirement Levels](https://datatracker.ietf.org/doc/rfc2119/)
 
 ### Informative
-* [WoT-Arch](https://www.w3.org/TR/wot-architecture/)
+* [WoT-Arch: W3C Web of Things (WoT) Architecture](https://www.w3.org/TR/wot-architecture/)
