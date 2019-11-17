@@ -29,38 +29,57 @@ specify several useful ones.
 
 This MAY {{?RFC2119}} be useful.
 
+## Background
+
 ## Requirements
 
 The WoT discovery process should have the following capabilities:
-* Support peer-to-peer (self-identifying), local (network segment), and global (internet-wide) discovery
-* Support various forms of query, including keyword, template, and semantic queries
-* Be able to discover sleeping devices
-* Support directory services (discovery via third-party services)
-* Automatically clean up TDs for devices that are no longer accessible
-* Support both static and dynamic TDs
-* Support appropriate security and privacy goals
-* Align with existing standards as much as possible
+
+### System
+* Support discovery via third-party services (e.g. a directory service) in order to support sleeping devices
 * Support WoT Scripting Discovery API
 
-### Privacy-Preserving Architecture
+### Localization, Search, and Filtering
+* Support peer-to-peer (self-identifying), local (network segment), and global (internet-wide) discovery
+* Support various forms of query, including keyword, template, and semantic queries
+
+### Data Management
+* Support both Dynamic and Static TDs
+* Automatically clean up TDs for devices that are no longer accessible
+
+### Security
+* Support best known methods for authentication
+* Support authorization and role management
+
+### Privacy
+* Support authentication and authorization mechanisms that do not reveal user identities
 * Support device and information lifecycle, trust management, access controls
 * Distribute TDs only to authenticated and authorized users
 * Don’t leak metadata or queries to unauthorized entities
 
-### Alignment with existing standards
+### Alignment with Existing Standards
 * Align with IETF CoRE Resource Directories, CoRE Link Format, and DID.
 * Be accessible via a variety of existing discovery mechanisms,
   including DNS-SD, DNS-SRV, DHCP, QR codes, and Bluetooth beacons.
 
-### Architecture
+## Use Cases
+TODO
+
+## Architecture
 Two-phase architecture: open and lightweight "first contact" introduction 
 mechanism, following by an authenticated and authorization step that gates
 access to an "exploration" directory mechanism that provides detailed metadata.
+
 The first contact mechanism should be designed to preserve privacy, and will
 essentially be designed just to provide links to directory services without
 revealing what devices are indexed by those directories.
 
-#### Introduction: First Contact Mechanism
+The exploration mechanism should be designed to be scalable, and implementable
+both on small devices (with a small amount of data, such as a single TD) and on
+larger systems managing millions of devices.   It should support searches of
+various types.
+
+### Introduction Phase: First Contact Mechanism
 * Obtain address of directory service - only
 * Address should not leak any other metadata, eg type of devices
 * Can have multiple mechanisms for introduction
@@ -68,7 +87,7 @@ revealing what devices are indexed by those directories.
   - Global: search engine
   - Self: Well-known addresses, eg “.well-known/core?rt=wot.directory”
 
-#### Exploration: Directory 
+### Exploration Phase: Directory 
 * Mutual authentication and secure connection required, and then...
 * Queryable Directory service
 * Multiple query type supported
@@ -84,6 +103,17 @@ revealing what devices are indexed by those directories.
   - Access control
   - Self (peer-to-peer): same query API, but no public registration API
   - Mutable IDs need way to notify registered users of changes
+  
+## Design Options
+
+### Use an Existing Mechanism for Discovery
+TODO
+
+### Use Existing Mechanisms for Introductions and a New Mechanism for Exploration
+TODO
+
+### Design a new Mechanism for both Introduction and Exploration
+TODO
 
 ## CoRE Discovery and Directories
 CoRE proposes several discovery and directory mechanisms.
