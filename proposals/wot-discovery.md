@@ -233,56 +233,49 @@ correlated with spatial locality.  On the other hand, it may be better correllat
 rights.
 
 * **mDNS (+ DNS-SD)**
-          <ul>
-              <li>Base technology: IP + UDP</li>
-              <li>multicast DNS (mDNS) resolves host names to IP addresses within small networks. When an mDNS client needs to resolve a host name, it sends an IP multicast query message that asks the host having that name to identify itself. That target machine then multicasts a message that includes its IP address. All machines in that subnet can then use that information to update their mDNS caches.</li>
-              <li>often used in conjunction with DNS-SD that allows clients to conduct simple service discovery using standard DNS queries.</li>
-              <li>part of 'zeroconf' technology suite</li>
-              <li>implemented e.g. by Apple Bonjour</li>
-              <li>Interaction style: pull (client initiates communication)</li>
-              <li>https://tools.ietf.org/html/rfc6762 (+ https://tools.ietf.org/html/rfc6763)</li>
-          </ul>
-          <p><b>Multicast CoAP</b>
-          <ul>
-              <li>Base technology: IP + UDP + CoAP</li>
-              <li>CoAP supports making requests to an IP multicast group.</li>
-              <li>Clients can use multicast CoAP and the "All CoAP Nodes" multicast address to find CoAP servers. CoAP servers listen on the "All CoAP Nodes" address and the default CoAP port to reply to clients.</li>
-              <li>in combination with CoRE Link Format: a GET request to the appropriate multicast address is made for '/.well-known/core' (https://tools.ietf.org/html/rfc6690)</li>
-              <li>Interaction style: pull (client initiates communication)</li>
-              <li>https://tools.ietf.org/html/rfc7252</li>
-          </ul>
-          <p><b>SSDP</b>
-          <ul>
-              <li>Base technology: IP + UDP + HTTPU + SOAP</li>
-              <li>used by UPnP for discovery</li>
-              <li>'Simple Service Discovery Protocol' (SSDP)</li>
-              <li>In order to discover SSDP services, an SSDP client multicasts a HTTP UDP discovery request to the SSDP multicast channel/Port. SSDP services listen to the SSDP multicast channel/Port. If a SSDP service hears a HTTP UDP discovery request that matches the service it offers then it will respond using a unicast HTTP UDP response.</li>
-              <li>Interaction style: pull (client initiates communication); however, some UPnP devices also push info periodically</li>
-              <li>https://tools.ietf.org/html/draft-cai-ssdp-v1-03</li>
-          </ul>
-          <p><b>WS-Discovery</b>
-          <ul>
-              <li>Base technology: IP + TCP/UDP + SOAP et al.</li>
-              <li>specifies multicast discovery via web service based communication; avoids the need for centralized registries in smaller networks.</li>
-              <li>used by OASIS' Device Profile for Web Services (DPWS)</li>
-              <li>implemented e.g. by Microsoft Web Services on Devices API</li>
-              <li>Interaction style: pull (client initiates communication)</li>
-              <li>http://docs.oasis-open.org/ws-dd/discovery/1.1/os/wsdd-discovery-1.1-spec-os.html</li>
-          </ul>
-          <p><b>XMPP Service Discovery</b>
-          <ul>
-              <li>Base technology: IP + TCP + XMPP</li>
-              <li>discovering information about other XMPP entities (e.g. user). Two kinds of information can be discovered: (1) the identity and capabilities of an entity and (2) the items associated with an entity, such as the list of rooms hosted at a multi-user chat service.</li>
-              <li>Interaction style: pull (client initiates communication)</li>
-              <li>http://xmpp.org/extensions/xep-0030.html</li>
-              <li>update: http://xmpp.org/extensions/xep-0115.html#discover</li>
-          </ul>
-          <p><b>µPnP</b>
-          <ul>
-              <li>Base technology: IP + UDP + CoAP + IPSO</li>
-              <li>CoAP support makes use of CoAP's Resource Directory. Modified 802.15.4 link layer for support of uPnP. Resources formatted using IPSO Objects.</li>
-              <li>http://www.micropnp.com/ipso/index.html</li>
-          </ul>
+    - Base technology: IP + UDP
+    - multicast DNS (mDNS) resolves host names to IP addresses within small networks. When an mDNS client needs to resolve a host name, it sends an IP multicast query message that asks the host having that name to identify itself. That target machine then multicasts a message that includes its IP address. All machines in that subnet can then use that information to update their mDNS caches.
+    - often used in conjunction with DNS-SD that allows clients to conduct simple service discovery using standard DNS queries.
+    - part of 'zeroconf' technology suite
+    - implemented e.g. by Apple Bonjour
+    - Interaction style: pull (client initiates communication)
+    - References:  {{RFC6762}} (+ {{RFC6763}} )
+
+* **Multicast CoAP**
+    - Base technology: IP + UDP + CoAP
+    - CoAP supports making requests to an IP multicast group.
+    - Clients can use multicast CoAP and the "All CoAP Nodes" multicast address to find CoAP servers. CoAP servers listen on the "All CoAP Nodes" address and the default CoAP port to reply to clients.
+    - in combination with CoRE Link Format: a GET request to the appropriate multicast address is made for '/.well-known/core' (https://tools.ietf.org/html/rfc6690)
+    - Interaction style: pull (client initiates communication)
+    - References: {{RFC7252}}
+
+* **SSDP**
+    - Base technology: IP + UDP + HTTPU + SOAP
+    - used by UPnP for discovery
+    - 'Simple Service Discovery Protocol' (SSDP)
+    - In order to discover SSDP services, an SSDP client multicasts a HTTP UDP discovery request to the SSDP multicast channel/Port. SSDP services listen to the SSDP multicast channel/Port. If a SSDP service hears a HTTP UDP discovery request that matches the service it offers then it will respond using a unicast HTTP UDP response.
+    - Interaction style: pull (client initiates communication); however, some UPnP devices also push info periodically
+    - References: {{SSDP}}
+
+* **WS-Discovery**
+    - Base technology: IP + TCP/UDP + SOAP et al.
+    - specifies multicast discovery via web service based communication; avoids the need for centralized registries in smaller networks.
+    - used by OASIS' Device Profile for Web Services (DPWS)
+    - implemented e.g. by Microsoft Web Services on Devices API
+    - Interaction style: pull (client initiates communication)
+    - References: {{WS-Discovery}}
+
+* **XMPP Service Discovery**
+    - Base technology: IP + TCP + XMPP
+    - discovering information about other XMPP entities (e.g. user). Two kinds of information can be discovered: (1) the identity and capabilities of an entity and (2) the items associated with an entity, such as the list of rooms hosted at a multi-user chat service.
+    - Interaction style: pull (client initiates communication)
+    - References: {{XEP-0030}}, update: {{XEP-0115}}
+
+* **µPnP**
+    - Base technology: IP + UDP + CoAP + IPSO
+    - CoAP support makes use of CoAP's Resource Directory. Modified 802.15.4 link layer for support of uPnP. Resources formatted using IPSO Objects.
+    - References: {{MicroPnP}}
+
         </section>
         <section>
           <h2> Searching in Directories</h2>
@@ -841,6 +834,14 @@ rights.
 * [HTTP1.1 (RFC2616): Hypertext Transfer Protocol -- HTTP/1.1](https://datatracker.ietf.org/doc/rfc2616/)
 * [WoT-TD: W3C Web of Things (WoT) Thing Description](https://www.w3.org/TR/wot-thing-description/)
 * [RFC2119: Key words for use in RFCs to Indicate Requirement Levels](https://datatracker.ietf.org/doc/rfc2119/)
+* [Multicast DNS (RFC6762)](https://datatracker.ietf.org/doc/rfc6762/)
+* [DNS-Based Service Discovery (RFC6763)](https://datatracker.ietf.org/doc/rfc6763/)
+* [SSDP: Simple Service Discovery Protocol/1.0 Operating without an Arbiter](https://tools.ietf.org/html/draft-cai-ssdp-v1-03)
+* [Web Services Dynamic Discovery (WS-Discovery) Version 1.1](http://docs.oasis-open.org/ws-dd/discovery/1.1/wsdd-discovery-1.1-spec.html)
+* [XEP-0030: Service Discovery](https://xmpp.org/extensions/xep-0030.html)
+* [XEP-0115: Entity Capabilities](https://xmpp.org/extensions/xep-0115.html#discover)
+* [MicroPnP](http://www.micropnp.com/ipso/index.html) TODO: update a link
+
 
 ### Informative
 * [WoT-Arch: W3C Web of Things (WoT) Architecture](https://www.w3.org/TR/wot-architecture/)
