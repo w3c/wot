@@ -227,8 +227,12 @@ discover things nearby, in a spatial sense.
                  {{iBeacon}} (see: https://developer.apple.com/ibeacon)
 
 #### Finding Things on My Local Network
-This category includes technologies that allow discovery of endpoints on a local network.
-          <p><b>mDNS (+ DNS-SD)</b>
+This category includes technologies that allow discovery of endpoints on a local network segment.
+This can also find things "nearby", but in a network topology sense, which may be only loosely 
+correlated with spatial locality.  On the other hand, it may be better correllated with access
+rights.
+
+* **mDNS (+ DNS-SD)**
           <ul>
               <li>Base technology: IP + UDP</li>
               <li>multicast DNS (mDNS) resolves host names to IP addresses within small networks. When an mDNS client needs to resolve a host name, it sends an IP multicast query message that asks the host having that name to identify itself. That target machine then multicasts a message that includes its IP address. All machines in that subnet can then use that information to update their mDNS caches.</li>
