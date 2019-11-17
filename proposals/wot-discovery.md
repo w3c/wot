@@ -276,28 +276,24 @@ rights.
     - CoAP support makes use of CoAP's Resource Directory. Modified 802.15.4 link layer for support of uPnP. Resources formatted using IPSO Objects.
     - References: {{MicroPnP}}
 
-        </section>
-        <section>
-          <h2> Searching in Directories</h2>
-          In contrast to the above technologies, here, a central directory can be used for discovery of things and resources. Queries can be submitted to the directory to search for things and/or resources.
-          <p><b>CoRE Resource Directory</b>
-          <ul>
-              <li>Base technology: IP + UDP + CoAP</li>
-              <li>Resource Directory (RD) hosts descriptions of resources held on other servers, allowing lookups to be performed for those resources</li>
-              <li>Also defines lookup interface that allows simple queries (e.g.: GET /rd-lookup/res?rt=temperature )</li>
-              <li>https://tools.ietf.org/html/draft-ietf-core-resource-directory-04</li>
-          </ul>
-          <p><b>XMPP IoT Discovery</b>
-          <ul>
-              <li>Base technology: IP + TCP</li>
-              <li>Thing Registry can be searched for public Things and their metadata (various tags, e.g., location or serial number). A search is performed by providing one or more comparison operators in a search request to the registry.</li>
-              <li>http://xmpp.org/extensions/xep-0347.html#search</li>
-          </ul>
-          <p><b>HyperCat</b>
-          <ul>
-              <li>Base technology: IP + TCP + HTTP</li>
-              <li>HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs. HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.</li>
-              <li>http://www.hypercat.io/standard.html</li>
+#### Searching in Directories
+In contrast to the above technologies, here, a central directory can be used for discovery of things and resources. Queries can be submitted to the directory to search for things and/or resources.
+
+* **CoRE Resource Directory**
+    - Base technology: IP + UDP + CoAP
+    - Resource Directory (RD) hosts descriptions of resources held on other servers, allowing lookups to be performed for those resources
+    - Also defines lookup interface that allows simple queries (e.g.: `GET /rd-lookup/res?rt=temperature` )
+    - References: {{CoRE-RD}} 
+    
+* **XMPP IoT Discovery**
+    - Base technology: IP + TCP
+    - Thing Registry can be searched for public Things and their metadata (various tags, e.g., location or serial number). A search is performed by providing one or more comparison operators in a search request to the registry.
+    - References: http://xmpp.org/extensions/xep-0347.html#search</li>
+
+* **HyperCat**
+    - Base technology: IP + TCP + HTTP
+    - HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs. HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.
+    - References: http://www.hypercat.io/standard.html
           </ul>
           <p><b>Push API</b>
           <ul>
@@ -841,7 +837,8 @@ rights.
 * [XEP-0030: Service Discovery](https://xmpp.org/extensions/xep-0030.html)
 * [XEP-0115: Entity Capabilities](https://xmpp.org/extensions/xep-0115.html#discover)
 * [MicroPnP](http://www.micropnp.com/ipso/index.html) TODO: update a link
-
+* [XEP-0347: Internet of Things - Discovery](https://xmpp.org/extensions/xep-0347.html#search)
+* [HyperCat]()
 
 ### Informative
 * [WoT-Arch: W3C Web of Things (WoT) Architecture](https://www.w3.org/TR/wot-architecture/)
