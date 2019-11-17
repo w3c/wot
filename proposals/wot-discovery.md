@@ -166,7 +166,668 @@ All such mechanisms are acceptable as long at they satisfy the following propert
 Introduction services that are global in nature (eg DNS) may allow additional query parameters to identify
 the location of interest.  Other forms of metadata should however be avoided and the granularity of location accuracy
 should be limited to avoid the inference of PII.
-## References
+
+# Appendices 
+## A. Background
+
+The aim of this appendix is to collect and document candidate discovery technologies, 
+evaluate them, and to derive generic discovery interaction patterns. 
+The list of discovery categories can be found in the [Discovery Categories] section. 
+A list of discovery interaction patterns are presented in 
+the [Discovery Patterns] section, and
+an evaluation of technologies can be found in the [Discovery Technologies] section. 
+Further, we also analyzed which discovery technologies are supported by which IoT consortia
+and standards organizations.
+This analysis can be found in the [Support] section.
+      
+### Discovery Categories
+
+#### Finding Things Nearby
+This category of discovery includes technologies that allow systems to
+discover things nearby, in a spatial sense.
+
+* **Barcodes and QR codes**
+   - Can be visually read and decoded by a program (e.g. by an app)
+   - Max range: line of sight of the client
+   - Interaction style: pull (client initiates interaction)
+* **RFID**
+* **NFC (Near Field Communication)**
+   - Employs electromagnetic induction between two loop antennas 
+   - Operates on globally unlicensed radio frequency ISM band of 13.56 MHz
+   - Builds on RFID by allowing two-way communication between endpoints
+   - Can be utilized to bootstrap more powerful communication connections (e.g. Bluetooth or WiFi) between two devices
+   - Max range: ~10 cm
+* **Markerless Recognition**
+   - Augmented reality technique using a location service
+   - Location in turn can be based on accelerometers, cameras, compasses, available WiFi access points, GPS, etc.
+   - Camera may also be used to find field of view
+   - Based on derived position and a database of things indexed by location, surrounding things can be identified
+   - Implemented e.g. by AR browsers such as LAYAR or AURASMA
+   - Max range: Vicinity of client (accuracy of client's location is more of a constraint)
+   - Interaction style: pull (client initiates interaction)
+* **UriBeacon (Google's Physical Web)**
+   - Base technology: Bluetooth Low Energy
+   - BLE-enabled device periodically transmits an advertising packet containing a URI.
+   - UriBeacon approach does not require an app. 
+   - Since URI is identifying a beacon, standard Web mechanisms (DNS) can be used for resolving
+   - UriBeacon is now part of the Eddystone open source project which allows other beacon data formats in addition to URLs
+   - Eddystone supports broadcasting URLs via its Eddystone-URL frame type
+   - Max range: 100 meters (see: http://www.bluetooth.com/Pages/low-energy-tech-info.aspx)
+   - Interaction style: push (beacons broadcast information)</li>
+   - References: {{UriBeacon}}, {{EddyStone}}
+   https://github.com/google/uribeacon/tree/master/specification
+* **iBeacon (Apple)**
+   - Base technology: Bluetooth Low Energy
+   - BLE-enabled device periodically transmits an advertising packet containing a UUID
+   - iBeacon requires an app that is enabled to read whitelisted objects
+   - UUID resolution requires an external server containing an directory
+   - Max range: 100 meters 
+   - Interaction style: push (beacons broadcast information)
+   - References: {{BLE}} (see: http://www.bluetooth.com/Pages/low-energy-tech-info.aspx),
+                 {{iBeacon}} (see: https://developer.apple.com/ibeacon)
+
+#### Finding Things on My Local Network
+This category includes technologies that allow discovery of endpoints on a local network.
+          <p><b>mDNS (+ DNS-SD)</b>
+          <ul>
+              <li>Base technology: IP + UDP</li>
+              <li>multicast DNS (mDNS) resolves host names to IP addresses within small networks. When an mDNS client needs to resolve a host name, it sends an IP multicast query message that asks the host having that name to identify itself. That target machine then multicasts a message that includes its IP address. All machines in that subnet can then use that information to update their mDNS caches.</li>
+              <li>often used in conjunction with DNS-SD that allows clients to conduct simple service discovery using standard DNS queries.</li>
+              <li>part of 'zeroconf' technology suite</li>
+              <li>implemented e.g. by Apple Bonjour</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>https://tools.ietf.org/html/rfc6762 (+ https://tools.ietf.org/html/rfc6763)</li>
+          </ul>
+          <p><b>Multicast CoAP</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP</li>
+              <li>CoAP supports making requests to an IP multicast group.</li>
+              <li>Clients can use multicast CoAP and the "All CoAP Nodes" multicast address to find CoAP servers. CoAP servers listen on the "All CoAP Nodes" address and the default CoAP port to reply to clients.</li>
+              <li>in combination with CoRE Link Format: a GET request to the appropriate multicast address is made for '/.well-known/core' (https://tools.ietf.org/html/rfc6690)</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>https://tools.ietf.org/html/rfc7252</li>
+          </ul>
+          <p><b>SSDP</b>
+          <ul>
+              <li>Base technology: IP + UDP + HTTPU + SOAP</li>
+              <li>used by UPnP for discovery</li>
+              <li>'Simple Service Discovery Protocol' (SSDP)</li>
+              <li>In order to discover SSDP services, an SSDP client multicasts a HTTP UDP discovery request to the SSDP multicast channel/Port. SSDP services listen to the SSDP multicast channel/Port. If a SSDP service hears a HTTP UDP discovery request that matches the service it offers then it will respond using a unicast HTTP UDP response.</li>
+              <li>Interaction style: pull (client initiates communication); however, some UPnP devices also push info periodically</li>
+              <li>https://tools.ietf.org/html/draft-cai-ssdp-v1-03</li>
+          </ul>
+          <p><b>WS-Discovery</b>
+          <ul>
+              <li>Base technology: IP + TCP/UDP + SOAP et al.</li>
+              <li>specifies multicast discovery via web service based communication; avoids the need for centralized registries in smaller networks.</li>
+              <li>used by OASIS' Device Profile for Web Services (DPWS)</li>
+              <li>implemented e.g. by Microsoft Web Services on Devices API</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>http://docs.oasis-open.org/ws-dd/discovery/1.1/os/wsdd-discovery-1.1-spec-os.html</li>
+          </ul>
+          <p><b>XMPP Service Discovery</b>
+          <ul>
+              <li>Base technology: IP + TCP + XMPP</li>
+              <li>discovering information about other XMPP entities (e.g. user). Two kinds of information can be discovered: (1) the identity and capabilities of an entity and (2) the items associated with an entity, such as the list of rooms hosted at a multi-user chat service.</li>
+              <li>Interaction style: pull (client initiates communication)</li>
+              <li>http://xmpp.org/extensions/xep-0030.html</li>
+              <li>update: http://xmpp.org/extensions/xep-0115.html#discover</li>
+          </ul>
+          <p><b>µPnP</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP + IPSO</li>
+              <li>CoAP support makes use of CoAP's Resource Directory. Modified 802.15.4 link layer for support of uPnP. Resources formatted using IPSO Objects.</li>
+              <li>http://www.micropnp.com/ipso/index.html</li>
+          </ul>
+        </section>
+        <section>
+          <h2> Searching in Directories</h2>
+          In contrast to the above technologies, here, a central directory can be used for discovery of things and resources. Queries can be submitted to the directory to search for things and/or resources.
+          <p><b>CoRE Resource Directory</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP</li>
+              <li>Resource Directory (RD) hosts descriptions of resources held on other servers, allowing lookups to be performed for those resources</li>
+              <li>Also defines lookup interface that allows simple queries (e.g.: GET /rd-lookup/res?rt=temperature )</li>
+              <li>https://tools.ietf.org/html/draft-ietf-core-resource-directory-04</li>
+          </ul>
+          <p><b>XMPP IoT Discovery</b>
+          <ul>
+              <li>Base technology: IP + TCP</li>
+              <li>Thing Registry can be searched for public Things and their metadata (various tags, e.g., location or serial number). A search is performed by providing one or more comparison operators in a search request to the registry.</li>
+              <li>http://xmpp.org/extensions/xep-0347.html#search</li>
+          </ul>
+          <p><b>HyperCat</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP</li>
+              <li>HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs. HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.</li>
+              <li>http://www.hypercat.io/standard.html</li>
+          </ul>
+          <p><b>Push API</b>
+          <ul>
+              <li>Base technology: HTTP + web push protocol</li>
+              <li>The Push API enables sending of a push message to a previously registered Service Worker of a web application via a push service, e.g. allowing the web application to resume on this device. The Push API makes it possible to discover, awaken and connect user devices.</li>
+              <li>https://w3c.github.io/push-api/</li>
+              <li>https://tools.ietf.org/html/draft-ietf-webpush-protocol-02</li>
+          </ul>
+          <p><b>SIR</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP + XML</li>
+              <li>Discussion paper at the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.</li>
+              <li>Sensor Instance Registry (SIR) is a web service interface for managing the metadata and status information of sensors. Furthermore it is capable of automatically harvesting sensor metadata, and transforming the collected metadata sets into a homogeneous data model.</li>
+              <li>https://portal.opengeospatial.org/files/?artifact_id=40609</li>
+          </ul>
+          <p><b>SPARQL Endpoints</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP + RDF</li>
+              <li>a SPARQL endpoint of a central triplestore accepts advanced queries (generally consisting of SELECT/WHERE statements) for RDF data.</li>
+              <li>http://www.w3.org/TR/2013/REC-sparql11-overview-20130321/</li>
+          </ul>
+          <p><b>Research article: "Mobile digcovery: A global service discovery for the IoT"</b>
+          <ul>
+              <li>A centralized infrastructure that allows registration of sensors. Employs 'digrectory' to handle different resources. Each directory is attached to a particular communication technology, such as NFC, IPv6 etc. A mobile app enables users to discover and access sensors. Discovery mechanism takes advantage of geolocation and context awareness.</li>
+              <li>http://dx.doi.org/10.1109/WAINA.2013.261</li>
+          </ul>
+          <p><b>Research article: "A discovery service for smart objects over an agent-based middleware"</b>
+          <ul>
+              <li>Indexes all smart objects connected to the registry. Indexing is done based on domains. Discovery process is based on searching the indices.</li>
+              <li>http://dx.doi.org/10.1007/978-3-642-41428-2_23</li>
+          </ul>
+          <p><b>Research article: "A Semantic Enhanced Service Proxy Framework for Internet of Things"</b>
+          <ul>
+              <li>A semantic based framework which uses the concept of service advertisement of a smart object. Authors argue that such a mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.</li>
+              <li>http://dx.doi.org/10.1109/GreenCom-CPSCom.2010.116</li>
+          </ul>
+        </section>
+        <section>
+          <h2> Searching Across Peers</h2>
+          In peer to peer discovery, the directory is essentially distributed across the peers. This is often based upon distributed hash tables which maps the search space into a numeric range and then allocates servers to parts of that range. The technique works well for scale free networks. It requires Peers in the P2P overlay to host parts of the RD and to have full connectivity and certain computing power in order to forward overlay messages, keep a consistent DHT and routing tables in the node. P2P Overlays tolerate certain amounts of churn but it would be impractical for constrained devices to participate as full peers on the DHT.
+          <p><b>"RFC7650": CoAP usage for RELOAD</b>
+          <ul>
+              <li>Base technology: IP + UDP/TCP + CoAP</li>
+              <li>CoAP Usage for RELOAD allows CoAP nodes to store resources in a RELOAD peer-to-peer overlay, provides a lookup service, and enables the use of RELOAD overlay as a cache for sensor data. RELOAD is a DHT-based (Chord) P2P protocol of IETF.</li>
+              <li>https://datatracker.ietf.org/doc/rfc7650/</li>
+          </ul>
+          <p><b>"IETF Draft": Distributed RD</b>
+          <ul>
+              <li>Base technology: IP + UDP/TCP + CoAP</li>
+              <li>This document defines a Distributed Resource Directory (DRD) for Constrained Application Protocol (CoAP). This case uses raw DHT with no RELOAD dependencies.</li>
+              <li>http://tools.ietf.org/html/draft-jimenez-distributed-resource-directory-00.html</li>
+          </ul>
+          <p><b>Research article: "A Scalable and self-configurable architecture for service discovery in the IoT"</b>
+          <ul>
+              <li>IoT gateways are backbones of the architecture. Gateways enable registration and un-registration of smart objects. A list of registered objects are maintained in a CoAP server. Service discovery is based on sending a GET request to ./well-known/core. In the distributed architecture several gateways are interlinked through two P2P overlays namely distributed local service (DLS) and distributed geographic table (DGT) to facilitate global service discovery.</li>
+              <li>http://dx.doi.org/10.1109/JIOT.2014.2358296</li>
+          </ul>
+        </section>
+        <section>
+          <h2> Accessing Thing Metadata</h2>
+          Once a "service" has been discovered with the approaches above, next "resources" and/or general metadata access at thing level needs to be performed.
+          <p><b>CoRE Link Format</b>
+          <ul>
+              <li>Base technology: IP + UDP + CoAP</li>
+              <li>lists URIs (links) for the resources hosted by the server, complemented by attributes about those resources and possible further link relations. A well-known relative URI "/.well-known/core" is defined as a default entry point for requesting the list of links about resources hosted by a server.</li>
+              <li>https://tools.ietf.org/html/rfc6690</li>
+          </ul>
+          <p><b>HATEOAS</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP (typically)</li>
+              <li>abbrv. for 'Hypermedia as the Engine of Application State'</li>
+              <li>principle of REST architectures (not a standard)</li>
+              <li>hypertext should be used to find your way through the API => client interacts with an application through hypermedia provided dynamically by application servers - no prior knowledge on how to interact, since links to resources are provided</li>
+              <li>http://restcookbook.com/Basics/hateoas/</li>
+          </ul>
+          <p><b>SOS</b>
+          <ul>
+              <li>Base technology: IP + TCP + HTTP + SOAP etc.</li>
+              <li>Standard by the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.</li>
+              <li>Sensor Observation Service (SOS) is a Web service interface which allows querying sensor measurements as well as sensor metadata. Advanced spatial, temporal and thematic filtering is possible to query measurements.</li>
+              <li>http://www.opengeospatial.org/standards/sos</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Semantic Based Discovery</h2>
+          Several research articles using semantics for discovery can be found below.
+          <p><b>A web service discovery computational method for IOT system</b>
+          <ul>
+              <li>Zhou and Ma presents an ontology concept for vehicular sensors. The algorithm calculates semantic similarity, relativity and combines them to work out the maximum value of the required concepts of the web services. Then a matching degree is computed to find out the relevant web services. @[1]</li>
+          </ul>
+          <p><b>Semantic Enhanced Service Proxy Framework for Internet of Things</b>
+          <ul>
+              <li>The authors of @[2] have introduced a semantic based framework which uses the concept of service advertisement of a smart object. They mention that such mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.</li>
+          </ul>
+          <p><b>An evaluation of semantic service discovery of a U-city middleware</b>
+          <ul>
+              <li>Another semantic based service discovery is presented in @[3]. It proposes a middleware which performs SD using semantic web technologies on the contextual </li>information inferred from sensor data.</li>
+          </ul>
+        </section>
+      </section>
+      
+      <section id="discoveryPatterns">
+        <h2>Discovery Interaction Patterns</h2>
+      </section>
+      
+      <section id="discoveryEvaluation">
+        <h2>Evaluation of Discovery Technologies</h2>
+        In the following, we analyze the identified discovery technologies according to a set of evaluation criteria. Those criteria are listed below.
+        
+        <p><b>Evaluation Criteria</b>
+        <ol>
+        <li>Interaction Pattern</li>
+            This criterion specifies whether a discovery technology complies with the identified interaction pattern in that discovery category. 
+        <li>Support of higher layer discovery</li>
+            This criterion specifies whether a discovery technology provides means to submit search queries based on terms used in the underlying data model, so the thing description. This includes searches such as e.g.: 'search all things with name X' or 'search all things with property XYZ'. 
+        <li>Bootstrapping</li>
+            This criterion specifies whether means are provided to start/interact with things after discovery. 
+        <li>Lifetime / sleepy nodes</li>
+            This criterion specifies whether sleeping times of constrained devices are directly considered by the discovery technology. 
+        <li>Range</li>
+            This criterion specifies the spatial extent within which a discovery technology is functioning. This is important for the category “finding things around me”. 
+        <li>Support for (physically) local/remote discovery of things</li>
+        <li>Richness of query</li>
+            This criterion specifies to what extent contextual query parameters can be passed in a search query to discover things. E.g., this may include spatial parameters ('search all things in NYC') and temporal parameters ('search all things active yesterday'). In comparison to the criterion 'Support of higher layer discovery', this criterion looks at richer search query mechanisms that go beyond a basic search for terms of the thing description model. 
+        <li>Ranking of results</li>
+            This criterion specifies how/if the discovery mechanism is capable of ranking search results. 
+        </ol>
+        
+        <p><b>Category: 1) Finding things around me</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" href="#discoveryPattern">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <b>Optical Markers</b></td>
+          <td> No (marker cannot send messages)</td>
+          <td> No </td>
+          <td> Pointing to thing endpoint </td>
+          <td> n/a </td>
+          <td> vicinity of client </td>
+          <td> Local (vicinity of client) </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>NFC</b> </td>
+          <td> No (NFC initiator [client]starts interaction with target [thing]) </td>
+          <td> No </td>
+          <td> Pointing to thing endpoint </td>
+          <td> n/a </td>
+          <td> &lt; 10 cm </td>
+          <td> Local </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>Markerless Recognition</b> </td>
+          <td> No (things are not part of interactions)</td>
+          <td> Yes (could be supported by filtering out things on an AR layer) </td>
+          <td> Pointing to thing endpoint </td>
+          <td> n/a </td>
+          <td> vicinity of client </td>
+          <td> Local </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>UriBeacon</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Advertise message points to thing endpoint </td>
+          <td> There is support for sleep state in BLE and depends on which power mode is being used in the thing. For lowest power mode, the radio is switched off completely and the thing will not periodically announce its URI. There are power mode configurations where the thing powers on once every so many seconds, broadcasts, listens, then goes back to sleep. </td>
+          <td> &lt; 100 m (<a rel="nofollow" href="http://www.bluetooth.com/Pages/low-energy-tech-info.aspx">link</a>) </td>
+          <td> Local (around the client) </td>
+          <td> n/a (since this discovery is not initiated by manual search) </td>
+          <td> n/a
+          </td></tr>
+          <tr>
+          <td> <b>iBeacon</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Advertise message points to thing endpoint</td>
+          <td> Same as above (need to confirm) </td>
+          <td> &lt; 100 m (<a rel="nofollow" href="http://www.bluetooth.com/Pages/low-energy-tech-info.aspx">link</a>) </td>
+          <td> Local (around the client) </td>
+          <td> n/a </td>
+          <td> n/a
+          </td></tr>
+        </table>
+        
+        <p><b>Category: 2) Finding things on my network</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" href="#discoveryPattern">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <b>mDNS</b> </td>
+          <td> Yes </td>
+          <td> No (but can be implemented on application layer) </td>
+          <td> Client receives an IP address of the thing for direct interaction </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> N/A since there is no manual entry of keywords </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc6690#section-1.2.1"><b>Multicast CoAP</b></a> </td>
+          <td> yes </td>
+          <td> yes, if resource directory is used </td>
+          <td> address, port, and resource descriptions </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> N/A since there is no manual entry of keywords </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>SSDP</b> </td>
+          <td> Yes </td>
+          <td> No (only basic filtering for devices or services with a specific type) </td>
+          <td> Client receives the endpoint of the UPnP device description  </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> N/A querying using keywords is not possible </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>WS-Discovery</b> </td>
+          <td> Yes </td>
+          <td> Only basic filtering is possible. They use the term 'scope' for this. </td>
+          <td> Discovery happens in two steps: (1) find services and (2) locate a target service, i.e., to retrieve its transport address(es) </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local (network point of view) </td>
+          <td> basic querying using service types and scopes </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>XMPP Service Discovery</b> </td>
+          <td> No </td>
+          <td> Yes (Two kinds of information can be discovered: (1) the identity and capabilities of an entity, including the protocols and features it supports; and (2) the items associated with an entity, such as the list of rooms hosted at a multi-user chat service) </td>
+          <td> Provides information on identity and capabilities of an entity. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local discovery </td>
+          <td> basic querying which discovers entity, features etc </td>
+          <td> No
+          </td>
+        </tr>
+        </table>
+        
+        <p><b>Category: 3) Searching in directories</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" class="external text" href="https://github.com/w3c/wot/blob/master/TF-DI/Interactions.md">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> (DOES THIS MAKE SENSE HERE??) </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-ietf-core-resource-directory-04#section-5"><b>CoRE Resource Directory</b></a> </td>
+          <td> Yes </td>
+          <td> Yes, key-value-pair search based on tagged resources (e.g., "resource type", "interface type" etc.) is supported </td>
+          <td> IP address &amp; port of thing and list of resources matching the query </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> No. Not beyond tag concatenation. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>XMPP IoT Discovery</b> </td>
+          <td> Yes </td>
+          <td> Yes </td>
+          <td> Provides various metadata for discovered thing. </td>
+          <td> Yes </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Basic (the spec is not finalized) </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>HyperCat</b> </td>
+          <td> Yes </td>
+          <td> Yes, flexible key-value-pair search based on tagged resources is supported </td>
+          <td> Provides reference to thing. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> No. Not beyond key-value-pairs. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://w3c.github.io/push-api/"><b>Push API</b></a> </td>
+          <td> Yes </td>
+          <td> (<i>???</i>) </td>
+          <td> Yes, through notifications </td>
+          <td> Yes, Service Worker runs in the background </td>
+          <td> n/a </td>
+          <td> Yes </td>
+          <td> (<i>???</i>) </td>
+          <td> (<i>???</i>)
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://portal.opengeospatial.org/modules/admin/license_agreement.php?suppressHeaders=0&amp;access_license_id=3&amp;target=http://portal.opengeospatial.org/files/?artifact_id=40609"><b>Sensor Instance Registry</b></a> </td>
+          <td> Yes </td>
+          <td> Yes (bound to SensorML as thing description) </td>
+          <td> Provides rich metadata description (SensorML) of discovered device </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Yes. Spatial and Temporal queries. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>SPARQL Endpoint</b> </td>
+          <td> Yes </td>
+          <td> Yes (flexible search interface - independent of underlying thing description) </td>
+          <td> Provides description of discovered thing. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Yes, high flexibility in query formulation. </td>
+          <td> Yes (with 'order by')
+          </td></tr></table>
+        <p><b>Category: 4) Searching across peers</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" class="external text" href="https://github.com/w3c/wot/blob/master/TF-DI/Interactions.md">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc7650"><b>CoAP RELOAD</b></a> </td>
+          <td> No pattern has been investigated </td>
+          <td> See CoAP RD  </td>
+          <td> See CoAP RD </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> See CoAP RD </td>
+          <td> No
+          </td></tr></table>
+        <p><b>Category: 5) Accessing thing metadata</b>
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> <b>Technology</b> </th>
+          <th> <b>Follows <a rel="nofollow" class="external text" href="https://github.com/w3c/wot/blob/master/TF-DI/Interactions.md">Identified Interaction Pattern</a></b> </th>
+          <th> <b>Higher Layer Discovery</b> </th>
+          <th> <b>Bootstrapping</b> </th>
+          <th> <b>Sleeping Time Support</b> </th>
+          <th> <b>Range</b> </th>
+          <th> <b>Local / Remote Discovery</b> </th>
+          <th> <b>Richness of Query</b> </th>
+          <th> <b>Ranking of Results</b>
+          </th></tr>
+          <tr>
+          <td> <b>CoRE Link Format</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Yes, this format can be used for bootstrapping. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Low. Just direct access to metadata. </td>
+          <td> Can be used by application layer to rank results
+          </td></tr>
+          <tr>
+          <td> <b>HATEOAS</b> </td>
+          <td> No (typically, not one metadata document, but information distributed and advertised via links) </td>
+          <td> No </td>
+          <td> Bootstrapping information can be gathered by following links. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Low. </td>
+          <td> No
+          </td></tr>
+          <tr>
+          <td> <b>Sensor Observation Service</b> </td>
+          <td> Yes </td>
+          <td> No </td>
+          <td> Yes, it returns SensorML when metadata is queried. </td>
+          <td> No </td>
+          <td> n/a </td>
+          <td> Local and remote </td>
+          <td> Medium. Temporal queries are supported. </td>
+          <td> No
+          </td></tr></table>
+      </section>
+      
+      <section id="discoveryConsortia">
+        <h2>Discovery Technologies used by IoT Consortia</h2>
+        Below we analyze which discovery technologies are used by related IoT consortia, initiatives, and working groups.
+        "--" equals NO (not supported). 
+        <table border="1">
+          <tr bgcolor="LightGray">
+          <th> Consortium </th>
+          <th> Focus Domain </th>
+          <th> 1. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#1._Finding_things_around_me" title="Discovery Categories and Tech Landscape">Finding things around me</a> </th>
+          <th> 2. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#2._Finding_things_on_my_network" title="Discovery Categories and Tech Landscape">Finding things on my network</a> </th>
+          <th> 3. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#3._Searching_in_Directories" title="Discovery Categories and Tech Landscape">Searching in Directories</a> </th>
+          <th> 4. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#4._Searching_across_Peers" title="Discovery Categories and Tech Landscape">Searching across Peers</a> </th>
+          <th> 5. Category: <a href="/WoT/IG/wiki/Discovery_Categories_and_Tech_Landscape#5._Accessing_thing_metadata" title="Discovery Categories and Tech Landscape">Accessing thing metadata</a>
+          </th></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://www.ietf.org/">IETF</a> </td>
+          <td> all </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc6762">mDNS</a>; <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc7252">Multicast CoAP</a>; <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-cai-ssdp-v1-03">SSDP</a> </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-ietf-core-resource-directory-04">CoRE Resource Directory</a> </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-jimenez-p2psip-coap-reload-10">CoAP RELOAD</a> </td>
+          <td> <a rel="nofollow" class="external text" href="https://tools.ietf.org/html/rfc6690">CoRE Link Format</a>
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://openmobilealliance.org/">OMA</a> </td>
+          <td> all </td>
+          <td> -- </td>
+          <td> -- </td>
+          <td> OMA LwM2M uses CoAP </td>
+          <td> -- </td>
+          <td> OMA LwM2M can be extended to work with CoRE Link Format
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://openinterconnect.org">OIC</a> </td>
+          <td> all </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;?
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="https://allseenalliance.org">Allseen Alliance</a> </td>
+          <td> smart home </td>
+          <td> <a rel="nofollow" class="external text" href="https://allseenalliance.org/framework/documentation/learn/core/about-announcement"><b>About Announcement</b></a> </td>
+          <td> mDNS </td>
+          <td>&#160;? </td>
+          <td> -- </td>
+          <td> --
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.ipso-alliance.org">IPSO Alliance</a> </td>
+          <td> all </td>
+          <td> -- </td>
+          <td> Not explicitely supports this but CoAP can be extended </td>
+          <td> CoAP </td>
+          <td> -- </td>
+          <td> CoRE Link Format
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.onem2m.org">oneM2M</a> </td>
+          <td> telecomunication (Note from Soumya - oneM2M proposes to be independent of the underlying network and does not propose any specific protocols to work with. But they have worked on binding to HTTP and MQTT) </td>
+          <td> Possible through UriBeacon </td>
+          <td> Possible through mDNS </td>
+          <td> Possible through CoAP </td>
+          <td> -- </td>
+          <td> CoRE Link Format
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://threadgroup.org/">ThreadGroup</a> </td>
+          <td> smart home </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;?
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.hypercat.io">Hyper/Cat</a> </td>
+          <td> smart cities </td>
+          <td> -- </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="http://www.hypercat.io/standard.html">HyperCat Catalogue</a> </td>
+          <td> -- </td>
+          <td> --
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.opengroup.org/getinvolved/workgroups/iot">Open Group</a> </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;? </td>
+          <td>&#160;?
+          </td></tr>
+          <tr>
+          <td> <a rel="nofollow" class="external text" href="http://www.opengeospatial.org/projects/groups/sensorwebdwg">OGC SWE</a> </td>
+          <td> smart cities, environmental monitoring </td>
+          <td> -- </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="https://portal.opengeospatial.org/modules/admin/license_agreement.php?suppressHeaders=0&amp;access_license_id=3&amp;target=http://portal.opengeospatial.org/files/?artifact_id=40609">Sensor Instance Registry</a> </td>
+          <td> -- </td>
+          <td> <a rel="nofollow" class="external text" href="https://portal.opengeospatial.org/files/?artifact_id=47599">Sensor Observation Service</a>
+          </td></tr></table>
+      </section>
+      
+      ## References
 
 ### Normative
 * [ACE-OAuth2: Authentication and Authorization for Constrained Environments (ACE) using the OAuth 2.0 Framework](https://datatracker.ietf.org/doc/draft-ietf-ace-oauth-authz/)
