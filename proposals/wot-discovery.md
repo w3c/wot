@@ -140,7 +140,7 @@ Accept: application/td+json
 ```
 * Technically CoRE-RD only stores links to resources, not the resources
   themselves.  A "CoRE Data Hub" combined with the RD may be required to actually
-  allow storage and retreival of TDs themselves.
+  allow storage and retrieval of TDs themselves.
 * HTTP should also be supported
 
 ## Authentication
@@ -212,10 +212,9 @@ discover things nearby, in a spatial sense.
    - Since URI is identifying a beacon, standard Web mechanisms (DNS) can be used for resolving
    - UriBeacon is now part of the Eddystone open source project which allows other beacon data formats in addition to URLs
    - Eddystone supports broadcasting URLs via its Eddystone-URL frame type
-   - Max range: 100 meters (see: http://www.bluetooth.com/Pages/low-energy-tech-info.aspx)
-   - Interaction style: push (beacons broadcast information)</li>
+   - Max range: 100 meters (see: {{BLE}})
+   - Interaction style: push (beacons broadcast information)
    - References: {{UriBeacon}}, {{EddyStone}}
-   https://github.com/google/uribeacon/tree/master/specification
 * **iBeacon (Apple)**
    - Base technology: Bluetooth Low Energy
    - BLE-enabled device periodically transmits an advertising packet containing a UUID
@@ -223,8 +222,7 @@ discover things nearby, in a spatial sense.
    - UUID resolution requires an external server containing an directory
    - Max range: 100 meters 
    - Interaction style: push (beacons broadcast information)
-   - References: {{BLE}} (see: http://www.bluetooth.com/Pages/low-energy-tech-info.aspx),
-                 {{iBeacon}} (see: https://developer.apple.com/ibeacon)
+   - References: {{BLE}}, {{iBeacon}}
 
 #### Finding Things on My Local Network
 This category includes technologies that allow discovery of endpoints on a local network segment.
@@ -239,7 +237,7 @@ rights.
     - part of 'zeroconf' technology suite
     - implemented e.g. by Apple Bonjour
     - Interaction style: pull (client initiates communication)
-    - References:  {{RFC6762}} (+ {{RFC6763}} )
+    - References: {{RFC6762}} (+ {{RFC6763}} )
 
 * **Multicast CoAP**
     - Base technology: IP + UDP + CoAP
@@ -269,12 +267,12 @@ rights.
     - Base technology: IP + TCP + XMPP
     - discovering information about other XMPP entities (e.g. user). Two kinds of information can be discovered: (1) the identity and capabilities of an entity and (2) the items associated with an entity, such as the list of rooms hosted at a multi-user chat service.
     - Interaction style: pull (client initiates communication)
-    - References: {{XEP-0030}}, update: {{XEP-0115}}
+    - Reference: {{XEP-0030}}, update: {{XEP-0115}}
 
 * **µPnP**
     - Base technology: IP + UDP + CoAP + IPSO
     - CoAP support makes use of CoAP's Resource Directory. Modified 802.15.4 link layer for support of uPnP. Resources formatted using IPSO Objects.
-    - References: {{MicroPnP}}
+    - Reference: {{MicroPnP}}
 
 #### Searching in Directories
 In contrast to the above technologies, here, a central directory can be used for discovery of things and resources. Queries can be submitted to the directory to search for things and/or resources.
@@ -283,146 +281,126 @@ In contrast to the above technologies, here, a central directory can be used for
     - Base technology: IP + UDP + CoAP
     - Resource Directory (RD) hosts descriptions of resources held on other servers, allowing lookups to be performed for those resources
     - Also defines lookup interface that allows simple queries (e.g.: `GET /rd-lookup/res?rt=temperature` )
-    - References: {{CoRE-RD}} 
+    - Reference: {{CoRE-RD}} 
     
 * **XMPP IoT Discovery**
     - Base technology: IP + TCP
     - Thing Registry can be searched for public Things and their metadata (various tags, e.g., location or serial number). A search is performed by providing one or more comparison operators in a search request to the registry.
-    - References: http://xmpp.org/extensions/xep-0347.html#search</li>
+    - Reference: {{XEP-0347}}</li>
 
 * **HyperCat**
     - Base technology: IP + TCP + HTTP
     - HyperCat is an open, lightweight JSON-based hypermedia catalogue format for exposing collections of URIs. HyperCat catalogue may expose any number of URIs, each with any number of resource description framework-like (RDF-like) triple statements about it.
-    - References: http://www.hypercat.io/standard.html
-          </ul>
-          <p><b>Push API</b>
-          <ul>
-              <li>Base technology: HTTP + web push protocol</li>
-              <li>The Push API enables sending of a push message to a previously registered Service Worker of a web application via a push service, e.g. allowing the web application to resume on this device. The Push API makes it possible to discover, awaken and connect user devices.</li>
-              <li>https://w3c.github.io/push-api/</li>
-              <li>https://tools.ietf.org/html/draft-ietf-webpush-protocol-02</li>
-          </ul>
-          <p><b>SIR</b>
-          <ul>
-              <li>Base technology: IP + TCP + HTTP + XML</li>
-              <li>Discussion paper at the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.</li>
-              <li>Sensor Instance Registry (SIR) is a web service interface for managing the metadata and status information of sensors. Furthermore it is capable of automatically harvesting sensor metadata, and transforming the collected metadata sets into a homogeneous data model.</li>
-              <li>https://portal.opengeospatial.org/files/?artifact_id=40609</li>
-          </ul>
-          <p><b>SPARQL Endpoints</b>
-          <ul>
-              <li>Base technology: IP + TCP + HTTP + RDF</li>
-              <li>a SPARQL endpoint of a central triplestore accepts advanced queries (generally consisting of SELECT/WHERE statements) for RDF data.</li>
-              <li>http://www.w3.org/TR/2013/REC-sparql11-overview-20130321/</li>
-          </ul>
-          <p><b>Research article: "Mobile digcovery: A global service discovery for the IoT"</b>
-          <ul>
-              <li>A centralized infrastructure that allows registration of sensors. Employs 'digrectory' to handle different resources. Each directory is attached to a particular communication technology, such as NFC, IPv6 etc. A mobile app enables users to discover and access sensors. Discovery mechanism takes advantage of geolocation and context awareness.</li>
-              <li>http://dx.doi.org/10.1109/WAINA.2013.261</li>
-          </ul>
-          <p><b>Research article: "A discovery service for smart objects over an agent-based middleware"</b>
-          <ul>
-              <li>Indexes all smart objects connected to the registry. Indexing is done based on domains. Discovery process is based on searching the indices.</li>
-              <li>http://dx.doi.org/10.1007/978-3-642-41428-2_23</li>
-          </ul>
-          <p><b>Research article: "A Semantic Enhanced Service Proxy Framework for Internet of Things"</b>
-          <ul>
-              <li>A semantic based framework which uses the concept of service advertisement of a smart object. Authors argue that such a mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.</li>
-              <li>http://dx.doi.org/10.1109/GreenCom-CPSCom.2010.116</li>
-          </ul>
-        </section>
-        <section>
-          <h2> Searching Across Peers</h2>
-          In peer to peer discovery, the directory is essentially distributed across the peers. This is often based upon distributed hash tables which maps the search space into a numeric range and then allocates servers to parts of that range. The technique works well for scale free networks. It requires Peers in the P2P overlay to host parts of the RD and to have full connectivity and certain computing power in order to forward overlay messages, keep a consistent DHT and routing tables in the node. P2P Overlays tolerate certain amounts of churn but it would be impractical for constrained devices to participate as full peers on the DHT.
-          <p><b>"RFC7650": CoAP usage for RELOAD</b>
-          <ul>
-              <li>Base technology: IP + UDP/TCP + CoAP</li>
-              <li>CoAP Usage for RELOAD allows CoAP nodes to store resources in a RELOAD peer-to-peer overlay, provides a lookup service, and enables the use of RELOAD overlay as a cache for sensor data. RELOAD is a DHT-based (Chord) P2P protocol of IETF.</li>
-              <li>https://datatracker.ietf.org/doc/rfc7650/</li>
-          </ul>
-          <p><b>"IETF Draft": Distributed RD</b>
-          <ul>
-              <li>Base technology: IP + UDP/TCP + CoAP</li>
-              <li>This document defines a Distributed Resource Directory (DRD) for Constrained Application Protocol (CoAP). This case uses raw DHT with no RELOAD dependencies.</li>
-              <li>http://tools.ietf.org/html/draft-jimenez-distributed-resource-directory-00.html</li>
-          </ul>
-          <p><b>Research article: "A Scalable and self-configurable architecture for service discovery in the IoT"</b>
-          <ul>
-              <li>IoT gateways are backbones of the architecture. Gateways enable registration and un-registration of smart objects. A list of registered objects are maintained in a CoAP server. Service discovery is based on sending a GET request to ./well-known/core. In the distributed architecture several gateways are interlinked through two P2P overlays namely distributed local service (DLS) and distributed geographic table (DGT) to facilitate global service discovery.</li>
-              <li>http://dx.doi.org/10.1109/JIOT.2014.2358296</li>
-          </ul>
-        </section>
-        <section>
-          <h2> Accessing Thing Metadata</h2>
-          Once a "service" has been discovered with the approaches above, next "resources" and/or general metadata access at thing level needs to be performed.
-          <p><b>CoRE Link Format</b>
-          <ul>
-              <li>Base technology: IP + UDP + CoAP</li>
-              <li>lists URIs (links) for the resources hosted by the server, complemented by attributes about those resources and possible further link relations. A well-known relative URI "/.well-known/core" is defined as a default entry point for requesting the list of links about resources hosted by a server.</li>
-              <li>https://tools.ietf.org/html/rfc6690</li>
-          </ul>
-          <p><b>HATEOAS</b>
-          <ul>
-              <li>Base technology: IP + TCP + HTTP (typically)</li>
-              <li>abbrv. for 'Hypermedia as the Engine of Application State'</li>
-              <li>principle of REST architectures (not a standard)</li>
-              <li>hypertext should be used to find your way through the API => client interacts with an application through hypermedia provided dynamically by application servers - no prior knowledge on how to interact, since links to resources are provided</li>
-              <li>http://restcookbook.com/Basics/hateoas/</li>
-          </ul>
-          <p><b>SOS</b>
-          <ul>
-              <li>Base technology: IP + TCP + HTTP + SOAP etc.</li>
-              <li>Standard by the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.</li>
-              <li>Sensor Observation Service (SOS) is a Web service interface which allows querying sensor measurements as well as sensor metadata. Advanced spatial, temporal and thematic filtering is possible to query measurements.</li>
-              <li>http://www.opengeospatial.org/standards/sos</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Semantic Based Discovery</h2>
-          Several research articles using semantics for discovery can be found below.
-          <p><b>A web service discovery computational method for IOT system</b>
-          <ul>
-              <li>Zhou and Ma presents an ontology concept for vehicular sensors. The algorithm calculates semantic similarity, relativity and combines them to work out the maximum value of the required concepts of the web services. Then a matching degree is computed to find out the relevant web services. @[1]</li>
-          </ul>
-          <p><b>Semantic Enhanced Service Proxy Framework for Internet of Things</b>
-          <ul>
-              <li>The authors of @[2] have introduced a semantic based framework which uses the concept of service advertisement of a smart object. They mention that such mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.</li>
-          </ul>
-          <p><b>An evaluation of semantic service discovery of a U-city middleware</b>
-          <ul>
-              <li>Another semantic based service discovery is presented in @[3]. It proposes a middleware which performs SD using semantic web technologies on the contextual </li>information inferred from sensor data.</li>
-          </ul>
-        </section>
-      </section>
-      
-      <section id="discoveryPatterns">
-        <h2>Discovery Interaction Patterns</h2>
-      </section>
-      
-      <section id="discoveryEvaluation">
-        <h2>Evaluation of Discovery Technologies</h2>
-        In the following, we analyze the identified discovery technologies according to a set of evaluation criteria. Those criteria are listed below.
+    - Reference: {{HyperCat}} 
+
+* **Push API**
+    - Base technology: HTTP + web push protocol
+    - The Push API enables sending of a push message to a previously registered Service Worker of a web application via a push service, e.g. allowing the web application to resume on this device. The Push API makes it possible to discover, awaken and connect user devices.
+    - Reference: {{Push-API}}, {{RFC8030}}
+
+* **SIR**
+    - Base technology: IP + TCP + HTTP + XML
+    - Discussion paper at the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.
+    - Sensor Instance Registry (SIR) is a web service interface for managing the metadata and status information of sensors. Furthermore it is capable of automatically harvesting sensor metadata, and transforming the collected metadata sets into a homogeneous data model.
+    - Rerefence: {{SIR}}
+
+* **SPARQL Endpoints**
+    - Base technology: IP + TCP + HTTP + RDF
+    - a SPARQL endpoint of a central triplestore accepts advanced queries (generally consisting of SELECT/WHERE statements) for RDF data.
+    - Reference: {{SPARQL}}
+
+* **Research article: "Mobile digcovery: A global service discovery for the IoT"**
+    - A centralized infrastructure that allows registration of sensors. Employs 'digrectory' to handle different resources. Each directory is attached to a particular communication technology, such as NFC, IPv6 etc. A mobile app enables users to discover and access sensors. Discovery mechanism takes advantage of geolocation and context awareness.
+    - Reference: {{Jara2013}}
+
+* **Research article: "A discovery service for smart objects over an agent-based middleware"**
+    - Indexes all smart objects connected to the registry. Indexing is done based on domains. Discovery process is based on searching the indices.
+    - Reference: {{Fortino2013}}
+
+* **Research article: "A Semantic Enhanced Service Proxy Framework for Internet of Things"**
+    - A semantic based framework which uses the concept of service advertisement of a smart object. Authors argue that such a mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.
+    - Reference: {{Alam2010}}
+
+#### Searching Across Peers
+
+In peer to peer discovery, the directory is essentially distributed across the peers. This is often based upon distributed hash tables which maps the search space into a numeric range and then allocates servers to parts of that range. The technique works well for scale free networks. It requires Peers in the P2P overlay to host parts of the RD and to have full connectivity and certain computing power in order to forward overlay messages, keep a consistent DHT and routing tables in the node. P2P Overlays tolerate certain amounts of churn but it would be impractical for constrained devices to participate as full peers on the DHT.
+
+* **"RFC7650": CoAP usage for RELOAD**
+    - Base technology: IP + UDP/TCP + CoAP
+    - CoAP Usage for RELOAD allows CoAP nodes to store resources in a RELOAD peer-to-peer overlay, provides a lookup service, and enables the use of RELOAD overlay as a cache for sensor data. RELOAD is a DHT-based (Chord) P2P protocol of IETF.
+    - Reference: {{RFC7650}}
+
+* **"IETF Draft": Distributed RD**
+    - Base technology: IP + UDP/TCP + CoAP
+    - This document defines a Distributed Resource Directory (DRD) for Constrained Application Protocol (CoAP). This case uses raw DHT with no RELOAD dependencies.
+    - Reference: {{A Distributed Resource Directory (DRD)}}
+
+* **Research article: "A Scalable and self-configurable architecture for service discovery in the IoT"**
+    - IoT gateways are backbones of the architecture. Gateways enable registration and un-registration of smart objects. A list of registered objects are maintained in a CoAP server. Service discovery is based on sending a GET request to ./well-known/core. In the distributed architecture several gateways are interlinked through two P2P overlays namely distributed local service (DLS) and distributed geographic table (DGT) to facilitate global service discovery.
+    - References: {{Cirani2014}}
+
+#### Accessing Thing Metadata
+
+Once a "service" has been discovered with the approaches above, next "resources" and/or general metadata access at thing level needs to be performed.
+
+* **CoRE Link Format**
+    - Base technology: IP + UDP + CoAP
+    - lists URIs (links) for the resources hosted by the server, complemented by attributes about those resources and possible further link relations. A well-known relative URI "/.well-known/core" is defined as a default entry point for requesting the list of links about resources hosted by a server.
+    - References: {{RFC6690}}
+
+* **HATEOAS**
+    - Base technology: IP + TCP + HTTP (typically)
+    - abbrv. for 'Hypermedia as the Engine of Application State'
+    - principle of REST architectures (not a standard)
+    - hypertext should be used to find your way through the API => client interacts with an application through hypermedia provided dynamically by application servers - no prior knowledge on how to interact, since links to resources are provided
+    - References: {{HATEOAS}}
+
+* **SOS**
+    - Base technology: IP + TCP + HTTP + SOAP etc.
+    - Standard by the Open Geospatial Consortium (OGC) and part of the Sensor Web Enablement (SWE) framework.
+    - Sensor Observation Service (SOS) is a Web service interface which allows querying sensor measurements as well as sensor metadata. Advanced spatial, temporal and thematic filtering is possible to query measurements.
+    - References: {{SOS}}</li>
+
+#### Semantic Based Discovery
+
+Several research articles using semantics for discovery can be found below.
+
+* **A web service discovery computational method for IOT system**
+    - Zhou and Ma presents an ontology concept for vehicular sensors. The algorithm calculates semantic similarity, relativity and combines them to work out the maximum value of the required concepts of the web services. Then a matching degree is computed to find out the relevant web services. 
+    - Reference: {{Zhou2012}}
+
+* **Semantic Enhanced Service Proxy Framework for Internet of Things**
+    - The authors of this paper have introduced a semantic based framework which uses the concept of service advertisement of a smart object. They mention that such mechanism makes the service registration easier which in turn facilitates discovery. The advertisement contains a service metadata including name, id, endpoint, location and semantic annotation link.
+    - Reference: {{Alam2010}}
+
+* **An evaluation of semantic service discovery of a U-city middleware**
+    - Another semantic based service discovery is presented in this paper. It proposes a middleware which performs SD using semantic web technologies on the contextual information inferred from sensor data.
+    - Reference: [Yun2010]
+
+### Discovery Interaction Patterns
+
+TODO
+
+### Evaluation of Discovery Technologies
+In the following, we analyze the identified discovery technologies according to a set of evaluation criteria. Those criteria are listed below.
         
-        <p><b>Evaluation Criteria</b>
-        <ol>
-        <li>Interaction Pattern</li>
-            This criterion specifies whether a discovery technology complies with the identified interaction pattern in that discovery category. 
-        <li>Support of higher layer discovery</li>
+* **Evaluation Criteria**
+    - Interaction Pattern: This criterion specifies whether a discovery technology complies with the identified interaction pattern in that discovery category. 
+    - Support of higher layer discovery: 
             This criterion specifies whether a discovery technology provides means to submit search queries based on terms used in the underlying data model, so the thing description. This includes searches such as e.g.: 'search all things with name X' or 'search all things with property XYZ'. 
-        <li>Bootstrapping</li>
+    - Bootstrapping:
             This criterion specifies whether means are provided to start/interact with things after discovery. 
-        <li>Lifetime / sleepy nodes</li>
+    - Lifetime / sleepy nodes: 
             This criterion specifies whether sleeping times of constrained devices are directly considered by the discovery technology. 
-        <li>Range</li>
+    - Range: 
             This criterion specifies the spatial extent within which a discovery technology is functioning. This is important for the category “finding things around me”. 
-        <li>Support for (physically) local/remote discovery of things</li>
-        <li>Richness of query</li>
+    - Support for (physically) local/remote discovery of things
+    - Richness of query:
             This criterion specifies to what extent contextual query parameters can be passed in a search query to discover things. E.g., this may include spatial parameters ('search all things in NYC') and temporal parameters ('search all things active yesterday'). In comparison to the criterion 'Support of higher layer discovery', this criterion looks at richer search query mechanisms that go beyond a basic search for terms of the thing description model. 
-        <li>Ranking of results</li>
+    - Ranking of results:
             This criterion specifies how/if the discovery mechanism is capable of ranking search results. 
-        </ol>
-        
-        <p><b>Category: 1) Finding things around me</b>
+
+* **Category: 1) Finding things around me**
         <table border="1">
           <tr bgcolor="LightGray">
           <th> <b>Technology</b> </th>
@@ -492,7 +470,7 @@ In contrast to the above technologies, here, a central directory can be used for
           </td></tr>
         </table>
         
-        <p><b>Category: 2) Finding things on my network</b>
+* **Category: 2) Finding things on my network**
         <table border="1">
           <tr bgcolor="LightGray">
           <th> <b>Technology</b> </th>
@@ -563,7 +541,7 @@ In contrast to the above technologies, here, a central directory can be used for
         </tr>
         </table>
         
-        <p><b>Category: 3) Searching in directories</b>
+* **Category: 3) Searching in directories**
         <table border="1">
           <tr bgcolor="LightGray">
           <th> <b>Technology</b> </th>
@@ -712,11 +690,10 @@ In contrast to the above technologies, here, a central directory can be used for
           <td> Medium. Temporal queries are supported. </td>
           <td> No
           </td></tr></table>
-      </section>
       
-      <section id="discoveryConsortia">
-        <h2>Discovery Technologies used by IoT Consortia</h2>
-        Below we analyze which discovery technologies are used by related IoT consortia, initiatives, and working groups.
+### Discovery Technologies used by IoT Consortia
+
+Below we analyze which discovery technologies are used by related IoT consortia, initiatives, and working groups.
         "--" equals NO (not supported). 
         <table border="1">
           <tr bgcolor="LightGray">
@@ -818,9 +795,8 @@ In contrast to the above technologies, here, a central directory can be used for
           <td> -- </td>
           <td> <a rel="nofollow" class="external text" href="https://portal.opengeospatial.org/files/?artifact_id=47599">Sensor Observation Service</a>
           </td></tr></table>
-      </section>
       
-      ## References
+## References
 
 ### Normative
 * [ACE-OAuth2: Authentication and Authorization for Constrained Environments (ACE) using the OAuth 2.0 Framework](https://datatracker.ietf.org/doc/draft-ietf-ace-oauth-authz/)
@@ -836,9 +812,28 @@ In contrast to the above technologies, here, a central directory can be used for
 * [Web Services Dynamic Discovery (WS-Discovery) Version 1.1](http://docs.oasis-open.org/ws-dd/discovery/1.1/wsdd-discovery-1.1-spec.html)
 * [XEP-0030: Service Discovery](https://xmpp.org/extensions/xep-0030.html)
 * [XEP-0115: Entity Capabilities](https://xmpp.org/extensions/xep-0115.html#discover)
-* [MicroPnP](http://www.micropnp.com/ipso/index.html) TODO: update a link
+* [MicroPnP](http://www.micropnp.com/ipso/index.html) TODO: fix link
 * [XEP-0347: Internet of Things - Discovery](https://xmpp.org/extensions/xep-0347.html#search)
-* [HyperCat]()
+* [HyperCat](http://www.hypercat.io/standard.html) TODO: fix link
+* [Push-API](https://w3c.github.io/push-api/)
+* [RFC8030: Generic Event Delivery Using HTTP Push](https://datatracker.ietf.org/doc/rfc8030/)
+* [SIR: Sensor Instance Registry Discussion Paper](https://portal.opengeospatial.org/files/?artifact_id=40609)
+* [SPARQL: SPARQL 1.1 Overview](https://www.w3.org/TR/sparql11-overview/)
+* [RFC7650: A Constrained Application Protocol (CoAP) Usage for REsource LOcation And Discovery (RELOAD)](https://datatracker.ietf.org/doc/rfc7650/)
+* [A Distributed Resource Directory (DRD)](https://datatracker.ietf.org/doc/draft-jimenez-t2trg-drd/)
+* [SOS: Sensor Observation Service](https://www.opengeospatial.org/standards/sos)
+* [UriBeacon](https://github.com/google/uribeacon/)
+* [EddyStone](https://github.com/google/eddystone/blob/master/protocol-specification.md)
+* [iBeacon](https://developer.apple.com/ibeacon/)
+* [BLE](https://web.archive.org/web/20140214120404/http://www.bluetooth.com/Pages/low-energy-tech-info.aspx) TODO: fix link
+
 
 ### Informative
 * [WoT-Arch: W3C Web of Things (WoT) Architecture](https://www.w3.org/TR/wot-architecture/)
+* [Jara2013](https://dx.doi.org/10.1109/WAINA.2013.261)
+* [Fortino2013](https://dx.doi.org/10.1007/978-3-642-41428-2_23)
+* [Alam2010](https://doi.org/10.1109/GreenCom-CPSCom.2010.116)
+* [Cirani2014](https://doi.org/10.1109/JIOT.2014.2358296)
+* [HATEOAS](http://restcookbook.com/Basics/hateoas/)
+* [Zhou2012](https://doi.org/10.1109/CCIS.2012.6664533)
+* [Yun2010](https://ieeexplore.ieee.org/document/5440391?arnumber=5440391)
