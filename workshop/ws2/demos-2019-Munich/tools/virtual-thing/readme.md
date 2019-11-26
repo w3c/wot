@@ -11,4 +11,4 @@ Given a TD it will generate a virtual entity (A W3C WoT Thing) that exposes the 
 `virtual-thing --help`
 
 ## Github:
-`https://github.com/tum-ei-esi/virtual-thing`
+`https://github.com/tum-esi/virtual-thing`

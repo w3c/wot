@@ -319,7 +319,7 @@ A first introduction of the tool was given [before.](#automatic-behavior-testing
 
 **Steps**
 
-1. Download testbench from [its repository](git@github.com:tum-ei-esi/testbench.git) by `git clone git@github.com:tum-ei-esi/testbench.git`
+1. Download testbench from [its repository](git@github.com:tum-esi/testbench.git) by `git clone git@github.com:tum-esi/testbench.git`
 2. Switch into `testbench` folder
 3. Execute the `npm install`. This will install every required library, including `node-wot`
 4. Execute `npm run-script build`
