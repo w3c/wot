@@ -191,40 +191,40 @@
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           After each work item, in parenthesis, we identify the deliverables it may be included in.
           <dl>
-	    <dt><strong>Architectural Requirements, Use Cases, and Vocabulary</strong> (Architecture)</dt>
-            <dd>Understand and describe requirements of new use cases, architectural patterns, and concepts.</dd>
-            <dt><strong>Link Relation Types:</strong> (Architecture, Thing Description)</dt>
-            <dd>Define link relation types for specific relationships.</dd>
-            <dt><strong>Interoperability Profiles:</strong> (Profile)</dt>
-            <dd>Support plug-and-play interoperabilty via a profile mechanism that defines specific subsets of TDs.</dd>
-            <dt><strong>Thing Description Templates:</strong> (Architecture, Profile, Thing Description)</dt>
-            <dd>Define a mechanism to describe classes of things and an inheritance mechanism
-            and describe how Thing Descriptions can be defined in a modular way.</dd>
-            <dt><strong>Complex Interactions:</strong> (Architecture, Thing Description, Profile)</dt>
-            <dd>Document how hypermedia controls can be used to describe complex interactions and thing behaviour.</dd>
-            <dt><strong>Discovery:</strong> (Discovery)</dt>
-            <dd>Define a non-mandatory mechanisms to search for and retrieve Thing Descriptions in both local and global contexts.</dd>
-	    <dt><strong>Lifecycle:</strong> (Architecture)</dt>
-            <dd>Terminology for states and transitions for products, devices, and information.</dd>
-            <dt><strong>Onboarding:</strong> (Architecture, Discovery)</dt>
-            <dd>Define how trust can be established between Things, gateways, and servers 
-            and how security configurations and provisioning can be established.</dd>
-            <dt><strong>Identifier Management:</strong> (Architecture, Discovery)</dt>
-            <dd>Mitigate privacy risks by defining how identifiers are managed and updated.</dd>
-            <dt><strong>Security Schemes:</strong> (Thing Description)</dt>
-            <dd>Vocabulary for new security schemes supporting targetted protocols, use cases and new requirements.</dd>
-            <dt><strong>Thing Description Vocabulary:</strong> (Thing Description)</dt>
-            <dd>Extensions to Thing Description vocabulary definitions.</dd> 
-            <dt><strong>Protocol Vocabulary and Bindings:</strong> (Thing Description)</dt>
-            <dd>Extensions to protocol vocabulary definitions and protocol bindings.</dd> 
-            <dt><strong>Observe Defaults:</strong> (Thing Description)</dt>
-            <dd>For protocols such as HTTP where multiple ways to implement "observe" is possible, define a default.</dd>
+	    <dt><a href="#usecases"><strong>Architectural Requirements, Use Cases, and Vocabulary:</strong> (Architecture)</a></dt>
+              <dd>Understand and describe requirements of new use cases, architectural patterns, and concepts.</dd>
+            <dt><a href="#link"><strong>Link Relation Types:</strong> (Architecture, Thing Description)</a></dt>
+              <dd>Define link relation types for specific relationships.</dd>
+            <dt><a href="#profiles"<strong>Interoperability Profiles:</strong> (Profile)</a></dt>
+              <dd>Support plug-and-play interoperabilty via a profile mechanism that defines specific subsets of TDs.</dd>
+            <dt><a href="#td-templates"><strong>Thing Description Templates:</strong> (Architecture, Profile, Thing Description)</a></dt>
+              <dd>Define a mechanism to describe classes of things and an inheritance mechanism
+              and describe how Thing Descriptions can be defined in a modular way.</dd>
+            <dt><a href="#complex-interaction"><strong>Complex Interactions:</strong> (Architecture, Thing Description, Profile)</a></dt>
+              <dd>Document how hypermedia controls can be used to describe complex interactions and thing behaviour.</dd>
+            <dt><a href="#discovery"><strong>Discovery:</strong> (Discovery)</a></dt>
+              <dd>Define a non-mandatory mechanisms to search for and retrieve Thing Descriptions in both local and global contexts.</dd>
+	    <dt><a href="#lifecycle"><strong>Lifecycle:</strong> (Architecture)</a></dt>
+              <dd>Terminology for states and transitions for products, devices, and information.</dd>
+            <dt><a href="#onboarding"><strong>Onboarding:</strong> (Architecture, Discovery)</a></dt>
+              <dd>Define how trust can be established between Things, gateways, and servers 
+              and how security configurations and provisioning can be established.</dd>
+            <dt><a href="#identifier-management"><strong>Identifier Management:</strong> (Architecture, Discovery)</a></dt>
+              <dd>Mitigate privacy risks by defining how identifiers are managed and updated.</dd>
+            <dt><a href="#security-schemes"><strong>Security Schemes:</strong> (Thing Description)</a></dt>
+              <dd>Vocabulary for new security schemes supporting targetted protocols, use cases and new requirements.</dd>
+            <dt><a href="#td-vocabulary"><strong>Thing Description Vocabulary:</strong> (Thing Description)</a></dt>
+              <dd>Extensions to Thing Description vocabulary definitions.</dd> 
+            <dt><a href="#protocol-vocabulary"><strong>Protocol Vocabulary and Bindings:</strong> (Thing Description)</a></dt>
+              <dd>Extensions to protocol vocabulary definitions and protocol bindings.</dd> 
+            <dt><a href="#observe-defaults"><strong>Observe Defaults:</strong> (Thing Description)</a></dt>
+              <dd>For protocols such as HTTP where multiple ways to implement "observe" is possible, define a default.</dd>
           </dl>
         </div>
 	    
         <p>Details for each of these are given below.</p>
 
-	<h3>Architectural Requirements, Use Cases, and Vocabulary</h3>
+	<h3 id="usecases">Architectural Requirements, Use Cases, and Vocabulary</h3>
         <p>
           The <a href="https://www.w3.org/TR/wot-architecture">WoT Architecture</a>
           specification includes the definitions of several terms and concepts used to
@@ -237,7 +237,7 @@
           these new concepts.
         </p>
               
-	<h3>Link Relation Types</h3>
+	<h3 id="link">Link Relation Types</h3>
 	<p>
           The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
@@ -258,7 +258,7 @@
           relationships, or implementation of specific network APIs.
         </p>
 
-        <h3>Interoperability Profiles</h3>
+        <h3 id="profiles">Interoperability Profiles</h3>
         <p>The
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
           provides a general framework for describing the interface to a Thing
@@ -299,7 +299,7 @@
           </ol>
         </p>
 
-        <h3>Thing Description Templates</h3>
+        <h3 id="td-templates">Thing Description Templates</h3>
         <p>Current
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Descriptions (TDs)</a>
           apply to specific Things, for example, particular devices.
@@ -340,7 +340,7 @@
           it can satisfy these use cases.
         </p>
 
-        <h3>Complex Interactions</h3>
+        <h3 id="complex-interaction">Complex Interactions</h3>
         <p>
           Many use cases require the implementation of complex
           interactions that span multiple protocol transactions.
@@ -374,7 +374,7 @@
           </ol>
         </p>
 
-        <h3>Discovery</h3>
+        <h3 id="discovery">Discovery</h3>
         <p>During the previous charter a format for the storage of
           the metadata required to access a Thing was defined: the
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>.
@@ -403,7 +403,7 @@
           and W3C working groups.
         </p>
 
-        <h3>Lifecycle</h3>
+        <h3 id="lifecycle">Lifecycle</h3>
 	<p>
           Definition and description of states and transitions 
           for products, devices and information.
@@ -416,7 +416,7 @@
           of privacy.
         </p>
 
-        <h3>Onboarding</h3>
+        <h3 id="onboarding">Onboarding</h3>
         <p>
           In this work item we will define mechanisms to perform minimum-effort
           onboarding of 
@@ -428,7 +428,7 @@
           however is also applicable for other use cases.
         </p>
 
-        <h3>Identifier Management</h3>
+        <h3 id="identifier-management">Identifier Management</h3>
         <p>
           A <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description</a>
           contains an identifier meant to be
@@ -461,7 +461,7 @@
           directory services supporting discovery.
         </p>
 
-        <h3>Security Schemes</h3>
+        <h3 id="security-schemes">Security Schemes</h3>
 	<p>
           In the context of a 
           <a href="http://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>, 
@@ -495,7 +495,7 @@
           This list is not inclusive and additional security schemes may be considered.
         </p>
 	      
-	<h3>Thing Description Vocabulary</h3>
+	<h3 id="td-vocabulary">Thing Description Vocabulary</h3>
 	<p>
           The
           <a href="https://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
@@ -514,7 +514,7 @@
           and better support for default values.
         </p>
 
-        <h3>Protocol Vocabulary and Bindings</h3>
+        <h3 id="protocol-vocabulary">Protocol Vocabulary and Bindings</h3>
 	<p>
           The
           <a href="https://www.w3.org/TR/wot-thing-description">WoT Thing Description (TD)</a>
@@ -536,7 +536,7 @@
           for CoAP(S), CoAP(S)+WS(S), MQTT, and OPC UA.
         </p>
 
-        <h3>Observe Defaults</h3>
+        <h3 id="observe-defaults">Observe Defaults</h3>
         <p>The WoT interaction model includes abstractions for 
           Properties, Events, and Actions.  
           The Properties abstraction in particular includes an "observe" operation,
