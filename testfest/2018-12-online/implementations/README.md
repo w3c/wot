@@ -1,2 +1,0 @@
-Descriptions of each implementation
-

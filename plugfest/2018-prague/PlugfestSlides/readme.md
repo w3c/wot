@@ -1,1 +1,0 @@
-Slides from plugfest participants
