@@ -2,6 +2,8 @@
 
 This is a repository for the W3C [Web of Things Interest Group](http://www.w3.org/WoT/IG/).
 
+TODO: Add a table of contents and pointers to the other repos, and what this should be used for.
+
 ## How to Get Involved
 
 ### Web-site based Pull-Request
