@@ -2,7 +2,20 @@
 
 This is a repository for the W3C [Web of Things Interest Group](http://www.w3.org/WoT/IG/).
 
-TODO: Add a table of contents and pointers to the other repos, and what this should be used for.
+This repository is mainly for archival and general logistics.  For work on a specific topic,
+one of the other repositories dedicated to that topic may be more relevant:
+* [WoT Marketing](https://github.com/w3c/wot-marketing)
+  General introductory material, including tutorials and getting started guides.
+* [WoT Architecture](https://github.com/w3c/wot-architecture) 
+  Overall architecture, responsible for [WoT Architecture](https://www.w3.org/TR/wot-architecture/) deliverable.
+* [WoT Thing Description](https://github.com/w3c/wot-thing-description) 
+  Thing Description metadata, responsible for [WoT Thing Description](https://www.w3.org/TR/wot-thing-description/) deliverable.
+* [WoT Security](https://github.com/w3c/wot-security) 
+* [WoT Discovery](https://github.com/w3c/wot-discovery) 
+* [WoT Scripting API](https://github.com/w3c/wot-scripting-api) 
+* [WoT Use Cases](https://github.com/w3c/wot-usecases) 
+  Use case collection (WIP, still in bring-up).
+* [WoT Testing](https://github.com/w3c/wot-testing) 
 
 ## How to Get Involved
 
