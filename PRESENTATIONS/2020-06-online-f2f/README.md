@@ -1,5 +1,5 @@
 # Presentation Material from June 2020 Online WoT F2F
-This online F2F was held from 22 June 2020 to 26 June 2020.
+This online F2F will be held from 22 June 2020 to 26 June 2020.
 This directory will be used to archive presentations and make them available to people
 who may not have access to screen sharing during the F2F.
 All presenters should upload their presentations, ideally in advance of their session.
