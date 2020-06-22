@@ -2,6 +2,7 @@
 Please use a name in the format `2020-06-DD-Session-Presenter.{pptx,pdf}`,
 for example `2020-06-22-Discovery-McCool.{pptx,pdf}`.
 Whatever main format you use, please export and check in a PDF as well.
+This makes it easier to browse presentations in github.
 
 If you use Powerpoint, see 
 [the PPTX template](https://github.com/w3c/wot/blob/master/PRESENTATIONS/2020-06-online-f2f/Template-2020-06-DD-WoT-Session-Presenter.potx).
