@@ -17,7 +17,7 @@ Here are links to the presentations, in order by agenda.
 * Opening Session: [PDF](2020-06-22-F2F-Opening-McCool.pdf), [PPTX](2020-06-22-F2F-Opening-McCool.pptx)
 * Security: [PDF](2020-06-22-Security-McCool.pdf), [PPTX](2020-06-22-Security-McCool.pptx)
 * Discovery: [PDF](2020-06-22-Discovery-McCool.pdf), [PPTX](2020-06-22-Discovery-McCool.pptx)
-    - LinkSmart: TDB
+    - LinkSmart: [PDF](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pdf), [PPTX](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pptx)
     - DIDs: TDB
 ## Tuesday 2020-06-23
 * PoCs: [PDF](2020-06-23-PoCs-McCool.pdf), [PPTX](2020-06-23-PoCs-McCool.pptx)
