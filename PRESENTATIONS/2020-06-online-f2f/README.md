@@ -12,8 +12,8 @@ Here are links to the presentations, in order by agenda.
 * Opening Session: [PDF](2020-06-22-F2F-Opening-McCool.pdf), [PPTX](2020-06-22-F2F-Opening-McCool.pptx)
 * Security: [PDF](2020-06-22-Security-McCool.pdf), [PPTX](2020-06-22-Security-McCool.pptx)
 * Discovery: [PDF](2020-06-22-Discovery-McCool.pdf), [PPTX](2020-06-22-Discovery-McCool.pptx)
-** LinkSmart: TDB
-** DIDs: TDB
+    - LinkSmart: TDB
+    - DIDs: TDB
 ## Tuesday 2020-06-23
 * PoCs: [PDF](2020-06-23-PoCs-McCool.pdf), [PPTX](2020-06-23-PoCs-McCool.pptx)
 * Scripting: TDB
@@ -24,8 +24,8 @@ Here are links to the presentations, in order by agenda.
 * Lifecycle: TDB
 ## Thursday 2020-06-23
 * Architecture
-** Use Cases: TDB
-** Requirements: TDB
+    - Use Cases: TDB
+    - Requirements: TDB
 ## Friday 2020-06-23
 * Thing Description: TDB
 * Marketing: TDB
