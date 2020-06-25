@@ -14,19 +14,19 @@ If you use Powerpoint, see
 Here are links to the presentations, in order by agenda.
 
 ## Monday 2020-06-22
-* Opening Session: [PDF](2020-06-22-F2F-Opening-McCool.pdf), [PPTX](2020-06-22-F2F-Opening-McCool.pptx)
+* Opening Session: [PDF](2020-06-22-Opening-McCool.pdf), [PPTX](2020-06-22-Opening-McCool.pptx)
 * Security: [PDF](2020-06-22-Security-McCool.pdf), [PPTX](2020-06-22-Security-McCool.pptx)
 * Discovery: [PDF](2020-06-22-Discovery-McCool.pdf), [PPTX](2020-06-22-Discovery-McCool.pptx)
     - LinkSmart: [PDF](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pdf), [PPTX](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pptx)
     - DIDs: TDB
 ## Tuesday 2020-06-23
 * PoCs: [PDF](2020-06-23-PoCs-McCool.pdf), [PPTX](2020-06-23-PoCs-McCool.pptx)
-* Scripting: TDB
+* Scripting: [PDF](2020-06-23-Scripting-Kis.pdf), [PPTX](2020-06-23-Scripting-Kis.pptx)
 * Plugfest: [PDF](2020-06-23-Plugfest-McCool.pdf), [PPTX](2020-06-23-Plugfest-McCool.pptx)
-* Binding Templates: TDB
+* Binding Templates: [PDF](2020-06-23-Binding-Korkan.pdf), [PPTX](2020-06-23-Binding-Korkan.pptx)
 ## Wednesday 2020-06-23
-* Profiles: TDB
-* Lifecycle: TDB
+* Profiles: [PDF](2020-06-24-Profiles-Lagally.pdf), [PPTX](2020-06-24-Profiles-Lagally.pptx)
+* Lifecycle: [PDF](2020-06-24-Lifecycle-Kis-Lagally.pdf), [PPTX](2020-06-24-Lifecycle-Kis-Lagally.pptx)
 ## Thursday 2020-06-23
 * Architecture
     - Use Cases: TDB
