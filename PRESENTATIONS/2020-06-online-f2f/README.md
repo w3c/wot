@@ -14,7 +14,7 @@ If you use Powerpoint, see
 Here are links to the presentations, in order by agenda.
 
 ## Monday 2020-06-22
-* Opening Session: [PDF](2020-06-22-F2F-Opening-McCool.pdf), [PPTX](2020-06-22-F2F-Opening-McCool.pptx)
+* Opening Session: [PDF](2020-06-22-Opening-McCool.pdf), [PPTX](2020-06-22-Opening-McCool.pptx)
 * Security: [PDF](2020-06-22-Security-McCool.pdf), [PPTX](2020-06-22-Security-McCool.pptx)
 * Discovery: [PDF](2020-06-22-Discovery-McCool.pdf), [PPTX](2020-06-22-Discovery-McCool.pptx)
     - LinkSmart: [PDF](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pdf), [PPTX](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pptx)
