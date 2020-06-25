@@ -21,9 +21,9 @@ Here are links to the presentations, in order by agenda.
     - DIDs: TDB
 ## Tuesday 2020-06-23
 * PoCs: [PDF](2020-06-23-PoCs-McCool.pdf), [PPTX](2020-06-23-PoCs-McCool.pptx)
-* Scripting: TDB
+* Scripting: [PDF](2020-06-23-Scripting-Kis.pdf), [PPTX](2020-06-23-Scripting-Kis.pptx)
 * Plugfest: [PDF](2020-06-23-Plugfest-McCool.pdf), [PPTX](2020-06-23-Plugfest-McCool.pptx)
-* Binding Templates: TDB
+* Binding Templates: [PDF](2020-06-23-Binding-Korkan.pdf), [PPTX](2020-06-23-Binding-Korkan.pptx)
 ## Wednesday 2020-06-23
 * Profiles: TDB
 * Lifecycle: TDB
