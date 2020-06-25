@@ -25,8 +25,8 @@ Here are links to the presentations, in order by agenda.
 * Plugfest: [PDF](2020-06-23-Plugfest-McCool.pdf), [PPTX](2020-06-23-Plugfest-McCool.pptx)
 * Binding Templates: [PDF](2020-06-23-Binding-Korkan.pdf), [PPTX](2020-06-23-Binding-Korkan.pptx)
 ## Wednesday 2020-06-23
-* Profiles: TDB
-* Lifecycle: TDB
+* Profiles: [PDF](2020-06-24-Profiles-Lagally.pdf), [PPTX](2020-06-24-Profiles-Lagally.pptx)
+* Lifecycle: [PDF](2020-06-24-Lifecycle-Kis-Lagally.pdf), [PPTX](2020-06-24-Lifecycle-Kis-Lagally.pptx)
 ## Thursday 2020-06-23
 * Architecture
     - Use Cases: TDB
