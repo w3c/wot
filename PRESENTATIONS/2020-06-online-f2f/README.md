@@ -9,7 +9,7 @@ Whatever main format you use, please export and check in a PDF as well.
 This makes it easier to browse presentations in github.
 
 If you use Powerpoint, see 
-[the PPTX template](https://github.com/w3c/wot/blob/master/PRESENTATIONS/2020-06-online-f2f/Template-2020-06-DD-WoT-Session-Presenter.potx).
+[the PPTX template](Template-2020-06-DD-WoT-Session-Presenter.potx).
 
 Here are links to the presentations, in order by agenda.
 
@@ -28,9 +28,12 @@ Here are links to the presentations, in order by agenda.
 * Profiles: [PDF](2020-06-24-Profiles-Lagally.pdf), [PPTX](2020-06-24-Profiles-Lagally.pptx)
 * Lifecycle: [PDF](2020-06-24-Lifecycle-Kis-Lagally.pdf), [PPTX](2020-06-24-Lifecycle-Kis-Lagally.pptx)
 ## Thursday 2020-06-23
-* Architecture
-    - Use Cases: TDB
-    - Requirements: TDB
+* Architecture: [PDF](2020-06-25-Usecases-Requirements-Lagally.pdf), [PPTX](2020-06-25-Usecases-Requirements-Lagally.pptx)   
+    - Use Cases
+    - Requirements
 ## Friday 2020-06-23
-* Thing Description: TDB
-* Marketing: TDB
+* Thing Description: TBD
+* Marketing:
+    - Progress: TBD
+    - Project Management Tools: [PDF](link), [PPTX](link)
+    - Next steps: TBD
