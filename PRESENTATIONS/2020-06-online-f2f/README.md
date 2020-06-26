@@ -35,5 +35,5 @@ Here are links to the presentations, in order by agenda.
 * Thing Description: TBD
 * Marketing:
     - Progress: TBD
-    - Project Management Tools: [PDF](2020-06-26-Project-Management-Kaz.pdf), [PPTX](2020-06-26-Project-Management-Kaz.pptx)
+    - Project Management: [PDF](2020-06-26-Project-Management-Kaz.pdf), [PPTX](2020-06-26-Project-Management-Kaz.pptx)
     - Next steps: TBD
