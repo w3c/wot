@@ -33,8 +33,8 @@ Here are links to the presentations, in order by agenda.
     - Requirements
 ## Friday 2020-06-23
 * Thing Description: TBD
-* Marketing:
-    - Progress: TBD
-    - Project Management: [PDF](2020-06-26-Project-Management-Kaz.pdf), [PPTX](2020-06-26-Project-Management-Kaz.pptx)
-    - Next steps: TBD
+* Marketing: TBD
 * Closing: [PDF](2020-06-26-Closing-McCool.pdf), [PPTX](2020-06-26-Closing-McCool.pptx)
+
+## Deferred
+* Project Management: [PDF](2020-06-26-Project-Management-Kaz.pdf), [PPTX](2020-06-26-Project-Management-Kaz.pptx)
