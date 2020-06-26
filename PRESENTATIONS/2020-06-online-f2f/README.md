@@ -24,14 +24,14 @@ Here are links to the presentations, in order by agenda.
 * Scripting: [PDF](2020-06-23-Scripting-Kis.pdf), [PPTX](2020-06-23-Scripting-Kis.pptx)
 * Plugfest: [PDF](2020-06-23-Plugfest-McCool.pdf), [PPTX](2020-06-23-Plugfest-McCool.pptx)
 * Binding Templates: [PDF](2020-06-23-Bindings-Korkan.pdf), [ODP](2020-06-23-Bindings-Korkan.odp)
-## Wednesday 2020-06-23
+## Wednesday 2020-06-24
 * Profiles: [PDF](2020-06-24-Profiles-Lagally.pdf), [PPTX](2020-06-24-Profiles-Lagally.pptx)
 * Lifecycle: [PDF](2020-06-24-Lifecycle-Kis-Lagally.pdf), [PPTX](2020-06-24-Lifecycle-Kis-Lagally.pptx)
-## Thursday 2020-06-23
+## Thursday 2020-06-25
 * Architecture: [PDF](2020-06-25-Usecases-Requirements-Lagally.pdf), [PPTX](2020-06-25-Usecases-Requirements-Lagally.pptx)   
     - Use Cases
     - Requirements
-## Friday 2020-06-23
+## Friday 2020-06-26
 * Thing Description: TBD
 * Marketing: TBD
 * Closing: [PDF](2020-06-26-Closing-McCool.pdf), [PPTX](2020-06-26-Closing-McCool.pptx)
