@@ -32,8 +32,8 @@ Here are links to the presentations, in order by agenda.
     - Use Cases
     - Requirements
 ## Friday 2020-06-26
-* Thing Description: TBD
-* Marketing: TBD
+* Thing Description: [PDF](2020-06-26-TD-Topics-vf2f.pdf)
+* Marketing: [PDF](2020-06-26-Marketing-vf2f.pdf)
 * Closing: [PDF](2020-06-26-Closing-McCool.pdf), [PPTX](2020-06-26-Closing-McCool.pptx)
 
 ## Deferred
