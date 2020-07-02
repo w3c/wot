@@ -18,7 +18,7 @@ Here are links to the presentations, in order by agenda.
 * Security: [PDF](2020-06-22-Security-McCool.pdf), [PPTX](2020-06-22-Security-McCool.pptx)
 * Discovery: [PDF](2020-06-22-Discovery-McCool.pdf), [PPTX](2020-06-22-Discovery-McCool.pptx)
     - LinkSmart: [PDF](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pdf), [PPTX](2020-06-22-Discovery-ThingDirectory-Tavakolizadeh.pptx)
-    - DIDs: TDB
+    - DIDs and Verifiable Claims: [PDF](2020-06-22-DID-VC-Fotiou.pdf)
 ## Tuesday 2020-06-23
 * PoCs: [PDF](2020-06-23-PoCs-McCool.pdf), [PPTX](2020-06-23-PoCs-McCool.pptx)
 * Scripting: [PDF](2020-06-23-Scripting-Kis.pdf), [PPTX](2020-06-23-Scripting-Kis.pptx)
