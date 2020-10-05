@@ -9,7 +9,7 @@ Whatever main format you use, please export and check in a PDF as well.
 This makes it easier to browse presentations in github.
 
 If you use Powerpoint, see 
-[the PPTX template](Template-2020-09-DD-WoT-Session-Presenter.potx).
+[the PPTX template](Template-2020-06-DD-WoT-Session-Presenter.potx).
 
 Here are links to the presentations, in order by agenda.
 
