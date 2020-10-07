@@ -15,3 +15,6 @@ Here are links to the presentations, in order by agenda.
 
 ## Monday 2020-10-05
 * Opening Session: [PDF](2020-10-05-Opening-McCool.pdf), [PPTX](2020-10-05-Opening-McCool.pptx)
+
+## Monday 2020-10-07
+* Opening Session: [PDF](2020-10-07-Opening-McCool.pdf), [PPTX](2020-10-07-Opening-McCool.pptx)
