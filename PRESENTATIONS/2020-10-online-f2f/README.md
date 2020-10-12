@@ -16,5 +16,8 @@ Here are links to the presentations, in order by agenda.
 ## Monday 2020-10-05
 * Opening Session: [PDF](2020-10-05-Opening-McCool.pdf), [PPTX](2020-10-05-Opening-McCool.pptx)
 
-## Monday 2020-10-07
+## Wednesday 2020-10-07
 * Opening Session: [PDF](2020-10-07-Opening-McCool.pdf), [PPTX](2020-10-07-Opening-McCool.pptx)
+
+## Wednesday 2020-10-20
+* Discovery Architecture Overview [PDF](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pptx)
