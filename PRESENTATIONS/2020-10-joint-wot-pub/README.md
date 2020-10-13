@@ -2,8 +2,11 @@
 
 * [Agenda](https://github.com/w3c/wot/issues/935)
 * [WoT Introduction and Status](https://github.com/w3c/wot-marketing/blob/master/presentations/2020-10-WoT-Intro.pptx)
-* [To do: Publication Use Cases for WoT](2020-10-WoT-Pub-Use-Cases.pptx)
+    - This content is included in the next presentation, however...
+* [WoT Intro and Publication Use Cases](2020-10-WoT-Intro-Pubs.pptx)
+    - What is IoT
+    - What are the goals and status of WoT
     - NHK Hybridcast example
     - Node-RED integration
-    - Science education
+    - Science education with interactive notebooks
 
