@@ -18,6 +18,7 @@ Here are links to the presentations, in order by agenda.
 
 ## Wednesday 2020-10-07
 * Opening Session: [PDF](2020-10-07-Opening-McCool.pdf), [PPTX](2020-10-07-Opening-McCool.pptx)
-
+* Usecase
+  * Use Case for Media (NHK): [PDF](2020-10-07-WoT-F2F-UseCase-NHK-Endo.pdf)
 ## Wednesday 2020-10-20
 * Discovery Architecture Overview: [PDF](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pptx)
