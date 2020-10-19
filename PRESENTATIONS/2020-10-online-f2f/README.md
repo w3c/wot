@@ -21,3 +21,4 @@ Here are links to the presentations, in order by agenda.
 
 ## Wednesday 2020-10-20
 * Discovery Architecture Overview: [PDF](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pptx)
+* Discovery: Introduction Mechanisms: [PDF](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pptx)
