@@ -30,6 +30,8 @@ Here are links to the presentations, in order by agenda.
   * Semantic Search: [PDF](2020-10-20-WoT-F2F-Discovery-SemanticSearch-Cimmino.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-SemanticSearch-Cimmino.pptx) 
   
 ## Wednesday 2020-10-21
+* Thing Descriptions and Thing Models
+   * Managing Dynamic Resources : [PDF](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pdf), [PPTX](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pptx) 
 
 ## Thursday 2020-10-22
 * Security
