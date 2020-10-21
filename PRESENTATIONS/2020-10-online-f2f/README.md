@@ -33,5 +33,5 @@ Here are links to the presentations, in order by agenda.
 
 ## Thursday 2020-10-22
 * Security
-   * OAuth 2.0 : [PDF](2020-10-22-WoT-F2F-Security-OAuth2-XX.pdf), [PPTX](2020-10-20-WoT-F2F-Security-OAuth2-XX.pptx) 
+   * OAuth 2.0 : [PDF](2020-10-22-WoT-F2F-Security-OAuth2-Aguzzi.pdf), [PPTX](2020-10-20-WoT-F2F-Security-OAuth2-Aguzzi.pptx) 
    * Other Security Topics: [PDF](2020-10-22-WoT-F2F-Security-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Security-McCool.pptx) 
