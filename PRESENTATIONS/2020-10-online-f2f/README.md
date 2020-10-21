@@ -21,5 +21,6 @@ Here are links to the presentations, in order by agenda.
 * Usecase
   * Use Case for Media (NHK): [PDF](2020-10-07-WoT-F2F-UseCase-NHK-Endo.pdf)
 ## Wednesday 2020-10-20
+* Opening Session: [PDF](2020-10-20-Opening-McCool.pdf), [PPTX](2020-10-20-Opening-McCool.pptx)
 * Discovery Architecture Overview: [PDF](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pptx)
 * Discovery: Introduction Mechanisms: [PDF](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pptx)
