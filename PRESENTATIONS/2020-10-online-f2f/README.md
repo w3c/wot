@@ -3,8 +3,8 @@ This online F2F will be held on various dates from 5 October 2020 to 22 October 
 This directory will be used to archive presentations and make them available to people
 who may not have access to screen sharing during the F2F.
 All presenters should upload their presentations, ideally in advance of their session.
-Please use a name in the format `2020-06-DD-Session-Presenter.{pptx,pdf}`,
-for example `2020-06-22-Discovery-McCool.{pptx,pdf}`.
+Please use a name in the format `2020-06-DD-WoT-F2F-Session-Presenter.{pptx,pdf}`,
+for example `2020-06-20-WoT-F2F-Opening-McCool.{pptx,pdf}`.
 Whatever main format you use, please export and check in a PDF as well.
 This makes it easier to browse presentations in github.
 
