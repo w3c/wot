@@ -20,7 +20,7 @@ Here are links to the presentations, in order by agenda.
 * Opening Session: [PDF](2020-10-07-WoT-F2F-Opening-McCool.pdf), [PPTX](2020-10-07-WoT-F2F-Opening-McCool.pptx)
 * Usecase
   * Use Case for Media (NHK): [PDF](2020-10-07-WoT-F2F-UseCase-NHK-Endo.pdf)
-## Wednesday 2020-10-20
+## Tuesday 2020-10-20
 * Opening Session: [PDF](2020-10-20-WoT-F2F-Opening-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Opening-McCool.pptx)
 * Discovery
   * Architecture Overview: [PDF](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pptx)
@@ -28,3 +28,10 @@ Here are links to the presentations, in order by agenda.
   * Directory API: [PDF](2020-10-20-WoT-F2F-Discovery-DirectoryAPI-Tavakolizadeh.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-DirectoryAPI-Tavakolizadeh.pptx)
   * Syntactic Search: [PDF](2020-10-20-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pptx) 
   * Semantic Search: [PDF](2020-10-20-WoT-F2F-Discovery-SemanticSearch-Cimmino.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-SemanticSearch-Cimmino.pptx) 
+  
+## Wednesday 2020-10-21
+
+## Thursday 2020-10-22
+* Security
+   * OAuth 2.0 : [PDF](2020-10-22-WoT-F2F-Security-OAuth2-XX.pdf), [PPTX](2020-10-20-WoT-F2F-Security-OAuth2-XX.pptx) 
+   * Other Security Topics: [PDF](2020-10-22-WoT-F2F-Security-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Security-McCool.pptx) 
