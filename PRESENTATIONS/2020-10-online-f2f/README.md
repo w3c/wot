@@ -14,10 +14,10 @@ If you use Powerpoint, see
 Here are links to the presentations, in order by agenda.
 
 ## Monday 2020-10-05
-* Opening Session: [PDF](2020-10-05-Opening-McCool.pdf), [PPTX](2020-10-05-Opening-McCool.pptx)
+* Opening Session: [PDF](2020-10-05-WoT-F2F-Opening-McCool.pdf), [PPTX](2020-10-05-WoT-F2F-Opening-McCool.pptx)
 
 ## Wednesday 2020-10-07
-* Opening Session: [PDF](2020-10-07-Opening-McCool.pdf), [PPTX](2020-10-07-Opening-McCool.pptx)
+* Opening Session: [PDF](2020-10-07-WoT-F2F-Opening-McCool.pdf), [PPTX](2020-10-07-WoT-F2F-Opening-McCool.pptx)
 * Usecase
   * Use Case for Media (NHK): [PDF](2020-10-07-WoT-F2F-UseCase-NHK-Endo.pdf)
 ## Wednesday 2020-10-20
