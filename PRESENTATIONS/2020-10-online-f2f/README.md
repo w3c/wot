@@ -22,5 +22,9 @@ Here are links to the presentations, in order by agenda.
   * Use Case for Media (NHK): [PDF](2020-10-07-WoT-F2F-UseCase-NHK-Endo.pdf)
 ## Wednesday 2020-10-20
 * Opening Session: [PDF](2020-10-20-Opening-McCool.pdf), [PPTX](2020-10-20-Opening-McCool.pptx)
-* Discovery Architecture Overview: [PDF](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pptx)
-* Discovery: Introduction Mechanisms: [PDF](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pptx)
+* Discovery
+  * Architecture Overview: [PDF](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Architecture-Overview-McCool.pptx)
+  * Introduction Mechanisms: [PDF](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pptx)
+  * Directory API: [PDF](2020-10-20-WoT-F2F-Discovery-DirectoryAPI-Tavakolizadeh.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-DirectoryAPI-Tavakolizadeh.pptx)
+  * Syntactic Search: [PDF](2020-10-20-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pptx) 
+  * Semantic Search: [PDF](2020-10-20-WoT-F2F-Discovery-SemanticSearch-Cimmino.pdf), [PPTX](2020-10-20-WoT-F2F-Discovery-SemanticSearch-Cimmino.pptx) 
