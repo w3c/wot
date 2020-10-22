@@ -31,9 +31,13 @@ Here are links to the presentations, in order by agenda.
   
 ## Wednesday 2020-10-21
 * Thing Descriptions and Thing Models
+   * Opening Session: [PDF](2020-10-21-WoT-F2F-Opening-Seb.pdf), [PPTX](2020-10-21-WoT-F2F-Opening-Seb.pptx)
+   * What's new in TD 1.1 FPWD and Thing Model : [PDF](2020_TD_Topics_TPAC.pdf), [PPTX](2020_TD_Topics_TPAC.pptx) 
    * Managing Dynamic Resources : [PDF](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pdf), [PPTX](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pptx) 
 
 ## Thursday 2020-10-22
 * Security
    * OAuth 2.0 : [PDF](2020-10-22-WoT-F2F-Security-OAuth2-Aguzzi.pdf), [PPTX](2020-10-20-WoT-F2F-Security-OAuth2-Aguzzi.pptx) 
    * Other Security Updates: [PDF](2020-10-22-WoT-F2F-Security-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Security-McCool.pptx) 
+   
+   
