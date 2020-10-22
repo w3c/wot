@@ -34,6 +34,7 @@ Here are links to the presentations, in order by agenda.
    * Opening Session: [PDF](2020-10-21-WoT-F2F-Opening-Seb.pdf), [PPTX](2020-10-21-WoT-F2F-Opening-Seb.pptx)
    * What's new in TD 1.1 FPWD and Thing Model : [PDF](2020_TD_Topics_TPAC.pdf), [PPTX](2020_TD_Topics_TPAC.pptx) 
    * Managing Dynamic Resources : [PDF](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pdf), [PPTX](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pptx) 
+   * Component approach for TD : [PDF](https://www.w3.org/WoT/IG/wiki/File:2020-10-21_TD_mechanisms_for_components.pdf)
 
 ## Thursday 2020-10-22
 * Security
