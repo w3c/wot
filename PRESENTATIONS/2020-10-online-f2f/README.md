@@ -18,7 +18,9 @@ Here are links to the presentations, in order by agenda.
 
 ## Wednesday 2020-10-07
 * Opening Session: [PDF](2020-10-07-WoT-F2F-Opening-McCool.pdf), [PPTX](2020-10-07-WoT-F2F-Opening-McCool.pptx)
-* Usecase
+* Use Cases and Requirements: [PDF](2020-10-07-WoT-F2F-Usecases-Requirements-Lagally.pdf)
+* Case Studies
+  * Rural Hybridization: [PDF](2020-10-07-WoT-F2F-Rural-Hybridization-Kiura.pdf)
   * Use Case for Media (NHK): [PDF](2020-10-07-WoT-F2F-UseCase-NHK-Endo.pdf)
   
 ## Tuesday 2020-10-20
@@ -33,12 +35,13 @@ Here are links to the presentations, in order by agenda.
 ## Wednesday 2020-10-21
 * Opening Session: [PDF](2020-10-21-WoT-F2F-Opening-Seb.pdf), [PPTX](2020-10-21-WoT-F2F-Opening-Seb.pptx)
 * Thing Descriptions and Thing Models   
-   * What's new in TD 1.1 FPWD and Thing Model : [PDF](2020_TD_Topics_TPAC.pdf), [PPTX](2020_TD_Topics_TPAC.pptx) 
-   * Managing Dynamic Resources : [PDF](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pdf), [PPTX](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pptx) 
-   * Component approach for TD : [PDF](https://www.w3.org/WoT/IG/wiki/File:2020-10-21_TD_mechanisms_for_components.pdf)
+   * What's new in TD 1.1 FPWD and Thing Model: [PDF](2020-10-21-TD-Topics-Kaebisch.pdf), [PPTX](2020-10-21-TD-Topics-Kaebisch.pptx) 
+   * Managing Dynamic Resources: [PDF](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pdf), [PPTX](2020-10-21-WoT-F2F-TD-ManageDynamicResources-Peintner.pptx) 
+   * Component approaches for TDs: [PDF](https://www.w3.org/WoT/IG/wiki/File:2020-10-21_TD_mechanisms_for_components.pdf)
 
 ## Thursday 2020-10-22
 * Opening Session: [PDF](2020-10-22-WoT-F2F-Opening-McCool.pdf), [PPTX](2020-10-21-WoT-F2F-Opening-McCool.pptx)
+* Scripting: [PDF](2020-10-22-WoT-F2F-Scripting-Update.pdf)
 * Security
    * OAuth 2.0 : [PDF](2020-10-22-WoT-F2F-Security-OAuth2-Aguzzi.pdf), [PPTX](2020-10-20-WoT-F2F-Security-OAuth2-Aguzzi.pptx) 
    * Other Security Updates: [PDF](2020-10-22-WoT-F2F-Security-McCool.pdf), [PPTX](2020-10-20-WoT-F2F-Security-McCool.pptx) 
