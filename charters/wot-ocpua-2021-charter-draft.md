@@ -1,4 +1,4 @@
-# OPC UA W3C WoT Working Group Charter (Draft)
+# OPC UA W3C WoT Cooperation Proposal (Draft)
 
 ## Purpose 
 The OPC UA W3C WoT Working Group is a joint initiative of the W3C Web of Things (WoT) (https://www.w3.org/WoT/) and the 
