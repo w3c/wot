@@ -39,6 +39,6 @@ The working group meets as needed. Meetings may be electronic or in person. The 
 Face-to-Face and electronic meetings will be organized jointly by W3C and the OPC Foundation.
 
 ## Deliverables 
-### W3C W3C Recommendation/Note?
-### OPC UA companion specification 
-### Prototype implementation
+* W3C W3C Recommendation/Note?
+* OPC UA companion specification 
+* Prototype implementation
