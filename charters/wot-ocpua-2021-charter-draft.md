@@ -3,7 +3,7 @@
 ## Purpose 
 The OPC UA W3C WoT Working Group is a joint initiative of the W3C Web of Things (WoT) (https://www.w3.org/WoT/) and the 
 OPC Foundation (https://opcfoundation.org/). The purpose is the development of an OPC UA Binding 
-for the W3C Web of Things through an OPC UA Companion specification and mirrored as a W3C Recommendation/Note(?) docuement.
+for the W3C Web of Things through an OPC UA Companion specification and mirrored as a W3C Recommendation/Note(?) document.
 
 ## Scope
 Web of Thing (WoT) should support a standardized binding to OPC UA systems to enable simple application development like for cross-domain 
@@ -12,6 +12,11 @@ scenarios such as flexible manufacturing.
 
 Such a binding for the WoT needs its own set of OPC UA specific vocabulary definitions, which should be developed collaboratively. In the context of the existing [liason](https://opcfoundation.org/news/opc-foundation-news/w3c-and-opcf-to-integrate-opc-ua-into-the-web-of-things/) a joint 
 working group should be established to work together on an OPC UA binding for the Web of Things. This guaranteed that the binding is getting accepted within the OPC UA community as well as in the WoT community and avoids heterogeneous (project specific) definitions and incompatible OPC UA handlings in WoT Thing Descriptions.
+
+In details the joint activity should mainly address:
+* define a standardized way how Thing Description can be created from nodeset file (and vice versa) 
+* define how the OPC UA specific endpoints can be described in TDs
+* define the (public) UA security modes as metadata in TDs
  
 
 ### OPC Foundation
