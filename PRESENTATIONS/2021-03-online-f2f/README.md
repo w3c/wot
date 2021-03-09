@@ -15,6 +15,7 @@ If you use Powerpoint, see
 Here are links to the presentations, in order by agenda.
 
 ## Monday 2021-03-15
+* Opening Session: [PDF](2021-03-15-WoT-Opening-McCool.pdf), [PPTX](2021-03-15-WoT-Opening-McCool.pptx)
 
 ## Wednesday 2021-03-17
   
