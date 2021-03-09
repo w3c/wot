@@ -15,14 +15,25 @@ If you use Powerpoint, see
 Here are links to the presentations, in order by agenda.
 
 ## Monday 2021-03-15
-* Opening Session: [PDF](2021-03-15-WoT-Opening-McCool.pdf), [PPTX](2021-03-15-WoT-Opening-McCool.pptx)
+* Opening: [PDF](2021-03-15-WoT-Opening-McCool.pdf), [PPTX](2021-03-15-WoT-Opening-McCool.pptx)
+* Closing: [PDF](2021-03-15-WoT-Closing-McCool.pdf), [PPTX](2021-03-15-WoT-Closing-McCool.pptx)
 
 ## Wednesday 2021-03-17
+* Opening: [PDF](2021-03-17-WoT-Opening-McCool.pdf), [PPTX](2021-03-17-WoT-Opening-McCool.pptx)
+* Closing: [PDF](2021-03-17-WoT-Closing-McCool.pdf), [PPTX](2021-03-17-WoT-Closing-McCool.pptx)
   
 ## Thursday 2021-03-18
+* Opening: [PDF](2021-03-18-WoT-Opening-McCool.pdf), [PPTX](2021-03-18-WoT-Opening-McCool.pptx)
+* Closing: [PDF](2021-03-18-WoT-Closing-McCool.pdf), [PPTX](2021-03-18-WoT-Closing-McCool.pptx)
 
 ## Monday 2021-03-22
+* Opening: [PDF](2021-03-22-WoT-Opening-McCool.pdf), [PPTX](2021-03-22-WoT-Opening-McCool.pptx)
+* Closing: [PDF](2021-03-22-WoT-Closing-McCool.pdf), [PPTX](2021-03-22-WoT-Closing-McCool.pptx)
 
 ## Wednesday 2021-03-24
+* Opening: [PDF](2021-03-24-WoT-Opening-McCool.pdf), [PPTX](2021-03-24-WoT-Opening-McCool.pptx)
+* Closing: [PDF](2021-03-24-WoT-Closing-McCool.pdf), [PPTX](2021-03-24-WoT-Closing-McCool.pptx)
 
 ## Thursday 2021-03-25
+* Opening: [PDF](2021-03-25-WoT-Opening-McCool.pdf), [PPTX](2021-03-25-WoT-Opening-McCool.pptx)
+* Closing: [PDF](2021-03-25-WoT-Closing-McCool.pdf), [PPTX](2021-03-25-WoT-Closing-McCool.pptx)
