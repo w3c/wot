@@ -72,6 +72,8 @@ Here are links to the presentations, in order by agenda.
 * Opening:
    [PDF](2021-03-25-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-03-25-WoT-F2F-Opening-McCool.pptx)
+* Plugfest:
+   [PDF](2021-03-25-WoT-F2F-Plugfest-Results-McCool.pdf)
 * Closing:
    [PDF](2021-03-25-WoT-F2F-Closing-McCool.pdf),
    [PPTX](2021-03-25-WoT-F2F-Closing-McCool.pptx)
