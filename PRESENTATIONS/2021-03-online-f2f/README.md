@@ -20,6 +20,9 @@ Here are links to the presentations, in order by agenda.
 * Opening:
    [PDF](2021-03-15-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-03-15-WoT-F2F-Opening-McCool.pptx)
+* WoT Summary and Status:
+   [PDF](2021-03-15-WoT-F2F-Summary-McCool.pdf),
+   [PPTX](2021-03-15-WoT-F2F-Summary-McCool.pptx)
 * Closing:
    [PDF](2021-03-15-WoT-F2F-Closing-McCool.pdf),
    [PPTX](2021-03-15-WoT-F2F-Closing-McCool.pptx)
