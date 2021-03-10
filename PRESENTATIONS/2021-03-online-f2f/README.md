@@ -28,6 +28,9 @@ Here are links to the presentations, in order by agenda.
 * Opening:
    [PDF](2021-03-17-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-03-17-WoT-F2F-Opening-McCool.pptx)
+* Discovery Intro:
+   [PDF](2021-03-17-WoT-F2F-Discovery-Intro-McCool.pdf),
+   [PPTX](2021-03-17-WoT-F2F-Discovery-Intro-McCool.pptx)
 * Syntactic Search:
    [PDF](2021-03-17-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pdf),
    [PPTX](2021-03-17-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pptx)
