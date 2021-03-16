@@ -40,6 +40,9 @@ Here are links to the presentations, in order by agenda.
 * Semantic Search:
    [PDF](2021-03-17-WoT-F2F-Discovery-SemanticSearch-Cimmino.pdf),
    [PPTX](2021-03-17-WoT-F2F-Discovery-SemanticSearch-Cimmino.pptx)
+* Issues:
+   [PDF](2021-03-17-WoT-F2F-Discovery-Issues-McCool.pdf),
+   [PPTX](2021-03-17-WoT-F2F-Discovery-Issues-McCool.pptx)
 * Closing:
    [PDF](2021-03-17-WoT-F2F-Closing-McCool.pdf),
    [PPTX](2021-03-17-WoT-F2F-Closing-McCool.pptx)
