@@ -34,6 +34,12 @@ Here are links to the presentations, in order by agenda.
 * Discovery Intro:
    [PDF](2021-03-17-WoT-F2F-Discovery-Intro-McCool.pdf),
    [PPTX](2021-03-17-WoT-F2F-Discovery-Intro-McCool.pptx)
+* Introduction
+   [PDF](2021-03-17-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pdf),
+   [PPTX](2021-03-online-f2f/2021-03-17-WoT-F2F-Discovery-Introduction-Mechanisms-Toumura.pptx)
+* Exploration
+   [PDF](2021-03-17-WoT-F2F-Discovery-Exploration-Tavakolizadeh.pdf),
+   [PPTX](2021-03-17-WoT-F2F-Discovery-Exploration-Tavakolizadeh.pptx)
 * Syntactic Search:
    [PDF](2021-03-17-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pdf),
    [PPTX](2021-03-17-WoT-F2F-Discovery-SyntacticSearch-Cimmino.pptx)
