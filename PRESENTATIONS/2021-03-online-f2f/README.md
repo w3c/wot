@@ -74,7 +74,7 @@ Here are links to the presentations, in order by agenda.
 ## Wednesday 2021-03-24
 * Opening:
    [PDF](2021-03-42-WoT-F2F-Opening-McCool.pdf),
-   [PPTX](2021-03-24-WoT-F2F-Opening-McCool.pptx)
+   [PPTX](2021-03-42-WoT-F2F-Opening-McCool.pptx)
 * TD Topics:
    [PDF](2021-03-24-WoT-F2F-TD-Sebastian.pdf),
    [PPTX](2021-03-24-WoT-F2F-TD-Sebastian.pptx)
