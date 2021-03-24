@@ -75,6 +75,9 @@ Here are links to the presentations, in order by agenda.
 * Opening:
    [PDF](2021-03-24-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-03-24-WoT-F2F-Opening-McCool.pptx)
+* TD Topics:
+   [PDF](2021-03-24-WoT-F2F-TD-Sebastian.pdf),
+   [PPTX](2021-03-24-WoT-F2F-TD-Sebastian.pptx) 
 * Closing:
    [PDF](2021-03-24-WoT-F2F-Closing-McCool.pdf),
    [PPTX](2021-03-24-WoT-F2F-Closing-McCool.pptx)
