@@ -10,7 +10,7 @@ Web of Thing (WoT) should support a standardized binding to OPC UA systems to en
 applications. OPC UA is one of the prominent automation standards for device communication in the factory domain as well as for Industry 4.0 
 scenarios such as flexible manufacturing. 
 
-Such a binding for the WoT needs its own set of OPC UA specific vocabulary definitions, which should be developed collaboratively. In the context of the existing [liason](https://opcfoundation.org/news/opc-foundation-news/w3c-and-opcf-to-integrate-opc-ua-into-the-web-of-things/) a joint 
+Such a binding for the WoT needs its own set of OPC UA specific vocabulary definitions, which should be developed collaboratively. In the context of the existing [liaison](https://opcfoundation.org/news/opc-foundation-news/w3c-and-opcf-to-integrate-opc-ua-into-the-web-of-things/) a joint 
 working group should be established to work together on an OPC UA binding for the Web of Things. This guaranteed that the binding is getting accepted within the OPC UA community as well as in the WoT community and avoids heterogeneous (project specific) definitions and incompatible OPC UA handlings in WoT Thing Descriptions.
 
 The joint activity should mainly address:
