@@ -14,9 +14,10 @@ Such a binding for the WoT needs its own set of OPC UA specific vocabulary defin
 working group should be established to work together on an OPC UA binding for the Web of Things. This guaranteed that the binding is getting accepted within the OPC UA community as well as in the WoT community and avoids heterogeneous (project specific) definitions and incompatible OPC UA handlings in WoT Thing Descriptions.
 
 The joint activity should mainly address:
-* define a standardized way how Thing Description can be created from UA nodeset file (and vice versa) 
+* define a standardized way how Thing Description can be created from UA NodesetFile (and vice versa) 
 * define how the OPC UA specific endpoints can be described in TDs
 * define the (public) UA security modes as metadata in TDs
+* define an ontology (OPC UA Binding Ontology) that covers UA specific metadata (e.g., for endpoint and security definition) 
  
 
 ### OPC Foundation
