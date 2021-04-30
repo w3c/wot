@@ -6,7 +6,7 @@ OPC Foundation (https://opcfoundation.org/). The purpose is the development of a
 for the W3C Web of Things through an OPC UA Companion specification and mirrored as a W3C Recommendation/Note(?) document.
 
 ## Scope
-Web of Thing (WoT) should support a standardized binding to OPC UA systems to enable simple application development like for cross-domain 
+The W3C Web of Thing (WoT) should support a standardized binding to OPC UA systems to enable simple application development like for cross-domain 
 applications. OPC UA is one of the prominent automation standards for device communication in the factory domain as well as for Industry 4.0 
 scenarios such as flexible manufacturing. 
 
