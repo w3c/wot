@@ -21,6 +21,9 @@ Testing & Re-Chartering
 * Opening:
    [PDF](2021-06-21-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-06-21-WoT-F2F-Opening-McCool.pptx)
+* Testing:
+   [PDF](2021-06-21-WoT-F2F-Testing-McCool.pdf),
+   [PPTX](2021-06-21-WoT-F2F-Testing-McCool.pptx)
 
 ## Tuesday 2021-06-22
 Profile
