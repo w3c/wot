@@ -33,6 +33,9 @@ Profile
 * Opening:
    [PDF](2021-06-22-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-06-22-WoT-F2F-Opening-McCool.pptx)
+* Profile:
+   [PDF](2021-06-22-WoT-F2F-Profile-Lagally.pdf),
+   [PPTX](2021-06-22-WoT-F2F-Opening-Lagally.pptx)
   
 ## Wednesday 2021-06-23
 Discovery (& Profile)
