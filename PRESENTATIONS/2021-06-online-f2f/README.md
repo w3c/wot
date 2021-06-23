@@ -36,6 +36,12 @@ Profile
   
 ## Wednesday 2021-06-23
 Discovery (& Profile)
+* Opening:
+   [PDF](2021-06-23-WoT-F2F-Opening-McCool.pdf),
+   [PPTX](2021-06-23-WoT-F2F-Opening-McCool.pptx)
+* Discovery:
+   [PDF](2021-06-23-WoT-F2F-Discovery-McCool.pdf),
+   [PPTX](2021-06-23-WoT-F2F-Discovery-McCool.pptx)
 
 ## Monday 2021-06-28
 Open Day
