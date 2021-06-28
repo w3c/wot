@@ -56,6 +56,8 @@ Open Day
    [PDF](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2021-03-online-f2f/2021-03-15-ECHONET-Lite-WebAPI-ECHONET-Consortium.pdf)
 * ITU-T:
 * Eclipse Ditto:
+   [PDF](2021-06-28-WoT-F2F-EclipseDitto-Jaeckle.pdf),
+   [Link](https://www.eclipse.org/ditto/slides/2021_06_ditto-in-20-min/)
 * ISO TC184/SC4 (about IEC CDD):
 
 ## Tuesday 2021-06-29
