@@ -51,6 +51,12 @@ Open Day
 * Opening:
    [PDF](2021-06-28-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-06-28-WoT-F2F-Opening-McCool.pptx)
+* IETF/T2TRG:
+* ECHONET:
+   [PDF](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2021-03-online-f2f/2021-03-15-ECHONET-Lite-WebAPI-ECHONET-Consortium.pdf)
+* ITU-T:
+* Eclipse Ditto:
+* ISO TC184/SC4 (about IEC CDD):
 
 ## Tuesday 2021-06-29
 Architecture & Use Case
