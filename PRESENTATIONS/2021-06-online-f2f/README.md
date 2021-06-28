@@ -19,49 +19,49 @@ Here are links to the presentations, in order by agenda.
 ## Monday 2021-06-21
 Testing & Re-Chartering
 * Opening:
-   [PDF](2021-06-21-WoT-F2F-Opening-McCool.pdf),
-   [PPTX](2021-06-21-WoT-F2F-Opening-McCool.pptx)
+   - [PDF](2021-06-21-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-06-21-WoT-F2F-Opening-McCool.pptx)
 * Testing:
-   [PDF](2021-06-21-WoT-F2F-Testing-McCool.pdf),
-   [PPTX](2021-06-21-WoT-F2F-Testing-McCool.pptx)
+   - [PDF](2021-06-21-WoT-F2F-Testing-McCool.pdf)
+   - [PPTX](2021-06-21-WoT-F2F-Testing-McCool.pptx)
 * Charters:
-   [PDF](2021-06-21-WoT-F2F-Charters-McCool.pdf),
-   [PPTX](2021-06-21-WoT-F2F-Charters-McCool.pptx)
+   - [PDF](2021-06-21-WoT-F2F-Charters-McCool.pdf)
+   - [PPTX](2021-06-21-WoT-F2F-Charters-McCool.pptx)
 
 ## Tuesday 2021-06-22
 Profile
 * Opening:
-   [PDF](2021-06-22-WoT-F2F-Opening-McCool.pdf),
-   [PPTX](2021-06-22-WoT-F2F-Opening-McCool.pptx)
+   - [PDF](2021-06-22-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-06-22-WoT-F2F-Opening-McCool.pptx)
 * Profile:
-   [PDF](2021-06-22-WoT-F2F-Profile-Lagally.pdf),
-   [PPTX](2021-06-22-WoT-F2F-Opening-Lagally.pptx)
+   - [PDF](2021-06-22-WoT-F2F-Profile-Lagally.pdf)
+   - [PPTX](2021-06-22-WoT-F2F-Opening-Lagally.pptx)
   
 ## Wednesday 2021-06-23
 Discovery (& Profile)
 * Opening:
-   [PDF](2021-06-23-WoT-F2F-Opening-McCool.pdf),
-   [PPTX](2021-06-23-WoT-F2F-Opening-McCool.pptx)
+   - [PDF](2021-06-23-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-06-23-WoT-F2F-Opening-McCool.pptx)
 * Discovery:
-   [PDF](2021-06-23-WoT-F2F-Discovery-McCool.pdf),
-   [PPTX](2021-06-23-WoT-F2F-Discovery-McCool.pptx)
+   - [PDF](2021-06-23-WoT-F2F-Discovery-McCool.pdf)
+   - [PPTX](2021-06-23-WoT-F2F-Discovery-McCool.pptx)
 
 ## Monday 2021-06-28
 Open Day
 * Opening:
-   [PDF](2021-06-28-WoT-F2F-Opening-McCool.pdf),
-   [PPTX](2021-06-28-WoT-F2F-Opening-McCool.pptx)
+   - [PDF](2021-06-28-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-06-28-WoT-F2F-Opening-McCool.pptx)
 * IETF/T2TRG:
-   [PDF](2021-06-28-WoT-F2F-Open-Day-IETF-T2TRG.pdf)
+   - [PDF](2021-06-28-WoT-F2F-Open-Day-IETF-T2TRG.pdf)
 * ECHONET:
-   [PDF](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2021-03-online-f2f/2021-03-15-ECHONET-Lite-WebAPI-ECHONET-Consortium.pdf)
+   - [PDF](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2021-03-online-f2f/2021-03-15-ECHONET-Lite-WebAPI-ECHONET-Consortium.pdf)
 * ITU-T:
-   [PDF - Q2-SG20 past WoT related studies](2021-06-28-WoT-F2F-Open-Day-ITU-T-Q2-SG20-past.pdf)
-   [PDF - Q4-SG20 activities](2021-06-28-WoT-F2F-Open-Day-ITU-T-Q4-SG20-Activities.pdf)
-   [PDF - Y-Sup-69](2021-06-28-WoT-F2F-Open-Day-ITU-T-Y-Sup-69-Web-DM.pdf)
+   - [PDF - Q2-SG20 past WoT related studies](2021-06-28-WoT-F2F-Open-Day-ITU-T-Q2-SG20-past.pdf)
+   - [PDF - Q4-SG20 activities](2021-06-28-WoT-F2F-Open-Day-ITU-T-Q4-SG20-Activities.pdf)
+   - [PDF - Y-Sup-69](2021-06-28-WoT-F2F-Open-Day-ITU-T-Y-Sup-69-Web-DM.pdf)
 * Eclipse Ditto:
-   [PDF](2021-06-28-WoT-F2F-EclipseDitto-Jaeckle.pdf),
-   [Link](https://www.eclipse.org/ditto/slides/2021_06_ditto-in-20-min/)
+   - [PDF](2021-06-28-WoT-F2F-EclipseDitto-Jaeckle.pdf),
+   - [Link](https://www.eclipse.org/ditto/slides/2021_06_ditto-in-20-min/)
 * ISO TC184/SC4 (about IEC CDD):
 
 ## Tuesday 2021-06-29
