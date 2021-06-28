@@ -56,6 +56,9 @@ Open Day
 * ECHONET:
    [PDF](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2021-03-online-f2f/2021-03-15-ECHONET-Lite-WebAPI-ECHONET-Consortium.pdf)
 * ITU-T:
+   [PDF - Q2-SG20 past WoT related studies](link)
+   [PDF - Q4-SG20](link)
+   [PDF - Y-Sup-69](link)
 * Eclipse Ditto:
    [PDF](2021-06-28-WoT-F2F-EclipseDitto-Jaeckle.pdf),
    [Link](https://www.eclipse.org/ditto/slides/2021_06_ditto-in-20-min/)
