@@ -52,6 +52,7 @@ Open Day
    [PDF](2021-06-28-WoT-F2F-Opening-McCool.pdf),
    [PPTX](2021-06-28-WoT-F2F-Opening-McCool.pptx)
 * IETF/T2TRG:
+   [PDF](2021-06-28-WoT-F2F-Open-Day-IETF-T2TRG.pdf)
 * ECHONET:
    [PDF](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2021-03-online-f2f/2021-03-15-ECHONET-Lite-WebAPI-ECHONET-Consortium.pdf)
 * ITU-T:
