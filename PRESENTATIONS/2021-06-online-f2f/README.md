@@ -48,6 +48,9 @@ Discovery (& Profile)
 
 ## Monday 2021-06-28
 Open Day
+* Opening:
+   [PDF](2021-06-28-WoT-F2F-Opening-McCool.pdf),
+   [PPTX](2021-06-28-WoT-F2F-Opening-McCool.pptx)
 
 ## Tuesday 2021-06-29
 Architecture & Use Case
