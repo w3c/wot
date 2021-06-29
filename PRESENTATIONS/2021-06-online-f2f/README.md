@@ -60,12 +60,15 @@ Open Day
    - [PDF - Q4-SG20 activities](2021-06-28-WoT-F2F-Open-Day-ITU-T-Q4-SG20-Activities.pdf)
    - [PDF - Y-Sup-69](2021-06-28-WoT-F2F-Open-Day-ITU-T-Y-Sup-69-Web-DM.pdf)
 * Eclipse Ditto:
-   - [PDF](2021-06-28-WoT-F2F-EclipseDitto-Jaeckle.pdf),
+   - [PDF](2021-06-28-WoT-F2F-EclipseDitto-Jaeckle.pdf)
    - [Link](https://www.eclipse.org/ditto/slides/2021_06_ditto-in-20-min/)
 * ISO TC184/SC4 (about IEC CDD):
 
 ## Tuesday 2021-06-29
 Architecture & Use Case
+* Opening:
+   - [PDF](2021-06-29-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-06-29-WoT-F2F-Opening-McCool.pptx)
 
 ## Wednesday 2021-06-30
 Thing Description & Security & Marketing
