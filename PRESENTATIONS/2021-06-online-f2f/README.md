@@ -72,6 +72,12 @@ Architecture & Use Case
 
 ## Wednesday 2021-06-30
 Thing Description & Security & Marketing
+* Opening:
+   - [PDF](2021-06-30-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-06-30-WoT-F2F-Opening-McCool.pptx)
+* Thing Description
+* Security
+* Marketing
 
 ## (optional: Friday 2021-07-02)
 (currently not scheduled)
