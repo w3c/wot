@@ -8,6 +8,8 @@ one of the other repositories dedicated to that topic may be more relevant:
   General introductory material, including tutorials and getting started guides.
 * [WoT Architecture](https://github.com/w3c/wot-architecture) 
   Overall architecture, responsible for [WoT Architecture](https://www.w3.org/TR/wot-architecture/) deliverable.
+* [WoT Profile](https://github.com/w3c/wot-profile) 
+  Interoperability Profiles. Responsible for the WoT Profile [WoT Profile](https://www.w3.org/TR/wot-profile/) deliverable.
 * [WoT Thing Description](https://github.com/w3c/wot-thing-description) 
   Thing Description metadata, responsible for [WoT Thing Description](https://www.w3.org/TR/wot-thing-description/) deliverable.
 * [WoT Security](https://github.com/w3c/wot-security) 
