@@ -42,6 +42,9 @@ Discovery (& Profile)
 * Opening:
    - [PDF](2021-06-23-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2021-06-23-WoT-F2F-Opening-McCool.pptx)
+* Profile (continued):
+   - [PDF](2021-06-23-WoT-F2F-Profiles.pdf)
+   - [PPTX](2021-06-23-WoT-F2F-Profiles.pptx)
 * Discovery:
    - [PDF](2021-06-23-WoT-F2F-Discovery-McCool.pdf)
    - [PPTX](2021-06-23-WoT-F2F-Discovery-McCool.pptx)
@@ -69,13 +72,18 @@ Architecture & Use Case
 * Opening:
    - [PDF](2021-06-29-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2021-06-29-WoT-F2F-Opening-McCool.pptx)
-
+* Architecture & Use Case
+   - [PDF](2021-06-29-WoT-F2F-Arch + Use Cases.pdf)
+   - [PPTX](2021-06-29-WoT-F2F-Arch + Use Cases.pptx)
 ## Wednesday 2021-06-30
 Thing Description & Security & Marketing
 * Opening:
    - [PDF](2021-06-30-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2021-06-30-WoT-F2F-Opening-McCool.pptx)
 * Thing Description
+** Action Model
+   - [PDF](2021-06-30-WoT-F2F-Action%20Semantics.pdf)
+   - [PDF](2021-06-30-WoT-F2F-Action%20Semantics.pptx)
 * Security
    - [PDF](2021-06-30-WoT-F2F-Security-McCool.pdf)
    - [PPTX](2021-06-30-WoT-F2F-Security-McCool.pptx)
