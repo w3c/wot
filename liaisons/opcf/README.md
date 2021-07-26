@@ -3,7 +3,7 @@
 ## Purpose 
 The OPC UA W3C WoT Working Group is a joint initiative of the W3C Web of Things (WoT) (https://www.w3.org/WoT/) and the 
 OPC Foundation (https://opcfoundation.org/). The purpose is the development of an OPC UA Binding 
-for the W3C Web of Things through an OPC UA Companion specification and mirrored as a W3C Recommendation/Note(?) document.
+for the W3C Web of Things through an OPC UA Companion specification and mirrored as a W3C Note document.
 
 ## Scope
 The W3C Web of Thing (WoT) should support a standardized binding to OPC UA systems to enable simple application development like for cross-domain 
@@ -39,19 +39,38 @@ groundbreaking W3C Patent Policy.
 
 ## Working Group 
 
+Note: TBD will be defined during the Kick-off meeting. 
+
 ### Structure of working group
+The name of the working group is TBD. The structure of the TBD Working Group consists a chair, an editor and members.
 
 ### Membership
 The working group is open to any employee or representative of a member of the OPC Foundation or the W3C. 
+
+### Working Group Chair 
+The chairperson will be elected by the members of the working group. However, initially a provisional chairman will be nominated by the TBD. 
+
+### Working Group Editor 
+The editor(s) need both OPC UA expertise and Web of Things knowledge. A final determination will be made after the working group is formed.
+
+### Working Group Start-up 
+The working group will be formed with a call for members and announcement of an initial kick-off meeting.
+
+### Working Group Operation 
+TBD
 
 ### Working Group Meetings 
 
 The working group meets as needed. Meetings may be electronic or in person. The frequency and form of the meetings will be established as the working group forms. 
 
-Face-to-Face and electronic meetings will be organized jointly by W3C and the OPC Foundation.
+Face-to-Face and electronic meetings will be organized jointly by W3C and the OPC Foundation. The working group will use github / SharePoint provided by the W3C / OPC Foundation for electronic scheduling and sharing (TBD).
+
+### Proposed Project Schedule 
+TBD
+
 
 ## Deliverables 
-* W3C Recommendation/Note?
+* W3C Note
 * OPC UA companion specification 
 * OPC UA Binding Ontology
 * Prototype implementation
