@@ -53,6 +53,43 @@
       footer {
         font-size: small;
       }
+     <!-- additional style -->
+     <!-- Include the following though originally not in the official template -->
+     span.caption {
+         display: block;
+         text-align: center;
+         font-style: italic;
+     }
+     section {
+         clear: both;
+     }
+     div.summary {
+         clear: both;
+         margin-top: 0.5em;
+         margin-left: 10%;
+         margin-right: 10%;
+         padding: 0.5em;
+         background: rgb(240,240,255);
+         border: solid 1px black;
+     }
+     #relationships {
+         float:right;
+         margin-left: 0.6em;
+         width:40%;
+         min-width:250px;
+         max-width:936px;
+     }
+     #deliverables dt {
+         font-weight: bold;
+         margin-top: 0.5em;
+     }
+     .info {
+         background-color: #ddd;
+         margin-top: 1em;
+         padding: 15px;
+         border: 1px solid transparent;
+         border-radius: 4px;
+     }
     </style>
   </head>
   <body>
@@ -167,40 +204,60 @@
       </section>
 
 
+      <section id="backgound" class="backgound">
+          <p>"Smart Cities" refers to a range of technologies and processes for intelligent management of our built and inhabited environment. 
+           As interest rises, we see prospects for smarter and easier integration of various technologies from multiple vendors related to IoT devices and Web services. </p>
+           
+            <p>Several <a href="https://w3c.github.io/wot-usecases/#smart-city">preliminary use cases on Smart Cities</a> have been discussed within the Web of Thing (WoT) IG as part of the WoT standardization based on the <a href="https://www.w3.org/WoT/ws-2019/minutes.html#day2-item02">proposal during the Second WoT Workshop in Munich</a>.
+<!--
+              However, Smart Cities include various technologies, of which WoT is just one. We would therefore like to create a dedicated W3C Interest Group:</p>
+          <ul>
+              <li>to identify and document use cases and requirements that W3C specifications need to meet to support Smart City services,</li>
+              <li>to obtain feedback from all stakeholders on the usage of Web technologies for Smart Cities,</li>
+              <li>to gather expert input on important features for Smart Cities based on Web technology, and</li>
+              <li>to provide a forum for technical and business discussions related to Smart Cities.</li>
+          </ul>
+
+          <p>We've generated an <a href="http://w3c.github.io/wot/charters/smart-cities/smart-cities-ig-charter.html">initial draft Charter for the potential Smart Cities Interest Group</a>. 
+            We would like to collect even more use cases along with concrete system implementation experiences from all over the world, since uses may depend on cities' locations, cultures, etc., and include various sub-systems from many different vendors. 
+            Therefore we'd like to hold a dedicated W3C workshop on the possible standardization for Smart Cities.</p>
+
+          <p>As cities include diverse populations including people with disabilities, we need to account for accessibility as well as security, privacy protection and multi-language support and security for Smart Cities.</p>
+
+          <p>The Web has become a platform for various industries and services including payments and commerce, publishing, media distribution, video conferencing and connected cars, and it's becoming a promising platform for IoT interoperability, as mentioned in the <a href="https://www.w3.org/2020/04/pressrelease-wot-rec.html.en">Web of Things Press Release in April 2020</a>. Also there is an expectation for the Web of Things standards to be applied to integration of huge numbers of sub-systems for Smart City services. We've been generating a <a href="http://w3c.github.io/wot/charters/smart-cities/smart-cities-ig-charter.html">draft Charter for a potential Smart Cities Interest Group</a> to (1) introduce the W3C as a place to have discussions on interoperability for Smart City services and (2) document use cases and requirements that W3C specifications need to meet to support Smart City services.</p>
+-->
+          However, Smart Cities include various technologies, of which WoT is just one. So W3C organized a virtual online workshop on Smart Cities in June 2021 to finalize this Charter for the Smart Cities Interest Group to collect input from the Smart Citeis stakeholders.
+
+<p>During the workshop discussion, we did the following:</p>
+<ul>
+    <li>Identified Smart Cities standardization stakeholders to drive the development of Web standards aligned with the real needs of Smart Cities</li>
+    <li>Clarified reasonable applications for Smart Cities technologies</li>
+    <li>Saw how to improve the draft Charter for the potential Smart Cities Interest Group for further discussions within that IG</li>
+</ul>
+
+<p>We also confirmed that it would be very important to consider
+    inclusive design including accessibility, privacy, security, and
+    internationalization. Smart City applications are tightly
+    related to the people who live in cities.  We want Smart City
+    technology to have a positive impact on their lives and want to avoid
+    unintended negative consequences.</p>
+      </section>
 
       <section id="scope" class="scope">
         <h2>Scope</h2>
         <p><!-- Brief background of landscape, technology, and relationship to the Web, users, developers, implementers, and industry. -->
-<!-- Original text, kept for reference.  
-	During the <a href="https://www.w3.org/WoT/ws-2019/schedule.html#day2">Second W3C Workshop on the Web of Things</a>,
-        the Government Technology Agency of Singapore (GovTech) gave an
-        <a href="https://www.w3.org/WoT/ws-2019/Presentations%20-%20Day%202/02_W3C%20WOT%20FINAL.pdf">exciting presentation</a>
-        on the need for standardization in the context of Smart Cities.
-        Since then, GovTech has been participating in the discussion on possible next-gen WoT use cases within the WoT-IG's Use Cases TF,
-	and has contributed several use cases for Smart Cities, including for
-        <a href="https://github.com/w3c/wot-usecases/blob/master/USE-CASES/smartcity-geolocation.md">geolocation</a> and
-        <a href="https://github.com/w3c/wot-usecases/blob/master/USE-CASES/smartcity-health-monitoring.md">public health monitoring</a>.
-	Additional use cases being worked on that are relevant to Smart Cities include logistics and transportation,
-	digital twins, Smart City dashboards, discovery, and edge computing.
 
-        The WoT IG has also created a [https://www.w3.org/WoT/IG/wiki/PoC_WebConf Proof of Concept Task Force]
-        for the possible system applications of WoT technology to Smart Cities and Retail verticals, 
-	and we're several more participants in that TF, e.g., Conexxus, Fiserv, Fraunhofer,
-        Hitachi, Intel, IRI, Oracle, Siemens and UPM in addition to Singapore GovTech.
+            <p><em>Note: This charter was drawn up as an outcome of the June 2021 <a href="https://www.w3.org/2021/06/smartcities-workshop/report.html">W3C Workshop on Smart Cities</a>.</em></p>
 
-        However, since several Smart Cities topics (for example, data management and visualization, or cloud application portals) 
-	go beyond the scope of the WoT charter, we felt that a separate
-        Interest group that focused on Smart City use cases and requirements was appropriate.
-        We're generating a draft Charter for the expected Interest
-        Group with the important stakeholders including GovTech, Intel,
-        Conexxus, Fiserv, Fraunhofer, Hitachi, IRI, Oracle, Siemens and UPM.	      
-	</p>
+            <div class="summary">
+                <p style="text-align:center;font-weight:bold;">Scope Summary</p>
+                <ul>
+                    <li>Survey on the existing technologies and standards for Smart Cities (Technology Landscape)</li>
+                    <li>Best Practices on what technologies, e.g., WoT, Automotive, Geospatial, VR/AR, Speech and Semantic Web, to be applied for what kind of Smart Cities applications, e.g., improved accessibility, visitor guidance and energy management.</li>
+                    <li>Use cases and requirements for Smart Cities</li>
+                </ul>
+            </div>
 
-        <p><strong>Needs reworking.  Should not focus so much on WoT, needs to balance with other topics
-        of relevance to Smart Cities.
-        Would be good to have sections for "topics" and "tasks".  Drafts follow.
-        </strong></p>
--->
         <p>Standards are essential for Smart City technology and business development.
         Standards benefit vendors, cities, and users.
         For vendors, standards unify markets and mean that a larger market can be addressed
@@ -228,7 +285,7 @@
         and drive the development of web technology standards aligned with the real needs
         of Smart Cities.</p>
 
-        <p>The topics that the Interest Group will address include but are not limited to:
+        <p>The topics that the Interest Group will address include but are not limited to:</p>
         <ul>
           <li>Transportation, 
               both public and private;</li>
@@ -254,18 +311,24 @@
           <li>Security,
               to preserve the integrity and safety of systems and protect users;</li>
           <li>Accessibility,
-	      to incorporate design-for-all thinking throughout all aspects of smart city infrastructure, and ensure accessibility for people with disabilities in every activity and at every stage of life;</li>
-	  <li>Internationalization,
+	            to incorporate design-for-all thinking throughout all
+	            aspects of smart city infrastructure, and ensure
+	            accessibility for people with disabilities in every
+	            activity and at every stage of life;</li>
+	        <li>Internationalization,
               to support diverse populations and tourism.</li>
         </ul>
-        </p>
 
-        <p>The tasks that the Interest Group will undertake include:
+        <p>The main tasks that the Interest Group will undertake include:</p>
         <ul>
-          <li>Identification of Smart City use cases to which web technologies are applicable;</li>
-          <li>Identification and prioritization of gaps in web standards for Smart City use cases;</li>
-          <li>Identification of requirements to provide better support for
-            high priority Smart City use cases, possibly through the creation of Task Forces;</li>
+          <li>Survey on the existing technologies and standards for Smart Cities (Technology Landscape)</li>
+          <li>Best Practices on what technologies, e.g., WoT, Automotive, Geospatial, VR/AR, Speech and Semantic Web, to be applied for what kind of Smart Cities applications, e.g., improved accessibility, visitor guidance and energy management.</li>
+          <li>Smart Cities use cases to which Web technologies are applicable and requirements to provide better support for high priority use cases</li>
+        </ul>
+
+        <p>The group may also consider the following when work on the above tasks:</p>
+        <ul>
+          <li>Identification and prioritization of gaps in Web standards for Smart City use cases;</li>
           <li>Incubation of technical solutions for the identified requirements by
             supporting the creation of Community Groups or Business Groups focusing on
             particular topics;
@@ -282,7 +345,13 @@
           <li>Ensuring issues of accessibility, device independence,
           internationalization, performance, privacy, and security are given
           equal consideration in all discussions and outcomes.</li>
-        </ul></p>
+        </ul>
+
+        <p>During the group discussion, we'll continue to work on outreach to clarify the primary stakeholders from the industries, countries/cities and communities to involve in the group's work.</p>
+
+        <p>Note that there are many topics to discuss around Smart
+            Cities and the scope of the group may become too
+            broad, so we would like to focus on data governance and privacy management for the first year based on the discussion during the <a href="https://www.w3.org/2021/06/smartcities-workshop/report.html">workshop</a>.</p>
 
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
@@ -291,6 +360,7 @@
             new or existing W3C Working Groups,
             or within a Community Group or Business Group when incubation is needed.
             </p>
+
         </section>
       </section>
 
@@ -298,29 +368,17 @@
         <h2>
           Deliverables
         </h2>
-        <p>
-          The primary deliverables of the Smart Cities Interest Group will be IG Notes
-          that identify requirements for existing and/or new technical
-          specifications and gaps. 
-          The group will also
-          maintain public documentation 
-          of W3C Recommendations, 
-          standards,
-          and technologies applicable to Smart City use cases that it is
-          tracking and investigating. 
-          This documentation will include identified
-          gaps, stable standards deployed in implementations, 
-          descriptions of proof-of-concept projects,
-          and
-          standards under development in W3C and external groups.
-        </p>
+        <p>The primary deliverables of the Smart Cities Interest Group will
+        be IG Notes that identify requirements for existing and/or new
+        technical specifications and gaps in the Web Platform.</p>
 
         <section id="normative">
           <h3>
             Normative Specifications
           </h3>
           <p>
-          The Interest Group will not deliver any normative specifications.
+          The Interest Group will not deliver any normative
+          specifications.
           </p>
         </section>
 
@@ -332,8 +390,9 @@
             Other non-normative documents may be created such as:
           </p>
           <ul>
-            <li>Use case and requirement documents;</li>
-            <li>Primer or Best Practice documents to support Smart City stakeholders.</li>
+              <li>Survey on the existing technologies and standards for Smart Cities (Technology Landscape)</li>
+              <li>Best Practices on what technologies, e.g., WoT, Automotive, Geospatial, VR/AR, Speech and Semantic Web, to be applied for what kind of Smart Cities applications, e.g., improved accessibility, visitor guidance and energy management.</li>
+              <li>Use cases and requirements for Smart Cities</li>
           </ul>
         </section>
 
@@ -410,10 +469,11 @@
           per the 
           <a href="https://www.w3.org/Consortium/Process/#WGCharter">W3C Process Document</a>:</p>
         <dl>
-            <dt class="coord-category">Use cases:</dt>
+            <dt class="coord-category">Virtical Use cases:</dt>
             <dd><dl>
-                <dt class="coord-org">Agriculture CG</dt>
-                   <dd>definition of use cases</dd>
+                <dt class="coord-org">Agriculture CG</dt> <dd>definition of use cases</dd>
+                <dt class="coord-org">Media &amp; Entertainment IG</dt><dd>tbd</dd>
+                <dt class="coord-org">Publishing BG</dt><dd>tbd</dd>
             </dl></dd>
             <dt class="coord-category">Primary:</dt>
             <dd><dl>
@@ -429,7 +489,7 @@
                     <dd>v2v comms, geolocation</dd>
                 <dt class="coord-org">Spatial Data on the Web IG
                     <dd>geolocation</dd>
-                <dt class="coord-org">Decentralized Identifiers WG / Verifiable Credentials WG / Credentials CG</dt>
+                <dt class="coord-org">Decentralized Identifiers (DID)WG / Verifiable Credentials (VC) WG / Credentials CG</dt>
                     <dd>identifiers, signing, credentials, authentications</dd>
                 <dt class="coord-org">Dataset Exchange WG</dt>
                     <dd> (geolocation, semantics, data modelling)</li>
@@ -439,6 +499,8 @@
                     <dd>ML, DL, edge computing</dd>
                 <dt class="coord-org">Big Data CG</dt>
                     <dd>data management, data modelling</dd>
+                <dt class="coord-org">Voice Interaction CG</dt><dd>tbd</dd>
+                <dt class="coord-org">Solid CG</dt><dd>tbd</dd>
             </dl></dd>
             <dt class="coord-category">Secondary:</dt>
             <dd><dl>
@@ -446,7 +508,7 @@
                     <dd>security, credentials</dd>
                 <dt class="coord-org">Service Workers WG</dt>
                     <dd>edge computing</dd>
-                <dt class="coord-org">Devices and Sensors WG</dt>
+                <dt class="coord-org">Devices and Sensors (DAS) WG</dt>
                     <dd>geolocation</dd>
                 <dt class="coord-org">JSON-LD WG / JSON for Linking Data CG</dt>
                     <dd>data modelling, semantics</dd>
@@ -455,9 +517,9 @@
                 <dt class="coord-org">Web Real-Time Communications WG</dt>
                     <dd>video and data streams</dd>
                 <dt class="coord-org">Web Assembly WG</dt>
-                    <dd>edge computing)</dd>
+                    <dd>edge computing</dd>
                 <dt class="coord-org">Accessible Infographics CG</dt>
-                    <dd>data visualization)</dd>
+                    <dd>data visualization</dd>
             </dl></dd>
         </dl>
 
@@ -480,20 +542,38 @@
         <section>
           <h3 id="external-coordination">External Organizations</h3>
           <dl>
+          <dt class="coord-category">SDOs working on Smart Cities:</dt>
+          <dd><dl>
             <dt class="coord-org"><a href="https://www.ietf.org/">IETF:</a></dt>
             <dd>Coordination on communication protocols, data modelling, 
                 discovery, and security standards.
             </dd>
-            <dt class="coord-org"><a href="https://www.itu.int/">ITU:</a></dt>
+            <dt class="coord-org"><a href="https://www.itu.int/">ITU-T:</a></dt>
             <dd>Coordination on standards for telecommunication technologies
                 and the use cases they enable.
             </dd>
+
             <dt class="coord-org"><a href="https://asean.org/">ASEAN:</a></dt>
             <dd>Discussion of smart city use cases and deployments in South-East Asia.
             </dd>
-            <dt class="coord-org"><a href="https://www.ogc.org/">Open Geospatial Consortium:</a></dt>
-            <dd>Coordinated standards for geolocation and geographic information systems.
-            </dd>
+
+            <dt class="coord-org"><a href="https://www.ogc.org/">Open Geospatial Consortium (OGC):</a></dt>
+            <dd>Coordinated standards for geolocation and geographic information systems.</dd>
+            <dt class="coord-org">ISO</dt><dd>tbd</dd>
+            <dt class="coord-org">IEC</dt><dd>tbd</dd>
+            <dt class="coord-org">ISO/IEC JTC1</dt><dd>tbd</dd>
+            <dt class="coord-org">BSI</dt><dd>tbd</dd>
+            <dt class="coord-org">ETSI</dt><dd>tbd</dd>
+            <dt class="coord-org">ECLASS</dt><dd>tbd</dd>
+          </dl></dd>
+
+          <dt class="coord-category">Countries, Cities and Communities (not limited to but incluiding the following):</dt>
+          <dd><dl>
+                <dt class="coord-org">The World Economic Forum</dt><dd>tbd</dd>
+                <dt class="coord-org">ASEAN</dt><dd>tbd<dd>
+                <dt class="coord-org">The Smart City Consortium</dt><dd>tbd</dd>
+                <dt class="coord-org">Other countries, cities and communities to be added including developing countries and rural areas</dt>
+          </dl></dd>
           </dl>
         </section>
       </section>
