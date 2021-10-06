@@ -21,8 +21,8 @@ Here are links to the presentations, in order by agenda.
    - [PDF](2021-10-05-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2021-10-05-WoT-F2F-Opening-McCool.pptx)
 * Discovery:
-   - [PDF](2021-10-07-WoT-F2F-Opening-Kaebisch.pdf)
-   - [PPTX](2021-10-07-WoT-F2F-Opening-Kaebisch.pptx)
+   - [PDF](2021-10-05-WoT-F2F-Discovery-McCool.pdf)
+   - [PPTX](2021-10-05-WoT-F2F-Discovery-McCool.pptx)
 
 ## Thursday 2021-10-07
 * Opening:
