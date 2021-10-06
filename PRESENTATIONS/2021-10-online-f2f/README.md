@@ -26,8 +26,8 @@ Here are links to the presentations, in order by agenda.
 
 ## Thursday 2021-10-07
 * Opening:
-   - [PDF](2021-10-07-WoT-F2F-Opening-McCool.pdf)
-   - [PPTX](2021-10-07-WoT-F2F-Opening-McCool.pptx)
+   - [PDF](2021-10-07-WoT-F2F-Opening-Kaebisch.pdf)
+   - [PPTX](2021-10-07-WoT-F2F-Opening-Kaebisch.pptx)
 * Thing Descriptions and Models
   
 ## Tuesday 2021-10-26
