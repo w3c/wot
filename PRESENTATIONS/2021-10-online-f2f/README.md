@@ -21,10 +21,13 @@ Here are links to the presentations, in order by agenda.
    - [PDF](2021-10-05-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2021-10-05-WoT-F2F-Opening-McCool.pptx)
 * Discovery:
-   - [PDF](2021-10-05-WoT-F2F-Discovery-McCool.pdf)
-   - [PPTX](2021-10-05-WoT-F2F-Discovery-McCool.pptx)
+   - [PDF](2021-10-05-WoT-F2F-Discovery-Kaebisch.pdf)
+   - [PPTX](2021-10-05-WoT-F2F-Discovery-Kaebisch.pptx)
 
 ## Thursday 2021-10-07
+* Opening:
+   - [PDF](2021-10-07-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-10-07-WoT-F2F-Opening-McCool.pptx)
 * Thing Descriptions and Models
   
 ## Tuesday 2021-10-26
