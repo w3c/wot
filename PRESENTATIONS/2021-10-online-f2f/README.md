@@ -30,6 +30,14 @@ Here are links to the presentations, in order by agenda.
    - [PPTX](2021-10-07-WoT-F2F-Opening-Kaebisch.pptx)
 * Thing Descriptions and Models
   
+## Monday 2021-10-11 - Open Day
+* Opening:
+   - [PDF](2021-10-11-WoT-OpenDay-McCool.pdf)
+   - [PPTX](2021-10-11-WoT-OpenDay-McCool.pptx)
+* Takenaka Corporation
+* Plugfest Project Review
+   - https://github.com/w3c/wot-testing/labels/Plugfest%202021.09
+   
 ## Tuesday 2021-10-26
 * Use Cases
 * Japanese WoT CG Update
