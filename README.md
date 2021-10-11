@@ -1,4 +1,10 @@
-# Web of Things
+# Web of Things (WoT) General Repository
+[![Follow on Twitter](https://img.shields.io/twitter/follow/W3C_WoT.svg?label=follow+W3C_WoT)](https://twitter.com/W3C_WoT)
+[![Stack Exchange questions](https://img.shields.io/stackexchange/stackoverflow/t/web-of-things?style=plastic)]( https://stackoverflow.com/questions/tagged/web-of-things)
+
+General information about the Web of Things can be found on https://www.w3.org/WoT/.
+  
+---
 
 This is a repository for the W3C [Web of Things Interest Group](http://www.w3.org/WoT/IG/).
 
@@ -8,6 +14,8 @@ one of the other repositories dedicated to that topic may be more relevant:
   General introductory material, including tutorials and getting started guides.
 * [WoT Architecture](https://github.com/w3c/wot-architecture) 
   Overall architecture, responsible for [WoT Architecture](https://www.w3.org/TR/wot-architecture/) deliverable.
+* [WoT Profile](https://github.com/w3c/wot-profile) 
+  Interoperability Profiles. Responsible for the WoT Profile [WoT Profile](https://www.w3.org/TR/wot-profile/) deliverable.
 * [WoT Thing Description](https://github.com/w3c/wot-thing-description) 
   Thing Description metadata, responsible for [WoT Thing Description](https://www.w3.org/TR/wot-thing-description/) deliverable.
 * [WoT Security](https://github.com/w3c/wot-security) 

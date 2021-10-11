@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>DRAFT Smart Cities Interest Group Charter</title>
+
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/OldGuide/pubrules-style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css">
+    <style>
+      main {
+        max-width: 60em;
+        margin: 0 auto;
+      }
+
+      ul#navbar {
+        font-size: small;
+      }
+
+      dt.spec {
+        font-weight: bold;
+      }
+
+      dt.spec new {
+        background: yellow;
+      }
+
+      dt.coord-category {
+        font-weight: bold;
+      }
+      dt.coord-org {
+        font-style: italic;
+      }
+
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+
+      .todo {
+        color: #900;
+      }
+
+      footer {
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+          <li><a href="#success-criteria">Success Criteria</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          <li><a href="#patentpolicy">Patent Disclosures</a></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"></a>
+      </p>
+    </header>
+
+
+    <main>
+      <h1 id="title">DRAFT Smart Cities Interest Group Charter</h1>
+      <!--Change to PROPOSED when presented to AC. delete PROPOSED after AC review completed -->
+
+      <p class="mission">The <strong>mission</strong> of the <a href="">Smart Cities Interest Group</a> is 
+	<ul>
+	   <li> to identify and document use cases and requirements that W3C specifications 
+		need to meet to support Smart City services,</li>
+	   <li> to obtain feedback from all stakeholders on the usage of Web technologies for Smart Cities,</li>
+	   <li> to gather expert input on important features for Smart Cities based on the Web technology, and</li>
+	   <li> to provide a forum for technical and business discussions related to Smart Cities.</li>
+        </ul>
+      </p>
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/#####/join">Join the Smart Cities Interest Group.</a></p>
+      </div>
+
+         <p style="padding: 0.5ex; border: 1px solid green"> This proposed charter is available
+      on <i class="todo"><a href="https://github.com/w3c/@@">GitHub</a>.
+
+    Feel free to raise <a href="https://github.com/w3c/@@/issues">issues</a></i>.
+          </p>
+
+      <section id="details">
+        <table class="summary-table">
+          <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              <i class="todo">[dd monthname 2020] (date of the "Call for Participation", when the charter is approved)</i>
+            </td>
+          </tr>
+          <tr id="CharterEnd">
+            <th>
+              End date
+            </th>
+            <td>
+              <i class="todo">[dd monthname 2022]</i> (two year duration)
+            </td>
+          </tr>
+
+          <tr class="todo">
+            <th>Charter extension</th>
+            <td>See <a href="#history">Change History</a>.
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Chairs
+            </th>
+            <td>
+              Goal: 2-3 co-chairs
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Team Contacts
+            </th>
+            <td>
+              <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a> (0.2 <abbr title="Full-Time Equivalent">FTE</abbr>)
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+              <strong>Teleconferences:</strong> Regular weekly calls will be held.
+              <br>
+              <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; 
+		    additional face-to-face meetings may be scheduled by consent of the participants, usually no more than 3 per year.
+              <br>
+              <strong>Workshop:</strong> A workshop with an open CFP and invited speakers may be organized
+                    to provide further feedback and input and the guide the group's agenda.
+            </td>
+          </tr>
+        </table>
+
+<!--
+        <p class="issue"><b>Note:</b> The <a href="https://www.w3.org/Consortium/Process/#WGCharter">W3C Process Document</a> 
+		requires “The level of confidentiality of the group's proceedings and deliverables”; 
+		however, it does not mandate where this appears. Since all W3C Working Groups should be chartered as public, 
+		this notice has been moved from the essentials table to the <a href="#public">communication section</a>.</p>
+-->
+      </section>
+
+
+
+      <section id="scope" class="scope">
+        <h2>Scope</h2>
+        <p><!-- Brief background of landscape, technology, and relationship to the Web, users, developers, implementers, and industry. -->
+<!-- Original text, kept for reference.  
+	During the <a href="https://www.w3.org/WoT/ws-2019/schedule.html#day2">Second W3C Workshop on the Web of Things</a>,
+        the Government Technology Agency of Singapore (GovTech) gave an
+        <a href="https://www.w3.org/WoT/ws-2019/Presentations%20-%20Day%202/02_W3C%20WOT%20FINAL.pdf">exciting presentation</a>
+        on the need for standardization in the context of Smart Cities.
+        Since then, GovTech has been participating in the discussion on possible next-gen WoT use cases within the WoT-IG's Use Cases TF,
+	and has contributed several use cases for Smart Cities, including for
+        <a href="https://github.com/w3c/wot-usecases/blob/master/USE-CASES/smartcity-geolocation.md">geolocation</a> and
+        <a href="https://github.com/w3c/wot-usecases/blob/master/USE-CASES/smartcity-health-monitoring.md">public health monitoring</a>.
+	Additional use cases being worked on that are relevant to Smart Cities include logistics and transportation,
+	digital twins, Smart City dashboards, discovery, and edge computing.
+
+        The WoT IG has also created a [https://www.w3.org/WoT/IG/wiki/PoC_WebConf Proof of Concept Task Force]
+        for the possible system applications of WoT technology to Smart Cities and Retail verticals, 
+	and we're several more participants in that TF, e.g., Conexxus, Fiserv, Fraunhofer,
+        Hitachi, Intel, IRI, Oracle, Siemens and UPM in addition to Singapore GovTech.
+
+        However, since several Smart Cities topics (for example, data management and visualization, or cloud application portals) 
+	go beyond the scope of the WoT charter, we felt that a separate
+        Interest group that focused on Smart City use cases and requirements was appropriate.
+        We're generating a draft Charter for the expected Interest
+        Group with the important stakeholders including GovTech, Intel,
+        Conexxus, Fiserv, Fraunhofer, Hitachi, IRI, Oracle, Siemens and UPM.	      
+	</p>
+
+        <p><strong>Needs reworking.  Should not focus so much on WoT, needs to balance with other topics
+        of relevance to Smart Cities.
+        Would be good to have sections for "topics" and "tasks".  Drafts follow.
+        </strong></p>
+-->
+        <p>Standards are essential for Smart City technology and business development.
+        Standards benefit vendors, cities, and users.
+        For vendors, standards unify markets and mean that a larger market can be addressed
+        with a single product design, allowing products to more efficiently make returns on
+        the investments needed to develop them. 
+        For cities, standards allow the deployment of technologies that can be sourced 
+        from multiple vendors,
+        more and higher quality products,
+        and increases the probability that systems will remain usable over a longer timescale.
+        Standards also encourage the development of open systems that can interoperate
+        with other standardized systems, 
+        multiplying the number of use cases that can be addressed.
+        For users, standardized technologies mean that services available in one city will
+        also be available in others, facilitating mobility.
+        </p>
+        <p>However, we need to know what standards should be developed to achieve these
+        objectives.  What gaps exist?  What opportunities can be exposed by standards 
+        that enable new use cases?  What are the business drivers that encourage adoption
+        of standards, and how can standard development be aligned with these drivers?
+        Given a set of standards that could be developed, what are the priorities?
+        How can the needs and goals of all stakeholders be aligned?
+        </p>
+        <p>The purpose of this Interest Group is collect and connect
+        Smart City stakeholders to answer these kinds of questions
+        and drive the development of web technology standards aligned with the real needs
+        of Smart Cities.</p>
+
+        <p>The topics that the Interest Group will address include but are not limited to:
+        <ul>
+          <li>Transportation, 
+              both public and private;</li>
+          <li>Logistics, 
+              including last-mile delivery of goods and services;</li>
+          <li>Infrastructure, 
+              including IoT-based sensing and actuation;</li>
+          <li>Signage, 
+              addressing the problem of timely delivery of information to a diverse population;</li>
+          <li>Open data portals,
+              including network APIs to data services and the development of app ecosystems;</li>
+          <li>Data management,
+              facilitating the rapid ingestion, storage, and dissemination of data</li>
+              </li>
+          <li>Edge and cloud computing,
+              allowing computation to be efficiently applied when and where needed;
+              </li>
+          <li>Payments,
+              to allow services to be monetized, encouraging new business development and
+              cost recovery;</li>
+          <li>Privacy,
+              to preserve the rights of citizens and other stakeholders;</li>
+          <li>Security,
+              to preserve the integrity and safety of systems and protect users;</li>
+          <li>Accessibility,
+	      to incorporate design-for-all thinking throughout all aspects of smart city infrastructure, and ensure accessibility for people with disabilities in every activity and at every stage of life;</li>
+	  <li>Internationalization,
+              to support diverse populations and tourism.</li>
+        </ul>
+        </p>
+
+        <p>The tasks that the Interest Group will undertake include:
+        <ul>
+          <li>Identification of Smart City use cases to which web technologies are applicable;</li>
+          <li>Identification and prioritization of gaps in web standards for Smart City use cases;</li>
+          <li>Identification of requirements to provide better support for
+            high priority Smart City use cases, possibly through the creation of Task Forces;</li>
+          <li>Incubation of technical solutions for the identified requirements by
+            supporting the creation of Community Groups or Business Groups focusing on
+            particular topics;
+          </li>
+          <li>Suggesting existing Working Groups to include particular topics in
+            their scope as appropriate;</li>
+          <li>Suggesting the creation of new Working Groups to address particular topics if no
+            existing Working Group is appropriate;</li>
+          <li>Tracking and review of Smart City-related deliverables developed by
+            other W3C groups, and reporting of issues as appropriate;</li>
+          <li>Coordination with other organizations to
+            gather knowledge, coordinate input into W3C efforts, and promote
+            development and use of W3C standards within Smart City applications;</li>
+          <li>Ensuring issues of accessibility, device independence,
+          internationalization, performance, privacy, and security are given
+          equal consideration in all discussions and outcomes.</li>
+        </ul></p>
+
+        <section id="section-out-of-scope">
+          <h3 id="out-of-scope">Out of Scope</h3>
+            <p>The technical development of standards is not in scope for the Interest Group. 
+            Technical discussions are expected to take place within a 
+            new or existing W3C Working Groups,
+            or within a Community Group or Business Group when incubation is needed.
+            </p>
+        </section>
+      </section>
+
+      <section id="deliverables">
+        <h2>
+          Deliverables
+        </h2>
+        <p>
+          The primary deliverables of the Smart Cities Interest Group will be IG Notes
+          that identify requirements for existing and/or new technical
+          specifications and gaps. 
+          The group will also
+          maintain public documentation 
+          of W3C Recommendations, 
+          standards,
+          and technologies applicable to Smart City use cases that it is
+          tracking and investigating. 
+          This documentation will include identified
+          gaps, stable standards deployed in implementations, 
+          descriptions of proof-of-concept projects,
+          and
+          standards under development in W3C and external groups.
+        </p>
+
+        <section id="normative">
+          <h3>
+            Normative Specifications
+          </h3>
+          <p>
+          The Interest Group will not deliver any normative specifications.
+          </p>
+        </section>
+
+        <section id="ig-other-deliverables">
+          <h3>
+            Other Deliverables
+          </h3>
+          <p>
+            Other non-normative documents may be created such as:
+          </p>
+          <ul>
+            <li>Use case and requirement documents;</li>
+            <li>Primer or Best Practice documents to support Smart City stakeholders.</li>
+          </ul>
+        </section>
+
+        <section id="timeline">
+          <h3>Timeline</h3>
+            <p class="todo">Put here a timeline view of all deliverables.</p>
+            <ul class="todo">
+              <li>Month YYYY: First teleconference</li>
+              <li>Month YYYY: First face-to-face meeting</li>
+              <li>Month YYYY: Requirements and Use Cases for FooML</li>
+              <li>Month YYYY: FPWD for FooML</li>
+              <li>Month YYYY: Requirements and Use Cases for BarML</li>
+              <li>Month YYYY: FPWD FooML Primer</li>
+            </ul>
+        </section>
+      </section>
+
+	<section id="success-criteria">
+	  <h2>Success Criteria</h2>
+          <p>The Interest Group will have succeeded if it can achieve the following:</p>
+          <ul>
+            <li>Participation via mailing list subscription and postings from people
+              representing various stakeholder communities, including equipment vendors,
+              governments, regulators, hardware and software developers, users, and citizens.
+            </li>
+            <li>Members of the Interest Group starting or joining relevant Working Groups 
+              and driving the development of work items for W3C Recommendations.
+            </li>
+            <li>Members of the Interest Group starting or joining relavant 
+              Interest, Community, or Business Groups
+              and contributing to the creation of W3C Notes.</li>
+            <li>Constructive feedback on W3C deliverables posted for review on the
+              <a href="https://lists.w3.org/Archives/Public/public-smart-cities/">Smart Cities IG mailing list</a>.
+              <br><strong>Note: link is a placeholder, may change, and is currently not active.</strong>
+            </li>
+            <li>Engagement and coordination with other organizations to promote alignment with 
+            and adherence to W3C standards.</li>
+          </ul>
+
+          <p>To achieve this, the Interest Group will organize regular
+          conference calls to update members on progress of work items, and to
+          invite other groups and organizations to present their work to
+          Interest Group participants.</p>
+	</section>
+
+      <section id="coordination">
+        <h2>Coordination</h2>
+        <p><!-- The original text in the template does not make sense if we are not doing RECS.
+                Inappropriate text has been commented out below.
+                However, horizontal review of the use cases and requirements is still desireable.
+           -->
+	For all deliverables, this Interest Group will seek 
+        <a href="https://www.w3.org/Guide/process/charter.html#horizontal-review">horizontal review</a> for
+        accessibility, internationalization, performance, privacy, and security 
+        with the relevant Working and Interest Groups,
+        and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>.
+        <!-- Invitation for review must be issued during each major 
+             standards-track document transition, including
+             <a href="https://www.w3.org/Consortium/Process/#RecsWD" title="First Public Working Draft">FPWD</a>.  
+        -->
+        The Interest Group is encouraged to engage collaboratively with the 
+        horizontal review groups throughout development of each deliverable.  
+        <!--
+        The Interest Group is advised to seek a review at least 3 months before first entering
+          <a href="https://www.w3.org/Consortium/Process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
+          to proactively notify the horizontal review groups when major changes occur in a specification following a review.
+        -->
+        </p>
+
+        <section>
+          <h3 id="w3c-coordination">W3C Groups</h3>
+
+        <p>Additional technical coordination with the following W3C Groups will be made, 
+          per the 
+          <a href="https://www.w3.org/Consortium/Process/#WGCharter">W3C Process Document</a>:</p>
+        <dl>
+            <dt class="coord-category">Use cases:</dt>
+            <dd><dl>
+                <dt class="coord-org">Agriculture CG</dt>
+                   <dd>definition of use cases</dd>
+            </dl></dd>
+            <dt class="coord-category">Primary:</dt>
+            <dd><dl>
+                <dt class="coord-org">Web of Things (WoT) IG/WG/CG</dt>
+                    <dd>internet of things, discovery, edge computing)</dd>
+                <dt class="coord-org">Media and Entertainment IG</dt>
+                    <dd>signage, video links</dd>
+                <dt class="coord-org">Web and Networks IG</dt>
+                    <dd>edge computing, network metadata</dd>
+                <dt class="coord-org">Publishing BG / Publishing CG / EPUB 3 WG / Publishing WG</dt>
+                    <dd>documentation, public communications, multimedia</dd>
+                <dt class="coord-org">Automotive WG</dt>
+                    <dd>v2v comms, geolocation</dd>
+                <dt class="coord-org">Spatial Data on the Web IG
+                    <dd>geolocation</dd>
+                <dt class="coord-org">Decentralized Identifiers WG / Verifiable Credentials WG / Credentials CG</dt>
+                    <dd>identifiers, signing, credentials, authentications</dd>
+                <dt class="coord-org">Dataset Exchange WG</dt>
+                    <dd> (geolocation, semantics, data modelling)</li>
+                <dt class="coord-org">Immersive Web WG</dt>
+                    <dd>VR, AR</dd>
+                <dt class="coord-org">GPU for the Web WG</dt>
+                    <dd>ML, DL, edge computing</dd>
+                <dt class="coord-org">Big Data CG</dt>
+                    <dd>data management, data modelling</dd>
+            </dl></dd>
+            <dt class="coord-category">Secondary:</dt>
+            <dd><dl>
+                <dt class="coord-org">Web Authentication WG</dt>
+                    <dd>security, credentials</dd>
+                <dt class="coord-org">Service Workers WG</dt>
+                    <dd>edge computing</dd>
+                <dt class="coord-org">Devices and Sensors WG</dt>
+                    <dd>geolocation</dd>
+                <dt class="coord-org">JSON-LD WG / JSON for Linking Data CG</dt>
+                    <dd>data modelling, semantics</dd>
+                <dt class="coord-org">Web Payments WG/Web Payment Security IG</dt>
+                    <dd>payments</dd>
+                <dt class="coord-org">Web Real-Time Communications WG</dt>
+                    <dd>video and data streams</dd>
+                <dt class="coord-org">Web Assembly WG</dt>
+                    <dd>edge computing)</dd>
+                <dt class="coord-org">Accessible Infographics CG</dt>
+                    <dd>data visualization)</dd>
+            </dl></dd>
+        </dl>
+
+      	<!--
+           In addition to the above catch-all reference to horizontal review 
+           which includes accessibility review, 
+           please check with chairs and staff contacts of the 
+           <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>
+           to determine if an additional liaison statement with more specific information about 
+           concrete review issues is needed in the list below.
+
+          <dl>
+            <dt class="coord-org"><a href=""><i class="todo">[other name]</i> Working Group</a></dt>
+            <dd><i class="todo">[specific nature of liaison]</i></dd>
+          </dl>
+        -->
+
+        </section>
+
+        <section>
+          <h3 id="external-coordination">External Organizations</h3>
+          <dl>
+            <dt class="coord-org"><a href="https://www.ietf.org/">IETF:</a></dt>
+            <dd>Coordination on communication protocols, data modelling, 
+                discovery, and security standards.
+            </dd>
+            <dt class="coord-org"><a href="https://www.itu.int/">ITU:</a></dt>
+            <dd>Coordination on standards for telecommunication technologies
+                and the use cases they enable.
+            </dd>
+            <dt class="coord-org"><a href="https://asean.org/">ASEAN:</a></dt>
+            <dd>Discussion of smart city use cases and deployments in South-East Asia.
+            </dd>
+            <dt class="coord-org"><a href="https://www.ogc.org/">Open Geospatial Consortium:</a></dt>
+            <dd>Coordinated standards for geolocation and geographic information systems.
+            </dd>
+          </dl>
+        </section>
+      </section>
+
+      <section class="participation">
+        <h2 id="participation">
+          Participation
+        </h2>
+        <p>
+          To be successful, this Interest Group is expected to have 6 or more active participants 
+          for its duration.
+          The chairs and editors are expected to contribute half of a working day per week 
+          towards the Interest Group. 
+          There is no minimum requirement for other Participants.
+        </p>
+        <p>
+          The group encourages questions, 
+          comments and issues on its public mailing lists and document repositories, 
+          as described in <a href='#communication'>Communication</a>.
+        </p>
+        <p>
+          The group also welcomes non-Members to contribute technical submissions 
+          for consideration upon their agreement to the terms of the 
+          <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
+        </p>
+        <p>Participants in the group are required 
+          (by the <a href="https://www.w3.org/Consortium/Process/#ParticipationCriteria">W3C Process</a>) to follow the
+          W3C <a href="https://www.w3.org/Consortium/cepc/">Code of Ethics and Professional Conduct</a>.</p>
+      </section>
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public">
+          Technical discussions for this Interest Group are conducted in 
+          <a href="https://www.w3.org/Consortium/Process/#confidentiality-levels">public</a>: 
+          the meeting minutes from teleconference and face-to-face meetings will be archived 
+          for public review, 
+          and technical discussions and issue tracking will be conducted in a manner that 
+          can be both read and written to by the general public. 
+          Working Drafts and Editor's Drafts of deliverables will be developed on a 
+          public repository and may permit direct public contribution requests.
+          The meetings themselves are not open to public participation, however.
+        </p>
+        <p>
+          Information about the group 
+          (including details about deliverables, issues, actions, status, 
+          participants, and meetings) 
+          will be available from the <a href="">Smart Cities Interest Group home page.</a>
+        </p>
+        <p>
+          Most Smart City Interest Group teleconferences will focus on discussion of 
+          particular deliverables, and will be conducted on an as-needed basis.
+        </p>
+        <p>
+          This group primarily conducts its technical work 
+          on <a class="todo" id="public-github" href="[link to Github repo]">GitHub issues</a>.
+          The public is invited to review, discuss and contribute to this work.
+        </p>
+        <p>
+          The group may use a Member-confidential mailing list 
+          for administrative purposes and, 
+          at the discretion of the Chairs and members of the group, 
+          for member-only discussions in special cases when a participant requests such a discussion.
+        </p>
+      </section>
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p>
+          This group will seek to make decisions through consensus and due process, 
+          per the <a href="https://www.w3.org/Consortium/Process/#Consensus"> 
+          W3C Process Document (section 3.3)</a>. 
+          Typically, an editor or other participant makes an initial proposal,
+          which is then refined in discussion with members of the group and other reviewers,
+          and consensus emerges with little formal voting being required.
+        </p>
+        <p>
+          However, if a decision is necessary for timely progress and consensus is not 
+          achieved after careful consideration of the range of views presented,
+          the Chairs may call for a group vote and record a decision along with any objections.
+        </p>
+        <p>
+          To afford asynchronous decisions and organizational deliberation,
+          any resolution (including publication decisions) taken in a face-to-face meeting
+          or teleconference will be considered provisional.
+
+          A call for consensus (CfC) will be issued for all resolutions 
+          (for example, via email, GitHub issue or web-based survey),
+          with a response period from <span id='cfc'>one week to 10 working days</span>,
+          depending on the chair's evaluation of the group consensus on the issue.
+
+          If no objections are raised by the end of the response period,
+          the resolution will be considered to have consensus as a resolution of the 
+          Interest Group.
+        </p>
+        <p>
+          All decisions made by the group should be considered resolved unless and until 
+          new information becomes available or unless reopened at the discretion of the 
+          Chairs or the Director.
+        </p>
+        <p>
+          This charter is written in accordance with the 
+          <a href="https://www.w3.org/Consortium/Process/#Votes">W3C Process Document 
+          (Section 3.4, Votes)</a> 
+          and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+      <section id="patentpolicy">
+        <h2>Patent Disclosures </h2>
+        <p>The Interest Group provides an opportunity to
+          share perspectives on the topic addressed by this charter. W3C reminds
+          Interest Group participants of their obligation to comply with patent
+          disclosure obligations as set out in 
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">Section 6</a>
+          of the W3C Patent Policy. While the Interest Group does not
+          produce Recommendation-track documents, when Interest Group
+          participants review Recommendation-track specifications from Working
+          Groups, the patent disclosure obligations do apply. 
+          For more information about disclosure obligations for this group,
+          please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C
+            Patent Policy Implementation</a>.</p>
+      </section>
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>This Interest Group will use the  
+		<a href="https://www.w3.org/Consortium/Legal/copyright-documents">W3C Document license</a> 
+		for all its deliverables.</p>
+	      <!-- alternative: 
+                  <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a>
+              -->
+      </section>
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p>
+        This charter has been created according to 
+	<a href="https://www.w3.org/Consortium/Process/#GAGeneral">section 5.2</a> of the 
+	<a href="https://www.w3.org/Consortium/Process/">Process Document</a>. 
+	In the event of a conflict between this document or the provisions of any charter and the W3C Process, 
+	the W3C Process shall take precedence.
+        </p>
+
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+          <p class="issue"><b>Note:</b>Display this table and update it when appropriate. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/process/charter.html#extension">Charter Guidebook (section 4)</a>.</p>
+
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/Consortium/Process/#CharterReview">W3C Process Document (section 5.2.3)</a>:</p>
+
+          <table class="history">
+            <tbody>
+              <tr>
+                <th>
+                  Charter Period
+                </th>
+                <th>
+                  Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+                <th>
+                  Changes
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Initial Charter</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Charter Extension</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">none</i>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a class="todo" href="">Rechartered</a>
+                </th>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy]</i>
+                </td>
+                <td>
+                  <p class="todo">[description of change to charter, with link to new deliverable item in charter] <b>Note:</b> use the class <code>new</code> for all new deliverables, for ease of recognition.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+
+    <hr>
+
+    <footer>
+      <address>
+        <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a>
+      </address>
+
+      <p class="copyright">
+        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
+        <i class="todo">[yyyy]</i>
+        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+        (
+        <a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+        <a href="https://www.keio.ac.jp/">Keio</a>,
+        <a href="https://ev.buaa.edu.cn/">Beihang</a>
+        ), All Rights Reserved.
+
+        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+      </p>
+      <hr>
+      <p><a href="https://github.com/w3c/charter-drafts">Yes, it's on GitHub!</a>.</p>
+    </footer>
+
+  </body>
+</html>
