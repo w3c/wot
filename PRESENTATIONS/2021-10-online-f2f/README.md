@@ -31,6 +31,8 @@ Here are links to the presentations, in order by agenda.
 * Thing Descriptions and Models
    - [PDF](2021-10-07-WoT-F2F-TD-Kaebisch.pdf)
    - [PPTX](2021-10-07-WoT-F2F-TD-Kaebisch.pptx)
+* 
+   - [PDF](2021-10-07-WoT-F2F-TD-Aguzzi.pdf)
   
 ## Monday 2021-10-11 - Open Day
 * Opening:
