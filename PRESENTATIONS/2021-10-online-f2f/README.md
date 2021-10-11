@@ -34,7 +34,7 @@ Here are links to the presentations, in order by agenda.
 * Proposal: Reduce redundant information in TDs (Cristiano)
    - [PDF](2021-10-07-WoT-F2F-TD-Aguzzi.pdf)
 * Status Binding Template TF (Ege)
-   - [PDF]( )
+   - tbd
   
 ## Monday 2021-10-11 - Open Day
 * Opening:
