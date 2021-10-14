@@ -43,6 +43,16 @@ Here are links to the presentations, in order by agenda.
 * Takenaka Corporation
 * Plugfest Project Review
    - https://github.com/w3c/wot-testing/labels/Plugfest%202021.09
+
+## Thursday 2021-10-14 - Open Day
+* Opening:
+   - [PDF](2021-10-14-WoT-OpenDay-McCool.pdf)
+   - [PPTX](2021-10-14-WoT-OpenDay-McCool.pptx)
+* ECHONET
+* Spatial Data on the Web/Geolocation    
+   - [PDF](2021-10-14-WoT-OpenDay-Geolocation-McCool.pdf)
+   - [PPTX](2021-10-14-WoT-OpenDay-Geolocation-McCool.pptx)
+* Netzo
    
 ## Tuesday 2021-10-26
 * Use Cases
