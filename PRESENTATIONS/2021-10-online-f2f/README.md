@@ -41,6 +41,7 @@ Here are links to the presentations, in order by agenda.
    - [PDF](2021-10-11-WoT-OpenDay-McCool.pdf)
    - [PPTX](2021-10-11-WoT-OpenDay-McCool.pptx)
 * Takenaka Corporation
+   - [PDF](2021-10-11-WoT-OpenDay-Takenaka-Kasuya.pdf)
 * Plugfest Project Review
    - https://github.com/w3c/wot-testing/labels/Plugfest%202021.09
 
@@ -49,6 +50,7 @@ Here are links to the presentations, in order by agenda.
    - [PDF](2021-10-14-WoT-OpenDay-McCool.pdf)
    - [PPTX](2021-10-14-WoT-OpenDay-McCool.pptx)
 * ECHONET
+   - [PDF](2021-10-14-WoT-OpenDay-ECHONET-Matsuda.pdf)
 * Spatial Data on the Web/Geolocation    
    - [PDF](2021-10-14-WoT-OpenDay-Geolocation-McCool.pdf)
    - [PPTX](2021-10-14-WoT-OpenDay-Geolocation-McCool.pptx)
