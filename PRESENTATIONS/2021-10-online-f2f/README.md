@@ -63,6 +63,8 @@ Here are links to the presentations, in order by agenda.
 * Use Cases
 * Japanese WoT CG Update
 * Charters
+   - [PDF](2021-10-26-WoT-F2F-Charters-McCool.pdf)
+   - [PPTX](2021-10-26-WoT-F2F-Charters-McCool.pptx)
 
 ## Wednesday 2021-10-27
 * Architecture
