@@ -70,6 +70,8 @@ TBD
 
 
 ## Deliverables 
+* OPC UA companion specification
+  * defines OPC UA Binding Ontology 
+  * guideline to transform UA NodesetFile to Thing Description (and vice versa)
 * OPC UA Binding Document as W3C Note for WoT Thing Description
-* OPC UA companion specification that defines OPC UA Binding Ontology and how Thing Description can be created from UA NodesetFile (and vice versa)
 * Prototype implementation
