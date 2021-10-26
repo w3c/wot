@@ -70,7 +70,7 @@ TBD
 
 
 ## Deliverables 
-* W3C Note
+* OPC UA Binding as W3C Note
 * OPC UA companion specification 
-* OPC UA Binding Ontology
+** defines OPC UA Binding Ontology
 * Prototype implementation
