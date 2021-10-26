@@ -70,7 +70,6 @@ TBD
 
 
 ## Deliverables 
-* OPC UA Binding as W3C Note
-* OPC UA companion specification 
-** defines OPC UA Binding Ontology
+* OPC UA Binding Document as W3C Note for WoT Thing Description
+* OPC UA companion specification that defines OPC UA Binding Ontology
 * Prototype implementation
