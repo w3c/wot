@@ -57,8 +57,12 @@ Here are links to the presentations, in order by agenda.
 * Netzo
    
 ## Tuesday 2021-10-26
+* Opening:
+   - [PDF](2021-10-26-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2021-10-26-WoT-F2F-Opening-McCool.pptx)
 * Use Cases
 * Japanese WoT CG Update
+* Charters
 
 ## Wednesday 2021-10-27
 * Architecture
@@ -67,6 +71,6 @@ Here are links to the presentations, in order by agenda.
 * Marketing
 
 ## Thursday 2021-10-28
-* Liaisons
-* Security
+* OPC-UA Joint Meeting
+* T2TRG/IETF/DID Joint Meeting (Security, Discovery)
 * Testing 
