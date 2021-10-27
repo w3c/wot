@@ -1,8 +1,7 @@
-# OPC UA W3C WoT Cooperation Proposal (Draft)
+# OPC UA W3C WoT Binding Proposal (Draft)
 
 ## Purpose 
-This is a joint initiative of the [W3C Web of Things (WoT)](https://www.w3.org/WoT/) and the 
-[OPC Foundation](https://opcfoundation.org/) in the context of the official [liaison](https://opcfoundation.org/news/opc-foundation-news/w3c-and-opcf-to-integrate-opc-ua-into-the-web-of-things/) between both SDOs. The purpose is the development of an OPC UA Binding Ontology through an OPC UA Companion specification and a W3C Note document for OPU UA Binding for the W3C WoT Thing Description.
+The purpose is the development of an OPC UA Binding Ontology through an OPC UA Companion specification and a W3C Note document for OPU UA Binding for the W3C WoT Thing Description.
 
 ## Scope
 The W3C Web of Thing (WoT) should support a standardized binding to OPC UA systems to enable simple application development like for cross-domain 
