@@ -69,6 +69,9 @@ Here are links to the presentations, in order by agenda.
    - [PPTX](2021-10-26-WoT-F2F-Charters-McCool.pptx)
 
 ## Wednesday 2021-10-27
+* Opening:
+   - [PDF](2021-10-27-WoT-F2F-Opening-Kaebisch.pdf)
+   - [PPTX](2021-10-27-WoT-F2F-Opening-Kaebisch.pptx)
 * Architecture
 * Profiles
 * Scripting
