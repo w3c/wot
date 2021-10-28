@@ -75,12 +75,13 @@ Here are links to the presentations, in order by agenda.
 * Architecture
 * Profiles
 * Scripting
-* Marketing
+* Marketing  I / II
 
 ## Thursday 2021-10-28
 * Opening:
    - [PDF](2021-10-28-WoT-F2F-Opening-Kaebisch.pdf)
    - [PPTX](2021-10-28-WoT-F2F-Opening-Kaebisch.pptx)
+* Marketing  II / II
 * OPC-UA Joint Meeting
 * T2TRG/IETF/DID Joint Meeting (Security, Discovery)
 * Testing 
