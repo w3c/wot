@@ -84,4 +84,6 @@ Here are links to the presentations, in order by agenda.
 * Marketing  II / II
 * OPC-UA Joint Meeting
 * T2TRG/IETF/DID Joint Meeting (Security, Discovery)
+   - [PDF](2021-10-28-WoT-F2F-T2TRG-DID-McCool.pdf)
+   - [PPTX](2021-10-28-WoT-F2F-T2TRG-DID-McCool.pptx)
 * Testing 
