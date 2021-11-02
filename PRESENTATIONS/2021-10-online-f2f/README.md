@@ -83,6 +83,7 @@ Here are links to the presentations, in order by agenda.
    - [PPTX](2021-10-28-WoT-F2F-Opening-Kaebisch.pptx)
 * Marketing  II / II
 * OPC-UA Joint Meeting
+   - [PDF](2021-10-28-WoT-F2F-OPC-UA.pdf)
 * T2TRG/IETF/DID Joint Meeting (Security, Discovery)
    - [PDF](2021-10-28-WoT-F2F-T2TRG-DID-McCool.pdf)
    - [PPTX](2021-10-28-WoT-F2F-T2TRG-DID-McCool.pptx)
