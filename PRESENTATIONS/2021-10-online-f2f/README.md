@@ -61,6 +61,12 @@ Here are links to the presentations, in order by agenda.
    - [PDF](2021-10-26-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2021-10-26-WoT-F2F-Opening-McCool.pptx)
 * Use Cases
+   * Conexxus
+      - [PDF](2021-10-26-WoT-F2F-Retail-Ezell+Dickinson.pdf)
+   * MiniApps
+      - [PDF](2021-10-26-WoT-F2F-UseCases-MiniApps-Qing.pdf)
+   * NHK
+      - [PDF](2021-10-26-WoT-F2F-UseCases-NHK-Endo.pdf)
 * Japanese WoT CG Update
    - [PDF](2021-10-26-WoT-F2F-WoT-JP-CG-Mizushima.pdf)
    - [PPTX](2021-10-26-WoT-F2F-WoT-JP-CG-Mizushima.pptx)
