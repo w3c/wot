@@ -1,5 +1,6 @@
 # WG 2021 Extension Plan
-We will request a 6mo extension to the WG charter, based on the following plan: 
+We will request a 6mo extension to the WG charter, based on the following plan:
+
 0. Clarify which normative features in the TD 1.1 should be covered by mid-Nov
 1. Roll back TD spec to 1.1 (1.0 compatible) features by Nov 30
 2. Normative features freeze TD 1.1 & Architecture spec by Dec 15
