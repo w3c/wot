@@ -1,10 +1,10 @@
 # WG 2021 Extension Plan
 We will request a 6mo extension to the WG charter, based on the following plan:
 
-0. Clarify which normative features in the TD 1.1 should be covered by mid-Nov
+0. Clarify which normative sections should be included or should be improved in TD 1.1, Profile, Arch 1.1, and Discovery by end-Nov
 1. Roll back TD spec to 1.1 (1.0 compatible) features by Nov 30
 2. Normative features freeze TD 1.1 & Architecture spec by Dec 15
-3. Get wide review including TAG, Accessibilty, Privacy, Security, and Internationalization to review TD 1.1 draft 
+3. Start to get wide review including TAG, Accessibilty, Privacy, Security, and Internationalization to review TD 1.1 draft (note: might take 6 month)
 4. Normative features freeze Discovery spec by Dec 15 
 5. Feature freeze Profile spec by Jan 31 
 6. Testfest in mid-Feb 
