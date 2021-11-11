@@ -1,5 +1,5 @@
 # WG 2021 Extension Plan
-We will request a 6mo extension to the WG charter, based on the following plan:
+We will request a 12mo extension to the WG charter, based on the following plan:
 
 0. Clarify which normative sections should be included or should be improved in TD 1.1, Profile, Arch 1.1, and Discovery by end-Nov
 1. Roll back TD spec to 1.1 (1.0 compatible) features by Nov 30
@@ -11,3 +11,5 @@ We will request a 6mo extension to the WG charter, based on the following plan:
 7. CR transition in mid-March
 8. PR transition in mid-April
 9. REC transition before end of extended charter end of July
+
+The spec generation schedule is fixed for 6 months.
