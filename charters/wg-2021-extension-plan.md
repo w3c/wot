@@ -12,4 +12,4 @@ We will request a 12mo extension to the WG charter, based on the following plan:
 8. PR transition in mid-April
 9. REC transition before end of extended charter end of July
 
-The spec generation schedule is fixed for 6 months.
+The spec generation schedule is fixed for 6 months and the extra 6 months will be used as a buffer for potential addition for the wide reviews and testing.
