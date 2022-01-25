@@ -19,6 +19,4 @@ During the second 6 months we can begin editor's draft documents for the planned
 13. CR candidate for Discovery and Profiles by July 30, 2022
 14. CR Transition for Discovery and Profiles by Aug 31, 2022
 15. CR Transition for Discovery and Profiles by Nov 1, 2022
-16. REC transition before end of extended charter on Feb 1, 2023)
-
-
+16. REC transition before end of extended charter on Feb 1, 2023
