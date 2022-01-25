@@ -7,7 +7,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 1. Roll back TD spec to 1.1 (1.0 compatible) features by Nov 30, 2021
 2. Start wide review process including TAG, Accessibilty, Privacy, Security, and Internationalization to review drafts ASAP (note: might take 6 months)
 3. Document consistency check complete by Feb 4
-4. Clarify which normative sections should be included or should be improved in TD 1.1, Profile, Arch 1.1, and Discovery by Feb 4
+4. Clarify which normative sections should be included or should be improved in TD 1.1, Profile, Architecture 1.1, and Discovery by Feb 4
 5. Normative feature freeze for TD 1.1 & Architecture spec by Feb 4, 2022
 6. Normative feature freeze for Discovery spec by Feb 4, 2022
 7. Testfest 1 in mid-March (focus on TD, Discovery)
