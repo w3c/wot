@@ -15,12 +15,18 @@ During the second 6 months we can begin editor's draft documents for the planned
 9. Normative feature freeze for Discovery spec by Feb 4, 2022
 10. Clarify which normative sections should be included or should be improved in Profile by Mar 4
 11. Testfest/Plugfest 1 in mid-March (focus on TD, Discovery)
-12. CR candidate for Architecture and TD 1.1 by March 30, 2022
-13. CR transition for Architecture and TD 1.1 in mid-April, 2022
-14. PR transition for Architecture and TD 1.1 in mid-May, 2022
-15. Normative feature freeze for Profile spec by mid-Jun, 2022
-16. Testfest/Plugfest 2 in mid-July, 2022 (focus on Discovery, Profile)
-17. CR candidate for Discovery and Profiles by July 30, 2022
-18. CR Transition for Discovery and Profiles by Aug 31, 2022
-19. CR Transition for Discovery and Profiles by Nov 1, 2022
-20. REC transition before end of extended charter on Feb 1, 2023
+12. CR candidate for Architecture by March 30, 2022
+13. CR candidate for TD 1.1 by March 30, 2022
+14. CR transition for Architecture in mid-April, 2022
+15. CR transition for TD 1.1 in mid-April, 2022
+16. PR transition for Architecture in mid-May, 2022
+17. PR transition for TD 1.1 in mid-May, 2022
+18. Normative feature freeze for Profile spec by mid-Jun, 2022
+19. Testfest/Plugfest 2 in mid-July, 2022 (focus on Discovery, Profile)
+20. CR candidate for Discovery by July 30, 2022
+21. CR candidate for Profiles by July 30, 2022
+22. CR Transition for Discovery by Aug 31, 2022
+23. CR Transition for Profiles by Aug 31, 2022
+24. CR Transition for Discovery by Nov 1, 2022
+25. CR Transition for Profiles by Nov 1, 2022
+26. REC transition before end of extended charter on Feb 1, 2023
