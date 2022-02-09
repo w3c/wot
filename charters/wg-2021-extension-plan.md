@@ -9,10 +9,10 @@ During the second 6 months we can begin editor's draft documents for the planned
 3. Document consistency check complete by Feb 4
 4. Clarify which normative sections should be included or should be improved in TD 1.1 by Feb 4
 5. Clarify which normative sections should be included or should be improved in Architecture 1.1 by Feb 4
-6. Clarify which normative sections should be included or should be improved in Discovery by Feb 4
+6. Clarify which normative sections should be included or should be improved in Discovery by Feb 14
 7. Normative feature freeze for Architecture spec by Feb 4, 2022
 8. Normative feature freeze for TD 1.1 spec by Feb 4, 2022
-9. Normative feature freeze for Discovery spec by Feb 4, 2022
+9. Normative feature freeze for Discovery spec by Feb 28, 2022
 10. Clarify which normative sections should be included or should be improved in Profile by Mar 4
 11. Testfest/Plugfest 1 in mid-March (focus on TD, Discovery)
 12. CR candidate for Architecture by March 30, 2022
