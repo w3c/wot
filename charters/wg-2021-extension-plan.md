@@ -27,6 +27,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 21. CR candidate for Profiles by July 30, 2022
 22. CR Transition for Discovery by Aug 31, 2022
 23. CR Transition for Profiles by Aug 31, 2022
-24. PR Transition for Discovery by Nov 1, 2022
-25. PR Transition for Profiles by Nov 1, 2022
-26. REC transition before end of extended charter on Feb 1, 2023
+24. TPAC 2022 (possibly hybrid) Sept 12-16, 2022 (tentative)
+25. PR Transition for Discovery by Nov 1, 2022
+26. PR Transition for Profiles by Nov 1, 2022
+27. REC transition before end of extended charter on Feb 1, 2023
