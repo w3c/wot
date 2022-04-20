@@ -19,7 +19,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | May 6, 2022 | TD1.1 | CR candidate |
 | May 6, 2022 | Arch1.1 | Normative feature freeze |
 | mid-May, 2022 | TD1.1 | CR transition |
-| mid-May, 2022 | TD1.1 | PR transition |
+| **FIX** mid-May, 2022 | TD1.1 | PR transition |
 | June 3, 2022 | Arch1.1 | CR candidate |
 | mid-June, 2022 | Profiles | Normative feature freeze |
 | June 30, 2022 | Arch1.1 | CR transition |
