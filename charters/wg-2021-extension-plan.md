@@ -26,7 +26,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | mid-July, 2022 | TD1.1 | PR transition |
 | Jul 30, 2022 | Discovery | CR candidate |
 | Jul 30, 2022 | Profiles | CR candidate |
-| Jul 30, 2022 | Arch1.1 | PR transition  |
+| Jul 30, 2022 | Arch1.1 | PR transition  (note: only 30 days after CR, may need to delay 1mo) |
 | Aug 31, 2022 | Discovery | CR Transition |
 | Aug 31, 2022 | Profiles | CR Transition |
 | Sep 12-16, 2022 (tentative)| All | TPAC 2022 (possibly hybrid) |
