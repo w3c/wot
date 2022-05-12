@@ -17,7 +17,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | Apr 11, 2022 | Discovery | Clarify which normative sections should be included or should be improved |
 | May 6, 2022 | Discovery | Normative feature freeze |
 | May 6, 2022 | TD1.1 | CR candidate |
-| May 6, 2022 | Arch1.1 | Normative feature freeze |
+| May 18, 2022 | Arch1.1 | Normative feature freeze |
 | mid-May, 2022 | TD1.1 | CR transition |
 | June 3, 2022 | Arch1.1 | CR candidate |
 | mid-June, 2022 | Profiles | Normative feature freeze |
