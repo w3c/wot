@@ -23,7 +23,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | early June, 2022 | Profiles | Normative feature freeze |
 | June 6-10, 2022 | - | Testfest 2 (focus on Discovery, TD) |
 | June 30, 2022 | Arch1.1 | CR transition |
-| mid-July 2022 | -   | Testfest 3 (focus on Profile, fixing at-risk items in other deliverables) |
+| July 18-22 2022 | -   | Testfest 3 (focus on Profile, fixing at-risk items in other deliverables) |
 | mid-July, 2022 | TD1.1 | PR transition |
 | Jul 30, 2022 | Discovery | CR candidate |
 | Jul 30, 2022 | Profiles | CR candidate |
