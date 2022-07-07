@@ -20,7 +20,7 @@ See https://w3c.github.io/wot-usecases/#use-case-opc-ua-binding
 
 ## Deliverables
 1. OPC UA Ontology
-   - Defines information model and vocabulary for all OPC UA definitions and protocol options used in UA NodesetFile
+   - Defines information model and vocabulary for relevant OPC UA definitions and protocol options used in UA NodesetFile
    - RDF/TTL/JSONLD Context file and URL, suitable for use in JSON-LD and RDF
    - Note: useful for activites other than 2
 2. WoT TD Protocol Binding for OPC UA Nodesets
