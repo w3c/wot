@@ -27,5 +27,5 @@ See https://w3c.github.io/wot-usecases/#use-case-opc-ua-binding
    - Depends on 1 (TDs with this protocol binding would include the OPC UA ontology defined in 1)
 3. Process to transform a OPC UA NodesetFile to a WoT Thing Description (and vice versa, if TD describes OPC UA Nodeset)
    - May have to infer or convert certain aspects to do conversion
-   - May have to gather information from places other than NodesetFile
+   - May have to gather information from places other than NodesetFile, such as human-readable specifications.
    - OPC UA TD Producer/Generator; possibly also a "service"
