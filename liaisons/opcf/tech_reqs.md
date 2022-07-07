@@ -34,10 +34,10 @@ See https://w3c.github.io/wot-usecases/#use-case-opc-ua-binding
    - Depends on Deliverable 1 (TDs with this protocol binding would include the OPC UA ontology defined in Deliverable 1)
 3. Process to transform a OPC UA NodesetFile to a WoT Thing Description 
    - For Objective 1, this process needs to support transformation from OPC UA metadata to WoT TDs.
-   - May have to infer or convert certain aspects to do conversion.
+   - May have to infer or convert certain aspects of the metadata to do conversion.
    - May have to gather information from sources other than the NodesetFile, such as human-readable specifications, 
-     if all information needed in a TD is not explictly available in a NodesetFile (and possibly vice-versa).
-   - To support automatic tooling, the transformation process should be formally defined.
+     if all information needed in a TD is not explictly available in a NodesetFile.
+   - To support automatic tooling, the mapping between the information models should be formally defined.
    - Transformation could be performed by a OPC UA TD Producer/Generator, which might be a tool (static conversion) 
      or a service (dynamic conversion).
 4. ? Process to transform a WoT Thing Description to an OPC UA NodesetFile 
