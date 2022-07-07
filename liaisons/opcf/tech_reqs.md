@@ -9,6 +9,9 @@ See https://w3c.github.io/wot-usecases/#use-case-opc-ua-binding
 3. ? Let OPC UA servers connect to WoT Things
 
 ## Notes
+* Objective 3 is marked with a "?" since we should discuss whether it is an objective or not.  If it is
+  not, we probably should state it as a "non-goal".  If it is not a goal, then Deliverable 4 below should also
+  be removed.
 * WoT TDs use RDF, typically serialized as JSON-LD, so Objective 2 includes support for semantic annotations and extensions, 
   which can be done either by annotations such as `@type` or by introducing new vocabulary via a context extension.
 * Metadata for OPC UA servers will be expressed as WoT TDs, and WoT TDs can be distributed via
