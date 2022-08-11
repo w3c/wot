@@ -1,8 +1,11 @@
 # Onboarding
-An example for now, copied from old WG.  Note you can use HTML inside an MD file, and we eventually need HTML for the charter, so... just put a blank line before and after and avoid blank lines in the middle.
 
 ## Motivation
-Put notes from issue here, use cases, requirements, etc.
+In order to establish secure communications in some contexts, for example on a LAN,
+some form of onboarding process to establish mutual trust between Things and
+Consumers is needed.  Having a prescriptive (but optional) process for this
+would be useful, and may also include additional steps such as registration with
+a WoT Discovery service.
 
 ## Description
 
