@@ -6,3 +6,4 @@ so use HTML if possible for the actual content.  Github can also render the HTML
 Just put a blank line before and after and avoid blank lines in the middle.
 
 * [Onboarding](onboarding.md)
+* [Discovery](discovery.md)
