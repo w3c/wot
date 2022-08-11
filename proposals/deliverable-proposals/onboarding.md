@@ -1,10 +1,11 @@
 # Onboarding
-An example for now, copied from old WG.  Note you can use HTML inside an MD file, and we eventually need HTML for the charter, so...
+An example for now, copied from old WG.  Note you can use HTML inside an MD file, and we eventually need HTML for the charter, so... just put a blank line before and after and avoid blank lines in the middle.
 
 ## Motivation
 Put notes from issue here, use cases, requirements, etc.
 
 ## Description
+
 <p>
 In this work item we will define mechanisms to perform minimum-effort
 onboarding of
