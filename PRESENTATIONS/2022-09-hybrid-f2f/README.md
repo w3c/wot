@@ -16,7 +16,8 @@ Use of this template is optional if you already have material you are reusing,
 but is preferred for new material.
 
 Here are links to the presentations, in order by agenda.  Note the timezones!
-Meeting "at" TPAC are in the morning in Pacific time, others are in the morning in
+Meeting during TPAC itself (the actual hybrid event) are in the morning in Pacific time,
+others (Pre-TPAC and Post-TPAC) are in the morning in
 Eastern time, and there is a 3h difference between these.
 
 ## Pre-TPAC
