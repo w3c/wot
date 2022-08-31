@@ -14,6 +14,33 @@ If you use Powerpoint, see
 Use of this template is optional if you already have material you are reusing,
 but is preferred for new material.
 
-Here are links to the presentations, in order by agenda.
+Here are links to the presentations, in order by agenda.  Note the timezones!
+Meeting "at" TPAC are in the morning in Pacific time, others are in the morning in
+Eastern time, and there is a 3h difference between these.
 
-## To Do
+## Pre-TPAC
+### Tuesday 6 September 2022 - 2h - 8:00am-10:00am Eastern
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Tuesday.2C_September_6)
+
+### Wednesday 7 September 2022 - 2h - 8:00am-10:00am Eastern
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_7)
+
+## TPAC
+### Monday 12 September 2022 - 2h - 8:00am-10:00am Pacific
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Monday.2C_September_12)
+
+### Wednesday 14 September 2022 - 2h - 8:00am-10:00am Pacific
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_14)
+
+### Wednesday 14 September 2022 - 1h - 3pm Pacific (tentative)
+* [Breakout](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#WoT_Status_Update_and_Demos)
+
+## Post-TPAC
+### Tuesday 20 September 2022 - 2h - 8:00am-10:00am Eastern
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Tuesday.2C_September_20)
+
+### Wednesday 21 September 2022 - 2h - 8:00am-10:00am Eastern
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_21)
+
+### Thursday 22 September 2022 - 2h - 8:00am-10:00am Eastern
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_21)
