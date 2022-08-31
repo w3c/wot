@@ -1,4 +1,4 @@
-# Presentation Material from September 2022 hybrid WoT F2F
+# Presentation Material from September 2022 Hybrid WoT F2F
 This hybrid F2F will be held on
 [various dates from 6 September 2022 to 22 September 2022](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022).
 This directory will be used to archive presentations and make them available to people
