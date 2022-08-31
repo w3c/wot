@@ -5,7 +5,8 @@ This directory will be used to archive presentations and make them available to 
 who may not have access to screen sharing during the F2F.
 All presenters should upload their presentations, ideally in advance of their session.
 Please use a name in the format `2022-09-DD-WoT-F2F-Session-Presenter.{pptx,pdf}`,
-for example `2022-09-15-WoT-F2F-Opening-McCool.{pptx,pdf}`.
+for example `2022-09-15-WoT-F2F-Opening-McCool.{pptx,pdf}`.  The "Session" value should be one
+or two words summarizing the topic, and will also be used in the table of contents.
 Whatever main format you use, please export and check in a PDF as well.
 This makes it easier to browse presentations in github.
 
