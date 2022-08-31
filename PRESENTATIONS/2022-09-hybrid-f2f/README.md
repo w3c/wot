@@ -32,8 +32,8 @@ Eastern time, and there is a 3h difference between these.
 ### Wednesday 14 September 2022 - 2h - 8:00am-10:00am Pacific
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_14)
 
-### Wednesday 14 September 2022 - 1h - 3pm Pacific (tentative)
-* [Breakout](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#WoT_Status_Update_and_Demos)
+### DEMO BREAKOUT: Wednesday 14 September 2022 - 1h - 3pm Pacific (tentative)
+* [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#WoT_Status_Update_and_Demos)
 
 ## Post-TPAC
 ### Tuesday 20 September 2022 - 2h - 8:00am-10:00am Eastern
