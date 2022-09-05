@@ -6,7 +6,13 @@ maturity, including geolocation and support for JSONPath queries.  In addition
 work may be needed to align with proposed TD 2.0 features, such as signatures,
 and updating the TD/TM for a WoT Thing Description Directory.
 
-To Do: link to labelled issues in the wot-discovery repo.
+There are a set of [labelled issues in the wot-discovery repo](https://github.com/w3c/wot-discovery/labels/defer%20to%20Discovery%202.0)
+that should be considered.  Note that "2.0" is used however we may or may not
+want to have either a 1.1 (backward compatible) or 2.0 (not backward compatible)
+deliverable in the next charter.  We also have to consider how this
+relates to the various versions of TD; e.g. should all versions of TDs
+be supported in a single directory?  Some features like signatures
+may only be possible with the newer TD specification.
 
 ## Description
 
