@@ -11,7 +11,7 @@ and on resource constrained devices.
 
 Initially this work item will focus on delivering the Profile 1.1 specification.
 
-In addition, specification work for the following profiles will be carried out:  
+In addition, specification work for other profiles, including the following profiles will be carried out:  
 * Digital Twin Profile
 * Cloud Profile
 * Constraint Device Profile
