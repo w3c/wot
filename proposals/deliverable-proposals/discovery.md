@@ -41,7 +41,18 @@ may only be possible with the newer TD specification.
       aligned with existing standards, and should support both static and
       dynamic situations.</li>
 </ul>
+<p>Due to some limitations expected in JSONPath, in particular lack of
+   support for scripting and limitations on keyword searches, it may be 
+   necessary to define additional chainable filters for geolocation and
+   other specific use cases, such as semantic type checking.  Prefix
+   expansion also needs to be dealt with, ideally in a way that does not
+   require full RDF processing.  See discussion in issues.
+</p>
 <p>In addition, WoT Discovery may have to be updated to accomodate
    security bootstrapping using the WoT Onboarding process proposed as
    another deliverable.
+</p>
+<p>Updates are also expected in related standards, such as DID, and new
+   Introduction types and protocol support may be added (for example, a
+   CoAP API for directories) and TD serialization formats (e.g. YAML or CBOR).
 </p>
