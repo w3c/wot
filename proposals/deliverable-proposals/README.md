@@ -10,3 +10,4 @@ any HTML content.
 
 * [Onboarding](onboarding.md)
 * [Discovery](discovery.md)
+* [Profiles](profiles.md)
