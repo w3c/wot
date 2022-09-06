@@ -36,7 +36,8 @@ may only be possible with the newer TD specification.
       but would be lighter-weight to implement and use.</li>
   <li>Geolocation.  Many WoT use cases have identified a need to 
       limit discovery by geographic location.  To support this, a standard
-      way to encode geolocation metadata is needed and query mechanisms
+      way to encode geolocation metadata is needed (or several ways, each
+      identified using a profile) and query mechanisms
       that can filter by this metadata.  Geolocation metadata should be 
       aligned with existing standards, and should support both static and
       dynamic situations.</li>
