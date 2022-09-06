@@ -8,7 +8,7 @@ so use HTML if possible for the actual content.
 Just put a blank line before and after and avoid blank lines in the middle of
 any HTML content.
 
-* <strike>[Onboarding](onboarding.md)</strike>
+* <strike>[Onboarding](onboarding.md)</strike> (DEPRECATED - merged with Security proposal)
 * [Security](security.md)
 * [Discovery](discovery.md)
 * [Profiles](profiles.md)
