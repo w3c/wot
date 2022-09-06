@@ -1,4 +1,4 @@
-# Profiles
+# WoT Profiles
 
 ## Motivation
 In order to address important interoperability use cases among diverse stakeholders, 
