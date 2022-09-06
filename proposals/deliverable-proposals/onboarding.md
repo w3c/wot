@@ -1,4 +1,5 @@
 # Onboarding
+DEPRECATED - To be incorporated into a consolidated Security proposal.
 
 ## Motivation
 In order to establish secure communications in some contexts, for example on a LAN,
