@@ -19,3 +19,13 @@ of specific deployment scenarios and use cases.
 This work item complements the work that is done for device discovery,
 however is also applicable for other use cases.
 </p>
+
+## Discussion
+- How complex?  Is a separate spec needed?
+- Similar to security bootstrapping in Discovery 
+- Probably 3-4 pages, but needs careful review
+- Might also include in a normative security document
+- Who has appropriate knowledge
+
+Proposal (McCool): include in normative security document;
+does have lifecycle implications (Arch) and scripting.  Need joint calls to align.
