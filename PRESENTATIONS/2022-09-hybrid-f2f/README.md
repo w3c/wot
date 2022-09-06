@@ -32,6 +32,9 @@ Eastern time, and there is a 3h difference between these.
 
 ### Wednesday 7 September 2022 - 2h - 8:00am-10:00am Eastern
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_7)
+* Opening:
+   - [PDF](2022-09-07-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2022-09-07-WoT-F2F-Opening-McCool.pptx)
 
 ## TPAC
 ### Monday 12 September 2022 - 2h - 8:00am-10:00am Pacific
