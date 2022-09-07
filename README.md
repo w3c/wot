@@ -29,7 +29,7 @@ one of the other repositories dedicated to that topic may be more relevant:
 
 ### Web-site based Pull-Request
 
-* [Fork](https://github.com/w3c/wot#fork-destination-box) the `w3c/wot` repository into your own account (botton in the top right corner)
+* [Fork](https://github.com/w3c/wot#fork-destination-box) the `w3c/wot` repository into your own account (button in the top right corner)
 * Navigate to a file in your master branch that you want to change (e.g.,  http://github.com/{your-account}/wot/blob/master/charters/wot-ig-2016.html or http://github.com/{your-account}/wot/blob/master/charters/wot-wg-2016.html)
 * Click the edit icon in the upper right (pen next to Raw/Blame/History)
 * Make your edits (e.g., directly in the online editor or by copying the text to your favorite editor and back)
