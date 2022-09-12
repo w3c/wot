@@ -42,6 +42,8 @@ Eastern time, and there is a 3h difference between these.
 * Opening:
    - [PDF](2022-09-12-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2022-09-12-WoT-F2F-Opening-McCool.pptx)
+* Liaison:
+   - [PDF](2022-09-12-WoT-F2F-ECHONET-Liaison.pdf)
 
 ### Wednesday 14 September 2022 - 2h - 8:00am-10:00am Pacific
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_14)
