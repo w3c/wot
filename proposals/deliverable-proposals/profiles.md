@@ -12,7 +12,7 @@ and on resource constrained devices.
 Initially this work item will focus on delivering the Profile 1.1 specification.
 When TD 2.0 becomes available, appropriate clarifications and constraints will be delivered in a Profile 2.0 specification.
 
-In addition, specification work for other profiles will be carried out. 
+In addition, specification work for other profiles may be carried out, among others. 
 Initial use cases and requirements for other profiles are described in https://www.w3.org/TR/wot-usecases .
 
 To address some of these use cases, the following profiles have been proposed:  
