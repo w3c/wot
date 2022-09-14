@@ -53,6 +53,9 @@ Eastern time, and there is a 3h difference between these.
 * Overview:
    - [PDF](2022-09-14-WoT-Overview-McCool.pdf)
    - [PPTX](2022-09-14-WoT-Overview-McCool.pptx)
+* Joint Calls:
+   - WoT CG
+   - WoT-JP CG - [PDF](2022-09-14-WoT-F2F-WoT-JP-CG-Mizushima.pdf)
 
 ### DEMO BREAKOUT: Wednesday 14 September 2022 - 1h - 3pm Pacific (tentative)
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#WoT_Status_Update_and_Demos)
