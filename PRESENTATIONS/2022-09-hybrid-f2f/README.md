@@ -65,6 +65,7 @@ Eastern time, and there is a 3h difference between these.
    - [PPTX](2022-09-14-WoT-Overview-McCool.pptx)
 * Demos:
    - Retail - [PDF](2022-05-WoT-Connexxus-McCool.pdf)
+   - Discovery - [PDF](2022-09-14-WoT-F2F-Demo-nodered-discovery-ktoumura.pdf)
    
 ## Post-TPAC
 ### Tuesday 20 September 2022 - 2h - 8:00am-10:00am Eastern
