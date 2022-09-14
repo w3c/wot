@@ -65,6 +65,11 @@ Eastern time, and there is a 3h difference between these.
    - [PPTX](2022-09-14-WoT-Overview-McCool.pptx)
 * Demos:
    - Retail - [PDF](2022-05-WoT-Connexxus-McCool.pdf)
+
+### Smart Cities BREAKOUT: Wednesday 14 September 2022 - 1h - 4:30pm Pacific
+* [Agenda](https://www.w3.org/wiki/TPAC/2022/SessionIdeas#Web-based_Digital_Twins_for_Smart_Cities)
+* Slides:
+    - [PDF](https://www.w3.org/2022/Talks/0914-smartcities-ka/20220914-dt-sc-ka.pdf)
    
 ## Post-TPAC
 ### Tuesday 20 September 2022 - 2h - 8:00am-10:00am Eastern
