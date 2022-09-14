@@ -43,14 +43,16 @@ Eastern time, and there is a 3h difference between these.
    - [PDF](2022-09-12-WoT-F2F-Opening-McCool.pdf)
    - [PPTX](2022-09-12-WoT-F2F-Opening-McCool.pptx)
 * Liaison:
-   - [PDF](2022-09-12-WoT-F2F-ECHONET-Liaison.pdf)
+   - ECHONET - [PDF](2022-09-12-WoT-F2F-ECHONET-Liaison.pdf)
 
 ### Wednesday 14 September 2022 - 2h - 8:00am-10:00am Pacific
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_14)
 
 ### DEMO BREAKOUT: Wednesday 14 September 2022 - 1h - 3pm Pacific (tentative)
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#WoT_Status_Update_and_Demos)
-
+* Demos:
+   - Retail - [PDF](2022-05-WoT-Connexxus-McCool.pdf)
+   
 ## Post-TPAC
 ### Tuesday 20 September 2022 - 2h - 8:00am-10:00am Eastern
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Tuesday.2C_September_20)
