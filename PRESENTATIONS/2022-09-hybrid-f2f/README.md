@@ -65,6 +65,7 @@ Eastern time, and there is a 3h difference between these.
    - [PPTX](2022-09-14-WoT-Overview-McCool.pptx)
 * Demos:
    - Retail - [PDF](2022-05-WoT-Connexxus-McCool.pdf)
+   - Discovery - [PDF](2022-09-14-WoT-F2F-Demo-nodered-discovery-ktoumura.pdf)
    - WoT-enabled TV services - [PDF](2022-09-14-WoT-F2F-TPAC2022_Breakout-Endo.pdf)
 
 ### Smart Cities BREAKOUT: Wednesday 14 September 2022 - 1h - 4:30pm Pacific
