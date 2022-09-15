@@ -7,22 +7,26 @@ See https://w3c.github.io/wot-usecases/#use-case-opc-ua-binding
 1. Use OPC UA servers (device, node) from WoT Consumers; treat an OPC UA server as a Thing
 2. Express metadata for OPC UA servers using WoT TDs
 
-## Non-Objectives
-1. Letting OPC UA servers connect to WoT Things
-
-## Notes
+### Notes
 * WoT TDs use RDF, typically serialized as JSON-LD, so Objective 2 includes support for semantic annotations and extensions, 
   which can be done either by annotations such as `@type` or by introducing new vocabulary via a context extension.
 * Metadata for OPC UA servers will be expressed as WoT TDs, and WoT TDs can be distributed via
   WoT Discovery, so Objective 2 also implies that OPC UA devices can be discovered via WoT Discovery.
-* If OPC UA devices are ALSO WoT Consumers, Objective 1 would satisfy Non-Objective 1, resulting in "OPC UA Servients".
+* Ideally metadata for OPC UA servers (that is, generation of WoT TDs) should be an automatic process,
+  meaning there should be a formal definition of the mapping from the relevant parts of the
+  OPC UA information model to the WoT TD model.
+  
+## Non-Objectives
+1. Letting OPC UA servers connect to WoT Things
+
+### Notes 
+* If OPC UA devices are also WoT Consumers, Objective 1 would satisfy Non-Objective 1, resulting in "OPC UA Servients".
   However, as this depends on the ability of OPC UA devices to read and parse WoT TDs, and there will be smaller
   or brownfield devices that would not be capable of this, at best Non-Objective 1 would only be satisfied by
   a subset of OPC UA devices.
-* Ideally metadata for OPC UA servers (that is, generation of WoT TDs) should be an automatic process,
-  meaning our goal should be a formal definition of the mapping between the two information models.
+* As noted generation of metadata for OPC UA servers (that is, generation of WoT TDs) should be an automatic process,
   For Objective 1, this needs to allow expression of OPC UA information in a WoT TD.  For Non-Objective 1,
-  the reverse mapping would be needed: translating WoT TDs into equivalent OPC UA metadata.  However,
+  the reverse mapping would also be needed: translating WoT TDs into equivalent OPC UA metadata.  However,
   supporting round-tripping tends to be difficult, which is why this is a non-goal.
 
 ## Deliverables
