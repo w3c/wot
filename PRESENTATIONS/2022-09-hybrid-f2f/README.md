@@ -76,9 +76,13 @@ Eastern time, and there is a 3h difference between these.
 ## Post-TPAC
 ### Tuesday 20 September 2022 - 2h - 8:00am-10:00am Eastern
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Tuesday.2C_September_20)
+* CANCELLED - Agenda merged into 21 Sept 2022 agenda.
 
 ### Wednesday 21 September 2022 - 2h - 8:00am-10:00am Eastern
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_21)
+* Opening:
+   - [PDF](2022-09-21-WoT-F2F-Opening-McCool.pdf)
+   - [PPTX](2022-09-21-WoT-F2F-Opening-McCool.pptx)
 
 ### Thursday 22 September 2022 - 2h - 8:00am-10:00am Eastern
 * [Agenda](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022#Wednesday.2C_September_21)
