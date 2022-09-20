@@ -16,6 +16,7 @@ In the next iteration of the binding templates, the group is planning the follow
   1. Protocols
     1. Bacnet
     2. gRPC
+    3. OPC-UA
   2. Payload Formats
     1. JSON
     2. XML
