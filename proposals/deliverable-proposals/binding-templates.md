@@ -2,8 +2,8 @@
 
 In the next iteration of the binding templates, the group is planning the following work:
 
-1. Evaluation of going for the recommendation track or registry track and adopting one of them. The choice should allow:
-  1. Versioning of the documents in stable fashion that allow them to be used in implementations.
+1. Evaluation of going for the recommendation track or registry track and adopting one. The choice should allow:
+  1. Versioning of the documents in a stable fashion that allow them to be used in implementations.
   2. Documentation of the implementations of the individual binding templates.
   3. Encourage new binding templates to be written by different (working group) members.
   4. Publication of ontologies of protocols
@@ -12,11 +12,11 @@ In the next iteration of the binding templates, the group is planning the follow
   2. CoAP
   3. MQTT
   4. Modbus
-3. Starting work on the new binding template documents and publishing first working draft of each
+3. Starting work on the new binding template documents and publishing the first working draft of each
   1. Protocols
-    1. Bacnet
+    1. BACnet
     2. gRPC
-    3. OPC-UA
+    3. OPC-UA (also see https://github.com/w3c/wot/blob/main/liaisons/opcf/tech_reqs.md)
   2. Payload Formats
     1. JSON
     2. XML
