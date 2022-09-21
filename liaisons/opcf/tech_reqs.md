@@ -6,24 +6,28 @@ See https://w3c.github.io/wot-usecases/#use-case-opc-ua-binding
 ## Objectives
 1. Use OPC UA servers (device, node) from WoT Consumers; treat an OPC UA server as a Thing
 2. Express metadata for OPC UA servers using WoT TDs
-3. ? Let OPC UA servers connect to WoT Things
 
-## Notes
-* Objective 3 is marked with a "?" since we should discuss whether it is an objective or not.  If it is
-  not, we probably should state it as a "non-goal".  If it is not a goal, then Deliverable 4 below should also
-  be removed.
+### Notes
 * WoT TDs use RDF, typically serialized as JSON-LD, so Objective 2 includes support for semantic annotations and extensions, 
   which can be done either by annotations such as `@type` or by introducing new vocabulary via a context extension.
 * Metadata for OPC UA servers will be expressed as WoT TDs, and WoT TDs can be distributed via
   WoT Discovery, so Objective 2 also implies that OPC UA devices can be discovered via WoT Discovery.
-* If OPC UA devices are ALSO WoT Consumers, Objective 1 would satisfy Objective 3, resulting in "OPC UA Servients".
-  However, as this depends on the ability of OPC UA devices to read and parse WoT TDs, and there will be smaller
-  or brownfield devices that would not be capable of this, at best Objective 3 would only be satisfied by
-  a subset of OPC UA devices.
 * Ideally metadata for OPC UA servers (that is, generation of WoT TDs) should be an automatic process,
-  meaning our goal should be a formal definition of the mapping between the two information models.
-  For Objective 1, this needs to allow expression of OPC UA information in a WoT TD.  For Objective 3,
-  the reverse mapping may be needed: translating WoT TDs into equivalent OPC UA metadata.
+  meaning there should be a formal definition of the mapping from the relevant parts of the
+  OPC UA information model to the WoT TD model.
+  
+## Non-Objectives
+1. Letting OPC UA servers connect to WoT Things
+
+### Notes 
+* If OPC UA devices are also WoT Consumers, Objective 1 would satisfy Non-Objective 1, resulting in "OPC UA Servients".
+  However, as this depends on the ability of OPC UA devices to read and parse WoT TDs, and there will be smaller
+  or brownfield devices that would not be capable of this, at best Non-Objective 1 would only be satisfied by
+  a subset of OPC UA devices.
+* As noted generation of metadata for OPC UA servers (that is, generation of WoT TDs) should be an automatic process,
+  For Objective 1, this needs to allow expression of OPC UA information in a WoT TD.  For Non-Objective 1,
+  the reverse mapping would also be needed: translating WoT TDs into equivalent OPC UA metadata.  However,
+  supporting round-tripping tends to be difficult, which is why this is a non-goal.
 
 ## Deliverables
 1. OPC UA Ontology
@@ -40,6 +44,8 @@ See https://w3c.github.io/wot-usecases/#use-case-opc-ua-binding
    - To support automatic tooling, the mapping between the information models should be formally defined.
    - Transformation could be performed by a OPC UA TD Producer/Generator, which might be a tool (static conversion) 
      or a service (dynamic conversion).
-4. ? Process to transform a WoT Thing Description to an OPC UA NodesetFile 
-   - For Objective 3, this process needs to support transformation from WoT TDs to OPC UA metadata.
-   - As with Deliverable 3, certain aspects of the information model may need to be inferred or gathered from other sources.
+     
+## Non-Deliverables
+1. Process to transform a WoT Thing Description to an OPC UA NodesetFile 
+   - For Non-Objective 1, this process would need to support transformation from WoT TDs to OPC UA metadata.
+   - As with Deliverable 3, certain aspects of the information model would need to be inferred or gathered from other sources.
