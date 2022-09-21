@@ -1,4 +1,5 @@
 # OPC UA W3C WoT Binding Proposal (Draft)
+See also [Technical Requirements Document](tech_reqs.md).
 
 ## Purpose 
 The purpose is the development of an OPC UA Binding Ontology through an OPC UA Companion specification and a W3C Note document for OPU UA Binding for the W3C WoT Thing Description.
