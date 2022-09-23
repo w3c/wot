@@ -11,3 +11,4 @@ any HTML content.
 * [Onboarding](onboarding.md)
 * [Discovery](discovery.md)
 * [Profiles](profiles.md)
+* [Scripting](scripting.md)
