@@ -19,8 +19,9 @@ In the next iteration of the binding templates, the group is planning the follow
     3. OPC-UA (also see https://github.com/w3c/wot/blob/main/liaisons/opcf/tech_reqs.md)
   2. Payload Formats
     1. JSON
-    2. XML
-    3. CloudEvents
+    2. CBOR
+    3. XML
+    4. CloudEvents
   3. Platforms/Standards 
     1. Philips Hue
     2. ECHONET (agreement needed with the ECHONET Liaison)
