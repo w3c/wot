@@ -59,4 +59,4 @@ Currently security schemes are "baked into" the TD specification but it would
 be more manageable and consistent to break them out as separate ontologies so that all
 security schemes would be done via extensions.  Then the TD 2.0 spec would only
 have to include general-purpose "structural" security schemes like `nosec` and `combo`.
-
+The security ontologies and URLs for them would be published in a new [Registry Track Note](https://www.w3.org/2021/Process-20211102/#registries).
