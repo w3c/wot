@@ -1,4 +1,9 @@
-## Thing Description 2.0
+# Thing Description 2.0
+
+In this new charter, the Working Group will work on the WoT Thing Description specification to achieve the following goals:
+- Address more use cases such that the applicability of the TD is broadened.
+- Make it more usable in existing use cases
+- Increase the efficiency of TDs when transmitting, parsing and consuming them
 
 A list of overall topics are written below. These contain multiple work items underneath that should be detailed later.
 
