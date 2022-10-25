@@ -74,6 +74,11 @@ Related Issues:
 
 Defining how TDs should be versioned, i.e. what does each version number incrementation mean for consumers.
 This probably has a dependency on the parsing, consuming, and validation chapter below since how the versions influence these steps for the consumer is important.
+This will be important for the Discovery deliverable since TDDs can manage different versions of a TD.
+
+Also see:
+- https://github.com/w3c/wot-thing-description/issues/1607
+- https://github.com/w3c/wot-discovery/issues/257
 
 ## Normative TD Parsing, Consuming, and Validation
 
