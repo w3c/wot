@@ -28,7 +28,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | Sep 12-16, 2022 (tentative)| All | TPAC 2022 (possibly hybrid) |
 | Oct 26, 2022 | TD1.1 | CR transition |
 | Oct 26, 2022 | Discovery | CR transition |
-| Oct 26, 2022 | Arch1.1 | CR transition   |
+| Oct 27, 2022 | Arch1.1 | CR transition   |
 | Dec 21, 2022 | Profiles | New WD |
 | Jan 11, 2023 | TD1.1 | PR transition |
 | Jan 11, 2023 | Discovery | PR Transition |
