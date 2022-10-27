@@ -30,9 +30,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | Oct 26, 2022 | Discovery | CR transition |
 | Nov 28, 2022 | Arch 1.1 | Group call for consensus - at the latest |
 | Dec 8, 2022 | Arch1.1 | CR transition request - worst case  |
-
 | Dec 12-16, 2022 | Profiles | Plugfest+Testfest for TD, Profile, Discovery (Munich?) |
-
 | Dec 21, 2022 | Profiles | New WD |
 | Jan 11, 2023 | TD1.1 | PR transition |
 | Jan 11, 2023 | Discovery | PR Transition |
