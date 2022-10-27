@@ -28,6 +28,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | Sep 12-16, 2022 (tentative)| All | TPAC 2022 (possibly hybrid) |
 | Oct 26, 2022 | TD1.1 | CR transition |
 | Oct 26, 2022 | Discovery | CR transition |
+| Nov 28, 2022 | Arch 1.1 | Group call for consensus - at the latest |
 | Dec 8, 2022 | Arch1.1 | CR transition request - worst case  |
 
 | Dec 12-16, 2022 | Profiles | Plugfest+Testfest for TD, Profile, Discovery (Munich?) |
