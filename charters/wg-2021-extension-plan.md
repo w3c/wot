@@ -24,16 +24,14 @@ During the second 6 months we can begin editor's draft documents for the planned
 | July 20, 2022 | Profiles | Normative feature freeze |
 | July 25-29 2022 | -   | Testfest 3 (focus on Profile, fixing at-risk items in other deliverables) |
 | early Aug, 2022 | Discovery | CR candidate |
-| Aug 31, 2022 | Discovery | CR Transition |
 | Sep 12-16, 2022 (tentative)| All | TPAC 2022 (possibly hybrid) |
-| Oct 26, 2022 | TD1.1 | CR transition |
-| Oct 26, 2022 | Discovery | CR transition |
-| Nov 28, 2022 | Arch 1.1 | Group call for consensus - at the latest |
-| Dec 8, 2022 | Arch1.1 | CR transition request - worst case  |
+| Oct 26, 2022 | TD1.1 | CR transition request |
+| Oct 26, 2022 | Discovery | CR transition request |
+| Nov 2, 2022 | Arch1.1 | CR transition request |
 | Dec 8, 2022 | Profiles | WD candidate - for testing  |
 | Dec 12-16, 2022 | Profiles | Plugfest+Testfest for TD, Profile, Discovery (Munich?) |
 | Dec 21, 2022 | Profiles | New WD |
-| Jan 11, 2023 | TD1.1 | PR transition |
-| Jan 11, 2023 | Discovery | PR Transition |
-| Jan 24, 2023 | Arch1.1 | PR Transition request |
+| Jan 11, 2023 | TD1.1 | PR transition request |
+| Jan 11, 2023 | Discovery | PR transition request |
+| Jan 24, 2023 | Arch1.1 | PR transition request |
 | March 7, 2023 | All | REC transition |
