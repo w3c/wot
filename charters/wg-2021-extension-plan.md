@@ -30,6 +30,7 @@ During the second 6 months we can begin editor's draft documents for the planned
 | Nov 2, 2022 | Arch1.1 | CR transition request |
 | Dec 8, 2022 | Profiles | WD candidate - for testing  |
 | Dec 12-16, 2022 | Profiles | Plugfest+Testfest for TD, Profile, Discovery (Munich?) |
+| Dec 20 (ish), 2022 | Next | Next WG Charter Discussion |
 | Dec 21, 2022 | Profiles | New WD |
 | Jan 11, 2023 | TD1.1 | PR transition request |
 | Jan 11, 2023 | Discovery | PR transition request |
