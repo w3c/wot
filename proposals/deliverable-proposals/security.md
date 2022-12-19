@@ -5,7 +5,7 @@ Security and Privacy considerations and assertions related to them are currently
 scattered across many deliverables.  In addition, we have an informative guideline
 document that does not have any assertions. 
 
-Consolidating this material into a single document would make it easier to review
+Consolidating this material into a single normative document would make it easier to review
 (and this is important, since security reviewers are hard to get and yet such
 review is critical) and would also create a location for new security features to
 be placed, such as onboarding.
