@@ -10,6 +10,8 @@ Consolidating this material into a single normative document would make it easie
 review is critical) and would also create a location for new security features to
 be placed, such as onboarding.
 
+To reflect the new document's status, it would need a new name, such as "WoT Security and Privacy Recommendations" or "WoT Security and Privacy Recommended Practices".
+
 ## Description
 The WoT Security and Privacy deliverable would describe integrated security and privacy 
 considerations and features for all WoT systems and deliverables.  In addition to consolidating existing informative
