@@ -57,3 +57,36 @@ may only be possible with the newer TD specification.
    Introduction types and protocol support may be added (for example, a
    CoAP API for directories) and TD serialization formats (e.g. YAML or CBOR).
 </p>
+
+## Other Discussion
+
+- Filters can be a general mechanism that can also encapsulate common queries,
+  such as searching by keyword or id.  We should look at some common use cases
+  for additional filters.  We also need a "base" query that just gives the whole
+  directory (which is then passed through filters).
+  Example of what a filter chain might look like (applied to a query URL):
+  ```
+    https://tdd.example.com/list?filter="geo(lat=45.5,long=123.3,r=15)|keyword('light')"
+  ```
+  Filtering based on time would also be useful (e.g. time of last update).
+  Filters may also apply to events and event payloads.
+- Thing Model support.  Storing TMs in TDDs, and allowing links from TDs to be
+  resolved.  It would be helpful to also be able to validate a TD against a TM.
+  May also align with work on Digital Twins.  We need to understand how this
+  fits into a Thing lifecycle - it's a different use case for "Discovery" than
+  what we have been focused on.
+- Validation by TDDs during registration could be improved.  Hopefully this will
+  be improved in TD 2.0 and TDD implementations should follow suit.  For example,
+  validation of extensions would be useful, but mechanisms for this need to be
+  defined in the TD spec, not Discovery.
+- Other protocols: CoAP and MQTT.  Would be nice to have standard TDD APIs using
+  these protocols - currently we only have HTTP and allow CoAP only for TD Servers.
+  Then there is support for HTTP/3 and QUIC.
+- Additional security features: object security/JOSE, ranking/evaluation of
+  multiple TDDs, key distribution via DID/VC, etc.
+- Additional checks during registration, e.g. checking if a Thing is accessible
+  via the URLs given in the TD.  Not really clear how to generally do an
+  aliveness check however since affordances are optional, and only properties
+  are "safe".  There would need to be some way to "tag" an affordance as being
+  usable for an aliveness check.
+- Alignment with other specs, e.g. Scripting.
