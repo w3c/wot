@@ -25,6 +25,7 @@ The following existing content would be consolidated:
 - Security bootstrapping (e.g. first contact with an unknown Thing), currently in Discovery.
 - Informative content from the existing WoT Security and Privacy Guidelines document,
   including definitions, threat models, risks, actors, and testing recommendations.
+  - Best practices, i.e. which security schemes are recommended for new development and which are provided only for compatibility with brownfield devices.
   
 ## New
 The following new features would be defined normatively.
