@@ -48,4 +48,4 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | June 29, 2023 | TD 1.1 | REC transition (PR transition request + 1wk + 2mo) |
 | June 29, 2023 | Arch 1.1 | REC transition (PR transition request + 1wk + 2mo) |
 | Aug 3, 2023 | Discovery | REC transition (PR transition request + 1wk + 2mo) |
-| Oct-Nov, 2023 | Next | TPAC - Europe - tentative |
+| Sept 11-15, 2023 | Next | TPAC 2023 - Seville, Spain |
