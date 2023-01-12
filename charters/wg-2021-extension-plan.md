@@ -30,17 +30,18 @@ During the second 6 months we can begin editor's draft documents for the planned
 | Nov 2, 2022 | Arch1.1 | CR transition request |
 | Dec 8, 2022 | Profiles | WD candidate - for testing  |
 | Dec 12-16, 2022 | Profiles | Plugfest+Testfest for TD, Profile, Discovery (Munich?) |
-| Dec 14, 2022 | TD1.1 | CR transition (estimated) |
-| Dec 14, 2022 | Discovery | CR transition (estimated) |
-| Dec 14, 2022 | Arch1.1 | CR transition (estimated) |
 | Dec 20 (ish), 2022 | Next | Next WG Charter Discussion |
-| Dec 21, 2022 | Profiles | New WD |
+| Jan 13, 2023 | Profiles | New WD publication |
+| Jan 13, 2023 | TD1.1 | CR transition |
+| Jan 13, 2023 | Discovery | CR transition |
+| Jan 13, 2023 | Arch1.1 | CR transition |
 | Jan 16-20, 2023 | Next | Next WG Charter Finalization |
-| <strike>Jan 11, 2023</strike> Mar 16, 2023 | TD1.1 | PR transition request (CR transition + 3mo) |
-| <strike>Jan 11, 2023</strike> Mar 16, 2023 | Discovery | PR transition request (CR transition + 3mo) |
-| <strike>Jan 24, 2023</strike> Mar 16, 2023 | Arch1.1 | PR transition request (CR transition + 3mo) |
+| Feb 28, 2023 | Profile CR draft |
 | Mar 22, 2023 | Next | Next WG Charter AC Review Complete |
-| May 25, 2023 | All | REC transition (PR transition request + 1wk + 2mo) |
-| May 1, 2023 | Next | Next WG Charter Begins |
-| June-July, 2023 | Next | F2F - {Switzerland,Munich,Tokyo} - tentative |
+| April 14, 2023 | TD1.1 | PR transition request (CR transition + 3mo) |
+| April 14, 2023 | Discovery | PR transition request (CR transition + 3mo) |
+| April 14, 2023 | Arch1.1 | PR transition request (CR transition + 3mo) |
+| June 1, 2023 | Next | Next WG Charter Begins |
+| June 1, 2023 | Next | F2F - {Switzerland,Munich,Tokyo} - tentative |
+| June 29, 2023 | All | REC transition (PR transition request + 1wk + 2mo) |
 | Oct-Nov, 2023 | Next | TPAC - Europe - tentative |
