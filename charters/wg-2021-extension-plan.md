@@ -1,8 +1,6 @@
-# WG 2021 Extension Plan
-We will request a 12mo extension to the WG charter, based on the following plan.
-Note however that the spec generation schedule is based on a 6 month extension plan.
-The additional 6 months will be used as a buffer for wide review and testing.
-During the second 6 months we can begin editor's draft documents for the planned WG rechartering for 2023.
+# WG Extension Plan
+We will request an extension to the current (2019) WG charter, based on the following plan.
+We are developing a new draft charter proposed to begin in 1 June 2023.
 
 | Due date | Spec. | Description |
 | --- | --- | --- |
@@ -35,13 +33,19 @@ During the second 6 months we can begin editor's draft documents for the planned
 | Jan 13, 2023 | TD1.1 | CR transition |
 | Jan 13, 2023 | Discovery | CR transition |
 | Jan 13, 2023 | Arch1.1 | CR transition |
-| Jan 16-20, 2023 | Next | Next WG Charter Finalization |
-| Feb 28, 2023 | Profile CR draft |
+| Jan 16-20, 2023 | Next | Next WG Charter Draft |
+| Feb 16, 2023 | Discovery | CR2 transition |
+| Feb 28, 2023 | Profile | CR draft |
+| Mar 15, 2023 | Profile | CR transition request |
+| Mar 30, 2023 | Profile | CR transition |
 | Mar 22, 2023 | Next | Next WG Charter AC Review Complete |
 | April 14, 2023 | TD1.1 | PR transition request (CR transition + 3mo) |
-| April 14, 2023 | Discovery | PR transition request (CR transition + 3mo) |
 | April 14, 2023 | Arch1.1 | PR transition request (CR transition + 3mo) |
+| May 19, 2023 | Discovery | PR transition request (CR2 transition + 3mo) |
+| May 31, 2023 | Profile | PR transition request (CR transition + 2mo) |
 | June 1, 2023 | Next | Next WG Charter Begins |
 | June 1, 2023 | Next | F2F - {Switzerland,Munich,Tokyo} - tentative |
-| June 29, 2023 | All | REC transition (PR transition request + 1wk + 2mo) |
+| June 29, 2023 | TD 1.1 | REC transition (PR transition request + 1wk + 2mo) |
+| June 29, 2023 | Arch 1.1 | REC transition (PR transition request + 1wk + 2mo) |
+| Aug 3, 2023 | Discovery | REC transition (PR transition request + 1wk + 2mo) |
 | Oct-Nov, 2023 | Next | TPAC - Europe - tentative |
