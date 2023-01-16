@@ -97,11 +97,10 @@
         <p class="join"><a href="https://www.w3.org/groups/wg/wot/join">Join the Web of Things Working Group.</a></p>
       </div>
 
-         <p style="padding: 0.5ex; border: 1px solid green"> This proposed charter is available
-      on <i class="todo"><a href="https://github.com/w3c/wot">GitHub</a>.
-
-    Feel free to raise <a href="https://github.com/w3c/@@/issues">issues</a></i>.
-          </p>
+      <p style="padding: 0.5ex; border: 1px solid green"> This proposed charter is available
+        on <a href="https://github.com/w3c/wot">GitHub</a>.
+        Feel free to raise <a href="https://github.com/w3c/wot/issues">issues</a>.
+      </p>
 
       <div id="details">
         <table class="summary-table">
@@ -110,7 +109,8 @@
               Charter Status
             </th>
             <td>
-              <i class="todo">See the <a href="https://www.w3.org/groups/wg/[shortname]/charters">group status page</a> and <a href="https://w3c.github.io/charter-drafts/charter-template.html#history">detailed change history</a>.</i>
+              See the <a href="https://www.w3.org/groups/wg/wot/charters">group status page</a> 
+	      and <a href="https://w3c.github.io/charter-drafts/charter-template.html#history">detailed change history</a>.
             </td>
           </tr>		
           <tr id="Duration">
@@ -118,7 +118,7 @@
               Start date
             </th>
             <td>
-              <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+              <i class="todo">1 June 2023 (ESTIMATED) (date of the "Call for Participation", when the charter is approved)</i>
             </td>
           </tr>
           <tr id="CharterEnd">
@@ -126,7 +126,7 @@
               End date
             </th>
             <td>
-              <i class="todo">[dd monthname yyyy]</i> (Start date + 2 years)
+              <i class="todo">1 June 2025 (ESTIMATED; Start date + 2 years)</i>
             </td>
           </tr>
           <tr>
@@ -142,7 +142,7 @@
               Team Contacts
             </th>
             <td>
-              <span class="todo"><a href="mailto:">[team contact name]</a></span> <i class="todo">(0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)</i>
+	      <a href="mailto:ashimura@w3.org">Kazuyuki Ashimura</a> (0.2 <abbr title="Full-Time Equivalent">FTE</abbr>)
             </td>
           </tr>
           <tr>
@@ -150,9 +150,13 @@
               Meeting Schedule
             </th>
             <td>
-              <strong>Teleconferences:</strong> <i class="todo">topic-specific calls may be held</i> or <i class="todo">somthing else</i>
+	      <strong>Teleconferences:</strong>
+		    Weekly with additional topic specific calls as appropriate.<br/>
               <br>
-              <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, usually no more than 3 per year.
+              <strong>Face-to-face:</strong>
+		    We will meet during the W3C's annual Technical Plenary week;
+		    additional face-to-face meetings may be scheduled by consent of the participants,
+		    with no more than four (4) face-to-face meetings in total per year.
             </td>
           </tr>
         </tbody></table>
@@ -161,20 +165,64 @@
       </div>
 
       <div id="background" class="background">
-        <p><i class="todo">Brief background of landscape, technology, and relationship to the Web, users, developers, implementers, and industry.</i></p>
+        <!-- Brief background of landscape, technology, and relationship to the Web, users, developers, implementers, and industry. -->
+	<p>This working group is tasked with the standardization
+           or extension of several technological building blocks
+           identified by the
+           <a href="https://www.w3.org/groups/ig/wot">Web of Things Interest Group</a> (IG)
+           as being important to advancing the Web of Things.
+           The WoT building blocks are intended to complement existing
+           and emerging IoT standards by focusing on enabling cross-platform and cross-domain interoperability.
+           The proposed work items are summarized in the <a href="#scope">Scope</a> section, and
+	   include <span class="todo">(REVISE) interoperability profiles for particular usage contexts;
+           vocabulary support for new protocols, security schemes, and links;
+           standardized discovery mechanisms;
+	   and improvements to Thing Description Templates.</span>
+           These work items will be prototyped and tested by multiple implementors in
+           WoT IG <a href="https://w3c.github.io/wot/current-practices/wot-practices.html#plugfests">PlugFests</a>
+           during development.
+           Open-source implementations will be prioritized.</p>
       </div>
 
       <section id="scope" class="scope">
         <h2>Scope</h2>
-        <p><i class="todo">What exactly is in scope, and out of scope.
-          For legal review. Be brief.</i></p>
+        <!-- What exactly is in scope, and out of scope.
+          For legal review. Be brief. -->
+        <p>The Working Group has the following work items in scope:</p>
+
+        <div class="summary">
+          <p style="text-align:left;font-style:italic">Scope Summary</p>
+          After each work item, in parenthesis, we identify the deliverables it may be included in.
+          <dl class="todo">
+	    <dt><a href="#scope-item-id"><strong>[scope-item-name]:</strong> ([deliverable])</a></dt>
+              <dd>[description]</dd>
+	  </dl>
+	</div>
+
+	<p>Details for each of these are given below.</p>
+
+	<div class="todo">
+	<h3 id="scope-item-id">[scope-item-name]</h3>
+        <p>
+	   [extended description]
+        </p>
+	</div>
 
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
-            <p>The following features are out of scope, and will not be addressed by this <i class="todo">(Working|Interest)</i> group.</p>
+            <p>The following features are out of scope, and will not be addressed by this Working group.</p>
 
-            <ul class="out-of-scope">
-            </ul>
+	    <dl class="out-of-scope">
+            <dt><strong>Application- and domain-specific metadata vocabularies:</strong></dt>
+            <dd>The Working Group is restricted to work on cross-domain vocabularies.</dd>
+            <dt><strong>APIs and security frameworks specific to particular platforms external to the W3C:</strong></dt>
+            <dd>The scope of the Working Group is restricted to APIs and security frameworks that are applicable across platforms.
+            We will not define new security mechanisms but will use existing mechanisms and best practices.</dd>
+            <dt><strong>Modification of protocols:</strong></dt>
+            <dd>If during work on protocol bindings, it becomes apparent that changes are needed to protocols,
+            the Web of Things Working Group will rely on the organization responsible for the protocol to make the changes.
+	    It is out of scope for the Working Group to standardize such changes itself.</dd>
+            </dl>
         </section>
 
       </section>
