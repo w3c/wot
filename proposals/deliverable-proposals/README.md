@@ -14,3 +14,4 @@ any HTML content.
 * [Profiles](profiles.md)
 * [Scripting](scripting.md)
 * [Thing Description](thing-description.md)
+* [Binding Templates](binding-templates.md)
