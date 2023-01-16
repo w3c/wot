@@ -250,7 +250,7 @@
         common use cases, such as filtering by type, time, or keyword.
         </p>
 
-	<h3 id="discovery-signing">Discovery Signing (Discovery, TD, Security)</h3>
+	<h3 id="signing">Signing (Discovery, TD, Security)</h3>
         <p>
         A mechanism for signing JSON-LD documents was under discussion in the last charter 
         but was not mature enough to include. 
@@ -259,6 +259,8 @@
         This may also require a definition of TD canonicalization.        
         Verifying a signature requires identity management, i.e. the verifier needs to 
         know or have trusted access to the public key of the signer.
+        Directories should be extended to verify signatures and generate new chained signatures
+        as needed.
         </p>
 
 	<h3 id="geolocation">Geolocation (Discovery, TD, Profiles)</h3>
