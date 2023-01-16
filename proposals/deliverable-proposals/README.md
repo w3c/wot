@@ -12,3 +12,4 @@ any HTML content.
 * [Security](security.md)
 * [Discovery](discovery.md)
 * [Profiles](profiles.md)
+* [Scripting](scripting.md)
