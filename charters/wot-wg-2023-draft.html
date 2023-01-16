@@ -194,19 +194,86 @@
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           After each work item, in parenthesis, we identify the deliverables it may be included in.
           <dl class="todo">
-	    <dt><a href="#scope-item-id"><strong>[scope-item-name]:</strong> ([deliverable])</a></dt>
-              <dd>[description]</dd>
-	  </dl>
-	</div>
+	        <dt><a href="#discovery-updates"><strong>Discovery Updates</strong> (Discovery)</a></dt>
+              <dd>Backward-compatible updates to the Discovery specification to support
+              Thing Models, additional introduction mechanisms, alignment with scripting,
+              and improved security and validation.</dd>
+	        <dt><a href="#discovery-coap-dir"><strong>Discovery CoAP Directory</strong> (Discovery)</a></dt>
+              <dd>Add support for a CoAP API for Directory services.</dd>
+	        <dt><a href="#discovery-queries"><strong>Discovery Queries</strong> (Discovery)</a></dt>
+              <dd>Add support for JSONPath queries to TD Directory services.
+                  Add support for query filters for common use cases.
+          </dd>
+	        <dt><a href="#discovery-signing"><strong>Discovery Integrity Projection</strong> (Discovery,TD)</a></dt>
+              <dd>Add support for signing to TD Directory services.
+                  May require definition of TD canonicalization.</dd>
+	        <dt><a href="#geolocation"><strong>Geolocation</strong> (Discovery,TD,Profiles)</a></dt>
+              <dd>Support embedding of static geolocation information in TDs, 
+              annotation of data models for dynamic geolocation, and spatial filters in
+              TD Directory queries for geospatially-limited discovery.</dd>
+	        </dl>
+	      </div>
 
 	<p>Details for each of these are given below.</p>
 
-	<div class="todo">
-	<h3 id="scope-item-id">[scope-item-name]</h3>
+	<h3 id="discovery-updates">Discovery Updates (Discovery)</h3>
         <p>
-	   [extended description]
+        Various updates are expected to be needed to align the Discovery spec with updates to other
+        proposed deliverables in this charter, for example updates to the TD information model.
+        In addition, support for new features even in the TD 1.1 specification developed in the last
+        charter (such as Thing Models) and improved security and validation are needed.
         </p>
-	</div>
+
+	<h3 id="discovery-coap-dir">Discovery CoAP Directory (Discovery)</h3>
+        <p>
+        Currently, TD Directory services only have an HTTP API defined.
+        TD Directories are the only Discovery exploration mechanism supporting the 
+        return of multiple Thing Descriptions.  
+        Howver, the cost of using HTTP in constrained environments can be prohibitive.  
+        Defining a CoAP API with equivalent
+        functionality to the HTTP API would allow the API to be used and provided by constrained devices,
+        including those that simply want to self-host multiple TDs.
+        </p>
+
+	<h3 id="discovery-queries">Discovery Queries (Discovery)</h3>
+        <p>
+        Currently there is no mandatory query language support for TD Directories.
+        This means that consumers will often need to download the contents of the entire
+        directory if the id of a target TD is not known.
+        An endpoint for SPARQL queries is defined but because of the difficulty of supporting RDF processing 
+        it is optional.  
+        JSON Path is still currently under discussion as an IETF RFC but was not mature enough to include 
+        during the last charter. 
+        JSON Path queries would complement the current SPARQL-based query support but would be lighter-weight 
+        to implement and use.
+        In addition, some simple, chainable query filters would be added to the API for specific
+        common use cases, such as filtering by type, time, or keyword.
+        </p>
+
+	<h3 id="discovery-signing">Discovery Signing (Discovery, TD)</h3>
+        <p>
+        A mechanism for signing JSON-LD documents was under discussion in the last charter 
+        but was not mature enough to include. 
+        Adding support for RDF canonicalization and signing in alignment with those standards would 
+        be helpful to ensure that TDs are not intercepted and modified by third parties. 
+        This may also require a definition of TD canonicalization.        
+        </p>
+
+	<h3 id="geolocation">Geolocation (Discovery, TD, Profiles)</h3>
+        <p>
+        Many WoT use cases have identified a need to limit discovery by geographic location or
+        to identify the location of a Thing. 
+        To support this, a standard way to encode geolocation metadata is needed 
+        (or several ways, each identified using a profile) and (for discovery) query mechanisms 
+        that can filter by this metadata. 
+        Geolocation metadata should be aligned with existing standards, 
+        and should support both static and dynamic situations.
+        Geolocation information may be included in either TDs or directly from the device and ideally
+        both situations would be supported.
+        Since multiple standards and use cases exist for geolocation information, profiles
+        to constrain how it should be encoded in particular situations (for example, in Building 
+        Information Management Systems) would be useful.
+        </p>
 
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
