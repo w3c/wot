@@ -13,3 +13,4 @@ any HTML content.
 * [Discovery](discovery.md)
 * [Profiles](profiles.md)
 * [Scripting](scripting.md)
+* [Thing Description](thing-description.md)
