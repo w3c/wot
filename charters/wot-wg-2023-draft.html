@@ -250,13 +250,15 @@
         common use cases, such as filtering by type, time, or keyword.
         </p>
 
-	<h3 id="discovery-signing">Discovery Signing (Discovery, TD)</h3>
+	<h3 id="discovery-signing">Discovery Signing (Discovery, TD, Security)</h3>
         <p>
         A mechanism for signing JSON-LD documents was under discussion in the last charter 
         but was not mature enough to include. 
         Adding support for RDF canonicalization and signing in alignment with those standards would 
         be helpful to ensure that TDs are not intercepted and modified by third parties. 
         This may also require a definition of TD canonicalization.        
+        Verifying a signature requires identity management, i.e. the verifier needs to 
+        know or have trusted access to the public key of the signer.
         </p>
 
 	<h3 id="geolocation">Geolocation (Discovery, TD, Profiles)</h3>
