@@ -1,5 +1,7 @@
 # W3C Web of Things Group Charters
 
+To do: should be updated to follow latest process documented here: https://www.w3.org/Guide/process/charter.html.
+
 As decided in the [WebConf on 27 Apr 2016](https://www.w3.org/2016/04/27-wot-minutes.html), we now use the following process for our charter work:
 
 ## Process
@@ -38,7 +40,13 @@ Check [How to Get Involved](https://github.com/w3c/wot#how-to-get-involved) if y
   * [Rendered document](http://w3c.github.io/wot/charters/wot-wg-2016.html)
 
 #### 2019
-Note: Submitted, not yet approved.
+
+To do: following only points at draft, should be updated to point to published version
 
 * [Working document](https://github.com/w3c/wot/blob/master/charters/wot-wg-charter-draft-2019.html)
   * [Rendered document](https://cdn.statically.io/gh/w3c/wot/master/charters/wot-wg-charter-draft-2019.html?env=dev)
+
+#### 2023
+
+* [Working document](https://github.com/w3c/wot/blob/master/charters/wot-wg-2023-draft.html)
+  * [Rendered document](https://cdn.statically.io/gh/w3c/wot/master/charters/wot-wg-2023-draft?env=dev)
