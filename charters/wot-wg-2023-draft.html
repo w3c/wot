@@ -236,8 +236,16 @@
             <a href="#security-deliverable">Security</a>):</dt>
            <dd>Add support for TD signing and support signed TDs in the discovery process.
             Requires definition of TD canonicalization.</dd>
-	        </dl>
-	      </div>
+      <dt>
+        <a href="#profiles">
+          <strong>Interoperability Profiles:</strong> (Profile)
+        </a>
+      </dt>
+      <dd>
+        Support out-of-the-box interoperabilty via a profiling mechanism.
+      </dd>
+	  </dl>
+	</div>
 
 	<p>Details for each of these are given below.</p>
 
@@ -349,6 +357,26 @@
         Directories should be extended to verify signatures and generate new chained signatures
         as needed.
         </p>
+
+    <h3 id="profiles">Interoperability Profiles</h3>
+    <ol>
+      <li>Complete the transition of the current
+        <a href="https://w3c.github.io/wot-profile/">WoT Profile</a> Working
+        Draft, including a first basic HTTP-based profile, to a Recommendation 
+        (WoT Profile 1.0)</li>
+      <li>Normatively define one or more profiles which specify how to observe
+        properties and subscribe to events over HTTP, e.g. using Server-Sent
+        Events and/or Webhooks (WoT Profile 1.x)</li>
+      <li>Consider defining other profiles, e.g. a CoAP-based profile for
+        constrained devices which do not have the resources to implement
+        HTTP-based profiles (WoT Profile 1.x)</li>
+      <li>Stretch goal: Specify an updated profiling mechanism which reuses the 
+        sub-protocol and context extension mechanisms from the WoT Thing 
+        Description specification, in order to more tightly constrain how 
+        profiles are defined (WoT Profile 2.0)</li>
+    </ol>
+
+	</div>
 
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
