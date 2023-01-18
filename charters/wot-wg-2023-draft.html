@@ -193,18 +193,34 @@
         <div class="summary">
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           After each work item, in parenthesis, we identify the deliverables it may be included in.
-          <dl class="todo">
-	    <dt><a href="#scope-item-id"><strong>[scope-item-name]:</strong> ([deliverable])</a></dt>
-              <dd>[description]</dd>
-	  </dl>
+          <dl>
+            <dt>
+              <a href="#timeseries-workitem"><strong>Timeseries</strong></a> 
+              (<a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#binding-deliverable">Binding Templates</a>):
+            </dt>
+            <dd>
+              Add support for describing historical values or value changes of affordances to the TD specification in an interoperable way with existing solutions.
+            </dd>
+          </dl>
 	</div>
 
 	<p>Details for each of these are given below.</p>
 
-	<div class="todo">
-	<h3 id="scope-item-id">[scope-item-name]</h3>
+  <h3 id="timeseries-workitem">Timeseries</h3>
         <p>
-	   [extended description]
+          Some edge and cloud services can collect property value changes or event emissions for a certain time. 
+          This data, called timeseries, can be retrieved by Consumers to display the evolution of the affordance data over time,
+          make predictions about the future values and more.
+          There are different serialization formats and structures of such data in existing solutions.
+          The generic mechanism for timeseries should be introduced in the <a href="#thing-description-deliverable">Thing Description</a>
+          with bindings to existing solutions illustrated in the <a href="#binding-deliverable">Binding Templates</a>
+        </p>
+        <p>
+          Related Issues:
+            <ul>
+              <li>https://github.com/w3c/wot-thing-description/issues/892</li>
+            </ul>
         </p>
 	</div>
 
