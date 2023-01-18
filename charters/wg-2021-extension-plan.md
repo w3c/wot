@@ -29,10 +29,10 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | Dec 8, 2022 | Profiles | WD candidate - for testing  |
 | Dec 12-16, 2022 | Profiles | Plugfest+Testfest for TD, Profile, Discovery (Munich?) |
 | Dec 20 (ish), 2022 | Next | Next WG Charter Discussion |
-| Jan 13, 2023 | Profiles | New WD publication |
-| Jan 13, 2023 | TD1.1 | CR transition |
-| Jan 13, 2023 | Discovery | CR transition |
-| Jan 13, 2023 | Arch1.1 | CR transition |
+| Jan 18, 2023 | Profiles | WD2 publication |
+| Jan 18, 2023 | TD1.1 | CR transition |
+| Jan 18, 2023 | Discovery | CR transition |
+| Jan 18, 2023 | Arch1.1 | CR transition |
 | Jan 16-20, 2023 | Next | Next WG Charter Draft |
 | Feb 16, 2023 | Discovery | CR2 transition |
 | Feb 28, 2023 | Profile | CR draft |
