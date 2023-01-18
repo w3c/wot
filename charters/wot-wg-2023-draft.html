@@ -227,6 +227,14 @@
             <dd>
               Add support for a connection description to be shared among affordance operations
             </dd>
+            <dt>
+              <a href="#canon-workitem"><strong>Canonicalization</strong></a> 
+              (<a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#discovery-deliverable">Discovery</a>):
+            </dt>
+            <dd>
+              Add a canonicalization algorithm.
+            </dd>
           </dl>
 	</div>
 
@@ -317,6 +325,30 @@
             <li>https://github.com/w3c/wot-thing-description/issues/1242</li>
             <li>https://github.com/w3c/wot-thing-description/issues/878</li>
           </ul>
+      </p>
+    <h3 id="canon-workitem">Canonicalization</h3>
+      <p>
+        Thing Descriptions can contain the same information but serialized differently even in the same serialization format, due to structures such as maps which do not impose an order.
+        This is problematic for comparing TDs or more importantly, for signing them where every byte difference results in a different signature.
+        Thus, the WG will develop a canonicalization algorithm based on JSON-LD.
+      </p>
+      
+      <p>
+        Related Issues:
+          <ul>
+            <li>https://github.com/w3c/wot-thing-description/issues/1023</li>
+            <li>https://github.com/w3c/wot-thing-description/issues/940</li>
+          </ul>
+      </p>
+      <p>
+        Some work has been done in the previous charter but has been postponed due to lack of features in JSON-LD.
+        Related PRs:
+        <ul>
+          <li>https://github.com/w3c/wot-thing-description/pull/1304</li>
+          <li>https://github.com/w3c/wot-thing-description/pull/1151</li>
+          <li>https://github.com/w3c/wot-thing-description/pull/943</li>
+          <li>https://github.com/w3c/wot-thing-description/pull/1086</li>
+        </ul>
       </p>
 	</div>
 
