@@ -209,7 +209,15 @@
               <a href="#profiles-deliverable">Profiles</a>):
             </dt>
             <dd>
-              Add support for describing protocols that have specific payload structures.
+              Add support for describing protocols that depend on specific payload structures on top of the protocol bindings.
+            </dd>
+            <dt>
+              <a href="#manageable-actions-workitem"><strong>Manageable Actions</strong></a> 
+              (<a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#profiles-deliverable">Profiles</a>):
+            </dt>
+            <dd>
+              Add support for describing actions that can be managed after their invocation.
             </dd>
           </dl>
 	</div>
@@ -248,6 +256,35 @@
           The <a href="#binding-deliverable">Binding Templates</a> should be updated with concrete cases where this mechanism is already used.
           The <a href="#profiles-deliverable">Profiles</a> can use this mechanism to reduce the size of TDs while making them easier to understand.
           The working group will also document in which cases this method does not work due to making the TDs too complicated to understand, thus requiring a binding document. 
+      </p>
+    <h3 id="manageable-actions-workitem">Manageable Actions</h3>
+      <p>
+        Various use cases require the implementation of more complex actions that span multiple protocol transactions.
+        These are covered in the <a href="https://www.w3.org/TR/wot-thing-description11/">WoT Thing Description 1.1</a> 
+        via the initiation (<code>invokeaction</code>), monitoring (<code>queryaction</code>), and cancellation (<code>cancelaction</code>) of ongoing actions.
+        However, the following points are not supported:
+        <ul>
+          <li>Sent and received payloads associated to the operations</li>
+          <li>Management of dynamically generated identification</li>
+          <li>Describing queues of actions</li>
+        </ul>
+        These limitations are also influencing the <a href="#profiles-deliverable">Profiles</a>.
+      </p>
+      <p>
+        Additionally, there have been proposals by the WG members that need to taken into account and evaluated:
+        <ul>
+          <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control</li>
+          <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control-2</li>
+          <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control-3</li>
+        </ul>
+      </p>
+      <p>
+        Related Issues:
+          <ul>
+            <li>https://github.com/w3c/wot-thing-description#1692</li>
+            <li>https://github.com/w3c/wot-thing-description#1644</li>
+            <li>https://github.com/w3c/wot-thing-description#1223</li>
+          </ul>
       </p>
 	</div>
 
