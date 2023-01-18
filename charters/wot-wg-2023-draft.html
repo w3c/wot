@@ -219,6 +219,14 @@
             <dd>
               Add support for describing actions that can be managed after their invocation.
             </dd>
+            <dt>
+              <a href="#init-connection-workitem"><strong>Initial / Common Connection Description</strong></a> 
+              (<a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#binding-deliverable">Binding Templates</a>):
+            </dt>
+            <dd>
+              Add support for a connection description to be shared among affordance operations
+            </dd>
           </dl>
 	</div>
 
@@ -285,6 +293,29 @@
             <li>https://github.com/w3c/wot-thing-description#1692</li>
             <li>https://github.com/w3c/wot-thing-description#1644</li>
             <li>https://github.com/w3c/wot-thing-description#1223</li>
+          </ul>
+      </p>
+    <h3 id="init-connection-workitem">Initial / Common Connection Description</h3>
+      <p>
+        Currently, each form of an affordance has information on the endpoint, media type and other protocol related information.
+        It is possible to use the <code>base</code> term for simplifying the endpoint but it has limitations such as:
+        <ul>
+          <li>If the media type is also common across forms, it is repeated</li>
+          <li>Multiple bases are not possible</li>
+          <li>For protocols that are based on an initial connection and then subsequent messages, the semantics are not clear.</li>
+        </ul>
+      </p>
+      <p>
+        Thus, a mechanism to describe connection and protocol information that can be used by other forms is needed.
+        In protocols with initial connection, this can be also used to indicate what needs to be done by the Consumer before executing any operation.
+      </p>
+      <p>
+        Related Issues:
+          <ul>
+            <li>https://github.com/w3c/wot-thing-description/issues/1664</li>
+            <li>https://github.com/w3c/wot-thing-description/issues/1248</li>
+            <li>https://github.com/w3c/wot-thing-description/issues/1242</li>
+            <li>https://github.com/w3c/wot-thing-description/issues/878</li>
           </ul>
       </p>
 	</div>
