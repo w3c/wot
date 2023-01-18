@@ -194,25 +194,119 @@
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           After each work item, in parenthesis, we identify the deliverables it may be included in.
           <dl>
-	    <dt><a href="#onboarding-workitem"><strong>Onboarding</strong></a> 
+	        <dt><a href="#discovery-updates-workitem"><strong>Discovery Updates</strong></a> 
+            (<a href="#discovery-deliverable">Discovery</a>):</dt>
+            <dd>Backward-compatible updates to the Discovery specification to support
+                additional introduction mechanisms, align with scripting APIs, 
+		            support all Thing Description versions (1.0, 1.1, and 2.0),
+                and improve security and validation.</dd>
+	        <dt><a href="#discovery-thing-models-workitem"><strong>Discovery of Thing Models</strong></a>
+            (<a href="#discovery-deliverable">Discovery</a>):</dt>
+            <dd>Extend discovery support to include storing and returning Thing Models from
+                exploration mechanisms.</dd>
+	        <dt><a href="#discovery-coap-dir-workitem"><strong>Discovery CoAP Directory</strong></a>
+            (<a href="#discovery-deliverable">Discovery</a>):</dt>
+            <dd>Add support for a CoAP API to TD Directory services supporting discovery.</dd>
+	        <dt><a href="#discovery-jsonpath-query-language-workitem"><strong>Discovery JSON Path Query Language</strong></a>
+            (<a href="#discovery-deliverable">Discovery</a>):</dt>
+            <dd>Add support for JSONPath queries to TD Directory services.</dd>
+	        <dt><a href="#discovery-query-filters-workitem"><strong>Discovery Query Filters</strong></a>
+            (<a href="#discovery-deliverable">Discovery</a>):</dt>
+            <dd>Add support for query filters for common use cases to TD Directory services.</dd>
+          </dd>
+	        <dt><a href="#geolocation-workitem"><strong>Geolocation</strong></a>
+            (<a href="#discovery-deliverable">Discovery</a>,
+             <a href="#thing-description-deliverable">Thing Description</a>,
+             <a href="#profiles-deliverable">Profiles</a>):</dt>
+            <dd>Define mechanisms for embedding of static geolocation information in TDs, 
+                annotation of data models for dynamic geolocation, and spatial filters in
+                TD Directory queries for geospatially-limited discovery.</dd>
+	        <dt><a href="#onboarding-workitem"><strong>Onboarding</strong></a> 
            (<a href="#architecture-deliverable">Architecture</a>,
             <a href="#discovery-deliverable">Discovery</a>,
             <a href="#security-deliverable">Security</a>):</dt>
-        <dd>Define lifecycle process to establish mutual trust and identification.</dd>
-	    <dt><a href="#sec-ontology-workitem"><strong>Security Scheme Ontology</strong></a>
+           <dd>Define lifecycle process to establish mutual trust and identification.</dd>
+	        <dt><a href="#sec-ontology-workitem"><strong>Security Scheme Ontology</strong></a>
            (<a href="#thing-description-deliverable">Thing Description</a>,
             <a href="#security-deliverable">Security</a>):</dt>
-        <dd>Refactor TD security schemes using TD extension ontologies.</dd>
-      <dt><a href="#signing-workitem"><strong>Signing</strong></a> 
+           <dd>Refactor TD security schemes using TD extension ontologies.</dd>
+          <dt><a href="#signing-workitem"><strong>Signing</strong></a> 
            (<a href="#discovery-deliverable">Discovery</a>,
             <a href="#thing-description-deliverable">Thing Description</a>,
             <a href="#security-deliverable">Security</a>):</dt>
-        <dd>Add support for TD signing and support signed TDs in the discovery process.
+           <dd>Add support for TD signing and support signed TDs in the discovery process.
             Requires definition of TD canonicalization.</dd>
-	  </dl>
-	</div>
+	        </dl>
+	      </div>
 
 	<p>Details for each of these are given below.</p>
+
+	<h3 id="discovery-updates-workitem">Discovery Updates</h3>
+        <p>
+        Various updates are expected to be needed to align the Discovery spec with updates to other
+        proposed deliverables in this charter, for example updates to the information model,
+	including support for all versions of the Thing Description specification,
+        and to improve security and validation.
+        </p>
+
+	<h3 id="discovery-thing-models-workitem">Discovery of Thing Models</h3>
+        <p>
+        Currently only Thing Descriptions can be stored in TD Directories, but it would be useful
+        to also store Thing Models in them, in particular to allow links to Thing Models to be 
+        resolved by reference to a TD  Directory.
+        </p>
+
+	<h3 id="discovery-coap-dir-workitem">Discovery CoAP Directory</h3>
+        <p>
+        Currently, TD Directory services only have an HTTP API defined.
+        TD Directories are the only Discovery exploration mechanism supporting the 
+        return of multiple Thing Descriptions, and they may also be needed in the 
+        case of constrained devices hosting multiple Things.
+        However, the cost of using HTTP in constrained environments can be prohibitive.  
+        Defining a CoAP API with equivalent
+        functionality to the HTTP API would allow the API to be used and provided by constrained devices,
+        including those that simply want to self-host multiple TDs.
+        </p>
+
+	<h3 id="discovery-jsonpath-query-language-workitem">Discovery JSON Path Query Language</h3>
+        <p>
+        Currently there is no mandatory query language support for TD Directories.
+        This means that consumers will often need to download the contents of the entire
+        directory if the id of a target TD is not known.
+        An endpoint for SPARQL queries is defined but because of the difficulty of supporting RDF processing 
+        it is optional.  
+        JSON Path is still currently under discussion as an IETF RFC but was not mature enough to include 
+        during the last charter. 
+        JSON Path queries would complement the current SPARQL-based query support but would be lighter-weight 
+        to implement and use.
+        </p>
+
+	<h3 id="discovery-query-filters-workitem">Discovery Query Filters</h3>
+        <p>
+        Some simple query filters would be added to the API for specific
+        common use cases, such as filtering by type, time, or keyword.
+        These filters would be chainable with each other and with query language results,
+        so that, for example, the result of a JSON Path query might them be filtered by time without
+        needing to complicate the JSON Path query with time computations.
+        This mechanism would also be able to support <a href="#geolocation-workitem">filtering by geolocation</a>.
+        </p>
+
+	<h3 id="geolocation-workitem">Geolocation</h3>
+        <p>
+        Many WoT use cases have identified a need to limit discovery by geographic location or
+        to identify the location of a Thing. 
+        To support this, a standard way to encode geolocation metadata is needed 
+        (or several ways, each identified using a profile) and (for discovery) query mechanisms 
+        that can filter by this metadata. 
+        Geolocation metadata should be aligned with existing standards, 
+        and should support both static and dynamic situations.
+        Geolocation information may be included in either TDs or in data
+        delivered directly from the Thing and ideally
+        both situations would be supported.
+        Since multiple standards and use cases exist for geolocation information, profiles
+        to constrain how it should be encoded in particular situations (for example, in Building 
+        Information Management Systems) would be useful.
+        </p>
 
 	<h3 id="onboarding-workitem">Onboarding</h3>
         <p>
