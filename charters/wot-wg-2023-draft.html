@@ -223,19 +223,17 @@
                 TD Directory queries for geospatially-limited discovery.</dd>
 	        <dt><a href="#onboarding-workitem"><strong>Onboarding</strong></a> 
            (<a href="#architecture-deliverable">Architecture</a>,
-            <a href="#discovery-deliverable">Discovery</a>,
-            <a href="#security-deliverable">Security</a>):</dt>
+            <a href="#discovery-deliverable">Discovery</a>):</dt>
            <dd>Define lifecycle process to establish mutual trust and identification.</dd>
 	        <dt><a href="#sec-ontology-workitem"><strong>Security Scheme Ontology</strong></a>
            (<a href="#thing-description-deliverable">Thing Description</a>,
-            <a href="#security-deliverable">Security</a>):</dt>
-           <dd>Refactor TD security schemes using TD extension ontologies.</dd>
+            <a href="#protocol-binding-deliverable">Protocol Binding</a>):</dt>
+           <dd>Refactor security schemes to use Protocol Binding ontologies for protocol-specific security schemes.</dd>
           <dt><a href="#signing-workitem"><strong>Signing</strong></a> 
            (<a href="#discovery-deliverable">Discovery</a>,
-            <a href="#thing-description-deliverable">Thing Description</a>,
-            <a href="#security-deliverable">Security</a>):</dt>
-           <dd>Add support for TD signing and support signed TDs in the discovery process.
-            Requires definition of TD canonicalization.</dd>
+            <a href="#thing-description-deliverable">Thing Description</a>):</dt>
+           <dd>Add support for Thing Description signing and support signed Thing Descriptions in the Discovery process.
+            Requires definition of Thing Descriptin canonicalization.</dd>
 	        </dl>
 	      </div>
 
@@ -315,7 +313,7 @@
         some form of onboarding process to establish mutual trust between Things and Consumers is needed.
         Having a prescriptive (but optional) process for this would be useful.
 
-        Onboarding may be part of a larger "lifecycle" which would be described in the 
+        Onboarding is part of the larger WoT Thing lifecycle which is described in the 
         Architecture document.
 
         In this work item we will define mechanisms to perform secure minimum-effort onboarding of Things 
@@ -332,21 +330,21 @@
         Currently security schemes are "baked into" the TD specification but 
         it would be more manageable and consistent to break them out 
         as separate ontologies so that all security schemes would be done via extensions. 
-        Then the TD 2.0 spec would only have to include general-purpose "structural" security schemes 
-        like <code>nosec</code> and <code>combo</code>. 
-        The security ontologies and URLs for them would be published in a new Registry Track Note.
+        For protocol-specific security schemes in particular, these should be moved to
+        the Protocol Bindings and ontologies supporting them.
+        The TD 2.0 spec would be updated to only include general-purpose "structural" security schemes 
+        and "generic" schemes that apply to all protocols.
         </p>
 
 	<h3 id="signing-workitem">Signing</h3>
         <p>
-        A mechanism for signing JSON-LD documents was under discussion in the last charter 
-        but was not mature enough to include. 
-        Adding support for RDF canonicalization and signing in alignment with those standards would 
+        Mechanisms for signing TDs documents were under discussion in the last charter 
+        but were not mature enough to include. 
+        Adding support for TD canonicalization and signing would 
         be helpful to ensure that TDs are not intercepted and modified by third parties. 
-        This may also require a definition of TD canonicalization.        
         Verifying a signature requires identity management, i.e. the verifier needs to 
         know or have trusted access to the public key of the signer.
-        Directories should be extended to verify signatures and generate new chained signatures
+        Directories need to be extended to verify signatures and generate new chained signatures
         as needed.
         </p>
 
@@ -374,11 +372,7 @@
           Deliverables
         </h2>
 
-        <p><i class="todo">Updated document status is available on the <a href="https://www.w3.org/groups/wg/[shortname]/publications">group publication status page</a>. [or link to a page this group prefers to use]</i></p>
-
-        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <span class="todo">Choose one:</span> <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, or otherwise reach a stable state
-          <span class="todo">The Working Group intends to publish the latest state of their work as Candidate Recommendation (with Snapshots) and does not intend to advance their documents to Recommendation</span>.</p>
-
+        <p>Updated document status is available on the <a href="https://www.w3.org/groups/wg/wot/publications">group publication status page</a>.</p>
         <section id="normative">
           <h3>
             Normative Specifications
@@ -421,11 +415,12 @@
             Other Deliverables
           </h3>
           <p>
-            Other non-normative documents may be created such as:
+            Other non-normative documents may be created including:
           </p>
           <ul>
-            <li>Use case and requirement documents;</li>
-            <li>Test suite and implementation report for the specification;</li>
+            <li id="usecases-deliverable">Use Cases and Requirements;</li>
+            <li id="security-deliverable">Security and Privacy Guidelines (to be published as a W3C Note);</li>
+            <li>Test suite and implementation reports for each specification;</li>
             <li>Primer or Best Practice documents to support web developers when designing applications.</li>
           </ul>
         </section>
@@ -436,15 +431,11 @@
               <li>June 2023: First teleconference</li>
               <li>July 2023: First face-to-face meeting</li>
               <li>September 2023: Requirements and Use Cases for WoT Discovery 1.1</li>
-              <li>September 2023: Requirements and Use Cases for WoT Security and Privacy</li>
               <li>January 2024: FPWD for WoT Discovery 1.1</li>
-              <li>January 2024: FPWD for WoT Security and Privacy</li>
               <li>August 2024: CR Transition for WoT Discovery 1.1</li>
-              <li>August 2024: CR Transition for WoT Security and Privacy</li>
+              <li>August 2024: Updated publication of WoT Security and Privacy Guidelines as a Note</li>
               <li>December 2024: PR Transition for WoT Discovery 1.1</li>
-              <li>December 2024: PR Transition for WoT Security and Privacy</li>
               <li>March 2025: REC Transition for WoT Discovery 1.1</li>
-              <li>March 2025: REC Transition for WoT Security and Privacy 1.1</li>
             </ul>
         </section>
       </section>
