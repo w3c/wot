@@ -194,6 +194,48 @@
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           After each work item, in parenthesis, we identify the deliverables it may be included in.
           <dl>
+            <dt><a href="#discovery-updates-workitem"><strong>Discovery Updates</strong></a> 
+              (<a href="#discovery-deliverable">Discovery</a>):</dt>
+              <dd>Backward-compatible updates to the Discovery specification to support
+                  additional introduction mechanisms, align with scripting APIs, 
+                  support all Thing Description versions (1.0, 1.1, and 2.0),
+                  and improve security and validation.</dd>
+            <dt><a href="#discovery-thing-models-workitem"><strong>Discovery of Thing Models</strong></a>
+              (<a href="#discovery-deliverable">Discovery</a>):</dt>
+              <dd>Extend discovery support to include storing and returning Thing Models from
+                  exploration mechanisms.</dd>
+            <dt><a href="#discovery-coap-dir-workitem"><strong>Discovery CoAP Directory</strong></a>
+              (<a href="#discovery-deliverable">Discovery</a>):</dt>
+              <dd>Add support for a CoAP API to TD Directory services supporting discovery.</dd>
+            <dt><a href="#discovery-jsonpath-query-language-workitem"><strong>Discovery JSON Path Query Language</strong></a>
+              (<a href="#discovery-deliverable">Discovery</a>):</dt>
+              <dd>Add support for JSONPath queries to TD Directory services.</dd>
+            <dt><a href="#discovery-query-filters-workitem"><strong>Discovery Query Filters</strong></a>
+              (<a href="#discovery-deliverable">Discovery</a>):</dt>
+              <dd>Add support for query filters for common use cases to TD Directory services.</dd>
+            </dd>
+            <dt><a href="#geolocation-workitem"><strong>Geolocation</strong></a>
+              (<a href="#discovery-deliverable">Discovery</a>,
+               <a href="#thing-description-deliverable">Thing Description</a>,
+               <a href="#profiles-deliverable">Profiles</a>):</dt>
+              <dd>Define mechanisms for embedding of static geolocation information in TDs, 
+                  annotation of data models for dynamic geolocation, and spatial filters in
+                  TD Directory queries for geospatially-limited discovery.</dd>
+            <dt><a href="#onboarding-workitem"><strong>Onboarding</strong></a> 
+             (<a href="#architecture-deliverable">Architecture</a>,
+              <a href="#discovery-deliverable">Discovery</a>,
+              <a href="#security-deliverable">Security</a>):</dt>
+             <dd>Define lifecycle process to establish mutual trust and identification.</dd>
+            <dt><a href="#sec-ontology-workitem"><strong>Security Scheme Ontology</strong></a>
+             (<a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#security-deliverable">Security</a>):</dt>
+             <dd>Refactor TD security schemes using TD extension ontologies.</dd>
+            <dt><a href="#signing-workitem"><strong>Signing</strong></a> 
+             (<a href="#discovery-deliverable">Discovery</a>,
+              <a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#security-deliverable">Security</a>):</dt>
+             <dd>Add support for TD signing and support signed TDs in the discovery process.
+              Requires definition of TD canonicalization.</dd>
             <dt>
               <a href="#timeseries-workitem"><strong>Timeseries</strong></a> 
               (<a href="#thing-description-deliverable">Thing Description</a>,
@@ -240,121 +282,228 @@
 
 	<p>Details for each of these are given below.</p>
 
-    <h3 id="timeseries-workitem">Timeseries</h3>
-      <p>
-        Some edge and cloud services can collect property value changes or event emissions for a certain time. 
-        This data, called timeseries, can be retrieved by Consumers to display the evolution of the affordance data over time,
-        make predictions about the future values and more.
-        There are different serialization formats and structures of such data in existing solutions.
-        The generic mechanism for timeseries should be introduced in the <a href="#thing-description-deliverable">Thing Description</a>
-        with bindings to existing solutions illustrated in the <a href="#binding-deliverable">Binding Templates</a>
-      </p>
-      <p>
-        Related Issues:
-          <ul>
-            <li>https://github.com/w3c/wot-thing-description/issues/892</li>
-          </ul>
-      </p>
-    <h3 id="payload-protocols-workitem">Payload Driven Protocols</h3>
-      <p>
-        Some protocols are built on top of the application layer protocols. Some examples are:
-        <ul>
-          <li> RPC protocols on top of HTTP such as JSON-RPC. </li>
-          <li> Protocols using MQTT topics together with payloads to identify affordances.</li>
-          <li> Websocket sub-protocols.</li>
-          <li> SSE usage across implementations.</li>
-          <li> Webhook usage across implementations.</li>
-        </ul>
-        </p>
+  <h3 id="discovery-updates-workitem">Discovery Updates</h3>
         <p>
-          The <a href="#thing-description-deliverable">Thing Description</a> should be updated with mechanisms that make it possible to describe such protocols while 
-          optimizing the TD instances to be human and machine readable.
-          The <a href="#binding-deliverable">Binding Templates</a> should be updated with concrete cases where this mechanism is already used.
-          The <a href="#profiles-deliverable">Profiles</a> can use this mechanism to reduce the size of TDs while making them easier to understand.
-          The working group will also document in which cases this method does not work due to making the TDs too complicated to understand, thus requiring a binding document. 
-      </p>
-    <h3 id="manageable-actions-workitem">Manageable Actions</h3>
-      <p>
-        Various use cases require the implementation of more complex actions that span multiple protocol transactions.
-        Such actions are not simply invoked but need to managed over time by the Thing and the Consumer.
-        These are covered in the <a href="https://www.w3.org/TR/wot-thing-description11/">WoT Thing Description 1.1</a> 
-        via the initiation (<code>invokeaction</code>), monitoring (<code>queryaction</code>), and cancellation (<code>cancelaction</code>) of ongoing actions.
-        However, the following points are not supported:
-        <ul>
-          <li>Sent and received payloads associated to the operations</li>
-          <li>Management of dynamically generated identification</li>
-          <li>Describing queues of actions</li>
-        </ul>
-        These limitations are also influencing the <a href="#profiles-deliverable">Profiles</a>.
-      </p>
-      <p>
-        Additionally, there have been proposals by the WG members that need to taken into account and evaluated:
-        <ul>
-          <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control</li>
-          <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control-2</li>
-          <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control-3</li>
-        </ul>
-      </p>
-      <p>
-        Related Issues:
-          <ul>
-            <li>https://github.com/w3c/wot-thing-description#1692</li>
-            <li>https://github.com/w3c/wot-thing-description#1644</li>
-            <li>https://github.com/w3c/wot-thing-description#1223</li>
-          </ul>
-      </p>
-    <h3 id="init-connection-workitem">Initial / Common Connection Description</h3>
-      <p>
-        Currently, each form of an affordance has information on the endpoint, media type and other protocol related information.
-        It is possible to use the <code>base</code> term for simplifying the endpoint but it has limitations such as:
-        <ul>
-          <li>If the media type is also common across forms, it is repeated</li>
-          <li>Multiple bases are not possible</li>
-          <li>For protocols that are based on an initial connection and then subsequent messages, the semantics are not clear.</li>
-        </ul>
-      </p>
-      <p>
-        Thus, a mechanism to describe connection and protocol information that can be used by other forms is needed.
-        In protocols with initial connection, this can be also used to indicate what needs to be done by the Consumer before executing any operation.
-      </p>
-      <p>
-        Related Issues:
-          <ul>
-            <li>https://github.com/w3c/wot-thing-description/issues/1664</li>
-            <li>https://github.com/w3c/wot-thing-description/issues/1248</li>
-            <li>https://github.com/w3c/wot-thing-description/issues/1242</li>
-            <li>https://github.com/w3c/wot-thing-description/issues/878</li>
-          </ul>
-      </p>
-    <h3 id="canon-workitem">Canonicalization</h3>
-      <p>
-        Thing Descriptions can contain the same information but serialized differently even in the same serialization format, due to structures such as maps which do not impose an order.
-        This is problematic for comparing TDs or more importantly, for signing them where every byte difference results in a different signature.
-        Thus, the WG will develop a canonicalization algorithm based on JSON-LD.
-      </p>
-      
-      <p>
-        Related Issues:
-          <ul>
-            <li>https://github.com/w3c/wot-thing-description/issues/1023</li>
-            <li>https://github.com/w3c/wot-thing-description/issues/940</li>
-          </ul>
-      </p>
-      <p>
-        Some work has been done in the previous charter but has been postponed due to lack of features in JSON-LD.
-        Related PRs:
-        <ul>
-          <li>https://github.com/w3c/wot-thing-description/pull/1304</li>
-          <li>https://github.com/w3c/wot-thing-description/pull/1151</li>
-          <li>https://github.com/w3c/wot-thing-description/pull/943</li>
-          <li>https://github.com/w3c/wot-thing-description/pull/1086</li>
-        </ul>
-      </p>
-	</div>
+        Various updates are expected to be needed to align the Discovery spec with updates to other
+        proposed deliverables in this charter, for example updates to the information model,
+	including support for all versions of the Thing Description specification,
+        and to improve security and validation.
+        </p>
 
-        <section id="section-out-of-scope">
-          <h3 id="out-of-scope">Out of Scope</h3>
-            <p>The following features are out of scope, and will not be addressed by this Working group.</p>
+	<h3 id="discovery-thing-models-workitem">Discovery of Thing Models</h3>
+        <p>
+        Currently only Thing Descriptions can be stored in TD Directories, but it would be useful
+        to also store Thing Models in them, in particular to allow links to Thing Models to be 
+        resolved by reference to a TD  Directory.
+        </p>
+
+	<h3 id="discovery-coap-dir-workitem">Discovery CoAP Directory</h3>
+        <p>
+        Currently, TD Directory services only have an HTTP API defined.
+        TD Directories are the only Discovery exploration mechanism supporting the 
+        return of multiple Thing Descriptions, and they may also be needed in the 
+        case of constrained devices hosting multiple Things.
+        However, the cost of using HTTP in constrained environments can be prohibitive.  
+        Defining a CoAP API with equivalent
+        functionality to the HTTP API would allow the API to be used and provided by constrained devices,
+        including those that simply want to self-host multiple TDs.
+        </p>
+
+	<h3 id="discovery-jsonpath-query-language-workitem">Discovery JSON Path Query Language</h3>
+        <p>
+        Currently there is no mandatory query language support for TD Directories.
+        This means that consumers will often need to download the contents of the entire
+        directory if the id of a target TD is not known.
+        An endpoint for SPARQL queries is defined but because of the difficulty of supporting RDF processing 
+        it is optional.  
+        JSON Path is still currently under discussion as an IETF RFC but was not mature enough to include 
+        during the last charter. 
+        JSON Path queries would complement the current SPARQL-based query support but would be lighter-weight 
+        to implement and use.
+        </p>
+
+	<h3 id="discovery-query-filters-workitem">Discovery Query Filters</h3>
+        <p>
+        Some simple query filters would be added to the API for specific
+        common use cases, such as filtering by type, time, or keyword.
+        These filters would be chainable with each other and with query language results,
+        so that, for example, the result of a JSON Path query might them be filtered by time without
+        needing to complicate the JSON Path query with time computations.
+        This mechanism would also be able to support <a href="#geolocation-workitem">filtering by geolocation</a>.
+        </p>
+
+	<h3 id="geolocation-workitem">Geolocation</h3>
+        <p>
+        Many WoT use cases have identified a need to limit discovery by geographic location or
+        to identify the location of a Thing. 
+        To support this, a standard way to encode geolocation metadata is needed 
+        (or several ways, each identified using a profile) and (for discovery) query mechanisms 
+        that can filter by this metadata. 
+        Geolocation metadata should be aligned with existing standards, 
+        and should support both static and dynamic situations.
+        Geolocation information may be included in either TDs or in data
+        delivered directly from the Thing and ideally
+        both situations would be supported.
+        Since multiple standards and use cases exist for geolocation information, profiles
+        to constrain how it should be encoded in particular situations (for example, in Building 
+        Information Management Systems) would be useful.
+        </p>
+
+	<h3 id="onboarding-workitem">Onboarding</h3>
+        <p>
+        In order to establish secure communications in some contexts,
+        for example on a LAN,
+        some form of onboarding process to establish mutual trust between Things and Consumers is needed.
+        Having a prescriptive (but optional) process for this would be useful.
+
+        Onboarding may be part of a larger "lifecycle" which would be described in the 
+        Architecture document.
+
+        In this work item we will define mechanisms to perform secure minimum-effort onboarding of Things 
+        that conforms to the security and privacy requirements of specific 
+        deployment scenarios and use cases.
+
+        This work item complements the work that is done for device discovery, 
+        and is in particular useful when registering TDs with a TD Directory service,
+        however is also applicable for other use cases.
+        </p>
+
+	<h3 id="sec-ontology-workitem">Security Scheme Ontology</h3>
+        <p>
+        Currently security schemes are "baked into" the TD specification but 
+        it would be more manageable and consistent to break them out 
+        as separate ontologies so that all security schemes would be done via extensions. 
+        Then the TD 2.0 spec would only have to include general-purpose "structural" security schemes 
+        like <code>nosec</code> and <code>combo</code>. 
+        The security ontologies and URLs for them would be published in a new Registry Track Note.
+        </p>
+
+	<h3 id="signing-workitem">Signing</h3>
+        <p>
+        A mechanism for signing JSON-LD documents was under discussion in the last charter 
+        but was not mature enough to include. 
+        Adding support for RDF canonicalization and signing in alignment with those standards would 
+        be helpful to ensure that TDs are not intercepted and modified by third parties. 
+        This may also require a definition of TD canonicalization.        
+        Verifying a signature requires identity management, i.e. the verifier needs to 
+        know or have trusted access to the public key of the signer.
+        Directories should be extended to verify signatures and generate new chained signatures
+        as needed.
+        </p>
+  <h3 id="timeseries-workitem">Timeseries</h3>
+    <p>
+      Some edge and cloud services can collect property value changes or event emissions for a certain time. 
+      This data, called timeseries, can be retrieved by Consumers to display the evolution of the affordance data over time,
+      make predictions about the future values and more.
+      There are different serialization formats and structures of such data in existing solutions.
+      The generic mechanism for timeseries should be introduced in the <a href="#thing-description-deliverable">Thing Description</a>
+      with bindings to existing solutions illustrated in the <a href="#binding-deliverable">Binding Templates</a>
+    </p>
+    <p>
+      Related Issues:
+        <ul>
+          <li>https://github.com/w3c/wot-thing-description/issues/892</li>
+        </ul>
+    </p>
+  <h3 id="payload-protocols-workitem">Payload Driven Protocols</h3>
+    <p>
+      Some protocols are built on top of the application layer protocols. Some examples are:
+      <ul>
+        <li> RPC protocols on top of HTTP such as JSON-RPC. </li>
+        <li> Protocols using MQTT topics together with payloads to identify affordances.</li>
+        <li> Websocket sub-protocols.</li>
+        <li> SSE usage across implementations.</li>
+        <li> Webhook usage across implementations.</li>
+      </ul>
+      </p>
+      <p>
+        The <a href="#thing-description-deliverable">Thing Description</a> should be updated with mechanisms that make it possible to describe such protocols while 
+        optimizing the TD instances to be human and machine readable.
+        The <a href="#binding-deliverable">Binding Templates</a> should be updated with concrete cases where this mechanism is already used.
+        The <a href="#profiles-deliverable">Profiles</a> can use this mechanism to reduce the size of TDs while making them easier to understand.
+        The working group will also document in which cases this method does not work due to making the TDs too complicated to understand, thus requiring a binding document. 
+    </p>
+  <h3 id="manageable-actions-workitem">Manageable Actions</h3>
+    <p>
+      Various use cases require the implementation of more complex actions that span multiple protocol transactions.
+      Such actions are not simply invoked but need to managed over time by the Thing and the Consumer.
+      These are covered in the <a href="https://www.w3.org/TR/wot-thing-description11/">WoT Thing Description 1.1</a> 
+      via the initiation (<code>invokeaction</code>), monitoring (<code>queryaction</code>), and cancellation (<code>cancelaction</code>) of ongoing actions.
+      However, the following points are not supported:
+      <ul>
+        <li>Sent and received payloads associated to the operations</li>
+        <li>Management of dynamically generated identification</li>
+        <li>Describing queues of actions</li>
+      </ul>
+      These limitations are also influencing the <a href="#profiles-deliverable">Profiles</a>.
+    </p>
+    <p>
+      Additionally, there have been proposals by the WG members that need to taken into account and evaluated:
+      <ul>
+        <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control</li>
+        <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control-2</li>
+        <li>https://github.com/w3c/wot-thing-description/tree/main/proposals/hypermedia-control-3</li>
+      </ul>
+    </p>
+    <p>
+      Related Issues:
+        <ul>
+          <li>https://github.com/w3c/wot-thing-description#1692</li>
+          <li>https://github.com/w3c/wot-thing-description#1644</li>
+          <li>https://github.com/w3c/wot-thing-description#1223</li>
+        </ul>
+    </p>
+  <h3 id="init-connection-workitem">Initial / Common Connection Description</h3>
+    <p>
+      Currently, each form of an affordance has information on the endpoint, media type and other protocol related information.
+      It is possible to use the <code>base</code> term for simplifying the endpoint but it has limitations such as:
+      <ul>
+        <li>If the media type is also common across forms, it is repeated</li>
+        <li>Multiple bases are not possible</li>
+        <li>For protocols that are based on an initial connection and then subsequent messages, the semantics are not clear.</li>
+      </ul>
+    </p>
+    <p>
+      Thus, a mechanism to describe connection and protocol information that can be used by other forms is needed.
+      In protocols with initial connection, this can be also used to indicate what needs to be done by the Consumer before executing any operation.
+    </p>
+    <p>
+      Related Issues:
+        <ul>
+          <li>https://github.com/w3c/wot-thing-description/issues/1664</li>
+          <li>https://github.com/w3c/wot-thing-description/issues/1248</li>
+          <li>https://github.com/w3c/wot-thing-description/issues/1242</li>
+          <li>https://github.com/w3c/wot-thing-description/issues/878</li>
+        </ul>
+    </p>
+  <h3 id="canon-workitem">Canonicalization</h3>
+    <p>
+      Thing Descriptions can contain the same information but serialized differently even in the same serialization format, due to structures such as maps which do not impose an order.
+      This is problematic for comparing TDs or more importantly, for signing them where every byte difference results in a different signature.
+      Thus, the WG will develop a canonicalization algorithm based on JSON-LD.
+    </p>
+    
+    <p>
+      Related Issues:
+        <ul>
+          <li>https://github.com/w3c/wot-thing-description/issues/1023</li>
+          <li>https://github.com/w3c/wot-thing-description/issues/940</li>
+        </ul>
+    </p>
+    <p>
+      Some work has been done in the previous charter but has been postponed due to lack of features in JSON-LD.
+      Related PRs:
+      <ul>
+        <li>https://github.com/w3c/wot-thing-description/pull/1304</li>
+        <li>https://github.com/w3c/wot-thing-description/pull/1151</li>
+        <li>https://github.com/w3c/wot-thing-description/pull/943</li>
+        <li>https://github.com/w3c/wot-thing-description/pull/1086</li>
+      </ul>
+    </p>
+	</div>
+    <section id="section-out-of-scope">
+      <h3 id="out-of-scope">Out of Scope</h3>
+        <p>The following features are out of scope, and will not be addressed by this Working group.</p>
 
 	    <dl class="out-of-scope">
             <dt><strong>Application- and domain-specific metadata vocabularies:</strong></dt>
@@ -386,23 +535,23 @@
             Normative Specifications
           </h3>
           <p>
-            The <i class="todo">(Working|Interest)</i> Group will deliver the following W3C normative specifications:
+            The Working Group will deliver the following W3C normative specifications:
           </p>
           <dl>
-            <dt id="web-foo" class="spec"><a href="https://w3c.github.io/charter-drafts/charter-template.html#">Web <i class="todo">[spec name]</i></a></dt>
+            <dt id="discovery-deliverable" class="spec">Web of Things (WoT) Discovery 1.1</dt>
             <dd>
-              <p>This specification defines <i class="todo">[concrete description]</i>.</p>
+              <p>This specification defines a Discovery process for WoT, and would be a backward-compatible
+                 update to the existing WoT Discovery Specification.</p>
 
-              <p class="draft-status"><b>Draft state:</b> <i class="todo">[No draft | <a href="https://w3c.github.io/charter-drafts/charter-template.html#">Use Cases and Requirements</a> | <a href="https://w3c.github.io/charter-drafts/charter-template.html#">Editor's Draft</a> | <a href="https://w3c.github.io/charter-drafts/charter-template.html#">Member Submission</a> | <a href="https://w3c.github.io/charter-drafts/charter-template.html#">Adopted from WG/CG Foo</a> | <a href="https://w3c.github.io/charter-drafts/charter-template.html#">Working Draft</a>]</i></p>
-              <p class="milestone"><b>Expected completion:</b> <i class="todo">[Q1–4 yyyy]</i></p>
-              <p class="todo">Per <a href="https://www.w3.org/Consortium/Process/#WGCharter">5.2.6</a>, for every Recommendation Track deliverable that continues work on a Working Draft (WD) published under any other Charter (including a predecessor group of the same name), for which there is an existing <a href="https://www.w3.org/Consortium/Process/#exclusion-draft">Exclusion Draft</a>: </p>
-              <p><b>Adopted Draft:</b> The <span class="todo">title, stable URL, and publication date of the <a href="https://www.w3.org/Consortium/Process/#adopted-draft">Adopted Draft</a></span> which will serve as the basis for work on the deliverable.
-              </p><p><b>Exclusion Draft:</b> The <span class="todo">title, stable URL, and publication date of the most recent <a href="https://www.w3.org/Consortium/Process/#exclusion-draft">Exclusion Draft</a></span>.
-              <span class="todo">Exclusion period <b>began</b>; Exclusion period <b>ended</b>.</span> <span class="todo">(this <a href="https://www.w3.org/2004/01/pp-impl/charter-assistant?wgid=32061">charter assistant</a> helps in producing the list. use the proper <a href="https://www.w3.org/2004/01/pp-impl/">wgid</a>)</span>
-              </p><p><b>Exclusion Draft Charter:</b> The  <span class="todo">stable URL of the <a href="https://www.w3.org/Consortium/Process/#other-charter">Working Group charter</a></span> under which the most recent Exclusion Draft was published.
+              <p class="draft-status"><b>Draft state:</b>No draft</p>
+              <p class="milestone"><b>Expected completion:</b> Q3 2024</p>
+              <p><b>Adopted Draft:</b>
+              This will be a revision of the current <i>Web of Things (WoT) Discovery</i> specification published
+              at <a href="https://www.w3.org/TR/wot-discovery/">https://www.w3.org/TR/wot-discovery/</a>,
+              as a Candidate Recommendation on 19 January 2023.</p>
+              </p>
             </p></dd>
           </dl>
-
 
         </section>
 
@@ -424,12 +573,13 @@
           <h3>Timeline</h3>
             <p class="todo">Put here a timeline view of all deliverables.</p>
             <ul class="todo">
-              <li>Month YYYY: First teleconference</li>
-              <li>Month YYYY: First face-to-face meeting</li>
-              <li>Month YYYY: Requirements and Use Cases for FooML</li>
-              <li>Month YYYY: FPWD for FooML</li>
-              <li>Month YYYY: Requirements and Use Cases for BarML</li>
-              <li>Month YYYY: FPWD FooML Primer</li>
+              <li>June 2023: First teleconference</li>
+              <li>July 2023: First face-to-face meeting</li>
+              <li>September 2023: Requirements and Use Cases for WoT Discovery 1.1</li>
+              <li>January 2024: FPWD for WoT Discovery 1.1</li>
+              <li>August 2024: CR Transition for WoT Discovery 1.1</li>
+              <li>December 2024: PR Transition for WoT Discovery 1.1</li>
+              <li>March 2025: REC Transition for WoT Discovery 1.1</li>
             </ul>
         </section>
       </section>
@@ -438,7 +588,7 @@
 	  <h2>Success Criteria</h2>
 
     <!-- Testing and interop -->
-	  <p><span class="todo">Remove this clause if the Group does not intend to move to REC:</span> In order to advance to 
+	  <p>In order to advance to 
 		  <a href="https://www.w3.org/Consortium/Process/#RecsPR" title="Proposed Recommendation">Proposed Recommendation</a>, each normative specification is expected to have 
 		  <a href="https://www.w3.org/Consortium/Process/#implementation-experience">at least two independent interoperable
 			  implementations</a> of every feature defined in the specification, where
@@ -446,33 +596,31 @@ interoperability can be verified by passing open test suites, and two or
 more implementations interoperating with each other. In order to advance to
 Proposed Recommendation, each normative specification must have an open
 test suite of every feature defined in the specification.</p>
-	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
-    <p><span class="todo">Consider adopting a healthy testing policy, such as:</span> 
-      To promote interoperability, all changes made to specifications 
+	  <p>A testing plan will be developed for each specification, starting from the earliest drafts.</p>
+    <p>To promote interoperability, all changes made to specifications 
       in Candidate Recommendation 
       or to features that have deployed implementations
       should have <a href="https://www.w3.org/2019/02/testing-policy.html">tests</a>.  
-      Testing efforts should be conducted via the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests</a> project.</p>
 
     <!-- Horizontal review -->
     <p>Each specification should contain sections detailing all known security and privacy implications for implementers, Web authors, and end users.</p>
+<!--
 	  <p><i class="todo">For specifications of technologies that directly impact user experience, such as content technologies, as well as protocols and APIs which impact content: </i>
 		Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and
 		recommendations for maximising accessibility in implementations.</p>
+-->
 	
-    <!-- Relevance and momentum -->
-	  <p><span class="todo">Consider adding this clause if the Group does not intend to move to REC:</span> All new features should be supported by at least two intents to implement before being incorporated in the specification.</p>
 	</section>
 
       <section id="coordination">
         <h2>Coordination</h2>
-        <p>For all specifications, this <i class="todo">(Working|Interest)</i> Group will seek <a href="https://www.w3.org/Guide/documentreview/#how_to_get_horizontal_review">horizontal review</a> for
+        <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/Guide/documentreview/#how_to_get_horizontal_review">horizontal review</a> for
           accessibility, internationalization, privacy, and security with the relevant Working and
           Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>.
           Invitation for review must be issued during each major standards-track document transition, including
           <a href="https://www.w3.org/Consortium/Process/#RecsWD" title="First Public Working Draft">FPWD</a>.  The
-          <i class="todo">(Working|Interest)</i> Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
-          each specification.  The <i class="todo">(Working|Interest)</i> Group is advised to seek a review at least 3 months before first entering
+          Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
+          each specification.  The Working Group is advised to seek a review at least 3 months before first entering
           <a href="https://www.w3.org/Consortium/Process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
           to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
 
@@ -508,7 +656,7 @@ test suite of every feature defined in the specification.</p>
           Participation
         </h2>
         <p>
-          To be successful, this <i class="todo">(Working|Interest)</i> Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the <i class="todo">(Working|Interest)</i> Group. There is no minimum requirement for other Participants.
+          To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
         </p>
         <p>
           The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href="https://w3c.github.io/charter-drafts/charter-template.html#communication">Communication</a>.
@@ -527,18 +675,19 @@ test suite of every feature defined in the specification.</p>
           Communication
         </h2>
         <p id="public">
-          Technical discussions for this <i class="todo">(Working|Interest)</i> Group are conducted in <a href="https://www.w3.org/Consortium/Process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests.
+          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/Consortium/Process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests.
         The meetings themselves are not open to public participation, however.
         </p>
         <p>
-          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://w3c.github.io/charter-drafts/charter-template.html"><i class="todo">[name]</i> (Working|Interest) Group home page.</a>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://www.w3.org/WoT/">Web of Things (WoT) Working Group home page.</a>
         </p>
         <p>
-          Most <i class="todo">[name]</i> (Working|Interest) Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+          Most Web of Things (WoT) Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.  However, one teleconference will be held weekly to coordinate activities among the task forces responsible for each specification.
         </p>
         <p>
-          This group primarily conducts its technical work  <i class="todo">pick one, or both, as appropriate:</i> on the public mailing list <a class="todo" id="public-name" href="mailto:public-[email-list]@w3.org">public-<i class="todo">[email-list]</i>@w3.org</a> (<a class="todo" href="https://lists.w3.org/Archives/Public/public-[email-list]/">archive</a>)
-          <i class="todo">or</i> on <a class="todo" id="public-github" href="https://w3c.github.io/charter-drafts/[link%20to%20Github%20repo]">GitHub issues</a>.
+          This group primarily conducts its technical work  
+          on <a id="public-github" href="https://github.com/w3c/wot">GitHub issues</a>, using 
+          a main repository for general topics and more specific repositories for individual specifications.
           The public is invited to review, discuss and contribute to this work.
         </p>
         <p>
@@ -560,9 +709,9 @@ test suite of every feature defined in the specification.</p>
         <p>
           To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
 
-          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id="cfc"><i class="todo">[pick a duration within:] one week to 10 working days</i></span>, depending on the chair's evaluation of the group consensus on the issue.
+          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from one week to 10 working days, depending on the chair's evaluation of the group consensus on the issue.
 
-          If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the <i class="todo">(Working|Interest)</i> Group.
+          If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
         </p>
         <p>
           All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs or the Director.
@@ -575,7 +724,6 @@ test suite of every feature defined in the specification.</p>
 
 
       <section id="patentpolicy">
-      <p><i class="todo">[Keep 'Patent Policy' for a Working Group, 'Patent Disclosures' for an Interest Group]</i></p>
 
         <h2>
           Patent Policy
@@ -586,23 +734,16 @@ test suite of every feature defined in the specification.</p>
           For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/groups/wg/[shortname]/ipr">licensing information</a>.
         </p>
 
-        <h2>Patent Disclosures </h2>
-        <p>The Interest Group provides an opportunity to
-          share perspectives on the topic addressed by this charter. W3C reminds
-          Interest Group participants of their obligation to comply with patent
-          disclosure obligations as set out in <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">Section
-            6</a> of the W3C Patent Policy. While the Interest Group does not
-          produce Recommendation-track documents, when Interest Group
-          participants review Recommendation-track specifications from Working
-          Groups, the patent disclosure obligations do apply. For more information about disclosure obligations for this group,
-          please see the <a href="https://www.w3.org/groups/ig/[shortname]/ipr">licensing information</a>.</p>
       </section>
 
 
 
       <section id="licensing">
         <h2>Licensing</h2>
-        <p>This <i class="todo">(Working|Interest)</i> Group will use the <i class="todo">[pick a license, one of:]</i>  <a href="https://www.w3.org/Consortium/Legal/copyright-documents">W3C Document license</a> | <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
+        <p>This Working Group will use the 
+          <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> 
+          for all its deliverables.</p>
+
       </section>
 
 
@@ -707,7 +848,7 @@ test suite of every feature defined in the specification.</p>
         <i class="todo"><a href="mailto:">[team contact name]</a></i>
       </address>
 
-<p class="copyright">Copyright © <i class="todo">[yyyy]</i> <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+<p class="copyright">Copyright © 2023</i> <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
   <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
   <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
   <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
