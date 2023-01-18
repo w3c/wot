@@ -202,26 +202,53 @@
             <dd>
               Add support for describing historical values or value changes of affordances to the TD specification in an interoperable way with existing solutions.
             </dd>
+            <dt>
+              <a href="#payload-protocols-workitem"><strong>Payload Driven Protocols</strong></a> 
+              (<a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#binding-deliverable">Binding Templates</a>,
+              <a href="#profiles-deliverable">Profiles</a>):
+            </dt>
+            <dd>
+              Add support for describing protocols that have specific payload structures.
+            </dd>
           </dl>
 	</div>
 
 	<p>Details for each of these are given below.</p>
 
-  <h3 id="timeseries-workitem">Timeseries</h3>
-        <p>
-          Some edge and cloud services can collect property value changes or event emissions for a certain time. 
-          This data, called timeseries, can be retrieved by Consumers to display the evolution of the affordance data over time,
-          make predictions about the future values and more.
-          There are different serialization formats and structures of such data in existing solutions.
-          The generic mechanism for timeseries should be introduced in the <a href="#thing-description-deliverable">Thing Description</a>
-          with bindings to existing solutions illustrated in the <a href="#binding-deliverable">Binding Templates</a>
+    <h3 id="timeseries-workitem">Timeseries</h3>
+      <p>
+        Some edge and cloud services can collect property value changes or event emissions for a certain time. 
+        This data, called timeseries, can be retrieved by Consumers to display the evolution of the affordance data over time,
+        make predictions about the future values and more.
+        There are different serialization formats and structures of such data in existing solutions.
+        The generic mechanism for timeseries should be introduced in the <a href="#thing-description-deliverable">Thing Description</a>
+        with bindings to existing solutions illustrated in the <a href="#binding-deliverable">Binding Templates</a>
+      </p>
+      <p>
+        Related Issues:
+          <ul>
+            <li>https://github.com/w3c/wot-thing-description/issues/892</li>
+          </ul>
+      </p>
+    <h3 id="payload-protocols-workitem">Payload Driven Protocols</h3>
+      <p>
+        Some protocols are built on top of the application layer protocols. Some examples are:
+        <ul>
+          <li> RPC protocols on top of HTTP such as JSON-RPC. </li>
+          <li> Protocols using MQTT topics together with payloads to identify affordances.</li>
+          <li> Websocket sub-protocols.</li>
+          <li> SSE usage across implementations.</li>
+          <li> Webhook usage across implementations.</li>
+        </ul>
         </p>
         <p>
-          Related Issues:
-            <ul>
-              <li>https://github.com/w3c/wot-thing-description/issues/892</li>
-            </ul>
-        </p>
+          The <a href="#thing-description-deliverable">Thing Description</a> should be updated with mechanisms that make it possible to describe such protocols while 
+          optimizing the TD instances to be human and machine readable.
+          The <a href="#binding-deliverable">Binding Templates</a> should be updated with concrete cases where this mechanism is already used.
+          The <a href="#profiles-deliverable">Profiles</a> can use this mechanism to reduce the size of TDs while making them easier to understand.
+          The working group will also document in which cases this method does not work due to making the TDs too complicated to understand, thus requiring a binding document. 
+      </p>
 	</div>
 
         <section id="section-out-of-scope">
