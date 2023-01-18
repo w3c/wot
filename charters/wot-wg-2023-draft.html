@@ -193,20 +193,68 @@
         <div class="summary">
           <p style="text-align:left;font-style:italic">Scope Summary</p>
           After each work item, in parenthesis, we identify the deliverables it may be included in.
-          <dl class="todo">
-	    <dt><a href="#scope-item-id"><strong>[scope-item-name]:</strong> ([deliverable])</a></dt>
-              <dd>[description]</dd>
+          <dl>
+	    <dt><a href="#onboarding-workitem"><strong>Onboarding</strong></a> 
+           (<a href="#architecture-deliverable">Architecture</a>,
+            <a href="#discovery-deliverable">Discovery</a>,
+            <a href="#security-deliverable">Security</a>):</dt>
+        <dd>Define lifecycle process to establish mutual trust and identification.</dd>
+	    <dt><a href="#sec-ontology-workitem"><strong>Security Scheme Ontology</strong></a>
+           (<a href="#thing-description-deliverable">Thing Description</a>,
+            <a href="#security-deliverable">Security</a>):</dt>
+        <dd>Refactor TD security schemes using TD extension ontologies.</dd>
+      <dt><a href="#signing-workitem"><strong>Signing</strong></a> 
+           (<a href="#discovery-deliverable">Discovery</a>,
+            <a href="#thing-description-deliverable">Thing Description</a>,
+            <a href="#security-deliverable">Security</a>):</dt>
+        <dd>Add support for TD signing and support signed TDs in the discovery process.
+            Requires definition of TD canonicalization.</dd>
 	  </dl>
 	</div>
 
 	<p>Details for each of these are given below.</p>
 
-	<div class="todo">
-	<h3 id="scope-item-id">[scope-item-name]</h3>
+	<h3 id="onboarding-workitem">Onboarding</h3>
         <p>
-	   [extended description]
+        In order to establish secure communications in some contexts,
+        for example on a LAN,
+        some form of onboarding process to establish mutual trust between Things and Consumers is needed.
+        Having a prescriptive (but optional) process for this would be useful.
+
+        Onboarding may be part of a larger "lifecycle" which would be described in the 
+        Architecture document.
+
+        In this work item we will define mechanisms to perform secure minimum-effort onboarding of Things 
+        that conforms to the security and privacy requirements of specific 
+        deployment scenarios and use cases.
+
+        This work item complements the work that is done for device discovery, 
+        and is in particular useful when registering TDs with a TD Directory service,
+        however is also applicable for other use cases.
         </p>
-	</div>
+
+	<h3 id="sec-ontology-workitem">Security Scheme Ontology</h3>
+        <p>
+        Currently security schemes are "baked into" the TD specification but 
+        it would be more manageable and consistent to break them out 
+        as separate ontologies so that all security schemes would be done via extensions. 
+        Then the TD 2.0 spec would only have to include general-purpose "structural" security schemes 
+        like <code>nosec</code> and <code>combo</code>. 
+        The security ontologies and URLs for them would be published in a new Registry Track Note.
+        </p>
+
+	<h3 id="signing-workitem">Signing</h3>
+        <p>
+        A mechanism for signing JSON-LD documents was under discussion in the last charter 
+        but was not mature enough to include. 
+        Adding support for RDF canonicalization and signing in alignment with those standards would 
+        be helpful to ensure that TDs are not intercepted and modified by third parties. 
+        This may also require a definition of TD canonicalization.        
+        Verifying a signature requires identity management, i.e. the verifier needs to 
+        know or have trusted access to the public key of the signer.
+        Directories should be extended to verify signatures and generate new chained signatures
+        as needed.
+        </p>
 
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
