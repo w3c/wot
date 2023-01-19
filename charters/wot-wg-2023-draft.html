@@ -292,6 +292,15 @@
             <dd>
               Explain the semantics on how to version Thing Descriptions.
             </dd>
+            <dt>
+              <a href="#td-consumption-workitem"><strong>Normative TD Parsing, Consuming and Validation</strong></a>
+              (<a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#scripting-deliverable">Scripting API</a>,
+              <a href="#profiles-deliverable">Profiles</a>):
+            </dt>
+            <dd>
+              Define normative algorithms for parsing, consuming and validating Thing Descriptions.
+            </dd>
           </dl>
 	</div>
 
@@ -535,7 +544,7 @@
       <ul>
         <li>https://github.com/w3c/wot-thing-description/pull/945</li>
       </ul>
-    </p>
+      </p>
     <h3 id="td-versioning-workitem">TD Versioning</h3>
       <p>
         TD allows themselves to be versioned. However, the semantics of such versioning is not defined, i.e. the meaning of version numbers.
@@ -549,6 +558,15 @@
           <li>https://github.com/w3c/wot-thing-description/issues/257</li>
           <li>https://github.com/w3c/wot-discovery/issues/257</li>
         </ul>
+      </p>
+    <h3 id="td-consumption-workitem">TD Parsing, Consumption and Validation</h3>
+      <p>
+        Currently the TD specification defines an abstract information model and a default JSON serialization for TDs.
+        However, parsing, consuming and validating TDs are not normatively defined. 
+        A validation process is defined but is not normative, which leads to certain ambiguities for a Consumer parsing a TD.
+        Additionally, no method is proposed for validation the extensions that are used via the prefixes and the <code>@context</code>. 
+        
+        The WG will specify normative algorithms for parsing, consuming and validating TDs to ensure interoperability of Consumers.
       </p>
     
 	</div>
