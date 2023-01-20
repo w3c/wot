@@ -236,6 +236,12 @@
             <a href="#security-deliverable">Security</a>):</dt>
            <dd>Add support for TD signing and support signed TDs in the discovery process.
             Requires definition of TD canonicalization.</dd>
+          <dt><a href="#binding-mechanism-workitem"><strong>Binding Mechanism</strong></a> 
+            (<a href="#binding:-deliverable">Binding Templates</a>,
+              <a href="#thing-description-deliverable">Thing Description</a>,
+              <a href="#security-deliverable">Security</a>,
+              <a href="#profiles-deliverable">Profiles</a>):</dt>
+            <dd>Add normative binding mechanism</dd>
 	        </dl>
 	      </div>
 
@@ -349,7 +355,74 @@
         Directories should be extended to verify signatures and generate new chained signatures
         as needed.
         </p>
-
+  <h3 id="binding-mechanism-workitem">Binding Mechanism</h3>
+    <p>
+      The current mechanism for how a protocol or payload binding should happen is largely informative with some normative text in different deliverables.
+      The WG will consolidate the explanation of the mechanism and explain it in further detail.
+    </p>
+  <h3 id="http-binding-workitem">HTTP Binding</h3>
+    <p>
+      The WG will work on the current HTTP Binding that is split also into the TD specification in order to publish it as a standalone normative document.
+      This will reference the HTTP in RDF ontology, introduce default values and describe the terms associated with the behavior of Things regarding the usage of the HTTP.
+    </p>
+  <h3 id="coap-binding-workitem">CoAP Binding</h3>
+    <p>
+      The WG will work on the current Modbus Binding in order to publish it as a standalone normative document.
+      This will include a CoAP ontology, introduce default values and describe the terms associated with the behavior of Things regarding the usage of the CoAP.
+    </p>
+  <h3 id="mqtt-binding-workitem">MQTT Binding</h3>
+    <p>
+      The WG will work on the current MQTT Binding in order to publish it as a standalone normative document.
+      This will include a MQTT ontology, introduce default values and describe the terms associated with the behavior of Things and Brokers regarding the usage of the MQTT.
+    </p>
+  <h3 id="modbus-binding-workitem">Modbus Binding</h3>
+    <p>
+      The WG will work on the current Modbus Binding in order to publish it as a standalone normative document.
+      This will include a Modbus ontology, introduce default values and describe the terms associated with the behavior of Things regarding the usage of the Modbus.
+    </p>
+  <h3 id="bacnet-binding-workitem" class="todo">BACnet Binding</h3>
+    <p>
+      The WG will work on specifying a BACnet Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include a BACnet ontology, introduce default values and describe the terms associated with the behavior of Things regarding the usage of the BACnet.
+      Note: How should we mention ASHRAE here?
+    </p>
+  <h3 id="opcua-binding-workitem" class="todo">OPC UA Binding</h3>
+    <p>
+      The WG will work on specifying an OPC UA Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include a OPC UA ontology, introduce default values and describe the terms associated with the behavior of Things regarding the usage of the OPC UA.
+      Note: How should we mention OPC Foundation here?
+    </p>
+  <h3 id="gRPC-binding-workitem">gRPC Binding</h3>
+    <p>
+      The WG will work on specifying a gRPC Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include a gRPC ontology, introduce default values and describe the terms associated with the behavior of Things regarding the usage of the gRPC.
+    </p>
+  <h3 id="json-binding-workitem">JSON Binding</h3>
+    <p>
+      The WG will work on specifying a JSON Payload Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include specification on the usage of Data Schema terms as well as <code>contentType</code> term usage within forms.
+    </p>
+  <h3 id="cbor-binding-workitem">CBOR Binding</h3>
+    <p>
+      The WG will work on specifying a CBOR Payload Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include specification on the usage of Data Schema terms as well as <code>contentType</code> term usage within forms.
+    </p>
+  <h3 id="xml-binding-workitem">XML Binding</h3>
+    <p>
+      The WG will work on specifying an XML Payload Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include specification on the usage of Data Schema terms as well as <code>contentType</code> term usage within forms.
+    </p>
+  <h3 id="cloudevents-binding-workitem">CloudEvents Binding</h3>
+    <p>
+      The WG will work on specifying an CloudEvents Payload Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include specification on the usage of Data Schema terms as well as <code>contentType</code> term usage within forms.
+    </p>
+  <h3 id="echonet-binding-workitem" class="todo">ECHONET Lite Web API Binding</h3>
+    <p>
+      The WG will work on specifying an ECHONET Lite Web API Combination Binding for the Web of Things in order to publish it as a standalone normative document.
+      This will include specification on the usage of Data Schema terms, together with how form elements should be structured with possible other assertions on the TD instances.
+      Note: How should we mention ECHONET Consortium here?
+    </p>
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
             <p>The following features are out of scope, and will not be addressed by this Working group.</p>
