@@ -33,7 +33,9 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | Jan 19, 2023 | TD1.1 | CR transition |
 | Jan 19, 2023 | Discovery | CR transition |
 | Jan 19, 2023 | Arch1.1 | CR transition |
-| Jan 16-20, 2023 | Next | Next WG Charter Draft |
+| Jan 16-20, 2023 | Next | Next WG Charter Meeting |
+| Jan 25, 2023 | Discovery | CR2 draft |
+| Feb 8, 2023 | Discovery | CR2 transition request |
 | Feb 16, 2023 | Discovery | CR2 transition |
 | Feb 28, 2023 | Profile | CR draft |
 | Mar 15, 2023 | Profile | CR transition request |
