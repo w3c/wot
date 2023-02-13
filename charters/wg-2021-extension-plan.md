@@ -42,6 +42,7 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | Feb 28, 2023 | Profile | CR draft |
 | Mar 15, 2023 | Profile | CR transition request |
 | Mar 30, 2023 | Profile | CR transition |
+| Mar 30, 2023 | Binding Templates | WG Note Publication |
 | Mar 22, 2023 | Next | Next WG Charter AC Review Complete (submission + 1mo) |
 | April 19, 2023 | TD1.1 | PR transition request (CR transition + 3mo) |
 | April 19, 2023 | Arch1.1 | PR transition request (CR transition + 3mo) |
