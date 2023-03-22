@@ -36,23 +36,24 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | Jan 16-20, 2023 | Next | Next WG Charter Meeting |
 | Jan 25, 2023 | Discovery | CR2 draft |
 | Feb 8, 2023 | Discovery | CR2 transition request |
-| Feb 8, 2023 | Next | Next WG Charter - First Draft |
 | Feb 16, 2023 | Discovery | CR2 transition |
 | Feb 28, 2023 | Profile | CR draft |
 | Mar 1, 2023 | Next | Next WG Charter - Final Draft - Submit |
 | Mar 15, 2023 | Profile | CR transition request |
-| Mar 22, 2023 | Next | Next WG Charter AC Review Complete (submission + 1mo) |
 | Mar 27, 2023 | Scripting API | Note draft ready for group review |
+| Mar 29, 2023 | Next | Next WG Charter - First Draft |
 | Mar 30, 2023 | Profile | CR transition |
 | Mar 30, 2023 | Binding Templates | Starting WG Review |
 | April 13, 2023 | Scripting API | Note published |
 | April 13, 2023 | Binding Templates | Note published |
 | April 19, 2023 | TD1.1 | PR transition request (CR transition + 3mo) |
 | April 19, 2023 | Arch1.1 | PR transition request (CR transition + 3mo) |
+| May 17, 2023 | Next | Next WG Charter W3M/Wide Review Complete (submission + 1.5mo) |
 | May 19, 2023 | Discovery | PR transition request (CR2 transition + 3mo) |
 | May 31, 2023 | Profile | PR transition request (CR transition + 2mo) |
 | June 1, 2023 | Next | Next WG Charter Begins |
 | June 1, 2023 | Next | F2F - {Switzerland,Munich,Tokyo} - tentative |
+| June 14, 2023 | Next | Next WG Charter AC Review Complete (submission + 1mo) |
 | June 29, 2023 | TD 1.1 | REC transition (PR transition request + 1wk + 2mo) |
 | June 29, 2023 | Arch 1.1 | REC transition (PR transition request + 1wk + 2mo) |
 | Aug 3, 2023 | Discovery | REC transition (PR transition request + 1wk + 2mo) |
