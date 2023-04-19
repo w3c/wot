@@ -34,21 +34,19 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | Jan 19, 2023 | Discovery | CR transition |
 | Jan 19, 2023 | Arch1.1 | CR transition |
 | Jan 16-20, 2023 | Next | Next WG Charter Meeting |
-| Jan 25, 2023 | Discovery | CR2 draft |
-| Feb 8, 2023 | Discovery | CR2 transition request |
-| Feb 16, 2023 | Discovery | CR2 transition |
 | Feb 28, 2023 | Profile | CR draft |
-| Mar 1, 2023 | Next | Next WG Charter - Final Draft - Submit |
 | Mar 15, 2023 | Profile | CR transition request |
 | Mar 27, 2023 | Scripting API | Note draft ready for group review |
 | Mar 29, 2023 | Next | Next WG Charter - First Draft |
 | Mar 30, 2023 | Profile | CR transition |
 | Mar 30, 2023 | Binding Templates | Starting WG Review |
+| April 12, 2023 | Next | Next WG Charter - Final Draft - Submit |
 | April 13, 2023 | Architecture Dev Meeting | Note published |
 | April 13, 2023 | Scripting API | Note published |
 | April 13, 2023 | Binding Templates | Note published |
 | April 19, 2023 | TD1.1 | PR transition request (CR transition + 3mo) |
-| April 24, 2023 | Common | Testfest (Architecture, TD, Discovery, Profile ?) |
+| April 19, 2023 | Discovery | (TO UPDATE) PR transition request (CR transition + 3mo) |
+| April 25/26/27, 2023 | Common | Testfest (Architecture, TD, Discovery, Profile) |
 | May 10, 2023 | Arch1.1 | cut-off date for implementation report contributions -  PR draft - at risk items cleaned up |
 | May 17, 2023 | Next | Next WG Charter W3M/Wide Review Complete (submission + 1.5mo) |
 | May 18, 2023 | Arch1.1 | Call for resolution (TF) - PR draft freeze - 1 week review  |
