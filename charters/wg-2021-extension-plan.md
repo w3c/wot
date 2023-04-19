@@ -34,23 +34,26 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | Jan 19, 2023 | Discovery | CR transition |
 | Jan 19, 2023 | Arch1.1 | CR transition |
 | Jan 16-20, 2023 | Next | Next WG Charter Meeting |
-| Jan 25, 2023 | Discovery | CR2 draft |
-| Feb 8, 2023 | Discovery | CR2 transition request |
-| Feb 16, 2023 | Discovery | CR2 transition |
 | Feb 28, 2023 | Profile | CR draft |
-| Mar 1, 2023 | Next | Next WG Charter - Final Draft - Submit |
 | Mar 15, 2023 | Profile | CR transition request |
 | Mar 29, 2023 | Next | Next WG Charter - First Draft |
 | Mar 30, 2023 | Profile | CR transition |
 | Mar 30, 2023 | Binding Templates | Starting WG Review |
 | April 3, 2023 | Scripting API | Note draft ready for group review |
+| April 12, 2023 | Next | Next WG Charter - Final Draft - Submit |
+| April 13, 2023 | Architecture Dev Meeting | Note published |
 | April 13, 2023 | Binding Templates | Note published |
 | April 19, 2023 | TD1.1 | PR transition request (CR transition + 3mo) |
-| April 19, 2023 | Arch1.1 | PR transition request (CR transition + 3mo) |
-| April 24, 2023 | Scripting API | Note published |
+| April 19, 2023 | Discovery | (TO UPDATE) PR transition request (CR transition + 3mo) |
+| April 25/26/27, 2023 | Common | Testfest (Architecture, TD, Discovery, Profile) |
+| April 27, 2023 | Scripting API | Note published (if resolution by April 19) |
+| May 10, 2023 | Arch1.1 | cut-off date for implementation report contributions -  PR draft - at risk items cleaned up |
 | May 17, 2023 | Next | Next WG Charter W3M/Wide Review Complete (submission + 1.5mo) |
+| May 18, 2023 | Arch1.1 | Call for resolution (TF) - PR draft freeze - 1 week review  |
 | May 19, 2023 | Discovery | PR transition request (CR2 transition + 3mo) |
+| May 24, 2023 | Arch1.1 | PR publication resolution (WG) and transition requeset to W3M |
 | May 31, 2023 | Profile | PR transition request (CR transition + 2mo) |
+| June 1, 2023 | Arch1.1 | PR publication |
 | June 1, 2023 | Next | Next WG Charter Begins |
 | June 1, 2023 | Next | F2F - {Switzerland,Munich,Tokyo} - tentative |
 | June 14, 2023 | Next | Next WG Charter AC Review Complete (submission + 1mo) |
