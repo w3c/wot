@@ -54,6 +54,6 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | June 1, 2023 | Next | Next WG Charter Begins |
 | June 1, 2023 | Next | F2F - {Switzerland,Munich,Tokyo} - tentative |
 | June 14, 2023 | Next | Next WG Charter AC Review Complete (submission + 1mo) |
+| June 19-23, 2023 | Next | (PROPOSED) Next WG Charter detailed work planning |
 | June 29, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (PR transition request + 1wk + 2mo) |
-| Aug 3, 2023 | Discovery | REC transition (PR transition request + 1wk + 2mo) |
 | Sept 11-15, 2023 | Next | TPAC 2023 - Seville, Spain |
