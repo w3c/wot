@@ -42,18 +42,17 @@ We are developing a new draft charter proposed to begin in 1 June 2023.
 | April 3, 2023 | Scripting API | Note draft ready for group review |
 | April 12, 2023 | Next | Next WG Charter - Final Draft - Submit |
 | April 13, 2023 | Architecture Dev Meeting | Note published |
-| April 13, 2023 | Binding Templates | Note published |
 | April 25/26/27, 2023 | Common | Testfest (Architecture, TD, Discovery, Profile) |
 | April 27, 2023 | Scripting API | Note published (if resolution by April 19) |
-| May 10, 2023 | Arch1.1, Discovery, TD 1.1 | cut-off date for implementation report contributions -  PR draft - at risk items cleaned up |
+| May 17, 2023 | Arch1.1, Discovery, TD 1.1 | cut-off date for implementation report contributions -  PR draft - at risk items cleaned up |
 | May 17, 2023 | Next | Next WG Charter W3M/Wide Review Complete (submission + 1.5mo) |
-| May 18, 2023 | Arch1.1, Discovery, TD 1.1 | Call for resolution (TF) - PR draft freeze - 1 week review  |
-| May 24, 2023 | Arch1.1, Discovery, TD 1.1 | PR publication resolution (WG) and transition request to W3M |
-| May 31, 2023 | Profile | PR transition request (CR transition + 2mo) |
-| June 1, 2023 | Arch1.1, Discovery, TD 1.1 | PR publication |
-| June 1, 2023 | Next | Next WG Charter Begins |
-| June 1, 2023 | Next | F2F - {Switzerland,Munich,Tokyo} - tentative |
+| May 18, 2023 | Binding Templates | Publish updated Note |
+| May 24, 2023 | Arch1.1, Discovery, TD 1.1 | Call for resolution (TF) - PR draft freeze - 1 week review  |
+| May 31, 2023 | Arch1.1, Discovery, TD 1.1 | PR publication resolution (WG) and transition request to W3M |
+| June 7, 2023 | Profile | PR transition request (CR transition + 2mo) |
+| June 14, 2023 | Arch1.1, Discovery, TD 1.1 | PR publication |
 | June 14, 2023 | Next | Next WG Charter AC Review Complete (submission + 1mo) |
 | June 19-23, 2023 | Next | (PROPOSED) Next WG Charter detailed work planning |
-| June 29, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (PR transition request + 1wk + 2mo) |
+| July 1, 2023 | Next | Next WG Charter Begins |
+| July 6, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (PR transition request + 1wk + 2mo) |
 | Sept 11-15, 2023 | Next | TPAC 2023 - Seville, Spain |
