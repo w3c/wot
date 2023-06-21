@@ -16,6 +16,9 @@ Prioritized list of work items related to Discovery.
 - Following not yet actually prioritized, we may need to split into smaller work items first
 - Update base URL to work-item list after it gets moved
 - Need to add requirements and links from each work item, below only a couple of examples are given
+     - Link to requirements in wot-architecture
+     - We could also put these in a document, or in MD files under each deliverable
+     - However, a single list of requirements would allow us to address requirements that span more than one deliverable
 
 ### Prioritized List
 1. Direct - [Discovery Improvements](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-improvements-workitem)
@@ -32,6 +35,7 @@ Prioritized list of work items related to Discovery.
     * As above, but if meant for development may not be relevant to TDDs; to discuss.
 10. Dependency - [Geolocation](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#geolocation-workitem)
     * Assuming geolocation data added to TDs, this would add geolocation query support to Discovery.
+    * Requirements: https://github.com/w3c/wot-architecture/blob/main/REQUIREMENTS/geolocation.md
 11. Dependency - [Onboarding](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#onboarding-workitem)
     * Onboarding is actually about establishing trust and identification but may be a preliminary to or related to TDD registration.
 12. Dependency - [TD Versioning](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#td-versioning-workitem)
