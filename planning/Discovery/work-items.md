@@ -40,7 +40,7 @@ Prioritized list of work items related to Discovery.
     * Onboarding is actually about establishing trust and identification but may be a preliminary to or related to TDD registration.
 12. Dependency - [TD Versioning](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#td-versioning-workitem)
     * Impact on Discovery includes how or whether to maintain multiple versions of a single TD, and possibly filtering by version.
-13. Dependency - [Interoperability Profiles<](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#profiles-workitem)
+13. Dependency - [Interoperability Profiles](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#profiles-workitem)
     * Should TDDs also satisfy a Profile?
 14. Process - [WoT CG Coordination](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#wotcg-coordination)
     * Gathering information on requirements, implementations, feedback on current versions, suggestions for improvement, etc.
