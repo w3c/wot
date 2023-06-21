@@ -10,9 +10,9 @@ Prioritized list of work items related to Discovery.
  
 ### To do:
 - Assign "categories" to work items to cluster them into a smaller number of "feature sets".
-      - Right now have categories for "Direct" (internal Discovery feature),
-        "Dependency" (involved in more than one deliverable), and "Process" (not really a spec feature,
-        but a procedural matter).
+    - Right now have categories for "Direct" (internal Discovery feature),
+      "Dependency" (involved in more than one deliverable), and "Process" (not really a spec feature,
+      but a procedural matter).
 - Following not yet actually prioritized, we may need to split into smaller work items first
 - Update base URL to work-item list after it gets moved
 - Need to add requirements and links from each work item, below only a couple of examples are given
