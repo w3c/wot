@@ -24,9 +24,16 @@ What purposes does the Architecture document serve, and how can it be restructur
 If Architecture is made informative, what should we do with existing normative security content?
 Options include:
 1. Make all security content informative.
-2. Move normative security content to a Profile - they apply primarily to greenfield systems.
-3. Move normative security content to a new normative Security deliverable - would require modifying the charter.
-4. Move normative security content to other deliverables, e.g. to TD or Discovery.
+     - Not ideal, some of it is useful.
+3. Move normative security content to a Profile
+     - Would make sense as they apply primarily to greenfield systems.
+     - Some of the security assertions in other documents could also move into the same profile.
+     - Would mean that WoT Things that need to support security, e.g. Discovery TDDs, would have to mandate a Profile.
+     - Profiles would have to be understood as constraining the implementation, not just the TD, so support assertions like HAL, secure updates, etc.
+5. Move normative security content to a new normative Security deliverable
+     - Would require modifying the charter.
+7. Move normative security content to other deliverables, e.g. to TD or Discovery.
+     - Some don't really fit into any deliverable, e.g. secure update, HAL.
 
 ### Privacy Assertions
 Same options as with security, although privacy assertions tend to be more "policy-like".
