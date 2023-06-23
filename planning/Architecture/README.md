@@ -5,6 +5,7 @@ To be discussed during planning.
 
 ### Informative vs. Normative
 Should we make Architecture informative?
+- If we do, we need to determine disposition of existing normative content.
 
 ### Restructuring
 What purposes does the Architecture document serve, and how can it be restructured to serve these purposes better?
