@@ -65,6 +65,7 @@ Discussion:
      - Would need to align profile requirements so it can support this usage.
      - Could also have different profiles for different levels of security, trading off with resource needs, etc.
      - May also have different profiles for different privacy needs, e.g. PII or not
+- There are also security assertions in other documents that may also need to be relocated...
 
 ### Privacy Assertions
 Same options as with security, although privacy assertions tend to be more "policy-like".
