@@ -16,6 +16,9 @@ See also Architecture.  The following are not covered by that discussion.
 ### Ease of Use
 - Inlined security scheme definitions
 
+### Onboarding
+- Where will this go, especially if Architecture is made informative?
+
 ### Other
 - Security improvements driven by new bindings
 
