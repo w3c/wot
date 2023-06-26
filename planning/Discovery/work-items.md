@@ -44,8 +44,19 @@ Prioritized list of work items related to Discovery.
     * Should TDDs also satisfy a Profile?
 14. Process - [WoT CG Coordination](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#wotcg-coordination)
     * Gathering information on requirements, implementations, feedback on current versions, suggestions for improvement, etc.
+15. Direct - Placeholder - Sort-by Filtering
+16. Direct - Placeholder - Validation
+17. Direct - Placeholder - TD Versions
+18. Direct - Placeholder - Version Selection
+19. Direct - Placeholder - Improve Security
 
 ## Other/New/Proposed
 Other possible work-items needed:
 * sort-by filtering (was taken out at the last minute, but relates to query filters)
 * break "improvements" into smaller individual work-items so they can be prioritized
+    - Currently: "Various updates are expected to be needed to align the Discovery spec with updates to other proposed deliverables in this charter, for example updates to the information model, including support for all versions of the Thing Description specification, and to improve security and validation."
+    - Break into:
+            - Validation - Improve validation of TDs registered with TDDs
+            - TD Versions - Update information model to allow TD 2.0 (and multiple different versions of TDs)
+            - Version Selection - Fetch specific version of TD if available (including from TDDs) - e.g. fetch TD 1.1 if available, TD 2.0 if available, etc.
+            - Improve Security - general
