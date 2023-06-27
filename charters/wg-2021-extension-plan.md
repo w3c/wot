@@ -1,4 +1,7 @@
 # WG Extension Plan
+Note: the schedule has been moved to [planning/schedule.md](https://github.com/w3c/wot/blob/main/planning/schedule.md).  New edits should be done on that
+file, this one should be considered an archive.
+
 We will request an extension to the current (2019) WG charter, based on the following plan.
 We are developing a new draft charter proposed to begin in 1 June 2023.
 
