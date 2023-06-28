@@ -59,7 +59,7 @@ the renewed WG charter (probably to start sometime in August).
 | TBD, 2023 | Next | Next WG Charter AC Review Complete (W3M review complete + 1mo) |
 | June 19-23, 2023 | Next | (PROPOSED) Next WG Charter detailed work planning |
 | July 6, 2023 | Arch 1.1, Discovery, TD 1.1 | PR publication (estimate) |
-| mid-Aug, 2023 | Next | Next WG Charter Begins (estimate) |
 | mid-Aug, 2023 | Next | Deadline for Press Release for  Arch 1.1, Discovery, TD 1.1 |
 | mid-Aug, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (estimate PR transition request + 1wk + 2mo) |
+| 1 Sept, 2023 | Next | Next WG Charter Begins (estimate) |
 | Sept 11-15, 2023 | Next | TPAC 2023 - Seville, Spain |
