@@ -25,7 +25,7 @@ OPCF:
 * guideline to transform UA nodeset to Thing Description (and vice versa) or UA browsing to Thing Description
 
 WoT:
-* Provide formal approach how TD forms should be designed for UA based endpoints based on OPC UA Binding metadata (similar with, e.g., Modbus)
+* Provide formal approach how Thing Description forms (the part of the Thing Description that provide concrete connection information, including URLs and protocol methods) should be designed for UA based endpoints based on OPC UA Binding metadata (similar with, e.g., Modbus)
 *  organize PlugFest and design scenarios to evaluate working assumptions
 
 ## Deliverables 
