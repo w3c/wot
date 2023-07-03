@@ -79,3 +79,5 @@ Other possible work-items needed:
         - Version Selection - Fetch specific version of TD if available (including from TDDs) - e.g. fetch TD 1.1 if available, TD 2.0 if available, etc.
         - Improve Security - general
 * additional introductions
+    - e.g. MQTT Discovery, etc.
+    - also improved local introductions (Andrea to propose concrete suggestions)
