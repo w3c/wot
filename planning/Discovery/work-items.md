@@ -74,8 +74,8 @@ Other possible work-items needed:
 * break "improvements" into smaller individual work-items so they can be prioritized
     - Currently: "Various updates are expected to be needed to align the Discovery spec with updates to other proposed deliverables in this charter, for example updates to the information model, including support for all versions of the Thing Description specification, and to improve security and validation."
     - Break into:
-            - Validation - Improve validation of TDs registered with TDDs
-            - TD Versions - Update information model to allow TD 2.0 (and multiple different versions of TDs)
-            - Version Selection - Fetch specific version of TD if available (including from TDDs) - e.g. fetch TD 1.1 if available, TD 2.0 if available, etc.
-            - Improve Security - general
+        - Validation - Improve validation of TDs registered with TDDs
+        - TD Versions - Update information model to allow TD 2.0 (and multiple different versions of TDs)
+        - Version Selection - Fetch specific version of TD if available (including from TDDs) - e.g. fetch TD 1.1 if available, TD 2.0 if available, etc.
+        - Improve Security - general
 * additional introductions
