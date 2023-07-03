@@ -1,4 +1,4 @@
-# Organization Name
+![image](https://github.com/w3c/wot/assets/13832739/aa5ad207-dd67-4b8b-9c0d-8b1754e44424))![image](https://github.com/w3c/wot/assets/13832739/8fd03131-91be-4135-b06d-68df3a3b20ea)# Organization Name
 OPC Foundation (https://opcfoundation.org/)
 
 ## Purpose 
@@ -7,7 +7,7 @@ To describe OPC UA-based devices with a W3C WoT Thing Description, specific meta
 information that enables the connection to an OPC UA device/server and indicates how to retrieve specific OPC UA data and/or 
 functions from the device.
 
-The usage of those specific metadata in the WoT Thing Description should be described in an 'OPC UA Binding' W3C Note document, 
+The usage of those specific metadata in the WoT Thing Description should be described in an 'OPC UA Binding' (W3C Note) document, 
 similar to what exists, e.g., for Modbus.
 
 ## Participants
@@ -16,20 +16,22 @@ Who is involved and what is their role?
 * members from W3C WoT (applying OPC UA metadata to WoT Thing Description)
 
 ## Scope 
+The primary aim is to collaboratively define the aforementioned 'OPC UA Binding' document, which can be utilized to create the Thing Description for a device/server with an OPC UA interface. Doing this, OPC UA-specific metadata are required, which either need to be formally selected (e.g, for node addressing like with nodeId or extendedNodeId), or newly defined within an OPC UA-specific namespace (e.g., for security purposes). In addition, a strategy will be provided how Thing Descriptions can be generated automatically using OPC UA mechanisms, such as those from UA nodesets or UA browsing mechanisms.
+
+To work together on this document, we need expertise from both SDOs in the following areas:
+
 OPCF: 
-* defines OPC UA Binding metadata for communication and security definition (namespace already exists for UA data
-modeling)
-* Optional: guideline to transform UA NodesetFile to Thing Description (and vice versa)
+* selecting, and if necessary, defining new OPC UA Binding metadata for communication and security definitions (note: namespace already exists for UA data modeling)
+* guideline to transform UA nodeset to Thing Description (and vice versa) or UA browsing to Thing Description
 
 WoT:
-* Provide formal approach how TD forms should be designed for UA based endpoints
-based on OPC UA Binding Ontology (similar with, e.g., HTTP)
+* Provide formal approach how TD forms should be designed for UA based endpoints based on OPC UA Binding metadata (similar with, e.g., Modbus)
 *  organize PlugFest and design scenarios to evaluate working assumptions
 
 ## Deliverables 
 What deliverables are being created by which organization, if any?
-* W3C Note OPC UA Binding for Web of Things
-* OPC UA companion specification defines OPC UA Binding Metadata
+* joint OPC UA Binding for Web of Things document (as Note Document at the W3C / as Companion Specification at the OPCF)
+* if needed, OPC UA companion specification defines OPC UA Binding metadata (alternatively, this can be part of the new OPC UA Web-of-Things Connectivity WG)
 
 ## Dependencies
 What depends on what?
