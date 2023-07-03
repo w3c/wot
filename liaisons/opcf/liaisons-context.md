@@ -1,4 +1,4 @@
-![image](https://github.com/w3c/wot/assets/13832739/aa5ad207-dd67-4b8b-9c0d-8b1754e44424))![image](https://github.com/w3c/wot/assets/13832739/8fd03131-91be-4135-b06d-68df3a3b20ea)# Organization Name
+# Organization Name
 OPC Foundation (https://opcfoundation.org/)
 
 ## Purpose 
