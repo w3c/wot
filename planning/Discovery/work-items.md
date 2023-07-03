@@ -23,44 +23,48 @@ Prioritized list of work items related to Discovery.
 ### Prioritized List
 
 #### Higher Priority
-1. Direct - [Discovery Query Filters](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-query-filters-workitem)
-2. Direct - [Discovery JSON Path Query Language](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-jsonpath-query-language-workitem)
-3. Direct - Placeholder - Sort-by Filtering
+1. [Discovery Query Filters](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-query-filters-workitem)
+2. [Discovery JSON Path Query Language](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-jsonpath-query-language-workitem)
+3. Placeholder - Sort-by Filtering
     * Related to query filters, since can be used to prioritize results
     * Need to define what to do with TDs that don't have field used for sorting
-4. Direct - Placeholder - Improve Security
+4. Placeholder - Improve Security
     * Subset of [Discovery Improvements](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-improvements-workitem)
-5. Dependency - [Signing](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#signing-workitem)
-6. Dependency - [Canonicalization](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#canon-workitem)
-7. Dependency - [Normative TD Parsing, Consuming and Validation](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#td-consumption-workitem)
-    * Relevance: In order to support queries, TD content needs to be parsed by directory, and only valid TDs should be stored in TDDs.
-(https://github.com/w3c/wot-usecases/blob/main/REQUIREMENTS/geolocation-requirements.md)
-8. Dependency - [TD Versioning](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#td-versioning-workitem)
-    * Impact on Discovery includes how or whether to maintain multiple versions of a single TD, and possibly filtering by version.
-9. Dependency - [Interoperability Profiles](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#profiles-workitem)
-    * Should TDDs also satisfy a Profile?
-10. Process - [WoT CG Coordination](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#wotcg-coordination)
-    * Gathering information on requirements, implementations, feedback on current versions, suggestions for improvement, etc.
-11. Direct - Placeholder - Validation
+11. Placeholder - Validation
     * Subset of [Discovery Improvements](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-improvements-workitem)
-12. Direct - Placeholder - TD Versions
+12. Placeholder - TD Versions
     * Subset of [Discovery Improvements](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-improvements-workitem)
-13. Direct - Placeholder - Version Selection
+13. Placeholder - Version Selection
     * Subset of [Discovery Improvements](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-improvements-workitem)
-14. Direct - Placeholder - Additional Introductions
+14. Placeholder - Additional Introductions
     * To be researched, but to support additional ecosystems
     * Examples: MQTT Discovery, OPC UA Discovery
     
-#### Middle Priority
-1. Direct - [Discovery CoAP Directory](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-coap-dir-workitem)
-2. Dependency - [Geolocation](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#geolocation-workitem)
-    * Assuming geolocation data added to TDs, this would add geolocation query support to Discovery.
+#### Lower Priority
+1. [Discovery CoAP Directory](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-coap-dir-workitem)
+2. [Geolocation (Query Part)](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#geolocation-workitem)
+    * Assuming geolocation metadata added to TDs (a dependency), this would add geolocation query support to Discovery.
     * May be higher priority for some use cases - more analysis needed
     * Requirements: [https://github.com/w3c/wot-architecture/blob/main/REQUIREMENTS/geolocation.md]
-3. Dependency - [Onboarding](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#onboarding-workitem)
-    * Onboarding is actually about establishing trust and identification but may be a preliminary to or related to TDD registration.
 
-#### Lower Priority
+#### Dependencies
+* [Onboarding](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#onboarding-workitem)
+    * Onboarding is actually about establishing trust and identification but may be a preliminary to or related to TDD registration.
+* [Geolocation (Metadata Part)](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#geolocation-workitem)
+    - [Requirements](https://github.com/w3c/wot-usecases/blob/main/REQUIREMENTS/geolocation-requirements.md)
+* [Signing](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#signing-workitem)
+* [Canonicalization](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#canon-workitem)
+* [Normative TD Parsing, Consuming and Validation](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#td-consumption-workitem)
+    * Relevance: In order to support queries, TD content needs to be parsed by directory, and only valid TDs should be stored in TDDs.
+* [TD Versioning](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#td-versioning-workitem)
+    * Impact on Discovery includes how or whether to maintain multiple versions of a single TD, and possibly filtering by version.
+* [Interoperability Profiles](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#profiles-workitem)
+    * Should TDDs also satisfy a Profile?
+    * This would specifically about changes to the TDD Thing Model to include a specific profile.
+
+#### Process
+* [WoT CG Coordination](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#wotcg-coordination)
+    * Gathering information on requirements, implementations, feedback on current versions, suggestions for improvement, etc.
 
 #### Questionable/Tentative
 1. Dependency - [Linting mechanism for TDs](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#td-linting-workitem)
@@ -81,3 +85,14 @@ Other possible work-items needed:
 * additional introductions
     - e.g. MQTT Discovery, etc.
     - also improved local introductions (Andrea to propose concrete suggestions)
+ 
+## Open Questions
+* Backward compatibility (Discovery 1.1 vs. Discovery 2.0)
+* Compability with existing discovery mechanisms
+     - should confirm that WoT Discovery is in fact compatible with CoRE RD, well-known URLs, etc.
+* Mapping from other forms of metadata and bridging to other ecosystems' discovery mechanisms
+     - Should generation of TDs for devices that have other forms of metadata be part of Discovery?
+     - Compatible with consideration of other discovery mechanisms, e.g. should WoT Discovery gather metadata proactively?
+     - Should WoT Discovery act as a "bridge" to MQTT Discovery, Zigbee Discovery etc.?
+     - Note that systems like Zigbee have standardized data models, so translation is not that difficult (just instantiate a standard Thing Model as a TD by filling in URLs, etc).
+     - Closely related to Binding for particular ecosystems (which define what TDs should look like)
