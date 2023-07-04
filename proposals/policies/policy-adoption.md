@@ -10,3 +10,6 @@
     - In this case the draft proposal will stay in the proposals directory and a new PR will be made against it for the changes.
     - The review period will be shortened to one week less a day after the PR with the change is created and an email is set to the membership linking to this PR and calling for a resolution.
     - Ideally the PR is created the same day as the WoT main call in which case it is acceptable to have a resolution in the next WoT main call to adopt it.
+    - This process may be repeated if necessary.
+- Rejected policies (for which no consensus can be reached in a group resolution or for which the group resolution is to reject the policy proposal) should be moved to a "rejected" subdirectory under the "proposals" directory.
+    - Again, the proposal version MUST be deleted; it should be a "move" not a "copy".
