@@ -3,6 +3,13 @@ Note: The following is in the (draft) WoT charter, so this policy will be active
 the charter is approved and can only be changed by modifying the charter.  It is included here 
 only for information.
 
+However, the following interpretations are to be included in this policy as clarifications:
+- "Working Days" will be defined as Monday through Friday, ignoring holidays
+    - Holidays are not consistent between international locales, and taking the union of all holidays by all participants would create too much complication and delay, so we will adopt the simpler policy of ignoring them.
+    - In practice 5 working days is one week for review and 10 working days is two weeks.
+- If a call for resolution is created and distributed the same day as a WoT main call the entire day will be considered as being available for review.
+    - In particular, in practice this allows for a resolution to take place in a WoT main call two weeks after a call for resolution made the same day as a WoT main call.
+
 ## Group Decisions
       <p>
         This group will seek to make decisions through consensus and due process, per the <a
