@@ -1,4 +1,5 @@
-# Web of Things (WoT) Architecture
+# Web of Things (WoT) Architecture (Draft)
+- please consider Ben's comment https://github.com/w3c/wot/pull/1096#issuecomment-1611130514
 
 ## Decisions
 To be discussed during planning.
