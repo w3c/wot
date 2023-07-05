@@ -16,3 +16,4 @@
     - This process may be repeated if necessary.
 - Rejected policies (for which no consensus can be reached in a group resolution or for which the group resolution is to reject the policy proposal) should be moved to a "rejected" subdirectory under the "proposals" directory.
     - Again, the proposal version MUST be deleted; it should be a "move" not a "copy".
+    - For each rejected policy there should be a reason provided why it was rejected
