@@ -1,4 +1,4 @@
-# Web of Things (WoT) Security
+# Web of Things (WoT) Security (Draft)
 
 ## Decisions
 See also Architecture.  The following are not covered by that discussion.
