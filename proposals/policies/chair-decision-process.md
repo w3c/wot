@@ -1,4 +1,4 @@
-# Web of Things (WoT) Policy
+# Web of Things (WoT) Policy (Draft)
 ## Chairs' Decision Process and Quorum
 - The following relates only to decisions that the WG agrees can be delegated to chairs, which includes the following:
     - TBD, ex. rejecting unsolicited IE applications
