@@ -5,7 +5,7 @@ Links to org and background
 What is the goal of the liaison?
 
 ## Participants
-Who is involved and what is their role?
+Who suggested this liaison (e.g., IG, CG)? Who is lead contact (from which organization)? Who is organizing the liaison? Who is involved and what is their role?
 
 ## Scope 
 What work needs to be done, by whom?
