@@ -1,4 +1,4 @@
-# Organization Name
+# {Organization Name}
 Links to org and background
 
 ## Purpose 
