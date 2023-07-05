@@ -1,4 +1,4 @@
-# Web of Things (WoT) Policy
+# Web of Things (WoT) Policy (Draft)
 ## Policy Adoption
 - To propose a new policy, first create a PR against [wot/proposals/policies](https://github.com/w3c/wot/main/proposals/policies).
     - Comments taken on the PR can be used for gathering feedback during "development"
