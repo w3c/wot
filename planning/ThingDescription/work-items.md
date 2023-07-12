@@ -30,3 +30,7 @@ Also, see https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details and https
 - Normative Parsing, Validation, Consumption
 - Signing and Canonicalization
 - TD Versioning
+
+## Notes
+
+We should use <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md> to find relevant issues
