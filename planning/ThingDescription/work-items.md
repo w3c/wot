@@ -16,6 +16,7 @@ Also, see https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details and https
   - `href` and URI design
   - External Security Ontologies 
 - Reusable Elements and pointers (e.g. reusable payloads, initial connection)
+- Restructuring the TD Specification and Specification Generation
 - Inline Security
 
 ## Feature Aiming Work Items
