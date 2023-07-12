@@ -7,6 +7,8 @@ This version extends it by taking the reviews into account, while moving the pro
 
 ## Proposed Solution
 
+### Overall Idea
+
 It is proposed to use GitHub's built-in [code review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) to formally review pull requests without having to wait for a decision in a synchronous weekly call.
 This form of asynchronous decision process specifies how to conduct asynchronous decisions that are already written in the Working Group's existing [Decision Policy](https://www.w3.org/2020/01/wot-wg-charter.html#decisions).
 
