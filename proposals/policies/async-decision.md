@@ -1,6 +1,7 @@
 # Web of Things (WoT) Asynchronous Decision Policy
 
 This is a proposal to make the review process for specification changes more efficient by using asynchronous tools, rather than following the current unwritten rule that pull requests can only be merged following a resolution in a synchronous weekly conference call.
+The scope of this policy is limited to individual documents or deliverables where the editors are the editors of the document or deliverable in scope.
 
 This proposal was originally [submitted](https://lists.w3.org/Archives/Public/public-wot-wg/2021Aug/0006.html) to the public-wot-wg mailing list on 3rd August 2021 and followed up by @benfrancis at https://github.com/w3c/wot/pull/1005/files.
 This version extends it by taking the reviews into account, while moving the problem and notes into an Appendix section.
