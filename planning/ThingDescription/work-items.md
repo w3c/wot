@@ -13,9 +13,9 @@ Also see https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details and https:
 - Binding Mechanism
   - Mapping TD elements to messages
   - Payload Driven Protocols (e.g. WS, SSE)
-  - `href` and URI design 
+  - `href` and URI design
+  - External Security Ontologies 
 - Reusable Elements and pointers (e.g. reusable payloads, initial connection)
-- External Security Ontologies 
 - Inline Security
 
 ## Feature Aiming Work Items
