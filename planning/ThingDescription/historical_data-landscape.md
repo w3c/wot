@@ -29,3 +29,5 @@ To find the related use cases, the [coverage document](https://github.com/w3c/wo
 
 ## Existing Solutions
 
+- [Timeseries Data Submodel Specification at IDTA](https://industrialdigitaltwin.org/wp-content/uploads/2023/03/IDTA-02008-1-1_Submodel_TimeSeriesData.pdf)
+- [InfluxDB Timeseries Data oriented Database](https://www.influxdata.com/)
