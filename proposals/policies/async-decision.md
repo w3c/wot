@@ -19,7 +19,7 @@ This form of asynchronous decision process specifies how to conduct asynchronous
 
 ### Normative Changes
 
-- For normative or breaking changes to a specification, approval is required by at least two Editors of a specification that are not from the same organization. Editors should use GitHub's code review tool to either:
+- For normative or breaking changes to a specification, approval is required by at least two Editors of a specification who are not from the same organization or who are Invited Experts. Editors should use GitHub's code review tool to either:
   - Approve the pull request. The approval should be clear and if there any further changes needed, they should be requested to the pull request (see below) or a separate issue should be opened.
   - Request changes to the pull request, explained in a comment
   - Comment to say that they have no strong opinion or that they abstain, deferring to the opinion of other editors
