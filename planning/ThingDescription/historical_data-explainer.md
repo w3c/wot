@@ -1,4 +1,4 @@
-# Landscape of Historical Data Work Item
+# Explainer of Historical Data Work Item
 
 This document puts together all information related to timeseries or historical data related topics.
 These include issues, use cases, and discussions in other forms.
