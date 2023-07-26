@@ -1,0 +1,31 @@
+# Landscape of Historical Data Work Item
+
+This document puts together all information related to timeseries or historical data related topics.
+These include issues, use cases, and discussions in other forms.
+
+## Overall Description of the Topic
+
+Some edge and cloud services can collect property value changes or event emissions for a certain time.
+This data, called timeseries, can be collected by Consumers to display (or use in any other way) the evolution of the affordance data over time.
+
+## Use Cases
+
+To find the related use cases, the [coverage document](https://github.com/w3c/wot-usecases/blob/main/USE-CASES/coverage.csv) has been used and another pass through the [use cases document](https://w3c.github.io/wot-usecases) has been made.
+
+- [Smart Agriculture - Greehouse Horticulture](https://w3c.github.io/wot-usecases/#smart-agriculture)
+- [Smart Agriculture - Open-field Agriculture](https://w3c.github.io/wot-usecases/#smart-agriculture-openfield)
+- [Smart City - Geolocation](https://w3c.github.io/wot-usecases/#smartcity-geolocation)
+- [Smart City - Dashboard](https://w3c.github.io/wot-usecases/#smartcity-dashboard)
+- [Smart City - Connected Building Energy Efficiency](https://w3c.github.io/wot-usecases/#connected-building-energy-efficiency)
+- [Digital Twin - Digital Twin 2](https://w3c.github.io/wot-usecases/#digital-twin-2)
+- [VR/AR - AR Virtual Guide](https://w3c.github.io/wot-usecases/#ar-guide)
+
+## Issues
+
+- [Historical Events](https://github.com/w3c/wot-thing-description/issues/892)
+- [Historical Property Updates](https://github.com/w3c/wot-thing-description/issues/302#issuecomment-441235444)
+
+## Other Discussions
+
+## Existing Solutions
+

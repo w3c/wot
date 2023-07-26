@@ -58,7 +58,7 @@ Also, see https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details and https
 
 ### Feature Aiming Work Items
 
-- Timeseries
+- Historical Data
 - Manageable Actions
 - Streaming
 
