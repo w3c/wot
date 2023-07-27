@@ -1,5 +1,5 @@
 # Improved Web of Things Unifies Diverse IoT Systems [DRAFT]
-** THIS IS A DRAFT.  The WoT deliverables cited below are still in Proposed Recommendation status.**
+** THIS IS A DRAFT. The WoT deliverables cited below are still in Proposed Recommendation status.**
 
 https://www.w3.org/ — DD MM 2023 — The World Wide Web Consortium (W3C) announced today that 
 [Web of Things (WoT) Architecture 1.1](https://www.w3.org/TR/wot-architecture11/),
