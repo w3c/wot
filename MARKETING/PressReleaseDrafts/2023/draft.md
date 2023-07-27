@@ -5,7 +5,7 @@ https://www.w3.org/ — DD MM 2023 — The World Wide Web Consortium (W3C) annou
 [Web of Things (WoT) Architecture 1.1](https://www.w3.org/TR/wot-architecture11/),
 [Web of Things (WoT) Thing Description 1.1](https://www.w3.org/TR/wot-thing-description11/), 
 and 
-[WoT Discovery](https://www.w3.org/TR/wot-discovery/)
+[Web of Things (WoT) Discovery](https://www.w3.org/TR/wot-discovery/)
 are now official W3C Recommendations.
 Without breaking compatibility with the [first release in 2020](https://www.w3.org/2020/04/pressrelease-wot-rec.html),
 these new W3C Recommendations improve and expand the scope of the Web of Things,
