@@ -44,7 +44,7 @@ A searchable Thing Description Directory service is defined supporting semantic 
 
 <!-- What is the impact? -->
 ## Widely Adopted and Supported
-{Testimonials from WG members}
+{Testimonials from WG members go here}
 
 Many [software packages and open-source projects now support WoT](https://www.w3.org/WoT/developers/), including
 tools for Thing Description validation and construction as well as support for Thing runtimes and 
