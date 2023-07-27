@@ -22,7 +22,7 @@ communication protocols and data standards.
 In short, the WoT uses web technology to harmonize access to diverse
 IoT devices an breaks silo walls.
 
-<img href="https://www.w3.org/WoT/images/wot-mappings.png">
+ <img src="https://www.w3.org/WoT/images/wot-mappings.png" class="img-responsive" alt="WoT Interactions" />
 
 <!-- What is new? -->
 ## Significant Improvements and Functionality
