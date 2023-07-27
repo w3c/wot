@@ -53,4 +53,5 @@ Thing Description directories supporting discovery.
 The Web of Things has been adopted or is under consideration for adoption by
 several other standards organizations, including ECHONET, OPC UA, and IPA DADC.
 
-User community (users that are not WG members, WoT CG)
+The growing WoT user community is supported by multiple [WoT Community Groups](https://www.w3.org/WoT/cg/), 
+which hold regular meetings to share information on WoT and its applications in both English and Japanese.
