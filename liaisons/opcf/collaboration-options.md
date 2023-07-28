@@ -40,6 +40,9 @@ Cons
 OPCF Members setup an OPC UA Binding document as OPC UA Companion. W3C WoT experts can be involved for getting feedback.
 
 Pro
-*  conformance testing organized by OPC UA according to their needs.
-*  follows the new de-coupling binding approache of the new WoT charter 
+* conformance testing organized by OPC UA according to their needs.
+* follows the new de-coupling binding approache of the new WoT charter
+
+Cons
+* Binding is not under control of the WoT WG and will require coordination to ensure it follows a consistent template, document structure, is consistent with the TD specification, etc.
 
