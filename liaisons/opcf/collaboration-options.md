@@ -14,7 +14,9 @@ A previously developed W3C Note about OPC UA Binding can be used or transformed 
 OPC UA *may* later adopt it or modify it as a companion specification.
 
 Pro
-*  includes testing
+* includes testing
+* the decision to convert from a Note to a Rec will require AC review, which (if successful) will give the document more of a mandate from W3C as a whole
+* assertions and RFC2119 keywords will be more appropriate
 
 Cons
 * still no conformance testing provided
