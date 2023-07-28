@@ -27,6 +27,7 @@ Cons
 
 # As W3C REC only
 W3C members setup an OPC UA Binding document as W3C Recommendation. OPC UA experts can be involved for getting feedback in that work. 
+OPC UA *may* later adopt it or modify it as a companion specification.
 
 Pro
 * includes testing
