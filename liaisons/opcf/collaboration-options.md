@@ -2,6 +2,7 @@ There are several options how the development of the OPC UA Binding for the Web 
 
 # As W3C Note
 W3C members setup an OPC UA Binding document as W3C Note. OPC UA experts can be involved for getting feedback.
+OPC UA *may* later adopt it or modify it as a companion specification.
 
 Pro
 * aligned with existing approaches such as Modbus Binding
