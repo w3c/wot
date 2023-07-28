@@ -27,7 +27,8 @@ Cons
 W3C members setup an OPC UA Binding document as W3C Recommendation. OPC UA experts can be involved for getting feedback in that work. 
 
 Pro
-*  includes testing
+* includes testing
+* as above, "mandate" and "assertive language" benefits
 
 Cons
 * still no conformance testing provided
