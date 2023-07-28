@@ -9,6 +9,7 @@ Pro
 
 Cons
 * no testing / conformance testing provided
+* potential for adopted OPC UA companions specification to diverge from W3C version
 
 # Develop W3C Note, transform it later into a W3C REC
 A previously developed W3C Note about OPC UA Binding can be used or transformed to a REC. OPC UA experts can be involved for getting feedback. 
