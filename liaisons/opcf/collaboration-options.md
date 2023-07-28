@@ -4,7 +4,7 @@ There are several options how the development of the OPC UA Binding for the Web 
 W3C members setup an OPC UA Binding document as W3C Note. OPC UA experts can be involved for getting feedback.
 
 Pro
-* alligned with existing approaches such as with Modbus Binding
+* aligned with existing approaches such as Modbus Binding
 
 Cons
 * no testing / conformance testing provided
