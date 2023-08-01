@@ -1,16 +1,16 @@
-# Web of Things (WoT) Asynchronous Decision Policy
+# Web of Things (WoT) Asynchronous Decision Policy DRAFT
 
-This is a proposal to make the review process for specification changes more efficient by using asynchronous tools, rather than following the current unwritten rule that pull requests can only be merged following a resolution in a synchronous weekly conference call.
+This is a policy to make the review process for specification changes more efficient by using asynchronous tools, rather than following the current unwritten rule that pull requests can only be merged following a resolution in a synchronous weekly conference call.
 The scope of this policy is limited to individual documents or deliverables where the editors are the editors of the document or deliverable in scope.
 
-This proposal was originally [submitted](https://lists.w3.org/Archives/Public/public-wot-wg/2021Aug/0006.html) to the public-wot-wg mailing list on 3rd August 2021 and followed up by @benfrancis at https://github.com/w3c/wot/pull/1005/files.
+This policy was originally [submitted](https://lists.w3.org/Archives/Public/public-wot-wg/2021Aug/0006.html) to the public-wot-wg mailing list on 3rd August 2021 and followed up by @benfrancis at https://github.com/w3c/wot/pull/1005/files.
 This version extends it by taking the reviews into account, while moving the problem and notes into an Appendix section.
 
-## Proposed Solution
+## Policy
 
 ### Overall Idea
 
-It is proposed to use GitHub's built-in [code review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) to formally review pull requests without having to wait for a decision in a synchronous weekly call.
+We use GitHub's built-in [code review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) to formally review pull requests without having to wait for a decision in a synchronous weekly call.
 This form of asynchronous decision process specifies how to conduct asynchronous decisions that are already written in the Working Group's existing [Decision Policy](https://www.w3.org/2020/01/wot-wg-charter.html#decisions).
 
 ### Non-normative Changes
