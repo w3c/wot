@@ -50,8 +50,13 @@ Many [software packages and open-source projects now support WoT](https://www.w3
 tools for Thing Description validation and construction as well as support for Thing runtimes and 
 Thing Description directories supporting discovery.
 
-The Web of Things has been adopted in the market and is included or is under consideration for adoption by
-several other standards organizations, including ECHONET, OPC Foundation with OPC UA (Web-of-Things Connectivity WG), and IPA DADC.
+Market adoption of the Web of Things is rapidly growing.
+The Web of Things has been adopted or is under consideration for adoption by
+several standards organizations, including 
+[ECHONET](https://echonet.jp/english/), 
+[Connexxus](https://www.conexxus.org/),
+the [OPC Foundation](https://opcfoundation.org/) (OPC UA Web-of-Things Connectivity WG), 
+and the [IPA Digital Architecture Design Center](https://www.ipa.go.jp/en/about/org/dadc/index.html).
 
 The growing WoT user community is supported by multiple [WoT Community Groups](https://www.w3.org/WoT/cg/), 
 which hold regular meetings to share information on WoT and its applications in both English and Japanese.
