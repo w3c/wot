@@ -54,7 +54,7 @@ Market adoption of the Web of Things is rapidly growing.
 The Web of Things has been adopted or is under consideration for adoption by
 several standards organizations, including 
 [ECHONET](https://echonet.jp/english/), 
-[Connexxus](https://www.conexxus.org/),
+[Conexxus](https://www.conexxus.org/),
 the [OPC Foundation](https://opcfoundation.org/) (OPC UA Web-of-Things Connectivity WG), 
 and the [IPA Digital Architecture Design Center](https://www.ipa.go.jp/en/about/org/dadc/index.html).
 
