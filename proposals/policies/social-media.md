@@ -1,4 +1,4 @@
-# Web of Things (WoT) Social Media Policy
+# Web of Things (WoT) Social Media Policy (Draft)
 
 Social Media (Twitter, LinkedIn, etc.) news requires quick publication. Thus, group resolutions would be too slow and a policy is required.
 
