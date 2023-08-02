@@ -23,6 +23,7 @@ In short, the WoT uses web technology to harmonize access to diverse
 IoT devices and breaks silo walls.
 This allows WoT applications to be written on top of a single, portable interaction abstraction.
 
+ <!-- This is taken from our website but it is hiding some terms like "MQTT", "Bearer", ... needs to be fixed if the figure is used for the press release  -->
  <img src="https://www.w3.org/WoT/images/wot-mappings.png" class="img-responsive" alt="WoT Interactions" />
 
 <!-- What is new? -->
