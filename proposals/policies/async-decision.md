@@ -1,4 +1,4 @@
-# Web of Things (WoT) Asynchronous Decision Policy DRAFT
+# Web of Things (WoT) Asynchronous Decision Policy (Draft)
 
 This is a policy to make the review process for specification changes more efficient by using asynchronous tools, rather than following the current unwritten rule that pull requests can only be merged following a resolution in a synchronous weekly conference call.
 The scope of this policy is limited to individual documents or deliverables where the editors are the editors of the document or deliverable in scope.
