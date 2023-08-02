@@ -1,4 +1,4 @@
-# Web of Things (WoT) Policy
+# Web of Things (WoT) Decision Policy (Draft)
 Note: The following is in the (draft) WoT charter, so this policy will be active when
 the charter is approved and can only be changed by modifying the charter.  It is included here 
 only for information.
