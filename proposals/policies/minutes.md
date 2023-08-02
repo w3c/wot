@@ -1,4 +1,4 @@
-# Web of Things (WoT) Policy
+# Web of Things (WoT) Policy (Draft)
 ## Minutes
 - During each WoT main call or WoT TF call,
   there will be an opportunity for corrections to be made to the draft minutes of previous calls.
