@@ -20,7 +20,7 @@ the WoT Thing Description, to allow easy integration of IoT devices and services
 This includes IoT systems that have already been released and use different IoT 
 communication protocols and data standards.
 In short, the WoT uses web technology to harmonize access to diverse
-IoT devices, and breaks silo walls.
+IoT devices and breaks silo walls.
 This allows WoT applications to be written on top of a single, portable interaction abstraction.
 
  <img src="https://www.w3.org/WoT/images/wot-mappings.png" class="img-responsive" alt="WoT Interactions" />
