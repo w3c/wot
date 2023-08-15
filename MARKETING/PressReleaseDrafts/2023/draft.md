@@ -13,9 +13,10 @@ and add significant new functionality.
 
 <!-- Why is it important? -->
 ## WoT addresses the IoT fragmentation problem
-Currently, IoT systems suffer from lack of interoperability and fragmentation.
+Currently, Internet of Things (IoT) systems suffer from lack of interoperability and fragmentation.
 Customers want to be able to choose devices from multiple vendors without redesign.
-The WoT recommendations provide a format for standardized descriptive information, 
+The Web of Things (WoT) extends the IoT with Web technology to address this issue.
+In particular, the WoT recommendations provide a format for standardized descriptive information, 
 the WoT Thing Description, to allow easy integration of IoT devices and services.
 This includes IoT systems that have already been released and use different IoT 
 communication protocols and data standards.
