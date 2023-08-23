@@ -1,4 +1,4 @@
-# Improved Web of Things unifies diverse IoT systems [DRAFT]
+# Enhanced Web of Things connect diverse IoT ecosystems [DRAFT]
 ** THIS IS A DRAFT. The WoT deliverables cited below are still in Proposed Recommendation status.**
 
 https://www.w3.org/ — DD MM 2023 — The World Wide Web Consortium (W3C) announced today that 
