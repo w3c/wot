@@ -22,9 +22,18 @@ Note the timezones!
 Meeting during TPAC itself (the actual hybrid event) are in CET time.
 
 ## Thursday 14 September 2023 - 4h - 14:30am-18:30am CET
-* [Calendar](https://www.w3.org/events/meetings/4bc67292-6edc-4e66-8d97-bdf0cb2eb46a/)
-* To do
+[Calendar](https://www.w3.org/events/meetings/4bc67292-6edc-4e66-8d97-bdf0cb2eb46a/)
+* Opening (sebastian)
+* Use Cases and Requirements Process (McCool)
+* TD and Bindings (Sebastian)
+* [Discovery (McCool)](2023-09-15-WoT-TPAC-Discovery-McCool.pdf)
+* Accessibility (McCool)
 
 ## Friday 15 September 2023 - 4h - 14:30am-18:30am CET
-* [Calendar](https://www.w3.org/events/meetings/a98d2f0d-599e-4fa8-b1cd-1a5ef5d8236e/)
-* To do
+[Calendar](https://www.w3.org/events/meetings/a98d2f0d-599e-4fa8-b1cd-1a5ef5d8236e/)
+* Opening (Sebastian)
+* Outreach (Sebastian)
+* [Security and Privacy (McCool)](2023-09-15-WoT-TPAC-Security-McCool.pdf)
+* Profiles and Architecture (Sebastian/McCool)
+* New Commercial Use Case and Requirements (Kaz)
+* Wrap Up and Next Steps (Sebastian)
