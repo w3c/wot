@@ -26,7 +26,7 @@ Meeting during TPAC itself (the actual hybrid event) are in CET time.
 * Opening (sebastian)
 * Use Cases and Requirements Process (McCool)
 * TD and Bindings (Sebastian)
-* [Discovery (McCool)](2023-09-15-WoT-TPAC-Discovery-McCool.pdf)
+* [Discovery (McCool)](2023-09-14-WoT-TPAC-Discovery-McCool.pdf)
 * Accessibility (McCool)
 
 ## Friday 15 September 2023 - 4h - 14:30am-18:30am CET
