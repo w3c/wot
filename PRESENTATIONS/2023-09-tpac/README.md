@@ -12,7 +12,7 @@ Whatever main format you use, please export and check in a PDF as well.
 This makes it easier to browse presentations in github.
 
 If you use Powerpoint, see 
-[the PPTX template](2023-09-DD-WoT-TPAC-Session-Presenter.potx).
+[the PPTX template](Template-2023-09-DD-WoT-TPAC-Session-Presenter.potx).
 Use of this template is optional if you already have material you are reusing,
 but is preferred for new material.
 
