@@ -28,6 +28,9 @@ Meeting during TPAC itself (the actual hybrid event) are in CET time.
 * TD and Bindings (Sebastian)
 * [Discovery (McCool)](2023-09-14-WoT-TPAC-Discovery-McCool.pdf)
 * [Accessibility (McCool)](2023-09-14-WoT-TPAC-Accessibility-McCool.pdf)
+    - NOTE: Held in APA location!
+    - Previous session to end 5m early and this one will start 5m late to allow for room change
+    - Will also use APA callin logistics
 
 ## Friday 15 September 2023 - 4h - 14:30am-18:30am CET
 [Calendar](https://www.w3.org/events/meetings/a98d2f0d-599e-4fa8-b1cd-1a5ef5d8236e/)
