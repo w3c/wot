@@ -28,7 +28,7 @@ Meeting during TPAC itself (the actual hybrid event) are in CET time.
 * TD and Bindings
   - [TD2.0 plans (Sebastian)](2023-09-14-TD2-Planning-Sebastian.pdf)
   - Registry (Ege)
-  - Manageable (Koster)
+  - Manageable Actions (Koster)
 * [Discovery (McCool)](2023-09-14-WoT-TPAC-Discovery-McCool.pdf)
 * [Accessibility (McCool)](2023-09-14-WoT-TPAC-Accessibility-McCool.pdf)
     - NOTE: Held in APA location: Utrera, 1st floor
