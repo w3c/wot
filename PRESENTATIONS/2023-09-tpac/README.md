@@ -40,6 +40,7 @@ Meeting during TPAC itself (the actual hybrid event) are in CET time.
 * Opening (Sebastian)
 * Outreach (Sebastian)
 * [Security and Privacy (McCool)](2023-09-15-WoT-TPAC-Security-McCool.pdf)
-* Profiles and Architecture (Sebastian/McCool)
+* Profiles (Sebastian/Luca)
+* [Architecture (McCool)](2023-09-15-WoT-TPAC-Architecture-McCool.pdf)
 * New Commercial Use Case and Requirements (Kaz)
 * Wrap Up and Next Steps (Sebastian)
