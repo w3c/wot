@@ -25,7 +25,10 @@ Meeting during TPAC itself (the actual hybrid event) are in CET time.
 [Calendar](https://www.w3.org/events/meetings/4bc67292-6edc-4e66-8d97-bdf0cb2eb46a/)
 * [Opening (Sebastian)](2023-09-14-WoT-TPAC-Opening-Sebastian.pdf)
 * [Use Cases and Requirements Process (McCool)](2023-09-14-WoT-TPAC-UseCases-McCool.pdf)
-* TD and Bindings (Sebastian)
+* TD and Bindings
+  - [TD2.0 plans (Sebastian)](2023-09-14-TD2-Planning-Sebastian.pdf)
+  - Registry (Ege)
+  - Manageable (Koster)
 * [Discovery (McCool)](2023-09-14-WoT-TPAC-Discovery-McCool.pdf)
 * [Accessibility (McCool)](2023-09-14-WoT-TPAC-Accessibility-McCool.pdf)
     - NOTE: Held in APA location: Utrera, 1st floor
