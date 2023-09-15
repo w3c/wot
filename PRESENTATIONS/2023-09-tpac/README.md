@@ -37,7 +37,7 @@ Meeting during TPAC itself (the actual hybrid event) are in CET time.
 
 ## Friday 15 September 2023 - 4h - 14:30am-18:30am CET
 [Calendar](https://www.w3.org/events/meetings/a98d2f0d-599e-4fa8-b1cd-1a5ef5d8236e/)
-* Opening (Sebastian)
+* [Opening (Sebastian)](2023-09-15-WoT-TPAC-Opening-Sebastian.pdf)
 * Outreach (Sebastian)
 * [Security and Privacy (McCool)](2023-09-15-WoT-TPAC-Security-McCool.pdf)
 * Profiles (Sebastian/Luca)
