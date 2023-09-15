@@ -42,5 +42,5 @@ Meeting during TPAC itself (the actual hybrid event) are in CET time.
 * [Security and Privacy (McCool)](2023-09-15-WoT-TPAC-Security-McCool.pdf)
 * Profiles (Sebastian/Luca)
 * [Architecture (McCool)](2023-09-15-WoT-TPAC-Architecture-McCool.pdf)
-* New Commercial Use Case and Requirements (Kaz)
+* [New Commercial Use Case and Requirements (Kaz)](https://www.w3.org/2023/Talks/0915-wot-usecases-ka/)
 * Wrap Up and Next Steps (Sebastian)
