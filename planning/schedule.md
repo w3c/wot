@@ -62,7 +62,9 @@ the renewed WG charter (probably to start sometime in August).
 | July 25, 2023 | Next | Press Release Narrative - WG input, call for testimonials sent |
 | Aug 9, 2023 | Next | Press Release Draft - Review starts, call for resolution in 2 weeks |
 | Aug 23, 2023 | Next | Press Release Draft - Resolution to Publish |
-| end-Aug, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (estimate PR transition request + 1wk + 2mo) |
-| Sept 1, 2023 | Next | Next WG Charter Begins (estimate) |
-| Sept 6, 2023 | Next | Expected Press Release Publication Date (after MarComm review) |
 | Sept 11-15, 2023 | Next | TPAC 2023 - Seville, Spain |
+| Sept 29, 2023 | Arch 1.1, Discovery, TD 1.1 | Press Release Testimonial Deadline |
+| Oct 1, 2023 | Next | New WG Charter Begins (estimate) |
+| prior to Oct 5, 2023 | Arch 1.1, Discovery, TD 1.1 | Web resource publication (estimate) |
+| Oct 5, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (estimate) |
+| Oct 5, 2023 | Next | Expected Press Release Publication Date (estimate) |
