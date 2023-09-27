@@ -12,20 +12,29 @@ This version extends it by taking the reviews into account, while moving the pro
 We use GitHub's built-in [code review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) to formally review pull requests without having to wait for a decision in a synchronous weekly call.
 This form of asynchronous decision process specifies how to conduct asynchronous decisions that are already written in the Working Group's existing [Decision Policy](https://www.w3.org/2020/01/wot-wg-charter.html#decisions).
 
-### Non-normative Changes
+### Issues and Pull Requests
 
-- For non-normative or editorial changes to the wording of a specification or its supporting documents, a code review approval from a single Editor of the specification is sufficient to merge a pull request.
+- An Issue should be created before a Pull Request that links to it is created.  This Issue should be used to reach consensus before creating a Pull Request if possible.  This discussion can include whether the change needs to be normative or not.
+    - Note: A template for Issues should be created that prompts for useful information, e.g. a link to a Use Case and/or Requirement; to be discussed.
+    - Note: A template for PRs should be created that prompts for a link to the related issue and a proposed category: Editorial or Normative
+- Editors should label Pull Requests as being either "Editorial" (non-normative) or "Normative" as soon as possible.
+- At least one week should be allowed for discussion after the label has been applied before merging a Pull Request.
+- If any Working Group member disagrees with an "Editorial" classification, a Pull Request should be reclassified as "Normative"
+
+### Editorial (Non-normative) Changes
+
+- For changes labelled as Editorial (which make non-normative changes to the wording of a specification or its supporting documents), a code review approval from a single Editor of the specification is sufficient to merge a Pull Request, if there are no objections or calls for discussion from any Working Group member (including other Editors) on the Pull Request.
 
 ### Normative Changes
 
-- For normative or breaking changes to a specification, approval is required by at least two Editors of a specification who are not from the same organization or who are Invited Experts. Editors should use GitHub's code review tool to either:
-  - Approve the pull request. The approval should be clear and if there any further changes needed, they should be requested to the pull request (see below) or a separate issue should be opened.
-  - Request changes to the pull request, explained in a comment
-  - Comment to say that they have no strong opinion or that they abstain, deferring to the opinion of other editors
-- A pull request can be landed once two editors have either provided their approval.
+- For Normative (breaking changes to a specification), approval is required by at least two Editors of a specification who are not from the same organization or who are Invited Experts. Editors should use GitHub's code review tool to either:
+  - Approve the Pull Request. The approval should be clear and if there any further changes needed, they should be requested to the pull request (see below) or a separate issue should be opened.
+  - Request changes to the Pull Request, explained in a comment.
+  - Comment to say that they have no strong opinion or that they abstain, deferring to the opinion of other editors.
+- A pull request can be landed once two editors have either provided their approval.  However, if any editor objects then the Pull Request should be rejected.
 - Editors are expected to provide formal reviews, but all members (and non-members) may contribute to the public discussion on GitHub and Editors are responsible for determining consensus. Reviews may be requested from other interested members in order to ascertain consensus.
-- If there are request for changes from other members, they should be taken into account.
-- If a consensus can not be reached by the editors asynchronously where the Pull Request discussion thread goes long (see appendix) without making progress, then a synchronous discussion in a web conference is needed to arrive at a consensus. The need for a synchronous discussion should be indicated in the discussion and the results should be reflected as a GitHub comment. If a unanimous decision can not be reached, then Chairs may call for a group decision to resolve a deadlock in line with the Working Group's existing [Decision Policy](https://www.w3.org/2020/01/wot-wg-charter.html#decisions).
+- If there are request for changes from other Working Group members, they should be taken into account.
+- If a consensus can not be reached by the editors asynchronously where the Pull Request discussion thread goes long (see appendix) without making progress, then a synchronous discussion in a web conference is needed to arrive at a consensus. The need for a synchronous discussion should be indicated in the discussion and the results should be reflected as a GitHub comment. If a unanimous decision can not be reached by the members of the Working Group involved in the discussion, then Chairs may call for a group decision to resolve a deadlock in line with the Working Group's existing [Decision Policy](https://www.w3.org/2020/01/wot-wg-charter.html#decisions).
 - For all changes, those who start a Pull Request or Discussion/Issue implicitly agree beforehand to join a synchronous meeting in case the TF moderator identifies a long and inconclusive discussion and calls for a meeting.
 
 ## Appendix
