@@ -5,7 +5,7 @@ The scope of this policy is limited to individual documents or deliverables wher
 This policy was originally [submitted](https://lists.w3.org/Archives/Public/public-wot-wg/2021Aug/0006.html) to the public-wot-wg mailing list on 3rd August 2021 and followed up by @benfrancis at https://github.com/w3c/wot/pull/1005/files.
 This version extends it by taking the reviews into account, while moving the problem and notes into an Appendix section.
 
-## Asynchronous Decisions
+## Asynchronous Decisions for Deliverables
 
 ### Overall Idea
 
