@@ -26,6 +26,7 @@ This form of asynchronous decision process specifies how to conduct asynchronous
 - Editors are expected to provide formal reviews, but all members (and non-members) may contribute to the public discussion on GitHub and Editors are responsible for determining consensus. Reviews may be requested from other interested members in order to ascertain consensus.
 - If there are request for changes from other members, they should be taken into account.
 - If a consensus can not be reached by the editors asynchronously where the Pull Request discussion thread goes long (see appendix) without making progress, then a synchronous discussion in a web conference is needed to arrive at a consensus. The need for a synchronous discussion should be indicated in the discussion and the results should be reflected as a GitHub comment. If a unanimous decision can not be reached, then Chairs may call for a group decision to resolve a deadlock in line with the Working Group's existing [Decision Policy](https://www.w3.org/2020/01/wot-wg-charter.html#decisions).
+- For all changes, those who start a Pull Request or Discussion/Issue implicitly agree beforehand to join a synchronous meeting in case the TF moderator identifies a long and inconclusive discussion and calls for a meeting.
 
 ## Appendix
 
