@@ -11,3 +11,10 @@ This file summarizes the registry mechanism that the WoT WG/IG needs along with 
   - https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
   - https://www.iana.org/assignments/media-types-parameters/media-types-parameters.xhtml
 - Explain what the WoT needs/requires in order to choose a mechanism and the rules
+
+## Appendix
+
+### Useful Resources
+
+- https://www.w3.org/2020/01/registering-mediatypes (we followed this for registering TD media type)
+- IANA Guidelines: https://www.iana.org/help/protocol-registration
