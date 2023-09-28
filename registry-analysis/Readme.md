@@ -17,4 +17,4 @@ This file summarizes the registry mechanism that the WoT WG/IG needs along with 
 ### Useful Resources
 
 - https://www.w3.org/2020/01/registering-mediatypes (we followed this for registering TD media type)
-- IANA Guidelines: https://www.iana.org/help/protocol-registration
+- IANA Guidelines: https://www.iana.org/help and https://www.iana.org/help/protocol-registration
