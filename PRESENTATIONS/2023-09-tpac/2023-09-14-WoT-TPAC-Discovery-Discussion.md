@@ -14,5 +14,7 @@ Summary of main points from discussion.
     - OPC UA
 - MQTT Discovery
     - No OASIS standard (but we should talk to them)
+    - Home Assistant has one specific way of doing it... but not following a standard?
     - Follow-up comment:
+        - Sparkplug B is an Eclipse specification includes discovery - https://sparkplug.eclipse.org/specification; HiveMQ has some interest
         - Can we actually deliver TDs with MQTT links? e.g. a TD server, well-known topic, even if only for self-describing things?
