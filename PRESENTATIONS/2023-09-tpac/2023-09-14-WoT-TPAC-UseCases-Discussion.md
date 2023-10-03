@@ -1,0 +1,5 @@
+# Use Cases and Requirements
+Summary of main points from discussion.
+
+- To do
+- https://www.w3.org/2023/09/14-wot-minutes.html#t07
