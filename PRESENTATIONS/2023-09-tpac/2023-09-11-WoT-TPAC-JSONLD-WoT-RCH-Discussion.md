@@ -1,6 +1,6 @@
 # JSON-LD WG, WoT WG, RCH WG Joint Meeting
 
-Summary of main points from the discussion.
+**Draft** summary of main points from the discussion. A further PR is needed to distill the text to a more concise form.
 
 ## [Sept 11 Minutes](https://www.w3.org/2023/09/11-wot-minutes.html)
 
@@ -16,6 +16,8 @@ Question from WoT WG: To verify a digital signature the entire document needs to
 - New selective disclosure mechanism in JSON-LD:  https://www.w3.org/TR/vc-di-ecdsa/#ecdsa-sd-2023
 - Another mechanism if need to handle multiple versions: https://docs.google.com/presentation/d/1d-04kIWhPuNscsAyUuRH3pduqrNerhigCWahKe6SNos/edit#
   - Note from Ege: It is not clear what the difference between the two methods is at this point
+ 
+- Also see https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/
  
 #### Integrity of Linked Data
 
@@ -82,3 +84,7 @@ Question from WoT WG: Lately there has been an emergence of tools to lint Open A
 - JSON-LD playground has warnings but more can be added,  like a warning for the default vocabulary
 - linting tends to be application-specific. If WoT WG finds something that is generic, we can contact JSON-LD WG
 - VC uses a property to define a schema for defining linting rules
+
+## Action Items
+
+To be further worked on
