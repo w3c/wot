@@ -32,20 +32,14 @@ This allows WoT applications to be written on top of a single, portable interact
 
 <!-- What is new? -->
 ## Significant improvements and functionality
-In general, these new Recommendations have many small changes to improve the usability of
-the previous release and address new use cases. However, significant new features are also defined,
+These new Recommendations were revised to improve the usability of
+the previous release and address new use cases. Significant new features were also defined,
 including Thing Models and Discovery.
 
-Thing Models provide a way to describe classes of things, such as product lines from particular vendors.
-Thing Models also support modularity, allowing a parameterized model to be built from reusable components.
-A Thing Model can be used to generate a Thing Description by providing the appropriate parameters.
+Thing Models provide a way to describe classes of things, such as product lines from particular vendors, and support modularity by allowing a parameterized model to be built from reusable components. A Thing Model can be used to generate a Thing Description by providing the appropriate parameters.
 
-Discovery provides easy access to Thing Descriptions, while controlling access appropriately to preserve privacy.
-It does not replace other existing discovery mechanisms but builds upon and applies them to the 
-distribution of Thing Descriptions.
-WoT Discovery can be applied both within a local-area network (LAN), and at scale across the entire Internet.
-It can also be used for both self-describing IoT devices and externally described devices.
-A searchable Thing Description Directory service is defined supporting semantic search.
+Discovery provides easy access to Thing Descriptions, while controlling access appropriately to preserve privacy. It does not replace other existing discovery mechanisms but builds upon and applies them to the distribution of Thing Descriptions, which can be done both within a local-area network (LAN) and at scale across the entire Internet. It can also be used for self-describing IoT devices and externally described devices.
+A searchable Thing Description Directory service is defined, which makes it an asset in supporting semantic search.
 
 <!-- What is the impact? -->
 ## Widely adopted and supported
