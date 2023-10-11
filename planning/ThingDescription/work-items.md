@@ -1,10 +1,10 @@
-# Web of Things TD Work Items DRAFT
+# [DRAFT] Web of Things TD Work Items 
 
 ## Original Input
 
 This is copied from https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf and should ideally be restructured and organized into the section later.
 
-## Restructuring with Categories
+## Categories
 
 The work items are split into three categories. 
 The first category focuses on work items that are more about restructuring, redesigning and improving the usability of the specification. These could pave the way to new features.
@@ -61,3 +61,12 @@ For new features (keywords or behavior), a use case (or user story) should exist
   - What to do with the existing issues and PRs that are postponed?
     - Option 1: If there are no use cases identified, they can be closed after some time.
   - What about the work items in the charter or details that are not linked to use cases?
+ 
+## Related Resources
+
+In addition to GitHub issues and Use Cases, there are various documents that should be read before starting the work
+
+- Long Running Actions Proposals: https://github.com/w3c/wot-thing-description/tree/main/proposals
+- Registry Analysis: https://github.com/w3c/wot/pull/1126
+- Historical Data Landscape: https://github.com/w3c/wot/pull/1112
+- Charter Details: https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html
