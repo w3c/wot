@@ -1,5 +1,5 @@
 # TD and Bindings
-Summary of main points from discussion.
+Summary of main points from the discussion.
 
 ## [Sept 14, TD and Bindings](https://www.w3.org/2023/09/14-wot-minutes.html#t04)
 - [Slides](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-TD2-Planning-Sebastian.pdf)
@@ -10,7 +10,7 @@ Summary of main points from discussion.
      - The TD spec will only describe the mechanism of binding
      - Separate discussion on the topic of a registry
      - Integrators might implement just what they need - BACnet example
-     - 2 step approach, first what information is needed, then think about how later
+     - 2-step approach, first what information is needed, then think about how later
 - Other topics in TD reorganization
      - base terms
      - common server connection 
@@ -21,9 +21,9 @@ Summary of main points from discussion.
      - BACnet has return codes, non-specific to BACnet 
      - there should be an abstract interaction model and concrete subprotocol 
      - TD doesn't model protocols in detail
-     - we could try to de=scribe the existing mechanisms and create the abstraction from those
+     - we could try to describe the existing mechanisms and create the abstraction from those
      - there should be a default mechanism to drive eventual standardization
-     - there are other long running affoerdance patterns like chained alarm events
+     - there are other long-running affordance patterns like chained alarm events
      - TD is a static descriptor and manageable actions require dynamic interaction
      - state charts may be a solution 
      - we need to clarify the needs
@@ -38,16 +38,16 @@ Summary of main points from discussion.
      - Backward compatibility
 - Binding registry
 - [Slides](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf)
-     - bindinmg mechanism will be described in the TD spec
+     - The binding mechanism will be described in the TD spec
      - accommodate more diverse protocols
      - flexibility is required, a REC document can't be changed
      - the REC document can include a registry table which can be updated through a special process https://www.w3.org/2023/Process-20230612/
      - we would define the rules for adding to the table
      - W3C WebCodecs example https://www.w3.org/TR/webcodecs-codec-registry/
      - IANA is another example
-     - Need to have a follow on discussion with WebCodecs (action?)
+     - Need to have a follow-up discussion with WebCodecs (action?)
      - What are the requirements and guarantees
-     - 2 step approach - first, what kind of information is needed, then how the registry will work
+     - 2-step approach - first, what kind of information is needed, then how the registry will work
      - more examples of different registries
      - https://github.com/w3c/tt-profile-registry/pulse
      - https://www.w3.org/TR/ttml-profile-registry/
@@ -55,9 +55,9 @@ Summary of main points from discussion.
      - https://www.w3.org/TR/webcodecs-codec-registry/
      - https://www.w3.org/TR/did-spec-registries/
 
-     - Changes in the main document may require changing documents in all of the registered bindings - potential issue
+     - Changes in the main document may require changing documents in all of the registered bindings - a potential issue
      - how do we remove entries
      - TD version tracking
      - registered bindings should be immutable
      - there should be a validation step for bindings
-     - rule for publishing all "intermediate" TDs versions should also apply to bindings to avoid "skips" preventing upgrades
+     - The rule for publishing all "intermediate" TDs versions should also apply to bindings to avoid "skips" preventing upgrades
