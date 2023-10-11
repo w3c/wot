@@ -29,6 +29,7 @@ The rules below apply to the two subsequent sections:
 
 ### Normative Changes
 
+- In the following, the Editor's decisions should reflect their understanding of the consensus of the group.
 - For Normative (breaking changes or new features to a specification), approval is required by at least two Editors of a specification who are not from the same organization or who are Invited Experts. Editors should use GitHub's code review tool to either:
   - Approve the Pull Request. The approval should be clear and if there are any further changes needed, they should be requested to the pull request (see below) or a separate issue should be opened.
   - Request changes to the Pull Request, explained in a comment.
