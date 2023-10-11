@@ -61,7 +61,21 @@ For new features (keywords or behavior), a use case (or user story) should exist
   - What to do with the existing issues and PRs that are postponed?
     - Option 1: If there are no use cases identified, they can be closed after some time.
   - What about the work items in the charter or details that are not linked to use cases?
- 
+
+## Roadmap
+
+We have a roadmap for the TD specification that is aligned with the charter start and end dates.
+
+- Charter End Date: 2 October 2025
+- CR Transition (feature freeze): July 10, 2025 (worst estimate)
+- Charter Start: October 2023
+
+Notes:
+- Stopping big features 6 months prior to CR Transition. That means January 10, 2025 -> End of 2024, we should be done with big features.
+  - The bigger the implementation impact, the more time to implement
+  - We can give something like "Story Points" to give a rough idea of the effort
+- We should look at the schedule on a weekly basis, part of the agenda
+
 ## Related Resources
 
 In addition to GitHub issues and Use Cases, there are various documents that should be read before starting the work
