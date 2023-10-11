@@ -10,6 +10,10 @@ are now official W3C Recommendations.
 Without breaking compatibility with the [first release in 2020](https://www.w3.org/press-releases/2020/wot-rec/),
 these new W3C Recommendations improve and expand the scope of the Web of Things,
 and add significant new functionality.
+In addition, two supporting W3C Notes have been updated, the
+[Web of Things (WoT) Binding Templates](https://www.w3.org/TR/wot-binding-templates/) 
+and the
+[Web of Things (WoT) Scripting API](https://www.w3.org/TR/wot-scripting-api/).
 
 <!-- Why is it important? -->
 ## WoT addresses the IoT fragmentation problem
