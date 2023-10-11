@@ -36,8 +36,7 @@ Summary of main points from the discussion.
      - Custom implementations
      - Semantic support 
      - Backward compatibility
-- Binding registry
-- [Slides](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf)
+- Binding registry ([Slides](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf))
      - The binding mechanism will be described in the TD spec
      - accommodate more diverse protocols
      - flexibility is required, a REC document can't be changed
