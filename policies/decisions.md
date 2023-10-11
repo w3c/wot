@@ -4,32 +4,7 @@ the charter is approved and can only be changed by modifying the charter.  It is
 only for information and for clarification of certain points.
 
 ## Group Decisions
-This group will seek to make decisions through consensus and due process, per the
-<a href="https://www.w3.org/Consortium/Process/#Consensus">W3C Process Document (section 5.2.1, Consensus)</a>.
-Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with
-members of the group and other reviewers, and consensus emerges with little formal voting being required.
-
-However, if a decision is necessary for timely progress and consensus is not achieved after careful
-consideration of the range of views presented, the Chairs may call for a group vote and record a decision along
-with any objections.
-
-To afford asynchronous decisions and organizational deliberation, resolutions
-both proposed and taken in a face-to-face meeting or teleconference will be considered provisional.
-A call for consensus (CfC) will be issued for all such resolutions (via email)
-with a response period from 5 to 10 working days, depending on the Chairs' evaluation of the
-group consensus on the issue.
-If no objections are raised by the end of the response period, the resolution will be considered to have
-consensus as a resolution of the Working Group.
-
-In some cases, resolutions can be announced and proposed in advance, by circulating an email to the group
-with concrete proposed text for the resolution.  In these cases, the announcement can be considered the
-call for consensus (CfC) and when the resolution is made by the group, it can be considered final, at the
-discretion of the Chairs, if sufficient time (5 to 10 working days, at the discretion of the Chairs, as above)
-has been allowed for asynchronous input.
-This process will be followed especially for publication decisions which are then effective immediately.
-
-All decisions made by the group should be considered resolved unless and until new information becomes available
-or unless reopened at the discretion of the Chairs or the Director.
+The basic policy is provided in the working group WoT charter (see [Section 8](https://www.w3.org/2023/10/wot-wg-2023.html#decisions)).
 
 ### Clarifications
 However, the following interpretations are to be included in this policy as clarifications:
