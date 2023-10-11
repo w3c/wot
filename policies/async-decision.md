@@ -14,7 +14,9 @@ This form of asynchronous decision process specifies how to conduct asynchronous
 
 ### Issues and Pull Requests
 
-- An Issue should be created before a Pull Request that links to it is created.  This Issue should be used to reach consensus before creating a Pull Request if possible.  This discussion can include whether the change needs to be normative or not.
+The rules below apply to the two subsequent sections:
+
+- An Issue should be created before a Pull Request that links to it is created.  This Issue should be used to reach a consensus before creating a Pull Request if possible.  This discussion can include whether the change needs to be normative or not.
     - Note: A template for Issues should be created that prompts for useful information, e.g. a link to a Use Case and/or Requirement; to be discussed.
     - Note: A template for PRs should be created that prompts for a link to the related issue and a proposed category: Editorial or Normative
 - Editors should label Pull Requests as being either "Editorial" (non-normative) or "Normative" as soon as possible.
@@ -23,17 +25,17 @@ This form of asynchronous decision process specifies how to conduct asynchronous
 
 ### Editorial (Non-normative) Changes
 
-- For changes labelled as Editorial (which make non-normative changes to the wording of a specification or its supporting documents), a code review approval from a single Editor of the specification is sufficient to merge a Pull Request, if there are no objections or calls for discussion from any Working Group member (including other Editors) on the Pull Request.
+- For changes labeled as Editorial (which make non-normative changes to the wording of a specification or its supporting documents), a code review approval from a single Editor of the specification is sufficient to merge a Pull Request, if there are no objections or calls for discussion from any Working Group member (including other Editors) on the Pull Request.
 
 ### Normative Changes
 
-- For Normative (breaking changes to a specification), approval is required by at least two Editors of a specification who are not from the same organization or who are Invited Experts. Editors should use GitHub's code review tool to either:
-  - Approve the Pull Request. The approval should be clear and if there any further changes needed, they should be requested to the pull request (see below) or a separate issue should be opened.
+- For Normative (breaking changes or new features to a specification), approval is required by at least two Editors of a specification who are not from the same organization or who are Invited Experts. Editors should use GitHub's code review tool to either:
+  - Approve the Pull Request. The approval should be clear and if there are any further changes needed, they should be requested to the pull request (see below) or a separate issue should be opened.
   - Request changes to the Pull Request, explained in a comment.
   - Comment to say that they have no strong opinion or that they abstain, deferring to the opinion of other editors.
-- A pull request can be landed once two editors have either provided their approval.  However, if any editor objects then the Pull Request should be rejected.
+- A pull request can be landed once two editors have provided their approval.  However, if any editor objects then the Pull Request should be rejected.
 - Editors are expected to provide formal reviews, but all members (and non-members) may contribute to the public discussion on GitHub and Editors are responsible for determining consensus. Reviews may be requested from other interested members in order to ascertain consensus.
-- If there are request for changes from other Working Group members, they should be taken into account.
+- If there are requests for changes from other Working Group members, they should be taken into account.
 - If a consensus can not be reached by the editors asynchronously where the Pull Request discussion thread goes long (see appendix) without making progress, then a synchronous discussion in a web conference is needed to arrive at a consensus. The need for a synchronous discussion should be indicated in the discussion and the results should be reflected as a GitHub comment. If a unanimous decision can not be reached by the members of the Working Group involved in the discussion, then Chairs may call for a group decision to resolve a deadlock in line with the Working Group's existing [Decision Policy](https://www.w3.org/2020/01/wot-wg-charter.html#decisions).
 - For all changes, those who start a Pull Request or Discussion/Issue implicitly agree beforehand to join a synchronous meeting in case the TF moderator identifies a long and inconclusive discussion and calls for a meeting.
 
@@ -41,7 +43,7 @@ This form of asynchronous decision process specifies how to conduct asynchronous
 
 ### How to identify long and inconclusive discussion
 
-One-size-fits-all solution to identify a long and inconclusive is not realistic. In the end, it is the editors' responsability to identify such cases. 
+A one-size-fits-all solution to identify a long and inconclusive is not realistic. In the end, it is the editors' responsibility to identify such cases. 
 Some metrics that the editors can use are listed below:
 
 1. **Number of Comments**: A long and complex discussion often involves multiple participants sharing their thoughts and opinions. Look for a high number of comments on the PR. You can see the comment count on the Pull Request page.
@@ -59,7 +61,7 @@ Some metrics that the editors can use are listed below:
 ### Problem
 
 Currently:
-1. It is common to get to the end of a two hour meeting without having managed to review all of the open pull requests in a given repository
+1. It is common to get to the end of a two-hour meeting without having managed to review all of the open pull requests in a given repository
 2. If anyone is missing from the call who may have feedback, the discussion is often deferred for a week or more until they are available to join a call
 3. When pull requests are reviewed there isn't always a clear resolution about whether or not to merge and discussion can end up being paused until the following week
 4. Sometimes only small changes are needed to a pull request before landing it, but it has to wait another week for a chance for another review
