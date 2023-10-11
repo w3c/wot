@@ -1,6 +1,7 @@
 # Web of Things (WoT) Policy
 ## Policy Adoption
-- first, a new issue should be created to motivate a new or change a Policy
+- First, a new issue should be created to motivate a new or change a Policy
+- New Policy should be discussed in the main call and there is a need of consensus. 
 - To propose a new policy, first create a PR against [wot/proposals/policies](https://github.com/w3c/wot/main/proposals/policies).
     - Comments taken on the PR can be used for gathering feedback during "development"
     - Initial policies should include "(Draft)" in the title.
