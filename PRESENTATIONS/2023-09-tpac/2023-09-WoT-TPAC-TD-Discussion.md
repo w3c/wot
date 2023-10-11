@@ -1,7 +1,10 @@
 # TD and Bindings
+
 Summary of main points from the discussion.
 
 ## [Sept 14, TD and Bindings](https://www.w3.org/2023/09/14-wot-minutes.html#t04)
+
+### Intro from Sebastian
 - [Slides](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-TD2-Planning-Sebastian.pdf)
 - Plan to reorganize and combine documents
      - Incorporate the Binding Templates document into the TD document
@@ -36,7 +39,9 @@ Summary of main points from the discussion.
      - Custom implementations
      - Semantic support 
      - Backward compatibility
-- Binding registry ([Slides](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf))
+ 
+### Binding Registry
+- ([Slides](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf))
      - The binding mechanism will be described in the TD spec
      - accommodate more diverse protocols
      - flexibility is required, a REC document can't be changed
@@ -53,7 +58,7 @@ Summary of main points from the discussion.
      - https://www.w3.org/TR/mse-byte-stream-format-registry/
      - https://www.w3.org/TR/webcodecs-codec-registry/
      - https://www.w3.org/TR/did-spec-registries/
-
+- Discussion:
      - Changes in the main document may require changing documents in all of the registered bindings - a potential issue
      - how do we remove entries
      - TD version tracking
