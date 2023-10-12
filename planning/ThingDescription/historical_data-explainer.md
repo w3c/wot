@@ -2,6 +2,7 @@
 
 This document gathers all information related to time series or historical data-related topics.
 These include issues, use cases, and discussions in other forms.
+This document will be worked on before extending the TD specification.
 
 ## Overall Description of the Topic
 
