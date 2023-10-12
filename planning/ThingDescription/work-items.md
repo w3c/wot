@@ -76,6 +76,20 @@ Notes:
   - We can give something like "Story Points" to give a rough idea of the effort
 - We should look at the schedule on a weekly basis, part of the agenda
 
+### Refactoring Roadmap
+
+In no particular order, we have the following:
+
+- Incorporating Binding Mechanism
+- Better integration of Thing Model
+- Specification Generation Tooling
+- Grouping of normative requirements
+- Common definitions section (usability improvements for not needing to "jump around" while reading)
+- Assertion id alignment: adding `td`, checking naming scheme
+- Synchronization with other documents
+- Example reorganization
+- Testing Pipeline
+
 ## Related Resources
 
 In addition to GitHub issues and Use Cases, there are various documents that should be read before starting the work
