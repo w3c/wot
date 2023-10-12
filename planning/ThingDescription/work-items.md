@@ -7,16 +7,16 @@ This is copied from https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebC
 ## Categories
 
 The work items are split into three categories. 
-The first category focuses on work items that are more about restructuring, redesigning and improving the usability of the specification. These could pave the way to new features.
+The first category focuses on work items that are more about restructuring, redesigning, and improving the usability of the specification. These could pave the way for new features.
 The second category is about work items that are directly linked to new features.
 The third category is currently called supporting work items (can be renamed) and they improve various mechanisms but are not necessarily new keywords for TD instances.
 Such categories can be reflected with labels and different views in the GitHub project management panel.
-The task force will go through existing issues, pull requests and discussions and categorize them accordingly.
+The task force will go through existing issues, pull requests and discussions, and categorize them accordingly.
 
 - **Priorities:** The items below can be considered a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
 
-- **Organization:** In order to have a better overview, the list of work items should be kept low and small work items should be grouped into bigger ones. 
-This allows to better label and manage the items.
+- **Organization:** In order to have a better overview, the list of work items should be kept low, and small work items should be grouped into bigger ones. 
+This allows us to better label and manage the items.
 
 - **Details:** The details of different work items can be found at <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md>. We will consolidate such details and link them appropriately.
 
@@ -41,8 +41,10 @@ Changes that improve readability, the usability of the specification OR developm
 ### Feature Aiming Work Items
 
 For new features (keywords or behavior), a use case (or user story) should exist in the first place.
+While the refactoring topics are being worked on, new features should not be incorporated into the specification.
+Instead, the TF will analyze current solutions, gather existing use cases and discussions, and write the requirements to shape the feature.
 
-- Timeseries
+- Timeseries / Historical Data
 - Manageable Actions
 - Streaming
 
@@ -53,7 +55,7 @@ For new features (keywords or behavior), a use case (or user story) should exist
 - Signing and Canonicalization
 - TD Versioning
 - TD Testing for plugfest and testfests
-- Bugfixes
+- Bugfixes (updates for the TD next. Actual bugs for 1.1 should be handled as errata)
 
 ## Notes
 
