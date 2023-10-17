@@ -1,7 +1,7 @@
 # Improved Web of Things unifies diverse IoT systems [DRAFT]
 ** THIS IS A DRAFT. The WoT deliverables cited below are still in Proposed Recommendation status.**
 
-https://www.w3.org/ — <FIXME: City + Date> DD MM 2023 — The World Wide Web Consortium (W3C) announced today that 
+https://www.w3.org/ — DD MM 2023 — The World Wide Web Consortium (W3C) announced today that 
 [Web of Things (WoT) Architecture 1.1](https://www.w3.org/TR/wot-architecture11/),
 [Web of Things (WoT) Thing Description 1.1](https://www.w3.org/TR/wot-thing-description11/), 
 and 
@@ -78,12 +78,18 @@ We're enthusiastic that these leaps in cyber-physical systems will stimulate pro
 ### Intel
 Intel congratulates the WoT WG for the updated WoT standard.  This update solidifies support for the descriptive approach to IoT interoperability.  IoT fragmentation remains a major barrier to greater IoT adoption.  The WoT standard addresses a key challenge in the integration of IoT devices and services from different IoT ecosystems by providing a common format for describing data and interaction.   This descriptive approach strongly differentiates it from other prescriptive approaches to IoT interoperability, and is designed to work with and enhance other standards, not compete with them.
 
-*Eric Siow, <FIXME:title> Intel Corporation*
+*Eric Siow, Director, Web Standards and Ecosystem Strategies, Intel Corporation*
 
 ### OPC Foundation
 The OPC Foundation welcomes the new releases of the W3C Web of Things. Current OPC Foundation group activities are working on a solution how WoT Thing Descriptions can be used as a data model mapping service from non-OPC UA asset interfaces to OPC UA systems. This reduces the onboarding effort (e.g. of Modbus-based assets) and enables smooth use of asset data interfaces in the OPC UA address space. We see this as a big win for the manufacturing industry and another important step towards improving the interoperability of heterogeneous asset landscapes.
 
 *Stefan Hoppe, president OPC Foundation*
+
+### Oracle
+
+The Web of Things set of specifications, including the updated version 1.1, serves as a unifying framework to address complex IoT use cases requiring interoperability across diverse ecosystems at massive scale. Oracle is pleased with the progression of this set of specifications to the Recommendation status and is proud to have been an active contributor, leader, and co-editor of this effort. We believe that this will benefit customers and users by enabling much-needed interoperability between different vendor solutions for IoT.  
+
+*Jai Suri, vice president, IoT and blockchain applications development, Oracle*
 
 ### Luminem and SIFIS-Home Consortium 
 The SIFIS-Home consortium is looking forward the new W3C Web of Things
@@ -105,9 +111,4 @@ Addressing today's market challenges, such as energy optimization, requires tech
 
 *Thomas Kiessling, chief technology officer at Smart Infrastructure, Siemens AG*
 
-### Oracle
-
-The Web of Things set of specifications, including the updated version 1.1, serves as a unifying framework to address complex IoT use cases requiring interoperability across diverse ecosystems at massive scale. Oracle is pleased with the progression of this set of specifications to the Recommendation status and is proud to have been an active contributor, leader, and co-editor of this effort. We believe that this will benefit customers and users by enabling much-needed interoperability between different vendor solutions for IoT.  
-
-*Jai Suri, vice president, IoT and blockchain applications development, Oracle*
 
