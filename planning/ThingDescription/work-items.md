@@ -31,6 +31,7 @@ Changes that improve readability, the usability of the specification OR developm
   - Payload Driven Protocols (e.g. WS, SSE)
   - `href` and URI design
   - External Security Ontologies
+    - Also see https://github.com/w3c/wot-charter-drafts/issues/57 , https://github.com/w3c/wot-thing-description/issues/1880
 - Reusable Elements and pointers (e.g. reusable payloads, initial connection)
 - Restructuring the TD Specification and Specification Generation
   - This should be done while keeping the current content, e.g. grouping of normative requirements, common definitions section (usability improvements for not needing to "jump around" while reading)
@@ -97,6 +98,6 @@ In no particular order, we have the following:
 In addition to GitHub issues and Use Cases, there are various documents that should be read before starting the work
 
 - Long Running Actions Proposals: https://github.com/w3c/wot-thing-description/tree/main/proposals
-- Registry Analysis: https://github.com/w3c/wot/pull/1126
+- Registry Analysis: https://github.com/w3c/wot/tree/main/registry-analysis
 - Historical Data Landscape: https://github.com/w3c/wot/pull/1112
 - Charter Details: https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html
