@@ -68,3 +68,45 @@ which hold regular meetings to share information on WoT and its applications in 
 [boilerplate "about w3c", boilerplate contact info for the media]
 
 {Testimonials from WG members and other W3C Members go here}
+
+## Testimonials from W3C members and Liasion Partners
+
+
+### Hitachi
+To feedback effective solutions from digital twins to real-world systems, it is essential that we are able to quickly find devices in the physical environment and understand their roles and the context of the data which they provide. 
+The updated recommendations to which we contributed in part, include enhanced capabilities such as Thing Discovery that will facilitate this link between the physical and cyberspace. 
+We're enthusiastic that these leaps in cyber-physical systems will stimulate progress across diverse sectors and contribute to the realization of a better society.
+
+*Itaru Nishizawa, Vice President and Executive Officer, Chief Technology Officer, Hitachi, Ltd.*
+
+### Intel
+Intel congratulates the WoT WG for the updated WoT standard.  This update solidifies support for the descriptive approach to IoT interoperability.  IoT fragmentation remains a major barrier to greater IoT adoption.  The WoT standard addresses a key challenge in the integration of IoT devices and services from different IoT ecosystems by providing a common format for describing data and interaction.   This descriptive approach strongly differentiates it from other prescriptive approaches to IoT interoperability, and is designed to work with and enhance other standards, not compete with them.
+
+*Eric Siow, Intel Corporation*
+
+### OPC Foundation
+The OPC Foundation welcomes the new releases of the W3C Web of Things. Current OPC Foundation group activities are working on a solution how WoT Thing Descriptions can be used as a data model mapping service from non-OPC UA asset interfaces to OPC UA systems. This reduces the onboarding effort (e.g. of Modbus-based assets) and enables smooth use of asset data interfaces in the OPC UA address space. We see this as a big win for the manufacturing industry and another important step towards improving the interoperability of heterogeneous asset landscapes.
+
+*Stefan Hoppe, President OPC Foundation*
+
+### Luminem and SIFIS-Home Consortium 
+The SIFIS-Home consortium is looking forward the new W3C Web of Things
+standards. The SIFIS-Home project focused on proving that is possible to
+have more awareness on the risks and hazards related to the deployment
+of connected devices in the Home environment. The Thing Description
+model proved to be the ideal match to deliver the additional information.
+
+*Luca Barbato, Luminem CEO and SIFIS-Home consortium member*
+*Andrea Saracino, SIFIS-Home project coordinator*
+
+### Microsoft
+We built a reference implementation that uses the new Web of Things (WoT) release with our Azure OpenAI service to demonstrate how to automatically onboard industrial assets and were pleased with how easy it was to generate WoT Thing Descriptions automatically. In addition, the open-source WoT tools available from the Eclipse Foundation made automatic validation of the generated Thing Description an easy value add.
+
+*Erich Barnstedt, Chief Architect Standards, Consortia and Industrial IoT, Azure Edge + Platform team, Microsoft Corporation*
+
+### Siemens
+Addressing today's market challenges, such as energy optimization, requires technologies that facilitate easy heterogeneous system integration and optimization implementation. The Web of Things, which is one of the key technology building blocks, facilitates addressing such challenges by integrating efficient diverse data sources from a variety of device systems. Our in-house solution sayWoT! implements the latest WoT Thing Description 1.1 and is successfully used in various IoT projects by customers. One of the highlights is the usage of sayWoT! in the Wunsiedel Energy Park, Germany, to enable smart control to ensures green hydrogen production.
+
+*Thomas Kiessling, Chief Technology Officer at Smart Infrastructure, Siemens AG*
+
+
