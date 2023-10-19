@@ -1,0 +1,138 @@
+@import url("https://www.w3.org/StyleSheets/base.css");
+
+/* Copyright 1997-2005 W3C (MIT, ERCIM, Keio). All Rights Reserved.
+   The following software licensing rules apply:
+   http://www.w3.org/Consortium/Legal/copyright-software */
+
+/* $Id: pubrules-style.css,v 1.2 2023/07/21 14:31:10 vivien Exp $ */
+
+body {
+ margin: 2em 1em 2em 70px;
+ font-family: sans-serif;
+ color: black;
+ background-color: white;
+ background-position: top left;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5 {
+ text-align: left;
+ font-family: sans-serif;
+ font-weight: normal;
+ color: #005a9c;
+ margin-left: 0
+}
+
+h4, h5, blockquote { margin-left: 1em }
+
+div.head p { margin-left: 0 }	  
+
+.first { margin: 3em 4em 2em 3em}
+
+div.head img { 
+ color: white;
+ border: none;
+ float:left; 
+ padding-right: 1em;
+ padding-bottom: 1em;
+ margin-left: 0
+}
+
+p { clear: left }
+
+/*p, ul, ol, blockquote, dl { margin-left: 2em }*/
+
+th { text-align: left }
+
+.rfc2119 {
+  text-transform: lowercase;
+  font-weight: bold
+}
+
+/* Navigation styles from Eric Meyer */
+/*
+http://www.complexspiral.com/events/archive/2003/seybold/cssnav.html
+*/
+
+/* Shared */
+li.label {
+	 list-style: none; 
+	 margin: 0; 
+	 padding: .15em 0 .15em .5em;
+	 border-top: 1px solid gray;
+	 text-align: left; 
+	 color: white; 
+	 background: #0050B2; 
+	 font-weight: bold;
+	 }
+
+/* highlighting and border effects */
+#navbar {float:right}
+#navbar {padding: 0 1px 2em 1em; margin: 0;
+  font: bold 10px sans-serif;
+  background: white; width: 13em;}
+#navbar li {list-style: none; margin: 0; border-top: 1px solid gray;
+  text-align: left;}
+#navbar li#current {list-style: none; margin: 0; border-top: 1px solid gray;
+  text-align: left; background: #CCD; color: black; padding: 0.25em 0.5em 0.25em 0.75em;
+  border-left: 1em solid #AAB; text-decoration: none;}
+#navbar li a {display: block; padding: 0.25em 0.5em 0.25em 0.75em;
+  border-left: 1em solid #AAB; text-decoration: none;}
+/*#navbar li a:link {color: #448; }*/
+#navbar li a:visited {color: #667; }
+#navbar li a:hover {border-color: #FE3; color: #FFF; background: #332;}
+
+/* Same for class version */
+
+.navbar {float:right}
+.navbar {padding: 0 1px 2em 1em; margin: 0;
+  font: bold 10px sans-serif;
+  background: white; width: 13em;}
+.navbar li {list-style: none; margin: 0; border-top: 1px solid gray;
+  text-align: left;}
+.navbar li#current {list-style: none; margin: 0; border-top: 1px solid gray;
+  text-align: left; background: #CCD; color: black; padding: 0.25em 0.5em 0.25em 0.75em;
+  border-left: 1em solid #AAB; text-decoration: none;}
+.navbar li a {display: block; padding: 0.25em 0.5em 0.25em 0.75em;
+  border-left: 1em solid #AAB; text-decoration: none;}
+/*.navbar li a:link {color: #448; }*/
+.navbar li a:visited {color: #667; }
+.navbar li a:hover {border-color: #FE3; color: #FFF; background: #332;}
+
+/* tabbed styles */
+#navigation {padding: 3px 0; margin: 0;
+  border-bottom: 1px solid #778;
+  font: bold 10px sans-serif;}
+#navigation li {list-style: none; margin: 0;
+  display: inline; line-height: 250%}
+#navigation li a {padding: 3px 0.5em; margin-left: 3px;
+  border: 1px solid #778; border-bottom: none;
+  background: #DDE;
+  text-decoration: none;}
+#navigation li a:link {color: #448; }
+#navigation li a:visited {color: #667; }
+#navigation li a:hover {color: #000; background: #AAE;
+  border-color: #227;}
+
+/* Same thing for class navigation */
+.navigation {padding: 3px 0; margin: 0;
+  border-bottom: 1px solid #778;
+  font: bold 10px sans-serif; }
+.navigation li {list-style: none; margin: 0;
+  display: inline; line-height: 250%}
+.navigation li a {padding: 3px 0.5em; margin-left: 3px;
+  border: 1px solid #778; border-bottom: none;
+  background: #DDE;
+  text-decoration: none;}
+.navigation li a:link {color: #448; }
+.navigation li a:visited {color: #667; }
+.navigation li a:hover {color: #000; background: #AAE;
+  border-color: #227;}
+
+
+/* "current tab" style */
+#navigation li a#current {background: white; border-bottom: 1px solid white;}
+/* Same thing for class navigation */
+.navigation li a#current {background: white; border-bottom: 1px solid white;}
+

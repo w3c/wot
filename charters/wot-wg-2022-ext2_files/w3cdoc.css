@@ -1,0 +1,270 @@
+a:link img, a:visited img {
+   border-style: none
+}
+
+html{
+   background-color: #fff;
+   color: #000;
+   margin:0;
+   border:0;}
+
+body
+{
+	background-color: #fff;
+	padding: 0em 2em;
+	font-family: "Gill Sans";
+}
+
+h4, h5, h6 {border: none;}
+body.team
+{
+margin:0;
+border-right: 30px solid #FFEEC2;
+border-left: 30px solid #FFEEC2;}
+
+body.team:before {content:"Team confidential";
+   font-size: 2em;
+   color: #F00;
+   padding: 5px;
+   font-weight: bold;}
+
+body.ab
+{
+margin:0;
+border-right: 30px solid #E2EDFE; ;
+border-left: 30px solid #E2EDFE;;}
+
+body.ab:before {content:"AB+Team confidential";
+      font-size: 2em;
+      color: #F00;
+      padding: 5px;
+      font-weight: bold;}
+
+#content {	background-color: #fff;}
+/*quotes*/
+blockquote
+{
+	background: #c8e3ea;
+	padding: 0.5em;
+	border-left: #999;
+	border-width: 0 0 0 1px;
+	border-style: none none none solid;
+	font-family: "Gill Sans";
+	font-style: italic;
+}
+q
+{
+	background: #c8e3ea;
+	font-family: "Gill Sans";
+	font-style: italic;
+}
+blockquote:after {
+	display: block;
+	content: attr(cite);
+	text-align: right;
+	font-size: 0.7em;
+}
+
+blockquote cite.title,
+blockquote cite.author {
+	font-style: italic;
+	font-size: 0.8em
+}
+blockquote cite.title:before {
+	content: "-- ";
+}
+
+/*PRE style*/
+pre
+{
+	padding: 0.5em;
+	border-color: #c8e3ea;
+	border-width: 1px 1px 1px 3px;
+	border-style: solid;
+	font-family: "Courier", fixed;
+}
+
+/*From http://www.w3.org/2005/09/table.css*/
+table
+{
+	border-collapse: collapse;
+	margin: 1em auto;
+}
+
+table caption
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table, tr, th, td { border: 1px solid black; }
+th, td { padding: 5px 1em; }
+
+th
+{
+	background: #005a9c;
+	color: #fff;
+}
+
+th a:link {
+  color: #fff;
+}
+
+th a:visited {
+  color: #aaa;
+}
+
+#Icons { float: right; }
+
+#footer
+{
+	border-color: #333;
+	border-width: 1px 0 0 0;
+	border-style: solid none none none;
+	clear: both;
+	font-size: 0.9em;
+}
+
+/* Stolen from /Stylesheets/activities.css */
+ul#Navigate { font-size: 0.86em; }
+#Icons img { vertical-align: top; }
+.trail { vertical-align: bottom; }
+
+.boldblack
+{
+	font-weight: bold !important;
+	background: transparent;
+	color: #000 !important;
+}
+
+/* right column */
+#Contents
+{
+	float: left;
+	width: 70%;
+	margin: 0 1% 1em 4%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin-bottom: 0;
+	padding-bottom: 0.15em;
+	border-bottom: 1px solid #ccc;
+	background: transparent;
+	color: #005a9c;
+	font-weight: normal;
+}
+
+h1
+{
+	margin-top: 1em;
+	margin-bottom: 0;
+	padding-bottom: 0.15em;
+	border-bottom: none;
+	background: transparent;
+	color: #000;
+}
+
+p.firstelement, table, address { margin-top: 0.7em; }
+
+/* left column */
+ul#Navigate, ul.nav
+{
+	margin: 0;
+	padding: 0.2em 0 0 0;
+}
+
+ul#Navigate
+{
+	float: left;
+	width: 13em;
+	margin: 1em 0 0 0.2em;
+	border-right: 1px solid gray;
+	background: #c8e3ea;
+	color: #000;
+	text-indent: 2px;
+}
+
+ul#Navigate li, ul.nav li
+{
+	padding: 0.2em 0 0.2em 0.3em;
+	list-style: none;
+	font-weight: normal;
+}
+
+ul.nav li { border-top: 1px solid gray; }
+
+ul#Navigate a, ul.nav li a
+{
+	padding-right: 0.1em;
+	background: transparent;
+	color: #000;
+	text-decoration: none;
+}
+
+ul#Navigate li.navcurrent, ul.nav li.navcurrent
+{
+	list-style: disc;
+	background: #fff;
+	color: #000;
+}
+
+ul#Navigate li a:hover, .nav li a:hover,
+ul#Navigate li a:focus, .nav li a:focus
+{
+	background: transparent;
+	color: #00e;
+	text-decoration: underline;
+}
+
+/* print */
+
+@media print
+{
+	body, html { font-family: sans-serif; }
+	
+	h1, h2, h3, h4, h5, h6
+	{
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+	
+	blockquote, pre, table { page-break-inside: avoid; }
+	ul, ol, dl { page-break-before: avoid; }
+	.whiteout, .trail, ul#Navigate, p#Validate { display: none; }
+	
+	div#Contents
+	{
+		float: none;
+		width: 100%;
+	}
+}
+
+.whiteout, .whiteout a:link, .whiteout a:visited
+{
+	background: #fff;
+	color: #fff;
+}
+
+.whiteout a:hover, .whiteout a:focus
+{
+	background: #fff;
+	color: #00e;
+}
+
+.whiteout a:active
+{
+	background: #fff;
+	color: #f00;
+}
+
+div.whiteout
+{
+	margin: -10px 0 0 0;
+	padding: 0;
+}
+
+/*#status {
+   padding: .5em 2em;
+   background-color: #FCC;
+   margin: 0 auto;}*/

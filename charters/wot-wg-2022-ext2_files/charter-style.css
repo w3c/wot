@@ -1,0 +1,89 @@
+#template h1 { clear: none }
+
+form { width: 90%; 
+       background: #eee5de; 
+       color: black; 
+       border: thin black solid; 
+       padding: .5em;  
+       margin-bottom: 1em; 
+       margin-left: auto;
+       margin-right: auto 
+       }
+
+body { counter-reset: h2; }
+
+h2.nocount:before { content: "" }
+
+h2:before {
+      content: counter(h2) ". ";
+      display: inline;
+    }
+
+h2.nocount {
+      counter-increment: none;
+      counter-reset: none
+    }
+
+h2 {
+      counter-increment: h2;
+      counter-reset: h3;
+    }
+
+h3:before {
+      content: counter(h2) "." counter(h3) " ";
+      display: inline;
+    }
+
+h3 { counter-increment: h3; }
+
+h4 { margin-left: 0 }
+
+tfoot
+{
+	font-size: 0.9em;
+	font-style: italic;
+	background-color: #ddd;
+}
+
+td.meeting { background: #FFE }
+td.WD1 { background: #FED }
+td.LC { background: #FCB }
+td.CR { background: #FA9 }
+td.PR { background: #F87 }
+td.REC { background: #F60 }
+td.note  { background: #F60 }
+
+.toadd { background-color: #FF0; font-style: italic}
+
+strong.must { color: #F30; }
+
+strong.should { color: #C63; padding: 0; border: none }
+.should { 
+	padding: .25em;
+	border: thin #C63 solid;
+ }
+
+li.may, strong.may { color: #99C; }
+div.may { 
+   padding: 3px;
+   background-color: #e2edfe;
+   border: 1px #005A9C solid; }
+
+.example
+{
+	background-color: #CC9;
+}
+
+div.example, ul.example, p.example, ol.example
+{
+	width: 80%;
+	border: thin black solid;
+}
+
+@media print {
+   .noprint { display: none }
+}
+
+.todo {
+  background-color:#FFC;
+}
