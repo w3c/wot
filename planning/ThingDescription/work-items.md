@@ -38,6 +38,8 @@ Changes that improve readability, the usability of the specification OR developm
   - While doing the refactoring, we should have a document to discuss the design of TD
 - Inline Security
 - Better integration of Thing Model
+- TD Versioning: impacts signing and canonicalization
+- Normative Parsing, Validation, Consumption
 
 ### Feature Aiming Work Items
 
@@ -48,13 +50,11 @@ Instead, the TF will analyze current solutions, gather existing use cases and di
 - Timeseries / Historical Data
 - Manageable Actions
 - Streaming
+- Signing and Canonicalization (there is discussion on where this should belong)
 
 ### Supporting Work Items (to be renamed)
 
 - Linting
-- Normative Parsing, Validation, Consumption
-- Signing and Canonicalization
-- TD Versioning
 - TD Testing for plugfest and testfests
 - Bugfixes (updates for the TD next. Actual bugs for 1.1 should be handled as errata)
 
