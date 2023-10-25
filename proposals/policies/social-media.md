@@ -1,9 +1,7 @@
-# Web of Things (WoT) Social Media Policy
-
+# Web of Things (WoT) Policy (Draft)
 Social Media (Twitter, LinkedIn, etc.) news requires quick publication. Thus, group resolutions would be too slow and a policy is required.
 
-## Process
-
+## Social Media
 - Chairs can review a proposed post and either authorize it immediately or ask for a 24-hour member review (via email).
 - Chairs can also post immediately for urgent, fact-based announcements. In addition, Ege Korkan has been approved to post such tweets directly.
 - However, such "immediate posts" should be limited to statements of objective facts.
@@ -11,8 +9,7 @@ Social Media (Twitter, LinkedIn, etc.) news requires quick publication. Thus, gr
 - Because any chair can review, this can be done in any meeting that a chair is present at or via email.
 - Review should be done whenever there is the slightest doubt; another set of eyes can help make sure there are no ambiguities or unintended meanings.
 
-## Content
-
+### Content
 - Posts should be in English (for now, to keep things simple).
 - The WoT accounts owned by the W3C WoT IG/WG can promote content from other groups or people that are related to WoT. The restrictions are:
   - The link to the content itself has to be inserted. This can be a calendar entry, blog post, original tweet, or post.

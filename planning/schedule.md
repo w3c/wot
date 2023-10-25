@@ -48,21 +48,25 @@ the renewed WG charter (probably to start sometime in August).
 | May 17, 2023 | Arch 1.1, Discovery, TD 1.1 | cut-off date for implementation report contributions -  PR draft - at risk items cleaned up |
 | May 18, 2023 | Binding Templates | Publish updated Note |
 | May 24, 2023 | Arch 1.1, Discovery, TD 1.1 | Call for resolution (TF) - PR draft freeze - 2 week review  |
-
-## Current
-| Due date | Spec. | Description |
-| --- | --- | --- |
 | June 7, 2023 | Arch 1.1, Discovery, TD 1.1 | PR publication (WG resolutions) |
 | June 7, 2023 | Profile | <strike>PR transition request (CR transition + 2mo)</strike> |
 | June 14, 2023 | Arch 1.1, Discovery, TD 1.1 | PR transition request to W3M (WG resolutions) |
-| TBD, 2023 | Next | Next WG Charter W3M/Wide Review Complete (submission + 1.5mo) |
-| TBD, 2023 | Next | Next WG Charter AC Review Complete (W3M review complete + 1mo) |
 | June 19-23, 2023 | Next | Next WG Charter detailed work planning |
 | July 6, 2023 | Arch 1.1, Discovery, TD 1.1 | PR publication (estimate) |
 | July 25, 2023 | Next | Press Release Narrative - WG input, call for testimonials sent |
 | Aug 9, 2023 | Next | Press Release Draft - Review starts, call for resolution in 2 weeks |
 | Aug 23, 2023 | Next | Press Release Draft - Resolution to Publish |
-| end-Aug, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (estimate PR transition request + 1wk + 2mo) |
-| Sept 1, 2023 | Next | Next WG Charter Begins (estimate) |
-| Sept 6, 2023 | Next | Expected Press Release Publication Date (after MarComm review) |
+| August 30, 2023 | Next | Next WG Charter AC Review Complete (W3M review complete + 1mo) |
 | Sept 11-15, 2023 | Next | TPAC 2023 - Seville, Spain |
+
+## Current
+| Due date | Spec. | Description |
+| --- | --- | --- |
+| Sept 20, 2023 | Next | Press Release - call for resolution in 2 weeks |
+| Sept 29, 2023 | Arch 1.1, Discovery, TD 1.1 | Press Release Testimonial Deadline |
+| Oct 1, 2023 | Next | New WG Charter Begins (estimate) |
+| prior to Oct 5, 2023 | Arch 1.1, Discovery, TD 1.1 | Web resource publication (estimate) |
+| Oct 5, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (estimate) |
+| Oct 4, 2023 | Next | Press Release - Resolution to Publish |
+| Oct 5, 2023 | Next | Expected Press Release Publication Date (estimate) |
+

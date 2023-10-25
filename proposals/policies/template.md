@@ -1,4 +1,4 @@
-# Web of Things (WoT) Policy
+# Web of Things (WoT) Policy (Draft)
 ## Template
 - This is an example, not an actual proposed policy.
 - Keep things simple, not more than a quarter page of text, ideally in bullet-point form.
