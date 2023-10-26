@@ -87,12 +87,18 @@ In no particular order, we have the following:
 - Incorporating Binding Mechanism
 - Better integration of Thing Model
 - Specification Generation Tooling
-- Grouping of normative requirements
-- Common definitions section (usability improvements for not needing to "jump around" while reading)
+- Grouping of normative requirements (depends on specification generation tooling)
+- Common definitions section (usability improvements for not needing to "jump around" while reading) (depends on specification generation tooling)
 - Assertion id alignment: adding `td`, checking naming scheme
 - Synchronization with other documents
 - Example reorganization
 - Testing Pipeline
+
+### Redesign Roadmap
+
+- Base connection design
+- Data mapping
+More to come here
 
 ## Related Resources
 
