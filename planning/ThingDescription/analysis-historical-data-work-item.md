@@ -9,6 +9,11 @@ This document will be worked on before extending the TD specification.
 Some edge and cloud services can collect property value changes or event emissions for a certain time.
 This data, called time series, can be collected by Consumers to display (or use in any other way) the evolution of the affordance data over time.
 
+This topic is also known as:
+
+- Timeseries
+- Data Trend
+
 ## Use Cases
 
 To find the related use cases, the [coverage document](https://github.com/w3c/wot-usecases/blob/main/USE-CASES/coverage.csv) has been used and another pass through the [use cases document](https://w3c.github.io/wot-usecases) has been made.
@@ -28,10 +33,13 @@ To find the related use cases, the [coverage document](https://github.com/w3c/wo
 
 ## Other Discussions
 
+## Identified Requirements
+
 ## Existing Solutions
 
 - [Timeseries Data Submodel Specification at IDTA](https://industrialdigitaltwin.org/wp-content/uploads/2023/03/IDTA-02008-1-1_Submodel_TimeSeriesData.pdf)
 - [InfluxDB Timeseries Data oriented Database](https://www.influxdata.com/)
+- [WebThings.io REST API](https://webthings.io/api/#event-resource)
 - ECHONET Lite Web API has an extension of the current TD specification on this direction
   - WebAPI Specs: https://echonet.jp/wp/wp-content/uploads/pdf/General/Standard/web_api/ECHONET_Lite_Web_API_Specs_v1.1.4_e.pdf
   - WebAPI Device Specification: https://echonet.jp/wp/wp-content/uploads/pdf/General/Standard/web_api/ECHONET_Lite_Web_API_Dev_Specs_v1.4.1_e.pdf
