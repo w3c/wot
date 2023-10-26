@@ -11,7 +11,7 @@ This data, called time series, can be collected by Consumers to display (or use 
 
 This topic is also known as:
 
-- Timeseries
+- Time series
 - Data Trend
 
 ## Use Cases
@@ -33,7 +33,15 @@ To find the related use cases, the [coverage document](https://github.com/w3c/wo
 
 ## Other Discussions
 
+These can be artifacts like presentations, meeting minutes.
+
 ## Identified Requirements
+
+From the use cases, requirements should be identified.
+
+## Feature Proposals
+
+Ideally, the feature can exist only after the requirements are identified. However, if there are proposals already, they can be put here to drive discussions.
 
 ## Existing Solutions
 
@@ -43,3 +51,7 @@ To find the related use cases, the [coverage document](https://github.com/w3c/wo
 - ECHONET Lite Web API has an extension of the current TD specification on this direction
   - WebAPI Specs: https://echonet.jp/wp/wp-content/uploads/pdf/General/Standard/web_api/ECHONET_Lite_Web_API_Specs_v1.1.4_e.pdf
   - WebAPI Device Specification: https://echonet.jp/wp/wp-content/uploads/pdf/General/Standard/web_api/ECHONET_Lite_Web_API_Dev_Specs_v1.4.1_e.pdf
+
+## Reading Resources
+
+- Overview on Wikipedia: https://en.wikipedia.org/wiki/Time_series
