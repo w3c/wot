@@ -69,7 +69,7 @@ which hold regular meetings to share information on WoT and its applications in 
 
 {Testimonials from WG members and other W3C Members go here}
 
-## Testimonials from W3C Members and Liasion Partners
+## Testimonials from W3C Members and liaison partners
 
 
 ### Hitachi
