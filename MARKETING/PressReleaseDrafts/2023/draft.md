@@ -51,13 +51,13 @@ Many [software packages and open-source projects now support WoT](https://www.w3
 tools for Thing Description validation and construction as well as support for Thing runtimes and 
 Thing Description directories supporting discovery.
 
-Market adoption of the Web of Things is rapidly growing.
-The Web of Things has been adopted or is under consideration for adoption by
-several standards organizations, including 
+Market adoption of the Web of Things is gaining momentum, with notable products such as SayWoT! and Desigo CC from Siemens and a building management platform from Takenaka.
+Interesting products from startups are also appearing like MONAS and Agorà from VAIMEE systems for creating digital twins of cast-resin transformers, and in the agricultural domain for crops and terrains; and Krellian Cloud, which provides real-time data analytics for smart buildings.
+Additionally, the Web of Things has either been adopted or is under consideration for adoption by several standards organizations, including
 [ECHONET](https://echonet.jp/english/), 
 [Conexxus](https://www.conexxus.org/),
-the [OPC Foundation](https://opcfoundation.org/) (OPC UA Web-of-Things Connectivity WG), 
-and the [IPA Digital Architecture Design Center](https://www.ipa.go.jp/en/about/org/dadc/index.html).
+the [OPC Foundation](https://opcfoundation.org/) (OPC UA Web-of-Things Connectivity), 
+[IPA Digital Architecture Design Center](https://www.ipa.go.jp/en/about/org/dadc/index.html), and [Industrial Digital Twin Association](https://industrialdigitaltwin.org/en/) (Asset Interfaces Description).
 
 The growing WoT user community is supported by multiple [WoT Community Groups](https://www.w3.org/WoT/cg/), 
 which hold regular meetings to share information on WoT and its applications in both English and Japanese.
