@@ -53,7 +53,7 @@ Many [software packages and open-source projects now support WoT](https://www.w3
 tools for Thing Description validation and construction as well as support for Thing runtimes and 
 Thing Description directories supporting discovery.
 
-The market adoption of the Web of Things is gaining momentum, with notable products such as SayWoT! and Desigo CC from Siemens, the CGLL Platform from Takenaka, <some more>.
+Market adoption of the Web of Things is gaining momentum, with notable products such as SayWoT! and Desigo CC from Siemens, the CGLL Platform from Takenaka, and interesting products from the startup world like MONAS and Agorà from VAIMEE systems for creating digital twins of cast-resign transformers and crops-terrains, and Krellian Cloud which provides real-time data analytics for smart buildings.
 Additionally, the Web of Things has either been adopted or is under consideration for adoption by several standards organizations, including
 [ECHONET](https://echonet.jp/english/), 
 [Conexxus](https://www.conexxus.org/),
