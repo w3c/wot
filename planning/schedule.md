@@ -65,8 +65,8 @@ the renewed WG charter (probably to start sometime in August).
 | Sept 20, 2023 | Next | Press Release - call for resolution in 2 weeks |
 | Sept 29, 2023 | Arch 1.1, Discovery, TD 1.1 | Press Release Testimonial Deadline |
 | Oct 1, 2023 | Next | New WG Charter Begins (estimate) |
-| prior to Oct 5, 2023 | Arch 1.1, Discovery, TD 1.1 | Web resource publication (estimate) |
-| Oct 5, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (estimate) |
-| Oct 4, 2023 | Next | Press Release - Resolution to Publish |
-| Oct 5, 2023 | Next | Expected Press Release Publication Date (estimate) |
+| Nov 1, 2023 | Next | Press Release - Resolution to Publish (proposed) |
+| prior to Nov 9, 2023 | Arch 1.1, Discovery, TD 1.1 | Web resource publication (estimate) |
+| Nov 9, 2023 | Arch 1.1, Discovery, TD 1.1 | REC transition (estimate) |
+| Nov 9, 2023 | Next | Expected Press Release Publication Date (estimate) |
 
