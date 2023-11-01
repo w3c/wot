@@ -51,8 +51,8 @@ Many [software packages and open-source projects now support WoT](https://www.w3
 tools for Thing Description validation and construction as well as support for Thing runtimes and 
 Thing Description directories supporting discovery.
 
-Market adoption of the Web of Things is gaining momentum, with notable products such as SayWoT! and Desigo CC from Siemens and a building management platform from Takenaka.
-Interesting products from startups are also appearing like MONAS and Agorà from VAIMEE systems for creating digital twins of cast-resin transformers, and in the agricultural domain for crops and terrains; and Krellian Cloud, which provides real-time data analytics for smart buildings.
+Market adoption of the Web of Things is gaining momentum, with notable products such as SayWoT! and Desigo CC from Siemens and the Building Communication System from Takenaka.
+Interesting products from startups are also appearing like MONAS and Agorà from VAIMEE for creating digital twins of cast-resin transformers, and in the agricultural domain for crops and terrains; and Krellian Cloud, which provides real-time data analytics for smart buildings.
 Additionally, the Web of Things has either been adopted or is under consideration for adoption by several standards organizations, including
 [ECHONET](https://echonet.jp/english/), 
 [Conexxus](https://www.conexxus.org/),
