@@ -80,7 +80,7 @@ We're enthusiastic that these leaps in cyber-physical systems will stimulate pro
 ### Intel
 Intel congratulates the WoT WG for the updated WoT standard.  This update solidifies support for the descriptive approach to IoT interoperability.  IoT fragmentation remains a major barrier to greater IoT adoption.  The WoT standard addresses a key challenge in the integration of IoT devices and services from different IoT ecosystems by providing a common format for describing data and interaction.   This descriptive approach strongly differentiates it from other prescriptive approaches to IoT interoperability, and is designed to work with and enhance other standards, not compete with them.
 
-*Eric Siow, <FIXME:title> Intel Corporation*
+*Eric Siow, Web Standards and Ecosystem Strategies Director, Intel Corporation*
 
 ### OPC Foundation
 The OPC Foundation welcomes the new releases of the W3C Web of Things. Current OPC Foundation group activities are working on a solution how WoT Thing Descriptions can be used as a data model mapping service from non-OPC UA asset interfaces to OPC UA systems. This reduces the onboarding effort (e.g. of Modbus-based assets) and enables smooth use of asset data interfaces in the OPC UA address space. We see this as a big win for the manufacturing industry and another important step towards improving the interoperability of heterogeneous asset landscapes.
