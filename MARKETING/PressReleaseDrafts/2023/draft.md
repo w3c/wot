@@ -1,7 +1,7 @@
 # Enhanced Web of Things connects diverse IoT ecosystems [DRAFT]
 ** THIS IS A DRAFT. The WoT deliverables cited below are still in Proposed Recommendation status.**
 
-https://www.w3.org/ — <FIXME: City + Date> DD MM 2023 — The World Wide Web Consortium (W3C) announced today that 
+https://www.w3.org/ — DD MM 2023 — The World Wide Web Consortium (W3C) announced today that 
 [Web of Things (WoT) Architecture 1.1](https://www.w3.org/TR/wot-architecture11/),
 [Web of Things (WoT) Thing Description 1.1](https://www.w3.org/TR/wot-thing-description11/), 
 and 
