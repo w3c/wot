@@ -20,10 +20,7 @@ This allows us to better label and manage the items.
 
 - **Details:** The details of different work items can be found at <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md>. We will consolidate such details and link them appropriately.
 
-### Usability and Design Work Items
-
-Changes that improve readability, the usability of the specification OR development, spec generation, bug fix, and testing of the specification do not need use cases.
-
+### Protocol Binding
 - Binding Submission Mechanism (e.g. Registry)
 - Binding Mechanism
   - Integration of the Binding Templates into the TD document
@@ -32,14 +29,35 @@ Changes that improve readability, the usability of the specification OR developm
   - `href` and URI design
   - External Security Ontologies
     - Also see https://github.com/w3c/wot-charter-drafts/issues/57 , https://github.com/w3c/wot-thing-description/issues/1880
+
+### Usability and Design Work Items
+Changes that improve readability, the usability of the specification OR development, spec generation, bug fix, and testing of the specification do not need use cases.
 - Reusable Elements and pointers (e.g. reusable payloads, initial connection)
 - Restructuring the TD Specification and Specification Generation
   - This should be done while keeping the current content, e.g. grouping of normative requirements, common definitions section (usability improvements for not needing to "jump around" while reading)
   - While doing the refactoring, we should have a document to discuss the design of TD
 - Inline Security
 - Better integration of Thing Model
-- TD Versioning: impacts signing and canonicalization
+- TD Versioning: impacts signing and canonicalization (RDF canonicalization?)
 - Normative Parsing, Validation, Consumption
+#### Document reorganization
+- Common definition section
+- Grouping of normative requirements
+- Start a TD (re)design document
+#### Reusable Elements
+- Reusable connections, for example a MQTT Broker connection that can be described at the top and used in the forms
+- Data Schema mapping information/metadata
+- Security schemes may need to be refactored and use the same pattern as other reusable elements
+- Create a design document, scenarios, requirements, and use the same pattern for all reusable elements
+- Review current state of the art in other standards
+#### Uniform pattern/state machines between Actions, Events, and Properties
+- Avoid doing the same thing in a different way, for example how to express observability and cancellation
+- Relationships across affordances, for example when an Action changes the state of a Property
+- Design document, etc. 
+- Property vs. Action (also URI Variables redesign question)
+#### Normative Consumption
+- Do we want to proscribe how TDs are processed beyond text level?
+- Degraded consumption rule for uniform degradation across consumers, e.g. TD too big
 
 ### Feature Aiming Work Items
 
