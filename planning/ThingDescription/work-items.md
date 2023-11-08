@@ -48,7 +48,8 @@ Changes that improve readability, the usability of the specification OR developm
 - Reusable connections, for example a MQTT Broker connection that can be described at the top and used in the forms
 - Data Schema mapping information/metadata
 - Security schemes may need to be refactored and use the same pattern as other reusable elements
-- Create a design document, scenarios, requirements, and use the same pattern for all reusable elements
+- Create a design document [issue](https://github.com/w3c/wot-thing-description/issues/1889)
+- scenarios, requirements, and use the same pattern for all reusable elements
 - Review current state of the art in other standards
 #### Uniform pattern/state machines between Actions, Events, and Properties
 - Avoid doing the same thing in a different way, for example how to express observability and cancellation
