@@ -58,7 +58,8 @@ Changes that improve readability, the usability of the specification OR developm
 #### Normative Consumption
 - Do we want to proscribe how TDs are processed beyond text level?
 - Degraded consumption rule for uniform degradation across consumers, e.g. TD too big
-
+#### Single source of truth for build
+- Make sure there are no gaps in the tooling and process for building index.html
 ### Feature Aiming Work Items
 
 
