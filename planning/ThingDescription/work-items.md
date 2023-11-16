@@ -1,10 +1,10 @@
 # [DRAFT] Web of Things TD Work Items 
 
-This is copied from https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf and is further restructured here.
+This is copied from <https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf> and is further restructured here.
 
 ## Categories
 
-The work items are split into four categories. 
+The work items are split into four categories.
 
 1. The first category is Binding Templates, which involves specifying the mechanism but also the submission mechanism.
 2. The second category focuses on work items that are more about restructuring, redesigning, and improving the usability of the specification. These could pave the way for new features.
@@ -16,7 +16,7 @@ The task force will go through existing issues, pull requests, and discussions, 
 
 - **Priorities:** The items below can be considered a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
 
-- **Organization:** In order to have a better overview, the list of work items should be kept low, and small work items should be grouped into bigger ones. 
+- **Organization:** In order to have a better overview, the list of work items should be kept low, and small work items should be grouped into bigger ones.
 This allows us to better label and manage the items.
 
 - **Details:** The details of different work items can be found at <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md>. We will consolidate such details and link them appropriately.
@@ -73,7 +73,7 @@ Changes that should be done while keeping the current content
 #### Normative Parsing, Validation, Consumption
 
 - What is a valid TD, are there any levels of validness?
-  - A TD validator can do only JSON Schema validation but that is not enough to test everything. 
+  - A TD validator can do only JSON Schema validation but that is not enough to test everything.
   - A TD may be not completely valid but usable by a "degraded consumer" (see below) or a TD can be completely valid according to all the assertions and protocol bindings but not be usable by some consumers.
 - Do we want to prescribe how TDs are processed and consumed beyond the text level?
 - Degraded consumption rule for uniform degradation across consumers, e.g. TD too big, protocol or protocol options unknown, contentType unknown, etc.
@@ -98,9 +98,9 @@ These are contained in this folder with the `analysis-` prefix.
 ### Supporting Work Items (to be renamed)
 
 - Linting
-- TD Testing for plugfest and testfests: Currently it is at Eclipse Thingweb Playground at https://github.com/eclipse-thingweb/playground/tree/master/packages/assertions but we should move it here.
+- TD Testing for plugfest and testfests: Currently it is at Eclipse Thingweb Playground at <https://github.com/eclipse-thingweb/playground/tree/master/packages/assertions> but we should move it here.
 - Bugfixes (updates for the TD next. Actual bugs for 1.1 should be handled as errata)
-- Examples reorganization: It would be better to have complete TD examples that can be validated but at the same time we can show a part of it for specific features. Also, see https://github.com/w3c/wot-thing-description/issues/1851.
+- Examples reorganization: It would be better to have complete TD examples that can be validated but at the same time we can show a part of it for specific features. Also, see <https://github.com/w3c/wot-thing-description/issues/1851>.
 
 ## Notes
 
@@ -118,6 +118,7 @@ We have a roadmap for the TD specification that is aligned with the charter star
 - Charter Start: October 2023
 
 Notes:
+
 - Stopping big features 6 months prior to CR Transition. That means January 10, 2025 -> End of 2024, we should be done with big features.
   - The bigger the implementation impact, the more time to implement
   - We can give something like "Story Points" to give a rough idea of the effort
@@ -151,7 +152,7 @@ More to come here
 
 In addition to GitHub issues and Use Cases, there are various documents that should be read before starting the work
 
-- Long Running Actions Proposals: https://github.com/w3c/wot-thing-description/tree/main/proposals
-- Registry Analysis: https://github.com/w3c/wot/tree/main/registry-analysis
-- Historical Data Landscape: https://github.com/w3c/wot/pull/1112
-- Charter Details: https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html
+- Long Running Actions Proposals: <https://github.com/w3c/wot-thing-description/tree/main/proposals>
+- Registry Analysis: <https://github.com/w3c/wot/tree/main/registry-analysis>
+- Historical Data Landscape: <https://github.com/w3c/wot/pull/1112>
+- Charter Details: <https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html>
