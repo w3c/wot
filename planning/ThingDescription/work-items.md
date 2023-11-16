@@ -1,17 +1,18 @@
 # [DRAFT] Web of Things TD Work Items 
 
-## Original Input
-
-This is copied from https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf and should ideally be restructured and organized into the section later.
+This is copied from https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf and is further restructured here.
 
 ## Categories
 
-The work items are split into three categories. 
-The first category focuses on work items that are more about restructuring, redesigning, and improving the usability of the specification. These could pave the way for new features.
-The second category is about work items that are directly linked to new features.
-The third category is currently called supporting work items (can be renamed) and they improve various mechanisms but are not necessarily new keywords for TD instances.
+The work items are split into four categories. 
+
+1. The first category is Binding Templates, which involves specifying the mechanism but also the submission mechanism.
+2. The second category focuses on work items that are more about restructuring, redesigning, and improving the usability of the specification. These could pave the way for new features.
+3. The third category is about work items that are directly linked to new features.
+4. The fourth category is currently called supporting work items (can be renamed) and they improve various mechanisms but are not necessarily new keywords for TD instances.
+
 Such categories can be reflected with labels and different views in the GitHub project management panel.
-The task force will go through existing issues, pull requests and discussions, and categorize them accordingly.
+The task force will go through existing issues, pull requests, and discussions, and categorize them accordingly.
 
 - **Priorities:** The items below can be considered a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
 
@@ -20,7 +21,8 @@ This allows us to better label and manage the items.
 
 - **Details:** The details of different work items can be found at <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md>. We will consolidate such details and link them appropriately.
 
-### Protocol Binding
+### Binding Templates
+
 - Binding Submission Mechanism (e.g. Registry)
 - Binding Mechanism
   - Integration of the Binding Templates into the TD document
@@ -32,7 +34,8 @@ This allows us to better label and manage the items.
 
 ### Usability and Design Work Items
 
-Changes that improve readability, the usability of the specification OR development, spec generation, bug fix, and testing of the specification do not need use cases.
+Changes that improve readability, the usability of the specification OR development, spec generation, bug fixes, and testing of the specification do not need use cases.
+These have more priority since they can impact how new features look like in a TD instance.
 
 #### Design Document
 
@@ -45,18 +48,19 @@ Changes that should be done while keeping the current content
 - Common definition section: Usability and readability improvements for not needing to "jump around" while reading
 - Grouping of normative requirements
 - Assertion id alignment: adding `td`, checking naming scheme
+- Better integration of Thing Model
 
 #### Synchronization with other documents
 
 - Moving binding templates core document content to TD
 - Moving discovery-related text from TD to Discovery
 
-#### Reusable Elements
+#### Reusable TD Elements
 
 - Reusable connections, for example, an MQTT Broker connection that can be described at the top and used in the forms
 - Data Schema mapping information/metadata
 - Security schemes may need to be refactored and use the same pattern as other reusable elements
-
+- Inline Security
 - Scenarios, requirements, and use the same pattern for all reusable elements
 - Review the current state of the art in other standards
 
@@ -78,25 +82,18 @@ Changes that should be done while keeping the current content
 
 - Make sure there are no gaps in the tooling and process for building index.html
 
-#### Others
-
-Items that are not grouped in a topic above are listed here:
-
-- Inline Security
-- Better integration of Thing Model
-- TD Versioning: impacts signing and canonicalization (RDF canonicalization?)
-- Creating the registry mechanism
-
 ### Feature Aiming Work Items
 
 For new features (keywords or behavior), a use case (or user story) should exist in the first place.
 While the refactoring topics are being worked on, new features should not be incorporated into the specification.
 Instead, the TF will analyze current solutions, gather existing use cases and discussions, and write the requirements to shape the feature.
+These are contained in this folder with the `analysis-` prefix.
 
 - Timeseries / Historical Data
 - Manageable Actions
 - Streaming
 - Signing and Canonicalization (there is discussion on where this should belong)
+  - TD Versioning
 
 ### Supporting Work Items (to be renamed)
 
