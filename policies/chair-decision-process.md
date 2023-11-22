@@ -1,4 +1,7 @@
 # Web of Things (WoT) Policy
+
+The following policy is only valid for the Chairs' meeting. 
+
 ## Working Group Chairs' Decision Process and Quorum
 - The following relates only to decisions that the Working Group agrees can be delegated to chairs, which includes the following:
     - Rejecting unsolicited Invited Expert applications
