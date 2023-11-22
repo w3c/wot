@@ -189,7 +189,7 @@ In order to choose a mechanism and the rules, we document our requirements and e
   - Link to the binding: Stable link
   - (possibly) The binding prefix
 -  Requirements on the submitted document:
-  - To be clarified but the initial list for protocols at https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification
+  - To be clarified but the initial list for protocols at https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification  
 
 What we are doing now: https://w3c.github.io/wot-binding-templates/#protocol-bindings-table
 
