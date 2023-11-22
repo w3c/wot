@@ -25,10 +25,14 @@ Volunteer: Jan Romann
 #### TTML Media Type Definition and Profile Registry
 
 This [document](https://w3c.github.io/tt-profile-registry/#registry) defines a specific media type and a registry for associated "processor profiles".
-The registry, its entries and the modification process are specified as follows:
+
+##### Entry Format
 
 - Entries must contain a unique ID, an absolute URI that identifies the profile, and contact information of the registrant
 - Entries *should* contain links to the specification of the profile itself and its corresponding vocabulary
+
+##### Submission and Modification Process
+
 - Entries can be added, changed, or deleted
   - Although deletion is possible, entries are intended to be stable
 - Requests are made via an email to the WG chair, will be decided on in a WG meeting
@@ -43,13 +47,24 @@ These are relevant for
 [`SourceBuffer` objects](https://www.w3.org/TR/media-source/#sourcebuffer) which
 are used for cosuming audio and video streams.
 
-The registry, its entries and the modification process are specified as follows:
+##### Entry Format
 
-- Each entry consists of MIME type/subtype which is mapped to a publicly available specification for a byte stream format. Furthermore, it has to be specified if a flag for generating timestamps needs to be set with the byte stream format.
-- It is recommended that the specification should be available without fees.
-- All requirements mentioned in the [Media Source Extensions](https://www.w3.org/TR/media-source/#byte-stream-formats) specification must be fulfilled.
-- The possibility to remove entries that fail to satisfy any of the mandatory requirements is explicitly mentioned.
-- New entries are submitted to a public mailing list where they are supposed to be discussed and evaluated before adding them to the registry. The process of approving a new entry is (apparently?) not formally specified.
+Each entry consists of MIME type/subtype which is mapped to a publicly available
+specification for a byte stream format.
+It is recommended that the specification should be available without fees.
+
+Furthermore, it has to be specified if a flag for generating timestamps needs to
+be set with the byte stream format.
+
+##### Submission Process
+All requirements mentioned in the [Media Source Extensions](https://www.w3.org/TR/media-source/#byte-stream-formats) specification must be fulfilled.
+
+New entries are submitted to a public mailing list where they are supposed to be
+discussed and evaluated before adding them to the registry.
+The process of approving a new entry is (apparently?) not formally specified.
+
+##### Modification Process
+The possibility to remove entries that fail to satisfy any of the mandatory requirements is explicitly mentioned.
 
 #### DID Specification Registries
 
@@ -57,29 +72,41 @@ This [document](https://www.w3.org/TR/did-spec-registries/) defines
 a registry for all known global parameters, properties, and values used by the
 Decentralized Identifier ecosystem.
 
-The registry, its entries and the modification process are specified as follows:
-
-- New entries have to be submitted via a modification request (as part of a PR on the registry's repository)
-- Entries must include a human-readable description and should have a clear and descriptive name
+##### Entry Format
+- Entries must include a human-readable description and should have a clear and descriptive name.
 - Entries must adhere to an IPR policy and do no harm to others (including legally and security-wise).
-- Entries must link to a specification that makes it possible to implement the addition
-- Entries must specify a JSON-LD context (with a set of more finegrained requirements)
-- Entries must not be removed, only deprecated
+- Entries must link to a specification that makes it possible to implement the addition.
+- Entries must specify a JSON-LD context (with a set of more finegrained requirements).
+
+##### Submission Process
+.New entries have to be submitted via a modification request
+(as part of a PR on the registry's repository).
+
+##### Modification Process
+Entries must not be removed, only deprecated.
 
 #### XPointer Scheme Name Registry Policy
 
 This [document](https://www.w3.org/2005/04/xpointer-policy) defines a policy
 that governs the registration of simple names for Scheme-Based XPointers.
 
-The registry, its entries and the modification process are specified as follows:
+##### Entry Format
+Entries consist of a name and description.
+
+##### Submission Process
 
 - Entries are given out on a "first come, first serve" basis
 - A W3C account is required
-- As part of a registration request, only a name and a description are required, requests are made via a Web form
+- Registration requests are made via a Web form
 - After submission, a registration is reviewed on a public mailing list where objections can be raised within one month
 - In case of an objection, the Team Contact makes a decision within two weeks. If the objection is upheld, the submission can be revised or appealed within one week. Otherwise, it is rejected.
 - In the case of an appeal, the W3C Director decides.
 - In the case of no objection and an approval by the director, the request changes its state to "Registered". The other states are "Pending" and "Rejected".
+
+##### Modification Process
+
+A process for modifying an entry is not defined.
+<!-- TODO: Double-check that this is really the case -->
 
 #### Insights and Conclusion
 
@@ -162,7 +189,7 @@ In order to choose a mechanism and the rules, we document our requirements and e
   - Link to the binding: Stable link
   - (possibly) The binding prefix
 -  Requirements on the submitted document:
-  - To be clarified but the initial list for protocols at https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification  
+  - To be clarified but the initial list for protocols at https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification
 
 What we are doing now: https://w3c.github.io/wot-binding-templates/#protocol-bindings-table
 
