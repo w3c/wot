@@ -6,6 +6,8 @@ call for a group resolution to adopt it.  If the group resolution passes, it can
 
 ## Index
 
+* [Policy Adoption](policy-adoption.md)
 * [Group Decisions](decisions.md)
 * [Asynchronous Decisions for Deliverables](async-decision.md)
+
 
