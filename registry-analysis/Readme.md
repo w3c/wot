@@ -65,7 +65,6 @@ The registry, its entries and the modification process are specified as follows:
 - Entries must link to a specification that makes it possible to implement the addition
 - Entries must specify a JSON-LD context (with a set of more finegrained requirements)
 - Entries must not be removed, only deprecated
-<!-- TODO: Could maybe be expanded -->
 
 #### XPointer Scheme Name Registry Policy
 
