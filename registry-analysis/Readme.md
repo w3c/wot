@@ -77,7 +77,7 @@ The registry, its entries and the modification process are specified as follows:
 - A W3C account is required
 - As part of a registration request, only a name and a description are required, requests are made via a Web form
 - After submission, a registration is reviewed on a public mailing list where objections can be raised within one month
-- In case of an objection, the Team Contact makes a decision within two weeks. If the objection is upheld, the submission can be revise or appealed within one week, otherwise it is rejected.
+- In case of an objection, the Team Contact makes a decision within two weeks. If the objection is upheld, the submission can be revised or appealed within one week. Otherwise, it is rejected.
 - In the case of an appeal, the W3C Director decides.
 - In the case of no objection and an approval by the director, the request changes its state to "Registered". The other states are "Pending" and "Rejected".
 
@@ -106,7 +106,7 @@ not leaving aspects too vague.
 Except for the XPointer scheme registry, all of the registries above require
 formal specifications to be linked to from registry.
 Depending on the kind of registry, additional aspects need to be specified,
-e.g., a JSON-LD @context when it comes to DID.
+e.g., a JSON-LD `@context` when it comes to DID.
 
 This emphasizes that special attention should be given to which parts need to be
 included in a registry entry.
