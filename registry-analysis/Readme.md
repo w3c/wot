@@ -126,6 +126,17 @@ supposed to be deleted if it violates any of the mandatory requirments.
 DID, however, only allows for the *Deprecation* of entries, which seems like a
 good way to avoid accidental breaking of deployed implementations.
 
+##### Versioning
+
+One aspect that is not explicitly covered in the registries mentioned above is
+having different versions of the same entry.
+New versions of the same document could be treated simply as a resubmission
+while marking the old entries as deprecated (see the section on deletion and
+deprecation above).
+However, we could also opt for an explicit versioning mechanism for our
+registries in order to, for instance, group different versions of a Binding
+Template.
+
 <!-- TODO: Are there more aspects that need to be covered here? -->
 
 ## Analysis of IANA Registries
