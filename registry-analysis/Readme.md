@@ -26,6 +26,9 @@ Volunteer: Jan Romann
 
 This [document](https://w3c.github.io/tt-profile-registry/#registry) defines a specific media type and a registry for associated "processor profiles".
 
+**Status:** Not active (Last updated Dec 2020)
+**Creation:** TBD
+
 ##### Entry Format
 
 - Entries must contain a unique ID, an absolute URI that identifies the profile, and contact information of the registrant
