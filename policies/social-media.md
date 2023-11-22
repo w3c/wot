@@ -1,5 +1,7 @@
-# Web of Things (WoT) Policy (Draft)
-Social Media (Twitter, LinkedIn, etc.) news requires quick publication. Thus, group resolutions would be too slow and a policy is required.
+# Web of Things (WoT) Policy
+Social Media (Twitter/X, LinkedIn, etc.) news requires quick publication. Thus, group resolutions would be too slow and a policy is required.
+
+However, a group resolution is required if a new platform is to be adopted or a significant change to the use of an existing platform.
 
 ## Social Media
 - Chairs can review a proposed post and either authorize it immediately or ask for a 24-hour member review (via email).
@@ -14,7 +16,7 @@ Social Media (Twitter, LinkedIn, etc.) news requires quick publication. Thus, gr
 - The WoT accounts owned by the W3C WoT IG/WG can promote content from other groups or people that are related to WoT. The restrictions are:
   - The link to the content itself has to be inserted. This can be a calendar entry, blog post, original tweet, or post.
   - The owner should be indicated in the message (tweet, post, etc.) itself. For example, this can be saying "... from WoT CG", or "... from Node.js Summit 22".
-  - If we are sharing content that is from the same platform, a rendering of the original content generally happens and the two requirements above are generally automatically met. For example, on Twitter, a retweet links to the content and shows the owner of the content.
+  - If we are sharing content that is from the same platform, a rendering of the original content generally happens and the two requirements above are generally automatically met. For example, on Twitter/X, a retweet links to the content and shows the owner of the content.
   - The relationship to WoT should be clear from the promoted content. For example, if someone who usually talks about WoT also tweets about their vacation, we should not share it.
   - Valid examples of promoted content:
     - Check out the event from WoT CG: https://www.w3.org/events/meetings/322db7e4-1a9f-44c6-8ddf-af601043dfb9
