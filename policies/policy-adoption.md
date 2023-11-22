@@ -2,7 +2,7 @@
 ## Policy Adoption
 - First, a new issue should be created to motivate a new or change a Policy
 - New Policy should be discussed in the main call and there is a need of consensus. 
-- To propose a new policy, first create a PR against [wot/proposals/policies](https://github.com/w3c/wot/main/proposals/policies).
+- To propose a new policy, first create a PR against [wot/proposals/policies](https://github.com/w3c/wot/tree/main/proposals/policies). 
     - Comments taken on the PR can be used for gathering feedback during "development"
     - Initial policies should include "(Draft)" in the title.
 - When the PR for the proposed policy is deemed ready to be discussed by the entire group, it can be merged and a call-for-resolution to adopt it should be sent by email to the entire group, with a link to the proposed policy.  The call for resolution should also be announced in a WoT main call, consistent with the policy for [group decisions](https://github.com/w3c/wot/blob/main/policies/decisions.md).
