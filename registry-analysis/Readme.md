@@ -48,7 +48,7 @@ a registry that maps between MIME-type/subtype pairs and byte stream format
 specifications.
 These are relevant for
 [`SourceBuffer` objects](https://www.w3.org/TR/media-source/#sourcebuffer) which
-are used for cosuming audio and video streams.
+are used for consuming audio and video streams.
 
 ##### Entry Format
 
@@ -151,7 +151,7 @@ With the XPointer Scheme Registry being a exception once more, all registries
 also define a way to delete or deprecate entries.
 In the case of the "TTML Media Type Definition and Profile Registry" and the
 "Media Source Extensions Byte Stream Format Registry", however, an entry is only
-supposed to be deleted if it violates any of the mandatory requirments.
+supposed to be deleted if it violates any of the mandatory requirements.
 
 DID, however, only allows for the *Deprecation* of entries, which seems like a
 good way to avoid accidental breaking of deployed implementations.
