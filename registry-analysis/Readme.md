@@ -24,11 +24,10 @@ Volunteer: Jan Romann
 
 #### TTML Media Type Definition and Profile Registry
 
-This [document](https://w3c.github.io/tt-profile-registry/#registry) defines a specific media type and a registry for associated "processor profiles".
+**Status:** Active (Last updated Nov 2020)
+**Creation:** 10 May 2016
 
-**Status:** Not active (Last updated Dec 2020)
-**Creation:** TBD
-
+This [document](https://www.w3.org/TR/ttml-profile-registry/#registry) defines a specific media type and a registry for associated "processor profiles".
 ##### Entry Format
 
 - Entries must contain a unique ID, an absolute URI that identifies the profile, and contact information of the registrant
@@ -42,6 +41,9 @@ This [document](https://w3c.github.io/tt-profile-registry/#registry) defines a s
 - Decisions are made via consensus, the requestor is notified accordingly
 
 #### Media Source Extensions Byte Stream Format Registry
+
+**Status:** Active (Last entries added May 2021)
+**Creation:** 04 October 2016
 
 This [document](https://www.w3.org/TR/mse-byte-stream-format-registry/) defines
 a registry that maps between MIME-type/subtype pairs and byte stream format
@@ -71,6 +73,9 @@ The possibility to remove entries that fail to satisfy any of the mandatory requ
 
 #### DID Specification Registries
 
+**Status:** Active (Last updated Sep 2023)
+**Creation:** 18 June 2020
+
 This [document](https://www.w3.org/TR/did-spec-registries/) defines
 a registry for all known global parameters, properties, and values used by the
 Decentralized Identifier ecosystem.
@@ -89,6 +94,9 @@ Decentralized Identifier ecosystem.
 Entries must not be removed, only deprecated.
 
 #### XPointer Scheme Name Registry Policy
+
+**Status:** Inactive? (Last registration request Nov 2021, still pending)
+**Creation:** Nov 2005
 
 This [document](https://www.w3.org/2005/04/xpointer-policy) defines a policy
 that governs the registration of simple names for Scheme-Based XPointers.
@@ -192,7 +200,7 @@ In order to choose a mechanism and the rules, we document our requirements and e
   - Link to the binding: Stable link
   - (possibly) The binding prefix
 -  Requirements on the submitted document:
-  - To be clarified but the initial list for protocols at https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification  
+  - To be clarified but the initial list for protocols at https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification
 
 What we are doing now: https://w3c.github.io/wot-binding-templates/#protocol-bindings-table
 
