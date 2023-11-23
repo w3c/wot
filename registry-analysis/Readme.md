@@ -38,8 +38,8 @@ This [document](https://w3c.github.io/tt-profile-registry/#registry) defines a s
 
 - Entries can be added, changed, or deleted
   - Although deletion is possible, entries are intended to be stable
-- Requests are made via an email to the WG chair, will be decided on in a WG meeting
-- Decisions are made via consensus, requestor is notified accordingly
+- Requests are made via an email to the WG chair, and will be decided on in a WG meeting
+- Decisions are made via consensus, the requestor is notified accordingly
 
 #### Media Source Extensions Byte Stream Format Registry
 
@@ -79,7 +79,7 @@ Decentralized Identifier ecosystem.
 - Entries must include a human-readable description and should have a clear and descriptive name.
 - Entries must adhere to an IPR policy and do no harm to others (including legally and security-wise).
 - Entries must link to a specification that makes it possible to implement the addition.
-- Entries must specify a JSON-LD context (with a set of more finegrained requirements).
+- Entries must specify a JSON-LD context (with a set of more fine-grained requirements).
 
 ##### Submission Process
 .New entries have to be submitted via a modification request
@@ -101,7 +101,7 @@ Entries consist of a name and description.
 - Entries are given out on a "first come, first serve" basis
 - A W3C account is required
 - Registration requests are made via a Web form
-- After submission, a registration is reviewed on a public mailing list where objections can be raised within one month
+- After submission, registration is reviewed on a public mailing list where objections can be raised within one month
 - In case of an objection, the Team Contact makes a decision within two weeks. If the objection is upheld, the submission can be revised or appealed within one week. Otherwise, it is rejected.
 - In the case of an appeal, the W3C Director decides.
 - In the case of no objection and an approval by the director, the request changes its state to "Registered". The other states are "Pending" and "Rejected".
@@ -118,15 +118,15 @@ conclusion of certain important aspects is given below.
 
 ##### Registration
 
-In general, all of the registries above define a submitting new entries.
+In general, all of the registries above define a process for submitting new entries.
 However, they vary in their complexity and the formality of the procedure for
 admission.
 Generally, the WG lead and sometimes -- in the case of an appeal -- even the W3C
-directorate are involved in the decision.
+directorate is involved in the decision.
 However, all registries try to a consensus in one way or another, with different
 levels of leadership acting as a mediator or coordinator of the process.
 
-If probably makes sense to also focus on achieving consensus in the case of
+It probably makes sense to also focus on achieving consensus in the case of
 our registries.
 However, the process should not be too complicated while also
 not leaving aspects too vague.
@@ -134,7 +134,7 @@ not leaving aspects too vague.
 ##### Components of a Registry Entry
 
 Except for the XPointer scheme registry, all of the registries above require
-formal specifications to be linked to from registry.
+formal specifications to be linked to from the registry.
 Depending on the kind of registry, additional aspects need to be specified,
 e.g., a JSON-LD `@context` when it comes to DID.
 
@@ -147,14 +147,14 @@ included.
 
 ##### Deletion and Deprecation of Registry Entries
 
-With the XPointer Scheme Registry being a exception once more, all registries
+With the XPointer Scheme Registry being an exception once more, all registries
 also define a way to delete or deprecate entries.
 In the case of the "TTML Media Type Definition and Profile Registry" and the
 "Media Source Extensions Byte Stream Format Registry", however, an entry is only
 supposed to be deleted if it violates any of the mandatory requirements.
 
 DID, however, only allows for the *Deprecation* of entries, which seems like a
-good way to avoid accidental breaking of deployed implementations.
+a good way to avoid accidental breaking of deployed implementations.
 
 ##### Versioning
 
