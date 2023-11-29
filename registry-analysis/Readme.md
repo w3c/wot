@@ -177,16 +177,46 @@ Template.
 
 <!-- TODO: Are there more aspects that need to be covered here? -->
 
-## Analysis of IANA Registries
+## Analysis of IANA Registries (DRAFT)
 
 Volunteer:  Cristiano Aguzzi
 
-Examples:
-- https://www.iana.org/assignments/websocket/websocket.xml
-- https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-- https://www.iana.org/assignments/media-types-parameters/media-types-parameters.xhtml
+> Examples:
+>- https://www.iana.org/assignments/websocket/websocket.xml
+>- https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
+>- https://www.iana.org/assignments/media-types-parameters/media-types-parameters.xhtml
+
+The Internet Assigned Numbers Authority (IANA) plays a crucial role in ensuring the proper functioning
+of the Internet through various coordination mechanisms, collectively known as IANA functions. This report 
+focuses on the Protocol Assignments function, closely coordinated with the Internet Engineering Task Force (IETF), 
+providing insights into the potential establishment of a registry for protocol binding templates.
+
+### IANA Procedures and RFC 8126
+IANA, as outlined in RFC 8126, establishes common procedures for protocol assignments. These procedures may be supplemented
+or modified by specific registries defined in corresponding RFCs. The submission of registrations is typically facilitated 
+through web forms on the IANA website or via email.
+
+### Generic Considerations
+Even in seemingly unlimited spaces, a minimal review before assignment is often necessary to prevent hoarding or wastage of values 
+and to ensure the legitimacy of requests. Balancing adequate review with ease of registration is crucial, considering 
+requests from various entities.
+
+Common review policies, as defined by RFC, include (order of strictness):
+
+1. Private Use
+2. Experimental Use
+3. Hierarchical Allocation
+4. First Come First Served
+5. Expert Review
+6. Specification Required
+7. RFC Required
+8. IETF Review
+9. Standards Action
+10. IESG Approval
+
 
 ### Media Type Registry
+> TODO: 
 
 ## WoT Requirements and Expectations for a Potential Registry
 
