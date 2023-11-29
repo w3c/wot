@@ -14,10 +14,7 @@ The work items are split into four categories.
 Such categories can be reflected with labels and different views in the GitHub project management panel.
 The task force will go through existing issues, pull requests, and discussions, and categorize them accordingly.
 
-- **Priorities:** The items below can be considered a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
-
-- **Organization:** In order to have a better overview, the list of work items should be kept low, and small work items should be grouped into bigger ones.
-This allows us to better label and manage the items.
+- **Priorities:** The items in each markdown under [td-next-work-items](./td-next-work-items) is a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
 
 - **Details:** The details of different work items can be found at <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md>. We will consolidate such details and link them appropriately.
 
@@ -30,22 +27,23 @@ This allows us to better label and manage the items.
 
 ## Roadmap
 
-We have a roadmap for the TD specification that is aligned with the charter start and end dates.
+We should a roadmap for the TD specification that is aligned with the charter start and end dates.
+
+### WoT WG Charter Details
 
 - Charter End Date: 2 October 2025
 - CR Transition (feature freeze): July 10, 2025 (worst estimate)
 - Charter Start: October 2023
 
-Notes:
+#### Schedule for TD Deliverable
 
-- Stopping big features 6 months prior to CR Transition. That means January 10, 2025 -> End of 2024, we should be done with big features.
-  - The bigger the implementation impact, the more time to implement
-  - We can give something like "Story Points" to give a rough idea of the effort
-- We should look at the schedule on a weekly basis, part of the agenda
+- We will stop work big features 6 months prior to CR Transition. That means January 10, 2025. In other words, we should be done with big features by the end of 2024.
+- As a result, we should indicate whether a feature is considered a big feature. Some notes on this:
+  - The bigger the implementation impact, the more time to implement.
+  - We can give something like "Story Points" to give a rough idea of the effort.
+- We should look at the schedule on a weekly basis, part of the meeting agenda.
 
 ### Refactoring Roadmap
-
-Note: The items below will be turned to links.
 
 In no particular order, we have the following:
 
