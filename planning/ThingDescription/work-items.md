@@ -47,8 +47,8 @@ We should a roadmap for the TD specification that is aligned with the charter st
 
 In no particular order, we have the following:
 
-- Incorporating Binding Mechanism
-- Better integration of Thing Model
+- [Incorporating Binding Mechanism](./td-next-work-items/binding-templates.md#integration-of-the-binding-templates-into-the-td-document)
+- [Better integration of Thing Model](./td-next-work-items/usability-and-design.md#td-testing-for-plugfest-and-testfests)  
 - Specification Generation Tooling
 - Grouping of normative requirements (depends on specification generation tooling)
 - Common definitions section (usability improvements for not needing to "jump around" while reading) (depends on specification generation tooling)
