@@ -11,39 +11,84 @@ We should start a TD (re)design document that explains the idea behind the desig
 
 Changes that should be done while keeping the current content
 
-- Common definition section: Usability and readability improvements for not needing to "jump around" while reading
-- Grouping of normative requirements
-- Assertion id alignment: adding `td`, checking naming scheme
-- Better integration of Thing Model
+### Common definition section
+
+Usability and readability improvements for not needing to "jump around" while reading
+
+### Grouping of normative requirements
+
+### Assertion id alignment
+
+Adding `td`, checking naming scheme
+
+### Better integration of Thing Model
 
 ## Synchronization with other documents
 
-- Moving binding templates core document content to TD
-- Moving discovery-related text from TD to Discovery
+### Moving binding templates core document content to TD
+
+Please refer to the [binding templates planning document](binding-templates.md)
+
+### Moving discovery-related text from TD to Discovery
 
 ## Reusable TD Elements
 
-- Reusable connections, for example, an MQTT Broker connection that can be described at the top and used in the forms
-- Data Schema mapping information/metadata
-- Security schemes may need to be refactored and use the same pattern as other reusable elements
-- Inline Security
-- Scenarios, requirements, and use the same pattern for all reusable elements
-- Review the current state of the art in other standards
+### Reusable connections
+
+Currently, each form of an affordance has information on the endpoint, media type and other protocol related information. 
+It is possible to use the base term for simplifying the endpoint but it has limitations such as:
+
+- If the media type is also common across forms, it is repeated
+- Multiple bases are not possible
+- For protocols that are based on an initial connection and then subsequent messages, the semantics are not clear.
+
+Thus, a mechanism to describe connection and protocol information that can be used by other forms is needed. 
+In protocols with initial connection, this can be also used to indicate what needs to be done by the Consumer before executing any operation.
+
+Related Issues:
+
+- <https://github.com/w3c/wot-thing-description/issues/1664>
+- <https://github.com/w3c/wot-thing-description/issues/1248>
+- <https://github.com/w3c/wot-thing-description/issues/1242>
+- <https://github.com/w3c/wot-thing-description/issues/878>
+
+### Data Schema mapping information/metadata
+
+### Security Schemes Refactoring
+
+The need to be refactored and use the same pattern as other reusable elements
+
+### Inline Security
+
+### Scenarios, requirements, and use the same pattern for all reusable elements
+
+### Review the current state of the art in other standards
 
 ## Uniform pattern/state machines between Actions, Events, and Properties
 
-- Avoid doing the same thing in a different way, for example how to express observability and cancellation
-- Relationships across affordances, for example when an Action changes the state of a Property
-- Property vs. Action (also URI Variables redesign question)
+### Avoid doing the same thing in a different way, for example how to express observability and cancellation
+
+### Relationships across affordances, for example when an Action changes the state of a Property
+
+### Property vs. Action (also URI Variables redesign question)
 
 ## Normative Parsing, Validation, Consumption
 
-- What is a valid TD, are there any levels of validness?
-  - A TD validator can do only JSON Schema validation but that is not enough to test everything.
-  - A TD may be not completely valid but usable by a "degraded consumer" (see below) or a TD can be completely valid according to all the assertions and protocol bindings but not be usable by some consumers.
-- Do we want to prescribe how TDs are processed and consumed beyond the text level?
-- Degraded consumption rule for uniform degradation across consumers, e.g. TD too big, protocol or protocol options unknown, contentType unknown, etc.
+Currently the TD specification defines an abstract information model and a default JSON serialization for TDs.
+However, parsing, consuming and validating TDs are not normatively defined.
+A validation process is defined but is not normative, which leads to certain ambiguities for a Consumer parsing a TD.
+Additionally, no method is proposed for validation the extensions that are used via the prefixes and the @context.
+The WG will specify normative algorithms for parsing, consuming and validating TDs to ensure interoperability of Consumers.
+
+### What is a valid TD, are there any levels of validness?
+
+* A TD validator can do only JSON Schema validation but that is not enough to test everything.
+* A TD may be not completely valid but usable by a "degraded consumer" (see below) or a TD can be completely valid according to all the assertions and protocol bindings but not be usable by some consumers.
+
+### Do we want to prescribe how TDs are processed and consumed beyond the text level?
+
+### Degraded consumption rule for uniform degradation across consumers, e.g. TD too big, protocol or protocol options unknown, contentType unknown, etc.
 
 ## Single source of truth for build
 
-- Make sure there are no gaps in the tooling and process for building index.html
+* Make sure there are no gaps in the tooling and process for building index.html
