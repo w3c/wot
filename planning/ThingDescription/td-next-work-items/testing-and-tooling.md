@@ -1,4 +1,4 @@
-# Testing and Tooling
+# TD.Next Testing and Tooling Work Items
 
 ## Linting
 
@@ -12,7 +12,6 @@ Related Issues:
 - <https://github.com/w3c/wot-thing-description/issues/1512>
 - <https://github.com/w3c/wot-thing-description/issues/1195>
 
-
 ## Testing Procedure
 
 Currently it is at Eclipse Thingweb Playground at <https://github.com/eclipse-thingweb/playground/tree/master/packages/assertions> but we should move it here.
@@ -21,7 +20,14 @@ Currently it is at Eclipse Thingweb Playground at <https://github.com/eclipse-th
 
 Small updates for the TD next. Actual bugs for 1.1 should be handled as errata
 
-## Examples reorganization
+## Examples Reorganization
 
 It would be better to have complete TD examples that can be validated but at the same time we can show a part of it for specific features.
 Also, see <https://github.com/w3c/wot-thing-description/issues/1851>.
+
+## Spec Generation
+
+Single source of truth for specification generation.
+
+- Reducing the amount of documents that we need to maintain.
+- Make sure there are no gaps in the tooling and process for building index.html

@@ -1,11 +1,13 @@
-# Feature Aiming Work Items
+# TD.Next Feature Aiming Work Items
 
 For new features (keywords or behavior), a use case (or user story) should exist in the first place.
 While the refactoring topics are being worked on, new features should not be incorporated into the specification.
 Instead, the TF will analyze current solutions, gather existing use cases and discussions, and write the requirements to shape the feature.
 These are contained in this folder with the `analysis-` prefix.
 
-## Timeseries / Historical Data
+## Historical Data
+
+Also known as timeseries.
 
 Please refer to [Analysis Document](./../analysis-historical-data-work-item.md)
 
@@ -14,7 +16,7 @@ Please refer to [Analysis Document](./../analysis-historical-data-work-item.md)
 Note: This should be moved to an analysis document.
 
 Various use cases require the implementation of more complex actions that span multiple protocol transactions. Such actions are not simply invoked but need to managed over time by the Thing and the Consumer. 
-These are covered in the WoT Thing Description 1.1 via the initiation (invokeaction), monitoring (`queryaction`), and cancellation (`cancelaction`) of ongoing actions. 
+These are covered in the WoT Thing Description 1.1 via the initiation (invokeaction), monitoring (`queryaction`), and cancellation (`cancelaction`) of ongoing actions.
 However, the following points are not supported:
 
 - Sent and received payloads associated to the operations
@@ -40,7 +42,7 @@ Related Issues:
 Note: This should be moved to an analysis document.
 
 A streaming protocol establishes an ongoing connection supporting delivery of time-sensitive information such as audio or video. 
-Note that this connection in general may be over either reliable (TCP) or unreliable (UDP) transports, or over a combination, and may also support encryption or content management. 
+Note that this connection in general may be over either reliable (TCP) or unreliable (UDP) transports, or over a combination, and may also support encryption or content management.
 Streaming may also be used to support other kinds of ongoing time-sensitive data delivery.
 
 While related to event notification mechanisms, streaming in practice is supported by a specific set of protocols such as RTSP, HLS, DASH, MSE, WebRTC, etc.
@@ -54,14 +56,14 @@ Note: This should be moved to an analysis document.
 
 ### Signing
 
-Mechanisms for signing TDs documents were under discussion in the last charter but were not mature enough to include. 
+Mechanisms for signing TDs documents were under discussion in the last charter but were not mature enough to include.
 Adding support for TD canonicalization and signing would be helpful to ensure that TDs are not intercepted and modified by third parties.
 Verifying a signature requires identity management, i.e. the verifier needs to know or have trusted access to the public key of the signer.
 Directories need to be extended to verify signatures and generate new chained signatures as needed.
 
 ### Canonicalization
 
-Thing Descriptions can contain the same information but serialized differently even in the same serialization format, due to structures such as maps which do not impose an order. 
+Thing Descriptions can contain the same information but serialized differently even in the same serialization format, due to structures such as maps which do not impose an order.
 This is problematic for comparing TDs or more importantly, for signing them where every byte difference results in a different signature.
 Thus, the WG will develop a canonicalization algorithm based on JSON-LD.
 

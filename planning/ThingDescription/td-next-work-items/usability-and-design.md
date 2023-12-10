@@ -1,4 +1,4 @@
-# Usability and Design Work Items
+# TD.Next Usability and Design Work Items
 
 Changes that improve readability, the usability of the specification OR development, spec generation, bug fixes, and testing of the specification do not need use cases.
 These have more priority since they can impact how new features look like in a TD instance.
@@ -11,29 +11,36 @@ We should start a TD (re)design document that explains the idea behind the desig
 
 Changes that should be done while keeping the current content
 
-### Common definition section
+### Common Definition Section
 
 Usability and readability improvements for not needing to "jump around" while reading
 
 ### Grouping of normative requirements
 
+Making sure that important normative text is not scattered around too much.
+
 ### Assertion id alignment
 
 Adding `td`, checking naming scheme
 
-### Better integration of Thing Model
+### Better Integration of Thing Model
 
-## Synchronization with other documents
+There were questions about how much a TM is related to the TD.
+Some discussion might be needed.
 
-### Moving binding templates core document content to TD
+## Synchronization with Other Documents
 
-Please refer to the [binding templates planning document](binding-templates.md)
+### Discovery Sync
 
-### Moving discovery-related text from TD to Discovery
+Moving discovery-related text from TD to Discovery
+
+### Architecture Sync
+
+Checking overlaps with architecture.
 
 ## Reusable TD Elements
 
-### Reusable connections
+### Reusable Connections
 
 Currently, each form of an affordance has information on the endpoint, media type and other protocol related information. 
 It is possible to use the base term for simplifying the endpoint but it has limitations such as:
@@ -52,7 +59,16 @@ Related Issues:
 - <https://github.com/w3c/wot-thing-description/issues/1242>
 - <https://github.com/w3c/wot-thing-description/issues/878>
 
-### Data Schema mapping information/metadata
+### Data Schema Mapping
+
+Also known as: Mapping TD elements to messages
+
+How can we represent all protocol messages sent and received?
+It should be using data schema to indicate application-specific parameters but we should be able to describe payload, header, uri variables, and other protocol parameters.
+
+Related Issues:
+
+- BACnet URI Variables discussion
 
 ### Security Schemes Refactoring
 
@@ -60,17 +76,22 @@ The need to be refactored and use the same pattern as other reusable elements
 
 ### Inline Security
 
-### Scenarios, requirements, and use the same pattern for all reusable elements
+Simplifying the way to describe security when there is only one mechanism needed to be described (in contrast to needing two terms at the moment)
 
-### Review the current state of the art in other standards
+TODO: Find relevant discussions
 
-## Uniform pattern/state machines between Actions, Events, and Properties
+### Reusable Element Design
 
-### Avoid doing the same thing in a different way, for example how to express observability and cancellation
+Scenarios, requirements, and use the same pattern for all reusable elements.
+This will influence the items above.
 
-### Relationships across affordances, for example when an Action changes the state of a Property
+## Affordance Uniformity
 
-### Property vs. Action (also URI Variables redesign question)
+Uniform pattern/state machines between Actions, Events, and Properties.
+
+- Avoid doing the same thing in a different way, for example how to express observability and cancellation
+- Relationships across affordances, for example when an Action changes the state of a Property
+- Property vs. Action (also URI Variables redesign question)
 
 ## Normative Parsing, Validation, Consumption
 
@@ -80,15 +101,17 @@ A validation process is defined but is not normative, which leads to certain amb
 Additionally, no method is proposed for validation the extensions that are used via the prefixes and the @context.
 The WG will specify normative algorithms for parsing, consuming and validating TDs to ensure interoperability of Consumers.
 
-### What is a valid TD, are there any levels of validness?
+### TD Validation
 
-* A TD validator can do only JSON Schema validation but that is not enough to test everything.
-* A TD may be not completely valid but usable by a "degraded consumer" (see below) or a TD can be completely valid according to all the assertions and protocol bindings but not be usable by some consumers.
+What is a valid TD, are there any levels of validness?
 
-### Do we want to prescribe how TDs are processed and consumed beyond the text level?
+- A TD validator can do only JSON Schema validation but that is not enough to test everything.
+- A TD may be not completely valid but usable by a "degraded consumer" (see below) or a TD can be completely valid according to all the assertions and protocol bindings but not be usable by some consumers.
 
-### Degraded consumption rule for uniform degradation across consumers, e.g. TD too big, protocol or protocol options unknown, contentType unknown, etc.
+### Consumption Rules
 
-## Single source of truth for build
+Do we want to prescribe how TDs are processed and consumed beyond the text level?
 
-* Make sure there are no gaps in the tooling and process for building index.html
+### Degraded Consumption
+
+- Rule for uniform degradation across consumers, e.g. TD too big, protocol or protocol options unknown, contentType unknown, etc.

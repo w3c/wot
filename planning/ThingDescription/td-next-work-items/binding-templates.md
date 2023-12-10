@@ -9,12 +9,7 @@ Registry analysis is happening at a separate document. See [Registry Analysis](.
 
 ### Binding Templates Integration
 
-It will be incorporated into the TD document.
-
-### Mapping TD elements to messages
-
-How can we represent all protocol messages sent and received?
-It should be using data schema to indicate application-specific parameters but we should be able to describe payload, header, uri variables, and other protocol parameters.
+Binding Templates core mechanism will be incorporated into the TD document.
 
 ### Payload Driven Protocols
 
@@ -31,11 +26,10 @@ The Binding Templates should be updated with concrete cases where this mechanism
 The Profiles can use this mechanism to reduce the size of TDs while making them easier to understand.
 The working group will also document in which cases this method does not work due to making the TDs too complicated to understand, thus requiring a binding document.
 
-### href and URI design
+Note: This is dependent on *Reusable TD Elements* of [Usability and Design](./usability-and-design.md) work item list.
 
 ### External Security Ontologies
 
 Currently security schemes are "baked into" the TD specification but it would be more manageable and consistent to break them out as separate ontologies so that all security schemes would be done via extensions. For protocol-specific security schemes in particular, these should be moved to the Protocol Bindings and ontologies supporting them. The TD 2.0 spec would be updated to only include general-purpose "structural" security schemes and "generic" schemes that apply to all protocols.
-
 
 See https://github.com/w3c/wot-charter-drafts/issues/57 , https://github.com/w3c/wot-thing-description/issues/1880
