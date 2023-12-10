@@ -43,25 +43,27 @@ We should a roadmap for the TD specification that is aligned with the charter st
   - We can give something like "Story Points" to give a rough idea of the effort.
 - We should look at the schedule on a weekly basis, part of the meeting agenda.
 
-### Refactoring Roadmap
+### Specification Refactoring Roadmap
 
-In no particular order, we have the following:
+An example list of refactoring items with an order:
 
-- [Incorporating Binding Mechanism](./td-next-work-items/binding-templates.md#integration-of-the-binding-templates-into-the-td-document)
-- [Better integration of Thing Model](./td-next-work-items/usability-and-design.md#td-testing-for-plugfest-and-testfests)  
-- Specification Generation Tooling
-- Grouping of normative requirements (depends on specification generation tooling)
-- Common definitions section (usability improvements for not needing to "jump around" while reading) (depends on specification generation tooling)
-- Assertion id alignment: adding `td`, checking the naming scheme
-- Synchronization with other documents
-- Example reorganization
-- Testing Pipeline
+- [Incorporating Binding Mechanism](./td-next-work-items/binding-templates.md#binding-templates-integration)
+- [Specification Generation Tooling](./td-next-work-items/testing-and-tooling.md#spec-generation)
+- [Grouping of normative requirements](./td-next-work-items/usability-and-design.md#grouping-of-normative-requirements)
+- [Common definitions section](./td-next-work-items/usability-and-design.md#common-definition-section)
+- [Assertion id alignment](./td-next-work-items/usability-and-design.md#assertion-id-alignment)
+- [Synchronization with other documents](./td-next-work-items/usability-and-design.md#synchronization-with-other-documents)
+- [Example reorganization](./td-next-work-items/testing-and-tooling.md#examples-reorganization)
+- [Testing Pipeline](./td-next-work-items/testing-and-tooling.md#testing-procedure)
 
-### Redesign Roadmap
+### TD Instance Redesign Roadmap
+
+An example list of redesign items with an order:
 
 - Base connection design
 - Data mapping
-More to come here
+
+### New Features Roadmap
 
 ## Related Resources
 

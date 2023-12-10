@@ -15,11 +15,11 @@ Changes that should be done while keeping the current content
 
 Usability and readability improvements for not needing to "jump around" while reading
 
-### Grouping of normative requirements
+### Grouping of Normative Requirements
 
 Making sure that important normative text is not scattered around too much.
 
-### Assertion id alignment
+### Assertion id Alignment
 
 Adding `td`, checking naming scheme
 
