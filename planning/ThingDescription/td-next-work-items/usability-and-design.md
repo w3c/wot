@@ -87,6 +87,10 @@ Relevant discussions:
 Scenarios, requirements, and use the same pattern for all reusable elements.
 This will influence the items above.
 
+Related discussions:
+
+- https://github.com/w3c/wot-thing-description/pull/1341 (but many are linked here as well)
+
 ## Affordance Uniformity
 
 Uniform pattern/state machines between Actions, Events, and Properties.
