@@ -78,7 +78,9 @@ The need to be refactored and use the same pattern as other reusable elements
 
 Simplifying the way to describe security when there is only one mechanism needed to be described (in contrast to needing two terms at the moment)
 
-TODO: Find relevant discussions
+Relevant discussions:
+
+- https://github.com/w3c/wot-thing-description/pull/945
 
 ### Reusable Element Design
 
