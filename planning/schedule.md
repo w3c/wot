@@ -71,5 +71,6 @@ the renewed WG charter (probably to start sometime in August).
 | Dec 5, 2023 | Next | Press Release published |
 | Dec 20, 2023 |   | Last meeting of 2023 |
 | Jan 9, 2024 |   | Marketing and Chairs' calls held |
-| Jan 10, 2024 |   | First main call of 2024 |
+| Jan 10, 2024 |   | First main call of 2024, first TD/Binding call |
+| Jan 15, 2024 |   | First Scripting, Security, and Discovery calls of 2024 |
 
