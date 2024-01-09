@@ -3,7 +3,7 @@ This schedule spans the end of the current WG charter and will also be used for 
 the renewed WG charter (probably to start sometime in August).
 
 Archives of older schedules:
-* [2021-2023](schedule-2023.md)
+* [2021-2023](schedule_2023.md)
 
 ## Past
 | Due date | Spec. | Description |
