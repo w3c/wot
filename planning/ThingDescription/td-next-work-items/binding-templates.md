@@ -5,6 +5,12 @@
 We need to specify how a new binding should be submitted. E.g. Registry or a similar approach.
 Registry analysis is happening at a separate document. See [Registry Analysis](../../../registry-analysis/).
 
+Our approach should clarify the following points:
+
+- Rule-based validation process of the binding document submission (what checks should a submission pass)
+- Review process (do we organize special meetings, invite submitters to explain, how do we document it all etc.)
+- To be continued
+
 ## Binding Mechanism
 
 ### Binding Templates Integration
