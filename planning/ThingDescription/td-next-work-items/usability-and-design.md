@@ -101,10 +101,10 @@ Uniform pattern/state machines between Actions, Events, and Properties.
 
 ## Normative Parsing, Validation, Consumption
 
-Currently the TD specification defines an abstract information model and a default JSON serialization for TDs.
+Currently, the TD specification defines an abstract information model and a default JSON serialization for TDs.
 However, parsing, consuming and validating TDs are not normatively defined.
 A validation process is defined but is not normative, which leads to certain ambiguities for a Consumer parsing a TD.
-Additionally, no method is proposed for validation the extensions that are used via the prefixes and the @context.
+Additionally, no method is proposed for validation of the extensions that are used via the prefixes and the @context.
 The WG will specify normative algorithms for parsing, consuming and validating TDs to ensure interoperability of Consumers.
 
 ### TD Validation
@@ -113,6 +113,8 @@ What is a valid TD, are there any levels of validness?
 
 - A TD validator can do only JSON Schema validation but that is not enough to test everything.
 - A TD may be not completely valid but usable by a "degraded consumer" (see below) or a TD can be completely valid according to all the assertions and protocol bindings but not be usable by some consumers.
+
+Additionally, we need better validation of protocols and associated security in the TD.
 
 ### Consumption Rules
 
