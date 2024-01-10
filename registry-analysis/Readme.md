@@ -9,7 +9,7 @@ This file summarizes the registry mechanism that the WoT WG/IG needs along with 
 
 ### Official Registry Track Registries
 
-Volunteer: Michael Koster
+Volunteer: Ege Korkan
 
 Documents that confirm to https://www.w3.org/2023/Process-20230612/#registries
 They can be queried at https://www.w3.org/TR/?filter-tr-name=&status%5B%5D=dry&status%5B%5D=cry&status%5B%5D=ry
@@ -17,6 +17,8 @@ They can be queried at https://www.w3.org/TR/?filter-tr-name=&status%5B%5D=dry&s
 Examples:
 - https://www.w3.org/TR/webcodecs-codec-registry/
 - https://www.w3.org/TR/aac-registry/
+
+Existing Analysis: https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf
 
 ### Custom Registry Mechanism Registries
 
