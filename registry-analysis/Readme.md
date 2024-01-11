@@ -17,16 +17,38 @@ First Analysis as a presentation in TPAC 2023: <https://github.com/w3c/wot/blob/
 
 #### Important Notes
 
-- We cannot make normative references to the registry content. This is probably important for the profile discussions. Extract from the W3C Process document:
+- We cannot make normative references to the registry content. This is probably important for the profile discussions. 
+  - Extract from the W3C Process document:
 
-> If there are entries that must be implemented, or any other such restrictions, they must be defined or documented in the referencing specification without dependency on the registry. For example, “All implementations must implement the Basic-Method as defined in the registry” is not acceptable; a change to the definition of the Basic-Method in the registry would then affect conformance. Instead, the requirement must be complete in the specification, directly or by reference to another specification. For example “All implementations must recognize the name Basic-Method, and implement it as defined by section yy of IETF RFC xxxx”. (The Registry should nonetheless contain Basic-Method as an entry.)
+  > If there are entries that must be implemented, or any other such restrictions, they must be defined or documented in the referencing specification without dependency on the registry. For example, “All implementations must implement the Basic-Method as defined in the registry” is not acceptable; a change to the definition of the Basic-Method in the registry would then affect conformance. Instead, the requirement must be complete in the specification, directly or by reference to another specification. For example “All implementations must recognize the name Basic-Method, and implement it as defined by section yy of IETF RFC xxxx”. (The Registry should nonetheless contain Basic-Method as an entry.)
+
+  - Extract from WebCodecs
+  
+  > Implementers of WebCodecs are not required to support any particular codec nor registry entry.
 
 #### WebCodecs Codec Registry
 
 **Status:** Active (Last publication Jan 2024)
 **Creation:** Since [13 October 2022](https://www.w3.org/TR/2022/DRY-webcodecs-codec-registry-20221013/) a Draft Registry. FPWD was on 8 April 2021, still same name. Also see <https://www.w3.org/standards/history/webcodecs-codec-registry/>.
 
+[This registry](https://www.w3.org/TR/webcodecs-codec-registry/) provides the means to identify and avoid collisions among codec strings and provides a mechanism to define codec-specific members of WEBCODECS codec configuration dictionaries.
+This registry maintains a mapping between codec strings and registration specifications as described below.
 
+##### Entry Format
+
+- Unique codec string
+- Common name string
+- Link to the codec’s specification.
+
+##### Submission and Modification Process
+
+There are requirements on the codec string and what the specification should contain.
+
+- Submission is done by filing an issue over GitHub
+- The Media WG may seek expertise from outside the Working Group as part of its evaluation, e.g., from the codec specification editors or relevant standards group.
+- The codec specification must be made available to the Working Group for evaluation.
+- If the Working Group reaches consensus to accept the candidate, a pull request should be drafted (either by editors or by the party requesting the candidate registration) to register the candidate. The registry editors will review and merge the pull request.
+- Existing entries cannot be deleted or deprecated. They may be changed after being published through the same process as candidate entries.
 
 #### W3C Alternative and Augmented Communication (AAC) Symbol Registry
 
