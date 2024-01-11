@@ -1,4 +1,4 @@
-# [DFAFT] Registry Mechanism Analysis
+# [DRAFT] Registry Mechanism Analysis
 
 This file summarizes the registry mechanism that the WoT WG/IG needs along with the work done to analyze similar approaches and the requirements we have on such mechanisms.
 
