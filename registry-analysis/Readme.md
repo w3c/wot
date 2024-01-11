@@ -10,15 +10,53 @@ This file summarizes the registry mechanism that the WoT WG/IG needs along with 
 
 Volunteer: Ege Korkan
 
-Documents that confirm to <https://www.w3.org/2023/Process-20230612/#registries>
-They can be queried at <https://www.w3.org/TR/?filter-tr-name=&status%5B%5D=dry&status%5B%5D=cry&status%5B%5D=ry>
+Documents that confirm to <https://www.w3.org/2023/Process-20230612/#registries>.
+That section should be read first by everyone.
+They can be queried at <https://www.w3.org/TR/?filter-tr-name=&status%5B%5D=dry&status%5B%5D=cry&status%5B%5D=ry>.
+First Analysis as a presentation in TPAC 2023: <https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf>
 
-Examples:
+#### Important Notes
 
-- <https://www.w3.org/TR/webcodecs-codec-registry/>
-- <https://www.w3.org/TR/aac-registry/>
+- We cannot make normative references to the registry content. This is probably important for the profile discussions. Extract from the W3C Process document:
 
-First Analysis as a presentation: <https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf>
+> If there are entries that must be implemented, or any other such restrictions, they must be defined or documented in the referencing specification without dependency on the registry. For example, “All implementations must implement the Basic-Method as defined in the registry” is not acceptable; a change to the definition of the Basic-Method in the registry would then affect conformance. Instead, the requirement must be complete in the specification, directly or by reference to another specification. For example “All implementations must recognize the name Basic-Method, and implement it as defined by section yy of IETF RFC xxxx”. (The Registry should nonetheless contain Basic-Method as an entry.)
+
+#### WebCodecs Codec Registry
+
+**Status:** Active (Last publication Jan 2024)
+**Creation:** Since [13 October 2022](https://www.w3.org/TR/2022/DRY-webcodecs-codec-registry-20221013/) a Draft Registry. FPWD was on 8 April 2021, still same name. Also see <https://www.w3.org/standards/history/webcodecs-codec-registry/>.
+
+
+
+#### W3C Alternative and Augmented Communication (AAC) Symbol Registry
+
+**Status:** Kind of Active (Last publication December 2022) (WG still active) but not finalized (Draft Registry)
+**Creation:**  Oct 2022
+
+This [document](https://www.w3.org/TR/aac-registry/) provides reference numbers and symbols for symbol attribute.
+The symbol attribute identifies the concept for symbols used in AAC devices, etc., for users who comprehend content more effectively when AAC (rather than just natural language alone) is used to convey meaning. The symbols are an alternative vocabulary, and multiple symbol sets exist today.
+The symbol attribute accepts a numeric reference number.
+See examples below
+
+- ![question mark](./images/questionmark.png)
+- ![acne](./images/acne.png)
+
+##### Entry Format
+
+- Index number
+- (English) Text associated to index number to explain it
+- SVG or pointer to an SVG with the symbol
+
+They maintain a JSON file that maps the english text to the id.
+Each symbol has an svg with the same id, i.e. 12332.svg is the symbol for `acne`.
+
+##### Submission and Modification Process
+
+The symbols are developed by the Blissymbolics Communication International (BCI) and this document is a joint work with them.
+
+> Additions and extensions to the symbol and concept cross reference index are performed by time-tested BCI processes before they are migrated into this W3C Registry.
+
+Other than this, they follow the process document.
 
 ### Custom Registry Mechanism Registries
 
