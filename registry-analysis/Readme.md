@@ -2,7 +2,6 @@
 
 This file summarizes the registry mechanism that the WoT WG/IG needs along with the work done to analyze similar approaches and the requirements we have on such mechanisms.
 
-
 - Explain what the WoT needs/requires in order to choose a mechanism and the rules
 
 ## Analysis of other W3C Documents
@@ -11,14 +10,15 @@ This file summarizes the registry mechanism that the WoT WG/IG needs along with 
 
 Volunteer: Ege Korkan
 
-Documents that confirm to https://www.w3.org/2023/Process-20230612/#registries
-They can be queried at https://www.w3.org/TR/?filter-tr-name=&status%5B%5D=dry&status%5B%5D=cry&status%5B%5D=ry
+Documents that confirm to <https://www.w3.org/2023/Process-20230612/#registries>
+They can be queried at <https://www.w3.org/TR/?filter-tr-name=&status%5B%5D=dry&status%5B%5D=cry&status%5B%5D=ry>
 
 Examples:
-- https://www.w3.org/TR/webcodecs-codec-registry/
-- https://www.w3.org/TR/aac-registry/
 
-Existing Analysis: https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf
+- <https://www.w3.org/TR/webcodecs-codec-registry/>
+- <https://www.w3.org/TR/aac-registry/>
+
+First Analysis as a presentation: <https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf>
 
 ### Custom Registry Mechanism Registries
 
@@ -30,6 +30,7 @@ Volunteer: Jan Romann
 **Creation:** 10 May 2016
 
 This [document](https://www.w3.org/TR/ttml-profile-registry/#registry) defines a specific media type and a registry for associated "processor profiles".
+
 ##### Entry Format
 
 - Entries must contain a unique ID, an absolute URI that identifies the profile, and contact information of the registrant
@@ -64,6 +65,7 @@ Furthermore, it has to be specified if a flag for generating timestamps needs to
 be set with the byte stream format.
 
 ##### Submission Process
+
 All requirements mentioned in the [Media Source Extensions](https://www.w3.org/TR/media-source/#byte-stream-formats) specification must be fulfilled.
 
 New entries are submitted to a public mailing list where they are supposed to be
@@ -71,6 +73,7 @@ discussed and evaluated before adding them to the registry.
 The process of approving a new entry is (apparently?) not formally specified.
 
 ##### Modification Process
+
 The possibility to remove entries that fail to satisfy any of the mandatory requirements is explicitly mentioned.
 
 #### DID Specification Registries
@@ -83,16 +86,19 @@ a registry for all known global parameters, properties, and values used by the
 Decentralized Identifier ecosystem.
 
 ##### Entry Format
+
 - Entries must include a human-readable description and should have a clear and descriptive name.
 - Entries must adhere to an IPR policy and do no harm to others (including legally and security-wise).
 - Entries must link to a specification that makes it possible to implement the addition.
 - Entries must specify a JSON-LD context (with a set of more fine-grained requirements).
 
 ##### Submission Process
-.New entries have to be submitted via a modification request
+
+New entries have to be submitted via a modification request
 (as part of a PR on the registry's repository).
 
 ##### Modification Process
+
 Entries must not be removed, only deprecated.
 
 #### XPointer Scheme Name Registry Policy
@@ -104,6 +110,7 @@ This [document](https://www.w3.org/2005/04/xpointer-policy) defines a policy
 that governs the registration of simple names for Scheme-Based XPointers.
 
 ##### Entry Format
+
 Entries consist of a name and description.
 
 ##### Submission Process
@@ -184,9 +191,10 @@ Template.
 Volunteer:  Cristiano Aguzzi
 
 Examples:
-- https://www.iana.org/assignments/websocket/websocket.xml
-- https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-- https://www.iana.org/assignments/media-types-parameters/media-types-parameters.xhtml
+
+- <https://www.iana.org/assignments/websocket/websocket.xml>
+- <https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry>
+- <https://www.iana.org/assignments/media-types-parameters/media-types-parameters.xhtml>
 
 ### Media Type Registry
 
@@ -201,15 +209,14 @@ In order to choose a mechanism and the rules, we document our requirements and e
   - Name of the binding
   - Link to the binding: Stable link
   - (possibly) The binding prefix
--  Requirements on the submitted document:
-  - To be clarified but the initial list for protocols at https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification
+- Requirements on the submitted document:
+  - To be clarified but the initial list for protocols at <https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification>
 
-What we are doing now: https://w3c.github.io/wot-binding-templates/#protocol-bindings-table
+What we are doing now: <https://w3c.github.io/wot-binding-templates/#protocol-bindings-table>
 
 ## Appendix
 
 ### Useful Resources
 
-- https://www.w3.org/2020/01/registering-mediatypes (we followed this for registering TD media type)
-- IANA Guidelines: https://www.iana.org/help and https://www.iana.org/help/protocol-registration
-- https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf
+- <https://www.w3.org/2020/01/registering-mediatypes> (we followed this for registering TD media type)
+- IANA Guidelines: <https://www.iana.org/help> and <https://www.iana.org/help/protocol-registration>
