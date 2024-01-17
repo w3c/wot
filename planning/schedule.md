@@ -1,5 +1,5 @@
 # Schedule
-This schedule spans the [https://www.w3.org/2023/10/wot-wg-2023.html](current WG charter) which started in October 3, 2023 and ends in October 2, 2025.
+This schedule spans the [current WG charter](https://www.w3.org/2023/10/wot-wg-2023.html) which started in October 3, 2023 and ends in October 2, 2025.
 
 Archives of older schedules:
 * [2021-2023](schedule_2023.md)
