@@ -1,6 +1,5 @@
 # Schedule
-This schedule spans the end of the current WG charter and will also be used for planning for
-the renewed WG charter (probably to start sometime in August).
+This schedule spans the [https://www.w3.org/2023/10/wot-wg-2023.html](current WG charter) which started in October 3, 2023 and ends in October 2, 2025.
 
 Archives of older schedules:
 * [2021-2023](schedule_2023.md)
