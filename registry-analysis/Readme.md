@@ -251,9 +251,9 @@ Template.
 Volunteer:  Cristiano Aguzzi
 
 > Examples:
-- <https://www.iana.org/assignments/websocket/websocket.xml>
-- <https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry>
-- <https://www.iana.org/assignments/media-types-parameters/media-types-parameters.xhtml>
+> - <https://www.iana.org/assignments/websocket/websocket.xml>
+> - <https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry>
+> - <https://www.iana.org/assignments/media-types/media-types.xhtml>
 
 The Internet Assigned Numbers Authority (IANA) plays a crucial role in ensuring the proper functioning
 of the Internet through various coordination mechanisms, collectively known as IANA functions. This report 
@@ -282,6 +282,34 @@ Common review policies, as defined by RFC, include (order of strictness):
 8. IETF Review
 9. Standards Action
 10. IESG Approval
+
+The following subsections expand the guidelines for the main review policies that were used across the relevant examples
+of registries selected by the Working Group (see later sections). 
+
+#### First Come First Served ([RFC](https://datatracker.ietf.org/doc/html/rfc8126#section-4.4))
+Streamlined review policy the requests are registered in a first come first served fashion and they are usually accepted without
+any particular review. The requirement for acceptance is only that the request is well formed and does not clash with existing
+registrations (e.g., for strings case-sensitive equality). Some registries might add some additional requirements but they are usually
+regarding the format of the request and they are not used to add additional review steps to the process. Any registry that uses
+this policy has to define a "change controller" an entity responsible for overseeing any change of the registry (e.g., protocol updates 
+that deprecate old codes). The [RFC](https://datatracker.ietf.org/doc/html/rfc8126#section-4.4) advises any change controller to be 
+careful "that the protocol retains wire compatibility". 
+
+> It is also important to understand that First Come First Served really has no filtering.  Essentially, any well-formed request is
+accepted.
+
+#### Expert Review ([RFC](https://datatracker.ietf.org/doc/html/rfc8126#section-4.5))
+The expert reviews policy requires the registry to define an expert for reviewing new registration requests. The role of the expert
+is so important that IANA dedicates an [entire section](https://datatracker.ietf.org/doc/html/rfc8126#section-4.5) about this role 
+and how to manage it. While is not mandatory, it is advised to provide additional documentation attached to a registration request 
+to give the expert sufficient context to evaluate it. 
+
+> The required documentation and review criteria, giving clear guidance to the designated expert, should be provided when defining the
+> registry.
+
+Another important aspect that needs to be laid out is the criteria for accepting requests or discarding them, it will help the expert
+review process. Change controller should be defined here too. 
+
 
 ### Media Type Registry
 > TODO: 
