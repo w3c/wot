@@ -260,6 +260,20 @@ Examples:
 
 ## WoT Requirements and Expectations for a Potential Registry
 
+### Expectation and Use Case
+
+From the charter:
+
+> Support WoT Interoperability: The WG will improve out-of-the-box interoperability and enable the integration of WoT into other ecosystems and communities. Thus, the WG will define core binding and profiling mechanisms, and define additional profiles and bindings, as appropriate.
+
+Our Story and Use Case:
+
+The goal of the W3C Web of Things is to support multiple protocols via the bindings mechanism.
+There are domains like smart cities, infrastructure where multiple stakeholders bring different devices and systems with different protocols.
+This means existing systems should be made interoperable with a descriptive approach via Thing Descriptions.
+
+### Requirements
+
 In order to choose a mechanism and the rules, we document our requirements and expectations
 
 - A binding should be written by people with a good understanding of the protocol, media type (or similar) and not necessarily the TD Editors
