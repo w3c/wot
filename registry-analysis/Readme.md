@@ -304,7 +304,7 @@ accepted.
 > ([RFC8126](https://datatracker.ietf.org/doc/html/rfc8126#section-4.5))
 
 The expert reviews policy requires the registry to define an expert for reviewing new registration requests. The role of the expert
-is so important that IANA dedicates an [entire section](https://datatracker.ietf.org/doc/html/rfc8126#section-4.5) about this role 
+is so important that IANA dedicates an [entire section](https://datatracker.ietf.org/doc/html/rfc8126#autoid-29) about this role 
 and how to manage it. While is not mandatory, it is advised to provide additional documentation attached to a registration request 
 to give the expert sufficient context to evaluate it. 
 
