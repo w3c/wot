@@ -6,10 +6,10 @@
 - moderate the task force session
 
 ### Editors of REC and Note documents
-- 
+- see https://www.w3.org/Guide/editor/role.html
 
 ### Co-chairs
-- see <tbd>
+- see https://www.w3.org/Guide/chair/role.html
 
 ### W3C team contact
 - see https://www.w3.org/Guide/teamcontact/role.html
@@ -19,4 +19,4 @@
 - <tbd>
 
 ### Invited experts
-- see 
+- see https://www.w3.org/invited-experts/
