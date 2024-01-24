@@ -78,6 +78,10 @@ Also known as: Mapping TD elements to messages
 - [BACnet URI Variables discussion](https://github.com/w3c/wot-binding-templates/issues/302)
 - [Complex data types in simple protocols](https://github.com/w3c/wot-thing-description/issues/1936)
 - [jsonrpc-over-websocket](https://github.com/w3c/wot-binding-templates/issues/125)
+- [xml binding discussion](https://github.com/w3c/wot-binding-templates/issues/139)
+- [cbor analysis](https://github.com/w3c/wot-binding-templates/issues/8)
+- [initial issue with this](https://github.com/w3c/wot-binding-templates/issues/219)
+- [aka payload pattern](https://github.com/w3c/wot-thing-description/issues/1217)
 
 ### Security Schemes Refactoring
 
