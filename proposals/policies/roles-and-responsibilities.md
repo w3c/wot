@@ -7,7 +7,13 @@
 - ...
 
 ### Editors of REC and Note documents
-- see https://www.w3.org/Guide/editor/role.html
+- responsible for the whole document
+- Should be aligned well with TF-leads
+- also see https://www.w3.org/Guide/editor/role.html
+- ...
+
+### Author of REC and Note documents
+- people who contribute to specific sections of the document.
 - ...
 
 ### Co-chairs
@@ -19,7 +25,7 @@
 - ...
   
 ### Liaison contact person
-- official contact person of the SDO representants are listed here https://www.w3.org/liaisons/
+- official contact person of the SDO representatives as listed here https://www.w3.org/liaisons/
 - ...
 
 ### Invited experts
