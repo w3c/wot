@@ -2,13 +2,9 @@
 
 This file summarizes the registry mechanism that the WoT WG/IG needs along with the work done to analyze similar approaches and the requirements we have on such mechanisms.
 
-- Explain what the WoT needs/requires in order to choose a mechanism and the rules
-
 ## Analysis of other W3C Documents
 
-### Official Registry Track Registries
-
-Volunteer: Ege Korkan
+### Official W3C Registry Track Registries
 
 Documents that confirm to <https://www.w3.org/2023/Process-20230612/#registries>.
 That section should be read first by everyone.
@@ -82,7 +78,7 @@ Other than this, they follow the process document.
 
 ### Custom Registry Mechanism Registries
 
-Volunteer: Jan Romann
+Registries within W3C that do not use the Official W3C Registry Track.
 
 #### TTML Media Type Definition and Profile Registry
 
@@ -258,7 +254,7 @@ Examples:
 
 ### Media Type Registry
 
-## WoT Requirements and Expectations for a Potential Registry
+## WoT Requirements and Expectations for a Potential Binding Registry
 
 ### Expectation and Use Case
 
@@ -269,24 +265,42 @@ From the charter:
 Our Story and Use Case:
 
 The goal of the W3C Web of Things is to support multiple protocols via the bindings mechanism.
-There are domains like smart cities, infrastructure where multiple stakeholders bring different devices and systems with different protocols.
+There are domains like smart cities, and infrastructure where multiple stakeholders bring different devices and systems with different protocols.
 This means existing systems should be made interoperable with a descriptive approach via Thing Descriptions.
+
+It is unrealistic to incorporate a complete list of bindings into a REC document before its publication, thus we need a more flexible mechanism.
 
 ### Requirements
 
-In order to choose a mechanism and the rules, we document our requirements and expectations
+To choose a mechanism and the rules, we document our requirements and expectations below:
 
-- A binding should be written by people with a good understanding of the protocol, media type (or similar) and not necessarily the TD Editors
-- The registry is bound to the TD spec version
-- The registry table's entry acceptance should outlive the TD spec. This means that after a REC publication, the table can be updated
-- What needs to be registered (i.e. what is put into the TD document and not what the linked document should contain)
+- A binding should be written by people with a good understanding of the protocol, media type (or similar), and not necessarily the TD Editors. This includes people and organizations inside and outside of the WoT WG.
+- A binding should correspond to a TD specification version.
+- Association of a binding to the TD specification should be confirmed (or allowed) by the TD task force. In other words, any person cannot say that this binding can be used with the TD version X.
+- It should be possible to register, update, or remove the association of a binding to a specific TD specification outside of the REC lifecycle of the given TD specification. This means that the process should outlive the WG if the WG ever comes to stop functioning or if the WG decides to not work on a TD specification version anymore.
+- There should be no two bindings for the same protocol, media type etc.
+- A binding should be identifiable by the elements in a form such as `href`, `contentType`, or other terms.
+- A binding that uses a protocol should map at least one WoT operation to a protocol message
+- A binding that uses a serialization format should mention how the Data Schema terms should be used to describe the messages.
+
+### Rules of a Registry
+
+A preliminary list of rules (needs more iteration):
+
+- Entry format (i.e. what is put into the TD document and not what the linked document should contain)
   - Name of the binding
   - Link to the binding: Stable link
   - (possibly) The binding prefix
 - Requirements on the submitted document:
-  - To be clarified but the initial list for protocols at <https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification>
+  - To be clarified but the initial list for protocols at <https://w3c.github.io/wot-binding-templates/#creating-a-new-protocol-binding-template-subspecification> and <https://w3c.github.io/wot-binding-templates/#protocol-bindings-table>
 
-What we are doing now: <https://w3c.github.io/wot-binding-templates/#protocol-bindings-table>
+Aspects to clarify based on the analysis of other registries above:
+
+- Versioning of registry entries (see https://github.com/w3c/wot/tree/main/registry-analysis#versioning) and versioning with respect to 
+- Deletion and depreciation (see https://github.com/w3c/wot/tree/main/registry-analysis#deletion-and-deprecation-of-registry-entries)
+- Differentiating entry into the registry and update
+- Technical submission mechanism. How does a binding get submitted? Is it a PR, an issue linking to an existing document, or an email? See the submission mechanism fields above.
+- Whether we should have one or multiple registries
 
 ## Appendix
 
