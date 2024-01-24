@@ -63,12 +63,26 @@ Related Issues:
 
 Also known as: Mapping TD elements to messages
 
-How can we represent all protocol messages sent and received?
-It should be using data schema to indicate application-specific parameters but we should be able to describe payload, header, uri variables, and other protocol parameters.
+- Some protocols have a main channel and auxiliary/ancillary/side channels to exchange information, e.g HTTP has Headers, URI-Variables, Payload/Body.
+- Some protocols may have a default/unique `contentType` for at least one of the channels, others are fixed or flexible. e.g. HTTP Headers are key-value strings, Modbus uses only boolean and 16bit quantities.
+- Some protocols do not have the concept of `contentType` at all.
+- Some `contentType` may be more expressive than our DataSchema, e.g. CBOR [Maps with integer keys](https://www.rfc-editor.org/rfc/rfc8949.html#map-keys).
 
-Related Issues:
+#### Open questions
+- How can we describe how the logical information (state for property, input/output messages for actions, messages for event) is mapped to each channel?
+- Do we need to reconsider how we express `contentType` and `contentCoding` in the case more than a channel allows flexible data formats?
+- Do we want to provide a way to express a serialization scheme for protocols that have only inflexible (e.g. binary-only) channels, without going through the route of declaring a `contentType`?
+- Do we want to provide a way to express a serialization scheme between our DataSchema and richer contentTypes (e.g XML, CBOR)?
 
-- BACnet URI Variables discussion
+#### Related Issues:
+- [BACnet URI Variables discussion](https://github.com/w3c/wot-binding-templates/issues/302)
+- [Complex data types in simple protocols](https://github.com/w3c/wot-thing-description/issues/1936)
+- [jsonrpc-over-websocket](https://github.com/w3c/wot-binding-templates/issues/125)
+- [xml binding discussion](https://github.com/w3c/wot-binding-templates/issues/139)
+- [cbor analysis](https://github.com/w3c/wot-binding-templates/issues/8)
+- [initial issue with this](https://github.com/w3c/wot-binding-templates/issues/219)
+- [aka payload pattern](https://github.com/w3c/wot-thing-description/issues/1217)
+- [HTTP Headers in directory exploration (Problem 2)](https://github.com/eclipse-thingweb/node-wot/issues/1221)
 
 ### Security Schemes Refactoring
 
