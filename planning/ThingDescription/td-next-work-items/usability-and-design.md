@@ -82,6 +82,7 @@ Also known as: Mapping TD elements to messages
 - [cbor analysis](https://github.com/w3c/wot-binding-templates/issues/8)
 - [initial issue with this](https://github.com/w3c/wot-binding-templates/issues/219)
 - [aka payload pattern](https://github.com/w3c/wot-thing-description/issues/1217)
+- [HTTP Headers in directory exploration (Problem 2)](https://github.com/eclipse-thingweb/node-wot/issues/1221)
 
 ### Security Schemes Refactoring
 
