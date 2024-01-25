@@ -297,7 +297,7 @@ A preliminary list of rules (needs more iteration):
 Aspects to clarify based on the analysis of other registries above:
 
 - Versioning of registry entries (see https://github.com/w3c/wot/tree/main/registry-analysis#versioning) and versioning with respect to 
-- Deletion and depreciation (see https://github.com/w3c/wot/tree/main/registry-analysis#deletion-and-deprecation-of-registry-entries)
+- Deletion and deprecation (see https://github.com/w3c/wot/tree/main/registry-analysis#deletion-and-deprecation-of-registry-entries)
 - Differentiating entry into the registry and update
 - Technical submission mechanism. How does a binding get submitted? Is it a PR, an issue linking to an existing document, or an email? See the submission mechanism fields above.
 - Whether we should have one or multiple registries
