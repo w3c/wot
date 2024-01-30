@@ -14,4 +14,9 @@ Archives of older schedules:
 | --- | --- | --- |
 | Jan 10, 2024 |   | First main call of 2024, first TD/Binding call |
 | Jan 15, 2024 |   | First Scripting, Security, and Discovery calls of 2024 |
+|  | All | FPWD Publication Requests |
+|  | All | CR Transition Requests |
+|  | All | PR Transition Requests |
+| Sept 25, 2025 | All | REC Transition Requests |
+| Oct 2, 2025 |   | End of WG Charter |
 
