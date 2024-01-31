@@ -66,7 +66,7 @@ Verifying a signature requires identity management, i.e. the verifier needs to k
 Directories need to be extended to verify signatures and generate new chained signatures as needed.
 
 ### Canonicalization
-![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/canonicalization)
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/canonicaliziation)
 
 Thing Descriptions can contain the same information but serialized differently even in the same serialization format, due to structures such as maps which do not impose an order.
 This is problematic for comparing TDs or more importantly, for signing them where every byte difference results in a different signature.
