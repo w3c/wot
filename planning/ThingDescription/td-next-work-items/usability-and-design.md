@@ -60,6 +60,7 @@ Related Issues:
 - <https://github.com/w3c/wot-thing-description/issues/878>
 
 ### Data Schema Mapping
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/data%20mapping)
 
 Also known as: Mapping TD elements to messages
 
