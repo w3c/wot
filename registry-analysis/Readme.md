@@ -321,10 +321,10 @@ the evaluation process to subject matter experts. Designated experts are not gat
 interoperability, and potential conflicts. Multiple experts may collaborate, and conflicts among them require resolution within the expert group. 
 If an expert has a conflict of interest, they must recuse themselves, temporary experts may be appointed, and usually also replacements
 are declared by the IEGS. The role of designated experts involves coordinating 
-reviews that can vary in scope, consulting with technology experts, and following registry specific criteria. Experts are accountable to the IETF community, and 
+reviews that can vary in scope, consulting with technology experts, and following registry-specific criteria. Experts are accountable to the IETF community, and 
 the evaluation process is transparent. 
 
-### URI Schemes
+### URI Schemes ([RFC 7595](https://www.rfc-editor.org/rfc/rfc7595.html))
 **Registration policy** for provisional: [First Come First Served](#First_Come_First_Served)
 
 **Registration policy** for permanent schemes : [Expert Review](#Expert_Review)
@@ -360,17 +360,35 @@ Upon receiving the request, IANA follows these steps:
 7. **Update Registration Status:** Once approved, IANA updates the registration status. If rejected, the "Pending Review" request is removed.
 
 
-### Websockets sub-protocols
+### Websockets sub-protocols ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
 
-TODO
+**Registration policy** : [First Come First Served](#First_Come_First_Served)
 
-### Websockets extensions
+The RFC adds a basic template with minor constraints/guidelines. 
 
-TODO
+### Websockets extensions ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
 
-### Websockets other registries
+**Registration policy** : [First Come First Served](#First_Come_First_Served)
 
-TODO
+The RFC adds a basic template with minor constraints/guidelines. 
+
+### Websockets version number ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
+
+**Registration policy** : IETF review
+
+Interesting that the version number is itself in a registry and it regulated by the regular track for
+standardization. 
+
+### Media-types ([RFC 6838](https://datatracker.ietf.org/doc/html/rfc6838))
+
+**Registration policy** : Custom
+
+Differently from the other registry and from what is advised in RFC 8126 the registration
+of Media-types follows its own defined steps. This registry has it's own section in [IANA Website](https://www.iana.org/form/media-types)
+and it is composed by these steps:
+1. Submission of the template
+2. Review from a "Media types reviewer" which is quite similar to [Expert Review](#Expert_Review) but not explicitly stated in the RFC
+3. Comments from the community: in any time comments can be sent and if IANA and the "Media types reviewer" agrees they can be attached in the media type registration
 
 
 ## WoT Requirements and Expectations for a Potential Registry
