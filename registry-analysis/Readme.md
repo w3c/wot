@@ -304,7 +304,7 @@ accepted.
 > ([RFC8126](https://datatracker.ietf.org/doc/html/rfc8126#section-4.5))
 
 The expert reviews policy requires the registry to define an expert for reviewing new registration requests. The role of the expert
-is so important that IANA dedicates an [entire section](https://datatracker.ietf.org/doc/html/rfc8126#autoid-29) about this role 
+is so important that IANA dedicates an [entire section](https://datatracker.ietf.org/doc/html/rfc8126#autoid-29) (see summary below) about this role 
 and how to manage it. While is not mandatory, it is advised to provide additional documentation attached to a registration request 
 to give the expert sufficient context to evaluate it. 
 
@@ -314,13 +314,51 @@ to give the expert sufficient context to evaluate it.
 Another important aspect that needs to be laid out is the criteria for accepting requests or discarding them, it will help the expert
 review process. Change controller should be defined here too. 
 
+##### The role of Designed Expert in IANA
+The designated experts play a crucial role in the IANA process, addressing the limitations of open mailing list discussions by providing
+clear and expert advice. The motivation behind this approach is to ensure efficient evaluation of assignment requests and to delegate 
+the evaluation process to subject matter experts. Designated experts are not gatekeepers but focus on evaluating requests for completeness, 
+interoperability, and potential conflicts. Multiple experts may collaborate, and conflicts among them require resolution within the expert group. 
+If an expert has a conflict of interest, they must recuse themselves, temporary experts may be appointed, and usually also replacements
+are declared by the IEGS. The role of designated experts involves coordinating 
+reviews that can vary in scope, consulting with technology experts, and following registry specific criteria. Experts are accountable to the IETF community, and 
+the evaluation process is transparent. 
 
 ### URI Schemes
 **Registration policy** for provisional: [First Come First Served](#First_Come_First_Served)
 
-**Registration policy** for : [Expert Review](#Expert_Review)
+**Registration policy** for permanent schemes : [Expert Review](#Expert_Review)
 
-TODO
+To register a new URI Scheme the RFC specifies the following steps (that should be followed regardless of the type):
+
+1. **Check Existing Entries:** Verify if the desired scheme name is already registered in the IANA "Uniform Resource Identifier (URI) Schemes" registry. 
+If it exists, choose a different name or update the existing specification.
+
+2. **Prepare Registration Request:** Create a scheme registration request using the specified template in Section 7.4. 
+This request can be part of an Internet-Draft or submitted alone, following the guidelines of [RFC5378].
+
+3. **Review and Request Feedback:** If the registration is for a 'permanent' status, review the requirements in Section 3, 
+then submit the request to the uri-review@ietf.org mailing list and other relevant lists for discussion. Allow time for 
+comments and respond to them, making necessary revisions.
+
+4. **Submit to IANA:** Submit the scheme registration request (possibly updated) or a pointer to the document containing it to IANA at iana@iana.org.
+
+Upon receiving the request, IANA follows these steps:
+
+1. **Completeness Check:** IANA checks the submission for completeness. If sections are missing or citations are incorrect, the request is rejected, and the registrant can resubmit a corrected request.
+
+2. **Provisional Registration:** If the request is for 'provisional' registration and there's no existing entry for the same name, IANA adds the registration under the First Come First Served policy.
+
+3. **Pending Review:** For other cases, IANA enters the registration request in the registry with the status marked as "Pending Review."
+
+4. **Expert Review:** IANA requests Expert Review against the guidelines. The Designated Expert evaluates the request against the [criteria](https://www.rfc-editor.org/rfc/rfc7595.html#section-3).
+
+5. **Decision for Permanent Registration:** For 'permanent' registration, the Designated Expert may accept it, suggest 'provisional' registration, request IETF review and IESG approval, or request additional review or discussion.
+
+6. **Handling Conflicts:** If an entry already exists for the same name, the Designated Expert decides whether to reject the request or modify the existing entry to note separate use.
+
+7. **Update Registration Status:** Once approved, IANA updates the registration status. If rejected, the "Pending Review" request is removed.
+
 
 ### Websockets sub-protocols
 
