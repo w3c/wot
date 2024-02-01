@@ -1,4 +1,5 @@
 # TD.Next Binding Templates Work Items
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Binding)
 
 ## Binding Submission Mechanism
 
@@ -12,12 +13,15 @@ Our approach should clarify the following points:
 - To be continued
 
 ## Binding Mechanism
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Binding)
 
 ### Binding Templates Integration
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Binding) ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/document%20reorganization)
 
 Binding Templates core mechanism will be incorporated into the TD document.
 
 ### Payload Driven Protocols
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/data%20mapping)
 
 Some protocols are built on top of the application layer protocols. Some examples are:
 
@@ -35,6 +39,7 @@ The working group will also document in which cases this method does not work du
 Note: This is dependent on *Reusable TD Elements* of [Usability and Design](./usability-and-design.md) work item list.
 
 ### External Security Ontologies
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Binding) ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security)
 
 Currently security schemes are "baked into" the TD specification but it would be more manageable and consistent to break them out as separate ontologies so that all security schemes would be done via extensions. For protocol-specific security schemes in particular, these should be moved to the Protocol Bindings and ontologies supporting them. The TD 2.0 spec would be updated to only include general-purpose "structural" security schemes and "generic" schemes that apply to all protocols.
 

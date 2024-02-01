@@ -6,12 +6,14 @@ Instead, the TF will analyze current solutions, gather existing use cases and di
 These are contained in this folder with the `analysis-` prefix.
 
 ## Historical Data
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/historical%20data)
 
-Also known as timeseries.
+Also known as time series.
 
 Please refer to [Analysis Document](./../analysis-historical-data-work-item.md)
 
-## Manageable Actions
+## Manageable Affordances
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/manageable%20affordances)
 
 Note: This should be moved to an analysis document.
 
@@ -38,6 +40,7 @@ Related Issues:
 - <https://github.com/w3c/wot-thing-description#1223>
 
 ## Streaming
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/streaming)
 
 Note: This should be moved to an analysis document.
 
@@ -55,6 +58,7 @@ In order to clearly define what infrastructure is actually needed, if any, one o
 Note: This should be moved to an analysis document.
 
 ### Signing
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/signing)
 
 Mechanisms for signing TDs documents were under discussion in the last charter but were not mature enough to include.
 Adding support for TD canonicalization and signing would be helpful to ensure that TDs are not intercepted and modified by third parties.
@@ -62,6 +66,7 @@ Verifying a signature requires identity management, i.e. the verifier needs to k
 Directories need to be extended to verify signatures and generate new chained signatures as needed.
 
 ### Canonicalization
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/canonicaliziation)
 
 Thing Descriptions can contain the same information but serialized differently even in the same serialization format, due to structures such as maps which do not impose an order.
 This is problematic for comparing TDs or more importantly, for signing them where every byte difference results in a different signature.
@@ -80,6 +85,7 @@ Some work has been done in the previous charter but has been postponed due to la
 - <https://github.com/w3c/wot-thing-description/pull/1086>
 
 ### TD Versioning
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/versioning)
 
 Note: This should be moved to an analysis document.
 

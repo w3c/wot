@@ -8,6 +8,7 @@ These have more priority since they can impact how new features look like in a T
 We should start a TD (re)design document that explains the idea behind the design of different features. See [issue 1889](https://github.com/w3c/wot-thing-description/issues/1889).
 
 ## Document reorganization
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/document%20reorganization)
 
 Changes that should be done while keeping the current content
 
@@ -29,6 +30,7 @@ There were questions about how much a TM is related to the TD.
 Some discussion might be needed.
 
 ## Synchronization with Other Documents
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/document%20synchronisation)
 
 ### Discovery Sync
 
@@ -39,8 +41,11 @@ Moving discovery-related text from TD to Discovery
 Checking overlaps with architecture.
 
 ## Reusable TD Elements
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security)
 
 ### Reusable Connections
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/reusable%20connections)
+
 
 Currently, each form of an affordance has information on the endpoint, media type and other protocol related information. 
 It is possible to use the base term for simplifying the endpoint but it has limitations such as:
@@ -60,6 +65,7 @@ Related Issues:
 - <https://github.com/w3c/wot-thing-description/issues/878>
 
 ### Data Schema Mapping
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/data%20mapping)
 
 Also known as: Mapping TD elements to messages
 
@@ -85,10 +91,13 @@ Also known as: Mapping TD elements to messages
 - [HTTP Headers in directory exploration (Problem 2)](https://github.com/eclipse-thingweb/node-wot/issues/1221)
 
 ### Security Schemes Refactoring
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security) ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Binding)
+
 
 The need to be refactored and use the same pattern as other reusable elements
 
 ### Inline Security
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security) ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/reusable%20elements)
 
 Simplifying the way to describe security when there is only one mechanism needed to be described (in contrast to needing two terms at the moment)
 
@@ -97,6 +106,7 @@ Relevant discussions:
 - https://github.com/w3c/wot-thing-description/pull/945
 
 ### Reusable Element Design
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security)
 
 Scenarios, requirements, and use the same pattern for all reusable elements.
 This will influence the items above.
@@ -106,6 +116,7 @@ Related discussions:
 - https://github.com/w3c/wot-thing-description/pull/1341 (but many are linked here as well)
 
 ## Affordance Uniformity
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/affordance%20uniformity)
 
 Uniform pattern/state machines between Actions, Events, and Properties.
 
@@ -114,6 +125,7 @@ Uniform pattern/state machines between Actions, Events, and Properties.
 - Property vs. Action (also URI Variables redesign question)
 
 ## Normative Parsing, Validation, Consumption
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Validation)
 
 Currently, the TD specification defines an abstract information model and a default JSON serialization for TDs.
 However, parsing, consuming and validating TDs are not normatively defined.
