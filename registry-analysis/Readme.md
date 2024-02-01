@@ -242,17 +242,150 @@ Template.
 
 <!-- TODO: Are there more aspects that need to be covered here? -->
 
-## Analysis of IANA Registries
+## Analysis of IANA Registries (DRAFT)
 
 Volunteer:  Cristiano Aguzzi
 
-Examples:
+> Examples:
+> - <https://www.iana.org/assignments/websocket/websocket.xml>
+> - <https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry>
+> - <https://www.iana.org/assignments/media-types/media-types.xhtml>
 
-- <https://www.iana.org/assignments/websocket/websocket.xml>
-- <https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry>
-- <https://www.iana.org/assignments/media-types-parameters/media-types-parameters.xhtml>
+The Internet Assigned Numbers Authority (IANA) plays a crucial role in ensuring the proper functioning
+of the Internet through various coordination mechanisms, collectively known as IANA functions. This report 
+focuses on the Protocol Assignments function, closely coordinated with the Internet Engineering Task Force (IETF), 
+providing insights into the potential establishment of a registry for protocol binding templates.
 
-### Media Type Registry
+### IANA Procedures and RFC 8126
+IANA, as outlined in RFC 8126, establishes common procedures for protocol assignments. These procedures may be supplemented
+or modified by specific registries defined in corresponding RFCs. The submission of registrations is typically facilitated 
+through web forms on the IANA website or via email.
+
+### Generic Considerations
+Even in seemingly unlimited spaces, a minimal review before assignment is often necessary to prevent hoarding or wastage of values 
+and to ensure the legitimacy of requests. Balancing adequate review with ease of registration is crucial, considering 
+requests from various entities.
+
+Common review policies, as defined by RFC, include (order of strictness):
+
+1. Private Use
+2. Experimental Use
+3. Hierarchical Allocation
+4. First Come First Served
+5. Expert Review
+6. Specification Required
+7. RFC Required
+8. IETF Review
+9. Standards Action
+10. IESG Approval
+
+The following subsections expand the guidelines for the main review policies that were used across the relevant examples
+of registries selected by the Working Group (see later sections). 
+
+#### First Come First Served 
+> ([RFC8126](https://datatracker.ietf.org/doc/html/rfc8126#section-4.4))
+
+Streamlined review policy the requests are registered in a first come first served fashion and they are usually accepted without
+any particular review. The requirement for acceptance is only that the request is well formed and does not clash with existing
+registrations (e.g., for strings case-sensitive equality). Some registries might add some additional requirements but they are usually
+regarding the format of the request and they are not used to add additional review steps to the process. Any registry that uses
+this policy has to define a "change controller" an entity responsible for overseeing any change of the registry (e.g., protocol updates 
+that deprecate old codes). The [RFC](https://datatracker.ietf.org/doc/html/rfc8126#section-4.4) advises any change controller to be 
+careful "that the protocol retains wire compatibility". 
+
+> It is also important to understand that First Come First Served really has no filtering.  Essentially, any well-formed request is
+accepted.
+
+#### Expert Review
+> ([RFC8126](https://datatracker.ietf.org/doc/html/rfc8126#section-4.5))
+
+The expert reviews policy requires the registry to define an expert for reviewing new registration requests. The role of the expert
+is so important that IANA dedicates an [entire section](https://datatracker.ietf.org/doc/html/rfc8126#autoid-29) (see summary below) about this role 
+and how to manage it. While is not mandatory, it is advised to provide additional documentation attached to a registration request 
+to give the expert sufficient context to evaluate it. 
+
+> The required documentation and review criteria, giving clear guidance to the designated expert, should be provided when defining the
+> registry.
+
+Another important aspect that needs to be laid out is the criteria for accepting requests or discarding them, it will help the expert
+review process. Change controller should be defined here too. 
+
+##### The role of Designed Expert in IANA
+The designated experts play a crucial role in the IANA process, addressing the limitations of open mailing list discussions by providing
+clear and expert advice. The motivation behind this approach is to ensure efficient evaluation of assignment requests and to delegate 
+the evaluation process to subject matter experts. Designated experts are not gatekeepers but focus on evaluating requests for completeness, 
+interoperability, and potential conflicts. Multiple experts may collaborate, and conflicts among them require resolution within the expert group. 
+If an expert has a conflict of interest, they must recuse themselves, temporary experts may be appointed, and usually also replacements
+are declared by the IEGS. The role of designated experts involves coordinating 
+reviews that can vary in scope, consulting with technology experts, and following registry-specific criteria. Experts are accountable to the IETF community, and 
+the evaluation process is transparent. 
+
+### URI Schemes ([RFC 7595](https://www.rfc-editor.org/rfc/rfc7595.html))
+**Registration policy** for provisional: [First Come First Served](#First_Come_First_Served)
+
+**Registration policy** for permanent schemes : [Expert Review](#Expert_Review)
+
+To register a new URI Scheme the RFC specifies the following steps (that should be followed regardless of the type):
+
+1. **Check Existing Entries:** Verify if the desired scheme name is already registered in the IANA "Uniform Resource Identifier (URI) Schemes" registry. 
+If it exists, choose a different name or update the existing specification.
+
+2. **Prepare Registration Request:** Create a scheme registration request using the specified template in Section 7.4. 
+This request can be part of an Internet-Draft or submitted alone, following the guidelines of [RFC5378].
+
+3. **Review and Request Feedback:** If the registration is for a 'permanent' status, review the requirements in Section 3, 
+then submit the request to the uri-review@ietf.org mailing list and other relevant lists for discussion. Allow time for 
+comments and respond to them, making necessary revisions.
+
+4. **Submit to IANA:** Submit the scheme registration request (possibly updated) or a pointer to the document containing it to IANA at iana@iana.org.
+
+Upon receiving the request, IANA follows these steps:
+
+1. **Completeness Check:** IANA checks the submission for completeness. If sections are missing or citations are incorrect, the request is rejected, and the registrant can resubmit a corrected request.
+
+2. **Provisional Registration:** If the request is for 'provisional' registration and there's no existing entry for the same name, IANA adds the registration under the First Come First Served policy.
+
+3. **Pending Review:** For other cases, IANA enters the registration request in the registry with the status marked as "Pending Review."
+
+4. **Expert Review:** IANA requests Expert Review against the guidelines. The Designated Expert evaluates the request against the [criteria](https://www.rfc-editor.org/rfc/rfc7595.html#section-3).
+
+5. **Decision for Permanent Registration:** For 'permanent' registration, the Designated Expert may accept it, suggest 'provisional' registration, request IETF review and IESG approval, or request additional review or discussion.
+
+6. **Handling Conflicts:** If an entry already exists for the same name, the Designated Expert decides whether to reject the request or modify the existing entry to note separate use.
+
+7. **Update Registration Status:** Once approved, IANA updates the registration status. If rejected, the "Pending Review" request is removed.
+
+
+### Websockets sub-protocols ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
+
+**Registration policy** : [First Come First Served](#First_Come_First_Served)
+
+The RFC adds a basic template with minor constraints/guidelines. 
+
+### Websockets extensions ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
+
+**Registration policy** : [First Come First Served](#First_Come_First_Served)
+
+The RFC adds a basic template with minor constraints/guidelines. 
+
+### Websockets version number ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
+
+**Registration policy** : IETF review
+
+Interesting that the version number is itself in a registry and it regulated by the regular track for
+standardization. 
+
+### Media-types ([RFC 6838](https://datatracker.ietf.org/doc/html/rfc6838))
+
+**Registration policy** : Custom
+
+Differently from the other registry and from what is advised in RFC 8126 the registration
+of Media-types follows its own defined steps. This registry has it's own section in [IANA Website](https://www.iana.org/form/media-types)
+and it is composed by these steps:
+1. Submission of the template
+2. Review from a "Media types reviewer" which is quite similar to [Expert Review](#Expert_Review) but not explicitly stated in the RFC
+3. Comments from the community: in any time comments can be sent and if IANA and the "Media types reviewer" agrees they can be attached in the media type registration
+
 
 ## WoT Requirements and Expectations for a Potential Binding Registry
 
