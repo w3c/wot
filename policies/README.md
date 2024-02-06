@@ -6,3 +6,8 @@ call for a group resolution to adopt it.  If the group resolution passes, it can
 
 ## Index
 * [Working Group Chairs' Decision Process and Quorum](chair-decision-process.md)
+* [Policy Adoption](policy-adoption.md)
+* [Group Decisions](decisions.md)
+* [Asynchronous Decisions for Deliverables](async-decision.md)
+* [Social Media](social-media.md)
+

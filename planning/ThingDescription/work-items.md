@@ -1,74 +1,75 @@
-# Web of Things TD Work Items DRAFT
+# [DRAFT] Web of Things TD Work Items 
 
-## Original Input
+This is copied from <https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf> and is further restructured here.
 
-This is copied from https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf and should ideally be restructured and organized into the section later.
+## Categories
 
-### Classification Proposal
+The work items are split into four categories.
 
-- For new features (keywords or behavior), a use case (or user story) should exist in the first place.
-- Changes that improve readability, the usability of the specification OR development, spec generation, bug fix, and testing of the specification do not need use cases
+1. [Binding Templates](./td-next-work-items/binding-templates.md): The first category is Binding Templates, which involves specifying the mechanism but also the submission mechanism.
+2. [Usability and Design](./td-next-work-items/usability-and-design.md): The second category focuses on work items that are more about restructuring, redesigning, and improving the usability of the specification. These could pave the way for new features.
+3. [New Features](./td-next-work-items/new-features.md): The third category is about work items that are directly linked to new features.
+4. [Testing and Tooling](./td-next-work-items/testing-and-tooling.md): The fourth category is comprised of items that help the specification management and maintain a consistency.
+
+Such categories can be reflected with labels and different views in the GitHub project management panel.
+The task force will go through existing issues, pull requests, and discussions, and categorize them accordingly.
+
+- **Priorities:** The items in each markdown under [td-next-work-items](./td-next-work-items) is a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
+
+- **Details:** The details of different work items can be found at <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md>. We will consolidate such details and link them appropriately.
+
+## Notes
+
+- The points below are still open to discussion:
   - What to do with the existing issues and PRs that are postponed?
     - Option 1: If there are no use cases identified, they can be closed after some time.
   - What about the work items in the charter or details that are not linked to use cases?
-- Topics that have multiple dependencies on them should be prioritized
-- Such categories can be reflected with labels and different views in the GitHub project management panel
 
-### Big Tasks List Proposal
+## Roadmap
 
-- Restructure TD document while keeping the current content, e.g. grouping of normative requirements, common definitions section (usability improvements for not needing to "jump around" while reading)
-- ThingModel integration into TD document
-- Protocol Binding integration into TD document
-- Binding Mechanisms for interaction data in the message body or URI, protocol metadata in payload, etc.
-  - Relates to presentation by Luca
-- Design registry and documentation requirements for binding specifications
-- Security refactor
-- Spec Generation
-- TD Testing (each TF responsible for its own testing)
-- Bugfixes
+We should a roadmap for the TD specification that is aligned with the charter start and end dates.
 
-### Organization
+### WoT WG Charter Details
 
-- Ideally, we have a small list of such tasks. Smaller tasks should be grouped into them.
-- In the GitHub Projects, we want to ideally have one view per big task. A small task can have multiple big task labels, thus appearing in multiple views.
-- While doing the refactoring, we should have a document to discuss the design of TD
+- Charter End Date: 2 October 2025
+- CR Transition (feature freeze): July 10, 2025 (worst estimate)
+- Charter Start: October 2023
 
-## Restructuring with Categories
+#### Schedule for TD Deliverable
 
-The work items are split into two categories. The first category focuses on work items that are more about restructuring, redesigning and improving the usability of the specification. These could pave the way to new features.
-The second category is about work items that are directly linked to new features.
+- We will stop work big features 6 months prior to CR Transition. That means January 10, 2025. In other words, we should be done with big features by the end of 2024.
+- As a result, we should indicate whether a feature is considered a big feature. Some notes on this:
+  - The bigger the implementation impact, the more time to implement.
+  - We can give something like "Story Points" to give a rough idea of the effort.
+- We should look at the schedule on a weekly basis, part of the meeting agenda.
 
-Also, see https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details and https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf (July 5 Agenda)
+### Specification Refactoring Roadmap
 
-**Priorities:** The items below can be considered a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
+An example list of refactoring items with an order:
 
-**Details:** The details of different work items can be found at https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md . We will consolidate such details and link them appopriately.
+- [Incorporating Binding Mechanism](./td-next-work-items/binding-templates.md#binding-templates-integration)
+- [Specification Generation Tooling](./td-next-work-items/testing-and-tooling.md#spec-generation)
+- [Grouping of normative requirements](./td-next-work-items/usability-and-design.md#grouping-of-normative-requirements)
+- [Common definitions section](./td-next-work-items/usability-and-design.md#common-definition-section)
+- [Assertion id alignment](./td-next-work-items/usability-and-design.md#assertion-id-alignment)
+- [Synchronization with other documents](./td-next-work-items/usability-and-design.md#synchronization-with-other-documents)
+- [Example reorganization](./td-next-work-items/testing-and-tooling.md#examples-reorganization)
+- [Testing Pipeline](./td-next-work-items/testing-and-tooling.md#testing-procedure)
 
-### Usability and Design Work Items
+### TD Instance Redesign Roadmap
 
-- Binding Submission Mechanism (e.g. Registry)
-- Binding Mechanism
-  - Mapping TD elements to messages
-  - Payload Driven Protocols (e.g. WS, SSE)
-  - `href` and URI design
-  - External Security Ontologies
-- Reusable Elements and pointers (e.g. reusable payloads, initial connection)
-- Restructuring the TD Specification and Specification Generation
-- Inline Security
+An example list of redesign items with an order:
 
-### Feature Aiming Work Items
+- Base connection design
+- Data mapping
 
-- Timeseries
-- Manageable Actions
-- Streaming
+### New Features Roadmap
 
-### Supporting Work Items (to be renamed)
+## Related Resources
 
-- Linting
-- Normative Parsing, Validation, Consumption
-- Signing and Canonicalization
-- TD Versioning
+In addition to GitHub issues and Use Cases, there are various documents that should be read before starting the work
 
-### Notes
-
-We should use <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md> to find relevant issues
+- Long Running Actions Proposals: <https://github.com/w3c/wot-thing-description/tree/main/proposals>
+- Registry Analysis: <https://github.com/w3c/wot/tree/main/registry-analysis>
+- Historical Data Landscape: <https://github.com/w3c/wot/pull/1112>
+- Charter Details: <https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html>
