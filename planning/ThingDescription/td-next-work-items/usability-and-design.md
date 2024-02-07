@@ -93,8 +93,11 @@ Also known as: Mapping TD elements to messages
 ### Security Schemes Refactoring
 ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security) ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Binding)
 
-
 The need to be refactored and use the same pattern as other reusable elements
+
+Relevant discussions:
+
+- https://github.com/w3c/wot-thing-description/issues/1394
 
 ### Inline Security
 ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security) ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/reusable%20elements)
