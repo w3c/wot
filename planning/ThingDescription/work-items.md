@@ -27,9 +27,12 @@ The task force will go through existing issues, pull requests, and discussions, 
 
 ## Roadmap
 
-We should a roadmap for the TD specification that is aligned with the charter start and end dates.
+We should have a roadmap for the TD specification that is aligned with the charter start and end dates.
+Concrete roadmaps with the order of items are below at [Individual Roadmaps](#individual-roadmaps).
 
-### WoT WG Charter Details
+### Charter-Related Information
+
+#### WoT WG Charter Details
 
 - Charter End Date: 2 October 2025
 - CR Transition (feature freeze): July 10, 2025 (worst estimate)
@@ -43,27 +46,34 @@ We should a roadmap for the TD specification that is aligned with the charter st
   - We can give something like "Story Points" to give a rough idea of the effort.
 - We should look at the schedule on a weekly basis, part of the meeting agenda.
 
-### Specification Refactoring Roadmap
+### Individual Roadmaps
 
-An example list of refactoring items with an order:
+#### Specification Refactoring Roadmap
 
-- [Incorporating Binding Mechanism](./td-next-work-items/binding-templates.md#binding-templates-integration)
-- [Specification Generation Tooling](./td-next-work-items/testing-and-tooling.md#spec-generation)
-- [Grouping of normative requirements](./td-next-work-items/usability-and-design.md#grouping-of-normative-requirements)
-- [Common definitions section](./td-next-work-items/usability-and-design.md#common-definition-section)
-- [Assertion id alignment](./td-next-work-items/usability-and-design.md#assertion-id-alignment)
-- [Synchronization with other documents](./td-next-work-items/usability-and-design.md#synchronization-with-other-documents)
-- [Example reorganization](./td-next-work-items/testing-and-tooling.md#examples-reorganization)
-- [Testing Pipeline](./td-next-work-items/testing-and-tooling.md#testing-procedure)
+1. [Incorporating Binding Mechanism](./td-next-work-items/binding-templates.md#binding-templates-integration)
+2. [Synchronization with other documents](./td-next-work-items/usability-and-design.md#synchronization-with-other-documents) (might be a long process, so it should happen asynchronously or in the background with syncs in the calls)
+3. [Common definitions section](./td-next-work-items/usability-and-design.md#common-definition-section)
+4. [Grouping of normative requirements](./td-next-work-items/usability-and-design.md#grouping-of-normative-requirements)
+5. [Better Integration of Thing Model](./td-next-work-items/usability-and-design.md#better-integration-of-thing-model)
+6. [Security Schemes Refactoring](./td-next-work-items/usability-and-design.md#security-schemes-refactoring)
+ 
+#### Specification Tooling
 
-### TD Instance Redesign Roadmap
+1. [Specification Generation Tooling](./td-next-work-items/testing-and-tooling.md#spec-generation)
+2. [Example reorganization](./td-next-work-items/testing-and-tooling.md#examples-reorganization)
+
+#### Implementation Report Testing
+
+1. [Testing Pipeline](./td-next-work-items/testing-and-tooling.md#testing-procedure) (less priority since we are not close to the testing phase at all)
+
+#### TD Instance Redesign Roadmap
 
 An example list of redesign items with an order:
 
 - Base connection design
 - Data mapping
 
-### New Features Roadmap
+#### New Features Roadmap
 
 ## Related Resources
 
