@@ -46,6 +46,9 @@ Ideally, the feature can exist only after the requirements are identified. Howev
 ## Existing Solutions
 
 - [Timeseries Data Submodel Specification at IDTA](https://industrialdigitaltwin.org/wp-content/uploads/2023/03/IDTA-02008-1-1_Submodel_TimeSeriesData.pdf)
+  - Timepoint (A UTC time) and Duration (time after the start and last measurement) are possible. In Duration, start time is necessary
+  - TAI and UTC are basic formats. Unix Time, Ephemeris Time (ET) or Barycentric Dynamical Time (TBD) are possible
+  - Sampling Interval or Rate can be provided
 - [InfluxDB Timeseries Data oriented Database](https://www.influxdata.com/)
 - [WebThings.io REST API](https://webthings.io/api/#event-resource)
 - ECHONET Lite Web API has an extension of the current TD specification on this direction
