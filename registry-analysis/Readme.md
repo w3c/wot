@@ -408,11 +408,15 @@ It is unrealistic to incorporate a complete list of bindings into a REC document
 To choose a mechanism and the rules, we document our requirements and expectations below:
 
 - A binding should be written by people with a good understanding of the protocol, media type (or similar), and not necessarily the TD Editors. This includes people and organizations inside and outside of the WoT WG.
+  - TODO: Ask existing registry "managers" about this kind of a direction.
 - A binding should correspond to a TD specification version.
 - Association of a binding to the TD specification should be confirmed (or allowed) by the TD task force. In other words, any person cannot say that this binding can be used with the TD version X.
 - It should be possible to register, update, or remove the association of a binding to a specific TD specification outside of the REC lifecycle of the given TD specification. This means that the process should outlive the WG if the WG ever comes to stop functioning or if the WG decides to not work on a TD specification version anymore.
 - There should be no two bindings for the same protocol, media type etc.
 - A binding should be identifiable by the elements in a form such as `href`, `contentType`, or other terms.
+  - We need to clarify whether the URI scheme and the media type MUST be registered in IANA first.
+    - Provisional registration could reduce the overhead. Any new conflicting ones would bring up a discussion but it can still result in "our" provisional getting demoted.
+    - Pros: more stable. Cons: More overhead and work
 - A binding that uses a protocol should map at least one WoT operation to a protocol message
 - A binding that uses a serialization format should mention how the Data Schema terms should be used to describe the messages.
 
