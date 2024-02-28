@@ -14,6 +14,7 @@ Archives of older schedules:
 | --- | --- | --- |
 | January 10, 2024 |   | First main call of 2024, first TD/Binding call |
 | January 15, 2024 |   | First Scripting, Security, and Discovery calls of 2024 |
+| March 12, 2024 |  | First Profile call of 2024 |
 | September, 2024 | | Use Cases and Requirements Note Publication - update |
 | mid-December, 2024 | All | Discovery FPWD Publication Request - target |
 | March 13, 2025 | All | FPWD Publication Requests - latest |
