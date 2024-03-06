@@ -16,7 +16,8 @@ Archives of older schedules:
 | January 15, 2024 |   | First Scripting, Security, and Discovery calls of 2024 |
 | March 12, 2024 |  | First Profile call of 2024 |
 | September, 2024 | | Use Cases and Requirements Note Publication - update |
-| mid-December, 2024 | All | Discovery FPWD Publication Request - target |
+| mid-December, 2024 | TD | TD FPWD Publication Request - target - Freezing Addition of Big Features|
+| mid-December, 2024 | Discovery | Discovery FPWD Publication Request - target |
 | March 13, 2025 | All | FPWD Publication Requests - latest |
 | June, 2025 | | Testing (results contributed to WG) |
 | July 3, 2025 | All | CR Transition Requests - latest |
