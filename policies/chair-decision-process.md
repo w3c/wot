@@ -6,7 +6,7 @@ The following policy is only valid for the Chairs' meeting.
 - The following relates only to decisions that the Working Group agrees can be delegated to chairs, which includes the following:
     - Rejecting unsolicited Invited Expert applications
 - Chairs' decisions will generally by consensus of all three chairs, two chairs if only two are attending the meeting (see below), with the team contacts' assistance if necessary.
-- Weekly meetings will be held just prior (no more than a day earlier) to main WoT Working Group call.
+- Weekly meetings will be held prior to main WoT Working Group call.
 - Quorum is 2 out of 3 chairs.  If only one chair can attend* the Chairs' meeting no decisions can be made, although some administrative work may take place (preparing agendas for the main call, etc).
 - A chair not attending the Chairs' meeting (who has not commented by email) will generally be considered to be abstaining. 
 - If a chair cannot attend* a Chairs' meeting but clearly states their opinion/decision on an issue via email prior to the meeting this input will be considered as being equivalent to in-person discussion, but only for that specific topic, which needs to be clearly stated in an email to all chair and the team contact.
