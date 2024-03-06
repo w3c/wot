@@ -40,7 +40,7 @@ Concrete roadmaps with the order of items are below at [Individual Roadmaps](#in
 
 #### Schedule for TD Deliverable
 
-- We will stop work big features 6 months prior to CR Transition. That means January 10, 2025. In other words, we should be done with big features by the end of 2024.
+- We will stop work big features 6 months prior to CR Transition. That means January 10, 2025. In other words, we should be done with big features by the end of 2024. Please see https://github.com/w3c/wot/blob/main/planning/schedule.md
 - As a result, we should indicate whether a feature is considered a big feature. Some notes on this:
   - The bigger the implementation impact, the more time to implement.
   - We can give something like "Story Points" to give a rough idea of the effort.
