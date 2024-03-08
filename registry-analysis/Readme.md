@@ -26,12 +26,12 @@ To choose a mechanism and the rules, we document our expectations below:
   - TODO: Ask existing registry "managers" about their opinion on this proposal. This will be discussed in the breakout on March 12.
   - Reasons Behind the Requirement:
     - Instead of WG learning each new protocol and media type, it is more efficient for people with a good understanding of the protocol or media type to write a binding.
-    - Engaging other communities
+    - Engaging other communities.
 - A binding SHOULD correspond to specific TD specification version(s).
-  - REWRITE to take multiple TD version into account. Reason Behind the Requirement: Given that the registry is associated to a specific version of a TD specification, it is under the scope of that document.
+  - Reason Behind the Requirement: A binding may not fit newer or older versions of a TD specification (e.g. `readproperty` can become `readprop` or a new operations can arrive). Thus, at the of writing a binding, it needs to be associated to a one or more known TD specification versions.
   - TODO: Decide whether we want a separate registry report or whether it should be a section in the TD REC (Registry Section)
 - Association of a binding to the TD specification (registry entry) SHOULD be confirmed by the WoT Working Group. In other words, any person cannot say that this binding can be used with the TD version X.
-  - Reason Behind the Requirement: WoT WG is the manager of the registry.
+  - Reasons Behind the Requirement: WoT WG is the manager of the registry.
   - TODO: Add clarification about what to do if the WoT WG charter is not renewed.
 - It SHOULD be possible to register, update, or remove a registry entry for associating a binding to a specific TD specification outside of the REC lifecycle of the given TD specification.
   - Reasons Behind the Requirement:
