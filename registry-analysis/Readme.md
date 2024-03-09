@@ -240,9 +240,7 @@ However, we could also opt for an explicit versioning mechanism for our
 registries in order to, for instance, group different versions of a Binding
 Template.
 
-<!-- TODO: Are there more aspects that need to be covered here? -->
-
-## Analysis of IANA Registries (DRAFT)
+## Analysis of IANA Registries 
 
 Volunteer:  Cristiano Aguzzi
 
