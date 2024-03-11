@@ -354,7 +354,7 @@ Upon receiving the request, IANA follows these steps:
 7. **Update Registration Status:** Once approved, IANA updates the registration status. If rejected, the "Pending Review" request is removed.
 
 
-### Websockets sub-protocols ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
+### Websockets Subprotocols ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
 
 **Registration policy** : [First Come First Served](#First_Come_First_Served)
 
