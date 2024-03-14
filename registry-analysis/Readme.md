@@ -58,6 +58,7 @@ To choose a mechanism and the rules, we document our expectations below:
     - Avoid submission of a binding like "XML Binding" that only says "Use `contentType:application/xml` and nothing more. That alone would not be enough to serialize correct messages based on the data schema.
   - TODO: We will need additional mechanisms (including vocabulary terms) to ensure that it is possible to use other media types.
 - TODO: Explain that there are no categories
+- TODO: Analyze <https://github.com/w3c/ttwg/tree/main/boilerplate/registry>
 
 ### Content of Registry Definition
 
