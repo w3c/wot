@@ -43,13 +43,21 @@ To choose a mechanism and the rules, we document our expectations below:
     - We should avoid confusing users, i.e. which binding should I use?
     - It would complicate implementations
   - TODO: Clarify what happens when two ecosystems like OCF and LwM2M both use CoAP binding. The initial thinking is to register them as separate entries but clarify what they use from CoAP binding. A layered registry can be thought of as language tags with `en` extending to `en-us` and `en-uk` where the tags and entries are different but the association to `en` is expressed in the id.
-- The points below need more discussion in the TF.
-- A binding should be identifiable by the elements in a form such as `href`, `contentType`, or other terms.
-  - We need to clarify whether the URI scheme and the media type MUST be registered in IANA first.
+- In a TD, a binding SHOULD be identifiable by the elements in a form such as `href`, `contentType`, `subprotocol`, or other terms. Alternative: In a TD, a binding SHOULD be identifiable by the elements in a form or connection information (base etc.) (This alternative seems to have more consensus).
+  - Reasons Behind the Requirement:
+    - This avoids conflicts that are mentioned in the previous requirement
+  - TODO: These terms should be refined based on the additions/changes to the TD 2.0 mechanism. E.g. introducing a `protocol` term, or restrictions on URI scheme and `subprotocol` combination, data mapping etc.
+  - TODO: We need to clarify whether the URI scheme and the media type MUST be registered in IANA first.
     - Provisional registration could reduce the overhead. Any new conflicting ones would bring up a discussion but it can still result in "our" provisional getting demoted.
     - Pros: more stable. Cons: More overhead and work
-- A binding that uses a protocol should map at least one WoT operation to a protocol message
-- A binding that uses a serialization format should mention how the Data Schema terms should be used to describe the messages.
+- A binding that uses a protocol MUST map at least one WoT operation (`op` keyword values such as `readproperty`) to a protocol message and vice versa
+  - Reasons Behind the Requirement:
+    - Otherwise, it is not binding the protocol to WoT and cannot be useful.
+- A binding that uses a serialization format via the `contentType` keyword, MUST mention how the Data Schema terms should be used to describe the messages.
+  - Reasons Behind the Requirement:
+    - Avoid submission of a binding like "XML Binding" that only says "Use `contentType:application/xml` and nothing more. That alone would not be enough to serialize correct messages based on the data schema.
+  - TODO: We will need additional mechanisms (including vocabulary terms) to ensure that it is possible to use other media types.
+- TODO: Explain that there are no categories
 
 ### Content of Registry Definition
 
