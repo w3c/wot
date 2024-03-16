@@ -5,7 +5,7 @@ To propose a new policy, prepare a draft first in [wot/proposals/policies](https
 call for a group resolution to adopt it.  If the group resolution passes, it can be moved here and added to the index below.
 
 ## Index
-
+* [Working Group Chairs' Decision Process and Quorum](chair-decision-process.md)
 * [Policy Adoption](policy-adoption.md)
 * [Group Decisions](decisions.md)
 * [Asynchronous Decisions for Deliverables](async-decision.md)
