@@ -2,7 +2,7 @@
 
 ## WoT Articles Selection
 
-The Web of Things Interest Group Marketing Task Force collects articles about the Web of Things on the official web page of the W3C Web of Things at [the official webpage](https://www.w3.org/WoT/about/articles/).
+The Web of Things Interest Group Marketing Task Force collects links to articles about the Web of Things on the official web page of the W3C Web of Things at [the official webpage](https://www.w3.org/WoT/about/articles/).
 
 The allowed articles must be from one of the following categories:
 
