@@ -8,6 +8,6 @@ The allowed articles must be from one of the following categories:
 
 - It is written by the W3C WoT WG/IG as a whole or W3C Team. Examples are press releases
 - It is written in collaboration with the WoT IG/WG where the marketing TF is the point of contact. Interest Group has reviewed it before it is published. Examples are collaborations such as the one with the JSON Schema (see [here](https://json-schema.org/blog/posts/w3c-wot-case-study)).
-- It is written by one of the member organizations or someone affiliated by one of the member organizations.
+- It is written by one of the IG or WG member organizations or someone affiliated by one of the member organizations or Invited Experts of the WoT IG or WoT WG.
 
 Thus, third-party articles are not allowed until further changes to this policy.
