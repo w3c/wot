@@ -14,3 +14,11 @@ To make everyone's life easier, a specific way to manage assertion ids is specif
   - Correct examples: `binding-http-default-readproperty`, `profile-basic-description`
   - Incorrect examples: `binding-default-readproperty`, `http-default-readproperty`, `profile-description`
 - The spec editors and authors are encouraged to pick human readable and concise ids.
+- The pattern is as follows:
+  - Specifications: `SPECACRO-SCOPE-CUSTOM`
+  - Subspecifications: `SPECACRO-SUBSPECACRO-SCOPE-CUSTOM`
+  - where:
+    - SPECACRO is the acronym of the wot specification such as `td`, `arch`, `disc`
+    - SUBSPECACRO is the acronym of a subspecification of a specification such as `http` subspecification of the `binding` specification.
+    - SCOPE is defined by the specification editors as a wide concept of that specification. Examples are `tdd` of the Discovery specification, `forms` of the TD specification.
+    - CUSTOM is further granular ids chosen by the editors.
