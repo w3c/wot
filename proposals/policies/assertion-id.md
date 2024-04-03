@@ -19,6 +19,6 @@ To make everyone's life easier, a specific way to manage assertion ids is specif
   - Subspecifications: `SPECACRO-SUBSPECACRO-SCOPE-CUSTOM`
   - where:
     - SPECACRO is the acronym of the wot specification such as `td`, `arch`, `disc`
-    - SUBSPECACRO is the acronym of a subspecification of a specification such as `http` subspecification of the `binding` specification.
+    - SUBSPECACRO is the acronym of a subspecification of a specification such as `http` subspecification of the `binding` specification. If the specification has no subspecification, this is not applicable.
     - SCOPE is defined by the specification editors as a wide concept of that specification. Examples are `tdd` of the Discovery specification, `forms` of the TD specification.
-    - CUSTOM is further granular ids chosen by the editors.
+    - CUSTOM is a further granular set of ids chosen by the editors.
