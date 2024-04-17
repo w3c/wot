@@ -4,6 +4,18 @@ This file summarizes the registry mechanism that the WoT WG/IG needs along with 
 
 ## Analysis of other W3C Documents
 
+### TTWG Boilerplate
+
+Timed Text Working Group has a boilerplate for creating registry sections in W3C documents.
+After creating a custom registry mechanism as part of TTML Media Type Definition and Profile Registry (see our analysis [here](https://github.com/w3c/wot/blob/main/registry-analysis/Readme.md#ttml-media-type-definition-and-profile-registry)), they have created it as part of the evaluation of the new registry track mechanism.
+
+- Rendered version:  <https://w3c.github.io/ttwg/boilerplate/registry/>
+- GitHub link: <https://github.com/w3c/ttwg/tree/main/boilerplate/registry>
+
+#### Custodian
+
+If TTWG exists, it is TTWG. If not, it is the W3C team.
+
 ### Official W3C Registry Track Registries
 
 Documents that confirm to <https://www.w3.org/2023/Process-20230612/#registries>.
@@ -46,6 +58,10 @@ There are requirements on the codec string and what the specification should con
 - If the Working Group reaches consensus to accept the candidate, a pull request should be drafted (either by editors or by the party requesting the candidate registration) to register the candidate. The registry editors will review and merge the pull request.
 - Existing entries cannot be deleted or deprecated. They may be changed after being published through the same process as candidate entries.
 
+##### Custodian
+
+Media WG if it exists. Not clear what happens if the WG closes.
+
 #### W3C Alternative and Augmented Communication (AAC) Symbol Registry
 
 **Status:** Kind of Active (Last publication December 2022) (WG still active) but not finalized (Draft Registry)
@@ -76,6 +92,10 @@ The symbols are developed by the Blissymbolics Communication International (BCI)
 
 Other than this, they follow the process document.
 
+##### Custodian
+
+BCI if it exists. Not clear what happens if it closes.
+
 ### Custom Registry Mechanism Registries
 
 Registries within W3C that do not use the Official W3C Registry Track.
@@ -98,6 +118,10 @@ This [document](https://www.w3.org/TR/ttml-profile-registry/#registry) defines a
   - Although deletion is possible, entries are intended to be stable
 - Requests are made via an email to the WG chair, and will be decided on in a WG meeting
 - Decisions are made via consensus, the requestor is notified accordingly
+
+##### Custodian
+
+TTWG if it exists. Not clear what happens if it closes.
 
 #### Media Source Extensions Byte Stream Format Registry
 
@@ -132,6 +156,10 @@ The process of approving a new entry is (apparently?) not formally specified.
 
 The possibility to remove entries that fail to satisfy any of the mandatory requirements is explicitly mentioned.
 
+##### Custodian
+
+Media WG if it exists. Not clear what happens if it closes.
+
 #### DID Specification Registries
 
 **Status:** Active (Last updated Sep 2023)
@@ -156,6 +184,10 @@ New entries have to be submitted via a modification request
 ##### Modification Process
 
 Entries must not be removed, only deprecated.
+
+##### Custodian
+
+DID WG if it exists. Not clear what happens if it closes.
 
 #### XPointer Scheme Name Registry Policy
 
@@ -183,6 +215,10 @@ Entries consist of a name and description.
 
 A process for modifying an entry is not defined.
 <!-- TODO: Double-check that this is really the case -->
+
+##### Custodian
+
+The WG if it exists. Not clear what happens if it closes. For normal registrations, W3C director and team is also involved so they are also a custodian of some kind.
 
 #### Insights and Conclusion
 
@@ -240,11 +276,12 @@ However, we could also opt for an explicit versioning mechanism for our
 registries in order to, for instance, group different versions of a Binding
 Template.
 
-## Analysis of IANA Registries 
+## Analysis of IANA Registries
 
 Volunteer:  Cristiano Aguzzi
 
 > Examples:
+> 
 > - <https://www.iana.org/assignments/websocket/websocket.xml>
 > - <https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry>
 > - <https://www.iana.org/assignments/media-types/media-types.xhtml>
@@ -255,11 +292,13 @@ focuses on the Protocol Assignments function, closely coordinated with the Inter
 providing insights into the potential establishment of a registry for protocol binding templates.
 
 ### IANA Procedures and RFC 8126
+
 IANA, as outlined in RFC 8126, establishes common procedures for protocol assignments. These procedures may be supplemented
 or modified by specific registries defined in corresponding RFCs. The submission of registrations is typically facilitated 
 through web forms on the IANA website or via email.
 
 ### Generic Considerations
+
 Even in seemingly unlimited spaces, a minimal review before assignment is often necessary to prevent hoarding or wastage of values 
 and to ensure the legitimacy of requests. Balancing adequate review with ease of registration is crucial, considering 
 requests from various entities.
@@ -280,7 +319,8 @@ Common review policies, as defined by RFC, include (order of strictness):
 The following subsections expand the guidelines for the main review policies that were used across the relevant examples
 of registries selected by the Working Group (see later sections). 
 
-#### First Come First Served 
+#### First Come First Served
+
 > ([RFC8126](https://datatracker.ietf.org/doc/html/rfc8126#section-4.4))
 
 Streamlined review policy the requests are registered in a first come first served fashion and they are usually accepted without
@@ -295,6 +335,7 @@ careful "that the protocol retains wire compatibility".
 accepted.
 
 #### Expert Review
+
 > ([RFC8126](https://datatracker.ietf.org/doc/html/rfc8126#section-4.5))
 
 The expert reviews policy requires the registry to define an expert for reviewing new registration requests. The role of the expert
@@ -309,6 +350,7 @@ Another important aspect that needs to be laid out is the criteria for accepting
 review process. Change controller should be defined here too. 
 
 ##### The role of Designed Expert in IANA
+
 The designated experts play a crucial role in the IANA process, addressing the limitations of open mailing list discussions by providing
 clear and expert advice. The motivation behind this approach is to ensure efficient evaluation of assignment requests and to delegate 
 the evaluation process to subject matter experts. Designated experts are not gatekeepers but focus on evaluating requests for completeness, 
@@ -319,6 +361,7 @@ reviews that can vary in scope, consulting with technology experts, and followin
 the evaluation process is transparent. 
 
 ### URI Schemes ([RFC 7595](https://www.rfc-editor.org/rfc/rfc7595.html))
+
 **Registration policy** for provisional: [First Come First Served](#First_Come_First_Served)
 
 **Registration policy** for permanent schemes : [Expert Review](#Expert_Review)
@@ -353,25 +396,40 @@ Upon receiving the request, IANA follows these steps:
 
 7. **Update Registration Status:** Once approved, IANA updates the registration status. If rejected, the "Pending Review" request is removed.
 
+#### Custodian
+
+IANA. No fallback plan exists.
 
 ### Websockets Subprotocols ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
 
 **Registration policy** : [First Come First Served](#First_Come_First_Served)
 
-The RFC adds a basic template with minor constraints/guidelines. 
+#### Custodian
+
+IANA. No fallback plan exists.
+
+The RFC adds a basic template with minor constraints/guidelines.
 
 ### Websockets extensions ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
 
 **Registration policy** : [First Come First Served](#First_Come_First_Served)
 
-The RFC adds a basic template with minor constraints/guidelines. 
+The RFC adds a basic template with minor constraints/guidelines.
+
+#### Custodian
+
+IANA. No fallback plan exists.
 
 ### Websockets version number ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.5))
 
 **Registration policy** : IETF review
 
 Interesting that the version number is itself in a registry and it regulated by the regular track for
-standardization. 
+standardization.
+
+#### Custodian
+
+IANA. No fallback plan exists.
 
 ### Media-types ([RFC 6838](https://datatracker.ietf.org/doc/html/rfc6838))
 
@@ -380,10 +438,14 @@ standardization.
 Differently from the other registry and from what is advised in RFC 8126 the registration
 of Media-types follows its own defined steps. This registry has it's own section in [IANA Website](https://www.iana.org/form/media-types)
 and it is composed by these steps:
+
 1. Submission of the template
 2. Review from a "Media types reviewer" which is quite similar to [Expert Review](#Expert_Review) but not explicitly stated in the RFC
 3. Comments from the community: in any time comments can be sent and if IANA and the "Media types reviewer" agrees they can be attached in the media type registration
 
+#### Custodian
+
+IANA. No fallback plan exists.
 
 ## WoT Requirements and Expectations for a Potential Binding Registry
 
