@@ -12,9 +12,29 @@ After creating a custom registry mechanism as part of TTML Media Type Definition
 - Rendered version:  <https://w3c.github.io/ttwg/boilerplate/registry/>
 - GitHub link: <https://github.com/w3c/ttwg/tree/main/boilerplate/registry>
 
+They also provide a checklist: <https://w3c.github.io/ttwg/boilerplate/registry/#application-checklist>
+
 #### Custodian
 
-If TTWG exists, it is TTWG. If not, it is the W3C team.
+If TTWG exists, it is TTWG. If not, it is the W3C Team.
+Important to note that change management depends on who the custodian is.
+
+#### Change Process
+
+The document does not differentiate between entry, modification and removal as everthing is a change.
+
+- Change request can be an issue or email. However, when a PR changes the registry, an issue MUST be created and linked to PR.
+- Issue can be opened by anyone and a PR can be opened by TTWG members.
+- Custodian WG: PR is merged following the group decision policy (not a task force level decision)
+- Custodian W3C Team: Change request goes through wide review. A PR can be asked to be made or the Team creates the PR but in the end the Team applies the changes.
+
+#### States of an Entry
+
+- An entry goes through provisional, final and deprecated states but none of them are mandatory. A new entry should be in provisional but may be in final.
+- Provisional entries can be changed, deleted, the entry key can be reused (duplicates). Analogy: having two provisional coap binding entries is possible.
+- Final entries cannot be deleted, reused or changed. It can be become deprecated. Analogy: A final coap binding cannot get a new operation with a PR.
+- Deprecated entries cannot be deleted or changed. If a deprecated entry was final before, its key cannot be reused. Analogy: If we want to add a new operation to the coap binding, we need to deprecate the current one, add a new entry who key is different. E.g. coap2024 gets deleted and coap2025 arrives with the new operation.
+- You can go from provisional to deprecated. In that case, you can reuse the key later on.
 
 ### Official W3C Registry Track Registries
 
