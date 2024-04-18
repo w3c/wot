@@ -2,7 +2,11 @@
 
 This file summarizes the registry mechanism that the WoT WG/IG needs along with the work done to analyze similar approaches and the requirements we have on such mechanisms.
 
-## Analysis of other W3C Documents
+## Analysis of the W3C Process Document Registry Track
+
+To be detailed later.
+
+## Analysis of other W3C Registries
 
 ### TTWG Boilerplate
 
