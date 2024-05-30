@@ -519,6 +519,28 @@ Aspects to clarify based on the analysis of other registries above:
 - Technical submission mechanism. How does a binding get submitted? Is it a PR, an issue linking to an existing document, or an email? See the submission mechanism fields above.
 - Whether we should have one or multiple registries
 
+### Registry Template
+
+Submission template vs. what lives in the registry entry
+
+A set of files and requirements for each file
+
+At the top level, markdown file similar to the use case template that describes the binding, YAML template for git workflow 
+
+- name of binding
+- maintainers
+- protocols
+
+Same content as existing binding
+- HTML specification file using respec
+- JSON Schema
+- Ontology files including JSON-LD context for TDs
+
+(Think about how to manage the set of semantic artifacts/ontologies)
+
+Create a repository template to make it easy for people to create new bindings
+
+
 ## Appendix
 
 ### Useful Resources
