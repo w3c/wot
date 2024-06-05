@@ -29,7 +29,8 @@ To choose a mechanism and the rules, we document our expectations below:
     - Engaging other communities.
 - A binding SHOULD correspond to specific TD specification version(s).
   - Reason Behind the Requirement: A binding may not fit newer or older versions of a TD specification (e.g. `readproperty` can become `readprop` or a new operations can arrive). Thus, at the of writing a binding, it needs to be associated to a one or more known TD specification versions.
-  - TODO: Decide whether we want a separate registry report or whether it should be a section in the TD REC (Registry Section)
+- The binding registry MUST be a separate document but associated with a TD version.
+  - Reasons Behind the Requirement: It is easier to update in the long term.
 - Association of a binding to the TD specification (registry entry) SHOULD be confirmed by the WoT Working Group. In other words, any person cannot say that this binding can be used with the TD version X.
   - Reasons Behind the Requirement: WoT WG is the manager of the registry.
   - TODO: Add clarification about what to do if the WoT WG charter is not renewed.
