@@ -1,4 +1,7 @@
-# Web of Things (WoT) Policy (Draft)
+# Web of Things (WoT) Policy
+
+This is a policy to manage how official W3C erratas are managed for all WoT REC documents.
+This includes their submission, discussion, incorporation into the REC documents and its documentation in an errata document per REC document.
 
 ## Errata Management
 
