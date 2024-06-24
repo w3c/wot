@@ -17,6 +17,8 @@ Archives of older schedules:
 | March 12, 2024 |  | First Profile call of 2024 |
 | June 2024 | Interim updates, e.g. refactoring |
 | September, 2024 | | Use Cases and Requirements Note Publication - update |
+| September 23-27, 2024 | All | TPAC 2024; WoT meetings Sept 26-27 |
+| November 25-29, 2024 | All | WoT Week 2024; WoT@Industry Open Day Nov 27 |
 | mid-December, 2024 | TD | TD FPWD Publication Request - target - Freezing Addition of Big Features|
 | mid-December, 2024 | Discovery | Discovery FPWD Publication Request - target |
 | March 13, 2025 | All | FPWD Publication Requests - latest |
