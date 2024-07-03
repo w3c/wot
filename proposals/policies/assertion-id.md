@@ -3,9 +3,9 @@
 ## Assertion IDs of WoT Specs
 
 Implementers typically implement multiple WoT specifications and they are encouraged to provide implementation input by asserting whether they implement an assertion or not.
-To do so, they need to associate the assertion id with the assertion text.
+To do so, they need to associate the assertion ID with the assertion text.
 At the same time, the specification editors need to manage the list of assertions (sorted by assertion ids) during the specification lifecycle.
-To make everyone's life easier, a specific way to manage assertion ids is specified in this document.
+To make everyone's life easier, a well-defined pattern for managing assertion IDs is specified in this document.
 
 - Specification name: Each assertion of the specs should be prefixed with the specification acronym or name.
   - Correct examples: `td-context-default-language`, `td-forms-response`, `arch-security-consideration-tls-1-2`
@@ -18,13 +18,13 @@ To make everyone's life easier, a specific way to manage assertion ids is specif
   - Specifications: `SPECACRO-SCOPE-CUSTOM`
   - Sub specifications: `SPECACRO-SUBSPECACRO-SCOPE-CUSTOM`
   - where:
-    - SPECACRO is the acronym of the WoT specification. Allowed values are:
+    - `SPECACRO` is the acronym of the WoT specification. Allowed values are:
       - `td`: WoT Thing Description
       - `arch`: WoT Architecture
       - `disc`: WoT Discovery
       - `prof`: WoT Profiles
       - `bind`: WoT Binding Documents (not the core document)
-      - Non-REC track documents can also have an acronym but they do not contain RFC assertions.
-    - SUBSPECACRO is the acronym of a subspecification of a specification such as `http` subspecification of the `bind` specification. If the specification has no subspecification, this is not applicable.
-    - SCOPE is defined by the specification editors as a wide concept of that specification. Examples are `tdd` of the Discovery specification, `forms` of the TD specification.
-    - CUSTOM is a further granular set of ids chosen by the editors.
+      - Non-REC track documents can also have an acronym but they do not contain RFC 2119 assertions.
+    - `SUBSPECACRO` is the acronym of a subspecification of a specification such as `http` subspecification of the `bind` specification. If the specification has no subspecification, this is not applicable.
+    - `SCOPE` is defined by the specification editors as a wide concept of that specification. Examples are `tdd` of the Discovery specification, `forms` of the TD specification.
+    - `CUSTOM` is a further granular set of ids chosen by the editors.
