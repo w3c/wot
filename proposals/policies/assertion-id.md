@@ -13,7 +13,7 @@ To make everyone's life easier, a specific way to manage assertion ids is specif
 - Subspecification hierarchy: If a document has subdocuments (bindings) or standalone chapters (profiles), the specification name should be followed by the subdocument or category acronym.
   - Correct examples: `bind-http-default-readproperty`, `prof-basic-description`
   - Incorrect examples: `binding-default-readproperty`, `http-default-readproperty`, `profile-description`
-- The spec editors and authors are encouraged to pick human readable and concise ids.
+- The spec editors and authors are encouraged to pick human-readable and concise IDs.
 - The pattern is as follows:
   - Specifications: `SPECACRO-SCOPE-CUSTOM`
   - Sub specifications: `SPECACRO-SUBSPECACRO-SCOPE-CUSTOM`
