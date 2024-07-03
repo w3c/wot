@@ -23,7 +23,7 @@ To make everyone's life easier, a specific way to manage assertion ids is specif
       - `arch`: WoT Architecture
       - `disc`: WoT Discovery
       - `prof`: WoT Profiles
-      - `binding`: WoT Binding Documents (not the core document)
+      - `bind`: WoT Binding Documents (not the core document)
       - Non-REC track documents can also have an acronym but they do not contain RFC assertions.
     - SUBSPECACRO is the acronym of a subspecification of a specification such as `http` subspecification of the `binding` specification. If the specification has no subspecification, this is not applicable.
     - SCOPE is defined by the specification editors as a wide concept of that specification. Examples are `tdd` of the Discovery specification, `forms` of the TD specification.
