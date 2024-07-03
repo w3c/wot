@@ -11,7 +11,7 @@ To make everyone's life easier, a specific way to manage assertion ids is specif
   - Correct examples: `td-context-default-language`, `td-forms-response`, `arch-security-consideration-tls-1-2`
   - Incorrect examples: `context-default-language`, `forms-response`, `security-consideration-tls-1-2`
 - Subspecification hierarchy: If a document has subdocuments (bindings) or standalone chapters (profiles), the specification name should be followed by the subdocument or category acronym.
-  - Correct examples: `binding-http-default-readproperty`, `prof-basic-description`
+  - Correct examples: `bind-http-default-readproperty`, `prof-basic-description`
   - Incorrect examples: `binding-default-readproperty`, `http-default-readproperty`, `profile-description`
 - The spec editors and authors are encouraged to pick human readable and concise ids.
 - The pattern is as follows:
@@ -25,6 +25,6 @@ To make everyone's life easier, a specific way to manage assertion ids is specif
       - `prof`: WoT Profiles
       - `bind`: WoT Binding Documents (not the core document)
       - Non-REC track documents can also have an acronym but they do not contain RFC assertions.
-    - SUBSPECACRO is the acronym of a subspecification of a specification such as `http` subspecification of the `binding` specification. If the specification has no subspecification, this is not applicable.
+    - SUBSPECACRO is the acronym of a subspecification of a specification such as `http` subspecification of the `bind` specification. If the specification has no subspecification, this is not applicable.
     - SCOPE is defined by the specification editors as a wide concept of that specification. Examples are `tdd` of the Discovery specification, `forms` of the TD specification.
     - CUSTOM is a further granular set of ids chosen by the editors.
