@@ -1,8 +1,9 @@
-# Web of Things (WoT) Policy (Draft)
-
-## WoT Articles Selection
+# Web of Things (WoT) Policy
 
 The Web of Things Interest Group Marketing Task Force collects links to articles about the Web of Things on the official web page of the W3C Web of Things at [the official webpage](https://www.w3.org/WoT/about/articles/).
+To be fair and transparent and not promote unwanted content, this policy defines how such articles can be chosen.
+
+## WoT Articles Selection
 
 As a default, articles should be from one of the following categories:
 
