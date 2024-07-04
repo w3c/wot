@@ -28,12 +28,13 @@ To choose a mechanism and the rules, we document our expectations below:
     - Instead of WG learning each new protocol and media type, it is more efficient for people with a good understanding of the protocol or media type to write a binding.
     - Engaging other communities.
 - A binding SHOULD correspond to specific TD specification version(s).
-  - Reason Behind the Requirement: A binding may not fit newer or older versions of a TD specification (e.g. `readproperty` can become `readprop` or a new operations can arrive). Thus, at the of writing a binding, it needs to be associated to a one or more known TD specification versions.
+  - Reason Behind the Requirement: A binding may not fit newer or older versions of a TD specification (e.g. `readproperty` can become `readprop` or a new operations can arrive). Thus, at the time of writing a binding, it needs to be associated to one or more known TD specification versions.
 - The binding registry MUST be a separate document but associated with a TD version.
   - Reasons Behind the Requirement: It is easier to update in the long term.
-- Association of a binding to the TD specification (registry entry) SHOULD be confirmed by the WoT Working Group. In other words, any person cannot say that this binding can be used with the TD version X.
+- Association of a binding to the TD specification (registry entry) SHOULD be confirmed by the WoT Working Group. In other words, any person cannot say that this binding can be used with the TD version X. Thus, the custodian is the WoT WG.
   - Reasons Behind the Requirement: WoT WG is the manager of the registry.
-  - TODO: Add clarification about what to do if the WoT WG charter is not renewed.
+- If the WoT WG does not exist anymore, the W3C Team or their delegated entity becomes the custodian.
+  - Reasons Behind the Requirement: It should be possible to maintain the registry without the WoT WG.
 - It SHOULD be possible to register, update, or remove a registry entry for associating a binding to a specific TD specification outside of the REC lifecycle of the given TD specification.
   - Reasons Behind the Requirement:
     - Allowing new protocols to be bound to any TD version. 
@@ -43,7 +44,7 @@ To choose a mechanism and the rules, we document our expectations below:
     - It breaks interoperability otherwise
     - We should avoid confusing users, i.e. which binding should I use?
     - It would complicate implementations
-  - TODO: Clarify what happens when two ecosystems like OCF and LwM2M both use CoAP binding. The initial thinking is to register them as separate entries but clarify what they use from CoAP binding. A layered registry can be thought of as language tags with `en` extending to `en-us` and `en-uk` where the tags and entries are different but the association to `en` is expressed in the id.
+  - TODO: Clarify what happens when two ecosystems like OCF and LwM2M both use CoAP binding. The initial thinking is to register them as separate entries but clarify what they use from CoAP binding. A layered registry can be thought of as language tags with `en` extending to `en-us` and `en-uk` where the tags and entries are different but the association to `en` is expressed in the id. In our case, this would be `coap-ocf` and `coap-lwm2m`. The higher-level binding SHOULD NOT override or conflict the lower-level binding and this should be verified by the custodian. E.g. `cov:method` in CoAP binding should not be turned into `cov:operation` in the higher-level binding. The namespace (prefix and its values) defined in a binding CANNOT be redefined in any other binding.
 - In a TD, a binding SHOULD be identifiable by the elements in a form such as `href`, `contentType`, `subprotocol`, or other terms. Alternative: In a TD, a binding SHOULD be identifiable by the elements in a form or connection information (base etc.) (This alternative seems to have more consensus).
   - Reasons Behind the Requirement:
     - This avoids conflicts that are mentioned in the previous requirement
@@ -51,6 +52,7 @@ To choose a mechanism and the rules, we document our expectations below:
   - TODO: We need to clarify whether the URI scheme and the media type MUST be registered in IANA first.
     - Provisional registration could reduce the overhead. Any new conflicting ones would bring up a discussion but it can still result in "our" provisional getting demoted.
     - Pros: more stable. Cons: More overhead and work
+  - TODO: How to identify a higher-level binding in the form
 - A binding that uses a protocol MUST map at least one WoT operation (`op` keyword values such as `readproperty`) to a protocol message and vice versa
   - Reasons Behind the Requirement:
     - Otherwise, it is not binding the protocol to WoT and cannot be useful.
