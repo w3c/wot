@@ -1,10 +1,10 @@
-# WoT WG/ETSI ISG CIM Simple Liaison for NGSI-LD
+# [DRAFT] WoT WG/ETSI ISG CIM Simple Liaison for NGSI-LD
 The purpose of this liaison 
 will be to gain a better understanding of our respective activities
 and look for opportunities to work together. 
 
 
-**# ETSI ISG Context Information Management
+## ETSI ISG Context Information Management
 As part of its mission, the ETSI Industry Specification Group on cross-cutting Context Information Management (ISG CIM) drives the specification of an Application Programming Interface Specification/API, named NGSI-LD, which aims to enable applications to discover, access, update and manage data and context information from many different sources making it the interface of choice for getting access to Digital Twins data and managing their capabilities. 
 
 ## Purpose 
@@ -12,10 +12,14 @@ The goal of the liaison is to evaluate the potential of using W3C WoT Things Mod
 
 ## Participants
 The liaison proposal has emerged from informal discussion between W3C WoT and ETSI ISG CIM representatives.
-\_Contacts from W3C WoT are:\_
 
+**Contacts from W3C WoT are:**
+* Kaz Ashimura - W3C - WoT WG Staff Contact
+* Michael McCool - Intel - WoT WG co-Chair
+* Sebastian Kaebisch - Siemens - WoT WG co-Chair
+* Michael Koster - W3C Invited Expert - WoT WG co-Chair
 
-\_Contacts from ETSI ISG CIM are:\_
+**Contacts from ETSI ISG CIM are:**
 * Franck Le Gall - EGM - ETSI ISG CIM chair
 * Martin Bauer - NEC - ETSI ISG CIM Vice chair
 * Juanjo Hierro - Freelance - Chair of FIWARE TSC
