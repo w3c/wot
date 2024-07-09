@@ -41,28 +41,61 @@ Moving discovery-related text from TD to Discovery
 Checking overlaps with architecture.
 
 ## Reusable TD Elements
-![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/Security)
+![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/reusable+elements)
 
 ### Reusable Connections
 ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/reusable%20connections)
 
-
+**Problem:**
 Currently, each form of an affordance has information on the endpoint, media type and other protocol related information. 
 It is possible to use the base term for simplifying the endpoint but it has limitations such as:
 
-- If the media type is also common across forms, it is repeated
-- Multiple bases are not possible
-- For protocols that are based on an initial connection and then subsequent messages, the semantics are not clear.
-
-Thus, a mechanism to describe connection and protocol information that can be used by other forms is needed. 
-In protocols with initial connection, this can be also used to indicate what needs to be done by the Consumer before executing any operation.
+- If the media type is common across forms but is not `application/json`, it is repeated in each form.
+- If there are common protocol stack configurations such as different default verb, baud rate, endianness, they are repeated in each form
+- Multiple bases are not possible, thus each form repeats multiple bases. This is relevant when a TD has local and public IP addresses
+- For protocols that are based on an initial connection and then subsequent messages, the semantics are not clear. Thus, a Consumer can establish multiple connections instead of reusing the initial connection. See Example of Message Flow section below
 
 Related Issues:
 
 - <https://github.com/w3c/wot-thing-description/issues/1664>
 - <https://github.com/w3c/wot-thing-description/issues/1248>
 - <https://github.com/w3c/wot-thing-description/issues/1242>
-- <https://github.com/w3c/wot-thing-description/issues/878>
+- <https://github.com/w3c/wot-thing-description/issues/878> 35 comments
+- <https://github.com/w3c/wot-thing-description/issues/803>
+- <https://github.com/w3c/wot-thing-description/issues/1834>
+
+**Requirements**
+
+- Basic Requirement: A mechanism to describe connection and protocol information that can be used by other forms is needed. In protocols with initial connection, this can be also used to indicate what needs to be done by the Consumer before executing any operation.
+- Detailed Requirements:
+  - Each connection needs to be identifiable but we need to make sure to not include privacy or security risks
+  - The initial connection must not be mandatory to establish upon TD consumption and should left to the implementation when to establish and close it.
+
+**Notes:**
+- When to close the connection needs to be discussed.
+- Complex security mechanisms exchange should be handled at the same time
+
+#### Examples of Message Flow
+
+- No security Broker Connections
+
+> Example message flow here
+
+- WebSocket with Subprotocol Connection
+
+> Example message flow from WebThings here
+
+> Example message flow from Socket.io here
+
+> Example message flow from CoAP over WS here (see https://www.rfc-editor.org/rfc/rfc8323.html)
+
+- Initial Token/Credential exchange
+
+> Example message flow here
+
+- Proxy-based Communication
+
+> Example message flow here
 
 ### Data Schema Mapping
 ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/data%20mapping)
