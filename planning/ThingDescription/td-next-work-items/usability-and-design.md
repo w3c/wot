@@ -58,14 +58,14 @@ It is possible to use the base term for simplifying the endpoint but it has limi
 Related Issues:
 
 - Umbrella Issue: <https://github.com/w3c/wot-thing-description/issues/1248>
-- Media Type Override: <https://github.com/w3c/wot-thing-description/issues/204>
-- Single base <https://github.com/w3c/wot-thing-description/issues/803>
-- <https://github.com/w3c/wot-thing-description/issues/878> 35 comments
-- <https://github.com/w3c/wot-thing-description/issues/977>
-- <https://github.com/w3c/wot-thing-description/issues/1070>
-- <https://github.com/w3c/wot-thing-description/issues/1242>
-- <https://github.com/w3c/wot-thing-description/issues/1664>
-- <https://github.com/w3c/wot-thing-description/issues/1834>
+- Media Type and Security Override: <https://github.com/w3c/wot-thing-description/issues/204>: Sharing a media type and security (already possible) among forms
+- Single base with multiple protocols: <https://github.com/w3c/wot-thing-description/issues/803>: Having the same feature as the `security` term in form protocols
+- Reused Connection: <https://github.com/w3c/wot-thing-description/issues/878>: Implying a first connection that is not dropped but actually reused later
+- Out-of-band IP address: <https://github.com/w3c/wot-thing-description/issues/977>: Sort of related. Deducing the IP address from an out-of-band way
+- Reused Connection in WS: <https://github.com/w3c/wot-thing-description/issues/1070>: Similar issue to 878 but giving more details on WebSocket
+- Linking to Initial Connection: <https://github.com/w3c/wot-thing-description/issues/1242>: Similar issue to 803.
+- Reused Connection in WS 2: <https://github.com/w3c/wot-thing-description/issues/1664>: Similar issue to 878 abd 1070
+- Linking to Initial Connection 2: <https://github.com/w3c/wot-thing-description/issues/1834>: Similar issue to 803 and 1242
 
 **Requirements**
 
