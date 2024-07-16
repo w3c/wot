@@ -75,13 +75,31 @@ Related Issues:
 - When to close the connection needs to be discussed.
 - Complex security mechanisms exchange should be handled at the same time
 
-#### Examples of Message Flow
+#### Examples of Message Sequences
 
-- No security Broker Connections
+##### Simple HTTP Connection
 
-> Example message flow here
+- Participating Entities
+![Participating Entities](./images/initial-connection-HTTP-entities.drawio.png)
 
-- WebSocket with Subprotocol Connection
+- Lifecycle of a Connection
+![Lifecycle of a Connection](./images/initial-connection-HTTP-lifecycle.drawio.png)
+
+- Message Sequence
+![Message Sequence](./images/initial-connection-HTTP-sequence.drawio.png)
+
+##### No security Broker Connections
+
+- Participating Entities
+![Participating Entities](./images/initial-connection-Broker-entities.drawio.png)
+
+- Lifecycle of a Connection
+![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle.drawio.png)
+
+- Message Sequence
+![Message Sequence](./images/initial-connection-Broker-sequence.drawio.png)
+
+##### WebSocket with Subprotocol Connection
 
 > Example message flow from WebThings here
 
@@ -89,11 +107,11 @@ Related Issues:
 
 > Example message flow from CoAP over WS here (see https://www.rfc-editor.org/rfc/rfc8323.html)
 
-- Initial Token/Credential exchange
+##### Initial Token/Credential exchange
 
 > Example message flow here
 
-- Proxy-based Communication
+##### Proxy-based Communication
 
 > Example message flow here
 
