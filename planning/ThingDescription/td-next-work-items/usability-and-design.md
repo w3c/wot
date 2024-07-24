@@ -144,7 +144,17 @@ TODO
 
 ##### Proxy-based Communication
 
-> Example message flow here
+- Participating Entities
+
+![Participating Entities](./images/initial-connection-Proxy-entities.drawio.png)
+
+- Lifecycle of a Connection
+
+TODO
+
+- Message Sequence
+
+![Message Sequence](./images/initial-connection-Proxy-sequence.drawio.png)
 
 ### Data Schema Mapping
 
