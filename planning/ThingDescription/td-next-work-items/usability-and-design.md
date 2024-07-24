@@ -82,35 +82,35 @@ Related Issues:
 
 - Participating Entities
 
-![Participating Entities](./images/initial-connection-HTTP-entities.drawio.png)
+![Participating Entities](./images/initial-connection-HTTP-entities.png)
 
 - Lifecycle of a Connection
 
-![Lifecycle of a Connection](./images/initial-connection-HTTP-lifecycle.drawio.png)
+![Lifecycle of a Connection](./images/initial-connection-HTTP-lifecycle.png)
 
 - Message Sequence
 
-![Message Sequence](./images/initial-connection-HTTP-sequence.drawio.png)
+![Message Sequence](./images/initial-connection-HTTP-sequence.png)
 
 ##### No security Broker Connections
 
 - Participating Entities
 
-![Participating Entities](./images/initial-connection-Broker-entities.drawio.png)
+![Participating Entities](./images/initial-connection-Broker-entities.png)
 
 - Lifecycle of a Connection
 
-![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle.drawio.png)
+![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle.png)
 
 - Message Sequence
 
-![Message Sequence](./images/initial-connection-Broker-sequence.drawio.png)
+![Message Sequence](./images/initial-connection-Broker-sequence.png)
 
 ##### Basic WebSocket Connections
 
 - Participating Entities
 
-![Participating Entities](./images/initial-connection-WS-entities.drawio.png)
+![Participating Entities](./images/initial-connection-WS-entities.png)
 
 - Lifecycle of a Connection
 
@@ -118,7 +118,7 @@ TODO
 
 - Message Sequence
 
-![Message Sequence](./images/initial-connection-WS-sequence.drawio.png)
+![Message Sequence](./images/initial-connection-WS-sequence.png)
 
 ##### WebSocket with Subprotocol Connection
 
@@ -132,7 +132,7 @@ TODO
 
 - Participating Entities
 
-![Participating Entities](./images/initial-connection-Oauth2-entities.drawio.png)
+![Participating Entities](./images/initial-connection-Oauth2-entities.png)
 
 - Lifecycle of a Connection
 
@@ -140,13 +140,13 @@ TODO
 
 - Message Sequence
 
-![Message Sequence](./images/initial-connection-Oauth2-sequence.drawio.png)
+![Message Sequence](./images/initial-connection-Oauth2-sequence.png)
 
 ##### Proxy-based Communication
 
 - Participating Entities
 
-![Participating Entities](./images/initial-connection-Proxy-entities.drawio.png)
+![Participating Entities](./images/initial-connection-Proxy-entities.png)
 
 - Lifecycle of a Connection
 
@@ -154,7 +154,7 @@ TODO
 
 - Message Sequence
 
-![Message Sequence](./images/initial-connection-Proxy-sequence.drawio.png)
+![Message Sequence](./images/initial-connection-Proxy-sequence.png)
 
 ### Data Schema Mapping
 
