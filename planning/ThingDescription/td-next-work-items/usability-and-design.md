@@ -80,79 +80,71 @@ Related Issues:
 
 ##### Simple HTTP Connection
 
-- Participating Entities
+###### Participating Entities
 
 ![Participating Entities](./images/initial-connection-HTTP-entities.png)
 
-- Lifecycle of a Connection
+###### Lifecycle of a Connection
 
 ![Lifecycle of a Connection](./images/initial-connection-HTTP-lifecycle.png)
 
-- Message Sequence
+###### Message Sequence
 
 ![Message Sequence](./images/initial-connection-HTTP-sequence.png)
 
-##### No security Broker Connections
+##### Broker Connections without Security
 
-- Participating Entities
+###### Participating Entities
 
 ![Participating Entities](./images/initial-connection-Broker-entities.png)
 
-- Lifecycle of a Connection
+###### Lifecycle of a Connection
 
 ![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle.png)
 
-- Message Sequence
+###### Message Sequence
 
 ![Message Sequence](./images/initial-connection-Broker-sequence.png)
 
 ##### Basic WebSocket Connections
 
-- Participating Entities
+###### Participating Entities
 
 ![Participating Entities](./images/initial-connection-WS-entities.png)
 
-- Lifecycle of a Connection
+###### Lifecycle of a Connection
 
 TODO
 
-- Message Sequence
+###### Message Sequence
 
 ![Message Sequence](./images/initial-connection-WS-sequence.png)
 
-##### WebSocket with Subprotocol Connection
-
-> Example message flow from WebThings here
-
-> Example message flow from Socket.io here
-
-> Example message flow from CoAP over WS here (see https://www.rfc-editor.org/rfc/rfc8323.html)
-
 ##### OAuth2-based Interaction
 
-- Participating Entities
+###### Participating Entities
 
 ![Participating Entities](./images/initial-connection-Oauth2-entities.png)
 
-- Lifecycle of a Connection
+###### Lifecycle of a Connection
 
 TODO
 
-- Message Sequence
+###### Message Sequence
 
 ![Message Sequence](./images/initial-connection-Oauth2-sequence.png)
 
 ##### Proxy-based Communication
 
-- Participating Entities
+###### Participating Entities
 
 ![Participating Entities](./images/initial-connection-Proxy-entities.png)
 
-- Lifecycle of a Connection
+###### Lifecycle of a Connection
 
 TODO
 
-- Message Sequence
+###### Message Sequence
 
 ![Message Sequence](./images/initial-connection-Proxy-sequence.png)
 
