@@ -135,6 +135,7 @@ Typically, the broker is a separate entity than the Thing.
 ![Message Sequence](./images/initial-connection-Broker-sequence.png)
 
 We note that, even after a time has passed, the connection stays open and the subscription stays active.
+The client id is used in a connection but is typically not exposed to the application layer.
 
 ##### Basic WebSocket Connections
 
