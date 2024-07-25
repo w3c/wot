@@ -8,7 +8,7 @@ Please see [the presentation from TPAC 2023](https://github.com/w3c/wot/blob/mai
 
 Below is a short summary:
 
-- A W3C registry is a table surrounded by rules on how to govern that table. Each entry in that table
+- A W3C registry is a table surrounded by rules on how to govern that table. Each entry in that table is called a **Registry Entry**
 - W3C Process Document gives some rules, but each registry needs to extend these in the **Registry Definition** section.
 - A registry can be its own document, called **Registry Report**, or a section in a document, called **Registry Section**.
 - Defining a registry requires wide review and consensus.
