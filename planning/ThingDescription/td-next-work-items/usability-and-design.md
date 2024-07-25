@@ -84,13 +84,26 @@ Related Issues:
 
 ![Participating Entities](./images/initial-connection-HTTP-entities.png)
 
+In this case, the Thing has enough resources and contains its own HTTP server.
+
 ###### Lifecycle of a Connection
 
 ![Lifecycle of a Connection](./images/initial-connection-HTTP-lifecycle.png)
 
+1. A request from the client opens the connection to the server.
+2. A response from the server back to the client closes the connection.
+3. If the server provides no response in a given time interval, a timeout occurs and the connection is closed.
+4. Alternatively, a request can be sent with Keep Alive parameters (timeout and max requests parameters).
+5. In this case, the responses back to the client will not close the connection.
+6. If a certain amount of requests have been sent, the connection will be closed.
+7. If a certain time is reached, the connection will be closed.
+
 ###### Message Sequence
 
 ![Message Sequence](./images/initial-connection-HTTP-sequence.png)
+
+We note that even with Keep Alive option set, the interaction pattern do not change in the application level.
+Thus, keep alive can be seen as an optimization and not a different way to interact.
 
 ##### Broker Connections without Security
 
@@ -98,19 +111,38 @@ Related Issues:
 
 ![Participating Entities](./images/initial-connection-Broker-entities.png)
 
+Typically, the broker is a separate entity than the Thing.
+
 ###### Lifecycle of a Connection
 
-![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle.png)
+![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle-connection.png)
+
+1. A client connects to the broker and opens a consistent connection.
+2. Client can subscribe or publish to topics as long as the connection is active.
+3. Client can disconnect from the broker and close the connection.
+4. If the device turns off or has an error, the connection can be closed.
+
+###### Lifecycle of a Subscription
+
+![Lifecycle of a Subscription](./images/initial-connection-Broker-lifecycle-subscription.png)
+
+1. A Client already connected to the broker (open connection), can subscribe to a topic where that subscription becomes active.
+2. Multiple messages can be received while the subscription is active.
+3. Once the client unsubscribes from the topic, the subscription becomes inactive.
 
 ###### Message Sequence
 
 ![Message Sequence](./images/initial-connection-Broker-sequence.png)
+
+We note that, even after a time has passed, the connection stays open and the subscription stays active.
 
 ##### Basic WebSocket Connections
 
 ###### Participating Entities
 
 ![Participating Entities](./images/initial-connection-WS-entities.png)
+
+In this case, the Thing has enough resources and contains its own WebSocket server.
 
 ###### Lifecycle of a Connection
 
@@ -126,7 +158,9 @@ TODO
 
 ![Participating Entities](./images/initial-connection-Oauth2-entities.png)
 
-###### Lifecycle of a Connection
+In this case, the Thing has enough resources and contains its own HTTP server.
+
+###### Lifecycle of a Session
 
 TODO
 
@@ -139,6 +173,8 @@ TODO
 ###### Participating Entities
 
 ![Participating Entities](./images/initial-connection-Proxy-entities.png)
+
+In this case, the Thing has enough resources and contains its own HTTP server.
 
 ###### Lifecycle of a Connection
 
