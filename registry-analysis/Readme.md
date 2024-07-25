@@ -6,6 +6,14 @@ This file summarizes registry approaches found in W3C, IETF and IANA.
 
 Please see [the presentation from TPAC 2023](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf) as well as [the W3C Process document's relevant part](https://www.w3.org/policies/process/#registries).
 
+Below is a short summary:
+
+- A W3C registry is a table surrounded by rules on how to govern that table. Each entry in that table
+- W3C Process Document gives some rules, but each registry needs to extend these in the **Registry Definition** section.
+- A registry can be its own document, called **Registry Report**, or a section in a document, called **Registry Section**.
+- Defining a registry requires wide review and consensus.
+- Lifecycle of registry and its entries needs to be defined.
+
 ## Analysis of other W3C Registries
 
 ### TTWG Boilerplate
