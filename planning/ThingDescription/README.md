@@ -1,6 +1,7 @@
 # Thing Description Planning
 
 In this folder, you can find resources to help with understanding how the next version of the Thing Description deliverable is planned.
+First, work items are listed and then a roadmap with priorities is provided per category.
 
 ## Work Items
 
@@ -16,7 +17,7 @@ The work items are split into four categories.
 Such categories can be reflected with labels and different views in the GitHub project management panel.
 The task force will go through existing issues, pull requests, and discussions, and categorize them accordingly.
 
-- **Priorities:** The items in each markdown under [td-next-work-items](./td-next-work-items) is a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
+- **Priorities:** The items in each markdown under [td-next-work-items](./td-next-work-items) are a flat list with no priorities set for now. Ideally, items that are dependencies to other items and those with concrete industry use cases will be prioritized.
 
 - **Details:** The details of different work items can be found at <https://github.com/w3c/wot/blob/main/proposals/deliverable-proposals/thing-description.md>. We will consolidate such details and link them appropriately.
 
@@ -28,7 +29,6 @@ In addition to GitHub issues and Use Cases, there are various documents that sho
 - Registry Analysis: <https://github.com/w3c/wot/tree/main/registry-analysis>
 - Historical Data Landscape: <https://github.com/w3c/wot/pull/1112>
 - Charter Details: <https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html>
-
 
 ### Notes
 
@@ -59,7 +59,9 @@ Concrete roadmaps with the order of items are below at [Individual Roadmaps](#in
 
 ### Category-based Roadmaps
 
-#### Specification Refactoring Roadmap
+Each section contains a list of work items to be done in an order.
+
+#### Specification Refactoring
 
 1. [Incorporating Binding Mechanism](./td-next-work-items/binding-templates.md#binding-templates-integration)
 2. [Synchronization with other documents](./td-next-work-items/usability-and-design.md#synchronization-with-other-documents) (might be a long process, so it should happen asynchronously or in the background with syncs in the calls)
@@ -77,9 +79,13 @@ Concrete roadmaps with the order of items are below at [Individual Roadmaps](#in
 
 1. [Testing Pipeline](./td-next-work-items/testing-and-tooling.md#testing-procedure) (less priority since we are not close to the testing phase at all)
 
-#### Usability and Design Roadmap
+#### Usability and Design
 
 An example list of usability and design items with an order:
 
 - Initial connection
 - Data mapping
+
+#### New Features
+
+They are not ordered yet. See [here](./td-next-work-items/new-features.md) for more information.
