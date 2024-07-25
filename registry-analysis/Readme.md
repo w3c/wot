@@ -4,7 +4,7 @@ This file summarizes registry approaches found in W3C, IETF and IANA.
 
 ## Analysis of the W3C Process Document Registry Track
 
-This will be detailed later.
+Please see [the presentation from TPAC 2023](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2023-09-tpac/2023-09-14-WoT-TPAC-Registry-Korkan.pdf) as well as [the W3C Process document's relevant part](https://www.w3.org/policies/process/#registries).
 
 ## Analysis of other W3C Registries
 
