@@ -147,7 +147,14 @@ In this case, the Thing has enough resources and contains its own WebSocket serv
 
 ###### Lifecycle of a Connection
 
-TODO
+![Lifecycle of a Websocket connection](./images/initial-connection-Websocket-lifecycle.png)
+
+The lifecycle of a WebSocket connection in the Web of Things typically includes the following stages:
+
+1. **Connection Establishment**: The client initiates a handshake request to the server, which responds with a handshake response, establishing a persistent connection.
+2. **Data Transmission**: Once connected, the client and server can exchange data bi-directionally in real-time, with messages sent as frames. This may include ping/pong frames to keep understand connection "liveness" between the parties. 
+3. **Connection Closure**: Either party can initiate the closing handshake by sending a close frame, after which the connection is terminated, and resources are released.
+
 
 ###### Message Sequence
 
@@ -163,7 +170,15 @@ In this case, the Thing has enough resources and contains its own HTTP server.
 
 ###### Lifecycle of a Session
 
-TODO
+![Lifecycle of a Oauth Session](./images/initial-connection-OAuth2-lifecycle.png)
+
+The lifecycle of an OAuth token in a session involves the following stages:
+
+1. **Token Request and authorization**: The client requests an access token from the authorization server, typically after authenticating and obtaining user consent.
+2. **Token Use**: The client uses the access token to access protected resources on the resource server by including it in API requests.
+3. **Logout**: The client or authorization server can revoke tokens to terminate the session, preventing further access.
+4. **Token Expiry and Refresh**: Access tokens are time-limited. If a refresh token is available, the client can request a new access token without user reauthorization.
+
 
 ###### Message Sequence
 
