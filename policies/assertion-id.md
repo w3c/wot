@@ -1,4 +1,4 @@
-# Web of Things (WoT) Policy (Draft)
+# Web of Things (WoT) Policy
 
 ## Assertion IDs of WoT Specs
 
