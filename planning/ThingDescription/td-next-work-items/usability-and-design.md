@@ -158,7 +158,7 @@ The lifecycle of a WebSocket connection in the Web of Things typically includes 
 
 ###### Message Sequence
 
-![Message Sequence](./images/initial-connection-WS-sequence.png)
+![Message Sequence](./images/initial-connection-Websocket-sequence.png)
 
 ##### OAuth2-based Interaction
 
