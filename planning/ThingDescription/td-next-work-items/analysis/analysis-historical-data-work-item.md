@@ -48,7 +48,11 @@ Ideally, the feature can exist only after the requirements are identified. Howev
 - [Timeseries Data Submodel Specification at IDTA](https://industrialdigitaltwin.org/wp-content/uploads/2023/03/IDTA-02008-1-1_Submodel_TimeSeriesData.pdf)
   - Timepoint (A UTC time) and Duration (time after the start and last measurement) are possible. In Duration, start time is necessary
   - TAI and UTC are basic formats. Unix Time, Ephemeris Time (ET) or Barycentric Dynamical Time (TBD) are possible
-  - Sampling Interval or Rate can be provided
+  - Sampling Interval or Rate can be provided as metadata
+  - Start and End Time can be provided since it also takes past values into account. Accordingly, you can also provide whether it is an ongoing timeseries or a completed one. (Ege: This is probably not relevant for us)
+  - Last Update can be provided. This is probably a data and not metadata for WoT. We can give guidelines/defaults on this. Normally, it should be equal to the timestamp of the last value.
+  - Each data blob is called a record.
+  - First the metadata is defined and then each data point needs to respect to that. Basically, it is like providing a data schema and then the values. 
 - [InfluxDB Timeseries Data oriented Database](https://www.influxdata.com/)
 - [WebThings.io REST API](https://webthings.io/api/#event-resource)
 - ECHONET Lite Web API has an extension of the current TD specification on this direction
