@@ -141,7 +141,7 @@ The client id is used in a connection but is typically not exposed to the applic
 
 ###### Participating Entities
 
-![Participating Entities](./images/initial-connection-WS-entities.png)
+![Participating Entities](./images/initial-connection-Websocket-entities.png)
 
 In this case, the Thing has enough resources and contains its own WebSocket server.
 
