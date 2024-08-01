@@ -47,7 +47,7 @@ Checking overlaps with architecture.
 ![GitHub labels](https://img.shields.io/github/labels/w3c/wot-thing-description/reusable%20connections)
 
 **Problem:**
-Currently, each form of an affordance has information on the endpoint, media type and other protocol related information. 
+Currently, each form of an affordance has information on the endpoint, media type and other protocol related information.
 It is possible to use the base term for simplifying the endpoint but it has limitations such as:
 
 - If the media type is common across forms but is not `application/json`, it is repeated in each form.
@@ -152,7 +152,7 @@ In this case, the Thing has enough resources and contains its own WebSocket serv
 The lifecycle of a WebSocket connection in the Web of Things typically includes the following stages:
 
 1. **Connection Establishment**: The client initiates a handshake request to the server, which responds with a handshake response, establishing a persistent connection.
-2. **Data Transmission**: Once connected, the client and server can exchange data bi-directionally in real-time, with messages sent as frames. This may include ping/pong frames to keep understand connection "liveness" between the parties. 
+2. **Data Transmission**: Once connected, the client and server can exchange data bi-directionally in real-time, with messages sent as frames. This may include ping/pong frames to keep understand connection "liveness" between the parties.
 3. **Connection Closure**: Either party can initiate the closing handshake by sending a close frame, after which the connection is terminated, and resources are released.
 
 
@@ -194,11 +194,11 @@ In this case, the Thing has enough resources and contains its own HTTP server.
 
 ###### Lifecycle of a Connection
 
-TODO
+![Lifecycle of a Proxy](./images/initial-connection-Proxy-lifecycle.svg)
 
 ###### Message Sequence
 
-![Message Sequence](./images/initial-connection-Proxy-sequence.png)
+![Message Sequence](./images/initial-connection-Proxy-sequence.svg)
 
 ### Data Schema Mapping
 
