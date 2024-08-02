@@ -82,13 +82,13 @@ Related Issues:
 
 ###### Participating Entities
 
-![Participating Entities](./images/initial-connection-HTTP-entities.png)
+![Participating Entities](./images/initial-connection-HTTP-entities.svg)
 
 In this case, the Thing has enough resources and contains its own HTTP server.
 
 ###### Lifecycle of a Connection
 
-![Lifecycle of a Connection](./images/initial-connection-HTTP-lifecycle.png)
+![Lifecycle of a Connection](./images/initial-connection-HTTP-lifecycle.svg)
 
 1. A request from the client opens the connection to the server.
 2. A response from the server back to the client closes the connection.
@@ -100,7 +100,7 @@ In this case, the Thing has enough resources and contains its own HTTP server.
 
 ###### Message Sequence
 
-![Message Sequence](./images/initial-connection-HTTP-sequence.png)
+![Message Sequence](./images/initial-connection-HTTP-sequence.svg)
 
 We note that even with Keep Alive option set, the interaction pattern do not change in the application level.
 Thus, keep alive can be seen as an optimization and not a different way to interact.
@@ -109,13 +109,13 @@ Thus, keep alive can be seen as an optimization and not a different way to inter
 
 ###### Participating Entities
 
-![Participating Entities](./images/initial-connection-Broker-entities.png)
+![Participating Entities](./images/initial-connection-Broker-entities.svg)
 
 Typically, the broker is a separate entity than the Thing.
 
 ###### Lifecycle of a Connection
 
-![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle-connection.png)
+![Lifecycle of a Connection](./images/initial-connection-Broker-lifecycle-connection.svg)
 
 1. A client connects to the broker and opens a consistent connection.
 2. Client can subscribe or publish to topics as long as the connection is active.
@@ -124,7 +124,7 @@ Typically, the broker is a separate entity than the Thing.
 
 ###### Lifecycle of a Subscription
 
-![Lifecycle of a Subscription](./images/initial-connection-Broker-lifecycle-subscription.png)
+![Lifecycle of a Subscription](./images/initial-connection-Broker-lifecycle-subscription.svg)
 
 1. A Client already connected to the broker (open connection), can subscribe to a topic where that subscription becomes active.
 2. Multiple messages can be received while the subscription is active.
@@ -132,7 +132,7 @@ Typically, the broker is a separate entity than the Thing.
 
 ###### Message Sequence
 
-![Message Sequence](./images/initial-connection-Broker-sequence.png)
+![Message Sequence](./images/initial-connection-Broker-sequence.svg)
 
 We note that, even after a time has passed, the connection stays open and the subscription stays active.
 The client id is used in a connection but is typically not exposed to the application layer.
@@ -141,13 +141,13 @@ The client id is used in a connection but is typically not exposed to the applic
 
 ###### Participating Entities
 
-![Participating Entities](./images/initial-connection-Websocket-entities.png)
+![Participating Entities](./images/initial-connection-Websocket-entities.svg)
 
 In this case, the Thing has enough resources and contains its own WebSocket server.
 
 ###### Lifecycle of a Connection
 
-![Lifecycle of a Websocket connection](./images/initial-connection-Websocket-lifecycle.png)
+![Lifecycle of a Websocket connection](./images/initial-connection-Websocket-lifecycle.svg)
 
 The lifecycle of a WebSocket connection in the Web of Things typically includes the following stages:
 
@@ -158,19 +158,19 @@ The lifecycle of a WebSocket connection in the Web of Things typically includes 
 
 ###### Message Sequence
 
-![Message Sequence](./images/initial-connection-Websocket-sequence.png)
+![Message Sequence](./images/initial-connection-Websocket-sequence.svg)
 
 ##### OAuth2-based Interaction
 
 ###### Participating Entities
 
-![Participating Entities](./images/initial-connection-Oauth2-entities.png)
+![Participating Entities](./images/initial-connection-OAuth2-entities.svg)
 
 In this case, the Thing has enough resources and contains its own HTTP server.
 
 ###### Lifecycle of a Session
 
-![Lifecycle of a Oauth Session](./images/initial-connection-OAuth2-lifecycle.png)
+![Lifecycle of a Oauth Session](./images/initial-connection-OAuth2-lifecycle.svg)
 
 The lifecycle of an OAuth token in a session involves the following stages:
 
@@ -179,16 +179,15 @@ The lifecycle of an OAuth token in a session involves the following stages:
 3. **Logout**: The client or authorization server can revoke tokens to terminate the session, preventing further access.
 4. **Token Expiry and Refresh**: Access tokens are time-limited. If a refresh token is available, the client can request a new access token without user reauthorization.
 
-
 ###### Message Sequence
 
-![Message Sequence](./images/initial-connection-Oauth2-sequence.png)
+![Message Sequence](./images/initial-connection-OAuth2-sequence.svg)
 
 ##### Proxy-based Communication
 
 ###### Participating Entities
 
-![Participating Entities](./images/initial-connection-Proxy-entities.png)
+![Participating Entities](./images/initial-connection-Proxy-entities.svg)
 
 In this case, the Thing has enough resources and contains its own HTTP server.
 
