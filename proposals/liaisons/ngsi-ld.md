@@ -29,6 +29,7 @@ The liaison proposal has emerged from informal discussion between W3C WoT and ET
 What work needs to be done, by whom?
 
 ## Deliverables 
+The following have been discussed but have not been formally agreed to.
 * NGSI-LD API Binding Document as W3C Note describing how default WoT Things Descriptions are derived from a WoT Things Models using NGSI-LD as form to interact with Things
 * ETSI GR-055 on service execution to include the use of WoT ThingsDescription for NGSI-LD models description
 
