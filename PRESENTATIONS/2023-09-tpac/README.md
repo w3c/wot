@@ -1,6 +1,6 @@
 # WoT Presentation Material for September 2023 TPAC
 TPAC 2023 will be held during the week of 
-[11 September 2022 to 15 September 2022]([https://www.w3.org/WoT/IG/wiki/F2F_meeting,_September_2022](https://www.w3.org/2023/09/TPAC/)).
+[11 September 2023 to 15 September 2023](https://www.w3.org/2023/09/TPAC/).
 This directory will be used to archive presentations for the WoT sessions
 and make them available to people
 who may not have access to screen sharing during TPAC.
