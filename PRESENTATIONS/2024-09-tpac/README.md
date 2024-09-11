@@ -22,7 +22,10 @@ Note the timezones!
 Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 
 ## Thursday 26 September 2024 - 2h - 14:00-16:00 Pacific
-To do.
+
+### Use Cases and Requirements
+#### Requirements:
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pptx)
 
 ## Thursday 26 September 2024 - 1h30m - 16:30-18:00 Pacific
 JSON-LD Joint meeting (Org: Sebastian)
