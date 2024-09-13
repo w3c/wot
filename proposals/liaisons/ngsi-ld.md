@@ -42,5 +42,6 @@ What depends on what?
 ## Schedule
 Deliverables are expected to be published by end of 2024
 
+## Resources
 
 **
