@@ -16,12 +16,13 @@ Archives of older schedules:
 | January 15, 2024 |   | First Scripting, Security, and Discovery calls of 2024 |
 | March 12, 2024 |  | First Profile call of 2024 |
 | June 2024 | Interim updates, e.g. refactoring |
-| September, 2024 | | Use Cases and Requirements Note Publication - update |
+| October, 2024 | | Use Cases and Requirements process defined |
 | September 23-27, 2024 | All | [TPAC 2024](https://www.w3.org/2024/09/TPAC/); [WoT meetings Sept 26-27](https://www.w3.org/WoT/IG/wiki/Wiki_for_F2F_2024_planning) |
 | November 25-29, 2024 | All | [WoT Week 2024](https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning); WoT@Industry Open Day Nov 27 |
 | mid-December, 2024 | TD | TD FPWD Publication Request - target - Freezing Addition of Big Features|
 | mid-December, 2024 | Discovery | Discovery FPWD Publication Request - target |
 | March 13, 2025 | All | FPWD Publication Requests - latest |
+| March, 2025 | All | Use Case and Requirements Note Publication - update |
 | June, 2025 | | Testing (results contributed to WG) |
 | July 3, 2025 | All | CR Transition Requests - latest |
 | August 19, 2025 | All | PR Transition Requests - latest |
