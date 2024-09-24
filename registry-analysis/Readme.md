@@ -24,6 +24,7 @@ After creating a custom registry mechanism as part of TTML Media Type Definition
 
 - Rendered version:  <https://w3c.github.io/ttwg/boilerplate/registry/>
 - GitHub link: <https://github.com/w3c/ttwg/tree/main/boilerplate/registry>
+- Registry Section: <https://www.w3.org/TR/dapt/#registry-section>
 
 They also provide a checklist: <https://w3c.github.io/ttwg/boilerplate/registry/#application-checklist>
 
