@@ -24,6 +24,8 @@ Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 ## Thursday 26 September 2024 - 2h - 14:00-16:00 Pacific
 
 ### Use Cases and Requirements
+#### Use Cases
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-UseCases-Mizushima.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-UseCases-Mizushima.pptx)
 #### Requirements:
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pptx)
 
