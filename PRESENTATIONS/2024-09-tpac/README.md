@@ -33,7 +33,7 @@ Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 #### Requirements
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pptx)
 ### Refactoring
-* Presentation: pdf ppt
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Refactoring-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Refactoring-McCool.pptx)
 ### Discovery
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Discovery-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Discovery-McCool.pptx)
   
