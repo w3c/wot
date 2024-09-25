@@ -30,9 +30,11 @@ Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 ### Use Cases and Requirements
 #### Use Cases
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-UseCases-Mizushima.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-UseCases-Mizushima.pptx)
-#### Requirements:
+#### Requirements
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Requirements-McCool.pptx)
-
+### Discovery
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Discovery-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Discovery-McCool.pptx)
+  
 ## Thursday 26 September 2024 - 1h30m - 16:30-18:00 Pacific
 JSON-LD Joint meeting (Org: Sebastian)
 
