@@ -25,7 +25,8 @@ Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-25-Breakout-LinkML_One_Year_Update.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-25-Breakout-LinkML_One_Year_Update.pptx)
 
 ## Thursday 26 September 2024 - 2h - 14:00-16:00 Pacific
-
+### Opening
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Opening-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Opening-McCool.pptx)
 ### Use Cases and Requirements
 #### Use Cases
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-UseCases-Mizushima.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-UseCases-Mizushima.pptx)
