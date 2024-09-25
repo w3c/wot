@@ -37,11 +37,12 @@ Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 JSON-LD Joint meeting (Org: Sebastian)
 
 ## Friday 27 September 2024 - 1h30m - 9:00-10:30 Pacific
-SDW Joint meeting (Org: McCool)
+### SDW Joint meeting (Org: McCool)
 * Spatial discovery and spatial metadata in TDs
 * Relationship to Fiware and NGSI-LD
 
 ## Friday 27 September 2024 - 2h - 14:00-16:00 Pacific
-To do.
+### Opening
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-McCool.pptx)
 
 
