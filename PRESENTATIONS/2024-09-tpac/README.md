@@ -22,6 +22,8 @@ Note the timezones!
 Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 
 ## Wednesday 25 September 2024 - 1h - 08:30–09:30 Pacific
+
+### LinkML Breakout
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-25-Breakout-LinkML_One_Year_Update.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-25-Breakout-LinkML_One_Year_Update.pptx)
 
 ## Thursday 26 September 2024 - 2h - 14:00-16:00 Pacific
