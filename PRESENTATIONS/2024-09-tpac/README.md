@@ -59,4 +59,8 @@ JSON-LD Joint meeting (Org: Sebastian)
 ### Opening
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-McCool.pptx)
 
+### TD/Profiles/Bindings
+#### Use Case Process
+* Examples (McCool): [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-UseCase-Requirements-Examples-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-UseCase-Requirements-Examples-McCool.pptx)
+
 
