@@ -38,7 +38,10 @@ Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Discovery-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Discovery-McCool.pptx)
 
 ### Liaisons
-* Presentation OPC UA: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-OPCUA-Sebastian.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-OPCUA-Sebastian.pptx)
+#### OPC UA 
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-OPCUA-Sebastian.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-OPCUA-Sebastian.pptx)
+#### ETSI ISG CIM (NGSI-LD)
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-ETSI-ISG-CIM-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-ETSI-ISG-CIM-McCool.pptx)
   
 ## Thursday 26 September 2024 - 1h30m - 16:30-18:00 Pacific
 JSON-LD Joint meeting (Org: Sebastian)
