@@ -60,7 +60,7 @@ JSON-LD Joint meeting (Org: Sebastian)
 
 ## Friday 27 September 2024 - 2h - 14:00-16:00 Pacific
 ### Opening
-* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-McCool.pptx)
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-Sebastian.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-Sebastian.pptx)
 
 ### TD/Profiles/Bindings
 #### Use Case Process
