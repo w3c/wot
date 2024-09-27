@@ -54,6 +54,7 @@ JSON-LD Joint meeting (Org: Sebastian)
 
 ## Friday 27 September 2024 - 1h30m - 9:00-10:30 Pacific
 ### SDW Joint meeting (Org: McCool)
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-SDW-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-SDW-McCool.pptx)
 * Spatial discovery and spatial metadata in TDs
 * Relationship to FiWare and NGSI-LD
 
