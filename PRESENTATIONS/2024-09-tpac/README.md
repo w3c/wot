@@ -45,8 +45,9 @@ Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 #### ETSI ISG CIM (NGSI-LD)
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-ETSI-ISG-CIM-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Liaisons-ETSI-ISG-CIM-McCool.pptx)
 
-### Policies
 ### Closing
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Closing-Sebastian.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-26-WoT-TPAC-Closing-Sebastian.pptx)
+  
 
 ## Thursday 26 September 2024 - 1h30m - 16:30-18:00 Pacific
 JSON-LD Joint meeting (Org: Sebastian)
@@ -63,6 +64,7 @@ JSON-LD Joint meeting (Org: Sebastian)
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-Sebastian.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-Opening-Sebastian.pptx)
 
 ### TD/Profiles/Bindings
+### Policies
 #### Use Case Process
 * Examples (McCool): [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-UseCase-Requirements-Examples-McCool.pdf) [ppt](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-09-tpac/2024-09-27-WoT-TPAC-UseCase-Requirements-Examples-McCool.pptx)
 
