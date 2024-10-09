@@ -20,6 +20,7 @@ Here are links to the presentations, in order by the
 [agenda](https://www.w3.org/WoT/IG/wiki/Wiki_for_F2F_2024_planning#Agenda).
 Note the timezones!
 Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
+Minutes: [Day 1](https://www.w3.org/2024/09/26-wot-minutes.html) and [Day 2](https://www.w3.org/2024/09/27-wot-minutes.html).
 
 ## Wednesday 25 September 2024 - 1h - 08:30–09:30 Pacific
 
