@@ -43,5 +43,7 @@ What depends on what?
 Deliverables are expected to be published by end of 2025
 
 ## Resources
+- [Github Repo](https://github.com/w3c/wot-ngsi-ld)
+- Wiki (todo)
 
 **
