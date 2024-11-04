@@ -44,6 +44,5 @@ Deliverables are expected to be published by end of 2025
 
 ## Resources
 - [Github Repo](https://github.com/w3c/wot-ngsi-ld)
-- Wiki (todo)
-
-**
+- [Wiki](https://www.w3.org/WoT/IG/wiki/WoT-NGSI-LD)
+- [IRC](https://irc.w3.org/?channels=wot-ngsi-ld) 
