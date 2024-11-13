@@ -31,7 +31,7 @@ What work needs to be done, by whom?
   a NGSI-LD Binding that defines what information is needed in a
   Thing Description to communicate with an NSGI-LD Context Broker and access specific Things/NGSI-LD Entities.
 * ETSI ISG CIM to develop, in collaboration with the WoT WG,
-  extension of existing specifications to include the use of a WoT Thing Description for NGSI-LD model descriptions
+  extensions of existing specifications to include the use of a WoT Thing Description for NGSI-LD model descriptions
 
 ## Deliverables 
 The following have been discussed but have not been formally agreed to.
