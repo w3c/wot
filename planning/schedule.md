@@ -23,6 +23,7 @@ Archives of older schedules:
 | mid-December, 2024 | Discovery | Discovery FPWD Publication Request - target |
 | March 13, 2025 | All | FPWD Publication Requests - latest |
 | March, 2025 | All | Use Case and Requirements Note Publication - restructured |
+| March, 2025 | All | Use Case and Requirements - new use cases accepted |
 | June, 2025 | | Testing (results contributed to WG) |
 | July 3, 2025 | All | CR Transition Requests - latest |
 | August 19, 2025 | All | PR Transition Requests - latest |
