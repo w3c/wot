@@ -26,7 +26,8 @@ Prioritized list of work items related to Discovery.
 1. [Discovery Query Filters](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-query-filters-workitem)
     * [REQ: Discovery Filtering](https://w3c.github.io/wot-usecases/#REQ-discovery-filtering)
 3. [Discovery JSON Path Query Language](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-jsonpath-query-language-workitem)
-4. Placeholder - Sort-by Filtering
+    * [REQ: Discovery Filtering](https://w3c.github.io/wot-usecases/#REQ-discovery-filtering)
+5. Placeholder - Sort-by Filtering
     * [REQ: Discovery Filtering](https://w3c.github.io/wot-usecases/#REQ-discovery-filtering)
     * Related to query filters, since can be used to prioritize results
     * Need to define what to do with TDs that don't have field used for sorting
