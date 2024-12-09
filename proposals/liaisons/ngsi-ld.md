@@ -27,11 +27,23 @@ The liaison proposal has emerged from informal discussion between W3C WoT and ET
 
 ## Scope 
 What work needs to be done, by whom?
+* W3C WoT WG to develop, in collaboration with ETSI ISG CIM,
+  a NGSI-LD Binding that defines what information is needed in a
+  Thing Description to communicate with an NSGI-LD Context Broker and access specific Things/NGSI-LD Entities.
+* ETSI ISG CIM to develop, in collaboration with the WoT WG,
+  extensions of existing specifications to include the use of a WoT Thing Description for NGSI-LD model descriptions
 
 ## Deliverables 
 The following have been discussed but have not been formally agreed to.
-* NGSI-LD API Binding Document as W3C Note describing how default WoT Things Descriptions are derived from a WoT Things Models using NGSI-LD as form to interact with Things
-* ETSI GR-055 on service execution to include the use of WoT ThingsDescription for NGSI-LD models description
+* NGSI-LD API Binding Document as W3C Note
+   - Alternatives with more details:
+       * NGSI-LD API Binding Document as W3C Note describing how instance-specific information for WoT Thing Descriptions are 
+         derived from a WoT Thing Model using NGSI-LD as a mechanism to interact with Things
+       * NGSI-LD API Binding Document as W3C Note describing how to use NGSI-LD to interact with Things
+       * NGSI-LD API Binding Document as W3C Note describing what information is needed to interact with an NGSI-LD service
+* Extend ETSI GR-055 or another document to include the use of WoT Thing Description for NGSI-LD model description
+
+## Gaps
 
 ## Dependencies
 What depends on what?
@@ -40,8 +52,9 @@ What depends on what?
 ### Organization's Dependencies on WoT's Deliverables
 
 ## Schedule
-Deliverables are expected to be published by end of 2024
+Deliverables are expected to be published by end of 2025
 
 ## Resources
-
-**
+- [Github Repo](https://github.com/w3c/wot-ngsi-ld)
+- [Wiki](https://www.w3.org/WoT/IG/wiki/WoT-NGSI-LD)
+- [IRC](https://irc.w3.org/?channels=wot-ngsi-ld) 
