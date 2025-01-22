@@ -32,6 +32,6 @@ On completing the decision process, the Chairs will notify the potential invitee
 
 If a preliminary invitation is extended, the invitee will be notified in writing and arrangements will be made to schedule the presentation to the group, preferebly at an upcoming WG/IG call.
 
-If for some reason there is a failure to make the required arrangements, the invitation may be withdrawn and the invitee will be notified in writing. Potential invitees may need to re-apply if substantial time passes and there is still interest in becoming an IE.
+If for some reason there is a failure to make the required arrangements, the invitation may be withdrawn and the invitee will be notified in writing. Potential invitees may need to re-apply if substantial time passes and there is still interest in becoming an Invited Expert.
 
 After the presentation, the Chairs and Team Contact will discuss with the group at large and decide whether to proceerd wit hte invitation. If the invitation is to be extended, the invitee will be notified and will be asked to fill out the application form and proceed wit hthe organizational onboarding. If the invitee is rejected, they will be notified in a timely manner and provided a brief explanation in writing. 
