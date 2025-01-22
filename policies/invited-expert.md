@@ -28,7 +28,7 @@ The Chairs and Team contact may from time to time extend an invitation to someon
 
 Consideration will be given to invitees during the weekly WoT Chairs call. The Chairs will discuss each potential invitee and typically decide whether to extend an invitation within 2 or 3 weeks.
 
-On completing the decision process, the Chairs will notify the potential invitee or sponsors in a timely manner.
+On completing the decision process, the Chairs will notify the potential invitee in a timely manner.
 
 If a preliminary invitation is extended, the invitee will be notified in writing and arrangements will be made to schedule the presentation to the group, preferebly at an upcoming WG/IG call.
 
