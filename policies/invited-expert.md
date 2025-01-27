@@ -12,7 +12,7 @@ Invited Experts join the Working Group by invitation from the Working Group Chai
 
 Proposals, requests, and suggestions may be made to the Chairs for Invited Experts, and the Chairs may consider extending invitations. 
 
-If a proposal is submitted to the Chairs for consideration, the Chairs will discuss with the Team Cointact and decide whether to extend an invitation.
+If a proposal is submitted to the Chairs for consideration, the Chairs will discuss with the Team Contact and decide whether to extend an invitation.
 
 ### Requirements
 
