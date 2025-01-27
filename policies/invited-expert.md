@@ -30,7 +30,7 @@ Consideration will be given to invitees during the weekly WoT Chairs call. The C
 
 On completing the decision process, the Chairs will notify the potential invitee in a timely manner.
 
-If a preliminary invitation is extended, the invitee will be notified in writing and arrangements will be made to schedule the presentation to the group, preferebly at an upcoming WG/IG call.
+If a preliminary invitation is extended, the invitee will be notified in writing and arrangements will be made to schedule the presentation to the group, preferably at an upcoming WG/IG call.
 
 If for some reason there is a failure to make the required arrangements, the invitation may be withdrawn and the invitee will be notified in writing. Potential invitees may need to re-apply if substantial time passes and there is still interest in becoming an Invited Expert.
 
