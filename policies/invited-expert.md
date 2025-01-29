@@ -24,7 +24,7 @@ An Invited Expert must be a contributing member of the group and is expected to 
 
 ### Process
 
-The Chairs and Team contact may from time to time extend an invitation to someone to join the WoT Working Group or Interest Group as an Invited Expert. Often, there will be a suggestion or request sent to the Chairs and Team Contact to join the Web of Things as an Invited Expert.
+The Chairs and Team Contact may from time to time extend an invitation to someone to join the WoT Working Group or Interest Group as an Invited Expert. Such invitation will often be based on a suggestion or request sent to the Chairs and/or Team Contact.
 
 Consideration will be given to invitees during the weekly WoT Chairs call. The Chairs will discuss each potential invitee and typically decide whether to extend an invitation within 2 or 3 weeks.
 
