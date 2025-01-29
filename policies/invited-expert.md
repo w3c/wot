@@ -18,7 +18,7 @@ If a proposal is submitted to the Chairs for consideration, the Chairs will disc
 
 To be considered as an Invited Expert in the WoT Working Group, an invitee must make a commitment to contribute to the Web of Things specifications and must demonstrate the ability to contribute to the specifications. 
 
-An Invitee must prepare and present a brief - 10 minutes - summary presentation of their background and experience, particularly in standards organizations, and explain what/how they plan to contribute to the Web of Things specification.
+An Invitee must prepare and present a brief (10 minutes or so) summary presentation of their background and experience, particularly in standards organizations, and explain what and how they plan to contribute to the Web of Things specification.
 
 An Invited Expert must be a contributing member of the group and is expected to regularly join WoT meetings, perform administrative duties, make and review Pull Requests, etc.
 
