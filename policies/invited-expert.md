@@ -34,7 +34,7 @@ If a preliminary invitation is extended, the invitee will be notified in writing
 
 If for some reason there is a failure to make the required arrangements, the invitation may be withdrawn, in which case the invitee will be notified in writing. Potential invitees may need to re-apply if substantial time passes and they are still interested in becoming an Invited Expert.
 
-After the presentation, the Chairs and Team Contact will discuss with the group at large and decide whether to proceed with the invitation. If the invitation is to be extended, the invitee will be notified and will be asked to fill out the application form and proceed with the organizational onboarding. If the invitee is rejected, they will be notified in a timely manner and provided a brief explanation in writing. 
+After the presentation, the Chairs and Team Contact will discuss the prospective Invited Expert with the group at large and decide whether to proceed with the invitation. If the invitation is to be extended, the invitee will be asked to fill out the application form and proceed with the organizational onboarding. If the invitee is rejected, they will be notified in a timely manner and provided a brief explanation in writing. 
 
 ### Unsolicited Applications
 
