@@ -26,7 +26,7 @@ An Invited Expert must be a contributing member of the group and is expected to 
 
 The Chairs and Team Contact may from time to time extend an invitation to someone to join the WoT Working Group or Interest Group as an Invited Expert. Such invitation will often be based on a suggestion or request sent to the Chairs and/or Team Contact.
 
-Consideration of invitees will be made during the weekly WoT Chairs call. The Chairs will discuss each potential invitee and typically decide whether to extend an invitation within 2 or 3 weeks.
+Consideration of invitees will be made during the weekly WoT Chairs call. The Chairs will discuss each potential invitee and typically decide whether to extend a tentative invitation to present to the group within 2 or 3 weeks.
 
 Upon completing the decision process, the Chairs will notify the potential invitee in a timely manner.
 
