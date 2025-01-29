@@ -38,4 +38,4 @@ After the presentation, the Chairs and Team Contact will discuss with the group 
 
 ### Unsolicited Applications
 
-The Chairs may, at their discretion, consider unsolicited applications but are under no obligation to accept them and may simply reject them, in particular if they do not respond to requests to follow the above process.
+The Chairs may, at their discretion, consider unsolicited applications, but are under no obligation to accept them and may simply reject them, in particular if the applicants do not respond to requests to follow the above process.
