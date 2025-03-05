@@ -22,13 +22,14 @@ Archives of older schedules:
 | mid-December, 2024 | TD | TD FPWD Publication Request - target - Freezing Addition of Big Features|
 | mid-December, 2024 | Discovery | Discovery FPWD Publication Request - target |
 | March 13, 2025 | All | FPWD Publication Requests - latest |
-| March, 2025 | All | Use Case and Requirements Note Publication - restructured |
 | March, 2025 | All | Use Case and Requirements - new use cases accepted |
+| mid-April, 2025 | All | Use Case and Requirements Note Publication - restructured |
 | June, 2025 | | Testing (results contributed to WG) |
 | July 3, 2025 | All | CR Transition Requests - latest |
 | August 19, 2025 | All | PR Transition Requests - latest |
 | September, 2025 | All | Use Case and Requirements Note Publication - update |
 | September, 2025 | | Security and Privacy Guidelines Note Publication - update |
+| September, 2025 | All | Use Case and Requirements Note Publication - update |
 | September 24, 2025 | All | REC Transition Requests - latest |
 | October 2, 2025 |   | End of WG Charter |
 
