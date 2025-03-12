@@ -42,6 +42,8 @@ Prioritized list of work items related to Discovery.
 14. Placeholder - Additional Introductions
     * To be researched, but to support additional ecosystems
     * Examples: MQTT Discovery, OPC UA Discovery
+    * also improved local introductions (Andrea to propose concrete suggestions)
+
     
 #### Lower Priority
 1. [Discovery CoAP Directory](https://w3c.github.io/wot-charter-drafts/wot-wg-2023-details.html#discovery-coap-dir-workitem)
@@ -85,9 +87,6 @@ Other possible work-items needed:
         - TD Versions - Update information model to allow TD 2.0 (and multiple different versions of TDs)
         - Version Selection - Fetch specific version of TD if available (including from TDDs) - e.g. fetch TD 1.1 if available, TD 2.0 if available, etc.
         - Improve Security - general
-* additional introductions
-    - e.g. MQTT Discovery, etc.
-    - also improved local introductions (Andrea to propose concrete suggestions)
  
 ## Open Questions
 * Backward compatibility (Discovery 1.1 vs. Discovery 2.0)
