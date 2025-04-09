@@ -5,6 +5,7 @@ This is the WoT policy document governing Task Force Moderators
 - W3C process for selection
 - Chairs role
 - Task force members role
+- Nomination process and times
 ### Duties and Responsibilities
 - Hold coordination meetings as needed
 - Organize the Task Force meetings with an agenda
