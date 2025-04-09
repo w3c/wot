@@ -13,5 +13,5 @@ This is the WoT policy document governing Task Force Moderators
 - Review the minutes from the meetings
 - Manage toward deliverables
 ### Multiple moderators
-- A task force may have two moderators (e.g., Thing Description / Binding)
+- A task force may have two moderators
 - Produce a written statement of the division of responsibilities
