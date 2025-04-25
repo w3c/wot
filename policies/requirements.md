@@ -1,4 +1,6 @@
-# Requirements Policy
+# Web of Things (WoT) Policy
+
+## Requirements 
 New WoT specification Features should be motivated by Use Cases, as when updated specifications
 are published we should be able to  specify exactly what problem each new feature
 (or change to an existing feature) is solving.
