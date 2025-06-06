@@ -1,5 +1,6 @@
 # IG Schedule
 This schedule spans the [current IG charter](https://www.w3.org/2024/04/wot-ig-2024.html) which started on May 20, 2024 and ends on May 19, 2026.
+The [WG Schedule](wg-schedule.md) is managed separately.
 
 Archives of older schedules (which combine IG and WG schedules):
 * [2021-2023](schedule_2023.md)
