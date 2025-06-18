@@ -20,12 +20,6 @@ Archives of older schedules (which combine IG and WG schedules):
 | June 2024 | Interim updates, e.g. refactoring |
 | September 23-27, 2024 | All | [TPAC 2024](https://www.w3.org/2024/09/TPAC/); [WoT meetings Sept 26-27](https://www.w3.org/WoT/IG/wiki/Wiki_for_F2F_2024_planning) |
 | November 25-29, 2024 | All | [WoT Week 2024](https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning); WoT@Industry Open Day Nov 27 |
-| mid-December, 2024 | TD | TD FPWD Publication Request - target - Freezing Addition of Big Features|
-| mid-December, 2024 | Discovery | Discovery FPWD Publication Request - target |
-| March 13, 2025 | All | FPWD Publication Requests - latest |
-| July 3, 2025 | All | CR Transition Requests - latest |
-| August 19, 2025 | All | PR Transition Requests - latest |
-| September, 2025 | | Security and Privacy Guidelines Note Publication - update |
-| September 24, 2025 | All | REC Transition Requests - latest |
+| September 24, 2025  | TD | FPWD Publication Request |
 | October 2, 2025 |   | End of WG Charter |
 
