@@ -20,6 +20,6 @@ Archives of older schedules (which combine IG and WG schedules):
 | June 2024 | Interim updates, e.g. refactoring |
 | September 23-27, 2024 | All | [TPAC 2024](https://www.w3.org/2024/09/TPAC/); [WoT meetings Sept 26-27](https://www.w3.org/WoT/IG/wiki/Wiki_for_F2F_2024_planning) |
 | November 25-29, 2024 | All | [WoT Week 2024](https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning); WoT@Industry Open Day Nov 27 |
-| September 24, 2025  | TD | FPWD Publication Request |
+| September 24, 2025  | TD 2.0 | FPWD Publication Request |
 | October 2, 2025 |   | End of WG Charter |
 
