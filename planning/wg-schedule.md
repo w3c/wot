@@ -10,22 +10,40 @@ Archives of older schedules (which combine IG and WG schedules):
 | Due date | Spec. | Description |
 | --- | --- | --- |
 | Jan 9, 2024 |   | Marketing and Chairs' calls held |
-
-## Current
-| Due date | Spec. | Description |
-| --- | --- | --- |
 | January 10, 2024 |   | First main call of 2024, first TD/Binding call |
 | January 15, 2024 |   | First Scripting, Security, and Discovery calls of 2024 |
 | March 12, 2024 |  | First Profile call of 2024 |
 | June 2024 | Interim updates, e.g. refactoring |
 | September 23-27, 2024 | All | [TPAC 2024](https://www.w3.org/2024/09/TPAC/); [WoT meetings Sept 26-27](https://www.w3.org/WoT/IG/wiki/Wiki_for_F2F_2024_planning) |
 | November 25-29, 2024 | All | [WoT Week 2024](https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning); WoT@Industry Open Day Nov 27 |
-| mid-December, 2024 | TD | TD FPWD Publication Request - target - Freezing Addition of Big Features|
-| mid-December, 2024 | Discovery | Discovery FPWD Publication Request - target |
-| March 13, 2025 | All | FPWD Publication Requests - latest |
-| July 3, 2025 | All | CR Transition Requests - latest |
-| August 19, 2025 | All | PR Transition Requests - latest |
-| September, 2025 | | Security and Privacy Guidelines Note Publication - update |
-| September 24, 2025 | All | REC Transition Requests - latest |
-| October 2, 2025 |   | End of WG Charter |
 
+## Current
+September : Extension of Current Charter
+October 2, 2025 : End of WG Charter 
+November 10-14 : TPAC 2025 Kobe
+
+### TD
+* March 13, 2025 : FPWD Publication Requests
+* March 13, 2025 : CR Transition
+* March 13, 2025 : PR Transition
+* March 13, 2025 : REC Transition
+
+### Bindings Registry
+* March 13, 2025 : First Draft Registry
+* March 13, 2025 : Candidate Registry
+* March 13, 2025 : W3C Registry + Maintenance
+
+### Discovery
+* March 13, 2025 : FPWD Publication Requests
+* March 13, 2025 : CR Transition
+* March 13, 2025 : PR Transition
+* March 13, 2025 : REC Transition
+
+### Profiles
+* March 13, 2025 : FPWD Publication Requests
+* March 13, 2025 : CR Transition
+* March 13, 2025 : PR Transition
+* March 13, 2025 : REC Transition
+
+### Security and Privacy
+* March 13, 2025 : Group Note Publication Request
