@@ -40,10 +40,8 @@ November 10-14 : TPAC 2025 Kobe
 * March 13, 2025 : REC Transition
 
 ### Profiles
-* March 13, 2025 : FPWD Publication Requests
-* March 13, 2025 : CR Transition
-* March 13, 2025 : PR Transition
-* March 13, 2025 : REC Transition
+* July 31, 2025 : WoT Profiles 1.0 Working Group Note publication
+* October 31, 2025: WoT Profiles 2.0 Use Cases & Requirements publication
 
 ### Security and Privacy
 * March 13, 2025 : Group Note Publication Request
