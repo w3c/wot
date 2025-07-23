@@ -18,9 +18,9 @@ Archives of older schedules (which combine IG and WG schedules):
 | November 25-29, 2024 | All | [WoT Week 2024](https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning); WoT@Industry Open Day Nov 27 |
 
 ## Current
-September : Extension of Current Charter
-October 2, 2025 : End of WG Charter 
-November 10-14 : TPAC 2025 Kobe
+* September : Extension of Current Charter
+* October 2, 2025 : End of WG Charter 
+* November 10-14 : TPAC 2025 Kobe
 
 ### TD
 * March 13, 2025 : FPWD Publication Requests
