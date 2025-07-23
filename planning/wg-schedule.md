@@ -23,15 +23,33 @@ Archives of older schedules (which combine IG and WG schedules):
 * November 10-14 : TPAC 2025 Kobe
 
 ### TD
-* March 13, 2025 : FPWD Publication Requests
-* March 13, 2025 : CR Transition
-* March 13, 2025 : PR Transition
-* March 13, 2025 : REC Transition
+
+* August 28, 2025 : Document Freeze (TD Call)
+* September 3, 2025 : Group Call for Consensus (CfC) to move to First Public Working Draft.
+* September 16, 2025 : Transition request to First Public Working Draft
+* September 23, 2025 : Publication of the First Public Working Draft
+* January 14, 2026 : Group Call for Consensus (CfC) to move to Candidate Recommendation
+* January 27, 2026 : Transition request to Candidate Recommendation
+* February 3, 2026 : Publication of the Candidate Recommendation
+* March 4, 2026 : Group Call for Consensus (CfC) to move to Proposed Recommendation
+* March 17, 2026 : Transition request to Proposed Recommendation
+* March 24, 2026 : Publication of the Proposed Recommendation
+* April 22, 2026 : Transition request to Recommendation
+* April 28, 2026 : Publication of the Recommendation
 
 ### Bindings Registry
-* March 13, 2025 : First Draft Registry
-* March 13, 2025 : Candidate Registry
-* March 13, 2025 : W3C Registry + Maintenance
+
+* August 28, 2025 : Document Freeze (TD Call)
+* September 3, 2025 : Group Call for Consensus (CfC) to move to First Draft Registry
+* September 16, 2025 : Transition request to First Draft Registry
+* September 23, 2025 : Publication of the First Draft Registry
+* January 14, 2026 : Group Call for Consensus (CfC) to move to Candidate Registry
+* January 27, 2026 : Transition request to Candidate Registry
+* February 3, 2026 : Publication of the Candidate Registry
+* April 22, 2026 : Transition request to Registry
+* April 28, 2026 : Publication of the Registry and Maintenance
+
+Note: Since the registry track lacks a _Proposed Recommendation_ phase, and the milestone calculator does not account for the registry track, there is a significant time gap between the _Transition request to Registry_ and _Publication of the Candidate Registry_ steps.
 
 ### Discovery
 * March 13, 2025 : FPWD Publication Requests
