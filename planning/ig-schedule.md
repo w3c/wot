@@ -19,5 +19,5 @@ Archives of older schedules (which combine IG and WG schedules):
 | end-August, 2025 | UCR | Use Case and Requirements Note - Second Draft - IG/WG Review |
 | mid-September, 2025 | UCR | Use Case and Requirements Note - Final Draft - submitted for publication by IG |
 | November, 2025 | | Testing (Plugfest, TPAC2025, IG event, results contributed to WG) |
-| June, 2026 | UCR | Use Case and Requirements Note Publication - update |
+| April, 2026 | UCR | Use Case and Requirements Note Publication - update |
 | May 19, 2026 |   | End of IG Charter |
