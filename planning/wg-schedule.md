@@ -52,6 +52,14 @@ Archives of older schedules (which combine IG and WG schedules):
 
 Note: Since the registry track lacks a _Proposed Recommendation_ phase, and the milestone calculator does not account for the registry track, there is a significant time gap between the _Transition request to Registry_ and _Publication of the Candidate Registry_ steps.
 
+### Binding Templates
+
+* August 28, 2025 : Document Freeze (TD Call)
+* September 3, 2025 : Group Call for Consensus (CfC) to move to publish a Note 
+* September 16, 2025 : Group Note Publication
+
+Note: With this publication, the document will be retired.
+
 ### Discovery
 * March 13, 2025 : FPWD Publication Requests
 * March 13, 2025 : CR Transition
