@@ -60,12 +60,6 @@ Note: Since the registry track lacks a _Proposed Recommendation_ phase, and the 
 
 Note: With this publication, the document will be retired.
 
-### Discovery
-* March 13, 2025 : FPWD Publication Requests
-* March 13, 2025 : CR Transition
-* March 13, 2025 : PR Transition
-* March 13, 2025 : REC Transition
-
 ### Profiles
 * July 31, 2025 : WoT Profiles 1.0 Working Group Note publication
 * October 31, 2025: WoT Profiles 2.0 Use Cases & Requirements publication
