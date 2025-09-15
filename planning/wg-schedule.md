@@ -26,8 +26,8 @@ Archives of older schedules (which combine IG and WG schedules):
 ### TD
 
 * August 28, 2025 : Document Freeze (TD Call)
-* September 3, 2025 : Group Call for Consensus (CfC) to move to First Public Working Draft.
-* September 16, 2025 : Transition request to First Public Working Draft
+* September 3, 2025 : Group Call for Consensus (CfC) to move to First Public Working Draft - Done September 10th
+* September 16, 2025 : Transition request to First Public Working Draft - Transition request is approved 
 * September 23, 2025 : Publication of the First Public Working Draft
 * January 14, 2026 : Group Call for Consensus (CfC) to move to Candidate Recommendation
 * January 27, 2026 : Transition request to Candidate Recommendation
