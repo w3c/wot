@@ -41,8 +41,8 @@ Archives of older schedules (which combine IG and WG schedules):
 ### Bindings Registry
 
 * August 28, 2025 : Document Freeze (TD Call)
-* September 3, 2025 : Group Call for Consensus (CfC) to move to First Draft Registry
-* September 16, 2025 : Transition request to First Draft Registry
+* September 3, 2025 : Group Call for Consensus (CfC) to move to First Draft Registry - Done September 10th
+* September 16, 2025 : Transition request to First Draft Registry - Transition request is approved
 * September 23, 2025 : Publication of the First Draft Registry
 * January 14, 2026 : Group Call for Consensus (CfC) to move to Candidate Registry
 * January 27, 2026 : Transition request to Candidate Registry
