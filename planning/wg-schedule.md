@@ -61,8 +61,8 @@ Note: Since the registry track lacks a _Proposed Recommendation_ phase, and the 
 Note: With this publication, the document will be retired.
 
 ### Profiles
-* July 31, 2025 : WoT Profiles 1.0 Working Group Note publication
+* End of September(?), 2025 : WoT Profiles 1.0 Working Draft update publication
 * October 31, 2025: WoT Profiles 2.0 Use Cases & Requirements publication
 
 ### Security and Privacy
-* March 13, 2025 : Group Note Publication Request
+* (?), 2025 : Group Note Publication Request
