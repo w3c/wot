@@ -55,7 +55,7 @@ Note: Since the registry track lacks a _Proposed Recommendation_ phase, and the 
 ### Binding Templates
 
 * August 28, 2025 : Document Freeze (TD Call)
-* September 3, 2025 : Group Call for Consensus (CfC) to move to publish a Note 
+* September 3, 2025 : Group Call for Consensus (CfC) to move to publish a Note - Done September 10th
 * September 16, 2025 : Group Note Publication
 
 Note: With this publication, the document will be retired.
