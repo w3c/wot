@@ -6,8 +6,8 @@ Next steps
 
 Dave to generate new Zoom links for the TD call today and tomorrow, and potentially for all other meetings in the calendar.
 Dave to help with the publication of pending specifications, including the WoT Profile's Working draft that Ben mentioned.
-Sebastian to study and decide on the URL encoding issue in the OPCUA binding for Web of Things.
-Erich to send information about Web of Things to Aruba IT, the European cloud provider interested in industrial connectivity solutions.
+Sebastian to study and decide on the URL encoding issue in the OPC UA binding for Web of Things.
+Erich to send information about Web of Things to Azure IoT, the European cloud provider interested in industrial connectivity solutions.
 The group to review the AI-generated meeting minutes before publishing to ensure sensitive information is appropriately handled.
 The group to consider including Matter protocol binding as a work item in the new charter.
 Summary
@@ -22,7 +22,7 @@ The group discussed using an AI assistant for their meetings, with Michael repor
 
 Team Updates and Service Access
 
-The team discussed technical issues preventing access to certain services and minutes from the previous meeting, with Dave indicating these would be temporary and resolved soon. They reviewed the October 1st meeting minutes, which Ben shared, and approved their publication. The group noted that Philippa is engaged but has limited availability, so Dave is serving as the interim team contact, and they are still seeking a permanent replacement. They also mentioned the new logo rollout received mixed reactions, PPAC planning is ongoing, and the PCUA Community Group Meeting has been announced, with Smart City taking a break until TPAC.
+The team discussed technical issues preventing access to certain services and minutes from the previous meeting, with Dave indicating these would be temporary and resolved soon. They reviewed the October 1st meeting minutes, which Ben shared, and approved their publication. The group noted that Philippa is engaged but has limited availability, so Dave is serving as the interim team contact, and they are still seeking a permanent replacement. They also mentioned the new logo rollout received mixed reactions, TPAC planning is ongoing, and the OPC UA Community Group Meeting has been announced, with Smart City taking a break until TPAC.
 
 AI Meeting Minutes Transition Plan
 
@@ -38,7 +38,7 @@ Erich announced plans for a trial rollout of connectivity in a Microsoft data ce
 
 DTL to WoT Migration Progress
 
-The team discussed the mapping of ISO95 standard to DTL and WoT, highlighting successful migrations of datasets from DTDL to WoT, including a case with Bosch Building Automation. They agreed to carefully review and announce the progress, ensuring no overstatement or potential customer dissatisfaction. The conversation also touched on the ongoing support for DTDL, the move towards WoT in Azure IT Operations, and the contribution of open-source DTL and WoT parsers to the Digital Twin Consortium.
+The team discussed the mapping of ISO95 standard to DTDL and WoT, highlighting successful migrations of datasets from DTDL to WoT, including a case with Bosch Building Automation. They agreed to carefully review and announce the progress, ensuring no overstatement or potential customer dissatisfaction. The conversation also touched on the ongoing support for DTDL, the move towards WoT in Azure IT Operations, and the contribution of open-source DTDL and WoT parsers to the Digital Twin Consortium.
 
 W3C Operations and Publications Update
 
