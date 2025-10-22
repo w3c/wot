@@ -36,7 +36,7 @@ Data Center Connectivity Trial Plans
 
 Erich announced plans for a trial rollout of connectivity in a Microsoft data center on November 1st, using a UA Edge Translator and automatically generated WoT files from an equipment database. He suggested forming a new working group to create an OPC UA companion spec for data center assets, similar to existing specs for industries like carbon capture and storage. Michael agreed this could resolve tensions between DTDL's telemetry and semantic interface roles, and expressed interest in further discussion on the charter.
 
-DTL to WoT Migration Progress
+DTDL to WoT Migration Progress
 
 The team discussed the mapping of ISO95 standard to DTDL and WoT, highlighting successful migrations of datasets from DTDL to WoT, including a case with Bosch Building Automation. They agreed to carefully review and announce the progress, ensuring no overstatement or potential customer dissatisfaction. The conversation also touched on the ongoing support for DTDL, the move towards WoT in Azure IT Operations, and the contribution of open-source DTDL and WoT parsers to the Digital Twin Consortium.
 
