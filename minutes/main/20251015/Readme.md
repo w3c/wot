@@ -125,9 +125,7 @@ Ben: We will see how much support there is for this in the next charter. In orde
 
 sk: I would like everyone to contribute to this discussion. You also had some ideas on attracting more people on the charter
 
-Dave: We want to encourage people to come to the W3C. A strong idea would be to do certification to motivate businesses to be listed on the public pages. Within the working group to ensure which features needs to be implemented and which features are optional, test cases to be applied and to report that using those implementations would verify
-
-those test.
+Dave: We want to encourage people to come to the W3C. A strong idea would be to do certification to motivate businesses to be listed on the public pages. Within the working group to ensure which features are required to be implemented and which features are optional, test cases to be applied and to report that using those implementations would verify those test.
 
 sk: could you please make an issue on this
 
