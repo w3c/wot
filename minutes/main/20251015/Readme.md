@@ -135,7 +135,7 @@ ege: there was a discussion on adopters, we started a list and talked with the W
 
 <Ege> w3c/wot-cg#173
 
-sk: since the WoT is a background technology and it's not directly visible to the outside in regards to the usage. Alot of companies are relying on WoT but this is not visible to the outside, only when you start to talk with the technical people
+sk: since the WoT is a background technology and it's not directly visible to the outside in regards to the usage. A lot of companies are relying on WoT but this is not visible to the outside, only when you start to talk with the technical people
 
 Ben: There is a separate link to the WoT profile calls.
 
