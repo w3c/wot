@@ -7,7 +7,7 @@ Present
 Regrets
     -
 Chair
-    -
+    Michael Koster
 Scribe
     McCool
 
@@ -148,8 +148,9 @@ proposal: Take a snapshot of the current state of the Editor's draft of the Use 
 
 <sebastian> +1
 
-**RESOLUTION: Take a snapshot of the current state of the Editor's draft of the Use Case and Requirements document and prepare it for publication. Final resolution to publish will be in one to two weeks.
-TPAC Planning**
+**RESOLUTION: Take a snapshot of the current state of the Editor's draft of the Use Case and Requirements document and prepare it for publication. Final resolution to publish will be in one to two weeks.**
+
+## TPAC Planning
 
 mk: need to finalize schedule e.g. for breakouts and joint meetings
 … not sure where we are with meetings with JSON-LD group, etc.
