@@ -34,7 +34,7 @@ sk: the AI tool can be only initiated by the host, the host is for now Dave, and
 
 Dave: It may start by itself, we should check
 
-daniel: I started the call today with scripting, Zoltan and I were the only one present, did it record anything? Do I need to perform something?
+daniel: I started the call today with scripting, Zoltan and I were the only ones present, did it record anything? Do I need to perform something?
 
 Dave: I haven't seen anything till now, got to check after the event
 
