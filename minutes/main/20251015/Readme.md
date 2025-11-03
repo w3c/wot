@@ -109,9 +109,7 @@ ege: Ege discusses his comments on Changes to draft charter #1240: remove some s
 sk: I think the digital twin topic came from Michael Legally back in the days, his not active anymore
 
 sk: the plan for the next charter and the key focus topics, how to be more efficient in the WoT group
-… it is mainly caused by the many threats we have, in the past we had more than 10 calls in a week. In the past it was justified, creating the WoT, the idea behind it and what needs to be addressed. The picture was not clear in the beginning. The core here is now clear, the TD is the important technology used here. My proposal for the next charter
-
-would be to focus on the WoT TD. Of course the WoT TD cannot be a technology and a task that can exist alone, you need inputs like the bindings and the registry, but topics like discovery, profiles and architecture I am not sure whether we have the men power for it.
+… it is mainly caused by the many threats we have, in the past we had more than 10 calls in a week. In the past it was justified, creating the WoT, the idea behind it and what needs to be addressed. The picture was not clear in the beginning. The core here is now clear, the TD is the important technology used here. My proposal for the next charter would be to focus on the WoT TD. Of course the WoT TD cannot be a technology and a task that can exist alone — you need inputs like the bindings and the registry — but I am not sure whether we have the manpower for topics like discovery, profiles, and architecture.
 … I am open to discussing this in the new charter, but I feel that if we don't have the manpower, we focus on the TD 2.0, and then make another charter related to the other aspects. I have the feeling that other working groups use a similar approach focusing on smaller topics.
 … I would like to hear your views on this aspect
 
