@@ -26,7 +26,7 @@ the transcription from AI was not bad but sometimes special terms were not corre
 ## Minutes
 
 sk: AI generated minutes from last week
-… the transcription from AI was fnot bad but sometimes special terms were not correct, we need to go through it
+… the transcription from AI was not bad but sometimes special terms were not correct, we need to go through it
 
 ege: from other calls e.g, TD call, what should be the process? should the minutes be approved by the moderators?
 
