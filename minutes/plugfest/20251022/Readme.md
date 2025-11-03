@@ -1,13 +1,13 @@
 # IRC Minutes from 22.10.2025
 
 Attendees
-
+    Sebastian_Kaebisch, Michael_Koster, David_Ezell, Josh Thomas, Denis Ioan, Tomoaki Mizushima, Kunihiko Toumura 
 Present
     -
 Regrets
     -
 Chair
-    -
+    Sebastian
 Scribe
     mjk
 
