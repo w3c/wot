@@ -21,7 +21,7 @@ Contents
 
 ## Meeting minutes
 
-the transcription from AI was fnot bad but sometimes special terms were not correct, we need to go through it
+the transcription from AI was not bad but sometimes special terms were not correct, we need to go through it
 
 ## Minutes
 
