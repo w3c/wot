@@ -28,7 +28,7 @@ the transcription from AI was not bad but sometimes special terms were not corre
 sk: AI generated minutes from last week
 … the transcription from AI was not bad but sometimes special terms were not correct, we need to go through it
 
-ege: from other calls e.g, TD call, what should be the process? should the minutes be approved by the moderators?
+ege: from other calls, e.g., TD call, what should be the process? should the minutes be approved by the moderators?
 
 sk: the AI tool can be only initiated by the host, the host is for now Dave, and the problem is the AI tool can't be started, is that right?
 
