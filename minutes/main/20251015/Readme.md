@@ -113,9 +113,7 @@ sk: the plan for the next charter and the key focus topics, how to be more effic
 … I am open to discussing this in the new charter, but I feel that if we don't have the manpower, we focus on the TD 2.0, and then make another charter related to the other aspects. I have the feeling that other working groups use a similar approach focusing on smaller topics.
 … I would like to hear your views on this aspect
 
-Ben: I completly agree that the TD is the core and the number of meetings and the calls we had in the past were not sustainable. The question is which one survives? The problem I have to only focusing on TD and registry is that we never use the vocabulary from HTTP bindings, to adopt bindings we need a better way to figure out how they will work
-
-with the Profiles. I think if we have to wait for 2 years to then start working on Profiles, this will be too long. I would like to see WoT profiles in the next charter. I do see we need to drop Architecture, dicovery, and security merged with other specs.
+Ben: I completly agree that the TD is the core and the number of meetings and the calls we had in the past were not sustainable. The question is, which one survives? The problem I have with only focusing on TD and registry is that we never use the vocabulary from HTTP bindings; to adopt bindings, we need a better way to figure out how they will work with the Profiles. I think if we have to wait for 2 years to start working on Profiles, this will be too long. I would like to see WoT profiles in the next charter. I do see we need to drop Architecture, dicovery, and security merged with other specs.
 
 sk: We need a good stable group, we need W3C members driving this topic. Do you see enough people working on the Profiles?
 
