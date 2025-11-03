@@ -19,7 +19,7 @@ Sebastian: Continue organizing JSON-LD joint meeting discussion at TPAC
 
 ## Summary
 ### Use Case Document Update Meeting
-The meeting began with Michael and mmccool discussing updates to a use case document, noting that a call for resolution would take place on October 22nd for its publication. mmccool agreed to serve as the scribe for the meeting and confirmed the necessary tools were ready. The group reviewed the agenda, confirmed the absence of invited guests, and prepared to review minutes from the previous meeting on October 15th.
+The meeting began with Michael McCool discussing updates to a use case document, noting that a call for resolution would take place on October 22nd for its publication. McCool agreed to serve as the scribe for the meeting and confirmed the necessary tools were ready. The group reviewed the agenda, confirmed the absence of invited guests, and prepared to review minutes from the previous meeting on October 15th.
 
 ### Moving Minutes to GitHub Repository
 The group discussed challenges with editing meeting minutes on the W3C website and agreed to move them to GitHub for better accessibility. They decided to create a "minutes" directory under the WoT repo, with subdirectories for each task force, and convert existing HTML minutes to Markdown format. The chairs were tasked with establishing file naming conventions and locations in GitHub, while the group will start using this new system immediately for the current meeting's minutes.
