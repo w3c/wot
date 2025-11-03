@@ -36,7 +36,7 @@ Dave: It may start by itself, we should check
 
 daniel: I started the call today with scripting, Zoltan and I were the only ones present, did it record anything? Do I need to perform something?
 
-Dave: I haven't seen anything till now, got to check after the event
+Dave: I haven't seen anything until now, got to check after the event
 
 sk: we need to evaluate this again
 
