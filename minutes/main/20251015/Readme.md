@@ -112,7 +112,7 @@ sk: the plan for the next charter and the key focus topics, how to be more effic
 … it is mainly caused by the many threats we have, in the past we had more than 10 calls in a week. In the past it was justified, creating the WoT, the idea behind it and what needs to be addressed. The picture was not clear in the beginning. The core here is now clear, the TD is the important technology used here. My proposal for the next charter
 
 would be to focus on the WoT TD. Of course the WoT TD cannot be a technology and a task that can exist alone, you need inputs like the bindings and the registry, but topics like discovery, profiles and architecture I am not sure whether we have the men power for it.
-… I am open to discuss this in the new charter, but if I feel we don't have the men power we focus on the TD 2.0 and then to make another charter related to the other aspects. I have the feeling that other working groups do a similar approach focusing on smaller topics.
+… I am open to discussing this in the new charter, but I feel that if we don't have the manpower, we focus on the TD 2.0, and then make another charter related to the other aspects. I have the feeling that other working groups use a similar approach focusing on smaller topics.
 … I would like to hear your views on this aspect
 
 Ben: I completly agree that the TD is the core and the number of meetings and the calls we had in the past were not sustainable. The question is which one survives? The problem I have to only focusing on TD and registry is that we never use the vocabulary from HTTP bindings, to adopt bindings we need a better way to figure out how they will work
