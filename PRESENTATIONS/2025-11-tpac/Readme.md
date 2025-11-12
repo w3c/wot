@@ -26,3 +26,5 @@ Minutes: [Day 1](https://pad.w3.org/p/2025-11-13-wot) and [Day 2](https://pad.w3
 
 ### Welcome
 * Presentation: tbd
+  
+### PlugFest Summary
