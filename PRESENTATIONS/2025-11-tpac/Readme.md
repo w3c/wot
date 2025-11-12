@@ -25,7 +25,7 @@ Minutes: [Day 1](https://pad.w3.org/p/2025-11-13-wot) and [Day 2](https://pad.w3
 ## Thursday 13 November 2025 - 09:00–16:30 Japan Time
 
 ### Welcome
-* Presentation: tbd
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-13-WoT-TPAC-Opening-Sebastian.pdf) [pptx](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-13-WoT-TPAC-Opening-Sebastian.pptx)
   
 ### PlugFest Summary
 * Presentation: tbd
