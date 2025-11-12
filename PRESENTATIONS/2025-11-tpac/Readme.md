@@ -28,3 +28,34 @@ Minutes: [Day 1](https://pad.w3.org/p/2025-11-13-wot) and [Day 2](https://pad.w3
 * Presentation: tbd
   
 ### PlugFest Summary
+* Presentation: tbd
+
+### Charter WG plans
+* Presentation: tbd
+
+### Thing Description
+* Presentation: tbd
+
+### Scripting API 
+* Presentation: tbd
+
+## Friday 14 November 2025 - 09:00–18:00 Japan Time
+
+### Opening
+* Presentation: tbd
+
+### Liaisons
+* Presentation: tbd
+
+### Use Case  
+* Presentation: tbd
+ 
+### Protocol Bindings: Status and (Note) publication plans  
+* Presentation: tbd
+
+### Joint meeting with JSON-LD WG
+* Presentation: tbd
+
+### Joint meeting with WoT CG
+* Presentation: tbd
+
