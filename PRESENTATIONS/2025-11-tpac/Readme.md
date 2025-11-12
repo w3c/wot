@@ -17,7 +17,7 @@ Use of this template is optional if you already have material you are reusing,
 but is preferred for new material.
 
 Here are links to the presentations, in order by the
-[agenda](https://www.w3.org/WoT/IG/wiki/Wiki_for_F2F_2024_planning#Agenda).
+[agenda](https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2025_planning#F2F_Day_1:_Thursday,_Nov_13,_09:00-16:45).
 Note the timezones!
 Meeting during TPAC itself (the actual hybrid event) are in Pacific time.
 Minutes: [Day 1](https://www.w3.org/2024/09/26-wot-minutes.html) and [Day 2](https://www.w3.org/2024/09/27-wot-minutes.html).
