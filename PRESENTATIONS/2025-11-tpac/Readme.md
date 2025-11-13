@@ -31,7 +31,7 @@ Minutes: [Day 1](https://pad.w3.org/p/2025-11-13-wot) and [Day 2](https://pad.w3
 * Presentation: tbd
 
 ### Charter WG plans
-* Presentation: tbd
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-13-WoT-TPAC-Charter-Sebastian.pdf) [pptx](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-13-WoT-TPAC-Charter-Sebastian.pptx)
 
 ### Thing Description
 * Presentation: tbd
