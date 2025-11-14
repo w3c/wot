@@ -37,16 +37,21 @@ Minutes: [Day 1](https://pad.w3.org/p/2025-11-13-wot) and [Day 2](https://pad.w3
 ### Thing Description
 * Presentation: tbd
 
+### HTTP in local networks 
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/HTTPS%20For%20Local%20Networks%20(TPAC%202025).pdf)
+
 ### Scripting API 
 * Presentation: tbd
 
 ## Friday 14 November 2025 - 09:00–18:00 Japan Time
 
 ### Opening
-* Presentation: tbd
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-14-WoT-TPAC-Opening-Sebastian.pdf)
 
 ### Liaisons
-* Presentation: tbd
+* Presentation OPC UA: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-14-OPCUA-Liaisons-Sebastian.pdf)
+* Presentation smart Cities: tbd
+* Presentation ECHONET: tbd
 
 ### Use Case  
 * Presentation: tbd
