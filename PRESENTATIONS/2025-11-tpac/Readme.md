@@ -35,7 +35,7 @@ Minutes: [Day 1](https://pad.w3.org/p/2025-11-13-wot) and [Day 2](https://pad.w3
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-13-WoT-TPAC-Charter-Sebastian.pdf) [pptx](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-13-WoT-TPAC-Charter-Sebastian.pptx)
 
 ### Thing Description
-* Presentation: tbd
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-13-TD-Korkan.pdf)
 
 ### HTTP in local networks 
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/HTTPS%20For%20Local%20Networks%20(TPAC%202025).pdf)
@@ -50,11 +50,8 @@ Minutes: [Day 1](https://pad.w3.org/p/2025-11-13-wot) and [Day 2](https://pad.w3
 
 ### Liaisons
 * Presentation OPC UA: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/2025-11-14-OPCUA-Liaisons-Sebastian.pdf)
-* Presentation smart Cities: tbd
-* Presentation ECHONET: tbd
+* Presentation ECHONET: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2025-11-tpac/TPAC-Pham.pdf)
 
-### Use Case  
-* Presentation: tbd
  
 ### Protocol Bindings: Status and (Note) publication plans  
 * Presentation: tbd
