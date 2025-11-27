@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 02 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+WoT Thing Description</h1>
+<h2>02 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/02-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Daniel_Peintner, Ege_Korkan, Henk_Spaaj, Kunihiko_Toumura, Michael_Koster, Tomoaki_Mizushima, Vignesh_Vaidyanathan</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan, Michael_Koster</dd>
+<dt>Scribe</dt><dd>mjk</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#69df">Common Definitions feature of TD</a>
+<ol>
+<li><a href="#eb39">basic mechanism</a></li>
+</ol>
+</li>
+<li><a href="#401f">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=8e2a class=irc><cite>&lt;Ege&gt;</cite> <a href="https://www.w3.org/policies/patent-policy/20250515/">https://<wbr>www.w3.org/<wbr>policies/<wbr>patent-policy/<wbr>20250515/</a></p>
+<p id=92d1 class="phone s01"><cite>ege:</cite> (explains the W3C patent policy)</p>
+<p id=8e9c class=irc><cite>&lt;Ege&gt;</cite> no</p>
+<p id=e728 class=irc><cite>&lt;Ege&gt;</cite> Luca is also having issues</p>
+<p id=9801 class=summary>/w3c.zoom.us/j/89964604906?pwd=bDlHMWFpeTJZeitXMDZzYkZaMXk2dz09///w3c.zoom.us/j/89964604906?pwd=bDlHMWFpeTJZeitXMDZzYkZaMXk2dz09</p>
+<p id=1222 class=irc><cite>&lt;Ege&gt;</cite> can you try the zoom app</p>
+<p id=66f2 class=irc><cite>&lt;Henk&gt;</cite> benfrancis, I'm using the browser. Seems to work.,</p>
+<p id=997e class=irc><cite>&lt;Vignesh&gt;</cite> I agree to the patent policy</p>
+<p id=d35d class=irc><cite>&lt;Ege&gt;</cite> <a href="https://www.w3.org/2003/12/22-pp-faq.html#non-participants">https://<wbr>www.w3.org/<wbr>2003/<wbr>12/<wbr>22-pp-faq.html#non-participants</a></p>
+<p id=7117 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/tree/main/proposals/initial-connection">https://<wbr>github.com/<wbr>w3c/<wbr>wot-thing-description/<wbr>tree/<wbr>main/<wbr>proposals/<wbr>initial-connection</a></p>
+<p id=4ea3 class=irc><cite>&lt;Vignesh&gt;</cite> Its a 404</p>
+<p id=732e class="phone s01"><cite>ege:</cite> topic for today is the &quot;Common Definitions&quot; feature of the Thing Description format</p>
+<p id=816f class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/tree/main/proposals/common-definitions">https://<wbr>github.com/<wbr>w3c/<wbr>wot-thing-description/<wbr>tree/<wbr>main/<wbr>proposals/<wbr>common-definitions</a></p>
+</section>
+
+<section>
+<h3 id=69df>Common Definitions feature of TD</h3>
+<p id=d7e5 class="phone s01"><cite>ege:</cite> (explains user stories for common definitions)</p>
+<p id=81c0 class="phone s01"><cite>ege:</cite> the problem being solved is that in the &quot;form&quot; element of the TD there are repeated verbose statements in each instance of the form<br>
+<span id=686f>… The &quot;base&quot; element isn't sufficient for all the use cases</span></p>
+<p id=fdaf class=irc><cite>&lt;Vignesh&gt;</cite> I would say additionalResponses would also fall under same category</p>
+<p id=84ed class="phone s01"><cite>ege:</cite> and the semantics of interactions are not clear</p>
+<p id=530a class=irc><cite>&lt;Henk&gt;</cite> I have run into these problems in hiveot. Especially connection management and duplication of forms.</p>
+<p id=76eb class="phone s02"><cite>Vignesh:</cite> it would be good for example to describe error response only once</p>
+<p id=2675 class="phone s01"><cite>ege:</cite> agreed and noted</p>
+<p id=1bb9 class="phone s03"><cite>henk:</cite> connection management is a big problem as well as security protocol<br>
+<span id=2a1c>… Also a lot of form elements don't add value</span><br>
+<span id=1492>… and the problem of multiple bases</span></p>
+<p id=4ccd class="phone s02"><cite>vignesh:</cite> An improvement would be really helpful for MQTT</p>
+<p id=3187 class="phone s01"><cite>ege:</cite> for more use cases, we can add to existing issues, cerate new issues, and update the markdown document as needed<br>
+<span id=20cf>… Requirements are to be able to reuse the common definition by linking inside the document</span><br>
+<span id=8c19>… there needs to be support for a global media type</span><br>
+<span id=c5d0>… multiple base URIs</span><br>
+<span id=9f1a>… initial connection</span><br>
+<span id=5ceb>… also wrapper schemas for messages</span></p>
+<p id=ffff class="phone s04"><cite>dape:</cite> preprocessing for the global media type requires expanding the TD</p>
+<p id=c1fb class="phone s01"><cite>ege:</cite> we will specify an algorithm for expansion<br>
+<span id=00d8>… we want to make sure that the simple cases are easy to describe and not burdened by the new mechanism</span></p>
+<h4 id=eb39>basic mechanism</h4>
+<p id=66af class="phone s03"><cite>henk:</cite> how will support for multiple protocols affect the TD?</p>
+<p id=fff6 class="phone s01"><cite>ege:</cite> there is a default protocol<br>
+<span id=2d31>… There are inline fields and thing-wide defaults</span><br>
+<span id=3e47>… there are thing-wide defaults for security, connections, forms, and schemas</span><br>
+<span id=a833>… (explains examples in the tooling folder)</span></p>
+<p id=f39c class=irc><cite>&lt;Henk&gt;</cite> Ege Would it be possible to use URI variables in the default form?</p>
+<p id=9b3e class=irc><cite>&lt;Henk&gt;</cite> Example: {&quot;href&quot;:&quot;/{operation}/{name}&quot;}</p>
+<p id=caf8 class="phone s03"><cite>henk:</cite> the ability to use variables would eliminate the need to have form definitions</p>
+<p id=f139 class=irc><cite>&lt;Vignesh&gt;</cite> operation is specified separately in the form usually right?</p>
+<p id=7078 class="phone s01"><cite>ege:</cite> we would need to do the mapping between the variable values and elements to substitute in the document</p>
+<p id=b4ea class="phone s04"><cite>dape:</cite> we should be careful with this to identify problems/side effects</p>
+<p id=3f8e class="phone s01"><cite>ege:</cite> we should open an issue</p>
+<p id=5b29 class="phone s02"><cite>vignesh:</cite> in the last example, how do you point to 2 different forms?</p>
+<p id=e012 class="phone s01"><cite>ege:</cite> you can use the form name inside the form<br>
+<span id=2584>… you can override the default for example</span></p>
+<p id=bda9 class="phone s02"><cite>vignesh:</cite> OK</p>
+<p id=c728 class="phone s01"><cite>ege:</cite> (explains some of the recursion needed in the expansion algorithm)</p>
+<p id=af3c class="phone s01"><cite>ege:</cite> you can use connections inside a form</p>
+<p id=b391 class="phone s01"><cite>ege:</cite> you can override the security inline (example)</p>
+<p id=8273 class="phone s01"><cite>ege:</cite> (explains some invalid constructs)</p>
+<p id=654a class="phone s01"><cite>ege:</cite> This may be over-engineered</p>
+<p id=da9b class="phone s03"><cite>henk:</cite> what about authorization and roles for individual affordances?</p>
+<p id=c6cd class="phone s01"><cite>ege:</cite> it's possible today by using multiple security definitions and including them inline in the affordance</p>
+<p id=47f3 class="phone s03"><cite>henk:</cite> it probably doesn't work for connection oriented protocols</p>
+<p id=fc19 class="phone s01"><cite>ege:</cite> we should open an issue on this<br>
+<span id=2fe3>… we might need to use a feature of the protocol</span><br>
+<span id=5e55>… this can be resolved in parallel with the new feature</span></p>
+<p id=d1df class="phone s02"><cite>vignesh:</cite> does nosec need to be specified?</p>
+<p id=3ffc class="phone s01"><cite>ege:</cite> yes, the TD is invalid without it<br>
+<span id=bcff>… the security review result was we should not allow nosec as the default</span></p>
+<p id=549c class="phone s02"><cite>vignesh:</cite> what is we have one security scheme but multiple roles?</p>
+<p id=901f class="phone s03"><cite>henk:</cite> yes, this is my point too</p>
+<p id=6d58 class="phone s01"><cite>ege:</cite> it's not clear what we need to add, we should describe it in the issue<br>
+<span id=ed73>… We are out of time now and can continue the discussion later</span></p>
+<p id=c3d0 class=irc><cite>&lt;Vignesh&gt;</cite> great! I can have a look once more and get back</p>
+<p id=9809 class="phone s01"><cite>ege:</cite> Please let us know what additional feedback you have</p>
+<p id=4a96 class=irc><cite>&lt;Henk&gt;</cite> Thank you!</p>
+<p id=a63f class="phone s01"><cite>ege:</cite> maybe we can reconvene in 2 weeks</p>
+</section>
+
+<section>
+<h3 id=401f>AOB</h3>
+<p id=35a5 class="phone s01"><cite>ege:</cite> AOB?<br>
+<span id=6e59>… none, adjourned</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Warning: ‘s/https://w3c.zoom.us/j/89964604906?pwd=bDlHMWFpeTJZeitXMDZzYkZaMXk2dz09//’ interpreted as replacing ‘https:’ by ‘/w3c.zoom.us/j/89964604906?pwd=bDlHMWFpeTJZeitXMDZzYkZaMXk2dz09/’</p>
+<p class=warning>Succeeded: s/https://w3c.zoom.us/j/89964604906?pwd=bDlHMWFpeTJZeitXMDZzYkZaMXk2dz09//</p>
+<p class=warning>Succeeded: s/ther eis/there is</p>
+<p class=warning>Succeeded: s/yo ucan/you can</p>
+<p class=warning>Succeeded: s/wa /was /</p>
+<p class=warning>Maybe present: dape, ege, henk, Vignesh</p>
+<p class=warning>All speakers: dape, ege, henk, Vignesh</p>
+<p class=warning>Active on IRC: dape, Ege, egekorkan, Henk, mjk, Vignesh</p>
+</div>
+</body>
+</html>

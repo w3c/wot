@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 30 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+WoT Thing Description</h1>
+<h2>30 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/30-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Cristiano_Aguzzi, Daniel_Peintner, Ege_Korkan, Kunihiko_Toumura, Luca_Barbato, Mahda_Noura, Michael_Koster, Tomoaki_Mizushima</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan, Michael_Koster</dd>
+<dt>Scribe</dt><dd>Ege</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#6a14">Minutes</a></li>
+<li><a href="#cec0">Toolchain Updates</a>
+<ol>
+<li><a href="#9c30">additionalProperties modelling</a></li>
+<li><a href="#18a7">Multilanguage Support<br>
+… this is tracked in linkml/<wbr>linkml#2896</a></li>
+<li><a href="#2945">PR 2900 in LinkML</a></li>
+<li><a href="#a67f">our repo</a></li>
+</ol>
+</li>
+<li><a href="#b74f">Charter</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=7fd1 class=summary>Ege_Korkan, Kunihiko_Toumura, Mahda_Noura, Luca_Barbato</p>
+</section>
+
+<section>
+<h3 id=6a14>Minutes</h3>
+<p id=9195 class=summary><a href="https://www.w3.org/2025/10/23-wot-td-minutes.html">https://<wbr>www.w3.org/<wbr>2025/<wbr>10/<wbr>23-wot-td-minutes.html</a></p>
+<p id=2120 class="phone s01"><cite>ek:</cite> any remarks?</p>
+<p id=6de5 class="phone s02"><cite>lb:</cite> looks good</p>
+<p id=7881 class="phone s01"><cite>ek:</cite> approved<br>
+<span id=81e9>… I am making a PR for the wot repo with html minutes</span></p>
+</section>
+
+<section>
+<h3 id=cec0>Toolchain Updates</h3>
+<p id=1f64 class="phone s03"><cite>mn:</cite> they also have a runtime. linkml-runtime generates the linkml documentation. Eat your own dogfood<br>
+<span id=19cb>… now they are working on merging the both repositories</span><br>
+<span id=c396>… i.e. linkml and linkml-runtime</span><br>
+<span id=532b>… in the meantime, I started learning about their testing runtime</span><br>
+<span id=7f94>… I talked to a colleague in Siemens, Silvano, who works on this too</span></p>
+<h4 id=9c30>additionalProperties modelling</h4>
+<p id=6689 class=summary><a href="https://github.com/w3c/wot-thing-description-toolchain-tmp/issues/28">w3c/<wbr>wot-thing-description-toolchain-tmp#28</a><br>
+<span id=115b>… I was doing some post processing to add additionalProperties</span><br>
+<span id=7cce>… it depends on the linkml-runtime</span><br>
+<span id=8f49>… this is tracked in <a href="https://github.com/linkml/linkml/pull/2940">linkml/<wbr>linkml#2940</a></span></p>
+<h4 id=18a7>Multilanguage Support<br>
+<span id=e3cd>… this is tracked in <a href="https://github.com/linkml/linkml/pull/2896">linkml/<wbr>linkml#2896</a></h4>
+<p id=b9f1 class="phone s01"><cite>ek:</cite> do we have the same feature in the json-ld context</p>
+<p id=2f50 class="phone s03"><cite>mn:</cite> yes it is in our context as well</p>
+<p id=05b4 class=irc><cite>&lt;Zakim&gt;</cite> dape, you wanted to <a href="https://w3c.github.io/wot-thing-description/#example-11">https://<wbr>w3c.github.io/<wbr>wot-thing-description/#example-11</a></p>
+<p id=23c2 class="phone s04"><cite>dp:</cite> we have titles and title and it looks different to the example in linkml<br>
+<span id=2288>… who is behaving badly?</span></p>
+<p id=4431 class=summary><a href="https://github.com/w3c/wot-thing-description/blob/main/context/td-context-1.1.jsonld#L1387">https://<wbr>github.com/<wbr>w3c/<wbr>wot-thing-description/<wbr>blob/<wbr>main/<wbr>context/<wbr>td-context-1.1.jsonld#L1387</a></p>
+<p id=1b99 class="phone s03"><cite>mn:</cite> the default language in TD terms is english</p>
+<p id=6804 class=irc><cite>&lt;dape&gt;</cite> <a href="https://w3c.github.io/wot-thing-description/#table-vocabulary-terms-in-dataschema-level">https://<wbr>w3c.github.io/<wbr>wot-thing-description/#table-vocabulary-terms-in-dataschema-level</a></p>
+<p id=3ed5 class="phone s04"><cite>dp:</cite> is our title going to be object based on this ?</p>
+<p id=f541 class="phone s05"><cite>ca:</cite> we decided to keep it a string for now<br>
+<span id=956d>… this way we support json only parsers</span></p>
+<p id=a515 class=irc><cite>&lt;Zakim&gt;</cite> dape, you wanted to <a href="https://w3c.github.io/wot-thing-description/#example-9">https://<wbr>w3c.github.io/<wbr>wot-thing-description/#example-9</a></p>
+<p id=883e class="phone s01"><cite>ek:</cite> should we add anything to our multilanguage examples? Like in the linkml example?</p>
+<p id=592e class="phone s03"><cite>mn:</cite> no since our json-ld context already explains it</p>
+<h4 id=2945>PR 2900 in LinkML</h4>
+<p id=5689 class="phone s03"><cite>mn:</cite> this got merged so I get to remove a post processing script<br>
+<span id=0bd8>… this is a nice progress I am seeing</span></p>
+<h4 id=a67f>our repo</h4>
+<p id=fb63 class="phone s03"><cite>mn:</cite> I need to fix the ontology generators<br>
+<span id=e066>… also I managed to back into the repo</span><br>
+<span id=16ea>… I did some cleanups</span><br>
+<span id=73ab>… also the document generation</span><br>
+<span id=1171>… I have copied over the index.template.html</span><br>
+<span id=eff8>… we have the placeholder indicated by %s</span><br>
+<span id=e9d9>… I create jinja template and now focusing on the Thing class</span><br>
+<span id=a0be>… (shows the local index.html)</span><br>
+<span id=13e2>… the table section now gets auto generated</span></p>
+<p id=0dac class=summary><a href="https://github.com/w3c/wot-thing-description/blob/main/validation/td-validation.ttl">https://<wbr>github.com/<wbr>w3c/<wbr>wot-thing-description/<wbr>blob/<wbr>main/<wbr>validation/<wbr>td-validation.ttl</a></p>
+<p id=8419 class="phone s03"><cite>mn:</cite> we need to handle the atrisk stuff too</p>
+<p id=49d0 class="phone s01"><cite>ek:</cite> also we need unique ids for assertions</p>
+<p id=6d9c class="phone s03"><cite>mn:</cite> and I need to go into the shacl shapes too</p>
+<p id=aa68 class="phone s01"><cite>ek:</cite> yes I hate that we need to edit that file at the same time</p>
+<p id=50ec class="phone s03"><cite>mn:</cite> also the ontology and spec have different values for descriptions</p>
+<p id=fa7f class="phone s05"><cite>ca:</cite> not sure why we have a discrepency but indeed we should not have this</p>
+<p id=56dd class="phone s01"><cite>ek:</cite> also good to see that the linkml community is active</p>
+<p id=b0d6 class="phone s03"><cite>mn:</cite> yes indeed. however, I would need to provide a fix the rdf generator as it doesn't seem to be a high prio for them</p>
+<p id=893b class="phone s03"><cite>mn:</cite> we can keep a fork and use that for the spec as well. What do you think?</p>
+<p id=32c5 class="phone s01"><cite>ek:</cite> we should contribute upstream</p>
+</section>
+
+<section>
+<h3 id=b74f>Charter</h3>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Maybe present: ca, dp, ek, lb, mn</p>
+<p class=warning>All speakers: ca, dp, ek, lb, mn</p>
+<p class=warning>Active on IRC: dape, Ege, luca_barbato, mahda, mjk</p>
+</div>
+</body>
+</html>

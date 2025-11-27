@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 23 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+WoT Thing Description</h1>
+<h2>23 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/23-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Cristiano_Aguzzi, Ege_Korkan, Kunihiko_Toumura, Luca_Barbato, Mahda_Noura, Michael_Koster, Tomoaki_Mizushima</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan, Michael_Koster</dd>
+<dt>Scribe</dt><dd>cris</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#4321">minutes</a></li>
+<li><a href="#743a">pull requests</a>
+<ol>
+<li><a href="#0213">PR 2154</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=4321>minutes</h3>
+<p id=4fbd class="phone s01"><cite>ege:</cite> any problems?</p>
+<p id=a36c class=irc><cite>&lt;Ege&gt;</cite> <a href="https://www.w3.org/2025/10/16-wot-td-minutes.html">https://<wbr>www.w3.org/<wbr>2025/<wbr>10/<wbr>16-wot-td-minutes.html</a></p>
+<p id=ef81 class="phone s02"><cite>cris:</cite> are the names going to be corrected?</p>
+<p id=7273 class="phone s01"><cite>ege:</cite> we don't know how to fix it</p>
+<p id=912a class="phone s03"><cite>mk:</cite> we capture more stuff than the other groups</p>
+<p id=a1df class="phone s01"><cite>ege:</cite> ok, even if in tpac I got the opposite impression</p>
+</section>
+
+<section>
+<h3 id=743a>pull requests</h3>
+<h4 id=0213>PR 2154</h4>
+<p id=c1c2 class="phone s01"><cite>ege:</cite> based on last week discussion we were trying to reduce the number of times where you repeat the same ip address<br>
+<span id=086d>… you can use the connection to point to different IPs in the proposal</span></p>
+<p id=888d class="phone s04"><cite>luca:</cite> we have to consider the IP address is sort of a solved problem, you can have local dns or even mDNS. On the other hand, if we have to consider to describe a Thing that can be consumed in different ways (different local or remote ips).<br>
+<span id=e018>… or you even with different kind protocols</span></p>
+<p id=63f0 class="phone s05"><cite>mjk:</cite> another pattern in that you can use mixed protocols in different affordances</p>
+<p id=612a class="phone s01"><cite>ege:</cite> ok yes, I've prepared an example in the PR</p>
+<p id=575f class="phone s06"><cite>mizushima:</cite> we should pay attention on the use case of using different IPs, for example ip4 or ip6</p>
+<p id=0d85 class="phone s02"><cite>cris:</cite> here we are presenting our preferred why of modelling TDs using this new mechanism, but it should always possibile doing it in the old &quot;verbose&quot; way, right?</p>
+<p id=1ea1 class="phone s01"><cite>ege:</cite> yes</p>
+<p id=71fe class="phone s02"><cite>cris:</cite> moreover I think this mechanism could help clients to chose the right form by simply checking once the connect defintions<br>
+<span id=8213>… and prefer one connection type</span></p>
+<p id=c493 class="phone s06"><cite>mizushima:</cite> The issue depends on device implementation and complicated. We should investigate more</p>
+<p id=43d9 class="phone s01"><cite>ege:</cite> the whole goal of this exercise is to see the impact before going to specification<br>
+<span id=480e>… next in the PR we have an example with a TD that support multiple protocols</span><br>
+<span id=e9c3>… I don't see very often double protocol</span><br>
+<span id=9e78>… but it happens to have a mixed between modbus and modbus+tpc</span><br>
+<span id=4344>… do you think all of these are different patterns?</span></p>
+<p id=7804 class="phone s02"><cite>cris:</cite> I agree<br>
+<span id=e3d9>… I think it is a reasonable design</span></p>
+<p id=f090 class=irc><cite>&lt;luca_barbato&gt;</cite> +1</p>
+<p id=a9be class="phone s02"><cite>cris:</cite> but now choosing a form is difficult and you can't use indexing</p>
+<p id=ce20 class="phone s04"><cite>luca:</cite> yes you can</p>
+<p id=45b5 class="phone s02"><cite>cris:</cite> right,<br>
+<span id=fbc8>… or you could chose the connection</span></p>
+<p id=9a88 class="phone s04"><cite>luca:</cite> you can always iterate over the connections array<br>
+<span id=19cf>… and also you can use the connection term per afforandace level</span><br>
+<span id=0959>… you can also do expansion on demand</span></p>
+<p id=fed8 class="phone s01"><cite>ege:</cite> finally we have the use case of defaults</p>
+<p id=565f class=summary>qè</p>
+<p id=4866 class="phone s02"><cite>cris:</cite> I think we should review op as array if we allow that</p>
+<p id=b500 class="phone s07"><cite>dape:</cite> I noticed that we were discussing some &quot;desired extensions&quot; (connection as array or even form at the affordance level). We just need to be sure to not over complicate everything<br>
+<span id=4499>… it should not be too complex to generate the extended TD</span></p>
+<p id=24b1 class="phone s01"><cite>ege:</cite> I agree, I think if we implement till example 3 we are fine.</p>
+<p id=09b6 class="phone s01"><cite>ege:</cite> AOB ?</p>
+<p id=67df class=summary>[adjourned]</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/topic minutes/topic: minutes/</p>
+<p class=warning>Succeeded: i/chair:/scribenick: cris</p>
+<p class=warning>Succeeded: s/scribenick cris//</p>
+<p class=warning>Maybe present: cris, dape, ege, luca, mizushima, mjk, mk</p>
+<p class=warning>All speakers: cris, dape, ege, luca, mizushima, mjk, mk</p>
+<p class=warning>Active on IRC: cris, dape, Ege, ktoumura, luca_barbato, Mizushima, mjk</p>
+</div>
+</body>
+</html>

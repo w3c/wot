@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 16 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+WoT Thing Description</h1>
+<h2>16 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/16-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Daniel_Peintner, Ege_Korkan, Kunihiko_Toumura, Luca_Barbato, Mahda_Noura, Michael_Koster, Tomoaki_Mizushima</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan, Michael_Koster</dd>
+<dt>Scribe</dt><dd>Ege</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#6263">Minutes</a></li>
+<li><a href="#317d">Binding Ontologies Alignment</a></li>
+<li><a href="#af21">Common Definitions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=1849 class=summary>Ege_Korkan, Michael_Koster, Tomoaki_Mizushima, Kunihiko_Toumura, Mahda_Noura, Luca_Barbato</p>
+</section>
+
+<section>
+<h3 id=6263>Minutes</h3>
+<p id=8c1a class=summary><a href="https://www.w3.org/2025/10/09-wot-td-minutes.html">https://<wbr>www.w3.org/<wbr>2025/<wbr>10/<wbr>09-wot-td-minutes.html</a></p>
+<p id=b6b7 class="phone s01"><cite>ek:</cite> only major problems to be checked<br>
+<span id=b69c>… any issues with minutes?</span><br>
+<span id=a783>… hearing none, approved</span></p>
+</section>
+
+<section>
+<h3 id=317d>Binding Ontologies Alignment</h3>
+<p id=ffff class="phone s02"><cite>mn:</cite> there is misalignment on the usage of terms in different ontologies</p>
+<p id=7860 class="phone s01"><cite>ek:</cite> we can create a guideline to use in registry too</p>
+<p id=afaa class=irc><cite>&lt;luca_barbato&gt;</cite> +1</p>
+<p id=a5b2 class="phone s02"><cite>mn:</cite> (shows the examples)</p>
+<p id=67bd class="phone s02"><cite>mn:</cite> we can have a guideline in the top</p>
+<p id=675b class="phone s01"><cite>ek:</cite> what is the level of the guideline?</p>
+<p id=4410 class="phone s02"><cite>mn:</cite> Typically it is provided as a guideline, not a standard</p>
+<p id=ad6d class=irc><cite>&lt;luca_barbato&gt;</cite> I have to go even earlier sadly, I'm all for consistency and automated lints</p>
+<p id=644a class="phone s03"><cite>dp:</cite> we should fix one first, like Modbus. Also consistency in a single one document would be good<br>
+<span id=ec76>… that would be the minimum</span></p>
+<p id=f17e class="phone s01"><cite>ek:</cite> any other misalignments?</p>
+<p id=b2ef class="phone s02"><cite>mn:</cite> like labels and comments</p>
+<p id=aec8 class=summary><a href="https://github.com/w3c/wot-binding-templates/issues/448">w3c/<wbr>wot-binding-templates#448</a></p>
+<p id=4bac class="phone s01"><cite>ek:</cite> I have created an issue</p>
+</section>
+
+<section>
+<h3 id=af21>Common Definitions</h3>
+<p id=5a71 class=summary><a href="https://github.com/w3c/wot-thing-description/pull/2154">w3c/<wbr>wot-thing-description#2154</a></p>
+<p id=831d class="phone s01"><cite>ek:</cite> just extending examples</p>
+<p id=a908 class="phone s01"><cite>ek:</cite> (shows screen with examples)<br>
+<span id=7e02>… example 1 is about default content type cbor</span></p>
+<p id=a2c3 class="phone s03"><cite>dp:</cite> not putting contentType should still default to JSON right?</p>
+<p id=6890 class="phone s01"><cite>ek:</cite> not sure we removed it no?</p>
+<p id=b8a4 class="phone s01"><cite>ek:</cite> (looks at the spec, it still has default)<br>
+<span id=2a64>… <a href="https://github.com/w3c/wot-thing-description/pull/2081">w3c/<wbr>wot-thing-description#2081</a> can be analyzed</span></p>
+<p id=d5b1 class="phone s02"><cite>mn:</cite> multi protocols mean multiple forms?</p>
+<p id=1d68 class="phone s01"><cite>ek:</cite> yes I will show it later</p>
+<p id=a69f class="phone s03"><cite>dp:</cite> can we remove href if there is only one href for all affordances like in websockets?</p>
+<p id=3172 class="phone s01"><cite>ek:</cite> out of scope right now but can be added as an example at <a href="https://github.com/w3c/wot-thing-description/issues/2153">w3c/<wbr>wot-thing-description#2153</a><br>
+<span id=ee45>… for now we can leave the href empty in the form and provide that uri in the base field</span></p>
+<p id=6f43 class="phone s01"><cite>ek:</cite> example 2 is the same but with modbus protocol</p>
+<p id=b8a9 class="phone s01"><cite>ek:</cite> example 3 is similar but shows overriding as well</p>
+<p id=b3ae class="phone s01"><cite>ek:</cite> example 4 is multi ip address etc.</p>
+<p id=18f5 class="phone s01"><cite>ek:</cite> maybe we should have a connection with array value</p>
+<p id=f3c0 class="phone s04"><cite>mk:</cite> we need a new construct for this case</p>
+<p id=da9b class="phone s02"><cite>mn:</cite> I agree. You need to repeat<br>
+<span id=fd70>… how about doing it like security</span></p>
+<p id=61fd class="phone s01"><cite>ek:</cite> yes but then the term types duplicate</p>
+<p id=0514 class="phone s02"><cite>mn:</cite> a different direction would be to provide a TM with placeholders<br>
+<span id=3543>… and a new TD is generated based on ipv4 or ipv6</span><br>
+<span id=d54a>… like initializing a class with different values</span><br>
+<span id=ba6c>… so it is not a design problem</span></p>
+<p id=5aca class="phone s01"><cite>ek:</cite> (shows the examples until 7)</p>
+<p id=0272 class="phone s05"><cite>lb:</cite> if we provide stacking rules, we can have a form array</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/topic: Common Definitions//</p>
+<p class=warning>Succeeded: s/mh/mn</p>
+<p class=warning>Succeeded: s/7(/7)</p>
+<p class=warning>No scribenick or scribe found. Guessed: Ege</p>
+<p class=warning>Maybe present: dp, ek, lb, mk, mn</p>
+<p class=warning>All speakers: dp, ek, lb, mk, mn</p>
+<p class=warning>Active on IRC: dape, Ege, luca_barbato, mahda, mjk</p>
+</div>
+</body>
+</html>

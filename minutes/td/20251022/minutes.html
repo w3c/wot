@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 22 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+WoT Thing Description</h1>
+<h2>22 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/22-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Cristiano_Aguzzi, Daniel_Peintner, Ege_Korkan, Kunihiko_Toumura, Mahda_Noura, Michael_Koster, Tomoaki_Mizushima</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan, Michael_Koster</dd>
+<dt>Scribe</dt><dd>Ege, cris, luca_barbato</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#60cb">Minutes review</a></li>
+<li><a href="#eef9">Binding Templates</a>
+<ol>
+<li><a href="#85f8">PRs</a></li>
+</ol>
+</li>
+<li><a href="#3ac4">URI vs IRI</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=8ad7 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot/issues/1243">w3c/<wbr>wot#1243</a></p>
+</section>
+
+<section>
+<h3 id=60cb>Minutes review</h3>
+<p id=5dae class=irc><cite>&lt;Ege&gt;</cite> <a href="https://www.w3.org/2025/10/15-wot-td-minutes.html">https://<wbr>www.w3.org/<wbr>2025/<wbr>10/<wbr>15-wot-td-minutes.html</a></p>
+<p id=0428 class="phone s01"><cite>ege:</cite> Please point out only what you disagree with, typos will be addressed later</p>
+<p id=993f class=summary>&lt;no remarks&gt;</p>
+<p id=598f class="phone s01"><cite>ege:</cite> Approved</p>
+</section>
+
+<section>
+<h3 id=eef9>Binding Templates</h3>
+<h4 id=85f8>PRs</h4>
+<p id=2419 class="phone s01"><cite>ege:</cite> We have few PR approved by non-editors, so we should review them now as well</p>
+<p id=f0c3 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-binding-templates/pull/450">w3c/<wbr>wot-binding-templates#450</a></p>
+<p id=ec4c class="phone s01"><cite>ege:</cite> Any remarks?</p>
+<p id=8ecc class=summary>&lt;none&gt;</p>
+<p id=1b44 class="phone s01"><cite>ege:</cite> Merged</p>
+<p id=aaa6 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-binding-templates/pull/446">w3c/<wbr>wot-binding-templates#446</a></p>
+<p id=121e class=irc><cite>&lt;cris&gt;</cite> good to go +1</p>
+<p id=9dc9 class="phone s01"><cite>ege:</cite> Any remarks?</p>
+<p id=940d class=summary>&lt;none&gt;</p>
+<p id=1f44 class="phone s01"><cite>ege:</cite> Merged</p>
+</section>
+
+<section>
+<h3 id=3ac4>URI vs IRI</h3>
+<p id=5471 class=irc><cite>&lt;Ege&gt;</cite> lb: to sum it up, we reached consensus that we can use URIs. Whoever needs IRI-like strings, they encode</p>
+<p id=3e2c class=irc><cite>&lt;Ege&gt;</cite> ek: correct</p>
+<p id=c3b2 class="phone s01"><cite>ege:</cite> We'd have a theoretical breaking change</p>
+<p id=f2bd class="phone s02"><cite>lb:</cite> to sum it up, we reached consensus that we can use URIs. Whoever needs IRI-like strings, they encode</p>
+<p id=2404 class="phone s01"><cite>ege:</cite> correct</p>
+<p id=094b class="phone s02"><cite>lb:</cite> We can also consider it a profile problem, but for 2.0 we can just break and have a clean reference to URI</p>
+<p id=8a98 class="phone s03"><cite>dape:</cite> we have `base` and `href` using different types?</p>
+<p id=bf23 class="phone s01"><cite>ege:</cite> They are both anyURI, the text description is referencing URI, IRI and the URI RFC</p>
+<p id=a837 class="phone s03"><cite>dape:</cite> We use href in two places, we should make sure we update all the places</p>
+<p id=b255 class="phone s04"><cite>cris:</cite> Is joining IRIs having the same rules as URI ?</p>
+<p id=8289 class="phone s05"><cite>lu:</cite> yes</p>
+<p id=28c6 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/">https://<wbr>www.w3.org/<wbr>TR/<wbr>2012/<wbr>REC-xmlschema11-2-20120405/</a></p>
+<p id=defd class="phone s05"><cite>lu:</cite> We can break the xml tradition and have strict URI, since we have consensus for it, or we can go the profile way</p>
+<p id=c7dc class="phone s01"><cite>ege:</cite> Profiles would have quite a bit of trouble to restrict that</p>
+<p id=bf60 class="phone s05"><cite>lu:</cite> We can stay with URI and avoid troubles</p>
+<p id=65bc class="phone s06"><cite>mahda:</cite> Ontologies use IRI, are we fine with restrict? what about jsonschema?</p>
+<p id=237d class="phone s05"><cite>lu:</cite> in any case IRI and URL parser would deal with %encoded uri</p>
+<p id=ad09 class="phone s03"><cite>dape:</cite> We should allow non-ascii string</p>
+<p id=bc38 class="phone s05"><cite>lu:</cite> then we do not have consensus?</p>
+<p id=ca8e class="phone s07"><cite>mn:</cite> the Consumers will reject the uri scheme if they don't support it. Like a browser cannot use mailto: and will open email client</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/b:/lb:/</p>
+<p class=warning>Maybe present: cris, dape, ege, lb, lu, mahda, mn</p>
+<p class=warning>All speakers: cris, dape, ege, lb, lu, mahda, mn</p>
+<p class=warning>Active on IRC: cris, dape, Ege, luca_barbato, mahda7</p>
+</div>
+</body>
+</html>

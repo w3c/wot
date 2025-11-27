@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 09 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+WoT Thing Description</h1>
+<h2>09 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/09-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Daniel_Peintner, Ege_Korkan, Kunihiko_Toumura, Mahda_Noura, Michael_Koster, Tomoaki_Mizushima</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan, Michael_Koster</dd>
+<dt>Scribe</dt><dd>mjk</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#44ee">Meeting recording</a></li>
+<li><a href="#58e3">Minutes review</a></li>
+<li><a href="#8cd4">Toolchain updates</a></li>
+<li><a href="#23e1">Sync with the Architecture specification</a></li>
+<li><a href="#61ee">Common definitions</a>
+<ol>
+<li><a href="#096e">PR# 2154</a></li>
+</ol>
+</li>
+<li><a href="#eed0">PRs</a>
+<ol>
+<li><a href="#16bb">PR #444 - Prettier support</a></li>
+<li><a href="#acca">PR# 40 on the Binding Registry</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=44ee>Meeting recording</h3>
+<p id=51cc class="phone s01"><cite>ege:</cite> We need to figure out how to create minutes from the meetings to review</p>
+</section>
+
+<section>
+<h3 id=58e3>Minutes review</h3>
+<p id=7e8e class="phone s01"><cite>ege:</cite> Minutes from October 1st were not generated</p>
+</section>
+
+<section>
+<h3 id=8cd4>Toolchain updates</h3>
+<p id=352e class="phone s02"><cite>Mahda:</cite> We would like to revise the work on the toolchain</p>
+<p id=d96a class="phone s01"><cite>ege:</cite> We need to work on the linkml<br>
+<span id=57f4>… We need to do modeling, post processing, and testing</span><br>
+<span id=7a60>… and fix issues with the current JSON-LD context</span></p>
+</section>
+
+<section>
+<h3 id=23e1>Sync with the Architecture specification</h3>
+<p id=0c83 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/issues/2151">w3c/<wbr>wot-thing-description#2151</a></p>
+<p id=2e4a class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/blob/main/planning/work-items/other-documents-sync/arch.md">https://<wbr>github.com/<wbr>w3c/<wbr>wot-thing-description/<wbr>blob/<wbr>main/<wbr>planning/<wbr>work-items/<wbr>other-documents-sync/<wbr>arch.md</a></p>
+<p id=3017 class="phone s01"><cite>ege:</cite> we need to split up the remaining assertions as we did earlier</p>
+<p id=f8b9 class="phone s01"><cite>ege:</cite> (sorting assertions to group them for people to work on)<br>
+<span id=4510>… (assigned to dape, Toumura-san, ege, and mjk)</span></p>
+</section>
+
+<section>
+<h3 id=61ee>Common definitions</h3>
+<p id=09bc class="phone s01"><cite>ege:</cite> Issue # 2153 feedback from CG meeting<br>
+<span id=e418>… Does anyone here have input from the CG meeting?</span></p>
+<h4 id=096e>PR# 2154</h4>
+<p id=c928 class="phone s01"><cite>ege:</cite> the issue is when a thing has multiple IP addresses<br>
+<span id=4bd1>… there are multiple base addresses</span></p>
+<p id=9d55 class="phone s03"><cite>dape:</cite> how is the validation done outside JSON-Schema? We will need external tooling</p>
+<p id=3fa1 class="phone s01"><cite>ege:</cite> agree<br>
+<span id=391a>… we would need to keep a list of identifiers during the processing</span></p>
+<p id=8766 class="phone s02"><cite>mahda:</cite> This example is OK for different connections; will it also work for other cases?</p>
+<p id=eb8a class="phone s01"><cite>ege:</cite> different security, different operations, modbus endian-ness will all work</p>
+<p id=bc96 class="phone s01"><cite>ege:</cite> another case is when we want to reuse the forms<br>
+<span id=7feb>… we allow creation of hierarchy of definitions to avoid duplication</span><br>
+<span id=fae5>… any comments?</span></p>
+<p id=6b5b class="phone s01"><cite>ege:</cite> we need to add more examples<br>
+<span id=fc0d>… multiple protocols</span><br>
+<span id=04f6>… mapping operations, for example GET/POST/PUT</span><br>
+<span id=9053>… also Modbus where we need to specify all the parameters</span></p>
+<p id=69a5 class="phone s03"><cite>dape:</cite> default content type with multiple content types</p>
+<p id=333e class="phone s01"><cite>ege:</cite> we need more examples where there are exceptions to the default<br>
+<span id=8cf1>… Does anyone have more cases to add?</span></p>
+</section>
+
+<section>
+<h3 id=eed0>PRs</h3>
+<h4 id=16bb>PR #444 - Prettier support</h4>
+<p id=2916 class="phone s01"><cite>ege:</cite> is it OK, Daniel?</p>
+<p id=bbfd class="phone s01"><cite>ege:</cite> there was a problem with a newer version that added whitespace and confused github actions</p>
+<p id=3dc3 class="phone s03"><cite>dape:</cite> OK</p>
+<p id=23e5 class="phone s01"><cite>ege:</cite> (merged)</p>
+<h4 id=acca>PR# 40 on the Binding Registry</h4>
+<p id=951b class="phone s01"><cite>ege:</cite> same fix, is it OK?</p>
+<p id=2afd class="phone s01"><cite>ege:</cite> (merged)</p>
+<p id=154c class="phone s01"><cite>ege:</cite> That's all for today</p>
+<p id=7b6f class="phone s01"><cite>ege:</cite> Adjourned</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/endin/endian/</p>
+<p class=warning>Succeeded: s/MO/Mo/</p>
+<p class=warning>Succeeded: s/TH/Th/</p>
+<p class=warning>Succeeded: s/rssagent, draft minutes//</p>
+<p class=warning>Maybe present: dape, ege, Mahda</p>
+<p class=warning>All speakers: dape, ege, Mahda</p>
+<p class=warning>Active on IRC: dape, Ege, Mahda, mjk</p>
+</div>
+</body>
+</html>
