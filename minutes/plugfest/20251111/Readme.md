@@ -4,7 +4,9 @@
 Joshua Thomas (Ignite Retail Technology), Denis Ioan (ArmorSafe), Ege Korkan (Siemens), Tomoaki Mizushima (IRI), Michael Robinson (ArmorSafe), Piotr Sowinski (NeverBlink), Sebastian Kaebisch (Siemens), Kunihiko Toumura (Hitachi), Tetsuhiko Hirata (Hitachi), Takahiro Aritaki (Internet Academy), David Ezell (Conexxus), Cu Pham (ECHONET), Brian McManus (Ignite Retail Technology), Mahda Noura (Siemens), Kaz Ashimura (Nagasaki University), Nayef Alawadhi (Nawat, W3C)
 
 Regrets: 
+
 Chair: Sebastian
+
 Scribe: Sebastian, all
 
 ## Logistics
