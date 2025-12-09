@@ -1,16 +1,18 @@
 # WoT PlugFest Minutes 09.11.2025, 1-6pm
 
 
-# Attendees
+## Attendees
 Brian McManus (Ignite Retail Technology),  Joshua Thomas (Ignite Retail Technology), David Ezell (Conexxus), Kunihiko Toumura (Hitachi), Ege Korkan (Siemens), Sebastian Kaebisch (Siemens), Denis Ioan (ArmorSafe), Michael Robinson (ArmorSafe), Kaz Ashimura (Nagasaki University), Cu Pham (ECHONET), Tomoaki Mizushima (IRI)
 
 Presents:
     
 Regrets: 
+
 Chair: Sebastian
+
 Scribe: Sebastian, all
 
-# Logistics
+## Logistics
 
 Zoom Link
 https://w3c.zoom.us/j/81402345014?pwd=uX2HqibWTyEBcerTXDzjvi9sdIBFBF.1
@@ -25,7 +27,7 @@ SSID: NextSmartSystems
 Psw: Loki44310448!
 
 
-# Agenda:
+## Agenda:
 
 1. Welcome
 
@@ -36,7 +38,7 @@ Psw: Loki44310448!
 4. Topic check: https://github.com/w3c/wot-testing/tree/main/events/2025.11.Kobe
 
 
-# Minutes
+## Minutes
 
 SK: PlugFest start delayed. Room 307 will be prepeared. Expecting starting time 2:30pm. 
 ... currently there are network problems with the TPAC Wifi
