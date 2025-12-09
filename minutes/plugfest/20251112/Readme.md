@@ -138,7 +138,6 @@ Demo is shown with the POS.
 
 David: I'm going to show you about IGNITE. 
 
-
 Kunihiko Toumura: how to facilitate mashups by integrating WoT-Discovery and Generative AI
 Presented slides: https://github.com/w3c/wot-testing/blob/main/events/2025.11.Kobe/TD/Hitachi/2025-11-12-Plugfest-outcome-ktoumura.pdf
 Device onboarding in WoT systems, our WoT WG is for interoperability platform based on TD. Automatic TD generation from device documentation. 
@@ -173,26 +172,30 @@ The next one is even a more fantastic demo. He shows the second demo with the mu
 
 
 Piotr: 
+
 Presented slides: tbd
-    We are a startup building RDF streaming. Some parts of this are open source you can use, called Jelly. Some are still on the way. I'm new to WoT. When I heard about it and thought of integrating it in our solutions. 
-    The nice thing about the WoT is that I dont need to read the device manuals, I can just use the TD.
-    I also want to be able to learn about the semantics. Out of our semantics magically comes the knowledge graph. Then you can use SPARQL quries. 
-    I tried the TDs provided by ECHONET. 
-    It provides the properties and some minimal semantics encoded. I will be using those, it's JSON-LD.
-    I provided two pipelines, it allows you to define the RDF stream, how often I want to poll it, and the properties I want, I also tell it the schema like Saref. 
-    
-    In the second pipeline, I publish it to an MQTT broker. I could have also done something like SPARQL or SHACL validation. 
-    
-    Here is the output. We put it in a saref observation, provide the unit of measurement, timestamp and so on.
-    The same thing also works for the ceiling light, we poll it every 5sec. For me the advantage was zero configuration. We can scale this to any number of protocols, OPC UA, modbus and so on. 
-    Preserves data semantics. 
-    
-    Sebastian: If there are any Question. 
-    
-   Vincet Sheib:  Very interesting work, is the WG do any work to connect to the browser and connect to the Web of Things?
-    Sk: It depends on the procols that are used. It becomes difficult when you use non-Web protocols. It would be nice if the browser support more protocols. We have to fight the cross-origins. A gateway is required. We are open for this and at the moment we don't have a solution but we are willing to . 
+
+We are a startup building RDF streaming. Some parts of this are open source you can use, called Jelly. Some are still on the way. I'm new to WoT. When I heard about it and thought of integrating it in our solutions. 
+The nice thing about the WoT is that I dont need to read the device manuals, I can just use the TD.
+I also want to be able to learn about the semantics. Out of our semantics magically comes the knowledge graph. Then you can use SPARQL quries. 
+I tried the TDs provided by ECHONET. 
+It provides the properties and some minimal semantics encoded. I will be using those, it's JSON-LD.
+I provided two pipelines, it allows you to define the RDF stream, how often I want to poll it, and the properties I want, I also tell it the schema like Saref. 
+
+In the second pipeline, I publish it to an MQTT broker. I could have also done something like SPARQL or SHACL validation. 
+
+Here is the output. We put it in a saref observation, provide the unit of measurement, timestamp and so on.
+The same thing also works for the ceiling light, we poll it every 5sec. For me the advantage was zero configuration. We can scale this to any number of protocols, OPC UA, modbus and so on. 
+Preserves data semantics. 
+
+Sebastian: If there are any Question. 
+
+Vincet Sheib:  Very interesting work, is the WG do any work to connect to the browser and connect to the Web of Things?
+
+Sk: It depends on the procols that are used. It becomes difficult when you use non-Web protocols. It would be nice if the browser support more protocols. We have to fight the cross-origins. A gateway is required. We are open for this and at the moment we don't have a solution but we are willing to . 
 
 Discussion: Sylvia Cadena: She wants to follow up with us to discuss how they can help us push WoT to policy makers, so they better understand it. 
+
 Disussion: Vincet Sheib - Protocols in the browser
 
 
