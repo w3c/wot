@@ -57,13 +57,21 @@ Psw: Loki44310448!
 
 ## Minutes
 Mahda: focusing on the TD tooling, how to create ontologies. also focuisng on protocol bindings
+
 Will: just observing WoT. Located in London. here to learn more
+
 Piotr: CTO from Neverblink from Poland. try to integrate WoT Thing Description
+
 Charith: Im from Sri Lanka and with Cardiff University. We have a smart home lab. Testing network behavoir and try to apply LLM. Try to find out the relevance of WoT for it. 
+
 Josh: ArmorSafe is with Conexxus consortia. Using WoT Thing Description in the Conexxus standard and apply it to cashier system as example. We also invovled in other groups such in Web Payment WG
+
 Phan: I'm with ECHONET. Standard from Japan. Combine ECHONET and Web of Things. I have different devices with me. Remotely there is also a smart home lab.
+
 Kunihiko: I'm from Hitachi. I like to connect to other things via a MCP server approach.
+
 Ege: Will testing some new TD 2.0 features. 
+
 Sebastian: do some OPC UA testing. We want to publish the new companion standard soon
 
     github material: https://github.com/w3c/wot-testing/tree/main/events/2025.11.Kobe/TD/OPC%20UA
@@ -86,6 +94,7 @@ Sebastian: do some OPC UA testing. We want to publish the new companion standard
 
  
  Related activity by Kensaku Komatsu, Sync on the Web CG
+ 
  * slide : https://nttcom.app.box.com/s/jm1c4o0v2qb3geppy73hboqjhd2w5tlu
  * demo movie : DMX Synchronized Song "Angle Brackes Rise" https://nttcom.box.com/s/in7pki6cnjb1qiceh0ff6hgbhbuoevat
  
