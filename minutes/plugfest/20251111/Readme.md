@@ -65,10 +65,12 @@ Sebastian: lets spend some time in the afternoon to talk about the breakout sess
 
 <lunch break until 2pm>
 
-------------------------------------------------------------------------------------------------------------------------
 Propsed plan for the demo session tomorrow (5:30-6:30pm; room 307; floor 3):
+
 Agenda:
+
     1. Welcome
+    
     2. Presentation about WoT (Sebastian; 10min)
 
         give an overview about Kobe PlugFest
@@ -107,10 +109,10 @@ Agenda:
     Lets prepeare the room 2h before. Please also send the slides to Sebastian at least 2 hours in advance.
 
 
-------------------------------------------------------------------------------------------------------------------------
+Josh: today, I developed an UI interface that can imort all TDs of the devices used here in the PlugFest.
 
-Josh: today, I developed an UI interface that can imort all TDs of the devices used here in the PlugFest. 
 <Josh shows the tool>
+    
 Kunihiko: one devices uses also WebSocket protocol
 
 
