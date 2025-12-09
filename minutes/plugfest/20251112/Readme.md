@@ -38,7 +38,9 @@ Mohammad Saleem
 Torumamm Hashi
 
 Regrets: 
+
 Chair: Sebastian
+
 Scribe: Mahda, all
 
 ## Logistics
