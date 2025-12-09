@@ -44,14 +44,24 @@ SK: PlugFest start delayed. Room 307 will be prepeared. Expecting starting time 
 ... currently there are network problems with the TPAC Wifi
 
 Ege: writing some tests for the new TD2.0 features 
+
 Brian: do some ArmorSafe use cases
+
 Josh: working on Conexxus standard, combine it with WoT standard. Do some testing. Have some special hardware with us. Cashier machine
+
 Denis: bring different hardware. Testing new functionalities. Testing the WebThing protocol. 
+
 David: see a lot of promissing with WoT such as Discovery. Combining Thing Description with data directory (based on MCP server)
+
 Michael: see big potential in the Conexxus standard and WoT. A perfect combination. 
+
 Tomoaki: Im intersted in the use cases
+
 Pham: bring ECHONET devices with WoT. Devices represents a real home.
+
 Kaz: former WoT team contact. Supporting Pham with ECHONET
+
 Toumura: bring a MCP server which is created from WoT Thing Description
+
 Sebastian: will test OPC UA binding. Security is still an open question, I will test some options this week.
 
