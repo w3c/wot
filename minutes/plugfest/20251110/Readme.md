@@ -4,7 +4,9 @@
 Joshua Thomas (Ignite Retail Technology), Denis Ioan (ArmorSafe), Ege Korkan (Siemens), Tomoaki Mizushima (IRI), Kunihiko Toumura (Hitachi), Cu Pham (ECHONET), Mahda Noura (Siemens), Sebastian Kaebisch (Siemens), Piotr Sowinski (NeverBlink), Will Abramson (Legendary Requirements), Michael Robinson (ArmorSafe), Charith Perera (Cardiff University, Invited Expert), Kensaku Komatsu (NTT inc), Kaz Ashimura (Nagasaki University), David Ezell (Conexxus), Manu Sporny (Digital Bazaar), Brian McManus (Ignite Retail Technology)
     
 Regrets: 
+
 Chair: Sebastian
+
 Scribe: Sebastian, all
 
 ## Logistics
