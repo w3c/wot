@@ -94,7 +94,7 @@ Cris: I quickly reviewed before the call. Probably the variables mechanism need 
 
 Ege: it would be good to still document this examples
 
-Ege: there are some people that is doing matematical operations using custom keywords. 
+Ege: there are some people that is doing mathematical operations using custom keywords. 
 
 ### Registry 
 
