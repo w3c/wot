@@ -88,7 +88,7 @@ Ege: we need to generate the Ids of each assertions (it needs to be static).
 
 Mahda: I'll look into this. 
 
-### Managiable affordances and Data mapping
+### Manageable affordances and Data mapping
 
 Cris: I quickly reviewed before the call. Probably the variables mechanism need to be reviewed. 
 
