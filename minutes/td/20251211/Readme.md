@@ -66,7 +66,7 @@ Mahda: I finished doing the core vocabulary definitions. I also implemented a me
 
 Ege: ActionAffordance should be a cross referencing. 
 
-Mahda: data schema table is now ready a part of the assigment of default types. 
+Mahda: data schema table is now ready a part of the assignment of default types. 
 
 Cris: can you make an example?
 
