@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 15 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>WoT Thing Description</h1>
+<h2>15 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/15-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Daniel_Peintner, Ege_Korkan, Klaus_Hartke, Kunihiko_Toumura, Luca_Barbato, Mahda_Noura, Tomoaki_Mizushima</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan</dd>
+<dt>Scribe</dt><dd>dape</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#6be8">Minutes</a></li>
+<li><a href="#fcf4">Quick Schedule</a>
+<ol>
+<li><a href="#3c77">URI vs IRI</a></li>
+</ol>
+</li>
+<li><a href="#e216">Common definitions</a></li>
+<li><a href="#46c8">Bindings</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=6be8>Minutes</h3>
+<p id=d573 class=summary><a href="https://www.w3.org/2025/10/08-wot-td-minutes.html">https://<wbr>www.w3.org/<wbr>2025/<wbr>10/<wbr>08-wot-td-minutes.html</a></p>
+<p id=83f1 class="phone s01"><cite>EK:</cite> Minutes from Wednesday are approved</p>
+</section>
+
+<section>
+<h3 id=fcf4>Quick Schedule</h3>
+<h4 id=3c77>URI vs IRI</h4>
+<p id=f939 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/issues/2156">w3c/<wbr>wot-thing-description#2156</a></p>
+<p id=9dee class="phone s01"><cite>EK:</cite> Issue come out of an OPC-UA discussion</p>
+<p id=d19c class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/eclipse-thingweb/node-wot/tree/master/packages/binding-opcua#getting-started">https://<wbr>github.com/<wbr>eclipse-thingweb/<wbr>node-wot/<wbr>tree/<wbr>master/<wbr>packages/<wbr>binding-opcua#getting-started</a></p>
+<p id=8614 class="phone s01"><cite>EK:</cite> the URI schema for OPC-UA contains s= meaning a string<br>
+<span id=79b4>… protocol allows any string which is UTF8 encoded</span><br>
+<span id=ffff>… technically possible</span><br>
+<span id=883b>… can contain German Umlaut or Japanese characters</span><br>
+<span id=dcae>… we noticed discrepancy</span><br>
+<span id=4b6d>… we reference RFC3986</span><br>
+<span id=0127>… anyURI is IRI</span><br>
+<span id=7881>… both are in normative tables and we have some conflict</span></p>
+<p id=4dfd class="phone s02"><cite>KH:</cite> in href we say IRU and not URI</p>
+<p id=964e class="phone s01"><cite>EK:</cite> Correct<br>
+<span id=a2f2>… I think W3C review asked us to use IRI</span><br>
+<span id=ce97>… but correct, there is a discrepancy</span><br>
+<span id=8435>… IRI parsing not common in code basis</span><br>
+<span id=8f0c>… I found <a href="https://www.w3.org/International/wiki/IRIStatus">https://<wbr>www.w3.org/<wbr>International/<wbr>wiki/<wbr>IRIStatus</a></span></p>
+<p id=6526 class="phone s01"><cite>EK:</cite> We can restrict it per protocol to URIs</p>
+<p id=eb65 class="phone s03"><cite>LB:</cite> Would it be enough to point IRI RFC<br>
+<span id=d952>… saying non ASCII characters are allowed</span><br>
+<span id=761c>… most parsing libraries do work with unicode</span><br>
+<span id=4ddb>… main problem is weird escaping</span><br>
+<span id=7ce1>… DNS had problems with IRI</span><br>
+<span id=9d8e>… we could restrict strings to UTF8</span></p>
+<p id=d393 class="phone s01"><cite>EK:</cite> IRI handling in specific parts only?</p>
+<p id=6a39 class="phone s03"><cite>LB:</cite> yes, but sounds more profile worthy<br>
+<span id=a7f5>… we should review the RFCs</span><br>
+<span id=55cd>… and pick the one that fits our target</span><br>
+<span id=6126>… TD should give freedom</span><br>
+<span id=5d23>… profile can restrict</span></p>
+<p id=b205 class="phone s02"><cite>KH:</cite> We want address resources on the Web<br>
+<span id=ce5f>… we should use Web standards</span><br>
+<span id=bb3a>… we can choose URL, IRI etc</span><br>
+<span id=bf39>… no matter of taste</span><br>
+<span id=c200>… it is about protocol</span><br>
+<span id=ab9b>… protocol driver (HTTP, CoAP) needs to know</span><br>
+<span id=c4d6>… so far URI standard is used</span><br>
+<span id=3d70>… value in href field (or base field) use URI</span></p>
+<p id=1d0b class=irc><cite>&lt;luca_barbato&gt;</cite> Related specifications: <a href="https://url.spec.whatwg.org">https://<wbr>url.spec.whatwg.org</a> <a href="https://www.rfc-editor.org/rfc/rfc3987">https://<wbr>www.rfc-editor.org/<wbr>rfc/<wbr>rfc3987</a></p>
+<p id=7071 class="phone s02"><cite>KH:</cite> w.r.t. to OPC-UA I need to see the ABNF grammar</p>
+<p id=2444 class="phone s01"><cite>EK:</cite> Document is open to members<br>
+<span id=1d8f>… not sure if it contains ABNF</span></p>
+<p id=b3de class="phone s02"><cite>KH:</cite> There should be something<br>
+<span id=ddcf>… saying URI or IRI</span><br>
+<span id=637a>… you cannot say URI standard and put unicode characters in query string</span></p>
+<p id=3d22 class="phone s03"><cite>LB:</cite> We can make it extra flexible<br>
+<span id=388d>… field is UTF8 string and offload it to protocol</span></p>
+<p id=ea17 class="phone s02"><cite>KH:</cite> This cannot work<br>
+<span id=18f7>… because of base</span></p>
+<p id=5914 class="phone s01"><cite>EK:</cite> True<br>
+<span id=5ba6>… unless we indicate in a different way the protocol</span></p>
+<p id=8338 class="phone s02"><cite>KH:</cite> We could get rid of base and href ...<br>
+<span id=e9a0>… and come upo with a combined string per protocol</span><br>
+<span id=91b0>… but it creates major problems</span></p>
+<p id=9209 class="phone s04"><cite>MN:</cite> hypermedia concept claim does no longer make sense also</p>
+<p id=07d9 class="phone s03"><cite>LB:</cite> Easiest thing is to pick the right definittion of href<br>
+<span id=8790>… additional field for anything we cannot support</span></p>
+<p id=bac5 class="phone s02"><cite>KH:</cite> I would go with URI<br>
+<span id=10000>… no huge problem, I think we need a pragmatic solution</span><br>
+<span id=bad9>… for base is correct</span><br>
+<span id=868f>… for href it should be used URI also (currently not the case)</span></p>
+<p id=ec45 class="phone s03"><cite>LB:</cite> Uniform to URI</p>
+<p id=2bda class="phone s02"><cite>KH:</cite> Yes, it should be always been URI<br>
+<span id=7f13>… there are options to support unicode in URI</span><br>
+<span id=ca3a>… we need to better understand the OPC-UA requirements</span></p>
+<p id=7bb2 class="phone s01"><cite>EK:</cite> IRI to URI is in RFC?</p>
+<p id=47e9 class="phone s02"><cite>KH:</cite> Yes, there is a conversion algorithm<br>
+<span id=ceb0>… UTF8 bytes to percentage encoding</span></p>
+<p id=f8b6 class="phone s05"><cite>DP:</cite> the OPCUA binding requires percentage encoding</p>
+<p id=6b9e class="phone s01"><cite>EK:</cite> Not sure</p>
+<p id=4559 class="phone s02"><cite>KH:</cite> We need to check we (or OPCUA) violate the standard</p>
+<p id=cbe6 class="phone s01"><cite>EK:</cite> Let's look at the OPC spec</p>
+<p id=72d3 class="phone s02"><cite>KH:</cite> Next week Wed I cannot join, I can join Thursday</p>
+<p id=0dae class="phone s01"><cite>EK:</cite> Thanks!</p>
+<p id=bf45 class=irc><cite>&lt;egekorkan&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/pull/2154">w3c/<wbr>wot-thing-description#2154</a></p>
+</section>
+
+<section>
+<h3 id=e216>Common definitions</h3>
+<p id=ad15 class=summary><a href="https://github.com/w3c/wot-thing-description/pull/2154">w3c/<wbr>wot-thing-description#2154</a></p>
+<p id=49bf class="phone s01"><cite>EK:</cite> I started the exercise to extend the  examples</p>
+<p id=f47c class=irc><cite>&lt;egekorkan&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/blob/ege-common-definitions-examples/proposals/common-definitions/tooling/tds.js">https://<wbr>github.com/<wbr>w3c/<wbr>wot-thing-description/<wbr>blob/<wbr>ege-common-definitions-examples/<wbr>proposals/<wbr>common-definitions/<wbr>tooling/<wbr>tds.js</a></p>
+<p id=cc47 class="phone s01"><cite>EK:</cite> examples at line 454<br>
+<span id=1f5e>… recommendedTDs</span><br>
+<span id=b2de>… e.g., change from default contentType JSON to cbor etc</span><br>
+<span id=ebbb>… or Modbus with all parameters</span><br>
+<span id=6206>… multi IP addresses</span><br>
+<span id=9d5f>… local vs public security</span></p>
+<p id=ae5f class="phone s01"><cite>EK:</cite> Do you see more useful examples?<br>
+<span id=6b08>… to test this new method</span><br>
+<span id=ea02>… will show it tomorrow in more details</span><br>
+<span id=9942>… please provide feedback in PR</span><br>
+<span id=1c2e>… in PR I summarized also some of my findings</span></p>
+</section>
+
+<section>
+<h3 id=46c8>Bindings</h3>
+<p id=f28d class=irc><cite>&lt;egekorkan&gt;</cite> github.com/w3c/wot-binding-templates/pull/446</p>
+<p id=1214 class=irc><cite>&lt;egekorkan&gt;</cite> <a href="https://github.com/w3c/wot-binding-templates/pull/446">w3c/<wbr>wot-binding-templates#446</a></p>
+<p id=de81 class="phone s01"><cite>EK:</cite> realized some mistakes<br>
+<span id=6f12>… no proper rendering for Modbus</span><br>
+<span id=34c8>… the same stupid error appeared more often</span><br>
+<span id=8d84>… I also updated the authors</span><br>
+<span id=1b6d>… same change everywhere expect Modbus with more changes</span><br>
+<span id=cb8d>… I will wait a bit for feedback</span></p>
+<p id=73eb class="phone s02"><cite>KH:</cite> Wonder why S has been removed in general</p>
+<p id=133e class="phone s01"><cite>EK:</cite> We started off with S and changed later on<br>
+<span id=249d>… due to W3C feedback</span></p>
+<p id=99bc class="phone s02"><cite>KH:</cite> I see</p>
+<p id=4beb class="phone s02"><cite>KH:</cite> IANA uses plural and W3C seems to use singular</p>
+<p id=f053 class=summary>[adjourned]</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/EK: IANA/KH: IANA</p>
+<p class=warning>Maybe present: DP, EK, KH, LB, MN</p>
+<p class=warning>All speakers: DP, EK, KH, LB, MN</p>
+<p class=warning>Active on IRC: dape, Ege, egekorkan, luca_barbato, Mahda, MIzushima</p>
+</div>
+</body>
+</html>

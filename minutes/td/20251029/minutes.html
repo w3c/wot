@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>WoT Thing Description &ndash; 29 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>WoT Thing Description</h1>
+<h2>29 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/29-wot-td-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Cristiano_Aguzzi, Daniel_Peintner, Ege_Korkan, Kunihiko_Toumura, Tomoaki_Mizushima</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Ege_Korkan</dd>
+<dt>Scribe</dt><dd>dape</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#b25d">Minutes</a></li>
+<li><a href="#638d">Publication Schedule</a></li>
+<li><a href="#fea3">TD SpecWork</a>
+<ol>
+<li><a href="#b25b">Common Definitions</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=b25d>Minutes</h3>
+<p id=f113 class=summary><a href="https://www.w3.org/2025/10/22-wot-td-minutes.html">https://<wbr>www.w3.org/<wbr>2025/<wbr>10/<wbr>22-wot-td-minutes.html</a></p>
+<p id=20cc class="phone s01"><cite>EK:</cite> Minutes look good -&gt; approved</p>
+</section>
+
+<section>
+<h3 id=638d>Publication Schedule</h3>
+<p id=fc1c class="phone s01"><cite>EK:</cite> Only blocker is namespace issue<br>
+<span id=abe3>… Dave talks with PLH</span></p>
+<p id=1905 class="phone s02"><cite>CA:</cite> Scripting API plans an update soon also</p>
+<p id=5dd4 class="phone s01"><cite>EK:</cite> You can go ahead... but not sure how long it will take</p>
+</section>
+
+<section>
+<h3 id=fea3>TD SpecWork</h3>
+<h4 id=b25b>Common Definitions</h4>
+<p id=c43e class="phone s01"><cite>EK:</cite> Minor additions compared to last week<br>
+<span id=632b>… see <a href="https://github.com/w3c/wot-thing-description/pull/2154/files">https://<wbr>github.com/<wbr>w3c/<wbr>wot-thing-description/<wbr>pull/<wbr>2154/<wbr>files</a></span><br>
+<span id=7d95>… one example added with protocol defaults</span><br>
+<span id=417b>… doing nothing means protocol defaults are in place</span><br>
+<span id=a323>… I created 3 issues</span></p>
+<p id=c81e class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/issues/2161">w3c/<wbr>wot-thing-description#2161</a></p>
+<p id=2025 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/issues/2160">w3c/<wbr>wot-thing-description#2160</a></p>
+<p id=1fd6 class=irc><cite>&lt;Ege&gt;</cite> <a href="https://github.com/w3c/wot-thing-description/issues/2159">w3c/<wbr>wot-thing-description#2159</a></p>
+<p id=5c56 class="phone s01"><cite>EK:</cite> issues are results of last weeks discussion</p>
+<p id=4472 class="phone s01"><cite>EK:</cite> 2159 is about what we agreed up on last week<br>
+<span id=af9f>… Consensus to turn connection in array</span><br>
+<span id=b176>… array is OR relationship</span><br>
+<span id=a951>… same semantics as in OpenAPI with security</span><br>
+<span id=1181>… I suggest proposing the change as a separate PR (as a follow-up)</span></p>
+<p id=0424 class="phone s02"><cite>CA:</cite> I like the approach<br>
+<span id=aeb6>… but I have a concern/question</span><br>
+<span id=d999>… single form entries get expanded</span><br>
+<span id=7272>… what about absolute hrefs</span><br>
+<span id=e09a>… do we expand them as well?</span></p>
+<p id=b60d class="phone s01"><cite>EK:</cite> If the information is present, you should stick with it<br>
+<span id=db47>… I see the problem with the algorithm</span></p>
+<p id=006e class="phone s02"><cite>CA:</cite> Exactly<br>
+<span id=8322>… one can go item by item</span></p>
+<p id=7b15 class="phone s01"><cite>EK:</cite> Local scope has priority</p>
+<p id=6c9b class="phone s02"><cite>CA:</cite> I see, but it is expanded and I end up having the same twice</p>
+<p id=a8aa class=summary>&lt;live testing/exploration&gt;</p>
+<p id=9e4a class="phone s03"><cite>DP:</cite> Is it creating an issue or just a bad looking TD ?</p>
+<p id=e668 class="phone s02"><cite>CA:</cite> Causes issues with indexing</p>
+<p id=3b00 class="phone s02"><cite>CA:</cite> I see the problem not only with base but other terms might cause problems</p>
+<p id=7361 class="phone s04"><cite>TM:</cite> Has connection priority?<br>
+<span id=c412>… connection definition has ipv4 and ipv6</span></p>
+<p id=fd47 class="phone s01"><cite>EK:</cite> No priority<br>
+<span id=0734>… &quot;connectionDefinitions&quot; just defines it while &quot;connection&quot; uses it</span></p>
+<p id=f766 class="phone s04"><cite>TM:</cite> I think there are network rules<br>
+<span id=4abf>… at first I would like to see ipv4 for example</span></p>
+<p id=0a04 class="phone s01"><cite>EK:</cite> For now, the client can choose<br>
+<span id=2eb3>… so far the client can have it own logic</span></p>
+<p id=e6a3 class="phone s04"><cite>TM:</cite> Not sure if &quot;connection&quot; is necessary</p>
+<p id=b6f1 class="phone s01"><cite>EK:</cite> If you don't put it ... you have to do it over and over again<br>
+<span id=edb7>… we want to avoid that situation</span></p>
+<p id=9545 class="phone s02"><cite>CA:</cite> we have the freedom  where to put it</p>
+<p id=5a76 class="phone s01"><cite>EK:</cite> I will note the comment in the issue</p>
+<p id=898d class="phone s01"><cite>EK:</cite> Need to go, tomorrow is normal session</p>
+<p id=2cd2 class=summary>[adjourned]</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Maybe present: CA, DP, EK, TM</p>
+<p class=warning>All speakers: CA, DP, EK, TM</p>
+<p class=warning>Active on IRC: cris, dape, Ege, Mizushima</p>
+</div>
+</body>
+</html>
