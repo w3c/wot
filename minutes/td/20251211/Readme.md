@@ -70,7 +70,7 @@ Mahda: data schema table is now ready a part of the assignment of default types.
 
 Cris: can you make an example?
 
-Mahda: for example the readOnly has a default. Only in spec but not in jsonschema. Now I'm in security vocabulary defintions. I'm currently evaluating if the generated text matches the current spec. 
+Mahda: for example the readOnly has a default. Only in spec but not in jsonschema. Now I'm in security vocabulary definitions. I'm currently evaluating if the generated text matches the current spec. 
 
 Daniel: how do we cross check? In the end, what should do? is there a plan to make a good automated test? 
 
