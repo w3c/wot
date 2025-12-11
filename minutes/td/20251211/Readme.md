@@ -62,7 +62,7 @@ Ege: I leave it for review
 
 ### Tooling Updates
 
-Mahda: I finished doing the core vocubulary definitions. I also implemented a mechanism to opt-out cross referencing. Now same concepts can have a more specific description if they are used in other places. You can also define notes. 
+Mahda: I finished doing the core vocabulary definitions. I also implemented a mechanism to opt-out cross referencing. Now same concepts can have a more specific description if they are used in other places. You can also define notes. 
 
 Ege: ActionAffordance should be a cross referencing. 
 
