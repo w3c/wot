@@ -1,12 +1,48 @@
 # Web of Things (WoT) Policy
+
 ## Minutes
-- During each WoT main call or WoT TF call,
-  there will be an opportunity for corrections to be made to the draft minutes of previous calls.
-- Draft minutes will be made available at a URL of the form <code>https://www.w3.org/yyyy/mm/dd-wot-minutes.html</code>
-  not less than 48 hours before each call (for the main call) and similar forms for TF calls.
-- We will generally NOT review minutes in calls unless a group member mentions a need for a correction.
-- It is the responsibility of group members to review minutes prior to each call.
-    - The chairs in particular must review the minutes of the main call, and task force leads are responsible for reviewing the minutes of task forces.
-- For exceptional (non-repeating) meetings, such as testfests, plugfests, and planning meetings, minutes will be confirmed in the main call.
-    - Generally, unless a need for correction is raised, time will not be spend in the main call reviewing such minutes.
-    - In these cases an email should be sent out prior to the main call with links to the minutes at least 48 hours in advance.
+
+This policy applies to each WoT main call or WoT TF call,
+
+- An Etherpad link is created for each meeting or a set of meetings (e.g. one Etherpad for two TD Calls in a week)
+- At the end of the meeting, the scribe clicks on the star button to create a snapshot for that day.
+- The TF lead creates a PR in the https://github.com/w3c/wot repository right after the meeting (or set of meetings) .
+- The file path of minutes is `minutes/TASKFORCE/DDMMYYY/Readme.md`
+- The minutes are saved as a Markdown file for easy rendering on GitHub.
+- The attendees, scribe, and what the attendees have said must be recorded.
+- The minutes are written in Markdown format even though they are written in Etherpad. The template below is to be used.
+
+```md
+# WoT TASKFORCE Call - DD MONTH YEAR
+
+## Meeting Information
+
+### Attendees
+
+- NAME SURNAME
+- NAME SURNAME
+
+### Scribe
+
+NAME SURNAME
+
+## Minutes
+
+### Topic1
+
+foo:
+bar:
+
+### Topic1
+
+#### Subtopic1
+
+foo:
+bar:
+```
+
+
+Requirements in general:
+
+- Minutes MUST be made public right after a meeting, i.e. not waiting for review.
+- Change history MUST be kept
