@@ -4,7 +4,7 @@
 
 This policy applies to each WoT main call or WoT TF call,
 
-- An Etherpad link is created for each meeting or a set of meetings (e.g. one Etherpad for two TD Calls in a week)
+- An Etherpad link is created for each meeting or a set of meetings (e.g., one Etherpad for two TD Calls in a week)
 - At the end of the meeting, the scribe clicks on the star button to create a snapshot for that day.
 - The TF lead creates a PR in the https://github.com/w3c/wot repository right after the meeting (or set of meetings) .
 - The file path of minutes is `minutes/TASKFORCE/DDMMYYY/Readme.md`
@@ -44,5 +44,5 @@ bar:
 
 Requirements in general:
 
-- Minutes MUST be made public right after a meeting, i.e. not waiting for review.
+- Minutes MUST be made public right after a meeting, i.e., not waiting for review.
 - Change history MUST be kept
