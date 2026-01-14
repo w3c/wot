@@ -26,6 +26,11 @@ This policy applies to each WoT main call or WoT TF call,
 
 NAME SURNAME
 
+### Agenda
+
+LINK TO THE AGENDA
+(Example: https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf#January_15%2C_16_2026)
+
 ## Minutes
 
 ### Topic1
