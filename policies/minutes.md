@@ -9,7 +9,8 @@ This policy applies to each WoT main call or WoT TF call,
 - The TF lead creates a PR in the https://github.com/w3c/wot repository right after the meeting (or set of meetings).
 - The file path of minutes is `minutes/TASKFORCE/YYYYMMDD/Readme.md`
 - The minutes are saved as a Markdown file for easy rendering on GitHub.
-- The attendees, scribe, and what the attendees have said must be recorded.
+- The attendees, scribe, and what the attendees have said must be recorded (not word-for-word
+as in a transcript, but paraphrased sufficiently to carry each speaker's meaning).
 - The minutes are written in Markdown format even though they are written in Etherpad. The template below is to be used.
 
 ```md
