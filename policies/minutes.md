@@ -14,7 +14,7 @@ as in a transcript, but paraphrased sufficiently to carry each speaker's meaning
 - The minutes are written in Markdown format even though they are written in Etherpad. The template below is to be used.
 
 ```md
-# WoT TASKFORCE Call - DD MONTH YEAR
+# WoT TASKFORCE Call - DD Month YYYY (e.g., 21 January 2026)
 
 ## Meeting Information
 
