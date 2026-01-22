@@ -180,7 +180,7 @@ Erich: Gateway: <https://www.waveshare.com/wiki/SX1302_LoRaWAN_Gateway_HA>
 … Software Stack: <https://www.beyondlogic.org/lorawan-upgrading-to-basic-station-and-the-things-network-v3-stack/>  
 <https://wiki.dragino.com/xwiki/bin/view/Main/User%20Manual%20for%20LoRaWAN%20End%20Nodes/LHT65N%20LoRaWAN%20Temperature%20%26%20Humidity%20Sensor%20Manual/#H2.4.2BAT-BatteryInfo>  
 <https://github.com/lorabasics/basicstation>  
-Michael: Two layers, radio and network gateway.  
+Michael: Two layers: radio and network gateway.  
 Erich: I created two TDs: one for radio provisioning and another one for device onboarding.  
 … You need some fun stuff like mostSignificantByte, bitmask, multiplier.  
 … Similar to Modbus.  
