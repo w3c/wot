@@ -108,7 +108,7 @@ Cris: I still have the work on manageable affordances; once that is done, I can 
 
 ---
 
-## Slot 1 - 05 February 2026
+## Slot 2 - 05 February 2026
 
 ### Meeting Information
 
