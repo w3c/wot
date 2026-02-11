@@ -125,7 +125,7 @@
               End date
             </th>
             <td>
-              <i class="todo">[dd monthname yyyy]</i> (Start date + 2 years)
+              <i class="todo">[dd monthname 2026]</i> (Start date + 2 years)
             </td>
           </tr>
           <tr>
@@ -184,6 +184,19 @@
       blocks enable cross-platform and cross-domain
       interoperability in the IoT.
       </p>
+
+		<p>
+			In addition, this new charter acknowledges the strategic relevance of 
+			Artificial Intelligence (AI) in advancing the objectives of the WoT. 
+			AI will be considered as an enabling technology across selected deliverables, 
+			particularly where it can enhance automation, interoperability, and semantic 
+			consistency. Potential contributions include AI‑assisted generation of WoT Thing 
+			Descriptions, automated mapping of IoT data models to target application domains, and 
+			intelligent support for aligning heterogeneous device capabilities. The charter also 
+			highlights the relevance of AI Agents and the MCP as 
+			emerging mechanisms for dynamic, context‑aware, and interoperable interactions between 
+			WoT systems and AI‑driven services.
+		</p>	  
       </div>
 
       <section id="scope" class="scope">
@@ -193,7 +206,16 @@
       <p>During this charter, the Working Group would work on the
       following:</p>
       <dl>
-        <dt><strong>Support New Use Cases</strong>:</dt>
+        <dt><strong>Increase Descriptiveness of TDs</strong>:</dt>
+        <dd>The WG will work on increasing the descriptive power of
+        TDs to allow using them in additional use cases. This
+        includes describing dynamic resources, historical values
+        (timeseries), better describing payloads, both static and
+        dynamic geolocation information, manageable actions and
+        more precise definitions of data schemas for each type of
+        operation.</dd>
+        <!--
+		<dt><strong>Support New Use Cases</strong>:</dt>
         <dd>Address the requirements of new use cases, such as
         Digital Twins and integration with edge and cloud
         systems.</dd>
@@ -226,7 +248,7 @@
         operation.</dd>
         <dt><strong>Improve Security and Privacy</strong>:</dt>
         <dd>Define modular security vocabularies, simplify the use
-        of security schemes, and other work as appropriate.</dd>
+        of security schemes, and other work as appropriate.</dd>-->
       </dl>
 
         <section id="section-out-of-scope">
@@ -249,7 +271,7 @@
         changes are needed to protocols, the Web of Things Working
         Group will rely on the organization responsible for the
         protocol to make the changes. It is out of scope for the
-        Working Group to standardize such changes itself.</dd>
+        Working Group to standardize such changes itself.</dd>-->
       </dl>
         </section>
 
@@ -260,7 +282,7 @@
           Deliverables
         </h2>
 
-        <p><i class="todo">Updated document status is available on the <a href="https://www.w3.org/groups/wg/wot/publications/">group publication status page</a>. [or link to a page this group prefers to use]</i></p>
+        <!-- <p><i class="todo">Updated document status is available on the <a href="https://www.w3.org/groups/wg/wot/publications/">group publication status page</a>. [or link to a page this group prefers to use]</i></p> -->
 
         <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <span class='todo'>Choose one:</span> <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, or otherwise reach a stable state
           <span class='todo'>The Working Group intends to publish the latest state of their work as Candidate Recommendation (with Snapshots) and does not intend to advance their documents to Recommendation</span>.</p>
@@ -272,6 +294,7 @@
           <p>
             The Working Group will deliver the following W3C normative specifications:
           </p>
+			<!--
           <p class="todo">Consider making a second list for existing specifications that the group will maintain.</p>
           <dl>
             <dt id="web-foo" class="spec"><a href="#"><i class="todo">[new spec name]</i></a></dt>
@@ -339,7 +362,7 @@
             specification published at <a href=
             "https://www.w3.org/TR/wot-discovery/">https://www.w3.org/TR/wot-discovery/</a>,
             as a Proposed Recommendation on 11 July 2023.</p>
-          </dd>
+          </dd> -->
           <dt id="thing-description-deliverable" class="spec">Thing
           Description (Update)</dt>
           <dd>
@@ -362,6 +385,7 @@
             "https://www.w3.org/TR/wot-thing-description11/">https://www.w3.org/TR/wot-thing-description11/</a>,
             as a Proposed Recommendation on 11 July 2023.</p>
           </dd>
+			  <!--
           <dt id="profiles-deliverable" class="spec">Profile</dt>
           <dd>
             <p>This specification defines a profiling mechanism to
@@ -403,46 +427,28 @@
             2025</p>
             <p class="milestone"><b>Expected REC
             Transition:</b>June 2025</p>
-          </dd>
-
-
-
+          </dd> -->
+	  
           </dl>
 
 
         </section>
 
-        <section id="incubation">
-          <!-- If no incubation or not a Working Group, delete the section. -->
-          <h3>
-            Tentative Deliverables
-          </h3>
-          <p>Depending on the incubation progress, interest from multiple implementers, and the consensus
-            of the Group participants, the Working Group may adopt the following documents
-             as Rec-track specifications:</p>
-          <dl>
-            <dt id="web-incubated-foo" class="spec"><a href="#">Web <i class="todo">[spec name]</i></a></dt>
-            <dd>
-              <p>This specification defines <i class="todo">[concrete description]</i>.</p>
-              <p class="draft-status"><b>Draft state:</b>
-                Proposal in <a href=""><i class="todo">[other name]</i> Community Group</a></p>
-            </dd>
-          </dl>
-        </section>
 
         <section id="other-deliverables">
           <h3>
             Other Deliverables
           </h3>
           <p>
-            Other non-normative documents may be created such as:
+            Other non-normative documents may be created or updated such as:
           </p>
           <ul>
             <li>Use case and requirement documents;</li>
-            <li>Test suite and implementation report for the specification;</li>
+            <li>Test suite and implementation report for the specification (tbc)</li>
             <li>Primer or Best Practice documents to support web developers when designing applications.</li>
-          <li id="security-deliverable">Security and Privacy Guidelines (to be published as a W3C Note);</li>
-          <li>Test suite and implementation reports for each specification;</li>
+			<li>Update security requirements in WoT deliverables (tbc)</li>
+          <!-- <li id="security-deliverable">Security and Privacy Guidelines (to be published as a W3C Note);</li> 
+          <li>Test suite and implementation reports for each specification;</li>-->
           <li>WoT Scripting API (W3C Note): This document will present a design for a Scripting API that will support
           exposing and consuming Thing Descriptions while providing
           a high-level interface to interactions that is
@@ -455,11 +461,12 @@
             "https://www.w3.org/TR/2020/NOTE-wot-scripting-api-20201124/">
             Group Note</a>
           </li>
-          <li>Binding Registry to manage specific protocols, Payloads and Ecosystems (W3C Registry): This document specify how
+		 <li>WoT Binding Registry: This document specify how
           protocols and payload formats should be used to allow
           integration of specific classes of IoT systems and
-          ecosystems. (Protocol-specific subdocuments also?)</li>
-
+          ecosystems. (Protocol-specific subdocuments also?).</li>
+		  <li>WoT and AI Agents (to be published as a W3C Note): tbd</li>
+		  <li>WoT [Protocol] Bindings Note (to be published as a W3C Note each): Publish specific protocol bindings such as MQTT, HTTP, Modbus, BACnet, and LoRaWAN for the usage in WoT Thing Description.</li>
           </ul>
         </section>
 
@@ -545,6 +552,14 @@ interoperability can be verified by passing open test suites. In order to advanc
         <section>
           <h3 id="w3c-coordination">W3C Groups</h3>
           <dl>
+			 <dt>
+                  <a href="https://www.w3.org/groups/ig/webai/">Web & AI Interest Group</a>
+              </dt>
+              <dd>tbd</dd>
+              <dt>
+                  <a href="https://www.w3.org/groups/cg/webagents/">Autonomous Agents on the Web Community Group</a>
+              </dt>
+              <dd>tbd</dd>
               <dt>
                   <a href="https://www.w3.org/community/wot/">Web of
                       Things Community Group</a>
