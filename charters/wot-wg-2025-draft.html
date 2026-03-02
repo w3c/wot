@@ -349,7 +349,7 @@
           <p>
             To enhance interoperability implementation, the WoT Working Group develops and maintains registries for WoT Bindings.
           </p>
-			<dt id="thing-description-deliverable" class="spec">WoT Binding Registry</dt>
+			<dt id="wot-binding-registry-deliverable" class="spec">WoT Binding Registry</dt>
           <dd>
             <p>Defines a registry of WoT bindings that make it possible to have a record of the different communication protocol bindings. 
 				Additionally, it sets the rules that govern this registry to guarantee a quality standard, long lifecycle and ease 
@@ -366,37 +366,109 @@
  
         </section>
 		  
-        <section id="other-deliverables">
+        <section id="informative-deliverables">
           <h3>
-            Informative Deliverables
+            Informative Specifications
           </h3>
           <p>
             Other non-normative documents may be created or updated such as:
           </p>
-          <ul>
-		  <li>WoT Scripting API (W3C Note): This document will present a design for a Scripting API that will support
+
+			<dt id="wot-api-deliverable" class="spec">WoT Scripting API</dt>
+          <dd>
+            <p>This document will present a design for a Scripting API that will support
           exposing and consuming Thing Descriptions while providing
           a high-level interface to interactions that is
           independent of protocol. The work will continuously align
-          with the WoT TD specification. Besides these efforts,
+          with the WoT Thing Description 2.0 specification. Besides these efforts,
           alignment with the WoT Discovery specification will be
-          the main topic.<br>
-            <!-- Since we plan to publish an update soon the URL might need to change -->
-             Draft state: <a href=
-            "https://www.w3.org/TR/2020/NOTE-wot-scripting-api-20201124/">
-            Group Note</a>
-          </li>
-            <li>Use case and requirement documents;</li>
-            <li>Test suite and implementation report for the WoT Thing Description 2.0 specification</li>
-            <!--<li>Primer or Best Practice documents to support web developers when designing applications.</li>
-			<li>Update security requirements in WoT deliverables (tbc)</li>
-           <li id="security-deliverable">Security and Privacy Guidelines (to be published as a W3C Note);</li> 
-          <li>Test suite and implementation reports for each specification;</li>-->
-		  <li>WoT and AI Agents (to be published as a W3C Note): tbd</li>
-		  <li>WoT [Protocol] Bindings Note (to be published as a W3C Note each): Publish specific protocol bindings such as MQTT, HTTP, Modbus, BACnet, CoAP, PROFINET, and LoRaWAN for the usage in WoT Thing Description.</li>
-		  <li>Tooling for specification and resource generation</li>
-		  <li>Update semantic artefacts for WoT Thing Description 2.0</li>
-          </ul>
+          the main topic.</p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://www.w3.org/TR/wot-scripting-api/">Group Note</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q3 2027</p>
+			</p>
+          </dd>
+
+		  <dt id="wot-use-case-deliverable" class="spec">Use case and requirement documents</dt>
+          <dd>
+            <p>The work will continuously maintain WoT use cases and requirements in accordance 
+				with the WoT Thing Description 2.0 specification. </p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://www.w3.org/TR/wot-usecases/">Group Note</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q3 2027</p>
+			</p>
+          </dd>
+
+		  <dt id="wot-primer-deliverable" class="spec">Primer and Best Practice</dt>
+          <dd>
+            <p>Document supporting web developers in designing WoT‑based applications, including the combination of AI techniques and tooling (e.g, AI Agents and MCP).</p>
+            <p class="draft-status"><b>Draft state:</b>No draft</p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2027</p>
+			</p>
+          </dd>
+ 
+		  <dt id="wot-http-binding-deliverable" class="spec">WoT HTTP Binding</dt>
+          <dd>
+            <p>Official WoT binding for HTTP</p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://w3c.github.io/wot-binding-templates/bindings/protocols/http/">Editors Draft</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2026</p>
+			</p>
+          </dd>
+
+		  <dt id="wot-mqtt-binding-deliverable" class="spec">WoT MQTT Binding</dt>
+          <dd>
+            <p>Official WoT binding for MQTT</p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://w3c.github.io/wot-binding-templates/bindings/protocols/mqtt/index.html">Editors Draft</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2026</p>
+			</p>
+          </dd>
+
+		   <dt id="wot-modbus-binding-deliverable" class="spec">WoT Modbus Binding</dt>
+          <dd>
+            <p>Official WoT binding for Modbus</p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://w3c.github.io/wot-binding-templates/bindings/protocols/modbus/">Editors Draft</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2026</p>
+			</p>
+          </dd>
+
+		  <dt id="wot-BACnet-binding-deliverable" class="spec">WoT BACnet Binding</dt>
+          <dd>
+            <p>Official WoT binding for BACnet</p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://w3c.github.io/wot-binding-templates/bindings/protocols/bacnet/index.html">Editors Draft</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2026</p>
+			</p>
+          </dd>
+
+		  <dt id="wot-CoAP-binding-deliverable" class="spec">WoT CoAP Binding</dt>
+          <dd>
+            <p>Official WoT binding for CoAP</p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://w3c.github.io/wot-binding-templates/bindings/protocols/coap/index.html">Editors Draft</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2026</p>
+			</p>
+          </dd>
+
+		  <dt id="wot-PROFINET-binding-deliverable" class="spec">WoT PROFINET Binding</dt>
+          <dd>
+            <p>Official WoT binding for PROFINET</p>
+            <p class="draft-status"><b>Draft state:</b><a href=
+            "https://w3c.github.io/wot-binding-templates/bindings/protocols/profinet/">Editors Draft</a></p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2026</p>
+			</p>
+          </dd>
+
+		  <dt id="wot-LoRaWAN-binding-deliverable" class="spec">WoT LoRaWAN Binding</dt>
+          <dd>
+            <p>Official WoT binding for LoRaWAN</p>
+            <p class="draft-status"><b>Draft state:</b>No Draft</p>
+            <p class="milestone"><b>Expected completion:</b>Q4 2026</p>
+			</p>
+          </dd>				
+
         </section>
 
 		  
