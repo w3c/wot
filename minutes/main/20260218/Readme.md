@@ -51,54 +51,71 @@ MK: any additional items?
 
 #### Marketing Call
 -> https://pad.w3.org/p/2026-02-11-wot-outreach 11 Feb 2026 WoT Marketing minutes (Draft)
+
 -> https://github.com/w3c/wot/pull/1267 wot PR 1267 - Meeting minutes for WoT Outreach (PR for GitHub)
+
 EK: Twitter account supposed to be closed
 ... leverage more the W3C mechanisms (Mastodon, blog, events)
 ... get back to use w.r.t. LinkedIn
 ... different platform reach different audience
 ... Mastodon has the same outreach than Twitter
+
 EK: we might want to review minutes and approve them (https://github.com/w3c/wot/pull/1267)
+
 DR: Action could be related to charter review
+
 EK: Make some articles and push them to the different channels
 ... I can take this
 -> https://lists.w3.org/Archives/Member/w3c-ac-members/2026JanMar/0041.html Announcement on starting WoT Charter refinement (Member-only)
+
 DR: Announcement went to AC already
 ... need to think about re-chartering time
 ... marketing material should be ready
 ... should work on marketing plan
+
 EK: I see
 MK: idea is to get more people excited
 ... as soon as we get the charter approved
+
 EK: Material should be ready before material, right?
 DR: Correct
 MK: We don't have to wait 
 ... getting new members will take more time
+
 DR: Progress can be tracked here but work should be done in another task force
 Kaz: We need to clarify time schedule, mile-stones etc
 ... 3 months extension could be enough if we could really concentrate on the Charter document
 ... however, my impression so far is we still need 6 more months
 ... so let's clarify the timeline for the rechartering process during the Charter Discission session later
+
 MK: Agree
 MK: What about Q&A for webpage item on agenda?
 ... is this topic meant for wiki?
+
 EK: Not sure where it is coming from?
 DR: I raised these topics
 ... coming from marketing discussions
+
 MK: I see, clarifications 
 ... should create issue to figure out next steps
+
 Kaz: Clarification is good
 ... however, we have digital twin IG separately
 ... so we should be careful how to deal with "Digital Twin" within the WoT charter
 ... WoT itself is a method for Digital Twin purposes and Digital Twin is one of the WoT use cases
 ... so don't think we want another digital twin work item
+
 MK: Q&A seems to make sense
 ... action to create issue
+
 DE: second what Dave said
 ... WoT is good way to poll device information
 ... we have to make clear that we are aware of
+
 EK: We should not define anything new
 ... more explanation that it is used already
 ... anyhow, wonder who besides me (Siemens) and W3C is willing to contribute
+
 MK: I am willing to support digital twin and marketing
 DE: Connexus might have some use-cases also
 MK: Physical AI is the *new* buzzword (including digital twin)
