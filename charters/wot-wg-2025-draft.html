@@ -499,24 +499,26 @@
 	  <h2>Success Criteria</h2>
 
     <!-- Testing and interop -->
-	  <p>In order to advance beyond
+	  <p><span class='todo'>Remove this clause if the Group does not intend to move to REC:</span> In order to advance beyond
 		  <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">Candidate Recommendation</a>, each normative specification is expected to have
 		  <a href="https://www.w3.org/policies/process/#implementation-experience">at least two independent interoperable
 			  implementations</a> of every feature defined in the specification, where
 interoperability can be verified by passing open test suites. In order to advance beyond Candidate Recommendation, each normative specification must have an open test suite of every feature defined in the specification.</p>
 	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
-    <p>To promote interoperability, all changes made to specifications
+    <p><span class='remove todo'>Consider adopting a healthy testing policy, such as:</span>
+      To promote interoperability, all changes made to specifications
       in Candidate Recommendation
       or to features that have deployed implementations
-      should have <a href='https://www.w3.org/2019/02/testing-policy.html'>tests</a>.
+      should have <a href='https://www.w3.org/policies/testing/'>tests</a>.
       Testing efforts should be conducted via the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests</a> project.</p>
 
     <!-- Horizontal review -->
 
     <p>Each specification should contain separate sections detailing all known security and
-      privacy implications for implementers, Web authors, and end users.</p>
+      privacy implications for implementers, Web authors, and users.</p>
 
-	  <p>Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and
+	  <p id="a11y-section"><i class="todo">For specifications of technologies that directly impact user experience, such as content technologies, as well as protocols and APIs which impact content: </i>
+		Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and
 		recommendations for maximising accessibility in implementations.</p>
 
     <!-- W3C Statements and Web Platform Design Principles -->
@@ -527,19 +529,28 @@ interoperability can be verified by passing open test suites. In order to advanc
       <li><a href="https://www.w3.org/TR/design-principles/">Web Platform Design Principles</a>.</li>
     </ul>
 
+    <!-- Relevance and momentum -->
+	  <p><span class='todo'>Consider adding this clause if the Group does not intend to move to REC:</span> All new features should have expressions of interest from at least two potential implementors before being incorporated in the specification.</p>
 	</section>
 
       <section id="coordination">
         <h2>Coordination</h2>
+        <p class="todo">For Working Groups</p>
         <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">horizontal review</a> for
+        accessibility, internationalization, privacy, and security with the relevant Working and
+        Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.
+        Invitation for review must be issued during each major standards-track document transition, including
+        <a href="https://www.w3.org/policies/process/#RecsWD" title="First Public Working Draft">FPWD</a>.  The
+        Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
+        each specification.  The Working Group is advised to seek a review at least 3 months before first entering
+        <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
+        to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
+
+        <p class="todo">For Interest Groups which expect to produce reviewed specifications</p>
+        <p>Where appropriate, this Interest Group will seek <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">horizontal review</a> for
           accessibility, internationalization, privacy, and security with the relevant Working and
-          Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.
-          Invitation for review must be issued during each major standards-track document transition, including
-          <a href="https://www.w3.org/policies/process/#RecsWD" title="First Public Working Draft">FPWD</a>.  The
-          Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
-          each specification.  The Working Group is advised to seek a review at least 3 months before first entering
-          <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
-          to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
+          Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.</p>
+
 
         <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
 
