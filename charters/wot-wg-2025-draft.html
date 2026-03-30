@@ -168,7 +168,7 @@
 		  </p>
 		<p>
 			Newcomers are encouraged to read the <a
-			href="https://www.w3.org/WoT/documentation/#web-of-things-in-a-nutshell"
+			href="https://www.w3.org/WoT/"
 			>Web of Things in a Nutshell</a> documentation where they will find a
 			technical overview of how the various existing deliverables relate to
 			one another.
@@ -512,7 +512,6 @@
 
 	<section id="success-criteria">
 	  <h2>Success Criteria</h2>
-    <span class="todo">TODO: Needs updating based on Success Criteria in previous charter</span>
 
     <!-- Testing and interop -->
 	  <p>In order to advance beyond
@@ -521,12 +520,12 @@
 			  implementations</a> of every feature defined in the specification, where
 interoperability can be verified by passing open test suites. In order to advance beyond Candidate Recommendation, each normative specification must have an open test suite of every feature defined in the specification.</p>
 	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
-    <p><span class='remove todo'>Consider adopting a healthy testing policy, such as:</span>
+    <p>
       To promote interoperability, all changes made to specifications
       in Candidate Recommendation
       or to features that have deployed implementations
       should have <a href='https://www.w3.org/policies/testing/'>tests</a>.
-      Testing efforts should be conducted via the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests</a> project.</p>
+      Testing efforts should be conducted via the <a href="https://github.com/w3c/wot-testing/blob/main/tools/README.md">WoT's test infrastructure</a>.</p>
 
     <!-- Horizontal review -->
 
@@ -560,8 +559,6 @@ interoperability can be verified by passing open test suites. In order to advanc
         to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
 
         <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
-
-      	<p class="todo">In addition to the above catch-all reference to horizontal review which includes accessibility review, please check with chairs and staff contacts of the <a href="https://www.w3.org/groups/wg/apa/">Accessible Platform Architectures Working Group</a> to determine if an additional liaison statement with more specific information about concrete review issues is needed in the list below.</p>
 
         <section>
           <h3 id="w3c-coordination">W3C Groups</h3>
@@ -790,7 +787,7 @@ interoperability can be verified by passing open test suites. In order to advanc
           The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>. The group also welcomes non-participants to make technical contributions for ongoing work, provided they agree to the terms of the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a>.
         </p>
         <p>
-          The Chairs should periodically look through the non-W3C-Member contributors to the Working Group <i class="todo">or the [name of an associated Community Group, if any]</i> and consider whether each one should be invited to participate as an <a href="https://www.w3.org/invited-experts/">Invited Expert</a>. If a non-W3C-Member contributor would like to participate in meetings, they are encouraged to <a href="https://www.w3.org/groups/[type]/[shortname]/instructions/">apply to be an Invited Expert</a>.
+          The Chairs should periodically look through the non-W3C-Member contributors to the Working Group of the W3C Web of Things Community Group and consider whether each one should be invited to participate as an <a href="https://www.w3.org/invited-experts/">Invited Expert</a>. If a non-W3C-Member contributor would like to participate in meetings, they are encouraged to <a href="https://www.w3.org/groups/[type]/[shortname]/instructions/">apply to be an Invited Expert</a>.
         </p>
         <p>Participants in the group are required (by the <a href="https://www.w3.org/policies/process/#ParticipationCriteria">W3C Process</a>) to follow the
           W3C <a href="https://www.w3.org/policies/code-of-conduct/">Code of Conduct</a>.</p>
@@ -825,18 +822,17 @@ interoperability can be verified by passing open test suites. In order to advanc
         <h2>
           Decision Policy
         </h2>
-        <span class="todo">TODO: Needs updating based on Decision Policy from previous charter</span>
+
         <p>
           This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/policies/process/#Consensus">W3C Process Document (section 5.2.1, Consensus)</a>. Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
         <p>
            However, if a decision is necessary for timely progress and consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote and record a decision along with any objections.
         </p>
         <p>
-          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
-
-          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id='cfc'><i class="todo">[pick a duration within:] one week to 10 working days</i></span>, depending on the chair's evaluation of the group consensus on the issue.
-
-          If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
+To afford asynchronous decisions and organizational deliberation, resolutions both proposed and taken in a face-to-face meeting or teleconference will be considered provisional. A call for consensus (CfC) will be issued for all such resolutions (via email) with a response period from 5 to 10 working days, depending on the Chairs' evaluation of the group consensus on the issue. If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
+</p>
+		   <p>
+In some cases, resolutions can be announced and proposed in advance, by circulating an email to the group with concrete proposed text for the resolution. In these cases, the announcement can be considered the call for consensus (CfC) and when the resolution is made by the group, it can be considered final, at the discretion of the Chairs, if sufficient time (5 to 10 working days, at the discretion of the Chairs, as above) has been allowed for asynchronous input. This process will be followed especially for publication decisions which are then effective immediately.
         </p>
         <p>
           All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs.
@@ -877,7 +873,6 @@ interoperability can be verified by passing open test suites. In order to advanc
           <h3>
             Charter History
           </h3>
-          <p class="issue"><b>Note:</b>Display this table and update it when appropriate. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/process/charter.html#extension">Charter Guidebook (section 4)</a>.</p>
 
           <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/policies/process/#CharterReview">W3C Process Document (section 4.3, Advisory Committee Review of a Charter)</a>:</p>
 
