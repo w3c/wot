@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title><i class="todo">[name]</i> <i class="todo">(Working|Interest)</i> Group Charter</title>
+    <title>Web of Things Working Group Charter</title>
 
     <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen">
     <link rel="stylesheet" type="text/css" href="https://www.w3.org/OldGuide/pubrules-style.css">
@@ -126,7 +126,7 @@
               Chairs
             </th>
             <td>
-              Sebastian Kaebisch (Siemens) and Michael Koster (Invited Expert)</i>
+              Sebastian Kaebisch (Siemens), Michael Koster (Invited Expert), and Kazuyuki Ashimura (Invited Expert)</i>
             </td>
           </tr>
           <tr>
@@ -153,7 +153,7 @@
       <div id="background" class="background">
         <h2>Motivation and Background</h2>
 		  <p>
-   			In recent years, the Web of Things Working Group has developed a set
+   			In recent years, the Web of Things (WoT) Working Group has developed a set
    			of deliverables that address interoperability challenges in the IoT.
    			These <a href="https://www.w3.org/groups/wg/wot/publications/">deliverables</a> define 
 			  standardized building blocks, such as the
@@ -168,7 +168,7 @@
 		  </p>
 		<p>
 			Newcomers are encouraged to read the <a
-			href="https://www.w3.org/WoT/documentation/#web-of-things-in-a-nutshell"
+			href="https://www.w3.org/WoT/"
 			>Web of Things in a Nutshell</a> documentation where they will find a
 			technical overview of how the various existing deliverables relate to
 			one another.
@@ -206,7 +206,16 @@
         <dd>The WG will add new features, maintain and refine the current 
 			deliverables, address issues identified during implementation, and reorganize 
 			material between documents as appropriate. While this work is not limited to backward‑compatible 
-			updates, great care will be taken to minimize the impact on existing implementations.</dd>
+			updates, great care will be taken to minimize the impact on existing implementations.
+		</dd>
+
+		<dd>
+		  The deliverable <a href="https://www.w3.org/TR/wot-usecases/">WoT Use Cases and Requirements</a>
+		  is continued from the previous
+		  <a href="https://www.w3.org/2024/04/wot-ig-2024.html">W3C Web of Things Interest Group</a>
+		  under this new Working Group charter.
+		</dd>
+
 		<dt><strong>Developer Guidance</strong>:</dt>
         <dd>The WG will develop developer guidance to support developers in designing WoT‑based 
 			applications, including best practices, tooling, and examples.</dd>
@@ -214,6 +223,29 @@
         <dd>The WG may develop sub‑protocols, for example based on WebSockets, that are 
 			specifically designed for the Web of Things and can be used as interfaces for 
 			IoT devices or services.</dd>  
+		<dt><strong>Promotion</strong>:</dt>
+        <dd> The following two scopes will be continued from the previous <a href="https://www.w3.org/2024/04/wot-ig-2024.html">IG activities</a>:
+			<ul>
+          <li>An important activity is the operation of PlugFests to collect
+            interoperability implementation experience and to validate the current
+            working assumptions of the potential building blocks and features
+            discussed in the WoT Working Group task forces (e.g., Thing
+            Description). These events enable developers to get together to test
+            their implementations and facilitates networking between partners
+            and experts. The Working Group will seek to encourage work on open
+            source projects and community evaluation of the Web of Things. This
+            activity will be in cooperation with the
+		    <a href="https://www.w3.org/community/wot/">Web of Things
+		    Community Group</a>.</li>
+		 <li>To reach out and collaborate with the community as mentioned in the
+		   scope, the Marketing Task Force works on promoting the W3C Web of Things
+		   in different ways such as Web presence, Social Media presence, and more.
+            The Marketing Task Force will also use the opportunity to do outreach with
+            community groups such as with the W3C Web of Things Community Group. In
+            addition, the TF will mediate between such community groups and the WoT
+            Working Group.</li>
+          </ul>
+		</dd>
       </dl>
 
         <section id="section-out-of-scope">
@@ -350,19 +382,18 @@
           <h3>
             Tentative Deliverables 
           </h3>
-          <p>
-			Depending on the <a href="https://www.w3.org/guide/incubation.html">incubation</a> progress,
-              interest from multiple implementers, and the consensus of the Group
-              participants, the Working Group may adopt the following documents as Rec-track
-			<dt id="wot-thing-protocol" class="spec">WoT Thing Protocol</dt>
+          <p>Depending on the <a href="https://www.w3.org/guide/incubation.html">incubation</a> progress,
+             interest from multiple implementers, and the consensus of the Group
+             participants, the Working Group may adopt the following documents as Rec-track
+			      <dt id="wot-thing-protocol" class="spec">WoT Thing Protocol</dt>
             <dd>
-              <p>This document defines a sub‑protocol, the WoT Thing Protocol, that operates over either WebSocket or HTTP for monitoring and controlling connected devices over the World Wide Web. The WoT Thing Protocol is intended as a dedicated protocol for the Web of Things, to enable a WoT Consumer to communicate with one or more WoT Things over an HTTP REST API or WebSocket connection.</p>
+              <p>This document defines HTTP and WebSocket sub-protocols for monitoring and controlling connected devices over the World Wide Web.
+                The WoT Thing Protocol is intended as a dedicated protocol for the Web of Things, to enable a WoT Consumer to communicate with one
+                or more WoT Things over an HTTP REST API and/or WebSocket connection.</p>
               <p class="draft-status"><b>Draft state:</b> <a href="https://w3c.github.io/web-thing-protocol">Draft Community Group Report</a></p>
-		    </p>
-          </dd>
+            </dd>
+		      </p>
         </section>
-
-		  
 		  
         <section id="informative-deliverables">
           <h3>
@@ -488,30 +519,26 @@
 
         <section id="timeline">
           <h3>Timeline</h3>
+          <ul>
           <li>June 2026: First teleconference</li>
-          <li>October 2026: First face-to-face meeting (TPAC
-          2026, Dublin, Ireland)</li>
-          <li>Q4 2026: Requirements and Use Cases updated</li>
-          <li>Q4 2026: CR Transition for Profile deliverable</li>
-          <li>Q1 2027: FPWD for updated Discovery, Thing
-          Description, and Architecture deliverables</li>
-          <li>Q1 2027: PR Transition for Profile deliverable</li>
-          <li>Q2 2027: FPWD for updated Profile deliverable</li>
-          <li>Q3 2027: REC Transition for Profile deliverable</li>
-          <li>Q3 2027: Updated publication of WoT Security and
-          Privacy Guidelines as a Note</li>
-          <li>Q4 2027: CR Transition for updated Discovery, Thing
-          Description, Architecture, and Profile deliverables</li>
-          <li>Q4 2027: Updated publication of Bindings as
-          Notes</li>
-          <li>Q1 2028: Updated publication of Scripting API as a
-          Note</li>
-          <li>Q2 2028: PR Transition for updated Discovery, Thing
-          Description, Architecture, and Profile deliverables</li>
-          <li>June 2028: REC Transition for updated Discovery,
-          Thing Description, Architecture, and Profile
-          deliverables</li>
-            </ul>
+          <li>July 2026: Initial contributions for Binding Registry entries</li>
+          <li>October 2026: First face-to-face meeting (TPAC 2026, Dublin, Ireland)</li>
+          <li>Q4 2026: FPWD of WoT Thing Protocol</li>
+          <li>Q4 2026: Publication of HTTP Binding as a Note</li>
+          <li>Q4 2026: Publication of MQTT Binding as a Note</li>
+          <li>Q4 2026: Publication of Modbus Binding as a Note</li>
+          <li>Q4 2026: Publication of BACnet Binding as a Note</li>
+          <li>Q4 2026: Publication of CoAP Binding as a Note</li>
+          <li>Q4 2026: Publication of PROFINET Binding as a Note</li>
+          <li>Q4 2026: Publication of LoRaWAN Binding as a Note</li>
+          <li>Q1 2027: WD of Thing Description 2.0</li>
+          <li>Q1 2027: Publication of Binding Registry as a Note</li>
+          <li>Q3 2027: Updated publication of Scripting API as a Note</li>
+          <li>Q3 2027: Updated publication of Use Cases and Requirements as a Note</li>
+          <li>Q4 2027: Publication of Primer and Best Practice as a Note</li>
+          <li>Q4 2027: CR Transition for Thing Description 2.0</li>
+          <li>June 2028: REC Transition for Thing Description 2.0</li>
+          </ul>
         </section>
       </section>
 
@@ -519,25 +546,25 @@
 	  <h2>Success Criteria</h2>
 
     <!-- Testing and interop -->
-	  <p><span class='todo'>Remove this clause if the Group does not intend to move to REC:</span> In order to advance beyond
+	  <p>In order to advance beyond
 		  <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">Candidate Recommendation</a>, each normative specification is expected to have
 		  <a href="https://www.w3.org/policies/process/#implementation-experience">at least two independent interoperable
 			  implementations</a> of every feature defined in the specification, where
 interoperability can be verified by passing open test suites. In order to advance beyond Candidate Recommendation, each normative specification must have an open test suite of every feature defined in the specification.</p>
 	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
-    <p><span class='remove todo'>Consider adopting a healthy testing policy, such as:</span>
+    <p>
       To promote interoperability, all changes made to specifications
       in Candidate Recommendation
       or to features that have deployed implementations
       should have <a href='https://www.w3.org/policies/testing/'>tests</a>.
-      Testing efforts should be conducted via the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests</a> project.</p>
+      Testing efforts should be conducted via the <a href="https://github.com/w3c/wot-testing/blob/main/tools/README.md">WoT's test infrastructure</a>.</p>
 
     <!-- Horizontal review -->
 
     <p>Each specification should contain separate sections detailing all known security and
       privacy implications for implementers, Web authors, and users.</p>
 
-	  <p id="a11y-section"><i class="todo">For specifications of technologies that directly impact user experience, such as content technologies, as well as protocols and APIs which impact content: </i>
+	  <p id="a11y-section">
 		Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and
 		recommendations for maximising accessibility in implementations.</p>
 
@@ -549,13 +576,10 @@ interoperability can be verified by passing open test suites. In order to advanc
       <li><a href="https://www.w3.org/TR/design-principles/">Web Platform Design Principles</a>.</li>
     </ul>
 
-    <!-- Relevance and momentum -->
-	  <p><span class='todo'>Consider adding this clause if the Group does not intend to move to REC:</span> All new features should have expressions of interest from at least two potential implementors before being incorporated in the specification.</p>
 	</section>
 
       <section id="coordination">
         <h2>Coordination</h2>
-        <p class="todo">For Working Groups</p>
         <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">horizontal review</a> for
         accessibility, internationalization, privacy, and security with the relevant Working and
         Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.
@@ -566,15 +590,7 @@ interoperability can be verified by passing open test suites. In order to advanc
         <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
         to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
 
-        <p class="todo">For Interest Groups which expect to produce reviewed specifications</p>
-        <p>Where appropriate, this Interest Group will seek <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">horizontal review</a> for
-          accessibility, internationalization, privacy, and security with the relevant Working and
-          Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.</p>
-
-
         <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
-
-      	<p class="todo">In addition to the above catch-all reference to horizontal review which includes accessibility review, please check with chairs and staff contacts of the <a href="https://www.w3.org/groups/wg/apa/">Accessible Platform Architectures Working Group</a> to determine if an additional liaison statement with more specific information about concrete review issues is needed in the list below.</p>
 
         <section>
           <h3 id="w3c-coordination">W3C Groups</h3>
@@ -582,14 +598,14 @@ interoperability can be verified by passing open test suites. In order to advanc
 			 <dt>
                   <a href="https://www.w3.org/groups/ig/webai/">Web & AI Interest Group</a>
               </dt>
-              <dd>tbd</dd>
-              <dt>
-                  <a href="https://www.w3.org/groups/cg/webagents/">Autonomous Agents on the Web Community Group</a>
-              </dt>
-              <dd>tbd</dd>
-              <dt>
-                  <a href="https://www.w3.org/community/wot/">Web of
-                      Things Community Group</a>
+              <dd>﻿To collaborate on technologies and requirements of AI-related
+                technologies that impact and intersect with the Web of Things.</dd>
+              <dt><a href="https://www.w3.org/groups/cg/webagents/">Autonomous Agents
+                on the Web Community Group</a></dt>
+              <dd>For collaboration on WoT use cases, particularly where agent‑based
+                approaches intersect with WoT standards.</dd>
+              <dt><a href="https://www.w3.org/community/wot/">Web of
+                Things Community Group</a>
               </dt>
               <dd>For collaboration on community outreach of the WG
                   reports to increase adoption and implementation, as well
@@ -603,6 +619,11 @@ interoperability can be verified by passing open test suites. In order to advanc
                   reports to increase adoption and implementation, as well
                   as collecting feedback from the Japanese community.
                   Meetings held in Japanese.</dd>
+              <dt>
+                  <a href="https://www.w3.org/community/web-thing-protocol/">Web Thing Protocol Community Group</a>
+              </dt>
+              <dd>For the incubation of a common protocol for communicating with connected devices over the web, and
+                handing off specifications to the WoT Working Group for formal recommendation track standardization.</dd>
           <dt>
             <a href="https://www.w3.org/2018/json-ld-wg/">JSON-LD
             Working Group</a>
@@ -614,27 +635,21 @@ interoperability can be verified by passing open test suites. In order to advanc
             "https://www.w3.org/community/exi-next/">Efficient
             Extensible Interchange Community Group</a>
           </dt>
-          <dd>In relation to efficient interchange for Thing
-          Descriptions.</dd>
-          <dt>
-            <a href="https://www.w3.org/auto/">Web and Automotive
-            Business & Working Groups</a>
-          </dt>
-          <dd>For collaboration on technologies and requirements
-          relating to connected cars and the Web of Things.</dd>
-          <dt>
-            <a href="https://www.w3.org/2009/dap/">Device and
-            Sensors Working Group</a>
-          </dt>
-          <dd>For coordination on APIs for sensors and
-          actuators.</dd>
+          <dd>Toward efficient interchange of Thing Descriptions.</dd>
+          <dt><a href="https://www.w3.org/2009/dap/">Device and
+            Sensors Working Group</a></dt>
+          <dd>For coordination on APIs for sensors and actuators.</dd>
           <dt>
             <a href="https://www.w3.org/groups/wg/did/">Decentralized Identifier Working Group</a>
           </dt>
           <dd>For coordination on identity management and
-          information lifecycle.</dd>
-          <dt>
-            <a href="https://www.w3.org/web-networks/">Web &
+            information lifecycle.</dd>
+		  <dt><a href="https://www.w3.org/groups/wg/vc/">Verifiable Credentials
+		    Working Group</a></dt>
+          <dd>For coordinating use of Decentralized Identifiers in Verifiable
+          Credential ecosystems with the Web of Things.</dd>
+          
+          <dt><a href="https://www.w3.org/web-networks/">Web &
             Networks Interest Group</a>
           </dt>
           <dd>For collaboration on networking and computing
@@ -679,11 +694,11 @@ interoperability can be verified by passing open test suites. In order to advanc
           </dt>
           <dd>For collaboration on application of Web of Things in
           Agent-based systems in the Web.</dd>
+		  <dt>
+            <a href="https://www.w3.org/groups/ig/smart-cities/">Web-based Digital Twins for Smart Cities Interest Group</a>
+          </dt>
+          <dd>For collaboration on the Web-based digital twin framework including WoT as one of the key components.</dd>
           </dl>
-
-          <p class="issue"><b>Note:</b> Do not list horizontal groups here, only specific WGs relevant to your work.</p>
-          <p class="issue"><b>Note:</b> Do not bury normative text inside the liaison section.
-            Instead, put it in the scope section.</p>
         </section>
 
         <section>
@@ -708,26 +723,20 @@ interoperability can be verified by passing open test suites. In order to advanc
           <dt>
             <a href=
             "https://industrialdigitaltwin.org/en/">Industrial
-            Digital Twin Association</a>
+            Digital Twin Association (IDTA)</a>
           </dt>
           <dd>
             For coordination on the use of TDs and bindings in the
-            Asset Interface Description (AID) submodel for the
-            Asset Administration (AAS) specification. Additionally,
-            the AAS submodels can be used for Digital Nameplate
-            (DNP) and Product Carbon Footprint (PCF) to form the
-            Digital Product Passport (DPP) of products that the
-            European Commission is demanding each product to supply
-            (DPP4.0). Also see <a href=
-            "https://github.com/w3c/wot/issues/978#issuecomment-1359830278">
-            the related GitHub comment</a>.
+            <a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Asset%20Interfaces%20Description">Asset Interfaces Description (AID) submodel</a> for the
+            Asset Administration Shell (AAS) specification. Additionally, the AAS and its submodels can be used to form the Digital Product Passport (DPP) in accordance with regulatory 
+			  requirements (e.g., the EU Ecodesign for Sustainable Products Regulation (ESPR) and the EU Battery Regulation). For example, the Digital Battery Passport requires dynamic data (e.g., state of charge, remaining capacity), 
+			  which can be obtained via a WoT Thing Description or an Asset Interfaces Description, respectively.
           </dd>
           <dt>
             <a href="https://www.ashrae.org/">ASHRAE</a>
           </dt>
           <dd>For coordination on the development of the BACnet
-          (ASHRAE 135-2020) binding for the W3C Web of Things
-          .</dd>
+          (ASHRAE 135-2024) binding for the W3C Web of Things.</dd>
           <dt>
             <a href="https://www.ietf.org/">IETF</a>
           </dt>
@@ -746,8 +755,7 @@ interoperability can be verified by passing open test suites. In order to advanc
             <a href="https://csa-iot.org/">Connectivity Standards
             Alliance (CSA)</a>
           </dt>
-          <dd>To coordinate smart home use cases and to develop a
-          potential Matter binding.</dd>
+          <dd>For coordination on the development of a possible binding with the W3C Web of Things for smart home and IoT purposes.</dd>
           <dt>
             <a href="https://onedm.org/">One Data Model</a>
           </dt>
@@ -792,13 +800,13 @@ interoperability can be verified by passing open test suites. In order to advanc
           Participation
         </h2>
         <p>
-          To be successful, this <i class="todo">(Working|Interest)</i> Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the <i class="todo">(Working|Interest)</i> Group. There is no minimum requirement for other Participants.
+          To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
         </p>
         <p>
           The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>. The group also welcomes non-participants to make technical contributions for ongoing work, provided they agree to the terms of the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a>.
         </p>
         <p>
-          The Chairs should periodically look through the non-W3C-Member contributors to the <i class="todo">(Working|Interest)</i> Group <i class="todo">or the [name of an associated Community Group, if any]</i> and consider whether each one should be invited to participate as an <a href="https://www.w3.org/invited-experts/">Invited Expert</a>. If a non-W3C-Member contributor would like to participate in meetings, they are encouraged to <a href="https://www.w3.org/groups/[type]/[shortname]/instructions/">apply to be an Invited Expert</a>.
+          The Chairs should periodically look through the non-W3C-Member contributors to the Working Group of the W3C Web of Things Community Group and consider whether each one should be invited to participate as an <a href="https://www.w3.org/invited-experts/">Invited Expert</a>. If a non-W3C-Member contributor would like to participate in meetings, they are encouraged to <a href="https://www.w3.org/groups/wg/wot/instructions/">apply to be an Invited Expert</a>.
         </p>
         <p>Participants in the group are required (by the <a href="https://www.w3.org/policies/process/#ParticipationCriteria">W3C Process</a>) to follow the
           W3C <a href="https://www.w3.org/policies/code-of-conduct/">Code of Conduct</a>.</p>
@@ -809,18 +817,17 @@ interoperability can be verified by passing open test suites. In order to advanc
           Communication
         </h2>
         <p id="public">
-          Technical discussions for this <i class="todo">(Working|Interest)</i> Group are conducted in <a href="https://www.w3.org/policies/process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests.
+          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/policies/process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests.
         The meetings themselves are not open to public participation, however.
         </p>
         <p>
-          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://www.w3.org/groups/[type]/[shortname]/"><i class="todo">[name]</i> <i class="todo">(Working|Interest)</i> Group home page.</a>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://www.w3.org/groups/wg/wot/">WoT Working Group home page.</a>
         </p>
         <p>
-          Most <i class="todo">[name]</i> <i class="todo">(Working|Interest)</i> Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+          Most WoT Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
         </p>
         <p>
-          This group primarily conducts its technical work  <i class="todo">pick one, or both, as appropriate:</i> on the public mailing list <a class="todo" id="public-name" href="mailto:public-[email-list]@w3.org">public-<i class="todo">[email-list]</i>@w3.org</a> (<a class="todo" href="https://lists.w3.org/Archives/Public/public-[email-list]/">archive</a>)
-          <i class="todo">or</i> on <a class="todo" id="public-github" href="[link to Github repo]">GitHub issues</a>.
+          This group primarily conducts its technical work on <a href="https://github.com/w3c/wot">GitHub issues</a>, using a main repository for general topics and more specific repositories for individual specifications.
           The public is invited to review, discuss and contribute to this work.
         </p>
         <p>
@@ -834,17 +841,29 @@ interoperability can be verified by passing open test suites. In order to advanc
         <h2>
           Decision Policy
         </h2>
+
         <p>
           This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/policies/process/#Consensus">W3C Process Document (section 5.2.1, Consensus)</a>. Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
         <p>
            However, if a decision is necessary for timely progress and consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote and record a decision along with any objections.
         </p>
         <p>
-          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
-
-          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id='cfc'><i class="todo">[pick a duration within:] one week to 10 working days</i></span>, depending on the chair's evaluation of the group consensus on the issue.
-
-          If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the <i class="todo">(Working|Interest)</i> Group.
+To enable asynchronous decisions and organizational deliberation, resolutions both
+proposed and taken in a face-to-face meeting or teleconference will be considered
+provisional. A call for consensus (CfC) will be issued for all such resolutions (via
+email) with a response period from 5 to 10 working days, depending on the Chairs'
+evaluation of the group consensus on the issue. If no objections are raised by the
+end of the response period, the resolution will be considered to have consensus as
+a resolution of the Working Group.
+</p>
+		   <p>
+In some cases, resolutions might be announced and proposed in advance, by circulating
+an email to the group with concrete proposed text for the resolution. In these cases,
+the announcement can be considered the call for consensus (CfC) and when the
+resolution is made by the group, it can be considered final, at the discretion of
+the Chairs, if sufficient time (5 to 10 working days, at the discretion of the
+Chairs, as above) has been allowed for asynchronous input. This process will be
+followed especially for publication decisions which are then effective immediately.
         </p>
         <p>
           All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs.
@@ -857,8 +876,6 @@ interoperability can be verified by passing open test suites. In order to advanc
 
 
       <section id="patentpolicy">
-      <p><i class="todo">[Keep 'Patent Policy' for a Working Group, 'Patent Disclosures' for an Interest Group]</i></p>
-
         <h2>
           Patent Policy
         </h2>
@@ -867,24 +884,12 @@ interoperability can be verified by passing open test suites. In order to advanc
 
           For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/groups/wg/[shortname]/ipr/">licensing information</a>.
         </p>
-
-        <h2>Patent Disclosures </h2>
-        <p>The Interest Group provides an opportunity to
-          share perspectives on the topic addressed by this charter. W3C reminds
-          Interest Group participants of their obligation to comply with patent
-          disclosure obligations as set out in <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">Section
-            6</a> of the W3C Patent Policy. While the Interest Group does not
-          produce Recommendation-track documents, when Interest Group
-          participants review Recommendation-track specifications from Working
-          Groups, the patent disclosure obligations do apply. For more information about disclosure obligations for this group,
-          please see the <a href="https://www.w3.org/groups/ig/[shortname]/ipr/">licensing information</a>.</p>
       </section>
-
 
 
       <section id="licensing">
         <h2>Licensing</h2>
-        <p>This <i class="todo">(Working|Interest)</i> Group will use the <a href="https://www.w3.org/copyright/software-license/">W3C Software and Document license</a> for all its deliverables.</p>
+        <p>This Working Group will use the <a href="https://www.w3.org/copyright/software-license/">W3C Software and Document license</a> for all its deliverables.</p>
       </section>
 
       <section id="about">
@@ -899,7 +904,6 @@ interoperability can be verified by passing open test suites. In order to advanc
           <h3>
             Charter History
           </h3>
-          <p class="issue"><b>Note:</b>Display this table and update it when appropriate. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/process/charter.html#extension">Charter Guidebook (section 4)</a>.</p>
 
           <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/policies/process/#CharterReview">W3C Process Document (section 4.3, Advisory Committee Review of a Charter)</a>:</p>
 
