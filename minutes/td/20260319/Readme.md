@@ -121,7 +121,3 @@ Erich: Let’s ask; maybe it is just a constant. Region for sure changes.
 Ege: Is it on GitHub?
 
 Erich: Yes.
-
-***
-
-If you want them merged with the previous minutes, formatted as W3C‑style minutes, or prepared as a PR-ready commit message, just tell me!
