@@ -188,7 +188,7 @@ Ege: Also a small update on the data mapping topic: <https://github.com/w3c/wot-
 
 Mahda: We can create new properties for each, but that would explode in complexity.
 
-Ege: In a way, it becomes—
+Ege: In a way, the TD becomes too big to understand with way too many affordances.
 
 #### RML
 
