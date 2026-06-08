@@ -20,8 +20,9 @@ Archives of older schedules (which combine IG and WG schedules):
 ## Current
 ### Logistics
 * September : Start planning for extension of Current Charter
-* October 2, 2025 : End of ccurrent WG Charter 
-* November 10-14 : TPAC 2025 Kobe (including WoT PlugFest)
+* October 2, 2025 : End of ccurrent WG Charter
+* June - August, 2026: New charter approvals 
+* October 26-30 : TPAC 2026 Dublin (including WoT PlugFest)
 
 ### TD
 
@@ -60,9 +61,3 @@ Note: Since the registry track lacks a _Proposed Recommendation_ phase, and the 
 
 Note: With this publication, the document will be retired.
 
-### Profiles
-* End of September(?), 2025 : WoT Profiles 1.0 Working Draft update publication
-* October 31, 2025: WoT Profiles 2.0 Use Cases & Requirements publication
-
-### Security and Privacy
-* (?), 2025 : Group Note Publication Request
