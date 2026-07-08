@@ -228,6 +228,7 @@ Kaz: Thanks.
 
 Christian: Currently just on my local PC.
 ... But can put it on the node-wot repository.
+... <https://github.com/wiresio/node-wot/tree/master/examples/analysis/csv>
 
 Kaz: Would be great if you could put that on the node-wot repo.
 
