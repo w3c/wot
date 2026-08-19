@@ -51,7 +51,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### HTTP
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -59,7 +59,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### CoAP
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -67,7 +67,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### Modbus
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -75,7 +75,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### MQTT
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -83,7 +83,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### BACnet
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -91,7 +91,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### Profinet
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -99,7 +99,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### Lorawan
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -107,7 +107,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### JSON
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -115,7 +115,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### CBOR
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -123,7 +123,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### CSV
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -131,7 +131,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### XML
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -139,7 +139,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### Text
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
@@ -147,7 +147,7 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### Octet Stream
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a note
+* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
 * MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
 * MONTH DAY, YEAR  : Review within the Binding Registry process
 * MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
