@@ -1,4 +1,3 @@
-```markdown
 # WoT TD Calls
 
 https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf
@@ -438,4 +437,4 @@ https://cache.industry.siemens.com/dl/files/595/34261595/att_951630/v1/manual_pa
 ... any other remarks or business?
 
 ... adjourned
-```
+
