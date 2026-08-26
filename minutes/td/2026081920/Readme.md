@@ -102,7 +102,7 @@ https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf
 
 ... (then shows the MD about readOnly/writeOnly also)
 
--> @@@readOnly-writeOnly.md
+-> https://github.com/w3c/wot-thing-description/blob/main/planning/work-items/analysis/readOnly-writeOnly.md
 
 **Kaz:** technically, it would be nicer if we could express the atomic unit for this purpose
 
