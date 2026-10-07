@@ -92,10 +92,10 @@ Toumura-san has trouble with his audio, so Ege and Kazuyuki ask him to type in t
 
 #### Bindings
 
-#### LoRaWAN
+##### LoRaWAN
 **Ege:** Warren to bring a device. 
 
-#### Matter Binding
+##### Matter Binding
 **Kazuyuki:** depending on ECHONET's participation; TBD.
 
 ### Please Update the GitHub for Devices That You Will Bring
