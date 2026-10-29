@@ -33,8 +33,11 @@ Minutes: [Day 1](https://pad.w3.org/p/2026-10-29-wot) and [Day 2](https://pad.w3
 ### WoT and AI 
 * Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2026-10-tpac/2025-10-29-WoT_AI_Brainstorming.pdf)
 
-### Thing Description
+### Thing Description (I / II)
 * Presentation: tbd
+
+### Presentation from DNV: Web of Things in Maritime Industry 
+* Presentation: [pptx](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2026-10-tpac/Maritime-Interoperability-2026-10-DD-WoT-TPAC.pptx)
 
 ### Scripting API 
 * Presentation: tbd
