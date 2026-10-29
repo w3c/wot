@@ -31,7 +31,7 @@ Minutes: [Day 1](https://pad.w3.org/p/2026-10-29-wot) and [Day 2](https://pad.w3
 * Presentation: tbd
 
 ### WoT and AI 
-* Presentation: tbd
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2026-10-tpac/2025-10-29-WoT_AI_Brainstorming.pdf)
 
 ### Thing Description
 * Presentation: tbd
