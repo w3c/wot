@@ -25,7 +25,7 @@ Minutes: [Day 1](https://pad.w3.org/p/2026-10-29-wot) and [Day 2](https://pad.w3
 ## Thursday, Oct 29, 09:00-16:45 GMT
 
 ### Welcome
-* Presentation: tbd
+* Presentation: [pdf](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2026-10-tpac/2026-10-29-WoT-TPAC-Opening-Sebastian.pdf)
 
 ### PlugFest Summary
 * Presentation: tbd
