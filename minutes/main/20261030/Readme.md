@@ -10,34 +10,34 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning#F2F_Agenda_.28Thursda
 **Breakout Proposal:** https://github.com/w3c/tpac2026-breakouts/issues/85
 
 Present
-Kaz Ashimura
-Kensaku Komatsu
-Nanaaka Kido
-Kunihiko Toumura
-Yohei Sonobe
-Noriaki Matsumura
-Chris Needham
-Emma Horrell
-Wolfgang Schildbach
-Sebastian Kaebisch
-Matt Reynolds
-Koichi Moriyama
-Rob Smith
-Naomi Yoshizawa
-Hiroshi Ota
-Michiko Kuriyama
-Ege Korkan
-Robert Warrent
-Mahda Noura
+1. Kaz Ashimura
+1. Kensaku Komatsu
+1. Nanaaka Kido
+1. Kunihiko Toumura
+1. Yohei Sonobe
+1. Noriaki Matsumura
+1. Chris Needham
+1. Emma Horrell
+1. Wolfgang Schildbach
+1. Sebastian Kaebisch
+1. Matt Reynolds
+1. Koichi Moriyama
+1. Rob Smith
+1. Naomi Yoshizawa
+1. Hiroshi Ota
+1. Michiko Kuriyama
+1. Ege Korkan
+1. Robert Warrent
+1. Mahda Noura
 
 Remote:
-Bernd Czelhan
-Tomoaki Mizushima
-Miriam Fukushima
-Fredrik Solenbert
-Daniel Peintner
-Ben Francis
-Iris Johnson
+1. Bernd Czelhan
+1. Tomoaki Mizushima
+1. Miriam Fukushima
+1. Fredrik Solenbert
+1. Daniel Peintner
+1. Ben Francis
+1. Iris Johnson
 
 Chair: Kaz
 
@@ -195,32 +195,32 @@ Kaz: Ken could think about that in the CG
 The following session will be held at tge Sales Suite on the 2nd Floor (9:30-17:30)
 
 Present:
-Angel Li
-Sebastian Kaebisch
-Johan Wilhelm Kluewer
-Dave Regett
-Mahda Noura
-Ege Korkan
-Kunihiko Toumura
-Kaz Ashimura
-Robert Warren
-Noriaki Matsumura
-Yohei Sonobe
-Philip Tronstad
-David Ezell
+1. Angel Li
+1. Sebastian Kaebisch
+1. Johan Wilhelm Kluewer
+1. Dave Reggett
+1. Mahda Noura
+1. Ege Korkan
+1. Kunihiko Toumura
+1. Kaz Ashimura
+1. Robert Warren
+1. Noriaki Matsumura
+1. Yohei Sonobe
+1. Philip Tronstad
+1. David Ezell
 
 Remote:
-Daniel Peintner
-Tomoaki Mizushima
-Ben Francis
-Tetsushi Matsuda (ECHONET)
-Christian Glomb
-Michael Koter
-Cristiano Aguzzi
+1. Daniel Peintner
+1. Tomoaki Mizushima
+1. Ben Francis
+1. Tetsushi Matsuda (ECHONET)
+1. Christian Glomb
+1. Michael Koter
+1. Cristiano Aguzzi
 
 Guests from JSON-LD:
-Benjamin Young
-Niklas Lindstroem
+1. Benjamin Young
+1. Niklas Lindstroem
 
 Chair: Sebastian, Kaz, Michael
 
