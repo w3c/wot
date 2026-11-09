@@ -34,8 +34,8 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### CoAP
 
-* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
-* Q1 2027    : Submission to a W3C Note 
+* Q1 2026    : Group Call for Consensus (CfC) to publish a Note
+* Q1 2026    : Submission to a W3C Note 
 
 #### Modbus
 
@@ -50,8 +50,8 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### BACnet
 
-* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
-* Q1 2027    : Submission to a W3C Note 
+* Q1 2026    : Group Call for Consensus (CfC) to publish a Note
+* Q1 2026   : Submission to a W3C Note 
 
 #### Profinet
 
