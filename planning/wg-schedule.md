@@ -29,8 +29,8 @@ Archives of older schedules (which combine IG and WG schedules):
 
 #### HTTP
 
-* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
-* Q1 2027    : Submission to a W3C Note 
+* Q4 2026    : Group Call for Consensus (CfC) to publish a Note
+* Q4 2026    : Submission to a W3C Note 
 
 #### CoAP
 
