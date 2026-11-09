@@ -4,33 +4,11 @@ This schedule spans the [current WG charter](https://www.w3.org/2023/10/wot-wg-2
 Archives of older schedules (which combine IG and WG schedules):
 * [2021-2023](schedule_2023.md)
 
-## Past
-
-### TD 
-
-* September 3, 2025 : Group Call for Consensus (CfC) to move to First Public Working Draft
-* September 4, 2025 : Transition request to First Public Working Draft - [Link](https://github.com/w3c/transitions/issues/738)
-* 4 November 2025 : Publication of the First Public Working Draft
-
-### Bindings Registry
-
-* September 3, 2025 : Group Call for Consensus (CfC) to move to First Draft Registry
-* September 4, 2025 : Transition request to First Draft Registry - [Link](https://github.com/w3c/transitions/issues/737)
-* 4 November 2025 : Publication of the First Draft Registry
-
-### Binding Templates
-
-* August 28, 2025 : Document Freeze (TD Call)
-* September 3, 2025 : Group Call for Consensus (CfC) to publish a Note
-* 4 November 2025: Group Note Publication (Retirement)
-
 ## Current
-
-* June - August 2026: New charter approvals 
-* October 26-30 2026: TPAC 2026 Dublin (including WoT PlugFest)
 
 ### TD
 
+* Q1 2027 : Updated Working Draft
 * MONTH DAY, YEAR  : Document Freeze (TD Call)
 * MONTH DAY, YEAR  : Group Call for Consensus (CfC) to move to Candidate Recommendation
 * MONTH DAY, YEAR  : Transition request to Candidate Recommendation
@@ -40,70 +18,50 @@ Archives of older schedules (which combine IG and WG schedules):
 
 ### Bindings Registry
 
-* MONTH DAY, YEAR  : Document Freeze (TD Call)
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to move to Candidate Registry
-* MONTH DAY, YEAR  : Transition request to Candidate Registry
-* MONTH DAY, YEAR  : Publication of the Candidate Registry
-* MONTH DAY, YEAR  : Transition request to Registry
-* MONTH DAY, YEAR  : Publication of the Registry and Maintenance
+* Q2 2027  : First Binding Registry as a Registry Draft
+* Q3 2027  : Document Freeze (TD Call)
+* Q4 2027  : Transition request to Candidate Registry
+* Q4 2027   : Publication of the Candidate Registry
+* Q4 2027   : Transition request to Registry
+* Q1 2028  : Publication of the Registry and Maintenance
 
 ### Individual Binding Templates
 
 #### HTTP
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
-* MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
-* MONTH DAY, YEAR  : Review within the Binding Registry process
-* MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
-* MONTH DAY, YEAR  : Review within the Binding Registry process
+* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
+* Q1 2027    : Submission to a W3C Note 
 
 #### CoAP
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
-* MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
-* MONTH DAY, YEAR  : Review within the Binding Registry process
-* MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
-* MONTH DAY, YEAR  : Review within the Binding Registry process
+* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
+* Q1 2027    : Submission to a W3C Note 
 
 #### Modbus
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
-* MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
-* MONTH DAY, YEAR  : Review within the Binding Registry process
-* MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
-* MONTH DAY, YEAR  : Review within the Binding Registry process
+* Q4 2026    : Group Call for Consensus (CfC) to publish a Note
+* Q4 2026    : Submission to a W3C Note 
+
 
 #### MQTT
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
-* MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
-* MONTH DAY, YEAR  : Review within the Binding Registry process
-* MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
-* MONTH DAY, YEAR  : Review within the Binding Registry process
+* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
+* Q1 2027    : Submission to a W3C Note 
 
 #### BACnet
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
-* MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
-* MONTH DAY, YEAR  : Review within the Binding Registry process
-* MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
-* MONTH DAY, YEAR  : Review within the Binding Registry process
+* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
+* Q1 2027    : Submission to a W3C Note 
 
 #### Profinet
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
-* MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
-* MONTH DAY, YEAR  : Review within the Binding Registry process
-* MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
-* MONTH DAY, YEAR  : Review within the Binding Registry process
+* Q1 2027    : Group Call for Consensus (CfC) to publish a Note
+* Q1 2027    : Submission to a W3C Note 
 
 #### Lorawan
 
-* MONTH DAY, YEAR  : Group Call for Consensus (CfC) to publish a Note
-* MONTH DAY, YEAR  : Submission to the Binding Registry (initial state)
-* MONTH DAY, YEAR  : Review within the Binding Registry process
-* MONTH DAY, YEAR  : Request for Transition to the current/stable state within the Binding Registry process
-* MONTH DAY, YEAR  : Review within the Binding Registry process
+* Q4 2026    : Group Call for Consensus (CfC) to publish a Note
+* Q4 2026    : Submission to a W3C Note 
 
 #### JSON
 
