@@ -25,6 +25,7 @@ Remote:
 1. Ben Francis
 1. Daniel Peintner
 1. Cristiano Aguzzi
+1. Michael Koster
 
 Chair: Sebastian, Kaz, Michael
 
