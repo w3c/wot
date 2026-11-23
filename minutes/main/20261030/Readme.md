@@ -12,7 +12,7 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning#F2F_Agenda_.28Thursda
 Present
 1. Kaz Ashimura
 1. Kensaku Komatsu
-1. Nanaaka Kido
+1. Nanaka Kido
 1. Kunihiko Toumura
 1. Yohei Sonobe
 1. Noriaki Matsumura
