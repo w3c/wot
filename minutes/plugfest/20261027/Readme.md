@@ -131,7 +131,7 @@ RC: code is open source
 
 RC: there is also a scanner which shows the Thing Descriptions
 
-### WoT WoT Maritime Artifact Factory Artifact Factory (DNV)
+### WoT Maritime Artifact Factory (DNV)
 
 PL: for maritime we see WoT thinkg to go
 
