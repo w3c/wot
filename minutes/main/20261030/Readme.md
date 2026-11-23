@@ -27,7 +27,7 @@ Present
 1. Hiroshi Ota
 1. Michiko Kuriyama
 1. Ege Korkan
-1. Robert Warrent
+1. Robert Warren
 1. Mahda Noura
 
 Remote:
