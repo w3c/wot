@@ -75,7 +75,7 @@ LLM will generate the policy which generates an agent that implements its.
 Question: is the agent running locally?  Yes.
 
 #### ECHONET
-Yoheu Sonobe (Nagasaki Univ)  & Tao Xin (Jaist) - Echonet
+Yohei Sonobe (Nagasaki Univ)  & Tao Xin (Jaist) - Echonet
 11 Echonet devices are located in Japan and relayed over AWS using SSH. The Jaist testbed is a smart home testbed with 11 devices including a camera and an air filter.  Demo for remotely turning a lamp and fan on and off using Linux curl command to send HTTP requests, with effects visible via video stream.
 Note on the upcoming WoT F2F in 2027 in Nagasaki.
 (Note Taker's comments: Very impressive live slides)
