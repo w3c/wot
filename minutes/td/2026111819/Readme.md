@@ -2,7 +2,7 @@
 
 https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf
 
-## Slot 1 - 18 October 2026
+## Slot 1 - 18 November 2026
 
 ### Meeting Information
 
@@ -34,25 +34,32 @@ https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf
 -> https://deploy-preview-508--wot-binding-templates.netlify.app/bindings/protocols/modbus/ Preview
 
 **Sebastian:** we have many bindings in the editorial process.
+
 ... started with the Modbus binding.
+
 ... some spelling problems and inconsistencies.
 
 -> https://deploy-preview-508--wot-binding-templates.netlify.app/bindings/protocols/modbus/#full-td Example 8
 
 **Sebastian:** (explains namespace substitution)
+
 ... enum values are not identified as coming from the namespace.
+
 ... the values could be mapped directly in the `@context` (but aren't).
+
 ... this needs to be changed.
 
 **Daniel:** we should use the latest TD version.
 
 **Sebastian:** agree.
+
 **Sebastian:** (displays the TD section in JSON-LD Playground)
 ... there is no value mapping in the example, it's just a string.
 
 **Mahda:** there should be a link in the context.
 
 **Sebastian:** we can fix this if we include the definitions in the Modbus context file.
+
 **Sebastian:** (shows the definitions in the file) but it doesn't resolve yet.
 
 **Mahda:** it should resolve now. 
@@ -69,7 +76,9 @@ https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf
 **Sebastian:** we could use the namespace prefix but with underscore, e.g., `modv_function`.
 
 **Mahda:** we could use `modv:hasFunction` but still need `type:vocab`.
+
 ... `@type` may cause a problem due to overuse.
+
 ... there could be a local context to override the mapping.
 
 **Sebastian:** why is "type" mapping to the hypermedia ontology?
@@ -86,7 +95,7 @@ https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf
 **Michael:** AOB?
 ... adjourned.
 
-## Slot 2 - 19 October 2026
+## Slot 2 - 19 November 2026
 
 ### Meeting Information
 
@@ -127,11 +136,15 @@ https://www.w3.org/WoT/IG/wiki/WG_WoT_Thing_Description_WebConf
 **Sebastian:** Does it make sense to be published in OPC?
 
 **Erich:** I believe it is better on the W3C side.
+
 ... specific use case for WoT.
+
 ... leverage existing mapping specifications.
 
-**Kazuyuki:** OPC Classic I/F is popular and important like ECHONET's Classic I/F, and should be considered one of the possible bindings.
+**Kazuyuki:** OPC Classic I/F is popular and important like Echonet's Classic I/F, and should be considered one of the possible bindings.
+
 ... on the other hand, a possible question is who should have the authorship and the IP rights for the original specs.
+
 ... classic I/F binding is important, but we need to think about that kind of logistics as well.
 
 **Erich:** I talked to Hitachi as well (have OPC Classic protocol).
